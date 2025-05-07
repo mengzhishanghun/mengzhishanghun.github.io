@@ -9,7 +9,7 @@
 <p align="center">张靖宇 | UE Plugin & Python Project | 独立开发者</p>
 
 <p align="center">
-  <a href="./个人简历.md">📄 个人简历</a> | <a href="https://mengzhishanghun.github.io">🌐 在线主页</a>
+  <a href="./个人简历.md">📄 个人简历</a> | <a href="https://github.com/mengzhishanghun">🏠 GitHub 首页</a> | <a href="https://mengzhishanghun.github.io">🌐 在线主页</a>
 </p>
 
 <p align="center">
@@ -40,6 +40,16 @@
 
 ---
 
+## 📈 GitHub Overview
+
+[![Stats](https://github-readme-stats.vercel.app/api?username=mengzhishanghun&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
+
+[![Trophy](https://github-profile-trophy.vercel.app/?username=mengzhishanghun&theme=tokyonight&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
+
+[![Activity](https://github-readme-activity-graph.vercel.app/graph?username=mengzhishanghun&theme=tokyo-night&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
+
+---
+
 ## 💖 Sponsor Me
 
 <table>
@@ -53,16 +63,6 @@
 </table>
 
 > 💼 业务合作 / Python 脚本 & UE 插件定制 → [mengzhishanghun@outlook.com](mailto:mengzhishanghun@outlook.com)
-
----
-
-## 📈 GitHub Overview
-
-[![Stats](https://github-readme-stats.vercel.app/api?username=mengzhishanghun&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
-
-[![Trophy](https://github-profile-trophy.vercel.app/?username=mengzhishanghun&theme=tokyonight&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
-
-[![Activity](https://github-readme-activity-graph.vercel.app/graph?username=mengzhishanghun&theme=tokyo-night&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
 
 ---
 
