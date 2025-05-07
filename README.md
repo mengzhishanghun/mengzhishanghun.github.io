@@ -6,33 +6,32 @@
 -->
 
 <h1 align="center">mengzhishanghun</h1>
-<p align="center">张靖宇 | UE Plugin & Python Project | 独立开发者</p>
+<p align="center">张靖宇 | UE Plugin & Python Project | 独立开发者</p>
 
 <p align="center">
   <a href="./个人简历.md">📄 个人简历</a> | <a href="https://mengzhishanghun.github.io">🌐 在线主页</a>
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=white" style="margin:0 4px"/>
+  <img src="https://img.shields.io/badge/Unreal‑Engine-313131?logo=unrealengine&logoColor=white" style="margin:0 4px"/>
+  <img src="https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white" style="margin:0 4px"/>
+</p>
 
 ---
 
-## 🔧 Tech Stack
+## 🌟 Featured Projects
 
-![Unreal Engine](https://img.shields.io/badge/Unreal‑Engine-313131?logo=unrealengine&logoColor=white)
-![C++](https://img.shields.io/badge/C%2B%2B-00599C?logo=cplusplus&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=white)
-
----
-
-## 🚀 UE Plugins
+### 🚀 UE Plugins
 
 | 插件 | 描述 | 链接 |
 |------|------|------|
 | **SimpleSSHTunnel** | SSH 隧道快速集成 | <https://www.fab.com/zh-cn/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721> |
-| **SimpleByteConversion**|常用类型，结构体与字节数组转换|<https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002>|
+| **SimpleByteConversion** | 通用类型 ↔️ 字节数组转换 | <https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002> |
 
 ---
 
-## 🐍 Python Projects
+### 🐍 Python Projects
 
 | 项目 | 描述 | 链接 |
 |------|------|------|
@@ -47,7 +46,8 @@
   <tr><td align="center">微信</td></tr>
   <tr>
     <td>
-      <img src="https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun.github.io/main/Assets/WeChatPay.png" alt="WeChat Pay QR" width="200"/>
+      <!-- Sponsor 路径保持不变 -->
+      <img src="https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun.github.io/main/Assets/WeChatPay.png" alt="WeChat Pay QR" width="250"/>
     </td>
   </tr>
 </table>
@@ -58,11 +58,11 @@
 
 ## 📈 GitHub Overview
 
-[![Activity](https://github-readme-activity-graph.vercel.app/graph?username=mengzhishanghun&theme=tokyo-night&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
+[![Stats](https://github-readme-stats.vercel.app/api?username=mengzhishanghun&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
 
 [![Trophy](https://github-profile-trophy.vercel.app/?username=mengzhishanghun&theme=tokyonight&no-frame=true&row=1&column=6)](https://github.com/ryo-ma/github-profile-trophy)
 
-[![Stats](https://github-readme-stats.vercel.app/api?username=mengzhishanghun&show_icons=true&include_all_commits=true&count_private=true&theme=tokyonight)](https://github.com/anuraghazra/github-readme-stats)
+[![Activity](https://github-readme-activity-graph.vercel.app/graph?username=mengzhishanghun&theme=tokyo-night&hide_border=true)](https://github.com/Ashutosh00710/github-readme-activity-graph)
 
 ---
 
