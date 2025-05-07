@@ -6,7 +6,7 @@
 -->
 
 <h1 align="center">mengzhishanghun</h1>
-<p align="center">张靖宇 · UE Plugin & Python Automation Developer</p>
+<p align="center">张靖宇 | UE Plugin & Python Project | 独立开发者</p>
 
 <p align="center">
   <a href="./个人简历.md">📄 个人简历</a> | <a href="https://mengzhishanghun.github.io">🌐 在线主页</a>
