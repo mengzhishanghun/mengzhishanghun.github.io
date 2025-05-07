@@ -47,7 +47,7 @@
   <tr>
     <td>
       <!-- Sponsor 路径保持不变 -->
-      <img src="https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun.github.io/main/Assets/WeChatPay.png" alt="WeChat Pay QR" width="250"/>
+      <img src="https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun.github.io/main/Assets/WeChatPay.jpg" alt="WeChat Pay QR" width="250"/>
     </td>
   </tr>
 </table>
