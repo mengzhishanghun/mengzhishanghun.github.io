@@ -47,7 +47,7 @@
   <tr><td align="center">微信</td></tr>
   <tr>
     <td>
-      <img src="https://github.com/mengzhishanghun/mengzhishanghun.github.io/blob/b8269f1e4f8633df5e3b4b9e95452935aa46d99b/Assets/WeChatPay.png" alt="WeChat Pay QR" width="200"/>
+      <img src="https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun.github.io/main/Assets/WeChatPay.png" alt="WeChat Pay QR" width="200"/>
     </td>
   </tr>
 </table>
