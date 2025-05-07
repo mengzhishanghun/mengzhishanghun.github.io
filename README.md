@@ -27,7 +27,7 @@
 | 插件 | 描述 | 链接 |
 |------|------|------|
 | **SimpleSSHTunnel** | SSH 隧道快速集成 | <https://www.fab.com/zh-cn/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721> |
-| **SimpleByteConversion** | 通用类型 ↔️ 字节数组转换 | <https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002> |
+| **SimpleByteConversion** | 通用类型&结构体 ↔️ 字节数组转换 | <https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002> |
 
 ---
 
