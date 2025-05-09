@@ -1,0 +1,121 @@
+﻿/* ---------- 通用 ---------- */
+html, body {
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+    font-family: "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background: #111;
+    color: #eee;
+}
+
+h1, h2, h3 {
+    color: #4dd0e1;
+    margin: 0 0 24px;
+}
+
+ul {
+    line-height: 1.8em;
+    padding-left: 1.2em;
+}
+
+a.EmailLink {
+    color: #4dd0e1;
+    text-decoration: none;
+}
+
+/* ---------- 左侧按钮式 SideNav ---------- */
+.SideNav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.NavButton {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+    background: var(--btn-color, #1e1e1e);
+    border-radius: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.4);
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.2s;
+}
+
+.NavButton:hover {
+    transform: translateX(12px);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.45);
+}
+
+.NavIcon {
+    font-size: 1.4rem;
+    pointer-events: none;
+}
+
+.NavText {
+    position: absolute;
+    left: 60px;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.75);
+    padding: 0 20px;
+    border-radius: 0 4px 4px 0;
+    color: #fff;
+    font-size: 0.95rem;
+    white-space: nowrap;
+    transform: translateX(-15px) scaleX(0);
+    transform-origin: left center;
+    opacity: 0;
+    transition: transform 0.35s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.3s ease;
+}
+
+.NavButton:hover .NavText {
+    transform: translateX(0) scaleX(1);
+    opacity: 1;
+}
+
+/* ---------- 主内容区 ---------- */
+.ContentArea {
+    position: fixed;
+    left: 60px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    padding: 0 5vw;
+    box-sizing: border-box;
+}
+
+.SnapSection {
+    scroll-snap-align: start;
+    min-height: 100vh;
+    padding: 15vh 0 10vh; /* 上15% 下10% 空间 */
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---------- 移动端 ---------- */
+@media (max-width: 768px) {
+    .SideNav {
+        display: none;
+    }
+    .ContentArea {
+        left: 0;
+        padding: 1.5rem 6vw;
+    }
+}
