@@ -8,9 +8,14 @@ html, body {
     color: #eee;
 }
 
+body {
+    font-size: 18px;
+    line-height: 1.8em;
+}
+
 h1, h2, h3 {
     color: #4dd0e1;
-    margin: 0 0 24px;
+    margin: 18px 0 16px;
 }
 
 ul {
@@ -22,6 +27,18 @@ a.EmailLink {
     color: #4dd0e1;
     text-decoration: none;
 }
+
+p {
+    font-size: 1.1rem;
+    line-height: 1.9rem;
+    margin-bottom: 1.2rem;
+}
+
+li {
+    font-size: 1.05rem;
+    line-height: 1.8rem;
+}
+
 
 /* ---------- 左侧按钮式 SideNav ---------- */
 .SideNav {
@@ -125,12 +142,6 @@ a.EmailLink {
     margin: 0;
     font-size: 2rem;
 }
-
-.SnapSection > h3{
-    color: #4dd0e1;
-    margin: 48px 0 16px;
-}
-
 
 /* ---------- 移动端 ---------- */
 @media (max-width: 768px) {
