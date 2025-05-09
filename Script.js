@@ -21,3 +21,31 @@ buttons.forEach(btn => {
         document.querySelector(btn.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const cards = document.querySelectorAll(".ProjectCard");
+    let current = 0;
+    const showCard = (i) => {
+        cards.forEach((c, idx) => {
+            c.classList.toggle("active", idx === i);
+        });
+    };
+    showCard(current);
+
+    document.getElementById("ProjectPrev").onclick = () => {
+        current = (current - 1 + cards.length) % cards.length;
+        showCard(current);
+    };
+
+    document.getElementById("ProjectNext").onclick = () => {
+        current = (current + 1) % cards.length;
+        showCard(current);
+    };
+
+    const BirthYear = 1997;
+    const WorkStartYear = 2018;
+    const CurrentYear = new Date().getFullYear();
+    document.getElementById("Age").innerText = CurrentYear - BirthYear;
+    document.getElementById("WorkYears").innerText = CurrentYear - WorkStartYear;
+});
+
