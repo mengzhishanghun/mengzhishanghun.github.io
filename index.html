@@ -11,6 +11,7 @@
 <!-- 左侧按钮式导航 -->
 <nav class="SideNav">
     <a href="#Welcome"           class="NavButton" data-color="#16a085"><span class="NavIcon">🏠</span><span class="NavText">主页</span></a>
+    <a href="#Showcase"          class="NavButton" data-color="#16a085"><span class="NavIcon">📦</span><span class="NavText">成果展示</span></a>
     <a href="#SelfIntro"         class="NavButton" data-color="#2ecc71"><span class="NavIcon">👤</span><span class="NavText">自我介绍</span></a>
     <a href="#Skills"            class="NavButton" data-color="#3498db"><span class="NavIcon">🚀</span><span class="NavText">个人优势</span></a>
     <a href="#WorkExperience"    class="NavButton" data-color="#e74c3c"><span class="NavIcon">🏢</span><span class="NavText">工作经历</span></a>
@@ -30,6 +31,59 @@
     </div>
     </section>
 
+    <section id="Showcase" class="SnapSection">
+        <h2>📦 作品展示</h2>
+
+        <!-- 分类标签 -->
+        <div class="ProjectTabs">
+            <button class="ProjectTab active" data-type="UEPlugins">🎮 UE 插件</button>
+            <button class="ProjectTab" data-type="PythonProjects">🐍 Python 项目</button>
+        </div>
+
+        <!-- 共用轮播区域 -->
+        <div class="ProjectCarousel">
+            <button class="ProjectNav" id="ShowcasePrev">❮</button>
+            <div class="ProjectSlides" id="ShowcaseSlides">
+                <div class="ProjectCard" data-type="UEPlugins">
+                    <h3>SimpleSSHTunnel</h3>
+                    <p>一个简单的SSH隧道插件</p>
+                    <ul>
+                        <li>集成第三方libssh2+openssl搭建ssh加密隧道</li>
+                        <li>插件设置页面管理所有SSH通道，方便直观快捷</li>
+                        <li>纯C++编写，支持 Blueprint 快速调用</li>
+                        <li>适配 UE5.2~5.5</li>
+                        <li>仅支持win平台</li>
+                    </ul>
+                    <p class="Award">🏷️ <a href="https://www.fab.com/zh-cn/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721" target="_blank">点击打开Fab插件链接</a></p>
+                </div>
+
+                <div class="ProjectCard" data-type="UEPlugins">
+                    <h3>SimpleByteConversion</h3>
+                    <p>一个简单的字节数组转换插件</p>
+                    <ul>
+                        <li>int、int64、bool、float、double、struct与字节数组互转，适用于存档与通信</li>
+                        <li>纯C++编写，支持 Blueprint 快速调用</li>
+                        <li>适配 UE5.2~5.5</li>
+                        <li>支持全平台</li>
+                    </ul>
+                    <p class="Award">🏷️ <a href="https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002" target="_blank">点击打开Fab插件链接</a></p>
+                </div>
+
+                <div class="ProjectCard" data-type="PythonProjects">
+                    <h3>UEPluginAutoPacker</h3>
+                    <p>UE插件多版本一键打包器，解决多版本打包问题</p>
+                    <ul>
+                        <li>自动打包多个 UE 插件版本，适用于上架</li>
+                        <li>支持添加管理计算机UE引擎版本，有缓存不用重复设置</li>
+                        <li>支持一键修改打包文件，满足Fab上架需求</li>
+                        <li>仅支持win平台</li>
+                    </ul>
+                    <p class="Award">🐙 <a href="https://github.com/MZSH-Tools/UEPluginAutoPacker" target="_blank">点击打开Github项目页面</a></p>
+                </div>
+            </div>
+            <button class="ProjectNav" id="ShowcaseNext">❯</button>
+        </div>
+    </section>
 
     <section id="SelfIntro" class="SnapSection">
         <h2>👤 自我介绍</h2>
@@ -61,7 +115,6 @@
             <li>掌握性能优化与网络同步，熟悉源码修改、蓝图逻辑分离、调度优化等高级实践</li>
         </ul>
     </section>
-
 
     <section id="WorkExperience" class="SnapSection">
         <h2>🏢 工作经历</h2>

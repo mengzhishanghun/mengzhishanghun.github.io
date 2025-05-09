@@ -47,5 +47,47 @@ document.addEventListener("DOMContentLoaded", () => {
     const CurrentYear = new Date().getFullYear();
     document.getElementById("Age").innerText = CurrentYear - BirthYear;
     document.getElementById("WorkYears").innerText = CurrentYear - WorkStartYear;
+
+    // 轮播 + 标签切换逻辑（用于 Showcase）
+    const ShowcaseTabs = document.querySelectorAll(".ProjectTab");
+    const ShowcaseCards = document.querySelectorAll("#ShowcaseSlides .ProjectCard");
+    const ShowcasePrev = document.getElementById("ShowcasePrev");
+    const ShowcaseNext = document.getElementById("ShowcaseNext");
+
+    let ShowcaseCurrentType = "UEPlugins";
+    let ShowcaseIndex = 0;
+
+    function FilterShowcase(type) {
+        const Visible = Array.from(ShowcaseCards).filter(c => c.dataset.type === type);
+        ShowcaseCards.forEach(c => c.classList.remove("active"));
+        if (Visible.length > 0) {
+            Visible[0].classList.add("active");
+            ShowcaseIndex = 0;
+        }
+    }
+
+    ShowcaseTabs.forEach(tab => {
+        tab.addEventListener("click", () => {
+            ShowcaseTabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            ShowcaseCurrentType = tab.dataset.type;
+            FilterShowcase(ShowcaseCurrentType);
+        });
+    });
+
+    ShowcasePrev.onclick = () => {
+        const Visible = Array.from(ShowcaseCards).filter(c => c.dataset.type === ShowcaseCurrentType);
+        ShowcaseIndex = (ShowcaseIndex - 1 + Visible.length) % Visible.length;
+        Visible.forEach((c, i) => c.classList.toggle("active", i === ShowcaseIndex));
+    };
+
+    ShowcaseNext.onclick = () => {
+        const Visible = Array.from(ShowcaseCards).filter(c => c.dataset.type === ShowcaseCurrentType);
+        ShowcaseIndex = (ShowcaseIndex + 1) % Visible.length;
+        Visible.forEach((c, i) => c.classList.toggle("active", i === ShowcaseIndex));
+    };
+
+// 初始化默认显示
+    FilterShowcase(ShowcaseCurrentType);
 });
 
