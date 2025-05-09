@@ -11,7 +11,6 @@ const observer = new IntersectionObserver(
     },
     { root: document.querySelector('.ContentArea'), threshold: 0.55 }
 );
-
 document.querySelectorAll('.SnapSection').forEach(sec => observer.observe(sec));
 
 /* --- 平滑滚动（阻止 <a> 默认跳转） --------------------------- */
@@ -22,33 +21,38 @@ buttons.forEach(btn => {
     });
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    const cards = document.querySelectorAll(".ProjectCard");
-    let current = 0;
-    const showCard = (i) => {
+/* --- 通用轮播函数 -------------------------------------------- */
+function SetupCarousel(buttonPrevId, buttonNextId, cardSelector) {
+    const cards = document.querySelectorAll(cardSelector);
+    let index = 0;
+    const show = (i) => {
         cards.forEach((c, idx) => {
             c.classList.toggle("active", idx === i);
         });
     };
-    showCard(current);
+    show(index);
 
-    document.getElementById("ProjectPrev").onclick = () => {
-        current = (current - 1 + cards.length) % cards.length;
-        showCard(current);
+    document.getElementById(buttonPrevId).onclick = () => {
+        index = (index - 1 + cards.length) % cards.length;
+        show(index);
     };
-
-    document.getElementById("ProjectNext").onclick = () => {
-        current = (current + 1) % cards.length;
-        showCard(current);
+    document.getElementById(buttonNextId).onclick = () => {
+        index = (index + 1) % cards.length;
+        show(index);
     };
+}
 
+document.addEventListener("DOMContentLoaded", () => {
     const BirthYear = 1997;
     const WorkStartYear = 2018;
     const CurrentYear = new Date().getFullYear();
     document.getElementById("Age").innerText = CurrentYear - BirthYear;
     document.getElementById("WorkYears").innerText = CurrentYear - WorkStartYear;
 
-    // 轮播 + 标签切换逻辑（用于 Showcase）
+    // 初始化项目经历轮播
+    SetupCarousel("ProjectPrev", "ProjectNext", "#ProjectSlides .ProjectCard");
+
+    // Showcase 的标签与轮播逻辑
     const ShowcaseTabs = document.querySelectorAll(".ProjectTab");
     const ShowcaseCards = document.querySelectorAll("#ShowcaseSlides .ProjectCard");
     const ShowcasePrev = document.getElementById("ShowcasePrev");
@@ -87,7 +91,6 @@ document.addEventListener("DOMContentLoaded", () => {
         Visible.forEach((c, i) => c.classList.toggle("active", i === ShowcaseIndex));
     };
 
-// 初始化默认显示
+    // 默认显示第一个标签
     FilterShowcase(ShowcaseCurrentType);
 });
-
