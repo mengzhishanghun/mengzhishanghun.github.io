@@ -258,5 +258,62 @@ footer {
   align-items: start;
 }
 
+.ProjectTabs {
+  text-align: center;
+  margin: 2rem 0 2.5rem;
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.ProjectTabs .Tab {
+  cursor: pointer;
+  margin: 0 0.5rem;
+  color: var(--text-color);
+}
+
+.ProjectTabs .Tab.active {
+  color: var(--highlight);
+  font-weight: bold;
+}
+
+.ProjectGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.ProjectCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.ProjectCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 188, 212, 0.15);
+}
+
+.ProjectTitle {
+  font-size: 1.2rem;
+  color: var(--highlight);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.ProjectIntro {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0.5rem 0 0.8rem;
+}
+
+.ProjectCard ul {
+  padding-left: 1.2rem;
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+
 
 
