@@ -424,6 +424,22 @@ footer {
   text-align:right;
 }
 
+/* 让赞赏区块中的图片居中且限制大小 */
+#BlogContent p img {
+  display: block;
+  margin: 0 auto;
+  max-width: 240px;
+}
+
+/* 可选：优化 blockquote 样式 */
+#BlogContent blockquote {
+  border-left: 4px solid #555;
+  margin: 1.2rem 0;
+  padding-left: 1rem;
+  color: #aaa;
+}
+
+
 
 
 

@@ -1,3 +1,9 @@
+// ✅ 启用 GFM + 自动换行支持（marked 初始化）
+marked.setOptions({
+  gfm: true,
+  breaks: true
+});
+
 const ContentArea = document.getElementById("ContentArea");
 const HeroArea = document.getElementById("HeroArea");
 const NavBar = document.getElementById("NavBar");
@@ -143,6 +149,9 @@ function filterPosts(cat) {
 async function loadBlogPost(title, url) {
   const res = await fetch(url);
   let md = await res.text();
+
+  // ✅ 强制将多段 > 引用拆开（每个 > 段前加换行）
+  md = md.replace(/^> /gm, '\n> ');
 
   // 替换相对图片路径为 GitHub raw 路径
   const basePath = url.substring(0, url.lastIndexOf("/") + 1);
