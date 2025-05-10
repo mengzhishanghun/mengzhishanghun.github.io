@@ -1,20 +1,9 @@
-<section>
-  <nav style="margin-bottom:1rem;">
-    <button onclick="filterPosts('all')">全部</button>
-    <button onclick="filterPosts('Tech')">技术干货</button>
-    <button onclick="filterPosts('Review')">项目复盘</button>
-  </nav>
-  <ul id="BlogList">
-    <li data-cat="Tech">UE 插件打包流程最佳实践</li>
-    <li data-cat="Tech">Python asyncio 高并发实战</li>
-    <li data-cat="Review">SimpleSSHTunnel 上架 Fab 经历</li>
-  </ul>
+<section id="BlogMainView">
+  <div class="ProjectTabs" id="BlogFilter"></div>
+  <ul id="BlogList" class="SimpleBlogList"></ul>
 </section>
 
-<script>
-  function filterPosts(cat){
-    document.querySelectorAll('#BlogList li').forEach(li=>{
-      li.style.display = (cat==='all'||li.dataset.cat===cat)?'list-item':'none';
-    });
-  }
-</script>
+<section id="BlogDetailView" style="display:none;">
+  <button onclick="backToBlogList()" class="btn">← 返回</button>
+  <article id="BlogContent" style="margin-top:2rem;"></article>
+</section>

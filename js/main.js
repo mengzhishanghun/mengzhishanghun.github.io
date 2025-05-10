@@ -15,6 +15,7 @@ async function loadPage(page) {
 
   if (page === "about") calculateInfo();
   if (page === "projects") setupProjectFilter();
+  if (page === "blog") loadBlogList();
 }
 
 // 切换到内容区域
@@ -61,4 +62,92 @@ function setupProjectFilter() {
       });
     });
   });
+}
+
+// ========== 博客功能 ==========
+
+async function loadBlogList() {
+  const res = await fetch("https://raw.githubusercontent.com/mengzhishanghun/MyBlog/main/index.md");
+  const text = await res.text();
+  const lines = text.split("\n");
+
+  const filterEl = document.getElementById("BlogFilter");
+  const listEl = document.getElementById("BlogList");
+  filterEl.innerHTML = "";
+  listEl.innerHTML = "";
+
+  let currentCat = "未分类";
+  const cats = new Set();
+  const posts = [];
+
+  for (let line of lines) {
+    if (line.startsWith("## ")) {
+      currentCat = line.replace("## ", "").trim();
+      cats.add(currentCat);
+    }
+
+    const match = line.match(/- \[(.+?)\]\((.+?)\)/);
+    if (match) {
+      posts.push({ title: match[1], url: match[2], cat: currentCat });
+    }
+  }
+
+  // 分类按钮横向分隔展示
+  cats.forEach((cat, idx) => {
+    const span = document.createElement("span");
+    span.className = "Tab" + (idx === 0 ? " active" : "");
+    span.dataset.cat = cat;
+    span.textContent = cat;
+    span.onclick = () => {
+      document.querySelectorAll("#BlogFilter .Tab").forEach(t => t.classList.remove("active"));
+      span.classList.add("active");
+      filterPosts(cat);
+    };
+    filterEl.appendChild(span);
+
+    if (idx < cats.size - 1) {
+      const sep = document.createElement("span");
+      sep.textContent = " | ";
+      filterEl.appendChild(sep);
+    }
+  });
+
+  // 渲染列表
+  posts.forEach(post => {
+    const li = document.createElement("li");
+    li.dataset.cat = post.cat;
+    li.innerHTML = `<a href="javascript:void(0)" onclick="loadBlogPost('${post.title}', '${post.url}')">${post.title}</a>`;
+    listEl.appendChild(li);
+  });
+
+  filterPosts([...cats][0]); // 默认展示第一个分类
+}
+
+function filterPosts(cat) {
+  document.querySelectorAll('#BlogList li').forEach(li => {
+    li.style.display = (li.dataset.cat === cat) ? 'list-item' : 'none';
+  });
+}
+
+async function loadBlogPost(title, url) {
+  const res = await fetch(url);
+  let md = await res.text();
+
+  // 替换相对图片路径为绝对 Raw 路径
+  const basePath = url.substring(0, url.lastIndexOf("/") + 1);
+  md = md.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
+    const fullUrl = src.startsWith("http") ? src : basePath + src;
+    return `![${alt}](${fullUrl})`;
+  });
+
+  const html = marked.parse(md);
+
+  document.getElementById("BlogMainView").style.display = "none";
+  document.getElementById("BlogDetailView").style.display = "block";
+  document.getElementById("BlogContent").innerHTML = `<h2>${title}</h2>` + html;
+}
+
+function backToBlogList() {
+  document.getElementById("BlogMainView").style.display = "block";
+  document.getElementById("BlogDetailView").style.display = "none";
 }

@@ -385,6 +385,27 @@ footer {
   font-size: 0.92rem;
 }
 
+.SimpleBlogList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.SimpleBlogList li {
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 0.5rem;
+}
+
+.SimpleBlogList a {
+  color: var(--highlight);
+  text-decoration: none;
+}
+
+.SimpleBlogList a:hover {
+  text-decoration: underline;
+}
+
 
 
 
