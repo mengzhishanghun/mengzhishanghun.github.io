@@ -25,12 +25,12 @@ p {
 }
 
 a {
-  color: var(--highlight);  /* 使用亮色主题色 */
+  color: var(--highlight);
   text-decoration: underline;
 }
 
 a:hover {
-  color: #1de9b6;           /* 悬停时变亮一点 */
+  color: #1de9b6;
 }
 
 header{
@@ -77,122 +77,12 @@ section{
   margin-bottom:4rem;
 }
 
-.card-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
-  gap:1.5rem;
-}
-
-.project-card{
-  background:var(--card-bg);
-  border:1px solid var(--border-color);
-  padding:1rem 1.2rem;
-  border-radius:12px;
-}
-
-.timeline{
-  border-left:2px solid var(--highlight);
-  padding-left:1.5rem;
-}
-
-.timeline-item{
-  position:relative;
-  margin-bottom:2rem;
-}
-
-.timeline-item::before{
-  content:"";
-  position:absolute;
-  left:-10px;
-  top:4px;
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:var(--highlight);
-}
-
-.timeline-dual {
-  position: relative;
-  padding: 0 0 4rem 0;
-}
-
-.timeline-dual::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 2px;
-  height: 100%;
-  background: var(--highlight);
-}
-
-.tl-item {
-  position: relative;
-  width: 50%;
-  padding: 0 1.5rem 2.5rem;
-}
-
-.tl-item h3 {
-  margin: 0 0 .3rem 0;
-}
-
-.tl-item p,
-.tl-item ul {
-  font-size: .95rem;
-  color: #c4c4c4;
-}
-
-.tl-left {
-  text-align: left;
-  align-self: flex-start;
-}
-
-.tl-left::before {
-  content: "";
-  position: absolute;
-  right: -6px;
-  top: .4rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--highlight);
-}
-
-.tl-right {
-  text-align: left;
-  align-self: flex-start;
-  margin-left: 50%;
-}
-
-.tl-right::before {
-  content: "";
-  position: absolute;
-  left: -6px;
-  top: .4rem;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--highlight);
-}
-
 footer {
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
   color: #888;
   border-top: 1px solid var(--border-color);
-}
-
-@media (max-width: 700px) {
-  .tl-item {
-    width: 100%;
-    text-align: left;
-    padding-left: 2rem;
-  }
-
-  .timeline-dual::after {
-    left: 20px;
-  }
 }
 
 .hero {
@@ -223,6 +113,7 @@ footer {
   border-radius: 8px;
   transition: background 0.2s;
 }
+
 .btn:hover {
   background: #00acc1;
 }
@@ -239,7 +130,7 @@ footer {
 }
 
 .InfoList strong {
-  width: 6em; /* 可根据内容宽度调整 */
+  width: 6em;
   font-weight: bold;
   color: #eee;
   flex-shrink: 0;
@@ -291,7 +182,6 @@ footer {
   border-radius: 12px;
   padding: 1.2rem 1.5rem;
   transition: transform 0.2s, box-shadow 0.2s;
-
   text-decoration: none;
   color: inherit;
 }
@@ -340,30 +230,6 @@ footer {
   color: var(--highlight);
 }
 
-.SubProjectCard {
-  display: flex;
-  align-items: flex-start;
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.ConnectorLine {
-  position: absolute;
-  left: 0;
-  top: 0.5rem;
-  width: 4px;
-  height: 100%;
-  background: var(--highlight);
-  border-radius: 2px;
-}
-
-.SubProjectCard h4 {
-  margin: 0 0 0.4rem 0;
-  font-size: 1rem;
-  color: #fff;
-}
-
 .ProjectCardMini {
   background: #1c1c1c;
   border: 1px solid var(--border-color);
@@ -391,10 +257,13 @@ footer {
 }
 
 .SimpleBlogList li {
-  margin: 0.8rem 0;
-  font-size: 1.05rem;
-  border-bottom: 1px dashed var(--border-color);
-  padding-bottom: 0.5rem;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:0.8rem 0;
+  font-size:1.05rem;
+  border-bottom:1px dashed var(--border-color);
+  padding-bottom:0.5rem;
 }
 
 .SimpleBlogList a {
@@ -406,41 +275,22 @@ footer {
   text-decoration: underline;
 }
 
-/* ==== Blog list layout ==== */
-.SimpleBlogList li{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin:0.8rem 0;
-  font-size:1.05rem;
-  border-bottom:1px dashed var(--border-color);
-  padding-bottom:0.5rem;
-}
-
-.PostDate{
+.PostDate {
   color:#888;
   font-size:0.9rem;
-  min-width:8rem;     /* 给日期留固定宽度 */
+  min-width:8rem;
   text-align:right;
 }
 
-/* 让赞赏区块中的图片居中且限制大小 */
 #BlogContent p img {
   display: block;
   margin: 0 auto;
   max-width: 240px;
 }
 
-/* 可选：优化 blockquote 样式 */
 #BlogContent blockquote {
   border-left: 4px solid #555;
   margin: 1.2rem 0;
   padding-left: 1rem;
   color: #aaa;
 }
-
-
-
-
-
-
