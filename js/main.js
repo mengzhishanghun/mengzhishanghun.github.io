@@ -80,20 +80,28 @@ async function loadBlogList() {
   const cats = new Set();
   const posts = [];
 
+  const postReg = /^-\s+(\d{4}-\d{2}-\d{2})\s+–\s+\[([^\]]+)]\(([^)]+)\)/;
+
   for (let line of lines) {
     if (line.startsWith("## ")) {
       currentCat = line.replace("## ", "").trim();
       cats.add(currentCat);
+      continue;
     }
 
-    const match = line.match(/- \[(.+?)\]\((.+?)\)/);
+    const match = line.match(postReg);
     if (match) {
-      posts.push({ title: match[1], url: match[2], cat: currentCat });
+      posts.push({
+        date: match[1],
+        title: match[2],
+        url: match[3],
+        cat: currentCat
+      });
     }
   }
 
   // 分类按钮横向分隔展示
-  cats.forEach((cat, idx) => {
+  [...cats].forEach((cat, idx) => {
     const span = document.createElement("span");
     span.className = "Tab" + (idx === 0 ? " active" : "");
     span.dataset.cat = cat;
@@ -112,20 +120,23 @@ async function loadBlogList() {
     }
   });
 
-  // 渲染列表
+  // 渲染列表（保留所有，filter 控制显示）
   posts.forEach(post => {
     const li = document.createElement("li");
     li.dataset.cat = post.cat;
-    li.innerHTML = `<a href="javascript:void(0)" onclick="loadBlogPost('${post.title}', '${post.url}')">${post.title}</a>`;
+    li.innerHTML = `
+      <a href="javascript:void(0)" onclick="loadBlogPost('${post.title}', '${post.url}')">${post.title}</a>
+      <span class="PostDate">${post.date}</span>
+    `;
     listEl.appendChild(li);
   });
 
-  filterPosts([...cats][0]); // 默认展示第一个分类
+  filterPosts([...cats][0]); // 默认显示第一个分类
 }
 
 function filterPosts(cat) {
   document.querySelectorAll('#BlogList li').forEach(li => {
-    li.style.display = (li.dataset.cat === cat) ? 'list-item' : 'none';
+    li.style.display = (li.dataset.cat === cat) ? 'flex' : 'none';
   });
 }
 
@@ -133,7 +144,7 @@ async function loadBlogPost(title, url) {
   const res = await fetch(url);
   let md = await res.text();
 
-  // 替换相对图片路径为绝对 Raw 路径
+  // 替换相对图片路径为 GitHub raw 路径
   const basePath = url.substring(0, url.lastIndexOf("/") + 1);
   md = md.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
     const fullUrl = src.startsWith("http") ? src : basePath + src;

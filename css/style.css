@@ -406,6 +406,24 @@ footer {
   text-decoration: underline;
 }
 
+/* ==== Blog list layout ==== */
+.SimpleBlogList li{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin:0.8rem 0;
+  font-size:1.05rem;
+  border-bottom:1px dashed var(--border-color);
+  padding-bottom:0.5rem;
+}
+
+.PostDate{
+  color:#888;
+  font-size:0.9rem;
+  min-width:8rem;     /* 给日期留固定宽度 */
+  text-align:right;
+}
+
 
 
 
