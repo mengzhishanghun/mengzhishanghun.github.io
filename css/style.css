@@ -1,0 +1,262 @@
+:root {
+  --bg-color: #0d0d0d;
+  --text-color: #e6e6e6;
+  --highlight: #00bcd4;
+  --card-bg: #1b1b1b;
+  --border-color: rgba(255,255,255,0.08);
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family: "Segoe UI", sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.8;
+  padding-top: 72px;
+}
+
+p {
+  margin: 0.8rem 0;
+}
+
+a {
+  color: var(--highlight);  /* 使用亮色主题色 */
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #1de9b6;           /* 悬停时变亮一点 */
+}
+
+header{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:#111;
+  border-bottom:1px solid var(--border-color);
+  z-index:1000;
+}
+
+nav ul{
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  list-style:none;
+  padding:1rem;
+}
+
+nav li{
+  cursor:pointer;
+  font-weight:500;
+  transition:color .2s;
+}
+
+nav li:hover,
+nav li.active{
+  color:var(--highlight);
+}
+
+main{
+  max-width:860px;
+  margin:0 auto;
+  padding:2rem 1rem;
+}
+
+h1,h2,h3{
+  font-weight:600;
+  margin-bottom:.6rem;
+  color:var(--highlight);
+}
+
+section{
+  margin-bottom:4rem;
+}
+
+.card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:1.5rem;
+}
+
+.project-card{
+  background:var(--card-bg);
+  border:1px solid var(--border-color);
+  padding:1rem 1.2rem;
+  border-radius:12px;
+}
+
+.timeline{
+  border-left:2px solid var(--highlight);
+  padding-left:1.5rem;
+}
+
+.timeline-item{
+  position:relative;
+  margin-bottom:2rem;
+}
+
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-10px;
+  top:4px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:var(--highlight);
+}
+
+.timeline-dual {
+  position: relative;
+  padding: 0 0 4rem 0;
+}
+
+.timeline-dual::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: var(--highlight);
+}
+
+.tl-item {
+  position: relative;
+  width: 50%;
+  padding: 0 1.5rem 2.5rem;
+}
+
+.tl-item h3 {
+  margin: 0 0 .3rem 0;
+}
+
+.tl-item p,
+.tl-item ul {
+  font-size: .95rem;
+  color: #c4c4c4;
+}
+
+.tl-left {
+  text-align: left;
+  align-self: flex-start;
+}
+
+.tl-left::before {
+  content: "";
+  position: absolute;
+  right: -6px;
+  top: .4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--highlight);
+}
+
+.tl-right {
+  text-align: left;
+  align-self: flex-start;
+  margin-left: 50%;
+}
+
+.tl-right::before {
+  content: "";
+  position: absolute;
+  left: -6px;
+  top: .4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--highlight);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid var(--border-color);
+}
+
+@media (max-width: 700px) {
+  .tl-item {
+    width: 100%;
+    text-align: left;
+    padding-left: 2rem;
+  }
+
+  .timeline-dual::after {
+    left: 20px;
+  }
+}
+
+.hero {
+  text-align: center;
+  padding: 6rem 1rem 4rem;
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.2rem;
+  color: var(--highlight);
+}
+
+.hero .intro {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.8rem 1.8rem;
+  background: var(--highlight);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.btn:hover {
+  background: #00acc1;
+}
+
+.InfoList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.InfoList li {
+  display: flex;
+  gap: 0.5rem;
+  line-height: 1.8;
+}
+
+.InfoList strong {
+  width: 6em; /* 可根据内容宽度调整 */
+  font-weight: bold;
+  color: #eee;
+  flex-shrink: 0;
+}
+
+.ContactList {
+  list-style: none;
+  padding-left: 0;
+}
+
+.ContactList li {
+  margin: 0.6rem 0;
+  line-height: 1.7;
+  display: flex;
+  gap: 0.5rem;
+  align-items: start;
+}
+
+
+
