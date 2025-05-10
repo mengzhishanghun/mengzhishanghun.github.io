@@ -320,6 +320,72 @@ footer {
   color: #bbb;
 }
 
+.WorkCard {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.WorkCard:hover {
+  background-color: #222;
+}
+
+.WorkHeader h3 {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--highlight);
+}
+
+.SubProjectCard {
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.ConnectorLine {
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  width: 4px;
+  height: 100%;
+  background: var(--highlight);
+  border-radius: 2px;
+}
+
+.SubProjectCard h4 {
+  margin: 0 0 0.4rem 0;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.ProjectCardMini {
+  background: #1c1c1c;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1rem 1.2rem;
+  margin: 1rem 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.ProjectCardMini h4 {
+  font-size: 1rem;
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+.ProjectCardMini ul {
+  padding-left: 1.2rem;
+  color: #bbb;
+  font-size: 0.92rem;
+}
+
+
 
 
 
