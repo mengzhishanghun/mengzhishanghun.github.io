@@ -12,11 +12,12 @@
       <a class="ProjectCard" data-cat="UE" href="https://www.fab.com/zh-cn/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721" target="_blank">
         <div>
           <h3 class="ProjectTitle">SimpleSSHTunnel</h3>
-          <p class="ProjectIntro">SSH 隧道快速集成，Fab 上架</p>
+          <p class="ProjectIntro">实现简单的SSH隧道功能，方便搭建加密访问通道。</p>
           <ul>
-            <li>libssh2 + OpenSSL，轻量封装</li>
-            <li>Blueprint 一键调用</li>
-            <li>适配 UE 5.2–5.5 · Windows</li>
+            <li>封装libssh2 + OpenSSL</li>
+            <li>纯C++编码，支持蓝图一键调用</li>
+            <li>适配 UE 5.2–5.5</li>
+            <li>仅支持win平台</li>
           </ul>
         </div>
       </a>
@@ -24,11 +25,12 @@
       <a class="ProjectCard" data-cat="UE" href="https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002" target="_blank">
         <div>
           <h3 class="ProjectTitle">SimpleByteConversion</h3>
-          <p class="ProjectIntro">通用二进制 ↔ 结构体转换插件</p>
+          <p class="ProjectIntro">实现常用的数据结构与字节数组转换，方便数据传输。</p>
           <ul>
-            <li>支持 int/float/bool/struct ↔ 字节数组</li>
-            <li>Blueprint 快速调用</li>
-            <li>适配 UE 5.2–5.5 · 全平台</li>
+            <li>支持int/int64/float/double/bool/struct ↔ 字节数组</li>
+            <li>纯C++编码，支持蓝图一键调用</li>
+            <li>适配 UE 5.2–5.5</li>
+            <li>支持全平台</li>
           </ul>
         </div>
       </a>
@@ -37,10 +39,12 @@
       <a class="ProjectCard" data-cat="Python" href="https://github.com/MZSH-Tools/UEPluginAutoPacker" target="_blank" style="display:none;">
         <div>
           <h3 class="ProjectTitle">UEPluginAutoPacker</h3>
-          <p class="ProjectIntro">UE 插件多版本一键打包脚本</p>
+          <p class="ProjectIntro">UE插件多版本一键打包</p>
           <ul>
             <li>自动检测本地 UE 版本并批量打包</li>
-            <li>一键修改 .uplugin 版本字段</li>
+            <li>自动分版本保存打包文件，失败有日志说明</li>
+            <li>自动修改多处Fab插件提交检查点（可选）</li>
+            <li>仅支持win打包</li>
           </ul>
         </div>
       </a>
