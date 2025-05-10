@@ -6,18 +6,45 @@
   --border-color: rgba(255,255,255,0.08);
 }
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family: "Segoe UI", sans-serif;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   background: var(--bg-color);
   color: var(--text-color);
+  font-family: "Segoe UI", sans-serif;
   line-height: 1.8;
-  padding-top: 72px;
+}
+
+/* ✅ 页面整体容器（用于贴底页脚） */
+.PageWrapper {
+  min-height: calc(100vh - 60px);
+  padding-top: 72px; /* ✅ 让所有页面整体下移，避开 fixed header */
+}
+
+/* ✅ 主体内容区域 */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2rem 1rem 2rem;
+}
+
+/* ✅ 页脚自然推到底 */
+footer {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  border-top: 1px solid var(--border-color);
+  background: #111;
 }
 
 p {
@@ -28,74 +55,55 @@ a {
   color: var(--highlight);
   text-decoration: underline;
 }
-
 a:hover {
   color: #1de9b6;
 }
 
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#111;
-  border-bottom:1px solid var(--border-color);
-  z-index:1000;
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #111;
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
 }
 
-nav ul{
-  display:flex;
-  justify-content:center;
-  gap:2rem;
-  list-style:none;
-  padding:1rem;
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  padding: 1rem;
 }
-
-nav li{
-  cursor:pointer;
-  font-weight:500;
-  transition:color .2s;
+nav li {
+  cursor: pointer;
+  font-weight: 500;
+  transition: color 0.2s;
 }
-
 nav li:hover,
-nav li.active{
-  color:var(--highlight);
+nav li.active {
+  color: var(--highlight);
 }
 
-main{
-  max-width:860px;
-  margin:0 auto;
-  padding:2rem 1rem;
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--highlight);
 }
 
-h1,h2,h3{
-  font-weight:600;
-  margin-bottom:.6rem;
-  color:var(--highlight);
-}
-
-section{
-  margin-bottom:4rem;
-}
-
-footer {
-  text-align: center;
-  padding: 1rem 0;
-  font-size: 0.9rem;
-  color: #888;
-  border-top: 1px solid var(--border-color);
+section {
+  margin-bottom: 4rem;
 }
 
 .hero {
   text-align: center;
   padding: 6rem 1rem 4rem;
 }
-
 .hero h1 {
   font-size: 2.8rem;
   margin-bottom: 1.2rem;
   color: var(--highlight);
 }
-
 .hero .intro {
   font-size: 1.2rem;
   color: #ccc;
@@ -113,7 +121,6 @@ footer {
   border-radius: 8px;
   transition: background 0.2s;
 }
-
 .btn:hover {
   background: #00acc1;
 }
@@ -122,13 +129,11 @@ footer {
   list-style: none;
   padding-left: 0;
 }
-
 .InfoList li {
   display: flex;
   gap: 0.5rem;
   line-height: 1.8;
 }
-
 .InfoList strong {
   width: 6em;
   font-weight: bold;
@@ -140,7 +145,6 @@ footer {
   list-style: none;
   padding-left: 0;
 }
-
 .ContactList li {
   margin: 0.6rem 0;
   line-height: 1.7;
@@ -154,23 +158,30 @@ footer {
   margin: 2rem 0 2.5rem;
   font-size: 1rem;
   color: #aaa;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 .ProjectTabs .Tab {
   cursor: pointer;
   margin: 0 0.5rem;
   color: var(--text-color);
 }
-
 .ProjectTabs .Tab.active {
   color: var(--highlight);
   font-weight: bold;
 }
 
+.ProjectGridWrapper {
+  display: flex;
+  justify-content: center;
+}
 .ProjectGrid {
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  max-width: 860px;
+  width: 100%;
 }
 
 .ProjectCard {
@@ -185,7 +196,6 @@ footer {
   text-decoration: none;
   color: inherit;
 }
-
 .ProjectCard:hover {
   transform: translateY(-4px);
   box-shadow: 0 8px 18px rgba(0, 188, 212, 0.15);
@@ -197,13 +207,11 @@ footer {
   font-weight: 600;
   text-decoration: none;
 }
-
 .ProjectIntro {
   font-size: 0.95rem;
   color: #ccc;
   margin: 0.5rem 0 0.8rem;
 }
-
 .ProjectCard ul {
   padding-left: 1.2rem;
   font-size: 0.9rem;
@@ -219,11 +227,9 @@ footer {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-
 .WorkCard:hover {
   background-color: #222;
 }
-
 .WorkHeader h3 {
   margin: 0;
   font-size: 1.05rem;
@@ -238,13 +244,11 @@ footer {
   margin: 1rem 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
-
 .ProjectCardMini h4 {
   font-size: 1rem;
   color: var(--highlight);
   margin-bottom: 0.5rem;
 }
-
 .ProjectCardMini ul {
   padding-left: 1.2rem;
   color: #bbb;
@@ -255,31 +259,28 @@ footer {
   list-style: none;
   padding-left: 0;
 }
-
 .SimpleBlogList li {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin:0.8rem 0;
-  font-size:1.05rem;
-  border-bottom:1px dashed var(--border-color);
-  padding-bottom:0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.8rem 0;
+  font-size: 1.05rem;
+  border-bottom: 1px dashed var(--border-color);
+  padding-bottom: 0.5rem;
 }
-
 .SimpleBlogList a {
   color: var(--highlight);
   text-decoration: none;
 }
-
 .SimpleBlogList a:hover {
   text-decoration: underline;
 }
 
 .PostDate {
-  color:#888;
-  font-size:0.9rem;
-  min-width:8rem;
-  text-align:right;
+  color: #888;
+  font-size: 0.9rem;
+  min-width: 8rem;
+  text-align: right;
 }
 
 #BlogContent p img {
@@ -294,3 +295,4 @@ footer {
   padding-left: 1rem;
   color: #aaa;
 }
+

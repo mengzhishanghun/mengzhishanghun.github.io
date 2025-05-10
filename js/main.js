@@ -171,3 +171,10 @@ function backToBlogList() {
   document.getElementById("BlogMainView").style.display = "block";
   document.getElementById("BlogDetailView").style.display = "none";
 }
+
+// 自动设置当前年份（用于 footer）
+const YearEl = document.getElementById("Year");
+if (YearEl) {
+  YearEl.textContent = new Date().getFullYear();
+}
+

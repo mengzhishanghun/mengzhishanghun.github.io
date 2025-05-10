@@ -7,30 +7,33 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<header id="NavBar" style="display: none;">
-  <nav>
-    <ul>
-      <li data-page="about">基础信息</li>
-      <li data-page="projects">作品展示</li>
-      <li data-page="experience">工作经历</li>
-      <li data-page="blog">个人博客</li>
-      <li data-page="contact">合作说明</li>
-    </ul>
-  </nav>
-</header>
+<div class="PageWrapper">
+  <header id="NavBar" style="display: none;">
+    <nav>
+      <ul>
+        <li data-page="about">基础信息</li>
+        <li data-page="projects">作品展示</li>
+        <li data-page="experience">工作经历</li>
+        <li data-page="blog">个人博客</li>
+        <li data-page="contact">合作说明</li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <div id="HeroArea" class="hero">
-    <h1>👋 你好，我是张靖宇</h1>
-    <p class="intro">一位专注于 <strong>UE 插件开发</strong> 与 <strong>Python 自动化</strong> 的自由开发者</p>
-    <p class="intro">擅长插件架构、AI 交互、VR 模拟等前沿方向</p>
-    <a href="#" onclick="switchToContent('about')" class="btn">了解更多</a>
-  </div>
+  <main>
+    <div id="HeroArea" class="hero">
+      <h1>👋 你好，我是张靖宇</h1>
+      <p class="intro">一位专注于 <strong>UE 插件开发</strong> 与 <strong>Python 自动化</strong> 的自由开发者</p>
+      <p class="intro">擅长插件架构、AI 交互、VR 模拟等前沿方向</p>
+      <a href="#" onclick="switchToContent('about')" class="btn">了解更多</a>
+    </div>
 
-  <div id="ContentArea" style="display: none;"></div>
-</main>
+    <div id="ContentArea" style="display: none;"></div>
+  </main>
+</div>
 
-<footer>© 2025 张靖宇 | mengzhishanghun.github.io</footer>
+<footer>© <span id="Year"></span> 张靖宇 | mengzhishanghun.github.io</footer>
+
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="js/main.js"></script>
 </body>
