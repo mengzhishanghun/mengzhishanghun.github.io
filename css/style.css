@@ -283,11 +283,17 @@ footer {
 }
 
 .ProjectCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
   padding: 1.2rem 1.5rem;
   transition: transform 0.2s, box-shadow 0.2s;
+
+  text-decoration: none;
+  color: inherit;
 }
 
 .ProjectCard:hover {

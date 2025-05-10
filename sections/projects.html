@@ -8,47 +8,40 @@
   <!-- 项目卡片区 -->
   <div class="ProjectGrid">
     <!-- UE 插件 -->
-    <div class="ProjectCard" data-cat="UE">
-      <a class="ProjectTitle" href="https://www.fab.com/zh-cn/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721" target="_blank">SimpleSSHTunnel</a>
-      <p class="ProjectIntro">SSH 隧道快速集成，Fab 上架</p>
-      <ul>
-        <li>libssh2 + OpenSSL，轻量封装</li>
-        <li>Blueprint 一键调用</li>
-        <li>适配 UE 5.2–5.5 · Windows</li>
-      </ul>
-    </div>
+    <a class="ProjectCard" data-cat="UE" href="https://www.fab.com/zh-cn/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721" target="_blank">
+      <div>
+        <h3 class="ProjectTitle">SimpleSSHTunnel</h3>
+        <p class="ProjectIntro">SSH 隧道快速集成，Fab 上架</p>
+        <ul>
+          <li>libssh2 + OpenSSL，轻量封装</li>
+          <li>Blueprint 一键调用</li>
+          <li>适配 UE 5.2–5.5 · Windows</li>
+        </ul>
+      </div>
+    </a>
 
-    <div class="ProjectCard" data-cat="UE">
-      <a class="ProjectTitle" href="https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002" target="_blank">SimpleByteConversion</a>
-      <p class="ProjectIntro">通用二进制 ↔ 结构体转换插件</p>
-      <ul>
-        <li>支持 int/float/bool/struct ↔ 字节数组</li>
-        <li>Blueprint 快速调用</li>
-        <li>适配 UE 5.2–5.5 · 全平台</li>
-      </ul>
-    </div>
+    <a class="ProjectCard" data-cat="UE" href="https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002" target="_blank">
+      <div>
+        <h3 class="ProjectTitle">SimpleByteConversion</h3>
+        <p class="ProjectIntro">通用二进制 ↔ 结构体转换插件</p>
+        <ul>
+          <li>支持 int/float/bool/struct ↔ 字节数组</li>
+          <li>Blueprint 快速调用</li>
+          <li>适配 UE 5.2–5.5 · 全平台</li>
+        </ul>
+      </div>
+    </a>
 
     <!-- Python 项目 -->
-    <div class="ProjectCard" data-cat="Python" style="display:none;">
-      <a class="ProjectTitle" href="https://github.com/MZSH-Tools/UEPluginAutoPacker" target="_blank">UEPluginAutoPacker</a>
-      <p class="ProjectIntro">UE 插件多版本一键打包脚本</p>
-      <ul>
-        <li>自动检测本地 UE 版本并批量打包</li>
-        <li>一键修改 .uplugin 版本字段</li>
-      </ul>
-    </div>
+    <a class="ProjectCard" data-cat="Python" href="https://github.com/MZSH-Tools/UEPluginAutoPacker" target="_blank" style="display:none;">
+      <div>
+        <h3 class="ProjectTitle">UEPluginAutoPacker</h3>
+        <p class="ProjectIntro">UE 插件多版本一键打包脚本</p>
+        <ul>
+          <li>自动检测本地 UE 版本并批量打包</li>
+          <li>一键修改 .uplugin 版本字段</li>
+        </ul>
+      </div>
+    </a>
   </div>
 </section>
-
-<script>
-  document.querySelectorAll('.ProjectTabs .Tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.ProjectTabs .Tab').forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const cat = tab.dataset.cat;
-      document.querySelectorAll('.ProjectCard').forEach(card => {
-        card.style.display = (card.dataset.cat === cat) ? 'block' : 'none';
-      });
-    });
-  });
-</script>
