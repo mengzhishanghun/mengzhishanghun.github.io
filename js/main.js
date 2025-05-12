@@ -20,7 +20,7 @@ async function loadPage(page) {
   if (active) active.classList.add("active");
 
   if (page === "about") calculateInfo();
-  if (page === "projects") setupProjectFilter();
+  if (page === "projects") loadProjectList();
   if (page === "blog") loadBlogList();
 }
 
@@ -52,21 +52,127 @@ function calculateInfo() {
   if (expEl) expEl.textContent = `${exp} 年`;
 }
 
-// 设置作品分类过滤
-function setupProjectFilter() {
-  const tabs = document.querySelectorAll('.ProjectTabs .Tab');
-  const cards = document.querySelectorAll('.ProjectCard');
-  if (!tabs.length || !cards.length) return;
+// ========== 项目功能 ==========
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      const cat = tab.dataset.cat;
-      cards.forEach(card => {
-        card.style.display = (card.dataset.cat === cat) ? 'block' : 'none';
+async function loadProjectList() {
+  const res = await fetch("https://raw.githubusercontent.com/mengzhishanghun/MyProjects/main/index.md");
+  const text = await res.text();
+  const lines = text.split("\n");
+
+  const filterEl = document.getElementById("ProjectFilter");
+  const gridEl = document.getElementById("ProjectGrid");
+  filterEl.innerHTML = "";
+  gridEl.innerHTML = "";
+
+  let currentCat = "未分类";
+  const cats = new Set();
+  const items = [];
+
+  const linkReg = /^\-\s+\[([^\]]+)\]\(([^)]+)\)/;
+
+  for (let line of lines) {
+    if (line.startsWith("## ")) {
+      currentCat = line.replace("## ", "").trim();
+      cats.add(currentCat);
+      continue;
+    }
+
+    const match = line.match(linkReg);
+    if (match) {
+      items.push({
+        name: match[1],
+        url: match[2],
+        cat: currentCat
       });
-    });
+    }
+  }
+
+  // 分类按钮
+  [...cats].forEach((cat, idx) => {
+    const span = document.createElement("span");
+    span.className = "Tab" + (idx === 0 ? " active" : "");
+    span.dataset.cat = cat;
+    span.textContent = cat;
+    span.onclick = () => {
+      document.querySelectorAll("#ProjectFilter .Tab").forEach(t => t.classList.remove("active"));
+      span.classList.add("active");
+      filterProjects(cat);
+    };
+    filterEl.appendChild(span);
+
+    if (idx < cats.size - 1) {
+      const sep = document.createElement("span");
+      sep.textContent = " | ";
+      filterEl.appendChild(sep);
+    }
+  });
+
+  // 加载所有项目详情
+  for (let item of items) {
+    try {
+      const res = await fetch(item.url);
+      const md = await res.text();
+      const lines = md.split("\n");
+
+      let intro = "";
+      let link = "";
+      let features = [];
+      let section = "";
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i].trim();
+
+        if (line.startsWith("## ")) {
+          section = line.replace("## ", "").trim();
+          continue;
+        }
+
+        if (section === "简介" && intro === "" && line && !line.startsWith("#")) {
+          intro = line;
+        }
+
+        if (section === "链接" && link === "" && line && !line.startsWith("#")) {
+          const mdLinkMatch = line.match(/\[.*?\]\((.*?)\)/);
+          link = mdLinkMatch ? mdLinkMatch[1] : line;
+        }
+
+        if (section === "特性" && line.startsWith("-")) {
+          features.push(line.replace(/^-/, "").trim());
+        }
+      }
+
+      // 构建卡片
+      const card = document.createElement(link ? "a" : "div");
+      card.className = "ProjectCard";
+      card.dataset.cat = item.cat;
+      if (link) {
+        card.href = link;
+        card.target = "_blank";
+      }
+
+      const html = `
+        <div>
+          <h3 class="ProjectTitle">${item.name}</h3>
+          <p class="ProjectIntro">${intro}</p>
+          <ul>${features.map(f => `<li>${f}</li>`).join("")}</ul>
+        </div>
+      `;
+
+      card.innerHTML = html;
+      gridEl.appendChild(card);
+
+    } catch (err) {
+      console.error(`❌ 无法加载项目：${item.name}`, err);
+    }
+  }
+
+  // 默认只显示第一个分类
+  filterProjects([...cats][0]);
+}
+
+function filterProjects(cat) {
+  document.querySelectorAll('.ProjectCard').forEach(card => {
+    card.style.display = (card.dataset.cat === cat) ? 'flex' : 'none';
   });
 }
 
@@ -106,7 +212,6 @@ async function loadBlogList() {
     }
   }
 
-  // 分类按钮横向分隔展示
   [...cats].forEach((cat, idx) => {
     const span = document.createElement("span");
     span.className = "Tab" + (idx === 0 ? " active" : "");
@@ -126,7 +231,6 @@ async function loadBlogList() {
     }
   });
 
-  // 渲染列表（保留所有，filter 控制显示）
   posts.forEach(post => {
     const li = document.createElement("li");
     li.dataset.cat = post.cat;
@@ -137,7 +241,7 @@ async function loadBlogList() {
     listEl.appendChild(li);
   });
 
-  filterPosts([...cats][0]); // 默认显示第一个分类
+  filterPosts([...cats][0]);
 }
 
 function filterPosts(cat) {
@@ -150,10 +254,8 @@ async function loadBlogPost(title, url) {
   const res = await fetch(url);
   let md = await res.text();
 
-  // ✅ 强制将多段 > 引用拆开（每个 > 段前加换行）
   md = md.replace(/^> /gm, '\n> ');
 
-  // 替换相对图片路径为 GitHub raw 路径
   const basePath = url.substring(0, url.lastIndexOf("/") + 1);
   md = md.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
     const fullUrl = src.startsWith("http") ? src : basePath + src;
@@ -177,4 +279,3 @@ const YearEl = document.getElementById("Year");
 if (YearEl) {
   YearEl.textContent = new Date().getFullYear();
 }
-

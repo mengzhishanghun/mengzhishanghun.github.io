@@ -1,53 +1,6 @@
 <section>
-  <!-- 分类切换 -->
-  <div class="ProjectTabs">
-    <span class="Tab active" data-cat="UE">UE 插件</span> |
-    <span class="Tab" data-cat="Python">Python 项目</span>
-  </div>
-
-  <!-- 项目卡片区：外层包裹用于居中 -->
+  <div class="ProjectTabs" id="ProjectFilter"></div>
   <div class="ProjectGridWrapper">
-    <div class="ProjectGrid">
-      <!-- UE 插件 -->
-      <a class="ProjectCard" data-cat="UE" href="https://www.fab.com/zh-cn/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721" target="_blank">
-        <div>
-          <h3 class="ProjectTitle">SimpleSSHTunnel</h3>
-          <p class="ProjectIntro">实现简单的SSH隧道功能，方便搭建加密访问通道。</p>
-          <ul>
-            <li>封装libssh2 + OpenSSL</li>
-            <li>纯C++编码，支持蓝图一键调用</li>
-            <li>适配 UE 5.2–5.5</li>
-            <li>仅支持win平台</li>
-          </ul>
-        </div>
-      </a>
-
-      <a class="ProjectCard" data-cat="UE" href="https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002" target="_blank">
-        <div>
-          <h3 class="ProjectTitle">SimpleByteConversion</h3>
-          <p class="ProjectIntro">实现常用的数据结构与字节数组转换，方便数据传输。</p>
-          <ul>
-            <li>支持int/int64/float/double/bool/struct ↔ 字节数组</li>
-            <li>纯C++编码，支持蓝图一键调用</li>
-            <li>适配 UE 5.2–5.5</li>
-            <li>支持全平台</li>
-          </ul>
-        </div>
-      </a>
-
-      <!-- Python 项目 -->
-      <a class="ProjectCard" data-cat="Python" href="https://github.com/MZSH-Tools/UEPluginAutoPacker" target="_blank" style="display:none;">
-        <div>
-          <h3 class="ProjectTitle">UEPluginAutoPacker</h3>
-          <p class="ProjectIntro">UE插件多版本一键打包</p>
-          <ul>
-            <li>自动检测本地 UE 版本并批量打包</li>
-            <li>自动分版本保存打包文件，失败有日志说明</li>
-            <li>自动修改多处Fab插件提交检查点（可选）</li>
-            <li>仅支持win打包</li>
-          </ul>
-        </div>
-      </a>
-    </div>
+    <div class="ProjectGrid" id="ProjectGrid"></div>
   </div>
 </section>
