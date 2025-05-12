@@ -32,12 +32,10 @@ function switchToContent(page) {
   loadPage(page);
 }
 
-// 点击导航加载页面
 NavItems.forEach(li => {
   li.addEventListener("click", () => switchToContent(li.dataset.page));
 });
 
-// 动态计算年龄和经验
 function calculateInfo() {
   const birthYear = 1997;
   const workStartYear = 2018;
@@ -52,10 +50,10 @@ function calculateInfo() {
   if (expEl) expEl.textContent = `${exp} 年`;
 }
 
-// ========== 项目功能 ==========
+// ========== 项目展示 ==========
 
 async function loadProjectList() {
-  const res = await fetch("https://raw.githubusercontent.com/mengzhishanghun/MyProjects/main/index.md");
+  const res = await fetch("https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Projects/index.md");
   const text = await res.text();
   const lines = text.split("\n");
 
@@ -68,7 +66,7 @@ async function loadProjectList() {
   const cats = new Set();
   const items = [];
 
-  const linkReg = /^\-\s+\[([^\]]+)\]\(([^)]+)\)/;
+  const linkReg = /^\-\s+(?:\d{4}-\d{2}-\d{2}\s+–\s+)?\[([^\]]+)\]\(([^)]+)\)/;
 
   for (let line of lines) {
     if (line.startsWith("## ")) {
@@ -87,7 +85,6 @@ async function loadProjectList() {
     }
   }
 
-  // 分类按钮
   [...cats].forEach((cat, idx) => {
     const span = document.createElement("span");
     span.className = "Tab" + (idx === 0 ? " active" : "");
@@ -99,7 +96,6 @@ async function loadProjectList() {
       filterProjects(cat);
     };
     filterEl.appendChild(span);
-
     if (idx < cats.size - 1) {
       const sep = document.createElement("span");
       sep.textContent = " | ";
@@ -107,7 +103,6 @@ async function loadProjectList() {
     }
   });
 
-  // 加载所有项目详情
   for (let item of items) {
     try {
       const res = await fetch(item.url);
@@ -121,7 +116,6 @@ async function loadProjectList() {
 
       for (let i = 0; i < lines.length; i++) {
         const line = lines[i].trim();
-
         if (line.startsWith("## ")) {
           section = line.replace("## ", "").trim();
           continue;
@@ -133,7 +127,7 @@ async function loadProjectList() {
 
         if (section === "链接" && link === "" && line && !line.startsWith("#")) {
           const mdLinkMatch = line.match(/\[.*?\]\((.*?)\)/);
-          link = mdLinkMatch ? mdLinkMatch[1] : line;
+          link = mdLinkMatch ? mdLinkMatch[1] : line.trim();
         }
 
         if (section === "特性" && line.startsWith("-")) {
@@ -141,7 +135,6 @@ async function loadProjectList() {
         }
       }
 
-      // 构建卡片
       const card = document.createElement(link ? "a" : "div");
       card.className = "ProjectCard";
       card.dataset.cat = item.cat;
@@ -150,23 +143,19 @@ async function loadProjectList() {
         card.target = "_blank";
       }
 
-      const html = `
+      card.innerHTML = `
         <div>
           <h3 class="ProjectTitle">${item.name}</h3>
           <p class="ProjectIntro">${intro}</p>
           <ul>${features.map(f => `<li>${f}</li>`).join("")}</ul>
         </div>
       `;
-
-      card.innerHTML = html;
       gridEl.appendChild(card);
-
     } catch (err) {
       console.error(`❌ 无法加载项目：${item.name}`, err);
     }
   }
 
-  // 默认只显示第一个分类
   filterProjects([...cats][0]);
 }
 
@@ -176,10 +165,10 @@ function filterProjects(cat) {
   });
 }
 
-// ========== 博客功能 ==========
+// ========== 博客展示 ==========
 
 async function loadBlogList() {
-  const res = await fetch("https://raw.githubusercontent.com/mengzhishanghun/MyBlog/main/index.md");
+  const res = await fetch("https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/index.md");
   const text = await res.text();
   const lines = text.split("\n");
 
@@ -192,7 +181,7 @@ async function loadBlogList() {
   const cats = new Set();
   const posts = [];
 
-  const postReg = /^-\s+(\d{4}-\d{2}-\d{2})\s+–\s+\[([^\]]+)]\(([^)]+)\)/;
+  const postReg = /^\-\s+(\d{4}-\d{2}-\d{2})\s+–\s+\[([^\]]+)]\(([^)]+)\)/;
 
   for (let line of lines) {
     if (line.startsWith("## ")) {
@@ -223,7 +212,6 @@ async function loadBlogList() {
       filterPosts(cat);
     };
     filterEl.appendChild(span);
-
     if (idx < cats.size - 1) {
       const sep = document.createElement("span");
       sep.textContent = " | ";
@@ -253,7 +241,6 @@ function filterPosts(cat) {
 async function loadBlogPost(title, url) {
   const res = await fetch(url);
   let md = await res.text();
-
   md = md.replace(/^> /gm, '\n> ');
 
   const basePath = url.substring(0, url.lastIndexOf("/") + 1);
@@ -263,7 +250,6 @@ async function loadBlogPost(title, url) {
   });
 
   const html = marked.parse(md);
-
   document.getElementById("BlogMainView").style.display = "none";
   document.getElementById("BlogDetailView").style.display = "block";
   document.getElementById("BlogContent").innerHTML = `<h2>${title}</h2>` + html;
@@ -274,7 +260,7 @@ function backToBlogList() {
   document.getElementById("BlogDetailView").style.display = "none";
 }
 
-// 自动设置当前年份（用于 footer）
+// 页脚年份自动更新
 const YearEl = document.getElementById("Year");
 if (YearEl) {
   YearEl.textContent = new Date().getFullYear();
