@@ -32,8 +32,44 @@ function switchToContent(page) {
   loadPage(page);
 }
 
+// ✅ 启动时根据 hash 加载对应页面
+window.addEventListener("DOMContentLoaded", () => {
+  handleHashRoute();
+});
+
+// ✅ 监听 hash 改变时切换页面
+window.addEventListener("hashchange", () => {
+  handleHashRoute();
+});
+
+function handleHashRoute () {
+  const rawHash = window.location.hash;   // "", "#", "#about"…
+
+  const hash = rawHash.replace("#", "");
+
+  if (!hash) {              // ③ 只有真正空 hash 才回主页
+    HeroArea.style.display   = "block";
+    ContentArea.style.display = "none";
+    NavBar.style.display     = "none";
+  } else {
+    HeroArea.style.display   = "none";
+    ContentArea.style.display = "block";
+    NavBar.style.display     = "block";
+    loadPage(hash);          // "#about" / "#projects" …
+  }
+}
+
 NavItems.forEach(li => {
-  li.addEventListener("click", () => switchToContent(li.dataset.page));
+  li.addEventListener("click", () => {
+    const targetHash = `#${li.dataset.page}`;
+    if (location.hash !== targetHash) {
+      // ✅ 更新 hash，浏览器随后触发 hashchange 事件
+      location.hash = targetHash;
+    } else {
+      // ✅ 如果 hash 没变，浏览器不会触发事件，我们手动处理
+      handleHashRoute();
+    }
+  });
 });
 
 function calculateInfo() {
