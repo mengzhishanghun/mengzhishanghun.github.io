@@ -276,19 +276,35 @@ function filterPosts(cat) {
 
 async function loadBlogPost(title, url) {
   const res = await fetch(url);
-  let md = await res.text();
-  md = md.replace(/^> /gm, '\n> ');
+  let mdText = await res.text();
 
+  // 替换相对路径为绝对路径（比如图片）
   const basePath = url.substring(0, url.lastIndexOf("/") + 1);
-  md = md.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
+  mdText = mdText.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
     const fullUrl = src.startsWith("http") ? src : basePath + src;
     return `![${alt}](${fullUrl})`;
   });
 
-  const html = marked.parse(md);
+  // ✅ 使用 markdown-it 渲染
+  const md = window.markdownit({
+    html: true,
+    linkify: true,
+    typographer: true
+  }).use(window.markdownitEmoji)
+      .use(window.markdownitTaskLists);
+
+  let html = md.render(mdText);
+
+  // ✅ 补救：将未渲染的 [xxx](mailto:xxx) 替换成 <a href="mailto:xxx">xxx</a>
+  html = html.replace(/\[([^\]]+)\]\(mailto:([^)]+)\)/g, '<a href="mailto:$2">$1</a>');
+
+  // ✅ 再次修复重复 mailto:mailto:
+  html = html.replace(/href="mailto:mailto:/g, 'href="mailto:');
+
+  // 插入渲染内容
   document.getElementById("BlogMainView").style.display = "none";
   document.getElementById("BlogDetailView").style.display = "block";
-  document.getElementById("BlogContent").innerHTML = `<h2>${title}</h2>` + html;
+  document.getElementById("BlogContent").innerHTML = `<h2>${title}</h2>\n` + html;
 }
 
 function backToBlogList() {

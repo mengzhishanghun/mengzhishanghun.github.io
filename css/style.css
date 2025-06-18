@@ -309,4 +309,40 @@ section {
   transform: scale(1.02);
 }
 
+#BlogContent h1, #BlogContent h2, #BlogContent h3 {
+  color: var(--highlight);
+  margin: 1.5rem 0 1rem;
+}
+#BlogContent ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+#BlogContent blockquote {
+  border-left: 4px solid #555;
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: #aaa;
+}
+#BlogContent pre {
+  background: #1e1e1e;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+}
+#BlogContent table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+#BlogContent th, #BlogContent td {
+  border: 1px solid #444;
+  padding: 0.5rem 1rem;
+}
+#BlogContent tr:nth-child(even) {
+  background-color: #222;
+}
+
+
 
