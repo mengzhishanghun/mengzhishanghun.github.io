@@ -296,3 +296,17 @@ section {
   color: #aaa;
 }
 
+#BlogContent p img {
+  display: block;
+  margin: 1.2rem auto;
+  max-width: 100%;
+  max-height: 480px;
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+#BlogContent p img:hover {
+  transform: scale(1.02);
+}
+
+

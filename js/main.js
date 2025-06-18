@@ -301,3 +301,37 @@ const YearEl = document.getElementById("Year");
 if (YearEl) {
   YearEl.textContent = new Date().getFullYear();
 }
+
+// ✅ 动态创建图片预览层
+const overlay = document.createElement("div");
+overlay.id = "ImagePreviewOverlay";
+overlay.style.cssText = `
+  display:none;
+  position:fixed;
+  top:0;left:0;right:0;bottom:0;
+  background:rgba(0,0,0,0.85);
+  z-index:2000;
+  justify-content:center;
+  align-items:center;
+`;
+const img = document.createElement("img");
+img.id = "ImagePreview";
+img.style.cssText = `
+  max-width:90vw;
+  max-height:90vh;
+  border-radius:8px;
+  box-shadow:0 0 20px rgba(0,0,0,0.6);
+`;
+overlay.appendChild(img);
+document.body.appendChild(overlay);
+
+// ✅ 点击图片放大预览，点击遮罩关闭
+document.addEventListener("click", (e) => {
+  const target = e.target;
+  if (target.tagName === "IMG" && target.closest("#BlogContent")) {
+    img.src = target.src;
+    overlay.style.display = "flex";
+  } else if (target === overlay) {
+    overlay.style.display = "none";
+  }
+});
