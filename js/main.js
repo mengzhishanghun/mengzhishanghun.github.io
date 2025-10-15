@@ -118,21 +118,65 @@ document.addEventListener('wheel', handleWheel, { passive: true });
 // ========== 监听触摸事件（移动端） ==========
 let touchStartY = 0;
 let touchEndY = 0;
+let touchStartTime = 0;
+let isTouching = false;
 
 document.addEventListener('touchstart', (e) => {
+  // 检查是否在可滚动元素内
+  const target = e.target;
+  const scrollableContent = target.closest('.section-content.scrollable');
+
   touchStartY = e.touches[0].clientY;
+  touchStartTime = Date.now();
+  isTouching = true;
+
+  // 如果不在可滚动元素内，阻止默认滚动
+  if (!scrollableContent) {
+    // 不阻止，让浏览器处理
+  }
+}, { passive: true });
+
+document.addEventListener('touchmove', (e) => {
+  if (!isTouching) return;
+
+  const target = e.target;
+  const scrollableContent = target.closest('.section-content.scrollable');
+
+  // 如果在可滚动内容内，允许滚动
+  if (scrollableContent) {
+    return;
+  }
 }, { passive: true });
 
 document.addEventListener('touchend', (e) => {
+  if (!isTouching) return;
+
   touchEndY = e.changedTouches[0].clientY;
-  handleSwipe();
+  const touchDuration = Date.now() - touchStartTime;
+  isTouching = false;
+
+  // 检查是否在可滚动元素内
+  const target = e.target;
+  const scrollableContent = target.closest('.section-content.scrollable');
+
+  // 如果在可滚动元素内，不触发页面切换
+  if (!scrollableContent) {
+    handleSwipe(touchDuration);
+  }
 }, { passive: true });
 
-function handleSwipe() {
+function handleSwipe(duration) {
   const swipeDistance = touchStartY - touchEndY;
   const minSwipeDistance = 50;
+  const maxSwipeDuration = 500; // 快速滑动的最大时长
 
   if (Math.abs(swipeDistance) < minSwipeDistance) return;
+
+  // 快速滑动或长距离滑动都可以触发
+  const isQuickSwipe = duration < maxSwipeDuration;
+  const isLongSwipe = Math.abs(swipeDistance) > 100;
+
+  if (!isQuickSwipe && !isLongSwipe) return;
 
   if (swipeDistance > 0) {
     // 向上滑动（下一页）
