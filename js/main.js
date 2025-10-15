@@ -1,77 +1,11 @@
-// ✅ 启用 GFM + 自动换行支持（marked 初始化）
-marked.setOptions({
-  gfm: true,
-  breaks: true
-});
+// ========== 全局变量 ==========
+const sections = document.querySelectorAll('.fullpage-section');
+const dots = document.querySelectorAll('.nav-dots .dot');
+const scrollHint = document.querySelector('.scroll-hint');
+let currentSectionIndex = 0;
+let isScrolling = false;
 
-const ContentArea = document.getElementById("ContentArea");
-const HeroArea = document.getElementById("HeroArea");
-const NavBar = document.getElementById("NavBar");
-const NavItems = document.querySelectorAll("nav li");
-
-// 加载页面内容
-async function loadPage(page) {
-  const res = await fetch(`sections/${page}.html`);
-  const html = await res.text();
-  ContentArea.innerHTML = html;
-
-  NavItems.forEach(li => li.classList.remove("active"));
-  const active = document.querySelector(`nav li[data-page="${page}"]`);
-  if (active) active.classList.add("active");
-
-  if (page === "about") calculateInfo();
-  if (page === "projects") loadProjectList();
-  if (page === "blog") loadBlogList();
-}
-
-// 切换到内容区域
-function switchToContent(page) {
-  HeroArea.style.display = "none";
-  ContentArea.style.display = "block";
-  NavBar.style.display = "block";
-  loadPage(page);
-}
-
-// ✅ 启动时根据 hash 加载对应页面
-window.addEventListener("DOMContentLoaded", () => {
-  handleHashRoute();
-});
-
-// ✅ 监听 hash 改变时切换页面
-window.addEventListener("hashchange", () => {
-  handleHashRoute();
-});
-
-function handleHashRoute () {
-  const rawHash = window.location.hash;   // "", "#", "#about"…
-
-  const hash = rawHash.replace("#", "");
-
-  if (!hash) {              // ③ 只有真正空 hash 才回主页
-    HeroArea.style.display   = "block";
-    ContentArea.style.display = "none";
-    NavBar.style.display     = "none";
-  } else {
-    HeroArea.style.display   = "none";
-    ContentArea.style.display = "block";
-    NavBar.style.display     = "block";
-    loadPage(hash);          // "#about" / "#projects" …
-  }
-}
-
-NavItems.forEach(li => {
-  li.addEventListener("click", () => {
-    const targetHash = `#${li.dataset.page}`;
-    if (location.hash !== targetHash) {
-      // ✅ 更新 hash，浏览器随后触发 hashchange 事件
-      location.hash = targetHash;
-    } else {
-      // ✅ 如果 hash 没变，浏览器不会触发事件，我们手动处理
-      handleHashRoute();
-    }
-  });
-});
-
+// ========== 计算年龄和工作经验 ==========
 function calculateInfo() {
   const birthYear = 1997;
   const workStartYear = 2018;
@@ -79,269 +13,337 @@ function calculateInfo() {
   const age = now.getFullYear() - birthYear;
   const exp = now.getFullYear() - workStartYear;
 
-  const ageEl = document.getElementById("Age");
-  const expEl = document.getElementById("Experience");
+  // 更新所有年龄和经验显示
+  const ageElements = document.querySelectorAll('#age, #age-info');
+  const expElements = document.querySelectorAll('#experience, #exp-info');
 
-  if (ageEl) ageEl.textContent = `${age} 岁`;
-  if (expEl) expEl.textContent = `${exp} 年`;
-}
-
-// ========== 项目展示 ==========
-
-async function loadProjectList() {
-  const res = await fetch("https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Projects/index.md");
-  const text = await res.text();
-  const lines = text.split("\n");
-
-  const filterEl = document.getElementById("ProjectFilter");
-  const gridEl = document.getElementById("ProjectGrid");
-  filterEl.innerHTML = "";
-  gridEl.innerHTML = "";
-
-  let currentCat = "未分类";
-  const cats = new Set();
-  const items = [];
-
-  const linkReg = /^\-\s+(?:\d{4}-\d{2}-\d{2}\s+–\s+)?\[([^\]]+)\]\(([^)]+)\)/;
-
-  for (let line of lines) {
-    if (line.startsWith("## ")) {
-      currentCat = line.replace("## ", "").trim();
-      cats.add(currentCat);
-      continue;
-    }
-
-    const match = line.match(linkReg);
-    if (match) {
-      items.push({
-        name: match[1],
-        url: match[2],
-        cat: currentCat
-      });
-    }
-  }
-
-  [...cats].forEach((cat, idx) => {
-    const span = document.createElement("span");
-    span.className = "Tab" + (idx === 0 ? " active" : "");
-    span.dataset.cat = cat;
-    span.textContent = cat;
-    span.onclick = () => {
-      document.querySelectorAll("#ProjectFilter .Tab").forEach(t => t.classList.remove("active"));
-      span.classList.add("active");
-      filterProjects(cat);
-    };
-    filterEl.appendChild(span);
-    if (idx < cats.size - 1) {
-      const sep = document.createElement("span");
-      sep.textContent = " | ";
-      filterEl.appendChild(sep);
-    }
+  ageElements.forEach(el => {
+    if (el) el.textContent = age;
   });
 
-  for (let item of items) {
-    try {
-      const res = await fetch(item.url);
-      const md = await res.text();
-      const lines = md.split("\n");
+  expElements.forEach(el => {
+    if (el) el.textContent = exp;
+  });
+}
 
-      let intro = "";
-      let link = "";
-      let features = [];
-      let section = "";
+// ========== 更新页脚年份 ==========
+function updateYear() {
+  const yearEl = document.getElementById('year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
+}
 
-      for (let i = 0; i < lines.length; i++) {
-        const line = lines[i].trim();
-        if (line.startsWith("## ")) {
-          section = line.replace("## ", "").trim();
-          continue;
-        }
+// ========== 更新导航点状态 ==========
+function updateNavDots(index) {
+  dots.forEach((dot, i) => {
+    if (i === index) {
+      dot.classList.add('active');
+    } else {
+      dot.classList.remove('active');
+    }
+  });
+}
 
-        if (section === "简介" && intro === "" && line && !line.startsWith("#")) {
-          intro = line;
-        }
+// ========== 更新当前section激活状态 ==========
+function updateActiveSection(index) {
+  sections.forEach((section, i) => {
+    if (i === index) {
+      section.classList.add('active');
+    } else {
+      section.classList.remove('active');
+    }
+  });
+}
 
-        if (section === "链接" && link === "" && line && !line.startsWith("#")) {
-          const mdLinkMatch = line.match(/\[.*?\]\((.*?)\)/);
-          link = mdLinkMatch ? mdLinkMatch[1] : line.trim();
-        }
+// ========== 滚动到指定section ==========
+function scrollToSection(index) {
+  if (index < 0 || index >= sections.length || isScrolling) return;
 
-        if (section === "特性" && line.startsWith("-")) {
-          features.push(line.replace(/^-/, "").trim());
-        }
+  isScrolling = true;
+  currentSectionIndex = index;
+
+  sections[index].scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+
+  updateNavDots(index);
+  updateActiveSection(index);
+
+  // 隐藏滚动提示
+  if (index > 0 && scrollHint) {
+    scrollHint.classList.add('hidden');
+  }
+
+  // 重置滚动状态
+  setTimeout(() => {
+    isScrolling = false;
+  }, 1000);
+}
+
+// ========== 监听导航点点击 ==========
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    scrollToSection(index);
+  });
+});
+
+// ========== 监听鼠标滚轮 ==========
+let lastScrollTime = 0;
+const scrollDelay = 1000; // 防抖延迟
+
+function handleWheel(e) {
+  const now = Date.now();
+  if (now - lastScrollTime < scrollDelay) return;
+
+  if (e.deltaY > 0) {
+    // 向下滚动
+    if (currentSectionIndex < sections.length - 1) {
+      lastScrollTime = now;
+      scrollToSection(currentSectionIndex + 1);
+    }
+  } else {
+    // 向上滚动
+    if (currentSectionIndex > 0) {
+      lastScrollTime = now;
+      scrollToSection(currentSectionIndex - 1);
+    }
+  }
+}
+
+// 使用被动监听器优化性能
+document.addEventListener('wheel', handleWheel, { passive: true });
+
+// ========== 监听触摸事件（移动端） ==========
+let touchStartY = 0;
+let touchEndY = 0;
+
+document.addEventListener('touchstart', (e) => {
+  touchStartY = e.touches[0].clientY;
+}, { passive: true });
+
+document.addEventListener('touchend', (e) => {
+  touchEndY = e.changedTouches[0].clientY;
+  handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+  const swipeDistance = touchStartY - touchEndY;
+  const minSwipeDistance = 50;
+
+  if (Math.abs(swipeDistance) < minSwipeDistance) return;
+
+  if (swipeDistance > 0) {
+    // 向上滑动（下一页）
+    if (currentSectionIndex < sections.length - 1) {
+      scrollToSection(currentSectionIndex + 1);
+    }
+  } else {
+    // 向下滑动（上一页）
+    if (currentSectionIndex > 0) {
+      scrollToSection(currentSectionIndex - 1);
+    }
+  }
+}
+
+// ========== 监听键盘事件 ==========
+document.addEventListener('keydown', (e) => {
+  switch(e.key) {
+    case 'ArrowDown':
+    case 'PageDown':
+    case ' ': // 空格键
+      e.preventDefault();
+      if (currentSectionIndex < sections.length - 1) {
+        scrollToSection(currentSectionIndex + 1);
       }
-
-      const card = document.createElement(link ? "a" : "div");
-      card.className = "ProjectCard";
-      card.dataset.cat = item.cat;
-      if (link) {
-        card.href = link;
-        card.target = "_blank";
+      break;
+    case 'ArrowUp':
+    case 'PageUp':
+      e.preventDefault();
+      if (currentSectionIndex > 0) {
+        scrollToSection(currentSectionIndex - 1);
       }
-
-      card.innerHTML = `
-        <div>
-          <h3 class="ProjectTitle">${item.name}</h3>
-          <p class="ProjectIntro">${intro}</p>
-          <ul>${features.map(f => `<li>${f}</li>`).join("")}</ul>
-        </div>
-      `;
-      gridEl.appendChild(card);
-    } catch (err) {
-      console.error(`❌ 无法加载项目：${item.name}`, err);
-    }
-  }
-
-  filterProjects([...cats][0]);
-}
-
-function filterProjects(cat) {
-  document.querySelectorAll('.ProjectCard').forEach(card => {
-    card.style.display = (card.dataset.cat === cat) ? 'flex' : 'none';
-  });
-}
-
-// ========== 博客展示 ==========
-
-async function loadBlogList() {
-  const res = await fetch("https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/main/Blog/index.md");
-  const text = await res.text();
-  const lines = text.split("\n");
-
-  const filterEl = document.getElementById("BlogFilter");
-  const listEl = document.getElementById("BlogList");
-  filterEl.innerHTML = "";
-  listEl.innerHTML = "";
-
-  let currentCat = "未分类";
-  const cats = new Set();
-  const posts = [];
-
-  const postReg = /^\-\s+(\d{4}-\d{2}-\d{2})\s+–\s+\[([^\]]+)]\(([^)]+)\)/;
-
-  for (let line of lines) {
-    if (line.startsWith("## ")) {
-      currentCat = line.replace("## ", "").trim();
-      cats.add(currentCat);
-      continue;
-    }
-
-    const match = line.match(postReg);
-    if (match) {
-      posts.push({
-        date: match[1],
-        title: match[2],
-        url: match[3],
-        cat: currentCat
-      });
-    }
-  }
-
-  [...cats].forEach((cat, idx) => {
-    const span = document.createElement("span");
-    span.className = "Tab" + (idx === 0 ? " active" : "");
-    span.dataset.cat = cat;
-    span.textContent = cat;
-    span.onclick = () => {
-      document.querySelectorAll("#BlogFilter .Tab").forEach(t => t.classList.remove("active"));
-      span.classList.add("active");
-      filterPosts(cat);
-    };
-    filterEl.appendChild(span);
-    if (idx < cats.size - 1) {
-      const sep = document.createElement("span");
-      sep.textContent = " | ";
-      filterEl.appendChild(sep);
-    }
-  });
-
-  posts.forEach(post => {
-    const li = document.createElement("li");
-    li.dataset.cat = post.cat;
-    li.innerHTML = `
-      <a href="javascript:void(0)" onclick="loadBlogPost('${post.title}', '${post.url}')">${post.title}</a>
-      <span class="PostDate">${post.date}</span>
-    `;
-    listEl.appendChild(li);
-  });
-
-  filterPosts([...cats][0]);
-}
-
-function filterPosts(cat) {
-  document.querySelectorAll('#BlogList li').forEach(li => {
-    li.style.display = (li.dataset.cat === cat) ? 'flex' : 'none';
-  });
-}
-
-async function loadBlogPost(title, url) {
-  const res = await fetch(url);
-  let mdText = await res.text();
-
-  // 替换相对路径为绝对路径（处理图片）
-  const basePath = url.substring(0, url.lastIndexOf("/") + 1);
-  mdText = mdText.replace(/!\[(.*?)\]\((.*?)\)/g, (match, alt, src) => {
-    const fullUrl = src.startsWith("http") ? src : basePath + src;
-    return `![${alt}](${fullUrl})`;
-  });
-
-  // 使用 markdown-it 渲染
-  const md = window.markdownit({
-    html: true,
-    linkify: true,
-    typographer: true
-  }).use(window.markdownitEmoji)
-      .use(window.markdownitTaskLists);
-
-  const html = md.render(mdText);
-
-  // 显示内容
-  document.getElementById("BlogMainView").style.display = "none";
-  document.getElementById("BlogDetailView").style.display = "block";
-  document.getElementById("BlogContent").innerHTML = `<h2>${title}</h2>\n` + html;
-}
-
-function backToBlogList() {
-  document.getElementById("BlogMainView").style.display = "block";
-  document.getElementById("BlogDetailView").style.display = "none";
-}
-
-// 页脚年份自动更新
-const YearEl = document.getElementById("Year");
-if (YearEl) {
-  YearEl.textContent = new Date().getFullYear();
-}
-
-// ✅ 动态创建图片预览层
-const overlay = document.createElement("div");
-overlay.id = "ImagePreviewOverlay";
-overlay.style.cssText = `
-  display:none;
-  position:fixed;
-  top:0;left:0;right:0;bottom:0;
-  background:rgba(0,0,0,0.85);
-  z-index:2000;
-  justify-content:center;
-  align-items:center;
-`;
-const img = document.createElement("img");
-img.id = "ImagePreview";
-img.style.cssText = `
-  max-width:90vw;
-  max-height:90vh;
-  border-radius:8px;
-  box-shadow:0 0 20px rgba(0,0,0,0.6);
-`;
-overlay.appendChild(img);
-document.body.appendChild(overlay);
-
-// ✅ 点击图片放大预览，点击遮罩关闭
-document.addEventListener("click", (e) => {
-  const target = e.target;
-  if (target.tagName === "IMG" && target.closest("#BlogContent")) {
-    img.src = target.src;
-    overlay.style.display = "flex";
-  } else if (target === overlay) {
-    overlay.style.display = "none";
+      break;
+    case 'Home':
+      e.preventDefault();
+      scrollToSection(0);
+      break;
+    case 'End':
+      e.preventDefault();
+      scrollToSection(sections.length - 1);
+      break;
   }
 });
+
+// ========== 使用Intersection Observer监听section可见性 ==========
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.5
+};
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const index = Array.from(sections).indexOf(entry.target);
+      currentSectionIndex = index;
+      updateNavDots(index);
+      updateActiveSection(index);
+
+      // 隐藏滚动提示
+      if (index > 0 && scrollHint) {
+        scrollHint.classList.add('hidden');
+      } else if (index === 0 && scrollHint) {
+        scrollHint.classList.remove('hidden');
+      }
+    }
+  });
+}, observerOptions);
+
+// 观察所有section
+sections.forEach(section => {
+  sectionObserver.observe(section);
+});
+
+// ========== 数字动画效果 ==========
+function animateNumber(element, target, duration = 2000) {
+  const start = 0;
+  const increment = target / (duration / 16); // 60fps
+  let current = start;
+
+  const timer = setInterval(() => {
+    current += increment;
+    if (current >= target) {
+      element.textContent = target;
+      clearInterval(timer);
+    } else {
+      element.textContent = Math.floor(current);
+    }
+  }, 16);
+}
+
+// 当第一屏激活时，触发数字动画
+const heroSection = document.querySelector('.section-hero');
+let hasAnimated = false;
+
+const heroObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting && !hasAnimated) {
+      hasAnimated = true;
+
+      const birthYear = 1997;
+      const workStartYear = 2018;
+      const now = new Date();
+      const age = now.getFullYear() - birthYear;
+      const exp = now.getFullYear() - workStartYear;
+
+      // 动画更新数字
+      setTimeout(() => {
+        const ageEl = document.querySelector('#age');
+        const expEl = document.querySelector('#experience');
+
+        if (ageEl) animateNumber(ageEl, age, 1500);
+        if (expEl) animateNumber(expEl, exp, 1500);
+      }, 800);
+    }
+  });
+}, { threshold: 0.5 });
+
+if (heroSection) {
+  heroObserver.observe(heroSection);
+}
+
+// ========== 页面加载完成后初始化 ==========
+window.addEventListener('DOMContentLoaded', () => {
+  // 计算年龄和经验
+  calculateInfo();
+
+  // 更新年份
+  updateYear();
+
+  // 初始化第一屏为激活状态
+  updateNavDots(0);
+  updateActiveSection(0);
+
+  // 确保滚动到顶部
+  window.scrollTo(0, 0);
+
+  // 添加加载完成类，触发动画
+  document.body.classList.add('loaded');
+});
+
+// ========== 防止页面刷新后自动滚动 ==========
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+// ========== 处理URL hash导航（可选） ==========
+function handleHashNavigation() {
+  const hash = window.location.hash;
+  if (!hash) return;
+
+  const sectionMap = {
+    '#hero': 0,
+    '#about': 1,
+    '#skills': 2,
+    '#experience': 3,
+    '#contact': 4
+  };
+
+  const targetIndex = sectionMap[hash];
+  if (targetIndex !== undefined) {
+    setTimeout(() => {
+      scrollToSection(targetIndex);
+    }, 100);
+  }
+}
+
+// 监听hash变化
+window.addEventListener('hashchange', handleHashNavigation);
+
+// 页面加载时检查hash
+window.addEventListener('load', () => {
+  handleHashNavigation();
+});
+
+// ========== 优化：工作经历页面内部滚动 ==========
+const experienceSection = document.querySelector('.section-experience .section-content.scrollable');
+if (experienceSection) {
+  // 阻止工作经历内部滚动时触发页面切换
+  experienceSection.addEventListener('wheel', (e) => {
+    const isAtTop = experienceSection.scrollTop === 0;
+    const isAtBottom = experienceSection.scrollTop + experienceSection.clientHeight >= experienceSection.scrollHeight - 1;
+
+    // 如果在顶部向上滚动，或在底部向下滚动，允许切换页面
+    if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
+      return; // 允许默认行为（切换页面）
+    }
+
+    // 否则阻止事件冒泡，只在内部滚动
+    e.stopPropagation();
+  }, { passive: true });
+}
+
+// ========== 性能优化：节流函数 ==========
+function throttle(func, delay) {
+  let lastCall = 0;
+  return function(...args) {
+    const now = Date.now();
+    if (now - lastCall >= delay) {
+      lastCall = now;
+      func.apply(this, args);
+    }
+  };
+}
+
+// ========== 调试信息（开发时可用） ==========
+if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+  console.log('🎉 全屏简历已加载');
+  console.log('📱 支持功能：');
+  console.log('  - 鼠标滚轮切换页面');
+  console.log('  - 触摸滑动切换页面（移动端）');
+  console.log('  - 键盘方向键/PageUp/PageDown/Home/End');
+  console.log('  - 侧边导航点点击');
+  console.log('  - URL Hash导航（#about, #skills等）');
+}

@@ -7,39 +7,283 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-<div class="PageWrapper">
-  <header id="NavBar" style="display: none;">
-    <nav>
-      <ul>
-        <li data-page="about">基础信息</li>
-        <li data-page="projects">作品展示</li>
-        <li data-page="experience">工作经历</li>
-        <li data-page="blog">个人博客</li>
-        <li data-page="contact">合作说明</li>
-      </ul>
-    </nav>
-  </header>
+  <!-- 导航指示器 -->
+  <nav class="nav-dots">
+    <span class="dot active" data-index="0"></span>
+    <span class="dot" data-index="1"></span>
+    <span class="dot" data-index="2"></span>
+    <span class="dot" data-index="3"></span>
+    <span class="dot" data-index="4"></span>
+  </nav>
 
-  <main>
-    <div id="HeroArea" class="hero">
-      <h1>👋 你好，我是张靖宇</h1>
-      <p class="intro">一位专注于 <strong>UE 插件开发</strong> 与 <strong>Python 自动化</strong> 的自由开发者</p>
-      <p class="intro">擅长插件架构、AI 交互、VR 模拟等前沿方向</p>
-      <a href="#about" class="btn">了解更多</a>
+  <!-- 滚动提示 -->
+  <div class="scroll-hint">
+    <span>向下滚动</span>
+    <div class="mouse">
+      <div class="wheel"></div>
     </div>
+  </div>
 
-    <div id="ContentArea" style="display: none;"></div>
-  </main>
-</div>
+  <!-- 全屏容器 -->
+  <div class="fullpage-container">
 
-<footer>© <span id="Year"></span> 张靖宇 | mengzhishanghun.github.io</footer>
+    <!-- 第1屏：欢迎页 -->
+    <section class="fullpage-section section-hero">
+      <div class="section-content">
+        <h1 class="animate-title">👋 你好，我是张靖宇</h1>
+        <p class="animate-subtitle">一位专注于 <strong>UE 插件开发</strong> 与 <strong>Python 自动化</strong> 的自由开发者</p>
+        <p class="animate-subtitle delay-1">擅长插件架构、AI 交互、VR 模拟等前沿方向</p>
+        <div class="animate-fade delay-2">
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number" id="age">27</div>
+              <div class="stat-label">岁</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" id="experience">7</div>
+              <div class="stat-label">年经验</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">10+</div>
+              <div class="stat-label">项目经验</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<!-- ✅ markdown-it 主库和插件 -->
-<script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/markdown-it-emoji/dist/markdown-it-emoji.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/markdown-it-task-lists/dist/markdown-it-task-lists.min.js"></script>
+    <!-- 第2屏：个人简介 -->
+    <section class="fullpage-section section-about">
+      <div class="section-content">
+        <h2 class="section-title">📌 个人简介</h2>
 
-<script src="js/main.js"></script>
+        <div class="info-grid">
+          <div class="info-card animate-slide-left">
+            <h3>基础信息</h3>
+            <ul class="info-list">
+              <li><span class="label">姓名：</span><span class="value">张靖宇</span></li>
+              <li><span class="label">性别：</span><span class="value">男</span></li>
+              <li><span class="label">年龄：</span><span class="value"><span id="age-info">27</span> 岁</span></li>
+              <li><span class="label">籍贯：</span><span class="value">山西运城</span></li>
+              <li><span class="label">工作经验：</span><span class="value"><span id="exp-info">7</span> 年</span></li>
+              <li><span class="label">毕业院校：</span><span class="value">重庆电子工程职业学院</span></li>
+              <li><span class="label">专业：</span><span class="value">嵌入式技术与应用</span></li>
+            </ul>
+          </div>
+
+          <div class="info-card animate-slide-right">
+            <h3>个人优势</h3>
+            <ul class="advantage-list">
+              <li>精通 C++ 编程，扎实的数学、数据结构和算法基础</li>
+              <li>深入理解 TCP/IP 协议，熟练开发 UE 网络插件</li>
+              <li>精通 Python，擅长自动化与工具开发</li>
+              <li>熟练 MySQL、Oracle 等数据库</li>
+              <li>熟悉 ChatGPT、前端 AI 技术</li>
+              <li>精通 Git / SVN / Perforce</li>
+              <li>熟悉 VR 全套设备（Vive、Oculus、Pico 等）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第3屏：技能专长 -->
+    <section class="fullpage-section section-skills">
+      <div class="section-content">
+        <h2 class="section-title">🚀 技能专长</h2>
+
+        <div class="skills-grid">
+          <div class="skill-card animate-fade delay-0">
+            <div class="skill-icon">🎮</div>
+            <h3>Unreal Engine</h3>
+            <ul>
+              <li>深入了解 UE4 / UE5 流程</li>
+              <li>精通 Gameplay 框架与 VR 项目架构</li>
+              <li>丰富插件开发与二次开发经验</li>
+              <li>熟悉蓝图脚本、网络同步、性能优化</li>
+            </ul>
+          </div>
+
+          <div class="skill-card animate-fade delay-1">
+            <div class="skill-icon">🐍</div>
+            <h3>Python 自动化</h3>
+            <ul>
+              <li>大量脚本开发经验</li>
+              <li>后端架构设计能力</li>
+              <li>自动化工具开发</li>
+              <li>AI 服务集成（ChatGLM、Whisper）</li>
+            </ul>
+          </div>
+
+          <div class="skill-card animate-fade delay-2">
+            <div class="skill-icon">🥽</div>
+            <h3>VR / 虚拟拍摄</h3>
+            <ul>
+              <li>熟悉 MetaHuman / MassAI</li>
+              <li>虚拟拍摄技术实践</li>
+              <li>SteamVR、HTC 设备集成</li>
+              <li>LiveLink 实时传输</li>
+            </ul>
+          </div>
+
+          <div class="skill-card animate-fade delay-3">
+            <div class="skill-icon">🔧</div>
+            <h3>开发工具</h3>
+            <ul>
+              <li>VS、Rider 开发调试</li>
+              <li>Git 版本控制专家</li>
+              <li>Windows / Android 打包</li>
+              <li>引擎源码修改经验</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第4屏：工作经历 -->
+    <section class="fullpage-section section-experience">
+      <div class="section-content scrollable">
+        <h2 class="section-title">💼 工作经历</h2>
+
+        <div class="timeline">
+          <!-- 工作1 -->
+          <div class="timeline-item animate-slide-up">
+            <div class="timeline-marker">2018-2021</div>
+            <div class="timeline-content">
+              <h3>北京悠米互动娱乐科技有限公司</h3>
+              <p class="job-title">Unreal 开发工程师</p>
+
+              <div class="project-detail">
+                <h4>《救赎之地》大逃杀MOBA手游</h4>
+                <p class="project-desc">客户端使用UE4，服务器使用自建C++游戏服务器</p>
+                <p class="project-role"><strong>主要职责：</strong></p>
+                <ul class="project-tasks">
+                  <li>英雄技能模块：技能释放、冷却、隐藏、锁定逻辑</li>
+                  <li>战斗伤害系统：伤害计算、死亡判定、减伤增伤机制</li>
+                  <li>掉落系统、交互系统、坐骑系统</li>
+                  <li>跳伞系统：实现单人 / 组队跳伞 + 同步跟随逻辑</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 工作2 -->
+          <div class="timeline-item animate-slide-up">
+            <div class="timeline-marker">2021-2023</div>
+            <div class="timeline-content">
+              <h3>北京弘宇飞拓科技有限公司 成都分公司</h3>
+              <p class="job-title">Unreal 开发工程师</p>
+
+              <div class="project-detail">
+                <h4>北京航空301所 - 导弹演示系统</h4>
+                <p class="project-role"><strong>主要职责：</strong>程序架构，整体流程搭建，VR演示</p>
+                <ul class="project-tasks">
+                  <li>构建交互式军事基地，展示导弹结构与发射流程</li>
+                  <li>使用 Timeline + Niagara 模拟发射路径与爆炸效果</li>
+                </ul>
+              </div>
+
+              <div class="project-detail">
+                <h4>北京陆军航空兵学院 - VR 训练系统</h4>
+                <p class="project-role"><strong>主要职责：</strong>程序架构，数据收集，现场开发</p>
+                <ul class="project-tasks">
+                  <li>为教学课目编写训练逻辑，实现学员端与教员端联动控制</li>
+                  <li>接入飞行模拟器数据、支持实时同步学员操作与心率监控</li>
+                </ul>
+              </div>
+
+              <div class="project-detail">
+                <h4>北京商飞 - 飞机模型演示系统</h4>
+                <p class="project-role"><strong>主要职责：</strong>程序架构，AI、语音等后台服务搭建</p>
+                <ul class="project-tasks">
+                  <li>使用 DataTable + InstancedStaticMesh 实现飞机自动生成</li>
+                  <li>支持交互式参数修改与装备选择</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- 工作3 -->
+          <div class="timeline-item animate-slide-up">
+            <div class="timeline-marker">2023-2025</div>
+            <div class="timeline-content">
+              <h3>北京尼诺时空文化科技有限公司</h3>
+              <p class="job-title">Unreal 开发工程师</p>
+
+              <div class="project-detail">
+                <h4>驾考模拟器自主学习系统</h4>
+                <p class="project-desc">科目二三模拟考试教学系统，模拟教练教学帮助用户通过实际考试</p>
+                <p class="project-role"><strong>主要职责：</strong>程序架构，技术支持，引擎版本升级</p>
+                <ul class="project-tasks">
+                  <li>使用芬兰团队 XVP 车辆物理模型，模拟真实操作反馈</li>
+                  <li>自研插件并接入 MassAI 和 MetaHuman，模拟真实路人环境</li>
+                  <li>改写引擎源码以实现三屏 Lumen 正常显示并修复曝光不一致问题</li>
+                  <li>成功接入 Common UI 模块，提升 UI 管理效率</li>
+                  <li>使用 LevelSequence 记录车辆运动轨迹并还原教学行为</li>
+                </ul>
+              </div>
+
+              <div class="project-detail">
+                <h4>AI 数字人交互演示</h4>
+                <p class="project-role"><strong>主要职责：</strong>程序架构，整体流程搭建</p>
+                <ul class="project-tasks">
+                  <li>基于 MetaHuman + ChatGLM 构建数字人演示系统</li>
+                  <li>本地部署完整 AI 流程（语音识别 → Chat → 语音合成）</li>
+                  <li>结合 Kinect + ControlRig 实现人体姿态捕捉</li>
+                </ul>
+              </div>
+
+              <div class="project-detail">
+                <h4>海洋船舶模拟系统</h4>
+                <p class="project-role"><strong>主要职责：</strong>程序架构，虚拟拍摄演示，现场开发</p>
+                <ul class="project-tasks">
+                  <li>二次开发海洋插件，支持根据风力动态调整海浪参数</li>
+                  <li>开发虚拟拍摄系统：结合 SteamVR、HTC、3D 打印控制器</li>
+                  <li>通过 LiveLink 将实时拍摄画面推送至平板供导演监控</li>
+                  <li>支持通过外接设备远程控制船舶的运动方向和转向</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第5屏：联系方式 -->
+    <section class="fullpage-section section-contact">
+      <div class="section-content">
+        <h2 class="section-title">📬 联系方式</h2>
+
+        <div class="contact-container">
+          <div class="contact-card animate-fade">
+            <div class="contact-icon">💼</div>
+            <h3>服务与合作</h3>
+            <p>可承接 UE 插件开发、蓝图转 C++、Python 自动化脚本与后端架构设计</p>
+          </div>
+
+          <div class="contact-card animate-fade delay-1">
+            <div class="contact-icon">📝</div>
+            <h3>项目定制</h3>
+            <p>支持功能或周期定制，源码交付，可签 NDA 并提供持续维护</p>
+          </div>
+
+          <div class="contact-card animate-fade delay-2">
+            <div class="contact-icon">✉️</div>
+            <h3>联系邮箱</h3>
+            <a href="mailto:mengzhishanghun@outlook.com" class="email-link">mengzhishanghun@outlook.com</a>
+          </div>
+        </div>
+
+        <div class="contact-footer animate-fade delay-3">
+          <p>🤝 <strong>欢迎项目合作，期待与您共创价值！</strong></p>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>© <span id="year"></span> 张靖宇 | mengzhishanghun.github.io</footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
