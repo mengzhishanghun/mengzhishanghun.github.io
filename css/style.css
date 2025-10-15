@@ -202,47 +202,54 @@ body {
   overscroll-behavior-y: contain;
 }
 
-/* 移动端全屏section适配 - 保持布局不变，整体等比例缩放 */
+/* 移动端全屏section适配 - 真实尺寸缩小，不使用transform */
 @media (max-width: 768px) {
   .fullpage-section {
-    padding: 1rem;
+    padding: 0.5rem;
     min-height: 100vh;
-    align-items: flex-start;
-    justify-content: flex-start;
-    overflow: hidden;
   }
 
   .section-content {
-    padding: 0.8rem;
+    padding: 0.5rem;
     width: 100%;
-    transform: scale(0.75);
-    transform-origin: top center;
-    margin-top: 0;
+    max-width: 100%;
   }
 
   .section-content.scrollable {
-    max-height: calc(100vh - 2rem);
+    max-height: 95vh;
     overflow-y: auto;
-    transform: scale(0.7);
-    transform-origin: top center;
+    padding-right: 0.5rem;
+  }
+
+  /* 缩小标题 */
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title::after {
+    width: 40px;
+    height: 3px;
   }
 }
 
 @media (max-width: 480px) {
   .fullpage-section {
-    padding: 0.5rem;
+    padding: 0.3rem;
   }
 
   .section-content {
-    padding: 0.5rem;
-    transform: scale(0.65);
-    transform-origin: top center;
+    padding: 0.3rem;
   }
 
   .section-content.scrollable {
-    max-height: calc(100vh - 1rem);
-    transform: scale(0.6);
-    transform-origin: top center;
+    max-height: 96vh;
+    padding-right: 0.3rem;
+  }
+
+  .section-title {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
 }
 
@@ -409,15 +416,80 @@ body {
   font-weight: 500;
 }
 
+/* 移动端适配 - 首页 */
 @media (max-width: 768px) {
+  .motto {
+    margin-bottom: 2rem;
+  }
+
+  .motto-text {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .motto-text::before,
+  .motto-text::after {
+    width: 30px;
+  }
+
+  .section-hero h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-hero p {
+    font-size: 0.95rem;
+    margin-bottom: 0.8rem;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
     max-width: 300px;
+    margin-top: 2rem;
   }
 
   .stat-item {
-    padding: 1.5rem 1rem;
+    padding: 1.2rem 0.8rem;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .motto-text {
+    font-size: 0.8rem;
+  }
+
+  .motto-text::before,
+  .motto-text::after {
+    width: 20px;
+  }
+
+  .section-hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .section-hero p {
+    font-size: 0.85rem;
+  }
+
+  .stat-item {
+    padding: 1rem 0.6rem;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
   }
 }
 
@@ -627,6 +699,161 @@ body {
   transform: translateY(-2px);
 }
 
+/* 移动端适配 - 关于我页面（缩小字体，保持布局）*/
+@media (max-width: 768px) {
+  .about-card {
+    padding: 0.8rem;
+  }
+
+  .about-header {
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .avatar-placeholder {
+    width: 50px;
+    height: 50px;
+  }
+
+  .avatar-icon {
+    font-size: 1.8rem;
+  }
+
+  .about-name {
+    font-size: 1rem;
+  }
+
+  .nickname {
+    font-size: 0.75rem;
+  }
+
+  .about-title {
+    font-size: 0.75rem;
+  }
+
+  .about-motto {
+    font-size: 0.7rem;
+  }
+
+  .about-section h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .about-section p {
+    font-size: 0.7rem;
+    line-height: 1.5;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
+    padding: 0.8rem 0;
+  }
+
+  .stat-box {
+    padding: 0.6rem 0.4rem;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  .highlight-list li {
+    font-size: 0.7rem;
+    padding-left: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .about-footer {
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .info-tag {
+    font-size: 0.65rem;
+    padding: 0.3rem 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 0.6rem;
+  }
+
+  .about-header {
+    gap: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .avatar-placeholder {
+    width: 40px;
+    height: 40px;
+  }
+
+  .avatar-icon {
+    font-size: 1.5rem;
+  }
+
+  .about-name {
+    font-size: 0.9rem;
+  }
+
+  .nickname {
+    font-size: 0.65rem;
+  }
+
+  .about-title {
+    font-size: 0.65rem;
+  }
+
+  .about-motto {
+    font-size: 0.6rem;
+  }
+
+  .about-section h4 {
+    font-size: 0.75rem;
+  }
+
+  .about-section p {
+    font-size: 0.6rem;
+  }
+
+  .about-stats {
+    gap: 0.3rem;
+    padding: 0.6rem 0;
+  }
+
+  .stat-box {
+    padding: 0.5rem 0.3rem;
+  }
+
+  .stat-value {
+    font-size: 1rem;
+  }
+
+  .stat-label {
+    font-size: 0.55rem;
+  }
+
+  .highlight-list li {
+    font-size: 0.6rem;
+    padding-left: 0.8rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .info-tag {
+    font-size: 0.55rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
 /* 移动端保持布局，通过全局缩放适配 */
 
 /* ========== 第3屏：技能专长 ========== */
@@ -764,7 +991,116 @@ body {
   transform: translateY(-2px);
 }
 
-/* 移动端通过全局缩放适配，保持布局不变 */
+/* 移动端适配 - 技能页面（保持两列布局）*/
+@media (max-width: 768px) {
+  .skills-subtitle {
+    font-size: 0.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .skills-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .skill-item {
+    padding: 0.5rem;
+    gap: 0.5rem;
+  }
+
+  .skill-icon-large {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .skill-core .skill-icon-large {
+    width: 35px;
+    height: 35px;
+    font-size: 1.5rem;
+  }
+
+  .skill-content h3 {
+    font-size: 0.75rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .skill-core .skill-content h3 {
+    font-size: 0.85rem;
+  }
+
+  .skill-desc {
+    font-size: 0.6rem;
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+  }
+
+  .skill-tags {
+    gap: 0.2rem;
+  }
+
+  .skill-tags span {
+    font-size: 0.55rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .skills-footer {
+    margin-top: 1rem;
+    padding: 0.8rem;
+  }
+
+  .learning-statement {
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-subtitle {
+    font-size: 0.7rem;
+  }
+
+  .skills-list {
+    gap: 0.4rem;
+  }
+
+  .skill-item {
+    padding: 0.4rem;
+    gap: 0.4rem;
+  }
+
+  .skill-icon-large {
+    width: 25px;
+    height: 25px;
+    font-size: 1rem;
+  }
+
+  .skill-core .skill-icon-large {
+    width: 30px;
+    height: 30px;
+    font-size: 1.2rem;
+  }
+
+  .skill-content h3 {
+    font-size: 0.7rem;
+  }
+
+  .skill-core .skill-content h3 {
+    font-size: 0.75rem;
+  }
+
+  .skill-desc {
+    font-size: 0.55rem;
+  }
+
+  .skill-tags span {
+    font-size: 0.5rem;
+    padding: 0.15rem 0.3rem;
+  }
+
+  .learning-statement {
+    font-size: 0.7rem;
+  }
+}
 
 .skills-grid {
   display: grid;
@@ -1179,7 +1515,85 @@ body {
   font-size: 1.2rem;
 }
 
+/* 移动端适配 - 工作经历页面 */
 @media (max-width: 768px) {
+  .work-period {
+    font-size: 0.9rem;
+    padding: 0.4rem 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .company-card {
+    padding: 1rem;
+  }
+
+  .company-name {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .job-title {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .project-highlight {
+    padding: 1rem;
+    margin-top: 0.8rem;
+  }
+
+  .project-highlight h4 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .project-desc {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .task-list li {
+    font-size: 0.8rem;
+    padding-left: 1.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+  }
+
+  .project-list-compact {
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .project-item {
+    padding: 1rem;
+  }
+
+  .project-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .project-time {
+    font-size: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .project-desc-compact {
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .task-list-compact li {
+    font-size: 0.75rem;
+    padding-left: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
   .timeline {
     padding-left: 1.5rem;
   }
@@ -1193,6 +1607,53 @@ body {
   .timeline-content {
     margin-left: 0.5rem;
     padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .work-period {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .company-card {
+    padding: 0.8rem;
+  }
+
+  .company-name {
+    font-size: 1rem;
+  }
+
+  .job-title {
+    font-size: 0.75rem;
+  }
+
+  .project-highlight {
+    padding: 0.8rem;
+  }
+
+  .project-highlight h4 {
+    font-size: 0.9rem;
+  }
+
+  .project-desc {
+    font-size: 0.75rem;
+  }
+
+  .task-list li {
+    font-size: 0.75rem;
+  }
+
+  .project-item {
+    padding: 0.8rem;
+  }
+
+  .project-item h4 {
+    font-size: 0.85rem;
+  }
+
+  .task-list-compact li {
+    font-size: 0.7rem;
   }
 }
 
@@ -1322,7 +1783,7 @@ body {
 }
 
 /* 平板端 */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) and (min-width: 769px) {
   .platform-links {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
@@ -1334,24 +1795,104 @@ body {
   }
 }
 
-/* 移动端 */
+/* 移动端适配 - 产品展示页面（参考联系页面布局）*/
 @media (max-width: 768px) {
+  .products-intro {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
   .platform-links {
-    grid-template-columns: 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
   }
 
   .platform-card {
-    min-height: 240px;
-    padding: 2.5rem 2rem;
+    min-height: auto !important;
+    padding: 1.2rem !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 
   .platform-icon {
-    font-size: 3rem;
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .platform-icon svg {
+    height: 32px;
+    width: 32px;
   }
 
   .platform-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .platform-card p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  .platform-link-text {
+    font-size: 0.85rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  .products-footer {
+    font-size: 0.85rem;
+    padding: 1rem;
+  }
+
+  .products-footer strong {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .products-intro {
+    font-size: 0.8rem;
+  }
+
+  .platform-card {
+    padding: 1rem !important;
+  }
+
+  .platform-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .platform-icon svg {
+    height: 28px;
+    width: 28px;
+  }
+
+  .platform-card h3 {
+    font-size: 1rem;
+  }
+
+  .platform-card p {
+    font-size: 0.8rem;
+  }
+
+  .platform-link-text {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .products-footer {
+    font-size: 0.8rem;
+    padding: 0.8rem;
+  }
+
+  .products-footer strong {
+    font-size: 0.85rem;
   }
 }
 
@@ -1442,10 +1983,67 @@ body {
   border-radius: 16px;
 }
 
+/* 移动端适配 - 联系方式页面 */
 @media (max-width: 768px) {
   .contact-container {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-card {
+    padding: 1.2rem;
+  }
+
+  .contact-icon {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .contact-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .email-link {
+    font-size: 0.95rem;
+  }
+
+  .contact-footer {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-card {
+    padding: 1rem;
+  }
+
+  .contact-icon {
+    font-size: 1.8rem;
+  }
+
+  .contact-card h3 {
+    font-size: 1rem;
+  }
+
+  .contact-card p {
+    font-size: 0.8rem;
+  }
+
+  .email-link {
+    font-size: 0.85rem;
+  }
+
+  .contact-footer {
+    font-size: 0.9rem;
+    padding: 1rem;
   }
 }
 
