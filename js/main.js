@@ -288,7 +288,11 @@ function handleHashNavigation() {
     '#about': 1,
     '#skills': 2,
     '#experience': 3,
-    '#contact': 4
+    '#experience-1': 3,
+    '#experience-2': 4,
+    '#experience-3': 5,
+    '#products': 6,
+    '#contact': 7
   };
 
   const targetIndex = sectionMap[hash];
@@ -307,23 +311,7 @@ window.addEventListener('load', () => {
   handleHashNavigation();
 });
 
-// ========== 优化：工作经历页面内部滚动 ==========
-const experienceSection = document.querySelector('.section-experience .section-content.scrollable');
-if (experienceSection) {
-  // 阻止工作经历内部滚动时触发页面切换
-  experienceSection.addEventListener('wheel', (e) => {
-    const isAtTop = experienceSection.scrollTop === 0;
-    const isAtBottom = experienceSection.scrollTop + experienceSection.clientHeight >= experienceSection.scrollHeight - 1;
-
-    // 如果在顶部向上滚动，或在底部向下滚动，允许切换页面
-    if ((isAtTop && e.deltaY < 0) || (isAtBottom && e.deltaY > 0)) {
-      return; // 允许默认行为（切换页面）
-    }
-
-    // 否则阻止事件冒泡，只在内部滚动
-    e.stopPropagation();
-  }, { passive: true });
-}
+// ========== 移除了工作经历内部滚动逻辑（已拆分为独立页面）==========
 
 // ========== 性能优化：节流函数 ==========
 function throttle(func, delay) {

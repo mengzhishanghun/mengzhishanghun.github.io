@@ -14,6 +14,9 @@
     <span class="dot" data-index="2"></span>
     <span class="dot" data-index="3"></span>
     <span class="dot" data-index="4"></span>
+    <span class="dot" data-index="5"></span>
+    <span class="dot" data-index="6"></span>
+    <span class="dot" data-index="7"></span>
   </nav>
 
   <!-- 滚动提示 -->
@@ -140,116 +143,178 @@
       </div>
     </section>
 
-    <!-- 第4屏：工作经历 -->
-    <section class="fullpage-section section-experience">
-      <div class="section-content scrollable">
-        <h2 class="section-title">💼 工作经历</h2>
+    <!-- 第4屏：工作经历 1 (2018-2021) -->
+    <section class="fullpage-section section-experience-1">
+      <div class="section-content">
+        <h2 class="section-title">💼 工作经历 (1/3)</h2>
 
-        <div class="timeline">
-          <!-- 工作1 -->
-          <div class="timeline-item animate-slide-up">
-            <div class="timeline-marker">2018-2021</div>
-            <div class="timeline-content">
-              <h3>北京悠米互动娱乐科技有限公司</h3>
-              <p class="job-title">Unreal 开发工程师</p>
+        <div class="work-period">2018.08 - 2021.02</div>
 
-              <div class="project-detail">
-                <h4>《救赎之地》大逃杀MOBA手游</h4>
-                <p class="project-desc">客户端使用UE4，服务器使用自建C++游戏服务器</p>
-                <p class="project-role"><strong>主要职责：</strong></p>
-                <ul class="project-tasks">
-                  <li>英雄技能模块：技能释放、冷却、隐藏、锁定逻辑</li>
-                  <li>战斗伤害系统：伤害计算、死亡判定、减伤增伤机制</li>
-                  <li>掉落系统、交互系统、坐骑系统</li>
-                  <li>跳伞系统：实现单人 / 组队跳伞 + 同步跟随逻辑</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="company-card">
+          <h3 class="company-name">北京悠米互动娱乐科技有限公司</h3>
+          <p class="job-title">Unreal 开发工程师</p>
 
-          <!-- 工作2 -->
-          <div class="timeline-item animate-slide-up">
-            <div class="timeline-marker">2021-2023</div>
-            <div class="timeline-content">
-              <h3>北京弘宇飞拓科技有限公司 成都分公司</h3>
-              <p class="job-title">Unreal 开发工程师</p>
+          <div class="project-highlight">
+            <h4>《救赎之地》大逃杀MOBA手游</h4>
+            <p class="project-desc">客户端使用UE4，服务器使用自建C++游戏服务器</p>
 
-              <div class="project-detail">
-                <h4>北京航空301所 - 导弹演示系统</h4>
-                <p class="project-role"><strong>主要职责：</strong>程序架构，整体流程搭建，VR演示</p>
-                <ul class="project-tasks">
-                  <li>构建交互式军事基地，展示导弹结构与发射流程</li>
-                  <li>使用 Timeline + Niagara 模拟发射路径与爆炸效果</li>
-                </ul>
-              </div>
-
-              <div class="project-detail">
-                <h4>北京陆军航空兵学院 - VR 训练系统</h4>
-                <p class="project-role"><strong>主要职责：</strong>程序架构，数据收集，现场开发</p>
-                <ul class="project-tasks">
-                  <li>为教学课目编写训练逻辑，实现学员端与教员端联动控制</li>
-                  <li>接入飞行模拟器数据、支持实时同步学员操作与心率监控</li>
-                </ul>
-              </div>
-
-              <div class="project-detail">
-                <h4>北京商飞 - 飞机模型演示系统</h4>
-                <p class="project-role"><strong>主要职责：</strong>程序架构，AI、语音等后台服务搭建</p>
-                <ul class="project-tasks">
-                  <li>使用 DataTable + InstancedStaticMesh 实现飞机自动生成</li>
-                  <li>支持交互式参数修改与装备选择</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-
-          <!-- 工作3 -->
-          <div class="timeline-item animate-slide-up">
-            <div class="timeline-marker">2023-2025</div>
-            <div class="timeline-content">
-              <h3>北京尼诺时空文化科技有限公司</h3>
-              <p class="job-title">Unreal 开发工程师</p>
-
-              <div class="project-detail">
-                <h4>驾考模拟器自主学习系统</h4>
-                <p class="project-desc">科目二三模拟考试教学系统，模拟教练教学帮助用户通过实际考试</p>
-                <p class="project-role"><strong>主要职责：</strong>程序架构，技术支持，引擎版本升级</p>
-                <ul class="project-tasks">
-                  <li>使用芬兰团队 XVP 车辆物理模型，模拟真实操作反馈</li>
-                  <li>自研插件并接入 MassAI 和 MetaHuman，模拟真实路人环境</li>
-                  <li>改写引擎源码以实现三屏 Lumen 正常显示并修复曝光不一致问题</li>
-                  <li>成功接入 Common UI 模块，提升 UI 管理效率</li>
-                  <li>使用 LevelSequence 记录车辆运动轨迹并还原教学行为</li>
-                </ul>
-              </div>
-
-              <div class="project-detail">
-                <h4>AI 数字人交互演示</h4>
-                <p class="project-role"><strong>主要职责：</strong>程序架构，整体流程搭建</p>
-                <ul class="project-tasks">
-                  <li>基于 MetaHuman + ChatGLM 构建数字人演示系统</li>
-                  <li>本地部署完整 AI 流程（语音识别 → Chat → 语音合成）</li>
-                  <li>结合 Kinect + ControlRig 实现人体姿态捕捉</li>
-                </ul>
-              </div>
-
-              <div class="project-detail">
-                <h4>海洋船舶模拟系统</h4>
-                <p class="project-role"><strong>主要职责：</strong>程序架构，虚拟拍摄演示，现场开发</p>
-                <ul class="project-tasks">
-                  <li>二次开发海洋插件，支持根据风力动态调整海浪参数</li>
-                  <li>开发虚拟拍摄系统：结合 SteamVR、HTC、3D 打印控制器</li>
-                  <li>通过 LiveLink 将实时拍摄画面推送至平板供导演监控</li>
-                  <li>支持通过外接设备远程控制船舶的运动方向和转向</li>
-                </ul>
-              </div>
+            <div class="responsibilities">
+              <p class="section-subtitle">主要职责</p>
+              <ul class="task-list">
+                <li>英雄技能模块：技能释放、冷却、隐藏、锁定逻辑</li>
+                <li>战斗伤害系统：伤害计算、死亡判定、减伤增伤机制</li>
+                <li>掉落系统：场景内掉落与拾取逻辑</li>
+                <li>交互系统：场景物品交互，如开门、开关、激活器等</li>
+                <li>坐骑系统：坐骑控制与角色同步机制</li>
+                <li>跳伞系统：实现单人 / 组队跳伞 + 同步跟随逻辑</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 第5屏：联系方式 -->
+    <!-- 第5屏：工作经历 2 (2021-2023) -->
+    <section class="fullpage-section section-experience-2">
+      <div class="section-content">
+        <h2 class="section-title">💼 工作经历 (2/3)</h2>
+
+        <div class="work-period">2021.07 - 2023.01</div>
+
+        <div class="company-card">
+          <h3 class="company-name">北京弘宇飞拓科技有限公司 成都分公司</h3>
+          <p class="job-title">Unreal 开发工程师</p>
+
+          <div class="project-list-compact">
+            <div class="project-item">
+              <h4>北京航空301所 - 导弹演示系统</h4>
+              <p class="project-time">2021.07 - 2021.08</p>
+              <ul class="task-list-compact">
+                <li>构建交互式军事基地，展示导弹结构与发射流程</li>
+                <li>使用 Timeline + Niagara 模拟发射路径与爆炸效果</li>
+              </ul>
+            </div>
+
+            <div class="project-item">
+              <h4>沈阳航空601所 - 无人机航母演示</h4>
+              <p class="project-time">2024.05 - 2024.08</p>
+              <ul class="task-list-compact">
+                <li>使用 LevelSequence 录制无人机起降、补给、维修完整流程</li>
+                <li>制作高质量航母 VR 展示视频</li>
+              </ul>
+            </div>
+
+            <div class="project-item">
+              <h4>北京陆军航空兵学院 - VR 训练系统</h4>
+              <p class="project-time">2021.09 - 2022.09</p>
+              <ul class="task-list-compact">
+                <li>为教学课目编写训练逻辑，实现学员端与教员端联动控制</li>
+                <li>接入飞行模拟器数据、支持实时同步学员操作与心率监控</li>
+              </ul>
+            </div>
+
+            <div class="project-item">
+              <h4>北京商飞 - 飞机模型演示系统</h4>
+              <p class="project-time">2022.08 - 2023.01</p>
+              <ul class="task-list-compact">
+                <li>使用 DataTable + InstancedStaticMesh 实现飞机自动生成</li>
+                <li>支持交互式参数修改与装备选择</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第6屏：工作经历 3 (2023-2025) -->
+    <section class="fullpage-section section-experience-3">
+      <div class="section-content">
+        <h2 class="section-title">💼 工作经历 (3/3)</h2>
+
+        <div class="work-period">2023.02 - 2025.01</div>
+
+        <div class="company-card">
+          <h3 class="company-name">北京尼诺时空文化科技有限公司</h3>
+          <p class="job-title">Unreal 开发工程师</p>
+
+          <div class="project-list-compact">
+            <div class="project-item">
+              <h4>驾考模拟器自主学习系统</h4>
+              <p class="project-time">2023.02 - 2025.01</p>
+              <p class="project-desc-compact">科目二三模拟考试教学系统，模拟教练教学帮助用户通过实际考试</p>
+              <ul class="task-list-compact">
+                <li>使用芬兰团队 XVP 车辆物理模型，模拟真实操作反馈</li>
+                <li>自研插件并接入 MassAI 和 MetaHuman，模拟真实路人环境</li>
+                <li>改写引擎源码以实现三屏 Lumen 正常显示并修复曝光不一致问题</li>
+                <li>成功接入 Common UI 模块，提升 UI 管理效率</li>
+              </ul>
+            </div>
+
+            <div class="project-item">
+              <h4>AI 数字人交互演示</h4>
+              <p class="project-time">2023.03 - 2023.05</p>
+              <ul class="task-list-compact">
+                <li>基于 MetaHuman + ChatGLM 构建数字人演示系统</li>
+                <li>本地部署完整 AI 流程（语音识别 → Chat → 语音合成）</li>
+                <li>结合 Kinect + ControlRig 实现人体姿态捕捉</li>
+              </ul>
+            </div>
+
+            <div class="project-item">
+              <h4>海洋船舶模拟系统</h4>
+              <p class="project-time">2024.05 - 2024.08</p>
+              <ul class="task-list-compact">
+                <li>二次开发海洋插件，支持根据风力动态调整海浪参数</li>
+                <li>开发虚拟拍摄系统：结合 SteamVR、HTC、3D 打印控制器</li>
+                <li>通过 LiveLink 将实时拍摄画面推送至平板供导演监控</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第7屏：产品展示 -->
+    <section class="fullpage-section section-products">
+      <div class="section-content">
+        <h2 class="section-title">🎯 产品展示</h2>
+
+        <p class="products-intro">现阶段专注于 Unreal Engine 插件和开源项目开发，已发布多款开源项目和商业插件</p>
+
+        <div class="platform-links">
+          <a href="https://github.com/mengzhishanghun" target="_blank" class="platform-card github-card">
+            <div class="platform-icon">
+              <svg height="64" viewBox="0 0 16 16" width="64" fill="currentColor">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+              </svg>
+            </div>
+            <h3>GitHub</h3>
+            <p>开源项目与代码库</p>
+            <span class="platform-link-text">mengzhishanghun</span>
+          </a>
+
+          <a href="https://www.fab.com/search?q=mengzhishanghun" target="_blank" class="platform-card fab-card">
+            <div class="platform-icon">🛍️</div>
+            <h3>Fab Marketplace</h3>
+            <p>商业插件发布平台</p>
+            <span class="platform-link-text">查看我的产品</span>
+          </a>
+
+          <a href="https://www.cnblogs.com/mengzhishanghun" target="_blank" class="platform-card blog-card">
+            <div class="platform-icon">📝</div>
+            <h3>技术博客</h3>
+            <p>技术文章与开发笔记</p>
+            <span class="platform-link-text">访问博客园</span>
+          </a>
+        </div>
+
+        <div class="products-footer">
+          <p>💡 <strong>持续更新中，更多优质插件和工具敬请期待</strong></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 第8屏：联系方式 -->
     <section class="fullpage-section section-contact">
       <div class="section-content">
         <h2 class="section-title">📬 联系方式</h2>
