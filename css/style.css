@@ -194,37 +194,40 @@ body {
   padding-right: 1rem;
 }
 
-/* 移动端全屏section适配 */
+/* 移动端全屏section适配 - 保持布局不变，整体缩放 */
 @media (max-width: 768px) {
   .fullpage-section {
-    padding: 1rem;
+    padding: 1.5rem 1rem;
     min-height: 100vh;
-    align-items: flex-start;
-    padding-top: 3rem;
+    align-items: center;
   }
 
   .section-content {
     padding: 1rem;
     width: 100%;
+    transform: scale(0.95);
+    transform-origin: center;
   }
 
   .section-content.scrollable {
-    max-height: 85vh;
+    max-height: none;
+    overflow-y: visible;
+    transform: scale(0.9);
   }
 }
 
 @media (max-width: 480px) {
   .fullpage-section {
-    padding: 0.5rem;
-    padding-top: 2.5rem;
+    padding: 1rem 0.5rem;
   }
 
   .section-content {
-    padding: 0.8rem;
+    padding: 0.5rem;
+    transform: scale(0.85);
   }
 
   .section-content.scrollable {
-    max-height: 80vh;
+    transform: scale(0.8);
   }
 }
 
@@ -609,184 +612,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* 响应式设计 */
-@media (max-width: 768px) {
-  .about-card {
-    padding: 1.8rem 1.2rem;
-    max-width: 100%;
-  }
-
-  .about-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.2rem;
-    padding-bottom: 1.5rem;
-  }
-
-  .avatar-placeholder {
-    width: 80px;
-    height: 80px;
-  }
-
-  .avatar-icon {
-    font-size: 3rem;
-  }
-
-  .about-name {
-    font-size: 1.4rem;
-  }
-
-  .nickname {
-    display: block;
-    margin-top: 0.3rem;
-    font-size: 1rem;
-  }
-
-  .about-title {
-    font-size: 1rem;
-  }
-
-  .about-motto {
-    font-size: 0.9rem;
-  }
-
-  .about-content {
-    gap: 1.5rem;
-  }
-
-  .about-section h4 {
-    font-size: 1.1rem;
-  }
-
-  .about-section p {
-    font-size: 0.9rem;
-    line-height: 1.7;
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.8rem;
-  }
-
-  .stat-box {
-    padding: 1rem 0.5rem;
-  }
-
-  .stat-value {
-    font-size: 1.8rem;
-  }
-
-  .stat-label {
-    font-size: 0.8rem;
-  }
-
-  .highlight-list li {
-    font-size: 0.9rem;
-    padding-left: 1.2rem;
-    margin-bottom: 0.7rem;
-  }
-
-  .about-footer {
-    gap: 0.8rem;
-    justify-content: center;
-  }
-
-  .info-tag {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about-card {
-    padding: 1.5rem 1rem;
-    border-radius: 16px;
-  }
-
-  .about-header {
-    padding-bottom: 1.2rem;
-    gap: 1rem;
-  }
-
-  .avatar-placeholder {
-    width: 70px;
-    height: 70px;
-  }
-
-  .avatar-icon {
-    font-size: 2.5rem;
-  }
-
-  .about-name {
-    font-size: 1.2rem;
-  }
-
-  .nickname {
-    font-size: 0.9rem;
-  }
-
-  .about-title {
-    font-size: 0.9rem;
-  }
-
-  .about-motto {
-    font-size: 0.85rem;
-    line-height: 1.5;
-  }
-
-  .about-content {
-    gap: 1.2rem;
-  }
-
-  .about-section h4 {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .about-section p {
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-
-  .about-stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.6rem;
-    padding: 1rem 0;
-  }
-
-  .stat-box {
-    padding: 0.8rem 0.3rem;
-  }
-
-  .stat-value {
-    font-size: 1.5rem;
-  }
-
-  .stat-label {
-    font-size: 0.7rem;
-  }
-
-  .highlight-list li {
-    font-size: 0.85rem;
-    padding-left: 1rem;
-    margin-bottom: 0.6rem;
-    line-height: 1.6;
-  }
-
-  .highlight-list li::before {
-    font-size: 1rem;
-  }
-
-  .about-footer {
-    padding-top: 1rem;
-    gap: 0.6rem;
-  }
-
-  .info-tag {
-    font-size: 0.75rem;
-    padding: 0.35rem 0.7rem;
-  }
-}
+/* 移动端保持布局，通过全局缩放适配 */
 
 /* ========== 第3屏：技能专长 ========== */
 .section-skills {
@@ -923,130 +749,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* 响应式设计 - 保持两列布局，只调整大小 */
-@media (max-width: 1024px) {
-  .skills-list {
-    gap: 1rem;
-  }
-
-  .skill-item {
-    padding: 1.2rem;
-    gap: 1rem;
-  }
-
-  .skill-icon-large {
-    width: 65px;
-    height: 65px;
-    font-size: 2.8rem;
-  }
-
-  .skill-core .skill-icon-large {
-    width: 75px;
-    height: 75px;
-    font-size: 3.2rem;
-  }
-
-  .skill-content h3 {
-    font-size: 1.2rem;
-  }
-
-  .skill-desc {
-    font-size: 0.85rem;
-  }
-
-  .skill-tags span {
-    font-size: 0.75rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .skills-list {
-    gap: 0.8rem;
-  }
-
-  .skill-item {
-    padding: 1rem;
-    gap: 0.8rem;
-  }
-
-  .skill-icon-large {
-    width: 55px;
-    height: 55px;
-    font-size: 2.3rem;
-  }
-
-  .skill-core .skill-icon-large {
-    width: 65px;
-    height: 65px;
-    font-size: 2.8rem;
-  }
-
-  .skill-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .skill-core .skill-content h3 {
-    font-size: 1.3rem;
-  }
-
-  .skill-desc {
-    font-size: 0.8rem;
-  }
-
-  .skill-tags {
-    gap: 0.3rem;
-  }
-
-  .skill-tags span {
-    font-size: 0.7rem;
-    padding: 0.25rem 0.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-list {
-    gap: 0.6rem;
-  }
-
-  .skill-item {
-    padding: 0.8rem;
-    gap: 0.6rem;
-  }
-
-  .skill-icon-large {
-    width: 45px;
-    height: 45px;
-    font-size: 1.8rem;
-  }
-
-  .skill-core .skill-icon-large {
-    width: 55px;
-    height: 55px;
-    font-size: 2.3rem;
-  }
-
-  .skill-content h3 {
-    font-size: 0.95rem;
-  }
-
-  .skill-core .skill-content h3 {
-    font-size: 1.1rem;
-  }
-
-  .skill-desc {
-    font-size: 0.7rem;
-    line-height: 1.4;
-  }
-
-  .skill-tags {
-    gap: 0.25rem;
-  }
-
-  .skill-tags span {
-    font-size: 0.65rem;
-    padding: 0.2rem 0.4rem;
-  }
-}
+/* 移动端通过全局缩放适配，保持布局不变 */
 
 .skills-grid {
   display: grid;
