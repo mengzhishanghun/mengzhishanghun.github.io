@@ -395,66 +395,151 @@ body {
   border-radius: 2px;
 }
 
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+/* 单卡片布局 */
+.about-card {
+  max-width: 900px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 50px rgba(0, 188, 212, 0.2);
+  border-color: var(--highlight);
+}
+
+/* 头部区域 */
+.about-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.avatar-placeholder {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, rgba(0, 188, 212, 0.2) 0%, rgba(0, 188, 212, 0.05) 100%);
+  border: 3px solid var(--highlight);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 0 30px rgba(0, 188, 212, 0.4);
+}
+
+.avatar-icon {
+  font-size: 3.5rem;
+}
+
+.about-intro {
+  flex: 1;
+}
+
+.about-name {
+  font-size: 1.8rem;
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.nickname {
+  font-size: 1.2rem;
+  color: #999;
+  font-weight: 400;
+}
+
+.about-title {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 0.8rem;
+}
+
+.about-motto {
+  font-size: 1rem;
+  color: var(--highlight);
+  font-style: italic;
+  opacity: 0.9;
+}
+
+/* 内容区域 */
+.about-content {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
 }
 
-.info-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-}
-
-.info-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.15);
-}
-
-.info-card h3 {
-  font-size: 1.5rem;
+.about-section h4 {
+  font-size: 1.2rem;
   color: var(--highlight);
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 600;
 }
 
-.info-list {
-  list-style: none;
-  padding: 0;
-}
-
-.info-list li {
-  display: flex;
-  margin-bottom: 1rem;
+.about-section p {
+  color: #ccc;
   line-height: 1.8;
+  font-size: 1rem;
 }
 
-.info-list .label {
-  min-width: 6em;
+/* 统计数据 */
+.about-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 1.5rem 0;
+}
+
+.stat-box {
+  text-align: center;
+  background: rgba(0, 188, 212, 0.05);
+  border: 1px solid rgba(0, 188, 212, 0.2);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+  background: rgba(0, 188, 212, 0.1);
+  border-color: var(--highlight);
+  transform: translateY(-3px);
+}
+
+.stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--highlight);
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.9rem;
   color: #999;
-  font-weight: 500;
 }
 
-.info-list .value {
-  color: #e6e6e6;
-}
-
-.advantage-list {
+/* 亮点列表 */
+.highlight-list {
   list-style: none;
   padding: 0;
 }
 
-.advantage-list li {
+.highlight-list li {
   position: relative;
   padding-left: 1.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.8;
+  margin-bottom: 0.8rem;
+  color: #ccc;
+  line-height: 1.7;
 }
 
-.advantage-list li::before {
+.highlight-list li::before {
   content: '▹';
   position: absolute;
   left: 0;
@@ -463,22 +548,108 @@ body {
   font-size: 1.2rem;
 }
 
-.advantage-list .learning-note {
-  margin-top: 1.5rem;
-  padding-top: 1rem;
-  border-top: 1px dashed var(--border-color);
+/* 底部标签 */
+.about-footer {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.info-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: rgba(0, 188, 212, 0.1);
+  border: 1px solid rgba(0, 188, 212, 0.3);
+  border-radius: 20px;
   color: var(--highlight);
-  font-style: italic;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
 }
 
-.advantage-list .learning-note::before {
-  content: '';
+.info-tag:hover {
+  background: rgba(0, 188, 212, 0.2);
+  border-color: var(--highlight);
+  transform: translateY(-2px);
 }
 
+/* 响应式设计 */
 @media (max-width: 768px) {
-  .info-grid {
-    grid-template-columns: 1fr;
+  .about-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .about-header {
+    flex-direction: column;
+    text-align: center;
     gap: 1.5rem;
+  }
+
+  .avatar-placeholder {
+    width: 80px;
+    height: 80px;
+  }
+
+  .avatar-icon {
+    font-size: 3rem;
+  }
+
+  .about-name {
+    font-size: 1.5rem;
+  }
+
+  .about-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-value {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .avatar-placeholder {
+    width: 70px;
+    height: 70px;
+  }
+
+  .avatar-icon {
+    font-size: 2.5rem;
+  }
+
+  .about-name {
+    font-size: 1.3rem;
+  }
+
+  .nickname {
+    font-size: 1rem;
+  }
+
+  .about-title {
+    font-size: 1rem;
+  }
+
+  .about-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+  }
+
+  .stat-value {
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
   }
 }
 
