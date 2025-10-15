@@ -232,20 +232,15 @@ const heroObserver = new IntersectionObserver((entries) => {
     if (entry.isIntersecting && !hasAnimated) {
       hasAnimated = true;
 
-      const birthYear = 1997;
       const workStartYear = 2018;
       const now = new Date();
-      const age = now.getFullYear() - birthYear;
       const exp = now.getFullYear() - workStartYear;
 
       // 动画更新数字
       setTimeout(() => {
-        const ageEl = document.querySelector('#age');
         const expEl = document.querySelector('#experience');
-
-        if (ageEl) animateNumber(ageEl, age, 1500);
         if (expEl) animateNumber(expEl, exp, 1500);
-      }, 800);
+      }, 1800); // 延迟到统计卡片出现后
     }
   });
 }, { threshold: 0.5 });
