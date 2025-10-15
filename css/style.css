@@ -194,6 +194,40 @@ body {
   padding-right: 1rem;
 }
 
+/* 移动端全屏section适配 */
+@media (max-width: 768px) {
+  .fullpage-section {
+    padding: 1rem;
+    min-height: 100vh;
+    align-items: flex-start;
+    padding-top: 3rem;
+  }
+
+  .section-content {
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .section-content.scrollable {
+    max-height: 85vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .fullpage-section {
+    padding: 0.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .section-content {
+    padding: 0.8rem;
+  }
+
+  .section-content.scrollable {
+    max-height: 80vh;
+  }
+}
+
 .section-content.scrollable::-webkit-scrollbar {
   width: 6px;
 }
@@ -578,13 +612,15 @@ body {
 /* 响应式设计 */
 @media (max-width: 768px) {
   .about-card {
-    padding: 2rem 1.5rem;
+    padding: 1.8rem 1.2rem;
+    max-width: 100%;
   }
 
   .about-header {
     flex-direction: column;
     text-align: center;
-    gap: 1.5rem;
+    gap: 1.2rem;
+    padding-bottom: 1.5rem;
   }
 
   .avatar-placeholder {
@@ -597,22 +633,79 @@ body {
   }
 
   .about-name {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .nickname {
+    display: block;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+  }
+
+  .about-title {
+    font-size: 1rem;
+  }
+
+  .about-motto {
+    font-size: 0.9rem;
+  }
+
+  .about-content {
+    gap: 1.5rem;
+  }
+
+  .about-section h4 {
+    font-size: 1.1rem;
+  }
+
+  .about-section p {
+    font-size: 0.9rem;
+    line-height: 1.7;
   }
 
   .about-stats {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+  }
+
+  .stat-box {
+    padding: 1rem 0.5rem;
   }
 
   .stat-value {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  .highlight-list li {
+    font-size: 0.9rem;
+    padding-left: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .about-footer {
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .info-tag {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .about-card {
     padding: 1.5rem 1rem;
+    border-radius: 16px;
+  }
+
+  .about-header {
+    padding-bottom: 1.2rem;
+    gap: 1rem;
   }
 
   .avatar-placeholder {
@@ -625,31 +718,73 @@ body {
   }
 
   .about-name {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
   .nickname {
-    font-size: 1rem;
-  }
-
-  .about-title {
-    font-size: 1rem;
-  }
-
-  .about-section h4 {
-    font-size: 1.1rem;
-  }
-
-  .about-section p {
     font-size: 0.9rem;
   }
 
+  .about-title {
+    font-size: 0.9rem;
+  }
+
+  .about-motto {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .about-content {
+    gap: 1.2rem;
+  }
+
+  .about-section h4 {
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .about-section p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+
+  .about-stats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.6rem;
+    padding: 1rem 0;
+  }
+
+  .stat-box {
+    padding: 0.8rem 0.3rem;
+  }
+
   .stat-value {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
   }
 
   .stat-label {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+  }
+
+  .highlight-list li {
+    font-size: 0.85rem;
+    padding-left: 1rem;
+    margin-bottom: 0.6rem;
+    line-height: 1.6;
+  }
+
+  .highlight-list li::before {
+    font-size: 1rem;
+  }
+
+  .about-footer {
+    padding-top: 1rem;
+    gap: 0.6rem;
+  }
+
+  .info-tag {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.7rem;
   }
 }
 
