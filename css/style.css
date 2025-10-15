@@ -904,14 +904,11 @@ body {
 
 /* 核心技能特殊样式 */
 .skill-item.skill-core {
-  border: 3px solid var(--highlight);
-  background: linear-gradient(135deg, rgba(0, 188, 212, 0.15) 0%, rgba(0, 188, 212, 0.05) 100%);
-  box-shadow: 0 0 20px rgba(0, 188, 212, 0.3);
   padding: 1.5rem;
 }
 
 .skill-item.skill-core:hover {
-  box-shadow: 0 0 40px rgba(0, 188, 212, 0.5);
+  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.25);
 }
 
 /* 图标区域 */
