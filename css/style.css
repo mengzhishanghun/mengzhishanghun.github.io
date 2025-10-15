@@ -1901,6 +1901,14 @@ body {
   background: radial-gradient(ellipse at center, #1a1a2e 0%, var(--bg-color) 70%);
 }
 
+.contact-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
 .contact-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1973,6 +1981,14 @@ body {
   transform: scale(1.05);
 }
 
+.contact-hint {
+  font-size: 0.85rem;
+  color: #999;
+  font-style: italic;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
 .contact-footer {
   text-align: center;
   font-size: 1.2rem;
@@ -1985,6 +2001,12 @@ body {
 
 /* 移动端适配 - 联系方式页面 */
 @media (max-width: 768px) {
+  .contact-intro {
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
   .contact-container {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -2014,6 +2036,11 @@ body {
     font-size: 0.95rem;
   }
 
+  .contact-hint {
+    font-size: 0.75rem;
+    margin-top: 0.6rem;
+  }
+
   .contact-footer {
     font-size: 1rem;
     padding: 1.2rem;
@@ -2021,6 +2048,10 @@ body {
 }
 
 @media (max-width: 480px) {
+  .contact-intro {
+    font-size: 0.8rem;
+  }
+
   .contact-card {
     padding: 1rem;
   }
@@ -2039,6 +2070,11 @@ body {
 
   .email-link {
     font-size: 0.85rem;
+  }
+
+  .contact-hint {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;
   }
 
   .contact-footer {
