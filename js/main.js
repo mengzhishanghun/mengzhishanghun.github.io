@@ -13,8 +13,8 @@ function calculateInfo() {
   const exp = now.getFullYear() - workStartYear;
 
   // 更新所有年龄和经验显示
-  const ageElements = document.querySelectorAll('#age, #age-info');
-  const expElements = document.querySelectorAll('#experience, #exp-info, #exp-years');
+  const ageElements = document.querySelectorAll('#age-info');
+  const expElements = document.querySelectorAll('#exp-years');
 
   ageElements.forEach(el => {
     if (el) el.textContent = age;
@@ -45,7 +45,7 @@ function updateNavDots(index) {
 }
 
 // ========== 更新当前section激活状态（左右切换效果）==========
-function updateActiveSection(index, direction = 'next') {
+function updateActiveSection(index) {
   sections.forEach((section, i) => {
     section.classList.remove('active', 'prev');
 
@@ -63,11 +63,10 @@ function scrollToSection(index) {
   if (index < 0 || index >= sections.length || isScrolling) return;
 
   isScrolling = true;
-  const oldIndex = currentSectionIndex;
   currentSectionIndex = index;
 
   updateNavDots(index);
-  updateActiveSection(index, index > oldIndex ? 'next' : 'prev');
+  updateActiveSection(index);
   updateNavButtons();
 
   // 重置滚动状态（等待动画完成）
@@ -139,52 +138,6 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ========== 移除了 Intersection Observer（不再需要监听滚动）==========
-// 页面切换现在完全由按钮和导航点控制
-
-// ========== 数字动画效果 ==========
-function animateNumber(element, target, duration = 2000) {
-  const start = 0;
-  const increment = target / (duration / 16); // 60fps
-  let current = start;
-
-  const timer = setInterval(() => {
-    current += increment;
-    if (current >= target) {
-      element.textContent = target;
-      clearInterval(timer);
-    } else {
-      element.textContent = Math.floor(current);
-    }
-  }, 16);
-}
-
-// 当第一屏激活时，触发数字动画
-const heroSection = document.querySelector('.section-hero');
-let hasAnimated = false;
-
-const heroObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting && !hasAnimated) {
-      hasAnimated = true;
-
-      const workStartYear = 2018;
-      const now = new Date();
-      const exp = now.getFullYear() - workStartYear;
-
-      // 动画更新数字
-      setTimeout(() => {
-        const expEl = document.querySelector('#experience');
-        if (expEl) animateNumber(expEl, exp, 1500);
-      }, 1800); // 延迟到统计卡片出现后
-    }
-  });
-}, { threshold: 0.5 });
-
-if (heroSection) {
-  heroObserver.observe(heroSection);
-}
-
 // ========== 页面加载完成后初始化 ==========
 window.addEventListener('DOMContentLoaded', () => {
   // 计算年龄和经验
@@ -198,57 +151,11 @@ window.addEventListener('DOMContentLoaded', () => {
   updateActiveSection(0);
   updateNavButtons();
 
-  // 添加加载完成类，触发动画
-  document.body.classList.add('loaded');
 });
 
 // ========== 防止页面刷新后自动滚动 ==========
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
-}
-
-// ========== 处理URL hash导航（可选） ==========
-function handleHashNavigation() {
-  const hash = window.location.hash;
-  if (!hash) return;
-
-  const sectionMap = {
-    '#hero': 0,
-    '#about': 1,
-    '#skills': 1,
-    '#experience': 2,
-    '#products': 3,
-    '#contact': 3
-  };
-
-  const targetIndex = sectionMap[hash];
-  if (targetIndex !== undefined) {
-    setTimeout(() => {
-      scrollToSection(targetIndex);
-    }, 100);
-  }
-}
-
-// 监听hash变化
-window.addEventListener('hashchange', handleHashNavigation);
-
-// 页面加载时检查hash
-window.addEventListener('load', () => {
-  handleHashNavigation();
-});
-
-// ========== 移除了工作经历内部滚动逻辑（已拆分为独立页面）==========
-
-// ========== 性能优化：节流函数 ==========
-function throttle(func, delay) {
-  let lastCall = 0;
-  return function(...args) {
-    const now = Date.now();
-    if (now - lastCall >= delay) {
-      lastCall = now;
-      func.apply(this, args);
-    }
-  };
 }
 
 // ========== 调试信息（开发时可用） ==========
@@ -259,5 +166,4 @@ if (window.location.hostname === 'localhost' || window.location.hostname === '12
   console.log('  - 底部导航点点击跳转');
   console.log('  - 鼠标滚轮/触摸滑动仅用于页面内浏览');
   console.log('  - 键盘 Home/End 快速跳转');
-  console.log('  - URL Hash导航（#about, #skills等）');
 }

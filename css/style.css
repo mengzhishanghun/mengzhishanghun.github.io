@@ -260,10 +260,6 @@ body {
   display: none; /* Chrome/Safari/Opera */
 }
 
-.section-content.scrollable {
-  /* 所有内容区域现在都可滚动，此类保留用于特殊样式 */
-}
-
 /* 移动端全屏section适配 - 真实尺寸缩小，不使用transform */
 @media (max-width: 768px) {
   .fullpage-section {
@@ -277,10 +273,6 @@ body {
     width: 100%;
     max-width: 100%;
     max-height: 95vh;
-  }
-
-  .section-content.scrollable {
-    padding-right: 0.5rem;
   }
 
   /* 缩小标题 */
@@ -304,10 +296,6 @@ body {
     padding: 0.3rem;
     padding-bottom: 5rem; /* 小屏幕留出空间 */
     max-height: 96vh;
-  }
-
-  .section-content.scrollable {
-    padding-right: 0.3rem;
   }
 
   .section-title {
@@ -398,156 +386,6 @@ body {
   line-height: 1.8;
 }
 
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.stat-item {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 2rem 1rem;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.stat-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--highlight), transparent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-.stat-item:hover::before {
-  transform: scaleX(1);
-}
-
-.stat-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.2);
-  border-color: var(--highlight);
-}
-
-.stat-icon {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  filter: grayscale(0.3);
-  transition: all 0.3s ease;
-}
-
-.stat-item:hover .stat-icon {
-  filter: grayscale(0);
-  transform: scale(1.2);
-}
-
-.stat-number {
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 700;
-  color: var(--highlight);
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: #999;
-  font-weight: 500;
-}
-
-/* 移动端适配 - 首页 */
-@media (max-width: 768px) {
-  .motto {
-    margin-bottom: 2rem;
-  }
-
-  .motto-text {
-    font-size: 0.9rem;
-    padding: 0 0.5rem;
-  }
-
-  .motto-text::before,
-  .motto-text::after {
-    width: 30px;
-  }
-
-  .section-hero h1 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .section-hero p {
-    font-size: 0.95rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    max-width: 300px;
-    margin-top: 2rem;
-  }
-
-  .stat-item {
-    padding: 1.2rem 0.8rem;
-  }
-
-  .stat-icon {
-    font-size: 1.5rem;
-  }
-
-  .stat-number {
-    font-size: 2rem;
-  }
-
-  .stat-label {
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .motto-text {
-    font-size: 0.8rem;
-  }
-
-  .motto-text::before,
-  .motto-text::after {
-    width: 20px;
-  }
-
-  .section-hero h1 {
-    font-size: 1.5rem;
-  }
-
-  .section-hero p {
-    font-size: 0.85rem;
-  }
-
-  .stat-item {
-    padding: 1rem 0.6rem;
-  }
-
-  .stat-number {
-    font-size: 1.8rem;
-  }
-}
-
-/* ========== 第2屏：个人简介 ========== */
-.section-about {
-  background: linear-gradient(180deg, var(--bg-color) 0%, #0d0d1a 100%);
-}
-
 .section-title {
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   font-weight: 700;
@@ -570,30 +408,6 @@ body {
 }
 
 /* 合并页面内的二级标题 */
-.skills-section-title,
-.contact-section-title {
-  font-size: clamp(1.5rem, 3vw, 2rem);
-  font-weight: 700;
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 2rem;
-  color: var(--highlight);
-  position: relative;
-}
-
-.skills-section-title::after,
-.contact-section-title::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 3px;
-  background: var(--highlight);
-  border-radius: 2px;
-}
-
 /* 单卡片布局 */
 .about-card {
   max-width: 100%;
@@ -865,18 +679,6 @@ body {
 /* 移动端保持布局，通过全局缩放适配 */
 
 /* ========== 第3屏：技能专长 ========== */
-.section-skills {
-  background: radial-gradient(ellipse at center, #1a1a2e 0%, var(--bg-color) 70%);
-}
-
-.skills-subtitle {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #999;
-  margin-bottom: 3rem;
-  font-style: italic;
-}
-
 /* 两列网格布局 */
 .skills-list {
   display: grid;
@@ -949,13 +751,6 @@ body {
   font-weight: 700;
 }
 
-.skill-desc {
-  font-size: 0.9rem;
-  color: #ccc;
-  margin-bottom: 0.8rem;
-  line-height: 1.6;
-}
-
 /* 标签云 */
 .skill-tags {
   display: flex;
@@ -981,11 +776,6 @@ body {
 
 /* 移动端适配 - 技能页面（保持两列布局）*/
 @media (max-width: 768px) {
-  .skills-subtitle {
-    font-size: 0.75rem;
-    margin-bottom: 1rem;
-  }
-
   .skills-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
@@ -1005,12 +795,6 @@ body {
   .skill-content h3 {
     font-size: 0.75rem;
     margin-bottom: 0.2rem;
-  }
-
-  .skill-desc {
-    font-size: 0.6rem;
-    margin-bottom: 0.3rem;
-    line-height: 1.4;
   }
 
   .skill-tags {
@@ -1033,10 +817,6 @@ body {
 }
 
 @media (max-width: 480px) {
-  .skills-subtitle {
-    font-size: 0.7rem;
-  }
-
   .skills-list {
     gap: 0.4rem;
   }
@@ -1056,10 +836,6 @@ body {
     font-size: 0.7rem;
   }
 
-  .skill-desc {
-    font-size: 0.55rem;
-  }
-
   .skill-tags span {
     font-size: 0.5rem;
     padding: 0.15rem 0.3rem;
@@ -1068,12 +844,6 @@ body {
   .learning-statement {
     font-size: 0.7rem;
   }
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
 }
 
 .skills-footer {
@@ -1102,94 +872,6 @@ body {
   }
   50% {
     opacity: 0.6;
-  }
-}
-
-.skill-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.skill-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: var(--gradient-1);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s ease;
-}
-
-.skill-card:nth-child(1)::before {
-  background: var(--gradient-1);
-}
-
-.skill-card:nth-child(2)::before {
-  background: var(--gradient-2);
-}
-
-.skill-card:nth-child(3)::before {
-  background: var(--gradient-3);
-}
-
-.skill-card:nth-child(4)::before {
-  background: var(--gradient-4);
-}
-
-.skill-card:hover::before {
-  transform: scaleX(1);
-}
-
-.skill-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(0, 188, 212, 0.2);
-}
-
-.skill-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.skill-card h3 {
-  font-size: 1.5rem;
-  color: var(--highlight);
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.skill-card ul {
-  list-style: none;
-  padding: 0;
-}
-
-.skill-card li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.8rem;
-  color: #ccc;
-  line-height: 1.6;
-}
-
-.skill-card li::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: var(--highlight);
-  font-weight: bold;
-}
-
-@media (max-width: 768px) {
-  .skills-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
   }
 }
 
@@ -1248,73 +930,12 @@ body {
   font-style: italic;
 }
 
-.job-title {
-  color: #999;
-  font-size: 1rem;
-  text-align: center;
-  margin-bottom: 2rem;
-  font-style: italic;
-}
-
 /* 工作时期内联样式 */
 .work-period-inline {
   color: var(--highlight);
   font-weight: 600;
   font-style: normal;
   margin-left: 0.5rem;
-}
-
-/* 项目高亮卡片（用于第一家公司）*/
-.project-highlight {
-  background: rgba(0, 0, 0, 0.3);
-  border: 2px solid var(--highlight);
-  border-radius: 16px;
-  padding: 2rem;
-  margin-top: 1rem;
-}
-
-.project-highlight h4 {
-  font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-  color: #fff;
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.project-desc {
-  color: #aaa;
-  font-size: 0.95rem;
-  margin-bottom: 1.5rem;
-  font-style: italic;
-}
-
-.section-subtitle {
-  font-size: 1.1rem;
-  color: var(--highlight);
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.task-list {
-  list-style: none;
-  padding: 0;
-}
-
-.task-list li {
-  position: relative;
-  padding-left: 2rem;
-  margin-bottom: 0.8rem;
-  color: #ccc;
-  line-height: 1.7;
-}
-
-.task-list li::before {
-  content: '▹';
-  position: absolute;
-  left: 0;
-  color: var(--highlight);
-  font-weight: bold;
-  font-size: 1.5rem;
-  line-height: 1.3;
 }
 
 /* 紧凑型项目列表（用于第二、三家公司）*/
@@ -1386,122 +1007,6 @@ body {
   background: linear-gradient(180deg, var(--bg-color) 0%, #0d0d1a 100%);
 }
 
-.timeline {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg, var(--highlight) 0%, rgba(0, 188, 212, 0.2) 100%);
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 3rem;
-}
-
-.timeline-marker {
-  position: absolute;
-  left: -2.8rem;
-  top: 0;
-  background: var(--highlight);
-  color: var(--bg-color);
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  white-space: nowrap;
-  box-shadow: 0 0 15px var(--highlight-glow);
-}
-
-.timeline-content {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 2rem;
-  transition: all 0.3s ease;
-  margin-left: 1rem;
-}
-
-.timeline-content:hover {
-  transform: translateX(5px);
-  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.15);
-}
-
-.timeline-content h3 {
-  font-size: 1.3rem;
-  color: var(--highlight);
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.job-title {
-  color: #999;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-
-.project-detail {
-  background: rgba(0, 0, 0, 0.2);
-  border-left: 3px solid var(--highlight);
-  border-radius: 8px;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.project-detail:last-child {
-  margin-bottom: 0;
-}
-
-.project-detail h4 {
-  font-size: 1.1rem;
-  color: #fff;
-  margin-bottom: 0.8rem;
-  font-weight: 600;
-}
-
-.project-desc {
-  color: #aaa;
-  font-size: 0.95rem;
-  margin-bottom: 0.8rem;
-  font-style: italic;
-}
-
-.project-role {
-  color: #ccc;
-  font-size: 0.95rem;
-  margin-bottom: 0.8rem;
-}
-
-.project-tasks {
-  list-style: none;
-  padding: 0;
-}
-
-.project-tasks li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.6rem;
-  color: #ccc;
-  line-height: 1.6;
-  font-size: 0.9rem;
-}
-
-.project-tasks li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--highlight);
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
 /* 移动端适配 - 工作经历页面 */
 @media (max-width: 768px) {
   .experience-card {
@@ -1524,33 +1029,6 @@ body {
   .experience-meta {
     font-size: 0.75rem;
     margin-bottom: 1rem;
-  }
-
-  .project-highlight {
-    padding: 1rem;
-    margin-top: 0.8rem;
-  }
-
-  .project-highlight h4 {
-    font-size: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .project-desc {
-    font-size: 0.8rem;
-    margin-bottom: 1rem;
-  }
-
-  .section-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .task-list li {
-    font-size: 0.8rem;
-    padding-left: 1.5rem;
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
   }
 
   .project-list-compact {
@@ -1583,20 +1061,6 @@ body {
     margin-bottom: 0.4rem;
   }
 
-  .timeline {
-    padding-left: 1.5rem;
-  }
-
-  .timeline-marker {
-    left: -2.3rem;
-    font-size: 0.75rem;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .timeline-content {
-    margin-left: 0.5rem;
-    padding: 1.5rem;
-  }
 }
 
 @media (max-width: 480px) {
@@ -1622,22 +1086,6 @@ body {
     margin-bottom: 0.8rem;
   }
 
-  .project-highlight {
-    padding: 0.8rem;
-  }
-
-  .project-highlight h4 {
-    font-size: 0.9rem;
-  }
-
-  .project-desc {
-    font-size: 0.75rem;
-  }
-
-  .task-list li {
-    font-size: 0.75rem;
-  }
-
   .project-item {
     padding: 0.8rem;
   }
@@ -1649,316 +1097,6 @@ body {
   .task-list-compact li {
     font-size: 0.7rem;
   }
-}
-
-/* ========== 第7屏：产品展示 ========== */
-.section-products {
-  background: radial-gradient(ellipse at center, #1a1a2e 0%, var(--bg-color) 70%);
-}
-
-.products-intro {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #ccc;
-  margin-bottom: 3rem;
-  line-height: 1.8;
-}
-
-.platform-links {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 3rem;
-  max-width: 1100px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.platform-card {
-  background: var(--card-bg);
-  border: 2px solid var(--border-color);
-  border-radius: 20px;
-  padding: 3rem 2rem;
-  text-align: center;
-  text-decoration: none;
-  color: inherit;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 280px;
-}
-
-.platform-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0, 188, 212, 0.1) 0%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.platform-card:hover::before {
-  opacity: 1;
-}
-
-.platform-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 20px 50px rgba(0, 188, 212, 0.4);
-  border-color: var(--highlight);
-}
-
-.platform-icon {
-  font-size: 4rem;
-  margin-bottom: 1.5rem;
-  color: var(--highlight);
-  transition: transform 0.4s ease;
-}
-
-.platform-card:hover .platform-icon {
-  transform: scale(1.1) rotate(5deg);
-}
-
-.github-card .platform-icon svg {
-  transition: all 0.4s ease;
-}
-
-.github-card:hover .platform-icon svg {
-  fill: var(--highlight);
-  filter: drop-shadow(0 0 10px rgba(0, 188, 212, 0.6));
-}
-
-.platform-card h3 {
-  font-size: 1.8rem;
-  color: var(--highlight);
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.platform-card p {
-  color: #aaa;
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  line-height: 1.6;
-}
-
-.platform-link-text {
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  padding: 0.8rem 2rem;
-  background: rgba(0, 188, 212, 0.2);
-  border-radius: 25px;
-  transition: all 0.3s ease;
-}
-
-.platform-card:hover .platform-link-text {
-  background: var(--highlight);
-  color: var(--bg-color);
-  box-shadow: 0 0 20px rgba(0, 188, 212, 0.6);
-}
-
-.products-footer {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #fff;
-  padding: 1.5rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* 平板端 */
-@media (max-width: 1024px) and (min-width: 769px) {
-  .platform-links {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .platform-card {
-    padding: 2rem 1.5rem;
-    min-height: 260px;
-  }
-}
-
-/* 移动端适配 - 产品展示页面（参考联系页面布局）*/
-@media (max-width: 768px) {
-  .products-intro {
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .platform-links {
-    grid-template-columns: 1fr !important;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .platform-card {
-    min-height: auto !important;
-    padding: 1.2rem !important;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .platform-icon {
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .platform-icon svg {
-    height: 32px;
-    width: 32px;
-  }
-
-  .platform-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .platform-card p {
-    font-size: 0.85rem;
-    margin-bottom: 1rem;
-    line-height: 1.6;
-  }
-
-  .platform-link-text {
-    font-size: 0.85rem;
-    padding: 0.6rem 1.2rem;
-  }
-
-  .products-footer {
-    font-size: 0.85rem;
-    padding: 1rem;
-  }
-
-  .products-footer strong {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .products-intro {
-    font-size: 0.8rem;
-  }
-
-  .platform-card {
-    padding: 1rem !important;
-  }
-
-  .platform-icon {
-    font-size: 1.8rem;
-    margin-bottom: 0.6rem;
-  }
-
-  .platform-icon svg {
-    height: 28px;
-    width: 28px;
-  }
-
-  .platform-card h3 {
-    font-size: 1rem;
-  }
-
-  .platform-card p {
-    font-size: 0.8rem;
-  }
-
-  .platform-link-text {
-    font-size: 0.8rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .products-footer {
-    font-size: 0.8rem;
-    padding: 0.8rem;
-  }
-
-  .products-footer strong {
-    font-size: 0.85rem;
-  }
-}
-
-/* ========== 第8屏：联系方式 ========== */
-.section-contact {
-  background: radial-gradient(ellipse at center, #1a1a2e 0%, var(--bg-color) 70%);
-}
-
-.contact-intro {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #ccc;
-  margin-bottom: 3rem;
-  line-height: 1.8;
-}
-
-.contact-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.contact-card {
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-  padding: 2rem;
-  text-align: center;
-  transition: all 0.4s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.contact-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(0, 188, 212, 0.1) 0%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.contact-card:hover::before {
-  opacity: 1;
-}
-
-.contact-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 40px rgba(0, 188, 212, 0.3);
-  border-color: var(--highlight);
-}
-
-.contact-icon {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.contact-card h3 {
-  font-size: 1.3rem;
-  color: var(--highlight);
-  margin-bottom: 1rem;
-  font-weight: 600;
-}
-
-.contact-card p {
-  color: #ccc;
-  line-height: 1.8;
-  font-size: 0.95rem;
 }
 
 .email-link {
@@ -1975,105 +1113,16 @@ body {
   transform: scale(1.05);
 }
 
-.contact-hint {
-  font-size: 0.85rem;
-  color: #999;
-  font-style: italic;
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-
-.contact-footer {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #fff;
-  padding: 2rem;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
-  border-radius: 16px;
-}
-
 /* 移动端适配 - 联系方式页面 */
 @media (max-width: 768px) {
-  .contact-intro {
-    font-size: 0.85rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-  }
-
-  .contact-container {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-card {
-    padding: 1.2rem;
-  }
-
-  .contact-icon {
-    font-size: 2rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .contact-card h3 {
-    font-size: 1.1rem;
-    margin-bottom: 0.8rem;
-  }
-
-  .contact-card p {
-    font-size: 0.85rem;
-    line-height: 1.6;
-  }
-
   .email-link {
     font-size: 0.95rem;
-  }
-
-  .contact-hint {
-    font-size: 0.75rem;
-    margin-top: 0.6rem;
-  }
-
-  .contact-footer {
-    font-size: 1rem;
-    padding: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
-  .contact-intro {
-    font-size: 0.8rem;
-  }
-
-  .contact-card {
-    padding: 1rem;
-  }
-
-  .contact-icon {
-    font-size: 1.8rem;
-  }
-
-  .contact-card h3 {
-    font-size: 1rem;
-  }
-
-  .contact-card p {
-    font-size: 0.8rem;
-  }
-
   .email-link {
     font-size: 0.85rem;
-  }
-
-  .contact-hint {
-    font-size: 0.7rem;
-    margin-top: 0.5rem;
-  }
-
-  .contact-footer {
-    font-size: 0.9rem;
-    padding: 1rem;
   }
 }
 
@@ -2178,48 +1227,12 @@ footer {
   animation-delay: 1.4s;
 }
 
-.animate-fade {
-  animation: fadeIn 0.8s ease-out 1.6s both;
-}
-
-.animate-fade.delay-0 {
-  animation-delay: 0.2s;
-}
-
-.animate-fade.delay-1 {
-  animation-delay: 0.4s;
-}
-
-.animate-fade.delay-2 {
-  animation-delay: 0.6s;
-}
-
-.animate-fade.delay-3 {
-  animation-delay: 0.8s;
-}
-
-.animate-slide-left {
-  animation: slideInLeft 0.8s ease-out 0.3s both;
-}
-
-.animate-slide-right {
-  animation: slideInRight 0.8s ease-out 0.3s both;
-}
-
-.animate-slide-up {
-  animation: fadeInUp 0.8s ease-out both;
-}
-
 /* 当元素进入视口时触发动画 */
 .section-content > * {
   opacity: 0;
 }
 
-.fullpage-section.active .section-content > *,
-.fullpage-section.active .timeline-item,
-.fullpage-section.active .skill-card,
-.fullpage-section.active .contact-card,
-.fullpage-section.active .info-card {
+.fullpage-section.active .section-content > * {
   opacity: 1;
   animation-play-state: running;
 }
