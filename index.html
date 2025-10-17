@@ -7,16 +7,28 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <!-- 导航指示器 -->
-  <nav class="nav-dots">
-    <span class="dot active" data-index="0"></span>
-    <span class="dot" data-index="1"></span>
-    <span class="dot" data-index="2"></span>
-    <span class="dot" data-index="3"></span>
-    <span class="dot" data-index="4"></span>
-    <span class="dot" data-index="5"></span>
-    <span class="dot" data-index="6"></span>
-    <span class="dot" data-index="7"></span>
+  <!-- 底部导航条 -->
+  <nav class="nav-control">
+    <button class="nav-arrow nav-prev" aria-label="上一页">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18l-6-6 6-6"/>
+      </svg>
+    </button>
+    <div class="nav-dots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+      <span class="dot" data-index="3"></span>
+      <span class="dot" data-index="4"></span>
+      <span class="dot" data-index="5"></span>
+      <span class="dot" data-index="6"></span>
+      <span class="dot" data-index="7"></span>
+    </div>
+    <button class="nav-arrow nav-next" aria-label="下一页">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 18l6-6-6-6"/>
+      </svg>
+    </button>
   </nav>
 
   <!-- 滚动提示 -->

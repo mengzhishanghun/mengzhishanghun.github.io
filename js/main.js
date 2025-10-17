@@ -70,6 +70,7 @@ function scrollToSection(index) {
 
   updateNavDots(index);
   updateActiveSection(index);
+  updateNavButtons();
 
   // 隐藏滚动提示
   if (index > 0 && scrollHint) {
@@ -89,126 +90,50 @@ dots.forEach((dot, index) => {
   });
 });
 
-// ========== 监听鼠标滚轮 ==========
-let lastScrollTime = 0;
-const scrollDelay = 1000; // 防抖延迟
+// ========== 监听导航箭头按钮点击 ==========
+const prevBtn = document.querySelector('.nav-prev');
+const nextBtn = document.querySelector('.nav-next');
 
-function handleWheel(e) {
-  const now = Date.now();
-  if (now - lastScrollTime < scrollDelay) return;
-
-  if (e.deltaY > 0) {
-    // 向下滚动
-    if (currentSectionIndex < sections.length - 1) {
-      lastScrollTime = now;
-      scrollToSection(currentSectionIndex + 1);
-    }
-  } else {
-    // 向上滚动
-    if (currentSectionIndex > 0) {
-      lastScrollTime = now;
-      scrollToSection(currentSectionIndex - 1);
-    }
+// 更新箭头按钮状态
+function updateNavButtons() {
+  if (prevBtn) {
+    prevBtn.disabled = currentSectionIndex === 0;
+  }
+  if (nextBtn) {
+    nextBtn.disabled = currentSectionIndex === sections.length - 1;
   }
 }
 
-// 使用被动监听器优化性能
-document.addEventListener('wheel', handleWheel, { passive: true });
-
-// ========== 监听触摸事件（移动端） ==========
-let touchStartY = 0;
-let touchEndY = 0;
-let touchStartTime = 0;
-let isTouching = false;
-
-document.addEventListener('touchstart', (e) => {
-  // 检查是否在可滚动元素内
-  const target = e.target;
-  const scrollableContent = target.closest('.section-content.scrollable');
-
-  touchStartY = e.touches[0].clientY;
-  touchStartTime = Date.now();
-  isTouching = true;
-
-  // 如果不在可滚动元素内，阻止默认滚动
-  if (!scrollableContent) {
-    // 不阻止，让浏览器处理
-  }
-}, { passive: true });
-
-document.addEventListener('touchmove', (e) => {
-  if (!isTouching) return;
-
-  const target = e.target;
-  const scrollableContent = target.closest('.section-content.scrollable');
-
-  // 如果在可滚动内容内，允许滚动
-  if (scrollableContent) {
-    return;
-  }
-}, { passive: true });
-
-document.addEventListener('touchend', (e) => {
-  if (!isTouching) return;
-
-  touchEndY = e.changedTouches[0].clientY;
-  const touchDuration = Date.now() - touchStartTime;
-  isTouching = false;
-
-  // 检查是否在可滚动元素内
-  const target = e.target;
-  const scrollableContent = target.closest('.section-content.scrollable');
-
-  // 如果在可滚动元素内，不触发页面切换
-  if (!scrollableContent) {
-    handleSwipe(touchDuration);
-  }
-}, { passive: true });
-
-function handleSwipe(duration) {
-  const swipeDistance = touchStartY - touchEndY;
-  const minSwipeDistance = 50;
-  const maxSwipeDuration = 500; // 快速滑动的最大时长
-
-  if (Math.abs(swipeDistance) < minSwipeDistance) return;
-
-  // 快速滑动或长距离滑动都可以触发
-  const isQuickSwipe = duration < maxSwipeDuration;
-  const isLongSwipe = Math.abs(swipeDistance) > 100;
-
-  if (!isQuickSwipe && !isLongSwipe) return;
-
-  if (swipeDistance > 0) {
-    // 向上滑动（下一页）
-    if (currentSectionIndex < sections.length - 1) {
-      scrollToSection(currentSectionIndex + 1);
-    }
-  } else {
-    // 向下滑动（上一页）
+// 上一页
+if (prevBtn) {
+  prevBtn.addEventListener('click', () => {
     if (currentSectionIndex > 0) {
       scrollToSection(currentSectionIndex - 1);
     }
-  }
+  });
 }
 
-// ========== 监听键盘事件 ==========
+// 下一页
+if (nextBtn) {
+  nextBtn.addEventListener('click', () => {
+    if (currentSectionIndex < sections.length - 1) {
+      scrollToSection(currentSectionIndex + 1);
+    }
+  });
+}
+
+// 初始化按钮状态
+updateNavButtons();
+
+// ========== 鼠标滚轮只用于页面内滚动，不再翻页 ==========
+// 移除了滚轮翻页逻辑，滚轮现在只用于浏览页面内容
+
+// ========== 移除触摸滑动翻页逻辑 ==========
+// 触摸滑动现在只用于页面内滚动，不再翻页
+
+// ========== 监听键盘事件（保留上下箭头用于页面内滚动）==========
 document.addEventListener('keydown', (e) => {
   switch(e.key) {
-    case 'ArrowDown':
-    case 'PageDown':
-    case ' ': // 空格键
-      e.preventDefault();
-      if (currentSectionIndex < sections.length - 1) {
-        scrollToSection(currentSectionIndex + 1);
-      }
-      break;
-    case 'ArrowUp':
-    case 'PageUp':
-      e.preventDefault();
-      if (currentSectionIndex > 0) {
-        scrollToSection(currentSectionIndex - 1);
-      }
-      break;
     case 'Home':
       e.preventDefault();
       scrollToSection(0);
@@ -217,6 +142,7 @@ document.addEventListener('keydown', (e) => {
       e.preventDefault();
       scrollToSection(sections.length - 1);
       break;
+    // 移除了上下左右箭头翻页，保留用于页面内滚动
   }
 });
 
@@ -234,6 +160,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
       currentSectionIndex = index;
       updateNavDots(index);
       updateActiveSection(index);
+      updateNavButtons();
 
       // 隐藏滚动提示
       if (index > 0 && scrollHint) {
@@ -368,9 +295,9 @@ function throttle(func, delay) {
 if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
   console.log('🎉 全屏简历已加载');
   console.log('📱 支持功能：');
-  console.log('  - 鼠标滚轮切换页面');
-  console.log('  - 触摸滑动切换页面（移动端）');
-  console.log('  - 键盘方向键/PageUp/PageDown/Home/End');
-  console.log('  - 侧边导航点点击');
+  console.log('  - 底部导航箭头按钮翻页');
+  console.log('  - 底部导航点点击跳转');
+  console.log('  - 鼠标滚轮/触摸滑动仅用于页面内浏览');
+  console.log('  - 键盘 Home/End 快速跳转');
   console.log('  - URL Hash导航（#about, #skills等）');
 }
