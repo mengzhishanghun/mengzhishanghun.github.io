@@ -910,13 +910,9 @@ body {
   background: linear-gradient(135deg, rgba(0, 188, 212, 0.08) 0%, rgba(0, 0, 0, 0.2) 100%);
 }
 
-/* 核心技能特殊样式 */
+/* 核心技能特殊样式 - 只保留布局，移除高亮 */
 .skill-item.skill-core {
-  padding: 1.5rem;
-}
-
-.skill-item.skill-core:hover {
-  box-shadow: 0 10px 30px rgba(0, 188, 212, 0.25);
+  padding: 1.3rem;
 }
 
 /* 图标区域 */
@@ -940,15 +936,6 @@ body {
   border-color: var(--highlight);
 }
 
-.skill-core .skill-icon-large {
-  width: 80px;
-  height: 80px;
-  font-size: 3.5rem;
-  background: rgba(0, 188, 212, 0.2);
-  border-color: var(--highlight);
-  box-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
-}
-
 /* 内容区域 */
 .skill-content {
   flex: 1;
@@ -960,10 +947,6 @@ body {
   color: var(--highlight);
   margin-bottom: 0.4rem;
   font-weight: 700;
-}
-
-.skill-core .skill-content h3 {
-  font-size: 1.5rem;
 }
 
 .skill-desc {
@@ -1019,19 +1002,9 @@ body {
     font-size: 1.2rem;
   }
 
-  .skill-core .skill-icon-large {
-    width: 35px;
-    height: 35px;
-    font-size: 1.5rem;
-  }
-
   .skill-content h3 {
     font-size: 0.75rem;
     margin-bottom: 0.2rem;
-  }
-
-  .skill-core .skill-content h3 {
-    font-size: 0.85rem;
   }
 
   .skill-desc {
@@ -1079,18 +1052,8 @@ body {
     font-size: 1rem;
   }
 
-  .skill-core .skill-icon-large {
-    width: 30px;
-    height: 30px;
-    font-size: 1.2rem;
-  }
-
   .skill-content h3 {
     font-size: 0.7rem;
-  }
-
-  .skill-core .skill-content h3 {
-    font-size: 0.75rem;
   }
 
   .skill-desc {
