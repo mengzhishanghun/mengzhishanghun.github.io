@@ -254,14 +254,17 @@ body {
   .fullpage-section {
     padding: 0.5rem;
     min-height: 100vh;
+    padding-top: 2rem;
+    padding-bottom: 8rem;
   }
 
   .section-content {
     padding: 0.5rem;
-    padding-bottom: 6rem; /* 移动端留出更多空间 */
+    padding-top: 1rem;
+    padding-bottom: 2rem;
     width: 100%;
     max-width: 100%;
-    max-height: 95vh;
+    max-height: 80vh;
   }
 
   /* 缩小标题 */
@@ -279,12 +282,15 @@ body {
 @media (max-width: 480px) {
   .fullpage-section {
     padding: 0.3rem;
+    padding-top: 2rem;
+    padding-bottom: 7rem;
   }
 
   .section-content {
     padding: 0.3rem;
-    padding-bottom: 5rem; /* 小屏幕留出空间 */
-    max-height: 96vh;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+    max-height: 75vh;
   }
 
   .section-title {
