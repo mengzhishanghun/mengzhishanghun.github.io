@@ -243,10 +243,10 @@ body {
 }
 
 .section-content {
-  max-width: 1200px;
-  width: 100%;
+  max-width: 1400px;
+  width: 95%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 3rem 4rem;
   padding-bottom: 8rem; /* 为底部导航栏留出空间 */
   max-height: 90vh;
   overflow-y: auto;
@@ -569,14 +569,39 @@ body {
   border-radius: 2px;
 }
 
+/* 合并页面内的二级标题 */
+.skills-section-title,
+.contact-section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  text-align: center;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+  color: var(--highlight);
+  position: relative;
+}
+
+.skills-section-title::after,
+.contact-section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background: var(--highlight);
+  border-radius: 2px;
+}
+
 /* 单卡片布局 */
 .about-card {
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
   background: var(--card-bg);
   border: 2px solid var(--border-color);
-  border-radius: 20px;
-  padding: 2.5rem;
+  border-radius: 24px;
+  padding: 3rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease;
 }
@@ -591,15 +616,15 @@ body {
 .about-header {
   display: flex;
   align-items: center;
-  gap: 2rem;
-  padding-bottom: 2rem;
+  gap: 2.5rem;
+  padding-bottom: 2.5rem;
   border-bottom: 2px solid var(--border-color);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
 }
 
 .avatar-placeholder {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   background: linear-gradient(135deg, rgba(0, 188, 212, 0.2) 0%, rgba(0, 188, 212, 0.05) 100%);
   border: 3px solid var(--highlight);
   border-radius: 50%;
@@ -611,7 +636,7 @@ body {
 }
 
 .avatar-icon {
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .about-intro {
@@ -619,84 +644,57 @@ body {
 }
 
 .about-name {
-  font-size: 1.8rem;
+  font-size: 2rem;
   color: var(--highlight);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   font-weight: 700;
 }
 
 .nickname {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #999;
   font-weight: 400;
 }
 
 .about-title {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: #ccc;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1rem;
 }
 
 .about-motto {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--highlight);
   font-style: italic;
   opacity: 0.9;
+  margin-bottom: 1.2rem;
+}
+
+.about-tags {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 0.8rem;
 }
 
 /* 内容区域 */
 .about-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .about-section h4 {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--highlight);
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   font-weight: 600;
 }
 
 .about-section p {
   color: #ccc;
-  line-height: 1.8;
-  font-size: 1rem;
-}
-
-/* 统计数据 */
-.about-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  padding: 1.5rem 0;
-}
-
-.stat-box {
-  text-align: center;
-  background: rgba(0, 188, 212, 0.05);
-  border: 1px solid rgba(0, 188, 212, 0.2);
-  border-radius: 12px;
-  padding: 1.5rem 1rem;
-  transition: all 0.3s ease;
-}
-
-.stat-box:hover {
-  background: rgba(0, 188, 212, 0.1);
-  border-color: var(--highlight);
-  transform: translateY(-3px);
-}
-
-.stat-value {
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--highlight);
-  margin-bottom: 0.5rem;
-}
-
-.stat-label {
-  font-size: 0.9rem;
-  color: #999;
+  line-height: 1.9;
+  font-size: 1.05rem;
 }
 
 /* 亮点列表 */
@@ -722,24 +720,16 @@ body {
   font-size: 1.2rem;
 }
 
-/* 底部标签 */
-.about-footer {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
-}
-
+/* 信息标签 */
 .info-tag {
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1rem;
   background: rgba(0, 188, 212, 0.1);
   border: 1px solid rgba(0, 188, 212, 0.3);
-  border-radius: 20px;
+  border-radius: 24px;
   color: var(--highlight);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   transition: all 0.3s ease;
 }
 
@@ -796,38 +786,19 @@ body {
     line-height: 1.5;
   }
 
-  .about-stats {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.4rem;
-    padding: 0.8rem 0;
-  }
-
-  .stat-box {
-    padding: 0.6rem 0.4rem;
-  }
-
-  .stat-value {
-    font-size: 1.2rem;
-  }
-
-  .stat-label {
-    font-size: 0.65rem;
-  }
-
   .highlight-list li {
     font-size: 0.7rem;
     padding-left: 1rem;
     margin-bottom: 0.4rem;
   }
 
-  .about-footer {
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
   .info-tag {
     font-size: 0.65rem;
     padding: 0.3rem 0.6rem;
+  }
+
+  .about-tags {
+    gap: 0.4rem;
   }
 }
 
@@ -875,23 +846,6 @@ body {
     font-size: 0.6rem;
   }
 
-  .about-stats {
-    gap: 0.3rem;
-    padding: 0.6rem 0;
-  }
-
-  .stat-box {
-    padding: 0.5rem 0.3rem;
-  }
-
-  .stat-value {
-    font-size: 1rem;
-  }
-
-  .stat-label {
-    font-size: 0.55rem;
-  }
-
   .highlight-list li {
     font-size: 0.6rem;
     padding-left: 0.8rem;
@@ -901,6 +855,10 @@ body {
   .info-tag {
     font-size: 0.55rem;
     padding: 0.25rem 0.5rem;
+  }
+
+  .about-tags {
+    gap: 0.3rem;
   }
 }
 

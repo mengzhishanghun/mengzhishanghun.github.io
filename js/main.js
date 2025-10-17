@@ -14,7 +14,7 @@ function calculateInfo() {
 
   // 更新所有年龄和经验显示
   const ageElements = document.querySelectorAll('#age, #age-info');
-  const expElements = document.querySelectorAll('#experience, #exp-info');
+  const expElements = document.querySelectorAll('#experience, #exp-info, #exp-years');
 
   ageElements.forEach(el => {
     if (el) el.textContent = age;
@@ -215,13 +215,10 @@ function handleHashNavigation() {
   const sectionMap = {
     '#hero': 0,
     '#about': 1,
-    '#skills': 2,
-    '#experience': 3,
-    '#experience-1': 3,
-    '#experience-2': 4,
-    '#experience-3': 5,
-    '#products': 6,
-    '#contact': 7
+    '#skills': 1,
+    '#experience': 2,
+    '#products': 3,
+    '#contact': 3
   };
 
   const targetIndex = sectionMap[hash];
