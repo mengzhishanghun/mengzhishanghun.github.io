@@ -1,7 +1,6 @@
 // ========== 全局变量 ==========
 const sections = document.querySelectorAll('.fullpage-section');
 const dots = document.querySelectorAll('.nav-dots .dot');
-const scrollHint = document.querySelector('.scroll-hint');
 let currentSectionIndex = 0;
 let isScrolling = false;
 
@@ -45,42 +44,36 @@ function updateNavDots(index) {
   });
 }
 
-// ========== 更新当前section激活状态 ==========
-function updateActiveSection(index) {
+// ========== 更新当前section激活状态（左右切换效果）==========
+function updateActiveSection(index, direction = 'next') {
   sections.forEach((section, i) => {
+    section.classList.remove('active', 'prev');
+
     if (i === index) {
       section.classList.add('active');
-    } else {
-      section.classList.remove('active');
+    } else if (i < index) {
+      section.classList.add('prev');
     }
+    // i > index 的保持默认状态（在右侧）
   });
 }
 
-// ========== 滚动到指定section ==========
+// ========== 滚动到指定section（使用CSS transform实现左右切换）==========
 function scrollToSection(index) {
   if (index < 0 || index >= sections.length || isScrolling) return;
 
   isScrolling = true;
+  const oldIndex = currentSectionIndex;
   currentSectionIndex = index;
 
-  sections[index].scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
-
   updateNavDots(index);
-  updateActiveSection(index);
+  updateActiveSection(index, index > oldIndex ? 'next' : 'prev');
   updateNavButtons();
 
-  // 隐藏滚动提示
-  if (index > 0 && scrollHint) {
-    scrollHint.classList.add('hidden');
-  }
-
-  // 重置滚动状态
+  // 重置滚动状态（等待动画完成）
   setTimeout(() => {
     isScrolling = false;
-  }, 1000);
+  }, 600); // 与CSS transition时间一致
 }
 
 // ========== 监听导航点点击 ==========
@@ -146,36 +139,8 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// ========== 使用Intersection Observer监听section可见性 ==========
-const observerOptions = {
-  root: null,
-  rootMargin: '0px',
-  threshold: 0.5
-};
-
-const sectionObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const index = Array.from(sections).indexOf(entry.target);
-      currentSectionIndex = index;
-      updateNavDots(index);
-      updateActiveSection(index);
-      updateNavButtons();
-
-      // 隐藏滚动提示
-      if (index > 0 && scrollHint) {
-        scrollHint.classList.add('hidden');
-      } else if (index === 0 && scrollHint) {
-        scrollHint.classList.remove('hidden');
-      }
-    }
-  });
-}, observerOptions);
-
-// 观察所有section
-sections.forEach(section => {
-  sectionObserver.observe(section);
-});
+// ========== 移除了 Intersection Observer（不再需要监听滚动）==========
+// 页面切换现在完全由按钮和导航点控制
 
 // ========== 数字动画效果 ==========
 function animateNumber(element, target, duration = 2000) {
@@ -231,9 +196,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // 初始化第一屏为激活状态
   updateNavDots(0);
   updateActiveSection(0);
-
-  // 确保滚动到顶部
-  window.scrollTo(0, 0);
+  updateNavButtons();
 
   // 添加加载完成类，触发动画
   document.body.classList.add('loaded');

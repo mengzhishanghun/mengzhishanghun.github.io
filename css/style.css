@@ -189,77 +189,12 @@ body {
   }
 }
 
-/* ========== 滚动提示 ========== */
-.scroll-hint {
-  position: fixed;
-  bottom: 3rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 0.9rem;
-  animation: fadeInOut 3s ease-in-out infinite;
-  pointer-events: none;
-}
-
-.scroll-hint.hidden {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.mouse {
-  width: 24px;
-  height: 36px;
-  border: 2px solid rgba(255, 255, 255, 0.6);
-  border-radius: 12px;
-  position: relative;
-}
-
-.wheel {
-  width: 4px;
-  height: 8px;
-  background: rgba(255, 255, 255, 0.6);
-  border-radius: 2px;
-  position: absolute;
-  top: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  animation: scroll 1.5s ease-in-out infinite;
-}
-
-@keyframes scroll {
-  0%, 100% {
-    transform: translateX(-50%) translateY(0);
-    opacity: 1;
-  }
-  50% {
-    transform: translateX(-50%) translateY(8px);
-    opacity: 0.5;
-  }
-}
-
-@keyframes fadeInOut {
-  0%, 100% {
-    opacity: 0.4;
-  }
-  50% {
-    opacity: 1;
-  }
-}
-
-/* ========== 全屏容器（垂直滚动）========== */
+/* ========== 全屏容器（水平滑动效果）========== */
 .fullpage-container {
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
-  scroll-snap-type: y mandatory;
-  scrollbar-width: none;
-  -webkit-overflow-scrolling: touch;
-  overscroll-behavior-y: contain;
+  position: relative;
+  overflow: hidden;
 }
 
 .fullpage-container::-webkit-scrollbar {
@@ -268,13 +203,43 @@ body {
 
 .fullpage-section {
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  scroll-snap-align: start;
-  position: relative;
   padding: 2rem;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.6s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.fullpage-section::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
+}
+
+/* 页面切换状态 */
+.fullpage-section {
+  transform: translateX(100%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.fullpage-section.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+  z-index: 10;
+}
+
+.fullpage-section.prev {
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
 .section-content {
@@ -282,15 +247,21 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
+  padding-bottom: 8rem; /* 为底部导航栏留出空间 */
   max-height: 90vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   overscroll-behavior-y: contain;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.section-content::-webkit-scrollbar {
+  display: none; /* Chrome/Safari/Opera */
 }
 
 .section-content.scrollable {
   /* 所有内容区域现在都可滚动，此类保留用于特殊样式 */
-  padding-right: 1rem;
 }
 
 /* 移动端全屏section适配 - 真实尺寸缩小，不使用transform */
@@ -302,6 +273,7 @@ body {
 
   .section-content {
     padding: 0.5rem;
+    padding-bottom: 6rem; /* 移动端留出更多空间 */
     width: 100%;
     max-width: 100%;
     max-height: 95vh;
@@ -330,6 +302,7 @@ body {
 
   .section-content {
     padding: 0.3rem;
+    padding-bottom: 5rem; /* 小屏幕留出空间 */
     max-height: 96vh;
   }
 
@@ -343,19 +316,6 @@ body {
   }
 }
 
-.section-content::-webkit-scrollbar {
-  width: 6px;
-}
-
-.section-content::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 3px;
-}
-
-.section-content::-webkit-scrollbar-thumb {
-  background: var(--highlight);
-  border-radius: 3px;
-}
 
 /* ========== 第1屏：欢迎页 ========== */
 .section-hero {
