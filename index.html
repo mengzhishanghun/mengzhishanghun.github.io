@@ -15,8 +15,7 @@
       </svg>
     </button>
     <div class="nav-dots">
-      <span class="dot active" data-index="0"></span>
-      <span class="dot" data-index="1"></span>
+      <span class="dot active" data-index="1"></span>
       <span class="dot" data-index="2"></span>
       <span class="dot" data-index="3"></span>
     </div>
@@ -41,6 +40,14 @@
         <h1 class="animate-title">你好，我是 <span class="name-highlight">张靖宇</span></h1>
         <p class="animate-subtitle">一个专注于 Unreal Engine 开发的独立开发者</p>
         <p class="animate-subtitle delay-1">致力于将复杂问题简单化，让重复工作自动化</p>
+
+        <!-- 滚动提示 -->
+        <div class="scroll-hint" onclick="document.querySelector('.nav-next').click()">
+          <span class="hint-text">了解更多</span>
+          <svg class="hint-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M19 9l-7 7-7-7"/>
+          </svg>
+        </div>
       </div>
     </section>
 

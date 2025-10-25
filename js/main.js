@@ -35,8 +35,31 @@ function updateYear() {
 
 // ========== 更新导航点状态 ==========
 function updateNavDots(index) {
+  const navControl = document.querySelector('.nav-control');
+
+  // 第1页隐藏导航控制条
+  if (index === 0) {
+    if (navControl) {
+      navControl.style.opacity = '0';
+      navControl.style.pointerEvents = 'none';
+    }
+  } else {
+    if (navControl) {
+      navControl.style.opacity = '1';
+      navControl.style.pointerEvents = 'auto';
+    }
+  }
+
+  // 更新导航点状态（第2-4页对应索引1-3，显示为导航点0-2）
   dots.forEach((dot, i) => {
-    if (i === index) {
+    // 第1页不显示任何激活点
+    if (index === 0) {
+      dot.classList.remove('active');
+      return;
+    }
+
+    // 第2-4页（索引1-3）对应导航点0-2
+    if (i === index - 1) {
       dot.classList.add('active');
     } else {
       dot.classList.remove('active');
@@ -75,10 +98,48 @@ function scrollToSection(index) {
   }, 600); // 与CSS transition时间一致
 }
 
+// ========== 循环滚动（仅在第2-4页之间循环）==========
+function scrollToSectionWithLoop(direction) {
+  if (isScrolling) return;
+
+  let nextIndex = currentSectionIndex;
+
+  if (direction === 'next') {
+    // 如果在第1页，跳到第2页
+    if (currentSectionIndex === 0) {
+      nextIndex = 1;
+    }
+    // 如果在第2-3页，正常前进
+    else if (currentSectionIndex < sections.length - 1) {
+      nextIndex = currentSectionIndex + 1;
+    }
+    // 如果在第4页（最后一页），循环回第2页
+    else {
+      nextIndex = 1;
+    }
+  } else if (direction === 'prev') {
+    // 如果在第1页，不能后退
+    if (currentSectionIndex === 0) {
+      return;
+    }
+    // 如果在第2页，不能回到第1页（第2-4页循环），跳到第4页
+    else if (currentSectionIndex === 1) {
+      nextIndex = sections.length - 1;
+    }
+    // 如果在第3-4页，正常后退
+    else {
+      nextIndex = currentSectionIndex - 1;
+    }
+  }
+
+  scrollToSection(nextIndex);
+}
+
 // ========== 监听导航点点击 ==========
 dots.forEach((dot, index) => {
   dot.addEventListener('click', () => {
-    scrollToSection(index);
+    // 导航点索引0-2对应第2-4页（section索引1-3）
+    scrollToSection(index + 1);
   });
 });
 
@@ -89,28 +150,26 @@ const nextBtn = document.querySelector('.nav-next');
 // 更新箭头按钮状态
 function updateNavButtons() {
   if (prevBtn) {
+    // 只在第1页时禁用后退按钮
     prevBtn.disabled = currentSectionIndex === 0;
   }
   if (nextBtn) {
-    nextBtn.disabled = currentSectionIndex === sections.length - 1;
+    // 永远不禁用前进按钮（第4页会循环回第2页）
+    nextBtn.disabled = false;
   }
 }
 
 // 上一页
 if (prevBtn) {
   prevBtn.addEventListener('click', () => {
-    if (currentSectionIndex > 0) {
-      scrollToSection(currentSectionIndex - 1);
-    }
+    scrollToSectionWithLoop('prev');
   });
 }
 
 // 下一页
 if (nextBtn) {
   nextBtn.addEventListener('click', () => {
-    if (currentSectionIndex < sections.length - 1) {
-      scrollToSection(currentSectionIndex + 1);
-    }
+    scrollToSectionWithLoop('next');
   });
 }
 

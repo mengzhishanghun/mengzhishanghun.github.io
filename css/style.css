@@ -51,6 +51,7 @@ body {
   border-radius: 50px;
   border: 1px solid var(--border-color);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.4s ease, transform 0.4s ease;
 }
 
 /* 导航箭头 */
@@ -380,6 +381,63 @@ body {
   color: #ccc;
   margin-bottom: 1rem;
   line-height: 1.8;
+}
+
+/* 滚动提示 */
+.scroll-hint {
+  position: absolute;
+  bottom: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  animation: pulse-hint 2s ease-in-out infinite;
+  transition: all 0.3s ease;
+}
+
+.scroll-hint:hover {
+  transform: translateX(-50%) translateY(-5px);
+  animation: none;
+}
+
+.hint-text {
+  font-size: 0.95rem;
+  color: var(--highlight);
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.hint-arrow {
+  color: var(--highlight);
+  animation: bounce-arrow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-hint {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+  .scroll-hint {
+    bottom: 8rem;
+  }
 }
 
 .section-title {
