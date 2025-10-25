@@ -304,8 +304,36 @@ body {
 
 /* ========== 第1屏：欢迎页 ========== */
 .section-hero {
-  background: radial-gradient(ellipse at center, #1a1a2e 0%, var(--bg-color) 70%);
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0a0a0a 100%);
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* 添加微妙的装饰光效 */
+.section-hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.03) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.section-hero .section-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  padding-top: 0;
+  padding-bottom: 8rem;
+  z-index: 1;
 }
 
 /* 座右铭样式 */
@@ -404,15 +432,17 @@ body {
 }
 
 .hint-text {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: var(--highlight);
-  letter-spacing: 0.1em;
-  font-weight: 500;
+  letter-spacing: 0.15em;
+  font-weight: 600;
 }
 
 .hint-arrow {
   color: var(--highlight);
   animation: bounce-arrow 2s ease-in-out infinite;
+  width: 28px;
+  height: 28px;
 }
 
 @keyframes pulse-hint {
