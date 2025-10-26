@@ -98,14 +98,14 @@ function scrollToSection(index) {
   }, 600); // 与CSS transition时间一致
 }
 
-// ========== 循环滚动（仅在第2-4页之间循环）==========
+// ========== 页面切换（主页只显示一次，第2-4页循环）==========
 function scrollToSectionWithLoop(direction) {
   if (isScrolling) return;
 
   let nextIndex = currentSectionIndex;
 
   if (direction === 'next') {
-    // 如果在第1页，跳到第2页
+    // 如果在主页（第1页），跳到第2页
     if (currentSectionIndex === 0) {
       nextIndex = 1;
     }
@@ -118,11 +118,11 @@ function scrollToSectionWithLoop(direction) {
       nextIndex = 1;
     }
   } else if (direction === 'prev') {
-    // 如果在第1页，不能后退
+    // 如果在主页，不能后退
     if (currentSectionIndex === 0) {
       return;
     }
-    // 如果在第2页，不能回到第1页（第2-4页循环），跳到第4页
+    // 如果在第2页，循环到第4页（不能回主页）
     else if (currentSectionIndex === 1) {
       nextIndex = sections.length - 1;
     }
@@ -150,11 +150,11 @@ const nextBtn = document.querySelector('.nav-next');
 // 更新箭头按钮状态
 function updateNavButtons() {
   if (prevBtn) {
-    // 只在第1页时禁用后退按钮
+    // 只在主页时禁用后退按钮
     prevBtn.disabled = currentSectionIndex === 0;
   }
   if (nextBtn) {
-    // 永远不禁用前进按钮（第4页会循环回第2页）
+    // 前进按钮永远启用（主页进入第2页，第4页循环回第2页）
     nextBtn.disabled = false;
   }
 }
