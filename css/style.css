@@ -304,24 +304,12 @@ body {
 
 /* ========== 第1屏：欢迎页 ========== */
 .section-hero {
-  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0a0a0a 100%);
+  background: linear-gradient(180deg, var(--bg-color) 0%, #0d0d1a 100%);
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-}
-
-/* 添加微妙的装饰光效 */
-.section-hero::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at 50% 50%, rgba(0, 188, 212, 0.03) 0%, transparent 50%);
-  pointer-events: none;
 }
 
 .section-hero .section-content {
