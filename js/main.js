@@ -98,33 +98,29 @@ function scrollToSection(index) {
   }, 600); // 与CSS transition时间一致
 }
 
-// ========== 页面切换（主页只显示一次，第2-4页循环）==========
+// ========== 页面切换（线性导航：个人简介 ↔ 工作经历 ↔ 合作交流）==========
 function scrollToSectionWithLoop(direction) {
   if (isScrolling) return;
 
   let nextIndex = currentSectionIndex;
 
   if (direction === 'next') {
-    // 如果在主页（第1页），跳到第2页
+    // 如果在主页（第1页），跳到第2页（个人简介）
     if (currentSectionIndex === 0) {
       nextIndex = 1;
     }
-    // 如果在第2-3页，正常前进
+    // 如果在第2-3页，正常前进（不循环）
     else if (currentSectionIndex < sections.length - 1) {
       nextIndex = currentSectionIndex + 1;
     }
-    // 如果在第4页（最后一页），循环回第2页
+    // 如果在第4页（最后一页），不能再前进
     else {
-      nextIndex = 1;
-    }
-  } else if (direction === 'prev') {
-    // 如果在主页，不能后退
-    if (currentSectionIndex === 0) {
       return;
     }
-    // 如果在第2页，循环到第4页（不能回主页）
-    else if (currentSectionIndex === 1) {
-      nextIndex = sections.length - 1;
+  } else if (direction === 'prev') {
+    // 如果在主页或第2页（个人简介），不能后退
+    if (currentSectionIndex === 0 || currentSectionIndex === 1) {
+      return;
     }
     // 如果在第3-4页，正常后退
     else {
@@ -150,12 +146,12 @@ const nextBtn = document.querySelector('.nav-next');
 // 更新箭头按钮状态
 function updateNavButtons() {
   if (prevBtn) {
-    // 只在主页时禁用后退按钮
-    prevBtn.disabled = currentSectionIndex === 0;
+    // 在主页或个人简介页时禁用后退按钮
+    prevBtn.disabled = currentSectionIndex === 0 || currentSectionIndex === 1;
   }
   if (nextBtn) {
-    // 前进按钮永远启用（主页进入第2页，第4页循环回第2页）
-    nextBtn.disabled = false;
+    // 在最后一页（合作交流）时禁用前进按钮
+    nextBtn.disabled = currentSectionIndex === sections.length - 1;
   }
 }
 
