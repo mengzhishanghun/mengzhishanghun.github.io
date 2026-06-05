@@ -1,423 +1,159 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
-  <title>张靖宇 - 个人简历</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张靖宇 - Unreal Engine 开发工程师</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- 底部导航条 -->
-  <nav class="nav-control">
-    <button class="nav-arrow nav-prev" aria-label="上一页">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M15 18l-6-6 6-6"/>
-      </svg>
-    </button>
-    <div class="nav-dots">
-      <span class="dot active" data-index="1"></span>
-      <span class="dot" data-index="2"></span>
-      <span class="dot" data-index="3"></span>
+
+<canvas id="stars-canvas"></canvas>
+<canvas id="meteor-canvas"></canvas>
+
+<button class="back-hero" id="backBtn" onclick="goHero()">← 首页</button>
+
+<!-- ========== 第一页：Hero ========== -->
+<div class="page-hero" id="pageHero">
+    <div class="hero">
+        <p class="motto"><span id="mottoText"></span><span class="typewriter-cursor"></span></p>
+        <h1 class="hero-title" id="heroTitle">你好，我是 <span class="name">张靖宇</span></h1>
+        <p class="hero-sub" id="heroSub1">
+            <span class="role">虚幻引擎开发工程师</span><span class="sep"></span>深耕 UE 引擎 <span id="exp-years">8</span> 年
+        </p>
+        <p class="hero-sub" id="heroSub2">
+            游戏研发<span class="sep"></span>军工仿真<span class="sep"></span>数字孪生<span class="sep"></span>沉浸式交互<span class="sep"></span>AI 数字人
+        </p>
+        <div class="hero-tags" id="heroTags">
+            <span class="hero-tag" style="--t:0s;--d:3s">虚幻引擎 5</span>
+            <span class="hero-tag" style="--t:.5s;--d:3.5s">C++ 架构设计</span>
+            <span class="hero-tag" style="--t:1s;--d:2.8s">多人联网</span>
+            <span class="hero-tag" style="--t:1.5s;--d:3.2s">数字孪生</span>
+            <span class="hero-tag" style="--t:.3s;--d:3.8s">VR / AR 沉浸</span>
+            <span class="hero-tag" style="--t:.8s;--d:2.5s">AI 智能交互</span>
+            <span class="hero-tag" style="--t:1.2s;--d:3.3s">工具链开发</span>
+        </div>
+        <div class="enter-btn" id="enterBtn" onclick="goContent()">
+            <span>查看简历</span>
+            <div class="enter-arrow"></div>
+        </div>
     </div>
-    <button class="nav-arrow nav-next" aria-label="下一页">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M9 18l6-6-6-6"/>
-      </svg>
-    </button>
-  </nav>
+</div>
 
-  <!-- 全屏容器 -->
-  <div class="fullpage-container">
+<!-- ========== 第二页：正文 ========== -->
+<div class="page-content" id="pageContent">
+    <div class="layout" id="layoutBox">
+        <div class="layout-inner">
 
-    <!-- 第1屏：欢迎页 -->
-    <section class="fullpage-section section-hero">
-      <div class="section-content">
-        <!-- 座右铭 -->
-        <div class="motto animate-motto">
-          <span class="motto-text">"所有复杂，皆可封装；所有重复，皆可自动化"</span>
-        </div>
-
-        <h1 class="animate-title">你好，我是 <span class="name-highlight">张靖宇</span></h1>
-        <p class="animate-subtitle">一个专注于 Unreal Engine 开发的独立开发者</p>
-        <p class="animate-subtitle delay-1">致力于将复杂问题简单化，让重复工作自动化</p>
-
-        <!-- 滚动提示 -->
-        <div class="scroll-hint" onclick="document.querySelector('.nav-next').click()">
-          <span class="hint-text">了解更多</span>
-          <svg class="hint-arrow" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <path d="M19 9l-7 7-7-7"/>
-          </svg>
-        </div>
-      </div>
-    </section>
-
-    <!-- 第2屏：个人简介 + 技能专长 -->
-    <section class="fullpage-section section-about-skills">
-      <div class="section-content">
-        <h2 class="section-title">👨‍💻 个人简介</h2>
-
-        <div class="about-card">
-          <div class="about-header">
-            <div class="avatar-placeholder">
-              <span class="avatar-icon">🎮</span>
-            </div>
-            <div class="about-intro">
-              <h3 class="about-name">张靖宇 <span class="nickname">/ 男 <span id="age-info">28</span>岁</span></h3>
-              <p class="about-title">Unreal Engine 开发工程师</p>
-              <p class="about-motto">"所有复杂，皆可封装；所有重复，皆可自动化"</p>
-              <div class="about-tags">
-                <span class="info-tag">⏱️ <span id="exp-years">7</span>年工作经验</span>
-                <span class="info-tag">📍 山西运城</span>
-                <span class="info-tag">💼 独立开发者</span>
-                <span class="info-tag">🌐 远程工作</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="about-content">
-            <div class="about-section">
-              <h4>🎯 职业概况</h4>
-              <p>多年 Unreal Engine 开发经验，专注于<strong>插件开发与技术架构设计</strong>。擅长将复杂需求简化为可复用的技术模块，通过开发自动化工具提升团队效率。</p>
-              <p>项目经验覆盖<strong>手游开发、军工仿真、VR训练、模拟驾驶、虚拟拍摄、AI数字人</strong>等多个领域，具备丰富的跨行业技术落地能力。</p>
-            </div>
-
-            <div class="about-section">
-              <h4>💼 职业亮点</h4>
-              <ul class="highlight-list">
-                <li>改写UE引擎源码解决三屏Lumen渲染GI反射失效问题</li>
-                <li>开发虚拟拍摄系统，支持LiveLink实时推流与多设备协同控制</li>
-                <li>构建AI数字人交互系统，本地部署完整AI对话流程</li>
-              </ul>
-            </div>
-
-            <div class="about-section">
-              <h4>🎓 教育背景</h4>
-              <p><strong>重庆电子科技职业大学</strong> · 嵌入式技术与应用 · 2015-2018</p>
-            </div>
-
-            <!-- 技能专长部分 -->
-            <div class="about-section">
-              <h4>🚀 技能专长</h4>
-              <div class="skills-list">
-          <!-- UE核心技能 -->
-          <div class="skill-item skill-core">
-            <div class="skill-icon-large">🎮</div>
-            <div class="skill-content">
-              <h3>Unreal Engine</h3>
-              <div class="skill-tags">
-                <span>UE4 / UE5</span>
-                <span>Gameplay框架</span>
-                <span>插件开发</span>
-                <span>VR项目</span>
-                <span>网络同步</span>
-                <span>性能优化</span>
-                <span>源码修改</span>
-                <span>MetaHuman</span>
-                <span>LiveLink</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- C++ -->
-          <div class="skill-item">
-            <div class="skill-icon-large">⚙️</div>
-            <div class="skill-content">
-              <h3>C++</h3>
-              <div class="skill-tags">
-                <span>UE引擎源码修改</span>
-                <span>插件开发</span>
-                <span>模板编程</span>
-                <span>多线程编程</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 网络编程 -->
-          <div class="skill-item">
-            <div class="skill-icon-large">🌐</div>
-            <div class="skill-content">
-              <h3>网络编程</h3>
-              <div class="skill-tags">
-                <span>TCP / UDP</span>
-                <span>HTTP / FTP</span>
-                <span>SSH</span>
-                <span>WebSocket</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 开发工具 -->
-          <div class="skill-item">
-            <div class="skill-icon-large">🛠️</div>
-            <div class="skill-content">
-              <h3>开发工具</h3>
-              <div class="skill-tags">
-                <span>Visual Studio</span>
-                <span>Rider</span>
-                <span>调试优化</span>
-                <span>性能分析</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 版本控制 -->
-          <div class="skill-item">
-            <div class="skill-icon-large">📚</div>
-            <div class="skill-content">
-              <h3>版本控制</h3>
-              <div class="skill-tags">
-                <span>Git</span>
-                <span>SVN</span>
-                <span>Perforce</span>
-                <span>服务器配置</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- VR开发 -->
-          <div class="skill-item">
-            <div class="skill-icon-large">🥽</div>
-            <div class="skill-content">
-              <h3>VR 开发</h3>
-              <div class="skill-tags">
-                <span>Vive</span>
-                <span>Oculus</span>
-                <span>Pico</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- AI技术 -->
-          <div class="skill-item">
-            <div class="skill-icon-large">🤖</div>
-            <div class="skill-content">
-              <h3>AI 技术</h3>
-              <div class="skill-tags">
-                <span>ChatGPT</span>
-                <span>Claude</span>
-                <span>Ollama</span>
-              </div>
-            </div>
-          </div>
-              </div>
-
-              <div class="skills-footer">
-                <p class="learning-statement"><strong>💡 仍在不断学习中...</strong></p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 第3屏：工作经历 -->
-    <section class="fullpage-section section-experience">
-      <div class="section-content">
-        <h2 class="section-title">💼 工作经历</h2>
-
-        <div class="experience-card">
-          <div class="experience-content">
-            <!-- 第一家公司 -->
-            <div class="experience-section">
-              <h4>🏢 北京悠米互动娱乐科技有限公司</h4>
-              <p class="experience-meta">Unreal 开发工程师 <span class="work-period-inline">2018.08 - 2021.02</span></p>
-
-              <div class="project-list-compact">
-                <div class="project-item">
-                  <h5>《救赎之地》大逃杀MOBA手游</h5>
-                  <p class="project-time">2018.08 - 2021.02</p>
-                  <p class="project-desc-compact">客户端使用UE4，服务器使用自建C++游戏服务器</p>
-                  <ul class="task-list-compact">
-                    <li>英雄技能模块：技能释放、冷却、隐藏、锁定逻辑</li>
-                    <li>战斗伤害系统：伤害计算、死亡判定、减伤增伤机制</li>
-                    <li>掉落系统：场景内掉落与拾取逻辑</li>
-                    <li>交互系统：场景物品交互，如开门、开关、激活器等</li>
-                    <li>坐骑系统：坐骑控制与角色同步机制</li>
-                    <li>跳伞系统：实现单人 / 组队跳伞 + 同步跟随逻辑</li>
-                  </ul>
+            <!-- 个人信息卡 -->
+            <div class="profile-card fade-in">
+                <div class="profile-top">
+                    <div class="avatar">🎮</div>
+                    <div class="profile-body">
+                        <div class="profile-name">张靖宇 <span class="dim">/ 男 <span id="age-info">29</span>岁</span></div>
+                        <div class="profile-role">Unreal Engine 开发工程师</div>
+                        <div class="profile-motto">"所有复杂，皆可封装；所有重复，皆可自动化"</div>
+                        <div class="profile-meta">
+                            <span class="pmeta"><span id="exp-years2">8</span> 年经验</span>
+                            <span class="pmeta">山西运城</span>
+                            <span class="pmeta">独立开发者</span>
+                            <span class="pmeta">远程工作</span>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="left-divider"></div>
+                <div class="summary-text">
+                    专注于<strong>插件开发与技术架构设计</strong>，擅长将复杂需求简化为可复用模块。<br>
+                    项目覆盖<strong>手游、军工仿真、VR、模拟驾驶、虚拟拍摄、AI 数字人</strong>等领域。
+                </div>
             </div>
 
-            <!-- 第二家公司 -->
-            <div class="experience-section">
-              <h4>🏢 北京弘宇飞拓科技有限公司 成都分公司</h4>
-              <p class="experience-meta">Unreal 开发工程师 <span class="work-period-inline">2021.07 - 2023.01</span></p>
+            <!-- 工作经历 -->
+            <div class="section-label fade-in">工作经历</div>
 
-              <div class="project-list-compact">
-                <div class="project-item">
-                  <h5>沈阳航空601所 - 无人机航母演示</h5>
-                  <p class="project-time">2021.05 - 2021.08</p>
-                  <ul class="task-list-compact">
-                    <li>使用 LevelSequence 录制无人机起降、补给、维修完整流程</li>
-                    <li>制作高质量航母 VR 展示视频</li>
-                  </ul>
+            <div class="exp-card fade-in" onclick="openDetail('freelance')">
+                <div class="exp-dot"></div>
+                <div class="exp-body">
+                    <div class="exp-company">自由职业 / 独立开发者</div>
+                    <div class="exp-meta">2025.01 - 至今</div>
+                    <div class="exp-summary">17 款 UE 插件上架 Fab，承接飞行汽车模拟、动捕机器人控制、六自由度平台等仿真项目</div>
                 </div>
-
-                <div class="project-item">
-                  <h5>北京航空301所 - 导弹演示系统</h5>
-                  <p class="project-time">2021.07 - 2021.08</p>
-                  <ul class="task-list-compact">
-                    <li>构建交互式军事基地，展示导弹结构与发射流程</li>
-                    <li>使用 Timeline + Niagara 模拟发射路径与爆炸效果</li>
-                  </ul>
+                <span class="exp-arrow">▸</span>
+            </div>
+            <div class="exp-card fade-in" onclick="openDetail('nino')">
+                <div class="exp-dot"></div>
+                <div class="exp-body">
+                    <div class="exp-company">北京尼诺时空文化科技有限公司</div>
+                    <div class="exp-meta">Unreal 开发工程师 · 2023.02 - 2025.01</div>
+                    <div class="exp-summary">驾考模拟器核心开发，AI 数字人交互系统，海洋船舶虚拟拍摄</div>
                 </div>
-
-                <div class="project-item">
-                  <h5>北京陆军航空兵学院 - VR 训练系统</h5>
-                  <p class="project-time">2021.09 - 2022.09</p>
-                  <ul class="task-list-compact">
-                    <li>为教学课目编写训练逻辑，实现学员端与教员端联动控制</li>
-                    <li>接入飞行模拟器数据、支持实时同步学员操作与心率监控</li>
-                  </ul>
+                <span class="exp-arrow">▸</span>
+            </div>
+            <div class="exp-card fade-in" onclick="openDetail('hongyu')">
+                <div class="exp-dot"></div>
+                <div class="exp-body">
+                    <div class="exp-company">北京弘宇飞拓科技有限公司</div>
+                    <div class="exp-meta">Unreal 开发工程师 · 2021.07 - 2023.01</div>
+                    <div class="exp-summary">军工仿真项目群，航母 VR 演示、导弹系统、VR 飞行训练</div>
                 </div>
-
-                <div class="project-item">
-                  <h5>北京商飞 - 飞机模型演示系统</h5>
-                  <p class="project-time">2022.08 - 2023.01</p>
-                  <ul class="task-list-compact">
-                    <li>使用 DataTable + InstancedStaticMesh 实现飞机自动生成</li>
-                    <li>支持交互式参数修改与装备选择</li>
-                  </ul>
+                <span class="exp-arrow">▸</span>
+            </div>
+            <div class="exp-card fade-in" onclick="openDetail('youmi')">
+                <div class="exp-dot"></div>
+                <div class="exp-body">
+                    <div class="exp-company">北京悠米互动娱乐科技有限公司</div>
+                    <div class="exp-meta">Unreal 开发工程师 · 2018.08 - 2021.02</div>
+                    <div class="exp-summary">MOBA 手游《救赎之地》客户端开发，技能 / 战斗 / 跳伞多系统负责</div>
                 </div>
-              </div>
+                <span class="exp-arrow">▸</span>
             </div>
 
-            <!-- 第三家公司 -->
-            <div class="experience-section">
-              <h4>🏢 北京尼诺时空文化科技有限公司</h4>
-              <p class="experience-meta">Unreal 开发工程师 <span class="work-period-inline">2023.02 - 2025.01</span></p>
-
-              <div class="project-list-compact">
-                <div class="project-item">
-                  <h5>驾考模拟器自主学习系统</h5>
-                  <p class="project-time">2023.02 - 2025.01</p>
-                  <p class="project-desc-compact">科目二三模拟考试教学系统，模拟教练教学帮助用户通过实际考试</p>
-                  <ul class="task-list-compact">
-                    <li>使用芬兰团队 XVP 车辆物理模型，模拟真实操作反馈</li>
-                    <li>自研插件并接入 MassAI 和 MetaHuman，模拟真实路人环境</li>
-                    <li>改写引擎源码以实现三屏 Lumen GI 光反射失效、曝光不一致等问题</li>
-                    <li>接入并改写 Common UI 模块，提升 UI 管理效率</li>
-                  </ul>
-                </div>
-
-                <div class="project-item">
-                  <h5>AI 数字人交互演示</h5>
-                  <p class="project-time">2023.03 - 2023.05</p>
-                  <ul class="task-list-compact">
-                    <li>基于 MetaHuman 构建数字人演示系统</li>
-                    <li>本地部署完整 AI 流程（语音识别 → Chat → 文本转语音 -> 语音自动生成表情）</li>
-                    <li>结合 Kinect + ControlRig 实现人体姿态捕捉以及数字人眼动追踪</li>
-                  </ul>
-                </div>
-
-                <div class="project-item">
-                  <h5>海洋船舶模拟系统</h5>
-                  <p class="project-time">2024.05 - 2024.08</p>
-                  <ul class="task-list-compact">
-                    <li>二次开发海洋插件，支持根据风力动态调整海浪参数</li>
-                    <li>开发虚拟拍摄系统：结合 HTC、3D 打印控制器实现海面摄像回放等功能</li>
-                    <li>通过 LiveLink 将实时拍摄画面推送至平板供导演监控</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 第4屏：合作交流 -->
-    <section class="fullpage-section section-collaboration">
-      <div class="section-content">
-        <h2 class="section-title">🤝 合作交流</h2>
-
-        <div class="collaboration-card">
-          <div class="collaboration-content">
-
-            <!-- 开源作品与平台 -->
-            <div class="collaboration-section">
-              <h4>🎨 作品展示</h4>
-              <p class="section-intro">现阶段专注于 Unreal Engine 插件和开源项目开发，已发布多款开源项目和商业插件</p>
-
-              <div class="platform-list">
-                <a href="https://github.com/mengzhishanghun" target="_blank" class="platform-item">
-                  <div class="platform-icon-box">
-                    <svg height="48" viewBox="0 0 16 16" width="48" fill="currentColor">
-                      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                    </svg>
-                  </div>
-                  <div class="platform-info">
-                    <h5>GitHub</h5>
-                    <p>开源项目与代码库</p>
-                    <span class="platform-link">mengzhishanghun →</span>
-                  </div>
+            <!-- 作品平台 -->
+            <div class="section-gap"></div>
+            <div class="section-label fade-in">作品平台</div>
+            <div class="row-3 fade-in">
+                <a href="https://github.com/mengzhishanghun" target="_blank" class="collab-card">
+                    <div class="cc-icon"><svg viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></div>
+                    <div class="cc-info"><h5>GitHub</h5><span class="lnk">开源项目 →</span></div>
                 </a>
-
-                <a href="https://www.fab.com/search?q=mengzhishanghun" target="_blank" class="platform-item">
-                  <div class="platform-icon-box">🛍️</div>
-                  <div class="platform-info">
-                    <h5>Fab Marketplace</h5>
-                    <p>商业插件发布平台</p>
-                    <span class="platform-link">查看我的产品 →</span>
-                  </div>
+                <a href="https://www.fab.com/search?q=mengzhishanghun" target="_blank" class="collab-card">
+                    <div class="cc-icon">🛍️</div>
+                    <div class="cc-info"><h5>Fab</h5><span class="lnk">商业插件 →</span></div>
                 </a>
-
-                <a href="https://www.cnblogs.com/mengzhishanghun" target="_blank" class="platform-item">
-                  <div class="platform-icon-box">📝</div>
-                  <div class="platform-info">
-                    <h5>技术博客</h5>
-                    <p>技术文章与开发笔记</p>
-                    <span class="platform-link">访问博客园 →</span>
-                  </div>
+                <a href="https://www.cnblogs.com/mengzhishanghun" target="_blank" class="collab-card">
+                    <div class="cc-icon">📝</div>
+                    <div class="cc-info"><h5>博客</h5><span class="lnk">技术文章 →</span></div>
                 </a>
-              </div>
             </div>
 
-            <!-- 合作与联系 -->
-            <div class="collaboration-section">
-              <h4>💼 合作说明</h4>
-              <p class="section-intro">所有复杂，皆可封装；所有重复，皆可自动化 —— 期待与您合作</p>
-
-              <div class="platform-list">
-                <div class="platform-item-static">
-                  <div class="platform-icon-box">🎯</div>
-                  <div class="platform-info">
-                    <h5>核心服务</h5>
-                    <p>UE 插件定制开发 · 蓝图脚本开发 · 引擎版本升级 · 崩溃问题修复 · 性能优化</p>
-                  </div>
+            <!-- 合作交流 -->
+            <div class="section-gap"></div>
+            <div class="section-label fade-in">合作交流</div>
+            <div class="row-2 fade-in">
+                <div class="collab-card">
+                    <div class="cc-icon">🎯</div>
+                    <div class="cc-info"><h5>核心服务</h5><p>插件定制 · 引擎升级 · 崩溃修复 · 性能优化</p></div>
                 </div>
-
-                <div class="platform-item-static">
-                  <div class="platform-icon-box">🤝</div>
-                  <div class="platform-info">
-                    <h5>合作方式</h5>
-                    <p>功能定制 · 周期定制 · 技术咨询 · 源码交付 · 可签 NDA · 持续维护</p>
-                  </div>
+                <div class="collab-card">
+                    <div class="cc-icon">🤝</div>
+                    <div class="cc-info"><h5>合作方式</h5><p>功能定制 · 技术咨询 · 源码交付 · 可签 NDA</p></div>
                 </div>
-
-                <div class="platform-item-static">
-                  <div class="platform-icon-box">✉️</div>
-                  <div class="platform-info">
-                    <h5>联系邮箱</h5>
-                    <p>
-                      <a href="mailto:mengzhishanghun@outlook.com" class="email-link">mengzhishanghun@outlook.com</a><br>
-                      <span class="email-note">通常24小时内回复 · 支持中英文沟通</span>
-                    </p>
-                  </div>
-                </div>
-              </div>
             </div>
 
-          </div>
+            <div class="email-strip fade-in">
+                <a href="mailto:mengzhishanghun@outlook.com">mengzhishanghun@outlook.com</a>
+                <span>通常 24 小时内回复 · 支持中英文沟通</span>
+            </div>
+
         </div>
-      </div>
-    </section>
+    </div>
+</div>
 
-  </div>
+<!-- 详情页覆盖层 -->
+<div class="detail-overlay" id="detailOverlay" onclick="closeDetail(event)">
+    <div class="detail-panel" id="detailPanel"></div>
+</div>
 
-  <footer>© <span id="year"></span> 张靖宇 | mengzhishanghun.github.io</footer>
-
-  <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
