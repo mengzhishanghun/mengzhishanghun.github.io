@@ -107,9 +107,12 @@ const panel = document.getElementById('detailPanel');
 function openDetail(key) {
     const d = details[key];
     if (!d) return;
-    let html = `<div class="detail-back" onclick="closeDetail()">← 返回</div>`;
+    let html = `<div class="detail-header">`;
+    html += `<div class="detail-back" onclick="closeDetail()">← 返回</div>`;
     html += `<div class="detail-title">${d.title}</div>`;
     html += `<div class="detail-meta">${d.meta}</div>`;
+    html += `</div>`;
+    // 项目列表
     d.projects.forEach(p => {
         html += `<div class="project"><h5>${p.name}</h5>`;
         html += `<div class="project-time">${p.time}</div>`;
