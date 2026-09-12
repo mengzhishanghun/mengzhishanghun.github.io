@@ -1,1 +1,4 @@
 :root{--sl-font:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;--sl-color-accent-low:#182957;--sl-color-accent:#5575ff;--sl-color-accent-high:#c3d0ff;--sl-content-width:48rem}[data-theme=light]{--sl-color-accent-low:#eef2ff;--sl-color-accent:#355cf4;--sl-color-accent-high:#173997;--sl-color-white:#111827;--sl-color-gray-6:#f7f9fc}.site-title{font-weight:750;letter-spacing:-.025em}.sl-markdown-content{line-height:1.85}
+
+/* 与主站保持一致的近黑背景，沿用 Starlight 原生自动 / 深色 / 浅色切换。 */
+:root[data-theme=dark]{--sl-color-black:#0b0c0f;--sl-color-gray-6:#13161c;--sl-color-gray-5:#2a2e37;--sl-color-gray-2:#b7c0ce;--sl-color-accent:#90a7ff;--sl-color-accent-low:#1d2740;--sl-color-accent-high:#c3d0ff;--sl-color-bg-nav:#0b0c0f;--sl-color-bg-sidebar:#13161c}
