@@ -1,0 +1,10 @@
+---
+import DefaultContent from '@astrojs/starlight/components/MarkdownContent.astro';
+import RelatedContent from '../../../shared/RelatedContent.astro';
+import {products} from '../../../shared/catalog';
+const route=Astro.locals.starlightRoute;
+const lang=route.locale==='en'?'en':'zh';
+const product=products.find(p=>p.docPath&&route.id===lang+'/'+p.docPath);
+---
+<DefaultContent><slot/></DefaultContent>
+{product&&<RelatedContent contentKey={'doc:'+product.id} lang={lang}/>}

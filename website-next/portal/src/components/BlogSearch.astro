@@ -1,0 +1,32 @@
+---
+interface Props{lang:'zh'|'en';tags:string[];}
+const {lang,tags}=Astro.props;const zh=lang==='zh';
+---
+<div class="blog-search" data-blog-search data-lang={lang}><form role="search"><div class="search-field"><label for="blog-query">{zh?'搜索文章':'Search articles'}</label><input id="blog-query" type="search" name="q" placeholder={zh?'标题、正文或关键词':'Title, text, or keyword'} autocomplete="off"/></div><div class="tag-field"><label for="blog-tag">{zh?'标签':'Tag'}</label><select id="blog-tag" name="tag"><option value="">{zh?'全部':'All'}</option>{tags.map(tag=><option value={tag}>{tag}</option>)}</select></div><button class="button button-dark" type="submit">{zh?'搜索':'Search'}</button></form><p class="search-status" role="status" aria-live="polite"></p><div class="search-results" hidden></div><noscript><p>{zh?'启用 JavaScript 后可搜索全文；下方文章仍可直接阅读。':'Enable JavaScript for full-text search. The articles below remain available.'}</p></noscript></div>
+<script is:inline type="module">
+const root=document.querySelector('[data-blog-search]');
+if(root){
+ const zh=root.dataset.lang==='zh',form=root.querySelector('form'),input=root.querySelector('input'),select=root.querySelector('select'),status=root.querySelector('[role=status]'),results=root.querySelector('.search-results'),list=document.querySelector('[data-article-list]'),empty=document.querySelector('[data-tag-empty]');
+ let enginePromise,request=0,timer;
+ const loadEngine=()=>enginePromise??=(import('/blog-search/pagefind.js').then(async engine=>{await engine.options({baseUrl:'/'});await engine.init();return engine;}).catch(error=>{enginePromise=undefined;throw error;}));
+ const syncUrl=()=>{const url=new URL(location.href);for(const [key,value] of [['q',input.value.trim()],['tag',select.value]]){if(value)url.searchParams.set(key,value);else url.searchParams.delete(key);}history.replaceState(null,'',url);};
+ async function search(){
+  const current=++request,query=input.value.trim(),tag=select.value;
+  syncUrl();results.replaceChildren();results.hidden=!query;list.hidden=!!query;empty.hidden=true;
+  if(!query){let count=0;list.querySelectorAll('[data-article-tags]').forEach(card=>{const visible=!tag||JSON.parse(card.dataset.articleTags).includes(tag);card.hidden=!visible;if(visible)count++;});empty.hidden=count>0;status.textContent='';return;}
+  status.textContent=zh?'正在搜索…':'Searching…';
+  try{
+   const engine=await loadEngine();const response=await engine.search(query,{filters:tag?{tag}: {}});
+   const matches=await Promise.all(response.results.slice(0,20).map(result=>result.data()));
+   if(current!==request)return;
+   status.textContent=zh?'找到 '+response.results.length+' 篇文章'+(response.results.length>20?'，显示前 20 篇。':'。'):response.results.length+' articles found'+(response.results.length>20?' (showing the first 20).':'.');
+   for(const match of matches){const article=document.createElement('article'),heading=document.createElement('h2'),link=document.createElement('a'),description=document.createElement('p');article.className='article-card';link.href=match.url;link.textContent=match.meta.title;heading.append(link);description.textContent=match.excerpt.replace(/<[^>]*>/g,'');article.append(heading,description);results.append(article);}
+  }catch{if(current!==request)return;status.textContent=zh?'搜索暂不可用，请浏览下方文章。':'Search is unavailable. Browse the articles below.';results.hidden=true;list.hidden=false;list.querySelectorAll('[data-article-tags]').forEach(card=>card.hidden=false);}
+ }
+ form.addEventListener('submit',event=>{event.preventDefault();clearTimeout(timer);search();});
+ input.addEventListener('input',()=>{clearTimeout(timer);++request;timer=setTimeout(search,250);});
+ select.addEventListener('change',()=>{clearTimeout(timer);search();});
+ const restore=()=>{const params=new URLSearchParams(location.search);input.value=params.get('q')??'';select.value=params.get('tag')??'';search();};
+ window.addEventListener('popstate',restore);restore();
+}
+</script>

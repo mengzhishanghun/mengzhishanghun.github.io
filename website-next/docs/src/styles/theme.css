@@ -2,3 +2,5 @@
 
 /* 与主站保持一致的近黑背景，沿用 Starlight 原生自动 / 深色 / 浅色切换。 */
 :root[data-theme=dark]{--sl-color-black:#0b0c0f;--sl-color-gray-6:#13161c;--sl-color-gray-5:#2a2e37;--sl-color-gray-2:#b7c0ce;--sl-color-accent:#90a7ff;--sl-color-accent-low:#1d2740;--sl-color-accent-high:#c3d0ff;--sl-color-bg-nav:#0b0c0f;--sl-color-bg-sidebar:#13161c}
+
+:root{--sl-nav-height:7rem}

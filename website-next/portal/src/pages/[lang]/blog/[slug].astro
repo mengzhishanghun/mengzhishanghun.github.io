@@ -1,0 +1,7 @@
+---
+import BlogArticle from '../../../components/BlogArticle.astro';
+import {getPublishedPosts} from '../../../../../shared/blog';
+export async function getStaticPaths(){return (await getPublishedPosts()).map(post=>({params:{lang:post.data.lang,slug:post.data.slug},props:{post}}));}
+const {post}=Astro.props;
+---
+<BlogArticle post={post}/>

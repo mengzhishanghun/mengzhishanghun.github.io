@@ -3,12 +3,12 @@ import '../styles/site.css';
 import Icon from '../components/Icon.astro';
 import ThemeProvider from '../components/ThemeProvider.astro';
 import {ui,links,href,type Lang} from '../data/site';
-interface Props{lang:Lang;title?:string;description?:string;area?:string;}
+interface Props{lang:Lang;title?:string;description?:string;area?:string;alternateHref?:string;}
 const {lang,title,description,area=''}=Astro.props;const t=ui[lang];
-const alternate=Astro.url.pathname.replace(/^\/(zh|en)(\/|$)/,'/'+(lang==='zh'?'en':'zh')+'$2');
-const nav=[['projects',t.projects],['docs',t.docs],['blog',t.blog],['me',t.me]];
+const alternate=Astro.props.alternateHref??Astro.url.pathname.replace(/^\/(zh|en)(\/|$)/,'/'+(lang==='zh'?'en':'zh')+'$2');
+const nav=[['projects',t.projects],['works',t.works],['docs',t.docs],['blog',t.blog],['me',t.me]];
 ---
-<!doctype html><html lang={lang==='zh'?'zh-CN':'en'}><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="robots" content="noindex,nofollow"/><meta name="description" content={description??t.description}/><meta name="theme-color" content="#f7f9fc"/><title>{title?title+' · MZSH':'MZSH · '+t.brand}</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><ThemeProvider/></head><body>
+<!doctype html><html lang={lang==='zh'?'zh-CN':'en'}><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><meta name="robots" content="noindex,nofollow"/><meta name="description" content={description??t.description}/><meta name="theme-color" content="#f7f9fc"/><title>{title?title+' · MZSH':'MZSH · '+t.brand}</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"/><link rel="alternate" type="application/rss+xml" title={lang==='zh'?'MZSH 博客':'MZSH Blog'} href={href(lang,'blog')+'rss.xml'}/><ThemeProvider/></head><body>
 <a class="skip-link" href="#main">{lang==='zh'?'跳到主要内容':'Skip to content'}</a>
 <header class="site-header"><div class="container header-inner"><a class="brand" href={href(lang)}><span class="brand-word">MZSH<span>•</span></span></a><button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="main-navigation" aria-label={lang==='zh'?'展开导航':'Open navigation'}><Icon name="menu"/></button><nav class="main-nav" id="main-navigation" aria-label={lang==='zh'?'主导航':'Main navigation'}>{nav.map(([key,label])=><a href={href(lang,key)} aria-current={area===key?'page':undefined}>{label}</a>)}</nav><div class="header-actions"><select class="theme-select" data-theme-select aria-label={lang==='zh'?'颜色主题':'Color theme'}><option value="auto">{lang==='zh'?'自动':'Auto'}</option><option value="dark">{lang==='zh'?'深色':'Dark'}</option><option value="light">{lang==='zh'?'浅色':'Light'}</option></select><a class="language-switch" href={alternate} lang={lang==='zh'?'en':'zh-CN'} aria-label={lang==='zh'?'Switch to English':'切换中文'}>{lang==='zh'?'EN':'中'}</a><a class="button button-small button-dark header-contact" href={href(lang,'me')+'#contact'}>{t.contact}<Icon size={16}/></a></div></div></header>
 <main id="main"><slot/></main>
