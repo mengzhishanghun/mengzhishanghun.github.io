@@ -1,0 +1,3 @@
+import{spawnSync}from'node:child_process';import path from'node:path';import{fileURLToPath}from'node:url';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');const astro=path.join(root,'node_modules','astro','bin','astro.mjs');const action=process.argv[2]??'start';if(!['start','stop','status'].includes(action))throw new Error('Use start, stop, or status');
+for(const [i,app]of ['portal','docs'].entries()){const args=action==='start'?['dev','--background','--host','127.0.0.1','--port',String(4321+i)]:['dev',action];const result=spawnSync(process.execPath,[astro,...args],{cwd:path.join(root,app),stdio:'inherit',windowsHide:true,env:{...process.env,ASTRO_TELEMETRY_DISABLED:'1'}});if(result.status!==0)process.exit(result.status??1);}

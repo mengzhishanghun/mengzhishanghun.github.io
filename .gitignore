@@ -1,4 +1,4 @@
-﻿# ========== Node 项目相关 ==========
+# ========== Node 项目相关 ==========
 node_modules/
 dist/
 build/
@@ -52,3 +52,9 @@ vite.config.js
 
 # custom
 .claude/
+# 新版站点本机状态与生成缓存
+.codex/
+.agents/
+.svn/
+.astro/
+*.local.*

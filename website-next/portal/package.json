@@ -1,0 +1,1 @@
+{"name":"mzsh-portal","private":true,"type":"module","scripts":{"dev":"astro dev --host 127.0.0.1 --port 4321","build":"astro build"},"dependencies":{"astro":"7.3.2"}}

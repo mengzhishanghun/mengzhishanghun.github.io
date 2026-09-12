@@ -1,0 +1,19 @@
+{
+  "name": "mzsh-website-preview",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "portal",
+    "docs"
+  ],
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "npm run build --workspace portal && npm run build --workspace docs && node scripts/combine.mjs",
+    "preview": "node scripts/preview.mjs",
+    "stop": "node scripts/dev.mjs stop",
+    "status": "node scripts/dev.mjs status"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}
