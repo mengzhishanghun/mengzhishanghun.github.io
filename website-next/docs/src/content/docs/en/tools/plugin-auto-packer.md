@@ -24,4 +24,4 @@ Multi-version UE plugin packaging。
 
 This guide follows the public README. Refer to the release notes for version-specific options and support.
 
-[View the product](/en/projects/plugin-auto-packer/) · [Contact and feedback](/en/me/#contact)
+[查看作品](/works/#plugin-auto-packer) · [联系与反馈](mailto:mzsh.me@icloud.com)

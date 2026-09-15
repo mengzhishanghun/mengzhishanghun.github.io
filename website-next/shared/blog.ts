@@ -24,4 +24,4 @@ export async function getPosts() {
 }
 export const isPublished = (post:{data:{draft:boolean;date:Date}}) => !post.data.draft && post.data.date.getTime() <= Date.now();
 export const getPublishedPosts = async () => (await getPosts()).filter(isPublished);
-export const postHref = (post:{data:{lang:string;slug:string}}) => '/'+post.data.lang+'/blog/'+post.data.slug+'/';
+export const postHref = (post:{data:{lang:string;slug:string}}) => post.data.lang==='zh'?'/blog/'+post.data.slug+'/':'/en/blog/'+post.data.slug+'/';

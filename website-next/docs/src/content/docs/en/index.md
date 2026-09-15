@@ -12,4 +12,4 @@ Find downloads, basic workflows, and reference material for MZSH tools.
 
 These guides follow each tool’s public README. Check the linked repository for release-specific requirements and changes.
 
-[Back to MZSH](/en/) · [Contact and product feedback](/en/me/#contact)
+[返回 MZSH 主站](/) · [联系与反馈](mailto:mzsh.me@icloud.com)
