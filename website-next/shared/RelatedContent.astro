@@ -3,9 +3,9 @@ import {relatedContent,type ContentKind} from './relations';
 interface Props {contentKey:string;lang:'zh'|'en';}
 const {contentKey,lang}=Astro.props;
 const related=await relatedContent(contentKey,lang);
-const labels:Record<ContentKind,string>=lang==='zh'?{product:'相关产品',work:'相关作品',doc:'使用文档',blog:'相关文章'}:{product:'Products',work:'Case studies',doc:'Documentation',blog:'Articles'};
+const labels:Record<ContentKind,string>=lang==='zh'?{product:'相关作品',case:'相关案例',doc:'使用文档',blog:'相关文章'}:{product:'Works',case:'Cases',doc:'Documentation',blog:'Articles'};
 ---
-{related.length>0&&<aside class="related-content" aria-label={lang==='zh'?'关联内容':'Related content'} data-pagefind-ignore><h2>{lang==='zh'?'继续了解':'Explore related content'}</h2><div class="related-grid">{(['product','work','doc','blog'] as const).map(kind=>{const items=related.filter(item=>item.kind===kind);return items.length>0&&<section><h3>{labels[kind]}</h3><ul>{items.map(item=><li><a href={item.href}>{item.title}</a><p>{item.description}</p></li>)}</ul></section>})}</div></aside>}
+{related.length>0&&<aside class="related-content" aria-label={lang==='zh'?'关联内容':'Related content'} data-pagefind-ignore><h2>{lang==='zh'?'继续了解':'Explore related content'}</h2><div class="related-grid">{(['product','case','doc','blog'] as const).map(kind=>{const items=related.filter(item=>item.kind===kind);return items.length>0&&<section><h3>{labels[kind]}</h3><ul>{items.map(item=><li><a href={item.href}>{item.title}</a><p>{item.description}</p></li>)}</ul></section>})}</div></aside>}
 <style>
 .related-content{margin-block:2.5rem;padding-block:1.75rem;border-top:1px solid light-dark(#e2e7f0,#2a2e37);color:light-dark(#111827,#f1f3f7)}.related-content h2{font-size:1.4rem;line-height:1.4;margin:0 0 1.25rem}.related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.5rem}.related-content h3{font-size:.9rem;margin:0 0 .75rem;color:light-dark(#647084,#a4adbd)}.related-content ul{padding:0;margin:0;list-style:none}.related-content li+li{margin-top:1rem}.related-content a{font-size:1rem;color:light-dark(#355cf4,#90a7ff);text-decoration:underline;text-underline-offset:4px;overflow-wrap:anywhere}.related-content p{font-size:.875rem;color:light-dark(#647084,#a4adbd);margin:.35rem 0 0;line-height:1.7}
 </style>

@@ -1,6 +1,7 @@
 import type {APIRoute} from 'astro';
 import {getPublishedPosts,postHref} from '../../../../../shared/blog';
-export function getStaticPaths(){return ['zh','en'].map(lang=>({params:{lang}}));}
+// RSS 统一由 /blog/rss.xml 提供，不再发布语言前缀版本。
+export function getStaticPaths(){return [];}
 const xml=(value:string)=>value.replace(/[<>&"']/g,char=>({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;',"'":'&apos;'}[char]!));
 export const GET:APIRoute=async({params})=>{
  const lang=params.lang==='en'?'en':'zh';

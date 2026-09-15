@@ -5,7 +5,8 @@ const initialProducts=[
 ];
 
 export type ProductCopy = { label:string; description:string; features:string[]; steps:string[]; problem:string; result:string };
-export type Product = { id:string; name:string; mark:string; color:string; category:string; repo:string; docPath?:string; license?:string; download?:string; zh:ProductCopy; en:ProductCopy };
+export type ItemStatus = '已开源' | '归档' | '已完成';
+export type Product = { id:string; name:string; mark:string; color:string; category:string; repo:string; docPath?:string; fab?:string; status?:ItemStatus; license?:string; download?:string; zh:ProductCopy; en:ProductCopy };
 export const products:Product[] = initialProducts.map(product => ({...product, docPath:'tools/'+product.id, license:product.id==='md-blog-packer'?'MIT':undefined, download:product.repo+'/releases'}));
 export const works = [
   {id:'plugin-release-workflow',productIds:['plugin-auto-packer','plugin-manager'],
@@ -14,6 +15,11 @@ export const works = [
   {id:'markdown-publishing',productIds:['md-blog-packer'],
    zh:{title:'让 Markdown 图片随文章一起发布',summary:'从本地图片路径到可复制的发布文本，减少文章迁移时的手动整理。',kind:'工具实践',challenge:'本地 Markdown 能显示图片，复制到其他平台后，相对路径却未必可用。',approach:'MDBlogPacker 读取本地图片并转换为 Base64 内嵌格式，同时保留网络图片，支持标准图片语法与 Wiki 图片引用。',outcome:'提供 GUI 和命令行两种使用方式，转换结果可复制或导出；是否接受内嵌图片仍取决于目标平台。'},
    en:{title:'Publishing Markdown with its images',summary:'Turn local image references into portable publishing text.',kind:'Tooling case study',challenge:'Images that work in local Markdown may break when text is copied to a different platform.',approach:'MDBlogPacker embeds local images as Base64, preserves remote images, and supports standard Markdown and wiki image references.',outcome:'GUI and command-line workflows support copying or exporting the result. The destination platform still needs to accept embedded images.'}}
+];
+
+export const cases = [...works,
+  {id:'driving-simulator-three-screen',productIds:[],zh:{title:'解决驾考模拟器三屏显示不一致问题',summary:'围绕三屏 Lumen GI 光反射失效与曝光不一致，定位并改写引擎相关实现。',kind:'显示与渲染',background:'驾考模拟器自主学习系统需要在三块屏幕上呈现一致的训练画面。',approach:'针对三屏场景中的 Lumen GI 光反射与曝光差异，检查问题链路并改写引擎源码中的相关实现。',outcome:'三屏显示问题得到处理，项目继续用于模拟考试教学场景。'},en:{title:'Driving simulator displays',summary:'',kind:'Case',background:'',approach:'',outcome:''}},
+  {id:'ai-digital-human-integration',productIds:[],zh:{title:'集成 AI 数字人交互流程',summary:'将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。',kind:'交互集成',background:'AI 数字人交互演示需要让多个实时环节能够在同一套流程中协作。',approach:'基于 MetaHuman 构建数字人演示，接入语音识别、Chat、TTS 与表情驱动；并结合 Kinect 与 ControlRig 完成人体姿态捕捉和眼动追踪。',outcome:'形成可演示的本地 AI 数字人交互流程。'},en:{title:'Digital human integration',summary:'',kind:'Case',background:'',approach:'',outcome:''}},
 ];
 
 products.push(...[
@@ -142,4 +148,13 @@ products.push(...[
       "result": "A mapping configuration brings repeated downloads and updates together."
     }
   }
+]);
+
+products.forEach((product,index)=>Object.assign(product,{status:index<6?'已开源':'归档',fab:''}));
+cases.forEach((item,index)=>Object.assign(item,{status:'已完成',navTitle:['插件发布流程','Markdown 发布','三屏显示问题','AI 数字人流程'][index]}));
+
+products.push(...[
+  {id:'flying-car-simulator',name:'飞行汽车模拟器',mark:'FC',color:'blue',category:'simulation',repo:'',zh:{label:'飞行汽车仿真',description:'面向未来出行的飞行汽车仿真系统。',features:['飞行与地面行驶双模态切换控制','物理模型驱动的飞行姿态与动力学模拟','座舱交互与 HUD 仪表系统'],steps:[],problem:'需要同时呈现飞行与地面行驶状态。',result:'围绕双模态控制、物理模拟与座舱交互组织系统。'},en:{label:'Simulation',description:'',features:[],steps:[],problem:'',result:''}},
+  {id:'motion-capture-robot-control',name:'动捕机器人控制系统',mark:'MR',color:'violet',category:'interaction',repo:'',zh:{label:'动捕机器人控制',description:'基于动作捕捉的机器人实时控制方案。',features:['动捕数据采集与实时解析','UE 端机器人骨骼映射与动作同步','控制指令下发与反馈回路'],steps:[],problem:'需要将实时动作捕捉数据用于机器人控制。',result:'将数据解析、骨骼映射、动作同步和反馈回路接入同一方案。'},en:{label:'Interaction',description:'',features:[],steps:[],problem:'',result:''}},
+  {id:'six-dof-motion-platform',name:'六自由度运动平台联动',mark:'6D',color:'teal',category:'simulation',repo:'',zh:{label:'运动平台联动',description:'Stewart 平台与 UE 仿真的联动控制。',features:['平台姿态数据实时通信','UE 场景运动数据驱动平台响应','多自由度联动校准与调试'],steps:[],problem:'需要让运动平台与 UE 仿真场景同步响应。',result:'围绕实时通信、运动数据驱动与联动校准完成方案。'},en:{label:'Simulation',description:'',features:[],steps:[],problem:'',result:''}},
 ]);

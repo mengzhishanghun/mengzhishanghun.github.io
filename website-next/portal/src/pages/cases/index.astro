@@ -1,0 +1,8 @@
+---
+import Base from '../../layouts/Base.astro';
+import MasterDetail, { type MasterItem } from '../../components/MasterDetail.astro';
+import { cases, products } from '../../data/site';
+const relatedLinks=(ids:string[])=>ids.flatMap(id=>{const product=products.find(item=>item.id===id);if(!product)return [];return [product.repo&&{label:product.name+' GitHub',href:product.repo},product.fab&&{label:product.name+' Fab',href:product.fab},product.docPath&&{label:product.name+' 使用文档',href:'/docs/zh/'+product.docPath+'/'}].filter(Boolean) as {label:string;href:string}[]});
+const items: MasterItem[] = cases.map(item => { const copy=item.zh as Record<string,string>; const meta=item as {navTitle?:string;status?:string;productIds:string[]}; return { id:item.id, navTitle:meta.navTitle ?? copy.title, title:copy.title, status:meta.status ?? '已完成', description:copy.summary, details:[{heading:'背景',content:copy.background ?? copy.challenge},{heading:'主要方案',content:copy.approach},{heading:'最终效果',content:copy.outcome}], links:relatedLinks(meta.productIds) }; });
+---
+<Base title="案例" area="cases"><div class="master-page"><header class="shell master-page-head"><h1>案例</h1><p>从真实问题到落地结果。</p></header><section class="shell master-page-body"><MasterDetail items={items} label="案例列表"/></section></div></Base>
