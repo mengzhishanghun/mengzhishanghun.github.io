@@ -1,0 +1,56 @@
+---
+import MobileMenuToggle from 'virtual:starlight/components/MobileMenuToggle';
+import SiteChrome from '../../../shared/SiteChrome.astro';
+const { hasSidebar } = Astro.locals.starlightRoute;
+---
+
+<SiteChrome area="docs" docs contentTag="div">
+  <div class="docs-frame">
+    <div class="docs-tools"><slot name="header" /></div>
+    {hasSidebar && <nav class="sidebar print:hidden" aria-label={Astro.locals.t('sidebarNav.accessibleLabel')}>
+      <MobileMenuToggle />
+      <script>
+        class StarlightSidebarPane extends HTMLElement {
+          private readonly mediaQuery = matchMedia('(min-width: 50em)');
+          private readonly closeOnDesktop = () => this.hidePopover();
+
+          constructor() {
+            super();
+            this.addEventListener('toggle', ({ newState }) => this.trapFocus(newState === 'open'));
+          }
+
+          connectedCallback() {
+            this.mediaQuery.addEventListener('change', this.closeOnDesktop);
+          }
+
+          disconnectedCallback() {
+            this.mediaQuery.removeEventListener('change', this.closeOnDesktop);
+          }
+
+          trapFocus(shouldTrap: boolean) {
+            document.querySelectorAll<HTMLElement>('.main-frame, .sl-skip-link').forEach((element) => element.toggleAttribute('inert', shouldTrap));
+          }
+        }
+        if (!customElements.get('sl-sidebar-pane')) customElements.define('sl-sidebar-pane', StarlightSidebarPane);
+      </script>
+      <sl-sidebar-pane popover="" id="starlight__sidebar" class="sidebar-pane"><div class="sidebar-content sl-flex"><slot name="sidebar" /></div></sl-sidebar-pane>
+    </nav>}
+    <div id="main" class="main-frame"><slot /></div>
+  </div>
+</SiteChrome>
+
+<style is:global>
+  .site-chrome-docs .site-chrome-main{overflow:hidden}
+  .site-chrome-docs .sl-skip-link{display:none}
+  .docs-frame{height:100%;min-height:0;display:grid;grid-template-columns:var(--sl-sidebar-width,0) minmax(0,1fr);grid-template-rows:var(--sl-nav-height) minmax(0,1fr)}
+  .docs-tools{grid-column:1/-1;min-height:0;height:var(--sl-nav-height);padding:var(--sl-nav-pad-y) var(--sl-nav-pad-x);border-bottom:1px solid var(--sl-color-hairline-shade);background:var(--sl-color-bg-nav)}
+  .docs-tools>.header{height:100%}
+  .docs-frame>.sidebar{grid-column:1;grid-row:2;min-height:0;overflow:auto;background:var(--sl-color-bg-sidebar);border-inline-end:1px solid var(--sl-color-hairline-shade)}
+  .docs-frame>.main-frame{grid-column:2;grid-row:2;min-width:0;min-height:0;overflow:auto;padding:0}
+  .docs-frame>.main-frame main{padding:var(--sl-main-pad)}
+  .docs-frame .sidebar-pane{display:block;border:unset;padding:unset;width:var(--sl-sidebar-width);height:100%;background:var(--sl-color-bg-sidebar)}
+  .docs-frame .sidebar-content{height:100%;min-height:max-content;padding:1rem var(--sl-sidebar-pad-x) 0;flex-direction:column;gap:1rem}
+  .docs-frame .right-sidebar{position:sticky;top:0;height:100%;padding-top:0}
+  @media(max-width:50rem){.docs-frame{display:block}.docs-tools{height:var(--sl-nav-height)}.docs-frame>.sidebar{display:block;position:static;border:0}.docs-frame>.sidebar>.sidebar-pane{position:fixed;z-index:var(--sl-z-index-menu);inset:calc(var(--site-chrome-header-height) + var(--sl-nav-height)) 0 var(--site-chrome-footer-height);width:100%;height:auto;overflow-y:auto;scrollbar-gutter:stable;background-color:var(--sl-color-black)}.docs-frame>.sidebar>.sidebar-pane:not(:popover-open){display:none}.docs-frame>.sidebar>.sidebar-pane:popover-open{display:block}.docs-frame>.main-frame{height:calc(100% - var(--sl-nav-height))}}
+  @media(max-width:50rem){.docs-frame>.sidebar>.sl-menu-button{position:fixed;top:calc(var(--site-chrome-header-height) + (var(--sl-nav-height) - var(--sl-menu-button-size))/2);right:var(--sl-nav-pad-x);z-index:var(--sl-z-index-navbar)}}
+</style>

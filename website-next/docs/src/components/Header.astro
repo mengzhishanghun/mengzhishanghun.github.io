@@ -1,7 +1,4 @@
 ---
 import DefaultHeader from '@astrojs/starlight/components/Header.astro';
-const lang=Astro.locals.starlightRoute.locale==='en'?'en':'zh';
-const items=[['/','首页'],['/works/','作品'],['/cases/','案例'],['/blog/','博客']];
 ---
-<div class="docs-header-top"><DefaultHeader/></div><nav class="docs-site-nav" aria-label="主导航">{items.map(([href,label])=><a href={href}>{label}</a>)}</nav>
-<style>.docs-header-top{height:3.5rem}.docs-site-nav{display:flex;align-items:center;gap:1.5rem;min-height:2rem;white-space:nowrap;font-size:.875rem}.docs-site-nav a{color:var(--sl-color-gray-2);text-decoration:none}.docs-site-nav a:hover,.docs-site-nav a[aria-current=page]{color:var(--sl-color-text-accent)}@media(max-width:30rem){.docs-site-nav{gap:1rem;font-size:.8125rem}}</style>
+<DefaultHeader/>

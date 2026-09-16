@@ -24,4 +24,4 @@ Find and manage UE plugins。
 
 This guide follows the public README. Refer to the release notes for version-specific options and support.
 
-[查看作品](/works/#plugin-manager) · [联系与反馈](mailto:mzsh.me@icloud.com)
+[查看作品](/works/plugin-manager/) · [联系与反馈](mailto:mzsh.me@icloud.com)

@@ -24,4 +24,4 @@ Markdown 本地图片内嵌与复制。
 
 本页依据公开 README 整理。版本相关参数和支持范围，请以对应发布说明为准。
 
-[查看作品](/works/#md-blog-packer) · [联系与反馈](mailto:mzsh.me@icloud.com)
+[查看作品](/works/md-blog-packer/) · [联系与反馈](mailto:mzsh.me@icloud.com)

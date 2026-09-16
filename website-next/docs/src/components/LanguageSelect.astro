@@ -1,0 +1,49 @@
+---
+import context from 'virtual:starlight/project-context';
+import config from 'virtual:starlight/user-config';
+import Select from '@astrojs/starlight/components/Select.astro';
+function localizedPathname(locale: string | undefined): string {
+  const url = new URL(Astro.url);
+  if (!config.locales) return url.pathname;
+  if (locale === 'root') locale = '';
+  const base = import.meta.env.BASE_URL.replace(/\/+$/, '');
+  const hasBase = url.pathname.startsWith(base);
+  if (hasBase) url.pathname = url.pathname.replace(base, '');
+  const [, baseSegment] = url.pathname.split('/');
+  const isRootHtml = baseSegment?.endsWith('.html');
+  const baseSlug = isRootHtml ? baseSegment?.slice(0, -5) : baseSegment;
+  if (baseSlug && baseSlug in config.locales) {
+    if (locale) url.pathname = url.pathname.replace(baseSlug, locale);
+    else if (isRootHtml) url.pathname = '/index.html';
+    else url.pathname = url.pathname.replace('/' + baseSlug, '');
+  } else if (locale) {
+    url.pathname = baseSegment === 'index.html' ? '/' + locale + '.html' : '/' + locale + url.pathname;
+  }
+  if (hasBase) url.pathname = base + url.pathname;
+  if (context.trailingSlash === 'never') url.pathname = url.pathname.replace(/\/+$/, '');
+  return url.pathname;
+}
+---
+
+{config.isMultilingual && <starlight-lang-select><Select icon="translate" label={Astro.locals.t('languageSelect.accessibleLabel')} options={Object.entries(config.locales).map(([code, locale]) => ({ value: localizedPathname(code), selected: code === Astro.locals.starlightRoute.locale, label: locale!.label }))} width="7em" /></starlight-lang-select>}
+
+<script>
+  if (!customElements.get('starlight-lang-select')) {
+    const syncLanguageSelects = () => {
+      document.querySelectorAll<HTMLSelectElement>('starlight-lang-select select').forEach((select) => {
+        const markupSelectedIndex = select.querySelector<HTMLOptionElement>('option[selected]')?.index;
+        if (markupSelectedIndex !== select.selectedIndex) select.selectedIndex = markupSelectedIndex ?? 0;
+      });
+    };
+    window.addEventListener('pageshow', (event) => { if (event.persisted) syncLanguageSelects(); });
+    class StarlightLanguageSelect extends HTMLElement {
+      constructor() {
+        super();
+        const select = this.querySelector('select');
+        if (!select) return;
+        select.addEventListener('change', (event) => { if (event.currentTarget instanceof HTMLSelectElement) window.location.pathname = event.currentTarget.value; });
+      }
+    }
+    customElements.define('starlight-lang-select', StarlightLanguageSelect);
+  }
+</script>

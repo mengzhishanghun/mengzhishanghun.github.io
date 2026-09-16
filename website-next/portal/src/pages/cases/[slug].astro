@@ -1,6 +1,8 @@
 ---
-import { cases } from '../../data/site';
-export function getStaticPaths(){return cases.map(item=>({params:{slug:item.id},props:{target:'/cases/#'+item.id}}));}
-const { target } = Astro.props;
-return Astro.redirect(target);
+import Base from '../../layouts/Base.astro';
+import MasterDetail from '../../components/MasterDetail.astro';
+import { caseItems } from '../../data/master-items';
+export function getStaticPaths(){return caseItems.map(item=>({params:{slug:item.id},props:{item}}));}
+const { item } = Astro.props;
 ---
+<Base title={item.title} description={item.description} area="cases"><div class="master-page"><header class="shell master-page-head"><h1>案例</h1><p>从真实问题到落地结果。</p></header><section class="shell master-page-body"><MasterDetail items={caseItems} selectedId={item.id} label="案例列表" baseHref="/cases/"/></section></div></Base>
