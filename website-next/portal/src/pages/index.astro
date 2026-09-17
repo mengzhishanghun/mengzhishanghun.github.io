@@ -1,80 +1,116 @@
 ---
 import Base from '../layouts/Base.astro';
 
-const directions = [
-  { number: '01', title: '游戏与互动内容', description: '把玩法、叙事和交互体验做成真正可以运行、可以反复打磨的内容。' },
-  { number: '02', title: '数字孪生与仿真', description: '连接虚拟场景、实时数据与控制系统，让复杂设备和流程更容易理解。' },
-  { number: '03', title: 'AI 内容与漫剧', description: '探索角色、分镜、声音与视频生成，建立能够持续生产的内容流程。' },
-  { number: '04', title: '增长与投放实践', description: '从素材、渠道到数据复盘，记录内容如何被看见，以及怎样持续优化。' },
-];
-
-const highlights = [
-  { type: '精选作品', title: 'UEPluginAutoPacker', description: '把多引擎版本构建、打包日志与 Fab 包整理集中到一处。', href: '/works/plugin-auto-packer/' },
-  { type: '精选案例', title: 'AI 数字人交互流程', description: '将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。', href: '/cases/ai-digital-human-integration/' },
-  { type: '精选博客', title: 'Markdown 本地图片，发布时该怎么处理？', description: '从自己的站点到第三方平台，梳理图片路径、独立文件与 Base64 的取舍。', href: '/blog/markdown-images/' },
-];
+const featured = {
+  works: [
+    { title: 'UEPluginAutoPacker', description: '把多引擎版本构建、打包日志与 Fab 包整理集中到一处，减少重复操作，也更容易定位构建失败的原因。', href: '/works/plugin-auto-packer/' },
+    { title: 'UEPluginManager', description: '统一查找项目、引擎与商城插件，集中查看插件位置、版本与依赖关系。', href: '/works/plugin-manager/' },
+    { title: 'MDBlogPacker', description: '处理 Markdown 文章中的本地图片，让内容更方便复制和发布到不同平台。', href: '/works/md-blog-packer/' },
+  ],
+  cases: [
+    { title: '解决驾考模拟器三屏显示不一致问题', description: '围绕三屏环境中的 Lumen GI 与曝光差异，定位引擎限制并验证修改后的显示结果。', href: '/cases/driving-simulator-three-screen/' },
+    { title: '集成 AI 数字人交互流程', description: '把语音识别、对话、语音合成、表情驱动与人体交互串成可以实际演示的完整流程。', href: '/cases/ai-digital-human-integration/' },
+    { title: '插件开发到发布的工具链', description: '将插件管理、多版本构建、日志检查与交付整理成连贯的开发和发布流程。', href: '/cases/plugin-release-workflow/' },
+  ],
+  blog: [
+    { title: 'Markdown 本地图片，发布时该怎么处理？', description: '梳理相对路径、独立图片文件与 Base64 内嵌的适用场景，帮助文章在不同平台间稳定发布。', href: '/blog/markdown-images/' },
+  ],
+};
 ---
 <Base area="home">
-  <section class="hero home-hero">
-    <div class="shell hero-content">
-      <p class="eyebrow">MZSH · CREATIVE TECHNOLOGY</p>
-      <h1>所有复杂，皆可封装；<br/>所有重复，皆可自动化。</h1>
-      <p>你好，我是小毛。这里记录我正在实践的技术、内容与产品方向。</p>
-    </div>
-  </section>
-
-  <section class="home-directions" aria-labelledby="directions-title">
-    <div class="shell">
-      <header class="home-section-heading">
-        <div><p class="eyebrow">DIRECTIONS</p><h2 id="directions-title">不止一种方向，也不只做一种作品。</h2></div>
-        <p>这些方向可以并行发展，也会在不同项目里互相连接。</p>
-      </header>
-      <div class="direction-grid">
-        {directions.map(direction => <article class="direction-card"><span>{direction.number}</span><h3>{direction.title}</h3><p>{direction.description}</p></article>)}
+  <div class="home-layout">
+    <section class="hero">
+      <div class="shell hero-content">
+        <h1>所有复杂，皆可封装；<br/>所有重复，皆可自动化。</h1>
+        <p>你好，我是小毛。这里记录我正在实践的技术、内容与产品方向。</p>
+        <p class="home-direction-list" aria-label="目前关注的方向">游戏与互动内容<span>·</span>数字孪生与仿真<span>·</span>AI 内容与漫剧<span>·</span>增长与投放实践</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="home-highlights" aria-labelledby="highlights-title">
-    <div class="shell">
-      <header class="home-section-heading">
-        <div><p class="eyebrow">SELECTED</p><h2 id="highlights-title">精选内容</h2></div>
-        <p>这里由我手动挑选和编排，不受文章分类与发布时间限制。</p>
-      </header>
-      <div class="highlight-grid">
-        {highlights.map(item => <a class="highlight-card" href={item.href}><span>{item.type}</span><h3>{item.title}</h3><p>{item.description}</p><strong>查看内容 →</strong></a>)}
+    <section class="section featured-section" aria-label="精选内容">
+      <div class="shell">
+        <div class="featured-shell">
+          <div class="featured-tabs" role="tablist" aria-label="精选内容分类">
+            <button class="active" type="button" role="tab" aria-selected="true" data-tab="works">01　作品<small>做过的插件、工具与项目</small></button>
+            <button type="button" role="tab" aria-selected="false" data-tab="cases">02　案例<small>从真实问题到落地结果</small></button>
+            <button type="button" role="tab" aria-selected="false" data-tab="blog">03　博客<small>技术思考、排障与开发记录</small></button>
+          </div>
+          <section class="featured-panel" aria-live="polite">
+            <p class="eyebrow" data-label>精选作品 01</p>
+            <div class="featured-card" tabindex="0" data-feature></div>
+            <div class="featured-dots" data-dots></div>
+            <a class="featured-more text-link" data-feature-more href="/works/">查看更多作品 →</a>
+          </section>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </Base>
 
+<script define:vars={{ featured }} data-astro-rerun>
+  const groups = featured;
+  let group = 'works';
+  let index = 0;
+  let startX = 0;
+  const card = document.querySelector('[data-feature]');
+  const dots = document.querySelector('[data-dots]');
+  const label = document.querySelector('[data-label]');
+  const more = document.querySelector('[data-feature-more]');
+  const names = { works: '精选作品', cases: '精选案例', blog: '精选博客' };
+  const moreText = { works: '查看更多作品 →', cases: '查看更多案例 →', blog: '查看更多博客 →' };
+  const moreHref = { works: '/works/', cases: '/cases/', blog: '/blog/' };
+
+  const render = () => {
+    const items = groups[group];
+    const item = items[index] || items[0];
+    label.textContent = `${names[group]} ${String(index + 1).padStart(2, '0')}`;
+    more.textContent = moreText[group];
+    more.href = moreHref[group];
+    card.innerHTML = `<h3><a href="${item.href}">${item.title}</a></h3><p>${item.description}</p>`;
+    dots.innerHTML = items.length > 1
+      ? items.map((_, itemIndex) => `<button class="${itemIndex === index ? 'active' : ''}" type="button" aria-label="查看第 ${itemIndex + 1} 项" aria-current="${itemIndex === index ? 'true' : 'false'}" data-index="${itemIndex}"></button>`).join('')
+      : '';
+    dots.querySelectorAll('button').forEach(button => button.addEventListener('click', () => {
+      index = Number(button.dataset.index);
+      render();
+    }));
+  };
+
+  const move = direction => {
+    const itemCount = groups[group].length;
+    if (itemCount > 1) {
+      index = (index + direction + itemCount) % itemCount;
+      render();
+    }
+  };
+
+  document.querySelectorAll('[data-tab]').forEach(button => button.addEventListener('click', () => {
+    group = button.dataset.tab;
+    index = 0;
+    document.querySelectorAll('[data-tab]').forEach(tab => {
+      const active = tab === button;
+      tab.classList.toggle('active', active);
+      tab.setAttribute('aria-selected', String(active));
+    });
+    render();
+  }));
+  card.addEventListener('pointerdown', event => startX = event.clientX);
+  card.addEventListener('pointerup', event => {
+    if (Math.abs(event.clientX - startX) > 45) move(event.clientX < startX ? 1 : -1);
+  });
+  card.addEventListener('keydown', event => {
+    if (event.key === 'ArrowLeft') move(-1);
+    if (event.key === 'ArrowRight') move(1);
+  });
+  render();
+</script>
+
 <style>
-  :global(.home-main){overflow-y:auto;background:radial-gradient(circle at 78% 18%,#173c5c55,transparent 32%),var(--bg)}
-  .home-hero{min-height:58vh;position:relative;border-bottom:1px solid var(--line)}
-  .home-hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:1px;background:linear-gradient(90deg,transparent,var(--blue),transparent);opacity:.55}
-  .home-hero .eyebrow{margin-bottom:18px}
-  .home-hero h1{font-size:clamp(2.6rem,5vw,4.8rem);max-width:980px;white-space:normal}
-  .home-hero .hero-content>p:last-child{max-width:660px;font-size:1.08rem}
-  .home-directions,.home-highlights{padding:72px 0}
-  .home-highlights{border-top:1px solid var(--line);background:#06101b88}
-  .home-section-heading{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:28px}
-  .home-section-heading h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.25;margin-top:8px}
-  .home-section-heading>p{max-width:410px;text-align:right}
-  .direction-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);background:var(--panel)}
-  .direction-card{min-width:0;min-height:270px;padding:28px 24px;border-right:1px solid var(--line);position:relative;overflow:hidden}
-  .direction-card:last-child{border-right:0}
-  .direction-card::after{content:'';position:absolute;left:24px;right:24px;bottom:0;height:3px;background:var(--blue);transform:scaleX(.22);transform-origin:left;transition:transform .22s ease}
-  .direction-card:hover::after{transform:scaleX(1)}
-  .direction-card span,.highlight-card>span{color:var(--blue);font-size:.76rem;letter-spacing:.16em}
-  .direction-card h3{font-size:1.3rem;margin:56px 0 12px}
-  .direction-card p{font-size:.94rem}
-  .highlight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-  .highlight-card{min-width:0;min-height:260px;padding:26px;border:1px solid var(--line);background:linear-gradient(145deg,#11243a,#0a1625);display:flex;flex-direction:column;transition:border-color .2s ease,transform .2s ease}
-  .highlight-card:hover,.highlight-card:focus-visible{border-color:var(--blue);transform:translateY(-4px)}
-  .highlight-card h3{font-size:1.35rem;line-height:1.35;margin:32px 0 12px}
-  .highlight-card p{margin-bottom:28px}
-  .highlight-card strong{margin-top:auto;color:var(--blue);font-size:.9rem}
-  @media(prefers-reduced-motion:reduce){.direction-card::after,.highlight-card{transition:none}.highlight-card:hover,.highlight-card:focus-visible{transform:none}}
-  @media(max-width:900px){.direction-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.direction-card{border-bottom:1px solid var(--line)}.direction-card:nth-child(2){border-right:0}.direction-card:nth-child(n+3){border-bottom:0}.highlight-grid{grid-template-columns:1fr}}
-  @media(max-width:720px){.home-hero{min-height:58vh}.home-hero h1{font-size:clamp(2.15rem,11vw,3.1rem)}.home-directions,.home-highlights{padding:48px 0}.home-section-heading{display:block}.home-section-heading>p{margin-top:14px;text-align:left}.direction-grid{grid-template-columns:1fr}.direction-card{min-height:220px;border-right:0;border-bottom:1px solid var(--line)!important}.direction-card:last-child{border-bottom:0!important}.direction-card h3{margin-top:38px}.highlight-card{min-height:230px}}
+  .home-direction-list{display:flex;flex-wrap:wrap;gap:0 10px;max-width:820px!important;margin-top:14px;font-size:.92rem!important}
+  .home-direction-list span{color:var(--blue)}
+  .featured-card{touch-action:pan-y}
+  .featured-card h3{font-size:clamp(1.65rem,3vw,2.2rem);line-height:1.25;margin:22px 0 15px}
+  .featured-card h3 a:hover,.featured-card h3 a:focus-visible{color:var(--blue)}
+  .featured-card p{max-width:760px;font-size:1rem}
+  @media(max-width:720px){.home-direction-list{display:block;line-height:1.9}.home-direction-list span{padding:0 5px}.featured-card h3{font-size:1.45rem}}
 </style>
