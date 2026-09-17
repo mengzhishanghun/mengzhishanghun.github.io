@@ -1,8 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import MasterDetail from '../../components/MasterDetail.astro';
-import { workItems } from '../../data/master-items';
-export function getStaticPaths(){return workItems.map(item=>({params:{slug:item.id},props:{item}}));}
-const { item } = Astro.props;
+import { published } from '../../../../shared/content';
+export async function getStaticPaths(){return (await published('works')).map((item:any)=>({params:{slug:item.data.slug}}));}
+const items=await published('works'); const item=items.find((entry:any)=>entry.data.slug===Astro.params.slug);
 ---
-<Base title={item.title} description={item.description} area="works"><div class="master-page"><header class="shell master-page-head"><h1>作品</h1><p>插件、工具与项目记录。</p></header><section class="shell master-page-body"><MasterDetail items={workItems} selectedId={item.id} label="作品列表" baseHref="/works/"/></section></div></Base>
+<Base title={item?.data.title} description={item?.data.description} area="works"><div class="master-page"><header class="shell master-page-head"><h1>作品</h1><p>插件、工具与项目记录。</p></header><section class="shell master-page-body"><MasterDetail items={items} selectedSlug={item?.data.slug} label="作品目录" baseHref="/works/"/></section></div></Base>

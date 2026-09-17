@@ -3,6 +3,12 @@ title: Markdown 本地图片，发布时该怎么处理？
 description: 相对路径、独立图片文件和 Base64 内嵌各有适用场景；先看目标平台，再选择导出方式。
 lang: zh
 slug: markdown-images
+categoryId: writing
+categoryName: 写作与发布
+categoryOrder: 0
+order: 0
+status: 已发布
+featured: true
 translationKey: markdown-images
 date: 2026-09-12
 draft: false

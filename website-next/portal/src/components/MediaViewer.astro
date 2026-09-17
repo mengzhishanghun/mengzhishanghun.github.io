@@ -1,0 +1,26 @@
+---
+---
+<dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-zoom-in aria-label="放大图片">放大</button><button type="button" data-media-zoom-out aria-label="缩小图片">缩小</button><button type="button" data-media-reset aria-label="复位图片">复位</button><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog>
+<script is:inline>
+if (!document.documentElement.dataset.mediaViewerBound) {
+  document.documentElement.dataset.mediaViewerBound = 'true';
+  let opener = null, scale = 1;
+  const stop = () => { document.querySelectorAll('video,audio').forEach(media => { media.pause(); media.currentTime = 0; }); document.querySelectorAll('iframe[data-bilibili-frame]').forEach(frame => { frame.src='about:blank'; frame.remove(); }); document.querySelectorAll('[data-bilibili-stage]').forEach(stage => stage.replaceChildren()); };
+  const dialog = () => document.querySelector('[data-media-viewer]');
+  const close = () => { stop(); const viewer = dialog(); if (viewer?.open) viewer.close(); opener?.focus?.(); };
+  const open = (trigger, kind) => {
+    const viewer = dialog(), stage = viewer?.querySelector('[data-media-stage]'); if (!viewer || !stage) return;
+    stop(); opener = trigger; scale = 1; stage.replaceChildren();
+    if (kind === 'image') { const image = new Image(); image.src = trigger.dataset.mediaSrc; image.alt = trigger.dataset.mediaAlt || ''; image.dataset.mediaPreviewImage = ''; stage.append(image); }
+    else if(kind==='bilibili'){const host=trigger.closest('[data-bilibili]');const frame=document.createElement('iframe');frame.src=`https://player.bilibili.com/player.html?bvid=${encodeURIComponent(host.dataset.bvid)}&p=${encodeURIComponent(host.dataset.page)}&autoplay=0`;frame.title='Bilibili 播放器';frame.allow='fullscreen';frame.allowFullscreen=true;frame.dataset.bilibiliFrame='';stage.append(frame);}
+    else { const video = trigger.closest('.media-video')?.querySelector('video')?.cloneNode(true); if (!video) return; video.removeAttribute('autoplay'); video.preload = 'none'; video.controls = true; video.playsInline = true; video.dataset.mediaPreviewVideo = ''; stage.append(video); }
+    viewer.querySelector('[data-media-zoom-in]').hidden = kind !== 'image'; viewer.querySelector('[data-media-zoom-out]').hidden = kind !== 'image'; viewer.querySelector('[data-media-reset]').hidden = kind !== 'image'; viewer.querySelector('[data-media-fullscreen]').hidden = kind === 'image'; viewer.showModal(); viewer.querySelector('[data-media-close]').focus();
+  };
+  const zoom = (delta = 0, reset = false) => { const image = dialog()?.querySelector('[data-media-preview-image]'); if (!image) return; scale = reset ? 1 : Math.min(3, Math.max(.5, scale + delta)); image.style.transform = `scale(${scale})`; };
+  const bilibili = target => { const host=target.closest('[data-bilibili]'),stage=host?.querySelector('[data-bilibili-stage]'); if(!host||!stage||stage.firstChild)return; const frame=document.createElement('iframe'); frame.src=`https://player.bilibili.com/player.html?bvid=${encodeURIComponent(host.dataset.bvid)}&p=${encodeURIComponent(host.dataset.page)}&autoplay=0`; frame.title='Bilibili 播放器'; frame.allow='fullscreen'; frame.allowFullscreen=true; frame.loading='lazy'; frame.dataset.bilibiliFrame=''; stage.append(frame); };
+  document.addEventListener('click', event => { const target = event.target.closest?.('[data-media-image],[data-media-open-video],[data-media-open-bilibili],[data-media-close],[data-media-zoom-in],[data-media-zoom-out],[data-media-reset],[data-media-fullscreen],[data-bilibili-load]'); if (!target) return; if(target.matches('[data-bilibili-load]'))bilibili(target); else if (target.matches('[data-media-image]')) open(target, 'image'); else if (target.matches('[data-media-open-video]')) open(target, 'video'); else if(target.matches('[data-media-open-bilibili]'))open(target,'bilibili'); else if (target.matches('[data-media-close]')) close(); else if (target.matches('[data-media-zoom-in]')) zoom(.25); else if (target.matches('[data-media-zoom-out]')) zoom(-.25); else if (target.matches('[data-media-reset]')) zoom(0, true); else { const media = dialog()?.querySelector('[data-media-preview-video]'); if (media?.requestFullscreen) media.requestFullscreen().catch(() => {}); else dialog()?.querySelector('iframe')?.requestFullscreen?.().catch(() => {}); } });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
+  document.addEventListener('astro:before-swap', stop); addEventListener('pagehide', stop);
+  document.addEventListener('click', event => { const viewer = dialog(); if (event.target === viewer) close(); });
+}
+</script>

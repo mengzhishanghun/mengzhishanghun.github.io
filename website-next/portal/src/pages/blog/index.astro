@@ -1,5 +1,7 @@
 ---
-import Base from '../../layouts/Base.astro'; import { getPublishedPosts } from '../../../../shared/blog';
-const posts = (await getPublishedPosts()).filter(post => post.data.lang === 'zh');
+import Base from '../../layouts/Base.astro';
+import MasterDetail from '../../components/MasterDetail.astro';
+import { getCategorizedPosts } from '../../../../shared/blog';
+const posts = await getCategorizedPosts('zh');
 ---
-<Base title="博客" area="blog"><section class="shell page-head"><h1>技术思考、排障与开发记录。</h1><p>仅保留中文博客；早期文章仍可在博客园查看。</p></section><section class="shell section"><div class="card-grid">{posts.map(post=><a class="card" href={`/blog/${post.data.slug}/`}><span class="mark">{post.data.date.toISOString().slice(0,10)}</span><h3>{post.data.title}</h3><p>{post.data.description}</p></a>)}{posts.length===0&&<p>文章正在整理中。</p>}</div></section></Base>
+<Base title="博客" area="blog"><div class="master-page"><header class="shell master-page-head"><h1>博客</h1><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><MasterDetail items={posts} label="博客目录" baseHref="/blog/"/></section></div></Base>

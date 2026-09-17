@@ -1,5 +1,10 @@
 ---
-import { render } from 'astro:content'; import Base from '../../layouts/Base.astro'; import RelatedContent from '../../../../shared/RelatedContent.astro'; import { getPublishedPosts } from '../../../../shared/blog';
-export async function getStaticPaths(){return (await getPublishedPosts()).filter(post=>post.data.lang==='zh').map(post=>({params:{slug:post.data.slug},props:{post}}));} const { post } = Astro.props; const { Content } = await render(post);
+import Base from '../../layouts/Base.astro';
+import MasterDetail from '../../components/MasterDetail.astro';
+import RelatedContent from '../../../../shared/RelatedContent.astro';
+import { getCategorizedPosts } from '../../../../shared/blog';
+export async function getStaticPaths(){return (await getCategorizedPosts('zh')).map(post=>({params:{slug:post.data.slug},props:{post}}));}
+const { post } = Astro.props;
+const posts = await getCategorizedPosts('zh');
 ---
-<Base title={post.data.title} area="blog" description={post.data.description}><article class="shell detail" data-blog-article data-pagefind-body><a class="text-link" href="/blog/">← 返回博客</a><p class="eyebrow">{post.data.date.toISOString().slice(0,10)}　{post.data.tags.join(' · ')}</p><h1 data-pagefind-meta="title">{post.data.title}</h1><p>{post.data.description}</p><div class="prose"><Content/></div><RelatedContent contentKey={'blog:'+post.data.slug} lang="zh"/></article></Base>
+<Base title={post.data.title} area="blog" description={post.data.description}><div class="master-page"><header class="shell master-page-head"><h1>博客</h1><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><MasterDetail items={posts} selectedSlug={post.data.slug} label="博客目录" baseHref="/blog/"><RelatedContent slot="after" contentKey={'blog:'+post.data.slug} lang="zh"/></MasterDetail></section></div></Base>

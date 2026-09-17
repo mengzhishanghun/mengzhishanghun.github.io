@@ -67,6 +67,14 @@ npm run build
 
 文章图片可放在 portal/public/assets/blog/<文章目录>/，Markdown 以 /assets/blog/... 引用。日常维护独立图片，不必将本站图片转换为 Base64。
 
+## 新增内容与媒体
+
+作品写入 `portal/src/content/works/`，案例写入 `portal/src/content/cases/`，博客写入 `shared/posts/zh/`；三者均为 Markdown。frontmatter 至少包含 `title`、`description`、`slug`、`categoryId`、`categoryName`、`categoryOrder`、`order`、`status`、`featured` 和 `draft`。分类只会在至少有一篇公开内容时显示；slug 是固定 URL。
+
+媒体放在 `portal/public/media/{works,cases,blog}/<id>/{images,video,audio}/`，在 Markdown 中使用 `/media/...` 绝对路径。图片必须有 alt（装饰图片可写标题 `"decorative"`）：`![界面截图](/media/works/demo/images/screen.webp)`。视频和音频使用 `::video[说明]{src="/media/.../demo.mp4"}`、`::audio[说明]{src="/media/.../demo.mp3"}`。第一版唯一外站指令为 `::bilibili[说明]{bvid="BV1xx411c7mD" page="1"}`；不接受 iframe、HTML 或其他平台。
+
+所有媒体绝不自动播放：原生音视频统一 `controls` 与 `preload="none"`，Bilibili 必须由访客点击“加载播放器”后才创建 iframe，且 URL 显式关闭自动播放。切换文章、页面交换、关闭预览时会暂停/复位本地媒体并移除 Bilibili iframe。
+
 ## RSS 与发布边界
 
 RSS 位于 /zh/blog/rss.xml 和 /en/blog/rss.xml。BLOG_SITE_URL 控制订阅中的绝对地址，默认是本机 http://127.0.0.1:4321；未来正式部署必须设为经确认的正式源站地址，并按子域名方案核对路径。

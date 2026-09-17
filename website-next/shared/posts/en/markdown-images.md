@@ -3,6 +3,12 @@ title: What happens to local images when you publish Markdown?
 description: Choose between separate image files and Base64 embedding based on where your article will be published.
 lang: en
 slug: markdown-images
+categoryId: writing
+categoryName: Writing and publishing
+categoryOrder: 0
+order: 0
+status: Published
+featured: true
 translationKey: markdown-images
 date: 2026-09-12
 draft: false
