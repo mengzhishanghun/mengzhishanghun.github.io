@@ -8,6 +8,7 @@ categoryOrder: 0
 order: 1
 status: 已完成
 featured: true
+tags: [Markdown, 图片, 写作工具]
 productIds: [md-blog-packer]
 ---
 ## 背景

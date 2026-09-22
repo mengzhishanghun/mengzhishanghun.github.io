@@ -8,6 +8,7 @@ categoryOrder: 0
 order: 0
 status: 已完成
 featured: true
+tags: [Unreal Engine, 插件, 自动化]
 productIds: [plugin-auto-packer, plugin-manager]
 ---
 ## 背景

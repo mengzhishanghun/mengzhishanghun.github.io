@@ -8,6 +8,7 @@ categoryOrder: 1
 order: 0
 status: 已完成
 featured: false
+tags: [Unreal Engine, Lumen, 多屏显示, 仿真]
 ---
 ## 背景
 驾考模拟器自主学习系统需要在三块屏幕上呈现一致的训练画面。

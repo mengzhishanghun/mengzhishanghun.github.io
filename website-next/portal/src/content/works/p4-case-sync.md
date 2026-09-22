@@ -8,6 +8,7 @@ categoryOrder: 2
 order: 0
 status: 已开源
 featured: false
+tags: [Perforce, 版本控制, 开发工具]
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/P4CaseSync

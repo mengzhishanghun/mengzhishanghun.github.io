@@ -8,6 +8,7 @@ categoryOrder: 2
 order: 1
 status: 已开源
 featured: false
+tags: [文件更新, 自动化, 开发工具]
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/SimpleFileUpdater

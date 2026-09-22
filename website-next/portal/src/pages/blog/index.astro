@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
-import MasterDetail from '../../components/MasterDetail.astro';
+import ContentIndex from '../../components/ContentIndex.astro';
 import { getCategorizedPosts } from '../../../../shared/blog';
 const posts = await getCategorizedPosts('zh');
 ---
-<Base title="博客" area="blog"><div class="master-page"><header class="shell master-page-head"><h1>博客</h1><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><MasterDetail items={posts} label="博客目录" baseHref="/blog/"/></section></div></Base>
+<Base title="博客" area="blog"><div class="master-page"><header class="shell master-page-head"><h1>博客</h1><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><ContentIndex items={posts} label="博客目录" baseHref="/blog/"/></section></div></Base>

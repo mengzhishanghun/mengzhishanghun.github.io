@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
-import MasterDetail from '../../components/MasterDetail.astro';
+import ContentIndex from '../../components/ContentIndex.astro';
 import { published } from '../../../../shared/content';
 const items=await published('cases');
 ---
-<Base title="案例" area="cases"><div class="master-page"><header class="shell master-page-head"><h1>案例</h1><p>从真实问题到落地结果。</p></header><section class="shell master-page-body"><MasterDetail items={items} label="案例目录" baseHref="/cases/"/></section></div></Base>
+<Base title="案例" area="cases"><div class="master-page"><header class="shell master-page-head"><h1>案例</h1><p>从真实问题到落地结果。</p></header><section class="shell master-page-body"><ContentIndex items={items} label="案例目录" baseHref="/cases/"/></section></div></Base>

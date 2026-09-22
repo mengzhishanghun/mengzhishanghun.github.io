@@ -1,0 +1,60 @@
+---
+interface Props { items: any[]; label: string; baseHref: '/works/' | '/cases/' | '/blog/'; }
+const { items, label, baseHref } = Astro.props;
+const groups = [...new Map(items.map(item => [item.data.categoryId, {
+  id: item.data.categoryId,
+  name: item.data.categoryName,
+  order: item.data.categoryOrder,
+  items: items.filter(candidate => candidate.data.categoryId === item.data.categoryId),
+}])).values()].sort((left, right) => left.order - right.order);
+const documents = items.map((item, index) => ({
+  slug: item.data.slug,
+  title: item.data.title,
+  description: item.data.description,
+  categoryId: item.data.categoryId,
+  categoryName: item.data.categoryName,
+  tags: item.data.tags ?? [],
+  body: item.body ?? '',
+  order: index,
+  date: item.data.date?.toISOString?.() ?? '',
+}));
+const serializedDocuments = JSON.stringify(documents).replace(/</g, '\\u003c');
+const initialCategory = groups[0]?.id;
+---
+<div class="content-browser" data-content-index>
+  <details class="master-directory" open>
+    <summary class="master-directory-toggle">{label}</summary>
+    <nav class="master-nav content-directory" aria-label={label}>
+      {groups.map(group => <details class="master-group" data-content-group data-category={group.id} open={group.id === initialCategory}>
+        <summary>{group.name}<span>{group.items.length}</span></summary>
+        <div>{group.items.map(item => <a href={baseHref + item.data.slug + '/'}>{item.data.title}</a>)}</div>
+      </details>)}
+    </nav>
+  </details>
+  <section class="content-index-main" aria-label="内容列表">
+    <div class="content-filter">
+      <label for={`content-query-${baseHref.slice(1, -1)}`}>搜索当前分类</label>
+      <input id={`content-query-${baseHref.slice(1, -1)}`} data-content-query type="search" placeholder="输入多个关键词时用空格隔开" autocomplete="off" />
+      <div class="content-filter-heading"><span>标签</span><button type="button" data-content-clear hidden>清空筛选</button></div>
+      <div class="content-tags" data-content-tags aria-label="标签筛选"></div>
+      <p class="content-filter-status" data-content-status role="status" aria-live="polite"></p>
+    </div>
+    <div class="content-cards">
+      {items.map((item, index) => <article class="content-card" data-content-card data-slug={item.data.slug} hidden={item.data.categoryId !== initialCategory} style={`order:${index}`}>
+        <div class="content-card-meta">
+          <span>{item.data.categoryName}</span>
+          {item.data.date && <time datetime={item.data.date.toISOString()}>{item.data.date.toISOString().slice(0, 10)}</time>}
+          <span>{item.data.status}</span>
+        </div>
+        <h2><a href={baseHref + item.data.slug + '/'}>{item.data.title}</a></h2>
+        <p>{item.data.description}</p>
+        {item.data.tags?.length > 0 && <div class="content-card-tags" aria-label="文章标签">{item.data.tags.map((tag: string) => <span>{tag}</span>)}</div>}
+        <a class="text-link content-card-link" href={baseHref + item.data.slug + '/'}>阅读全文 →</a>
+      </article>)}
+    </div>
+    <p class="content-empty" data-content-empty hidden>没有找到符合当前条件的文章，请减少标签或更换关键词。</p>
+  </section>
+  <script type="application/json" data-content-index-data set:html={serializedDocuments}></script>
+</div>
+<script src="../scripts/content-index.ts"></script>
+

@@ -8,6 +8,7 @@ categoryOrder: 0
 order: 1
 status: 已开源
 featured: true
+tags: [Unreal Engine, 插件, 管理工具]
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPluginManager

@@ -8,6 +8,7 @@ categoryOrder: 0
 order: 2
 status: 已开源
 featured: false
+tags: [Unreal Engine, 编译, 自动化]
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEQuickStart

@@ -8,6 +8,7 @@ categoryOrder: 1
 order: 0
 status: 已开源
 featured: true
+tags: [Markdown, 写作工具, 图片]
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/MDBlogPacker
