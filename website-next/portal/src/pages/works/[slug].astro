@@ -5,4 +5,4 @@ import { published } from '../../../../shared/content';
 export async function getStaticPaths(){return (await published('works')).map((item:any)=>({params:{slug:item.data.slug}}));}
 const items=await published('works'); const item=items.find((entry:any)=>entry.data.slug===Astro.params.slug);
 ---
-<Base title={item?.data.title} description={item?.data.description} area="works"><div class="master-page"><header class="shell master-page-head"><h1>作品</h1><p>插件、工具与项目记录。</p></header><section class="shell master-page-body"><MasterDetail items={items} selectedSlug={item?.data.slug} label="作品目录" baseHref="/works/"/></section></div></Base>
+<Base title={item?.data.title} description={item?.data.description} area="works"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">作品</p><p>插件、工具与项目记录。</p></header><section class="shell master-page-body"><MasterDetail items={items} selectedSlug={item?.data.slug} label="作品目录" baseHref="/works/"/></section></div></Base>

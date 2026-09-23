@@ -7,7 +7,7 @@ if (!document.documentElement.dataset.mediaViewerBound) {
   let opener = null, scale = 1;
   const stop = () => { document.querySelectorAll('video,audio').forEach(media => { media.pause(); media.currentTime = 0; }); document.querySelectorAll('iframe[data-bilibili-frame]').forEach(frame => { frame.src='about:blank'; frame.remove(); }); document.querySelectorAll('[data-bilibili-stage]').forEach(stage => stage.replaceChildren()); };
   const dialog = () => document.querySelector('[data-media-viewer]');
-  const close = () => { stop(); const viewer = dialog(); if (viewer?.open) viewer.close(); opener?.focus?.(); };
+  const close = () => { const viewer = dialog(); if (!viewer?.open) return; stop(); viewer.close(); opener?.focus?.(); opener = null; };
   const open = (trigger, kind) => {
     const viewer = dialog(), stage = viewer?.querySelector('[data-media-stage]'); if (!viewer || !stage) return;
     stop(); opener = trigger; scale = 1; stage.replaceChildren();

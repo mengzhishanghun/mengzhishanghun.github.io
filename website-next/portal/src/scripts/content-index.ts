@@ -22,18 +22,25 @@ function initializeContentIndex(root: HTMLElement) {
   const groups = [...root.querySelectorAll<HTMLDetailsElement>('[data-content-group]')];
   if (!dataElement || !input || !tagList || !clearButton || !status || !empty || groups.length === 0) return;
 
-  const documents = JSON.parse(dataElement.textContent || '[]') as ContentDocument[];
+  const contentData = dataElement;
+  const queryInput = input;
+  const contentTags = tagList;
+  const clearFilters = clearButton;
+  const resultStatus = status;
+  const emptyState = empty;
+
+  const documents = JSON.parse(contentData.textContent || '[]') as ContentDocument[];
   const parameters = new URLSearchParams(location.search);
   const availableCategories = new Set(groups.map(group => group.dataset.category || ''));
   let categoryId = parameters.get('category') || groups[0].dataset.category || '';
   if (!availableCategories.has(categoryId)) categoryId = groups[0].dataset.category || '';
   let selectedTags = new Set(parameters.getAll('tag'));
-  input.value = parameters.get('q') || '';
+  queryInput.value = parameters.get('q') || '';
 
   const categoryDocuments = () => documents.filter(document => document.categoryId === categoryId);
 
   function rankedDocuments() {
-    const terms = splitSearchTerms(input.value);
+    const terms = splitSearchTerms(queryInput.value);
     return categoryDocuments()
       .map((document, originalIndex) => ({ document, originalIndex, rank: rankSearchDocument(document, terms) }))
       .filter(item => terms.length === 0 || item.rank.matchedTerms > 0)
@@ -54,7 +61,7 @@ function initializeContentIndex(root: HTMLElement) {
   function updateUrl() {
     const next = new URLSearchParams();
     if (categoryId !== groups[0].dataset.category) next.set('category', categoryId);
-    if (input.value.trim()) next.set('q', input.value.trim());
+    if (queryInput.value.trim()) next.set('q', queryInput.value.trim());
     [...selectedTags].forEach(tag => next.append('tag', tag));
     history.replaceState({}, '', location.pathname + (next.size ? `?${next}` : '') + location.hash);
   }
@@ -64,7 +71,7 @@ function initializeContentIndex(root: HTMLElement) {
     categoryDocuments().forEach(document => document.tags.forEach(tag => baseCounts.set(tag, (baseCounts.get(tag) || 0) + 1)));
     const tags = [...baseCounts.keys()].sort((left, right) => (baseCounts.get(right) || 0) - (baseCounts.get(left) || 0) || left.localeCompare(right, 'zh-CN'));
     selectedTags = new Set([...selectedTags].filter(tag => baseCounts.has(tag)));
-    tagList.replaceChildren(...tags.map(tag => {
+    contentTags.replaceChildren(...tags.map(tag => {
       const selected = selectedTags.has(tag);
       const count = searchedDocuments.filter(document => selected ? matchesSelectedTags(document) : matchesSelectedTags(document, tag)).length;
       const button = document.createElement('button');
@@ -94,10 +101,10 @@ function initializeContentIndex(root: HTMLElement) {
       card.hidden = position === undefined;
       if (position !== undefined) card.style.order = String(position);
     });
-    empty.hidden = visible.length > 0;
-    const hasQuery = splitSearchTerms(input.value).length > 0;
-    status.textContent = `显示 ${visible.length} 篇文章${hasQuery ? ' · 按相关性排序' : ''}`;
-    clearButton.hidden = selectedTags.size === 0 && !input.value.trim();
+    emptyState.hidden = visible.length > 0;
+    const hasQuery = splitSearchTerms(queryInput.value).length > 0;
+    resultStatus.textContent = `显示 ${visible.length} 篇文章${hasQuery ? ' · 按相关性排序' : ''}`;
+    clearFilters.hidden = selectedTags.size === 0 && !queryInput.value.trim();
     groups.forEach(group => group.open = group.dataset.category === categoryId);
     updateUrl();
   }
@@ -112,12 +119,12 @@ function initializeContentIndex(root: HTMLElement) {
       render();
     });
   });
-  input.addEventListener('input', render);
-  clearButton.addEventListener('click', () => {
-    input.value = '';
+  queryInput.addEventListener('input', render);
+  clearFilters.addEventListener('click', () => {
+    queryInput.value = '';
     selectedTags.clear();
     render();
-    input.focus();
+    queryInput.focus();
   });
   render();
 }

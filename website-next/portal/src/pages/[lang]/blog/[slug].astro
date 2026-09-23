@@ -1,8 +1,0 @@
----
-import BlogArticle from '../../../components/BlogArticle.astro';
-import {getPublishedPosts} from '../../../../../shared/blog';
-// 中文内容已迁移至 /blog/；不再生成语言前缀的旧文章页。
-export async function getStaticPaths(){return [];}
-const {post}=Astro.props;
----
-<BlogArticle post={post}/>

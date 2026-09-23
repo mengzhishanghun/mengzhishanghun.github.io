@@ -1,8 +1,0 @@
----
-import Base from '../../../layouts/Base.astro';
-import Icon from '../../../components/Icon.astro';
-import {languages,works,ui,href,type Lang} from '../../../data/site';
-export function getStaticPaths(){return languages.map(lang=>({params:{lang}}));}
-const lang=Astro.params.lang as Lang;const zh=lang==='zh';
----
-<Base lang={lang} title={ui[lang].works} area="works"><section class="container page-intro"><p class="eyebrow">SELECTED WORK</p><h1>{zh?'项目与案例':'Projects & case studies'}</h1><p>{zh?'从具体问题出发，看看工具如何组织工作，以及它们解决了哪一部分需求。':'Explore the problems behind the tools, how the work is organized, and the needs each project addresses.'}</p></section><section class="container catalog-section"><div class="work-grid">{works.map(work=><article class="entry-card"><p class="eyebrow">{work[lang].kind}</p><h2><a href={href(lang,'works',work.id)}>{work[lang].title}</a></h2><p>{work[lang].summary}</p><a class="text-link" href={href(lang,'works',work.id)}>{zh?'查看作品':'View case study'}<Icon/></a></article>)}</div></section></Base>
