@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+const options = [['微信赞赏', '微信赞赏二维码占位图'], ['支付宝', '支付宝收款二维码占位图']];
+---
+<Base title="支持创作" description="自愿支持梦之殇魂继续创作与分享。" area="support">
+  <div class="support-page">
+    <div class="shell support-shell">
+      <header class="support-intro"><p class="page-kicker">SUPPORT THE WORK</p><h1>支持创作</h1><p class="support-lead">如果作品和文章对你有帮助，欢迎自愿支持。</p><p class="support-detail">这只是一个可选的赞赏方式，用于支持我继续创作和分享。<br />没有任何压力，点个赞、留言或持续关注同样是莫大的鼓励。</p></header>
+      <div class="support-grid">{options.map(([name, alt]) => <section class="support-card" aria-label={name}><h2>{name}</h2><button type="button" class="qr-trigger" data-media-image data-media-src="/assets/qr-placeholder.svg" data-media-alt={`${alt}，非真实二维码，不可扫描`} aria-label={`预览${alt}`}><img src="/assets/qr-placeholder.svg" alt={`${alt}，非真实二维码，不可扫描`} width="206" height="206" /></button><p>点击图片查看大图 · 当前为不可扫描的占位图</p></section>)}</div>
+      <p class="support-disclaimer">自愿支持，不对应商品或服务。</p>
+      <p class="support-contact">如需项目合作或其他事宜，欢迎前往 <a href="/contact/">联系与合作 →</a></p>
+    </div>
+  </div>
+</Base>
+<style>
+  .support-page{min-height:100%;background:linear-gradient(90deg,#07111fdc,#0b1a2aa0),url('/assets/contact-support-background.png') center/cover;color:#eff6ff;padding:44px 0 48px}.support-shell{max-width:1040px;text-align:center}.page-kicker{font-size:.72rem;letter-spacing:.36em;color:#a7c0d9}.support-intro h1{font-family:serif;font-size:clamp(2.8rem,5vw,4.2rem);line-height:1.2;letter-spacing:.1em;margin:9px 0 14px}.support-lead{font-size:clamp(1rem,2vw,1.35rem);color:#eef5ff}.support-detail{margin-top:18px;font-size:.92rem;line-height:1.8;color:#b8c9dd}.support-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;width:min(100%,780px);margin:25px auto 18px}.support-card{min-width:0;padding:20px 20px 19px;border:1px solid #42617e;border-radius:9px;background:linear-gradient(145deg,#122338df,#0c1a2de0);box-shadow:0 12px 40px #02091266}.support-card h2{font-size:1.28rem;margin-bottom:14px}.qr-trigger{display:block;border:0;background:transparent;padding:0;margin:0 auto 8px;border-radius:5px}.qr-trigger img{display:block;width:206px;max-width:100%;height:auto;border-radius:4px}.support-card p{font-size:.78rem}.support-disclaimer{width:min(100%,780px);margin:auto;padding:13px;border:1px solid #3c5a76;border-radius:6px;background:#132943c4;color:#d2e4f6;font-size:.9rem}.support-disclaimer:before{content:'!';display:inline-grid;place-items:center;width:21px;height:21px;margin-right:10px;border-radius:50%;background:#bfddff;color:#183e61;font-weight:800}.support-contact{margin-top:21px;font-size:.82rem}.support-contact a{color:#81c9ff;border-bottom:1px solid #81c9ff}.support-contact a:focus-visible,.qr-trigger:focus-visible{outline:2px solid #8bd3ff;outline-offset:4px}
+  @media(max-width:650px){.support-page{padding:35px 0 42px}.support-grid{grid-template-columns:1fr;max-width:380px}.support-detail br{display:none}.support-card{padding:20px}.support-intro h1{font-size:2.7rem}}
+</style>

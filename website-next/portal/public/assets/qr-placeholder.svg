@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">二维码占位图</title><desc id="desc">非真实二维码，不可扫描</desc>
+  <rect width="240" height="240" rx="5" fill="#eaf3ff"/>
+  <g fill="none" stroke="#6a85a8" stroke-width="3"><path d="M23 45V23h22M195 23h22v22M23 195v22h22M195 217h22v-22"/></g>
+  <path d="M103 72h-12a8 8 0 0 0-8 8v12m54-20h12a8 8 0 0 1 8 8v12m-74 42v12a8 8 0 0 0 8 8h12m54-20v12a8 8 0 0 1-8 8h-12" fill="none" stroke="#6a85a8" stroke-width="4" stroke-linecap="round"/>
+  <text x="120" y="190" text-anchor="middle" fill="#314d72" font-family="sans-serif" font-size="15" font-weight="bold">非真实二维码</text>
+  <text x="120" y="211" text-anchor="middle" fill="#526987" font-family="sans-serif" font-size="12">占位图 · 不可扫描</text>
+</svg>

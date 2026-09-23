@@ -1,0 +1,66 @@
+---
+import Base from '../layouts/Base.astro';
+const email = 'mzsh.me@icloud.com';
+const services = [
+  ['01', '需求梳理与技术约束', '理解业务目标，明确技术可行性与实现边界'],
+  ['02', '方案设计与实现路径', '提供合适的技术方案，规划开发路径'],
+  ['03', '功能、工具与插件开发', '按需开发完整功能、实用工具或定制化插件'],
+  ['04', '现有问题排查与改进', '定位问题并提出可行的优化方案'],
+  ['05', '交付说明与后续沟通', '清晰交付成果，并提供后续沟通支持'],
+];
+---
+<Base title="联系与合作" description="联系小毛，交流游戏开发、数字孪生与工具插件合作。" area="contact">
+  <div class="contact-page">
+    <div class="shell contact-shell">
+      <div class="contact-intro">
+        <p class="page-kicker">CONTACT</p>
+        <h1>联系与合作</h1>
+        <p class="contact-lead">让想法落地，从一次清晰的沟通开始。</p>
+        <p class="contact-sublead">独立开发者 · 游戏与交互 · 数字世界的构建者</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-content">
+          <section aria-labelledby="directions-title">
+            <div class="section-heading"><h2 id="directions-title">合作方向</h2><p>从概念到实现，提供务实、可靠的开发支持。</p></div>
+            <div class="direction-grid">
+              <article><span class="direction-icon" aria-hidden="true">01</span><div><h3>游戏开发</h3><p>玩法原型、完整项目开发<br />以及技术方案实现</p></div></article>
+              <article><span class="direction-icon" aria-hidden="true">02</span><div><h3>数字孪生</h3><p>三维可视化、场景交互<br />与行业应用开发</p></div></article>
+              <article><span class="direction-icon" aria-hidden="true">03</span><div><h3>工具与插件开发</h3><p>提升效率的实用工具<br />与定制化插件</p></div></article>
+            </div>
+          </section>
+          <section aria-labelledby="capabilities-title" class="capabilities">
+            <div class="section-heading"><h2 id="capabilities-title">我能做什么</h2><p>将想法转化为可落地的产品与体验。</p></div>
+            <ol>{services.map(([number, title, detail]) => <li><span class="service-number">{number}</span><h3>{title}</h3><p>{detail}</p></li>)}</ol>
+          </section>
+        </div>
+        <aside class="contact-card" aria-labelledby="contact-methods-title">
+          <p class="card-kicker">GET IN TOUCH</p><h2 id="contact-methods-title">联系方式</h2><p>欢迎交流想法、项目咨询或任何合作机会。</p>
+          <div class="contact-method"><div class="method-icon" aria-hidden="true">@</div><div class="method-body"><h3>邮箱</h3><a href={'mailto:' + email}>{email}</a></div><button type="button" data-copy-email>复制邮箱</button></div>
+          <span class="copy-feedback" data-copy-feedback role="status" aria-live="polite"></span>
+          <div class="wechat-method"><div class="method-label"><span class="method-icon" aria-hidden="true">微</span><h3>微信</h3></div><button type="button" class="qr-trigger" data-media-image data-media-src="/assets/qr-placeholder.svg" data-media-alt="微信二维码占位图，非真实二维码，不可扫描" aria-label="预览微信二维码占位图"><img src="/assets/qr-placeholder.svg" alt="微信二维码占位图，非真实二维码，不可扫描" width="192" height="192" /></button><p>点击图片查看大图 · 当前为不可扫描的占位图</p></div>
+          <p class="contact-note">看到后会尽快回复，感谢你的耐心等待。</p>
+        </aside>
+      </div>
+    </div>
+  </div>
+</Base>
+<script is:inline>
+  if (!document.documentElement.dataset.copyEmailBound) {
+    document.documentElement.dataset.copyEmailBound = 'true';
+    document.addEventListener('click', async event => {
+      const button = event.target.closest?.('[data-copy-email]');
+      if (!button) return;
+      const feedback = button.closest('.contact-card')?.querySelector('[data-copy-feedback]');
+      try { await navigator.clipboard.writeText('mzsh.me@icloud.com'); if (feedback) feedback.textContent = '邮箱已复制'; }
+      catch { if (feedback) feedback.textContent = '复制失败，请手动选择邮箱地址'; }
+    });
+  }
+</script>
+<style>
+  .contact-page{min-height:100%;background:linear-gradient(90deg,#07111de0 0%,#07111dbb 52%,#07111d8c 100%),url('/assets/contact-support-background.png') center/cover;color:#eef5ff;padding:38px 0 42px}
+  .contact-shell{max-width:1360px}.page-kicker,.card-kicker{color:#a4bed5;letter-spacing:.4em;font-size:.7rem;font-weight:700}.page-kicker:before{content:'';display:inline-block;width:42px;height:1px;background:#a4bed5;vertical-align:middle;margin-right:14px}.contact-intro h1{font-size:clamp(2.5rem,5vw,4.1rem);line-height:1.2;letter-spacing:.08em;margin:15px 0 8px}.contact-lead{font-size:clamp(1.15rem,2vw,1.5rem);color:#f0f6ff}.contact-sublead{margin-top:17px;color:#aabed3;font-size:.9rem}
+  .contact-grid{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(300px,1fr);gap:clamp(28px,4vw,60px);margin-top:30px;align-items:start}.contact-content{min-width:0}.section-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;border-bottom:1px solid #376080;padding-bottom:10px}.section-heading h2{font-size:1.45rem;white-space:nowrap}.section-heading p{font-size:.86rem}.direction-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid #30445a;padding:25px 0 27px;gap:17px}.direction-grid article{display:flex;gap:14px;min-width:0}.direction-grid article+article{border-left:1px solid #30445a;padding-left:16px}.direction-icon,.method-icon{flex:none;display:grid;place-items:center;width:46px;height:46px;border:1px solid #385675;border-radius:8px;background:#11263b;color:#78b6ff;font-size:1.7rem}.direction-grid h3,.method-body h3,.method-label h3{font-size:1.02rem;margin:0 0 4px}.direction-grid p{font-size:.82rem;line-height:1.65}.capabilities{margin-top:28px}.capabilities ol{list-style:none;padding:11px 0 0;margin:0}.capabilities li{display:grid;grid-template-columns:48px minmax(155px,.85fr) minmax(0,1.45fr);align-items:center;gap:14px;padding:8px 0;border-bottom:1px solid #293c4f}.capabilities li:last-child{border-bottom:0}.service-number{display:grid;place-items:center;width:36px;height:36px;border:1px solid #315778;border-radius:50%;background:#0c2238;color:#8bc9ff;font-size:.82rem}.capabilities h3{font-size:.94rem}.capabilities li p{font-size:.82rem}
+  .contact-card{border:1px solid #47627d;border-radius:9px;background:linear-gradient(135deg,#152b42dc,#0b1929f2);padding:24px 28px 20px;box-shadow:0 12px 45px #02091377}.contact-card h2{font-size:1.45rem;margin:5px 0 1px}.contact-card>p:not(.card-kicker){font-size:.86rem}.contact-method{display:flex;align-items:center;gap:12px;margin-top:17px;padding-bottom:16px;border-bottom:1px solid #30465c}.method-body{flex:1;min-width:0}.method-body h3{font-size:.84rem;color:#abc1d8}.method-body a{color:#9cdbff;overflow-wrap:anywhere}.contact-method button{padding:7px 10px;border:1px solid #447294;background:#18324f;border-radius:5px;color:#e7f4ff;font-size:.78rem}.copy-feedback{display:block;color:#9cdbff;font-size:.78rem;min-height:1.2em}.wechat-method{border-bottom:1px solid #30465c;padding:8px 0 23px}.method-label{display:flex;align-items:center;gap:12px}.qr-trigger{display:block;margin:8px auto 7px;border:0;padding:0;background:transparent;border-radius:5px}.qr-trigger img{display:block;width:192px;max-width:100%;height:auto;border-radius:4px}.wechat-method>p{text-align:center;font-size:.78rem}.contact-card .contact-note{padding-top:15px;color:#a8bed7;font-size:.8rem}.contact-note:before{content:'➤';color:#74b2ff;margin-right:11px}
+  @media(max-width:920px){.contact-grid{grid-template-columns:1fr}.contact-card{max-width:560px;width:100%;margin:auto}.contact-page{padding-top:30px}}
+  @media(max-width:600px){.contact-page{padding:27px 0 36px}.contact-grid{margin-top:24px}.section-heading{display:block}.section-heading p{margin-top:3px}.direction-grid{grid-template-columns:1fr;gap:15px;padding:18px 0}.direction-grid article+article{border:0;padding-left:0}.capabilities li{grid-template-columns:38px 1fr;gap:4px 10px}.capabilities li p{grid-column:2}.contact-card{padding:20px}.contact-method{flex-wrap:wrap}.contact-method button{margin-left:58px}}
+</style>
