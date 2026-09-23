@@ -3,11 +3,11 @@
 /* Content pages use a wider, editorial canvas while the homepage keeps its original measure. */
 @media (min-width:721px){
   .master-page{padding:38px 0 64px}
-  .master-page-head,.master-page-body{width:min(1440px,calc(100% - 64px));max-width:none}
+  .master-page>.shell.master-page-head,.master-page>.shell.master-page-body{width:min(1440px,calc(100% - 48px));max-width:none}
   .master-page-head{padding-bottom:26px}
   .master-page-head h1{font-size:clamp(2.25rem,3.3vw,3.4rem);letter-spacing:-.035em}
   .master-page-head p{margin-top:7px;font-size:1rem}
-  .content-browser,.master-detail{grid-template-columns:260px minmax(0,1fr);gap:42px;border:0;background:transparent}
+  .content-browser,.master-detail{grid-template-columns:260px minmax(0,1fr);gap:36px;border:0;background:transparent}
   .content-browser>.master-directory,.master-detail>.master-directory{align-self:start;border-block:1px solid var(--line);background:#0a1625b8}
   .content-directory,.master-detail .master-nav{border-right:0;padding-block:0}
   .master-group:last-child{border-bottom:0}
@@ -30,5 +30,5 @@
 }
 
 @media (min-width:1500px){
-  .content-browser,.master-detail{grid-template-columns:280px minmax(0,1fr);gap:56px}
+  .content-browser,.master-detail{grid-template-columns:280px minmax(0,1fr);gap:48px}
 }
