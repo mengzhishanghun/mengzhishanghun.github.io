@@ -6,7 +6,7 @@
 body.home-page{height:auto;min-height:100%;overflow-x:hidden;overflow-y:auto;display:block}
 .home-page .home-main{overflow:visible}
 .home-page .home-layout{height:auto;min-height:0;display:block}
-.home-page .hero{min-height:520px;background-image:linear-gradient(90deg,#07101df7 0%,#07101de8 41%,#07101da8 72%,#07101d85 100%),url('/assets/mzsh-homepage-background-v2.png');background-position:center;background-size:cover}
+.home-page .hero{min-height:520px;background-image:linear-gradient(90deg,#07101df7 0%,#07101de8 41%,#07101da8 72%,#07101d85 100%),url('/assets/mzsh-homepage-background-v2.png');background-position:center 15%;background-size:cover}
 .home-page .hero-content{padding:72px 0 80px;max-width:none}
 .home-page .hero h1{font-size:clamp(2.4rem,4vw,3.75rem);margin-bottom:24px}
 .home-page .home-intro{display:grid;gap:3px;max-width:760px}
