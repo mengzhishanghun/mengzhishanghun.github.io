@@ -14,30 +14,44 @@ const nav = [['/', '首页', 'home'], ['/works/', '作品', 'works'], ['/cases/'
       <div class="header-actions"><a href="/contact/" aria-current={area === 'contact' ? 'page' : undefined}>联系</a><a href="/support/" aria-current={area === 'support' ? 'page' : undefined}>支持</a></div>
     </div>
   </header>
-  <ContentTag id={contentTag === 'main' ? 'main' : undefined} class:list={['site-chrome-main', {'home-main': area === 'home'}]}><slot /></ContentTag>
+  <ContentTag id={contentTag === 'main' ? 'main' : undefined} tabindex={contentTag === 'main' ? -1 : undefined} class:list={['site-chrome-main', {'home-main': area === 'home'}]}><slot /></ContentTag>
   <footer class="site-footer" transition:persist="site-footer"><div class="shell legal-footer"><span><strong>MZSH</strong>　© 2026 MZSH. 保留所有权利。</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-1</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async"/>晋公网安备14082502000144号</a></div></footer>
 </div>
 <script is:inline>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
+    const setMenuOpen = (open) => {
+      const header = document.querySelector('.site-chrome .site-header');
+      header?.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded', String(open));
+      header?.querySelector('.main-nav')?.classList.toggle('is-open', open);
+    };
     const update = () => {
       const header = document.querySelector('.site-chrome .site-header');
       if (!header) return;
       const path = location.pathname;
       header.querySelectorAll('.main-nav a, .header-actions a').forEach(link => {
         const href = link.getAttribute('href') || '';
-        link.toggleAttribute('aria-current', href === '/' ? path === '/' : path.startsWith(href));
+        if (href === '/' ? path === '/' : path.startsWith(href)) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
       });
-      header.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded', 'false');
-      header.querySelector('.main-nav')?.classList.remove('is-open');
+      setMenuOpen(false);
     };
     document.addEventListener('click', event => {
       const button = event.target.closest?.('[data-menu-toggle]');
-      if (!button) return;
-      const open = button.getAttribute('aria-expanded') !== 'true';
-      button.setAttribute('aria-expanded', String(open));
-      button.closest('.site-header')?.querySelector('.main-nav')?.classList.toggle('is-open', open);
+      if (button) setMenuOpen(button.getAttribute('aria-expanded') !== 'true');
+      else if (!event.target.closest?.('.main-nav')) setMenuOpen(false);
     });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      const button = document.querySelector('[data-menu-toggle][aria-expanded="true"]');
+      if (!button) return;
+      setMenuOpen(false);
+      button.focus();
+    });
+    document.addEventListener('focusin', event => {
+      if (!event.target.closest?.('.main-nav, [data-menu-toggle]')) setMenuOpen(false);
+    });
+    window.matchMedia('(max-width:720px)').addEventListener('change', () => setMenuOpen(false));
     document.addEventListener('astro:after-swap', update);
     update();
   }
@@ -66,6 +80,19 @@ const nav = [['/', '首页', 'home'], ['/works/', '作品', 'works'], ['/cases/'
 </style>
 
 <style>
-  .police-record { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+  .police-record { display: inline-flex; align-items: center; justify-content: flex-end; gap: 4px; }
   .police-record img { flex: none; object-fit: contain; }
+</style>
+
+<style is:global>
+  @media(max-width:900px){
+    .site-chrome{--site-chrome-footer-height:104px}
+    .site-chrome .legal-footer{grid-template-columns:minmax(0,1fr);align-content:center;gap:4px;padding-block:8px;font-size:.75rem;text-align:center}
+    .site-chrome .legal-footer a:nth-child(2){border:0}
+    .site-chrome .legal-footer a:last-child{justify-content:center;text-align:center}
+    .site-chrome .legal-footer strong{font-size:.85rem}
+  }
+  @media(max-width:720px){
+    .site-chrome .main-nav a{display:flex;align-items:center;min-height:44px}
+  }
 </style>
