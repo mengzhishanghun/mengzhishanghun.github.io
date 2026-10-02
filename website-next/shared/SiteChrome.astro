@@ -15,7 +15,7 @@ const nav = [['/', '首页', 'home'], ['/works/', '作品', 'works'], ['/cases/'
     </div>
   </header>
   <ContentTag id={contentTag === 'main' ? 'main' : undefined} class:list={['site-chrome-main', {'home-main': area === 'home'}]}><slot /></ContentTag>
-  <footer class="site-footer" transition:persist="site-footer"><div class="shell legal-footer"><span><strong>MZSH</strong>　© 2026 MZSH. 保留所有权利。</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-1</a><a href="https://beian.mps.gov.cn/" target="_blank" rel="noopener noreferrer">晋公网安备14082502000144号</a></div></footer>
+  <footer class="site-footer" transition:persist="site-footer"><div class="shell legal-footer"><span><strong>MZSH</strong>　© 2026 MZSH. 保留所有权利。</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-1</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async"/>晋公网安备14082502000144号</a></div></footer>
 </div>
 <script is:inline>
   if (!document.documentElement.dataset.siteChromeBound) {
@@ -63,4 +63,9 @@ const nav = [['/', '首页', 'home'], ['/works/', '作品', 'works'], ['/cases/'
   .site-chrome .site-footer{border-top:1px solid var(--line,var(--chrome-line));background:#06101be8}.site-chrome .legal-footer{height:100%;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) minmax(0,1fr);align-items:center;font-size:.78rem;color:var(--muted,var(--chrome-muted))}.site-chrome .legal-footer>*{min-width:0;overflow-wrap:anywhere}.site-chrome .legal-footer strong{color:var(--text,var(--chrome-text));font-size:1rem;letter-spacing:.04em}.site-chrome .legal-footer a{color:inherit;text-decoration:none}.site-chrome .legal-footer a:hover{text-decoration:underline}.site-chrome .legal-footer a:nth-child(2){text-align:center;border-inline:1px solid var(--line,var(--chrome-line))}.site-chrome .legal-footer a:last-child{text-align:right}
   .site-chrome :where(a,button):focus-visible{outline:2px solid var(--blue,var(--chrome-blue));outline-offset:3px}
   @media(max-width:720px){.site-chrome{--site-chrome-header-height:60px;--site-chrome-footer-height:64px}.site-chrome .shell{width:min(100% - 32px,var(--max,1160px))}.site-chrome .header-inner{height:60px;grid-template-columns:1fr auto auto;gap:10px}.site-chrome .menu-toggle{display:block;grid-column:2;grid-row:1}.site-chrome .header-actions{grid-column:3;grid-row:1;gap:2px}.site-chrome .header-actions a{min-width:44px;min-height:44px;font-size:.82rem}.site-chrome .main-nav{display:none;position:absolute;top:60px;left:0;right:0;background:var(--panel,var(--chrome-panel));padding:16px 24px;border-bottom:1px solid var(--line,var(--chrome-line))}.site-chrome .main-nav.is-open{display:grid;gap:14px}.site-chrome .main-nav a[aria-current=page]{margin:0;padding:0;border:0}.site-chrome .legal-footer{font-size:.64rem;gap:7px}.site-chrome .legal-footer strong{font-size:.78rem}}
+</style>
+
+<style>
+  .police-record { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; }
+  .police-record img { flex: none; object-fit: contain; }
 </style>
