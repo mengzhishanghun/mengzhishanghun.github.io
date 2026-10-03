@@ -1,12 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
-const options = [['微信赞赏', '微信赞赏二维码占位图'], ['支付宝', '支付宝收款二维码占位图']];
+// 原图来自 mengzhishanghun/.github 的公开捐赠页，保留原始二维码。
+const options = [
+  { name: '微信支持', alt: '梦之殇魂的微信支付收款二维码', source: '/assets/support/wechat.jpg', width: 828, height: 1124 },
+  { name: '支付宝', alt: 'mengzhishanghun 的支付宝收款二维码', source: '/assets/support/alipay.jpg', width: 1200, height: 1800 },
+];
 ---
 <Base title="支持创作" description="自愿支持梦之殇魂继续创作与分享。" area="support">
   <div class="support-page">
     <div class="shell support-shell">
       <header class="support-intro"><p class="page-kicker">SUPPORT THE WORK</p><h1>支持创作</h1><p class="support-lead">如果作品和文章对你有帮助，欢迎自愿支持。</p><p class="support-detail">这只是一个可选的赞赏方式，用于支持我继续创作和分享。<br />没有任何压力，点个赞、留言或持续关注同样是莫大的鼓励。</p></header>
-      <div class="support-grid">{options.map(([name, alt]) => <section class="support-card" aria-label={name}><h2>{name}</h2><button type="button" class="qr-trigger" data-media-image data-media-src="/assets/qr-placeholder.svg" data-media-alt={`${alt}，非真实二维码，不可扫描`} aria-label={`预览${alt}`}><img src="/assets/qr-placeholder.svg" alt={`${alt}，非真实二维码，不可扫描`} width="206" height="206" /></button><p>点击图片查看大图 · 当前为不可扫描的占位图</p></section>)}</div>
+      <div class="support-grid">{options.map(({ name, alt, source, width, height }) => <section class="support-card" aria-label={name}><h2>{name}</h2><button type="button" class="qr-trigger" data-media-image data-media-src={source} data-media-alt={alt} aria-label={`预览${alt}`}><img src={source} alt={alt} width={width} height={height} /></button><p>使用对应应用扫码支持 · 点击图片查看大图</p></section>)}</div>
       <p class="support-disclaimer">自愿支持，不对应商品或服务。</p>
       <p class="support-contact">如需项目合作或其他事宜，欢迎前往 <a href="/contact/">联系与合作 →</a></p>
     </div>
