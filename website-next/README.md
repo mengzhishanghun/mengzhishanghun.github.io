@@ -77,10 +77,10 @@ npm run build
 
 ## RSS 与发布边界
 
-RSS 位于 /zh/blog/rss.xml 和 /en/blog/rss.xml。BLOG_SITE_URL 控制订阅中的绝对地址，默认是本机 http://127.0.0.1:4321；未来正式部署必须设为经确认的正式源站地址，并按子域名方案核对路径。
+正式域名为 `https://mzsh.me`，主站和文档站的 Astro `site` 配置保持一致。RSS 位于 `/blog/rss.xml`，订阅与文章链接使用该正式域名的绝对地址；主站规范网址和文档站点地图也使用同一域名。
 
 当前两篇语言版本是依据 MDBlogPacker 公开 README 整理的同一篇新文章，用于本地阅读预览；不是迁移的博客园旧文章。旧文仍连接博客园，不自动同步外部平台。
 
-保留 noindex。没有部署工作流，没有修改 main、DNS、VPS 或现网文件。当前各栏目为同源路径，子域名部署和跨子域名偏好共享仍需单独配置；正式替换前应确认文章、案例、备案展示和公开素材。
+正式构建不再为文档页设置 `noindex`；本机预览服务仍通过 `X-Robots-Tag: noindex, nofollow` 禁止收录。当前各栏目使用单域名路径，构建产物位于 `dist/`。尚未配置部署工作流或修改 main、DNS、VPS 与现网文件；正式发布前需核对部署目标、HTTPS 和备案展示。
 
 node_modules/、dist/、.astro/、preview.local/ 等为依赖或生成物，不提交版本控制。
