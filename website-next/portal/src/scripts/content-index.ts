@@ -28,8 +28,10 @@ function initializeContentIndex(root: HTMLElement) {
   const nextPage = root.querySelector<HTMLButtonElement>('[data-content-next]');
   const main = root.querySelector<HTMLElement>('.content-index-main');
   const queryLabel = root.querySelector<HTMLElement>('[data-content-query-label]');
-  const gallery = root.dataset.pageSize !== undefined;
+  const sortLabel = root.querySelector<HTMLElement>('.content-sort-label');
+  const pageSize = Number(root.dataset.pageSize);
   const contentName = root.dataset.contentName || '文章';
+  const contentUnit = contentName === '文章' ? '篇' : contentName === '作品' ? '件' : '个';
   if (!dataElement || !input || !tagList || !clearButton || !status || !empty || groups.length === 0) return;
 
   const contentData = dataElement;
@@ -74,7 +76,7 @@ function initializeContentIndex(root: HTMLElement) {
     if (categoryId !== groups[0].dataset.category) next.set('category', categoryId);
     if (queryInput.value.trim()) next.set('q', queryInput.value.trim());
     [...selectedTags].forEach(tag => next.append('tag', tag));
-    if (gallery && currentPage > 1) next.set('page', String(currentPage));
+    if (currentPage > 1) next.set('page', String(currentPage));
     history.replaceState({}, '', location.pathname + (next.size ? `?${next}` : '') + location.hash);
   }
 
@@ -95,7 +97,7 @@ function initializeContentIndex(root: HTMLElement) {
       render();
       contentTags.querySelector<HTMLButtonElement>('[data-tag-all]')?.focus();
     });
-    contentTags.replaceChildren(...(gallery ? [allButton] : []), ...tags.map(tag => {
+    contentTags.replaceChildren(allButton, ...tags.map(tag => {
       const selected = selectedTags.has(tag);
       const count = searchedDocuments.filter(document => selected ? matchesSelectedTags(document) : matchesSelectedTags(document, tag)).length;
       const button = document.createElement('button');
@@ -104,7 +106,7 @@ function initializeContentIndex(root: HTMLElement) {
       button.dataset.tag = tag;
       button.setAttribute('aria-pressed', String(selected));
       button.disabled = !selected && count === 0;
-      button.textContent = gallery ? tag : `${tag}（${count}）${selected ? ' ×' : ''}`;
+      button.textContent = tag;
       button.setAttribute('aria-label', selected ? `取消标签 ${tag}` : `选择标签 ${tag}，${count} 个${contentName}`);
       button.addEventListener('click', () => {
         if (selectedTags.has(tag)) selectedTags.delete(tag); else selectedTags.add(tag);
@@ -126,7 +128,7 @@ function initializeContentIndex(root: HTMLElement) {
   function renderPagination(pageCount: number) {
     if (!pagination || !pageNumbers || !pageStatus || !previousPage || !nextPage) return;
     pagination.hidden = pageCount <= 1;
-    pageStatus.textContent = `每页 9 个 · 第 ${currentPage} / ${pageCount} 页`;
+    pageStatus.textContent = `每页 ${pageSize} ${contentUnit} · 第 ${currentPage} / ${pageCount} 页`;
     previousPage.disabled = currentPage <= 1;
     nextPage.disabled = currentPage >= pageCount;
     pageNumbers.replaceChildren(...paginationNumbers(currentPage, pageCount).map(number => {
@@ -151,7 +153,7 @@ function initializeContentIndex(root: HTMLElement) {
     const searchedDocuments = ranked.map(item => item.document);
     renderTags(searchedDocuments);
     const visible = ranked.filter(item => matchesSelectedTags(item.document));
-    const paged = paginateContent(visible, currentPage, gallery ? 9 : Math.max(visible.length, 1));
+    const paged = paginateContent(visible, currentPage, pageSize);
     currentPage = paged.page;
     const positions = new Map(paged.items.map((item, index) => [item.document.slug, index]));
     cards.forEach(card => {
@@ -161,28 +163,23 @@ function initializeContentIndex(root: HTMLElement) {
     });
     emptyState.hidden = visible.length > 0;
     const hasQuery = splitSearchTerms(queryInput.value).length > 0;
-    resultStatus.textContent = gallery
-      ? `共 ${visible.length} ${contentName === '作品' ? '件' : '个'}${contentName}${paged.pageCount > 1 ? ` · 第 ${currentPage} / ${paged.pageCount} 页` : ''}${hasQuery ? ' · 按相关性排序' : ''}`
-      : `显示 ${visible.length} 篇文章${hasQuery ? ' · 按相关性排序' : ''}`;
+    if (sortLabel) sortLabel.textContent = hasQuery ? '相关性排序' : '最新发布';
+    resultStatus.textContent = `共 ${visible.length} ${contentUnit}${contentName}${paged.pageCount > 1 ? ` · 第 ${currentPage} / ${paged.pageCount} 页` : ''}${hasQuery ? ' · 按相关性排序' : ''}`;
     clearFilters.hidden = selectedTags.size === 0 && !queryInput.value.trim();
     groups.forEach(group => {
       const selected = group.dataset.category === categoryId;
-      if (group instanceof HTMLDetailsElement) group.open = selected;
-      else group.setAttribute('aria-pressed', String(selected));
+      group.setAttribute('aria-pressed', String(selected));
     });
-    if (gallery) {
-      const categoryName = groups.find(group => group.dataset.category === categoryId)?.dataset.categoryName || '';
-      queryInput.placeholder = `搜索${categoryName}，多个关键词用空格隔开`;
-      if (queryLabel) queryLabel.textContent = `搜索${categoryName}`;
-      main?.setAttribute('aria-label', `${categoryName}${contentName}列表`);
-      renderPagination(paged.pageCount);
-    }
+    const categoryName = groups.find(group => group.dataset.category === categoryId)?.dataset.categoryName || '';
+    queryInput.placeholder = `搜索${categoryName}，多个关键词用空格隔开`;
+    if (queryLabel) queryLabel.textContent = `搜索${categoryName}`;
+    main?.setAttribute('aria-label', `${categoryName}${contentName}列表`);
+    renderPagination(paged.pageCount);
     updateUrl();
   }
 
   groups.forEach(group => {
-    const control = group instanceof HTMLDetailsElement ? group.querySelector('summary') : group;
-    control?.addEventListener('click', event => {
+    group.addEventListener('click', event => {
       event.preventDefault();
       const nextCategory = group.dataset.category || '';
       if (nextCategory !== categoryId) selectedTags.clear();

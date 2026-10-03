@@ -1,6 +1,7 @@
 ---
 import ContentCover from './ContentCover.astro';
 import '../styles/content-gallery.css';
+import '../styles/content-blog.css';
 interface Props { items: any[]; label: string; baseHref: '/works/' | '/cases/' | '/blog/'; }
 const { items, label, baseHref } = Astro.props;
 const gallery = baseHref !== '/blog/';
@@ -25,27 +26,19 @@ const documents = items.map((item, index) => ({
 const serializedDocuments = JSON.stringify(documents).replace(/</g, '\\u003c');
 const initialCategory = groups[0]?.id;
 ---
-<div class:list={['content-browser', { 'content-gallery': gallery }]} data-content-index data-page-size={gallery ? 9 : undefined} data-content-name={contentName}>
-  {gallery ? <nav class="content-category-nav" aria-label={label}>
+<div class:list={['content-browser', 'content-gallery', { 'content-blog': !gallery }]} data-content-index data-page-size={gallery ? 9 : 10} data-content-name={contentName}>
+  <nav class="content-category-nav" aria-label={label}>
     {groups.map(group => <button type="button" class="content-category" data-content-group data-category={group.id} data-category-name={group.name} aria-pressed={group.id === initialCategory}>
       <span>{group.name}</span><span class="content-category-count">{group.items.length}</span>
     </button>)}
-  </nav> :
-  <details class="master-directory" open>
-    <summary class="master-directory-toggle">{label}</summary>
-    <nav class="master-nav content-directory" aria-label={label}>
-      {groups.map(group => <details class="master-group" data-content-group data-category={group.id} open={group.id === initialCategory}>
-        <summary>{group.name}<span>{group.items.length}</span></summary>
-        <div>{group.items.map(item => <a href={baseHref + item.data.slug + '/'}>{item.data.title}</a>)}</div>
-      </details>)}
-    </nav>
-  </details>}
-  <section class="content-index-main" aria-label="内容列表" tabindex={gallery ? -1 : undefined}>
+  </nav>
+  <section class="content-index-main" aria-label="内容列表" tabindex="-1">
     <div class="content-filter">
       <div class="content-search">
-        <label class:list={{ 'gallery-sr-only': gallery }} for={`content-query-${baseHref.slice(1, -1)}`} data-content-query-label>搜索当前分类</label>
+        <label class="gallery-sr-only" for={`content-query-${baseHref.slice(1, -1)}`} data-content-query-label>搜索当前分类</label>
         <input id={`content-query-${baseHref.slice(1, -1)}`} data-content-query type="search" placeholder="输入多个关键词时用空格隔开" autocomplete="off" />
       </div>
+      {!gallery && <span class="content-sort-label">最新发布</span>}
       <div class="content-tag-filter">
         <div class="content-filter-heading"><span>标签</span><button type="button" data-content-clear hidden>清空筛选</button></div>
         <div class="content-tags" data-content-tags aria-label="标签筛选"></div>
@@ -57,28 +50,27 @@ const initialCategory = groups[0]?.id;
         {gallery && <a class="content-cover-link" href={baseHref + item.data.slug + '/'} tabindex="-1" aria-hidden="true"><ContentCover source={item.data.cover} index={index} /></a>}
         <div class="content-card-copy">
           <div class="content-card-meta">
-            {!gallery && <span>{item.data.categoryName}</span>}
             {item.data.date && <time datetime={item.data.date.toISOString()}>{item.data.date.toISOString().slice(0, 10)}</time>}
-            <span>{item.data.status}</span>
+            {gallery && <span>{item.data.status}</span>}
           </div>
           <h2><a href={baseHref + item.data.slug + '/'}>{item.data.title}</a></h2>
           <p>{item.data.description}</p>
         </div>
         <div class="content-card-side">
           {item.data.tags?.length > 0 && <div class="content-card-tags" aria-label={`${contentName}标签`}>{item.data.tags.map((tag: string) => <span>{tag}</span>)}</div>}
-          <a class="text-link content-card-link" href={baseHref + item.data.slug + '/'} aria-label={gallery ? `查看${contentName}：${item.data.title}` : undefined}>{gallery ? '↗' : '阅读全文 →'}</a>
+          <a class="text-link content-card-link" href={baseHref + item.data.slug + '/'} aria-label={`${gallery ? '查看' : '阅读全文'}：${item.data.title}`}>{gallery ? '↗' : '阅读全文 →'}</a>
         </div>
       </article>)}
     </div>
     <p class="content-empty" data-content-empty hidden>没有找到符合当前条件的{contentName}，请减少标签或更换关键词。</p>
-    {gallery && <nav class="content-pagination" data-content-pagination aria-label={`${contentName}分页`} hidden>
+    <nav class="content-pagination" data-content-pagination aria-label={`${contentName}分页`} hidden>
       <span class="content-page-status" data-content-page-status></span>
       <div class="content-page-controls">
         <button type="button" data-content-prev>上一页</button>
         <div class="content-page-numbers" data-content-page-numbers></div>
         <button type="button" data-content-next>下一页 →</button>
       </div>
-    </nav>}
+    </nav>
   </section>
   <script type="application/json" data-content-index-data set:html={serializedDocuments}></script>
 </div>

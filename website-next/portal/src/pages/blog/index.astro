@@ -2,6 +2,6 @@
 import Base from '../../layouts/Base.astro';
 import ContentIndex from '../../components/ContentIndex.astro';
 import { getCategorizedPosts } from '../../../../shared/blog';
-const posts = await getCategorizedPosts('zh');
+const posts = (await getCategorizedPosts('zh')).sort((left, right) => right.data.date.getTime() - left.data.date.getTime());
 ---
-<Base title="博客" area="blog"><div class="master-page"><header class="shell master-page-head"><h1>博客</h1><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><ContentIndex items={posts} label="博客目录" baseHref="/blog/"/></section></div></Base>
+<Base title="博客" area="blog"><div class="master-page gallery-page"><h1 class="gallery-sr-only">博客</h1><section class="shell master-page-body"><ContentIndex items={posts} label="博客分类" baseHref="/blog/"/></section></div></Base>
