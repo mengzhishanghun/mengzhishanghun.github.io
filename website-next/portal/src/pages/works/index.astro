@@ -4,4 +4,4 @@ import ContentIndex from '../../components/ContentIndex.astro';
 import { published } from '../../../../shared/content';
 const items=await published('works');
 ---
-<Base title="作品" area="works"><div class="master-page"><header class="shell master-page-head"><h1>作品</h1><p>插件、工具与项目记录。</p></header><section class="shell master-page-body"><ContentIndex items={items} label="作品目录" baseHref="/works/"/></section></div></Base>
+<Base title="作品" area="works"><div class="master-page gallery-page"><h1 class="gallery-sr-only">作品</h1><section class="shell master-page-body"><ContentIndex items={items} label="作品分类" baseHref="/works/"/></section></div></Base>

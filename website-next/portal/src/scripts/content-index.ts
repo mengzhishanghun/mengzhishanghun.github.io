@@ -1,4 +1,5 @@
 import { rankSearchDocument, splitSearchTerms, type SearchDocument } from '../../../shared/content-search';
+import { paginateContent, paginationNumbers } from '../../../shared/content-pagination';
 
 type ContentDocument = SearchDocument & {
   slug: string;
@@ -19,7 +20,16 @@ function initializeContentIndex(root: HTMLElement) {
   const status = root.querySelector<HTMLElement>('[data-content-status]');
   const empty = root.querySelector<HTMLElement>('[data-content-empty]');
   const cards = [...root.querySelectorAll<HTMLElement>('[data-content-card]')];
-  const groups = [...root.querySelectorAll<HTMLDetailsElement>('[data-content-group]')];
+  const groups = [...root.querySelectorAll<HTMLElement>('[data-content-group]')];
+  const pagination = root.querySelector<HTMLElement>('[data-content-pagination]');
+  const pageNumbers = root.querySelector<HTMLElement>('[data-content-page-numbers]');
+  const pageStatus = root.querySelector<HTMLElement>('[data-content-page-status]');
+  const previousPage = root.querySelector<HTMLButtonElement>('[data-content-prev]');
+  const nextPage = root.querySelector<HTMLButtonElement>('[data-content-next]');
+  const main = root.querySelector<HTMLElement>('.content-index-main');
+  const queryLabel = root.querySelector<HTMLElement>('[data-content-query-label]');
+  const gallery = root.dataset.pageSize !== undefined;
+  const contentName = root.dataset.contentName || '文章';
   if (!dataElement || !input || !tagList || !clearButton || !status || !empty || groups.length === 0) return;
 
   const contentData = dataElement;
@@ -31,6 +41,7 @@ function initializeContentIndex(root: HTMLElement) {
 
   const documents = JSON.parse(contentData.textContent || '[]') as ContentDocument[];
   const parameters = new URLSearchParams(location.search);
+  let currentPage = Number(parameters.get('page') || 1);
   const availableCategories = new Set(groups.map(group => group.dataset.category || ''));
   let categoryId = parameters.get('category') || groups[0].dataset.category || '';
   if (!availableCategories.has(categoryId)) categoryId = groups[0].dataset.category || '';
@@ -63,6 +74,7 @@ function initializeContentIndex(root: HTMLElement) {
     if (categoryId !== groups[0].dataset.category) next.set('category', categoryId);
     if (queryInput.value.trim()) next.set('q', queryInput.value.trim());
     [...selectedTags].forEach(tag => next.append('tag', tag));
+    if (gallery && currentPage > 1) next.set('page', String(currentPage));
     history.replaceState({}, '', location.pathname + (next.size ? `?${next}` : '') + location.hash);
   }
 
@@ -71,7 +83,19 @@ function initializeContentIndex(root: HTMLElement) {
     categoryDocuments().forEach(document => document.tags.forEach(tag => baseCounts.set(tag, (baseCounts.get(tag) || 0) + 1)));
     const tags = [...baseCounts.keys()].sort((left, right) => (baseCounts.get(right) || 0) - (baseCounts.get(left) || 0) || left.localeCompare(right, 'zh-CN'));
     selectedTags = new Set([...selectedTags].filter(tag => baseCounts.has(tag)));
-    contentTags.replaceChildren(...tags.map(tag => {
+    const allButton = document.createElement('button');
+    allButton.type = 'button';
+    allButton.className = 'content-tag';
+    allButton.dataset.tagAll = '';
+    allButton.textContent = '全部';
+    allButton.setAttribute('aria-pressed', String(selectedTags.size === 0));
+    allButton.addEventListener('click', () => {
+      selectedTags.clear();
+      currentPage = 1;
+      render();
+      contentTags.querySelector<HTMLButtonElement>('[data-tag-all]')?.focus();
+    });
+    contentTags.replaceChildren(...(gallery ? [allButton] : []), ...tags.map(tag => {
       const selected = selectedTags.has(tag);
       const count = searchedDocuments.filter(document => selected ? matchesSelectedTags(document) : matchesSelectedTags(document, tag)).length;
       const button = document.createElement('button');
@@ -80,12 +104,44 @@ function initializeContentIndex(root: HTMLElement) {
       button.dataset.tag = tag;
       button.setAttribute('aria-pressed', String(selected));
       button.disabled = !selected && count === 0;
-      button.textContent = `${tag}（${count}）${selected ? ' ×' : ''}`;
-      button.setAttribute('aria-label', selected ? `取消标签 ${tag}` : `选择标签 ${tag}，${count} 篇文章`);
+      button.textContent = gallery ? tag : `${tag}（${count}）${selected ? ' ×' : ''}`;
+      button.setAttribute('aria-label', selected ? `取消标签 ${tag}` : `选择标签 ${tag}，${count} 个${contentName}`);
       button.addEventListener('click', () => {
         if (selectedTags.has(tag)) selectedTags.delete(tag); else selectedTags.add(tag);
+        currentPage = 1;
         render();
+        contentTags.querySelector<HTMLButtonElement>(`[data-tag="${CSS.escape(tag)}"]`)?.focus();
       });
+      return button;
+    }));
+  }
+
+  function movePage(page: number) {
+    currentPage = page;
+    render();
+    main?.scrollIntoView({ block: 'start', behavior: 'auto' });
+    main?.focus({ preventScroll: true });
+  }
+
+  function renderPagination(pageCount: number) {
+    if (!pagination || !pageNumbers || !pageStatus || !previousPage || !nextPage) return;
+    pagination.hidden = pageCount <= 1;
+    pageStatus.textContent = `每页 9 个 · 第 ${currentPage} / ${pageCount} 页`;
+    previousPage.disabled = currentPage <= 1;
+    nextPage.disabled = currentPage >= pageCount;
+    pageNumbers.replaceChildren(...paginationNumbers(currentPage, pageCount).map(number => {
+      if (number === 'ellipsis') {
+        const gap = document.createElement('span');
+        gap.textContent = '…';
+        gap.setAttribute('aria-hidden', 'true');
+        return gap;
+      }
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.textContent = String(number);
+      button.setAttribute('aria-label', `第 ${number} 页`);
+      if (number === currentPage) button.setAttribute('aria-current', 'page');
+      button.addEventListener('click', () => movePage(number));
       return button;
     }));
   }
@@ -95,7 +151,9 @@ function initializeContentIndex(root: HTMLElement) {
     const searchedDocuments = ranked.map(item => item.document);
     renderTags(searchedDocuments);
     const visible = ranked.filter(item => matchesSelectedTags(item.document));
-    const positions = new Map(visible.map((item, index) => [item.document.slug, index]));
+    const paged = paginateContent(visible, currentPage, gallery ? 9 : Math.max(visible.length, 1));
+    currentPage = paged.page;
+    const positions = new Map(paged.items.map((item, index) => [item.document.slug, index]));
     cards.forEach(card => {
       const position = positions.get(card.dataset.slug || '');
       card.hidden = position === undefined;
@@ -103,29 +161,46 @@ function initializeContentIndex(root: HTMLElement) {
     });
     emptyState.hidden = visible.length > 0;
     const hasQuery = splitSearchTerms(queryInput.value).length > 0;
-    resultStatus.textContent = `显示 ${visible.length} 篇文章${hasQuery ? ' · 按相关性排序' : ''}`;
+    resultStatus.textContent = gallery
+      ? `共 ${visible.length} ${contentName === '作品' ? '件' : '个'}${contentName}${paged.pageCount > 1 ? ` · 第 ${currentPage} / ${paged.pageCount} 页` : ''}${hasQuery ? ' · 按相关性排序' : ''}`
+      : `显示 ${visible.length} 篇文章${hasQuery ? ' · 按相关性排序' : ''}`;
     clearFilters.hidden = selectedTags.size === 0 && !queryInput.value.trim();
-    groups.forEach(group => group.open = group.dataset.category === categoryId);
+    groups.forEach(group => {
+      const selected = group.dataset.category === categoryId;
+      if (group instanceof HTMLDetailsElement) group.open = selected;
+      else group.setAttribute('aria-pressed', String(selected));
+    });
+    if (gallery) {
+      const categoryName = groups.find(group => group.dataset.category === categoryId)?.dataset.categoryName || '';
+      queryInput.placeholder = `搜索${categoryName}，多个关键词用空格隔开`;
+      if (queryLabel) queryLabel.textContent = `搜索${categoryName}`;
+      main?.setAttribute('aria-label', `${categoryName}${contentName}列表`);
+      renderPagination(paged.pageCount);
+    }
     updateUrl();
   }
 
   groups.forEach(group => {
-    const summary = group.querySelector('summary');
-    summary?.addEventListener('click', event => {
+    const control = group instanceof HTMLDetailsElement ? group.querySelector('summary') : group;
+    control?.addEventListener('click', event => {
       event.preventDefault();
       const nextCategory = group.dataset.category || '';
       if (nextCategory !== categoryId) selectedTags.clear();
       categoryId = nextCategory;
+      currentPage = 1;
       render();
     });
   });
-  queryInput.addEventListener('input', render);
+  queryInput.addEventListener('input', () => { currentPage = 1; render(); });
   clearFilters.addEventListener('click', () => {
     queryInput.value = '';
     selectedTags.clear();
+    currentPage = 1;
     render();
     queryInput.focus();
   });
+  previousPage?.addEventListener('click', () => movePage(currentPage - 1));
+  nextPage?.addEventListener('click', () => movePage(currentPage + 1));
   render();
 }
 
