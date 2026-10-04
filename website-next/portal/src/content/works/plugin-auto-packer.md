@@ -9,6 +9,7 @@ order: 0
 status: 已开源
 featured: true
 tags: [Unreal Engine, 插件, 自动化, 打包]
+documentationUrl: /docs/zh/tools/plugin-auto-packer/
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker

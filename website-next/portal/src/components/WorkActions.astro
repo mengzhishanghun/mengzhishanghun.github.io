@@ -1,0 +1,18 @@
+---
+interface Props { purchaseUrl?: string; documentationUrl?: string; }
+const { purchaseUrl, documentationUrl } = Astro.props;
+const externalDocs = documentationUrl?.startsWith('http');
+---
+{(purchaseUrl || documentationUrl) && <nav class="work-actions" aria-label="作品购买与文档">
+  {purchaseUrl && <a class="work-action work-action-primary" href={purchaseUrl} target="_blank" rel="noopener noreferrer">去购买<span aria-hidden="true">↗</span></a>}
+  {documentationUrl && <a class="work-action" href={documentationUrl} target={externalDocs ? '_blank' : undefined} rel={externalDocs ? 'noopener noreferrer' : undefined}>查看文档<span aria-hidden="true">{externalDocs ? '↗' : '→'}</span></a>}
+</nav>}
+<style>
+  .work-actions{display:flex;flex-wrap:wrap;gap:12px;margin:24px 0}
+  .work-action{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:46px;padding:10px 22px;border:1px solid var(--blue);border-radius:8px;color:var(--blue);background:var(--panel);font-weight:600;line-height:1.5}
+  .work-action:hover{background:var(--line);color:var(--text)}
+  .work-action-primary{background:var(--blue);color:var(--bg)}
+  .work-action-primary:hover{background:var(--text);color:var(--bg)}
+  .work-action:focus-visible{outline:3px solid var(--text);outline-offset:4px}
+  @media(max-width:480px){.work-action{flex:1 1 140px;padding-inline:16px}}
+</style>

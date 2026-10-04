@@ -9,6 +9,7 @@ order: 2
 status: 已开源
 featured: false
 tags: [Unreal Engine, 编译, 自动化]
+documentationUrl: https://github.com/MZSH-Tools/UEQuickStart/blob/main/Docs/README.md
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEQuickStart

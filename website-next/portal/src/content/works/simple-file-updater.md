@@ -9,6 +9,7 @@ order: 1
 status: 已开源
 featured: false
 tags: [文件更新, 自动化, 开发工具]
+documentationUrl: https://github.com/MZSH-Tools/SimpleFileUpdater#readme
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
