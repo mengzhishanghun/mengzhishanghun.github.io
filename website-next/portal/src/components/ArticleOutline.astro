@@ -1,0 +1,37 @@
+---
+interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+  backHref: string;
+  backLabel: string;
+}
+const { headings, backHref, backLabel } = Astro.props;
+const outline = headings.filter(heading => heading.depth >= 2);
+const firstDepth = Math.min(...outline.map(heading => heading.depth));
+---
+<aside class="article-sidebar" aria-label="文章导航">
+  <a class="article-back" href={backHref}><span aria-hidden="true">←</span>{backLabel}</a>
+  <details class="article-outline" open>
+    <summary>文章大纲</summary>
+    {outline.length > 0 ? <nav aria-label="文章大纲">
+      <ol>{outline.map(heading => <li><a href={'#'+encodeURIComponent(heading.slug)} style={'--outline-depth:'+(heading.depth-firstDepth)}>{heading.text}</a></li>)}</ol>
+    </nav> : <p class="article-outline-empty">暂无章节标题</p>}
+  </details>
+</aside>
+<style is:global>
+  .master-page:has(.article-sidebar){height:auto;min-height:100%;grid-template-rows:auto auto}
+  .master-page:has(.article-sidebar) .master-page-body,.master-detail:has(>.article-sidebar){height:auto}
+  .master-detail:has(>.article-sidebar){align-items:start}
+  .article-sidebar{position:sticky;top:24px;display:flex;flex-direction:column;min-width:0;max-height:calc(100dvh - var(--site-chrome-header-height,70px) - var(--site-chrome-footer-height,43px) - 48px);padding-bottom:12px;border-block:1px solid var(--line);background:var(--panel)}
+  .article-back{display:flex;align-items:center;gap:10px;flex:none;min-height:48px;padding:14px 18px;border-bottom:1px solid var(--line);color:var(--blue);font-size:.9rem}
+  .article-back:hover{background:var(--line);color:var(--text)}
+  .article-outline{min-height:0;overflow-y:auto}
+  .article-outline summary{padding:14px 18px 8px;color:var(--muted);font-size:.82rem;cursor:pointer}
+  .article-outline ol{list-style:none;margin:0;padding:0}
+  .article-outline a{display:flex;align-items:center;min-height:44px;padding:10px 16px 10px calc(18px + var(--outline-depth)*12px);border-left:3px solid transparent;color:var(--muted);font-size:.9rem;line-height:1.55;overflow-wrap:anywhere}
+  .article-outline a:hover{border-left-color:var(--blue);background:var(--line);color:var(--text)}
+  .article-sidebar :is(a,summary):focus-visible{outline:2px solid var(--blue);outline-offset:-3px}
+  .article-outline-empty{padding:8px 18px 14px;font-size:.85rem}
+  .master-panel .prose :is(h2,h3,h4,h5,h6){scroll-margin-top:24px}
+  .master-panel .prose :is(h2,h3,h4,h5,h6):target{color:var(--blue)}
+  @media(max-width:960px){.article-sidebar{position:static;max-height:none;padding-bottom:0}.article-outline[open] nav{max-height:35dvh;overflow-y:auto}.article-outline summary{padding-bottom:14px}}
+</style>
