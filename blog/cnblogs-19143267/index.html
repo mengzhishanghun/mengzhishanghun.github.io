@@ -1,0 +1,208 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="我个人的理解是，Stream 是 Perforce 推出的、类似于传统分支但更智能的“流”。它提供可视化视图，便于查看分支间的同步关系。"><meta name="theme-color" content="#080b0d"><title>Perforce：Stream实战指南 · 小毛</title><link rel="canonical" href="https://mzsh.me/blog/cnblogs-19143267/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="小毛博客 RSS" href="/blog/rss.xml"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="swap"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js"></script><link rel="stylesheet" href="/_astro/Base.Qw-kn5IZ.css"><style>.related-content[data-astro-cid-dip3annw]{color:light-dark(#111827,#f1f3f7);border-top:1px solid light-dark(#e2e7f0,#2a2e37);margin-block:2.5rem;padding-block:1.75rem}.related-content[data-astro-cid-dip3annw] h2[data-astro-cid-dip3annw]{margin:0 0 1.25rem;font-size:1.4rem;line-height:1.4}.related-grid[data-astro-cid-dip3annw]{grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.5rem;display:grid}.related-content[data-astro-cid-dip3annw] h3[data-astro-cid-dip3annw]{color:light-dark(#647084,#a4adbd);margin:0 0 .75rem;font-size:.9rem}.related-content[data-astro-cid-dip3annw] ul[data-astro-cid-dip3annw]{margin:0;padding:0;list-style:none}.related-content[data-astro-cid-dip3annw] li[data-astro-cid-dip3annw]+li[data-astro-cid-dip3annw]{margin-top:1rem}.related-content[data-astro-cid-dip3annw] a[data-astro-cid-dip3annw]{color:light-dark(#355cf4,#90a7ff);text-underline-offset:4px;overflow-wrap:anywhere;font-size:1rem;text-decoration:underline}.related-content[data-astro-cid-dip3annw] p[data-astro-cid-dip3annw]{color:light-dark(#647084,#a4adbd);margin:.35rem 0 0;font-size:.875rem;line-height:1.7}
+</style><link rel="stylesheet" href="/_astro/MasterDetail.BFAHaL7k.css"><style>[data-astro-transition-scope="astro-gyrtbwwo-1"] { view-transition-name: astro-gyrtbwwo-1; }@layer astro { ::view-transition-old(astro-gyrtbwwo-1) { animation: none; opacity: 0; mix-blend-mode: normal; }::view-transition-new(astro-gyrtbwwo-1) { animation: none; mix-blend-mode: normal; }::view-transition-group(astro-gyrtbwwo-1) { animation: none } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }</style></head><body data-astro-transition-scope="astro-gyrtbwwo-1"><div class="site-chrome"><a class="skip-link" href="#main">跳到主要内容</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/" aria-label="MZSH 首页">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">菜单</button><nav id="main-navigation" class="main-nav" aria-label="主导航"><a href="/">首页</a><a href="/works/">作品</a><a href="/cases/">案例</a><a href="/blog/" aria-current="page">博客</a></nav><div class="header-actions"><a href="/contact/">联系</a><a href="/support/">支持</a></div></div></header><script type="module">var e=class extends HTMLElement{controller;frame=0;timers=[];connectedCallback(){this.frame=requestAnimationFrame(()=>this.initialize())}disconnectedCallback(){this.controller?.abort(),cancelAnimationFrame(this.frame),this.timers.forEach(window.clearTimeout),this.timers=[]}initialize(){this.controller?.abort();let{signal:e}=this.controller=new AbortController,t=this.querySelector(`.article-outline`),n=matchMedia(`(max-width: 960px)`),r=()=>{t&&(t.open=!n.matches)};r(),n.addEventListener(`change`,r,{signal:e});let i=Array.from(this.querySelectorAll(`.article-outline a`)),a=i.map(e=>document.getElementById(decodeURIComponent(e.hash.slice(1)))),o=this.closest(`.main-frame, .site-chrome-main`),s=()=>{let e=(o?.getBoundingClientRect().top??0)+70,t=0;a.forEach((n,r)=>{n&&n.getBoundingClientRect().top<=e&&(t=r)}),i.forEach((e,n)=>n===t?e.setAttribute(`aria-current`,`location`):e.removeAttribute(`aria-current`))},c=()=>{cancelAnimationFrame(this.frame),this.frame=requestAnimationFrame(s)};(o??window).addEventListener(`scroll`,c,{passive:!0,signal:e}),window.addEventListener(`resize`,c,{signal:e}),window.addEventListener(`hashchange`,c,{signal:e});let l=e=>{let r;try{r=decodeURIComponent(e.slice(1))}catch{return}let i=document.getElementById(r);i&&this.contains(i)&&o&&(n.matches&&t&&(t.open=!1),cancelAnimationFrame(this.frame),this.frame=requestAnimationFrame(()=>{let e=n.matches?(this.querySelector(`.article-sidebar`)?.getBoundingClientRect().height??0)+16:24;o.scrollTo({top:Math.max(0,o.scrollTop+i.getBoundingClientRect().top-o.getBoundingClientRect().top-e),behavior:`instant`}),i.setAttribute(`tabindex`,`-1`),i.focus({preventScroll:!0}),s()}))};i.forEach(t=>t.addEventListener(`click`,e=>{e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||!o||(e.preventDefault(),e.stopPropagation(),history.replaceState(history.state,``,t.hash),l(t.hash))},{signal:e})),window.addEventListener(`hashchange`,()=>l(location.hash),{signal:e});let u=history.state?.mzshViewport,d=u?.key===location.pathname+location.search+location.hash&&Number.isFinite(u.top);location.hash&&!d&&l(location.hash),this.querySelectorAll(`.prose table, .sl-markdown-content table`).forEach(e=>{if(e.parentElement?.classList.contains(`reading-table-scroll`))return;let t=document.createElement(`div`);t.className=`reading-table-scroll`,t.tabIndex=0,t.setAttribute(`role`,`region`),t.setAttribute(`aria-label`,`数据表格，可横向滚动`),e.before(t),t.append(e)});let f=this.querySelector(`[data-copy-status]`);f||(f=document.createElement(`span`),f.className=`reading-sr-only`,f.dataset.copyStatus=``,f.setAttribute(`role`,`status`),f.setAttribute(`aria-live`,`polite`),this.append(f)),this.querySelectorAll(`.prose pre, .sl-markdown-content pre`).forEach((t,n)=>{if(t.closest(`.expressive-code, .reading-code-frame`))return;let r=t.querySelector(`code`);if(!r)return;let i=document.createElement(`div`);i.className=`reading-code-frame`;let a=document.createElement(`div`);a.className=`reading-code-bar`;let o=document.createElement(`span`);o.textContent=`代码`;let s=document.createElement(`button`);s.type=`button`,s.textContent=`复制代码`,s.setAttribute(`aria-label`,`复制第 ${n+1} 段代码`),s.addEventListener(`click`,async()=>{try{if(await navigator.clipboard.writeText(r.textContent??``),!this.isConnected)return;s.textContent=`已复制`,f&&(f.textContent=`代码已复制`)}catch{let e=document.createRange();e.selectNodeContents(r);let t=getSelection();t?.removeAllRanges(),t?.addRange(e),s.textContent=`请手动复制`,f&&(f.textContent=`代码已选中，请手动复制`)}this.timers.push(window.setTimeout(()=>{s.textContent=`复制代码`},2200))},{signal:e}),a.append(o,s),t.before(i),i.append(a,t),t.tabIndex=0,t.setAttribute(`aria-label`,`代码示例，可横向滚动`)}),s()}};customElements.get(`mzsh-reading`)||customElements.define(`mzsh-reading`,e);</script><main id="main" tabindex="-1" class="site-chrome-main"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">博客</p><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><mzsh-reading class="reading-surface"><div class="master-detail reading-detail"><aside class="article-sidebar" aria-label="文章导航"><a class="article-back" href="/blog/">返回博客列表</a><details class="article-outline" open><summary>文章大纲</summary><nav aria-label="文章大纲"><ol><li><a href="#perforce-stream-%E6%A6%82%E8%BF%B0" style="--outline-depth:0">Perforce Stream 概述</a></li><li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF-stream" style="--outline-depth:1">什么是 Stream</a></li><li><a href="#%E4%BC%98%E7%BC%BA%E7%82%B9" style="--outline-depth:1">优缺点</a></li><li><a href="#%E6%96%B0%E5%BB%BA-stream" style="--outline-depth:1">新建 Stream</a></li><li><a href="#%E5%88%9B%E5%BB%BA-stream-depotp4admin" style="--outline-depth:2">创建 Stream Depot（P4Admin）</a></li><li><a href="#%E5%88%9B%E5%BB%BA%E4%B8%BB%E5%B9%B2mainline" style="--outline-depth:2">创建主干（Mainline）</a></li><li><a href="#%E5%88%9B%E5%BB%BA%E5%88%86%E6%94%AFbranch" style="--outline-depth:2">创建分支（Branch）</a></li><li><a href="#%E5%88%86%E6%94%AF%E7%B1%BB%E5%9E%8B" style="--outline-depth:3">分支类型</a></li><li><a href="#%E4%BD%BF%E7%94%A8-stream" style="--outline-depth:1">使用 Stream</a></li><li><a href="#%E6%96%B0%E5%BB%BA-stream-%E5%B7%A5%E4%BD%9C%E5%8C%BA" style="--outline-depth:2">新建 Stream 工作区</a></li><li><a href="#%E5%B7%A5%E4%BD%9C%E5%8C%BA%E5%88%87%E6%8D%A2streamgraph" style="--outline-depth:2">工作区切换（StreamGraph）</a></li><li><a href="#%E5%90%88%E5%B9%B6%E4%B8%8E%E6%9B%B4%E6%96%B0" style="--outline-depth:1">合并与更新</a></li><li><a href="#%E8%BF%9E%E6%8E%A5%E5%A4%96%E9%83%A8%E6%96%87%E4%BB%B6%E7%B1%BB%E4%BC%BC-svn-externals" style="--outline-depth:1">连接外部文件（类似 SVN externals）</a></li><li><a href="#perforce-%E6%8C%87%E4%BB%A4" style="--outline-depth:1">Perforce 指令</a></li><li><a href="#%E5%9C%A8-p4v-%E4%B8%AD%E6%9F%A5%E7%9C%8B%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C" style="--outline-depth:2">在 P4V 中查看/使用命令行</a></li><li><a href="#%E5%90%8C%E6%AD%A5%E6%8C%87%E4%BB%A4%E4%B8%8D%E9%87%8D%E6%96%B0%E4%B8%8B%E8%BD%BD%E5%B7%B2%E5%AD%98%E5%9C%A8%E6%96%87%E4%BB%B6" style="--outline-depth:2">同步指令（不重新下载已存在文件）</a></li></ol></nav></details></aside><article class="master-panel" aria-labelledby="detail-cnblogs-19143267" data-pagefind-body data-blog-article="true"><header class="item-heading"><p class="eyebrow">2025-10-15 · Perforce</p><h1 id="detail-cnblogs-19143267" data-pagefind-meta="title">Perforce：Stream实战指南</h1><p>我个人的理解是，Stream 是 Perforce 推出的、类似于传统分支但更智能的“流”。它提供可视化视图，便于查看分支间的同步关系。</p></header><div class="prose"><p id="perforcestream实战指南" class="article-source-title" hidden>Perforce：Stream实战指南</p>
+<h2 id="perforce-stream-概述">Perforce Stream 概述</h2>
+<h3 id="什么是-stream">什么是 Stream</h3>
+<p>我个人的理解是，Stream 是 Perforce 推出的、类似于传统分支但更智能的“流”。它提供可视化视图，便于查看分支间的同步关系。</p>
+<h3 id="优缺点">优缺点</h3>
+<ul>
+<li>优点：并发开发、互不影响；主线改动少；分层清晰。</li>
+<li>缺点：查看历史相对麻烦；通常需要多个工作区（可通过调整工作区根目录在一个工作区间切换多个 Stream，但相对麻烦）。</li>
+</ul>
+<p>注：为每个 Stream 准备一个本地文件夹可加速工作区切换，节省时间。</p>
+<hr>
+<h3 id="新建-stream">新建 Stream</h3>
+<h4 id="创建-stream-depotp4admin">创建 Stream Depot（P4Admin）</h4>
+<ol>
+<li>打开 P4Admin。</li>
+<li>File → New → Depot，类型选 <code>Stream</code>。</li>
+<li>设置 <code>Stream Depth</code>（库的层级深度，建议 2 以便在库中放置多个 Stream）。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 创建 Stream Depot（P4Admin）配图 1</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+</ol>
+<h4 id="创建主干mainline">创建主干（Mainline）</h4>
+<ol>
+<li>打开 P4V。</li>
+<li>File → New → Stream。</li>
+<li>设置 <code>Stream Name</code>。</li>
+<li><code>Type</code> 选择 <code>mainline</code>。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 创建主干（Mainline）配图 2</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+</ol>
+<p>注：注意保存位置（Depot/路径）。</p>
+<h4 id="创建分支branch">创建分支（Branch）</h4>
+<p>方式一：File → New → Stream。<br>
+</p><figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 创建分支（Branch）配图 3</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure><p></p>
+<p>方式二：在 StreamGraph/Stream 列表中，右键父节点（如主干）创建。<br>
+</p><figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 创建分支（Branch）配图 4</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure><p></p>
+<h5 id="分支类型">分支类型</h5>
+<p></p><figure class="media-figure media-image"><button type="button" class="media-image-trigger" data-media-image="" data-media-src="/media/imported/blog/d3b6ae38d877873ae8ae.png" data-media-alt="Perforce：Stream实战指南 · 分支类型配图 5" aria-label="放大查看图片：Perforce：Stream实战指南 · 分支类型配图 5"><img src="/media/imported/blog/d3b6ae38d877873ae8ae.png" alt="Perforce：Stream实战指南 · 分支类型配图 5" loading="lazy" decoding="async"></button><figcaption>Perforce：Stream实战指南 · 分支类型配图 5</figcaption></figure><p></p>
+<ul>
+<li>Development：用于长期项目和主要新特性开发。适合长期演进版本。</li>
+<li>Release：用于修复 bug、测试与发布分发。
+<ul>
+<li>注意：Release 分支建议在创建时取消勾选“From parent”自动传播（Propagation），以避免主干更新自动同步到发行版本；同时保留从 Release 合并修复回主干。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 分支类型配图 6</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+</ul>
+</li>
+<li>Virtual：用于缩小范围并直接提交给父级，常作为筛选器创建特定子集。</li>
+<li>Task：轻量分支，便于短期 bug 修复/小特性开发。可放在其他 Depot，父节点可为空或其他库（含标准库）。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 分支类型配图 7</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure>
+<ul>
+<li>建议统一放入 <code>Task</code> Depot，便于后续集中管理；确认 Location 是否为 Task 路径，必要时手动调整。</li>
+<li>注意：Task 创建后不可删除，且不可同名；不使用时不可见。</li>
+</ul>
+</li>
+</ul>
+<p>创建分支时的注意事项：<br>
+</p><figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 分支类型配图 8</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure><p></p>
+<ul>
+<li>“自动创建工作区”可不勾（按需）。</li>
+<li>“将父节点文件填充到分支”默认勾选（通常保留）。</li>
+</ul>
+<hr>
+<h3 id="使用-stream">使用 Stream</h3>
+<h4 id="新建-stream-工作区">新建 Stream 工作区</h4>
+<ol>
+<li>新建工作区（Workspace）。</li>
+<li>设置工作区名（Workspace name）。</li>
+<li>设置工作区根目录（Workspace root）。</li>
+<li>选择对应的 Stream。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 新建 Stream 工作区配图 9</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+</ol>
+<h4 id="工作区切换streamgraph">工作区切换（StreamGraph）</h4>
+<ul>
+<li>在 P4V 的 View 中打开 StreamGraph。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 10</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+<li>同一 Depot 内：拖拽“电脑”图标到目标 Stream 即可快速切换；Perforce 会自动下载/清理差异文件，工作区根目录不变。</li>
+<li>不同 Depot 间：标准做法是切换工作区；若受工作区数量上限约束（如 ≤10 个），可通过修改现有工作区实现切换：<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 11</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure>
+<ol>
+<li>在 Workspaces 视图中右键工作区 → Edit。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 12</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+<li>修改 <code>Workspace root</code> 为目标工程目录。</li>
+<li>修改 <code>Stream</code> 为目标工程对应的流（不必为主干，建议与本地目录对应，以便后续链接）。</li>
+<li>选择是否“拷贝”文件：本地已存在则不拷贝；否则选择拷贝。<br>
+<figure class="media-figure media-image"><button type="button" class="media-image-trigger" data-media-image="" data-media-src="/media/imported/blog/66cb751e684e5c88c5c9.png" data-media-alt="Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 13" aria-label="放大查看图片：Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 13"><img src="/media/imported/blog/66cb751e684e5c88c5c9.png" alt="Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 13" loading="lazy" decoding="async"></button><figcaption>Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 13</figcaption></figure></li>
+<li>若选择不拷贝，需执行同步指令（见下文“Perforce 指令”）。</li>
+</ol>
+</li>
+</ul>
+<hr>
+<h3 id="合并与更新">合并与更新</h3>
+<p></p><figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 合并与更新配图 14</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure><p></p>
+<ul>
+<li>两个流之间的上箭头表示“可更新”（copy to child/parent），下箭头表示“可合并”（merge）。</li>
+<li>无箭头：当前不支持该方向；灰色箭头：已一致；绿色箭头：有更新或差异。</li>
+</ul>
+<p>流程建议：</p>
+<ol>
+<li>先将工作区切换到“目标流”。例如：把个人流改动更新到主干，应切到“主干”而非个人流。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 合并与更新配图 15</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+<li>在目标流上右键：<code>Merge to</code> 为合并，<code>Copy to</code> 为拷贝更新。</li>
+<li>选择 <code>Source Stream</code>（表示“从哪里到这里”）。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 合并与更新配图 16</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+<li>勾选自动合并并提交；若有冲突则改为手动处理后提交。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 合并与更新配图 17</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+</ol>
+<hr>
+<h3 id="连接外部文件类似-svn-externals">连接外部文件（类似 SVN externals）</h3>
+<p>用途：将其他库（通常是公共库）中的文件连接到当前库中使用。</p>
+<p>示例：以插件 Prefixed 为例</p>
+<ul>
+<li>插件在公共库中的位置：<code>.../Save/UnrealPlugins/Prefixed/5.2/...</code><br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 18</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+<li>在主干上右键编辑，在“高级”中添加映射。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 19</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+<li>点击应用。</li>
+</ul>
+<p>注：分支会自动继承主干设置；若仅在某个分支使用，请只修改该分支。</p>
+<hr>
+<h3 id="perforce-指令">Perforce 指令</h3>
+<h4 id="在-p4v-中查看使用命令行">在 P4V 中查看/使用命令行</h4>
+<p></p><figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 在 P4V 中查看/使用命令行配图 20</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure><p></p>
+<h4 id="同步指令不重新下载已存在文件">同步指令（不重新下载已存在文件）</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">p4</span><span style="color:#9ECBFF"> sync</span><span style="color:#79B8FF"> -k</span></span></code></pre>
+<ul>
+<li>作用：将本机文件与版本库记录建立“已同步”的关联，避免重复下载。</li>
+<li>建议：执行成功后运行“clean”进行校验与清理。<br>
+<figure class="media-figure media-withheld" role="note"><strong>Perforce：Stream实战指南 · 同步指令（不重新下载已存在文件）配图 21</strong><p>此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。</p></figure></li>
+</ul></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH. 保留所有权利。</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+  if (!document.documentElement.dataset.siteChromeBound) {
+    document.documentElement.dataset.siteChromeBound = 'true';
+    const setMenuOpen = (open) => {
+      const header = document.querySelector('.site-chrome .site-header');
+      header?.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded', String(open));
+      header?.querySelector('.main-nav')?.classList.toggle('is-open', open);
+    };
+    const update = () => {
+      const header = document.querySelector('.site-chrome .site-header');
+      if (!header) return;
+      const path = location.pathname;
+      header.querySelectorAll('.main-nav a, .header-actions a').forEach(link => {
+        const href = link.getAttribute('href') || '';
+        if (href === '/' ? path === '/' : path.startsWith(href)) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+      setMenuOpen(false);
+    };
+    document.addEventListener('click', event => {
+      const button = event.target.closest?.('[data-menu-toggle]');
+      if (button) setMenuOpen(button.getAttribute('aria-expanded') !== 'true');
+      else if (!event.target.closest?.('.main-nav')) setMenuOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      const button = document.querySelector('[data-menu-toggle][aria-expanded="true"]');
+      if (!button) return;
+      setMenuOpen(false);
+      button.focus();
+    });
+    document.addEventListener('focusin', event => {
+      if (!event.target.closest?.('.main-nav, [data-menu-toggle]')) setMenuOpen(false);
+    });
+    window.matchMedia('(max-width:720px)').addEventListener('change', () => setMenuOpen(false));
+    let navigationGeneration = 0;
+    const finishNavigation = () => {
+      document.querySelector('.site-chrome-main')?.removeAttribute('aria-busy');
+      document.querySelectorAll('[data-navigation-pending]').forEach(link => link.removeAttribute('data-navigation-pending'));
+    };
+    document.addEventListener('astro:before-preparation', event => {
+      const generation = ++navigationGeneration;
+      performance.mark('mzsh-navigation-start');
+      document.querySelector('.site-chrome-main')?.setAttribute('aria-busy', 'true');
+      event.sourceElement?.setAttribute?.('data-navigation-pending', '');
+      event.signal?.addEventListener('abort', () => { if (generation === navigationGeneration) finishNavigation(); }, { once: true });
+    });
+    document.addEventListener('astro:page-load', () => {
+      finishNavigation();
+      if (performance.getEntriesByName('mzsh-navigation-start').length) {
+        performance.measure('mzsh-navigation', 'mzsh-navigation-start');
+        performance.clearMarks('mzsh-navigation-start');
+      }
+    });
+    document.addEventListener('astro:after-swap', update);
+    update();
+  }
+</script><script type="module">function e(e){return e.pathname+e.search+e.hash}function t(e,t){let n=e?.mzshViewport;return n?.key===t&&Number.isFinite(n.top)&&n.top>=0?n.top:void 0}var n,r=0;function i(){n?.abort(),cancelAnimationFrame(r)}function a(){i(),n=new AbortController;let a=document.querySelector(`.site-chrome-docs .main-frame`)??document.querySelector(`.site-chrome-main`);if(!a||document.body.classList.contains(`home-page`))return;let o=location.pathname,s=history.state?.index,c=t(history.state,e(location));c!==void 0&&(a.scrollTop=c),a.addEventListener(`scroll`,()=>{if(location.pathname!==o||history.state?.index!==s)return;let t=e(location),n=history.state?.index,i=a.scrollTop;cancelAnimationFrame(r),r=requestAnimationFrame(()=>{a.isConnected&&e(location)===t&&history.state?.index===n&&(!document.querySelector(`meta[name="astro-view-transitions-enabled"]`)||Number.isFinite(n))&&history.replaceState({...history.state,mzshViewport:{key:t,top:i}},``)})},{passive:!0,signal:n.signal})}document.addEventListener(`astro:before-preparation`,e=>{i(),e.signal?.addEventListener(`abort`,()=>{r=requestAnimationFrame(a)},{once:!0})}),window.addEventListener(`popstate`,i),document.addEventListener(`astro:page-load`,a),a();</script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-zoom-in aria-label="放大图片">放大</button><button type="button" data-media-zoom-out aria-label="缩小图片">缩小</button><button type="button" data-media-reset aria-label="复位图片">复位</button><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+if (!document.documentElement.dataset.mediaViewerBound) {
+  document.documentElement.dataset.mediaViewerBound = 'true';
+  let opener = null, scale = 1;
+  const stop = () => { document.querySelectorAll('video,audio').forEach(media => { media.pause(); media.currentTime = 0; }); document.querySelectorAll('iframe[data-bilibili-frame]').forEach(frame => { frame.src='about:blank'; frame.remove(); }); document.querySelectorAll('[data-bilibili-stage]').forEach(stage => stage.replaceChildren()); };
+  const dialog = () => document.querySelector('[data-media-viewer]');
+  const close = () => { const viewer = dialog(); if (!viewer?.open) return; stop(); viewer.close(); opener?.focus?.(); opener = null; };
+  const open = (trigger, kind) => {
+    const viewer = dialog(), stage = viewer?.querySelector('[data-media-stage]'); if (!viewer || !stage) return;
+    stop(); opener = trigger; scale = 1; stage.replaceChildren();
+    if (kind === 'image') { const image = new Image(); image.src = trigger.dataset.mediaSrc; image.alt = trigger.dataset.mediaAlt || ''; image.dataset.mediaPreviewImage = ''; stage.append(image); }
+    else if(kind==='bilibili'){const host=trigger.closest('[data-bilibili]');const frame=document.createElement('iframe');frame.src=`https://player.bilibili.com/player.html?bvid=${encodeURIComponent(host.dataset.bvid)}&p=${encodeURIComponent(host.dataset.page)}&autoplay=0`;frame.title='Bilibili 播放器';frame.allow='fullscreen';frame.allowFullscreen=true;frame.dataset.bilibiliFrame='';stage.append(frame);}
+    else { const video = trigger.closest('.media-video')?.querySelector('video')?.cloneNode(true); if (!video) return; video.removeAttribute('autoplay'); video.preload = 'none'; video.controls = true; video.playsInline = true; video.dataset.mediaPreviewVideo = ''; stage.append(video); }
+    viewer.querySelector('[data-media-zoom-in]').hidden = kind !== 'image'; viewer.querySelector('[data-media-zoom-out]').hidden = kind !== 'image'; viewer.querySelector('[data-media-reset]').hidden = kind !== 'image'; viewer.querySelector('[data-media-fullscreen]').hidden = kind === 'image'; viewer.showModal(); viewer.querySelector('[data-media-close]').focus();
+  };
+  const zoom = (delta = 0, reset = false) => { const image = dialog()?.querySelector('[data-media-preview-image]'); if (!image) return; scale = reset ? 1 : Math.min(3, Math.max(.5, scale + delta)); image.style.transform = `scale(${scale})`; };
+  const bilibili = target => { const host=target.closest('[data-bilibili]'),stage=host?.querySelector('[data-bilibili-stage]'); if(!host||!stage||stage.firstChild)return; const frame=document.createElement('iframe'); frame.src=`https://player.bilibili.com/player.html?bvid=${encodeURIComponent(host.dataset.bvid)}&p=${encodeURIComponent(host.dataset.page)}&autoplay=0`; frame.title='Bilibili 播放器'; frame.allow='fullscreen'; frame.allowFullscreen=true; frame.loading='lazy'; frame.dataset.bilibiliFrame=''; stage.append(frame); };
+  document.addEventListener('click', event => { const target = event.target.closest?.('[data-media-image],[data-media-open-video],[data-media-open-bilibili],[data-media-close],[data-media-zoom-in],[data-media-zoom-out],[data-media-reset],[data-media-fullscreen],[data-bilibili-load]'); if (!target) return; if(target.matches('[data-bilibili-load]'))bilibili(target); else if (target.matches('[data-media-image]')) open(target, 'image'); else if (target.matches('[data-media-open-video]')) open(target, 'video'); else if(target.matches('[data-media-open-bilibili]'))open(target,'bilibili'); else if (target.matches('[data-media-close]')) close(); else if (target.matches('[data-media-zoom-in]')) zoom(.25); else if (target.matches('[data-media-zoom-out]')) zoom(-.25); else if (target.matches('[data-media-reset]')) zoom(0, true); else { const media = dialog()?.querySelector('[data-media-preview-video]'); if (media?.requestFullscreen) media.requestFullscreen().catch(() => {}); else dialog()?.querySelector('iframe')?.requestFullscreen?.().catch(() => {}); } });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
+  document.addEventListener('astro:before-swap', stop); addEventListener('pagehide', stop);
+  document.addEventListener('click', event => { const viewer = dialog(); if (event.target === viewer) close(); });
+}
+</script></body></html><script type="module">function e(e,t,n=Date.now,r){let i=new Set([`/works/`,`/cases/`,`/blog/`]),a=new Map,o=new Map,s={hits:0,network:0,rejected:0},c=0,l=(e,n)=>{let r=typeof Request<`u`&&e instanceof Request?e:void 0,a=new URL(r?.url??String(e),t);if(a.origin!==t||!i.has(a.pathname)||(n?.method??r?.method??`GET`).toUpperCase()!==`GET`||(n?.credentials??r?.credentials)===`omit`||[`reload`,`no-store`,`no-cache`].includes(n?.cache??r?.cache??``))return;let o=new Headers(n?.headers??r?.headers);if(!(o.has(`authorization`)||o.has(`range`)))return a.pathname},u=(e,t)=>t?t.aborted?Promise.reject(new DOMException(`Aborted`,`AbortError`)):new Promise((n,r)=>{let i=()=>r(new DOMException(`Aborted`,`AbortError`));t.addEventListener(`abort`,i,{once:!0}),e.then(e=>{t.removeEventListener(`abort`,i),t.aborted||n(e)},e=>{t.removeEventListener(`abort`,i),r(e)})}):e,d=async(t,i)=>{let d=l(t,i);if(!d)return e(t,i);let f=typeof Request<`u`&&t instanceof Request?t:void 0,p=i?.signal===null?null:i?.signal??f?.signal;if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);let m=a.get(d);if(m&&m.expires>n()){if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);return s.hits++,typeof performance<`u`&&(performance.clearMarks(`mzsh-index-cache-hit`),performance.mark(`mzsh-index-cache-hit`)),m.response.clone()}a.delete(d);let h=o.get(d);if(!h){s.network++;let l=c,u={...i,signal:void 0};h=e(f?new Request(f,{signal:new AbortController().signal}):t,u).then(async e=>{if(e.status===200&&!e.redirected&&(e.headers.get(`content-type`)??``).includes(`text/html`)){let t=await e.clone().text();if(l===c&&/<meta\b[^>]*name=["']astro-view-transitions-enabled["']/.test(t)&&t.includes(`data-content-index-data`)&&t.includes(`site-chrome`)){a.set(d,{response:e.clone(),expires:n()+6e4});try{r?.(t)}catch{}}else s.rejected++}else s.rejected++;return e}).finally(()=>{o.get(d)===h&&o.delete(d)}),o.set(d,h)}return(await u(h,p)).clone()};return{fetch:d,stats:s,clear(){c++,a.clear(),o.clear()},warm(){return Promise.allSettled([...i].map(e=>d(new URL(e,t),{credentials:`same-origin`})))}}}var t=new Set;function n(e){let n=(e,t)=>e.match(RegExp(`\\b`+t+`=["']([^"']+)["']`,`i`))?.[1];for(let r of e.match(/<(?:link|script)\b[^>]*>/gi)??[]){let e=n(r,`rel`)===`stylesheet`,i=n(r,`type`)===`module`;if(!e&&!i)continue;let a=n(r,e?`href`:`src`);if(!a)continue;let o=new URL(a,location.origin);if(o.origin!==location.origin||!o.pathname.startsWith(`/_astro/`)||t.has(o.href)||t.size>=8||(t.add(o.href),[...document.querySelectorAll(`link[href],script[src]`)].some(e=>(`href`in e?e.href:e.src)===o.href)))continue;let s=document.createElement(`link`);s.rel=e?`preload`:`modulepreload`,e&&(s.as=`style`),s.href=o.href,document.head.append(s)}}var r=e(window.fetch.bind(window),location.origin,Date.now,n);window.fetch=r.fetch,window.addEventListener(`pagehide`,()=>r.clear());var i=navigator.connection;if(!i?.saveData&&!/2g/.test(i?.effectiveType??``)){let e=()=>{r.warm()};`requestIdleCallback`in window?window.requestIdleCallback(e,{timeout:900}):setTimeout(e,200)}for(let e of[`after-preparation`,`after-swap`,`page-load`])document.addEventListener(`astro:`+e,()=>{performance.clearMarks(`mzsh-`+e),performance.mark(`mzsh-`+e)});</script>

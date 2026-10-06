@@ -1,0 +1,306 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="比较在 UE 中调用系统 SSH 客户端与集成 libssh2 的方式，并说明端口转发、线程处理和资源释放。"><meta name="theme-color" content="#080b0d"><title>UE：如何在UE中实现SSH隧道，安全访问远程服务 · 小毛</title><link rel="canonical" href="https://mzsh.me/blog/cnblogs-19165541/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="小毛博客 RSS" href="/blog/rss.xml"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="swap"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js"></script><link rel="stylesheet" href="/_astro/Base.Qw-kn5IZ.css"><style>.related-content[data-astro-cid-dip3annw]{color:light-dark(#111827,#f1f3f7);border-top:1px solid light-dark(#e2e7f0,#2a2e37);margin-block:2.5rem;padding-block:1.75rem}.related-content[data-astro-cid-dip3annw] h2[data-astro-cid-dip3annw]{margin:0 0 1.25rem;font-size:1.4rem;line-height:1.4}.related-grid[data-astro-cid-dip3annw]{grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.5rem;display:grid}.related-content[data-astro-cid-dip3annw] h3[data-astro-cid-dip3annw]{color:light-dark(#647084,#a4adbd);margin:0 0 .75rem;font-size:.9rem}.related-content[data-astro-cid-dip3annw] ul[data-astro-cid-dip3annw]{margin:0;padding:0;list-style:none}.related-content[data-astro-cid-dip3annw] li[data-astro-cid-dip3annw]+li[data-astro-cid-dip3annw]{margin-top:1rem}.related-content[data-astro-cid-dip3annw] a[data-astro-cid-dip3annw]{color:light-dark(#355cf4,#90a7ff);text-underline-offset:4px;overflow-wrap:anywhere;font-size:1rem;text-decoration:underline}.related-content[data-astro-cid-dip3annw] p[data-astro-cid-dip3annw]{color:light-dark(#647084,#a4adbd);margin:.35rem 0 0;font-size:.875rem;line-height:1.7}
+</style><link rel="stylesheet" href="/_astro/MasterDetail.BFAHaL7k.css"><style>[data-astro-transition-scope="astro-gyrtbwwo-1"] { view-transition-name: astro-gyrtbwwo-1; }@layer astro { ::view-transition-old(astro-gyrtbwwo-1) { animation: none; opacity: 0; mix-blend-mode: normal; }::view-transition-new(astro-gyrtbwwo-1) { animation: none; mix-blend-mode: normal; }::view-transition-group(astro-gyrtbwwo-1) { animation: none } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }</style></head><body data-astro-transition-scope="astro-gyrtbwwo-1"><div class="site-chrome"><a class="skip-link" href="#main">跳到主要内容</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/" aria-label="MZSH 首页">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">菜单</button><nav id="main-navigation" class="main-nav" aria-label="主导航"><a href="/">首页</a><a href="/works/">作品</a><a href="/cases/">案例</a><a href="/blog/" aria-current="page">博客</a></nav><div class="header-actions"><a href="/contact/">联系</a><a href="/support/">支持</a></div></div></header><script type="module">var e=class extends HTMLElement{controller;frame=0;timers=[];connectedCallback(){this.frame=requestAnimationFrame(()=>this.initialize())}disconnectedCallback(){this.controller?.abort(),cancelAnimationFrame(this.frame),this.timers.forEach(window.clearTimeout),this.timers=[]}initialize(){this.controller?.abort();let{signal:e}=this.controller=new AbortController,t=this.querySelector(`.article-outline`),n=matchMedia(`(max-width: 960px)`),r=()=>{t&&(t.open=!n.matches)};r(),n.addEventListener(`change`,r,{signal:e});let i=Array.from(this.querySelectorAll(`.article-outline a`)),a=i.map(e=>document.getElementById(decodeURIComponent(e.hash.slice(1)))),o=this.closest(`.main-frame, .site-chrome-main`),s=()=>{let e=(o?.getBoundingClientRect().top??0)+70,t=0;a.forEach((n,r)=>{n&&n.getBoundingClientRect().top<=e&&(t=r)}),i.forEach((e,n)=>n===t?e.setAttribute(`aria-current`,`location`):e.removeAttribute(`aria-current`))},c=()=>{cancelAnimationFrame(this.frame),this.frame=requestAnimationFrame(s)};(o??window).addEventListener(`scroll`,c,{passive:!0,signal:e}),window.addEventListener(`resize`,c,{signal:e}),window.addEventListener(`hashchange`,c,{signal:e});let l=e=>{let r;try{r=decodeURIComponent(e.slice(1))}catch{return}let i=document.getElementById(r);i&&this.contains(i)&&o&&(n.matches&&t&&(t.open=!1),cancelAnimationFrame(this.frame),this.frame=requestAnimationFrame(()=>{let e=n.matches?(this.querySelector(`.article-sidebar`)?.getBoundingClientRect().height??0)+16:24;o.scrollTo({top:Math.max(0,o.scrollTop+i.getBoundingClientRect().top-o.getBoundingClientRect().top-e),behavior:`instant`}),i.setAttribute(`tabindex`,`-1`),i.focus({preventScroll:!0}),s()}))};i.forEach(t=>t.addEventListener(`click`,e=>{e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||!o||(e.preventDefault(),e.stopPropagation(),history.replaceState(history.state,``,t.hash),l(t.hash))},{signal:e})),window.addEventListener(`hashchange`,()=>l(location.hash),{signal:e});let u=history.state?.mzshViewport,d=u?.key===location.pathname+location.search+location.hash&&Number.isFinite(u.top);location.hash&&!d&&l(location.hash),this.querySelectorAll(`.prose table, .sl-markdown-content table`).forEach(e=>{if(e.parentElement?.classList.contains(`reading-table-scroll`))return;let t=document.createElement(`div`);t.className=`reading-table-scroll`,t.tabIndex=0,t.setAttribute(`role`,`region`),t.setAttribute(`aria-label`,`数据表格，可横向滚动`),e.before(t),t.append(e)});let f=this.querySelector(`[data-copy-status]`);f||(f=document.createElement(`span`),f.className=`reading-sr-only`,f.dataset.copyStatus=``,f.setAttribute(`role`,`status`),f.setAttribute(`aria-live`,`polite`),this.append(f)),this.querySelectorAll(`.prose pre, .sl-markdown-content pre`).forEach((t,n)=>{if(t.closest(`.expressive-code, .reading-code-frame`))return;let r=t.querySelector(`code`);if(!r)return;let i=document.createElement(`div`);i.className=`reading-code-frame`;let a=document.createElement(`div`);a.className=`reading-code-bar`;let o=document.createElement(`span`);o.textContent=`代码`;let s=document.createElement(`button`);s.type=`button`,s.textContent=`复制代码`,s.setAttribute(`aria-label`,`复制第 ${n+1} 段代码`),s.addEventListener(`click`,async()=>{try{if(await navigator.clipboard.writeText(r.textContent??``),!this.isConnected)return;s.textContent=`已复制`,f&&(f.textContent=`代码已复制`)}catch{let e=document.createRange();e.selectNodeContents(r);let t=getSelection();t?.removeAllRanges(),t?.addRange(e),s.textContent=`请手动复制`,f&&(f.textContent=`代码已选中，请手动复制`)}this.timers.push(window.setTimeout(()=>{s.textContent=`复制代码`},2200))},{signal:e}),a.append(o,s),t.before(i),i.append(a,t),t.tabIndex=0,t.setAttribute(`aria-label`,`代码示例，可横向滚动`)}),s()}};customElements.get(`mzsh-reading`)||customElements.define(`mzsh-reading`,e);</script><main id="main" tabindex="-1" class="site-chrome-main"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">博客</p><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><mzsh-reading class="reading-surface"><div class="master-detail reading-detail"><aside class="article-sidebar" aria-label="文章导航"><a class="article-back" href="/blog/">返回博客列表</a><details class="article-outline" open><summary>文章大纲</summary><nav aria-label="文章大纲"><ol><li><a href="#%E5%89%8D%E8%A8%80" style="--outline-depth:0">前言</a></li><li><a href="#ssh%E9%9A%A7%E9%81%93%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E5%BC%8F" style="--outline-depth:0">SSH隧道的实现方式</a></li><li><a href="#%E8%B0%83%E7%94%A8%E7%B3%BB%E7%BB%9Fssh%E5%AE%A2%E6%88%B7%E7%AB%AF" style="--outline-depth:1">调用系统SSH客户端</a></li><li><a href="#%E9%9B%86%E6%88%90ssh%E5%BA%93" style="--outline-depth:1">集成SSH库</a></li><li><a href="#%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E8%BF%99%E4%B8%A4%E4%B8%AA%E5%BA%93" style="--outline-depth:1">如何使用这两个库</a></li><li><a href="#%E4%B8%A4%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%AF%B9%E6%AF%94" style="--outline-depth:1">两种方式对比</a></li><li><a href="#%E8%87%B4%E8%B0%A2%E4%B8%8E%E5%BC%80%E6%BA%90%E5%BA%93" style="--outline-depth:0">致谢与开源库</a></li></ol></nav></details></aside><article class="master-panel" aria-labelledby="detail-cnblogs-19165541" data-pagefind-body data-blog-article="true"><header class="item-heading"><p class="eyebrow">2025-10-25 · UE</p><h1 id="detail-cnblogs-19165541" data-pagefind-meta="title">UE：如何在UE中实现SSH隧道，安全访问远程服务</h1><p>比较在 UE 中调用系统 SSH 客户端与集成 libssh2 的方式，并说明端口转发、线程处理和资源释放。</p></header><div class="prose"><p id="ue如何在ue中实现ssh隧道安全访问远程服务" class="article-source-title" hidden>UE：如何在UE中实现SSH隧道，安全访问远程服务</p>
+<h2 id="前言">前言</h2>
+<p>在UE项目开发中,经常需要访问远程服务器上的数据库、API或内网服务。直接暴露这些服务到公网存在安全风险,而SSH隧道(SSH Tunnel)提供了一种安全的解决方案</p><div></div>,既保证了数据传输的安全性,又避免了服务直接暴露。<p></p>
+<p>本文将介绍SSH隧道的工作原理,以及如何在UE中实现这一功能。</p>
+<hr>
+<h2 id="ssh隧道的实现方式">SSH隧道的实现方式</h2>
+<h3 id="调用系统ssh客户端">调用系统SSH客户端</h3>
+<p>我们先来实现最简单的方式,那就是借助系统自带的SSH客户端:</p>
+<p><strong>Windows (使用OpenSSH客户端):</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "GenericPlatform/GenericPlatformProcess.h"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">void</span><span style="color:#B392F0"> CreateSSHTunnelByCommand</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&#x26;</span><span style="color:#FFAB70"> SSHHost</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">    int32</span><span style="color:#FFAB70"> SSHPort</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&#x26;</span><span style="color:#FFAB70"> Username</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&#x26;</span><span style="color:#FFAB70"> Password</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">    int32</span><span style="color:#FFAB70"> LocalPort</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&#x26;</span><span style="color:#FFAB70"> RemoteHost</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#B392F0">    int32</span><span style="color:#FFAB70"> RemotePort</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#6A737D">    // 构建SSH命令</span></span>
+<span class="line"><span style="color:#6A737D">    // ssh -L LocalPort:RemoteHost:RemotePort Username@SSHHost -p SSHPort</span></span>
+<span class="line"><span style="color:#B392F0">    FString</span><span style="color:#E1E4E8"> Command </span><span style="color:#F97583">=</span><span style="color:#B392F0"> FString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Printf</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"ssh -L </span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">:</span><span style="color:#79B8FF">%s</span><span style="color:#9ECBFF">:</span><span style="color:#79B8FF">%d</span><span style="color:#79B8FF"> %s</span><span style="color:#9ECBFF">@</span><span style="color:#79B8FF">%s</span><span style="color:#9ECBFF"> -p </span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF"> -N"</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">        LocalPort, </span><span style="color:#F97583">*</span><span style="color:#E1E4E8">RemoteHost, RemotePort,</span></span>
+<span class="line"><span style="color:#F97583">        *</span><span style="color:#E1E4E8">Username, </span><span style="color:#F97583">*</span><span style="color:#E1E4E8">SSHHost, SSHPort);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 使用UE的进程管理启动SSH</span></span>
+<span class="line"><span style="color:#B392F0">    FProcHandle</span><span style="color:#E1E4E8"> ProcHandle </span><span style="color:#F97583">=</span><span style="color:#B392F0"> FPlatformProcess</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">CreateProc</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#B392F0">        TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"C:/Windows/System32/OpenSSH/ssh.exe"</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#F97583">        *</span><span style="color:#E1E4E8">Command,</span></span>
+<span class="line"><span style="color:#79B8FF">        true</span><span style="color:#E1E4E8">,</span><span style="color:#6A737D">   // bLaunchDetached</span></span>
+<span class="line"><span style="color:#79B8FF">        false</span><span style="color:#E1E4E8">,</span><span style="color:#6A737D">  // bLaunchHidden</span></span>
+<span class="line"><span style="color:#79B8FF">        false</span><span style="color:#E1E4E8">,</span><span style="color:#6A737D">  // bLaunchReallyHidden</span></span>
+<span class="line"><span style="color:#79B8FF">        nullptr</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        0</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        nullptr</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">        nullptr</span></span>
+<span class="line"><span style="color:#E1E4E8">    );</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 保存进程句柄用于后续关闭</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (ProcHandle.</span><span style="color:#B392F0">IsValid</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#B392F0">        UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Log, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"SSH隧道已启动"</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 关闭SSH隧道</span></span>
+<span class="line"><span style="color:#F97583">void</span><span style="color:#B392F0"> CloseSSHTunnel</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FProcHandle</span><span style="color:#F97583">&#x26;</span><span style="color:#FFAB70"> ProcHandle</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (ProcHandle.</span><span style="color:#B392F0">IsValid</span><span style="color:#E1E4E8">())</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#B392F0">        FPlatformProcess</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">TerminateProc</span><span style="color:#E1E4E8">(ProcHandle);</span></span>
+<span class="line"><span style="color:#B392F0">        FPlatformProcess</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">CloseProc</span><span style="color:#E1E4E8">(ProcHandle);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p><strong>这种方式的优缺点:</strong></p>
+<p>✅ <strong>优点:</strong></p>
+<ul>
+<li>实现简单,几行代码就能完成</li>
+<li>无需集成第三方库</li>
+<li>利用系统自带SSH客户端</li>
+</ul>
+<p>❌ <strong>缺点:</strong></p>
+<ul>
+<li>依赖系统环境(需要预装SSH客户端)</li>
+<li>无法在代码中输入密码(需要配置密钥或手动输入)</li>
+<li>进程管理复杂,难以获取连接状态</li>
+<li>跨平台兼容性差(Windows/Linux/Mac路径不同)</li>
+<li>无法获取详细的错误信息</li>
+<li>不适合打包发布(用户环境不可控)</li>
+</ul>
+<hr>
+<h3 id="集成ssh库">集成SSH库</h3>
+<p>更可靠的方式是集成专业的SSH库。</p>
+<p>这里选用开源的libssh2+OpenSSL的组合，需要两个关键库:</p>
+<p><strong>libssh2</strong> — SSH协议实现</p>
+<ul>
+<li>负责SSH连接建立</li>
+<li>用户认证(密码/密钥)</li>
+<li>端口转发功能</li>
+<li>🔗 开源地址: <a href="https://github.com/libssh2/libssh2">https://github.com/libssh2/libssh2</a></li>
+<li>📄 许可证: BSD 3-Clause</li>
+</ul>
+<p><strong>OpenSSL</strong> — 加密支持</p>
+<ul>
+<li>提供底层加密算法</li>
+<li>密钥交换</li>
+<li>数据加密/解密</li>
+<li>🔗 开源地址: <a href="https://github.com/openssl/openssl">https://github.com/openssl/openssl</a></li>
+<li>📄 许可证: Apache 2.0</li>
+</ul>
+<h3 id="如何使用这两个库">如何使用这两个库</h3>
+<p>集成libssh2到UE项目的基本步骤：</p>
+<p><strong>1. 编译库文件</strong></p>
+<p>首先需要为目标平台编译libssh2和OpenSSL的静态库：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># Windows平台需要编译出</span></span>
+<span class="line"><span style="color:#B392F0">libssh2.lib</span><span style="color:#9ECBFF"> /</span><span style="color:#9ECBFF"> libssh2.dll</span></span>
+<span class="line"><span style="color:#B392F0">libcrypto.lib</span><span style="color:#9ECBFF"> /</span><span style="color:#9ECBFF"> libcrypto.dll</span></span>
+<span class="line"><span style="color:#B392F0">libssl.lib</span><span style="color:#9ECBFF"> /</span><span style="color:#9ECBFF"> libssl.dll</span></span></code></pre>
+<p><strong>2. 在.Build.cs中添加依赖</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#6A737D">// 添加头文件路径</span></span>
+<span class="line"><span style="color:#E1E4E8">PublicIncludePaths.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(Path.</span><span style="color:#B392F0">Combine</span><span style="color:#E1E4E8">(ThirdPartyPath, </span><span style="color:#9ECBFF">"libssh2"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"include"</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#E1E4E8">PublicIncludePaths.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(Path.</span><span style="color:#B392F0">Combine</span><span style="color:#E1E4E8">(ThirdPartyPath, </span><span style="color:#9ECBFF">"openssl"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"include"</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 链接静态库</span></span>
+<span class="line"><span style="color:#E1E4E8">PublicAdditionalLibraries.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(Path.</span><span style="color:#B392F0">Combine</span><span style="color:#E1E4E8">(ThirdPartyPath, </span><span style="color:#9ECBFF">"libssh2"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"lib"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"libssh2.lib"</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#E1E4E8">PublicAdditionalLibraries.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(Path.</span><span style="color:#B392F0">Combine</span><span style="color:#E1E4E8">(ThirdPartyPath, </span><span style="color:#9ECBFF">"openssl"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"lib"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"libcrypto.lib"</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#E1E4E8">PublicAdditionalLibraries.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(Path.</span><span style="color:#B392F0">Combine</span><span style="color:#E1E4E8">(ThirdPartyPath, </span><span style="color:#9ECBFF">"openssl"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"lib"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"libssl.lib"</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 运行时需要的DLL</span></span>
+<span class="line"><span style="color:#E1E4E8">RuntimeDependencies.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"$(BinaryOutputDir)/libssh2.dll"</span><span style="color:#E1E4E8">, Path.</span><span style="color:#B392F0">Combine</span><span style="color:#E1E4E8">(ThirdPartyPath, </span><span style="color:#9ECBFF">"libssh2"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"bin"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"libssh2.dll"</span><span style="color:#E1E4E8">));</span></span></code></pre>
+<p><strong>3. 基本的libssh2使用流程</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "libssh2.h"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 初始化libssh2</span></span>
+<span class="line"><span style="color:#B392F0">libssh2_init</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 创建会话</span></span>
+<span class="line"><span style="color:#E1E4E8">LIBSSH2_SESSION</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> session </span><span style="color:#F97583">=</span><span style="color:#B392F0"> libssh2_session_init</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 连接到SSH服务器（基于已有的Socket）</span></span>
+<span class="line"><span style="color:#B392F0">libssh2_session_handshake</span><span style="color:#E1E4E8">(session, socket);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 用户认证</span></span>
+<span class="line"><span style="color:#B392F0">libssh2_userauth_password</span><span style="color:#E1E4E8">(session, username, password);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 创建端口转发通道</span></span>
+<span class="line"><span style="color:#E1E4E8">LIBSSH2_CHANNEL</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> channel </span><span style="color:#F97583">=</span><span style="color:#B392F0"> libssh2_channel_direct_tcpip</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">    session,</span></span>
+<span class="line"><span style="color:#E1E4E8">    remote_host,</span><span style="color:#6A737D">  // 远程目标地址</span></span>
+<span class="line"><span style="color:#E1E4E8">    remote_port</span><span style="color:#6A737D">   // 远程目标端口</span></span>
+<span class="line"><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 后续进行数据转发...</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 清理资源</span></span>
+<span class="line"><span style="color:#B392F0">libssh2_channel_free</span><span style="color:#E1E4E8">(channel);</span></span>
+<span class="line"><span style="color:#B392F0">libssh2_session_disconnect</span><span style="color:#E1E4E8">(session, </span><span style="color:#9ECBFF">"Normal Shutdown"</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"><span style="color:#B392F0">libssh2_session_free</span><span style="color:#E1E4E8">(session);</span></span>
+<span class="line"><span style="color:#B392F0">libssh2_exit</span><span style="color:#E1E4E8">();</span></span></code></pre>
+<p><strong>关键点：</strong></p>
+<ul>
+<li>libssh2需要配合Socket使用，UE中可以用<code>FSocket</code></li>
+<li>端口转发需要在本地开启监听Socket接受连接</li>
+<li>数据转发需要在独立线程中循环处理，避免阻塞主线程</li>
+<li>所有libssh2操作都需要正确的错误处理和资源释放</li>
+</ul>
+<h3 id="两种方式对比">两种方式对比</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>特性</th><th>调用系统SSH</th><th>集成SSH库</th></tr></thead><tbody><tr><td><strong>实现难度</strong></td><td>简单</td><td>复杂</td></tr><tr><td><strong>环境依赖</strong></td><td>需要系统SSH客户端</td><td>无依赖</td></tr><tr><td><strong>密码认证</strong></td><td>不支持(需手动输入)</td><td>完全支持</td></tr><tr><td><strong>状态监控</strong></td><td>困难</td><td>完整支持</td></tr><tr><td><strong>错误处理</strong></td><td>无法获取详情</td><td>详细错误信息</td></tr><tr><td><strong>跨平台</strong></td><td>路径不一致</td><td>统一接口</td></tr><tr><td><strong>打包发布</strong></td><td>不可靠</td><td>可靠</td></tr><tr><td><strong>适用场景</strong></td><td>开发测试</td><td>生产环境</td></tr></tbody></table>
+<p><strong>结论:</strong></p>
+<ul>
+<li>如果只是临时测试,调用系统SSH是最快的方式</li>
+<li>如果要做成产品级功能,集成SSH库是唯一选择</li>
+</ul>
+<hr>
+<h2 id="致谢与开源库">致谢与开源库</h2>
+<p>本技术方案基于以下优秀的开源项目:</p>
+<p><strong>libssh2</strong> — 成熟的SSH2协议客户端库</p>
+<ul>
+<li>📦 项目地址: <a href="https://github.com/libssh2/libssh2">https://github.com/libssh2/libssh2</a></li>
+<li>📄 许可证: BSD 3-Clause License</li>
+<li>💡 功能: SSH连接、用户认证、端口转发</li>
+<li>🙏 感谢libssh2团队提供如此优秀的SSH实现</li>
+</ul>
+<p><strong>OpenSSL</strong> — 行业标准的加密库</p>
+<ul>
+<li>📦 项目地址: <a href="https://github.com/openssl/openssl">https://github.com/openssl/openssl</a></li>
+<li>📄 许可证: Apache 2.0 License</li>
+<li>💡 功能: SSL/TLS协议、加密算法</li>
+<li>🙏 感谢OpenSSL项目为网络安全做出的贡献</li>
+</ul>
+<p>使用这些库时请遵守相应的开源协议,并在项目中注明来源。</p>
+<hr>
+<p><em>本文技术方案已在实际项目中验证,适用于开发/测试环境。生产环境请根据实际安全需求调整。</em></p></div><aside class="related-content" aria-label="关联内容" data-pagefind-ignore data-astro-cid-dip3annw><h2 data-astro-cid-dip3annw>继续了解</h2><div class="related-grid" data-astro-cid-dip3annw><section data-astro-cid-dip3annw><h3 data-astro-cid-dip3annw>相关作品</h3><ul data-astro-cid-dip3annw><li data-astro-cid-dip3annw><a href="/works/simple-ssh-tunnel/" data-astro-cid-dip3annw>SimpleSSHTunnel</a><p data-astro-cid-dip3annw>基于 libssh2 与 OpenSSL，将 SSH 隧道功能封装为 UE 蓝图接口。</p></li></ul></section></div></aside></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH. 保留所有权利。</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+  if (!document.documentElement.dataset.siteChromeBound) {
+    document.documentElement.dataset.siteChromeBound = 'true';
+    const setMenuOpen = (open) => {
+      const header = document.querySelector('.site-chrome .site-header');
+      header?.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded', String(open));
+      header?.querySelector('.main-nav')?.classList.toggle('is-open', open);
+    };
+    const update = () => {
+      const header = document.querySelector('.site-chrome .site-header');
+      if (!header) return;
+      const path = location.pathname;
+      header.querySelectorAll('.main-nav a, .header-actions a').forEach(link => {
+        const href = link.getAttribute('href') || '';
+        if (href === '/' ? path === '/' : path.startsWith(href)) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+      setMenuOpen(false);
+    };
+    document.addEventListener('click', event => {
+      const button = event.target.closest?.('[data-menu-toggle]');
+      if (button) setMenuOpen(button.getAttribute('aria-expanded') !== 'true');
+      else if (!event.target.closest?.('.main-nav')) setMenuOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      const button = document.querySelector('[data-menu-toggle][aria-expanded="true"]');
+      if (!button) return;
+      setMenuOpen(false);
+      button.focus();
+    });
+    document.addEventListener('focusin', event => {
+      if (!event.target.closest?.('.main-nav, [data-menu-toggle]')) setMenuOpen(false);
+    });
+    window.matchMedia('(max-width:720px)').addEventListener('change', () => setMenuOpen(false));
+    let navigationGeneration = 0;
+    const finishNavigation = () => {
+      document.querySelector('.site-chrome-main')?.removeAttribute('aria-busy');
+      document.querySelectorAll('[data-navigation-pending]').forEach(link => link.removeAttribute('data-navigation-pending'));
+    };
+    document.addEventListener('astro:before-preparation', event => {
+      const generation = ++navigationGeneration;
+      performance.mark('mzsh-navigation-start');
+      document.querySelector('.site-chrome-main')?.setAttribute('aria-busy', 'true');
+      event.sourceElement?.setAttribute?.('data-navigation-pending', '');
+      event.signal?.addEventListener('abort', () => { if (generation === navigationGeneration) finishNavigation(); }, { once: true });
+    });
+    document.addEventListener('astro:page-load', () => {
+      finishNavigation();
+      if (performance.getEntriesByName('mzsh-navigation-start').length) {
+        performance.measure('mzsh-navigation', 'mzsh-navigation-start');
+        performance.clearMarks('mzsh-navigation-start');
+      }
+    });
+    document.addEventListener('astro:after-swap', update);
+    update();
+  }
+</script><script type="module">function e(e){return e.pathname+e.search+e.hash}function t(e,t){let n=e?.mzshViewport;return n?.key===t&&Number.isFinite(n.top)&&n.top>=0?n.top:void 0}var n,r=0;function i(){n?.abort(),cancelAnimationFrame(r)}function a(){i(),n=new AbortController;let a=document.querySelector(`.site-chrome-docs .main-frame`)??document.querySelector(`.site-chrome-main`);if(!a||document.body.classList.contains(`home-page`))return;let o=location.pathname,s=history.state?.index,c=t(history.state,e(location));c!==void 0&&(a.scrollTop=c),a.addEventListener(`scroll`,()=>{if(location.pathname!==o||history.state?.index!==s)return;let t=e(location),n=history.state?.index,i=a.scrollTop;cancelAnimationFrame(r),r=requestAnimationFrame(()=>{a.isConnected&&e(location)===t&&history.state?.index===n&&(!document.querySelector(`meta[name="astro-view-transitions-enabled"]`)||Number.isFinite(n))&&history.replaceState({...history.state,mzshViewport:{key:t,top:i}},``)})},{passive:!0,signal:n.signal})}document.addEventListener(`astro:before-preparation`,e=>{i(),e.signal?.addEventListener(`abort`,()=>{r=requestAnimationFrame(a)},{once:!0})}),window.addEventListener(`popstate`,i),document.addEventListener(`astro:page-load`,a),a();</script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-zoom-in aria-label="放大图片">放大</button><button type="button" data-media-zoom-out aria-label="缩小图片">缩小</button><button type="button" data-media-reset aria-label="复位图片">复位</button><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+if (!document.documentElement.dataset.mediaViewerBound) {
+  document.documentElement.dataset.mediaViewerBound = 'true';
+  let opener = null, scale = 1;
+  const stop = () => { document.querySelectorAll('video,audio').forEach(media => { media.pause(); media.currentTime = 0; }); document.querySelectorAll('iframe[data-bilibili-frame]').forEach(frame => { frame.src='about:blank'; frame.remove(); }); document.querySelectorAll('[data-bilibili-stage]').forEach(stage => stage.replaceChildren()); };
+  const dialog = () => document.querySelector('[data-media-viewer]');
+  const close = () => { const viewer = dialog(); if (!viewer?.open) return; stop(); viewer.close(); opener?.focus?.(); opener = null; };
+  const open = (trigger, kind) => {
+    const viewer = dialog(), stage = viewer?.querySelector('[data-media-stage]'); if (!viewer || !stage) return;
+    stop(); opener = trigger; scale = 1; stage.replaceChildren();
+    if (kind === 'image') { const image = new Image(); image.src = trigger.dataset.mediaSrc; image.alt = trigger.dataset.mediaAlt || ''; image.dataset.mediaPreviewImage = ''; stage.append(image); }
+    else if(kind==='bilibili'){const host=trigger.closest('[data-bilibili]');const frame=document.createElement('iframe');frame.src=`https://player.bilibili.com/player.html?bvid=${encodeURIComponent(host.dataset.bvid)}&p=${encodeURIComponent(host.dataset.page)}&autoplay=0`;frame.title='Bilibili 播放器';frame.allow='fullscreen';frame.allowFullscreen=true;frame.dataset.bilibiliFrame='';stage.append(frame);}
+    else { const video = trigger.closest('.media-video')?.querySelector('video')?.cloneNode(true); if (!video) return; video.removeAttribute('autoplay'); video.preload = 'none'; video.controls = true; video.playsInline = true; video.dataset.mediaPreviewVideo = ''; stage.append(video); }
+    viewer.querySelector('[data-media-zoom-in]').hidden = kind !== 'image'; viewer.querySelector('[data-media-zoom-out]').hidden = kind !== 'image'; viewer.querySelector('[data-media-reset]').hidden = kind !== 'image'; viewer.querySelector('[data-media-fullscreen]').hidden = kind === 'image'; viewer.showModal(); viewer.querySelector('[data-media-close]').focus();
+  };
+  const zoom = (delta = 0, reset = false) => { const image = dialog()?.querySelector('[data-media-preview-image]'); if (!image) return; scale = reset ? 1 : Math.min(3, Math.max(.5, scale + delta)); image.style.transform = `scale(${scale})`; };
+  const bilibili = target => { const host=target.closest('[data-bilibili]'),stage=host?.querySelector('[data-bilibili-stage]'); if(!host||!stage||stage.firstChild)return; const frame=document.createElement('iframe'); frame.src=`https://player.bilibili.com/player.html?bvid=${encodeURIComponent(host.dataset.bvid)}&p=${encodeURIComponent(host.dataset.page)}&autoplay=0`; frame.title='Bilibili 播放器'; frame.allow='fullscreen'; frame.allowFullscreen=true; frame.loading='lazy'; frame.dataset.bilibiliFrame=''; stage.append(frame); };
+  document.addEventListener('click', event => { const target = event.target.closest?.('[data-media-image],[data-media-open-video],[data-media-open-bilibili],[data-media-close],[data-media-zoom-in],[data-media-zoom-out],[data-media-reset],[data-media-fullscreen],[data-bilibili-load]'); if (!target) return; if(target.matches('[data-bilibili-load]'))bilibili(target); else if (target.matches('[data-media-image]')) open(target, 'image'); else if (target.matches('[data-media-open-video]')) open(target, 'video'); else if(target.matches('[data-media-open-bilibili]'))open(target,'bilibili'); else if (target.matches('[data-media-close]')) close(); else if (target.matches('[data-media-zoom-in]')) zoom(.25); else if (target.matches('[data-media-zoom-out]')) zoom(-.25); else if (target.matches('[data-media-reset]')) zoom(0, true); else { const media = dialog()?.querySelector('[data-media-preview-video]'); if (media?.requestFullscreen) media.requestFullscreen().catch(() => {}); else dialog()?.querySelector('iframe')?.requestFullscreen?.().catch(() => {}); } });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
+  document.addEventListener('astro:before-swap', stop); addEventListener('pagehide', stop);
+  document.addEventListener('click', event => { const viewer = dialog(); if (event.target === viewer) close(); });
+}
+</script></body></html><script type="module">function e(e,t,n=Date.now,r){let i=new Set([`/works/`,`/cases/`,`/blog/`]),a=new Map,o=new Map,s={hits:0,network:0,rejected:0},c=0,l=(e,n)=>{let r=typeof Request<`u`&&e instanceof Request?e:void 0,a=new URL(r?.url??String(e),t);if(a.origin!==t||!i.has(a.pathname)||(n?.method??r?.method??`GET`).toUpperCase()!==`GET`||(n?.credentials??r?.credentials)===`omit`||[`reload`,`no-store`,`no-cache`].includes(n?.cache??r?.cache??``))return;let o=new Headers(n?.headers??r?.headers);if(!(o.has(`authorization`)||o.has(`range`)))return a.pathname},u=(e,t)=>t?t.aborted?Promise.reject(new DOMException(`Aborted`,`AbortError`)):new Promise((n,r)=>{let i=()=>r(new DOMException(`Aborted`,`AbortError`));t.addEventListener(`abort`,i,{once:!0}),e.then(e=>{t.removeEventListener(`abort`,i),t.aborted||n(e)},e=>{t.removeEventListener(`abort`,i),r(e)})}):e,d=async(t,i)=>{let d=l(t,i);if(!d)return e(t,i);let f=typeof Request<`u`&&t instanceof Request?t:void 0,p=i?.signal===null?null:i?.signal??f?.signal;if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);let m=a.get(d);if(m&&m.expires>n()){if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);return s.hits++,typeof performance<`u`&&(performance.clearMarks(`mzsh-index-cache-hit`),performance.mark(`mzsh-index-cache-hit`)),m.response.clone()}a.delete(d);let h=o.get(d);if(!h){s.network++;let l=c,u={...i,signal:void 0};h=e(f?new Request(f,{signal:new AbortController().signal}):t,u).then(async e=>{if(e.status===200&&!e.redirected&&(e.headers.get(`content-type`)??``).includes(`text/html`)){let t=await e.clone().text();if(l===c&&/<meta\b[^>]*name=["']astro-view-transitions-enabled["']/.test(t)&&t.includes(`data-content-index-data`)&&t.includes(`site-chrome`)){a.set(d,{response:e.clone(),expires:n()+6e4});try{r?.(t)}catch{}}else s.rejected++}else s.rejected++;return e}).finally(()=>{o.get(d)===h&&o.delete(d)}),o.set(d,h)}return(await u(h,p)).clone()};return{fetch:d,stats:s,clear(){c++,a.clear(),o.clear()},warm(){return Promise.allSettled([...i].map(e=>d(new URL(e,t),{credentials:`same-origin`})))}}}var t=new Set;function n(e){let n=(e,t)=>e.match(RegExp(`\\b`+t+`=["']([^"']+)["']`,`i`))?.[1];for(let r of e.match(/<(?:link|script)\b[^>]*>/gi)??[]){let e=n(r,`rel`)===`stylesheet`,i=n(r,`type`)===`module`;if(!e&&!i)continue;let a=n(r,e?`href`:`src`);if(!a)continue;let o=new URL(a,location.origin);if(o.origin!==location.origin||!o.pathname.startsWith(`/_astro/`)||t.has(o.href)||t.size>=8||(t.add(o.href),[...document.querySelectorAll(`link[href],script[src]`)].some(e=>(`href`in e?e.href:e.src)===o.href)))continue;let s=document.createElement(`link`);s.rel=e?`preload`:`modulepreload`,e&&(s.as=`style`),s.href=o.href,document.head.append(s)}}var r=e(window.fetch.bind(window),location.origin,Date.now,n);window.fetch=r.fetch,window.addEventListener(`pagehide`,()=>r.clear());var i=navigator.connection;if(!i?.saveData&&!/2g/.test(i?.effectiveType??``)){let e=()=>{r.warm()};`requestIdleCallback`in window?window.requestIdleCallback(e,{timeout:900}):setTimeout(e,200)}for(let e of[`after-preparation`,`after-swap`,`page-load`])document.addEventListener(`astro:`+e,()=>{performance.clearMarks(`mzsh-`+e),performance.mark(`mzsh-`+e)});</script>

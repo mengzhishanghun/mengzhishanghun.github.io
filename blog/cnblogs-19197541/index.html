@@ -1,0 +1,579 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="在 UE5.4 中实现运行时动画录制，最关键的两个问题是："><meta name="theme-color" content="#080b0d"><title>UE：论运行时动画录制的关键-正确获取骨骼数据与保存 · 小毛</title><link rel="canonical" href="https://mzsh.me/blog/cnblogs-19197541/"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate" type="application/rss+xml" title="小毛博客 RSS" href="/blog/rss.xml"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="swap"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CYDbzu1r.js"></script><link rel="stylesheet" href="/_astro/Base.Qw-kn5IZ.css"><style>.related-content[data-astro-cid-dip3annw]{color:light-dark(#111827,#f1f3f7);border-top:1px solid light-dark(#e2e7f0,#2a2e37);margin-block:2.5rem;padding-block:1.75rem}.related-content[data-astro-cid-dip3annw] h2[data-astro-cid-dip3annw]{margin:0 0 1.25rem;font-size:1.4rem;line-height:1.4}.related-grid[data-astro-cid-dip3annw]{grid-template-columns:repeat(auto-fit,minmax(min(100%,15rem),1fr));gap:1.5rem;display:grid}.related-content[data-astro-cid-dip3annw] h3[data-astro-cid-dip3annw]{color:light-dark(#647084,#a4adbd);margin:0 0 .75rem;font-size:.9rem}.related-content[data-astro-cid-dip3annw] ul[data-astro-cid-dip3annw]{margin:0;padding:0;list-style:none}.related-content[data-astro-cid-dip3annw] li[data-astro-cid-dip3annw]+li[data-astro-cid-dip3annw]{margin-top:1rem}.related-content[data-astro-cid-dip3annw] a[data-astro-cid-dip3annw]{color:light-dark(#355cf4,#90a7ff);text-underline-offset:4px;overflow-wrap:anywhere;font-size:1rem;text-decoration:underline}.related-content[data-astro-cid-dip3annw] p[data-astro-cid-dip3annw]{color:light-dark(#647084,#a4adbd);margin:.35rem 0 0;font-size:.875rem;line-height:1.7}
+</style><link rel="stylesheet" href="/_astro/MasterDetail.BFAHaL7k.css"><style>[data-astro-transition-scope="astro-gyrtbwwo-1"] { view-transition-name: astro-gyrtbwwo-1; }@layer astro { ::view-transition-old(astro-gyrtbwwo-1) { animation: none; opacity: 0; mix-blend-mode: normal; }::view-transition-new(astro-gyrtbwwo-1) { animation: none; mix-blend-mode: normal; }::view-transition-group(astro-gyrtbwwo-1) { animation: none } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }</style></head><body data-astro-transition-scope="astro-gyrtbwwo-1"><div class="site-chrome"><a class="skip-link" href="#main">跳到主要内容</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/" aria-label="MZSH 首页">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">菜单</button><nav id="main-navigation" class="main-nav" aria-label="主导航"><a href="/">首页</a><a href="/works/">作品</a><a href="/cases/">案例</a><a href="/blog/" aria-current="page">博客</a></nav><div class="header-actions"><a href="/contact/">联系</a><a href="/support/">支持</a></div></div></header><script type="module">var e=class extends HTMLElement{controller;frame=0;timers=[];connectedCallback(){this.frame=requestAnimationFrame(()=>this.initialize())}disconnectedCallback(){this.controller?.abort(),cancelAnimationFrame(this.frame),this.timers.forEach(window.clearTimeout),this.timers=[]}initialize(){this.controller?.abort();let{signal:e}=this.controller=new AbortController,t=this.querySelector(`.article-outline`),n=matchMedia(`(max-width: 960px)`),r=()=>{t&&(t.open=!n.matches)};r(),n.addEventListener(`change`,r,{signal:e});let i=Array.from(this.querySelectorAll(`.article-outline a`)),a=i.map(e=>document.getElementById(decodeURIComponent(e.hash.slice(1)))),o=this.closest(`.main-frame, .site-chrome-main`),s=()=>{let e=(o?.getBoundingClientRect().top??0)+70,t=0;a.forEach((n,r)=>{n&&n.getBoundingClientRect().top<=e&&(t=r)}),i.forEach((e,n)=>n===t?e.setAttribute(`aria-current`,`location`):e.removeAttribute(`aria-current`))},c=()=>{cancelAnimationFrame(this.frame),this.frame=requestAnimationFrame(s)};(o??window).addEventListener(`scroll`,c,{passive:!0,signal:e}),window.addEventListener(`resize`,c,{signal:e}),window.addEventListener(`hashchange`,c,{signal:e});let l=e=>{let r;try{r=decodeURIComponent(e.slice(1))}catch{return}let i=document.getElementById(r);i&&this.contains(i)&&o&&(n.matches&&t&&(t.open=!1),cancelAnimationFrame(this.frame),this.frame=requestAnimationFrame(()=>{let e=n.matches?(this.querySelector(`.article-sidebar`)?.getBoundingClientRect().height??0)+16:24;o.scrollTo({top:Math.max(0,o.scrollTop+i.getBoundingClientRect().top-o.getBoundingClientRect().top-e),behavior:`instant`}),i.setAttribute(`tabindex`,`-1`),i.focus({preventScroll:!0}),s()}))};i.forEach(t=>t.addEventListener(`click`,e=>{e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||!o||(e.preventDefault(),e.stopPropagation(),history.replaceState(history.state,``,t.hash),l(t.hash))},{signal:e})),window.addEventListener(`hashchange`,()=>l(location.hash),{signal:e});let u=history.state?.mzshViewport,d=u?.key===location.pathname+location.search+location.hash&&Number.isFinite(u.top);location.hash&&!d&&l(location.hash),this.querySelectorAll(`.prose table, .sl-markdown-content table`).forEach(e=>{if(e.parentElement?.classList.contains(`reading-table-scroll`))return;let t=document.createElement(`div`);t.className=`reading-table-scroll`,t.tabIndex=0,t.setAttribute(`role`,`region`),t.setAttribute(`aria-label`,`数据表格，可横向滚动`),e.before(t),t.append(e)});let f=this.querySelector(`[data-copy-status]`);f||(f=document.createElement(`span`),f.className=`reading-sr-only`,f.dataset.copyStatus=``,f.setAttribute(`role`,`status`),f.setAttribute(`aria-live`,`polite`),this.append(f)),this.querySelectorAll(`.prose pre, .sl-markdown-content pre`).forEach((t,n)=>{if(t.closest(`.expressive-code, .reading-code-frame`))return;let r=t.querySelector(`code`);if(!r)return;let i=document.createElement(`div`);i.className=`reading-code-frame`;let a=document.createElement(`div`);a.className=`reading-code-bar`;let o=document.createElement(`span`);o.textContent=`代码`;let s=document.createElement(`button`);s.type=`button`,s.textContent=`复制代码`,s.setAttribute(`aria-label`,`复制第 ${n+1} 段代码`),s.addEventListener(`click`,async()=>{try{if(await navigator.clipboard.writeText(r.textContent??``),!this.isConnected)return;s.textContent=`已复制`,f&&(f.textContent=`代码已复制`)}catch{let e=document.createRange();e.selectNodeContents(r);let t=getSelection();t?.removeAllRanges(),t?.addRange(e),s.textContent=`请手动复制`,f&&(f.textContent=`代码已选中，请手动复制`)}this.timers.push(window.setTimeout(()=>{s.textContent=`复制代码`},2200))},{signal:e}),a.append(o,s),t.before(i),i.append(a,t),t.tabIndex=0,t.setAttribute(`aria-label`,`代码示例，可横向滚动`)}),s()}};customElements.get(`mzsh-reading`)||customElements.define(`mzsh-reading`,e);</script><main id="main" tabindex="-1" class="site-chrome-main"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">博客</p><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><mzsh-reading class="reading-surface"><div class="master-detail reading-detail"><aside class="article-sidebar" aria-label="文章导航"><a class="article-back" href="/blog/">返回博客列表</a><details class="article-outline" open><summary>文章大纲</summary><nav aria-label="文章大纲"><ol><li><a href="#%E6%A0%B8%E5%BF%83%E9%97%AE%E9%A2%98" style="--outline-depth:0">核心问题</a></li><li><a href="#%E4%B8%80%E8%8E%B7%E5%8F%96%E6%AD%A3%E7%A1%AE%E7%9A%84%E9%AA%A8%E9%AA%BC%E6%95%B0%E6%8D%AE" style="--outline-depth:0">一、获取正确的骨骼数据</a></li><li><a href="#%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%88%99%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE-api-%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8" style="--outline-depth:1">核心原则：三个关键 API 的正确使用</a></li><li><a href="#%E9%94%99%E8%AF%AF%E7%A4%BA%E8%8C%83%E4%B8%8E%E5%90%8E%E6%9E%9C" style="--outline-depth:1">错误示范与后果</a></li><li><a href="#%E5%85%B3%E9%94%AE-api-%E5%AF%B9%E6%AF%94%E8%A1%A8" style="--outline-depth:1">关键 API 对比表</a></li><li><a href="#%E5%BC%95%E6%93%8E%E6%BA%90%E7%A0%81%E4%BE%9D%E6%8D%AE" style="--outline-depth:1">引擎源码依据</a></li><li><a href="#%E5%AE%8C%E6%95%B4%E5%88%9D%E5%A7%8B%E5%8C%96%E4%BB%A3%E7%A0%81" style="--outline-depth:1">完整初始化代码</a></li><li><a href="#%E5%85%B3%E9%94%AE%E7%82%B9%E8%AF%B4%E6%98%8E" style="--outline-depth:1">关键点说明</a></li><li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E7%94%A8-skeletalmesh-%E7%9A%84-refskeleton" style="--outline-depth:2">为什么必须用 SkeletalMesh 的 RefSkeleton？</a></li><li><a href="#%E4%B8%BA%E4%BB%80%E4%B9%88%E5%BF%85%E9%A1%BB%E7%94%A8-getrawbonenum" style="--outline-depth:2">为什么必须用 GetRawBoneNum()？</a></li><li><a href="#%E4%BA%8C%E6%AD%A3%E7%A1%AE%E4%BF%9D%E5%AD%98-animsequence" style="--outline-depth:0">二、正确保存 AnimSequence</a></li><li><a href="#%E6%A0%B8%E5%BF%83%E5%8E%9F%E5%88%99%E4%BD%BF%E7%94%A8-ianimationdatacontroller" style="--outline-depth:1">核心原则：使用 IAnimationDataController</a></li><li><a href="#%E6%A0%87%E5%87%86%E4%BF%9D%E5%AD%98%E6%B5%81%E7%A8%8B5-%E4%B8%AA%E5%85%B3%E9%94%AE%E6%AD%A5%E9%AA%A4" style="--outline-depth:1">标准保存流程（5 个关键步骤）</a></li><li><a href="#api-%E5%AF%B9%E6%AF%94ue4-vs-ue5" style="--outline-depth:1">API 对比：UE4 vs UE5</a></li><li><a href="#%E5%85%B3%E9%94%AE%E6%AD%A5%E9%AA%A4%E8%AF%A6%E8%A7%A3" style="--outline-depth:1">关键步骤详解</a></li><li><a href="#%E6%AD%A5%E9%AA%A4-3%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8-fscopedbracket" style="--outline-depth:2">步骤 3：为什么使用 FScopedBracket？</a></li><li><a href="#%E6%AD%A5%E9%AA%A4-4%E4%B8%BA%E4%BB%80%E4%B9%88%E4%B8%8D%E8%83%BD%E7%94%A8%E5%9B%BA%E5%AE%9A%E5%B8%A7%E7%8E%87" style="--outline-depth:2">步骤 4：为什么不能用固定帧率？</a></li><li><a href="#%E6%AD%A5%E9%AA%A4-54notifypopulated-%E7%9A%84%E4%BD%9C%E7%94%A8" style="--outline-depth:2">步骤 5.4：NotifyPopulated() 的作用</a></li><li><a href="#%E4%B8%89%E5%AE%8C%E6%95%B4%E4%BB%A3%E7%A0%81%E7%A4%BA%E4%BE%8B" style="--outline-depth:0">三、完整代码示例</a></li><li><a href="#%E5%A4%B4%E6%96%87%E4%BB%B6-testactorh" style="--outline-depth:1">头文件 (TestActor.h)</a></li><li><a href="#tick-%E5%BD%95%E5%88%B6%E9%80%BB%E8%BE%91" style="--outline-depth:1">Tick 录制逻辑</a></li><li><a href="#%E5%9B%9B%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%E7%82%B9%E6%80%BB%E7%BB%93" style="--outline-depth:0">四、核心技术点总结</a></li><li><a href="#%E9%AA%A8%E9%AA%BC%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%963-%E4%B8%AA%E5%BF%85%E9%A1%BB" style="--outline-depth:1">骨骼数据获取（3 个必须）</a></li><li><a href="#animsequence-%E4%BF%9D%E5%AD%985-%E4%B8%AA%E5%85%B3%E9%94%AE" style="--outline-depth:1">AnimSequence 保存（5 个关键）</a></li><li><a href="#%E4%BA%94%E8%B0%83%E8%AF%95%E6%A3%80%E6%9F%A5%E6%B8%85%E5%8D%95" style="--outline-depth:0">五、调试检查清单</a></li><li><a href="#%E5%BD%95%E5%88%B6%E5%89%8D%E6%A3%80%E6%9F%A5" style="--outline-depth:1">录制前检查</a></li><li><a href="#%E4%BF%9D%E5%AD%98%E5%89%8D%E6%A3%80%E6%9F%A5" style="--outline-depth:1">保存前检查</a></li><li><a href="#%E5%85%AD%E5%BC%95%E6%93%8E%E6%BA%90%E7%A0%81%E5%8F%82%E8%80%83%E4%BD%8D%E7%BD%AE" style="--outline-depth:0">六、引擎源码参考位置</a></li><li><a href="#animsequencecpp-%E5%85%B3%E9%94%AE%E5%87%BD%E6%95%B0" style="--outline-depth:1">AnimSequence.cpp 关键函数</a></li><li><a href="#%E7%BB%93%E8%AE%BA" style="--outline-depth:0">结论</a></li></ol></nav></details></aside><article class="master-panel" aria-labelledby="detail-cnblogs-19197541" data-pagefind-body data-blog-article="true"><header class="item-heading"><p class="eyebrow">2025-11-06 · UE</p><h1 id="detail-cnblogs-19197541" data-pagefind-meta="title">UE：论运行时动画录制的关键-正确获取骨骼数据与保存</h1><p>在 UE5.4 中实现运行时动画录制，最关键的两个问题是：</p></header><div class="prose"><p id="ue论运行时动画录制的关键-正确获取骨骼数据与保存" class="article-source-title" hidden>UE：论运行时动画录制的关键-正确获取骨骼数据与保存</p>
+<h2 id="核心问题">核心问题</h2>
+<p>在 UE5.4 中实现运行时动画录制，最关键的两个问题是：</p>
+<ol>
+<li><strong>如何获取正确的骨骼数据</strong> - 避免崩溃和数据不匹配</li>
+<li><strong>如何正确保存 AnimSequence</strong> - 使用引擎标准 API</li>
+</ol>
+<p>本文直击核心，提供最简洁有效的解决方案。</p>
+<hr>
+<h2 id="一获取正确的骨骼数据">一、获取正确的骨骼数据</h2>
+<h3 id="核心原则三个关键-api-的正确使用">核心原则：三个关键 API 的正确使用</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#6A737D">// ✅ 正确：使用 SkeletalMesh 的 RefSkeleton</span></span>
+<span class="line"><span style="color:#E1E4E8">USkeletalMesh</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> SkeletalMesh </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SkeletalMeshComponent-></span><span style="color:#B392F0">GetSkeletalMeshAsset</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> FReferenceSkeleton</span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8"> RefSkeleton </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SkeletalMesh-></span><span style="color:#B392F0">GetRefSkeleton</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ✅ 正确：使用 GetRawBoneNum() 获取实际骨骼数</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> int32 NumBones </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> RefSkeleton.</span><span style="color:#B392F0">GetRawBoneNum</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ✅ 正确：运行时变换数据</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> TArray</span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8">FTransform</span><span style="color:#F97583">>&#x26;</span><span style="color:#E1E4E8"> BoneSpaceTransforms </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SkeletalMeshComponent-></span><span style="color:#B392F0">GetBoneSpaceTransforms</span><span style="color:#E1E4E8">();</span></span></code></pre>
+<h3 id="错误示范与后果">错误示范与后果</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>错误代码</th><th>问题</th><th>后果</th></tr></thead><tbody><tr><td><code>Skeleton->GetReferenceSkeleton()</code></td><td>包含 ControlRig 虚拟骨骼</td><td>崩溃：FKControlRig.cpp<div></div></td></tr><tr><td><code>RefSkeleton.GetNum()</code></td><td>返回全部骨骼（含虚拟）</td><td>数组越界</td></tr><tr><td><code>GetBoneNames()</code> 后再遍历 RefSkeleton</td><td>骨骼名重复添加</td><td>数据混乱</td></tr></tbody></table>
+<h3 id="关键-api-对比表">关键 API 对比表</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>数据源</th><th>方法</th><th>返回值示例</th><th>是否正确</th></tr></thead><tbody><tr><td><code>Skeleton->GetReferenceSkeleton().GetNum()</code></td><td>全部骨骼</td><td>161 (89实际+72虚拟)</td><td>❌</td></tr><tr><td><code>SkeletalMesh->GetRefSkeleton().GetNum()</code></td><td>全部骨骼</td><td>161</td><td>❌</td></tr><tr><td><code>SkeletalMesh->GetRefSkeleton().GetRawBoneNum()</code></td><td>实际骨骼</td><td>89</td><td>✅</td></tr><tr><td><code>SkeletalMeshComponent->GetBoneSpaceTransforms().Num()</code></td><td>运行时变换</td><td>89</td><td>✅ 用于对比验证</td></tr></tbody></table>
+<h3 id="引擎源码依据">引擎源码依据</h3>
+<p><strong>AnimSequence.cpp 第 2674-2678 行（官方实现）</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> int32 NumBones </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> RefSkeleton.</span><span style="color:#B392F0">GetRawBoneNum</span><span style="color:#E1E4E8">();</span><span style="color:#6A737D">  // ← 引擎使用 GetRawBoneNum()</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> TArray</span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8">FTransform</span><span style="color:#F97583">></span><span style="color:#E1E4E8"> BoneSpaceTransforms </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> MeshComponent-></span><span style="color:#B392F0">GetBoneSpaceTransforms</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">check</span><span style="color:#E1E4E8">(BoneSpaceTransforms.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">>=</span><span style="color:#E1E4E8"> NumBones);</span><span style="color:#6A737D">  // ← 引擎期望这个条件成立</span></span></code></pre>
+<h3 id="完整初始化代码">完整初始化代码</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">void</span><span style="color:#B392F0"> ATestActor</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">StartRecording</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">int</span><span style="color:#FFAB70"> _FrameSize</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">ACharacter</span><span style="color:#F97583">*</span><span style="color:#FFAB70"> _TargetActor</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#E1E4E8">    TargetActor </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> _TargetActor;</span></span>
+<span class="line"><span style="color:#E1E4E8">    SkeletalMeshComponent </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> TargetActor-></span><span style="color:#B392F0">GetMesh</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 1. 获取正确的 RefSkeleton（SkeletalMesh 的，不是 Skeleton 的）</span></span>
+<span class="line"><span style="color:#B392F0">    USkeletalMesh</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> SkeletalMesh </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SkeletalMeshComponent-></span><span style="color:#B392F0">GetSkeletalMeshAsset</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#B392F0"> FReferenceSkeleton</span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8"> RefSkeleton </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SkeletalMesh-></span><span style="color:#B392F0">GetRefSkeleton</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 2. 使用 GetRawBoneNum() 获取实际骨骼数</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#B392F0"> int32</span><span style="color:#E1E4E8"> NumBones </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> RefSkeleton.</span><span style="color:#B392F0">GetRawBoneNum</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 3. 获取运行时变换数据（用于验证）</span></span>
+<span class="line"><span style="color:#F97583">    const</span><span style="color:#B392F0"> TArray</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">FTransform</span><span style="color:#E1E4E8">></span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8"> BoneSpaceTransforms </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SkeletalMeshComponent-></span><span style="color:#B392F0">GetBoneSpaceTransforms</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 4. 安全性检查（引擎期望这个条件）</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (BoneSpaceTransforms.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> NumBones)</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#B392F0">        UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Error, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"骨骼数据不匹配：BoneSpaceTransforms(</span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">) &#x3C; RawBoneNum(</span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">)"</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">            BoneSpaceTransforms.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">(), NumBones);</span></span>
+<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 5. 填充骨骼名称（单次遍历）</span></span>
+<span class="line"><span style="color:#E1E4E8">    BoneNames.</span><span style="color:#B392F0">Empty</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8"> (int32 BoneIndex </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; BoneIndex </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> NumBones; </span><span style="color:#F97583">++</span><span style="color:#E1E4E8">BoneIndex)</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#E1E4E8">        BoneNames.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(RefSkeleton.</span><span style="color:#B392F0">GetBoneName</span><span style="color:#E1E4E8">(BoneIndex));</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 6. 初始化数据数组</span></span>
+<span class="line"><span style="color:#E1E4E8">    TrackDataArray.</span><span style="color:#B392F0">SetNum</span><span style="color:#E1E4E8">(NumBones);</span></span>
+<span class="line"><span style="color:#E1E4E8">    IsRecording </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="关键点说明">关键点说明</h3>
+<h4 id="为什么必须用-skeletalmesh-的-refskeleton">为什么必须用 SkeletalMesh 的 RefSkeleton？</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#6A737D">// ❌ 错误：Skeleton 的 RefSkeleton 包含 ControlRig 虚拟骨骼</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> FReferenceSkeleton</span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8"> RefSkeleton </span><span style="color:#F97583">=</span></span>
+<span class="line"><span style="color:#E1E4E8">    SkeletalMesh-></span><span style="color:#B392F0">GetSkeleton</span><span style="color:#E1E4E8">()-></span><span style="color:#B392F0">GetReferenceSkeleton</span><span style="color:#E1E4E8">();</span><span style="color:#6A737D">  // 161个骨骼</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ✅ 正确：SkeletalMesh 的 RefSkeleton 是实际骨骼层级</span></span>
+<span class="line"><span style="color:#F97583">const</span><span style="color:#E1E4E8"> FReferenceSkeleton</span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8"> RefSkeleton </span><span style="color:#F97583">=</span></span>
+<span class="line"><span style="color:#E1E4E8">    SkeletalMesh-></span><span style="color:#B392F0">GetRefSkeleton</span><span style="color:#E1E4E8">();</span><span style="color:#6A737D">  // 配合 GetRawBoneNum() 使用</span></span></code></pre>
+<p><strong>Skeleton 中的虚拟骨骼示例</strong>：</p>
+<ul>
+<li><code>root_CONTROL</code> - ControlRig 根控制器</li>
+<li><code>ik_hand_l_CONTROL</code> - IK 手部控制器</li>
+<li>这些骨骼在 <code>BoneSpaceTransforms</code> 中<strong>不存在</strong>！</li>
+</ul>
+<h4 id="为什么必须用-getrawbonenum">为什么必须用 GetRawBoneNum()？</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#6A737D">// GetNum() vs GetRawBoneNum() 的区别</span></span>
+<span class="line"><span style="color:#E1E4E8">RefSkeleton.</span><span style="color:#B392F0">GetNum</span><span style="color:#E1E4E8">();</span><span style="color:#6A737D">         // 返回全部：RawBones + VirtualBones = 161</span></span>
+<span class="line"><span style="color:#E1E4E8">RefSkeleton.</span><span style="color:#B392F0">GetRawBoneNum</span><span style="color:#E1E4E8">();</span><span style="color:#6A737D">  // 返回实际：RawBones = 89</span></span></code></pre>
+<p><strong>验证方法</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#B392F0">UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Warning, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"RefSkeleton.GetNum() = </span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">), RefSkeleton.</span><span style="color:#B392F0">GetNum</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#B392F0">UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Warning, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"RefSkeleton.GetRawBoneNum() = </span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">), RefSkeleton.</span><span style="color:#B392F0">GetRawBoneNum</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#B392F0">UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Warning, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"BoneSpaceTransforms.Num() = </span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">), BoneSpaceTransforms.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 正确结果应该是：</span></span>
+<span class="line"><span style="color:#6A737D">// GetNum() = 161</span></span>
+<span class="line"><span style="color:#6A737D">// GetRawBoneNum() = 89</span></span>
+<span class="line"><span style="color:#6A737D">// BoneSpaceTransforms.Num() = 89</span></span></code></pre>
+<hr>
+<h2 id="二正确保存-animsequence">二、正确保存 AnimSequence</h2>
+<h3 id="核心原则使用-ianimationdatacontroller">核心原则：使用 IAnimationDataController</h3>
+<p>UE5 废弃了直接修改 AnimSequence 的方式，必须通过 <code>IAnimationDataController</code> 接口。</p>
+<h3 id="标准保存流程5-个关键步骤">标准保存流程（5 个关键步骤）</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">void</span><span style="color:#B392F0"> ATestActor</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">SpawnAnimAsset</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#6A737D">    // === 1. 创建资产对象 ===</span></span>
+<span class="line"><span style="color:#B392F0">    UPackage</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> Package </span><span style="color:#F97583">=</span><span style="color:#B392F0"> CreatePackage</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">AssetPath);</span></span>
+<span class="line"><span style="color:#B392F0">    UAnimSequence</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> AnimSeq </span><span style="color:#F97583">=</span><span style="color:#B392F0"> NewObject</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">UAnimSequence</span><span style="color:#E1E4E8">>(Package, </span><span style="color:#B392F0">UAnimSequence</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">StaticClass</span><span style="color:#E1E4E8">(),</span></span>
+<span class="line"><span style="color:#F97583">        *</span><span style="color:#E1E4E8">AssetName, RF_Public </span><span style="color:#F97583">|</span><span style="color:#E1E4E8"> RF_Standalone </span><span style="color:#F97583">|</span><span style="color:#E1E4E8"> RF_MarkAsRootSet);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 绑定 Skeleton</span></span>
+<span class="line"><span style="color:#B392F0">    USkeletalMesh</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> SkeletalMesh </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SkeletalMeshComponent-></span><span style="color:#B392F0">GetSkeletalMeshAsset</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">    AnimSeq-></span><span style="color:#B392F0">SetSkeleton</span><span style="color:#E1E4E8">(SkeletalMesh-></span><span style="color:#B392F0">GetSkeleton</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // === 2. 获取 Controller（唯一修改接口）===</span></span>
+<span class="line"><span style="color:#B392F0">    IAnimationDataModel</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> Model </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> AnimSeq-></span><span style="color:#B392F0">GetDataModel</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#B392F0">    TScriptInterface</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">IAnimationDataController</span><span style="color:#E1E4E8">> Controller </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Model-></span><span style="color:#B392F0">GetController</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // === 3. 初始化模型（使用 FScopedBracket）===</span></span>
+<span class="line"><span style="color:#E1E4E8">    Controller-></span><span style="color:#B392F0">InitializeModel</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#B392F0">    IAnimationDataController</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">FScopedBracket</span><span style="color:#B392F0"> ScopedBracket</span><span style="color:#E1E4E8">(Controller,</span></span>
+<span class="line"><span style="color:#B392F0">        LOCTEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"RecordAnimation"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"Recording Animation"</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // === 4. 设置帧率和帧数 ===</span></span>
+<span class="line"><span style="color:#6A737D">    // 计算实际帧率（关键：不能用固定值）</span></span>
+<span class="line"><span style="color:#F97583">    float</span><span style="color:#E1E4E8"> RecordingDuration </span><span style="color:#F97583">=</span><span style="color:#B392F0"> GetWorld</span><span style="color:#E1E4E8">()-></span><span style="color:#B392F0">GetTimeSeconds</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> RecordingStartTime;</span></span>
+<span class="line"><span style="color:#B392F0">    int32</span><span style="color:#E1E4E8"> NumFrames </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> TrackDataArray[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">].PosKeys.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#F97583">    float</span><span style="color:#E1E4E8"> ActualFrameRate </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">float</span><span style="color:#E1E4E8">)NumFrames </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> RecordingDuration;</span></span>
+<span class="line"><span style="color:#E1E4E8">    ActualFrameRate </span><span style="color:#F97583">=</span><span style="color:#B392F0"> FMath</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Clamp</span><span style="color:#E1E4E8">(ActualFrameRate, </span><span style="color:#79B8FF">24.0</span><span style="color:#F97583">f</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">120.0</span><span style="color:#F97583">f</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">    Controller-></span><span style="color:#B392F0">SetFrameRate</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FFrameRate</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FMath</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">RoundToInt</span><span style="color:#E1E4E8">(ActualFrameRate), </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#E1E4E8">    Controller-></span><span style="color:#B392F0">SetNumberOfFrames</span><span style="color:#E1E4E8">(NumFrames);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // === 5. 添加骨骼轨道和关键帧 ===</span></span>
+<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8"> (int32 BoneIndex </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; BoneIndex </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> BoneNames.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">(); </span><span style="color:#F97583">++</span><span style="color:#E1E4E8">BoneIndex)</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#F97583">        const</span><span style="color:#B392F0"> FName</span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8"> BoneName </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> BoneNames[BoneIndex];</span></span>
+<span class="line"><span style="color:#F97583">        const</span><span style="color:#B392F0"> FRawAnimSequenceTrack</span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8"> Track </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> TrackDataArray[BoneIndex];</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // 5.1 添加骨骼曲线</span></span>
+<span class="line"><span style="color:#E1E4E8">        Controller-></span><span style="color:#B392F0">AddBoneCurve</span><span style="color:#E1E4E8">(BoneName);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // 5.2 准备 Scale 数据（引擎要求 Pos/Rot/Scale 数量一致）</span></span>
+<span class="line"><span style="color:#B392F0">        TArray</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">FVector3f</span><span style="color:#E1E4E8">> ScaleKeys;</span></span>
+<span class="line"><span style="color:#E1E4E8">        ScaleKeys.</span><span style="color:#B392F0">Init</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FVector3f</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1.0</span><span style="color:#F97583">f</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1.0</span><span style="color:#F97583">f</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1.0</span><span style="color:#F97583">f</span><span style="color:#E1E4E8">), Track.PosKeys.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // 5.3 设置关键帧</span></span>
+<span class="line"><span style="color:#E1E4E8">        Controller-></span><span style="color:#B392F0">SetBoneTrackKeys</span><span style="color:#E1E4E8">(BoneName, Track.PosKeys, Track.RotKeys, ScaleKeys);</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // 5.4 通知数据填充完成（必须调用）</span></span>
+<span class="line"><span style="color:#E1E4E8">    Controller-></span><span style="color:#B392F0">NotifyPopulated</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // === 6. 启用根骨骼运动（可选）===</span></span>
+<span class="line"><span style="color:#E1E4E8">    AnimSeq->bEnableRootMotion </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">    AnimSeq->RootMotionRootLock </span><span style="color:#F97583">=</span><span style="color:#B392F0"> ERootMotionRootLock</span><span style="color:#E1E4E8">::RefPose;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">    // === 7. 保存资产 ===</span></span>
+<span class="line"><span style="color:#B392F0">    FAssetRegistryModule</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">AssetCreated</span><span style="color:#E1E4E8">(AnimSeq);</span></span>
+<span class="line"><span style="color:#E1E4E8">    Package-></span><span style="color:#B392F0">MarkPackageDirty</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">    FString</span><span style="color:#E1E4E8"> PackageFileName </span><span style="color:#F97583">=</span><span style="color:#B392F0"> FPackageName</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">LongPackageNameToFilename</span><span style="color:#E1E4E8">(</span></span>
+<span class="line"><span style="color:#E1E4E8">        AssetPath, </span><span style="color:#B392F0">FPackageName</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">GetAssetPackageExtension</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#B392F0">    FSavePackageArgs</span><span style="color:#E1E4E8"> SaveArgs;</span></span>
+<span class="line"><span style="color:#F97583">    bool</span><span style="color:#E1E4E8"> bSaved </span><span style="color:#F97583">=</span><span style="color:#B392F0"> UPackage</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">SavePackage</span><span style="color:#E1E4E8">(Package, AnimSeq, </span><span style="color:#F97583">*</span><span style="color:#E1E4E8">PackageFileName, SaveArgs);</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h3 id="api-对比ue4-vs-ue5">API 对比：UE4 vs UE5</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>功能</th><th>UE4（已弃用）</th><th>UE5（标准）</th></tr></thead><tbody><tr><td>添加轨道</td><td><code>AddNewRawTrack()</code></td><td><code>Controller->AddBoneCurve()</code></td></tr><tr><td>设置关键帧</td><td>直接修改 RawAnimationData</td><td><code>Controller->SetBoneTrackKeys()</code></td></tr><tr><td>作用域管理</td><td><code>OpenBracket()</code> / <code>CloseBracket()</code></td><td><code>FScopedBracket</code> (RAII)</td></tr><tr><td>完成通知</td><td>无</td><td><code>Controller->NotifyPopulated()</code></td></tr></tbody></table>
+<h3 id="关键步骤详解">关键步骤详解</h3>
+<h4 id="步骤-3为什么使用-fscopedbracket">步骤 3：为什么使用 FScopedBracket？</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#6A737D">// ❌ UE4 旧方式（容易忘记 CloseBracket）</span></span>
+<span class="line"><span style="color:#E1E4E8">Controller-></span><span style="color:#B392F0">OpenBracket</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">LOCTEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"AddTracks"</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">"Adding Tracks"</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#6A737D">// ... 添加数据</span></span>
+<span class="line"><span style="color:#E1E4E8">Controller-></span><span style="color:#B392F0">CloseBracket</span><span style="color:#E1E4E8">();</span><span style="color:#6A737D">  // 如果中途 return 会泄漏</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ✅ UE5 标准方式（RAII 自动管理）</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#B392F0">    IAnimationDataController</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">FScopedBracket</span><span style="color:#B392F0"> ScopedBracket</span><span style="color:#E1E4E8">(Controller, </span><span style="color:#B392F0">LOCTEXT</span><span style="color:#E1E4E8">(...));</span></span>
+<span class="line"><span style="color:#6A737D">    // ... 添加数据</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span><span style="color:#6A737D">  // 离开作用域自动调用 CloseBracket</span></span></code></pre>
+<h4 id="步骤-4为什么不能用固定帧率">步骤 4：为什么不能用固定帧率？</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#6A737D">// ❌ 错误：固定 30fps</span></span>
+<span class="line"><span style="color:#E1E4E8">Controller-></span><span style="color:#B392F0">SetFrameRate</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FFrameRate</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">30</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#6A737D">// 如果游戏运行在 60fps，录制的动画会以 2 倍速播放！</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// ✅ 正确：动态计算</span></span>
+<span class="line"><span style="color:#F97583">float</span><span style="color:#E1E4E8"> ActualFrameRate </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">float</span><span style="color:#E1E4E8">)NumFrames </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> RecordingDuration;</span></span>
+<span class="line"><span style="color:#E1E4E8">Controller-></span><span style="color:#B392F0">SetFrameRate</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FFrameRate</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FMath</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">RoundToInt</span><span style="color:#E1E4E8">(ActualFrameRate), </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">));</span></span></code></pre>
+<h4 id="步骤-54notifypopulated-的作用">步骤 5.4：NotifyPopulated() 的作用</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#E1E4E8">Controller-></span><span style="color:#B392F0">NotifyPopulated</span><span style="color:#E1E4E8">();</span><span style="color:#6A737D">  // ← 必须调用！</span></span></code></pre>
+<p><strong>作用</strong>：</p>
+<ul>
+<li>通知引擎数据填充完成</li>
+<li>触发内部缓存更新</li>
+<li>验证数据完整性</li>
+<li><strong>不调用会导致动画无法播放</strong></li>
+</ul>
+<hr>
+<h2 id="三完整代码示例">三、完整代码示例</h2>
+<h3 id="头文件-testactorh">头文件 (TestActor.h)</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">#pragma</span><span style="color:#B392F0"> once</span></span>
+<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "CoreMinimal.h"</span></span>
+<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "GameFramework/Actor.h"</span></span>
+<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "TestActor.generated.h"</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">UCLASS</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> TEST03_API</span><span style="color:#B392F0"> ATestActor</span><span style="color:#E1E4E8"> : </span><span style="color:#F97583">public</span><span style="color:#B392F0"> AActor</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#B392F0">    GENERATED_BODY</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">public:</span></span>
+<span class="line"><span style="color:#B392F0">    UFUNCTION</span><span style="color:#E1E4E8">(BlueprintCallable)</span></span>
+<span class="line"><span style="color:#F97583">    void</span><span style="color:#B392F0"> StartRecording</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">int</span><span style="color:#FFAB70"> _FrameSize</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">ACharacter</span><span style="color:#F97583">*</span><span style="color:#FFAB70"> _TargetActor</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> nullptr</span><span style="color:#E1E4E8">);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">    UFUNCTION</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">BlueprintCallable</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#F97583">    void</span><span style="color:#B392F0"> EndRecording</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">private:</span></span>
+<span class="line"><span style="color:#F97583">    virtual</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> Tick</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">float</span><span style="color:#FFAB70"> DeltaTime</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">override</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    void</span><span style="color:#B392F0"> SpawnAnimAsset</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">    UPROPERTY</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">    ACharacter</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> TargetActor;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">    UPROPERTY</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">    USkeletalMeshComponent</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> SkeletalMeshComponent;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">    TArray</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">FName</span><span style="color:#E1E4E8">> BoneNames;</span></span>
+<span class="line"><span style="color:#B392F0">    TArray</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">FRawAnimSequenceTrack</span><span style="color:#E1E4E8">> TrackDataArray;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    bool</span><span style="color:#E1E4E8"> IsRecording </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    float</span><span style="color:#E1E4E8"> RecordingStartTime;</span></span>
+<span class="line"><span style="color:#B392F0">    FTransform</span><span style="color:#E1E4E8"> InitialActorTransform;</span></span>
+<span class="line"><span style="color:#E1E4E8">};</span></span></code></pre>
+<h3 id="tick-录制逻辑">Tick 录制逻辑</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">void</span><span style="color:#B392F0"> ATestActor</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Tick</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">float</span><span style="color:#FFAB70"> DeltaTime</span><span style="color:#E1E4E8">)</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#B392F0">    Super</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Tick</span><span style="color:#E1E4E8">(DeltaTime);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (IsRecording)</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#F97583">        const</span><span style="color:#B392F0"> TArray</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">FTransform</span><span style="color:#E1E4E8">></span><span style="color:#F97583">&#x26;</span><span style="color:#E1E4E8"> BoneSpaceTransforms </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> SkeletalMeshComponent-></span><span style="color:#B392F0">GetBoneSpaceTransforms</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">        // 计算相对位移（用于根骨骼运动）</span></span>
+<span class="line"><span style="color:#B392F0">        FTransform</span><span style="color:#E1E4E8"> CurrentActorTransform </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> TargetActor-></span><span style="color:#B392F0">GetActorTransform</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#B392F0">        FTransform</span><span style="color:#E1E4E8"> RelativeActorTransform </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> CurrentActorTransform.</span><span style="color:#B392F0">GetRelativeTransform</span><span style="color:#E1E4E8">(InitialActorTransform);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">        for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">int</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> BoneNames.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">(); </span><span style="color:#F97583">++</span><span style="color:#E1E4E8">i)</span></span>
+<span class="line"><span style="color:#E1E4E8">        {</span></span>
+<span class="line"><span style="color:#B392F0">            FTransform</span><span style="color:#E1E4E8"> FinalBoneTransform;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">            if</span><span style="color:#E1E4E8"> (i </span><span style="color:#F97583">==</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">)</span><span style="color:#6A737D">  // 根骨骼</span></span>
+<span class="line"><span style="color:#E1E4E8">            {</span></span>
+<span class="line"><span style="color:#6A737D">                // 烘焙世界位移到根骨骼</span></span>
+<span class="line"><span style="color:#E1E4E8">                FinalBoneTransform </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> BoneSpaceTransforms[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> RelativeActorTransform;</span></span>
+<span class="line"><span style="color:#E1E4E8">            }</span></span>
+<span class="line"><span style="color:#F97583">            else</span></span>
+<span class="line"><span style="color:#E1E4E8">            {</span></span>
+<span class="line"><span style="color:#E1E4E8">                FinalBoneTransform </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> BoneSpaceTransforms[i];</span></span>
+<span class="line"><span style="color:#E1E4E8">            }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">            TrackDataArray[i].PosKeys.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FVector3f</span><span style="color:#E1E4E8">(FinalBoneTransform.</span><span style="color:#B392F0">GetLocation</span><span style="color:#E1E4E8">()));</span></span>
+<span class="line"><span style="color:#E1E4E8">            TrackDataArray[i].RotKeys.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FQuat4f</span><span style="color:#E1E4E8">(FinalBoneTransform.</span><span style="color:#B392F0">GetRotation</span><span style="color:#E1E4E8">()));</span></span>
+<span class="line"><span style="color:#E1E4E8">            TrackDataArray[i].ScaleKeys.</span><span style="color:#B392F0">Add</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FVector3f</span><span style="color:#E1E4E8">(FinalBoneTransform.</span><span style="color:#B392F0">GetScale3D</span><span style="color:#E1E4E8">()));</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h2 id="四核心技术点总结">四、核心技术点总结</h2>
+<h3 id="骨骼数据获取3-个必须">骨骼数据获取（3 个必须）</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤</th><th>API</th><th>错误会导致</th></tr></thead><tbody><tr><td>1. 数据源</td><td><code>SkeletalMesh->GetRefSkeleton()</code></td><td>使用 Skeleton 会包含虚拟骨骼</td></tr><tr><td>2. 骨骼数</td><td><code>RefSkeleton.GetRawBoneNum()</code></td><td>使用 GetNum() 会越界</td></tr><tr><td>3. 验证</td><td><code>BoneSpaceTransforms.Num() >= NumBones</code></td><td>不检查会崩溃</td></tr></tbody></table>
+<h3 id="animsequence-保存5-个关键">AnimSequence 保存（5 个关键）</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>步骤</th><th>API</th><th>作用</th></tr></thead><tbody><tr><td>1. 获取 Controller</td><td><code>Model->GetController()</code></td><td>唯一修改接口</td></tr><tr><td>2. 作用域管理</td><td><code>FScopedBracket</code></td><td>RAII 自动清理</td></tr><tr><td>3. 添加轨道</td><td><code>AddBoneCurve()</code></td><td>UE5 标准 API</td></tr><tr><td>4. 设置数据</td><td><code>SetBoneTrackKeys()</code></td><td>Pos/Rot/Scale 数量必须一致</td></tr><tr><td>5. 完成通知</td><td><code>NotifyPopulated()</code></td><td>必须调用</td></tr></tbody></table>
+<hr>
+<h2 id="五调试检查清单">五、调试检查清单</h2>
+<h3 id="录制前检查">录制前检查</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#B392F0">UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Warning, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"=== 骨骼数据诊断 ==="</span><span style="color:#E1E4E8">));</span></span>
+<span class="line"><span style="color:#B392F0">UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Warning, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"RefSkeleton.GetRawBoneNum() = </span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">), RefSkeleton.</span><span style="color:#B392F0">GetRawBoneNum</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#B392F0">UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Warning, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"RefSkeleton.GetNum() = </span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">), RefSkeleton.</span><span style="color:#B392F0">GetNum</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#B392F0">UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Warning, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"BoneSpaceTransforms.Num() = </span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">), BoneSpaceTransforms.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 正确结果：RawBoneNum == BoneSpaceTransforms.Num()</span></span></code></pre>
+<h3 id="保存前检查">保存前检查</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#B392F0">UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Warning, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"生成动画: 骨骼=</span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">, 帧数=</span><span style="color:#79B8FF">%d</span><span style="color:#9ECBFF">, 帧率=</span><span style="color:#79B8FF">%.2f</span><span style="color:#9ECBFF"> fps"</span><span style="color:#E1E4E8">),</span></span>
+<span class="line"><span style="color:#E1E4E8">    BoneNames.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">(), NumFrames, ActualFrameRate);</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D">// 检查数据完整性</span></span>
+<span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> (int32 i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&#x3C;</span><span style="color:#E1E4E8"> BoneNames.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">(); </span><span style="color:#F97583">++</span><span style="color:#E1E4E8">i)</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#F97583">    if</span><span style="color:#E1E4E8"> (TrackDataArray[i].PosKeys.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">!=</span><span style="color:#E1E4E8"> NumFrames)</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#B392F0">        UE_LOG</span><span style="color:#E1E4E8">(LogTemp, Error, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"骨骼 </span><span style="color:#79B8FF">%s</span><span style="color:#9ECBFF"> 数据不完整"</span><span style="color:#E1E4E8">), </span><span style="color:#F97583">*</span><span style="color:#E1E4E8">BoneNames[i].</span><span style="color:#B392F0">ToString</span><span style="color:#E1E4E8">());</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h2 id="六引擎源码参考位置">六、引擎源码参考位置</h2>
+<h3 id="animsequencecpp-关键函数">AnimSequence.cpp 关键函数</h3>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>函数</th><th>行号</th><th>作用</th></tr></thead><tbody><tr><td><code>CreateAnimation(SkeletalMeshComponent*)</code></td><td>2659-2692</td><td>标准骨骼数据获取</td></tr><tr><td><code>CreateAnimation(SkeletalMesh*)</code></td><td>2630-2657</td><td>使用参考姿态</td></tr><tr><td><code>GetBonePose()</code></td><td>1598-1715</td><td>播放时数据提取</td></tr></tbody></table>
+<p><strong>查看方法</strong>：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>文件路径：Engine/Source/Runtime/Engine/Private/Animation/AnimSequence.cpp</span></span>
+<span class="line"><span>关键行：const int32 NumBones = RefSkeleton.GetRawBoneNum();  // 第 2674 行</span></span></code></pre>
+<hr>
+<h2 id="结论">结论</h2>
+<p>UE5.4 运行时动画录制的核心在于：</p>
+<ol>
+<li>
+<p><strong>正确获取骨骼数据</strong>：</p>
+<ul>
+<li>使用 <code>SkeletalMesh->GetRefSkeleton()</code> 而非 Skeleton 的</li>
+<li>使用 <code>GetRawBoneNum()</code> 而非 <code>GetNum()</code></li>
+<li>必须验证 <code>BoneSpaceTransforms.Num() >= NumBones</code></li>
+</ul>
+</li>
+<li>
+<p><strong>正确保存 AnimSequence</strong>：</p>
+<ul>
+<li>通过 <code>IAnimationDataController</code> 接口操作</li>
+<li>使用 <code>FScopedBracket</code> 管理作用域</li>
+<li>调用 <code>AddBoneCurve()</code> 而非 <code>AddBoneTrack()</code></li>
+<li>必须调用 <code>NotifyPopulated()</code></li>
+</ul>
+</li>
+</ol>
+<p>遵循这些原则，就能实现稳定可靠的动画录制系统。</p>
+<hr>
+<p><strong>引擎版本</strong>：Unreal Engine 5.4
+<strong>参考源码</strong>：AnimSequence.cpp (2630-2692行)</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH. 保留所有权利。</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+  if (!document.documentElement.dataset.siteChromeBound) {
+    document.documentElement.dataset.siteChromeBound = 'true';
+    const setMenuOpen = (open) => {
+      const header = document.querySelector('.site-chrome .site-header');
+      header?.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded', String(open));
+      header?.querySelector('.main-nav')?.classList.toggle('is-open', open);
+    };
+    const update = () => {
+      const header = document.querySelector('.site-chrome .site-header');
+      if (!header) return;
+      const path = location.pathname;
+      header.querySelectorAll('.main-nav a, .header-actions a').forEach(link => {
+        const href = link.getAttribute('href') || '';
+        if (href === '/' ? path === '/' : path.startsWith(href)) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+      setMenuOpen(false);
+    };
+    document.addEventListener('click', event => {
+      const button = event.target.closest?.('[data-menu-toggle]');
+      if (button) setMenuOpen(button.getAttribute('aria-expanded') !== 'true');
+      else if (!event.target.closest?.('.main-nav')) setMenuOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      const button = document.querySelector('[data-menu-toggle][aria-expanded="true"]');
+      if (!button) return;
+      setMenuOpen(false);
+      button.focus();
+    });
+    document.addEventListener('focusin', event => {
+      if (!event.target.closest?.('.main-nav, [data-menu-toggle]')) setMenuOpen(false);
+    });
+    window.matchMedia('(max-width:720px)').addEventListener('change', () => setMenuOpen(false));
+    let navigationGeneration = 0;
+    const finishNavigation = () => {
+      document.querySelector('.site-chrome-main')?.removeAttribute('aria-busy');
+      document.querySelectorAll('[data-navigation-pending]').forEach(link => link.removeAttribute('data-navigation-pending'));
+    };
+    document.addEventListener('astro:before-preparation', event => {
+      const generation = ++navigationGeneration;
+      performance.mark('mzsh-navigation-start');
+      document.querySelector('.site-chrome-main')?.setAttribute('aria-busy', 'true');
+      event.sourceElement?.setAttribute?.('data-navigation-pending', '');
+      event.signal?.addEventListener('abort', () => { if (generation === navigationGeneration) finishNavigation(); }, { once: true });
+    });
+    document.addEventListener('astro:page-load', () => {
+      finishNavigation();
+      if (performance.getEntriesByName('mzsh-navigation-start').length) {
+        performance.measure('mzsh-navigation', 'mzsh-navigation-start');
+        performance.clearMarks('mzsh-navigation-start');
+      }
+    });
+    document.addEventListener('astro:after-swap', update);
+    update();
+  }
+</script><script type="module">function e(e){return e.pathname+e.search+e.hash}function t(e,t){let n=e?.mzshViewport;return n?.key===t&&Number.isFinite(n.top)&&n.top>=0?n.top:void 0}var n,r=0;function i(){n?.abort(),cancelAnimationFrame(r)}function a(){i(),n=new AbortController;let a=document.querySelector(`.site-chrome-docs .main-frame`)??document.querySelector(`.site-chrome-main`);if(!a||document.body.classList.contains(`home-page`))return;let o=location.pathname,s=history.state?.index,c=t(history.state,e(location));c!==void 0&&(a.scrollTop=c),a.addEventListener(`scroll`,()=>{if(location.pathname!==o||history.state?.index!==s)return;let t=e(location),n=history.state?.index,i=a.scrollTop;cancelAnimationFrame(r),r=requestAnimationFrame(()=>{a.isConnected&&e(location)===t&&history.state?.index===n&&(!document.querySelector(`meta[name="astro-view-transitions-enabled"]`)||Number.isFinite(n))&&history.replaceState({...history.state,mzshViewport:{key:t,top:i}},``)})},{passive:!0,signal:n.signal})}document.addEventListener(`astro:before-preparation`,e=>{i(),e.signal?.addEventListener(`abort`,()=>{r=requestAnimationFrame(a)},{once:!0})}),window.addEventListener(`popstate`,i),document.addEventListener(`astro:page-load`,a),a();</script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-zoom-in aria-label="放大图片">放大</button><button type="button" data-media-zoom-out aria-label="缩小图片">缩小</button><button type="button" data-media-reset aria-label="复位图片">复位</button><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+if (!document.documentElement.dataset.mediaViewerBound) {
+  document.documentElement.dataset.mediaViewerBound = 'true';
+  let opener = null, scale = 1;
+  const stop = () => { document.querySelectorAll('video,audio').forEach(media => { media.pause(); media.currentTime = 0; }); document.querySelectorAll('iframe[data-bilibili-frame]').forEach(frame => { frame.src='about:blank'; frame.remove(); }); document.querySelectorAll('[data-bilibili-stage]').forEach(stage => stage.replaceChildren()); };
+  const dialog = () => document.querySelector('[data-media-viewer]');
+  const close = () => { const viewer = dialog(); if (!viewer?.open) return; stop(); viewer.close(); opener?.focus?.(); opener = null; };
+  const open = (trigger, kind) => {
+    const viewer = dialog(), stage = viewer?.querySelector('[data-media-stage]'); if (!viewer || !stage) return;
+    stop(); opener = trigger; scale = 1; stage.replaceChildren();
+    if (kind === 'image') { const image = new Image(); image.src = trigger.dataset.mediaSrc; image.alt = trigger.dataset.mediaAlt || ''; image.dataset.mediaPreviewImage = ''; stage.append(image); }
+    else if(kind==='bilibili'){const host=trigger.closest('[data-bilibili]');const frame=document.createElement('iframe');frame.src=`https://player.bilibili.com/player.html?bvid=${encodeURIComponent(host.dataset.bvid)}&p=${encodeURIComponent(host.dataset.page)}&autoplay=0`;frame.title='Bilibili 播放器';frame.allow='fullscreen';frame.allowFullscreen=true;frame.dataset.bilibiliFrame='';stage.append(frame);}
+    else { const video = trigger.closest('.media-video')?.querySelector('video')?.cloneNode(true); if (!video) return; video.removeAttribute('autoplay'); video.preload = 'none'; video.controls = true; video.playsInline = true; video.dataset.mediaPreviewVideo = ''; stage.append(video); }
+    viewer.querySelector('[data-media-zoom-in]').hidden = kind !== 'image'; viewer.querySelector('[data-media-zoom-out]').hidden = kind !== 'image'; viewer.querySelector('[data-media-reset]').hidden = kind !== 'image'; viewer.querySelector('[data-media-fullscreen]').hidden = kind === 'image'; viewer.showModal(); viewer.querySelector('[data-media-close]').focus();
+  };
+  const zoom = (delta = 0, reset = false) => { const image = dialog()?.querySelector('[data-media-preview-image]'); if (!image) return; scale = reset ? 1 : Math.min(3, Math.max(.5, scale + delta)); image.style.transform = `scale(${scale})`; };
+  const bilibili = target => { const host=target.closest('[data-bilibili]'),stage=host?.querySelector('[data-bilibili-stage]'); if(!host||!stage||stage.firstChild)return; const frame=document.createElement('iframe'); frame.src=`https://player.bilibili.com/player.html?bvid=${encodeURIComponent(host.dataset.bvid)}&p=${encodeURIComponent(host.dataset.page)}&autoplay=0`; frame.title='Bilibili 播放器'; frame.allow='fullscreen'; frame.allowFullscreen=true; frame.loading='lazy'; frame.dataset.bilibiliFrame=''; stage.append(frame); };
+  document.addEventListener('click', event => { const target = event.target.closest?.('[data-media-image],[data-media-open-video],[data-media-open-bilibili],[data-media-close],[data-media-zoom-in],[data-media-zoom-out],[data-media-reset],[data-media-fullscreen],[data-bilibili-load]'); if (!target) return; if(target.matches('[data-bilibili-load]'))bilibili(target); else if (target.matches('[data-media-image]')) open(target, 'image'); else if (target.matches('[data-media-open-video]')) open(target, 'video'); else if(target.matches('[data-media-open-bilibili]'))open(target,'bilibili'); else if (target.matches('[data-media-close]')) close(); else if (target.matches('[data-media-zoom-in]')) zoom(.25); else if (target.matches('[data-media-zoom-out]')) zoom(-.25); else if (target.matches('[data-media-reset]')) zoom(0, true); else { const media = dialog()?.querySelector('[data-media-preview-video]'); if (media?.requestFullscreen) media.requestFullscreen().catch(() => {}); else dialog()?.querySelector('iframe')?.requestFullscreen?.().catch(() => {}); } });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape') close(); });
+  document.addEventListener('astro:before-swap', stop); addEventListener('pagehide', stop);
+  document.addEventListener('click', event => { const viewer = dialog(); if (event.target === viewer) close(); });
+}
+</script></body></html><script type="module">function e(e,t,n=Date.now,r){let i=new Set([`/works/`,`/cases/`,`/blog/`]),a=new Map,o=new Map,s={hits:0,network:0,rejected:0},c=0,l=(e,n)=>{let r=typeof Request<`u`&&e instanceof Request?e:void 0,a=new URL(r?.url??String(e),t);if(a.origin!==t||!i.has(a.pathname)||(n?.method??r?.method??`GET`).toUpperCase()!==`GET`||(n?.credentials??r?.credentials)===`omit`||[`reload`,`no-store`,`no-cache`].includes(n?.cache??r?.cache??``))return;let o=new Headers(n?.headers??r?.headers);if(!(o.has(`authorization`)||o.has(`range`)))return a.pathname},u=(e,t)=>t?t.aborted?Promise.reject(new DOMException(`Aborted`,`AbortError`)):new Promise((n,r)=>{let i=()=>r(new DOMException(`Aborted`,`AbortError`));t.addEventListener(`abort`,i,{once:!0}),e.then(e=>{t.removeEventListener(`abort`,i),t.aborted||n(e)},e=>{t.removeEventListener(`abort`,i),r(e)})}):e,d=async(t,i)=>{let d=l(t,i);if(!d)return e(t,i);let f=typeof Request<`u`&&t instanceof Request?t:void 0,p=i?.signal===null?null:i?.signal??f?.signal;if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);let m=a.get(d);if(m&&m.expires>n()){if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);return s.hits++,typeof performance<`u`&&(performance.clearMarks(`mzsh-index-cache-hit`),performance.mark(`mzsh-index-cache-hit`)),m.response.clone()}a.delete(d);let h=o.get(d);if(!h){s.network++;let l=c,u={...i,signal:void 0};h=e(f?new Request(f,{signal:new AbortController().signal}):t,u).then(async e=>{if(e.status===200&&!e.redirected&&(e.headers.get(`content-type`)??``).includes(`text/html`)){let t=await e.clone().text();if(l===c&&/<meta\b[^>]*name=["']astro-view-transitions-enabled["']/.test(t)&&t.includes(`data-content-index-data`)&&t.includes(`site-chrome`)){a.set(d,{response:e.clone(),expires:n()+6e4});try{r?.(t)}catch{}}else s.rejected++}else s.rejected++;return e}).finally(()=>{o.get(d)===h&&o.delete(d)}),o.set(d,h)}return(await u(h,p)).clone()};return{fetch:d,stats:s,clear(){c++,a.clear(),o.clear()},warm(){return Promise.allSettled([...i].map(e=>d(new URL(e,t),{credentials:`same-origin`})))}}}var t=new Set;function n(e){let n=(e,t)=>e.match(RegExp(`\\b`+t+`=["']([^"']+)["']`,`i`))?.[1];for(let r of e.match(/<(?:link|script)\b[^>]*>/gi)??[]){let e=n(r,`rel`)===`stylesheet`,i=n(r,`type`)===`module`;if(!e&&!i)continue;let a=n(r,e?`href`:`src`);if(!a)continue;let o=new URL(a,location.origin);if(o.origin!==location.origin||!o.pathname.startsWith(`/_astro/`)||t.has(o.href)||t.size>=8||(t.add(o.href),[...document.querySelectorAll(`link[href],script[src]`)].some(e=>(`href`in e?e.href:e.src)===o.href)))continue;let s=document.createElement(`link`);s.rel=e?`preload`:`modulepreload`,e&&(s.as=`style`),s.href=o.href,document.head.append(s)}}var r=e(window.fetch.bind(window),location.origin,Date.now,n);window.fetch=r.fetch,window.addEventListener(`pagehide`,()=>r.clear());var i=navigator.connection;if(!i?.saveData&&!/2g/.test(i?.effectiveType??``)){let e=()=>{r.warm()};`requestIdleCallback`in window?window.requestIdleCallback(e,{timeout:900}):setTimeout(e,200)}for(let e of[`after-preparation`,`after-swap`,`page-load`])document.addEventListener(`astro:`+e,()=>{performance.clearMarks(`mzsh-`+e),performance.mark(`mzsh-`+e)});</script>
