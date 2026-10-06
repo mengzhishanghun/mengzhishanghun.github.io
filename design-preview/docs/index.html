@@ -1,4 +1,152 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#07101d"><meta name="description" content="作品信息卡与文档阅读页的独立设计参考。真实页面已采用新版阅读布局。"><title>文档阅读页 · 设计预览 · 小毛</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/DesignPreview.Bb72QBDJ.css"></head><body class="design-preview"><a class="design-skip" href="#reading-content">跳到正文</a><header class="design-header"><div class="design-header-inner"><a class="design-brand" href="/" aria-label="小毛首页">MZSH<span>小毛</span></a><nav class="design-site-nav" aria-label="网站导航"><a href="/works/">作品</a><a href="/blog/">博客</a><a href="/docs/zh/">文档</a></nav><a class="design-exit" href="/docs/zh/guides/ue-tools/simple-config-exclude-guide/">查看原页面 <span aria-hidden="true">↗</span></a></div></header><div class="design-notice"><div><span class="design-dot" aria-hidden="true"></span><strong>设计预览</strong><span>独立参考样例 · 真实页面已采用新版阅读布局</span></div><nav class="design-switch" aria-label="设计样例切换"><a href="/design-preview/"><span>01</span> 作品信息卡</a><a href="/design-preview/docs/" aria-current="page"><span>02</span> 文档阅读页</a></nav></div><main class="design-grid"><aside class="design-sidebar" aria-label="本文导航"><a class="design-back" href="/docs/zh/guides/ue-tools/simple-config-exclude-guide/"><span aria-hidden="true">←</span> 返回原文档</a><p class="design-subject">SimpleConfigExclude</p><details class="design-outline" open><summary>本文大纲 <span aria-hidden="true">⌄</span></summary><nav aria-label="本文大纲"><ol><li><a href="#%E5%8A%9F%E8%83%BD%E4%B8%8E%E5%8F%82%E6%95%B0" style="--depth:0">功能与参数</a></li><li><a href="#11-%E4%B8%89%E6%80%81%E9%85%8D%E7%BD%AE%E9%80%89%E6%8B%A9%E5%99%A8" style="--depth:1">1.1 三态配置选择器</a></li><li><a href="#12-%E8%87%AA%E5%8A%A8%E6%89%AB%E6%8F%8F%E4%B8%8E%E5%BA%94%E7%94%A8" style="--depth:1">1.2 自动扫描与应用</a></li><li><a href="#13-%E5%A4%8D%E5%88%B6%E6%8E%92%E9%99%A4%E6%96%87%E4%BB%B6" style="--depth:1">1.3 复制排除文件</a></li><li><a href="#14-%E5%AE%89%E5%85%A8%E8%AE%BE%E8%AE%A1" style="--depth:1">1.4 安全设计</a></li><li><a href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE" style="--depth:0">安装与配置</a></li><li><a href="#%E6%AD%A5%E9%AA%A41%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6" style="--depth:1">步骤1：安装插件</a></li><li><a href="#%E6%AD%A5%E9%AA%A42%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE%E9%9D%A2%E6%9D%BF" style="--depth:1">步骤2：打开设置面板</a></li><li><a href="#%E6%AD%A5%E9%AA%A43%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99" style="--depth:1">步骤3：配置规则</a></li><li><a href="#%E6%AD%A5%E9%AA%A44%E6%89%93%E5%8C%85%E9%AA%8C%E8%AF%81" style="--depth:1">步骤4：打包验证</a></li><li><a href="#%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B" style="--depth:0">配置示例</a></li><li><a href="#%E5%9C%BA%E6%99%AF1%E6%8E%92%E9%99%A4%E8%B0%83%E8%AF%95%E9%85%8D%E7%BD%AE" style="--depth:1">场景1：排除调试配置</a></li><li><a href="#%E5%9C%BA%E6%99%AF2%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2" style="--depth:1">场景2：多环境部署</a></li><li><a href="#%E5%9C%BA%E6%99%AF3%E4%BF%9D%E6%8A%A4%E6%95%8F%E6%84%9F%E9%85%8D%E7%BD%AE" style="--depth:1">场景3：保护敏感配置</a></li><li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" style="--depth:0">注意事项</a></li><li><a href="#%E6%9D%A5%E6%BA%90" style="--depth:0">来源</a></li></ol></nav></details><p class="design-sidebar-note">留出阅读空间<br>把操作放在顺手的位置</p></aside><article id="reading-content" class="design-article" tabindex="-1"><header class="design-doc-heading"><p class="design-kicker">文档 / UE工具 / 阅读排版样例</p><h1>SimpleConfigExclude 使用指南</h1><p>在项目设置中管理配置文件的默认、包含和排除状态，并复制排除文件。</p></header><aside class="design-callout" aria-label="操作提示"><span aria-hidden="true">ⓘ</span><div><strong>开始之前</strong><p>修改配置状态会写回 DefaultGame.ini。复制排除文件时，检查目标目录及是否启用了复制前清理。</p></div></aside><div class="design-prose design-doc-body"><p>在项目设置中选择配置文件的包含与排除状态，并按需复制排除文件。</p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex, nofollow"><meta name="theme-color" content="#07101d"><meta name="description" content="作品信息卡与文档阅读页的独立设计参考。真实页面已采用新版阅读布局。"><title>文档阅读页 · 设计预览 · 小毛</title><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/_astro/DesignPreview.Bb72QBDJ.css"></head><body class="design-preview"><a class="design-skip" href="#reading-content">跳到正文</a><header class="design-header"><div class="design-header-inner"><a class="design-brand" href="/" aria-label="小毛首页">MZSH<span>小毛</span></a><nav class="design-site-nav" aria-label="网站导航"><a href="/works/">作品</a><a href="/blog/">博客</a><a href="/docs/zh/">文档</a></nav><a class="design-exit" href="/docs/zh/guides/ue-tools/simple-config-exclude-guide/">查看原页面 <span aria-hidden="true">↗</span></a></div></header><div class="design-notice"><div><span class="design-dot" aria-hidden="true"></span><strong>设计预览</strong><span>独立参考样例 · 真实页面已采用新版阅读布局</span></div><nav class="design-switch" aria-label="设计样例切换"><a href="/design-preview/"><span>01</span> 作品信息卡</a><a href="/design-preview/docs/" aria-current="page"><span>02</span> 文档阅读页</a></nav></div><main class="design-grid"><aside class="design-sidebar" aria-label="本文导航"><a class="design-back" href="/docs/zh/guides/ue-tools/simple-config-exclude-guide/"><span aria-hidden="true">←</span> 返回原文档</a><p class="design-subject">SimpleConfigExclude</p><details class="design-outline" open><summary>本文大纲 <span aria-hidden="true">⌄</span></summary><nav aria-label="本文大纲"><ol><li><a href="#%E9%85%8D%E7%BD%AE" style="--depth:0">配置</a></li><li><a href="#%E8%AE%BE%E7%BD%AE" style="--depth:1">设置</a></li><li><a href="#hide-plugin-config" style="--depth:2">Hide Plugin Config</a></li><li><a href="#clean-config-before-copy" style="--depth:2">Clean Config Before Copy</a></li><li><a href="#%E5%A4%8D%E5%88%B6" style="--depth:1">复制</a></li><li><a href="#copy-target-directory" style="--depth:2">Copy Target Directory</a></li><li><a href="#%E9%85%8D%E7%BD%AE%E6%8E%92%E9%99%A4%E8%A7%84%E5%88%99" style="--depth:1">配置排除规则</a></li><li><a href="#refresh-config-list-%E6%8C%89%E9%92%AE" style="--depth:2">Refresh Config List 按钮</a></li><li><a href="#%E7%A4%BA%E4%BE%8B" style="--depth:0">示例</a></li><li><a href="#%E7%A4%BA%E4%BE%8B-1%E6%8E%92%E9%99%A4%E8%B0%83%E8%AF%95%E9%85%8D%E7%BD%AE" style="--depth:1">示例 1：排除调试配置</a></li><li><a href="#%E7%A4%BA%E4%BE%8B-2%E5%BC%BA%E5%88%B6%E5%8C%85%E5%90%AB%E8%87%AA%E5%AE%9A%E4%B9%89%E9%85%8D%E7%BD%AE" style="--depth:1">示例 2：强制包含自定义配置</a></li><li><a href="#%E7%A4%BA%E4%BE%8B-3%E5%B0%86%E6%8E%92%E9%99%A4%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%8D%E5%88%B6%E5%88%B0%E6%89%93%E5%8C%85%E4%BA%A7%E7%89%A9" style="--depth:1">示例 3：将排除的文件复制到打包产物</a></li><li><a href="#%E9%87%8D%E8%A6%81%E8%AF%B4%E6%98%8E" style="--depth:0">重要说明</a></li><li><a href="#%E9%BB%98%E8%AE%A4%E8%A1%8C%E4%B8%BA" style="--depth:1">默认行为</a></li><li><a href="#%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE%E4%BF%9D%E6%8A%A4" style="--depth:1">插件配置保护</a></li><li><a href="#%E8%AE%BE%E7%BD%AE%E6%8C%81%E4%B9%85%E5%8C%96" style="--depth:1">设置持久化</a></li><li><a href="#%E5%A4%8D%E5%88%B6%E5%89%8D%E6%B8%85%E7%90%86" style="--depth:1">复制前清理</a></li><li><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5" style="--depth:0">故障排查</a></li><li><a href="#%E6%96%87%E4%BB%B6%E6%9C%AA%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD%E6%98%BE%E7%A4%BA" style="--depth:1">文件未在列表中显示</a></li><li><a href="#%E6%89%93%E5%8C%85%E5%90%8E%E8%A7%84%E5%88%99%E6%9C%AA%E7%94%9F%E6%95%88" style="--depth:1">打包后规则未生效</a></li><li><a href="#%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE%E5%87%BA%E7%8E%B0%E5%9C%A8%E5%88%97%E8%A1%A8%E4%B8%AD" style="--depth:1">插件配置出现在列表中</a></li><li><a href="#%E5%A4%8D%E5%88%B6%E5%90%8E%E7%9B%AE%E6%A0%87%E7%9B%AE%E5%BD%95%E6%9C%89%E5%A4%9A%E4%BD%99%E6%96%87%E4%BB%B6" style="--depth:1">复制后目标目录有多余文件</a></li><li><a href="#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98" style="--depth:0">常见问题</a></li><li><a href="#%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2" style="--depth:0">版本历史</a></li><li><a href="#%E6%94%AF%E6%8C%81" style="--depth:0">支持</a></li><li><a href="#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E%E8%A1%A5%E5%85%85" style="--depth:0">使用说明补充</a></li><li><a href="#%E5%8A%9F%E8%83%BD%E4%B8%8E%E5%8F%82%E6%95%B0" style="--depth:0">功能与参数</a></li><li><a href="#11-%E4%B8%89%E6%80%81%E9%85%8D%E7%BD%AE%E9%80%89%E6%8B%A9%E5%99%A8" style="--depth:1">1.1 三态配置选择器</a></li><li><a href="#12-%E8%87%AA%E5%8A%A8%E6%89%AB%E6%8F%8F%E4%B8%8E%E5%BA%94%E7%94%A8" style="--depth:1">1.2 自动扫描与应用</a></li><li><a href="#13-%E5%A4%8D%E5%88%B6%E6%8E%92%E9%99%A4%E6%96%87%E4%BB%B6" style="--depth:1">1.3 复制排除文件</a></li><li><a href="#14-%E5%AE%89%E5%85%A8%E8%AE%BE%E8%AE%A1" style="--depth:1">1.4 安全设计</a></li><li><a href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E9%85%8D%E7%BD%AE" style="--depth:0">安装与配置</a></li><li><a href="#%E6%AD%A5%E9%AA%A41%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6" style="--depth:1">步骤1：安装插件</a></li><li><a href="#%E6%AD%A5%E9%AA%A42%E6%89%93%E5%BC%80%E8%AE%BE%E7%BD%AE%E9%9D%A2%E6%9D%BF" style="--depth:1">步骤2：打开设置面板</a></li><li><a href="#%E6%AD%A5%E9%AA%A43%E9%85%8D%E7%BD%AE%E8%A7%84%E5%88%99" style="--depth:1">步骤3：配置规则</a></li><li><a href="#%E6%AD%A5%E9%AA%A44%E6%89%93%E5%8C%85%E9%AA%8C%E8%AF%81" style="--depth:1">步骤4：打包验证</a></li><li><a href="#%E9%85%8D%E7%BD%AE%E7%A4%BA%E4%BE%8B" style="--depth:0">配置示例</a></li><li><a href="#%E5%9C%BA%E6%99%AF1%E6%8E%92%E9%99%A4%E8%B0%83%E8%AF%95%E9%85%8D%E7%BD%AE" style="--depth:1">场景1：排除调试配置</a></li><li><a href="#%E5%9C%BA%E6%99%AF2%E5%A4%9A%E7%8E%AF%E5%A2%83%E9%83%A8%E7%BD%B2" style="--depth:1">场景2：多环境部署</a></li><li><a href="#%E5%9C%BA%E6%99%AF3%E4%BF%9D%E6%8A%A4%E6%95%8F%E6%84%9F%E9%85%8D%E7%BD%AE" style="--depth:1">场景3：保护敏感配置</a></li><li><a href="#%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" style="--depth:0">注意事项</a></li></ol></nav></details><p class="design-sidebar-note">留出阅读空间<br>把操作放在顺手的位置</p></aside><article id="reading-content" class="design-article" tabindex="-1"><header class="design-doc-heading"><p class="design-kicker">文档 /  / 阅读排版样例</p><h1>SimpleConfigExclude 使用文档</h1><p>SimpleConfigExclude 的完整中文产品使用文档</p></header><aside class="design-callout" aria-label="操作提示"><span aria-hidden="true">ⓘ</span><div><strong>开始之前</strong><p>修改配置状态会写回 DefaultGame.ini。复制排除文件时，检查目标目录及是否启用了复制前清理。</p></div></aside><div class="design-prose design-doc-body"><p><strong>支持的虚幻引擎版本</strong>：5.2–5.8</p>
+<p>可视化管理 Unreal Engine 项目打包时哪些配置文件（.ini）被包含或排除。</p>
+<hr>
+<h2 id="配置">配置</h2>
+<p><strong>位置</strong>：编辑器 > 项目设置 > Plugins > Simple Config Exclude</p>
+<h3 id="设置">设置</h3>
+<h4 id="hide-plugin-config">Hide Plugin Config</h4>
+<ul>
+<li><strong>默认</strong>：启用</li>
+<li><strong>功能</strong>：在配置列表中隐藏 DefaultSimpleConfigExclude.ini</li>
+<li><strong>目的</strong>：防止意外排除插件自身的设置</li>
+</ul>
+<h4 id="clean-config-before-copy">Clean Config Before Copy</h4>
+<ul>
+<li><strong>默认</strong>：启用</li>
+<li><strong>功能</strong>：复制排除文件前删除目标 Config 文件夹</li>
+<li><strong>目的</strong>：确保目标目录仅包含最新排除的文件</li>
+</ul>
+<h3 id="复制">复制</h3>
+<h4 id="copy-target-directory">Copy Target Directory</h4>
+<ul>
+<li><strong>默认</strong>：/Windows</li>
+<li><strong>功能</strong>：复制排除配置文件的目标目录</li>
+<li><strong>路径格式</strong>：相对于项目目录（如 <code>/Windows</code>、<code>/Build/Output</code>）</li>
+<li><strong>跨平台</strong>：支持 Windows、Mac、Linux</li>
+<li><strong>目录结构</strong>：保留原始结构（<code>TargetDir/ProjectName/Config/xxx.ini</code>）</li>
+<li><strong>复制按钮</strong>：将所有 Disallowed 配置文件复制到目标目录</li>
+</ul>
+<h3 id="配置排除规则">配置排除规则</h3>
+<p>所有 Config 文件夹中 .ini 文件的三态选择器：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>策略</th><th>说明</th></tr></thead><tbody><tr><td><strong>Default</strong></td><td>使用 UE 默认行为（通常基于文件类型）</td></tr><tr><td><strong>Allowed</strong></td><td>强制包含在打包中（即使 UE 会排除）</td></tr><tr><td><strong>Disallowed</strong></td><td>强制排除出打包</td></tr></tbody></table>
+<h4 id="refresh-config-list-按钮">Refresh Config List 按钮</h4>
+<p>点击重新扫描 Config 文件夹。适用于：</p>
+<ul>
+<li>新增配置文件</li>
+<li>删除配置文件</li>
+<li>列表与实际文件不同步</li>
+</ul>
+<hr>
+<h2 id="示例">示例</h2>
+<h3 id="示例-1排除调试配置">示例 1：排除调试配置</h3>
+<p>如果有 <code>DefaultDebugSettings.ini</code> 包含不应出现在发行版中的调试热键：</p>
+<ol>
+<li>打开 项目设置 > Plugins > Simple Config Exclude</li>
+<li>在列表中找到 <code>Config/DefaultDebugSettings.ini</code></li>
+<li>选择 “Disallowed”</li>
+<li>打包项目——文件将被排除</li>
+</ol>
+<h3 id="示例-2强制包含自定义配置">示例 2：强制包含自定义配置</h3>
+<p>如果有 <code>DefaultCustomSettings.ini</code> 必须被打包：</p>
+<ol>
+<li>打开插件设置</li>
+<li>找到 <code>Config/DefaultCustomSettings.ini</code></li>
+<li>选择 “Allowed”</li>
+<li>打包项目——文件将被强制包含</li>
+</ol>
+<h3 id="示例-3将排除的文件复制到打包产物">示例 3：将排除的文件复制到打包产物</h3>
+<p>打包后，你可能想手动添加排除的配置：</p>
+<ol>
+<li>将 “Copy Target Directory” 设为打包输出路径（如 <code>/Windows</code>）</li>
+<li>将要排除的配置设为 “Disallowed”</li>
+<li>打包项目</li>
+<li>点击 “Copy” 按钮</li>
+<li>文件复制到 <code>Windows/YourProject/Config/xxx.ini</code></li>
+</ol>
+<hr>
+<h2 id="重要说明">重要说明</h2>
+<h3 id="默认行为">默认行为</h3>
+<p>所有配置文件默认为 “Default” 状态，使用 UE 的默认打包行为。UE 根据文件类型自动决定（engine.ini、game.ini、input.ini 会被打包）。</p>
+<h3 id="插件配置保护">插件配置保护</h3>
+<p>插件默认隐藏 <code>DefaultSimpleConfigExclude.ini</code> 因为：</p>
+<ul>
+<li>它包含插件自身的设置</li>
+<li>排除它可能导致插件功能异常</li>
+<li>取消勾选 “Hide Plugin Config” 可以显示它</li>
+</ul>
+<h3 id="设置持久化">设置持久化</h3>
+<ul>
+<li>插件设置保存在 <code>DefaultSimpleConfigExclude.ini</code></li>
+<li>排除规则保存在 <code>DefaultGame.ini</code> 的 <code>[Staging]</code> 段</li>
+<li>两个文件都应提交到版本控制</li>
+</ul>
+<h3 id="复制前清理">复制前清理</h3>
+<p>启用 “Clean Config Before Copy” 时：</p>
+<ul>
+<li>复制前删除 <code>TargetDir/ProjectName/Config/</code> 文件夹</li>
+<li>仅复制当前 Disallowed 的文件</li>
+<li>确保目标目录反映当前状态</li>
+</ul>
+<hr>
+<h2 id="故障排查">故障排查</h2>
+<h3 id="文件未在列表中显示">文件未在列表中显示</h3>
+<ol>
+<li>点击 “Refresh Config List” 按钮</li>
+<li>确保文件在 <code>Config</code> 文件夹或子文件夹中</li>
+<li>确保文件扩展名为 <code>.ini</code></li>
+</ol>
+<h3 id="打包后规则未生效">打包后规则未生效</h3>
+<ol>
+<li>检查 <code>DefaultGame.ini</code> 是否包含 <code>[Staging]</code> 段</li>
+<li>尝试点击 “Refresh Config List”</li>
+<li>重启编辑器并重新打包</li>
+</ol>
+<h3 id="插件配置出现在列表中">插件配置出现在列表中</h3>
+<p>检查 “Hide Plugin Config” 设置，启用它以隐藏 DefaultSimpleConfigExclude.ini</p>
+<h3 id="复制后目标目录有多余文件">复制后目标目录有多余文件</h3>
+<p>启用 “Clean Config Before Copy” 选项，在复制前清理目标 Config 文件夹</p>
+<hr>
+<h2 id="常见问题">常见问题</h2>
+<p><strong>Q：这会影响游戏运行时吗？</strong>
+A：不会，这是仅编辑器插件，只影响打包过程。</p>
+<p><strong>Q：支持子文件夹吗？</strong>
+A：是的，插件递归扫描 Config 文件夹及所有子文件夹，复制时保留目录结构。</p>
+<p><strong>Q：复制的排除配置能用吗？</strong>
+A：取决于配置类型。运行时配置（如 Input）可用，编译时烘焙的配置（如渲染设置）不行。</p>
+<hr>
+<h2 id="版本历史">版本历史</h2>
+<p>参见 CHANGELOG.md（公开仓库暂无此文件）。</p>
+<p>打开 <strong>编辑 → 项目设置</strong>，进入 SimpleConfigExclude 设置页，将 <strong>Language</strong> 设置为 <strong>English</strong> 或 <strong>中文</strong>。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。</p>
+<h2 id="支持">支持</h2>
+<p>如有问题、反馈或希望加入 UE 技术交流群，请访问以下统一联系方式页面。</p>
+<ul>
+<li><strong>联系入口：</strong> <a href="/contact/">邮箱、微信群和 X</a></li>
+</ul>
+<hr>
+<h2 id="使用说明补充">使用说明补充</h2>
+<h1 id="simpleconfigexclude-使用指南">SimpleConfigExclude 使用指南</h1>
+<p>在项目设置中选择配置文件的包含与排除状态，并按需复制排除文件。</p>
 <h2 id="功能与参数">功能与参数</h2>
 <h3 id="11-三态配置选择器">1.1 三态配置选择器</h3>
 <p>插件为每个配置文件提供三种状态：</p>
@@ -90,5 +238,6 @@
 <h2 id="注意事项">注意事项</h2>
 <p>修改配置状态会写回 DefaultGame.ini。复制排除文件时，检查目标目录及是否启用了复制前清理。</p>
 <hr>
-<h2 id="来源">来源</h2>
-<p><a href="/works/simple-config-exclude/">查看对应作品</a></p></div><div class="design-source"><span>样例内容：已导入的真实使用指南</span><a href="/design-preview/">← 返回作品卡设计样例</a></div></article></main><footer class="design-footer"><span>MZSH · 阅读体验设计样例</span><a href="/">返回网站首页 <span aria-hidden="true">↗</span></a></footer><div class="design-sr-only" role="status" aria-live="polite" id="design-copy-status"></div><script type="module">var e=document.querySelector(`.design-outline`),t=window.matchMedia(`(max-width: 800px)`),n=()=>{e&&(e.open=!t.matches)};n(),t.addEventListener(`change`,n);var r=Array.from(document.querySelectorAll(`.design-outline a`)),i=r.map(e=>document.getElementById(decodeURIComponent(e.hash.slice(1)))),a=!1,o=()=>{a=!1;let e=0;i.forEach((t,n)=>{t&&t.getBoundingClientRect().top<=150&&(e=n)}),r.forEach((t,n)=>n===e?t.setAttribute(`aria-current`,`location`):t.removeAttribute(`aria-current`))};document.addEventListener(`scroll`,()=>{a||(a=!0,requestAnimationFrame(o))},{passive:!0}),o(),r.forEach(n=>n.addEventListener(`click`,()=>{t.matches&&e&&(e.open=!1)})),document.querySelectorAll(`.design-prose pre`).forEach((e,t)=>{let n=e.querySelector(`code`);if(!n)return;let r=document.createElement(`div`);r.className=`design-code-frame`;let i=document.createElement(`div`);i.className=`design-code-bar`;let a=document.createElement(`span`);a.textContent=`配置示例`;let o=document.createElement(`button`);o.type=`button`,o.textContent=`复制代码`,o.setAttribute(`aria-label`,`复制第 ${t+1} 段代码`),o.addEventListener(`click`,async()=>{let e=document.getElementById(`design-copy-status`);try{await navigator.clipboard.writeText(n.textContent||``),o.textContent=`已复制`,e&&(e.textContent=`第 ${t+1} 段代码已复制`)}catch{let t=document.createRange();t.selectNodeContents(n);let r=window.getSelection();r?.removeAllRanges(),r?.addRange(t),o.textContent=`请手动复制`,e&&(e.textContent=`浏览器未允许剪贴板访问，已选中代码，请手动复制`)}window.setTimeout(()=>{o.textContent=`复制代码`},2200)}),i.append(a,o),e.before(r),r.append(i,e),e.tabIndex=0,e.setAttribute(`aria-label`,`代码示例 ${t+1}，可横向滚动`)}),document.querySelectorAll(`.design-prose table`).forEach(e=>{let t=document.createElement(`div`);t.className=`design-table-scroll`,t.tabIndex=0,t.setAttribute(`role`,`region`),t.setAttribute(`aria-label`,`配置状态对照表，可横向滚动`),e.before(t),t.append(e)});</script></body></html>
+<hr>
+<p>文档来源：<a href="https://github.com/MZSH-UEPlugins/UEPluginDocs">MZSH-UEPlugins/UEPluginDocs</a> · 来源版本 <code>6a335dff6639</code></p>
+<p><a href="/works/simple-config-exclude/">返回作品</a></p></div><div class="design-source"><span>样例内容：已导入的真实使用指南</span><a href="/design-preview/">← 返回作品卡设计样例</a></div></article></main><footer class="design-footer"><span>MZSH · 阅读体验设计样例</span><a href="/">返回网站首页 <span aria-hidden="true">↗</span></a></footer><div class="design-sr-only" role="status" aria-live="polite" id="design-copy-status"></div><script type="module">var e=document.querySelector(`.design-outline`),t=window.matchMedia(`(max-width: 800px)`),n=()=>{e&&(e.open=!t.matches)};n(),t.addEventListener(`change`,n);var r=Array.from(document.querySelectorAll(`.design-outline a`)),i=r.map(e=>document.getElementById(decodeURIComponent(e.hash.slice(1)))),a=!1,o=()=>{a=!1;let e=0;i.forEach((t,n)=>{t&&t.getBoundingClientRect().top<=150&&(e=n)}),r.forEach((t,n)=>n===e?t.setAttribute(`aria-current`,`location`):t.removeAttribute(`aria-current`))};document.addEventListener(`scroll`,()=>{a||(a=!0,requestAnimationFrame(o))},{passive:!0}),o(),r.forEach(n=>n.addEventListener(`click`,()=>{t.matches&&e&&(e.open=!1)})),document.querySelectorAll(`.design-prose pre`).forEach((e,t)=>{let n=e.querySelector(`code`);if(!n)return;let r=document.createElement(`div`);r.className=`design-code-frame`;let i=document.createElement(`div`);i.className=`design-code-bar`;let a=document.createElement(`span`);a.textContent=`配置示例`;let o=document.createElement(`button`);o.type=`button`,o.textContent=`复制代码`,o.setAttribute(`aria-label`,`复制第 ${t+1} 段代码`),o.addEventListener(`click`,async()=>{let e=document.getElementById(`design-copy-status`);try{await navigator.clipboard.writeText(n.textContent||``),o.textContent=`已复制`,e&&(e.textContent=`第 ${t+1} 段代码已复制`)}catch{let t=document.createRange();t.selectNodeContents(n);let r=window.getSelection();r?.removeAllRanges(),r?.addRange(t),o.textContent=`请手动复制`,e&&(e.textContent=`浏览器未允许剪贴板访问，已选中代码，请手动复制`)}window.setTimeout(()=>{o.textContent=`复制代码`},2200)}),i.append(a,o),e.before(r),r.append(i,e),e.tabIndex=0,e.setAttribute(`aria-label`,`代码示例 ${t+1}，可横向滚动`)}),document.querySelectorAll(`.design-prose table`).forEach(e=>{let t=document.createElement(`div`);t.className=`design-table-scroll`,t.tabIndex=0,t.setAttribute(`role`,`region`),t.setAttribute(`aria-label`,`配置状态对照表，可横向滚动`),e.before(t),t.append(e)});</script></body></html>

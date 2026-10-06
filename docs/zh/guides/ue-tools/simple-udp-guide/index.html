@@ -1,0 +1,377 @@
+<!DOCTYPE html><html lang="zh-CN" dir="ltr" data-theme="dark" data-has-toc data-has-sidebar class="astro-i6hikcw2"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>SimpleUDP 使用文档 | MZSH Docs</title><link rel="canonical" href="https://mzsh.me/docs/zh/guides/ue-tools/simple-udp-guide/"/><link rel="sitemap" href="/docs/sitemap-index.xml"/><link rel="shortcut icon" href="/docs/favicon.svg" type="image/svg+xml"/><meta name="generator" content="Astro v7.3.2"/><meta name="generator" content="Starlight v0.42.0"/><meta property="og:title" content="SimpleUDP 使用文档"/><meta property="og:type" content="article"/><meta property="og:url" content="https://mzsh.me/docs/zh/guides/ue-tools/simple-udp-guide/"/><meta property="og:locale" content="zh-CN"/><meta property="og:description" content="SimpleUDP 的完整中文产品使用文档"/><meta property="og:site_name" content="MZSH Docs"/><meta name="twitter:card" content="summary_large_image"/><meta name="description" content="SimpleUDP 的完整中文产品使用文档"/><script>
+	window.StarlightThemeProvider = (() => {
+		const storedTheme =
+			typeof localStorage !== 'undefined' && localStorage.getItem('starlight-theme');
+		const theme =
+			storedTheme ||
+			(window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+		document.documentElement.dataset.theme = theme === 'light' ? 'light' : 'dark';
+		return {
+			updatePickers(theme = storedTheme || 'auto') {
+				document.querySelectorAll('starlight-theme-select').forEach((picker) => {
+					const select = picker.querySelector('select');
+					if (select) select.value = theme;
+					/** @type {HTMLTemplateElement | null} */
+					const tmpl = document.querySelector(`#theme-icons`);
+					const newIcon = tmpl && tmpl.content.querySelector('.' + theme);
+					if (newIcon) {
+						const oldIcon = picker.querySelector('svg.label-icon');
+						if (oldIcon) {
+							oldIcon.replaceChildren(...newIcon.cloneNode(true).childNodes);
+						}
+					}
+				});
+			},
+		};
+	})();
+</script><template id="theme-icons"><svg aria-hidden="true" class="light astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M5 12a1 1 0 0 0-1-1H3a1 1 0 0 0 0 2h1a1 1 0 0 0 1-1Zm.64 5-.71.71a1 1 0 0 0 0 1.41 1 1 0 0 0 1.41 0l.71-.71A1 1 0 0 0 5.64 17ZM12 5a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v1a1 1 0 0 0 1 1Zm5.66 2.34a1 1 0 0 0 .7-.29l.71-.71a1 1 0 1 0-1.41-1.41l-.66.71a1 1 0 0 0 0 1.41 1 1 0 0 0 .66.29Zm-12-.29a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.71-.71a1.004 1.004 0 1 0-1.43 1.41l.73.71ZM21 11h-1a1 1 0 0 0 0 2h1a1 1 0 0 0 0-2Zm-2.64 6A1 1 0 0 0 17 18.36l.71.71a1 1 0 0 0 1.41 0 1 1 0 0 0 0-1.41l-.76-.66ZM12 6.5a5.5 5.5 0 1 0 5.5 5.5A5.51 5.51 0 0 0 12 6.5Zm0 9a3.5 3.5 0 1 1 0-7 3.5 3.5 0 0 1 0 7Zm0 3.5a1 1 0 0 0-1 1v1a1 1 0 0 0 2 0v-1a1 1 0 0 0-1-1Z"/></svg><svg aria-hidden="true" class="dark astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.64 13a1 1 0 0 0-1.05-.14 8.049 8.049 0 0 1-3.37.73 8.15 8.15 0 0 1-8.14-8.1 8.59 8.59 0 0 1 .25-2A1 1 0 0 0 8 2.36a10.14 10.14 0 1 0 14 11.69 1 1 0 0 0-.36-1.05Zm-9.5 6.69A8.14 8.14 0 0 1 7.08 5.22v.27a10.15 10.15 0 0 0 10.14 10.14 9.784 9.784 0 0 0 2.1-.22 8.11 8.11 0 0 1-7.18 4.32v-.04Z"/></svg><svg aria-hidden="true" class="auto astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg></template><link rel="stylesheet" href="/docs/_astro/print.ehPL0gv-.css" media="print"><link rel="stylesheet" href="/docs/_astro/common.Bms1lJ6p.css"><script type="module" src="/docs/_astro/page.Dwipeu-R.js"></script></head><body class="astro-i6hikcw2"><a class="sl-skip-link astro-fefiebkd" href="#_top">跳转到内容</a><div class="site-chrome site-chrome-docs"><a class="skip-link" href="#main">跳到主要内容</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/" aria-label="MZSH 首页">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">菜单</button><nav id="main-navigation" class="main-nav" aria-label="主导航"><a href="/">首页</a><a href="/works/">作品</a><a href="/cases/">案例</a><a href="/blog/">博客</a></nav><div class="header-actions"><a href="/contact/">联系</a><a href="/support/">支持</a></div></div></header><script type="module" src="/docs/_astro/Search.astro_astro_type_script_index_0_lang.DiutEpJC.js"></script><script type="module">if(!customElements.get(`starlight-theme-select`)){let e=`starlight-theme`,t=e=>e===`auto`||e===`dark`||e===`light`?e:`auto`,n=()=>t(typeof localStorage<`u`&&localStorage.getItem(e)),r=t=>{typeof localStorage<`u`&&localStorage.setItem(e,t===`light`||t===`dark`?t:``)},i=()=>matchMedia(`(prefers-color-scheme: light)`).matches?`light`:`dark`,a=e=>{StarlightThemeProvider.updatePickers(e),document.documentElement.dataset.theme=e===`auto`?i():e,r(e)};matchMedia(`(prefers-color-scheme: light)`).addEventListener(`change`,()=>{n()===`auto`&&a(`auto`)});class o extends HTMLElement{constructor(){super(),a(n()),this.querySelector(`select`)?.addEventListener(`change`,e=>{e.currentTarget instanceof HTMLSelectElement&&a(t(e.currentTarget.value))})}}customElements.define(`starlight-theme-select`,o)}</script><script type="module">var e=document.getElementById(`starlight__sidebar`),t=e?.querySelector(`sl-sidebar-state-persist`),n=`sl-sidebar-state`,r=()=>{let r=[],i=t?.dataset.hash||``;try{let e=sessionStorage.getItem(n),t=JSON.parse(e||`{}`);Array.isArray(t.open)&&t.hash===i&&(r=t.open)}catch{}return{hash:i,open:r,scroll:e?.scrollTop||0}},i=e=>{try{sessionStorage.setItem(n,JSON.stringify(e))}catch{}},a=()=>i(r()),o=(e,t)=>{let n=r();n.open[t]=e,i(n)};t?.addEventListener(`click`,e=>{if(!(e.target instanceof Element))return;let t=e.target.closest(`summary`)?.closest(`details`);if(!t)return;let n=t.querySelector(`sl-sidebar-restore`),r=parseInt(n?.dataset.index||``);isNaN(r)||o(!t.open,r)}),addEventListener(`visibilitychange`,()=>{document.visibilityState===`hidden`&&a()});</script><script type="module">var e=class extends HTMLElement{controller;frame=0;timers=[];connectedCallback(){this.frame=requestAnimationFrame(()=>this.initialize())}disconnectedCallback(){this.controller?.abort(),cancelAnimationFrame(this.frame),this.timers.forEach(window.clearTimeout),this.timers=[]}initialize(){this.controller?.abort();let{signal:e}=this.controller=new AbortController,t=Array.from(this.querySelectorAll(`.article-outline a`)),n=t.map(e=>document.getElementById(decodeURIComponent(e.hash.slice(1)))),r=this.closest(`.main-frame, .site-chrome-main`),i=this.querySelector(`.article-sidebar`),a=()=>{if(!i||!r)return;let e=r.clientHeight;e&&(i.style.setProperty(`--outline-max-height`,`${Math.max(120,e-32)}px`),i.style.setProperty(`--outline-sticky-top`,`${Math.max(16,(e-i.getBoundingClientRect().height)/2)}px`))};if(a(),window.addEventListener(`resize`,a,{signal:e}),typeof ResizeObserver==`function`&&i&&r){let t=new ResizeObserver(a);t.observe(i),t.observe(r),e.addEventListener(`abort`,()=>t.disconnect(),{once:!0})}let o=()=>{let e=(r?.getBoundingClientRect().top??0)+70,i=0;n.forEach((t,n)=>{t&&t.getBoundingClientRect().top<=e&&(i=n)}),t.forEach((e,t)=>t===i?e.setAttribute(`aria-current`,`location`):e.removeAttribute(`aria-current`))},s=()=>{cancelAnimationFrame(this.frame),this.frame=requestAnimationFrame(o)};(r??window).addEventListener(`scroll`,s,{passive:!0,signal:e}),window.addEventListener(`resize`,s,{signal:e}),window.addEventListener(`hashchange`,s,{signal:e});let c=e=>{let t;try{t=decodeURIComponent(e.slice(1))}catch{return}let n=document.getElementById(t);n&&this.contains(n)&&r&&(cancelAnimationFrame(this.frame),this.frame=requestAnimationFrame(()=>{r.scrollTo({top:Math.max(0,r.scrollTop+n.getBoundingClientRect().top-r.getBoundingClientRect().top-24),behavior:`instant`}),n.setAttribute(`tabindex`,`-1`),n.focus({preventScroll:!0}),o()}))};t.forEach(t=>t.addEventListener(`click`,e=>{e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||!r||(e.preventDefault(),e.stopPropagation(),history.replaceState(history.state,``,t.hash),c(t.hash))},{signal:e})),window.addEventListener(`hashchange`,()=>c(location.hash),{signal:e});let l=history.state?.mzshViewport,u=l?.key===location.pathname+location.search+location.hash&&Number.isFinite(l.top);location.hash&&!u&&c(location.hash),this.querySelectorAll(`.prose table, .sl-markdown-content table`).forEach(e=>{if(e.parentElement?.classList.contains(`reading-table-scroll`))return;let t=document.createElement(`div`);t.className=`reading-table-scroll`,t.tabIndex=0,t.setAttribute(`role`,`region`),t.setAttribute(`aria-label`,`数据表格，可横向滚动`),e.before(t),t.append(e)});let d=this.querySelector(`[data-copy-status]`);d||(d=document.createElement(`span`),d.className=`reading-sr-only`,d.dataset.copyStatus=``,d.setAttribute(`role`,`status`),d.setAttribute(`aria-live`,`polite`),this.append(d)),this.querySelectorAll(`.prose pre, .sl-markdown-content pre`).forEach((t,n)=>{if(t.closest(`.expressive-code, .reading-code-frame`))return;let r=t.querySelector(`code`);if(!r)return;let i=document.createElement(`div`);i.className=`reading-code-frame`;let a=document.createElement(`div`);a.className=`reading-code-bar`;let o=document.createElement(`span`);o.textContent=`代码`;let s=document.createElement(`button`);s.type=`button`,s.textContent=`复制代码`,s.setAttribute(`aria-label`,`复制第 ${n+1} 段代码`),s.addEventListener(`click`,async()=>{try{if(await navigator.clipboard.writeText(r.textContent??``),!this.isConnected)return;s.textContent=`已复制`,d&&(d.textContent=`代码已复制`)}catch{let e=document.createRange();e.selectNodeContents(r);let t=getSelection();t?.removeAllRanges(),t?.addRange(e),s.textContent=`请手动复制`,d&&(d.textContent=`代码已选中，请手动复制`)}this.timers.push(window.setTimeout(()=>{s.textContent=`复制代码`},2200))},{signal:e}),a.append(o,s),t.before(i),i.append(a,t),t.tabIndex=0,t.setAttribute(`aria-label`,`代码示例，可横向滚动`)}),o()}};customElements.get(`mzsh-reading`)||customElements.define(`mzsh-reading`,e);</script><div class="site-chrome-main"><div class="docs-frame"><div class="docs-tools"><div class="docs-native-header"><div class="header astro-bwqt2ur3"><div class="title-wrapper sl-flex astro-bwqt2ur3"><a href="/docs/zh/" class="site-title sl-flex astro-nvzynx6e"><span class="astro-nvzynx6e" translate="no">MZSH Docs</span></a></div><div class="sl-flex print:hidden astro-bwqt2ur3"><site-search class="astro-bwqt2ur3 astro-sck2ntvc" data-translations="{&quot;placeholder&quot;:&quot;搜索&quot;}"><button data-open-modal disabled aria-label="搜索" aria-keyshortcuts="Control+K" class="astro-sck2ntvc"><svg aria-hidden="true" class="astro-sck2ntvc astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21.71 20.29 18 16.61A9 9 0 1 0 16.61 18l3.68 3.68a.999.999 0 0 0 1.42 0 1 1 0 0 0 0-1.39ZM11 18a7 7 0 1 1 0-14 7 7 0 0 1 0 14Z"/></svg><span class="sl-hidden md:sl-block astro-sck2ntvc" aria-hidden="true">搜索</span><kbd class="sl-hidden md:sl-flex astro-sck2ntvc" style="display: none;"><kbd class="astro-sck2ntvc">Ctrl</kbd><kbd class="astro-sck2ntvc">K</kbd></kbd></button><dialog style="padding:0" aria-label="搜索" class="astro-sck2ntvc"><div class="dialog-frame sl-flex astro-sck2ntvc"><button data-close-modal class="sl-flex md:sl-hidden astro-sck2ntvc">取消</button><div class="search-container astro-sck2ntvc"><div id="starlight__search" class="astro-sck2ntvc"></div></div></div></dialog></site-search><script>
+	(() => {
+		const openBtn = document.querySelector('button[data-open-modal]');
+		const shortcut = openBtn?.querySelector('kbd');
+		if (!openBtn || !(shortcut instanceof HTMLElement)) return;
+		const platformKey = shortcut.querySelector('kbd');
+		if (platformKey && /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)) {
+			platformKey.textContent = '⌘';
+			openBtn.setAttribute('aria-keyshortcuts', 'Meta+K');
+		}
+		shortcut.style.display = '';
+	})();
+</script></div><div class="sl-hidden md:sl-flex print:hidden right-group astro-bwqt2ur3"><div class="sl-flex social-icons astro-bwqt2ur3"><a href="https://github.com/mengzhishanghun" rel="me" class="sl-flex astro-74ylh45q"><span class="sr-only astro-74ylh45q">GitHub</span><svg aria-hidden="true" class="astro-74ylh45q astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-uyzwlu5r"><span class="sr-only astro-uyzwlu5r">选择主题</span><svg aria-hidden="true" class="icon label-icon astro-uyzwlu5r astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-uyzwlu5r"><option value="dark" class="astro-uyzwlu5r">深色</option><option value="light" class="astro-uyzwlu5r">浅色</option><option value="auto" selected class="astro-uyzwlu5r">自动</option></select><svg aria-hidden="true" class="icon caret astro-uyzwlu5r astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>StarlightThemeProvider.updatePickers();</script></div></div></div><mzsh-doc-menu><details class="docs-library"><summary>切换文档</summary><nav id="starlight__sidebar" class="docs-library-panel sidebar-pane" aria-label="文档目录"><sl-sidebar-state-persist data-hash="1rru0gf" class="astro-52ppamtu"><script aria-hidden="true">
+		(() => {
+			try {
+				if (!matchMedia('(min-width: 50em)').matches) return;
+				/** @type {HTMLElement | null} */
+				const target = document.querySelector('sl-sidebar-state-persist');
+				const state = JSON.parse(sessionStorage.getItem('sl-sidebar-state') || '0');
+				if (!target || !state || target.dataset.hash !== state.hash) return;
+				window._starlightScrollRestore = state.scroll;
+				customElements.define(
+					'sl-sidebar-restore',
+					class SidebarRestore extends HTMLElement {
+						connectedCallback() {
+							try {
+								const idx = parseInt(this.dataset.index || '');
+								const details = this.closest('details');
+								if (details && typeof state.open[idx] === 'boolean') details.open = state.open[idx];
+							} catch {}
+						}
+					}
+				);
+			} catch {}
+		})();
+	</script><ul class="top-level astro-uq5g25cp"><li class="astro-uq5g25cp"><details open class="astro-uq5g25cp"><summary class="astro-uq5g25cp"><span class="group-label astro-uq5g25cp"><span class="large astro-uq5g25cp">工具文档</span></span><svg aria-hidden="true" class="caret astro-uq5g25cp astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="0"></sl-sidebar-restore><ul class="astro-uq5g25cp"><li class="astro-uq5g25cp"><a href="/docs/zh/tools/md-blog-packer/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">MDBlogPacker 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/tools/p4-case-sync/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">P4CaseSync 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/tools/plugin-auto-packer/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">UEPluginAutoPacker 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/tools/plugin-manager/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">UEPluginManager 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/tools/simple-file-updater/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleFileUpdater 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/tools/ue-package-manager/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">UEPackageManager 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/tools/ue-quick-start/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">UEQuickStart 使用文档</span></a></li></ul></details></li><li class="astro-uq5g25cp"><details open class="astro-uq5g25cp"><summary class="astro-uq5g25cp"><span class="group-label astro-uq5g25cp"><span class="large astro-uq5g25cp">使用指南</span></span><svg aria-hidden="true" class="caret astro-uq5g25cp astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="1"></sl-sidebar-restore><ul class="astro-uq5g25cp"><li class="astro-uq5g25cp"><details open class="astro-uq5g25cp"><summary class="astro-uq5g25cp"><span class="group-label astro-uq5g25cp"><span class="large astro-uq5g25cp">UE工具</span></span><svg aria-hidden="true" class="caret astro-uq5g25cp astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="2"></sl-sidebar-restore><ul class="astro-uq5g25cp"><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/ai-data-asset-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">AIDataAsset 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-asset-cleaner-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleAssetCleaner 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-asset-namer-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleAssetNamer 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-auto-enum-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleAutoEnum 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-bp-inherit-fix-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleBPInheritFix 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-byte-conversion-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleByteConversion 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-config-exclude-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleConfigExclude 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-input-simulator-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleInputSimulator 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-launcher-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleLauncher 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-level-seq-smooth-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleLevelSeqSmooth 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleSSHTunnel 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleStaticMeshMerger 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-tcp-client-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleTCPClient 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-tcp-server-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleTCPServer 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-udp-guide/" aria-current="page" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleUDP 使用文档</span></a></li><li class="astro-uq5g25cp"><a href="/docs/zh/guides/ue-tools/simple-websocket-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">SimpleWebSocket 使用文档</span></a></li></ul></details></li><li class="astro-uq5g25cp"><details open class="astro-uq5g25cp"><summary class="astro-uq5g25cp"><span class="group-label astro-uq5g25cp"><span class="large astro-uq5g25cp">写作工具</span></span><svg aria-hidden="true" class="caret astro-uq5g25cp astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.25rem;"><path d="m14.83 11.29-4.24-4.24a1 1 0 1 0-1.42 1.41L12.71 12l-3.54 3.54a1 1 0 0 0 0 1.41 1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.24-4.24a1.002 1.002 0 0 0 0-1.42Z"/></svg></summary><sl-sidebar-restore data-index="3"></sl-sidebar-restore><ul class="astro-uq5g25cp"><li class="astro-uq5g25cp"><a href="/docs/zh/guides/writing-tools/md-image-embed-guide/" class="astro-uq5g25cp"><span class="astro-uq5g25cp">MDImageEmbed 使用文档</span></a></li></ul></details></li></ul></details></li></ul><script aria-hidden="true">
+		(() => {
+			const scroller = document.getElementById('starlight__sidebar');
+			if (!window._starlightScrollRestore || !scroller) return;
+			scroller.scrollTop = window._starlightScrollRestore;
+			delete window._starlightScrollRestore;
+		})();
+	</script></sl-sidebar-state-persist><div class="md:sl-hidden"><div class="mobile-preferences sl-flex astro-itm67vuy"><div class="social-icons astro-itm67vuy"><a href="https://github.com/mengzhishanghun" rel="me" class="sl-flex astro-74ylh45q"><span class="sr-only astro-74ylh45q">GitHub</span><svg aria-hidden="true" class="astro-74ylh45q astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M12 .3a12 12 0 0 0-3.8 23.38c.6.12.83-.26.83-.57L9 21.07c-3.34.72-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.08-.74.09-.73.09-.73 1.2.09 1.83 1.24 1.83 1.24 1.08 1.83 2.81 1.3 3.5 1 .1-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.14-.3-.54-1.52.1-3.18 0 0 1-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.28-1.55 3.29-1.23 3.29-1.23.64 1.66.24 2.88.12 3.18a4.65 4.65 0 0 1 1.23 3.22c0 4.61-2.8 5.63-5.48 5.92.42.36.81 1.1.81 2.22l-.01 3.29c0 .31.2.69.82.57A12 12 0 0 0 12 .3Z"/></svg></a></div><starlight-theme-select><label style="--sl-select-width: 6.25em" class="astro-uyzwlu5r"><span class="sr-only astro-uyzwlu5r">选择主题</span><svg aria-hidden="true" class="icon label-icon astro-uyzwlu5r astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M21 14h-1V7a3 3 0 0 0-3-3H7a3 3 0 0 0-3 3v7H3a1 1 0 0 0-1 1v2a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3v-2a1 1 0 0 0-1-1ZM6 7a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v7H6V7Zm14 10a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-1h16v1Z"/></svg><select autocomplete="off" class="astro-uyzwlu5r"><option value="dark" class="astro-uyzwlu5r">深色</option><option value="light" class="astro-uyzwlu5r">浅色</option><option value="auto" selected class="astro-uyzwlu5r">自动</option></select><svg aria-hidden="true" class="icon caret astro-uyzwlu5r astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1em;"><path d="M17 9.17a1 1 0 0 0-1.41 0L12 12.71 8.46 9.17a1 1 0 1 0-1.41 1.42l4.24 4.24a1.002 1.002 0 0 0 1.42 0L17 10.59a1.002 1.002 0 0 0 0-1.42Z"/></svg></label></starlight-theme-select><script>StarlightThemeProvider.updatePickers();</script></div></div></nav></details></mzsh-doc-menu></div><div id="main" class="main-frame" tabindex="-1"><mzsh-reading class="reading-surface docs-reading-surface"><div class="docs-reading-layout"><aside class="article-sidebar" aria-label="文章导航"><a class="article-back" href="/works/simple-udp/" aria-label="返回对应作品">返回</a><section class="article-outline"><p class="article-outline-heading">文章大纲</p><nav aria-label="文章大纲"><ol><li><a href="#%E5%85%BC%E5%AE%B9%E6%80%A7" style="--outline-depth:0">兼容性</a></li><li><a href="#-%E6%8F%92%E4%BB%B6%E5%88%9D%E5%A7%8B%E5%8C%96" style="--outline-depth:0">🔧 插件初始化</a></li><li><a href="#%EF%B8%8F-%E9%9D%99%E6%80%81%E9%80%9A%E9%81%93%E9%85%8D%E7%BD%AE%E5%8F%AF%E9%80%89" style="--outline-depth:0">⚙️ 静态通道配置（可选）</a></li><li><a href="#-%E6%8E%A5%E6%94%B6%E9%80%9A%E9%81%93" style="--outline-depth:1">🔹 接收通道</a></li><li><a href="#-%E5%8F%91%E9%80%81%E9%80%9A%E9%81%93" style="--outline-depth:1">🔹 发送通道</a></li><li><a href="#-%E8%93%9D%E5%9B%BE%E8%8A%82%E7%82%B9%E6%8E%A5%E5%8F%A3" style="--outline-depth:0">🧠 蓝图节点接口</a></li><li><a href="#-%E6%8E%A5%E6%94%B6" style="--outline-depth:1">📥 接收</a></li><li><a href="#-%E5%8F%91%E9%80%81" style="--outline-depth:1">📤 发送</a></li><li><a href="#%EF%B8%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E9%85%8D%E7%BD%AE" style="--outline-depth:1">⚙️ 运行时配置</a></li><li><a href="#%EF%B8%8F-%E5%B7%A5%E5%85%B7%E8%8A%82%E7%82%B9" style="--outline-depth:1">🛠️ 工具节点</a></li><li><a href="#-socket-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" style="--outline-depth:0">🔁 Socket 生命周期</a></li><li><a href="#-%E8%93%9D%E5%9B%BE%E7%A4%BA%E4%BE%8B%E5%9B%BE%E7%89%87" style="--outline-depth:0">🧪 蓝图示例（图片）</a></li><li><a href="#%E6%89%80%E6%9C%89%E8%93%9D%E5%9B%BE%E5%87%BD%E6%95%B0" style="--outline-depth:1">所有蓝图函数</a></li><li><a href="#%E7%BB%91%E5%AE%9A%E5%92%8C%E8%A7%A3%E7%BB%91%E7%A4%BA%E4%BE%8B" style="--outline-depth:1">绑定和解绑示例</a></li><li><a href="#%E8%A7%A3%E7%BB%91%E5%85%A8%E9%83%A8%E5%BC%BA%E5%88%B6%E5%85%B3%E9%97%AD-socket" style="--outline-depth:1">解绑全部（强制关闭 Socket）</a></li><li><a href="#%E5%8A%A8%E6%80%81%E6%9B%B4%E6%96%B0%E6%8E%A5%E6%94%B6%E9%80%9A%E9%81%93" style="--outline-depth:1">动态更新接收通道</a></li><li><a href="#%E5%8A%A8%E6%80%81%E6%9B%B4%E6%96%B0%E5%8F%91%E9%80%81%E9%80%9A%E9%81%93" style="--outline-depth:1">动态更新发送通道</a></li><li><a href="#%E5%8F%91%E9%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B6%88%E6%81%AF" style="--outline-depth:1">发送字符串消息</a></li><li><a href="#-%E6%8F%90%E7%A4%BA%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" style="--outline-depth:0">✅ 提示与注意事项</a></li><li><a href="#-%E6%8E%A8%E8%8D%90%E9%85%8D%E5%A5%97" style="--outline-depth:0">🔧 推荐配套</a></li><li><a href="#%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2" style="--outline-depth:0">版本历史</a></li><li><a href="#%E6%94%AF%E6%8C%81" style="--outline-depth:0">支持</a></li></ol></nav></section></aside><div class="main-pane"><main data-pagefind-body class="astro-i6hikcw2" lang="zh-CN" dir="ltr"><div class="content-panel astro-o256cxtg"><div class="sl-container astro-o256cxtg"><header class="docs-page-heading"><p class="docs-breadcrumb">使用文档</p><h1 id="_top">SimpleUDP 使用文档</h1><p class="docs-page-description">SimpleUDP 的完整中文产品使用文档</p></header></div></div><div class="content-panel astro-o256cxtg"><div class="sl-container astro-o256cxtg"><div class="sl-markdown-content"><p id="-simpleudp-插件教程蓝图版" class="article-source-title">📘 SimpleUDP 插件教程（蓝图版）</p>
+<p><strong>SimpleUDP</strong> 是 Unreal Engine 的轻量级 UDP 通信插件。<br>
+支持<strong>运行时动态配置收发通道</strong>，所有功能均暴露给蓝图，方便集成。</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="兼容性">兼容性</h2><a class="sl-anchor-link" href="#兼容性"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “兼容性”</span></a></div>
+<ul>
+<li>Unreal Engine 5.2–5.8</li>
+<li>版本 1.1.0（Version 2）</li>
+<li>更新日志（公开仓库暂无此文件）</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="-插件初始化">🔧 插件初始化</h2><a class="sl-anchor-link" href="#-插件初始化"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “🔧 插件初始化”</span></a></div>
+<p>插件启用后立即生效。<br>
+内部注册为 <code dir="auto">GameInstanceSubsystem</code>——无需手动启动或关闭代码。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="️-静态通道配置可选">⚙️ 静态通道配置（可选）</h2><a class="sl-anchor-link" href="#️-静态通道配置可选"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “⚙️ 静态通道配置（可选）”</span></a></div>
+<p>可通过 <strong>项目设置 → SimpleUDP Settings</strong> 预配置通道。</p>
+<p>注意：虽然支持运行时修改通道，但建议尽可能在此处配置，便于管理。</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="-接收通道">🔹 接收通道</h3><a class="sl-anchor-link" href="#-接收通道"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “🔹 接收通道”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>字段</th><th>示例</th><th>说明</th></tr></thead><tbody><tr><td>Channel Name</td><td><code dir="auto">DefaultRecv</code></td><td>蓝图中使用的通道名称</td></tr><tr><td>Bind Address</td><td><code dir="auto">0.0.0.0:9000</code></td><td>要监听的本地 IP 和端口</td></tr><tr><td>Max Receive Bytes</td><td><code dir="auto">1024</code></td><td>每次接收的最大包大小</td></tr><tr><td>Filter Mode</td><td>None / Whitelist / Blacklist</td><td>IP 过滤模式</td></tr><tr><td>Whitelist / Blacklist</td><td><code dir="auto">["192.168.1.0/24"]</code></td><td>支持 CIDR 格式</td></tr></tbody></table>
+<blockquote>
+<p><strong>重要：</strong> <code dir="auto">Max Receive Bytes</code> 默认值为 <code dir="auto">1024</code> 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，请务必在接收前调大对应接收通道的该参数，否则数据包可能无法被完整接收。</p>
+</blockquote>
+<div class="sl-heading-wrapper level-h3"><h3 id="-发送通道">🔹 发送通道</h3><a class="sl-anchor-link" href="#-发送通道"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “🔹 发送通道”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>字段</th><th>示例</th><th>说明</th></tr></thead><tbody><tr><td>Channel Name</td><td><code dir="auto">DefaultSend</code></td><td>通道名称</td></tr><tr><td>Target Addresses</td><td><code dir="auto">["255.255.255.255:9000"]</code></td><td>目标 IP:Port 列表</td></tr><tr><td>Fixed Port 🔧</td><td><code dir="auto">0</code>（默认）</td><td>发送 Socket 的本地绑定端口（0 = 自动）</td></tr><tr><td>Max Send Bytes</td><td><code dir="auto">1024</code></td><td>每个包的最大大小</td></tr></tbody></table>
+<blockquote>
+<p><strong>重要：</strong> <code dir="auto">Max Send Bytes</code> 默认值为 <code dir="auto">1024</code> 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，请务必在发送前调大对应发送通道的该参数，否则只会发送配置上限以内的数据。</p>
+</blockquote>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="-蓝图节点接口">🧠 蓝图节点接口</h2><a class="sl-anchor-link" href="#-蓝图节点接口"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “🧠 蓝图节点接口”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="-接收">📥 接收</h3><a class="sl-anchor-link" href="#-接收"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “📥 接收”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>节点</th><th>说明</th></tr></thead><tbody><tr><td><code dir="auto">BindUDPMessageHandler</code></td><td>绑定消息接收回调</td></tr><tr><td><code dir="auto">UnBindUDPMessageHandler</code></td><td>解绑指定处理器</td></tr><tr><td><code dir="auto">UnBindAllUDPMessageHandler</code></td><td>解绑所有处理器并关闭 Socket</td></tr></tbody></table>
+<div class="sl-heading-wrapper level-h3"><h3 id="-发送">📤 发送</h3><a class="sl-anchor-link" href="#-发送"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “📤 发送”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>节点</th><th>说明</th></tr></thead><tbody><tr><td><code dir="auto">SendUDPMessage</code></td><td>通过通道发送字节数组（Socket 自动创建）</td></tr></tbody></table>
+<div class="sl-heading-wrapper level-h3"><h3 id="️-运行时配置">⚙️ 运行时配置</h3><a class="sl-anchor-link" href="#️-运行时配置"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “⚙️ 运行时配置”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>节点</th><th>说明</th></tr></thead><tbody><tr><td><code dir="auto">UpdateReceiveChannelConfig</code></td><td>创建/更新接收通道（如需要会重新绑定）</td></tr><tr><td><code dir="auto">UpdateSendChannelConfig</code></td><td>创建/更新发送通道，支持 <code dir="auto">FixedPort</code> ✅</td></tr><tr><td><code dir="auto">GetReceiveChannelConfig</code></td><td>获取单个接收通道配置</td></tr><tr><td><code dir="auto">GetSendChannelConfig</code></td><td>获取单个发送通道配置</td></tr><tr><td><code dir="auto">GetAllReceiveChannelConfig</code></td><td>获取所有接收通道配置</td></tr><tr><td><code dir="auto">GetAllSendChannelConfig</code></td><td>获取所有发送通道配置</td></tr></tbody></table>
+<div class="sl-heading-wrapper level-h3"><h3 id="️-工具节点">🛠️ 工具节点</h3><a class="sl-anchor-link" href="#️-工具节点"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “🛠️ 工具节点”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>节点</th><th>说明</th></tr></thead><tbody><tr><td><code dir="auto">ParseEndpoint</code></td><td>解析 <code dir="auto">"127.0.0.1:9000"</code> 为 IP 和端口</td></tr><tr><td><code dir="auto">IsIPInCIDR</code></td><td>检查 IP 是否在 CIDR 块内</td></tr></tbody></table>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="-socket-生命周期">🔁 Socket 生命周期</h2><a class="sl-anchor-link" href="#-socket-生命周期"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “🔁 Socket 生命周期”</span></a></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>创建时机</th><th>销毁时机</th></tr></thead><tbody><tr><td>接收端</td><td>首次调用 <code dir="auto">BindUDPMessageHandler</code> 时</td><td>所有处理器移除 → 自动关闭 Socket</td></tr><tr><td>发送端</td><td>首次调用 <code dir="auto">SendUDPMessage</code> 或配置时</td><td>插件关闭或通道删除时</td></tr></tbody></table>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="-蓝图示例图片">🧪 蓝图示例（图片）</h2><a class="sl-anchor-link" href="#-蓝图示例图片"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “🧪 蓝图示例（图片）”</span></a></div>
+<div class="sl-heading-wrapper level-h3"><h3 id="所有蓝图函数">所有蓝图函数</h3><a class="sl-anchor-link" href="#所有蓝图函数"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “所有蓝图函数”</span></a></div>
+<p><img src="/media/manuals/fd1d93f02ef279e71e2e.png" alt="ShowAllFuntion" loading="lazy" decoding="async"></p>
+<div class="sl-heading-wrapper level-h3"><h3 id="绑定和解绑示例">绑定和解绑示例</h3><a class="sl-anchor-link" href="#绑定和解绑示例"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “绑定和解绑示例”</span></a></div>
+<p><img src="/media/manuals/f6d246d6dd2934e4c5a1.png" alt="StartReceiveMessage" loading="lazy" decoding="async"></p>
+<p>首次绑定后 Socket 自动创建，无处理器时自动销毁。</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="解绑全部强制关闭-socket">解绑全部（强制关闭 Socket）</h3><a class="sl-anchor-link" href="#解绑全部强制关闭-socket"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “解绑全部（强制关闭 Socket）”</span></a></div>
+<p><img src="/media/manuals/70c9fd752abed00b6b4c.png" alt="StopReceiveMessage" loading="lazy" decoding="async"></p>
+<p>使用此节点解绑通道上的所有内容并手动关闭 Socket。</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="动态更新接收通道">动态更新接收通道</h3><a class="sl-anchor-link" href="#动态更新接收通道"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “动态更新接收通道”</span></a></div>
+<p><img src="/media/manuals/5f056cc625a73554efc2.png" alt="DynamicAddOrUpdateReceiveChannelConfig" loading="lazy" decoding="async"></p>
+<p>如需要 Socket 会自动重建。函数调用顺序无关紧要。</p>
+<p>两个布尔值控制是覆盖现有通道还是添加新通道。</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="动态更新发送通道">动态更新发送通道</h3><a class="sl-anchor-link" href="#动态更新发送通道"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “动态更新发送通道”</span></a></div>
+<p><img src="/media/manuals/9aebf9a15bce612e4b1c.png" alt="DynamicUpdateSendChnnelConfig" loading="lazy" decoding="async"></p>
+<p>发送 Socket 仅在 <code dir="auto">FixedPort</code> 不同时重建。</p>
+<p>两个布尔值的行为与接收配置相同。</p>
+<div class="sl-heading-wrapper level-h3"><h3 id="发送字符串消息">发送字符串消息</h3><a class="sl-anchor-link" href="#发送字符串消息"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “发送字符串消息”</span></a></div>
+<p><img src="/media/manuals/01700bbe6fb9b6ce8da4.png" alt="SendMessage" loading="lazy" decoding="async"></p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="-提示与注意事项">✅ 提示与注意事项</h2><a class="sl-anchor-link" href="#-提示与注意事项"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “✅ 提示与注意事项”</span></a></div>
+<ul>
+<li>仅支持 IPv4（不支持 IPv6 或域名解析）</li>
+<li>有效端口范围：<code dir="auto">0~65535</code>，其中 <code dir="auto">0</code> 表示自动分配</li>
+<li>不要在不同通道中绑定相同端口，除非 Socket 已释放</li>
+<li>IP 过滤支持 CIDR 格式（如 <code dir="auto">192.168.1.0/24</code>）</li>
+</ul>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="-推荐配套">🔧 推荐配套</h2><a class="sl-anchor-link" href="#-推荐配套"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “🔧 推荐配套”</span></a></div>
+<p>配合 <strong>SimpleByteConversion</strong> 插件使用，轻松实现数据与 <code dir="auto">TArray&#x3C;uint8></code> 之间的序列化/反序列化。</p>
+<hr>
+<div class="sl-heading-wrapper level-h2"><h2 id="版本历史">版本历史</h2><a class="sl-anchor-link" href="#版本历史"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “版本历史”</span></a></div>
+<p>参见 CHANGELOG.md（公开仓库暂无此文件）。</p>
+<p>打开 <strong>编辑 → 项目设置</strong>，进入 SimpleUDP 设置页，将 <strong>Language</strong> 设置为 <strong>English</strong> 或 <strong>中文</strong>。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。</p>
+<div class="sl-heading-wrapper level-h2"><h2 id="支持">支持</h2><a class="sl-anchor-link" href="#支持"><span aria-hidden="true" class="sl-anchor-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="m12.11 15.39-3.88 3.88a2.52 2.52 0 0 1-3.5 0 2.47 2.47 0 0 1 0-3.5l3.88-3.88a1 1 0 1 0-1.42-1.42l-3.88 3.89a4.48 4.48 0 0 0 6.33 6.33l3.89-3.88a1 1 0 0 0-1.42-1.42m8.58-12.08a4.49 4.49 0 0 0-6.33 0l-3.89 3.88a1 1 0 1 0 1.42 1.42l3.88-3.88a2.52 2.52 0 0 1 3.5 0 2.47 2.47 0 0 1 0 3.5l-3.88 3.88a1 1 0 0 0 0 1.42 1 1 0 0 0 1.42 0l3.88-3.89a4.49 4.49 0 0 0 0-6.33M8.83 15.17a1 1 0 0 0 .71.29 1 1 0 0 0 .71-.29l4.92-4.92a1 1 0 1 0-1.42-1.42l-4.92 4.92a1 1 0 0 0 0 1.42"></path></svg></span><span class="sr-only" data-pagefind-ignore="">Section titled “支持”</span></a></div>
+<p>如有问题、反馈或希望加入 UE 技术交流群，请访问以下统一联系方式页面。</p>
+<ul>
+<li><strong>联系入口：</strong> <a href="/contact/">邮箱、微信群和 X</a></li>
+</ul>
+<hr>
+<p>文档来源：<a href="https://github.com/MZSH-UEPlugins/UEPluginDocs">MZSH-UEPlugins/UEPluginDocs</a> · 来源版本 <code dir="auto">6a335dff6639</code></p>
+<p><a href="/works/simple-udp/">返回作品</a></p></div><aside class="related-content astro-gcpmttat" aria-label="关联内容" data-pagefind-ignore><h2 class="astro-gcpmttat">继续了解</h2><div class="related-grid astro-gcpmttat"><section class="astro-gcpmttat"><h3 class="astro-gcpmttat">相关作品</h3><ul class="astro-gcpmttat"><li class="astro-gcpmttat"><a href="/works/simple-udp/" class="astro-gcpmttat">SimpleUDP</a><p class="astro-gcpmttat">将 UDP 收发、多通道配置和地址过滤封装为蓝图接口。</p></li></ul></section></div></aside><footer class="sl-flex astro-7k3yb46n"><div class="meta sl-flex astro-7k3yb46n"></div><div class="pagination-links print:hidden astro-yfkg2cex" dir="ltr"><a href="/docs/zh/guides/ue-tools/simple-tcp-server-guide/" rel="prev" class="astro-yfkg2cex"><svg aria-hidden="true" class="astro-yfkg2cex astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17 11H9.41l3.3-3.29a1.004 1.004 0 1 0-1.42-1.42l-5 5a1 1 0 0 0-.21.33 1 1 0 0 0 0 .76 1 1 0 0 0 .21.33l5 5a1.002 1.002 0 0 0 1.639-.325 1 1 0 0 0-.219-1.095L9.41 13H17a1 1 0 0 0 0-2Z"/></svg><span class="astro-yfkg2cex">上一页<br class="astro-yfkg2cex"><span class="link-title astro-yfkg2cex">SimpleTCPServer 使用文档</span></span></a><a href="/docs/zh/guides/ue-tools/simple-websocket-guide/" rel="next" class="astro-yfkg2cex"><svg aria-hidden="true" class="astro-yfkg2cex astro-ypj6my4d" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="--sl-icon-size: 1.5rem;"><path d="M17.92 11.62a1.001 1.001 0 0 0-.21-.33l-5-5a1.003 1.003 0 1 0-1.42 1.42l3.3 3.29H7a1 1 0 0 0 0 2h7.59l-3.3 3.29a1.002 1.002 0 0 0 .325 1.639 1 1 0 0 0 1.095-.219l5-5a1 1 0 0 0 .21-.33 1 1 0 0 0 0-.76Z"/></svg><span class="astro-yfkg2cex">下一页<br class="astro-yfkg2cex"><span class="link-title astro-yfkg2cex">SimpleWebSocket 使用文档</span></span></a></div></footer></div></div></main></div></div></mzsh-reading></div></div></div><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+  if (!document.documentElement.dataset.siteChromeBound) {
+    document.documentElement.dataset.siteChromeBound = 'true';
+    const setMenuOpen = (open) => {
+      const header = document.querySelector('.site-chrome .site-header');
+      header?.querySelector('[data-menu-toggle]')?.setAttribute('aria-expanded', String(open));
+      header?.querySelector('.main-nav')?.classList.toggle('is-open', open);
+    };
+    const update = () => {
+      const header = document.querySelector('.site-chrome .site-header');
+      if (!header) return;
+      const path = location.pathname;
+      header.querySelectorAll('.main-nav a, .header-actions a').forEach(link => {
+        const href = link.getAttribute('href') || '';
+        if (href === '/' ? path === '/' : path.startsWith(href)) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+      setMenuOpen(false);
+    };
+    document.addEventListener('click', event => {
+      const button = event.target.closest?.('[data-menu-toggle]');
+      if (button) setMenuOpen(button.getAttribute('aria-expanded') !== 'true');
+      else if (!event.target.closest?.('.main-nav')) setMenuOpen(false);
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape') return;
+      const button = document.querySelector('[data-menu-toggle][aria-expanded="true"]');
+      if (!button) return;
+      setMenuOpen(false);
+      button.focus();
+    });
+    document.addEventListener('focusin', event => {
+      if (!event.target.closest?.('.main-nav, [data-menu-toggle]')) setMenuOpen(false);
+    });
+    window.matchMedia('(max-width:720px)').addEventListener('change', () => setMenuOpen(false));
+    let navigationGeneration = 0;
+    const finishNavigation = () => {
+      document.querySelector('.site-chrome-main')?.removeAttribute('aria-busy');
+      document.querySelectorAll('[data-navigation-pending]').forEach(link => link.removeAttribute('data-navigation-pending'));
+    };
+    document.addEventListener('astro:before-preparation', event => {
+      const generation = ++navigationGeneration;
+      performance.mark('mzsh-navigation-start');
+      document.querySelector('.site-chrome-main')?.setAttribute('aria-busy', 'true');
+      event.sourceElement?.setAttribute?.('data-navigation-pending', '');
+      event.signal?.addEventListener('abort', () => { if (generation === navigationGeneration) finishNavigation(); }, { once: true });
+    });
+    document.addEventListener('astro:page-load', () => {
+      finishNavigation();
+      if (performance.getEntriesByName('mzsh-navigation-start').length) {
+        performance.measure('mzsh-navigation', 'mzsh-navigation-start');
+        performance.clearMarks('mzsh-navigation-start');
+      }
+    });
+    document.addEventListener('astro:after-swap', update);
+    update();
+  }
+</script><script type="module">function e(e){return e.pathname+e.search+e.hash}function t(e,t){let n=e?.mzshViewport;return n?.key===t&&Number.isFinite(n.top)&&n.top>=0?n.top:void 0}var n,r=0;function i(){n?.abort(),cancelAnimationFrame(r)}function a(){i(),n=new AbortController;let a=document.querySelector(`.site-chrome-docs .main-frame`)??document.querySelector(`.site-chrome-main`);if(!a)return;let o=location.pathname,s=history.state?.index,c=t(history.state,e(location));c!==void 0&&(a.scrollTop=c),a.addEventListener(`scroll`,()=>{if(location.pathname!==o||history.state?.index!==s)return;let t=e(location),n=history.state?.index,i=a.scrollTop;cancelAnimationFrame(r),r=requestAnimationFrame(()=>{a.isConnected&&e(location)===t&&history.state?.index===n&&(!document.querySelector(`meta[name="astro-view-transitions-enabled"]`)||Number.isFinite(n))&&history.replaceState({...history.state,mzshViewport:{key:t,top:i}},``)})},{passive:!0,signal:n.signal})}document.addEventListener(`astro:before-preparation`,e=>{i(),e.signal?.addEventListener(`abort`,()=>{r=requestAnimationFrame(a)},{once:!0})}),window.addEventListener(`popstate`,i),document.addEventListener(`astro:page-load`,a),a();</script><script type="module">var e=class extends HTMLElement{controller;connectedCallback(){this.controller=new AbortController;let{signal:e}=this.controller,t=this.querySelector(`details`),n=this.querySelector(`.docs-library-panel`),r=n?.querySelector(`sl-sidebar-state-persist`)?.dataset.hash;n?.addEventListener(`scroll`,()=>{if(t?.open)try{sessionStorage.setItem(`mzsh-doc-library-scroll`,JSON.stringify({hash:r,scroll:n.scrollTop}))}catch{}},{passive:!0,signal:e}),t?.addEventListener(`toggle`,()=>{if(t.open&&n)try{let e=JSON.parse(sessionStorage.getItem(`mzsh-doc-library-scroll`)||`null`);e?.hash===r&&Number.isFinite(e.scroll)&&(n.scrollTop=e.scroll)}catch{}},{signal:e}),document.addEventListener(`click`,e=>{t&&!this.contains(e.target)&&(t.open=!1)},{signal:e}),this.addEventListener(`keydown`,e=>{e.key===`Escape`&&t?.open&&(t.open=!1,t.querySelector(`summary`)?.focus())},{signal:e}),this.addEventListener(`click`,e=>{e.target.closest(`a`)&&t&&(t.open=!1)},{signal:e}),document.addEventListener(`focusin`,e=>{t&&!this.contains(e.target)&&(t.open=!1)},{signal:e})}disconnectedCallback(){this.controller?.abort()}};customElements.get(`mzsh-doc-menu`)||customElements.define(`mzsh-doc-menu`,e);</script></body></html>
