@@ -29,3 +29,5 @@
 body.contact-preview .site-chrome .local-page{padding-block:12px}
 @media(width<=1100px){.site-chrome .local-page .contact-card:has(.email){grid-template-columns:1fr}.contact-card:has(.email) .copy-row{margin-top:4px}.site-chrome .local-page .contact-card .email{font-size:1.125rem}}
 .site-chrome .local-page .copy-email{font-size:.875rem;line-height:1.4}
+
+.local-page .qr-link{cursor:zoom-in}
