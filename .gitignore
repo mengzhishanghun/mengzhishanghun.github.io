@@ -52,3 +52,8 @@ vite.config.js
 
 # custom
 .claude/
+# 本机工具与版本控制工作目录
+.codex/
+.agents/
+.svn/
+.vs/
