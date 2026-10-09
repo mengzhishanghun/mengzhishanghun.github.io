@@ -1,4 +1,25 @@
-/* 仅调整文章与手册的阅读区域；站点外壳沿用原有样式。 */
+/* 仅调整笔记、作品、案例和文档的阅读区域；站点外壳沿用原有样式。 */
+.site-chrome .reading-surface .note-hero {
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
+  padding-block: 4px 30px;
+}
+.site-chrome .note-hero .project-hero-copy {
+  min-inline-size: 0;
+  max-inline-size: 78ch;
+}
+.site-chrome .note-hero .project-breadcrumb {
+  margin-block-end: 14px;
+}
+.site-chrome .note-hero h1 {
+  font-size: clamp(1.9rem, 3vw, 2.9rem);
+  line-height: 1.25;
+}
+.site-chrome .note-hero .project-description {
+  max-inline-size: 72ch;
+  margin-block-start: 16px;
+  line-height: 1.7;
+}
 :where(.master-panel .prose, .site-chrome-docs .sl-markdown-content) {
   font-size: clamp(1rem, .18vw + .98rem, 1.08rem);
   line-height: 1.78;
@@ -7,14 +28,24 @@
 :where(.master-panel .prose, .site-chrome-docs .sl-markdown-content) :is(p, li) {
   max-inline-size: 74ch;
 }
-:where(.master-panel .prose, .site-chrome-docs .sl-markdown-content) :is(h2, h3, h4) {
+.site-chrome .reading-surface .prose :is(h2, h3, h4),
+.site-chrome-docs .sl-markdown-content :is(h2, h3, h4) {
   font-weight: 650;
-  line-height: 1.35;
-  scroll-margin-block-start: 1.5rem;
+  line-height: 1.4;
+  scroll-margin-block-start: 2rem;
 }
-:where(.master-panel .prose, .site-chrome-docs .sl-markdown-content) h2 {
+.site-chrome .reading-surface .prose h2,
+.site-chrome-docs .sl-markdown-content h2 {
+  border-block-start: 1px solid var(--sl-color-hairline, #31424c);
   border-inline-start: .18rem solid var(--sl-color-text-accent, #75c8df);
-  padding-inline-start: .65rem;
+  padding: .85rem 0 .1rem .7rem;
+  margin-block-start: 2.2rem;
+}
+.site-chrome .reading-surface .prose h3,
+.site-chrome-docs .sl-markdown-content h3 {
+  border-inline-start: .12rem solid var(--sl-color-text-accent, #75c8df);
+  padding-inline-start: .62rem;
+  margin-block-start: 1.8rem;
 }
 :where(.master-panel .prose, .site-chrome-docs .sl-markdown-content) table {
   display: block;
@@ -24,4 +55,16 @@
 :where(.master-panel .prose, .site-chrome-docs .sl-markdown-content) img {
   max-inline-size: 100%;
   block-size: auto;
+}
+@media (max-width: 720px) {
+  .site-chrome .reading-surface .note-hero {
+    padding-block: 0 24px;
+  }
+  .site-chrome .note-hero h1 {
+    font-size: clamp(1.7rem, 7vw, 2.25rem);
+  }
+  .site-chrome .note-hero .project-description {
+    margin-block-start: 12px;
+    font-size: 1rem;
+  }
 }

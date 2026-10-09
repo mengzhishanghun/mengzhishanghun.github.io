@@ -206,6 +206,64 @@ function readingStyles(html) {
   if (html.split('</head>').length !== 2) throw new Error('页面 head 边界异常');
   return html.replace('</head>', '<link rel="stylesheet" href="/assets/reading-area.css"></head>');
 }
+function ignorePagefind(html, node, edits) {
+  if (attrs(node)['data-pagefind-ignore'] !== undefined) return;
+  const loc = node.sourceCodeLocation?.startTag;
+  if (!loc) throw new Error('缺少 Pagefind 忽略节点边界');
+  const opening = html.slice(loc.startOffset, loc.endOffset);
+  edits.push([loc.startOffset, loc.endOffset, opening.replace(/>$/, ' data-pagefind-ignore>')]);
+}
+function blogLayoutEdits(html, doc, item) {
+  const label = item.route;
+  const detail = select(doc, (n,a) => n.tagName === 'div' && a.class?.split(' ').includes('reading-detail'), '笔记详情容器 ' + label);
+  const article = select(detail, (n,a) => n.tagName === 'article' && a.class?.split(' ').includes('master-panel'), '笔记 article ' + label);
+  const oldHeads = article.childNodes.filter(n => n.tagName === 'header' && attrs(n).class?.split(' ').includes('item-heading'));
+  const heroes = detail.childNodes.filter(n => n.tagName === 'header' && attrs(n)['data-note-hero'] !== undefined);
+  if (oldHeads.length + heroes.length !== 1) throw new Error('笔记布局必须是旧版或新版唯一结构: ' + label);
+  if (attrs(article)['aria-labelledby'] !== 'detail-' + item.data.slug) throw new Error('笔记 H1 关联失配: ' + label);
+  const edits = [];
+  const aside = select(detail, (n,a) => n.tagName === 'aside' && a.class?.split(' ').includes('article-sidebar'), '笔记目录侧栏 ' + label);
+  const adjacent = select(article, (n,a) => n.tagName === 'nav' && a.class?.split(' ').includes('blog-adjacent'), '笔记上下篇 ' + label);
+  ignorePagefind(html, aside, edits);
+  ignorePagefind(html, adjacent, edits);
+  if (oldHeads.length) {
+    const old = oldHeads[0], parts = old.childNodes.filter(n => n.tagName);
+    if (article.childNodes.find(n => n.tagName) !== old || parts.length !== 3 || parts[0].tagName !== 'p' ||
+        parts[1].tagName !== 'h1' || parts[2].tagName !== 'p' ||
+        !attrs(parts[0]).class?.split(' ').includes('eyebrow') || attrs(parts[1])['data-pagefind-meta'] !== 'title')
+      throw new Error('旧版笔记标题区结构不符: ' + label);
+    const headingId = attrs(parts[1]).id;
+    if (headingId !== 'detail-' + item.data.slug || textOf(parts[0]).trim() !== item.data.categoryName)
+      throw new Error('旧版笔记分类或 ID 不符: ' + label);
+    const detailLoc = detail.sourceCodeLocation.startTag;
+    const opening = html.slice(detailLoc.startOffset,detailLoc.endOffset)
+      .replace('reading-detail', 'reading-detail has-project-hero note-detail')
+      .replace(/>$/, ' data-blog-article="true" data-pagefind-body>');
+    const hero = `<header class="project-hero note-hero" data-note-hero><div class="project-hero-copy"><p class="project-breadcrumb" data-pagefind-ignore><a href="/blog/">笔记</a><span>/</span><span class="note-category">${escapeHTML(item.data.categoryName)}</span></p><div class="project-title-group"><h1 id="${escapeHTML(headingId)}" data-pagefind-meta="title">${escapeHTML(item.data.title)}</h1></div><p class="project-description">${escapeHTML(item.data.description || '')}</p></div></header>`;
+    edits.push([detailLoc.startOffset, detailLoc.endOffset, opening + hero]);
+    edits.push([...outerRange(old), '']);
+    const articleLoc = article.sourceCodeLocation.startTag;
+    const articleOpening = html.slice(articleLoc.startOffset,articleLoc.endOffset)
+      .replace(/\sdata-pagefind-body(?:="")?/, '')
+      .replace(/\sdata-blog-article="true"/, '');
+    if (articleOpening === html.slice(articleLoc.startOffset,articleLoc.endOffset)) throw new Error('旧版 Pagefind 标记缺失: ' + label);
+    edits.push([articleLoc.startOffset,articleLoc.endOffset,articleOpening]);
+  } else {
+    const hero = heroes[0];
+    if (detail.childNodes.find(n => n.tagName) !== hero ||
+        !attrs(detail).class?.split(' ').includes('has-project-hero') ||
+        attrs(detail)['data-blog-article'] !== 'true' || attrs(detail)['data-pagefind-body'] === undefined ||
+        attrs(article)['data-blog-article'] !== undefined || attrs(article)['data-pagefind-body'] !== undefined)
+      throw new Error('新版笔记布局或 Pagefind 标记不符: ' + label);
+    const h1 = select(hero, (n,a) => n.tagName === 'h1' && a.id === 'detail-' + item.data.slug && a['data-pagefind-meta'] === 'title', '笔记 H1 ' + label);
+    const category = select(hero, (n,a) => n.tagName === 'span' && a.class?.split(' ').includes('note-category'), '笔记分类 ' + label);
+    const breadcrumb = select(hero, (n,a) => n.tagName === 'p' && a.class?.split(' ').includes('project-breadcrumb'), '笔记面包屑 ' + label);
+    if (attrs(breadcrumb)['data-pagefind-ignore'] === undefined) throw new Error('笔记面包屑缺 Pagefind 忽略标记: ' + label);
+    const summary = select(hero, (n,a) => n.tagName === 'p' && a.class?.split(' ').includes('project-description'), '笔记摘要 ' + label);
+    edits.push(editText(h1,item.data.title),editText(category,item.data.categoryName),editText(summary,item.data.description || ''));
+  }
+  return edits;
+}
 for (const entry of allEntries) {
   const source = readSource(entry);
   const item = {...entry, ...source};
@@ -221,6 +279,7 @@ for (const entry of allEntries) {
     edits.push([...innerRange(bodyNode), rendered.code], [...innerRange(outlineNode), outline(rendered.metadata.headings)]);
   }
   if (entry.kind === 'blog') {
+    edits.push(...blogLayoutEdits(html,doc,item));
     if (entry.route !== '/blog/markdown-images/') {
       const sourceTitles = [];
       walk(bodyNode, n => { if (n.tagName === 'p' && attrs(n).class?.split(' ').includes('article-source-title')) sourceTitles.push(n); });
@@ -274,16 +333,12 @@ for (const entry of allEntries) {
   }
   const pageTitle = select(doc, n => n.tagName === 'title', 'title ' + entry.route);
   edits.push(editText(pageTitle, entry.kind === 'manual' ? `${item.data.title} | MZSH Docs` : `${item.data.title} · 小毛`));
-  const h1 = select(doc, n => n.tagName === 'h1', 'h1 ' + entry.route);
-  edits.push(editText(h1, item.data.title));
+  if (entry.kind !== 'blog') {
+    const h1 = select(doc, n => n.tagName === 'h1', 'h1 ' + entry.route);
+    edits.push(editText(h1, item.data.title));
+  }
   const description = select(doc, (n,a) => n.tagName === 'meta' && a.name === 'description', 'description ' + entry.route);
   edits.push(editAttr(description, 'content', item.data.description || ''));
-  if (entry.kind === 'blog') {
-    const intro = select(doc, (n,a) => n.tagName === 'header' && a.class?.split(' ').includes('item-heading'), '文章标题区 ' + entry.route);
-    const paragraphs = intro.childNodes.filter(n => n.tagName === 'p');
-    if (paragraphs.length !== 2) throw new Error('博客标题区结构变化: ' + entry.route);
-    edits.push(editText(paragraphs[1], item.data.description || ''));
-  }
   save(file, html, readingStyles(publicLabel(replace(html, edits))));
   input.set(entry.route, item);
 }
@@ -371,6 +426,23 @@ for (const route of manifest.deleteRoutes) {
   if (fs.existsSync(file)) removed.add(file);
 }
 const trackedHTML = execFileSync('git', ['ls-files', '-z', '--', '*.html'], {cwd:site}).toString('utf8').split('\0').filter(Boolean);
+const previousThemeSha = '340052362f8cd68621cffaf2fbd5947045dc371065491c69bad60ce5fca823d4';
+function fixDocsTheme(html, relative) {
+  const doc = parse(html, {sourceCodeLocationInfo:true});
+  const head = select(doc, n => n.tagName === 'head', '文档 head ' + relative);
+  const scripts = head.childNodes.filter(n => n.tagName === 'script');
+  const inline = scripts.filter(n => textOf(n).includes('StarlightThemeProvider'));
+  const external = scripts.filter(n => attrs(n).src === '/assets/docs-theme.js');
+  if (inline.length + external.length !== 1) throw new Error('未知文档主题脚本: ' + relative);
+  let themed = html;
+  if (inline.length) {
+    const original = html.slice(...outerRange(inline[0]));
+    if (sha256(original) !== previousThemeSha) throw new Error('文档主题初始化脚本已变化: ' + relative);
+    themed = replace(html, [[...outerRange(inline[0]), '<script src="/assets/docs-theme.js"></script>']]);
+  }
+  return readingStyles(themed);
+}
+let docsPages = 0, docsRedirects = 0, workPages = 0, workRedirects = 0;
 for (const relative of trackedHTML) {
   const file = path.join(site, relative);
   if (removed.has(file)) continue;
@@ -390,8 +462,27 @@ for (const relative of trackedHTML) {
     const existing = textOf(node).trim();
     if (/^(UE|C\+\+|Perforce|Python)：/.test(existing) && existing.endsWith(source.data.title)) referenceEdits.push(editText(node, source.data.title));
   });
-  save(file, original, publicLabel(replace(current, referenceEdits)));
+  let updated = publicLabel(replace(current, referenceEdits));
+  if (relative.startsWith('docs/')) {
+    if (updated.includes('StarlightThemeProvider') || updated.includes('src="/assets/docs-theme.js"')) {
+      updated = fixDocsTheme(updated, relative);
+      docsPages++;
+    } else if (/http-equiv=["']refresh/i.test(updated)) docsRedirects++;
+    else throw new Error('未知文档页面类型: ' + relative);
+  }
+  if (relative.startsWith('works/') && relative !== 'works/index.html') {
+    if (updated.includes('reading-detail')) {
+      const workDoc = parse(updated, {sourceCodeLocationInfo:true});
+      select(workDoc, (n,a) => n.tagName === 'header' && a.class?.split(' ').includes('project-hero'), '作品详情主视觉 ' + relative);
+      updated = readingStyles(updated);
+      workPages++;
+    } else if (/http-equiv=["']refresh/i.test(updated)) workRedirects++;
+    else throw new Error('未知作品页面类型: ' + relative);
+  }
+  save(file, original, updated);
 }
+if (docsPages !== 25 || docsRedirects !== 22 || workPages !== 24 || workRedirects !== 3)
+  throw new Error(`文档或作品页面集合变化: docs=${docsPages}/${docsRedirects}, works=${workPages}/${workRedirects}`);
 const stagedIndex = fs.mkdtempSync(path.join(site, 'tools', 'content-import', '.index-stage-'));
 let indexChanged = false;
 function filesUnder(dir) {
@@ -406,8 +497,20 @@ try {
   for (const record of orderedBlogs) {
     const route = '/blog/' + record.slug + '/';
     const file = routeFile(route);
-    const result = await created.index.addHTMLFile({url:route, content: changes.get(file) || fs.readFileSync(file,'utf8')});
+    const content = changes.get(file) || fs.readFileSync(file,'utf8');
+    const indexed = parse(content);
+    const root = select(indexed, (n,a) => a['data-blog-article'] === 'true', 'Pagefind 笔记根节点 ' + route);
+    if (attrs(root)['data-pagefind-body'] === undefined || !attrs(root).class?.split(' ').includes('reading-detail'))
+      throw new Error('Pagefind 笔记根节点无效: ' + route);
+    const h1 = select(root, (n,a) => n.tagName === 'h1' && a['data-pagefind-meta'] === 'title', 'Pagefind 标题 ' + route);
+    if (textOf(h1).trim() !== record.title) throw new Error('Pagefind 标题不符: ' + route);
+    for (const name of ['project-breadcrumb','article-sidebar','blog-adjacent']) {
+      const node = select(root, (n,a) => a.class?.split(' ').includes(name), 'Pagefind 导航 ' + name + ' ' + route);
+      if (attrs(node)['data-pagefind-ignore'] === undefined) throw new Error('Pagefind 导航未忽略: ' + route + ' ' + name);
+    }
+    const result = await created.index.addHTMLFile({url:route, content});
     if (result.errors.length) throw new Error('Pagefind 索引失败 ' + route + ': ' + result.errors.join('; '));
+    if (result.file.url !== route || result.file.meta.title !== record.title) throw new Error('Pagefind URL 或标题不符: ' + route);
   }
   const written = await created.index.writeFiles({outputPath:stagedIndex});
   if (written.errors.length) throw new Error('Pagefind 写出失败: ' + written.errors.join('; '));
