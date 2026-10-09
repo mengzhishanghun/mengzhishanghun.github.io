@@ -1,0 +1,2468 @@
+{
+  "version": 1,
+  "blogs": [
+    {
+      "source": "笔记/Perforce/290-Stream实战指南.md",
+      "route": "/blog/cnblogs-19143267/",
+      "bodyBaselineSha256": "3b93ec94716d9eea09f91b6ce62c35a04026836199de8103694b5b82ff8737fa",
+      "frontmatterBaseline": {
+        "title": "Stream实战指南",
+        "description": "我个人的理解是，Stream 是 Perforce 推出的、类似于传统分支但更智能的“流”。它提供可视化视图，便于查看分支间的同步关系。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19143267",
+        "translationKey": "cnblogs-19143267",
+        "categoryId": "perforce",
+        "categoryName": "Perforce",
+        "categoryOrder": 3,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-15",
+        "publishedAt": "2025-10-15 14:23",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "Stream"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19143267",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19143267"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/Perforce/300-UE源码控制操作指南.md",
+      "route": "/blog/cnblogs-19143251/",
+      "bodyBaselineSha256": "fb3394c49e65a02a44cc70db380d5a596070b75e2c18288ac20d13d5f3380ff1",
+      "frontmatterBaseline": {
+        "title": "UE源码控制操作指南",
+        "description": "Unreal中的操作跟Perforce中的操作大同小异",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19143251",
+        "translationKey": "cnblogs-19143251",
+        "categoryId": "perforce",
+        "categoryName": "Perforce",
+        "categoryOrder": 3,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-15",
+        "publishedAt": "2025-10-15 14:19",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "UnrealEngine",
+          "版本控制"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19143251",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19143251"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/Perforce/310-中文乱码问题修复.md",
+      "route": "/blog/cnblogs-19143254/",
+      "bodyBaselineSha256": "1f5c794711c4bcbd36031415508106f17c054e9c37775789dc890062ed6e9f9c",
+      "frontmatterBaseline": {
+        "title": "中文乱码问题修复",
+        "description": "中文乱码的原因是服务器没有开启Unicode模式。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19143254",
+        "translationKey": "cnblogs-19143254",
+        "categoryId": "perforce",
+        "categoryName": "Perforce",
+        "categoryOrder": 3,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-15",
+        "publishedAt": "2025-10-15 14:20",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "字符编码",
+          "中文乱码"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19143254",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19143254"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/Perforce/320-如何设置TypeMap.md",
+      "route": "/blog/cnblogs-19143258/",
+      "bodyBaselineSha256": "8ebfd893dedf6813b96ad92bcb229d7b4afe76a7394fdc8d78800cbc174ad79c",
+      "frontmatterBaseline": {
+        "title": "如何设置TypeMap",
+        "description": "首先你需要服务器管理员账号来进行操作",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19143258",
+        "translationKey": "cnblogs-19143258",
+        "categoryId": "perforce",
+        "categoryName": "Perforce",
+        "categoryOrder": 3,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-15",
+        "publishedAt": "2025-10-15 14:21",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "TypeMap"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19143258",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19143258"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/Perforce/330-客户端安装配置指南.md",
+      "route": "/blog/cnblogs-19143255/",
+      "bodyBaselineSha256": "d709732f6a583692818f3da93540bf5dc60c2a90099ea4c942729a8f77ae6b11",
+      "frontmatterBaseline": {
+        "title": "客户端安装配置指南",
+        "description": "前往官网下载 P4V 客户端，选择平台与版本后下载。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19143255",
+        "translationKey": "cnblogs-19143255",
+        "categoryId": "perforce",
+        "categoryName": "Perforce",
+        "categoryOrder": 3,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-15",
+        "publishedAt": "2025-10-15 14:21",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "安装配置"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19143255",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19143255"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/Perforce/340-客户端常用操作.md",
+      "route": "/blog/cnblogs-19143256/",
+      "bodyBaselineSha256": "c184a5051a87d1badcd0327517e4f1c664a8214efc7b385e3370d9926c2abafb",
+      "frontmatterBaseline": {
+        "title": "客户端常用操作",
+        "description": "基础的意思是每个使用Perforce的人都应该掌握的",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19143256",
+        "translationKey": "cnblogs-19143256",
+        "categoryId": "perforce",
+        "categoryName": "Perforce",
+        "categoryOrder": 3,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-15",
+        "publishedAt": "2025-10-15 14:21",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "客户端操作"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19143256",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19143256"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/Perforce/350-无法删除Stream Depot怎么处理.md",
+      "route": "/blog/cnblogs-19143260/",
+      "bodyBaselineSha256": "64b16ed6fee2cf959c3bcdacdcbc54f18f560831e4ca924382509c7d3b15d0f7",
+      "frontmatterBaseline": {
+        "title": "无法删除Stream Depot怎么处理",
+        "description": "test和Unreal Depot都是我要删除的Depot，区别是，test是完整的，而另一个则是先用stream -f -d 删除，结果被标记为deleted了，但是depot还是删除不了",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19143260",
+        "translationKey": "cnblogs-19143260",
+        "categoryId": "perforce",
+        "categoryName": "Perforce",
+        "categoryOrder": 3,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-15",
+        "publishedAt": "2025-10-15 14:22",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "Stream",
+          "Depot"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19143260",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19143260"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/Python/280-如何实现cmd可以访问conda但不能通过默认环境访问python.md",
+      "route": "/blog/cnblogs-19143286/",
+      "bodyBaselineSha256": "0a8e5ddde3997eef1bb2d7fe4e15a67c91fa4395666375700e552289eeccb0c7",
+      "frontmatterBaseline": {
+        "title": "如何实现cmd可以访问conda但不能通过默认环境访问python",
+        "description": "通常情况下，当安装完成miniconda后，miniconda的base默认环境会作为默认环境被系统获取，系统可以直接用base来执行python，这就造成了base环境极容易被污染",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19143286",
+        "translationKey": "cnblogs-19143286",
+        "categoryId": "python",
+        "categoryName": "Python",
+        "categoryOrder": 2,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-15",
+        "publishedAt": "2025-10-15 14:28",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "Conda",
+          "环境配置"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19143286",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19143286"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/020-如何让 AI 直接修改 DataAsset.md",
+      "route": "/blog/cnblogs-20159718/",
+      "bodyBaselineSha256": "027d08f5487974f4abc8ed46b08fa34710060e07a92387e7b5338d4e562b73a4",
+      "frontmatterBaseline": {
+        "title": "如何让 AI 直接修改 DataAsset",
+        "description": "讨论 DataAsset 与 JSON 双向同步中的格式选择、属性转换、循环触发和文件写入问题。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-20159718",
+        "translationKey": "cnblogs-20159718",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2026-05-25",
+        "publishedAt": "2026-05-25 19:21",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "AI",
+          "DataAsset",
+          "JSON"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/20159718",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/20159718"
+          }
+        ],
+        "productIds": [],
+        "workIds": [
+          "ai-data-asset"
+        ],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/030-如何解决蓝图继承中子类修改组件属性影响父类的 问题.md",
+      "route": "/blog/cnblogs-20030737/",
+      "bodyBaselineSha256": "9bdf04d3fc1922fec88268bcf5f21ba91d191eab7b3af49200184886b951d608",
+      "frontmatterBaseline": {
+        "title": "蓝图继承中的组件状态污染与修复思路",
+        "description": "分析 Actor 蓝图组件模板的 CreationMethod 异常，以及继承链、SCS 和 ICH 的检查与修复流程。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-20030737",
+        "translationKey": "cnblogs-20030737",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2026-05-13",
+        "publishedAt": "2026-05-13 12:59",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "蓝图",
+          "继承链"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/20030737",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/20030737"
+          }
+        ],
+        "productIds": [],
+        "workIds": [
+          "simple-bp-inherit-fix"
+        ],
+        "docIds": [
+          "simple-bp-inherit-fix-guide"
+        ]
+      }
+    },
+    {
+      "source": "笔记/UE开发/040-如何解决渲染时UMG大小不变的问题.md",
+      "route": "/blog/cnblogs-19813721/",
+      "bodyBaselineSha256": "364845623d9a2525f739b31c74550c7a50ae36e79a43f99934025b8b8c76c2aa",
+      "frontmatterBaseline": {
+        "title": "如何解决渲染时UMG大小不变的问题",
+        "description": "当你需要将UMG渲染出来的时候你可能会碰到一种很恶心的情况，你渲染出来的UMG大小不跟随你设置的输出分辨率变化",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19813721",
+        "translationKey": "cnblogs-19813721",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2026-04-02",
+        "publishedAt": "2026-04-02 18:28",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "UMG",
+          "渲染"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19813721",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19813721"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/050-如何在蓝图中实现数据序列化与字节转换.md",
+      "route": "/blog/cnblogs-19770934/",
+      "bodyBaselineSha256": "75a5274e1941e93ae3f90736835f1b61d528b30c1986881558baa9feb1c3e342",
+      "frontmatterBaseline": {
+        "title": "如何在蓝图中实现数据序列化与字节转换",
+        "description": "介绍内存表示与字节数组转换、CustomThunk 泛型结构体参数，以及 JSON 字段名和浮点数输出处理。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19770934",
+        "translationKey": "cnblogs-19770934",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2026-03-25",
+        "publishedAt": "2026-03-25 16:29",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "蓝图",
+          "序列化"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19770934",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19770934"
+          }
+        ],
+        "productIds": [],
+        "workIds": [
+          "simple-byte-conversion"
+        ],
+        "docIds": [
+          "simple-byte-conversion-guide"
+        ]
+      }
+    },
+    {
+      "source": "笔记/UE开发/060-如何管理打包时的配置文件排除.md",
+      "route": "/blog/cnblogs-19770930/",
+      "bodyBaselineSha256": "fa53ae7585993f6d1e71e460f2bef3791a363194c31e5014affb59d8b8ebdb21",
+      "frontmatterBaseline": {
+        "title": "如何管理打包时的配置文件排除",
+        "description": "介绍 DefaultGame.ini 的 Staging 包含与排除规则，以及配置扫描、文件写回和缓存重新加载流程。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19770930",
+        "translationKey": "cnblogs-19770930",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2026-03-25",
+        "publishedAt": "2026-03-25 16:29",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "打包",
+          "配置管理"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19770930",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19770930"
+          }
+        ],
+        "productIds": [],
+        "workIds": [
+          "simple-config-exclude"
+        ],
+        "docIds": [
+          "simple-config-exclude-guide"
+        ]
+      }
+    },
+    {
+      "source": "笔记/UE开发/070-如何用材质制作圆角矩形.md",
+      "route": "/blog/cnblogs-19379355/",
+      "bodyBaselineSha256": "3e44d568f4b693f4ea61990e4440b0c67d0462e40f8a1df133faa0bd1d30035b",
+      "frontmatterBaseline": {
+        "title": "如何用材质制作圆角矩形",
+        "description": "这个我都记不清是什么之后记录的了，整理笔记的时候翻到了，是通过材质来制作圆角矩形，因为目标是在一个三合一屏幕的项目中使用，所以数值大小按照三块屏幕设置的，如要使用，请注意修改。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19379355",
+        "translationKey": "cnblogs-19379355",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-12-21",
+        "publishedAt": "2025-12-21 15:04",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "材质"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19379355",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19379355"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/080-怎么查看打包到底打包了哪些文件.md",
+      "route": "/blog/cnblogs-19379306/",
+      "bodyBaselineSha256": "e16f1910cbd2be86ae0a1e71a9f65de8bb4539e332d6caadc18917277dd28596",
+      "frontmatterBaseline": {
+        "title": "怎么查看打包到底打包了哪些文件",
+        "description": "这个是打包后的文件，不同于平常的打包文件，这个可以看到打包完成后包含的所有配置文件以及资产，插件之类的",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19379306",
+        "translationKey": "cnblogs-19379306",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-12-21",
+        "publishedAt": "2025-12-21 14:33",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "打包"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19379306",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19379306"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/090-材质基础知识之if判断节点.md",
+      "route": "/blog/cnblogs-19379337/",
+      "bodyBaselineSha256": "1b80b9aafb28a07ab6d5810ef0fed1d2e300be97556a84e4ad685b23c6297017",
+      "frontmatterBaseline": {
+        "title": "材质基础知识之if判断节点",
+        "description": "这个图是前两天群友萌新发出的提问，说是为什么dissolve是0的时候，这个材质不可见。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19379337",
+        "translationKey": "cnblogs-19379337",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-12-21",
+        "publishedAt": "2025-12-21 14:55",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "材质"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19379337",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19379337"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/100-缓存路径修改.md",
+      "route": "/blog/cnblogs-19379365/",
+      "bodyBaselineSha256": "9a3d4709ccbff94a1d7f65c07fa0b3d406349999545a297ecc05f8bc3aa702f5",
+      "frontmatterBaseline": {
+        "title": "缓存路径修改",
+        "description": "最简单的办法就是通过Evenyting搜索\\Engine\\Config\\BaseEngine.ini",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19379365",
+        "translationKey": "cnblogs-19379365",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-12-21",
+        "publishedAt": "2025-12-21 15:11",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "缓存",
+          "配置管理"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19379365",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19379365"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/110-StaticMeshActor 与 ISM-HISM 的加载开销.md",
+      "route": "/blog/cnblogs-19204715/",
+      "bodyBaselineSha256": "e4182abc7862c742c73d53922e2330377fc54c342cbfc6ab29a0c014a74b283e",
+      "frontmatterBaseline": {
+        "title": "StaticMeshActor 与 ISM/HISM 的加载开销",
+        "description": "讨论独立 StaticMeshActor 与实例化网格的对象组织、加载开销，以及手动合并时的属性处理问题。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19204715",
+        "translationKey": "cnblogs-19204715",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-11-09",
+        "publishedAt": "2025-11-09 19:11",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "StaticMesh",
+          "ISM",
+          "HISM",
+          "性能优化"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19204715",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19204715"
+          }
+        ],
+        "productIds": [],
+        "workIds": [
+          "simple-static-mesh-merger"
+        ],
+        "docIds": [
+          "simple-static-mesh-merger-guide"
+        ]
+      }
+    },
+    {
+      "source": "笔记/UE开发/120-论运行时动画录制的关键-正确获取骨骼数据与保存.md",
+      "route": "/blog/cnblogs-19197541/",
+      "bodyBaselineSha256": "0c077d120e8b7acf24829ef5a009239a8f6d4b1bc40262bce399345a7bdb4c7c",
+      "frontmatterBaseline": {
+        "title": "论运行时动画录制的关键-正确获取骨骼数据与保存",
+        "description": "在 UE5.4 中实现运行时动画录制，最关键的两个问题是：",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19197541",
+        "translationKey": "cnblogs-19197541",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-11-06",
+        "publishedAt": "2025-11-06 19:10",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "动画",
+          "骨骼"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19197541",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19197541"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/130-C++MVVM简单应用.md",
+      "route": "/blog/cnblogs-19192707/",
+      "bodyBaselineSha256": "1cd5374985f2f3415f68e9dce445cf1e44aa3dcedde54b2cf098fc3fe5640fad",
+      "frontmatterBaseline": {
+        "title": "C++MVVM简单应用",
+        "description": "本文介绍如何在C++中建立简单可用的MVVM对象，以下操作在UE5.5中测试",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19192707",
+        "translationKey": "cnblogs-19192707",
+        "categoryId": "cpp",
+        "categoryName": "C++",
+        "categoryOrder": 1,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-11-05",
+        "publishedAt": "2025-11-05 10:19",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "UnrealEngine",
+          "MVVM"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19192707",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19192707"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/140-中英双语设置小技巧.md",
+      "route": "/blog/cnblogs-19183986/",
+      "bodyBaselineSha256": "e0c051a22615f20714e7d3ce25c2ab38cf6444a46c94b0cb0824cbaf105f2f56",
+      "frontmatterBaseline": {
+        "title": "中英双语设置小技巧",
+        "description": "发现最近UE新人好多，索性整理出来一些小技巧供大家使用。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19183986",
+        "translationKey": "cnblogs-19183986",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-11-01",
+        "publishedAt": "2025-11-01 22:45",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "本地化"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19183986",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19183986"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/150-快速创建一个地图.md",
+      "route": "/blog/cnblogs-19184043/",
+      "bodyBaselineSha256": "3eef4fb624d888fa76edaf69765061c3f839f2ade5f13dfb9b5fcca62f75228d",
+      "frontmatterBaseline": {
+        "title": "快速创建一个地图",
+        "description": "这里只讨论如何快速创建一个可用的标准地图，不包括世界分区地图。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19184043",
+        "translationKey": "cnblogs-19184043",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-11-01",
+        "publishedAt": "2025-11-01 23:39",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "关卡"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19184043",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19184043"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/160-多屏幕全屏后只有一个屏幕显示怎么办.md",
+      "route": "/blog/cnblogs-19174288/",
+      "bodyBaselineSha256": "f16edbd75393b0dabd2980160d7f95e698fa0b37ddbe3064837b4960ef39bf7f",
+      "frontmatterBaseline": {
+        "title": "多屏幕全屏后只有一个屏幕显示怎么办",
+        "description": "这里讨论的是，多个屏幕时，用N卡的Surround融合为一个屏幕，当开始游戏后发生的问题",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19174288",
+        "translationKey": "cnblogs-19174288",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-29",
+        "publishedAt": "2025-10-29 14:15",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "多屏显示"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19174288",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19174288"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/170-如何调用DLL.md",
+      "route": "/blog/cnblogs-19174295/",
+      "bodyBaselineSha256": "340123c6d23d8cd5ba6cc2255a6d35b9cf44827da691917573e94988a71cd34b",
+      "frontmatterBaseline": {
+        "title": "如何调用DLL",
+        "description": "说说我的方法吧，不知道正不正确，但是能用，哈哈哈哈，跟着官方的第三方库弄的 打包dll那一套我就不赘述了，就说说拿到DLL和Lib怎么办 以官方模板创建得插件TestThird为例 将dll，lib文件放到TestThird\\Source\\ThirdParty\\TestTh…",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19174295",
+        "translationKey": "cnblogs-19174295",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-29",
+        "publishedAt": "2025-10-29 14:16",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "DLL"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19174295",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19174295"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/180-PixelStreaming 像素流送.md",
+      "route": "/blog/cnblogs-19165494/",
+      "bodyBaselineSha256": "7e8bb27ea6124c6ee1bdebc7c2f7213d5d6b6df02701e9bdd3d7fddb21b9a959",
+      "frontmatterBaseline": {
+        "title": "PixelStreaming 像素流送",
+        "description": "开启PixelStreaming插件即可",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19165494",
+        "translationKey": "cnblogs-19165494",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-25",
+        "publishedAt": "2025-10-25 15:47",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "PixelStreaming"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165494",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165494"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/190-UE网络编程完全指南之UDP TCP WebSocket实现详解.md",
+      "route": "/blog/cnblogs-19165484/",
+      "bodyBaselineSha256": "a66b00c5acd73016353b10d86b8ec2e7f8209d8a03091af91d187826576a4a6f",
+      "frontmatterBaseline": {
+        "title": "UE网络编程完全指南之UDP TCP WebSocket实现详解",
+        "description": "通过 UDP、TCP 客户端、TCP 服务端和 WebSocket 示例讲解 UE 网络通信，并讨论线程、重连、会话和序列化。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19165484",
+        "translationKey": "cnblogs-19165484",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-25",
+        "publishedAt": "2025-10-25 15:44",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "UDP",
+          "TCP",
+          "WebSocket"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165484",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165484"
+          }
+        ],
+        "productIds": [],
+        "workIds": [
+          "simple-udp",
+          "simple-tcp-client",
+          "simple-tcp-server",
+          "simple-websocket",
+          "simple-byte-conversion"
+        ],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/200-多屏幕如何设置曝光同步.md",
+      "route": "/blog/cnblogs-19165561/",
+      "bodyBaselineSha256": "19f74eab4b7c0a75a16055da86230340d08c1b0408e852fc9a6f07930a3987d9",
+      "frontmatterBaseline": {
+        "title": "多屏幕如何设置曝光同步",
+        "description": "新建一个LocalPlayer，重写函数",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19165561",
+        "translationKey": "cnblogs-19165561",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-25",
+        "publishedAt": "2025-10-25 16:12",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "多屏显示",
+          "曝光"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165561",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165561"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/210-如何在UE中实现SSH隧道，安全访问远程服务.md",
+      "route": "/blog/cnblogs-19165541/",
+      "bodyBaselineSha256": "56e51e1d7474b8bdf314c3bcde4633e3cbb3eb3251dfa599548d8103e4346174",
+      "frontmatterBaseline": {
+        "title": "如何在UE中实现SSH隧道，安全访问远程服务",
+        "description": "比较在 UE 中调用系统 SSH 客户端与集成 libssh2 的方式，并说明端口转发、线程处理和资源释放。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19165541",
+        "translationKey": "cnblogs-19165541",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-25",
+        "publishedAt": "2025-10-25 16:05",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "SSH"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165541",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165541"
+          }
+        ],
+        "productIds": [],
+        "workIds": [
+          "simple-ssh-tunnel"
+        ],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/220-如何设置监听服务器.md",
+      "route": "/blog/cnblogs-19165553/",
+      "bodyBaselineSha256": "c6aea9b87f4a115afe3de70e879cb20da1c6f29f385cd9412dac0a47f625448b",
+      "frontmatterBaseline": {
+        "title": "如何设置监听服务器",
+        "description": "开启监听服务器的最简单办法，创建一个桌面快捷方式，修改目标为UnrealEditor.exe MyProject.uproject ?listen -game",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19165553",
+        "translationKey": "cnblogs-19165553",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-25",
+        "publishedAt": "2025-10-25 16:10",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "监听服务器"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165553",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165553"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/230-无缝地图切换.md",
+      "route": "/blog/cnblogs-19165504/",
+      "bodyBaselineSha256": "d58e98bf011242f509af14d62a15fae554bf52bffdbafa6aacfa10ff3375e736",
+      "frontmatterBaseline": {
+        "title": "无缝地图切换",
+        "description": "无缝地图切换有别于传统的流送地图，流送地图是在一个地图中放置子关卡，通过控制子关卡的加载和卸载来切换不同的地图 而无缝地图切换，是在切换地图的时候，先切换到一个简单的地图中，在后台加载地图，加载完成后再切换到那个地图中",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19165504",
+        "translationKey": "cnblogs-19165504",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-25",
+        "publishedAt": "2025-10-25 15:51",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "关卡",
+          "无缝切换"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165504",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165504"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/240-自定义配置DeveloperSettings.md",
+      "route": "/blog/cnblogs-19165500/",
+      "bodyBaselineSha256": "14294382bd3f01248a515ae4c587e21ea6dbba5d232c55f90b617308de6baebc",
+      "frontmatterBaseline": {
+        "title": "自定义配置DeveloperSettings",
+        "description": "创建一个继承自UDeveloperSettings的类 类属性中Config=Game意思是在Game.ini中配置，加上DefaultConfig，就是DefaultGame.ini config=后面跟的就是配置文件名 所以这里是在DefaultVehicle.ini中配置",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19165500",
+        "translationKey": "cnblogs-19165500",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-25",
+        "publishedAt": "2025-10-25 15:48",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "DeveloperSettings",
+          "配置管理"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165500",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165500"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/250-解决UObject蓝图缺少上下文的问题.md",
+      "route": "/blog/cnblogs-19165488/",
+      "bodyBaselineSha256": "2d27ab5c73c17a0eabb3c1dfcdeb449316e9bae0dc1582585ad9758b046d49bf",
+      "frontmatterBaseline": {
+        "title": "解决UObject蓝图缺少上下文的问题",
+        "description": "通常情况下，当你新建一个蓝图继承自UObejct的时候，你会发现不仅不能获取到PlayerController",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19165488",
+        "translationKey": "cnblogs-19165488",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-25",
+        "publishedAt": "2025-10-25 15:45",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "UObject",
+          "蓝图"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165488",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165488"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/260-遍历Actor所有属性进入Sequence记录.md",
+      "route": "/blog/cnblogs-19165520/",
+      "bodyBaselineSha256": "a5554f4d31f16205b7b1a24dbe921b0a09a6a68413f13335d72f920f92ddb2b9",
+      "frontmatterBaseline": {
+        "title": "遍历Actor所有属性进入Sequence记录",
+        "description": "这里通过递归，将这个Actor内需要记录的结构体设置为了CPF_Interp，这个属性代表这个值能被LevelSequence记录，这个函数会遍历结构体内的所有属性，同样也设置为CPF_Interp",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19165520",
+        "translationKey": "cnblogs-19165520",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-25",
+        "publishedAt": "2025-10-25 15:57",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "Actor",
+          "Sequence"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165520",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165520"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/360-一键解决MetaHuman播放动画时头部穿模问题.md",
+      "route": "/blog/cnblogs-19136316/",
+      "bodyBaselineSha256": "f028d707a24eb182db76246d41e15ce91c84de34e1891e02e0ab1e500e86ed15",
+      "frontmatterBaseline": {
+        "title": "一键解决MetaHuman播放动画时头部穿模问题",
+        "description": "这是最近做MetaHuman项目发现的问题，当头部和身体同时播放不同动画的时候，脖子附近会出现穿模现象，这个问题在LevelSequence中暂时没有发现。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19136316",
+        "translationKey": "cnblogs-19136316",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-12",
+        "publishedAt": "2025-10-12 10:14",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "MetaHuman",
+          "动画"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19136316",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19136316"
+          }
+        ],
+        "productIds": [],
+        "workIds": [],
+        "docIds": []
+      }
+    },
+    {
+      "source": "笔记/UE开发/370-如何在UE中创建动态枚举.md",
+      "route": "/blog/cnblogs-19136345/",
+      "bodyBaselineSha256": "ad7f1c625dbc3e72ca99275eae11c322932e77c54372df3993b94d98b9b758af",
+      "frontmatterBaseline": {
+        "title": "如何在UE中创建动态枚举",
+        "description": "说明 UE 枚举反射、配置数组绑定和子系统初始化，并记录基础方案的数据验证与复用限制。",
+        "type": "blog",
+        "lang": "zh",
+        "slug": "cnblogs-19136345",
+        "translationKey": "cnblogs-19136345",
+        "categoryId": "ue",
+        "categoryName": "UE",
+        "categoryOrder": 0,
+        "order": 0,
+        "status": "已发布",
+        "featured": false,
+        "date": "2025-10-12",
+        "publishedAt": "2025-10-12 10:33",
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "枚举"
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19136345",
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19136345"
+          }
+        ],
+        "productIds": [],
+        "workIds": [
+          "simple-auto-enum"
+        ],
+        "docIds": [
+          "simple-auto-enum-guide"
+        ]
+      }
+    },
+    {
+      "source": "笔记/随笔/010-Markdown 本地图片，发布时该怎么处理？.md",
+      "route": "/blog/markdown-images/",
+      "bodyBaselineSha256": "c0689b6e757f519f1ee8a52ef198706859dabf9f39876aaf16e0b1e272111e01",
+      "frontmatterBaseline": {
+        "title": "Markdown 本地图片，发布时该怎么处理？",
+        "description": "相对路径、独立图片文件和 Base64 内嵌各有适用场景；先看目标平台，再选择导出方式。",
+        "lang": "zh",
+        "slug": "markdown-images",
+        "categoryId": "notes",
+        "categoryName": "随笔",
+        "categoryOrder": 4,
+        "status": "已发布",
+        "featured": true,
+        "translationKey": "markdown-images",
+        "date": "2026-09-12",
+        "draft": false,
+        "tags": [
+          "Markdown",
+          "写作工具"
+        ],
+        "productIds": [
+          "md-blog-packer"
+        ],
+        "workIds": [
+          "markdown-publishing"
+        ],
+        "docIds": [
+          "md-blog-packer"
+        ],
+        "type": "blog",
+        "sitePublish": true,
+        "migrationOrigin": "existing-published-website-content"
+      }
+    }
+  ],
+  "cases": [
+    {
+      "source": "案例/UE项目/010-解决驾考模拟器三屏显示不一致问题.md",
+      "route": "/cases/driving-simulator-three-screen/",
+      "frontmatterBaseline": {
+        "title": "解决驾考模拟器三屏显示不一致问题",
+        "description": "围绕三屏 Lumen GI 光反射失效与曝光不一致，定位并改写引擎相关实现。",
+        "slug": "driving-simulator-three-screen",
+        "categoryId": "ue-projects",
+        "categoryName": "UE项目",
+        "categoryOrder": 0,
+        "cover": "../../../附件/网站/案例/driving-simulator-three-screen/cover.png",
+        "status": "已完成",
+        "featured": false,
+        "tags": [
+          "Lumen",
+          "多屏显示",
+          "仿真"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true,
+        "migrationOrigin": "existing-published-website-content",
+        "coverAlt": "解决驾考模拟器三屏显示不一致问题的流程图",
+        "websiteCoverUrl": "/assets/cases/driving-simulator-three-screen.png"
+      }
+    },
+    {
+      "source": "案例/UE项目/020-集成 AI 数字人交互流程.md",
+      "route": "/cases/ai-digital-human-integration/",
+      "frontmatterBaseline": {
+        "title": "集成 AI 数字人交互流程",
+        "description": "将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。",
+        "slug": "ai-digital-human-integration",
+        "categoryId": "ue-projects",
+        "categoryName": "UE项目",
+        "categoryOrder": 0,
+        "cover": "../../../附件/网站/案例/ai-digital-human-integration/cover.png",
+        "status": "已完成",
+        "featured": false,
+        "tags": [
+          "AI",
+          "MetaHuman",
+          "语音交互"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true,
+        "migrationOrigin": "existing-published-website-content",
+        "coverAlt": "集成 AI 数字人交互流程的流程图",
+        "websiteCoverUrl": "/assets/cases/ai-digital-human-integration.png"
+      }
+    },
+    {
+      "source": "案例/UE项目/030-飞行汽车模拟器.md",
+      "route": "/cases/flying-car-simulator/",
+      "frontmatterBaseline": {
+        "title": "飞行汽车模拟器",
+        "description": "面向未来出行的飞行汽车仿真系统。",
+        "slug": "flying-car-simulator",
+        "categoryId": "ue-projects",
+        "categoryName": "UE项目",
+        "categoryOrder": 0,
+        "cover": "../../../附件/网站/案例/flying-car-simulator/cover.png",
+        "status": "归档",
+        "featured": false,
+        "tags": [
+          "仿真",
+          "交通"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true,
+        "migrationOrigin": "existing-published-website-content",
+        "coverAlt": "飞行汽车模拟器的流程图",
+        "websiteCoverUrl": "/assets/cases/flying-car-simulator.png"
+      }
+    },
+    {
+      "source": "案例/UE项目/040-动捕机器人控制系统.md",
+      "route": "/cases/motion-capture-robot-control/",
+      "frontmatterBaseline": {
+        "title": "动捕机器人控制系统",
+        "description": "基于动作捕捉的机器人实时控制方案。",
+        "slug": "motion-capture-robot-control",
+        "categoryId": "ue-projects",
+        "categoryName": "UE项目",
+        "categoryOrder": 0,
+        "cover": "../../../附件/网站/案例/motion-capture-robot-control/cover.png",
+        "status": "归档",
+        "featured": false,
+        "tags": [
+          "动作捕捉",
+          "机器人"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true,
+        "migrationOrigin": "existing-published-website-content",
+        "coverAlt": "动捕机器人控制系统的流程图",
+        "websiteCoverUrl": "/assets/cases/motion-capture-robot-control.png"
+      }
+    },
+    {
+      "source": "案例/UE项目/050-六自由度运动平台联动.md",
+      "route": "/cases/six-dof-motion-platform/",
+      "frontmatterBaseline": {
+        "title": "六自由度运动平台联动",
+        "description": "Stewart 平台与 UE 仿真的联动控制。",
+        "slug": "six-dof-motion-platform",
+        "categoryId": "ue-projects",
+        "categoryName": "UE项目",
+        "categoryOrder": 0,
+        "cover": "../../../附件/网站/案例/six-dof-motion-platform/cover.png",
+        "status": "归档",
+        "featured": false,
+        "tags": [
+          "仿真",
+          "硬件联动"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true,
+        "migrationOrigin": "existing-published-website-content",
+        "coverAlt": "六自由度运动平台联动的流程图",
+        "websiteCoverUrl": "/assets/cases/six-dof-motion-platform.png"
+      }
+    },
+    {
+      "source": "案例/桌面与自动化/060-插件开发到发布的工具链.md",
+      "route": "/cases/plugin-release-workflow/",
+      "frontmatterBaseline": {
+        "title": "插件开发到发布的工具链",
+        "description": "围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。",
+        "slug": "plugin-release-workflow",
+        "categoryId": "desktop-automation",
+        "categoryName": "桌面与自动化",
+        "categoryOrder": 1,
+        "cover": "../../../附件/网站/案例/plugin-release-workflow/cover.png",
+        "status": "已完成",
+        "featured": true,
+        "tags": [
+          "UnrealEngine",
+          "插件",
+          "自动化"
+        ],
+        "productIds": [
+          "plugin-auto-packer",
+          "plugin-manager"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true,
+        "migrationOrigin": "existing-published-website-content",
+        "coverAlt": "插件开发到发布的工具链的流程图",
+        "websiteCoverUrl": "/assets/cases/plugin-release-workflow.png"
+      }
+    },
+    {
+      "source": "案例/桌面与自动化/070-让 Markdown 图片随文章一起发布.md",
+      "route": "/cases/markdown-publishing/",
+      "frontmatterBaseline": {
+        "title": "让 Markdown 图片随文章一起发布",
+        "description": "从本地图片路径到可复制的发布文本，减少文章迁移时的手动整理。",
+        "slug": "markdown-publishing",
+        "categoryId": "desktop-automation",
+        "categoryName": "桌面与自动化",
+        "categoryOrder": 1,
+        "cover": "../../../附件/网站/案例/markdown-publishing/cover.png",
+        "status": "已完成",
+        "featured": true,
+        "tags": [
+          "Markdown",
+          "图片",
+          "写作工具"
+        ],
+        "productIds": [
+          "md-blog-packer"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true,
+        "migrationOrigin": "existing-published-website-content",
+        "coverAlt": "让 Markdown 图片随文章一起发布的流程图",
+        "websiteCoverUrl": "/assets/cases/markdown-publishing.png"
+      }
+    }
+  ],
+  "manuals": [
+    {
+      "source": "文档/产品手册/ai-data-asset.md",
+      "route": "/docs/zh/guides/ue-tools/ai-data-asset-guide/",
+      "supplementSources": [],
+      "mainBodyBaselineSha256": "feda1b233149274a17abfa4ac76db81eff5fe115bdf11e8fc15aedcc21486a19",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "AIDataAsset 使用文档",
+        "description": "AIDataAsset 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "ai-data-asset-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/ai-data-asset-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "DataAsset",
+          "JSON"
+        ],
+        "workIds": [
+          "ai-data-asset"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "AIDataAsset/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "925245606ec13f3923f97b759e637947c3af3ee1",
+        "sourceSha256": "a84954a6d5c3417691dc9ce17bf42be3ee052a779bac1f0652b93d8f6b4c54ea",
+        "supplementSources": [],
+        "media": [
+          {
+            "path": "附件/网站/产品手册/ai-data-asset/DataAssetEditor.png",
+            "sha256": "f27ad5909baa60892e0a14d213847578c053d40c09e85ca2e6bcc7da324692e0",
+            "websiteUrl": "/media/manuals/f27ad5909baa60892e0a.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/ai-data-asset/JSONExport.png",
+            "sha256": "4b0067443f8e2e35eecd0b750037789e07903a75a6ae7eee0cabd7d5e487832f",
+            "websiteUrl": "/media/manuals/4b0067443f8e2e35eecd.png",
+            "publish": false,
+            "reason": "local-context"
+          }
+        ],
+        "managedBodySha256": "d47e1ed2187638558851e37684749ad97b45f4894a010c16c058d7471907ec38"
+      },
+      "supplementBodyBaselines": []
+    },
+    {
+      "source": "文档/产品手册/simple-asset-cleaner.md",
+      "route": "/docs/zh/guides/ue-tools/simple-asset-cleaner-guide/",
+      "supplementSources": [
+        "网站/文档/UE工具/SimpleAssetCleaner/使用指南.md"
+      ],
+      "mainBodyBaselineSha256": "409b8ba01de86bf3104ef3938a2fe39007bccc273bd23ebe24c09310d8636c1f",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleAssetCleaner 使用文档",
+        "description": "SimpleAssetCleaner 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-asset-cleaner-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-asset-cleaner-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "资产管理",
+          "引用分析"
+        ],
+        "workIds": [
+          "simple-asset-cleaner"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleAssetCleaner/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "0e640f00208e741f3ce44b630256e133297da001",
+        "sourceSha256": "728939930ae87dca8c6ce7843b4fa1fc18bdae5474fa5a767dd03377e6b585be",
+        "supplementSources": [
+          "网站/文档/UE工具/SimpleAssetCleaner/使用指南.md"
+        ],
+        "media": [
+          {
+            "path": "附件/网站/产品手册/simple-asset-cleaner/ShowSettings.png",
+            "sha256": "2935892db54825e4d3a0aa060d6a6f51ea35288ec27c7dd4f1a24bf7e48aacf2",
+            "websiteUrl": "/media/manuals/2935892db54825e4d3a0.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-asset-cleaner/ShowProxy.png",
+            "sha256": "371175e265a8cadb391f7d6abb79dacc9e62cbaab6a27ace5369e85c81014ab5",
+            "websiteUrl": "/media/manuals/371175e265a8cadb391f.png",
+            "publish": true
+          }
+        ],
+        "managedBodySha256": "53b0b90e0f69b2b095f45529c423bcc577085a5c7ad2bd450337e5b36ca07db5"
+      },
+      "supplementBodyBaselines": [
+        {
+          "source": "网站/文档/UE工具/SimpleAssetCleaner/使用指南.md",
+          "sha256": "3f6bd1833948ebe7db25930543af37dd7d23e0585e8977f3f64e766c2a9be4e7"
+        }
+      ]
+    },
+    {
+      "source": "文档/产品手册/simple-asset-namer.md",
+      "route": "/docs/zh/guides/ue-tools/simple-asset-namer-guide/",
+      "supplementSources": [
+        "网站/文档/UE工具/SimpleAssetNamer/使用指南.md"
+      ],
+      "mainBodyBaselineSha256": "a059963fa312a6a42c99a919b1bc7f37dfa5f5c434c7b32e2a3f1e70bd3632ec",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleAssetNamer 使用文档",
+        "description": "SimpleAssetNamer 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-asset-namer-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-asset-namer-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "资产管理",
+          "命名规范"
+        ],
+        "workIds": [
+          "simple-asset-namer"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleAssetNamer/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "9fc093d3aba35c6549dd5f48c4225e9afa8ee2e1",
+        "sourceSha256": "59522b3a676410a33c5ca372b8abd9750dead22b9e51ce44111545e6fd92e108",
+        "supplementSources": [
+          "网站/文档/UE工具/SimpleAssetNamer/使用指南.md"
+        ],
+        "media": [],
+        "managedBodySha256": "b6f28fca4d481ebc46429644d8d2e2723062998ecdfe627e7b13151711eb36d7"
+      },
+      "supplementBodyBaselines": [
+        {
+          "source": "网站/文档/UE工具/SimpleAssetNamer/使用指南.md",
+          "sha256": "24e5028ab6276cca90c2b357b74271448a999064d6072ca9d09f887fbb069180"
+        }
+      ]
+    },
+    {
+      "source": "文档/产品手册/simple-auto-enum.md",
+      "route": "/docs/zh/guides/ue-tools/simple-auto-enum-guide/",
+      "supplementSources": [
+        "网站/文档/UE工具/SimpleAutoEnum/使用指南.md"
+      ],
+      "mainBodyBaselineSha256": "5fbe756bf8a470fd1055752c9a246461d06746d489c0d9817e77e9dbc05d1fae",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleAutoEnum 使用文档",
+        "description": "SimpleAutoEnum 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-auto-enum-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-auto-enum-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "配置管理",
+          "枚举"
+        ],
+        "workIds": [
+          "simple-auto-enum"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleAutoEnum/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "a4797f2f7a11b0e3ea90a40cf7e4cde655f08cae",
+        "sourceSha256": "882544f046eb8aa7326bd62a1cfaa575fae568427af90395f43786688506dd03",
+        "supplementSources": [
+          "网站/文档/UE工具/SimpleAutoEnum/使用指南.md"
+        ],
+        "media": [
+          {
+            "path": "附件/网站/产品手册/simple-auto-enum/StandardUsage.png",
+            "sha256": "46a609f4b5ba2daad23e71df9eebfc0fcf379a72c5952b1e599150e365f795bf",
+            "websiteUrl": "/media/manuals/46a609f4b5ba2daad23e.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-auto-enum/RangeBinding.png",
+            "sha256": "7d14f4df15121b96d983e43cd1d9d5d8b1ba8b7dacf839e6ea3d4a86c1bb64ac",
+            "websiteUrl": "/media/manuals/7d14f4df15121b96d983.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-auto-enum/SharedArray.png",
+            "sha256": "aed4996fc06f34ad5aa9e65c7f27061d91c394701cc59824ce51948dd18786e0",
+            "websiteUrl": "/media/manuals/aed4996fc06f34ad5aa9.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-auto-enum/Settings.png",
+            "sha256": "3d090d75a9e55abf44acfff94521023fbd0ee3f6182ef019bb51271efe8c4bce",
+            "websiteUrl": "/media/manuals/3d090d75a9e55abf44ac.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-auto-enum/ShowDemo.png",
+            "sha256": "5fcf5aea851c7ef1588025a7bc971785a59fe3d5ac9117e400a263d665bcffb9",
+            "websiteUrl": "/media/manuals/5fcf5aea851c7ef15880.png",
+            "publish": true
+          }
+        ],
+        "managedBodySha256": "261abbe25544577cba20f3155c6e9e7d0a2d18892dca772a9ca3c0c180cd6e90"
+      },
+      "supplementBodyBaselines": [
+        {
+          "source": "网站/文档/UE工具/SimpleAutoEnum/使用指南.md",
+          "sha256": "ce442cc482095aa84d66fa681057b12ffcd97551c5045e0190456af474a0927e"
+        }
+      ]
+    },
+    {
+      "source": "文档/产品手册/simple-bp-inherit-fix.md",
+      "route": "/docs/zh/guides/ue-tools/simple-bp-inherit-fix-guide/",
+      "supplementSources": [
+        "网站/文档/UE工具/SimpleBPInheritFix/使用指南.md"
+      ],
+      "mainBodyBaselineSha256": "cbe4a223efce5c77c9f6e8077074b206cf01e1c8b9d3b849f468015673f1c0aa",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleBPInheritFix 使用文档",
+        "description": "SimpleBPInheritFix 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-bp-inherit-fix-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-bp-inherit-fix-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "蓝图",
+          "继承链"
+        ],
+        "workIds": [
+          "simple-bp-inherit-fix"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleBPInheritFix/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "f561a2adf1eec9e4a4470d06094662ac2c26e4e4",
+        "sourceSha256": "a592e174468b8baaa6f320fd0c9bfab6bff2276b8e8cb2dc6bf70f7eaa53b769",
+        "supplementSources": [
+          "网站/文档/UE工具/SimpleBPInheritFix/使用指南.md"
+        ],
+        "media": [],
+        "managedBodySha256": "162fc4344a951febbef0379a8178cca30103b5fe962243a7ed98d65f23f1198a"
+      },
+      "supplementBodyBaselines": [
+        {
+          "source": "网站/文档/UE工具/SimpleBPInheritFix/使用指南.md",
+          "sha256": "12baec57afa84f6f379bb7732905d48a4aaa350821abd952d95659bc7325a72b"
+        }
+      ]
+    },
+    {
+      "source": "文档/产品手册/simple-byte-conversion.md",
+      "route": "/docs/zh/guides/ue-tools/simple-byte-conversion-guide/",
+      "supplementSources": [
+        "网站/文档/UE工具/SimpleByteConversion/使用指南.md"
+      ],
+      "mainBodyBaselineSha256": "c1a6835fd36e03d49fb5a39ce10408ca4bc80315deca988c9a12dda3b5627663",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleByteConversion 使用文档",
+        "description": "SimpleByteConversion 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-byte-conversion-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-byte-conversion-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "蓝图",
+          "序列化"
+        ],
+        "workIds": [
+          "simple-byte-conversion"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleByteConversion/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "ab99f77aa06a50aa8a05dfbbd56f0239750bedd9",
+        "sourceSha256": "cec4ab5f58928d85f24d583579ecc57c7d0994ebec1d85851388abac26e52239",
+        "supplementSources": [
+          "网站/文档/UE工具/SimpleByteConversion/使用指南.md"
+        ],
+        "media": [
+          {
+            "path": "附件/网站/产品手册/simple-byte-conversion/ShowAllFunction.png",
+            "sha256": "27a304477cf72991938e0d5ac1cc55544fa06550348947bfced84f8ed1173108",
+            "websiteUrl": "/media/manuals/27a304477cf72991938e.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-byte-conversion/20250502134059.png",
+            "sha256": "bd6287d37959bc8728596f05b8256c89fa7244ce7e9e55b47e5a710f830546cd",
+            "websiteUrl": "/media/manuals/bd6287d37959bc872859.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-byte-conversion/20250502134105.png",
+            "sha256": "ea5bdaab0abb35ddef0cc222bc52089854d15194b9c7ed9fbd58946089338476",
+            "websiteUrl": "/media/manuals/ea5bdaab0abb35ddef0c.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-byte-conversion/20250719003048.png",
+            "sha256": "2ebae79ee6b329de0803a97345312b3ddbbe74c2e1da812e3525c0429052f991",
+            "websiteUrl": "/media/manuals/2ebae79ee6b329de0803.png",
+            "publish": true
+          }
+        ],
+        "managedBodySha256": "b7d0dc3d9a3c7dd617cb0ca4dcd33037a7127b8eafc3a5f7b4b2cf67c2932ff0"
+      },
+      "supplementBodyBaselines": [
+        {
+          "source": "网站/文档/UE工具/SimpleByteConversion/使用指南.md",
+          "sha256": "2249e4cf84dc84e66c2cc6d47da417b997099e88a86f829328f749635fc35e70"
+        }
+      ]
+    },
+    {
+      "source": "文档/产品手册/simple-config-exclude.md",
+      "route": "/docs/zh/guides/ue-tools/simple-config-exclude-guide/",
+      "supplementSources": [
+        "网站/文档/UE工具/SimpleConfigExclude/使用指南.md"
+      ],
+      "mainBodyBaselineSha256": "8588112b84018ce3f83067596cfe0cdedbd5b4204d2009f2dc033b50a5a5dba9",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleConfigExclude 使用文档",
+        "description": "SimpleConfigExclude 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-config-exclude-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-config-exclude-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "打包",
+          "配置管理"
+        ],
+        "workIds": [
+          "simple-config-exclude"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleConfigExclude/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "85bd1319ddac7c8e52beb821de297cecf78b769e",
+        "sourceSha256": "0dcae9401b799d069325c57d2d1898c2cd02fa3210733f0c4c9836b6a0fce2b3",
+        "supplementSources": [
+          "网站/文档/UE工具/SimpleConfigExclude/使用指南.md"
+        ],
+        "media": [],
+        "managedBodySha256": "042140b8f0ba3f1ef24458e679c39c2a82eabeef79893e32007ace88642cde5a"
+      },
+      "supplementBodyBaselines": [
+        {
+          "source": "网站/文档/UE工具/SimpleConfigExclude/使用指南.md",
+          "sha256": "9c0cbfdf9071fcc2a5a0f61f28a9018670ba83f061949a088e81117de404ff11"
+        }
+      ]
+    },
+    {
+      "source": "文档/产品手册/simple-input-simulator.md",
+      "route": "/docs/zh/guides/ue-tools/simple-input-simulator-guide/",
+      "supplementSources": [
+        "网站/文档/UE工具/SimpleInputSimulator/使用指南.md"
+      ],
+      "mainBodyBaselineSha256": "7830762d525df842e528fa9723edbcca74027ec3efdcc398ac4fe0ba50511e6a",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleInputSimulator 使用文档",
+        "description": "SimpleInputSimulator 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-input-simulator-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-input-simulator-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "蓝图",
+          "输入模拟"
+        ],
+        "workIds": [
+          "simple-input-simulator"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleInputSimulator/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "38e77c27323971044e18705d305ae8e62eab6f9e",
+        "sourceSha256": "c9ca41fa89af889ded6ff13c2aa2156aa52ed3dc4f757acb6c163280966c96b4",
+        "supplementSources": [
+          "网站/文档/UE工具/SimpleInputSimulator/使用指南.md"
+        ],
+        "media": [
+          {
+            "path": "附件/网站/产品手册/simple-input-simulator/ShowAllFunctions.png",
+            "sha256": "89dd66d8f8dd02fd3699415443f2b01327683c0e9fd2b45cda5ca0e0921b7a04",
+            "websiteUrl": "/media/manuals/89dd66d8f8dd02fd3699.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-input-simulator/ShowSimulateKeyInput.png",
+            "sha256": "a21b56b12c7d808fb6a1e95c9617a6492d3d1b44e44266cffd477ef0fee5a5cc",
+            "websiteUrl": "/media/manuals/a21b56b12c7d808fb6a1.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-input-simulator/ShowSimulateAxisInput.png",
+            "sha256": "e7e79750a6cc18dc62ff05aee6568e8e16360edf9115b9b639af18129778ba6a",
+            "websiteUrl": "/media/manuals/e7e79750a6cc18dc62ff.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-input-simulator/ShowSimulateKeyInput.png",
+            "sha256": "a21b56b12c7d808fb6a1e95c9617a6492d3d1b44e44266cffd477ef0fee5a5cc",
+            "websiteUrl": "/media/manuals/a21b56b12c7d808fb6a1.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-input-simulator/ShowSimulateAxisInput.png",
+            "sha256": "e7e79750a6cc18dc62ff05aee6568e8e16360edf9115b9b639af18129778ba6a",
+            "websiteUrl": "/media/manuals/e7e79750a6cc18dc62ff.png",
+            "publish": true
+          }
+        ],
+        "managedBodySha256": "cef78bab2ff14e892a09fc6f7fcc4b93b6e025751d15f1acdaafab3fc874dc1d"
+      },
+      "supplementBodyBaselines": [
+        {
+          "source": "网站/文档/UE工具/SimpleInputSimulator/使用指南.md",
+          "sha256": "f62ab5fedc8e0b3e001f9847795a3856d749af38c7e9e5db9b780900a4dadcc3"
+        }
+      ]
+    },
+    {
+      "source": "文档/产品手册/simple-launcher.md",
+      "route": "/docs/zh/guides/ue-tools/simple-launcher-guide/",
+      "supplementSources": [
+        "网站/文档/UE工具/SimpleLauncher/使用指南.md"
+      ],
+      "mainBodyBaselineSha256": "fc1997667f78d0b235132c4707168a83683e36aa72164ee68d8b4dd349f64744",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleLauncher 使用文档",
+        "description": "SimpleLauncher 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-launcher-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-launcher-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "进程管理"
+        ],
+        "workIds": [
+          "simple-launcher"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleLauncher/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "df15c1de04acdb21c7cbafc270d46d0bbb6352d5",
+        "sourceSha256": "f73ca3e8da22430775b2fefdb9b43f72acda258f209518e252e920515d2291f8",
+        "supplementSources": [
+          "网站/文档/UE工具/SimpleLauncher/使用指南.md"
+        ],
+        "media": [],
+        "managedBodySha256": "d6145e7e8ebb6526b5772b3bc568e91df10abd1e8b7d2971374f4bffceb5dc5b"
+      },
+      "supplementBodyBaselines": [
+        {
+          "source": "网站/文档/UE工具/SimpleLauncher/使用指南.md",
+          "sha256": "288cf4024bb38fa4da490c9c114d996dc4755dcc4c745659b6bfc3e6dc92f312"
+        }
+      ]
+    },
+    {
+      "source": "文档/产品手册/simple-level-seq-smooth.md",
+      "route": "/docs/zh/guides/ue-tools/simple-level-seq-smooth-guide/",
+      "supplementSources": [],
+      "mainBodyBaselineSha256": "5f7096a987d299af7baf7fead2f12e1e8a7a938a82a042d58948fa8efc78c378",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleLevelSeqSmooth 使用文档",
+        "description": "SimpleLevelSeqSmooth 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-level-seq-smooth-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-level-seq-smooth-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "动画",
+          "动作捕捉",
+          "滤波"
+        ],
+        "workIds": [
+          "simple-level-seq-smooth"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleLevelSeqSmooth/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "6bcca02224dc649477fbf16d145f52d546b836da",
+        "sourceSha256": "b3491cf7c88d916bfa97cab32b8db4a0f9c66b1fdcb03d1ced449af32b5618ce",
+        "supplementSources": [],
+        "media": [],
+        "managedBodySha256": "66312662cdc828d4c7d4e697c6619000d4bf8a114e8f04311224758745585026"
+      },
+      "supplementBodyBaselines": []
+    },
+    {
+      "source": "文档/产品手册/simple-ssh-tunnel.md",
+      "route": "/docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/",
+      "supplementSources": [],
+      "mainBodyBaselineSha256": "bf8fcc418eb2122965f22524ad2d471560b4b00e9a1d0d9e3b8ce2725beb33bf",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleSSHTunnel 使用文档",
+        "description": "SimpleSSHTunnel 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-ssh-tunnel-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "SSH"
+        ],
+        "workIds": [
+          "simple-ssh-tunnel"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleSSHTunnel/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "44e4889eb100a8445bab82223d8b0c7abd25a59d",
+        "sourceSha256": "e6121d56abcdc03fab16c3d4f65bc5dacb8179f308016cf3652663249ff83db2",
+        "supplementSources": [],
+        "media": [],
+        "managedBodySha256": "6207baf3b21bdf725ed566dee93b83571a09a41c4af25e719d607b91b12162e4"
+      },
+      "supplementBodyBaselines": []
+    },
+    {
+      "source": "文档/产品手册/simple-static-mesh-merger.md",
+      "route": "/docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/",
+      "supplementSources": [
+        "网站/文档/UE工具/SimpleStaticMeshMerger/使用指南.md"
+      ],
+      "mainBodyBaselineSha256": "d3f1948db17c64dea99d8a3457a6c4ebca65de9a8c55b4614774643baee9ab0b",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleStaticMeshMerger 使用文档",
+        "description": "SimpleStaticMeshMerger 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-static-mesh-merger-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "StaticMesh",
+          "实例化"
+        ],
+        "workIds": [
+          "simple-static-mesh-merger"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleStaticMeshMerger/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "46ad05df82db1497dd022d29145fc8004318aae0",
+        "sourceSha256": "198173e7195772ec3a35672379c1ae666d27afad2e203256c8bba37dea5f9afd",
+        "supplementSources": [
+          "网站/文档/UE工具/SimpleStaticMeshMerger/使用指南.md"
+        ],
+        "media": [],
+        "managedBodySha256": "4f26ca1c005307450bd26d2b22f9bf76a2c960ea729c480a970f382eff8b6b59"
+      },
+      "supplementBodyBaselines": [
+        {
+          "source": "网站/文档/UE工具/SimpleStaticMeshMerger/使用指南.md",
+          "sha256": "7c77a9a0671ab1714386f6f84461e6a2b4d6ec7c22dd3a291701838ea9e7797e"
+        }
+      ]
+    },
+    {
+      "source": "文档/产品手册/simple-tcp-client.md",
+      "route": "/docs/zh/guides/ue-tools/simple-tcp-client-guide/",
+      "supplementSources": [],
+      "mainBodyBaselineSha256": "668f5a31864fe0c25d606e1fafb5f53e91c9be7813867286e6f76dc57528f505",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleTCPClient 使用文档",
+        "description": "SimpleTCPClient 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-tcp-client-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-tcp-client-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "TCP"
+        ],
+        "workIds": [
+          "simple-tcp-client"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleTCPClient/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "205bc9a626feaa61bd122b7f95a66f6abc6bd437",
+        "sourceSha256": "eb85ed5d2574794e3af1cb81a4025761ef4af29446263a2d7189d4853b7078ec",
+        "supplementSources": [],
+        "media": [
+          {
+            "path": "附件/网站/产品手册/simple-tcp-client/ShowAllFunction.jpg",
+            "sha256": "2f974d095126f5f60e63ec0808e0a040f584805ecbef43c8e4f2d2c148c008c9",
+            "websiteUrl": "/media/manuals/2f974d095126f5f60e63.jpg",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-tcp-client/StartConnection And StopConnection.jpg",
+            "sha256": "1e59fed236ce1e5311be8fe42aeb1c73fad42e3e43e6bf1c898ac945f37a7c56",
+            "websiteUrl": "/media/manuals/1e59fed236ce1e5311be.jpg",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-tcp-client/ReceiveMessage.jpg",
+            "sha256": "881feef1462f4fc013e903c837a89c8569f993de6cd15857a4ab58f862efe4b3",
+            "websiteUrl": "/media/manuals/881feef1462f4fc013e9.jpg",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-tcp-client/DynamicUpdateChannel.jpg",
+            "sha256": "f7a610df8f4ddcc9613d272a0719dae359b348e3decf8d1d2d264a2f49dd9dee",
+            "websiteUrl": "/media/manuals/f7a610df8f4ddcc9613d.jpg",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-tcp-client/SendMessage.jpg",
+            "sha256": "6bebb2adaed201837f19159ad9d00c9d9ffab5c3d0fd6699d84a1329ef54d37c",
+            "websiteUrl": "/media/manuals/6bebb2adaed201837f19.jpg",
+            "publish": true
+          }
+        ],
+        "managedBodySha256": "6e68ffefd72886891faf9ea1c49d7e37319646e8cfb3c3d686c9d7cac5b194e8"
+      },
+      "supplementBodyBaselines": []
+    },
+    {
+      "source": "文档/产品手册/simple-tcp-server.md",
+      "route": "/docs/zh/guides/ue-tools/simple-tcp-server-guide/",
+      "supplementSources": [],
+      "mainBodyBaselineSha256": "a86656993f5f2d078edb163ac573babe577a3aa484042d95b3e444d86f37672a",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleTCPServer 使用文档",
+        "description": "SimpleTCPServer 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-tcp-server-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-tcp-server-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "TCP"
+        ],
+        "workIds": [
+          "simple-tcp-server"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleTCPServer/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "a097784d260578701d740ba8b2aeed2d78fea9c6",
+        "sourceSha256": "546f04de982dc7d2d47877e756d737f4e20ea2bb7b14447e76de04255d766130",
+        "supplementSources": [],
+        "media": [
+          {
+            "path": "附件/网站/产品手册/simple-tcp-server/ShowAllFunction.png",
+            "sha256": "e7cdf97f5f530a684eee9f23deaa22a4b192ef225feaf19a602eafe88309b77e",
+            "websiteUrl": "/media/manuals/e7cdf97f5f530a684eee.png",
+            "publish": true
+          }
+        ],
+        "managedBodySha256": "03d82d51ceede6b1197e6874e6bbf7c16aabcec70a38db5424502dc86a74adff"
+      },
+      "supplementBodyBaselines": []
+    },
+    {
+      "source": "文档/产品手册/simple-udp.md",
+      "route": "/docs/zh/guides/ue-tools/simple-udp-guide/",
+      "supplementSources": [],
+      "mainBodyBaselineSha256": "4d0ffa470dcaacb7b109ca081b53ce472e4a8bd3d9728a6715844d21b1f3e004",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleUDP 使用文档",
+        "description": "SimpleUDP 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-udp-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-udp-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "UDP"
+        ],
+        "workIds": [
+          "simple-udp"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleUDP/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "0c9cc77d46f13ee850e3a4c74f3902b1ace76ec7",
+        "sourceSha256": "4048711a4f551d12833c19e18b3b80e575e68ae43e5e2718beb09557cd3c4b3d",
+        "supplementSources": [],
+        "media": [
+          {
+            "path": "附件/网站/产品手册/simple-udp/ShowAllFuntion.png",
+            "sha256": "fd1d93f02ef279e71e2e67c9de5e58f9bfb08e878ee2796402b94a651e932293",
+            "websiteUrl": "/media/manuals/fd1d93f02ef279e71e2e.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-udp/StartReceiveMessage.png",
+            "sha256": "f6d246d6dd2934e4c5a1e287fb09c262c37834a6212cf5f2253944d0c607a01b",
+            "websiteUrl": "/media/manuals/f6d246d6dd2934e4c5a1.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-udp/StopReceiveMessage.png",
+            "sha256": "70c9fd752abed00b6b4c8ee913199567c2cc0cb69ff1d8f30e10b30d53933544",
+            "websiteUrl": "/media/manuals/70c9fd752abed00b6b4c.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-udp/DynamicAddOrUpdateReceiveChannelConfig.png",
+            "sha256": "5f056cc625a73554efc2bcabe54a6f8d67d918d8b4a6aac89f842c7d1aa5bd7a",
+            "websiteUrl": "/media/manuals/5f056cc625a73554efc2.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-udp/DynamicUpdateSendChnnelConfig.png",
+            "sha256": "9aebf9a15bce612e4b1c6b0e94bdc5e33dda396919bd0fb8e3da9015a826235b",
+            "websiteUrl": "/media/manuals/9aebf9a15bce612e4b1c.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-udp/SendMessage.png",
+            "sha256": "01700bbe6fb9b6ce8da4a3e6d4679f0e592dc8d5ba8e023a0b8cedfcd9657cbe",
+            "websiteUrl": "/media/manuals/01700bbe6fb9b6ce8da4.png",
+            "publish": true
+          }
+        ],
+        "managedBodySha256": "99dea84201bbd4745f62d3863d941b103a886db095e302ccdb76404f01c37e1e"
+      },
+      "supplementBodyBaselines": []
+    },
+    {
+      "source": "文档/产品手册/simple-websocket.md",
+      "route": "/docs/zh/guides/ue-tools/simple-websocket-guide/",
+      "supplementSources": [],
+      "mainBodyBaselineSha256": "3050e06d557702c6885d0ca5e90b157270a2ead322cba3d090f7d25e2024edad",
+      "frontmatterBaseline": {
+        "type": "doc",
+        "documentKind": "product-manual",
+        "title": "SimpleWebSocket 使用文档",
+        "description": "SimpleWebSocket 的完整中文产品使用文档",
+        "lang": "zh",
+        "slug": "simple-websocket-guide",
+        "websiteRoute": "/docs/zh/guides/ue-tools/simple-websocket-guide/",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "tags": [
+          "WebSocket"
+        ],
+        "workIds": [
+          "simple-websocket"
+        ],
+        "draft": false,
+        "sitePublish": true,
+        "managedSource": true,
+        "sourceRepository": "MZSH-UEPlugins/UEPluginDocs",
+        "sourceBranch": "main",
+        "sourcePath": "SimpleWebSocket/README_CN.md",
+        "sourceCommit": "6a335dff66390e9253af9cc06f023b8e6c659e6d",
+        "sourceBlobSha": "f46818d2eca00fdde439fd8d91bf5dc5cc8ffb5c",
+        "sourceSha256": "2e2b4c197d3700d1a0d20131f81515187b04afb09f1c2d095526b9f66a9d0228",
+        "supplementSources": [],
+        "media": [
+          {
+            "path": "附件/网站/产品手册/simple-websocket/20250524103328.png",
+            "sha256": "f401abc666a8714746661032ea5b092659608edcf7d0a1841a50d1d7978caed0",
+            "websiteUrl": "/media/manuals/f401abc666a871474666.png",
+            "publish": true
+          },
+          {
+            "path": "附件/网站/产品手册/simple-websocket/20250524104722.png",
+            "sha256": "7b84c6f39e82bcac8366a9246c0106cb347c01cbb75a99c99816cdf7f11edc3a",
+            "websiteUrl": "/media/manuals/7b84c6f39e82bcac8366.png",
+            "publish": true
+          }
+        ],
+        "managedBodySha256": "e6b996fec4dea00d035e3dad4e1885b4a3d5c674f194d2bf2999fd7396f175a5"
+      },
+      "supplementBodyBaselines": []
+    }
+  ],
+  "deleteRoutes": [
+    "/blog/cnblogs-19165647/"
+  ]
+}
