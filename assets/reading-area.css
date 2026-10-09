@@ -6,7 +6,6 @@
 }
 .site-chrome .note-hero .project-hero-copy {
   min-inline-size: 0;
-  max-inline-size: 78ch;
 }
 .site-chrome .note-hero .project-breadcrumb {
   margin-block-end: 14px;
@@ -16,7 +15,6 @@
   line-height: 1.25;
 }
 .site-chrome .note-hero .project-description {
-  max-inline-size: 72ch;
   margin-block-start: 16px;
   line-height: 1.7;
 }
