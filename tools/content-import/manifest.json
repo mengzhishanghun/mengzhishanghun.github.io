@@ -2464,5 +2464,823 @@
   ],
   "deleteRoutes": [
     "/blog/cnblogs-19165647/"
+  ],
+  "works": [
+    {
+      "source": "作品/实用工具/190-SimpleFileUpdater.md",
+      "route": "/works/simple-file-updater/",
+      "frontmatterBaseline": {
+        "title": "SimpleFileUpdater",
+        "description": "将本地目标路径与远程下载地址写入配置，批量更新指定文件。",
+        "slug": "simple-file-updater",
+        "type": "work",
+        "categoryId": "open-source-tools",
+        "categoryName": "开源工具",
+        "categoryOrder": 1,
+        "order": 0,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "cover": "附件/网站/作品/simple-file-updater-cover.png",
+        "coverAlt": "配置驱动的文件更新功能示意封面",
+        "tags": [
+          "文件更新",
+          "自动化"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/MZSH-Tools/SimpleFileUpdater"
+          }
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "bb4a0049ac4b65af9c6cc0332630b4084896052ef0806f02d57e83869a9ea494"
+    },
+    {
+      "source": "作品/协作工具/180-P4CaseSync.md",
+      "route": "/works/p4-case-sync/",
+      "frontmatterBaseline": {
+        "title": "P4CaseSync",
+        "description": "在提交前对照本地真实路径，检查并修正 Perforce 已打开文件的路径大小写。",
+        "slug": "p4-case-sync",
+        "type": "work",
+        "categoryId": "open-source-tools",
+        "categoryName": "开源工具",
+        "categoryOrder": 1,
+        "order": 0,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "cover": "附件/网站/作品/p4-case-sync-cover.png",
+        "coverAlt": "Perforce 路径大小写修正功能示意封面",
+        "tags": [
+          "Perforce",
+          "版本控制"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/MZSH-Tools/P4CaseSync"
+          }
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "6c9512b31bb752f86d7bf72ad1731ded3568a2514d4e6f42874558caa819609a"
+    },
+    {
+      "source": "作品/写作工具/170-MDBlogPacker.md",
+      "route": "/works/md-blog-packer/",
+      "frontmatterBaseline": {
+        "title": "MDBlogPacker",
+        "description": "将 Markdown 中的本地图片转成 Base64 内嵌格式，便于导出和复制到支持的平台。",
+        "slug": "md-blog-packer",
+        "type": "work",
+        "categoryId": "open-source-tools",
+        "categoryName": "开源工具",
+        "categoryOrder": 1,
+        "order": 0,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "cover": "附件/网站/作品/md-blog-packer-cover.png",
+        "coverAlt": "Markdown 图片发布工具功能示意封面",
+        "tags": [
+          "Markdown",
+          "图片"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/MZSH-Tools/MDBlogPacker"
+          }
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "d562996d618ae38b3a95d6e6e91233040ee452729078666fe662ab7c3a66e494"
+    },
+    {
+      "source": "作品/写作工具/240-MDImageEmbed.md",
+      "route": "/works/md-image-embed/",
+      "frontmatterBaseline": {
+        "title": "MDImageEmbed",
+        "description": "在 Obsidian 中把 Markdown 的本地图片转换为 Base64 内嵌格式后复制。",
+        "slug": "md-image-embed",
+        "type": "work",
+        "categoryId": "obsidian-plugins",
+        "categoryName": "Ob插件",
+        "categoryOrder": 3,
+        "order": 1,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "图片",
+          "导出"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19379394"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19379394",
+        "sourceDate": "2025-12-21",
+        "docIds": [
+          "md-image-embed-guide"
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "771b404aa445ca886729cc4cd3f6b89db7c59ef52ad4e63cc3efcf4b989ee596"
+    },
+    {
+      "source": "作品/UE工具/010-SimpleBPInheritFix.md",
+      "route": "/works/simple-bp-inherit-fix/",
+      "frontmatterBaseline": {
+        "title": "SimpleBPInheritFix",
+        "description": "针对 Actor 蓝图继承链中组件状态污染的问题，扫描继承链并执行修复。",
+        "slug": "simple-bp-inherit-fix",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 4,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "cover": "附件/网站/作品/simple-bp-inherit-fix-cover.png",
+        "coverAlt": "蓝图继承组件修复功能示意封面",
+        "tags": [
+          "蓝图",
+          "继承链"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/MZSH-UEPlugins/SimpleBPInheritFix"
+          }
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "7e819abff3fd309d88779a474aa55fb5b0ca6f9ca64aff12be0d87e063f0ce6e"
+    },
+    {
+      "source": "作品/UE工具/020-SimpleLevelSeqSmooth.md",
+      "route": "/works/simple-level-seq-smooth/",
+      "frontmatterBaseline": {
+        "title": "SimpleLevelSeqSmooth",
+        "description": "对 Level Sequence 数据进行滤波和平滑，支持批量处理与 ControlRig 参数段。",
+        "slug": "simple-level-seq-smooth",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 5,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "cover": "附件/网站/作品/simple-level-seq-smooth-cover.png",
+        "coverAlt": "动画序列平滑工具功能示意封面",
+        "tags": [
+          "动画",
+          "动作捕捉",
+          "滤波"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth"
+          }
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "e43fed939ff5624feb9819cef92b9c8df2b58be4241f9fa659eb55a41ccdbfe3"
+    },
+    {
+      "source": "作品/UE工具/030-AIDataAsset.md",
+      "route": "/works/ai-data-asset/",
+      "frontmatterBaseline": {
+        "title": "AIDataAsset",
+        "description": "将 DataAsset 属性与 JSON 文件关联，供外部程序读取和修改游戏数据。",
+        "slug": "ai-data-asset",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 6,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "DataAsset",
+          "JSON"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/20159718"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/20159718",
+        "sourceDate": "2026-05-25"
+      },
+      "media": [],
+      "sourceBaselineSha256": "2e665e311b0a426e6d276ec91a7dbc768f482f6d62f53b791f9d00e2d2645f66"
+    },
+    {
+      "source": "作品/UE工具/040-SimpleInputSimulator.md",
+      "route": "/works/simple-input-simulator/",
+      "frontmatterBaseline": {
+        "title": "SimpleInputSimulator",
+        "description": "在蓝图中模拟按键、轴输入，并清理残留的按键状态。",
+        "slug": "simple-input-simulator",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 7,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "蓝图",
+          "输入模拟"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19770939"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19770939",
+        "sourceDate": "2026-03-25",
+        "docIds": [
+          "simple-input-simulator-guide"
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "4620e8ca349d28637d4f06ae4dfb22a0bad5d8da90aa6a9ea0d1fcaed42e95b3"
+    },
+    {
+      "source": "作品/UE工具/050-SimpleByteConversion.md",
+      "route": "/works/simple-byte-conversion/",
+      "frontmatterBaseline": {
+        "title": "SimpleByteConversion",
+        "description": "提供基础类型、结构体、字节数组与 JSON 字符串之间的转换接口。",
+        "slug": "simple-byte-conversion",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 8,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "蓝图",
+          "序列化"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19770934"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19770934",
+        "sourceDate": "2026-03-25",
+        "docIds": [
+          "simple-byte-conversion-guide"
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "9448d9fdd9ed842f1fe299c462bb5e98a846bceccb3a284a7e6c7ebf9bfe9093"
+    },
+    {
+      "source": "作品/UE工具/060-SimpleConfigExclude.md",
+      "route": "/works/simple-config-exclude/",
+      "frontmatterBaseline": {
+        "title": "SimpleConfigExclude",
+        "description": "在项目设置中管理配置文件的默认、包含和排除状态，并复制排除文件。",
+        "slug": "simple-config-exclude",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 9,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "打包",
+          "配置管理"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19770930"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19770930",
+        "sourceDate": "2026-03-25",
+        "docIds": [
+          "simple-config-exclude-guide"
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "ce5ea628ccf4d2b9c82249436333e049438838a7f948d9e36dedbe07b5eee3e6"
+    },
+    {
+      "source": "作品/UE工具/070-SimpleLauncher.md",
+      "route": "/works/simple-launcher/",
+      "frontmatterBaseline": {
+        "title": "SimpleLauncher",
+        "description": "通过预设管理外部程序的启动、停止、多实例和退出通知。",
+        "slug": "simple-launcher",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 10,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "进程管理"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19770928"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19770928",
+        "sourceDate": "2026-03-25",
+        "docIds": [
+          "simple-launcher-guide"
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "379313ade431cc75a419d436dd5779e5d3400f712faddb6b6500e92acd757fa4"
+    },
+    {
+      "source": "作品/UE工具/080-SimpleAssetNamer.md",
+      "route": "/works/simple-asset-namer/",
+      "frontmatterBaseline": {
+        "title": "SimpleAssetNamer",
+        "description": "按资产类型和路径规则处理自动命名与批量重命名。",
+        "slug": "simple-asset-namer",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 11,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "资产管理",
+          "命名规范"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19770922"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19770922",
+        "sourceDate": "2026-03-25",
+        "docIds": [
+          "simple-asset-namer-guide"
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "25c79d32fbc03a208479d9e5e85d2fcc8d94dd70763d00596f31cbda571adbad"
+    },
+    {
+      "source": "作品/UE工具/090-SimpleStaticMeshMerger.md",
+      "route": "/works/simple-static-mesh-merger/",
+      "frontmatterBaseline": {
+        "title": "SimpleStaticMeshMerger",
+        "description": "预览并筛选 StaticMeshActor 分组，将选中的对象组织为 ISM/HISM 实例。",
+        "slug": "simple-static-mesh-merger",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 12,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "StaticMesh",
+          "实例化"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19204715"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19204715",
+        "sourceDate": "2025-11-09",
+        "docIds": [
+          "simple-static-mesh-merger-guide"
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "f99cded05805b03289eb3f0eb082141ce1f6767ab0eb47307f0633b545ac8393"
+    },
+    {
+      "source": "作品/UE工具/100-SimpleAssetCleaner.md",
+      "route": "/works/simple-asset-cleaner/",
+      "frontmatterBaseline": {
+        "title": "SimpleAssetCleaner",
+        "description": "根据根资源与引用关系识别候选未引用资产，提供提交时处理与全量清理入口。",
+        "slug": "simple-asset-cleaner",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 13,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "资产管理",
+          "引用分析"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19183435"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19183435",
+        "sourceDate": "2025-11-01",
+        "docIds": [
+          "simple-asset-cleaner-guide"
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "54c9fb550895d195cd02931f6fd12fc77db643317dd7256fcaa38c7a280a8b35"
+    },
+    {
+      "source": "作品/UE工具/110-SimpleSSHTunnel.md",
+      "route": "/works/simple-ssh-tunnel/",
+      "frontmatterBaseline": {
+        "title": "SimpleSSHTunnel",
+        "description": "基于 libssh2 与 OpenSSL，将 SSH 隧道功能封装为 UE 蓝图接口。",
+        "slug": "simple-ssh-tunnel",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 14,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "SSH"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165541"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165541",
+        "sourceDate": "2025-10-25"
+      },
+      "media": [],
+      "sourceBaselineSha256": "a2a2b0b4a01c7fd6690f256c619c7f40d9345beccb2eb8e30483fe679a1a5ad3"
+    },
+    {
+      "source": "作品/UE工具/120-SimpleUDP.md",
+      "route": "/works/simple-udp/",
+      "frontmatterBaseline": {
+        "title": "SimpleUDP",
+        "description": "将 UDP 收发、多通道配置和地址过滤封装为蓝图接口。",
+        "slug": "simple-udp",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 15,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "UDP"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165484"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165484",
+        "sourceDate": "2025-10-25"
+      },
+      "media": [],
+      "sourceBaselineSha256": "2de85b44e65602667966d514d0e30fe8042ff572f69629337be828bb4df09703"
+    },
+    {
+      "source": "作品/UE工具/130-SimpleTCPClient.md",
+      "route": "/works/simple-tcp-client/",
+      "frontmatterBaseline": {
+        "title": "SimpleTCPClient",
+        "description": "提供 TCP 客户端多通道连接、异步处理和重连管理。",
+        "slug": "simple-tcp-client",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 16,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "TCP"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165484"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165484",
+        "sourceDate": "2025-10-25"
+      },
+      "media": [],
+      "sourceBaselineSha256": "108617a7de1f6d20cb6065ae9256bf04f0d0d47831389653c315667ae3caf6d3"
+    },
+    {
+      "source": "作品/UE工具/140-SimpleTCPServer.md",
+      "route": "/works/simple-tcp-server/",
+      "frontmatterBaseline": {
+        "title": "SimpleTCPServer",
+        "description": "提供 TCP 服务端多客户端会话与连接事件接口。",
+        "slug": "simple-tcp-server",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 17,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "TCP"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165484"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165484",
+        "sourceDate": "2025-10-25"
+      },
+      "media": [],
+      "sourceBaselineSha256": "cc243753704e06ebbabbb59070e7a6dd6af998da458ebd946f7e23886ae0c33f"
+    },
+    {
+      "source": "作品/UE工具/150-SimpleWebSocket.md",
+      "route": "/works/simple-websocket/",
+      "frontmatterBaseline": {
+        "title": "SimpleWebSocket",
+        "description": "通过命名连接和消息委托，在 UE 中使用 WebSocket 通信。",
+        "slug": "simple-websocket",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 18,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "WebSocket"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19165484"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19165484",
+        "sourceDate": "2025-10-25"
+      },
+      "media": [],
+      "sourceBaselineSha256": "024393c7d96775367d2d38ba20f0b5ff1e1114c2cd96a67e0a798bd9a9e623f2"
+    },
+    {
+      "source": "作品/UE工具/160-SimpleAutoEnum.md",
+      "route": "/works/simple-auto-enum/",
+      "frontmatterBaseline": {
+        "title": "SimpleAutoEnum",
+        "description": "通过宏将配置数组绑定到枚举范围，减少重复的初始化代码。",
+        "slug": "simple-auto-enum",
+        "type": "work",
+        "categoryId": "ue-plugins",
+        "categoryName": "UE插件",
+        "categoryOrder": 0,
+        "order": 19,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "tags": [
+          "配置管理",
+          "枚举"
+        ],
+        "links": [
+          {
+            "label": "博客园原文",
+            "href": "https://www.cnblogs.com/mengzhishanghun/p/19136345"
+          }
+        ],
+        "sourcePlatform": "博客园",
+        "sourceUrl": "https://www.cnblogs.com/mengzhishanghun/p/19136345",
+        "sourceDate": "2025-10-12",
+        "docIds": [
+          "simple-auto-enum-guide"
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "cb0b73d0a7e98466622c16bce1d18279798ad4010d59ad2d7ec2664f657f4825"
+    },
+    {
+      "source": "作品/UE工具/200-UEPackageManager.md",
+      "route": "/works/ue-package-manager/",
+      "frontmatterBaseline": {
+        "title": "UEPackageManager",
+        "description": "用图形界面或命令行完成 UE 项目打包，并在成功后部署附加文件。",
+        "slug": "ue-package-manager",
+        "type": "work",
+        "categoryId": "open-source-tools",
+        "categoryName": "开源工具",
+        "categoryOrder": 1,
+        "order": 0,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "cover": "附件/网站/作品/ue-package-manager-cover.png",
+        "coverAlt": "UE 项目打包工具功能示意封面",
+        "tags": [
+          "UnrealEngine",
+          "打包",
+          "自动化"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/MZSH-Tools/UEPackageManager"
+          }
+        ]
+      },
+      "media": [
+        {
+          "path": "附件/网站/作品/ue-package-manager-ui.png",
+          "sha256": "baf8b7b901418c64d1f25311f6c9e82592e1ad2bdf8350c95ed6db071e699e2a",
+          "source": "/附件/网站/作品/ue-package-manager-ui.png",
+          "withheldHtmlSha256": "db7539cc0240c9eed204a8dd10ba0fbc345b46059ca1c10c65952c9944333032"
+        }
+      ],
+      "sourceBaselineSha256": "b9aab8c7bf3145a1682075e9bb4351f1361b5b49906d234d228d0ca967012808"
+    },
+    {
+      "source": "作品/UE工具/210-UEPluginAutoPacker.md",
+      "route": "/works/plugin-auto-packer/",
+      "frontmatterBaseline": {
+        "title": "UEPluginAutoPacker",
+        "description": "集中完成插件在多个 UE 引擎版本上的构建、日志查看和发布文件整理。",
+        "slug": "plugin-auto-packer",
+        "type": "work",
+        "categoryId": "open-source-tools",
+        "categoryName": "开源工具",
+        "categoryOrder": 1,
+        "order": 1,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "cover": "附件/网站/作品/plugin-auto-packer-cover.png",
+        "coverAlt": "UE 多版本插件打包器功能示意封面",
+        "tags": [
+          "UnrealEngine",
+          "插件",
+          "打包"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/MZSH-Tools/UEPluginAutoPacker"
+          }
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "752bbcd35536bf91cf8a67353ac8b263cb9a26e896c53dabf37242846c5acd1e"
+    },
+    {
+      "source": "作品/UE工具/220-UEPluginManager.md",
+      "route": "/works/plugin-manager/",
+      "frontmatterBaseline": {
+        "title": "UEPluginManager",
+        "description": "统一浏览项目、商城与引擎插件，查询依赖并管理插件状态。",
+        "slug": "plugin-manager",
+        "type": "work",
+        "categoryId": "open-source-tools",
+        "categoryName": "开源工具",
+        "categoryOrder": 1,
+        "order": 2,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "cover": "附件/网站/作品/plugin-manager-cover.png",
+        "coverAlt": "UE 插件管理工具功能示意封面",
+        "tags": [
+          "UnrealEngine",
+          "插件",
+          "依赖分析"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/MZSH-Tools/UEPluginManager"
+          }
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "36276ad89d7a0bcd035e3ceec563a7e66d1d9ead27b29213b2896157eefdeb5d"
+    },
+    {
+      "source": "作品/UE工具/230-UEQuickStart.md",
+      "route": "/works/ue-quick-start/",
+      "frontmatterBaseline": {
+        "title": "UEQuickStart",
+        "description": "识别项目和引擎，显示编译日志，并在编译成功后启动项目。",
+        "slug": "ue-quick-start",
+        "type": "work",
+        "categoryId": "open-source-tools",
+        "categoryName": "开源工具",
+        "categoryOrder": 1,
+        "order": 3,
+        "status": "正式文档",
+        "featured": false,
+        "draft": false,
+        "sitePublish": false,
+        "cover": "附件/网站/作品/ue-quick-start-cover.png",
+        "coverAlt": "UE 项目编译与启动功能示意封面",
+        "tags": [
+          "UnrealEngine",
+          "编译",
+          "启动工具"
+        ],
+        "links": [
+          {
+            "label": "GitHub",
+            "href": "https://github.com/MZSH-Tools/UEQuickStart"
+          }
+        ]
+      },
+      "media": [],
+      "sourceBaselineSha256": "11c0545a04f7e9b264b736a351723f83dac1bc090a7cecfad2993c8083c71d9e"
+    }
   ]
 }

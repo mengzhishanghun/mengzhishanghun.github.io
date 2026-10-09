@@ -19,11 +19,12 @@ const check = args.includes('--check');
 const vaultAt = args.indexOf('--vault');
 if (vaultAt < 0 || !args[vaultAt + 1]) throw new Error('必须指定 --vault <MyObsidian 路径>');
 const vault = path.resolve(args[vaultAt + 1]);
-if (manifest.blogs.length !== 36 || manifest.cases.length !== 7 || manifest.manuals.length !== 16) throw new Error('清单数量不符');
+if (manifest.blogs.length !== 36 || manifest.cases.length !== 7 || manifest.manuals.length !== 16 || manifest.works?.length !== 24) throw new Error('清单数量不符');
 if (manifest.deleteRoutes.join(',') !== '/blog/cnblogs-19165647/') throw new Error('删除清单不符');
-const allEntries = [...manifest.blogs.map(x => ({...x, kind: 'blog'})), ...manifest.cases.map(x => ({...x, kind: 'case'})), ...manifest.manuals.map(x => ({...x, kind: 'manual'}))];
+const allEntries = [...manifest.blogs.map(x => ({...x, kind: 'blog'})), ...manifest.cases.map(x => ({...x, kind: 'case'})), ...manifest.manuals.map(x => ({...x, kind: 'manual'})), ...manifest.works.map(x => ({...x, kind: 'work'}))];
 const unique = new Set(allEntries.map(x => x.route));
 if (unique.size !== allEntries.length) throw new Error('清单 route 重复');
+if (new Set(allEntries.map(x => x.source)).size !== allEntries.length) throw new Error('清单 source 重复');
 const processor = await createMarkdownProcessor({ syntaxHighlight: false, remarkPlugins: [rejectRawHTML], rehypePlugins: [rehypeExpressiveCode] });
 const headingProcessor = await createMarkdownProcessor({ syntaxHighlight: false });
 const escapeHTML = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -51,7 +52,7 @@ function safePath(base, rel) {
   return result;
 }
 function routeFile(route) {
-  if (!/^\/(blog|cases|docs)\/[a-z0-9/_-]+\/$/.test(route)) throw new Error('非法 route: ' + route);
+  if (!/^\/(blog|cases|docs|works)\/[a-z0-9/_-]+\/$/.test(route)) throw new Error('非法 route: ' + route);
   return safePath(site, route.slice(1) + 'index.html');
 }
 function readSource(entry) {
@@ -61,14 +62,16 @@ function readSource(entry) {
   if (!match) throw new Error('缺少 frontmatter: ' + entry.source);
   const data = YAML.parse(match[1]);
   if (data.draft !== false || data.slug !== entry.route.split('/').filter(Boolean).at(-1)) throw new Error('未授权的草稿或 slug: ' + entry.source);
-  if (data.type !== ({blog:'blog',case:'case',manual:'doc'})[entry.kind]) throw new Error('内容类型不符: ' + entry.source);
+  if (data.type !== ({blog:'blog',case:'case',manual:'doc',work:'work'})[entry.kind]) throw new Error('内容类型不符: ' + entry.source);
+  if (entry.kind === 'work' && JSON.stringify(data) !== JSON.stringify(entry.frontmatterBaseline))
+    throw new Error('作品 frontmatter 漂移: ' + entry.source);
   const unsupported = value => {
     const copy = structuredClone(value);
     delete copy.title;
     delete copy.description;
     return copy;
   };
-  if (JSON.stringify(unsupported(data)) !== JSON.stringify(unsupported(entry.frontmatterBaseline))) throw new Error('不支持同步的 frontmatter 字段变动: ' + entry.source);
+  if (entry.kind !== 'work' && JSON.stringify(unsupported(data)) !== JSON.stringify(unsupported(entry.frontmatterBaseline))) throw new Error('不支持同步的 frontmatter 字段变动: ' + entry.source);
   if (entry.kind === 'blog') {
     const first = raw.slice(match[0].length).match(/^\s*#\s+[^\n]+\n/);
     if (!first && entry.route !== '/blog/markdown-images/') throw new Error('笔记缺唯一首 H1: ' + entry.source);
@@ -136,6 +139,28 @@ function rejectRawHTML() {
     visit(tree);
   };
 }
+function workImagePlugin(media, used) {
+  return tree => {
+    const definitions = new Map();
+    const visit = (node, fn) => { fn(node); for (const child of node.children || []) visit(child, fn); };
+    visit(tree, node => {
+      if (node.type === 'definition') definitions.set(node.identifier.toLowerCase(), node.url);
+    });
+    visit(tree, node => {
+      if (node.type !== 'image' && node.type !== 'imageReference') return;
+      const url = node.type === 'image' ? node.url : definitions.get(node.identifier.toLowerCase());
+      let decoded;
+      try { decoded = decodeURIComponent(url); } catch { throw new Error('作品媒体地址编码异常: ' + url); }
+      if (!url || media.length !== 1 || decoded !== media[0].source)
+        throw new Error('作品含未知媒体: ' + url);
+      used.push(media[0]);
+      node.type = 'text';
+      node.value = 'MZSH_WITHHELD_WORK_MEDIA_0';
+      delete node.url;
+      delete node.children;
+    });
+  };
+}
 function validateRendered(markup, item) {
   const forbidden = new Set(['script','style','link','meta','base','iframe','video','audio','object','embed','picture','source','svg','math','form','input','button']);
   const fragment = parseFragment(markup);
@@ -167,6 +192,41 @@ async function render(body, item) {
   const result = await processor.render(linked);
   validateRendered(result.code, item);
   return result;
+}
+async function renderWork(body, item, withheld) {
+  const media = item.media || [];
+  if (body.includes('MZSH_WITHHELD_WORK_MEDIA_0')) throw new Error('作品正文含媒体保留标记: ' + item.abs);
+  for (const image of media) {
+    const actual = createHash('sha256').update(fs.readFileSync(safePath(vault, image.path))).digest('hex');
+    if (actual !== image.sha256) throw new Error('作品媒体源 hash 漂移: ' + image.path);
+  }
+  const used = [];
+  const workProcessor = await createMarkdownProcessor({syntaxHighlight:false, remarkPlugins:[rejectRawHTML, () => workImagePlugin(media, used)], rehypePlugins:[rehypeExpressiveCode]});
+  const rendered = await workProcessor.render(body);
+  if (used.length !== media.length || new Set(used).size !== used.length) throw new Error('作品媒体节点数量不符: ' + item.abs);
+  let code = rendered.code;
+  if (media.length) {
+    const token = '<p>MZSH_WITHHELD_WORK_MEDIA_0</p>';
+    if (code.split(token).length !== 2) throw new Error('作品媒体节点结构不符: ' + item.abs);
+    code = code.replace(token, withheld);
+  }
+  validateRendered(code, item);
+  return {...rendered, code};
+}
+function workHeadings(headings, route) {
+  const required = ['作品简介','背景与目标','核心能力','适用场景','适用范围与边界'];
+  const h2 = headings.filter(h => h.depth === 2).map(h => h.text);
+  if (JSON.stringify(h2) !== JSON.stringify(required) &&
+      JSON.stringify(h2) !== JSON.stringify([...required, '效果展示']))
+    throw new Error('作品章节不符: ' + route);
+  if (headings.some(h => h.depth < 2 || h.depth > 3) || !headings.some(h => h.depth === 3) ||
+      new Set(headings.map(h => h.slug)).size !== headings.length)
+    throw new Error('作品标题层级或锚点重复: ' + route);
+  let section = '';
+  for (const h of headings) {
+    if (h.depth === 2) section = h.text;
+    if (h.depth === 3 && section !== '核心能力') throw new Error('作品 H3 不在核心能力内: ' + route);
+  }
 }
 function outline(headings) {
   const roots = [], stack = [];
@@ -277,6 +337,30 @@ for (const entry of allEntries) {
     const names = rendered.metadata.headings.map(x => x.text);
     if (JSON.stringify(names) !== JSON.stringify(['主要说明','环境','出现的问题','解决方案','结果'])) throw new Error('案例五节不符: ' + entry.route);
     edits.push([...innerRange(bodyNode), rendered.code], [...innerRange(outlineNode), outline(rendered.metadata.headings)]);
+  }
+  if (entry.kind === 'work') {
+    const figures = [];
+    walk(bodyNode, n => {
+      if (n.tagName === 'figure' && attrs(n).class?.split(' ').includes('media-withheld')) figures.push(n);
+    });
+    if (figures.length !== (entry.media || []).length) throw new Error('作品屏蔽媒体占位数量不符: ' + entry.route);
+    let withheld = '';
+    if (figures.length) {
+      withheld = html.slice(...outerRange(figures[0]));
+      if (sha256(withheld) !== entry.media[0].withheldHtmlSha256)
+        throw new Error('作品屏蔽媒体占位 hash 漂移: ' + entry.route);
+    }
+    const rendered = await renderWork(source.body, item, withheld);
+    workHeadings(rendered.metadata.headings, entry.route);
+    const fragment = parseFragment(rendered.code);
+    for (const heading of rendered.metadata.headings) {
+      select(fragment, (n,a) => n.tagName === 'h' + heading.depth && a.id === heading.slug,
+        '作品正文锚点 ' + entry.route + ' #' + heading.slug);
+    }
+    edits.push([...innerRange(bodyNode), rendered.code], [...innerRange(outlineNode), outline(rendered.metadata.headings)]);
+    save(file, html, replace(html, edits));
+    input.set(entry.route, item);
+    continue;
   }
   if (entry.kind === 'blog') {
     edits.push(...blogLayoutEdits(html,doc,item));
@@ -471,6 +555,11 @@ for (const relative of trackedHTML) {
     else throw new Error('未知文档页面类型: ' + relative);
   }
   if (relative.startsWith('works/') && relative !== 'works/index.html') {
+    if (input.get('/' + relative.replace(/index\.html$/, ''))?.kind === 'work') {
+      select(doc, (n,a) => n.tagName === 'header' && a.class?.split(' ').includes('project-hero'), '作品详情主视觉 ' + relative);
+      workPages++;
+      continue;
+    }
     if (updated.includes('reading-detail')) {
       const workDoc = parse(updated, {sourceCodeLocationInfo:true});
       select(workDoc, (n,a) => n.tagName === 'header' && a.class?.split(' ').includes('project-hero'), '作品详情主视觉 ' + relative);
@@ -519,7 +608,7 @@ try {
   const stagedFiles = filesUnder(stagedIndex), oldFiles = filesUnder(target);
   indexChanged = JSON.stringify(stagedFiles) !== JSON.stringify(oldFiles) ||
     stagedFiles.some(relative => !fs.readFileSync(path.join(stagedIndex,relative)).equals(fs.readFileSync(path.join(target,relative))));
-  console.log(`预检 36/7/16；静态文件待更新 ${changes.size}、待删除 ${removed.size}、Pagefind 文件 ${stagedFiles.length}`);
+  console.log(`预检 36/7/16/24；静态文件待更新 ${changes.size}、待删除 ${removed.size}、Pagefind 文件 ${stagedFiles.length}`);
   if (check) {
     if (changes.size || removed.size || indexChanged) { console.error('网站内容与 OB 不一致'); process.exitCode = 1; }
   } else {
