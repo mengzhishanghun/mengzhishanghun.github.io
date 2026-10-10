@@ -1,0 +1,68 @@
+/* 支持页专用样式，联系页沿用原有公共布局。 */
+.support-preview .local-page .content {
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.65fr);
+  gap: 28px;
+  padding-bottom: 24px;
+}
+.support-preview .support-methods {
+  border-left: 1px solid var(--line);
+  padding-left: 28px;
+  min-width: 0;
+}
+.support-preview .purpose { border-left: 0; padding-left: 0; }
+.support-preview .payment-caption {
+  color: var(--muted);
+  font-size: .9375rem;
+  line-height: 1.7;
+  margin: 12px 0 16px;
+}
+.support-preview .github-support {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 16px 20px;
+  align-items: center;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: var(--panel);
+  padding: 24px;
+}
+.support-preview .github-mark { width: 56px; height: 56px; color: var(--text); }
+.support-preview .local-page .github-copy h3 { margin: 0 0 8px; font-size: 1.5rem; }
+.support-preview .github-summary { margin: 0 0 8px; font-size: 1.0625rem; line-height: 1.5; }
+.support-preview .github-detail { color: var(--muted); margin: 0; font-size: .9375rem; line-height: 1.7; }
+.support-preview .github-support-link {
+  grid-column: 2;
+  display: inline-flex;
+  justify-self: end;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--blue);
+  border-radius: 7px;
+  color: var(--blue);
+  font-weight: 700;
+  line-height: 1.5;
+  transition: background-color .15s ease;
+}
+.support-preview .github-support-link svg { width: 18px; height: 18px; flex: none; }
+.support-preview .github-support-link:hover { background: color-mix(in srgb, var(--blue) 10%, transparent); }
+.support-preview .github-support-link:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
+@media (min-width: 1400px) {
+  .support-preview .github-support { grid-template-columns: 56px minmax(0, 1fr) auto; }
+  .support-preview .github-support-link { grid-column: 3; }
+}
+@media (max-width: 900px) {
+  .support-preview .local-page .content { grid-template-columns: 1fr; gap: 24px; }
+  .support-preview .support-methods { border-left: 0; border-top: 1px solid var(--line); padding: 20px 0 0; }
+}
+@media (max-width: 480px) {
+  .support-preview .github-support { grid-template-columns: 40px minmax(0, 1fr); padding: 18px; gap: 16px; }
+  .support-preview .github-mark { width: 40px; height: 40px; }
+  .support-preview .local-page .github-copy h3 { font-size: 1.25rem; }
+  .support-preview .github-support-link { grid-column: 1 / -1; justify-self: stretch; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .support-preview .github-support-link { transition: none; }
+}
