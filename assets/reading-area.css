@@ -1,4 +1,11 @@
 /* 仅调整笔记、作品、案例和文档的阅读区域；站点外壳沿用原有样式。 */
+.site-chrome .reading-surface,
+.site-chrome-docs {
+  --reading-heading-accent: #8ad6e5;
+  --reading-heading-line: #22313a;
+  --reading-heading-text: #eef3f6;
+  --reading-heading-muted: #c8d8e0;
+}
 .site-chrome .reading-surface .note-hero {
   grid-template-columns: minmax(0, 1fr);
   gap: 0;
@@ -34,16 +41,71 @@
 }
 .site-chrome .reading-surface .prose h2,
 .site-chrome-docs .sl-markdown-content h2 {
-  border-block-start: 1px solid var(--sl-color-hairline, #31424c);
-  border-inline-start: .18rem solid var(--sl-color-text-accent, #75c8df);
-  padding: .85rem 0 .1rem .7rem;
-  margin-block-start: 2.2rem;
+  color: var(--reading-heading-accent);
+  font-size: 1.625rem;
+  border-block-start: 0;
+  border-inline-start: 0;
+  border-block-end: 1px solid var(--reading-heading-line);
+  padding-block: 0 .75rem;
+  padding-inline-start: 0;
+  margin-block: 2.125rem 1.125rem;
 }
 .site-chrome .reading-surface .prose h3,
 .site-chrome-docs .sl-markdown-content h3 {
-  border-inline-start: .12rem solid var(--sl-color-text-accent, #75c8df);
-  padding-inline-start: .62rem;
-  margin-block-start: 1.8rem;
+  color: var(--reading-heading-text);
+  font-size: 1.3125rem;
+  border-inline-start: 0;
+  padding-inline-start: 0;
+  margin-block: 1.875rem .75rem;
+  line-height: 1.5;
+}
+.site-chrome .reading-surface .prose h4,
+.site-chrome-docs .sl-markdown-content h4 {
+  color: var(--reading-heading-muted);
+  font-size: 1.125rem;
+  margin-block: 1.5rem .625rem;
+  line-height: 1.6;
+}
+/* 文档标题包含独立锚点：由整行承载章节间距与底线。 */
+.site-chrome-docs .sl-markdown-content .sl-heading-wrapper:has(> :is(h2, h3, h4):not(.sr-only, [hidden])) {
+  display: flex;
+  align-items: baseline;
+  gap: .375rem;
+}
+.site-chrome-docs .sl-markdown-content .sl-heading-wrapper.level-h2 {
+  font-size: 1.625rem;
+  line-height: 1.4;
+  border-block-end: 1px solid var(--reading-heading-line);
+  padding-block-end: .75rem;
+  margin-block: 2.125rem 1.125rem;
+}
+.site-chrome-docs .sl-markdown-content .sl-heading-wrapper.level-h3 {
+  font-size: 1.3125rem;
+  line-height: 1.5;
+  margin-block: 1.875rem .75rem;
+}
+.site-chrome-docs .sl-markdown-content .sl-heading-wrapper.level-h4 {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-block: 1.5rem .625rem;
+}
+.site-chrome-docs .sl-markdown-content .sl-heading-wrapper > :is(h2, h3, h4):not(.sr-only, [hidden]) {
+  display: block;
+  flex: 1;
+  min-inline-size: 0;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.site-chrome-docs .sl-markdown-content .sl-heading-wrapper:has(> :is(h2, h3, h4)) > .sl-anchor-link {
+  flex: none;
+  margin-inline-start: 0;
+}
+.site-chrome .reading-surface .article-outline .outline-link,
+.site-chrome-docs .article-outline .outline-link {
+  text-decoration: none;
 }
 :where(.master-panel .prose, .site-chrome-docs .sl-markdown-content) table {
   display: block;
@@ -55,6 +117,23 @@
   block-size: auto;
 }
 @media (max-width: 720px) {
+  .site-chrome .reading-surface .prose h2,
+  .site-chrome-docs .sl-markdown-content h2 {
+    font-size: 1.5rem;
+  }
+  .site-chrome .reading-surface .prose h3,
+  .site-chrome-docs .sl-markdown-content h3 {
+    font-size: 1.25rem;
+  }
+  .site-chrome-docs .sl-markdown-content .sl-heading-wrapper.level-h2 {
+    font-size: 1.5rem;
+  }
+  .site-chrome-docs .sl-markdown-content .sl-heading-wrapper.level-h3 {
+    font-size: 1.25rem;
+  }
+  .site-chrome-docs .sl-markdown-content .sl-heading-wrapper > :is(h2, h3, h4):not(.sr-only, [hidden]) {
+    font-size: inherit;
+  }
   .site-chrome .reading-surface .note-hero {
     padding-block: 0 24px;
   }
