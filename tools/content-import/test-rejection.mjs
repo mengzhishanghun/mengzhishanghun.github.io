@@ -60,7 +60,7 @@ try {
   const originalNewCase = fs.readFileSync(newCaseFile,'utf8');
   const originals = new Map([[caseFile,originalCase],[contactFile,originalContact],[workFile,originalWork],[mediaWorkFile,originalMediaWork],[newCaseFile,originalNewCase]]);
   const tests = [
-    ['案例错误标题层级', caseFile, originalCase.replace(/^## 环境\s*$/m, '### 环境'), /案例五节|案例标题层级/],
+    ['案例错误标题层级', caseFile, originalCase.replace(/^## 复现环境\s*$/m, '### 复现环境'), /案例五节|案例标题层级/],
     ['新增案例不安全正文', newCaseFile, originalNewCase + '\n\n<script>alert(1)</script>\n', /原始 HTML/],
     ['新增案例私人媒体', newCaseFile, originalNewCase + '\n\n![私人图](../../../附件/private.png)\n', /未知媒体/],
     ['引用式未知图片', caseFile, originalCase + '\n\n![未知图][pic]\n\n[pic]: /media/never-published.png\n', /未公开图片地址/],

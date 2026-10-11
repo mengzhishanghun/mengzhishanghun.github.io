@@ -381,7 +381,7 @@ for (const entry of allEntries) {
   if (entry.kind === 'case') {
     const rendered = await render(source.body, item);
     const names = rendered.metadata.headings.map(x => x.text);
-    if (JSON.stringify(names) !== JSON.stringify(['主要说明','环境','出现的问题','解决方案','结果'])) throw new Error('案例五节不符: ' + entry.route);
+    if (JSON.stringify(names) !== JSON.stringify(['背景介绍','复现环境','具体问题','解决方案','最终总结'])) throw new Error('案例五节不符: ' + entry.route);
     if (rendered.metadata.headings.some(h => h.depth !== 2)) throw new Error('案例标题层级不符: ' + entry.route);
     edits.push([...innerRange(bodyNode), rendered.code], [...innerRange(outlineNode), outline(rendered.metadata.headings)]);
     edits.push(...caseDetailsEdits(html,doc,item,isNewCase));

@@ -59,7 +59,7 @@ for (const entry of manifest.cases) {
   assert.equal(find(doc,(n,a) => n.tagName === 'script' && a['data-mzsh-analytics'] !== undefined).length,1);
   one(doc,(n,a) => n.tagName === 'link' && a.href === '/assets/reading-area.css');
   const prose = one(doc,(n,a) => a.class?.split(' ').includes('prose'));
-  assert.deepEqual(find(prose,n => /^h[1-6]$/.test(n.tagName || '')).map(n => [n.tagName,text(n)]),['主要说明','环境','出现的问题','解决方案','结果'].map(x => ['h2',x]));
+  assert.deepEqual(find(prose,n => /^h[1-6]$/.test(n.tagName || '')).map(n => [n.tagName,text(n)]),['背景介绍','复现环境','具体问题','解决方案','最终总结'].map(x => ['h2',x]));
   if (entry.createFromTemplate) {
     assert.ok(!markup.includes('driving-simulator-three-screen'));
     assert.equal(find(doc,(n,a) => a.class?.split(' ').includes('project-title-secondary')).length,0);
