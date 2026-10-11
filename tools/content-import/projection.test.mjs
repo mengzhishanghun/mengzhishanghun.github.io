@@ -34,10 +34,25 @@ test('import refuses full foreign frontmatter drift and unknown media before any
   const foreign='---\nlang: en\ntitle: Original\n---\n\nBody\n',primary='---\ntitle: Source\ndraft: false\n---\n\nBody\n';
   fs.writeFileSync(path.join(site,'content/en/example.md'),foreign.replace('Original','Changed'));fs.writeFileSync(path.join(vault,'primary.md'),primary);
   const sync={version:1,primary:'zh',records:[{id:'blog:example',kind:'blog',lang:'zh',source:'primary.md',output:'zh/example.md',images:[]}],foreignFingerprints:{'en/example.md':sha(foreign)}};
-  fs.writeFileSync(path.join(vault,'网站/000-sync.md'),'---\n'+JSON.stringify(sync)+'\n---\n');
+  fs.mkdirSync(path.join(site,'tools/content-import'),{recursive:true});
+  fs.writeFileSync(path.join(site,'tools/content-import/000-sync.local'),'---\n'+JSON.stringify(sync)+'\n---\n');
   await assert.rejects(()=>importContent({site,vault}),/外语.*人工修改/);
   assert.equal(fs.existsSync(path.join(site,'content/zh/example.md')),false);
   fs.writeFileSync(path.join(site,'content/en/example.md'),foreign);fs.writeFileSync(path.join(vault,'primary.md'),primary+'\n![unknown](unknown.png)\n');
   await assert.rejects(()=>importContent({site,vault}),/媒体/);
   assert.equal(fs.existsSync(path.join(site,'content/zh/example.md')),false);
+});
+
+test('missing project local config rejects without falling back to Obsidian or writing output',async t=>{
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'local-import-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+  const site=path.join(root,'site'),vault=path.join(root,'vault');fs.mkdirSync(path.join(vault,'网站'),{recursive:true});fs.mkdirSync(site);
+  fs.writeFileSync(path.join(vault,'网站/000-sync.md'),'---\nversion: 1\nprimary: zh\nrecords: []\n---\n');
+  await assert.rejects(()=>importContent({site,vault}),/同步配置缺失/);assert.deepEqual(fs.readdirSync(site),[]);
+});
+for(const kind of ['page','common'])test(`retired ${kind} records reject before any output writes`,async t=>{
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'retired-import-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+  const site=path.join(root,'site'),vault=path.join(root,'vault');fs.mkdirSync(path.join(site,'tools/content-import'),{recursive:true});fs.mkdirSync(vault);
+  const config={version:1,primary:'zh',records:[{id:kind==='page'?'page:home':'site-copy',kind,lang:'zh',source:'missing.md',output:'zh/missing.md'}]};
+  fs.writeFileSync(path.join(site,'tools/content-import/000-sync.local'),'---\n'+JSON.stringify(config)+'\n---\n');
+  await assert.rejects(()=>importContent({site,vault}),/页面与公共文案.*仓库/);assert.equal(fs.existsSync(path.join(site,'content')),false);
 });

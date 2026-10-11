@@ -101,13 +101,13 @@ languages:
       doc:simple-websocket-guide: doc/simple-websocket-guide.md
       doc:ue-package-manager: doc/ue-package-manager.md
       doc:ue-quick-start: doc/ue-quick-start.md
-      page:home: page/home.md
-      page:works-index: page/works-index.md
-      page:cases-index: page/cases-index.md
-      page:blog-index: page/blog-index.md
-      page:contact: page/contact.md
-      page:support: page/support.md
-      page:not-found: page/not-found.md
+      page:home: 000-页面/home.md
+      page:works-index: 000-页面/works-index.md
+      page:cases-index: 000-页面/cases-index.md
+      page:blog-index: 000-页面/blog-index.md
+      page:contact: 000-页面/contact.md
+      page:support: 000-页面/support.md
+      page:not-found: 000-页面/not-found.md
   - root: en
     enabled: true
     commonSource: 000-texts.md
@@ -206,13 +206,13 @@ languages:
       doc:simple-websocket-guide: doc/simple-websocket-guide.md
       doc:ue-package-manager: doc/ue-package-manager.md
       doc:ue-quick-start: doc/ue-quick-start.md
-      page:home: page/home.md
-      page:works-index: page/works-index.md
-      page:cases-index: page/cases-index.md
-      page:blog-index: page/blog-index.md
-      page:contact: page/contact.md
-      page:support: page/support.md
-      page:not-found: page/not-found.md
+      page:home: 000-pages/home.md
+      page:works-index: 000-pages/works-index.md
+      page:cases-index: 000-pages/cases-index.md
+      page:blog-index: 000-pages/blog-index.md
+      page:contact: 000-pages/contact.md
+      page:support: 000-pages/support.md
+      page:not-found: 000-pages/not-found.md
 ---
 
 公开语言目录与稳定内容映射。

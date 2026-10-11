@@ -55,9 +55,12 @@ export async function projectSource(source,record,site){
   for(const [start,end,value]of edits.sort((a,b)=>b[0]-a[0]))body=body.slice(0,start)+value+body.slice(end);
   return {data,body:canonicalText(body),raw:sourceText(data,body)};
 }
-export async function importContent({site,vault,check=false}){
-  const configFile=safePath(vault,'网站/000-sync.md'),config=parseSource(fs.readFileSync(configFile,'utf8')).data;
+export async function importContent({site,vault,sync,check=false}){
+  const configFile=sync?path.resolve(sync):safePath(site,'tools/content-import/000-sync.local');
+  if(!fs.existsSync(configFile))throw new Error('本机中文同步配置缺失；请配置 tools/content-import/000-sync.local 或显式指定 --sync');
+  const config=parseSource(fs.readFileSync(configFile,'utf8')).data;
   if(config.version!==1||config.primary!=='zh'||!Array.isArray(config.records))throw new Error('中文同步配置无效');
+  if(config.records.some(record=>!['blog','work','case','doc','supplement'].includes(record.kind)||record.id==='site-copy'||record.id?.startsWith('page:')))throw new Error('页面与公共文案仅在网站仓库维护，不得从笔记库同步');
   const contentRoot=path.join(site,'content'),files=new Map(),updates=[];
   for(const [relative,fingerprint]of Object.entries(config.foreignFingerprints||{})){
     const file=safePath(contentRoot,relative);
@@ -72,12 +75,13 @@ export async function importContent({site,vault,check=false}){
     files.set(output,projection.raw);updates.push({record,publishedFingerprint:canonicalTextHash(projection.raw),sourceFingerprint:binaryHash(Buffer.from(raw))});
   }
   const differences=[...files].filter(([file,raw])=>!fs.existsSync(file)||canonicalText(fs.readFileSync(file,'utf8'))!==raw).map(([file])=>path.relative(contentRoot,file).replaceAll('\\','/'));
-  if(!check){for(const [file,raw]of files){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,raw)}for(const update of updates)Object.assign(update.record,{publishedFingerprint:update.publishedFingerprint,sourceFingerprint:update.sourceFingerprint});fs.writeFileSync(configFile,sourceText(config,'中文手动同步配置；原始路径、媒体授权与审核指纹仅保存在笔记库。\n'));}
+  if(!check){for(const [file,raw]of files){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,raw)}for(const update of updates)Object.assign(update.record,{publishedFingerprint:update.publishedFingerprint,sourceFingerprint:update.sourceFingerprint});fs.writeFileSync(configFile,sourceText(config,'本机中文手动同步配置；包含私有路径与媒体权限，禁止提交。\n'));}
   return {files:files.size,differences};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const args=process.argv.slice(2),at=args.indexOf('--vault');
   if(at<0||!args[at+1])throw new Error('手动导入必须指定 --vault <中文笔记库>；静态构建请运行 tools/site-build/build.mjs');
-  const result=await importContent({site:path.resolve(here,'../..'),vault:path.resolve(args[at+1]),check:args.includes('--check')});
+  const syncAt=args.indexOf('--sync');if(syncAt>=0&&!args[syncAt+1])throw new Error('--sync 必须指定配置文件路径');
+  const result=await importContent({site:path.resolve(here,'../..'),vault:path.resolve(args[at+1]),sync:syncAt>=0?args[syncAt+1]:undefined,check:args.includes('--check')});
   console.log(`中文公开来源 ${result.files}，差异 ${result.differences.length}`);if(args.includes('--check')&&result.differences.length)process.exitCode=1;
 }

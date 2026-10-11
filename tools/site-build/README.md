@@ -24,6 +24,8 @@ node tools/content-import/test-cases.mjs
 
 每个语言目录的 `000-texts.md` 是该语言元数据与公共文案的唯一来源。`language` 包含 `code`、`label`、`htmlLang`、`searchLanguage`、`browserTags`；`languageLabels` 包含 `group` 和带 `{language}` 的 `switchAria`。浏览器规则使用完整标签或末尾 `-*`，例如 `[en, en-*]`；不同语言不能重叠。新增语言需要全部真实译文、来源映射及公共槽，无需改网站代码，隔离测试的第三语言不进入正式内容。
 
+页面源码直接在 `content/zh/000-页面/` 与 `content/en/000-pages/` 编辑；语言配置按固定内容 ID 映射到这些路径，目录整理不改变 slug 或发布网址。Obsidian 只保留中文作品、案例、笔记和文档，手动导入使用本机忽略的 `tools/content-import/000-sync.local`，页面和公共文案不经过导入。
+
 正文与补充稿的 `translationKey` 必须与清单身份一致。译文的 `sourceHash` 绑定对应公开中文快照，`generatedBodyHash` 与 `translationStatus: translated` 记录已审核正文；文本摘要统一 LF，媒体摘要始终按原始二进制字节计算。缺稿、过期、人工正文漂移、身份错误、草稿或越界会在任何发布树写入前拒绝。
 
 各语言 `tags` 与可选 `searchTags` 是 JSON、现有标签容器、筛选与搜索的权威来源。标签去重；空数组清除旧标签；搜索合并两者，不自动翻译标签。
