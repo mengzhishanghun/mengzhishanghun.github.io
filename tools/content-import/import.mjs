@@ -130,6 +130,27 @@ function sourceMedia(url, sourceAbs) {
   }
   throw new Error('未知媒体或相对链接: ' + url + ' in ' + sourceAbs);
 }
+function validateCaseCover(item) {
+  const expected = '/assets/cases/' + item.data.slug + '.png';
+  if (item.data.websiteCoverUrl !== expected) throw new Error('案例封面地址不符: ' + item.route);
+  const file = safePath(site, expected.slice(1));
+  if (!fs.existsSync(file) || !fs.statSync(file).isFile()) throw new Error('案例封面文件缺失: ' + item.route);
+  if (typeof item.data.coverAlt !== 'string' || !item.data.coverAlt.trim()) throw new Error('案例封面说明缺失: ' + item.route);
+}
+function caseCoverEdit(parent, item, detail) {
+  const className = detail ? 'project-hero-media' : 'content-cover-link';
+  const found = [];
+  walk(parent, n => { if (attrs(n).class?.split(' ').includes(className)) found.push(n); });
+  if (found.length > 1) throw new Error('案例封面重复: ' + item.route);
+  const url = escapeHTML(item.data.websiteCoverUrl), alt = escapeHTML(item.data.coverAlt);
+  const image = `<div class="content-cover content-cover-0" aria-hidden="true"><img src="${url}" alt="" width="1600" height="800" loading="lazy" decoding="async"></div>`;
+  const markup = detail
+    ? `<figure class="project-hero-media"><a class="project-media-trigger" data-astro-reload data-media-image data-media-src="${url}" data-media-alt="${alt}" aria-label="${escapeHTML('查看' + item.data.title + '示意图大图')}" href="${url}">${image}</a></figure>`
+    : `<div class="content-cover-link" aria-hidden="true">${image}</div>`;
+  if (found.length) return [...outerRange(found[0]), markup];
+  const offset = detail ? innerRange(parent)[1] : innerRange(parent)[0];
+  return [offset, offset, markup];
+}
 function rejectRawHTML() {
   return tree => {
     const visit = node => {
@@ -265,10 +286,10 @@ function caseDetailsEdits(html, doc, item, isNew) {
     [...innerRange(tags), item.data.tags.map(tag => `<li>${escapeHTML(tag)}</li>`).join('')]];
   if (isNew) {
     const secondary = select(hero, (n,a) => a.class?.split(' ').includes('project-title-secondary'), '案例模板英文副标题');
-    const media = select(hero, (n,a) => n.tagName === 'figure' && a.class?.split(' ').includes('project-hero-media'), '案例模板封面');
-    if (item.data.websiteCoverUrl || item.data.titleEn) throw new Error('新增案例媒体或英文未授权: ' + item.route);
-    edits.push([...outerRange(secondary),''], [...outerRange(media),'']);
+    if (item.data.titleEn) throw new Error('新增案例英文未授权: ' + item.route);
+    edits.push([...outerRange(secondary),'']);
   }
+  if (item.createFromTemplate) edits.push(caseCoverEdit(hero,item,true));
   return edits;
 }
 function caseCard(html, card, item, order, isNew = false) {
@@ -285,10 +306,10 @@ function caseCard(html, card, item, order, isNew = false) {
     [...innerRange(tags),item.data.tags.map(tag => `<span>${escapeHTML(tag)}</span>`).join('')],
     [...innerRange(meta),`<span>${escapeHTML(item.data.status)}</span>`]];
   if (isNew) {
-    const media = select(node, (n,a) => a.class?.split(' ').includes('content-cover-link'), '案例卡片封面');
     const secondary = select(node, (n,a) => a.class?.split(' ').includes('project-title-secondary'), '案例卡片英文');
-    edits.push([...outerRange(media),''],[...outerRange(secondary),'']);
+    edits.push([...outerRange(secondary),'']);
   }
+  if (item.createFromTemplate) edits.push(caseCoverEdit(node,item,false));
   return replace(markup,edits);
 }
 function publicLabel(html) {
@@ -379,6 +400,7 @@ for (const entry of allEntries) {
   const outlineNode = entry.kind === 'blog' ? null : select(doc, (n,a) => n.tagName === 'ol' && a.class?.split(' ').includes('outline-tree-root'), '目录 ' + entry.route);
   const edits = [];
   if (entry.kind === 'case') {
+    validateCaseCover(item);
     const rendered = await render(source.body, item);
     const names = rendered.metadata.headings.map(x => x.text);
     if (JSON.stringify(names) !== JSON.stringify(['背景介绍','复现环境','具体问题','解决方案','最终总结'])) throw new Error('案例五节不符: ' + entry.route);

@@ -60,14 +60,24 @@ for (const entry of manifest.cases) {
   one(doc,(n,a) => n.tagName === 'link' && a.href === '/assets/reading-area.css');
   const prose = one(doc,(n,a) => a.class?.split(' ').includes('prose'));
   assert.deepEqual(find(prose,n => /^h[1-6]$/.test(n.tagName || '')).map(n => [n.tagName,text(n)]),['背景介绍','复现环境','具体问题','解决方案','最终总结'].map(x => ['h2',x]));
+  const coverUrl = '/assets/cases/' + data.slug + '.png';
+  assert.equal(data.websiteCoverUrl,coverUrl);
+  assert.ok(fs.statSync(path.join(site,coverUrl.slice(1))).isFile());
+  const heroMedia = one(doc,(n,a) => a.class?.split(' ').includes('project-hero-media'));
+  const trigger = one(heroMedia,(n,a) => a['data-media-image'] !== undefined);
+  assert.equal(attrs(trigger).href,coverUrl);
+  assert.equal(attrs(trigger)['data-media-src'],coverUrl);
+  assert.equal(attrs(one(heroMedia,n => n.tagName === 'img')).src,coverUrl);
+  const cardMedia = one(card,(n,a) => a.class?.split(' ').includes('content-cover-link'));
+  assert.equal(attrs(one(cardMedia,n => n.tagName === 'img')).src,coverUrl);
   if (entry.createFromTemplate) {
     assert.ok(!markup.includes('driving-simulator-three-screen'));
     assert.equal(find(doc,(n,a) => a.class?.split(' ').includes('project-title-secondary')).length,0);
-    assert.equal(find(doc,(n,a) => a.class?.split(' ').includes('project-hero-media')).length,0);
-    assert.equal(find(card,n => n.tagName === 'img').length,0);
+    assert.equal(attrs(trigger)['data-media-alt'],data.coverAlt);
+    assert.equal(attrs(trigger)['aria-label'],'查看' + data.title + '示意图大图');
     context.record = record;
     context.query = data.tags[0];
     assert.ok(vm.runInContext('o(record,n(query)).score',context) > 0,'新增案例无法被实际搜索函数命中');
   }
 }
-console.log('十条案例路由、唯一卡片/JSON、分类 8+2、来源正文、模板清理、分析脚本与新案例搜索：通过');
+console.log('十条案例路由、唯一卡片/JSON、详情和列表封面、放大链接、分类 8+2、来源正文、模板清理、分析脚本与新案例搜索：通过');

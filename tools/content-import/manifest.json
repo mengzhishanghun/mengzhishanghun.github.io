@@ -1593,9 +1593,12 @@
         ],
         "type": "case",
         "draft": false,
-        "sitePublish": true
+        "sitePublish": true,
+        "cover": "../../../附件/网站/案例/blueprint-inheritance-repair/cover.png",
+        "coverAlt": "父子蓝图组件模板的继承扫描与 CreationMethod 修正流程",
+        "websiteCoverUrl": "/assets/cases/blueprint-inheritance-repair.png"
       },
-      "sourceBaselineSha256": "9470b5d98c237bdf68ea9b46ebc0faef70aee167a25dd2d6f679365d59ff06a3",
+      "sourceBaselineSha256": "7a365c8971766a435799a88bc4398ceb89199775de2286c30bd29b909c20bb88",
       "createFromTemplate": true
     },
     {
@@ -1618,9 +1621,12 @@
         ],
         "type": "case",
         "draft": false,
-        "sitePublish": true
+        "sitePublish": true,
+        "cover": "../../../附件/网站/案例/data-asset-json-sync/cover.png",
+        "coverAlt": "DataAsset、JSON 与外部 AI 或脚本的双向同步及自身写入过滤流程",
+        "websiteCoverUrl": "/assets/cases/data-asset-json-sync.png"
       },
-      "sourceBaselineSha256": "13ce0f84088ba3299a47a32a50a663c1526e68cad14b3d189c12ef99dd2d159e",
+      "sourceBaselineSha256": "e97a3c4f85a3a433c0ec3ec8dabf32da90e93798e9db31249615e3e857d51338",
       "createFromTemplate": true
     },
     {
@@ -1643,9 +1649,12 @@
         ],
         "type": "case",
         "draft": false,
-        "sitePublish": true
+        "sitePublish": true,
+        "cover": "../../../附件/网站/案例/metahuman-animation-clipping/cover.png",
+        "coverAlt": "头部与身体动画经 Additive Settings 调整后进行预览核对的流程",
+        "websiteCoverUrl": "/assets/cases/metahuman-animation-clipping.png"
       },
-      "sourceBaselineSha256": "cccb4ecdbb637f0c98dd90f5f2e4e3548bebb0a4987a52bc5b970054190f09d1",
+      "sourceBaselineSha256": "88235297791360721f785adaec85dd8acdfeffbb721c95ffb0e6e4bbfdf732a4",
       "createFromTemplate": true
     }
   ],

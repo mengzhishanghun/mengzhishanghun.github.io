@@ -60,6 +60,9 @@ try {
   const originalNewCase = fs.readFileSync(newCaseFile,'utf8');
   const originals = new Map([[caseFile,originalCase],[contactFile,originalContact],[workFile,originalWork],[mediaWorkFile,originalMediaWork],[newCaseFile,originalNewCase]]);
   const tests = [
+    ['新增案例 cover 漂移', newCaseFile, originalNewCase.replace(/^cover: .+$/m, 'cover: "../../../附件/private.png"'), /不支持同步的 frontmatter/],
+    ['新增案例封面说明漂移', newCaseFile, originalNewCase.replace(/^coverAlt: .+$/m, 'coverAlt: "changed"'), /不支持同步的 frontmatter/],
+    ['新增案例封面 URL 漂移', newCaseFile, originalNewCase.replace(/^websiteCoverUrl: .+$/m, 'websiteCoverUrl: "https://example.com/cover.png"'), /不支持同步的 frontmatter/],
     ['案例错误标题层级', caseFile, originalCase.replace(/^## 复现环境\s*$/m, '### 复现环境'), /案例五节|案例标题层级/],
     ['新增案例不安全正文', newCaseFile, originalNewCase + '\n\n<script>alert(1)</script>\n', /原始 HTML/],
     ['新增案例私人媒体', newCaseFile, originalNewCase + '\n\n![私人图](../../../附件/private.png)\n', /未知媒体/],
@@ -107,6 +110,47 @@ try {
     if (treeHash() !== baseline) throw new Error(label + ' 预检后发布树发生变化');
     fs.writeFileSync(workFile, originalWork);
     console.log(label + '：检测到待同步正文，发布树零变化');
+  }
+  // Keep the real manifest and assets untouched while testing the URL gate after the frozen baseline matches.
+  const isolatedSite = path.join(fixture,'site');
+  const isolatedTools = path.join(isolatedSite,'tools','content-import');
+  fs.mkdirSync(isolatedTools,{recursive:true});
+  for (const name of ['import.mjs','package.json']) fs.copyFileSync(path.join(here,name),path.join(isolatedTools,name));
+  fs.symlinkSync(path.join(here,'node_modules'),path.join(isolatedTools,'node_modules'),'junction');
+  for (const name of ['blog','cases','docs','works','_astro']) fs.symlinkSync(path.join(site,name),path.join(isolatedSite,name),'junction');
+  const isolatedAssets = path.join(isolatedSite,'assets');
+  fs.mkdirSync(path.join(isolatedAssets,'cases'),{recursive:true});
+  for (const name of fs.readdirSync(path.join(site,'assets'))) {
+    if (name === 'cases') continue;
+    const from = path.join(site,'assets',name), to = path.join(isolatedAssets,name);
+    if (fs.statSync(from).isDirectory()) fs.symlinkSync(from,to,'junction');
+    else fs.copyFileSync(from,to);
+  }
+  for (const name of fs.readdirSync(path.join(site,'assets','cases'))) fs.copyFileSync(path.join(site,'assets','cases',name),path.join(isolatedAssets,'cases',name));
+  const coverEntry = manifest.cases.find(x => x.route === '/cases/blueprint-inheritance-repair/');
+  const legitimateUrl = coverEntry.frontmatterBaseline.websiteCoverUrl;
+  for (const [label,url] of [
+    ['远端封面','https://example.com/cover.png'],
+    ['协议相对封面','//example.com/cover.png'],
+    ['编码封面',legitimateUrl.replace('blueprint','%62lueprint')],
+    ['查询封面',legitimateUrl + '?v=1'],
+    ['片段封面',legitimateUrl + '#cover'],
+    ['穿越封面','/assets/cases/../blueprint-inheritance-repair.png'],
+    ['其他本地封面','/assets/cases/driving-simulator-three-screen.png'],
+    ['缺失封面文件',legitimateUrl],
+  ]) {
+    const isolatedManifest = structuredClone(manifest);
+    isolatedManifest.cases.find(x => x.route === coverEntry.route).frontmatterBaseline.websiteCoverUrl = url;
+    fs.writeFileSync(path.join(isolatedTools,'manifest.json'),JSON.stringify(isolatedManifest));
+    fs.writeFileSync(newCaseFile,originalNewCase.replace(/^websiteCoverUrl: .+$/m,'websiteCoverUrl: ' + JSON.stringify(url)));
+    const coverFile = path.join(isolatedSite,legitimateUrl.slice(1));
+    if (label === '缺失封面文件') fs.unlinkSync(coverFile);
+    const result = spawnSync(process.execPath,[path.join(isolatedTools,'import.mjs'),'--vault',fixture,'--check'],{encoding:'utf8'});
+    const expected = label === '缺失封面文件' ? /案例封面文件缺失/ : /案例封面地址不符/;
+    if (result.status === 0 || !expected.test(result.stderr + result.stdout)) throw new Error(label + ' 未被封面独立门禁拒绝: ' + result.stderr);
+    if (treeHash() !== baseline) throw new Error(label + ' 后发布树发生变化');
+    fs.writeFileSync(newCaseFile,originalNewCase);
+    console.log(label + '：冻结基线匹配，封面独立门禁拒绝通过，发布树零变化');
   }
 } finally {
   if (!fixture.startsWith(path.resolve(os.tmpdir()) + path.sep)) throw new Error('临时目录越界，拒绝清理');
