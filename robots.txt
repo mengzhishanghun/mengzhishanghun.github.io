@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mzsh.me/sitemap.xml

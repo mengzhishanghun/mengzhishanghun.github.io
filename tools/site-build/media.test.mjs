@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import os from 'node:os';
+import path from 'node:path';
+import {mapMedia} from './media.mjs';
+test('same image source stays withheld or public according to occurrence, with byte proof',async t=>{
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'site-media-test-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+  const vault=path.join(root,'vault'),site=path.join(root,'site');fs.mkdirSync(vault);fs.mkdirSync(site);
+  fs.writeFileSync(path.join(vault,'zh.md'),'---\ntitle: Title\n---\n![a](/image.png)\n\n![a](/image.png)\n');
+  fs.writeFileSync(path.join(vault,'image.png'),'same bytes');fs.writeFileSync(path.join(site,'public.png'),'same bytes');
+  fs.writeFileSync(path.join(site,'baseline.html'),'<html><body><article><div class="prose"><figure class="media-figure media-withheld"><strong>Hidden</strong></figure><figure class="media-figure media-image"><img src="/public.png" alt="Diagram"></figure></div></article></body></html>');
+  const records=await mapMedia({id:'blog:example',locales:{zh:{source:'zh.md'}},baselineTemplate:'baseline.html'}, {vault,site});
+  assert.deepEqual(records.map(x=>x.state),['withheld','public']);
+  assert.equal(records[0].websiteUrl,undefined);
+  assert.equal(records[1].websiteUrl,'/public.png');
+  assert.equal(records[1].sourceSha256,records[1].publicSha256);
+  assert.equal(records[0].scaffold.includes('/image.png'),false);
+  fs.writeFileSync(path.join(site,'public.png'),'drift');
+  await assert.rejects(()=>mapMedia({id:'blog:example',locales:{zh:{source:'zh.md'}},baselineTemplate:'baseline.html'},{vault,site}),/公开媒体hash漂移/);
+});

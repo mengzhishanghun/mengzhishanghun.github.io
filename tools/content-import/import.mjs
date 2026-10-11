@@ -12,6 +12,12 @@ import rehypeExpressiveCode from 'rehype-expressive-code';
 import * as pagefind from 'pagefind';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
+// 双语构建器已接管固定来源与路由；旧入口只委托，避免旧逻辑覆盖新发布树。
+if (fs.existsSync(path.resolve(here, '../site-build/manifest.json'))) {
+  try { execFileSync(process.execPath,[path.resolve(here,'../site-build/build.mjs'),...process.argv.slice(2)],{stdio:'inherit'}); }
+  catch(error) { process.exit(error.status || 1); }
+  process.exit(0);
+}
 const site = path.resolve(here, '../..');
 const manifest = JSON.parse(fs.readFileSync(path.join(here, 'manifest.json'), 'utf8'));
 const args = process.argv.slice(2);
