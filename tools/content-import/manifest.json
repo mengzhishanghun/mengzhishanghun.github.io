@@ -1572,6 +1572,81 @@
         "coverAlt": "让 Markdown 图片随文章一起发布的流程图",
         "websiteCoverUrl": "/assets/cases/markdown-publishing.png"
       }
+    },
+    {
+      "source": "案例/UE项目/080-修复蓝图继承中的组件状态污染.md",
+      "route": "/cases/blueprint-inheritance-repair/",
+      "frontmatterBaseline": {
+        "title": "修复蓝图继承中的组件状态污染",
+        "description": "沿继承链检查组件模板的 CreationMethod，处理子类属性修改影响父类的问题。",
+        "slug": "blueprint-inheritance-repair",
+        "categoryId": "ue-projects",
+        "categoryName": "UE项目",
+        "categoryOrder": 0,
+        "order": 7,
+        "status": "已完成",
+        "featured": false,
+        "tags": [
+          "蓝图",
+          "继承链",
+          "组件修复"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true
+      },
+      "sourceBaselineSha256": "9470b5d98c237bdf68ea9b46ebc0faef70aee167a25dd2d6f679365d59ff06a3",
+      "createFromTemplate": true
+    },
+    {
+      "source": "案例/UE项目/090-让 DataAsset 与 JSON 双向同步.md",
+      "route": "/cases/data-asset-json-sync/",
+      "frontmatterBaseline": {
+        "title": "让 DataAsset 与 JSON 双向同步",
+        "description": "以 JSON 衔接外部 AI 工具与 DataAsset，处理双向同步中的字段转换、重复触发和写入问题。",
+        "slug": "data-asset-json-sync",
+        "categoryId": "ue-projects",
+        "categoryName": "UE项目",
+        "categoryOrder": 0,
+        "order": 8,
+        "status": "已完成",
+        "featured": false,
+        "tags": [
+          "DataAsset",
+          "JSON",
+          "AI"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true
+      },
+      "sourceBaselineSha256": "13ce0f84088ba3299a47a32a50a663c1526e68cad14b3d189c12ef99dd2d159e",
+      "createFromTemplate": true
+    },
+    {
+      "source": "案例/UE项目/100-处理 MetaHuman 头身动画叠加时的穿模.md",
+      "route": "/cases/metahuman-animation-clipping/",
+      "frontmatterBaseline": {
+        "title": "处理 MetaHuman 头身动画叠加时的穿模",
+        "description": "调整头部动画的 Additive Settings，并通过脚本蓝图批量处理同类动画设置。",
+        "slug": "metahuman-animation-clipping",
+        "categoryId": "ue-projects",
+        "categoryName": "UE项目",
+        "categoryOrder": 0,
+        "order": 9,
+        "status": "已完成",
+        "featured": false,
+        "tags": [
+          "MetaHuman",
+          "动画",
+          "批量处理"
+        ],
+        "type": "case",
+        "draft": false,
+        "sitePublish": true
+      },
+      "sourceBaselineSha256": "cccb4ecdbb637f0c98dd90f5f2e4e3548bebb0a4987a52bc5b970054190f09d1",
+      "createFromTemplate": true
     }
   ],
   "manuals": [

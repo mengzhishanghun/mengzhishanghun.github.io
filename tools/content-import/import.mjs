@@ -19,7 +19,7 @@ const check = args.includes('--check');
 const vaultAt = args.indexOf('--vault');
 if (vaultAt < 0 || !args[vaultAt + 1]) throw new Error('必须指定 --vault <MyObsidian 路径>');
 const vault = path.resolve(args[vaultAt + 1]);
-if (manifest.blogs.length !== 36 || manifest.cases.length !== 7 || manifest.manuals.length !== 16 || manifest.works?.length !== 24) throw new Error('清单数量不符');
+if (manifest.blogs.length !== 36 || manifest.cases.length !== 10 || manifest.manuals.length !== 16 || manifest.works?.length !== 24) throw new Error('清单数量不符');
 if (manifest.deleteRoutes.join(',') !== '/blog/cnblogs-19165647/') throw new Error('删除清单不符');
 const allEntries = [...manifest.blogs.map(x => ({...x, kind: 'blog'})), ...manifest.cases.map(x => ({...x, kind: 'case'})), ...manifest.manuals.map(x => ({...x, kind: 'manual'})), ...manifest.works.map(x => ({...x, kind: 'work'}))];
 const unique = new Set(allEntries.map(x => x.route));
@@ -247,6 +247,50 @@ function readHTML(file) {
   return {html, doc: parse(html, {sourceCodeLocationInfo: true})};
 }
 function save(file, before, after) { if (before !== after) changes.set(file, after); }
+function caseDetailsEdits(html, doc, item, isNew) {
+  const hero = select(doc, (n,a) => n.tagName === 'header' && a.class?.split(' ').includes('project-hero'), '案例主视觉');
+  const h1 = select(hero, n => n.tagName === 'h1', '案例标题');
+  const article = select(doc, n => n.tagName === 'article', '案例 article');
+  const oldId = attrs(h1).id;
+  if (attrs(article)['aria-labelledby'] !== oldId) throw new Error('案例 H1 关联失配: ' + item.route);
+  if (!isNew && oldId !== 'detail-' + item.data.slug) throw new Error('案例 H1 ID 漂移: ' + item.route);
+  const canonical = select(doc, (n,a) => n.tagName === 'link' && a.rel === 'canonical', '案例 canonical');
+  if (!isNew && attrs(canonical).href !== 'https://mzsh.me' + item.route) throw new Error('案例 canonical 漂移: ' + item.route);
+  const summary = select(hero, (n,a) => n.tagName === 'p' && a.class?.split(' ').includes('project-description'), '案例摘要');
+  const breadcrumb = select(hero, (n,a) => n.tagName === 'p' && a.class?.split(' ').includes('project-breadcrumb'), '案例分类');
+  const tags = select(hero, (n,a) => n.tagName === 'ul' && a.class?.split(' ').includes('work-card-tags'), '案例标签');
+  const edits = [editAttr(canonical,'href','https://mzsh.me' + item.route), editAttr(h1,'id','detail-' + item.data.slug),
+    editAttr(article,'aria-labelledby','detail-' + item.data.slug), editText(summary,item.data.description || ''),
+    [...innerRange(breadcrumb), `<a href="/cases/">案例</a><span>/</span>${escapeHTML(item.data.categoryName)}`],
+    [...innerRange(tags), item.data.tags.map(tag => `<li>${escapeHTML(tag)}</li>`).join('')]];
+  if (isNew) {
+    const secondary = select(hero, (n,a) => a.class?.split(' ').includes('project-title-secondary'), '案例模板英文副标题');
+    const media = select(hero, (n,a) => n.tagName === 'figure' && a.class?.split(' ').includes('project-hero-media'), '案例模板封面');
+    if (item.data.websiteCoverUrl || item.data.titleEn) throw new Error('新增案例媒体或英文未授权: ' + item.route);
+    edits.push([...outerRange(secondary),''], [...outerRange(media),'']);
+  }
+  return edits;
+}
+function caseCard(html, card, item, order, isNew = false) {
+  const markup = html.slice(...outerRange(card));
+  const doc = parseFragment(markup, {sourceCodeLocationInfo:true});
+  const node = select(doc, (n,a) => a['data-content-card'] !== undefined, '案例卡片');
+  const title = select(node, n => n.tagName === 'h2', '案例卡片标题');
+  const copy = select(node, (n,a) => a.class?.split(' ').includes('content-card-copy'), '案例卡片摘要区域');
+  const description = select(copy, (n,a) => n.tagName === 'p' && !a.class?.split(' ').includes('project-title-secondary'), '案例卡片摘要');
+  const tags = select(node, (n,a) => a.class?.split(' ').includes('content-card-tags'), '案例卡片标签');
+  const meta = select(node, (n,a) => a.class?.split(' ').includes('content-card-meta'), '案例卡片状态');
+  const edits = [editAttr(node,'href',item.route), editAttr(node,'data-slug',item.data.slug), editAttr(node,'aria-label',item.data.title),
+    editAttr(node,'style','order:' + order), editText(title,item.data.title),editText(description,item.data.description || ''),
+    [...innerRange(tags),item.data.tags.map(tag => `<span>${escapeHTML(tag)}</span>`).join('')],
+    [...innerRange(meta),`<span>${escapeHTML(item.data.status)}</span>`]];
+  if (isNew) {
+    const media = select(node, (n,a) => a.class?.split(' ').includes('content-cover-link'), '案例卡片封面');
+    const secondary = select(node, (n,a) => a.class?.split(' ').includes('project-title-secondary'), '案例卡片英文');
+    edits.push([...outerRange(media),''],[...outerRange(secondary),'']);
+  }
+  return replace(markup,edits);
+}
 function publicLabel(html) {
   return html.replace(/(<a\b[^>]*href="\/blog\/"[^>]*>)博客(?=<\/a>)/g, '$1笔记')
     .replace(/(<p class="master-section-title">)博客(<\/p>)/g, '$1笔记$2')
@@ -328,7 +372,9 @@ for (const entry of allEntries) {
   const source = readSource(entry);
   const item = {...entry, ...source};
   const file = routeFile(entry.route);
-  const {html, doc} = readHTML(file);
+  const isNewCase = entry.kind === 'case' && !fs.existsSync(file);
+  if (isNewCase && !entry.createFromTemplate) throw new Error('未授权创建案例页面: ' + entry.route);
+  const {html, doc} = readHTML(isNewCase ? routeFile('/cases/driving-simulator-three-screen/') : file);
   const bodyNode = select(doc, (n,a) => n.tagName === 'div' && a.class?.split(' ').includes(entry.kind === 'manual' ? 'sl-markdown-content' : 'prose') && (entry.kind === 'manual' ? true : n.parentNode?.tagName === 'article'), '正文 ' + entry.route);
   const outlineNode = entry.kind === 'blog' ? null : select(doc, (n,a) => n.tagName === 'ol' && a.class?.split(' ').includes('outline-tree-root'), '目录 ' + entry.route);
   const edits = [];
@@ -336,7 +382,9 @@ for (const entry of allEntries) {
     const rendered = await render(source.body, item);
     const names = rendered.metadata.headings.map(x => x.text);
     if (JSON.stringify(names) !== JSON.stringify(['主要说明','环境','出现的问题','解决方案','结果'])) throw new Error('案例五节不符: ' + entry.route);
+    if (rendered.metadata.headings.some(h => h.depth !== 2)) throw new Error('案例标题层级不符: ' + entry.route);
     edits.push([...innerRange(bodyNode), rendered.code], [...innerRange(outlineNode), outline(rendered.metadata.headings)]);
+    edits.push(...caseDetailsEdits(html,doc,item,isNewCase));
   }
   if (entry.kind === 'work') {
     const figures = [];
@@ -423,7 +471,7 @@ for (const entry of allEntries) {
   }
   const description = select(doc, (n,a) => n.tagName === 'meta' && a.name === 'description', 'description ' + entry.route);
   edits.push(editAttr(description, 'content', item.data.description || ''));
-  save(file, html, readingStyles(publicLabel(replace(html, edits))));
+  save(file, isNewCase ? '' : html, readingStyles(publicLabel(replace(html, edits))));
   input.set(entry.route, item);
 }
 function scriptJSON(doc, label) {
@@ -437,6 +485,36 @@ for (const section of ['blog','cases']) {
   const script = scriptJSON(doc, section + ' 列表数据');
   const records = JSON.parse(html.slice(...innerRange(script)));
   const edits = [];
+  if (section === 'cases') {
+    if (![7,10].includes(records.length) || new Set(records.map(x => x.slug)).size !== records.length) throw new Error('案例列表原始数量或 slug 不符');
+    const cards = select(doc, (n,a) => n.tagName === 'div' && a.class?.split(' ').includes('content-cards'), '案例卡片容器');
+    const cardNodes = cards.childNodes.filter(n => n.tagName);
+    if (cardNodes.length !== records.length) throw new Error('案例卡片与索引数量不符');
+    for (const record of records) if (!input.get('/cases/' + record.slug + '/')) throw new Error('列表存在清单外内容: ' + record.slug);
+    const template = select(cards, (n,a) => a['data-content-card'] !== undefined && a['data-slug'] === 'driving-simulator-three-screen', '案例模板卡片');
+    const finalRecords = [], finalCards = [];
+    for (const [order, entry] of manifest.cases.entries()) {
+      const item = input.get(entry.route), old = records.find(x => x.slug === item.data.slug);
+      const card = old ? select(cards, (n,a) => a['data-content-card'] !== undefined && a['data-slug'] === item.data.slug, '案例卡片 ' + entry.route) : template;
+      const secondary = [];
+      if (old) walk(card, n => { if (attrs(n).class?.split(' ').includes('project-title-secondary')) secondary.push(textOf(n).trim()); });
+      if (secondary.length > 1) throw new Error('案例英文副标题重复: ' + entry.route);
+      finalRecords.push({...old,slug:item.data.slug,title:[item.data.title,...secondary].join(' '),description:item.data.description || '',
+        categoryId:item.data.categoryId,categoryName:item.data.categoryName,tags:item.data.tags,
+        searchTags:[...new Set([...(old?.searchTags || []),...item.data.tags])],body:normalized(item.body),order,date:old?.date || ''});
+      finalCards.push(caseCard(html,card,item,order,!old));
+    }
+    const categoryCounts = new Map();
+    for (const item of finalRecords) categoryCounts.set(item.categoryId,(categoryCounts.get(item.categoryId) || 0) + 1);
+    if (categoryCounts.get('ue-projects') !== 8 || categoryCounts.get('desktop-automation') !== 2 || categoryCounts.size !== 2) throw new Error('案例分类数量不符');
+    for (const [category,count] of categoryCounts) {
+      const button = select(doc, (n,a) => n.tagName === 'button' && a['data-category'] === category, '案例分类 ' + category);
+      edits.push(editText(select(button, (n,a) => n.tagName === 'span' && a.class?.includes('content-category-count'), '案例分类计数'),count));
+    }
+    edits.push([...innerRange(cards),finalCards.join('')],[...innerRange(script),safeJSON(finalRecords)]);
+    save(file,html,replace(html,edits));
+    continue;
+  }
   for (const record of records) {
     const route = `/${section}/${record.slug}/`;
     if (manifest.deleteRoutes.includes(route)) continue;
@@ -457,7 +535,7 @@ for (const section of ['blog','cases']) {
   }
   const finalRecords = records.filter(x => !manifest.deleteRoutes.includes(`/${section}/${x.slug}/`));
   if (section === 'blog' && finalRecords.length !== 36) throw new Error('笔记列表非 36 篇');
-  if (section === 'cases' && finalRecords.length !== 7) throw new Error('案例列表非 7 篇');
+  if (section === 'cases' && finalRecords.length !== 10) throw new Error('案例列表非 10 篇');
   if (section === 'blog') orderedBlogs = finalRecords;
   edits.push([...innerRange(script), safeJSON(finalRecords)]);
   if (section === 'blog') {
@@ -608,11 +686,15 @@ try {
   const stagedFiles = filesUnder(stagedIndex), oldFiles = filesUnder(target);
   indexChanged = JSON.stringify(stagedFiles) !== JSON.stringify(oldFiles) ||
     stagedFiles.some(relative => !fs.readFileSync(path.join(stagedIndex,relative)).equals(fs.readFileSync(path.join(target,relative))));
-  console.log(`预检 36/7/16/24；静态文件待更新 ${changes.size}、待删除 ${removed.size}、Pagefind 文件 ${stagedFiles.length}`);
+  console.log(`预检 36/10/16/24；静态文件待更新 ${changes.size}、待删除 ${removed.size}、Pagefind 文件 ${stagedFiles.length}`);
   if (check) {
+    for (const file of changes.keys()) console.log('待更新: ' + path.relative(site,file).replaceAll('\\','/'));
     if (changes.size || removed.size || indexChanged) { console.error('网站内容与 OB 不一致'); process.exitCode = 1; }
   } else {
-    for (const [file, content] of changes) fs.writeFileSync(file, content);
+    for (const [file, content] of changes) {
+      if (!fs.existsSync(file)) fs.mkdirSync(path.dirname(file), {recursive:true});
+      fs.writeFileSync(file, content);
+    }
     for (const file of removed) fs.rmSync(path.dirname(file), {recursive:true});
     if (indexChanged) {
       const backup = path.join(site,'tools','content-import','.index-backup');

@@ -5,7 +5,8 @@
   "scripts": {
     "import": "node import.mjs",
     "check": "node import.mjs --check",
-    "test:rejection": "node test-rejection.mjs"
+    "test:rejection": "node test-rejection.mjs",
+    "test:cases": "node test-cases.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "7.3.0",

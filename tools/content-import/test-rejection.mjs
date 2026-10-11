@@ -56,7 +56,13 @@ try {
   const originalContact = fs.readFileSync(contactFile,'utf8');
   const originalWork = fs.readFileSync(workFile,'utf8');
   const originalMediaWork = fs.readFileSync(mediaWorkFile,'utf8');
+  const newCaseFile = path.join(fixture,'网站',manifest.cases.find(x => x.route === '/cases/blueprint-inheritance-repair/').source);
+  const originalNewCase = fs.readFileSync(newCaseFile,'utf8');
+  const originals = new Map([[caseFile,originalCase],[contactFile,originalContact],[workFile,originalWork],[mediaWorkFile,originalMediaWork],[newCaseFile,originalNewCase]]);
   const tests = [
+    ['案例错误标题层级', caseFile, originalCase.replace(/^## 环境\s*$/m, '### 环境'), /案例五节|案例标题层级/],
+    ['新增案例不安全正文', newCaseFile, originalNewCase + '\n\n<script>alert(1)</script>\n', /原始 HTML/],
+    ['新增案例私人媒体', newCaseFile, originalNewCase + '\n\n![私人图](../../../附件/private.png)\n', /未知媒体/],
     ['引用式未知图片', caseFile, originalCase + '\n\n![未知图][pic]\n\n[pic]: /media/never-published.png\n', /未公开图片地址/],
     ['原始 img', caseFile, originalCase + '\n\n<img src="/assets/beian-official.png">\n', /原始 HTML/],
     ['原始 script', caseFile, originalCase + '\n\n<script>alert(1)</script>\n', /原始 HTML/],
@@ -78,7 +84,7 @@ try {
     const result = run(false);
     if (result.status === 0 || !expected.test(result.stderr + result.stdout)) throw new Error(label + ' 未被预期门禁拒绝: ' + result.stderr);
     if (treeHash() !== baseline) throw new Error(label + ' 失败后发布树发生变化');
-    fs.writeFileSync(file, file === caseFile ? originalCase : file === contactFile ? originalContact : file === workFile ? originalWork : originalMediaWork);
+    fs.writeFileSync(file, originals.get(file));
     console.log(label + '：拒绝通过，发布树零变化');
   }
   const imageFile = path.join(fixture, manifest.works.find(x => x.media.length).media[0].path);
