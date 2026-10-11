@@ -6,16 +6,17 @@ import {attrs,walk} from './extract-dom.mjs';
 import {localeRoute} from './build.mjs';
 const require=createRequire(new URL('../content-import/package.json',import.meta.url));
 const {parse}=require('parse5');
-export function validateRuntime({manifest,output,site}) {
+export function validateRuntime({manifest,output,site,languageConfig}) {
   const errors=[],counts={pages:0,media:0,headings:0,codeFrames:0,inlineScripts:0};
-  for(const entry of manifest.entries)for(const locale of ['zh','en']) {
+  const config=languageConfig || JSON.parse(fs.readFileSync(path.join(output,'site-languages.json'),'utf8'));
+  for(const entry of manifest.entries)for(const {code:locale} of config.languages) {
     const route=localeRoute(entry,locale),relative=route.slice(1)+(route.endsWith('.html')?'':'index.html');
     const doc=parse(fs.readFileSync(path.join(output,relative),'utf8')),ids=new Set();
     walk(doc,n=>{if(attrs(n).id)ids.add(attrs(n).id)});
     let runtime,records;counts.pages++;
     const visit=(node,skip=false)=>{
       const a=attrs(node);skip ||= ['script','style','code','pre','svg'].includes(node.tagName);
-      if(locale==='en' && !skip && node.nodeName==='#text' && /[\p{Script=Han}]/u.test(node.value) && !/^\s*(中文|梦之殇魂|.*备.*号.*?)\s*$/.test(node.value))errors.push({route,kind:'untranslatedText',value:node.value.trim()});
+      if(locale==='en' && !skip && node.nodeName==='#text' && /[\p{Script=Han}]/u.test(node.value) && !config.languages.some(l=>l.label===node.value.trim()) && !/^\s*(梦之殇魂|.*备.*号.*?)\s*$/.test(node.value))errors.push({route,kind:'untranslatedText',value:node.value.trim()});
       if(node.tagName==='script' && a['data-site-language']!==undefined)runtime=JSON.parse(node.childNodes.map(n=>n.value || '').join(''));
       if(node.tagName==='script' && a['data-content-index-data']!==undefined)records=JSON.parse(node.childNodes.map(n=>n.value || '').join(''));
       if(node.tagName==='script' && !a.src && (!a.type || a.type==='module')) {
@@ -38,7 +39,7 @@ export function validateRuntime({manifest,output,site}) {
       }
       for(const child of node.childNodes || [])visit(child,skip);
     };visit(doc);
-    if(runtime?.locale!==locale || runtime?.urls?.[locale]!==route)errors.push({route,kind:'languageRuntime'});
+    if(runtime?.locale!==locale || runtime?.urls?.[locale]!==route || config.languages.some(l=>!runtime?.urls?.[l.code]) || !runtime?.languages || runtime.primary!==config.primary || runtime.fallback!==config.fallback)errors.push({route,kind:'languageRuntime'});
     if(entry.id==='page:works-index' && records) {
       const categories=new Map();for(const record of records) {const list=categories.get(record.categoryId) || [];list.push(record.order);categories.set(record.categoryId,list);}
       for(const [category,orders] of categories)if(orders.some((n,i)=>i>0 && n<orders[i-1]))errors.push({route,kind:'workOrder',category,orders});

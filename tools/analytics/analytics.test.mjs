@@ -4,11 +4,19 @@ import path from 'node:path';
 import test from 'node:test';
 import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
-import { injectHtml, isPublicHtml, isPublicPath } from './inject.mjs';
+import { injectHtml, isPublicHtml, isPublicPath,publicLanguageCodes } from './inject.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const script = path.join(here, '../../assets/analytics.js');
 const id = '123e4567-e89b-42d3-a456-426614174000';
+
+test('public language metadata admits configured future routes without exposing source directories',()=>{
+  const config={version:1,primary:'zh',fallback:'en',languages:['zh','en','fr'].map(code=>({code,label:code,htmlLang:code,searchLanguage:code,browserTags:[code]}))};
+  assert.equal(isPublicPath('fr/works/index.html',config),true);
+  for(const relative of ['001-zh/notes.md','网站/000-languages.md','private/file.md','fr/../private','fr\\private'])assert.equal(isPublicPath(relative,config),false);
+  assert.throws(()=>publicLanguageCodes({...config,languages:[...config.languages,{code:'fr'}]}),/code无效/);
+  assert.throws(()=>publicLanguageCodes({...config,languages:config.languages.map(l=>({...l,root:'private'}))}),/来源字段/);
+});
 
 function browser(url = 'https://mzsh.me/a/?q=1#top', options = {}) {
   const listeners = new Map();

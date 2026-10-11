@@ -1,15 +1,5 @@
 {
   "version": 1,
-  "common": {
-    "locales": {
-      "zh": {
-        "source": "网站/zh/005-页面/008-公共文案.md"
-      },
-      "en": {
-        "source": "网站/en/005-页面/008-公共文案.md"
-      }
-    }
-  },
   "entries": [
     {
       "id": "blog:cnblogs-19143267",
@@ -18,12 +8,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19143267/"
       ],
-      "zhSource": "网站/zh/003-笔记/002-Perforce/006-Stream实战指南.md",
-      "enSource": "网站/en/003-笔记/002-Perforce/006-Stream实战指南.md",
       "template": "blog--cnblogs-19143267.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/002-Perforce/006-Stream实战指南.md",
       "title": "Stream实战指南",
       "translationKey": "cnblogs-19143267",
       "cover": null,
@@ -134,14 +120,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/002-Perforce/006-Stream实战指南.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/002-Perforce/006-Stream实战指南.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19143267/index.html",
       "mediaOccurrences": [
         {
@@ -388,12 +366,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19143251/"
       ],
-      "zhSource": "网站/zh/003-笔记/002-Perforce/007-UE源码控制操作指南.md",
-      "enSource": "网站/en/003-笔记/002-Perforce/007-UE源码控制操作指南.md",
       "template": "blog--cnblogs-19143251.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/002-Perforce/007-UE源码控制操作指南.md",
       "title": "UE源码控制操作指南",
       "translationKey": "cnblogs-19143251",
       "cover": null,
@@ -424,14 +398,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/002-Perforce/007-UE源码控制操作指南.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/002-Perforce/007-UE源码控制操作指南.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19143251/index.html",
       "mediaOccurrences": [
         {
@@ -506,24 +472,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19143254/"
       ],
-      "zhSource": "网站/zh/003-笔记/002-Perforce/005-中文乱码问题修复.md",
-      "enSource": "网站/en/003-笔记/002-Perforce/005-中文乱码问题修复.md",
       "template": "blog--cnblogs-19143254.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/002-Perforce/005-中文乱码问题修复.md",
       "title": "中文乱码问题修复",
       "translationKey": "cnblogs-19143254",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/002-Perforce/005-中文乱码问题修复.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/002-Perforce/005-中文乱码问题修复.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19143254/index.html",
       "mediaOccurrences": []
     },
@@ -534,24 +488,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19143258/"
       ],
-      "zhSource": "网站/zh/003-笔记/002-Perforce/003-如何设置TypeMap.md",
-      "enSource": "网站/en/003-笔记/002-Perforce/003-如何设置TypeMap.md",
       "template": "blog--cnblogs-19143258.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/002-Perforce/003-如何设置TypeMap.md",
       "title": "如何设置TypeMap",
       "translationKey": "cnblogs-19143258",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/002-Perforce/003-如何设置TypeMap.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/002-Perforce/003-如何设置TypeMap.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19143258/index.html",
       "mediaOccurrences": []
     },
@@ -562,12 +504,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19143255/"
       ],
-      "zhSource": "网站/zh/003-笔记/002-Perforce/001-客户端安装配置指南.md",
-      "enSource": "网站/en/003-笔记/002-Perforce/001-客户端安装配置指南.md",
       "template": "blog--cnblogs-19143255.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/002-Perforce/001-客户端安装配置指南.md",
       "title": "客户端安装配置指南",
       "translationKey": "cnblogs-19143255",
       "cover": null,
@@ -593,14 +531,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/002-Perforce/001-客户端安装配置指南.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/002-Perforce/001-客户端安装配置指南.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19143255/index.html",
       "mediaOccurrences": [
         {
@@ -660,12 +590,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19143256/"
       ],
-      "zhSource": "网站/zh/003-笔记/002-Perforce/002-客户端常用操作.md",
-      "enSource": "网站/en/003-笔记/002-Perforce/002-客户端常用操作.md",
       "template": "blog--cnblogs-19143256.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/002-Perforce/002-客户端常用操作.md",
       "title": "客户端常用操作",
       "translationKey": "cnblogs-19143256",
       "cover": null,
@@ -746,14 +672,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/002-Perforce/002-客户端常用操作.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/002-Perforce/002-客户端常用操作.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19143256/index.html",
       "mediaOccurrences": [
         {
@@ -936,12 +854,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19143260/"
       ],
-      "zhSource": "网站/zh/003-笔记/002-Perforce/004-无法删除Stream Depot怎么处理.md",
-      "enSource": "网站/en/003-笔记/002-Perforce/004-无法删除Stream Depot怎么处理.md",
       "template": "blog--cnblogs-19143260.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/002-Perforce/004-无法删除Stream Depot怎么处理.md",
       "title": "无法删除Stream Depot怎么处理",
       "translationKey": "cnblogs-19143260",
       "cover": null,
@@ -957,14 +871,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/002-Perforce/004-无法删除Stream Depot怎么处理.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/002-Perforce/004-无法删除Stream Depot怎么处理.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19143260/index.html",
       "mediaOccurrences": [
         {
@@ -998,24 +904,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19143286/"
       ],
-      "zhSource": "网站/zh/003-笔记/003-Python/001-如何实现cmd可以访问conda但不能通过默认环境访问python.md",
-      "enSource": "网站/en/003-笔记/003-Python/001-如何实现cmd可以访问conda但不能通过默认环境访问python.md",
       "template": "blog--cnblogs-19143286.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/003-Python/001-如何实现cmd可以访问conda但不能通过默认环境访问python.md",
       "title": "如何实现cmd可以访问conda但不能通过默认环境访问python",
       "translationKey": "cnblogs-19143286",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/003-Python/001-如何实现cmd可以访问conda但不能通过默认环境访问python.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/003-Python/001-如何实现cmd可以访问conda但不能通过默认环境访问python.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19143286/index.html",
       "mediaOccurrences": []
     },
@@ -1026,24 +920,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-20159718/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/001-如何让 AI 直接修改 DataAsset.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/001-如何让 AI 直接修改 DataAsset.md",
       "template": "blog--cnblogs-20159718.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/001-如何让 AI 直接修改 DataAsset.md",
       "title": "如何让 AI 直接修改 DataAsset",
       "translationKey": "cnblogs-20159718",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/001-如何让 AI 直接修改 DataAsset.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/001-如何让 AI 直接修改 DataAsset.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-20159718/index.html",
       "mediaOccurrences": []
     },
@@ -1054,24 +936,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-20030737/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/002-如何解决蓝图继承中子类修改组件属性影响父类的 问题.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/002-如何解决蓝图继承中子类修改组件属性影响父类的 问题.md",
       "template": "blog--cnblogs-20030737.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/002-如何解决蓝图继承中子类修改组件属性影响父类的 问题.md",
       "title": "蓝图继承中的组件状态污染与修复思路",
       "translationKey": "cnblogs-20030737",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/002-如何解决蓝图继承中子类修改组件属性影响父类的 问题.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/002-如何解决蓝图继承中子类修改组件属性影响父类的 问题.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-20030737/index.html",
       "mediaOccurrences": []
     },
@@ -1082,12 +952,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19813721/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/003-如何解决渲染时UMG大小不变的问题.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/003-如何解决渲染时UMG大小不变的问题.md",
       "template": "blog--cnblogs-19813721.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/003-如何解决渲染时UMG大小不变的问题.md",
       "title": "如何解决渲染时UMG大小不变的问题",
       "translationKey": "cnblogs-19813721",
       "cover": null,
@@ -1098,14 +964,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/003-如何解决渲染时UMG大小不变的问题.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/003-如何解决渲染时UMG大小不变的问题.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19813721/index.html",
       "mediaOccurrences": [
         {
@@ -1130,24 +988,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19770934/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/005-如何在蓝图中实现数据序列化与字节转换.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/005-如何在蓝图中实现数据序列化与字节转换.md",
       "template": "blog--cnblogs-19770934.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/005-如何在蓝图中实现数据序列化与字节转换.md",
       "title": "如何在蓝图中实现数据序列化与字节转换",
       "translationKey": "cnblogs-19770934",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/005-如何在蓝图中实现数据序列化与字节转换.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/005-如何在蓝图中实现数据序列化与字节转换.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19770934/index.html",
       "mediaOccurrences": []
     },
@@ -1158,24 +1004,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19770930/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/004-如何管理打包时的配置文件排除.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/004-如何管理打包时的配置文件排除.md",
       "template": "blog--cnblogs-19770930.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/004-如何管理打包时的配置文件排除.md",
       "title": "如何管理打包时的配置文件排除",
       "translationKey": "cnblogs-19770930",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/004-如何管理打包时的配置文件排除.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/004-如何管理打包时的配置文件排除.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19770930/index.html",
       "mediaOccurrences": []
     },
@@ -1186,12 +1020,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19379355/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/008-如何用材质制作圆角矩形.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/008-如何用材质制作圆角矩形.md",
       "template": "blog--cnblogs-19379355.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/008-如何用材质制作圆角矩形.md",
       "title": "如何用材质制作圆角矩形",
       "translationKey": "cnblogs-19379355",
       "cover": null,
@@ -1222,14 +1052,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/008-如何用材质制作圆角矩形.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/008-如何用材质制作圆角矩形.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19379355/index.html",
       "mediaOccurrences": [
         {
@@ -1306,12 +1128,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19379306/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/009-怎么查看打包到底打包了哪些文件.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/009-怎么查看打包到底打包了哪些文件.md",
       "template": "blog--cnblogs-19379306.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/009-怎么查看打包到底打包了哪些文件.md",
       "title": "怎么查看打包到底打包了哪些文件",
       "translationKey": "cnblogs-19379306",
       "cover": null,
@@ -1332,14 +1150,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/009-怎么查看打包到底打包了哪些文件.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/009-怎么查看打包到底打包了哪些文件.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19379306/index.html",
       "mediaOccurrences": [
         {
@@ -1390,12 +1200,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19379337/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/006-材质基础知识之if判断节点.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/006-材质基础知识之if判断节点.md",
       "template": "blog--cnblogs-19379337.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/006-材质基础知识之if判断节点.md",
       "title": "材质基础知识之if判断节点",
       "translationKey": "cnblogs-19379337",
       "cover": null,
@@ -1406,14 +1212,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/006-材质基础知识之if判断节点.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/006-材质基础知识之if判断节点.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19379337/index.html",
       "mediaOccurrences": [
         {
@@ -1438,12 +1236,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19379365/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/007-缓存路径修改.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/007-缓存路径修改.md",
       "template": "blog--cnblogs-19379365.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/007-缓存路径修改.md",
       "title": "缓存路径修改",
       "translationKey": "cnblogs-19379365",
       "cover": null,
@@ -1464,14 +1258,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/007-缓存路径修改.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/007-缓存路径修改.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19379365/index.html",
       "mediaOccurrences": [
         {
@@ -1518,24 +1304,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19204715/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/010-StaticMeshActor 与 ISM-HISM 的加载开销.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/010-StaticMeshActor 与 ISM-HISM 的加载开销.md",
       "template": "blog--cnblogs-19204715.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/010-StaticMeshActor 与 ISM-HISM 的加载开销.md",
       "title": "StaticMeshActor 与 ISM/HISM 的加载开销",
       "translationKey": "cnblogs-19204715",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/010-StaticMeshActor 与 ISM-HISM 的加载开销.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/010-StaticMeshActor 与 ISM-HISM 的加载开销.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19204715/index.html",
       "mediaOccurrences": []
     },
@@ -1546,24 +1320,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19197541/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/011-论运行时动画录制的关键-正确获取骨骼数据与保存.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/011-论运行时动画录制的关键-正确获取骨骼数据与保存.md",
       "template": "blog--cnblogs-19197541.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/011-论运行时动画录制的关键-正确获取骨骼数据与保存.md",
       "title": "论运行时动画录制的关键-正确获取骨骼数据与保存",
       "translationKey": "cnblogs-19197541",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/011-论运行时动画录制的关键-正确获取骨骼数据与保存.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/011-论运行时动画录制的关键-正确获取骨骼数据与保存.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19197541/index.html",
       "mediaOccurrences": []
     },
@@ -1574,12 +1336,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19192707/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/012-C++MVVM简单应用.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/012-C++MVVM简单应用.md",
       "template": "blog--cnblogs-19192707.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/012-C++MVVM简单应用.md",
       "title": "C++MVVM简单应用",
       "translationKey": "cnblogs-19192707",
       "cover": null,
@@ -1605,14 +1363,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/012-C++MVVM简单应用.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/012-C++MVVM简单应用.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19192707/index.html",
       "mediaOccurrences": [
         {
@@ -1676,12 +1426,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19183986/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/014-中英双语设置小技巧.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/014-中英双语设置小技巧.md",
       "template": "blog--cnblogs-19183986.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/014-中英双语设置小技巧.md",
       "title": "中英双语设置小技巧",
       "translationKey": "cnblogs-19183986",
       "cover": null,
@@ -1707,14 +1453,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/014-中英双语设置小技巧.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/014-中英双语设置小技巧.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19183986/index.html",
       "mediaOccurrences": [
         {
@@ -1778,12 +1516,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19184043/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/013-快速创建一个地图.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/013-快速创建一个地图.md",
       "template": "blog--cnblogs-19184043.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/013-快速创建一个地图.md",
       "title": "快速创建一个地图",
       "translationKey": "cnblogs-19184043",
       "cover": null,
@@ -1819,14 +1553,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/013-快速创建一个地图.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/013-快速创建一个地图.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19184043/index.html",
       "mediaOccurrences": [
         {
@@ -1916,12 +1642,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19174288/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/015-多屏幕全屏后只有一个屏幕显示怎么办.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/015-多屏幕全屏后只有一个屏幕显示怎么办.md",
       "template": "blog--cnblogs-19174288.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/015-多屏幕全屏后只有一个屏幕显示怎么办.md",
       "title": "多屏幕全屏后只有一个屏幕显示怎么办",
       "translationKey": "cnblogs-19174288",
       "cover": null,
@@ -1937,14 +1659,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/015-多屏幕全屏后只有一个屏幕显示怎么办.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/015-多屏幕全屏后只有一个屏幕显示怎么办.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19174288/index.html",
       "mediaOccurrences": [
         {
@@ -1978,12 +1692,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19174295/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/016-如何调用DLL.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/016-如何调用DLL.md",
       "template": "blog--cnblogs-19174295.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/016-如何调用DLL.md",
       "title": "如何调用DLL",
       "translationKey": "cnblogs-19174295",
       "cover": null,
@@ -2024,14 +1734,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/016-如何调用DLL.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/016-如何调用DLL.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19174295/index.html",
       "mediaOccurrences": [
         {
@@ -2130,12 +1832,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19165494/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/024-PixelStreaming 像素流送.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/024-PixelStreaming 像素流送.md",
       "template": "blog--cnblogs-19165494.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/024-PixelStreaming 像素流送.md",
       "title": "PixelStreaming 像素流送",
       "translationKey": "cnblogs-19165494",
       "cover": null,
@@ -2166,14 +1864,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/024-PixelStreaming 像素流送.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/024-PixelStreaming 像素流送.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19165494/index.html",
       "mediaOccurrences": [
         {
@@ -2248,24 +1938,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19165484/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/025-UE网络编程完全指南之UDP TCP WebSocket实现详解.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/025-UE网络编程完全指南之UDP TCP WebSocket实现详解.md",
       "template": "blog--cnblogs-19165484.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/025-UE网络编程完全指南之UDP TCP WebSocket实现详解.md",
       "title": "UE网络编程完全指南之UDP TCP WebSocket实现详解",
       "translationKey": "cnblogs-19165484",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/025-UE网络编程完全指南之UDP TCP WebSocket实现详解.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/025-UE网络编程完全指南之UDP TCP WebSocket实现详解.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19165484/index.html",
       "mediaOccurrences": []
     },
@@ -2276,12 +1954,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19165561/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/018-多屏幕如何设置曝光同步.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/018-多屏幕如何设置曝光同步.md",
       "template": "blog--cnblogs-19165561.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/018-多屏幕如何设置曝光同步.md",
       "title": "多屏幕如何设置曝光同步",
       "translationKey": "cnblogs-19165561",
       "cover": null,
@@ -2302,14 +1976,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/018-多屏幕如何设置曝光同步.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/018-多屏幕如何设置曝光同步.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19165561/index.html",
       "mediaOccurrences": [
         {
@@ -2360,24 +2026,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19165541/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/021-如何在UE中实现SSH隧道，安全访问远程服务.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/021-如何在UE中实现SSH隧道，安全访问远程服务.md",
       "template": "blog--cnblogs-19165541.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/021-如何在UE中实现SSH隧道，安全访问远程服务.md",
       "title": "如何在UE中实现SSH隧道，安全访问远程服务",
       "translationKey": "cnblogs-19165541",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/021-如何在UE中实现SSH隧道，安全访问远程服务.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/021-如何在UE中实现SSH隧道，安全访问远程服务.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19165541/index.html",
       "mediaOccurrences": []
     },
@@ -2388,24 +2042,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19165553/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/020-如何设置监听服务器.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/020-如何设置监听服务器.md",
       "template": "blog--cnblogs-19165553.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/020-如何设置监听服务器.md",
       "title": "如何设置监听服务器",
       "translationKey": "cnblogs-19165553",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/020-如何设置监听服务器.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/020-如何设置监听服务器.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19165553/index.html",
       "mediaOccurrences": []
     },
@@ -2416,12 +2058,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19165504/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/022-无缝地图切换.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/022-无缝地图切换.md",
       "template": "blog--cnblogs-19165504.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/022-无缝地图切换.md",
       "title": "无缝地图切换",
       "translationKey": "cnblogs-19165504",
       "cover": null,
@@ -2442,14 +2080,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/022-无缝地图切换.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/022-无缝地图切换.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19165504/index.html",
       "mediaOccurrences": [
         {
@@ -2500,12 +2130,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19165500/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/023-自定义配置DeveloperSettings.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/023-自定义配置DeveloperSettings.md",
       "template": "blog--cnblogs-19165500.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/023-自定义配置DeveloperSettings.md",
       "title": "自定义配置DeveloperSettings",
       "translationKey": "cnblogs-19165500",
       "cover": null,
@@ -2551,14 +2177,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/023-自定义配置DeveloperSettings.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/023-自定义配置DeveloperSettings.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19165500/index.html",
       "mediaOccurrences": [
         {
@@ -2672,12 +2290,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19165488/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/019-解决UObject蓝图缺少上下文的问题.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/019-解决UObject蓝图缺少上下文的问题.md",
       "template": "blog--cnblogs-19165488.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/019-解决UObject蓝图缺少上下文的问题.md",
       "title": "解决UObject蓝图缺少上下文的问题",
       "translationKey": "cnblogs-19165488",
       "cover": null,
@@ -2693,14 +2307,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/019-解决UObject蓝图缺少上下文的问题.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/019-解决UObject蓝图缺少上下文的问题.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19165488/index.html",
       "mediaOccurrences": [
         {
@@ -2738,12 +2344,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19165520/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/017-遍历Actor所有属性进入Sequence记录.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/017-遍历Actor所有属性进入Sequence记录.md",
       "template": "blog--cnblogs-19165520.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/017-遍历Actor所有属性进入Sequence记录.md",
       "title": "遍历Actor所有属性进入Sequence记录",
       "translationKey": "cnblogs-19165520",
       "cover": null,
@@ -2754,14 +2356,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/017-遍历Actor所有属性进入Sequence记录.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/017-遍历Actor所有属性进入Sequence记录.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19165520/index.html",
       "mediaOccurrences": [
         {
@@ -2786,12 +2380,8 @@
       "legacyRoutes": [
         "/blog/cnblogs-19136316/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/027-一键解决MetaHuman播放动画时头部穿模问题.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/027-一键解决MetaHuman播放动画时头部穿模问题.md",
       "template": "blog--cnblogs-19136316.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/027-一键解决MetaHuman播放动画时头部穿模问题.md",
       "title": "一键解决MetaHuman播放动画时头部穿模问题",
       "translationKey": "cnblogs-19136316",
       "cover": null,
@@ -2822,14 +2412,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/027-一键解决MetaHuman播放动画时头部穿模问题.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/027-一键解决MetaHuman播放动画时头部穿模问题.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19136316/index.html",
       "mediaOccurrences": [
         {
@@ -2906,24 +2488,12 @@
       "legacyRoutes": [
         "/blog/cnblogs-19136345/"
       ],
-      "zhSource": "网站/zh/003-笔记/001-UE开发/026-如何在UE中创建动态枚举.md",
-      "enSource": "网站/en/003-笔记/001-UE开发/026-如何在UE中创建动态枚举.md",
       "template": "blog--cnblogs-19136345.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/001-UE开发/026-如何在UE中创建动态枚举.md",
       "title": "如何在UE中创建动态枚举",
       "translationKey": "cnblogs-19136345",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/001-UE开发/026-如何在UE中创建动态枚举.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/001-UE开发/026-如何在UE中创建动态枚举.md"
-        }
-      },
       "baselineTemplate": "blog/cnblogs-19136345/index.html",
       "mediaOccurrences": []
     },
@@ -2934,24 +2504,12 @@
       "legacyRoutes": [
         "/blog/markdown-images/"
       ],
-      "zhSource": "网站/zh/003-笔记/004-随笔/001-Markdown 本地图片，发布时该怎么处理？.md",
-      "enSource": "网站/en/003-笔记/004-随笔/001-Markdown 本地图片，发布时该怎么处理？.md",
       "template": "blog--markdown-images.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "003-笔记/004-随笔/001-Markdown 本地图片，发布时该怎么处理？.md",
       "title": "Markdown 本地图片，发布时该怎么处理？",
       "translationKey": "markdown-images",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/003-笔记/004-随笔/001-Markdown 本地图片，发布时该怎么处理？.md"
-        },
-        "en": {
-          "source": "网站/en/003-笔记/004-随笔/001-Markdown 本地图片，发布时该怎么处理？.md"
-        }
-      },
       "baselineTemplate": "blog/markdown-images/index.html",
       "mediaOccurrences": []
     },
@@ -2962,12 +2520,8 @@
       "legacyRoutes": [
         "/cases/driving-simulator-three-screen/"
       ],
-      "zhSource": "网站/zh/002-案例/002-UE项目/001-解决驾考模拟器三屏显示不一致问题.md",
-      "enSource": "网站/en/002-案例/002-UE项目/001-解决驾考模拟器三屏显示不一致问题.md",
       "template": "case--driving-simulator-three-screen.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/002-UE项目/001-解决驾考模拟器三屏显示不一致问题.md",
       "title": "解决驾考模拟器三屏显示不一致问题",
       "translationKey": "driving-simulator-three-screen",
       "cover": {
@@ -2975,14 +2529,6 @@
         "websiteUrl": "/assets/cases/driving-simulator-three-screen.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/002-UE项目/001-解决驾考模拟器三屏显示不一致问题.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/002-UE项目/001-解决驾考模拟器三屏显示不一致问题.md"
-        }
-      },
       "baselineTemplate": "cases/driving-simulator-three-screen/index.html",
       "mediaOccurrences": []
     },
@@ -2993,12 +2539,8 @@
       "legacyRoutes": [
         "/cases/ai-digital-human-integration/"
       ],
-      "zhSource": "网站/zh/002-案例/002-UE项目/002-集成 AI 数字人交互流程.md",
-      "enSource": "网站/en/002-案例/002-UE项目/002-集成 AI 数字人交互流程.md",
       "template": "case--ai-digital-human-integration.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/002-UE项目/002-集成 AI 数字人交互流程.md",
       "title": "集成 AI 数字人交互流程",
       "translationKey": "ai-digital-human-integration",
       "cover": {
@@ -3006,14 +2548,6 @@
         "websiteUrl": "/assets/cases/ai-digital-human-integration.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/002-UE项目/002-集成 AI 数字人交互流程.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/002-UE项目/002-集成 AI 数字人交互流程.md"
-        }
-      },
       "baselineTemplate": "cases/ai-digital-human-integration/index.html",
       "mediaOccurrences": []
     },
@@ -3024,12 +2558,8 @@
       "legacyRoutes": [
         "/cases/flying-car-simulator/"
       ],
-      "zhSource": "网站/zh/002-案例/002-UE项目/003-飞行汽车模拟器.md",
-      "enSource": "网站/en/002-案例/002-UE项目/003-飞行汽车模拟器.md",
       "template": "case--flying-car-simulator.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/002-UE项目/003-飞行汽车模拟器.md",
       "title": "飞行汽车模拟器",
       "translationKey": "flying-car-simulator",
       "cover": {
@@ -3037,14 +2567,6 @@
         "websiteUrl": "/assets/cases/flying-car-simulator.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/002-UE项目/003-飞行汽车模拟器.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/002-UE项目/003-飞行汽车模拟器.md"
-        }
-      },
       "baselineTemplate": "cases/flying-car-simulator/index.html",
       "mediaOccurrences": []
     },
@@ -3055,12 +2577,8 @@
       "legacyRoutes": [
         "/cases/motion-capture-robot-control/"
       ],
-      "zhSource": "网站/zh/002-案例/002-UE项目/004-动捕机器人控制系统.md",
-      "enSource": "网站/en/002-案例/002-UE项目/004-动捕机器人控制系统.md",
       "template": "case--motion-capture-robot-control.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/002-UE项目/004-动捕机器人控制系统.md",
       "title": "动捕机器人控制系统",
       "translationKey": "motion-capture-robot-control",
       "cover": {
@@ -3068,14 +2586,6 @@
         "websiteUrl": "/assets/cases/motion-capture-robot-control.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/002-UE项目/004-动捕机器人控制系统.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/002-UE项目/004-动捕机器人控制系统.md"
-        }
-      },
       "baselineTemplate": "cases/motion-capture-robot-control/index.html",
       "mediaOccurrences": []
     },
@@ -3086,12 +2596,8 @@
       "legacyRoutes": [
         "/cases/six-dof-motion-platform/"
       ],
-      "zhSource": "网站/zh/002-案例/002-UE项目/005-六自由度运动平台联动.md",
-      "enSource": "网站/en/002-案例/002-UE项目/005-六自由度运动平台联动.md",
       "template": "case--six-dof-motion-platform.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/002-UE项目/005-六自由度运动平台联动.md",
       "title": "六自由度运动平台联动",
       "translationKey": "six-dof-motion-platform",
       "cover": {
@@ -3099,14 +2605,6 @@
         "websiteUrl": "/assets/cases/six-dof-motion-platform.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/002-UE项目/005-六自由度运动平台联动.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/002-UE项目/005-六自由度运动平台联动.md"
-        }
-      },
       "baselineTemplate": "cases/six-dof-motion-platform/index.html",
       "mediaOccurrences": []
     },
@@ -3117,12 +2615,8 @@
       "legacyRoutes": [
         "/cases/plugin-release-workflow/"
       ],
-      "zhSource": "网站/zh/002-案例/001-桌面与自动化/001-插件开发到发布的工具链.md",
-      "enSource": "网站/en/002-案例/001-桌面与自动化/001-插件开发到发布的工具链.md",
       "template": "case--plugin-release-workflow.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/001-桌面与自动化/001-插件开发到发布的工具链.md",
       "title": "插件开发到发布的工具链",
       "translationKey": "plugin-release-workflow",
       "cover": {
@@ -3130,14 +2624,6 @@
         "websiteUrl": "/assets/cases/plugin-release-workflow.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/001-桌面与自动化/001-插件开发到发布的工具链.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/001-桌面与自动化/001-插件开发到发布的工具链.md"
-        }
-      },
       "baselineTemplate": "cases/plugin-release-workflow/index.html",
       "mediaOccurrences": []
     },
@@ -3148,12 +2634,8 @@
       "legacyRoutes": [
         "/cases/markdown-publishing/"
       ],
-      "zhSource": "网站/zh/002-案例/001-桌面与自动化/002-让 Markdown 图片随文章一起发布.md",
-      "enSource": "网站/en/002-案例/001-桌面与自动化/002-让 Markdown 图片随文章一起发布.md",
       "template": "case--markdown-publishing.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/001-桌面与自动化/002-让 Markdown 图片随文章一起发布.md",
       "title": "让 Markdown 图片随文章一起发布",
       "translationKey": "markdown-publishing",
       "cover": {
@@ -3161,14 +2643,6 @@
         "websiteUrl": "/assets/cases/markdown-publishing.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/001-桌面与自动化/002-让 Markdown 图片随文章一起发布.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/001-桌面与自动化/002-让 Markdown 图片随文章一起发布.md"
-        }
-      },
       "baselineTemplate": "cases/markdown-publishing/index.html",
       "mediaOccurrences": []
     },
@@ -3179,12 +2653,8 @@
       "legacyRoutes": [
         "/cases/blueprint-inheritance-repair/"
       ],
-      "zhSource": "网站/zh/002-案例/002-UE项目/006-修复蓝图继承中的组件状态污染.md",
-      "enSource": "网站/en/002-案例/002-UE项目/006-修复蓝图继承中的组件状态污染.md",
       "template": "case--blueprint-inheritance-repair.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/002-UE项目/006-修复蓝图继承中的组件状态污染.md",
       "title": "修复蓝图继承中的组件状态污染",
       "translationKey": "blueprint-inheritance-repair",
       "cover": {
@@ -3192,14 +2662,6 @@
         "websiteUrl": "/assets/cases/blueprint-inheritance-repair.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/002-UE项目/006-修复蓝图继承中的组件状态污染.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/002-UE项目/006-修复蓝图继承中的组件状态污染.md"
-        }
-      },
       "baselineTemplate": "cases/blueprint-inheritance-repair/index.html",
       "mediaOccurrences": []
     },
@@ -3210,12 +2672,8 @@
       "legacyRoutes": [
         "/cases/data-asset-json-sync/"
       ],
-      "zhSource": "网站/zh/002-案例/002-UE项目/007-让 DataAsset 与 JSON 双向同步.md",
-      "enSource": "网站/en/002-案例/002-UE项目/007-让 DataAsset 与 JSON 双向同步.md",
       "template": "case--data-asset-json-sync.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/002-UE项目/007-让 DataAsset 与 JSON 双向同步.md",
       "title": "让 DataAsset 与 JSON 双向同步",
       "translationKey": "data-asset-json-sync",
       "cover": {
@@ -3223,14 +2681,6 @@
         "websiteUrl": "/assets/cases/data-asset-json-sync.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/002-UE项目/007-让 DataAsset 与 JSON 双向同步.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/002-UE项目/007-让 DataAsset 与 JSON 双向同步.md"
-        }
-      },
       "baselineTemplate": "cases/data-asset-json-sync/index.html",
       "mediaOccurrences": []
     },
@@ -3241,12 +2691,8 @@
       "legacyRoutes": [
         "/cases/metahuman-animation-clipping/"
       ],
-      "zhSource": "网站/zh/002-案例/002-UE项目/008-处理 MetaHuman 头身动画叠加时的穿模.md",
-      "enSource": "网站/en/002-案例/002-UE项目/008-处理 MetaHuman 头身动画叠加时的穿模.md",
       "template": "case--metahuman-animation-clipping.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "002-案例/002-UE项目/008-处理 MetaHuman 头身动画叠加时的穿模.md",
       "title": "处理 MetaHuman 头身动画叠加时的穿模",
       "translationKey": "metahuman-animation-clipping",
       "cover": {
@@ -3254,14 +2700,6 @@
         "websiteUrl": "/assets/cases/metahuman-animation-clipping.png"
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/002-案例/002-UE项目/008-处理 MetaHuman 头身动画叠加时的穿模.md"
-        },
-        "en": {
-          "source": "网站/en/002-案例/002-UE项目/008-处理 MetaHuman 头身动画叠加时的穿模.md"
-        }
-      },
       "baselineTemplate": "cases/metahuman-animation-clipping/index.html",
       "mediaOccurrences": []
     },
@@ -3272,12 +2710,8 @@
       "legacyRoutes": [
         "/works/simple-file-updater/"
       ],
-      "zhSource": "网站/zh/001-作品/004-实用工具/001-SimpleFileUpdater.md",
-      "enSource": "网站/en/001-作品/004-实用工具/001-SimpleFileUpdater.md",
       "template": "work--simple-file-updater.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/004-实用工具/001-SimpleFileUpdater.md",
       "title": "SimpleFileUpdater",
       "translationKey": "simple-file-updater",
       "cover": {
@@ -3285,14 +2719,6 @@
         "websiteUrl": null
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/004-实用工具/001-SimpleFileUpdater.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/004-实用工具/001-SimpleFileUpdater.md"
-        }
-      },
       "baselineTemplate": "works/simple-file-updater/index.html",
       "mediaOccurrences": []
     },
@@ -3303,12 +2729,8 @@
       "legacyRoutes": [
         "/works/p4-case-sync/"
       ],
-      "zhSource": "网站/zh/001-作品/003-协作工具/001-P4CaseSync.md",
-      "enSource": "网站/en/001-作品/003-协作工具/001-P4CaseSync.md",
       "template": "work--p4-case-sync.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/003-协作工具/001-P4CaseSync.md",
       "title": "P4CaseSync",
       "translationKey": "p4-case-sync",
       "cover": {
@@ -3316,14 +2738,6 @@
         "websiteUrl": null
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/003-协作工具/001-P4CaseSync.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/003-协作工具/001-P4CaseSync.md"
-        }
-      },
       "baselineTemplate": "works/p4-case-sync/index.html",
       "mediaOccurrences": []
     },
@@ -3334,12 +2748,8 @@
       "legacyRoutes": [
         "/works/md-blog-packer/"
       ],
-      "zhSource": "网站/zh/001-作品/002-写作工具/001-MDBlogPacker.md",
-      "enSource": "网站/en/001-作品/002-写作工具/001-MDBlogPacker.md",
       "template": "work--md-blog-packer.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/002-写作工具/001-MDBlogPacker.md",
       "title": "MDBlogPacker",
       "translationKey": "md-blog-packer",
       "cover": {
@@ -3347,14 +2757,6 @@
         "websiteUrl": null
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/002-写作工具/001-MDBlogPacker.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/002-写作工具/001-MDBlogPacker.md"
-        }
-      },
       "baselineTemplate": "works/md-blog-packer/index.html",
       "mediaOccurrences": []
     },
@@ -3365,24 +2767,12 @@
       "legacyRoutes": [
         "/works/md-image-embed/"
       ],
-      "zhSource": "网站/zh/001-作品/002-写作工具/002-MDImageEmbed.md",
-      "enSource": "网站/en/001-作品/002-写作工具/002-MDImageEmbed.md",
       "template": "work--md-image-embed.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/002-写作工具/002-MDImageEmbed.md",
       "title": "MDImageEmbed",
       "translationKey": "md-image-embed",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/002-写作工具/002-MDImageEmbed.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/002-写作工具/002-MDImageEmbed.md"
-        }
-      },
       "baselineTemplate": "works/md-image-embed/index.html",
       "mediaOccurrences": []
     },
@@ -3393,12 +2783,8 @@
       "legacyRoutes": [
         "/works/simple-bp-inherit-fix/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/14-SimpleBPInheritFix.md",
-      "enSource": "网站/en/001-作品/005-UE插件/14-SimpleBPInheritFix.md",
       "template": "work--simple-bp-inherit-fix.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/005-SimpleBPInheritFix.md",
       "title": "SimpleBPInheritFix",
       "translationKey": "simple-bp-inherit-fix",
       "cover": {
@@ -3408,14 +2794,6 @@
       "sourceMediaReferences": [],
       "githubCreatedAt": "2026-04-16",
       "order": 13,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/14-SimpleBPInheritFix.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/14-SimpleBPInheritFix.md"
-        }
-      },
       "baselineTemplate": "works/simple-bp-inherit-fix/index.html",
       "mediaOccurrences": []
     },
@@ -3426,12 +2804,8 @@
       "legacyRoutes": [
         "/works/simple-level-seq-smooth/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/16-SimpleLevelSeqSmooth.md",
-      "enSource": "网站/en/001-作品/005-UE插件/16-SimpleLevelSeqSmooth.md",
       "template": "work--simple-level-seq-smooth.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/006-SimpleLevelSeqSmooth.md",
       "title": "SimpleLevelSeqSmooth",
       "translationKey": "simple-level-seq-smooth",
       "cover": {
@@ -3441,14 +2815,6 @@
       "sourceMediaReferences": [],
       "githubCreatedAt": "2026-05-13T07:13:03Z",
       "order": 15,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/16-SimpleLevelSeqSmooth.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/16-SimpleLevelSeqSmooth.md"
-        }
-      },
       "baselineTemplate": "works/simple-level-seq-smooth/index.html",
       "mediaOccurrences": []
     },
@@ -3459,26 +2825,14 @@
       "legacyRoutes": [
         "/works/ai-data-asset/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/15-AIDataAsset.md",
-      "enSource": "网站/en/001-作品/005-UE插件/15-AIDataAsset.md",
       "template": "work--ai-data-asset.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/007-AIDataAsset.md",
       "title": "AIDataAsset",
       "translationKey": "ai-data-asset",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2026-05-13T07:12:59Z",
       "order": 14,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/15-AIDataAsset.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/15-AIDataAsset.md"
-        }
-      },
       "baselineTemplate": "works/ai-data-asset/index.html",
       "mediaOccurrences": []
     },
@@ -3489,26 +2843,14 @@
       "legacyRoutes": [
         "/works/simple-input-simulator/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/07-SimpleInputSimulator.md",
-      "enSource": "网站/en/001-作品/005-UE插件/07-SimpleInputSimulator.md",
       "template": "work--simple-input-simulator.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/008-SimpleInputSimulator.md",
       "title": "SimpleInputSimulator",
       "translationKey": "simple-input-simulator",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-08-25",
       "order": 6,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/07-SimpleInputSimulator.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/07-SimpleInputSimulator.md"
-        }
-      },
       "baselineTemplate": "works/simple-input-simulator/index.html",
       "mediaOccurrences": []
     },
@@ -3519,26 +2861,14 @@
       "legacyRoutes": [
         "/works/simple-byte-conversion/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/02-SimpleByteConversion.md",
-      "enSource": "网站/en/001-作品/005-UE插件/02-SimpleByteConversion.md",
       "template": "work--simple-byte-conversion.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/009-SimpleByteConversion.md",
       "title": "SimpleByteConversion",
       "translationKey": "simple-byte-conversion",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-04-25",
       "order": 1,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/02-SimpleByteConversion.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/02-SimpleByteConversion.md"
-        }
-      },
       "baselineTemplate": "works/simple-byte-conversion/index.html",
       "mediaOccurrences": []
     },
@@ -3549,26 +2879,14 @@
       "legacyRoutes": [
         "/works/simple-config-exclude/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/12-SimpleConfigExclude.md",
-      "enSource": "网站/en/001-作品/005-UE插件/12-SimpleConfigExclude.md",
       "template": "work--simple-config-exclude.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/010-SimpleConfigExclude.md",
       "title": "SimpleConfigExclude",
       "translationKey": "simple-config-exclude",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-12-19",
       "order": 11,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/12-SimpleConfigExclude.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/12-SimpleConfigExclude.md"
-        }
-      },
       "baselineTemplate": "works/simple-config-exclude/index.html",
       "mediaOccurrences": []
     },
@@ -3579,26 +2897,14 @@
       "legacyRoutes": [
         "/works/simple-launcher/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/13-SimpleLauncher.md",
-      "enSource": "网站/en/001-作品/005-UE插件/13-SimpleLauncher.md",
       "template": "work--simple-launcher.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/011-SimpleLauncher.md",
       "title": "SimpleLauncher",
       "translationKey": "simple-launcher",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2026-02-01",
       "order": 12,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/13-SimpleLauncher.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/13-SimpleLauncher.md"
-        }
-      },
       "baselineTemplate": "works/simple-launcher/index.html",
       "mediaOccurrences": []
     },
@@ -3609,26 +2915,14 @@
       "legacyRoutes": [
         "/works/simple-asset-namer/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/11-SimpleAssetNamer.md",
-      "enSource": "网站/en/001-作品/005-UE插件/11-SimpleAssetNamer.md",
       "template": "work--simple-asset-namer.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/012-SimpleAssetNamer.md",
       "title": "SimpleAssetNamer",
       "translationKey": "simple-asset-namer",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-11-15",
       "order": 10,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/11-SimpleAssetNamer.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/11-SimpleAssetNamer.md"
-        }
-      },
       "baselineTemplate": "works/simple-asset-namer/index.html",
       "mediaOccurrences": []
     },
@@ -3639,26 +2933,14 @@
       "legacyRoutes": [
         "/works/simple-static-mesh-merger/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/10-SimpleStaticMeshMerger.md",
-      "enSource": "网站/en/001-作品/005-UE插件/10-SimpleStaticMeshMerger.md",
       "template": "work--simple-static-mesh-merger.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/013-SimpleStaticMeshMerger.md",
       "title": "SimpleStaticMeshMerger",
       "translationKey": "simple-static-mesh-merger",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-11-03",
       "order": 9,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/10-SimpleStaticMeshMerger.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/10-SimpleStaticMeshMerger.md"
-        }
-      },
       "baselineTemplate": "works/simple-static-mesh-merger/index.html",
       "mediaOccurrences": []
     },
@@ -3669,26 +2951,14 @@
       "legacyRoutes": [
         "/works/simple-asset-cleaner/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/08-SimpleAssetCleaner.md",
-      "enSource": "网站/en/001-作品/005-UE插件/08-SimpleAssetCleaner.md",
       "template": "work--simple-asset-cleaner.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/014-SimpleAssetCleaner.md",
       "title": "SimpleAssetCleaner",
       "translationKey": "simple-asset-cleaner",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-09-20",
       "order": 7,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/08-SimpleAssetCleaner.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/08-SimpleAssetCleaner.md"
-        }
-      },
       "baselineTemplate": "works/simple-asset-cleaner/index.html",
       "mediaOccurrences": []
     },
@@ -3699,26 +2969,14 @@
       "legacyRoutes": [
         "/works/simple-ssh-tunnel/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/01-SimpleSSHTunnel.md",
-      "enSource": "网站/en/001-作品/005-UE插件/01-SimpleSSHTunnel.md",
       "template": "work--simple-ssh-tunnel.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/015-SimpleSSHTunnel.md",
       "title": "SimpleSSHTunnel",
       "translationKey": "simple-ssh-tunnel",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-04-15",
       "order": 0,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/01-SimpleSSHTunnel.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/01-SimpleSSHTunnel.md"
-        }
-      },
       "baselineTemplate": "works/simple-ssh-tunnel/index.html",
       "mediaOccurrences": []
     },
@@ -3729,26 +2987,14 @@
       "legacyRoutes": [
         "/works/simple-udp/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/04-SimpleUDP.md",
-      "enSource": "网站/en/001-作品/005-UE插件/04-SimpleUDP.md",
       "template": "work--simple-udp.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/016-SimpleUDP.md",
       "title": "SimpleUDP",
       "translationKey": "simple-udp",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-05-26",
       "order": 3,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/04-SimpleUDP.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/04-SimpleUDP.md"
-        }
-      },
       "baselineTemplate": "works/simple-udp/index.html",
       "mediaOccurrences": []
     },
@@ -3759,26 +3005,14 @@
       "legacyRoutes": [
         "/works/simple-tcp-client/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/05-SimpleTCPClient.md",
-      "enSource": "网站/en/001-作品/005-UE插件/05-SimpleTCPClient.md",
       "template": "work--simple-tcp-client.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/017-SimpleTCPClient.md",
       "title": "SimpleTCPClient",
       "translationKey": "simple-tcp-client",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-07-05",
       "order": 4,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/05-SimpleTCPClient.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/05-SimpleTCPClient.md"
-        }
-      },
       "baselineTemplate": "works/simple-tcp-client/index.html",
       "mediaOccurrences": []
     },
@@ -3789,26 +3023,14 @@
       "legacyRoutes": [
         "/works/simple-tcp-server/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/06-SimpleTCPServer.md",
-      "enSource": "网站/en/001-作品/005-UE插件/06-SimpleTCPServer.md",
       "template": "work--simple-tcp-server.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/018-SimpleTCPServer.md",
       "title": "SimpleTCPServer",
       "translationKey": "simple-tcp-server",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-07-19",
       "order": 5,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/06-SimpleTCPServer.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/06-SimpleTCPServer.md"
-        }
-      },
       "baselineTemplate": "works/simple-tcp-server/index.html",
       "mediaOccurrences": []
     },
@@ -3819,26 +3041,14 @@
       "legacyRoutes": [
         "/works/simple-websocket/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/03-SimpleWebSocket.md",
-      "enSource": "网站/en/001-作品/005-UE插件/03-SimpleWebSocket.md",
       "template": "work--simple-websocket.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/019-SimpleWebSocket.md",
       "title": "SimpleWebSocket",
       "translationKey": "simple-websocket",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-05-19",
       "order": 2,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/03-SimpleWebSocket.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/03-SimpleWebSocket.md"
-        }
-      },
       "baselineTemplate": "works/simple-websocket/index.html",
       "mediaOccurrences": []
     },
@@ -3849,26 +3059,14 @@
       "legacyRoutes": [
         "/works/simple-auto-enum/"
       ],
-      "zhSource": "网站/zh/001-作品/005-UE插件/09-SimpleAutoEnum.md",
-      "enSource": "网站/en/001-作品/005-UE插件/09-SimpleAutoEnum.md",
       "template": "work--simple-auto-enum.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/020-SimpleAutoEnum.md",
       "title": "SimpleAutoEnum",
       "translationKey": "simple-auto-enum",
       "cover": null,
       "sourceMediaReferences": [],
       "githubCreatedAt": "2025-09-25",
       "order": 8,
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/005-UE插件/09-SimpleAutoEnum.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/005-UE插件/09-SimpleAutoEnum.md"
-        }
-      },
       "baselineTemplate": "works/simple-auto-enum/index.html",
       "mediaOccurrences": []
     },
@@ -3879,8 +3077,6 @@
       "legacyRoutes": [
         "/works/ue-package-manager/"
       ],
-      "zhSource": "网站/zh/001-作品/001-UE工具/001-UEPackageManager.md",
-      "enSource": "网站/en/001-作品/001-UE工具/001-UEPackageManager.md",
       "template": "work--ue-package-manager.html",
       "media": [
         {
@@ -3890,8 +3086,6 @@
           "withheldHtmlSha256": "db7539cc0240c9eed204a8dd10ba0fbc345b46059ca1c10c65952c9944333032"
         }
       ],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/001-UEPackageManager.md",
       "title": "UEPackageManager",
       "translationKey": "ue-package-manager",
       "cover": {
@@ -3905,14 +3099,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/001-UE工具/001-UEPackageManager.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/001-UE工具/001-UEPackageManager.md"
-        }
-      },
       "baselineTemplate": "works/ue-package-manager/index.html",
       "mediaOccurrences": [
         {
@@ -3935,12 +3121,8 @@
       "legacyRoutes": [
         "/works/plugin-auto-packer/"
       ],
-      "zhSource": "网站/zh/001-作品/001-UE工具/002-UEPluginAutoPacker.md",
-      "enSource": "网站/en/001-作品/001-UE工具/002-UEPluginAutoPacker.md",
       "template": "work--plugin-auto-packer.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/002-UEPluginAutoPacker.md",
       "title": "UEPluginAutoPacker",
       "translationKey": "plugin-auto-packer",
       "cover": {
@@ -3948,14 +3130,6 @@
         "websiteUrl": null
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/001-UE工具/002-UEPluginAutoPacker.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/001-UE工具/002-UEPluginAutoPacker.md"
-        }
-      },
       "baselineTemplate": "works/plugin-auto-packer/index.html",
       "mediaOccurrences": []
     },
@@ -3966,12 +3140,8 @@
       "legacyRoutes": [
         "/works/plugin-manager/"
       ],
-      "zhSource": "网站/zh/001-作品/001-UE工具/003-UEPluginManager.md",
-      "enSource": "网站/en/001-作品/001-UE工具/003-UEPluginManager.md",
       "template": "work--plugin-manager.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/003-UEPluginManager.md",
       "title": "UEPluginManager",
       "translationKey": "plugin-manager",
       "cover": {
@@ -3979,14 +3149,6 @@
         "websiteUrl": null
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/001-UE工具/003-UEPluginManager.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/001-UE工具/003-UEPluginManager.md"
-        }
-      },
       "baselineTemplate": "works/plugin-manager/index.html",
       "mediaOccurrences": []
     },
@@ -3997,12 +3159,8 @@
       "legacyRoutes": [
         "/works/ue-quick-start/"
       ],
-      "zhSource": "网站/zh/001-作品/001-UE工具/004-UEQuickStart.md",
-      "enSource": "网站/en/001-作品/001-UE工具/004-UEQuickStart.md",
       "template": "work--ue-quick-start.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "001-作品/001-UE工具/004-UEQuickStart.md",
       "title": "UEQuickStart",
       "translationKey": "ue-quick-start",
       "cover": {
@@ -4010,14 +3168,6 @@
         "websiteUrl": null
       },
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/001-作品/001-UE工具/004-UEQuickStart.md"
-        },
-        "en": {
-          "source": "网站/en/001-作品/001-UE工具/004-UEQuickStart.md"
-        }
-      },
       "baselineTemplate": "works/ue-quick-start/index.html",
       "mediaOccurrences": []
     },
@@ -4028,8 +3178,6 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/ai-data-asset-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/001-ai-data-asset.md",
-      "enSource": "网站/en/004-文档/003-产品手册/001-ai-data-asset.md",
       "template": "doc--ai-data-asset-guide.html",
       "media": [
         {
@@ -4046,8 +3194,6 @@
           "reason": "local-context"
         }
       ],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/001-ai-data-asset.md",
       "title": "AIDataAsset 使用文档",
       "inOriginalManifest": true,
       "translationKey": "ai-data-asset-guide",
@@ -4064,14 +3210,6 @@
           "websiteUrl": "/media/manuals/4b0067443f8e2e35eecd.png"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/001-ai-data-asset.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/001-ai-data-asset.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/ai-data-asset-guide/index.html",
       "mediaOccurrences": [
         {
@@ -4107,12 +3245,8 @@
       "legacyRoutes": [
         "/docs/zh/tools/md-blog-packer/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/002-md-blog-packer.md",
-      "enSource": "网站/en/004-文档/003-产品手册/002-md-blog-packer.md",
       "template": "doc--md-blog-packer.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/002-md-blog-packer.md",
       "title": "MDBlogPacker 使用文档",
       "inOriginalManifest": false,
       "translationKey": "md-blog-packer",
@@ -4124,14 +3258,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/002-md-blog-packer.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/002-md-blog-packer.md"
-        }
-      },
       "baselineTemplate": "docs/zh/tools/md-blog-packer/index.html",
       "mediaOccurrences": [],
       "bodyTitle": {
@@ -4147,27 +3273,13 @@
       "legacyRoutes": [
         "/docs/zh/guides/writing-tools/md-image-embed-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/003-md-image-embed.md",
-      "enSource": "网站/en/004-文档/003-产品手册/003-md-image-embed.md",
       "template": "doc--md-image-embed-guide.html",
       "media": [],
-      "supplementSources": [
-        "网站/zh/004-文档/002-写作工具/001-MDImageEmbed/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/003-md-image-embed.md",
       "title": "MDImageEmbed 使用文档",
       "inOriginalManifest": false,
       "translationKey": "md-image-embed-guide",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/003-md-image-embed.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/003-md-image-embed.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/writing-tools/md-image-embed-guide/index.html",
       "mediaOccurrences": [
         {
@@ -4215,7 +3327,10 @@
         "tag": "p",
         "template": "<p id=\"md-image-embed\" class=\"article-source-title\">{{sourceTitleMarkup}}</p>"
       },
-      "supplementDivider": true
+      "supplementDivider": true,
+      "supplementTranslationKeys": [
+        "supplement:004-文档/002-写作工具/001-MDImageEmbed/001-使用指南.md"
+      ]
     },
     {
       "id": "doc:p4-case-sync",
@@ -4224,25 +3339,13 @@
       "legacyRoutes": [
         "/docs/zh/tools/p4-case-sync/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/004-p4-case-sync.md",
-      "enSource": "网站/en/004-文档/003-产品手册/004-p4-case-sync.md",
       "template": "doc--p4-case-sync.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/004-p4-case-sync.md",
       "title": "P4CaseSync 使用文档",
       "inOriginalManifest": false,
       "translationKey": "p4-case-sync",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/004-p4-case-sync.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/004-p4-case-sync.md"
-        }
-      },
       "baselineTemplate": "docs/zh/tools/p4-case-sync/index.html",
       "mediaOccurrences": [],
       "bodyTitle": {
@@ -4258,25 +3361,13 @@
       "legacyRoutes": [
         "/docs/zh/tools/plugin-auto-packer/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/005-plugin-auto-packer.md",
-      "enSource": "网站/en/004-文档/003-产品手册/005-plugin-auto-packer.md",
       "template": "doc--plugin-auto-packer.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/005-plugin-auto-packer.md",
       "title": "UEPluginAutoPacker 使用文档",
       "inOriginalManifest": false,
       "translationKey": "plugin-auto-packer",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/005-plugin-auto-packer.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/005-plugin-auto-packer.md"
-        }
-      },
       "baselineTemplate": "docs/zh/tools/plugin-auto-packer/index.html",
       "mediaOccurrences": [],
       "bodyTitle": {
@@ -4295,25 +3386,13 @@
       "legacyRoutes": [
         "/docs/zh/tools/plugin-manager/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/006-plugin-manager.md",
-      "enSource": "网站/en/004-文档/003-产品手册/006-plugin-manager.md",
       "template": "doc--plugin-manager.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/006-plugin-manager.md",
       "title": "UEPluginManager 使用文档",
       "inOriginalManifest": false,
       "translationKey": "plugin-manager",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/006-plugin-manager.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/006-plugin-manager.md"
-        }
-      },
       "baselineTemplate": "docs/zh/tools/plugin-manager/index.html",
       "mediaOccurrences": [],
       "bodyTitle": {
@@ -4329,8 +3408,6 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-asset-cleaner-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/007-simple-asset-cleaner.md",
-      "enSource": "网站/en/004-文档/003-产品手册/007-simple-asset-cleaner.md",
       "template": "doc--simple-asset-cleaner-guide.html",
       "media": [
         {
@@ -4346,10 +3423,6 @@
           "publish": true
         }
       ],
-      "supplementSources": [
-        "网站/zh/004-文档/001-UE工具/008-SimpleAssetCleaner/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/007-simple-asset-cleaner.md",
       "title": "SimpleAssetCleaner 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-asset-cleaner-guide",
@@ -4366,14 +3439,6 @@
           "websiteUrl": "/media/manuals/371175e265a8cadb391f.png"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/007-simple-asset-cleaner.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/007-simple-asset-cleaner.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-asset-cleaner-guide/index.html",
       "mediaOccurrences": [
         {
@@ -4402,6 +3467,9 @@
           "baselineNodeSha256": "4831b117a05a28558d5639e7fcb6d7083de484a36790d872ca1e95fa2f778542",
           "utilityId": "doc:simple-asset-cleaner-guide:body-utility:13"
         }
+      ],
+      "supplementTranslationKeys": [
+        "supplement:004-文档/001-UE工具/008-SimpleAssetCleaner/001-使用指南.md"
       ]
     },
     {
@@ -4411,29 +3479,18 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-asset-namer-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/008-simple-asset-namer.md",
-      "enSource": "网站/en/004-文档/003-产品手册/008-simple-asset-namer.md",
       "template": "doc--simple-asset-namer-guide.html",
       "media": [],
-      "supplementSources": [
-        "网站/zh/004-文档/001-UE工具/006-SimpleAssetNamer/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/008-simple-asset-namer.md",
       "title": "SimpleAssetNamer 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-asset-namer-guide",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/008-simple-asset-namer.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/008-simple-asset-namer.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-asset-namer-guide/index.html",
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "supplementTranslationKeys": [
+        "supplement:004-文档/001-UE工具/006-SimpleAssetNamer/001-使用指南.md"
+      ]
     },
     {
       "id": "doc:simple-auto-enum-guide",
@@ -4442,8 +3499,6 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-auto-enum-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/009-simple-auto-enum.md",
-      "enSource": "网站/en/004-文档/003-产品手册/009-simple-auto-enum.md",
       "template": "doc--simple-auto-enum-guide.html",
       "media": [
         {
@@ -4477,10 +3532,6 @@
           "publish": true
         }
       ],
-      "supplementSources": [
-        "网站/zh/004-文档/001-UE工具/009-SimpleAutoEnum/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/009-simple-auto-enum.md",
       "title": "SimpleAutoEnum 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-auto-enum-guide",
@@ -4512,14 +3563,6 @@
           "websiteUrl": "/media/manuals/5fcf5aea851c7ef15880.png"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/009-simple-auto-enum.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/009-simple-auto-enum.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-auto-enum-guide/index.html",
       "mediaOccurrences": [
         {
@@ -4587,6 +3630,9 @@
           "baselineNodeSha256": "343dba96445e4d9e1c6dbe4de24fb8d3a8fbffe5a58b3a05cd537a709b4232c8",
           "utilityId": "doc:simple-auto-enum-guide:body-utility:13"
         }
+      ],
+      "supplementTranslationKeys": [
+        "supplement:004-文档/001-UE工具/009-SimpleAutoEnum/001-使用指南.md"
       ]
     },
     {
@@ -4596,29 +3642,18 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-bp-inherit-fix-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/010-simple-bp-inherit-fix.md",
-      "enSource": "网站/en/004-文档/003-产品手册/010-simple-bp-inherit-fix.md",
       "template": "doc--simple-bp-inherit-fix-guide.html",
       "media": [],
-      "supplementSources": [
-        "网站/zh/004-文档/001-UE工具/001-SimpleBPInheritFix/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/010-simple-bp-inherit-fix.md",
       "title": "SimpleBPInheritFix 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-bp-inherit-fix-guide",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/010-simple-bp-inherit-fix.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/010-simple-bp-inherit-fix.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-bp-inherit-fix-guide/index.html",
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "supplementTranslationKeys": [
+        "supplement:004-文档/001-UE工具/001-SimpleBPInheritFix/001-使用指南.md"
+      ]
     },
     {
       "id": "doc:simple-byte-conversion-guide",
@@ -4627,8 +3662,6 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-byte-conversion-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/011-simple-byte-conversion.md",
-      "enSource": "网站/en/004-文档/003-产品手册/011-simple-byte-conversion.md",
       "template": "doc--simple-byte-conversion-guide.html",
       "media": [
         {
@@ -4656,10 +3689,6 @@
           "publish": true
         }
       ],
-      "supplementSources": [
-        "网站/zh/004-文档/001-UE工具/003-SimpleByteConversion/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/011-simple-byte-conversion.md",
       "title": "SimpleByteConversion 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-byte-conversion-guide",
@@ -4686,14 +3715,6 @@
           "websiteUrl": "/media/manuals/2ebae79ee6b329de0803.png"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/011-simple-byte-conversion.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/011-simple-byte-conversion.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-byte-conversion-guide/index.html",
       "mediaOccurrences": [
         {
@@ -4748,6 +3769,9 @@
           "baselineNodeSha256": "aa24e63a667e860508e84dae801e5cc5d63c4efaf31a9ccc0db978a16e6004ec",
           "utilityId": "doc:simple-byte-conversion-guide:body-utility:12"
         }
+      ],
+      "supplementTranslationKeys": [
+        "supplement:004-文档/001-UE工具/003-SimpleByteConversion/001-使用指南.md"
       ]
     },
     {
@@ -4757,29 +3781,18 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-config-exclude-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/012-simple-config-exclude.md",
-      "enSource": "网站/en/004-文档/003-产品手册/012-simple-config-exclude.md",
       "template": "doc--simple-config-exclude-guide.html",
       "media": [],
-      "supplementSources": [
-        "网站/zh/004-文档/001-UE工具/004-SimpleConfigExclude/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/012-simple-config-exclude.md",
       "title": "SimpleConfigExclude 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-config-exclude-guide",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/012-simple-config-exclude.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/012-simple-config-exclude.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-config-exclude-guide/index.html",
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "supplementTranslationKeys": [
+        "supplement:004-文档/001-UE工具/004-SimpleConfigExclude/001-使用指南.md"
+      ]
     },
     {
       "id": "doc:simple-file-updater",
@@ -4788,25 +3801,13 @@
       "legacyRoutes": [
         "/docs/zh/tools/simple-file-updater/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/013-simple-file-updater.md",
-      "enSource": "网站/en/004-文档/003-产品手册/013-simple-file-updater.md",
       "template": "doc--simple-file-updater.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/013-simple-file-updater.md",
       "title": "SimpleFileUpdater 使用文档",
       "inOriginalManifest": false,
       "translationKey": "simple-file-updater",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/013-simple-file-updater.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/013-simple-file-updater.md"
-        }
-      },
       "baselineTemplate": "docs/zh/tools/simple-file-updater/index.html",
       "mediaOccurrences": [],
       "bodyTitle": {
@@ -4822,8 +3823,6 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-input-simulator-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/014-simple-input-simulator.md",
-      "enSource": "网站/en/004-文档/003-产品手册/014-simple-input-simulator.md",
       "template": "doc--simple-input-simulator-guide.html",
       "media": [
         {
@@ -4857,10 +3856,6 @@
           "publish": true
         }
       ],
-      "supplementSources": [
-        "网站/zh/004-文档/001-UE工具/002-SimpleInputSimulator/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/014-simple-input-simulator.md",
       "title": "SimpleInputSimulator 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-input-simulator-guide",
@@ -4892,14 +3887,6 @@
           "websiteUrl": "/media/manuals/e7e79750a6cc18dc62ff.png"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/014-simple-input-simulator.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/014-simple-input-simulator.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-input-simulator-guide/index.html",
       "mediaOccurrences": [
         {
@@ -4967,6 +3954,9 @@
           "baselineNodeSha256": "663eb363707c0d62f9e16c5234a843bcbac8c6e581e04841cee77859dc24f41f",
           "utilityId": "doc:simple-input-simulator-guide:body-utility:14"
         }
+      ],
+      "supplementTranslationKeys": [
+        "004-文档/001-UE工具/002-SimpleInputSimulator/001-使用指南"
       ]
     },
     {
@@ -4976,29 +3966,18 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-launcher-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/015-simple-launcher.md",
-      "enSource": "网站/en/004-文档/003-产品手册/015-simple-launcher.md",
       "template": "doc--simple-launcher-guide.html",
       "media": [],
-      "supplementSources": [
-        "网站/zh/004-文档/001-UE工具/005-SimpleLauncher/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/015-simple-launcher.md",
       "title": "SimpleLauncher 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-launcher-guide",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/015-simple-launcher.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/015-simple-launcher.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-launcher-guide/index.html",
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "supplementTranslationKeys": [
+        "004-文档/001-UE工具/005-SimpleLauncher/001-使用指南"
+      ]
     },
     {
       "id": "doc:simple-level-seq-smooth-guide",
@@ -5007,25 +3986,13 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-level-seq-smooth-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/016-simple-level-seq-smooth.md",
-      "enSource": "网站/en/004-文档/003-产品手册/016-simple-level-seq-smooth.md",
       "template": "doc--simple-level-seq-smooth-guide.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/016-simple-level-seq-smooth.md",
       "title": "SimpleLevelSeqSmooth 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-level-seq-smooth-guide",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/016-simple-level-seq-smooth.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/016-simple-level-seq-smooth.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-level-seq-smooth-guide/index.html",
       "mediaOccurrences": []
     },
@@ -5036,25 +4003,13 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/017-simple-ssh-tunnel.md",
-      "enSource": "网站/en/004-文档/003-产品手册/017-simple-ssh-tunnel.md",
       "template": "doc--simple-ssh-tunnel-guide.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/017-simple-ssh-tunnel.md",
       "title": "SimpleSSHTunnel 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-ssh-tunnel-guide",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/017-simple-ssh-tunnel.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/017-simple-ssh-tunnel.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/index.html",
       "mediaOccurrences": []
     },
@@ -5065,29 +4020,18 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/018-simple-static-mesh-merger.md",
-      "enSource": "网站/en/004-文档/003-产品手册/018-simple-static-mesh-merger.md",
       "template": "doc--simple-static-mesh-merger-guide.html",
       "media": [],
-      "supplementSources": [
-        "网站/zh/004-文档/001-UE工具/007-SimpleStaticMeshMerger/001-使用指南.md"
-      ],
-      "originalManifestSource": "004-文档/003-产品手册/018-simple-static-mesh-merger.md",
       "title": "SimpleStaticMeshMerger 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-static-mesh-merger-guide",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/018-simple-static-mesh-merger.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/018-simple-static-mesh-merger.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/index.html",
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "supplementTranslationKeys": [
+        "004-文档/001-UE工具/007-SimpleStaticMeshMerger/001-使用指南"
+      ]
     },
     {
       "id": "doc:simple-tcp-client-guide",
@@ -5096,8 +4040,6 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-tcp-client-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/019-simple-tcp-client.md",
-      "enSource": "网站/en/004-文档/003-产品手册/019-simple-tcp-client.md",
       "template": "doc--simple-tcp-client-guide.html",
       "media": [
         {
@@ -5131,8 +4073,6 @@
           "publish": true
         }
       ],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/019-simple-tcp-client.md",
       "title": "SimpleTCPClient 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-tcp-client-guide",
@@ -5164,14 +4104,6 @@
           "websiteUrl": "/media/manuals/6bebb2adaed201837f19.jpg"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/019-simple-tcp-client.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/019-simple-tcp-client.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-tcp-client-guide/index.html",
       "mediaOccurrences": [
         {
@@ -5248,8 +4180,6 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-tcp-server-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/020-simple-tcp-server.md",
-      "enSource": "网站/en/004-文档/003-产品手册/020-simple-tcp-server.md",
       "template": "doc--simple-tcp-server-guide.html",
       "media": [
         {
@@ -5259,8 +4189,6 @@
           "publish": true
         }
       ],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/020-simple-tcp-server.md",
       "title": "SimpleTCPServer 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-tcp-server-guide",
@@ -5272,14 +4200,6 @@
           "websiteUrl": "/media/manuals/e7cdf97f5f530a684eee.png"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/020-simple-tcp-server.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/020-simple-tcp-server.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-tcp-server-guide/index.html",
       "mediaOccurrences": [
         {
@@ -5304,8 +4224,6 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-udp-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/021-simple-udp.md",
-      "enSource": "网站/en/004-文档/003-产品手册/021-simple-udp.md",
       "template": "doc--simple-udp-guide.html",
       "media": [
         {
@@ -5345,8 +4263,6 @@
           "publish": true
         }
       ],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/021-simple-udp.md",
       "title": "SimpleUDP 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-udp-guide",
@@ -5383,14 +4299,6 @@
           "websiteUrl": "/media/manuals/01700bbe6fb9b6ce8da4.png"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/021-simple-udp.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/021-simple-udp.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-udp-guide/index.html",
       "mediaOccurrences": [
         {
@@ -5480,8 +4388,6 @@
       "legacyRoutes": [
         "/docs/zh/guides/ue-tools/simple-websocket-guide/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/022-simple-websocket.md",
-      "enSource": "网站/en/004-文档/003-产品手册/022-simple-websocket.md",
       "template": "doc--simple-websocket-guide.html",
       "media": [
         {
@@ -5497,8 +4403,6 @@
           "publish": true
         }
       ],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/022-simple-websocket.md",
       "title": "SimpleWebSocket 使用文档",
       "inOriginalManifest": true,
       "translationKey": "simple-websocket-guide",
@@ -5515,14 +4419,6 @@
           "websiteUrl": "/media/manuals/7b84c6f39e82bcac8366.png"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/022-simple-websocket.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/022-simple-websocket.md"
-        }
-      },
       "baselineTemplate": "docs/zh/guides/ue-tools/simple-websocket-guide/index.html",
       "mediaOccurrences": [
         {
@@ -5560,8 +4456,6 @@
       "legacyRoutes": [
         "/docs/zh/tools/ue-package-manager/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/023-ue-package-manager.md",
-      "enSource": "网站/en/004-文档/003-产品手册/023-ue-package-manager.md",
       "template": "doc--ue-package-manager.html",
       "media": [
         {
@@ -5572,8 +4466,6 @@
           "reason": "local-context"
         }
       ],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/023-ue-package-manager.md",
       "title": "UEPackageManager 使用文档",
       "inOriginalManifest": false,
       "translationKey": "ue-package-manager",
@@ -5585,14 +4477,6 @@
           "websiteUrl": "/media/imported/works/ue-package-manager-ui.png"
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/023-ue-package-manager.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/023-ue-package-manager.md"
-        }
-      },
       "baselineTemplate": "docs/zh/tools/ue-package-manager/index.html",
       "mediaOccurrences": [
         {
@@ -5623,25 +4507,13 @@
       "legacyRoutes": [
         "/docs/zh/tools/ue-quick-start/"
       ],
-      "zhSource": "网站/zh/004-文档/003-产品手册/024-ue-quick-start.md",
-      "enSource": "网站/en/004-文档/003-产品手册/024-ue-quick-start.md",
       "template": "doc--ue-quick-start.html",
       "media": [],
-      "supplementSources": [],
-      "originalManifestSource": "004-文档/003-产品手册/024-ue-quick-start.md",
       "title": "UEQuickStart 使用文档",
       "inOriginalManifest": false,
       "translationKey": "ue-quick-start",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/004-文档/003-产品手册/024-ue-quick-start.md"
-        },
-        "en": {
-          "source": "网站/en/004-文档/003-产品手册/024-ue-quick-start.md"
-        }
-      },
       "baselineTemplate": "docs/zh/tools/ue-quick-start/index.html",
       "mediaOccurrences": [],
       "bodyTitle": {
@@ -5657,8 +4529,6 @@
       "legacyRoutes": [
         "/"
       ],
-      "zhSource": "网站/zh/005-页面/001-首页.md",
-      "enSource": "网站/en/005-页面/001-首页.md",
       "template": "page--home.html",
       "media": [
         {
@@ -5702,7 +4572,6 @@
           "alt": ""
         }
       ],
-      "supplementSources": [],
       "title": "首页",
       "translationKey": "home",
       "cover": null,
@@ -5758,14 +4627,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/005-页面/001-首页.md"
-        },
-        "en": {
-          "source": "网站/en/005-页面/001-首页.md"
-        }
-      },
       "baselineTemplate": "index.html"
     },
     {
@@ -5775,8 +4636,6 @@
       "legacyRoutes": [
         "/works/"
       ],
-      "zhSource": "网站/zh/005-页面/002-作品列表.md",
-      "enSource": "网站/en/005-页面/002-作品列表.md",
       "template": "page--works-index.html",
       "media": [
         {
@@ -5880,7 +4739,6 @@
           "alt": ""
         }
       ],
-      "supplementSources": [],
       "title": "作品列表",
       "translationKey": "works-index",
       "cover": null,
@@ -5971,14 +4829,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/005-页面/002-作品列表.md"
-        },
-        "en": {
-          "source": "网站/en/005-页面/002-作品列表.md"
-        }
-      },
       "baselineTemplate": "works/index.html"
     },
     {
@@ -5988,8 +4838,6 @@
       "legacyRoutes": [
         "/cases/"
       ],
-      "zhSource": "网站/zh/005-页面/003-案例列表.md",
-      "enSource": "网站/en/005-页面/003-案例列表.md",
       "template": "page--cases-index.html",
       "media": [
         {
@@ -6037,7 +4885,6 @@
           "alt": ""
         }
       ],
-      "supplementSources": [],
       "title": "案例列表",
       "translationKey": "cases-index",
       "cover": null,
@@ -6088,14 +4935,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/005-页面/003-案例列表.md"
-        },
-        "en": {
-          "source": "网站/en/005-页面/003-案例列表.md"
-        }
-      },
       "baselineTemplate": "cases/index.html"
     },
     {
@@ -6105,8 +4944,6 @@
       "legacyRoutes": [
         "/blog/"
       ],
-      "zhSource": "网站/zh/005-页面/004-笔记列表.md",
-      "enSource": "网站/en/005-页面/004-笔记列表.md",
       "template": "page--blog-index.html",
       "media": [
         {
@@ -6114,7 +4951,6 @@
           "alt": ""
         }
       ],
-      "supplementSources": [],
       "title": "笔记列表",
       "translationKey": "blog-index",
       "cover": null,
@@ -6125,14 +4961,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/005-页面/004-笔记列表.md"
-        },
-        "en": {
-          "source": "网站/en/005-页面/004-笔记列表.md"
-        }
-      },
       "baselineTemplate": "blog/index.html"
     },
     {
@@ -6142,8 +4970,6 @@
       "legacyRoutes": [
         "/contact/"
       ],
-      "zhSource": "网站/zh/005-页面/005-联系与合作.md",
-      "enSource": "网站/en/005-页面/005-联系与合作.md",
       "template": "page--contact.html",
       "media": [
         {
@@ -6155,7 +4981,6 @@
           "alt": "小毛的个人微信二维码"
         }
       ],
-      "supplementSources": [],
       "title": "联系与合作",
       "translationKey": "contact",
       "cover": null,
@@ -6171,14 +4996,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/005-页面/005-联系与合作.md"
-        },
-        "en": {
-          "source": "网站/en/005-页面/005-联系与合作.md"
-        }
-      },
       "baselineTemplate": "contact/index.html"
     },
     {
@@ -6188,8 +5005,6 @@
       "legacyRoutes": [
         "/support/"
       ],
-      "zhSource": "网站/zh/005-页面/006-支持.md",
-      "enSource": "网站/en/005-页面/006-支持.md",
       "template": "page--support.html",
       "media": [
         {
@@ -6205,7 +5020,6 @@
           "alt": "梦之殇魂的支付宝收款二维码"
         }
       ],
-      "supplementSources": [],
       "title": "支持",
       "translationKey": "support",
       "cover": null,
@@ -6226,14 +5040,6 @@
           "websiteUrl": null
         }
       ],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/005-页面/006-支持.md"
-        },
-        "en": {
-          "source": "网站/en/005-页面/006-支持.md"
-        }
-      },
       "baselineTemplate": "support/index.html"
     },
     {
@@ -6243,23 +5049,12 @@
       "legacyRoutes": [
         "/docs/404.html"
       ],
-      "zhSource": "网站/zh/005-页面/007-404说明.md",
-      "enSource": "网站/en/005-页面/007-404说明.md",
       "template": "page--not-found.html",
       "media": [],
-      "supplementSources": [],
       "title": "404说明",
       "translationKey": "not-found",
       "cover": null,
       "sourceMediaReferences": [],
-      "locales": {
-        "zh": {
-          "source": "网站/zh/005-页面/007-404说明.md"
-        },
-        "en": {
-          "source": "网站/en/005-页面/007-404说明.md"
-        }
-      },
       "baselineTemplate": "docs/404.html"
     }
   ],

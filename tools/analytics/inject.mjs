@@ -6,10 +6,21 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const publicRoots = new Set(['_astro', 'assets', 'blog-search', 'blog', 'cases', 'contact', 'docs', 'en', 'licenses', 'media', 'support', 'works', 'zh']);
-const publicRootFiles = new Set(['favicon.svg', 'index.html', 'site-router.js', '.nojekyll', 'sitemap.xml', 'robots.txt']);
+const publicRootFiles = new Set(['favicon.svg', 'index.html', 'site-router.js', '.nojekyll', 'sitemap.xml', 'robots.txt', 'site-languages.json']);
 
-export function isPublicPath(relative) {
-  return publicRootFiles.has(relative) || publicRoots.has(relative.split('/')[0]);
+export function publicLanguageCodes(config) {
+  if(config?.version!==1 || !Array.isArray(config.languages) || !config.languages.length)throw new Error('公开语言配置无效');
+  const codes=config.languages.map(language=>language.code);
+  if(codes.some(code=>typeof code!=='string' || !/^[a-z]{2,3}(?:-[a-z0-9]{2,8})*$/.test(code)) || new Set(codes).size!==codes.length || !codes.includes(config.primary) || !codes.includes(config.fallback))throw new Error('公开语言code无效');
+  if(config.languages.some(language=>Object.keys(language).some(key=>!['code','label','htmlLang','searchLanguage','browserTags'].includes(key))))throw new Error('公开语言配置含来源字段');
+  return new Set(codes);
+}
+
+export function isPublicPath(relative,config) {
+  if(relative.includes('\\') || relative.split('/').some(part=>!part || part==='.' || part==='..'))return false;
+  const file=path.join(root,'site-languages.json');
+  const codes=config?publicLanguageCodes(config):fs.existsSync(file)?publicLanguageCodes(JSON.parse(fs.readFileSync(file,'utf8'))):new Set();
+  return publicRootFiles.has(relative) || publicRoots.has(relative.split('/')[0]) || codes.has(relative.split('/')[0]);
 }
 
 export function isPublicHtml(relative, html) {

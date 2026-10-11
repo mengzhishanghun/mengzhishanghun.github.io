@@ -5,6 +5,7 @@ import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
 import {pathToFileURL} from 'node:url';
 import {attrs,walk,applyEdits,templateName} from './extract-dom.mjs';
+import {readLanguages,languageSource,publicLanguages} from './languages.mjs';
 const require = createRequire(new URL('../content-import/package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -35,15 +36,25 @@ export function readSource(vault,relative,label) {
   if (!match) throw new Error(`frontmatter缺失: ${relative}`);
   return {abs,bytes,raw,data:YAML.parse(match[1]),body:raw.slice(match[0].length)};
 }
+export function sourceTags(source) {
+  const tags=source.data.tags ?? [],search=source.data.searchTags ?? [];
+  if(![tags,search].every(list=>Array.isArray(list) && list.every(value=>typeof value==='string' && value.trim())))throw new Error('来源标签必须为字符串数组');
+  return {tags:[...new Set(tags)],searchTags:[...new Set([...tags,...search])]};
+}
 export function preflight({vault,site,manifest}) {
-  const routes = new Map(), entries = [], ids = new Set();
-  for (const entry of manifest.entries) {
-    if (ids.has(entry.id)) throw new Error('内容ID重复: '+entry.id);
-    ids.add(entry.id);
-    for (const route of [...entry.legacyRoutes,...['zh','en'].map(locale => localeRoute(entry,locale))]) {
-      if (!/^\/[a-zA-Z0-9/_-]*(?:\.html)?\/?$/.test(route)) throw new Error('非法路由: '+route);
-      if (routes.has(route) && routes.get(route) !== entry.id) throw new Error('路由重复: '+route);
-      routes.set(route,entry.id);
+  const config=readLanguages(vault,manifest.entries.map(e=>e.id)),{primary,languages}=config;
+  const codes=languages.map(l=>l.code),routes=new Map(),entries=[],ids=new Set();
+  const verifyTranslation=(source,original,key,label)=>{
+    if(source.data.translationKey!==key)throw new Error(label+'身份不符');
+    if(source.data.sourceHash!==hash(original.bytes) || source.data.translationStatus!=='translated')throw new Error(label+'过期');
+    if(source.data.generatedBodyHash!==hash(source.body.trim()))throw new Error(label+'存在人工修改，保留并等待审核');
+  };
+  const validList=list=>Array.isArray(list) && list.every(v=>typeof v==='string' && v.trim()) && new Set(list).size===list.length;
+  for(const entry of manifest.entries) {
+    if(ids.has(entry.id))throw new Error('内容ID重复: '+entry.id);ids.add(entry.id);
+    for(const route of [...entry.legacyRoutes,...codes.map(code=>localeRoute(entry,code))]) {
+      if(!/^\/[a-zA-Z0-9/_-]*(?:\.html)?\/?$/.test(route))throw new Error('非法路由: '+route);
+      if(routes.has(route) && routes.get(route)!==entry.id)throw new Error('路由重复: '+route);routes.set(route,entry.id);
     }
     for (const media of entry.media || []) {
       if (media.path) {
@@ -61,21 +72,45 @@ export function preflight({vault,site,manifest}) {
       if(hash(fs.readFileSync(boundedPath(vault,occurrence.vaultPath,'媒体')))!==occurrence.sourceSha256)throw new Error('媒体来源hash漂移: '+occurrence.id);
       if(occurrence.state==='public' && hash(fs.readFileSync(boundedPath(site,occurrence.websiteUrl.slice(1),'媒体')))!==occurrence.publicSha256)throw new Error('公开媒体hash漂移: '+occurrence.id);
     }
-    const zh = readSource(vault,entry.locales.zh.source,'来源');
-    const en = readSource(vault,entry.locales.en.source,'译文');
-    if (en.data.sourceHash !== hash(zh.bytes) || en.data.translationStatus !== 'translated') throw new Error('译文过期: '+entry.id);
-    if (en.data.translationKey !== (entry.translationKey || entry.id)) throw new Error('译文身份不符: '+entry.id);
-    if (en.data.generatedBodyHash !== hash(en.body.trim())) throw new Error('译文存在人工修改，保留并等待审核: '+entry.id);
-    const supplements=[];
-    for(const relative of entry.supplementSources || []) {
-      const supplementalZh=readSource(vault,relative,'补充来源'),supplementalEn=readSource(vault,relative.replace('/zh/','/en/'),'补充译文');
-      if(supplementalEn.data.sourceHash!==hash(supplementalZh.bytes)||supplementalEn.data.translationStatus!=='translated')throw new Error('补充译文过期: '+relative);
-      if(supplementalEn.data.generatedBodyHash!==hash(supplementalEn.body.trim()))throw new Error('补充译文存在人工修改: '+relative);
-      supplements.push({zh:supplementalZh,en:supplementalEn});
+    const sources=Object.fromEntries(languages.map(lang=>[lang.code,readSource(vault,languageSource(lang,lang.sources[entry.id]),lang.code===primary?'来源':'译文')]));
+    for(const lang of languages) {
+      if(sources[lang.code].data.draft===true)throw new Error('草稿不得发布: '+entry.id);
+      if((lang.code!==primary || sources[lang.code].data.lang!==undefined) && sources[lang.code].data.lang!==lang.code)throw new Error('来源语言不符: '+entry.id);
+      sourceTags(sources[lang.code]);
+      if(lang.code!==primary)verifyTranslation(sources[lang.code],sources[primary],entry.translationKey || entry.id,'译文');
     }
-    entries.push({...entry,sources:{zh,en},supplements});
+    const lists=Object.fromEntries(languages.map(lang=>[lang.code,sources[lang.code].data.supplementSources ?? []])),keys=entry.supplementTranslationKeys ?? [];
+    if(!validList(keys) || languages.some(l=>!validList(lists[l.code]) || lists[l.code].length!==keys.length))throw new Error('补充来源列表不符: '+entry.id);
+    const supplements=keys.map((key,index)=>{
+      const pair=Object.fromEntries(languages.map(lang=>{
+        const relative=lists[lang.code][index];
+        if(!relative.startsWith('网站/'+lang.root+'/'))throw new Error('补充译文路径越界');
+        const source=readSource(vault,relative,lang.code===primary?'补充来源':'补充译文');
+        if(source.data.draft===true)throw new Error('补充草稿不得发布: '+entry.id);
+        if(source.data.lang!==lang.code)throw new Error('补充译文身份不符');
+        return [lang.code,source];
+      }));
+      for(const lang of languages)if(lang.code!==primary)verifyTranslation(pair[lang.code],pair[primary],key,'补充译文');
+      return pair;
+    });
+    entries.push({...entry,sources,supplements,languageCodes:codes});
   }
-  return {routes,entries};
+  const common=Object.fromEntries(languages.map(lang=>[lang.code,readSource(vault,languageSource(lang,lang.commonSource),'公共来源')]));
+  for(const lang of languages) {
+    if(common[lang.code].data.language?.code!==lang.code)throw new Error('公共来源语言不符');
+    if(lang.code!==primary)verifyTranslation(common[lang.code],common[primary],'site-copy','公共译文');
+  }
+  const copy=Object.fromEntries(languages.map(lang=>[lang.code,common[lang.code].data]));
+  for(const lang of languages) {
+    const item=copy[lang.code],base=copy[primary];
+    if(typeof item.languageLabels?.group!=='string' || typeof item.languageLabels?.switchAria!=='string' || !item.languageLabels.switchAria.includes('{language}'))throw new Error('公共语言文案缺失');
+    for(const group of ['shellSlots','scriptSlots','bodyUtilitySlots']) {
+      if(!item[group] || typeof item[group]!=='object')throw new Error('公共文案槽缺失: '+group);
+      const checkSlots=(original,translated)=>{for(const [key,value] of Object.entries(original)){if(typeof value==='string'){if(typeof translated?.[key]!=='string')throw new Error('公共文案槽缺失: '+key)}else if(value && typeof value==='object')checkSlots(value,translated?.[key])}};
+      checkSlots(base[group],item[group]);
+    }
+  }
+  return {routes,entries,config,copy};
 }
 function routeFile(route) { return route.slice(1) + (route.endsWith('.html') ? '' : 'index.html'); }
 function mapURL(url,locale,entries) {
@@ -84,7 +119,7 @@ function mapURL(url,locale,entries) {
   if (!local.startsWith('/') || local.startsWith('//')) return url;
   const match = local.match(/^([^?#]+)(.*)$/), pathname = match[1], suffix = match[2];
   for (const entry of entries) {
-    if ([...entry.legacyRoutes,...['zh','en'].map(l => localeRoute(entry,l))].includes(pathname)) return localeRoute(entry,locale)+suffix;
+    if ([...entry.legacyRoutes,...(entry.languageCodes || []).map(l => localeRoute(entry,l))].includes(pathname)) return localeRoute(entry,locale)+suffix;
     if (pathname.startsWith('/docs/en/') && entry.legacyRoutes.includes(pathname.replace('/docs/en/','/docs/zh/'))) return localeRoute(entry,locale)+suffix;
   }
   if (pathname === '/docs/' || pathname === '/docs/zh/' || pathname === '/docs/en/') {
@@ -199,7 +234,7 @@ async function renderBody(entry,locale,processor,site) {
       const a=attrs(node),loc=node.sourceCodeLocation;
       if(!loc)return;
       if(node.tagName==='figure' && (a.class || '').split(/\s+/).includes('frame') && !(a.class || '').split(/\s+/).includes('not-content') && loc.attrs?.class)edits.push([loc.attrs.class.startOffset,loc.attrs.class.endOffset,`class="${escapeHTML(a.class+' not-content')}"`]);
-      if(node.nodeName==='#text' && ['Terminal window',processor.copy.zh.codeLabels.terminalWindow].includes(node.value))edits.push([loc.startOffset,loc.endOffset,escapeHTML(labels.terminalWindow)]);
+      if(node.nodeName==='#text' && ['Terminal window',processor.copy[processor.primary].codeLabels.terminalWindow].includes(node.value))edits.push([loc.startOffset,loc.endOffset,escapeHTML(labels.terminalWindow)]);
       if(node.tagName==='button' && (attrs(node.parentNode).class || '').split(/\s+/).includes('copy'))for(const [key,value] of [['title',labels.copyTitle],['data-copied',labels.copied]]) {
         const at=loc.attrs?.[key];if(at)edits.push([at.startOffset,at.endOffset,`${key}="${escapeHTML(value)}"`]);
       }
@@ -215,7 +250,7 @@ async function renderBody(entry,locale,processor,site) {
     const edits=[];
     nodes.forEach((node,i)=>{
       const record=records[i],loc=node.sourceCodeLocation;
-      const id=locale==='zh'?record.oldId:headings[i].slug;
+      const id=locale===processor.primary?record.oldId:headings[i].slug;
       let template=record.template.replaceAll('{{headingId}}',escapeHTML(id)).replace('{{headingMarkup}}',code.slice(loc.startTag.endOffset,loc.endTag.startOffset));
       if(record.utilityId) {
         const slots=processor.copy[locale].bodyUtilitySlots[record.utilityId];
@@ -240,13 +275,13 @@ function outline(headings) {
   const list = (items,root) => items.map(h => `<li class="outline-node" data-heading-depth="${h.depth}"><a href="#${encodeURIComponent(h.slug)}" class="outline-link${root?' outline-root-link':''}">${escapeHTML(h.text)}</a>${h.children.length?'<ol class="outline-tree">'+list(h.children,false)+'</ol>':''}</li>`).join('');
   return list(roots,true);
 }
-function translationDictionary(copy,entries,locale) {
+function translationDictionary(copy,entries,locale,primary) {
   const dict = new Map();
-  for(const [id,slots] of Object.entries(copy.zh.shellSlots || {})) for(const [key,value] of Object.entries(slots)) if(typeof copy[locale].shellSlots?.[id]?.[key]==='string') dict.set(value,copy[locale].shellSlots[id][key]);
-  for(const [key,value] of Object.entries(copy.zh.scriptSlots || {})) if(typeof copy[locale].scriptSlots?.[key]==='string') dict.set(value,copy[locale].scriptSlots[key]);
-  for(const entry of entries) for(const field of ['title','description','categoryName','status','coverAlt']) if(typeof entry.sources.zh.data[field]==='string' && typeof entry.sources[locale].data[field]==='string') {
+  for(const [id,slots] of Object.entries(copy[primary].shellSlots || {})) for(const [key,value] of Object.entries(slots)) if(typeof copy[locale].shellSlots?.[id]?.[key]==='string') dict.set(value,copy[locale].shellSlots[id][key]);
+  for(const [key,value] of Object.entries(copy[primary].scriptSlots || {})) if(typeof copy[locale].scriptSlots?.[key]==='string') dict.set(value,copy[locale].scriptSlots[key]);
+  for(const entry of entries) for(const field of ['title','description','categoryName','status','coverAlt']) if(typeof entry.sources[primary].data[field]==='string' && typeof entry.sources[locale].data[field]==='string') {
     const value=entry.sources[locale].data[field];
-    if(locale!=='en' || !/[\p{Script=Han}]/u.test(value) || !dict.has(entry.sources.zh.data[field]))dict.set(entry.sources.zh.data[field],value);
+    if(locale===primary || !/[\p{Script=Han}]/u.test(value) || !dict.has(entry.sources[primary].data[field]))dict.set(entry.sources[primary].data[field],value);
   }
   return dict;
 }
@@ -262,30 +297,46 @@ function localizeJSON(value,dict,entries,locale) {
     const match=entries.find(e=>e.slug===value.slug && (value.type ? e.type===value.type : true));
     if(match) for(const field of ['title','description','categoryName','status','order']) if(field in value && match.sources[locale].data[field]!==undefined)result[field]=localizeJSON(match.sources[locale].data[field],dict,entries,locale);
     if(match && 'body' in value)result.body=match.searchBodies?.[locale] || '';
+    if(match && ('tags' in value || 'searchTags' in value))Object.assign(result,sourceTags(match.sources[locale]));
     return result;
   }
   return value;
 }
-function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs) {
+function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config) {
   const doc = parse(html,{sourceCodeLocationInfo:true}), edits=[];
-  const urls = Object.fromEntries(['zh','en'].map(l => [l,localeRoute(entry,l)]));
-  const runtime = {locale,urls,anchors,labels};
-  const nav = `<nav class="site-language-switch" aria-label="${escapeHTML(labels.group)}">`+['zh','en'].map(l => `<a data-site-locale="${l}" href="${urls[l]}" lang="${l}" hreflang="${l}" data-active="${l===locale}" aria-label="${escapeHTML(labels[l+'Aria'])}">${escapeHTML(labels[l])}</a>`).join('')+'</nav>';
+  const urls=Object.fromEntries(config.languages.map(l=>[l.code,localeRoute(entry,l.code)]));
+  const runtime={...publicLanguages(config),locale,urls,anchors,labels};
+  const nav='<label class="site-language-switch"><select data-site-language-select data-current="'+locale+'" aria-label="'+escapeHTML(labels.group)+'">'+config.languages.map(l=>'<option value="'+l.code+'" data-site-locale="'+l.code+'"'+(l.code===locale?' selected':'')+'>'+escapeHTML(l.label)+'</option>').join('')+'</select></label>';
   let actions = 0;
   walk(doc,node => {
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
-    if (node.tagName==='html' && loc.attrs?.lang) edits.push([loc.attrs.lang.startOffset,loc.attrs.lang.endOffset,`lang="${locale==='zh'?'zh-CN':'en'}"`]);
+    if(node.nodeName==='#text') {
+      const raw=html.slice(loc.startOffset,loc.endOffset);
+      let protectedText=false;
+      for(let parent=node.parentNode;parent;parent=parent.parentNode)if(['pre','code','textarea'].includes(parent.tagName))protectedText=true;
+      const normalized=protectedText?raw:node.parentNode?.tagName==='script'?(attrs(node.parentNode).type?.includes('json')?raw:raw.replace(/^\s+/,space=>space.replaceAll('\r\n','\n'))):node.parentNode?.tagName==='style'||!raw.trim()?raw.replaceAll('\r\n','\n'):raw;
+      if(normalized!==raw)edits.push([loc.startOffset,loc.endOffset,normalized]);
+    }
+    if (node.tagName==='html' && loc.attrs?.lang) edits.push([loc.attrs.lang.startOffset,loc.attrs.lang.endOffset,`lang="${config.languages.find(l=>l.code===locale).htmlLang}"`]);
     if ((a.class || '').split(/\s+/).includes('header-actions')) {actions++;edits.push([loc.endTag.startOffset,loc.endTag.startOffset,nav]);}
     if (node.tagName==='head') {
-      edits.push([loc.startTag.endOffset,loc.startTag.endOffset,`<script>window.SiteCopy=${safeJSON(scriptSlots || {})}</script>`]);
-      edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<link rel="stylesheet" href="/assets/site-ui/language-switch.css">`+['zh','en'].map(l=>`<link rel="alternate" hreflang="${l}" href="https://mzsh.me${urls[l]}">`).join('')]);
+      edits.push([loc.startTag.endOffset,loc.startTag.endOffset,`<script>window.SiteCopy=${safeJSON(scriptSlots || {})};window.SiteLanguageCode=${safeJSON(locale)};window.SitePrimaryCode=${safeJSON(config.primary)}</script>`]);
+      edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<link rel="stylesheet" href="/assets/site-ui/language-switch.css">`+config.languages.map(({code:l})=>`<link rel="alternate" hreflang="${l}" href="https://mzsh.me${urls[l]}">`).join('')]);
     }
     if (node.tagName==='body') edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<script type="application/json" data-site-language>${safeJSON(runtime)}</script><script defer src="/assets/site-ui/language-switch.js"></script>`]);
     if(node.tagName==='script' && scriptURLs?.has(a.src) && loc.attrs?.src)edits.push([loc.attrs.src.startOffset,loc.attrs.src.endOffset,`src="${scriptURLs.get(a.src)}"`]);
     if(node.tagName==='script' && a.type==='application/json' && loc.startTag && loc.endTag) {
       const raw=html.slice(loc.startTag.endOffset,loc.endTag.startOffset);
       if(raw.trim()) edits.push([loc.startTag.endOffset,loc.endTag.startOffset,safeJSON(localizeJSON(JSON.parse(raw),dict,entries,locale))]);
+    }
+    if(['content-card-tags','work-card-tags'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && loc.startTag && loc.endTag) {
+      let card=node;while(card && attrs(card)['data-content-card']===undefined)card=card.parentNode;
+      const target=card?entries.find(e=>e.slug===attrs(card)['data-slug']):entry;
+      if(!target)throw new Error('标签卡片来源缺失');
+      const child=node.childNodes.find(n=>n.tagName),tag=child?.tagName || (node.tagName==='ul'?'li':'span');
+      const open=child?.sourceCodeLocation?.startTag?html.slice(child.sourceCodeLocation.startTag.startOffset,child.sourceCodeLocation.startTag.endOffset):'<'+tag+'>';
+      edits.push([loc.startTag.endOffset,loc.endTag.startOffset,sourceTags(target.sources[locale]).tags.map(text=>open+escapeHTML(text)+'</'+tag+'>').join('')]);
     }
     if(a['data-content-card']!==undefined && a['data-slug'] && a.style && loc.attrs?.style) {
       const work=entries.find(e=>e.type==='work' && e.slug===a['data-slug']);
@@ -306,22 +357,15 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   if (actions!==1) throw new Error('header-actions不是唯一: '+entry.id);
   return applyEdits(html,edits);
 }
-function redirect(target,labels,root=false) {
-  const runtime = root ? {root:true,urls:{zh:'/zh/',en:'/en/'}} : null;
-  const js = root ? '' : `<script>location.replace(${safeJSON(target)}+location.search+location.hash)</script>`;
-  return `<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="canonical" href="https://mzsh.me${target}"><title>${escapeHTML(labels.group)}</title></head><body><a href="${target}">${escapeHTML(labels.zh)}</a>${js}${root?'<script type="application/json" data-site-language>'+safeJSON(runtime)+'</script><script defer src="/assets/site-ui/language-switch.js"></script>':''}</body></html>`;
+function redirect(target,labels,config,root=false) {
+  const primary=config.languages.find(l=>l.code===config.primary);
+  const runtime=root?{...publicLanguages(config),root:true,urls:Object.fromEntries(config.languages.map(l=>[l.code,'/'+l.code+'/']))}:null;
+  const js=root?'':'<script>location.replace('+safeJSON(target)+'+location.search+location.hash)</script>';
+  return '<!DOCTYPE html><html lang="'+primary.htmlLang+'"><head><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="canonical" href="https://mzsh.me'+target+'"><title>'+escapeHTML(labels.group)+'</title></head><body><a href="'+target+'">'+escapeHTML(primary.label)+'</a>'+js+(root?'<script type="application/json" data-site-language>'+safeJSON(runtime)+'</script><script defer src="/assets/site-ui/language-switch.js"></script>':'')+'</body></html>';
 }
 export async function buildSite(options) {
   const {site,vault,manifest,output,check=false}=options;
-  const {entries} = preflight(options);
-  let copy = options.copy;
-  if (!copy) {
-    const zh=readSource(vault,manifest.common.locales.zh.source,'公共来源'),en=readSource(vault,manifest.common.locales.en.source,'公共译文');
-    if (en.data.sourceHash!==hash(zh.bytes) || en.data.translationStatus!=='translated') throw new Error('公共译文过期');
-    if(en.data.translationKey!=='site-copy')throw new Error('公共译文身份不符');
-    if(en.data.generatedBodyHash!==hash(en.body.trim()))throw new Error('公共译文存在人工修改，保留并等待审核');
-    copy={zh:zh.data,en:en.data};
-  }
+  const {entries,config,copy}=preflight(options),{primary,languages}=config,codes=languages.map(l=>l.code);
   const files = new Map(), rendered = new Map();
   const scriptURLs=new Map(),scriptManifest=path.join(here,'scripts.json');
   if(!options.templateRoot && fs.existsSync(scriptManifest)) for(const relative of JSON.parse(fs.readFileSync(scriptManifest,'utf8'))) {
@@ -336,54 +380,55 @@ export async function buildSite(options) {
     const target='assets/site-ui/i18n/'+path.posix.basename(relative).replace(/\.js$/,'.'+hash(code).slice(0,12)+'.js');
     files.set(target,Buffer.from(code));scriptURLs.set('/'+relative,'/'+target);
   }
-  for (const entry of entries) for (const locale of ['zh','en']) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy},site));
-  const orderedWorks=entries.filter(e=>e.type==='work').sort((a,b)=>(a.sources.zh.data.categoryOrder ?? 0)-(b.sources.zh.data.categoryOrder ?? 0)||(a.sources.zh.data.order ?? 0)-(b.sources.zh.data.order ?? 0));
+  for (const entry of entries) for (const locale of codes) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy,primary},site));
+  const orderedWorks=entries.filter(e=>e.type==='work').sort((a,b)=>(a.sources[primary].data.categoryOrder ?? 0)-(b.sources[primary].data.categoryOrder ?? 0)||(a.sources[primary].data.order ?? 0)-(b.sources[primary].data.order ?? 0));
   orderedWorks.forEach((e,i)=>e.cardOrder=i);
   for(const entry of entries) {
     entry.searchBodies={};
-    for(const locale of ['zh','en']) {
+    for(const locale of codes) {
       let text='';
       const visit=node=>{if(['script','style'].includes(node.tagName))return;if(node.nodeName==='#text')text+=node.value+' ';else for(const child of node.childNodes || [])visit(child)};
       visit(parseFragment(rendered.get(entry.id+':'+locale).code));entry.searchBodies[locale]=text.trim();
     }
   }
-  for (const entry of entries) for (const locale of ['zh','en']) {
-    const result=rendered.get(entry.id+':'+locale), other=rendered.get(entry.id+':'+(locale==='zh'?'en':'zh'));
+  for (const entry of entries) for (const locale of codes) {
+    const result=rendered.get(entry.id+':'+locale), other=rendered.get(entry.id+':'+primary);
     if (result.headings.length!==other.headings.length) throw new Error('章节映射歧义: '+entry.id);
-    const slots=copy[locale].shellSlots?.[entry.id], dict=translationDictionary(copy,entries,locale);
+    const slots=copy[locale].shellSlots?.[entry.id], dict=translationDictionary(copy,entries,locale,primary);
     if (!slots) throw new Error('外壳译文缺失: '+entry.id+' '+locale);
     const file=path.join(options.templateRoot || path.join(here,'templates'),entry.template);
     let html=fs.readFileSync(file,'utf8').replaceAll('/blog-search/',`/${locale}/blog-search/`);
-    html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy.zh.shellSlots[entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
+    html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
     html=html.replace('{{body}}',result.code).replace('{{outline}}',outline(result.headings));
     if (/\{\{(?:text|body|outline)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
-    const anchors = Object.fromEntries(['zh','en'].map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
-    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs);
+    const anchors = Object.fromEntries(codes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
+    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,config);
     files.set(routeFile(localeRoute(entry,locale)),Buffer.from(html));
   }
-  for (const entry of entries) for (const route of entry.legacyRoutes) if (route!=='/') files.set(routeFile(route),Buffer.from(redirect(localeRoute(entry,'zh'),copy.zh.languageLabels)));
+  for (const entry of entries) for (const route of entry.legacyRoutes) if (route!=='/') files.set(routeFile(route),Buffer.from(redirect(localeRoute(entry,primary),copy[primary].languageLabels,config)));
   for(const alias of manifest.redirects || []) {
     const entry=entries.find(e=>e.id===alias.id);
     if(!entry)throw new Error('旧链目标缺失: '+alias.route);
     const target=localeRoute(entry,alias.locale);
     if(alias.route===target)throw new Error('旧链循环: '+alias.route);
-    files.set(routeFile(alias.route),Buffer.from(redirect(target,copy[alias.locale].languageLabels)));
+    files.set(routeFile(alias.route),Buffer.from(redirect(target,copy[codes.includes(alias.locale)?alias.locale:primary].languageLabels,config)));
   }
-  files.set('index.html',Buffer.from(redirect('/zh/',copy.zh.languageLabels,true)));
+  files.set('index.html',Buffer.from(redirect('/'+primary+'/',copy[primary].languageLabels,config,true)));
+  files.set('site-languages.json',Buffer.from(safeJSON(publicLanguages(config))+'\n'));
   files.set('robots.txt',Buffer.from('User-agent: *\nAllow: /\nSitemap: https://mzsh.me/sitemap.xml\n'));
-  files.set('sitemap.xml',Buffer.from('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+entries.filter(e=>e.slug!=='not-found').flatMap(e=>['zh','en'].map(l=>'<url><loc>https://mzsh.me'+localeRoute(e,l)+'</loc>'+['zh','en'].map(a=>'<xhtml:link rel="alternate" hreflang="'+a+'" href="https://mzsh.me'+localeRoute(e,a)+'"/>').join('')+'</url>')).join('')+'</urlset>\n'));
-  for(const locale of ['zh','en']) {
+  files.set('sitemap.xml',Buffer.from('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+entries.filter(e=>e.slug!=='not-found').flatMap(e=>codes.map(l=>'<url><loc>https://mzsh.me'+localeRoute(e,l)+'</loc>'+codes.map(a=>'<xhtml:link rel="alternate" hreflang="'+a+'" href="https://mzsh.me'+localeRoute(e,a)+'"/>').join('')+'</url>')).join('')+'</urlset>\n'));
+  for(const locale of codes) {
     const blogs=entries.filter(e=>e.type==='blog').sort((a,b)=>String(b.sources[locale].data.date || '').localeCompare(String(a.sources[locale].data.date || '')));
     const title=copy[locale].shellSlots?.['page:blog-index'];
     const rssTitle=Object.entries(title || {}).find(([key])=>key.includes('title'))?.[1] || blogs[0]?.sources[locale].data.title || '';
     const rss='<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0"><channel><title>'+escapeHTML(rssTitle)+'</title><link>https://mzsh.me/'+locale+'/blog/</link><description>'+escapeHTML(rssTitle)+'</description><language>'+locale+'</language>'+blogs.map(e=>'<item><title>'+escapeHTML(e.sources[locale].data.title)+'</title><link>https://mzsh.me'+localeRoute(e,locale)+'</link><guid>https://mzsh.me'+localeRoute(e,locale)+'</guid><description>'+escapeHTML(e.sources[locale].data.description || '')+'</description></item>').join('')+'</channel></rss>\n';
     files.set(locale+'/blog/rss.xml',Buffer.from(rss));
   }
-  if(!options.templateRoot) {
+  if(options.indexSearch!==false) {
     const pagefind=await import(new URL('../content-import/node_modules/pagefind/lib/index.js',import.meta.url));
     try {
-      for(const locale of ['zh','en']) {
-        const created=await pagefind.createIndex({forceLanguage:locale==='zh'?'zh-cn':'en'});
+      for(const locale of codes) {
+        const created=await pagefind.createIndex({forceLanguage:languages.find(l=>l.code===locale).searchLanguage});
         if(created.errors.length || !created.index)throw new Error('Pagefind创建失败: '+created.errors.join(';'));
         for(const entry of entries.filter(e=>e.slug!=='not-found')) {
           const route=localeRoute(entry,locale),result=await created.index.addHTMLFile({url:route,content:files.get(routeFile(route)).toString('utf8')});
@@ -403,13 +448,13 @@ export async function buildSite(options) {
   if (!check) for (const [relative,bytes] of files) {
     const file=boundedPath(output,relative);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes);
   }
-  return {pages:entries.length*2,differences,files:[...files.keys()]};
+  return {pages:entries.length*codes.length,differences,files:[...files.keys()]};
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2), value = name => args[args.indexOf(name)+1];
   if (!args.includes('--vault')) throw new Error('必须指定 --vault <路径>');
   const manifest = JSON.parse(fs.readFileSync(path.join(here,'manifest.json'),'utf8'));
   const result=await buildSite({vault:path.resolve(value('--vault')),site:path.resolve(here,'../..'),manifest,output:args.includes('--output') ? path.resolve(value('--output')) : path.resolve(here,'../..'),check:args.includes('--check')});
-  console.log(`双语页面 ${result.pages}，受管产物 ${result.files.length}，${args.includes('--check')?'差异':'写出'} ${result.differences.length}`);
+  console.log(`语言页面 ${result.pages}，受管产物 ${result.files.length}，${args.includes('--check')?'差异':'写出'} ${result.differences.length}`);
   if(args.includes('--check') && result.differences.length)process.exitCode=1;
 }
