@@ -15,7 +15,7 @@ const fixture = fs.mkdtempSync(path.join(os.tmpdir(), 'mzsh-import-reject-'));
 const casePath = manifest.cases[0].source;
 const contactPath = manifest.manuals[0].source;
 const paths = new Set([...manifest.blogs, ...manifest.cases, ...manifest.manuals, ...manifest.works].map(x => '网站/' + x.source));
-const workPath = '作品/UE工具/010-SimpleBPInheritFix.md';
+const workPath = manifest.works.find(x => x.route === '/works/simple-bp-inherit-fix/').source;
 paths.add('网站/' + workPath);
 for (const manual of manifest.manuals) for (const supplement of manual.supplementSources || []) paths.add(supplement);
 
@@ -51,7 +51,7 @@ try {
   const caseFile = path.join(fixture, '网站', casePath);
   const contactFile = path.join(fixture, '网站', contactPath);
   const workFile = path.join(fixture, '网站', workPath);
-  const mediaWorkFile = path.join(fixture, '网站', '作品/UE工具/200-UEPackageManager.md');
+  const mediaWorkFile = path.join(fixture, '网站', manifest.works.find(x => x.route === '/works/ue-package-manager/').source);
   const originalCase = fs.readFileSync(caseFile,'utf8');
   const originalContact = fs.readFileSync(contactFile,'utf8');
   const originalWork = fs.readFileSync(workFile,'utf8');
