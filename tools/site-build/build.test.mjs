@@ -11,28 +11,30 @@ function fixture(t) {
   t.after(() => fs.rmSync(root,{recursive:true,force:true}));
   const vault = path.join(root,'vault'), output = path.join(root,'published');
   fs.mkdirSync(vault); fs.mkdirSync(output); fs.writeFileSync(path.join(output,'sentinel'),'unchanged');
-  const zh = '---\nlang: zh\ntitle: 中文\ndraft: false\n---\n\n## 章节\n\n内容\n';
+  const zh = '---\nlang: zh\ntranslationKey: page:home\ntitle: 中文\ndraft: false\n---\n\n## 章节\n\n内容\n';
   const en = `---\nlang: en\ntitle: English\ndraft: false\ntranslationKey: 'page:home'\nsourceHash: ${hash(zh)}\ngeneratedBodyHash: ${hash('## Chapter\n\nContent')}\ntranslationStatus: translated\n---\n\n## Chapter\n\nContent\n`;
   for(const code of ['zh','en'])fs.mkdirSync(path.join(vault,'网站',code==='zh'?'001-zh':'002-en'),{recursive:true});
   fs.writeFileSync(path.join(vault,'网站/001-zh/zh.md'),zh);fs.writeFileSync(path.join(vault,'网站/002-en/en.md'),en);
   const label={group:'Language',switchAria:'Switch to {language}'};
-  const data=code=>({lang:code,language:{code,label:code==='zh'?'中文':'EN',htmlLang:code==='zh'?'zh-CN':'en',searchLanguage:code,browserTags:[code+'-*']},languageLabels:label,shellSlots:{'page:home':{title:code==='zh'?'中文':'English'}},scriptSlots:{},bodyUtilitySlots:{}});
+  const data=code=>({lang:code,translationKey:'site-copy',language:{code,label:code==='zh'?'中文':'EN',htmlLang:code==='zh'?'zh-CN':'en',searchLanguage:code,browserTags:[code+'-*']},languageLabels:label,shellSlots:{'page:home':{title:code==='zh'?'中文':'English'}},scriptSlots:{},bodyUtilitySlots:{}});
   const primary='---\n'+JSON.stringify(data('zh'))+'\n---\n\nCopy\n';
   fs.writeFileSync(path.join(vault,'网站/001-zh/000-texts.md'),primary);
   fs.writeFileSync(path.join(vault,'网站/002-en/000-texts.md'),'---\n'+JSON.stringify({...data('en'),translationKey:'site-copy',sourceHash:hash(primary),translationStatus:'translated',generatedBodyHash:hash('Copy')})+'\n---\n\nCopy\n');
   const languages=['zh','en'].map((code,i)=>({root:(i+1).toString().padStart(3,'0')+'-'+code,enabled:true,commonSource:'000-texts.md',sources:{'page:home':code+'.md'}}));
   fs.writeFileSync(path.join(vault,'网站/000-languages.md'),'---\n'+JSON.stringify({version:1,primary:'zh',fallback:'en',languages})+'\n---\n');
-  return {vault,output,site:root,manifest:{version:1,entries:[{id:'page:home',type:'page',slug:'home',legacyRoutes:['/'],locales:{zh:{source:'zh.md'},en:{source:'en.md'}},template:'home.html',media:[]}]}};
+  return {vault,sourceRoot:path.join(vault,'网站'),output,site:root,manifest:{version:1,entries:[{id:'page:home',type:'page',slug:'home',legacyRoutes:['/'],locales:{zh:{source:'zh.md'},en:{source:'en.md'}},template:'home.html',media:[]}]}};
 }
 for (const [name, mutate, message] of [
   ['missing Chinese source', x => fs.unlinkSync(path.join(x.vault,'网站/001-zh/zh.md')), /来源缺失/],
   ['missing English translation', x => fs.unlinkSync(path.join(x.vault,'网站/002-en/en.md')), /译文缺失/],
   ['duplicate public routes', x => x.manifest.entries.push({...x.manifest.entries[0],id:'page:duplicate'}), /路由重复|语言来源映射缺失/],
-  ['media outside allowed root', x => x.manifest.entries[0].media.push({path:'../private.png',publish:true}), /媒体越界/],
+  ['media outside allowed root', x => x.manifest.entries[0].mediaOccurrences=[{id:'page:home:media:1',ordinal:1,state:'public',websiteUrl:'/assets/../private.png'}], /媒体.*越界/],
   ['stale English translation', x => fs.appendFileSync(path.join(x.vault,'网站/001-zh/zh.md'),'Changed'), /译文过期/],
   ['manually modified English needs review', x => fs.appendFileSync(path.join(x.vault,'网站/002-en/en.md'),'Manual'), /人工修改/],
   ['explicit wrong primary language',x=>{const p=path.join(x.vault,'网站/001-zh/zh.md');fs.writeFileSync(p,fs.readFileSync(p,'utf8').replace('lang: zh','lang: en'))},/来源语言不符/],
   ['draft main source',x=>{const p=path.join(x.vault,'网站/001-zh/zh.md');fs.writeFileSync(p,fs.readFileSync(p,'utf8').replace('draft: false','draft: true'))},/草稿不得发布/],
+  ['missing primary identity',x=>{const p=path.join(x.vault,'网站/001-zh/zh.md');fs.writeFileSync(p,fs.readFileSync(p,'utf8').replace('translationKey: page:home\n',''))},/来源身份/],
+  ['private public metadata',x=>{const p=path.join(x.vault,'网站/001-zh/zh.md');fs.writeFileSync(p,fs.readFileSync(p,'utf8').replace('title: 中文','title: 中文\nsourcePath: private'))},/未授权字段/],
 ]) test(`rejects ${name} before changing published tree`, async t => {
   const x = fixture(t); mutate(x);
   await assert.rejects(() => buildSite(x),message);
@@ -44,6 +46,11 @@ test('historical primary sources may omit lang and draft',t=>{
   const x=fixture(t),p=path.join(x.vault,'网站/001-zh/zh.md'),en=path.join(x.vault,'网站/002-en/en.md'),original=fs.readFileSync(p,'utf8');
   const updated=original.replace('lang: zh\n','').replace('draft: false\n','');fs.writeFileSync(p,updated);
   fs.writeFileSync(en,fs.readFileSync(en,'utf8').replace(hash(original),hash(updated)));
+  assert.equal(preflight(x).entries.length,1);
+});
+
+test('translation snapshots accept LF and CRLF equivalently',t=>{
+  const x=fixture(t);for(const file of ['网站/001-zh/zh.md','网站/002-en/en.md','网站/001-zh/000-texts.md','网站/002-en/000-texts.md']){const p=path.join(x.vault,file);fs.writeFileSync(p,fs.readFileSync(p,'utf8').replaceAll('\n','\r\n'));}
   assert.equal(preflight(x).entries.length,1);
 });
 
@@ -136,36 +143,51 @@ test('documentation routes use leading locale and retain chapter hierarchy', () 
   assert.equal(localeRoute({legacyRoutes:['/docs/zh/guides/ue-tools/simple-websocket-guide/']},'en'),'/en/docs/guides/ue-tools/simple-websocket-guide/');
 });
 
-function supplementFixture(t,key='supplement:004-文档/001-UE工具/guide.md') {
-  const x=fixture(t),zhPath='网站/001-zh/004-文档/001-UE工具/guide.md',enPath='网站/002-en/004-Docs/001-UE-Tools/guide.md';
-  const zh='---\nlang: zh\n---\n\n中文补充\n';
+test('registered aliases carry exact redirect metadata, reachable language URLs and heading maps',async t=>{
+  const {x}=threeLanguages(t);x.manifest.entries[0].legacyRoutes=['/docs/zh/guide/'];
+  x.manifest.redirects=[{route:'/guide/',id:'page:home',locale:'zh'},{route:'/docs/en/guide/',id:'page:home',locale:'en'}];
+  await buildSite(x);
+  const read=route=>{const html=fs.readFileSync(path.join(x.output,route,'index.html'),'utf8');assert.doesNotMatch(html,/location\.replace|http-equiv="refresh"/);return JSON.parse(html.match(/data-site-language>([^<]+)<\/script>/)[1]);};
+  const generic=read('guide');assert.deepEqual(generic.redirect,{pathname:'/guide/',locale:null});
+  assert.deepEqual(Object.keys(generic.urls),['zh','en','fr']);
+  assert.equal(read('docs/en/guide').redirect.locale,'en');assert.equal(read('docs/zh/guide').redirect.locale,'zh');
+  assert.equal(Object.keys(generic.anchors.fr).length,1);
+  for(const url of Object.values(generic.urls))assert.ok(fs.existsSync(path.join(x.output,url.slice(1),'index.html')));
+});
+for(const [name,alias,expected]of [['missing target',{route:'/old/',id:'missing'},/旧链目标缺失/],['cross-domain pathname',{route:'https://example.com/',id:'page:home'},/旧链路径/],['locale loop',{route:'/zh/',id:'page:home'},/旧链覆盖正文/]])test(`alias rejects ${name} before publication`,async t=>{
+  const {x}=threeLanguages(t);x.manifest.redirects=[alias];await assert.rejects(()=>buildSite(x),expected);assert.deepEqual(fs.readdirSync(x.output),['sentinel']);
+});
+
+function supplementFixture(t,key='page:home:supplement:1') {
+  const x=fixture(t),zhPath='001-zh/supplements/guide.md',enPath='002-en/supplements/guide.md';
+  const zh=`---\nlang: zh\ntranslationKey: ${key}\n---\n\n中文补充\n`;
   const en=`---\nlang: en\ntranslationKey: ${key}\nsourceHash: ${hash(zh)}\ntranslationStatus: translated\ngeneratedBodyHash: ${hash('English supplement')}\n---\n\nEnglish supplement\n`;
-  for(const [relative,body] of [[zhPath,zh],[enPath,en]]) {fs.mkdirSync(path.dirname(path.join(x.vault,relative)),{recursive:true});fs.writeFileSync(path.join(x.vault,relative),body);}
+  for(const [relative,body] of [[zhPath,zh],[enPath,en]]) {fs.mkdirSync(path.dirname(path.join(x.sourceRoot,relative)),{recursive:true});fs.writeFileSync(path.join(x.sourceRoot,relative),body);}
   const mainZhFile=path.join(x.vault,'网站/001-zh/zh.md');const originalZh=fs.readFileSync(mainZhFile,'utf8');const mainZh=originalZh.replace('---\n',`---\nsupplementSources:\n  - ${zhPath}\n`);fs.writeFileSync(mainZhFile,mainZh);
   x.manifest.entries[0].supplementTranslationKeys=[key];
   const main=fs.readFileSync(path.join(x.vault,'网站/002-en/en.md'),'utf8').replace('---\n',`---\nsupplementSources:\n  - ${enPath}\n`).replace(hash(originalZh),hash(mainZh));
   fs.writeFileSync(path.join(x.vault,'网站/002-en/en.md'),main);
   return {x,enPath};
 }
-for(const key of ['supplement:004-文档/001-UE工具/guide.md','004-文档/001-UE工具/guide'])test(`explicit English supplements preserve stable key ${key}`,t=>{
+for(const key of ['page:home:supplement:1','page:home:supplement:2'])test(`explicit English supplements preserve stable key ${key}`,t=>{
   const {x}=supplementFixture(t,key);
   assert.equal(preflight(x).entries[0].supplements[0].en.data.lang,'en');
 });
 for(const mismatch of ['missing','missingKey','wrongIdentity','wrongPair'])test(`rejects ${mismatch} supplement before touching output`,async t=>{
   const {x,enPath}=supplementFixture(t);
-  const file=path.join(x.vault,mismatch==='missing'?'网站/002-en/en.md':enPath);
+  const file=mismatch==='missing'?path.join(x.vault,'网站/002-en/en.md'):path.join(x.sourceRoot,enPath);
   const raw=fs.readFileSync(file,'utf8');
   if(mismatch==='missingKey')delete x.manifest.entries[0].supplementTranslationKeys;
   else if(mismatch==='wrongPair') {
-    const other=enPath.replace('guide.md','other.md');fs.writeFileSync(path.join(x.vault,other),raw.replace('supplement:004-文档/001-UE工具/guide.md','supplement:other'));
+    const other=enPath.replace('guide.md','other.md');fs.writeFileSync(path.join(x.sourceRoot,other),raw.replace('page:home:supplement:1','supplement:other'));
     fs.writeFileSync(path.join(x.vault,'网站/002-en/en.md'),fs.readFileSync(path.join(x.vault,'网站/002-en/en.md'),'utf8').replace(enPath,other));
-  } else fs.writeFileSync(file,mismatch==='missing'?raw.replace(/supplementSources:\n  - [^\n]+\n/,'supplementSources: []\n'):raw.replace('supplement:004-文档/001-UE工具/guide.md','supplement:wrong'));
+  } else fs.writeFileSync(file,mismatch==='missing'?raw.replace(/supplementSources:\n  - [^\n]+\n/,'supplementSources: []\n'):raw.replace('page:home:supplement:1','supplement:wrong'));
   await assert.rejects(()=>buildSite(x),['missing','missingKey'].includes(mismatch)?/补充来源列表/:/补充译文身份/);
   assert.deepEqual(fs.readdirSync(x.output),['sentinel']);assert.equal(fs.readFileSync(path.join(x.output,'sentinel'),'utf8'),'unchanged');
 });
 
 test('draft supplemental source refuses publication before changing output',async t=>{
-  const {x,enPath}=supplementFixture(t),file=path.join(x.vault,enPath);
+  const {x,enPath}=supplementFixture(t),file=path.join(x.sourceRoot,enPath);
   fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('lang: en','lang: en\ndraft: true'));
   await assert.rejects(()=>buildSite(x),/补充草稿不得发布/);
   assert.deepEqual(fs.readdirSync(x.output),['sentinel']);

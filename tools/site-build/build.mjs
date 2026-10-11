@@ -6,6 +6,8 @@ import {fileURLToPath} from 'node:url';
 import {pathToFileURL} from 'node:url';
 import {attrs,walk,applyEdits,templateName} from './extract-dom.mjs';
 import {readLanguages,languageSource,publicLanguages} from './languages.mjs';
+import {mapMedia} from './media.mjs';
+import {assertPublicFields} from './source-schema.mjs';
 const require = createRequire(new URL('../content-import/package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -16,6 +18,7 @@ const {default:rehypeExpressiveCode} = await import(pathToFileURL(require.resolv
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g,c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const safeJSON = value => JSON.stringify(value).replace(/</g,'\\u003c');
 export const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+export const textHash = value => hash(String(value).replaceAll('\r\n','\n'));
 export function boundedPath(root,relative,label='路径') {
   if (!relative || path.isAbsolute(relative) || relative.includes('\\') || relative.split('/').includes('..')) throw new Error(`${label}越界: ${relative}`);
   const result = path.resolve(root,relative);
@@ -41,13 +44,14 @@ export function sourceTags(source) {
   if(![tags,search].every(list=>Array.isArray(list) && list.every(value=>typeof value==='string' && value.trim())))throw new Error('来源标签必须为字符串数组');
   return {tags:[...new Set(tags)],searchTags:[...new Set([...tags,...search])]};
 }
-export function preflight({vault,site,manifest}) {
-  const config=readLanguages(vault,manifest.entries.map(e=>e.id)),{primary,languages}=config;
+export function preflight({sourceRoot,site,manifest}) {
+  sourceRoot ||= path.join(site,'content');
+  const config=readLanguages(sourceRoot,manifest.entries.map(e=>e.id)),{primary,languages}=config;
   const codes=languages.map(l=>l.code),routes=new Map(),entries=[],ids=new Set();
   const verifyTranslation=(source,original,key,label)=>{
     if(source.data.translationKey!==key)throw new Error(label+'身份不符');
-    if(source.data.sourceHash!==hash(original.bytes) || source.data.translationStatus!=='translated')throw new Error(label+'过期');
-    if(source.data.generatedBodyHash!==hash(source.body.trim()))throw new Error(label+'存在人工修改，保留并等待审核');
+    if(source.data.sourceHash!==textHash(original.raw) || source.data.translationStatus!=='translated')throw new Error(label+'过期');
+    if(source.data.generatedBodyHash!==textHash(source.body.trim()))throw new Error(label+'存在人工修改，保留并等待审核');
   };
   const validList=list=>Array.isArray(list) && list.every(v=>typeof v==='string' && v.trim()) && new Set(list).size===list.length;
   for(const entry of manifest.entries) {
@@ -56,27 +60,19 @@ export function preflight({vault,site,manifest}) {
       if(!/^\/[a-zA-Z0-9/_-]*(?:\.html)?\/?$/.test(route))throw new Error('非法路由: '+route);
       if(routes.has(route) && routes.get(route)!==entry.id)throw new Error('路由重复: '+route);routes.set(route,entry.id);
     }
-    for (const media of entry.media || []) {
-      if (media.path) {
-        const file = boundedPath(vault,media.path,'媒体');
-        if (!fs.existsSync(file)) throw new Error('媒体缺失: '+media.path);
-        if (media.sha256 && hash(fs.readFileSync(file)) !== media.sha256) throw new Error('媒体hash变化: '+media.path);
-      }
-      if (media.websiteUrl && media.publish !== false) {
-        const url = decodeURIComponent(media.websiteUrl);
-        if (!url.startsWith('/') || url.startsWith('//')) throw new Error('媒体越界: '+url);
-        if (!fs.existsSync(boundedPath(site,url.slice(1),'媒体'))) throw new Error('公开媒体缺失: '+url);
-      }
+    mapMedia(entry,{site});
+    if(entry.cover){
+      if(!/^\/(?:assets|media)\//.test(entry.cover.websiteUrl || '') || /[?#]|\/\.\.\//.test(entry.cover.websiteUrl))throw new Error('封面地址越界');
+      if(hash(fs.readFileSync(boundedPath(site,entry.cover.websiteUrl.slice(1),'封面')))!==entry.cover.sha256)throw new Error('封面hash漂移');
     }
-    for(const occurrence of entry.mediaOccurrences || []) {
-      if(hash(fs.readFileSync(boundedPath(vault,occurrence.vaultPath,'媒体')))!==occurrence.sourceSha256)throw new Error('媒体来源hash漂移: '+occurrence.id);
-      if(occurrence.state==='public' && hash(fs.readFileSync(boundedPath(site,occurrence.websiteUrl.slice(1),'媒体')))!==occurrence.publicSha256)throw new Error('公开媒体hash漂移: '+occurrence.id);
-    }
-    const sources=Object.fromEntries(languages.map(lang=>[lang.code,readSource(vault,languageSource(lang,lang.sources[entry.id]),lang.code===primary?'来源':'译文')]));
+    const sources=Object.fromEntries(languages.map(lang=>[lang.code,readSource(sourceRoot,languageSource(lang,lang.sources[entry.id]),lang.code===primary?'来源':'译文')]));
     for(const lang of languages) {
+      assertPublicFields(sources[lang.code].data);
+      if(sources[lang.code].data.translationKey!==(entry.translationKey || entry.id))throw new Error('来源身份不符: '+entry.id);
       if(sources[lang.code].data.draft===true)throw new Error('草稿不得发布: '+entry.id);
       if((lang.code!==primary || sources[lang.code].data.lang!==undefined) && sources[lang.code].data.lang!==lang.code)throw new Error('来源语言不符: '+entry.id);
       sourceTags(sources[lang.code]);
+      if(entry.cover && sources[lang.code].data.websiteCoverUrl!==entry.cover.websiteUrl)throw new Error('来源封面地址不符');
       if(lang.code!==primary)verifyTranslation(sources[lang.code],sources[primary],entry.translationKey || entry.id,'译文');
     }
     const lists=Object.fromEntries(languages.map(lang=>[lang.code,sources[lang.code].data.supplementSources ?? []])),keys=entry.supplementTranslationKeys ?? [];
@@ -84,8 +80,10 @@ export function preflight({vault,site,manifest}) {
     const supplements=keys.map((key,index)=>{
       const pair=Object.fromEntries(languages.map(lang=>{
         const relative=lists[lang.code][index];
-        if(!relative.startsWith('网站/'+lang.root+'/'))throw new Error('补充译文路径越界');
-        const source=readSource(vault,relative,lang.code===primary?'补充来源':'补充译文');
+        if(!relative.startsWith(lang.root+'/'))throw new Error('补充译文路径越界');
+        const source=readSource(sourceRoot,relative,lang.code===primary?'补充来源':'补充译文');
+        assertPublicFields(source.data);
+        if(source.data.translationKey!==key)throw new Error('补充译文身份不符');
         if(source.data.draft===true)throw new Error('补充草稿不得发布: '+entry.id);
         if(source.data.lang!==lang.code)throw new Error('补充译文身份不符');
         return [lang.code,source];
@@ -95,8 +93,10 @@ export function preflight({vault,site,manifest}) {
     });
     entries.push({...entry,sources,supplements,languageCodes:codes});
   }
-  const common=Object.fromEntries(languages.map(lang=>[lang.code,readSource(vault,languageSource(lang,lang.commonSource),'公共来源')]));
+  const common=Object.fromEntries(languages.map(lang=>[lang.code,readSource(sourceRoot,languageSource(lang,lang.commonSource),'公共来源')]));
   for(const lang of languages) {
+    assertPublicFields(common[lang.code].data,true);
+    if(common[lang.code].data.translationKey!=='site-copy')throw new Error('公共来源身份不符');
     if(common[lang.code].data.language?.code!==lang.code)throw new Error('公共来源语言不符');
     if(lang.code!==primary)verifyTranslation(common[lang.code],common[primary],'site-copy','公共译文');
   }
@@ -145,16 +145,14 @@ async function renderBody(entry,locale,processor,site) {
       if (node.type === 'image') {
         if(entry.mediaOccurrences) {
           const occurrence=entry.mediaOccurrences[mediaOrdinal++];
-          if(!occurrence || decodeURIComponent(occurrence.source)!==decodeURIComponent(node.url))throw new Error('媒体occurrence歧义: '+entry.id+' '+mediaOrdinal);
+          if(!occurrence || '/media-occurrence/'+encodeURIComponent(occurrence.id)!==node.url)throw new Error('媒体occurrence歧义: '+entry.id+' '+mediaOrdinal);
+          if(!occurrence.utilityId){if(occurrence.state!=='public')throw new Error('隐藏媒体缺占位模板');node.url=occurrence.websiteUrl;return;}
           const token='MZSH_MEDIA_OCCURRENCE_'+mediaOrdinal;
           tokens.push({token,occurrence});
           node.type='text';node.value=token;delete node.url;delete node.alt;
           return;
         }
-        const ref = (entry.sourceMediaReferences || []).find(r => decodeURIComponent(r.source) === decodeURIComponent(node.url));
-        let url = ref?.websiteUrl || (node.url.startsWith('/') && !node.url.startsWith('/附件/') ? node.url : null);
-        if (!url || !fs.existsSync(boundedPath(site,decodeURIComponent(url.slice(1)),'媒体'))) throw new Error('未知媒体公开权限: '+entry.id+' '+node.url);
-        node.url = url;
+        throw new Error('未知媒体公开权限: '+entry.id);
       }
       if (node.type === 'link') {
         if(entry.relativeLinkTargets?.[node.url])node.url=entry.relativeLinkTargets[node.url];
@@ -163,7 +161,7 @@ async function renderBody(entry,locale,processor,site) {
           if(typeof note!=='string')throw new Error('缺失公共文件提示来源: '+entry.id);
           const label=(node.children || []).map(n=>n.value || '').join('');
           node.type='text';node.value=label+note;delete node.url;delete node.children;
-        } else node.url = mapURL(node.url,locale,processor.entries);
+        } else {if(/^(?:javascript|data|file|obsidian):/i.test(node.url))throw new Error('不安全链接');node.url = mapURL(node.url,locale,processor.entries);}
       }
       if (node.type === 'heading' && entry.type==='blog') node.depth=Math.min(6,node.depth+1);
       if (node.type === 'code' && node.lang==='blueprint')node.lang='text';
@@ -298,6 +296,7 @@ function localizeJSON(value,dict,entries,locale) {
     if(match) for(const field of ['title','description','categoryName','status','order']) if(field in value && match.sources[locale].data[field]!==undefined)result[field]=localizeJSON(match.sources[locale].data[field],dict,entries,locale);
     if(match && 'body' in value)result.body=match.searchBodies?.[locale] || '';
     if(match && ('tags' in value || 'searchTags' in value))Object.assign(result,sourceTags(match.sources[locale]));
+    if(match && 'coverAlt' in value)result.coverAlt=match.sources[locale].data.coverAlt ?? '';
     return result;
   }
   return value;
@@ -357,14 +356,14 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   if (actions!==1) throw new Error('header-actions不是唯一: '+entry.id);
   return applyEdits(html,edits);
 }
-function redirect(target,labels,config,root=false) {
-  const primary=config.languages.find(l=>l.code===config.primary);
-  const runtime=root?{...publicLanguages(config),root:true,urls:Object.fromEntries(config.languages.map(l=>[l.code,'/'+l.code+'/']))}:null;
-  const js=root?'':'<script>location.replace('+safeJSON(target)+'+location.search+location.hash)</script>';
-  return '<!DOCTYPE html><html lang="'+primary.htmlLang+'"><head><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="canonical" href="https://mzsh.me'+target+'"><title>'+escapeHTML(labels.group)+'</title></head><body><a href="'+target+'">'+escapeHTML(primary.label)+'</a>'+js+(root?'<script type="application/json" data-site-language>'+safeJSON(runtime)+'</script><script defer src="/assets/site-ui/language-switch.js"></script>':'')+'</body></html>';
+function redirect({pathname,entry,explicitLocale=null,anchors={},config,labels}) {
+  const locale=config.languages.find(l=>l.code===(explicitLocale || config.primary));
+  const urls=Object.fromEntries(config.languages.map(l=>[l.code,entry?localeRoute(entry,l.code):'/'+l.code+'/']));
+  const target=urls[locale.code],runtime={...publicLanguages(config),urls,anchors,labels,redirect:{pathname,locale:explicitLocale}};
+  return '<!DOCTYPE html><html lang="'+locale.htmlLang+'"><head><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="canonical" href="https://mzsh.me'+target+'"><title>'+escapeHTML(labels.group)+'</title></head><body><a href="'+target+'">'+escapeHTML(locale.label)+'</a><script type="application/json" data-site-language>'+safeJSON(runtime)+'</script><script defer src="/assets/site-ui/language-switch.js"></script></body></html>';
 }
 export async function buildSite(options) {
-  const {site,vault,manifest,output,check=false}=options;
+  const {site,manifest,output,check=false}=options;
   const {entries,config,copy}=preflight(options),{primary,languages}=config,codes=languages.map(l=>l.code);
   const files = new Map(), rendered = new Map();
   const scriptURLs=new Map(),scriptManifest=path.join(here,'scripts.json');
@@ -405,15 +404,31 @@ export async function buildSite(options) {
     html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,config);
     files.set(routeFile(localeRoute(entry,locale)),Buffer.from(html));
   }
-  for (const entry of entries) for (const route of entry.legacyRoutes) if (route!=='/') files.set(routeFile(route),Buffer.from(redirect(localeRoute(entry,primary),copy[primary].languageLabels,config)));
-  for(const alias of manifest.redirects || []) {
-    const entry=entries.find(e=>e.id===alias.id);
-    if(!entry)throw new Error('旧链目标缺失: '+alias.route);
-    const target=localeRoute(entry,alias.locale);
-    if(alias.route===target)throw new Error('旧链循环: '+alias.route);
-    files.set(routeFile(alias.route),Buffer.from(redirect(target,copy[codes.includes(alias.locale)?alias.locale:primary].languageLabels,config)));
+  const aliases=new Map();
+  for(const alias of [...entries.flatMap(e=>e.legacyRoutes.filter(route=>route!=='/').map(route=>({route,id:e.id}))),...manifest.redirects || []]) {
+    if(!/^\/[a-zA-Z0-9/_-]*(?:\.html)?\/?$/.test(alias.route))throw new Error('旧链路径无效');
+    const entry=entries.find(e=>e.id===alias.id);if(!entry)throw new Error('旧链目标缺失: '+alias.route);
+    if(files.has(routeFile(alias.route)))throw new Error('旧链覆盖正文或资源: '+alias.route);
+    if(aliases.has(alias.route) && aliases.get(alias.route).id!==entry.id)throw new Error('旧链目标冲突');
+    aliases.set(alias.route,{...alias,entry});
   }
-  files.set('index.html',Buffer.from(redirect('/'+primary+'/',copy[primary].languageLabels,config,true)));
+  const aliasPageIDs=new Map();
+  for(const entry of entries)for(const code of codes){
+    const ids=new Map();walk(parse(files.get(routeFile(localeRoute(entry,code))).toString()),node=>{const id=attrs(node).id;if(id)ids.set(id,(ids.get(id)||0)+1)});
+    aliasPageIDs.set(entry.id+':'+code,ids);
+  }
+  for(const [pathname,{entry}]of aliases) {
+    const oldCode=pathname.match(/^\/docs\/([^/]+)\//)?.[1],explicitLocale=codes.includes(oldCode)?oldCode:null;
+    const source=rendered.get(entry.id+':'+(explicitLocale || primary)).headings,anchors={};
+    for(const code of codes){const target=rendered.get(entry.id+':'+code).headings,map={};
+      if(source.length!==target.length)throw new Error('旧链章节映射歧义');
+      const sourceIDs=aliasPageIDs.get(entry.id+':'+(explicitLocale || primary)),targetIDs=aliasPageIDs.get(entry.id+':'+code);
+      source.forEach((h,i)=>{if(!sourceIDs.has(h.slug))return;if(sourceIDs.get(h.slug)!==1 || targetIDs.get(target[i].slug)!==1 || (map[h.slug] && map[h.slug]!==target[i].slug))throw new Error('旧链章节映射缺失或歧义');map[h.slug]=target[i].slug});anchors[code]=map;
+      const url=localeRoute(entry,code);if(!files.has(routeFile(url)) || url===pathname)throw new Error('旧链目标缺失或循环');
+    }
+    files.set(routeFile(pathname),Buffer.from(redirect({pathname,entry,explicitLocale,anchors,config,labels:copy[explicitLocale || primary].languageLabels})));
+  }
+  files.set('index.html',Buffer.from(redirect({pathname:'/',config,labels:copy[primary].languageLabels})));
   files.set('site-languages.json',Buffer.from(safeJSON(publicLanguages(config))+'\n'));
   files.set('robots.txt',Buffer.from('User-agent: *\nAllow: /\nSitemap: https://mzsh.me/sitemap.xml\n'));
   files.set('sitemap.xml',Buffer.from('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">'+entries.filter(e=>e.slug!=='not-found').flatMap(e=>codes.map(l=>'<url><loc>https://mzsh.me'+localeRoute(e,l)+'</loc>'+codes.map(a=>'<xhtml:link rel="alternate" hreflang="'+a+'" href="https://mzsh.me'+localeRoute(e,a)+'"/>').join('')+'</url>')).join('')+'</urlset>\n'));
@@ -452,9 +467,9 @@ export async function buildSite(options) {
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2), value = name => args[args.indexOf(name)+1];
-  if (!args.includes('--vault')) throw new Error('必须指定 --vault <路径>');
+  if (args.includes('--vault')) throw new Error('--vault仅用于显式手动导入；构建仅读取仓库content/');
   const manifest = JSON.parse(fs.readFileSync(path.join(here,'manifest.json'),'utf8'));
-  const result=await buildSite({vault:path.resolve(value('--vault')),site:path.resolve(here,'../..'),manifest,output:args.includes('--output') ? path.resolve(value('--output')) : path.resolve(here,'../..'),check:args.includes('--check')});
+  const result=await buildSite({sourceRoot:path.resolve(here,'../../content'),site:path.resolve(here,'../..'),manifest,output:args.includes('--output') ? path.resolve(value('--output')) : path.resolve(here,'../..'),check:args.includes('--check')});
   console.log(`语言页面 ${result.pages}，受管产物 ${result.files.length}，${args.includes('--check')?'差异':'写出'} ${result.differences.length}`);
   if(args.includes('--check') && result.differences.length)process.exitCode=1;
 }

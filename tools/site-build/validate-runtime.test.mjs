@@ -12,9 +12,9 @@ test('runtime gate rejects broken anchors and source order overridden by old lis
   fs.writeFileSync(path.join(root,'site-languages.json'),JSON.stringify(languageConfig));
   const render=(locale,orders,href)=>`<html lang="${locale}"><body><h2 id="valid">Title</h2><a href="${href}">Link</a><script type="application/json" data-site-language>${JSON.stringify({...languageConfig,locale,urls:{zh:'/zh/works/',en:'/en/works/'}})}</script><script type="application/json" data-content-index-data>${JSON.stringify(orders.map(order=>({categoryId:'plugins',order})))}</script></body></html>`;
   for(const locale of ['zh','en']) {fs.mkdirSync(path.join(root,locale,'works'),{recursive:true});fs.writeFileSync(path.join(root,locale,'works/index.html'),render(locale,[2,0],'#missing'));}
-  const errors=validateRuntime({manifest,output:root,site:root}).errors;
+  const errors=validateRuntime({manifest,output:root,site:root,validateAliases:false}).errors;
   assert.equal(errors.filter(e=>e.kind==='missingAnchor').length,2);
   assert.equal(errors.filter(e=>e.kind==='workOrder').length,2);
   for(const locale of ['zh','en'])fs.writeFileSync(path.join(root,locale,'works/index.html'),render(locale,[0,2],'#valid'));
-  assert.deepEqual(validateRuntime({manifest,output:root,site:root}).errors,[]);
+  assert.deepEqual(validateRuntime({manifest,output:root,site:root,validateAliases:false}).errors,[]);
 });

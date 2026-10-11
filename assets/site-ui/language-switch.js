@@ -98,9 +98,12 @@
     const data = pageData();
     if (!data) return;
     const explicit = currentLocale(window.location.pathname, data);
-    if (data.root === true && window.location.pathname === '/' && !explicit) {
-      const target = targetUrl(data, preferredLocale(data), window.location.href);
-      if (target) window.location.replace(target);
+    const redirect = data.redirect || (data.root === true ? { pathname: '/', locale: null } : null);
+    if (redirect && window.location.pathname === redirect.pathname && !explicit) {
+      const languages = enabledLanguages(data);
+      const locale = languages.some((language) => language.code === redirect.locale) ? redirect.locale : preferredLocale(data);
+      const target = targetUrl(data, locale, window.location.href);
+      if (target && new URL(target).pathname !== window.location.pathname) window.location.replace(target);
       return;
     }
     const languages = enabledLanguages(data);

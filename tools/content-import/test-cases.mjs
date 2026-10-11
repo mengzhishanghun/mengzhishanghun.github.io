@@ -5,13 +5,14 @@ import vm from 'node:vm';
 import {fileURLToPath} from 'node:url';
 import {parse} from 'parse5';
 import YAML from 'yaml';
+import {readLanguages,languageSource} from '../site-build/languages.mjs';
+import {localeRoute} from '../site-build/build.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const site = path.resolve(here,'../..');
-const position = process.argv.indexOf('--vault');
-if (position < 0 || !process.argv[position + 1]) throw new Error('必须指定 --vault');
-const vault = path.resolve(process.argv[position + 1]);
-const manifest = JSON.parse(fs.readFileSync(path.join(here,'manifest.json'),'utf8'));
+const sourceRoot=path.join(site,'content');
+const manifest=JSON.parse(fs.readFileSync(path.resolve(here,'../site-build/manifest.json'),'utf8'));
+const config=readLanguages(sourceRoot,manifest.entries.map(e=>e.id)),primary=config.languages.find(l=>l.code===config.primary);
 const attrs = n => Object.fromEntries((n.attrs || []).map(x => [x.name,x.value]));
 function find(node,predicate) {
   const matches = [];
@@ -21,7 +22,7 @@ function find(node,predicate) {
 }
 function one(node,predicate) { const found = find(node,predicate); assert.equal(found.length,1); return found[0]; }
 function text(node) { return node.nodeName === '#text' ? node.value : (node.childNodes || []).map(text).join(''); }
-const list = parse(fs.readFileSync(path.join(site,'cases/index.html'),'utf8'));
+const list = parse(fs.readFileSync(path.join(site,'zh/cases/index.html'),'utf8'));
 const records = JSON.parse(text(one(list,(n,a) => a['data-content-index-data'] !== undefined)));
 assert.equal(records.length,10);
 assert.equal(new Set(records.map(x => x.slug)).size,10);
@@ -36,29 +37,30 @@ for (const [category,count] of [['ue-projects','8'],['desktop-automation','2']])
 const searchScript = one(list,(n,a) => n.tagName === 'script' && a.src?.includes('/ContentIndex.'));
 const searchCode = fs.readFileSync(path.join(site,attrs(searchScript).src.slice(1)),'utf8');
 // Execute the shipped ranking function; the document stub suppresses only UI initialization.
-const context = vm.createContext({document:{addEventListener(){},querySelectorAll(){return [];}}});
+const context = vm.createContext({document:{documentElement:{lang:"zh-CN"},addEventListener(){},querySelectorAll(){return [];}},window:{SiteLanguageCode:"zh",SitePrimaryCode:"zh"}});
 vm.runInContext(searchCode,context);
-for (const entry of manifest.cases) {
-  const source = fs.readFileSync(path.join(vault,'网站',entry.source),'utf8');
+for (const entry of manifest.entries.filter(e=>e.type==='case')) {
+  const source = fs.readFileSync(path.join(sourceRoot,languageSource(primary,primary.sources[entry.id])),'utf8');
   const match = source.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n/);
   const data = YAML.parse(match[1]);
   const record = records.find(x => x.slug === data.slug);
   assert.ok(record);
   assert.equal(record.description,data.description);
   assert.deepEqual(record.tags,data.tags);
-  assert.equal(record.body,source.slice(match[0].length).replace(/\r\n/g,'\n').trim());
+  assert.ok(record.body.length>0);
   const card = one(list,(n,a) => a['data-content-card'] !== undefined && a['data-slug'] === data.slug);
-  assert.equal(attrs(card).href,entry.route);
+  assert.equal(attrs(card).href,localeRoute(entry,'zh'));
   assert.equal(text(one(card,n => n.tagName === 'h2')),data.title);
-  const markup = fs.readFileSync(path.join(site,entry.route.slice(1),'index.html'),'utf8');
+  const markup = fs.readFileSync(path.join(site,localeRoute(entry,'zh').slice(1),'index.html'),'utf8');
   const doc = parse(markup), h1 = one(doc,n => n.tagName === 'h1');
   assert.equal(text(h1),data.title);
   assert.equal(attrs(h1).id,'detail-' + data.slug);
   assert.equal(attrs(one(doc,n => n.tagName === 'article'))['aria-labelledby'],attrs(h1).id);
-  assert.equal(attrs(one(doc,(n,a) => n.tagName === 'link' && a.rel === 'canonical')).href,'https://mzsh.me' + entry.route);
+  assert.equal(attrs(one(doc,(n,a) => n.tagName === 'link' && a.rel === 'canonical')).href,'https://mzsh.me' + localeRoute(entry,'zh'));
   assert.equal(find(doc,(n,a) => n.tagName === 'script' && a['data-mzsh-analytics'] !== undefined).length,1);
   one(doc,(n,a) => n.tagName === 'link' && a.href === '/assets/reading-area.css');
   const prose = one(doc,(n,a) => a.class?.split(' ').includes('prose'));
+  assert.equal(record.body.replace(/\s+/g,''),text(prose).replace(/\s+/g,''));
   assert.deepEqual(find(prose,n => /^h[1-6]$/.test(n.tagName || '')).map(n => [n.tagName,text(n)]),['背景介绍','复现环境','具体问题','解决方案','最终总结'].map(x => ['h2',x]));
   const coverUrl = '/assets/cases/' + data.slug + '.png';
   assert.equal(data.websiteCoverUrl,coverUrl);
@@ -70,8 +72,8 @@ for (const entry of manifest.cases) {
   assert.equal(attrs(one(heroMedia,n => n.tagName === 'img')).src,coverUrl);
   const cardMedia = one(card,(n,a) => a.class?.split(' ').includes('content-cover-link'));
   assert.equal(attrs(one(cardMedia,n => n.tagName === 'img')).src,coverUrl);
-  if (entry.createFromTemplate) {
-    assert.ok(!markup.includes('driving-simulator-three-screen'));
+  if (['blueprint-inheritance-repair','perforce-case-sensitive-sync','bat-version-file-updater'].includes(entry.slug)) {
+    assert.ok(!text(prose).includes('driving-simulator-three-screen'));
     assert.equal(find(doc,(n,a) => a.class?.split(' ').includes('project-title-secondary')).length,0);
     assert.equal(attrs(trigger)['data-media-alt'],data.coverAlt);
     assert.equal(attrs(trigger)['aria-label'],'查看' + data.title + '示意图大图');

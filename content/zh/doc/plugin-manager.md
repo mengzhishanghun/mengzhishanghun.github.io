@@ -1,0 +1,68 @@
+---
+title: UEPluginManager 使用文档
+description: UEPluginManager 的完整中文产品使用文档
+type: doc
+slug: plugin-manager
+categoryId: open-source-tools
+categoryName: 开源工具
+categoryOrder: 1
+draft: false
+sitePublish: true
+tags:
+  - UnrealEngine
+  - 插件
+  - 依赖分析
+workIds:
+  - plugin-manager
+documentKind: product-manual
+websiteRoute: /docs/zh/tools/plugin-manager/
+lang: zh
+translationKey: plugin-manager
+---
+
+# UEPluginManager
+
+UE 插件管理工具，统一管理 UE 项目及其关联引擎中的所有插件。
+
+## 功能
+
+### 插件浏览
+- **自动扫描** - 扫描项目、商城（Marketplace）、引擎插件
+- **标签分类** - 插件按来源分为三个标签页：
+  - **项目** - 项目 Plugins 目录下的插件
+  - **商城** - 通过 Fab 下载安装的插件
+  - **引擎** - UE 引擎自带的插件
+- **分类管理** - 标签页实时显示各分类数量
+- **引擎识别** - 支持安装版（注册表）和源码版（GUID）引擎
+- **搜索过滤** - 按名称/作者/分类/描述/依赖/被依赖搜索
+  - 不区分大小写
+  - 支持空格分隔多关键词（同时匹配）
+- **排序** - 点击列标题排序，箭头指示排序方向
+- **依赖分析** - 查看插件依赖和被依赖关系
+- **冲突检测** - 同名插件冲突时显示红色"冲突"状态
+
+### 插件操作
+- **启用/禁用** - 修改 .uproject，支持依赖连锁确认
+- **恢复默认** - 从 .uproject 移除配置，恢复插件默认状态
+- **移动插件** - 项目插件和商城插件可互相移动（引擎插件不可移动）
+- **删除插件** - 移至回收站（引擎插件不可删除）
+- **目录修正** - 修正乱码文件夹名为插件同名
+
+### 快捷操作
+- **打开目录** - 一键打开项目/引擎/插件目录
+- **关闭项目** - 尝试关闭 UE 编辑器
+- **重新加载** - 外部修改后刷新插件列表
+
+## 使用
+
+1. 下载 Release 中的 `UEPluginManager.exe`，放入 UE 项目目录下运行
+2. 工具自动扫描项目和引擎插件
+3. 使用搜索框和标签页定位插件
+4. 点击插件查看详情和依赖关系
+5. 使用右侧按钮管理插件状态
+
+## 注意事项
+
+- **操作前建议**：关闭 UE 编辑器后再进行插件移动、删除、目录修正等操作
+- **只读文件**：工具会自动移除只读属性，兼容 Perforce 等版本控制系统
+- **冲突插件**：同名插件需先删除其中一个才能启用或移动

@@ -6,13 +6,15 @@ import {attrs,walk} from './extract-dom.mjs';
 import {localeRoute} from './build.mjs';
 const require=createRequire(new URL('../content-import/package.json',import.meta.url));
 const {parse}=require('parse5');
-export function validateRuntime({manifest,output,site,languageConfig}) {
+export function validateRuntime({manifest,output,site,languageConfig,validateAliases=true}) {
   const errors=[],counts={pages:0,media:0,headings:0,codeFrames:0,inlineScripts:0};
   const config=languageConfig || JSON.parse(fs.readFileSync(path.join(output,'site-languages.json'),'utf8'));
+  const pageIDs=new Map();
   for(const entry of manifest.entries)for(const {code:locale} of config.languages) {
     const route=localeRoute(entry,locale),relative=route.slice(1)+(route.endsWith('.html')?'':'index.html');
     const doc=parse(fs.readFileSync(path.join(output,relative),'utf8')),ids=new Set();
     walk(doc,n=>{if(attrs(n).id)ids.add(attrs(n).id)});
+    pageIDs.set(route,ids);
     let runtime,records;counts.pages++;
     const visit=(node,skip=false)=>{
       const a=attrs(node);skip ||= ['script','style','code','pre','svg'].includes(node.tagName);
@@ -43,6 +45,23 @@ export function validateRuntime({manifest,output,site,languageConfig}) {
     if(entry.id==='page:works-index' && records) {
       const categories=new Map();for(const record of records) {const list=categories.get(record.categoryId) || [];list.push(record.order);categories.set(record.categoryId,list);}
       for(const [category,orders] of categories)if(orders.some((n,i)=>i>0 && n<orders[i-1]))errors.push({route,kind:'workOrder',category,orders});
+    }
+  }
+  if(validateAliases){
+    counts.aliases=0;const aliases=new Map([['/',null]]);
+    for(const entry of manifest.entries)for(const route of entry.legacyRoutes)if(route!=='/')aliases.set(route,entry);
+    for(const alias of manifest.redirects || [])aliases.set(alias.route,manifest.entries.find(e=>e.id===alias.id));
+    for(const [pathname,entry]of aliases){
+      const relative=pathname.slice(1)+(pathname.endsWith('.html')?'':'index.html'),file=path.join(output,relative);counts.aliases++;
+      if(!fs.existsSync(file)){errors.push({route:pathname,kind:'missingAlias'});continue;}
+      const raw=fs.readFileSync(file,'utf8');let runtime;walk(parse(raw),n=>{if(n.tagName==='script'&&attrs(n)['data-site-language']!==undefined)runtime=JSON.parse(n.childNodes.map(c=>c.value || '').join(''))});
+      const explicit=pathname.match(/^\/docs\/([^/]+)\//)?.[1],expectedLocale=config.languages.some(l=>l.code===explicit)?explicit:null;
+      if(runtime?.redirect?.pathname!==pathname || runtime.redirect.locale!==expectedLocale || runtime.primary!==config.primary || runtime.fallback!==config.fallback || JSON.stringify(runtime.languages)!==JSON.stringify(config.languages) || /location\.replace|http-equiv=["']refresh/i.test(raw))errors.push({route:pathname,kind:'aliasRuntime'});
+      for(const {code}of config.languages){
+        const target=entry?localeRoute(entry,code):'/'+code+'/';
+        if(runtime?.urls?.[code]!==target || target===pathname || !pageIDs.has(target))errors.push({route:pathname,kind:'aliasTarget',code});
+        for(const id of Object.values(runtime?.anchors?.[code] || {}))if(!pageIDs.get(target)?.has(id))errors.push({route:pathname,kind:'aliasAnchor',code,id});
+      }
     }
   }
   return {counts,errors};

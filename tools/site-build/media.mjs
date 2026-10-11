@@ -1,51 +1,20 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
-import {pathToFileURL} from 'node:url';
 import {attrs,walk,extractTemplate} from './extract-dom.mjs';
-import {readSource,hash,boundedPath} from './build.mjs';
+import {hash,boundedPath} from './build.mjs';
 const require=createRequire(new URL('../content-import/package.json',import.meta.url));
 const {parse}=require('parse5');
-const {createMarkdownProcessor}=await import(pathToFileURL(require.resolve('@astrojs/markdown-remark')));
-export async function mapMedia(entry,{vault,site}) {
-  const source=readSource(vault,entry.locales.zh.source,'来源'),images=[];
-  let currentAbs=source.abs;
-  const collector=()=>tree=>{
-    let sectionId='';
-    const visit=node=>{
-      if(node.type==='heading') sectionId=(node.children || []).map(x=>x.value || '').join('');
-      if(node.type==='image')images.push({source:node.url,sectionId,sourceAbs:currentAbs});
-      for(const child of node.children || [])visit(child);
-    };visit(tree);
-  };
-  const processor=await createMarkdownProcessor({syntaxHighlight:false,remarkPlugins:[collector]});
-  await processor.render(source.body);
-  for(const relative of entry.supplementSources || []) {
-    const supplement=readSource(vault,relative,'补充来源'); currentAbs=supplement.abs;
-    await processor.render(supplement.body);
-  }
-  const baselinePath=entry.baselineTemplate || entry.template;
-  const html=fs.readFileSync(boundedPath(site,baselinePath),'utf8'),doc=parse(html,{sourceCodeLocationInfo:true}),nodes=[];
-  walk(doc,node=>{
-    const classes=(attrs(node).class || '').split(/\s+/);
-    if(node.tagName==='figure' && classes.some(c=>['media-figure','media-withheld'].includes(c)))nodes.push(node);
-    if(node.tagName==='p' && node.childNodes?.some(n=>n.tagName==='a' && (attrs(n).class || '').split(/\s+/).includes('media-image-trigger')))nodes.push(node);
-  });
-  if(images.length!==nodes.length)throw new Error(`媒体DOM/AST不能唯一配对: ${entry.id} source=${images.length},DOM=${nodes.length}`);
-  return images.map((image,i)=>{
-    const node=nodes[i],publicURLs=[];
-    walk(node,n=>{if(n.tagName==='img' && attrs(n).src)publicURLs.push(attrs(n).src);});
-    const withheld=(attrs(node).class || '').split(/\s+/).includes('media-withheld');
-    if(!withheld && (publicURLs.length<1 || new Set(publicURLs).size!==1))throw new Error('公开媒体地址不唯一: '+entry.id+' '+(i+1));
-    const ref=(entry.sourceMediaReferences || []).find(r=>decodeURIComponent(r.source)===decodeURIComponent(image.source));
-    const vaultPath=ref?.vaultPath || (image.source.startsWith('/') ? image.source.slice(1) : path.relative(vault,path.resolve(path.dirname(image.sourceAbs),decodeURIComponent(image.source))).replaceAll('\\','/'));
-    const sourceBytes=fs.readFileSync(boundedPath(vault,vaultPath,'媒体'));
-    const websiteUrl=withheld?undefined:publicURLs[0];
-    const sourceSha256=hash(sourceBytes),publicSha256=websiteUrl?hash(fs.readFileSync(boundedPath(site,websiteUrl.slice(1),'媒体'))):undefined;
-    if(publicSha256 && publicSha256!==sourceSha256)throw new Error('公开媒体hash漂移: '+entry.id+' '+(i+1));
-    const markup=html.slice(node.sourceCodeLocation.startOffset,node.sourceCodeLocation.endOffset);
-    const scaffold=extractTemplate('<html><body>'+markup+'</body></html>');
-    return {id:entry.id+':media:'+(i+1),ordinal:i+1,source:image.source,sectionId:image.sectionId,vaultPath,sourceSha256,state:withheld?'withheld':'public',websiteUrl,publicSha256,baselineNodeSha256:hash(markup),scaffold:scaffold.template.replace(/^.*?<body>|<\/body>[\s\S]*$/g,''),slots:scaffold.slots};
+export function mapMedia(entry,{site}) {
+  return (entry.mediaOccurrences || []).map((record,index)=>{
+    if(record.id!==entry.id+':media:'+(index+1)||record.ordinal!==index+1||!['withheld','public'].includes(record.state))throw new Error('媒体occurrence身份不符');
+    if(Object.keys(record).some(k=>!['id','ordinal','state','websiteUrl','publicSha256','utilityId'].includes(k)))throw new Error('公开媒体清单含私有字段');
+    if(record.state==='withheld'&&(record.websiteUrl||record.publicSha256))throw new Error('隐藏媒体权限无效');
+    if(record.state==='public'){
+      if(!/^\/(?:assets|media|_astro)\//.test(record.websiteUrl||'')||/[?#]|\/\.\.\//.test(record.websiteUrl))throw new Error('公开媒体地址越界');
+      if(hash(fs.readFileSync(boundedPath(site,decodeURIComponent(record.websiteUrl.slice(1)),'媒体')))!==record.publicSha256)throw new Error('公开媒体hash漂移');
+    }
+    return record;
   });
 }
 export function exportBodyUtilities(manifest,site,output) {

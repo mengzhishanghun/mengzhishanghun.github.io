@@ -1,0 +1,205 @@
+---
+title: SimpleAssetCleaner 使用文档
+description: SimpleAssetCleaner 的完整中文产品使用文档
+type: doc
+slug: simple-asset-cleaner-guide
+categoryId: ue-plugins
+categoryName: UE插件
+categoryOrder: 0
+draft: false
+sitePublish: true
+tags:
+  - 资产管理
+  - 引用分析
+workIds:
+  - simple-asset-cleaner
+documentKind: product-manual
+websiteRoute: /docs/zh/guides/ue-tools/simple-asset-cleaner-guide/
+lang: zh
+translationKey: simple-asset-cleaner-guide
+supplementSources:
+  - zh/supplements/simple-asset-cleaner-guide-1.md
+---
+
+# SimpleAssetCleaner 插件教程
+
+**SimpleAssetCleaner** 自动识别并移除 Unreal Engine 项目中未被引用的资产，保持仓库整洁。
+
+> **重要**：此插件可以从版本控制中删除资产。使用前请仔细阅读。
+
+**兼容性**：Unreal Engine 5.2–5.8
+
+---
+
+## 清理范围
+
+### 仅项目内容
+- **仅限**项目 `/Content/` 文件夹中的资产（`/Game/` 路径）
+
+### 不会触及
+- 插件资产（如 `/PluginName/Content/`）
+- 引擎资产
+- 代码文件（C++ 头文件/源文件）
+- `/Content/` 外部的引用
+
+---
+
+## 工作原理
+
+插件使用**引用链分析**：
+
+1. **根资产** - 始终视为"使用中"（地图、蓝图、数据资产等）
+2. **引用链** - 被根资产直接或间接引用的资产视为"使用中"
+3. **未引用资产** - 无法从任何根资产到达的资产将被清理
+
+### 提交时自动清理（推荐）
+
+- 打开版本控制提交对话框时触发
+- 仅检查新添加的文件
+- 将未引用的文件从版本控制中还原
+- **本地副本安全** - 不会从磁盘删除
+
+---
+
+## 提交时自动添加未控制依赖
+
+当提交 changelist 时，插件会自动检测当前待提交资产的依赖关系。如果发现依赖的文件尚未纳入版本控制，将弹窗列出这些文件，用户可通过复选框勾选需要添加的依赖，确认后自动添加到版本控制。
+
+- **触发时机**：提交 changelist 时自动执行
+- **检测内容**：待提交资产所依赖的、尚未纳入版本控制的文件
+- **操作方式**：弹窗显示未控制依赖列表，用户勾选确认后添加
+- **开关控制**：可在设置中通过"Enable Auto Add Dependencies / 启用自动添加依赖"开关控制是否启用
+
+---
+
+## 右键菜单
+
+在 Content Browser 中右键文件夹或资产，选择 **Simple Asset Cleaner** 子菜单，可使用以下功能：
+
+### 清理未引用资产
+
+扫描选中范围内的资产，弹窗显示未引用资产列表（带复选框），用户勾选确认后执行清理。
+
+- 支持选中单个/多个文件或文件夹
+- 新添加的文件：还原（本地保留）
+- 已跟踪的文件：**从服务器和本地删除**
+
+### 添加未控制依赖
+
+检查选中资产的依赖关系，找出未纳入版本控制的文件，弹窗列出后由用户确认添加。
+
+- 支持选中单个/多个文件或文件夹
+
+> 右键菜单可对选中范围进行精确操作，适合日常开发中对特定目录或资产执行清理和依赖检查。
+
+---
+
+## 配置
+
+**位置**：编辑器 > 项目设置 > General > Simple Asset Cleaner
+
+![](/media-occurrence/doc%3Asimple-asset-cleaner-guide%3Amedia%3A1)
+
+### 版本控制提供者（重要！）
+
+插件会自动将你的版本控制提供者包装为代理以监控提交。
+
+![](/media-occurrence/doc%3Asimple-asset-cleaner-guide%3Amedia%3A2)
+
+**不要手动选择代理提供者！**
+- 始终选择你实际的版本控制提供者（Perforce、Git、SVN 等）
+- 插件会在后台自动包装
+- 直接选择代理可能导致问题
+
+**正确设置**：
+- 使用：`Perforce`、`Git`、`Subversion` 等
+- 避免：`Perforce_Proxy`、`Git_Proxy` 或任何以 `_Proxy` 结尾的提供者
+
+### 通用设置
+
+#### Enable Auto Clean / 启用自动清理
+- **默认**：开启
+- **功能**：提交前检查引用
+- **行为**：还原未引用的新添加文件（本地文件安全）
+- **建议**：日常使用保持开启
+
+#### Enable Auto Add Dependencies / 启用自动添加依赖
+- **默认**：开启
+- **功能**：提交时自动检测未纳入版本控制的依赖文件
+- **行为**：弹窗列出未控制依赖，用户勾选确认后添加
+- **建议**：日常使用保持开启，避免遗漏依赖导致其他成员构建失败
+
+#### Language / 语言
+- **默认**：English
+- **选项**：中文 / English
+- **功能**：切换所有 UI 文本和日志语言
+- **行为**：修改后实时生效，无需重启编辑器
+
+#### Enable Verbose Logging / 启用详细日志
+- **默认**：关闭
+- **功能**：用于调试的详细日志
+- **建议**：仅在排查问题时开启
+
+### 根资产配置
+
+#### Root Asset Classes
+- **默认**：`UWorld`（地图文件）
+- **功能**：这些类型的资产（包括父类/派生类）被视为根
+- **示例**：
+  - `UWorld` - 地图（.umap）及派生类型
+  - `UDataAsset` - 数据资产及派生类型
+- **注意**：自动包含父类和所有派生类
+
+#### Custom Root Assets
+- **功能**：手动指定个别资产为根
+- **示例**：`/Game/Core/GameMode.GameMode`
+- **用途**：Root Asset Classes 未涵盖的关键资产
+
+#### Additional Root Paths
+- **功能**：这些路径下的所有资产都视为根
+- **示例**：`/Game/Essential/`、`/Game/Core/`
+- **用途**：保护整个系统文件夹不被清理
+
+---
+
+## 重要说明
+
+### 操作行为对比
+
+| 资产状态 | 提交时自动清理 | 右键"清理未引用资产" |
+|---------|--------------|-------------------|
+| 新添加 | 还原，**本地保留** | 还原，**本地保留** |
+| 已跟踪 | 不处理 | **删除（服务器 + 本地）** |
+
+### 自动添加依赖
+
+| 依赖状态 | 处理方式 |
+|---------|---------|
+| 已纳入版本控制 | 无需处理 |
+| 未纳入版本控制 | 在确认对话框中列出，由用户选择需要添加的文件 |
+
+---
+
+## 版本历史
+
+参见 [CHANGELOG.md](../CHANGELOG.md)。
+
+## 支持
+
+**报告问题时请提供**：
+- Unreal Engine 版本
+- 版本控制系统（Perforce/Git/SVN）
+- 插件设置截图
+- 日志输出（启用详细日志后）
+
+---
+
+**兼容性**：Unreal Engine 5.2–5.8 | 已在 Windows 上测试，理论上支持所有平台
+
+**记住**：从保守开始。你可以随时删除资产，但恢复需要版本控制历史！
+
+## 联系方式
+
+如有使用问题或合作需求，请前往联系页面。
+
+- **联系入口：** [联系与合作](https://mzsh.me/contact/)
