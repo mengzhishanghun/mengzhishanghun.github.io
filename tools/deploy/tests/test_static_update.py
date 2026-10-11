@@ -1,4 +1,5 @@
 """隔离部署门禁测试：仅使用临时目录与受控 HTTP/API 响应。"""
+import base64
 import importlib.util
 import json
 import os
@@ -39,20 +40,23 @@ def fixture(m, files=895, html=328, config=None):
     return entries, bodies
 
 
-def fake_api(entries):
+def fake_api(entries, bodies, blob_override=None):
     def api(path):
         if path.startswith('/git/commits/'):
             return {'sha': path.rsplit('/', 1)[1], 'tree': {'sha': TREE_SHA}}
         if path == '/git/trees/' + TREE_SHA + '?recursive=1':
             return {'sha': TREE_SHA, 'truncated': False, 'tree': entries}
+        item = next((e for e in entries if e['path'] == 'site-languages.json'), None)
+        if item and path == '/git/blobs/' + item['sha']:
+            return blob_override if blob_override is not None else {
+                'sha': item['sha'], 'size': len(bodies['site-languages.json']),
+                'encoding': 'base64', 'content': base64.b64encode(bodies['site-languages.json']).decode('ascii')}
         raise AssertionError('Unexpected API: ' + path)
     return api
 
 
 def fake_request(m, bodies):
     def request(url, **kwargs):
-        if url.endswith('/site-languages.json'):
-            return bodies['site-languages.json']
         if url.startswith(m.PAGES):
             return bodies[url[len(m.PAGES):]]
         raise AssertionError('Unexpected request: ' + url)
@@ -65,7 +69,7 @@ class PublicTreeTests(unittest.TestCase):
         self.entries, self.bodies = fixture(self.m)
 
     def tree(self, entries=None, bodies=None, **kwargs):
-        with patch.object(self.m, 'api', fake_api(entries or self.entries)), \
+        with patch.object(self.m, 'api', fake_api(entries or self.entries, bodies or self.bodies, kwargs.pop('blob', None))), \
              patch.object(self.m, 'request', fake_request(self.m, bodies or self.bodies)):
             return self.m.tree_for(kwargs.pop('sha', SHA), **kwargs)
 
@@ -112,6 +116,31 @@ class PublicTreeTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.tree(entries, bodies)
 
+    def registry_blob(self):
+        body = self.bodies['site-languages.json']
+        return {'sha': self.m.git_blob_hash(body), 'size': len(body), 'encoding': 'base64',
+                'content': base64.b64encode(body).decode('ascii')}
+
+    def test_registry_api_blob_accepts_crlf_wrapping_without_raw_request(self):
+        blob = self.registry_blob()
+        blob['content'] = '\r\n'.join(blob['content'][i:i+60] for i in range(0, len(blob['content']), 60)) + '\n'
+        self.assertEqual(len(self.tree(blob=blob)), 895)
+
+    def test_registry_api_blob_rejects_invalid_fields_and_encoding(self):
+        for change in [{'encoding': 'utf-8'}, {'sha': 'c' * 40}, {'size': True},
+                       {'size': 0}, {'content': None}, {'content': '!!!!'},
+                       {'content': 'e30= '}, {'content': 'é'},
+                       {'content': 'A' * 90_000}, {'content': 'e30='},
+                       {'content': base64.b64encode(b'x' * len(self.bodies['site-languages.json'])).decode('ascii')},
+                       {'content': base64.b64encode(b'x' * 64_001).decode('ascii')}]:
+            with self.subTest(change=change), self.assertRaises(ValueError):
+                self.tree(blob={**self.registry_blob(), **change})
+
+    def test_registry_api_blob_rejects_non_object_or_missing_fields(self):
+        for blob in [[], {}, {'sha': self.registry_blob()['sha']}]:
+            with self.subTest(blob=blob), self.assertRaises(ValueError):
+                self.tree(blob=blob)
+
     def test_public_unsafe_path_symlink_type_or_size_is_rejected(self):
         for change in [{'path': 'assets/../secret.txt'}, {'path': 'assets//bad.txt'},
                        {'path': 'assets\\bad.txt'}, {'mode': '120000'},
@@ -154,7 +183,7 @@ class DeploymentTests(unittest.TestCase):
                         patch.object(self.m, 'branch_sha', return_value=SHA),
                         patch.object(self.m, 'state_read', side_effect=lambda: dict(self.state)),
                         patch.object(self.m, 'state_write', side_effect=lambda s: self.state.update(s)),
-                        patch.object(self.m, 'api', fake_api(self.entries)),
+                        patch.object(self.m, 'api', fake_api(self.entries, self.bodies)),
                         patch.object(self.m, 'request', fake_request(self.m, self.bodies)),
                         patch.object(self.m, 'archive_read', return_value={'version': 1, 'files': {}}),
                         patch.object(self.m, 'archive_write'), patch.object(self.m, 'subprocess')]

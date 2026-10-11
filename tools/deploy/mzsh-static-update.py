@@ -2,6 +2,8 @@
 """Update mzsh.me from matching public GitHub refs and verified Pages bytes."""
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path, PurePosixPath
+import base64
+import binascii
 import hashlib
 import json
 import os
@@ -312,8 +314,23 @@ def tree_for(sha, *, history=False):
         item = registry_items[0]
         if not validate_public_item(item) or item['size'] > REGISTRY_LIMIT:
             raise ValueError('invalid language registry blob')
-        body = request(f'https://raw.githubusercontent.com/{REPO}/{sha}/site-languages.json',
-                       limit=REGISTRY_LIMIT)
+        blob = api('/git/blobs/' + item['sha'])
+        if (not isinstance(blob, dict) or blob.get('sha') != item['sha']
+                or type(blob.get('size')) is not int or blob['size'] != item['size']
+                or blob.get('encoding') != 'base64' or not isinstance(blob.get('content'), str)):
+            raise ValueError('invalid language registry API blob')
+        encoded_limit = 4 * ((REGISTRY_LIMIT + 2) // 3)
+        if len(blob['content']) > encoded_limit * 2:
+            raise ValueError('language registry encoded size limit exceeded')
+        content = blob['content'].replace('\r', '').replace('\n', '')
+        if len(content) > encoded_limit:
+            raise ValueError('language registry encoded size limit exceeded')
+        try:
+            body = base64.b64decode(content.encode('ascii'), validate=True)
+        except (UnicodeError, binascii.Error) as exc:
+            raise ValueError('language registry is not strict ASCII base64') from exc
+        if len(body) > REGISTRY_LIMIT:
+            raise ValueError('language registry decoded size limit exceeded')
         if len(body) != item['size'] or git_blob_hash(body) != item['sha']:
             raise ValueError('language registry differs from commit blob')
         try:

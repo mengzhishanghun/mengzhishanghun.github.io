@@ -10,7 +10,7 @@
 sudo -n python3 /usr/local/libexec/mzsh-static-update.py --check
 ```
 
-`--preflight` 与 `--check` 等价。检查要求 `main` 与 `production-static` 指向同一提交，读取该提交的 Git tree，并校验同提交 `site-languages.json` 的 Git blob 大小和摘要。随后检查公开白名单及 GitHub Pages 上每个发布文件的字节；`.nojekyll` 仅参与清单校验，不下载或复制到发布目录。只读模式不写状态、不补充历史资产、不创建发布目录、不切换指针、不重载 Caddy。
+`--preflight` 与 `--check` 等价。检查要求 `main` 与 `production-static` 指向同一提交，读取该提交的 Git tree，并仅通过该 tree 指定 SHA 的 Git Blob API 取得 `site-languages.json`；校验 API SHA、整数大小、严格 ASCII base64（仅去除 CR/LF）、解码容量与 Git blob 摘要，再解析 UTF-8 JSON 和公开 schema，不跟随返回 URL，也不回退到 raw 域名。解码上限为 64,000 字节，对应 base64 长度上限 85,336 字符，含换行的原字符串另受两倍该长度限制。随后检查公开白名单及 GitHub Pages 上每个发布文件的字节；`.nojekyll` 仅参与清单校验，不下载或复制到发布目录。只读模式不写状态、不补充历史资产、不创建发布目录、不切换指针、不重载 Caddy。
 
 正常更新仍由现有服务调用不带参数的入口。`--repair-current` 和 `--refresh-current` 保留既有历史资产修复行为，属于写入模式，不用于普通预检。三次失败的同一提交继续保持熔断，检查不会清零失败记录。
 
