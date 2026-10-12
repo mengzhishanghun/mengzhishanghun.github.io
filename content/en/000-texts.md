@@ -442,8 +442,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: "Local Images in Markdown: What Should You Do When Publishing?"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -1718,53 +1716,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: A One-Click Fix for MetaHuman Head Clipping During Animation
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  blog:markdown-images:
-    root.html:1.head:0.meta:2@content: Relative paths, separate image files, and Base64 embedding each suit different scenarios. Check the target platform before choosing an export method.
-    root.html:1.head:0.title:4.#text:0: "Local Images in Markdown: What Should You Do When Publishing? · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Essays
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Local Images in Markdown: What Should You Do When Publishing?"
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Relative paths, separate image files, and Base64 embedding each suit different scenarios. Check the target platform before choosing an export method.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Letting AI Modify DataAssets Directly
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -4902,8 +4853,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:1.#text:0: "1"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:0.#text:0: Perforce
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:1.#text:0: "7"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:4.span:0.#text:0: Essays
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:4.span:1.#text:0: "1"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1@aria-label: Content list
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:0.label:0.#text:0: Search this category
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:0.input:1@placeholder: Separate multiple keywords with spaces
@@ -4911,12 +4860,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:0.span:0.#text:0: Tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:0.button:1.#text:0: Clear filters
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:1@aria-label: Filter by tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0@aria-label: "Local Images in Markdown: What Should You Do When Publishing?"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:0.h2:0.#text:0: "Local Images in Markdown: What Should You Do When Publishing?"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:0.p:1.#text:0: Relative paths, separate image files, and Base64 embedding each suit different scenarios. Check the target platform before choosing an export method.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:0@aria-label: Article tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:0.span:0.#text:0: Markdown
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:0.span:1.#text:0: Writing Tools
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: Letting AI Modify DataAssets Directly
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.h2:0.#text:0: Letting AI Modify DataAssets Directly
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.p:1.#text:0: Format selection, property conversion, trigger loops, and file writes in two-way synchronization between DataAssets and JSON.
@@ -5358,8 +5301,6 @@ scriptSlots:
   blog:cnblogs-19136316:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19136345:root.html:1.body:1.script:5:1187: Bilibili player
   blog:cnblogs-19136345:root.html:1.body:1.script:5:2062: Bilibili player
-  blog:markdown-images:root.html:1.body:1.script:5:1187: Bilibili player
-  blog:markdown-images:root.html:1.body:1.script:5:2062: Bilibili player
   case:driving-simulator-three-screen:root.html:1.body:1.script:5:1187: Bilibili player
   case:driving-simulator-three-screen:root.html:1.body:1.script:5:2062: Bilibili player
   case:ai-digital-human-integration:root.html:1.body:1.script:5:1187: Bilibili player
@@ -6944,7 +6885,7 @@ codeLabels:
   copyTitle: Copy to clipboard
   copied: Copied!
 translationKey: site-copy
-sourceHash: 131876dbee422b698f74e3bab54a6f649e1f337b7db983717360fd3e13260fbf
+sourceHash: 347b01f19bbfba73e993be1bd14e95becfe18fbd83126a44a516177d2a517f28
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

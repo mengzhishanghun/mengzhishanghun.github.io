@@ -9,7 +9,7 @@ node tools/content-import/import.mjs --vault "中文笔记库路径"
 node tools/site-build/build.mjs --output "临时输出目录"
 ```
 
-默认私有同步配置为项目本机文件 `tools/content-import/000-sync.local`，也可通过 `--sync "配置文件路径"` 显式指定；配置缺失时拒绝，不回退读取 Obsidian。该文件受现有 `*.local` 忽略规则保护，禁止提交。配置保存 104 项中文原稿映射及对应完整外语审核指纹、逐次媒体授权与公开快照指纹，只在本机使用，不随仓库分发。
+默认私有同步配置为项目本机文件 `tools/content-import/000-sync.local`，也可通过 `--sync "配置文件路径"` 显式指定；配置缺失时拒绝，不回退读取 Obsidian。该文件受现有 `*.local` 忽略规则保护，禁止提交。配置保存 103 项中文原稿映射及对应完整外语审核指纹、逐次媒体授权与公开快照指纹，只在本机使用，不随仓库分发。
 
 页面位于 `content/zh/000-页面/` 和 `content/en/000-pages/`，各语言公共文案为 `content/{语言}/000-texts.md`。页面与公共文案不属于笔记库导入范围，旧 `page`、`common` 记录会在写入前拒绝。导入只投影前台必需字段，隐藏图片改为稳定标识，不复制隐藏附件或私人图片描述；共享公开媒体继续使用仓库已有文件。
 

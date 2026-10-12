@@ -20,9 +20,9 @@ coverAlt: Flowchart for publishing Markdown images together with an article
 websiteCoverUrl: /assets/cases/markdown-publishing.png
 lang: en
 translationKey: markdown-publishing
-sourceHash: 90a169d17e04bc16781b9d70b76295ab75dfbf2425188cd6daae92f8bec91aa0
+sourceHash: 313627d37c40f68712c7c0cfe57bbdbef6ac189ec3da8bbe575d6361d8d3b8d5
 translationStatus: translated
-generatedBodyHash: ee7a0fe899c464a5eec55a1f0dfd874272ba87ad17501de4d4b48c19eeaa8a26
+generatedBodyHash: 4781dc139e15c1b992a7a78515a9a51c3a69d997ef290718d11cb9ddacbffa41
 ---
 
 ## Background
@@ -43,7 +43,7 @@ A local computer's ability to resolve a relative path does not mean the target p
 
 ## Solution
 
-Before selecting an export method, it is necessary to distinguish the appropriate uses of separate images, remote URLs, and Base64 embedding. A site that can manage its own assets may need a different approach from an editor that only accepts pasted content. For guidance on choosing an image publishing method, [read the image publishing approach details](https://mzsh.me/blog/markdown-images/).
+Before selecting an export method, it is necessary to distinguish the appropriate uses of separate images, remote URLs, and Base64 embedding. A site that can manage its own assets may need a different approach from an editor that only accepts pasted content. For guidance on choosing an image publishing method, [read the image publishing approach details](/en/works/md-blog-packer/).
 
 MDBlogPacker recognizes standard Markdown image syntax and Wiki image references, reads local images, and converts them into Base64 embedded format. Remote images and images already embedded remain unchanged.
 

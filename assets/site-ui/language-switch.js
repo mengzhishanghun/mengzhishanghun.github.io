@@ -99,9 +99,9 @@
     if (!data) return;
     const explicit = currentLocale(window.location.pathname, data);
     const redirect = data.redirect || (data.root === true ? { pathname: '/', locale: null } : null);
-    if (redirect && window.location.pathname === redirect.pathname && !explicit) {
+    if (redirect && window.location.pathname === redirect.pathname) {
       const languages = enabledLanguages(data);
-      const locale = languages.some((language) => language.code === redirect.locale) ? redirect.locale : preferredLocale(data);
+      const locale = explicit || (languages.some((language) => language.code === redirect.locale) ? redirect.locale : preferredLocale(data));
       const target = targetUrl(data, locale, window.location.href);
       if (target && new URL(target).pathname !== window.location.pathname) window.location.replace(target);
       return;

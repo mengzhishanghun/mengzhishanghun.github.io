@@ -1306,20 +1306,6 @@
       "mediaOccurrences": []
     },
     {
-      "id": "blog:markdown-images",
-      "type": "blog",
-      "slug": "markdown-images",
-      "legacyRoutes": [
-        "/blog/markdown-images/"
-      ],
-      "template": "blog--markdown-images.html",
-      "title": "Markdown 本地图片，发布时该怎么处理？",
-      "translationKey": "markdown-images",
-      "baselineTemplate": "blog/markdown-images/index.html",
-      "supplementTranslationKeys": [],
-      "mediaOccurrences": []
-    },
-    {
       "id": "case:driving-simulator-three-screen",
       "type": "case",
       "slug": "driving-simulator-three-screen",
@@ -3096,6 +3082,60 @@
       "route": "/works/six-dof-motion-platform/",
       "id": "case:six-dof-motion-platform",
       "locale": "zh"
+    },
+    {
+      "route": "/blog/markdown-images/",
+      "id": "work:md-blog-packer",
+      "anchorOverrides": {
+        "zh": {
+          "自己的网站保留独立图片": "适用范围与边界",
+          "复制到其他平台检查图片接收方式": "适用范围与边界",
+          "mdblogpacker-适合放在哪一步": "适用场景",
+          "发布前的简短检查": "适用范围与边界"
+        },
+        "en": {
+          "自己的网站保留独立图片": "scope-and-limitations",
+          "复制到其他平台检查图片接收方式": "scope-and-limitations",
+          "mdblogpacker-适合放在哪一步": "use-cases",
+          "发布前的简短检查": "scope-and-limitations"
+        }
+      }
+    },
+    {
+      "route": "/zh/blog/markdown-images/",
+      "id": "work:md-blog-packer",
+      "anchorOverrides": {
+        "zh": {
+          "自己的网站保留独立图片": "适用范围与边界",
+          "复制到其他平台检查图片接收方式": "适用范围与边界",
+          "mdblogpacker-适合放在哪一步": "适用场景",
+          "发布前的简短检查": "适用范围与边界"
+        },
+        "en": {
+          "自己的网站保留独立图片": "scope-and-limitations",
+          "复制到其他平台检查图片接收方式": "scope-and-limitations",
+          "mdblogpacker-适合放在哪一步": "use-cases",
+          "发布前的简短检查": "scope-and-limitations"
+        }
+      }
+    },
+    {
+      "route": "/en/blog/markdown-images/",
+      "id": "work:md-blog-packer",
+      "anchorOverrides": {
+        "zh": {
+          "your-own-website-keep-images-as-separate-files": "适用范围与边界",
+          "copying-to-another-platform-check-how-it-accepts-images": "适用范围与边界",
+          "where-mdblogpacker-fits": "适用场景",
+          "a-short-pre-publication-check": "适用范围与边界"
+        },
+        "en": {
+          "your-own-website-keep-images-as-separate-files": "scope-and-limitations",
+          "copying-to-another-platform-check-how-it-accepts-images": "scope-and-limitations",
+          "where-mdblogpacker-fits": "use-cases",
+          "a-short-pre-publication-check": "scope-and-limitations"
+        }
+      }
     }
   ]
 }

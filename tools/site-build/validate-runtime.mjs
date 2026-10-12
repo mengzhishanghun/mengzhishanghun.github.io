@@ -55,12 +55,13 @@ export function validateRuntime({manifest,output,site,languageConfig,validateAli
       const relative=pathname.slice(1)+(pathname.endsWith('.html')?'':'index.html'),file=path.join(output,relative);counts.aliases++;
       if(!fs.existsSync(file)){errors.push({route:pathname,kind:'missingAlias'});continue;}
       const raw=fs.readFileSync(file,'utf8');let runtime;walk(parse(raw),n=>{if(n.tagName==='script'&&attrs(n)['data-site-language']!==undefined)runtime=JSON.parse(n.childNodes.map(c=>c.value || '').join(''))});
-      const explicit=pathname.match(/^\/docs\/([^/]+)\//)?.[1],expectedLocale=config.languages.some(l=>l.code===explicit)?explicit:null;
+      const explicit=pathname.match(/^\/docs\/([^/]+)\//)?.[1] || pathname.split('/')[1],expectedLocale=config.languages.some(l=>l.code===explicit)?explicit:null;
       if(runtime?.redirect?.pathname!==pathname || runtime.redirect.locale!==expectedLocale || runtime.primary!==config.primary || runtime.fallback!==config.fallback || JSON.stringify(runtime.languages)!==JSON.stringify(config.languages) || /location\.replace|http-equiv=["']refresh/i.test(raw))errors.push({route:pathname,kind:'aliasRuntime'});
       for(const {code}of config.languages){
         const target=entry?localeRoute(entry,code):'/'+code+'/';
         if(runtime?.urls?.[code]!==target || target===pathname || !pageIDs.has(target))errors.push({route:pathname,kind:'aliasTarget',code});
         for(const id of Object.values(runtime?.anchors?.[code] || {}))if(!pageIDs.get(target)?.has(id))errors.push({route:pathname,kind:'aliasAnchor',code,id});
+        for(const [oldId,newId]of Object.entries(manifest.redirects?.find(alias=>alias.route===pathname)?.anchorOverrides?.[code] || {}))if(runtime?.anchors?.[code]?.[oldId]!==newId)errors.push({route:pathname,kind:'aliasAnchorOverride',code,oldId,newId});
       }
     }
   }

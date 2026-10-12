@@ -20,7 +20,7 @@ node tools/content-import/test-cases.mjs
 
 ## 语言和翻译
 
-`content/000-languages.md` 设置 `version: 1`、`primary`、`fallback` 与按显示顺序排列的 `languages`。每项包含 `root`、`enabled`、`commonSource`、`sources`；来源映射使用固定内容 ID 和语言目录内相对路径。当前 101 个实体各有两种语言，另有 10 个补充稿及各语言公共文案。
+`content/000-languages.md` 设置 `version: 1`、`primary`、`fallback` 与按显示顺序排列的 `languages`。每项包含 `root`、`enabled`、`commonSource`、`sources`；来源映射使用固定内容 ID 和语言目录内相对路径。当前 100 个实体各有两种语言，另有 10 个补充稿及各语言公共文案。
 
 每个语言目录的 `000-texts.md` 是该语言元数据与公共文案的唯一来源。`language` 包含 `code`、`label`、`htmlLang`、`searchLanguage`、`browserTags`；`languageLabels` 包含 `group` 和带 `{language}` 的 `switchAria`。浏览器规则使用完整标签或末尾 `-*`，例如 `[en, en-*]`；不同语言不能重叠。新增语言需要全部真实译文、来源映射及公共槽，无需改网站代码，隔离测试的第三语言不进入正式内容。
 
@@ -35,5 +35,7 @@ node tools/content-import/test-cases.mjs
 公开正文图片使用稳定 occurrence 标识。每次出现的 `ordinal` 与 `state` 独立验证，只有公开记录携带获准 URL 和二进制摘要；隐藏记录只生成占位，不保留原路径、图片 alt、标题或附件。相同图片另一处已公开也不会改变隐藏 occurrence 的权限。原 CSS、原 `_astro` 和已登记媒体字节不被改写；历史文案脚本与 Pagefind 哈希产物保留以兼容缓存页面。
 
 明确语言正文网址保持其语言。已登记的无语言入口按有效手选、浏览器规则、`fallback` 选择语言；历史明确语言文档入口保留该语言。入口只携带真实目标路由，保留查询参数，并按已验证章节映射转换锚点；未知锚点保留。没有 JavaScript 时保留可点击的默认语言链接，不猜测未登记路径。
+
+对外分享使用已登记的无语言入口，例如 `/works/md-blog-packer/`，由访问者的语言规则选择版本。合并文章后可在 `manifest.redirects` 登记旧 `route` 和目标内容 `id`；可选 `anchorOverrides` 按目标语言保存旧章节 ID 到新章节 ID 的映射，目标必须唯一存在。显式语言旧地址仍保持其语言，通用旧地址继续自动选择语言。
 
 `validate-runtime.mjs` 检查实际语言映射、锚点、公开引用、脚本语法、作品顺序和代码框。`validate.mjs` 是旧模板迁移诊断工具，正式旧路由已成为入口页，不再作为当前构建验收。

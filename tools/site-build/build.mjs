@@ -417,14 +417,25 @@ export async function buildSite(options) {
     const ids=new Map();walk(parse(files.get(routeFile(localeRoute(entry,code))).toString()),node=>{const id=attrs(node).id;if(id)ids.set(id,(ids.get(id)||0)+1)});
     aliasPageIDs.set(entry.id+':'+code,ids);
   }
-  for(const [pathname,{entry}]of aliases) {
-    const oldCode=pathname.match(/^\/docs\/([^/]+)\//)?.[1],explicitLocale=codes.includes(oldCode)?oldCode:null;
+  for(const [pathname,{entry,anchorOverrides}]of aliases) {
+    const oldCode=pathname.match(/^\/docs\/([^/]+)\//)?.[1] || pathname.split('/')[1],explicitLocale=codes.includes(oldCode)?oldCode:null;
     const source=rendered.get(entry.id+':'+(explicitLocale || primary)).headings,anchors={};
     for(const code of codes){const target=rendered.get(entry.id+':'+code).headings,map={};
       if(source.length!==target.length)throw new Error('旧链章节映射歧义');
       const sourceIDs=aliasPageIDs.get(entry.id+':'+(explicitLocale || primary)),targetIDs=aliasPageIDs.get(entry.id+':'+code);
       source.forEach((h,i)=>{if(!sourceIDs.has(h.slug))return;if(sourceIDs.get(h.slug)!==1 || targetIDs.get(target[i].slug)!==1 || (map[h.slug] && map[h.slug]!==target[i].slug))throw new Error('旧链章节映射缺失或歧义');map[h.slug]=target[i].slug});anchors[code]=map;
       const url=localeRoute(entry,code);if(!files.has(routeFile(url)) || url===pathname)throw new Error('旧链目标缺失或循环');
+    }
+    if(anchorOverrides!==undefined){
+      const object=value=>value!==null&&typeof value==='object'&&!Array.isArray(value);
+      if(!object(anchorOverrides))throw new Error('旧链锚点覆盖配置无效');
+      for(const [code,map]of Object.entries(anchorOverrides)){
+        if(!codes.includes(code)||!object(map))throw new Error('旧链锚点覆盖语言或映射无效');
+        for(const [oldId,newId]of Object.entries(map)){
+          if(!oldId.trim()||typeof newId!=='string'||!newId.trim()||aliasPageIDs.get(entry.id+':'+code).get(newId)!==1)throw new Error('旧链锚点覆盖目标缺失或歧义');
+          anchors[code][oldId]=newId;
+        }
+      }
     }
     files.set(routeFile(pathname),Buffer.from(redirect({pathname,entry,explicitLocale,anchors,config,labels:copy[explicitLocale || primary].languageLabels})));
   }

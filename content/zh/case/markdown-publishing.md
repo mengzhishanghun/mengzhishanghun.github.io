@@ -40,7 +40,7 @@ translationKey: markdown-publishing
 
 ## 解决方案
 
-选择导出方式前，需要区分独立图片、远程地址与 Base64 内嵌的适用场景。能够自行管理资源的站点与只接受粘贴的编辑器，处理方式可能不同。如何选择图片发布方式，可[查看图片发布方案详情](https://mzsh.me/blog/markdown-images/)。
+选择导出方式前，需要区分独立图片、远程地址与 Base64 内嵌的适用场景。能够自行管理资源的站点与只接受粘贴的编辑器，处理方式可能不同。如何选择图片发布方式，可[查看图片发布方案详情](</zh/works/md-blog-packer/>)。
 
 MDBlogPacker 识别标准 Markdown 图片语法和 Wiki 图片引用，读取本地图片并转换为 Base64 内嵌格式；网络图片与已内嵌图片保留原状。
 

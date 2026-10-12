@@ -442,8 +442,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 笔记上下篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 上一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Markdown 本地图片，发布时该怎么处理？
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: 下一篇
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: 蓝图继承中的组件状态污染与修复思路
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -1718,53 +1716,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 笔记上下篇
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 上一篇
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: 一键解决MetaHuman播放动画时头部穿模问题
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  blog:markdown-images:
-    root.html:1.head:0.meta:2@content: 相对路径、独立图片文件和 Base64 内嵌各有适用场景；先看目标平台，再选择导出方式。
-    root.html:1.head:0.title:4.#text:0: Markdown 本地图片，发布时该怎么处理？ · 小毛
-    root.html:1.head:0.link:7@title: 小毛笔记 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 笔记
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 联系
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 笔记
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 笔记
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: 随笔
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Markdown 本地图片，发布时该怎么处理？
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 相对路径、独立图片文件和 Base64 内嵌各有适用场景；先看目标平台，再选择导出方式。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回笔记列表
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回笔记列表
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 笔记上下篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 下一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: 如何让 AI 直接修改 DataAsset
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -4902,8 +4853,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:1.#text:0: "1"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:0.#text:0: Perforce
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:1.#text:0: "7"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:4.span:0.#text:0: 随笔
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:4.span:1.#text:0: "1"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1@aria-label: 内容列表
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:0.label:0.#text:0: 搜索当前分类
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:0.input:1@placeholder: 输入多个关键词时用空格隔开
@@ -4911,12 +4860,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:0.span:0.#text:0: 标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:0.button:1.#text:0: 清空筛选
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:1@aria-label: 标签筛选
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0@aria-label: Markdown 本地图片，发布时该怎么处理？
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:0.h2:0.#text:0: Markdown 本地图片，发布时该怎么处理？
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:0.p:1.#text:0: 相对路径、独立图片文件和 Base64 内嵌各有适用场景；先看目标平台，再选择导出方式。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:0@aria-label: 文章标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:0.span:0.#text:0: Markdown
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:0.span:1.#text:0: 写作工具
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: 如何让 AI 直接修改 DataAsset
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.h2:0.#text:0: 如何让 AI 直接修改 DataAsset
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.p:1.#text:0: 讨论 DataAsset 与 JSON 双向同步中的格式选择、属性转换、循环触发和文件写入问题。
@@ -5358,8 +5301,6 @@ scriptSlots:
   blog:cnblogs-19136316:root.html:1.body:1.script:5:2062: Bilibili 播放器
   blog:cnblogs-19136345:root.html:1.body:1.script:5:1187: Bilibili 播放器
   blog:cnblogs-19136345:root.html:1.body:1.script:5:2062: Bilibili 播放器
-  blog:markdown-images:root.html:1.body:1.script:5:1187: Bilibili 播放器
-  blog:markdown-images:root.html:1.body:1.script:5:2062: Bilibili 播放器
   case:driving-simulator-three-screen:root.html:1.body:1.script:5:1187: Bilibili 播放器
   case:driving-simulator-three-screen:root.html:1.body:1.script:5:2062: Bilibili 播放器
   case:ai-digital-human-integration:root.html:1.body:1.script:5:1187: Bilibili 播放器

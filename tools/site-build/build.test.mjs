@@ -3,8 +3,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {buildSite,localeRoute,preflight,sourceTags} from './build.mjs';
+import {validateRuntime} from './validate-runtime.mjs';
 const hash = value => createHash('sha256').update(value).digest('hex');
 function fixture(t) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(),'bilingual-build-test-'));
@@ -153,6 +155,38 @@ test('registered aliases carry exact redirect metadata, reachable language URLs 
   assert.equal(read('docs/en/guide').redirect.locale,'en');assert.equal(read('docs/zh/guide').redirect.locale,'zh');
   assert.equal(Object.keys(generic.anchors.fr).length,1);
   for(const url of Object.values(generic.urls))assert.ok(fs.existsSync(path.join(x.output,url.slice(1),'index.html')));
+});
+test('registered leading-locale aliases honor their language and overrides despite opposite stored preference',async t=>{
+  const {x}=threeLanguages(t);x.manifest.redirects=[{route:'/en/old/',id:'page:home',anchorOverrides:{en:{'old-section':'chapter'}}},{route:'/old/',id:'page:home',anchorOverrides:{en:{'旧节':'chapter'}}},{route:'/zh/old/',id:'page:home',anchorOverrides:{zh:{'旧节':'章节'}}}];
+  await buildSite({...x,indexSearch:false});
+  assert.deepEqual(validateRuntime({manifest:x.manifest,site:x.site,output:x.output}).errors.filter(error=>error.kind.startsWith('alias')),[]);
+  for(const [route,fragment,saved,want]of [['/en/old/','old-section','zh','https://example.com/en/?view=full#chapter'],['/old/','旧节','en','https://example.com/en/?view=full#chapter'],['/zh/old/','旧节','en','https://example.com/zh/?view=full#%E7%AB%A0%E8%8A%82']]){
+    const raw=fs.readFileSync(path.join(x.output,route.slice(1),'index.html'),'utf8'),data=JSON.parse(raw.match(/data-site-language>([^<]+)<\/script>/)[1]);
+    assert.equal(data.redirect.locale,route==='/old/'?null:route.split('/')[1]);assert.equal(data.anchors[route==='/zh/old/'?'zh':'en'][fragment],route==='/zh/old/'?'章节':'chapter');
+    const navigations=[],location={href:'https://example.com'+route+'?view=full#'+encodeURIComponent(fragment),pathname:route,replace:url=>navigations.push(url)};
+    const document={readyState:'complete',querySelector:()=>({textContent:JSON.stringify(data)}),querySelectorAll:()=>[],addEventListener:()=>{}};
+    const window={location,localStorage:{getItem:()=>saved}};
+    vm.runInNewContext(fs.readFileSync(new URL('../../assets/site-ui/language-switch.js',import.meta.url),'utf8'),{window,document,navigator:{language:'zh'},URL});
+    assert.deepEqual(navigations,[want]);
+    window.location={...location,href:navigations[0],pathname:new URL(want).pathname};window.SiteLanguage.init();assert.equal(navigations.length,1);
+  }
+  const alias=path.join(x.output,'en/old/index.html');fs.writeFileSync(alias,fs.readFileSync(alias,'utf8').replace('"old-section":"chapter"','"old-section":""'));
+  assert.equal(validateRuntime({manifest:x.manifest,site:x.site,output:x.output}).errors.filter(error=>error.kind==='aliasAnchorOverride').length,1);
+});
+test('alias override rejects a duplicate target ID before publication',async t=>{
+  const {x}=threeLanguages(t),template=path.join(x.templateRoot,'home.html');fs.writeFileSync(template,fs.readFileSync(template,'utf8').replace('<article>','<div id="landing"></div><div id="landing"></div><article>'));
+  x.manifest.redirects=[{route:'/old/',id:'page:home',anchorOverrides:{en:{old:'landing'}}}];await assert.rejects(()=>buildSite({...x,indexSearch:false}),/旧链锚点.*歧义/);assert.deepEqual(fs.readdirSync(x.output),['sentinel']);
+});
+test('explicit alias runtime redirects with query and mapped hash once despite opposite stored preference',()=>{
+  const data={languages:[{code:'zh'},{code:'en'}],urls:{zh:'/zh/works/tool/',en:'/en/works/tool/'},anchors:{en:{old:'use-cases'}},redirect:{pathname:'/en/old/',locale:'en'}};
+  const navigations=[],window={location:{href:'https://example.com/en/old/?a=1#old',pathname:'/en/old/',replace:url=>navigations.push(url)},localStorage:{getItem:()=>'zh'}};
+  const document={readyState:'complete',querySelector:()=>({textContent:JSON.stringify(data)}),querySelectorAll:()=>[],addEventListener:()=>{}};
+  vm.runInNewContext(fs.readFileSync(new URL('../../assets/site-ui/language-switch.js',import.meta.url),'utf8'),{window,document,navigator:{language:'zh'},URL});
+  assert.deepEqual(navigations,['https://example.com/en/works/tool/?a=1#use-cases']);
+  window.location={...window.location,href:navigations[0],pathname:'/en/works/tool/'};window.SiteLanguage.init();assert.equal(navigations.length,1);
+});
+for(const [name,anchorOverrides,expected]of [['disabled locale',{xx:{old:'chapter'}},/旧链锚点/],['non-object map',{en:[]},/旧链锚点/],['empty old ID',{en:{'':'chapter'}},/旧链锚点/],['missing target ID',{en:{old:'missing'}},/旧链锚点/]])test(`alias override rejects ${name} before publication`,async t=>{
+  const {x}=threeLanguages(t);x.manifest.redirects=[{route:'/old/',id:'page:home',anchorOverrides}];await assert.rejects(()=>buildSite({...x,indexSearch:false}),expected);assert.deepEqual(fs.readdirSync(x.output),['sentinel']);
 });
 for(const [name,alias,expected]of [['missing target',{route:'/old/',id:'missing'},/旧链目标缺失/],['cross-domain pathname',{route:'https://example.com/',id:'page:home'},/旧链路径/],['locale loop',{route:'/zh/',id:'page:home'},/旧链覆盖正文/]])test(`alias rejects ${name} before publication`,async t=>{
   const {x}=threeLanguages(t);x.manifest.redirects=[alias];await assert.rejects(()=>buildSite(x),expected);assert.deepEqual(fs.readdirSync(x.output),['sentinel']);

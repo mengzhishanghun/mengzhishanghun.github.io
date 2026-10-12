@@ -42,7 +42,6 @@ languages:
       blog:cnblogs-19165520: blog/cnblogs-19165520.md
       blog:cnblogs-19136316: blog/cnblogs-19136316.md
       blog:cnblogs-19136345: blog/cnblogs-19136345.md
-      blog:markdown-images: blog/markdown-images.md
       case:driving-simulator-three-screen: case/driving-simulator-three-screen.md
       case:ai-digital-human-integration: case/ai-digital-human-integration.md
       case:flying-car-simulator: case/flying-car-simulator.md
@@ -147,7 +146,6 @@ languages:
       blog:cnblogs-19165520: blog/cnblogs-19165520.md
       blog:cnblogs-19136316: blog/cnblogs-19136316.md
       blog:cnblogs-19136345: blog/cnblogs-19136345.md
-      blog:markdown-images: blog/markdown-images.md
       case:driving-simulator-three-screen: case/driving-simulator-three-screen.md
       case:ai-digital-human-integration: case/ai-digital-human-integration.md
       case:flying-car-simulator: case/flying-car-simulator.md
