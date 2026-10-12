@@ -6884,6 +6884,7 @@ codeLabels:
   terminalWindow: 终端窗口
   copyTitle: 复制到剪贴板
   copied: 复制成功！
+engagementLabels: {"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}
 translationKey: site-copy
 ---
 

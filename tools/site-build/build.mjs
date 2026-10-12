@@ -8,6 +8,7 @@ import {attrs,walk,applyEdits,templateName} from './extract-dom.mjs';
 import {readLanguages,languageSource,publicLanguages} from './languages.mjs';
 import {mapMedia} from './media.mjs';
 import {assertPublicFields} from './source-schema.mjs';
+import {articleTypes,validateArticleIdentities,shareRoute} from './article-identities.mjs';
 const require = createRequire(new URL('../content-import/package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -45,6 +46,7 @@ export function sourceTags(source) {
   return {tags:[...new Set(tags)],searchTags:[...new Set([...tags,...search])]};
 }
 export function preflight({sourceRoot,site,manifest}) {
+  validateArticleIdentities(manifest.entries,JSON.parse(fs.readFileSync(path.join(here,'article-identities.json'),'utf8')));
   sourceRoot ||= path.join(site,'content');
   const config=readLanguages(sourceRoot,manifest.entries.map(e=>e.id)),{primary,languages}=config;
   const codes=languages.map(l=>l.code),routes=new Map(),entries=[],ids=new Set();
@@ -301,15 +303,26 @@ function localizeJSON(value,dict,entries,locale) {
   }
   return value;
 }
-function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config) {
+function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels) {
   const doc = parse(html,{sourceCodeLocationInfo:true}), edits=[];
   const urls=Object.fromEntries(config.languages.map(l=>[l.code,localeRoute(entry,l.code)]));
   const runtime={...publicLanguages(config),locale,urls,anchors,labels};
   const nav='<label class="site-language-switch"><select data-site-language-select data-current="'+locale+'" aria-label="'+escapeHTML(labels.group)+'">'+config.languages.map(l=>'<option value="'+l.code+'" data-site-locale="'+l.code+'"'+(l.code===locale?' selected':'')+'>'+escapeHTML(l.label)+'</option>').join('')+'</select></label>';
   let actions = 0;
+  let engagementBodies=0;
+  const article=articleTypes.has(entry.type);
+  const neutral=article?shareRoute(entry,locale,localeRoute(entry,locale)):null;
+  if(article && ![...entry.legacyRoutes,...(config.shareAliases || [])].includes(neutral))throw new Error('通用分享入口未登记: '+neutral);
   walk(doc,node => {
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
+    if(article && ['prose','sl-markdown-content'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && (node.parentNode?.tagName==='article' || (a.class || '').includes('sl-markdown-content'))) {
+      engagementBodies++;
+      if(!engagementLabels || Object.values(engagementLabels).some(v=>typeof v!=='string'))throw new Error('互动文案缺失');
+      const data={id:entry.id,origin:'https://mzsh.me',url:'https://mzsh.me'+neutral,title:entry.sources[config.fallback].data.title,labels:engagementLabels};
+      const markup='<section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="'+escapeHTML(engagementLabels.group)+'"><div class="article-engagement-actions"><button type="button" data-engagement-like hidden><span data-engagement-like-label>'+escapeHTML(engagementLabels.like)+'</span> <span data-engagement-count aria-label="'+escapeHTML(engagementLabels.count)+'">—</span></button><button type="button" data-engagement-share>'+escapeHTML(engagementLabels.share)+'</button></div><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p><label class="article-engagement-manual" data-engagement-manual hidden>'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" data-engagement-url readonly value="'+escapeHTML(data.url)+'"></label><script type="application/json" data-engagement-config>'+safeJSON(data)+'</script></section>';
+      edits.push([loc.endTag.endOffset,loc.endTag.endOffset,markup]);
+    }
     if(node.nodeName==='#text') {
       const raw=html.slice(loc.startOffset,loc.endOffset);
       let protectedText=false;
@@ -322,6 +335,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if (node.tagName==='head') {
       edits.push([loc.startTag.endOffset,loc.startTag.endOffset,`<script>window.SiteCopy=${safeJSON(scriptSlots || {})};window.SiteLanguageCode=${safeJSON(locale)};window.SitePrimaryCode=${safeJSON(config.primary)}</script>`]);
       edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<link rel="stylesheet" href="/assets/site-ui/language-switch.css">`+config.languages.map(({code:l})=>`<link rel="alternate" hreflang="${l}" href="https://mzsh.me${urls[l]}">`).join('')]);
+      if(article)edits.push([loc.endTag.startOffset,loc.endTag.startOffset,'<link rel="stylesheet" href="/assets/site-ui/engagement.css"><script defer src="/assets/site-ui/engagement.js"></script>']);
     }
     if (node.tagName==='body') edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<script type="application/json" data-site-language>${safeJSON(runtime)}</script><script defer src="/assets/site-ui/language-switch.js"></script>`]);
     if(node.tagName==='script' && scriptURLs?.has(a.src) && loc.attrs?.src)edits.push([loc.attrs.src.startOffset,loc.attrs.src.endOffset,`src="${scriptURLs.get(a.src)}"`]);
@@ -354,6 +368,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     }
   });
   if (actions!==1) throw new Error('header-actions不是唯一: '+entry.id);
+  if(article && engagementBodies!==1)throw new Error('文章互动正文容器不是唯一: '+entry.id);
   return applyEdits(html,edits);
 }
 function redirect({pathname,entry,explicitLocale=null,anchors={},config,labels}) {
@@ -365,6 +380,7 @@ function redirect({pathname,entry,explicitLocale=null,anchors={},config,labels})
 export async function buildSite(options) {
   const {site,manifest,output,check=false}=options;
   const {entries,config,copy}=preflight(options),{primary,languages}=config,codes=languages.map(l=>l.code);
+  config.shareAliases=(manifest.redirects || []).map(alias=>alias.route);
   const files = new Map(), rendered = new Map();
   const scriptURLs=new Map(),scriptManifest=path.join(here,'scripts.json');
   if(!options.templateRoot && fs.existsSync(scriptManifest)) for(const relative of JSON.parse(fs.readFileSync(scriptManifest,'utf8'))) {
@@ -401,7 +417,7 @@ export async function buildSite(options) {
     html=html.replace('{{body}}',result.code).replace('{{outline}}',outline(result.headings));
     if (/\{\{(?:text|body|outline)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
     const anchors = Object.fromEntries(codes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
-    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,config);
+    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,config,copy[locale].engagementLabels);
     files.set(routeFile(localeRoute(entry,locale)),Buffer.from(html));
   }
   const aliases=new Map();
@@ -467,6 +483,7 @@ export async function buildSite(options) {
     }finally{await pagefind.close();}
   }
   const differences=[];
+  files.set('tools/engagement/articles.json',Buffer.from(JSON.stringify({version:1,articleIds:entries.filter(e=>articleTypes.has(e.type)).map(e=>e.id)},null,2)+'\n'));
   for (const [relative,bytes] of files) {
     const file=boundedPath(output,relative);
     if (!fs.existsSync(file)||!fs.readFileSync(file).equals(bytes)) differences.push(relative);

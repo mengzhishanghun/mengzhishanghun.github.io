@@ -3136,6 +3136,102 @@
           "a-short-pre-publication-check": "scope-and-limitations"
         }
       }
+    },
+    {
+      "route": "/docs/guides/ue-tools/ai-data-asset-guide/",
+      "id": "doc:ai-data-asset-guide"
+    },
+    {
+      "route": "/docs/tools/md-blog-packer/",
+      "id": "doc:md-blog-packer"
+    },
+    {
+      "route": "/docs/guides/writing-tools/md-image-embed-guide/",
+      "id": "doc:md-image-embed-guide"
+    },
+    {
+      "route": "/docs/tools/p4-case-sync/",
+      "id": "doc:p4-case-sync"
+    },
+    {
+      "route": "/docs/tools/plugin-auto-packer/",
+      "id": "doc:plugin-auto-packer"
+    },
+    {
+      "route": "/docs/tools/plugin-manager/",
+      "id": "doc:plugin-manager"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-asset-cleaner-guide/",
+      "id": "doc:simple-asset-cleaner-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-asset-namer-guide/",
+      "id": "doc:simple-asset-namer-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-auto-enum-guide/",
+      "id": "doc:simple-auto-enum-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-bp-inherit-fix-guide/",
+      "id": "doc:simple-bp-inherit-fix-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-byte-conversion-guide/",
+      "id": "doc:simple-byte-conversion-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-config-exclude-guide/",
+      "id": "doc:simple-config-exclude-guide"
+    },
+    {
+      "route": "/docs/tools/simple-file-updater/",
+      "id": "doc:simple-file-updater"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-input-simulator-guide/",
+      "id": "doc:simple-input-simulator-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-launcher-guide/",
+      "id": "doc:simple-launcher-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-level-seq-smooth-guide/",
+      "id": "doc:simple-level-seq-smooth-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-ssh-tunnel-guide/",
+      "id": "doc:simple-ssh-tunnel-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-static-mesh-merger-guide/",
+      "id": "doc:simple-static-mesh-merger-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-tcp-client-guide/",
+      "id": "doc:simple-tcp-client-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-tcp-server-guide/",
+      "id": "doc:simple-tcp-server-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-udp-guide/",
+      "id": "doc:simple-udp-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/simple-websocket-guide/",
+      "id": "doc:simple-websocket-guide"
+    },
+    {
+      "route": "/docs/tools/ue-package-manager/",
+      "id": "doc:ue-package-manager"
+    },
+    {
+      "route": "/docs/tools/ue-quick-start/",
+      "id": "doc:ue-quick-start"
     }
   ]
 }

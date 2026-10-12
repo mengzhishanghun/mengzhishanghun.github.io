@@ -1,0 +1,10 @@
+.article-engagement { margin-block: 2rem 0; padding-block: 1.25rem; border-top: 1px solid var(--reading-heading-line, #22313a); color: var(--reading-heading-muted, #c8d8e0); }
+.article-engagement-actions { display: flex; flex-wrap: wrap; gap: .75rem; align-items: center; }
+.article-engagement button { min-height: 44px; padding: .55rem 1rem; border: 1px solid #3f6576; border-radius: .55rem; background: #142733; color: #eef3f6; font: inherit; cursor: pointer; }
+.article-engagement button:hover:not(:disabled) { background: #203b4b; }
+.article-engagement button:focus-visible, .article-engagement input:focus-visible { outline: 3px solid #8ad6e5; outline-offset: 3px; }
+.article-engagement button:disabled { cursor: default; color: #c8d8e0; }
+.article-engagement [hidden] { display: none !important; }
+.article-engagement-status { min-height: 1.5em; margin-block: .6rem 0; font-size: .9rem; line-height: 1.5; }
+.article-engagement-manual { display: grid; gap: .5rem; margin-top: .75rem; }
+.article-engagement input { box-sizing: border-box; min-height: 44px; width: 100%; min-width: 0; padding: .5rem; background: #142733; border: 1px solid #3f6576; color: #eef3f6; font: inherit; }

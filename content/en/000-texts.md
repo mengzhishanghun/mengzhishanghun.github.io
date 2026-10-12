@@ -6884,8 +6884,9 @@ codeLabels:
   terminalWindow: Terminal window
   copyTitle: Copy to clipboard
   copied: Copied!
+engagementLabels: {"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}
 translationKey: site-copy
-sourceHash: 347b01f19bbfba73e993be1bd14e95becfe18fbd83126a44a516177d2a517f28
+sourceHash: 10664eb2b12f400d7c32b344961c1e5573faa023c2eb1efca70fd8d17e75877b
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

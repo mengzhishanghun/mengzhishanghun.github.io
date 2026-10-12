@@ -1,5 +1,6 @@
 (() => {
-  if (window.location.hostname !== 'mzsh.me') return;
+  const domains = ['mzsh.me', 'mengzhishanghun.github.io'];
+  if (!domains.includes(window.location.hostname)) return;
   if (window.__mzshAnalytics) return;
   window.__mzshAnalytics = true;
 
@@ -62,7 +63,7 @@
     trackerScript.src = 'https://stats.mzsh.me/script.js';
     trackerScript.dataset.websiteId = website;
     trackerScript.dataset.autoTrack = 'false';
-    trackerScript.dataset.domains = 'mzsh.me';
+    trackerScript.dataset.domains = domains.join(',');
     trackerScript.dataset.excludeSearch = 'true';
     trackerScript.dataset.excludeHash = 'true';
     trackerScript.addEventListener('load', () => {

@@ -25,7 +25,7 @@ function browser(url = 'https://mzsh.me/a/?q=1#top', options = {}) {
   const location = new URL(url);
   const document = {
     title: 'A', referrer: options.referrer ?? 'https://search.example/results?q=private',
-    currentScript: { dataset: { websiteId: id } },
+    currentScript: { dataset: { websiteId: options.websiteId ?? id } },
     querySelector() { return null; },
     head: { appendChild(script) { scripts.push(script); } },
     createElement(tag) {
@@ -87,9 +87,27 @@ test('local preview makes no tracking call', async () => {
   assert.equal(page.scripts.length, 0);
 });
 
-test('backup domain does not request the tracker', () => {
-  const page = browser('https://mengzhishanghun.github.io/a/');
-  assert.equal(page.scripts.length, 0);
+test('backup domain shares the existing website while preserving hostname and language path', async () => {
+  const websiteId = '9cca2387-fae9-4a77-8e5e-40dfd9897fce';
+  const page = browser('https://mengzhishanghun.github.io/en/blog/note/?private=1#top', { websiteId });
+  assert.equal(page.scripts.length, 1);
+  assert.equal(page.scripts[0].dataset.websiteId, websiteId);
+  assert.equal(page.scripts[0].dataset.domains, 'mzsh.me,mengzhishanghun.github.io');
+  page.setTracker(); page.load();
+  page.navigate('/zh/blog/note/?other=1#next', 'Chinese note');
+  vm.runInNewContext(fs.readFileSync(script, 'utf8'), { window: page.window, document: page.document, URL, Promise });
+  page.emit('astro:page-load'); await new Promise(setImmediate);
+  assert.deepEqual(JSON.parse(JSON.stringify(page.calls)), [
+    { website: websiteId, url: 'https://mengzhishanghun.github.io/en/blog/note/', title: 'A', referrer: 'https://search.example/results' },
+    { website: websiteId, url: 'https://mengzhishanghun.github.io/zh/blog/note/', title: 'Chinese note', referrer: 'https://mengzhishanghun.github.io/en/blog/note/' },
+  ]);
+  assert.equal(page.scripts.length, 1);
+});
+
+test('other GitHub Pages and production subdomains do not request the tracker', () => {
+  for (const url of ['https://other.github.io/a/', 'https://preview.mzsh.me/a/', 'http://127.0.0.1:4321/a/']) {
+    assert.equal(browser(url).scripts.length, 0);
+  }
 });
 
 test('official tracker loads once on production domain with manual pageview settings', () => {
@@ -98,7 +116,7 @@ test('official tracker loads once on production domain with manual pageview sett
   assert.equal(page.scripts[0].src, 'https://stats.mzsh.me/script.js');
   assert.equal(page.scripts[0].dataset.websiteId, id);
   assert.equal(page.scripts[0].dataset.autoTrack, 'false');
-  assert.equal(page.scripts[0].dataset.domains, 'mzsh.me');
+  assert.equal(page.scripts[0].dataset.domains, 'mzsh.me,mengzhishanghun.github.io');
   assert.equal(page.scripts[0].dataset.excludeSearch, 'true');
   assert.equal(page.scripts[0].dataset.excludeHash, 'true');
   vm.runInNewContext(fs.readFileSync(script, 'utf8'), { window: page.window, document: page.document, URL, Promise });
