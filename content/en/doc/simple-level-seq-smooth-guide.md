@@ -18,9 +18,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/simple-level-seq-smooth-guide/
 lang: en
 translationKey: simple-level-seq-smooth-guide
-sourceHash: 21b0f4225d8ae045fa065854bf2a37bfb29411e3da2927566aec9639c7f41130
+sourceHash: ae97e0b7c026004bf42e1cf6f50d68fe5383140751bfdb780e346288fc5d4a88
 translationStatus: translated
-generatedBodyHash: e8c6a8a8127cb7c4c6346a415756dbf744e9b937906f2af6c8cd7b751d9f7e40
+generatedBodyHash: c89b7946a118c20f24d825f6f08b92bc5a6b48aa50990e50b0534b6066eab214
 ---
 
 # Simple Level Sequence Smooth
@@ -31,7 +31,6 @@ Level sequence data filtering plugin with 12 smoothing algorithms covering mocap
 
 - Unreal Engine 5.2–5.8
 - Version 1.1.0 (Version 2)
-- [Changelog](../CHANGELOG.md)
 
 ## Features
 
@@ -194,7 +193,6 @@ Auto-detects outlier frames using MAD robust statistics and reduces their weight
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 Open **Edit → Project Settings**, select the Simple Level Sequence Smooth settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
 

@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-byte-conversion-guide
 supplementSources:
   - en/supplements/simple-byte-conversion-guide-1.md
-sourceHash: b6dc5768b99e324eebab6a5ebbeb4594c6bb0360448e6afa6f8b158dfda84432
+sourceHash: dbce9086f45242720bab1b9192b59ce51cdbc46322a0c634222b5f58081d23da
 translationStatus: translated
-generatedBodyHash: a350fec4cb28ff848262c5eda231691bbcebf11449e8d99e3cfef55960dcf9e7
+generatedBodyHash: 4bac18f699b361fd0e75be09fbf9f1b3afee09967bd1026f1aae622eaf64138f
 ---
 
 # 📘 SimpleByteConversion Plugin Tutorial (Blueprint Edition)
@@ -117,7 +117,6 @@ Together, they let you send structured messages over TCP/UDP and decode them eas
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 
 Open **Edit → Project Settings**, go to SimpleByteConversion settings, and set **Language** to **English** or **Chinese**. English is the default. User-facing interfaces, prompts, notifications, and functional logs update immediately without restarting the editor; public API names and module startup/shutdown logs always remain in English.

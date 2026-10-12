@@ -17,9 +17,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/ai-data-asset-guide/
 lang: en
 translationKey: ai-data-asset-guide
-sourceHash: bac7c5c17951d508349e277004b51c7f3c276541e554f0497472bccedb75af69
+sourceHash: e2acfe8c3c8122529f9ce3031738b3743bf091cf87ce49369e3b573d8ff042fe
 translationStatus: translated
-generatedBodyHash: ffa8b4895ed3d440fb90b9d09dcbed8558b17f6dd0cac07617468ec51872fc46
+generatedBodyHash: c54da9295e1d041dcbbcc802b9e66f288c4ad1294bdf4f51526c2e58a16d6ae8
 ---
 
 # AI DataAsset
@@ -133,7 +133,6 @@ The plugin automatically exports the following JSON:
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 
 Open **Edit → Project Settings**, go to the AI DataAsset settings page, and set **Language** to **English** or **Chinese**. English is the default. User-facing interfaces, prompts, notifications, and functional logs update immediately without restarting the editor; public API names and module startup/shutdown logs always remain in English.

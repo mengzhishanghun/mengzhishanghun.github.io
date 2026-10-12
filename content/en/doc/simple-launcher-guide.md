@@ -18,9 +18,9 @@ lang: en
 translationKey: simple-launcher-guide
 supplementSources:
   - en/supplements/simple-launcher-guide-1.md
-sourceHash: af2d916892951453a8dc9c6ffc4ed112d41da3df1ab7f5f163588d0a016256c6
+sourceHash: 24667330f2f362b46405b58e81765e7f63d79ae641c24560b015b5d3cfa4bc3b
 translationStatus: translated
-generatedBodyHash: 56c64c14041fe367a4f952e61eeb0853bd215a399e409d1cd9fb8ebae55dda56
+generatedBodyHash: 2bcca71313879c41043d72f1eb67827decc2fab898aa7592295bbd9404e33716
 ---
 
 # SimpleLauncher User Guide
@@ -29,7 +29,6 @@ generatedBodyHash: 56c64c14041fe367a4f952e61eeb0853bd215a399e409d1cd9fb8ebae55dd
 
 - Unreal Engine 5.2–5.8
 - Version 1.1.0 (Version 2)
-- [Changelog](../CHANGELOG.md)
 
 ## Quick Start
 
@@ -187,7 +186,6 @@ The plugin supports Windows, Linux, and macOS. It uses UE's `FPlatformProcess::C
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 Open **Edit → Project Settings**, select the SimpleLauncher settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
 

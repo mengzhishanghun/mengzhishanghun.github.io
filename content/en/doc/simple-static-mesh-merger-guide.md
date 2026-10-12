@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-static-mesh-merger-guide
 supplementSources:
   - en/supplements/simple-static-mesh-merger-guide-1.md
-sourceHash: 9aa94535b1594b073aa5da97e0b97f3a3af329dcf9e6adaca2ec098f105a75be
+sourceHash: 999eeac8468af076071809fe6aaca25ae902524ac6d8294a5805e9d418e649f0
 translationStatus: translated
-generatedBodyHash: 60d4eb8c4e7fbbde8c1ebbe11a4fa90c4939adce57015c0f0448a7ac7be573b5
+generatedBodyHash: 0a00a6b726f49d46fa51768e868cd4b279e0f80ec2adc1dd7e7ba1956899001c
 ---
 
 # 📘 SimpleStaticMeshMerger User Guide
@@ -32,7 +32,6 @@ This guide provides detailed instructions on how to use the SimpleStaticMeshMerg
 
 - Unreal Engine 5.2–5.8
 - Version 1.1.0 (Version 2)
-- [Changelog](../CHANGELOG.md)
 
 ---
 
@@ -267,7 +266,6 @@ Clicking `Break Level Instances` recursively breaks all LevelInstances in the sc
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 Open **Edit → Project Settings**, select the SimpleStaticMeshMerger settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
 

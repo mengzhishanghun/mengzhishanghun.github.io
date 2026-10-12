@@ -18,7 +18,7 @@ documentKind: product-manual
 websiteRoute: /docs/zh/tools/ue-package-manager/
 lang: en
 translationKey: ue-package-manager
-sourceHash: f1d3b4f7f5f5cdb8db682f9fdbc0f36ef1816fb2f79126fb5c8533582a4144a6
+sourceHash: f779f7b72c3e428c81888a9a147e57a858044b23461cdbfdef9cf0e9e1564139
 translationStatus: translated
 generatedBodyHash: 7975b31e771dd50c7c2b8bcbf7ecd81684af11df75185b10400a8e3b62d6ec01
 ---

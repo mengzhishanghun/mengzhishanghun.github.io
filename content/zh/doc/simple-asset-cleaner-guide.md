@@ -180,9 +180,7 @@ supplementSources:
 
 ---
 
-## 版本历史
 
-参见 [CHANGELOG.md](../CHANGELOG.md)。
 
 ## 支持
 

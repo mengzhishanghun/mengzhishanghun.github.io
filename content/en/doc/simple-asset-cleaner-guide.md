@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-asset-cleaner-guide
 supplementSources:
   - en/supplements/simple-asset-cleaner-guide-1.md
-sourceHash: 6c99b66bc7f6cf196d45bc62973c51a0cea6d9a21441cdf618de47d7156677eb
+sourceHash: 7fcadfa851486b652372a27bf5927f70a503bc64a00d67b96c871e5896a83f29
 translationStatus: translated
-generatedBodyHash: 9a75ec94875279fc9a17585fb1805323bee5e5b8cf16b7db9a5ae9d3de7d3f35
+generatedBodyHash: d7338c5f297a1adb430035a8104aeacedd6724816c24e916826205351b094b04
 ---
 
 # SimpleAssetCleaner Plugin Tutorial
@@ -183,9 +183,7 @@ The plugin automatically wraps your version control provider in a proxy to monit
 
 ---
 
-## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 ## Support
 

@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-input-simulator-guide
 supplementSources:
   - en/supplements/simple-input-simulator-guide-1.md
-sourceHash: a96a8a827789d0da53cc6f8648ff0f7e186a712a78ca2d7f04c8e6c5e1b002fb
+sourceHash: f65749046c2d1717bea986413e7ad859aa633cdd88a7f2185631f3d8c8b4e8f1
 translationStatus: translated
-generatedBodyHash: 295fe5c94dc05c5c2267051b6a4add9882935e28cb87008323c3a569eead4d38
+generatedBodyHash: c1c4cd945b1665fda504c46397d063f2dc7bf0347e9fdba3e07e5e7b71f72ba9
 ---
 
 # 📘 Simple Input Simulator Plugin Tutorial (Blueprint Edition)
@@ -118,7 +118,6 @@ Simulate mouse movement or gamepad stick input.
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 Open **Edit → Project Settings**, select the SimpleInputSimulator settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
 

@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-config-exclude-guide
 supplementSources:
   - en/supplements/simple-config-exclude-guide-1.md
-sourceHash: f9de2dd3b9ceddf57e9edcf25276e1a4aee9a14f648b98221ea6a30bb41bcee0
+sourceHash: d18b121eec325425623b65857614681b6a541ea1aad152321ce1436fdc70d6bd
 translationStatus: translated
-generatedBodyHash: 1f68a744547e28ac5580497320de22a9ee026437d36b8b161d55eb7fd8449fc3
+generatedBodyHash: ded1248d848e041f090ddfdaa0600d6ef061f31ad49409561b21bb874628d435
 ---
 
 # SimpleConfigExclude Tutorial
@@ -176,7 +176,6 @@ A: It depends on the configuration type. Runtime configuration such as Input can
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 
 Open **Edit → Project Settings**, go to SimpleConfigExclude settings, and set **Language** to **English** or **Chinese**. English is the default. User-facing interfaces, prompts, notifications, and functional logs update immediately without restarting the editor; public API names and module startup/shutdown logs always remain in English.

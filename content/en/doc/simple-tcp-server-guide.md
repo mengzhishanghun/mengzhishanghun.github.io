@@ -16,9 +16,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/simple-tcp-server-guide/
 lang: en
 translationKey: simple-tcp-server-guide
-sourceHash: 85a0c137f52710953a5cadca745e66a6e0c70149582e1eba5785cbeaefbf28d5
+sourceHash: 84d392028a1c8716a0cbf7b02c765e727675effdbd7f01a1e9b66d9f403b8042
 translationStatus: translated
-generatedBodyHash: d32b0cb1b0ff5c3b53ecdd959763f0b80e429f804e6003d9a993a7ce86339bd5
+generatedBodyHash: c7bd32646a1014d50a7d9d70be3ae73d1986037071b78f2dc10c4f7d92130619
 ---
 
 # 📘 SimpleTCPServer Plugin Tutorial (Blueprint Edition)
@@ -30,7 +30,6 @@ It supports **multi-channel listening**, **dynamic configuration updates**, and 
 
 - Unreal Engine 5.2–5.8
 - Version 1.1.0 (Version 2)
-- [Changelog](../CHANGELOG.md)
 
 ---
 
@@ -133,7 +132,6 @@ Using this method is recommended for centralized management and ease of debuggin
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 Open **Edit → Project Settings**, select the SimpleTCPServer settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
 

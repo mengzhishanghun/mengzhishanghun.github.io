@@ -16,9 +16,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/simple-udp-guide/
 lang: en
 translationKey: simple-udp-guide
-sourceHash: ea129e6c816006d1d2ab4f92c41b4d86583e87c90c355dd37a6e1a6b3052d0d6
+sourceHash: 66a7f58861be0adf5ae3e13be4eaaa20507bf9b089c181c8add7a8a798478b80
 translationStatus: translated
-generatedBodyHash: 76cc4ab2b1aeda3e35cff5d99b04b4e5fac3b936401ebb7ced1b45d504f0204e
+generatedBodyHash: 69b0569caa5b9dc4b6c8f43f9be0c3a9e99d3ed6fbb4d99d2ab5f1f82c38fbf1
 ---
 
 # 📘 SimpleUDP Plugin Tutorial (Blueprint Edition)
@@ -30,7 +30,6 @@ It supports **runtime dynamic configuration of send/receive channels**, and all 
 
 - Unreal Engine 5.2–5.8
 - Version 1.1.0 (Version 2)
-- [Changelog](../CHANGELOG.md)
 
 ---
 
@@ -168,7 +167,6 @@ Use with **SimpleByteConversion** plugin to easily serialize/deserialize between
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 Open **Edit → Project Settings**, select the SimpleUDP settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
 

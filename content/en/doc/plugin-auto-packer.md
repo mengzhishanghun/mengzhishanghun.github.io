@@ -18,7 +18,7 @@ documentKind: product-manual
 websiteRoute: /docs/zh/tools/plugin-auto-packer/
 lang: en
 translationKey: plugin-auto-packer
-sourceHash: c1e486ef6a34a3432251405376d1389a9af4f1176e52654e1bc7a532f389c405
+sourceHash: ab8c12b966695d7f5c9fb1e6007485b5133cec08d765cd7602ca620a763595d2
 translationStatus: translated
 generatedBodyHash: ea756910f69288e6ae7e96fb89991428d2c1eb81c57533c9f4b70ef78db88867
 ---

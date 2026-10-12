@@ -124,7 +124,7 @@ UEPluginPacker.exe build MyPlugin --engines 5.5 --output D:\temp\out
 
 ## 📄 许可证
 
-本项目采用 [MIT License](./LICENSE) 协议开源，欢迎自由使用、修改和分发。
+本项目采用 [MIT License](<https://github.com/MZSH-Tools/UEPluginAutoPacker/blob/1a1e43b283fcb6deb561cba0636d1e28bc634f8a/LICENSE>) 协议开源，欢迎自由使用、修改和分发。
 
 ---
 

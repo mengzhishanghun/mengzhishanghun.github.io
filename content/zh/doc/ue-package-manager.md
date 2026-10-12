@@ -105,4 +105,4 @@ Build.bat
 
 ## 许可证
 
-[MIT License](LICENSE)
+[MIT License](<https://github.com/MZSH-Tools/UEPackageManager/blob/f15dfdb00e1d06919035ccd95bc752c2877a3f8c/LICENSE>)

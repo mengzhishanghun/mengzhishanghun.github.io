@@ -48,4 +48,4 @@ MDBlogPacker 可以读取标准 Markdown 图片引用和 Wiki 图片引用，把
 - 控制图片尺寸，避免导出文本过大。
 - 保留原稿与图片文件，后续修改更方便。
 
-工具行为依据 [MDBlogPacker 的公开 README](/docs/zh/tools/md-blog-packer/) 整理，具体操作见下方关联文档。
+工具行为依据 [MDBlogPacker 的公开 README](/zh/docs/tools/md-blog-packer/) 整理，具体操作见下方关联文档。

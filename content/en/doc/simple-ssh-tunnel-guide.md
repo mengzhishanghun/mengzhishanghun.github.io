@@ -16,9 +16,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/
 lang: en
 translationKey: simple-ssh-tunnel-guide
-sourceHash: 3c6a254ea8639a6bbdcc81e38c6ea6d583d41e1dec6c8e21a30fe723391648d7
+sourceHash: 204f173853f5a2027ccf619f593ecc763189d298e43193667930edfe189d3862
 translationStatus: translated
-generatedBodyHash: 2ebdb40e55d66e8d803b8cdc556727aabbf29a93dce467edaf09440dd6e2523e
+generatedBodyHash: de84a68f4cb264f1fcc4f245e6529c7b4b60ab2e2d6b437ccbdda07ad7b0a4b7
 ---
 
 # SimpleSSHTunnel User Guide
@@ -27,7 +27,6 @@ generatedBodyHash: 2ebdb40e55d66e8d803b8cdc556727aabbf29a93dce467edaf09440dd6e25
 
 - Unreal Engine 5.2–5.8
 - Version 1.1.0 (Version 2)
-- [Changelog](../CHANGELOG.md)
 
 ## 1. Configure SSH Connection
 
@@ -110,7 +109,6 @@ Closes all active SSH tunnels.
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 Open **Edit → Project Settings**, select the SimpleSSHTunnel settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
 

@@ -16,9 +16,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/simple-websocket-guide/
 lang: en
 translationKey: simple-websocket-guide
-sourceHash: 9cf9a89f66f36d3b431c26c65850b0e80c59d1d3362082bed6cc7f02fb784596
+sourceHash: 3a5c53a81fada4d59a47b1727aa8b71781f9901c1f37c97ca6c105c1d37c450f
 translationStatus: translated
-generatedBodyHash: 1d57ef6afd96a0d392da08fcabb0f4e26e651189871aed4435c87e79bb6a495c
+generatedBodyHash: 47adf97ebed01d1c99e8df5c4af6b6b758b621a61fa6506e8672abbb0da4816f
 ---
 
 # 📘 SimpleWebSocket User Guide
@@ -29,7 +29,6 @@ This guide walks you through how to configure and use the SimpleWebSocket plugin
 
 - Unreal Engine 5.2–5.8
 - Version 1.1.0 (Version 2)
-- [Changelog](../CHANGELOG.md)
 
 ---
 
@@ -84,7 +83,6 @@ You can use GameInstance-level Blueprint functions to connect, send, receive, an
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 Open **Edit → Project Settings**, select the SimpleWebSocket settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
 

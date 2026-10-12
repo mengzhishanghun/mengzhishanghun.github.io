@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 import YAML from 'yaml';
 import {createMarkdownProcessor} from '@astrojs/markdown-remark';
 import {publicFields,commonFields} from '../site-build/source-schema.mjs';
+import {createLinkResolver} from './links.mjs';
 
 const here=path.dirname(fileURLToPath(import.meta.url));
 export const canonicalText=value=>String(value).replaceAll('\r\n','\n');
@@ -19,7 +20,7 @@ export function parseSource(raw){
 }
 export const sourceText=(data,body)=>'---\n'+YAML.stringify(data,{lineWidth:0})+'---\n\n'+canonicalText(body).replace(/^\n/,'');
 const binaryHash=bytes=>createHash('sha256').update(bytes).digest('hex');
-export async function projectSource(source,record,site){
+export async function projectSource(source,record,site,resolveLink){
   if(source.data.draft===true)throw new Error('草稿不得同步');
   if(source.data.lang!==undefined && source.data.lang!==record.lang)throw new Error('同步语言身份不符');
   if(record.slug && source.data.slug!==undefined && source.data.slug!==record.slug)throw new Error('同步slug身份不符');
@@ -47,6 +48,15 @@ export async function projectSource(source,record,site){
         edits.push([node.position.start.offset,node.position.end.offset,replacement]);
       }
       if(node.type==='link' && /^(?:javascript|data|file|obsidian):/i.test(node.url))throw new Error('不安全链接');
+      if(resolveLink && ['link','definition'].includes(node.type)){
+        const url=resolveLink(node.url,record);
+        if(url!==node.url){
+          const segment=body.slice(node.position.start.offset,node.position.end.offset),start=node.type==='definition'?segment.indexOf(':')+1:segment.lastIndexOf('](')+2;
+          const offset=segment.indexOf(node.url,start);
+          if(offset<start||start<1)throw new Error('链接URL位置不能唯一定位');
+          edits.push([node.position.start.offset+offset,node.position.start.offset+offset+node.url.length,url]);
+        }
+      }
       for(const child of node.children||[])visit(child);
     };visit(tree);
   };
@@ -66,12 +76,14 @@ export async function importContent({site,vault,sync,check=false}){
     const file=safePath(contentRoot,relative);
     if(!fs.existsSync(file)||canonicalTextHash(fs.readFileSync(file,'utf8'))!==fingerprint)throw new Error('外语来源存在人工修改，先审核并更新同步指纹');
   }
+  const manifest=JSON.parse(fs.readFileSync(safePath(site,'tools/site-build/manifest.json'),'utf8'));
+  const resolveLink=createLinkResolver({site,vault,records:config.records,manifest});
   for(const record of config.records){
     if(record.lang!==config.primary)throw new Error('同步仅允许中文来源');
     const output=safePath(contentRoot,record.output),input=safePath(vault,record.source);
     if(files.has(output))throw new Error('同步输出重复');
     if(record.publishedFingerprint && (!fs.existsSync(output)||canonicalTextHash(fs.readFileSync(output,'utf8'))!==record.publishedFingerprint))throw new Error('公开中文来源存在人工修改，保留并等待审核');
-    const raw=fs.readFileSync(input,'utf8'),projection=await projectSource(parseSource(raw),record,site);
+    const raw=fs.readFileSync(input,'utf8'),projection=await projectSource(parseSource(raw),record,site,resolveLink);
     files.set(output,projection.raw);updates.push({record,publishedFingerprint:canonicalTextHash(projection.raw),sourceFingerprint:binaryHash(Buffer.from(raw))});
   }
   const differences=[...files].filter(([file,raw])=>!fs.existsSync(file)||canonicalText(fs.readFileSync(file,'utf8'))!==raw).map(([file])=>path.relative(contentRoot,file).replaceAll('\\','/'));

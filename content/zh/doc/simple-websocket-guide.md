@@ -26,7 +26,6 @@ translationKey: simple-websocket-guide
 
 - Unreal Engine 5.2–5.8
 - 版本 1.1.0（Version 2）
-- [更新日志](../CHANGELOG.md)
 
 ---
 
@@ -81,7 +80,6 @@ translationKey: simple-websocket-guide
 
 ## 版本历史
 
-参见 [CHANGELOG.md](../CHANGELOG.md)。
 
 
 打开 **编辑 → 项目设置**，进入 SimpleWebSocket 设置页，将 **Language** 设置为 **English** 或 **中文**。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。

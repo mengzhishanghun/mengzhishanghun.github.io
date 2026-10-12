@@ -638,12 +638,6 @@
     },
     {
       "depth": 2,
-      "oldId": "版本历史",
-      "utilityId": "doc:simple-asset-cleaner-guide:body-utility:26",
-      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
-    },
-    {
-      "depth": 2,
       "oldId": "支持",
       "utilityId": "doc:simple-asset-cleaner-guide:body-utility:27",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
@@ -816,12 +810,6 @@
       "depth": 2,
       "oldId": "3-常见问题",
       "utilityId": "doc:simple-asset-namer-guide:body-utility:11",
-      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
-    },
-    {
-      "depth": 2,
-      "oldId": "版本历史",
-      "utilityId": "doc:simple-asset-namer-guide:body-utility:12",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
     },
     {

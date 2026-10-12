@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-bp-inherit-fix-guide
 supplementSources:
   - en/supplements/simple-bp-inherit-fix-guide-1.md
-sourceHash: ca75b37f4c0ba01c4ad5f6bd8d60fde51d5c07bc64b1f86249992a2aa1b0b1f1
+sourceHash: bb610964032c37630a649dae94e9eb3ede9e20a7c1ca88c360eba37493b7ec36
 translationStatus: translated
-generatedBodyHash: 736865a97cc5b2db488804ab8d350295c9b41feb5e7d77d06da38043c0f1539c
+generatedBodyHash: df3c5fe302ca4095eb5b3cb70ff81bfd6fa5e3dd065727c44db788bce1bd8b78
 ---
 
 # 📘 SimpleBPInheritFix Tutorial
@@ -72,7 +72,6 @@ Choose any — ancestors, self, and descendants are scanned, yielding the same r
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 
 Open **Edit → Project Settings**, go to SimpleBPInheritFix settings, and set **Language** to **English** or **Chinese**. English is the default. User-facing interfaces, prompts, notifications, and functional logs update immediately without restarting the editor; public API names and module startup/shutdown logs always remain in English.

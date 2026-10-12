@@ -34,6 +34,7 @@ test('import refuses full foreign frontmatter drift and unknown media before any
   const foreign='---\nlang: en\ntitle: Original\n---\n\nBody\n',primary='---\ntitle: Source\ndraft: false\n---\n\nBody\n';
   fs.writeFileSync(path.join(site,'content/en/example.md'),foreign.replace('Original','Changed'));fs.writeFileSync(path.join(vault,'primary.md'),primary);
   const sync={version:1,primary:'zh',records:[{id:'blog:example',kind:'blog',lang:'zh',source:'primary.md',output:'zh/example.md',images:[]}],foreignFingerprints:{'en/example.md':sha(foreign)}};
+  fs.mkdirSync(path.join(site,'tools/site-build'),{recursive:true});fs.writeFileSync(path.join(site,'tools/site-build/manifest.json'),JSON.stringify({entries:[{id:'blog:example',legacyRoutes:['/blog/example/']}]}));
   fs.mkdirSync(path.join(site,'tools/content-import'),{recursive:true});
   fs.writeFileSync(path.join(site,'tools/content-import/000-sync.local'),'---\n'+JSON.stringify(sync)+'\n---\n');
   await assert.rejects(()=>importContent({site,vault}),/外语.*人工修改/);

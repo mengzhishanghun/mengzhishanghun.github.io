@@ -22,9 +22,9 @@ docIds:
   - md-blog-packer
 lang: en
 translationKey: markdown-images
-sourceHash: 80e4b3b7ec99b2834a454ecd8d339f358265ba6e7d0dbe63c72ac826bb27abf3
+sourceHash: fb711dc5f822162e3f5a93704c98a699cdd2accc5a577407706c660f18d13206
 translationStatus: translated
-generatedBodyHash: 3d27540334728ded4c56c7c11d9617c46c865c0bc7c497e8ac317fd232c8968e
+generatedBodyHash: 0d97c42a0754784570ca3b5cfee41935cae8a97e133eab9a5e69640bf27ab916
 ---
 
 A Markdown article displaying correctly on your computer does not mean its images will appear after you copy the text to another website. Relative paths in image syntax only specify file locations; the images themselves do not move with the text.
@@ -51,4 +51,4 @@ You can therefore retain the original Markdown and images for daily writing and 
 - Control image dimensions to avoid oversized export text.
 - Keep the original article and image files to simplify later changes.
 
-Tool behavior is based on [MDBlogPacker's public README](/docs/en/tools/md-blog-packer/). See the related documentation below for specific instructions.
+Tool behavior is based on [MDBlogPacker's public README](/en/docs/tools/md-blog-packer/). See the related documentation below for specific instructions.

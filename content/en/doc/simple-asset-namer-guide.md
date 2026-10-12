@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-asset-namer-guide
 supplementSources:
   - en/supplements/simple-asset-namer-guide-1.md
-sourceHash: 7b1cb4523212f81780bbcc10c4414f365c5b2a36785cdcb3f8b44d551f153d2b
+sourceHash: c706ee5d8205ca0ff1cd1b372f332d937e5d01fae99181a3d3365fcdbccabfcd
 translationStatus: translated
-generatedBodyHash: 8c69b7a042d03db5ec9e31ea6fb862e83008ea2cec37241318f30db1a8a7b74f
+generatedBodyHash: 849353f6339fc1399ea5f8fc215e418e47e7786bd0433ac84179ea094ca76749
 ---
 
 # Simple Asset Namer User Guide
@@ -227,9 +227,7 @@ Fix redirectors first: Content Browser → right-click folder → Fix Up Redirec
 
 ---
 
-## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 ## Support
 

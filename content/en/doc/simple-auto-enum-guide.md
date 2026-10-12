@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-auto-enum-guide
 supplementSources:
   - en/supplements/simple-auto-enum-guide-1.md
-sourceHash: 2a9fe54a451df01bfbe2259c06fb0515085e6d057def0398d6118b3a74c03e2a
+sourceHash: fc24be7ca55365d0aea499fc9baaf1fdef11dc661da025134acd06239a86842e
 translationStatus: translated
-generatedBodyHash: 572c3fd50714e8e3bfd93ae62f039bd550d77fb6153199bc43baa90ae17e12e7
+generatedBodyHash: d428584829a2947b72f3a180e0378f372e96e656f440ab95e891df3f42684d3c
 ---
 
 # 📘 SimpleAutoEnum Plugin Tutorial
@@ -177,7 +177,6 @@ The plugin generates enum values dynamically from configuration, enabling:
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 
 Open **Edit → Project Settings**, go to SimpleAutoEnum settings, and set **Language** to **English** or **Chinese**. English is the default. User-facing interfaces, prompts, notifications, and functional logs update immediately without restarting the editor; public API names and module startup/shutdown logs always remain in English.

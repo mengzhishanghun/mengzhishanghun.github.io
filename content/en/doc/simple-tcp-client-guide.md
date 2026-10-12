@@ -16,9 +16,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/simple-tcp-client-guide/
 lang: en
 translationKey: simple-tcp-client-guide
-sourceHash: ea5eab7e0e9f0a958a5f56a60cc9d5c10ff20d7c51045e4cd8548b96cef5fbb5
+sourceHash: 982d633a81180717bd15fcd9d70f17be788aecba2e0d250a31f0915a79490e8f
 translationStatus: translated
-generatedBodyHash: 47b1867c573e18e231f7c20046b4d448dc12c33d7826a40fce9bd087d028c214
+generatedBodyHash: 3e129a7c198d3dfe60e5f7a651562cd73b664bb4fe5b0fd329d5ff83430b06ce
 ---
 
 # 📘 SimpleTCPClient Plugin Tutorial (Blueprint Edition)
@@ -30,7 +30,6 @@ It supports **runtime dynamic configuration of client channels**, and all functi
 
 - Unreal Engine 5.2–5.8
 - Version 1.1.0 (Version 2)
-- [Changelog](../CHANGELOG.md)
 
 ---
 
@@ -131,7 +130,6 @@ Use with **SimpleByteConversion** to easily convert common Unreal types (FString
 
 ## Version History
 
-See [CHANGELOG.md](../CHANGELOG.md).
 
 Open **Edit → Project Settings**, select the SimpleTCPClient settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
 
