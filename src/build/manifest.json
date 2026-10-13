@@ -2921,19 +2921,6 @@
       ]
     },
     {
-      "id": "page:about",
-      "type": "page",
-      "slug": "about",
-      "legacyRoutes": [
-        "/about/"
-      ],
-      "template": "about/templates/page--about.html",
-      "title": "关于我",
-      "translationKey": "about",
-      "supplementTranslationKeys": [],
-      "mediaOccurrences": []
-    },
-    {
       "id": "page:not-found",
       "type": "page",
       "slug": "not-found",
@@ -3422,7 +3409,7 @@
         "zh": {
           "main-navigation": "main-navigation",
           "main": "main",
-          "purpose-title": "purpose-title",
+          "purpose-title": "support-title",
           "methods-title": "methods-title",
           "wechat-title": "wechat-title",
           "alipay-title": "alipay-title",
@@ -3432,7 +3419,7 @@
         "en": {
           "main-navigation": "main-navigation",
           "main": "main",
-          "purpose-title": "purpose-title",
+          "purpose-title": "support-title",
           "methods-title": "methods-title",
           "wechat-title": "wechat-title",
           "alipay-title": "alipay-title",
@@ -3448,7 +3435,7 @@
         "zh": {
           "main-navigation": "main-navigation",
           "main": "main",
-          "purpose-title": "purpose-title",
+          "purpose-title": "support-title",
           "methods-title": "methods-title",
           "wechat-title": "wechat-title",
           "alipay-title": "alipay-title",
@@ -3458,7 +3445,7 @@
         "en": {
           "main-navigation": "main-navigation",
           "main": "main",
-          "purpose-title": "purpose-title",
+          "purpose-title": "support-title",
           "methods-title": "methods-title",
           "wechat-title": "wechat-title",
           "alipay-title": "alipay-title",
@@ -3474,7 +3461,7 @@
         "zh": {
           "main-navigation": "main-navigation",
           "main": "main",
-          "purpose-title": "purpose-title",
+          "purpose-title": "support-title",
           "methods-title": "methods-title",
           "wechat-title": "wechat-title",
           "alipay-title": "alipay-title",
@@ -3484,12 +3471,62 @@
         "en": {
           "main-navigation": "main-navigation",
           "main": "main",
-          "purpose-title": "purpose-title",
+          "purpose-title": "support-title",
           "methods-title": "methods-title",
           "wechat-title": "wechat-title",
           "alipay-title": "alipay-title",
           "github-support-title": "github-support-title",
           "page-title": "support-title"
+        }
+      }
+    },
+    {
+      "route": "/about/",
+      "id": "page:home",
+      "anchorOverrides": {
+        "zh": {
+          "about-title": "about",
+          "about-facts-title": "about",
+          "about-experience-title": "about"
+        },
+        "en": {
+          "about-title": "about",
+          "about-facts-title": "about",
+          "about-experience-title": "about"
+        }
+      }
+    },
+    {
+      "route": "/zh/about/",
+      "id": "page:home",
+      "locale": "zh",
+      "anchorOverrides": {
+        "zh": {
+          "about-title": "about",
+          "about-facts-title": "about",
+          "about-experience-title": "about"
+        },
+        "en": {
+          "about-title": "about",
+          "about-facts-title": "about",
+          "about-experience-title": "about"
+        }
+      }
+    },
+    {
+      "route": "/en/about/",
+      "id": "page:home",
+      "locale": "en",
+      "anchorOverrides": {
+        "zh": {
+          "about-title": "about",
+          "about-facts-title": "about",
+          "about-experience-title": "about"
+        },
+        "en": {
+          "about-title": "about",
+          "about-facts-title": "about",
+          "about-experience-title": "about"
         }
       }
     }

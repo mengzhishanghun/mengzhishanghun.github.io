@@ -15,9 +15,9 @@ translationKey: home
 
 你好，我是小毛
 
-游戏开发 · 数字孪生 · 工具与插件
+主要做 UE 开发，做过多屏显示和 VR 项目。也在开发插件、工具与自动化流程。
 
-[关于我](/about/)[联系与支持](/contact/)
+[查看作品](/works/)[联系与支持](/contact/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A1)
 

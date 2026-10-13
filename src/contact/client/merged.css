@@ -1,3 +1,21 @@
-.voluntary-support { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
-.voluntary-support > h2 { margin-inline: auto; max-width: var(--shell-width, 1280px); }
-.voluntary-support .content { margin-top: 16px; }
+.site-chrome .local-page .page-hero { min-height: 160px; }
+.local-page .contact-content { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+.local-page .capability { padding: 14px 0; gap: 16px; }
+.local-page .capability svg { width: 32px; height: 32px; }
+.local-page .wechat-card { flex-direction: row; align-items: center; text-align: left; gap: 16px; }
+.local-page .wechat-card .qr-link img { width: 112px; }
+.voluntary-support { margin-top: 4px; padding-top: 16px; border-top: 1px solid var(--line); }
+.voluntary-support .payment-grid { gap: 8px; }
+.local-page .voluntary-support .payment-card { padding: 0; border: 0; background: transparent; text-align: left; }
+.voluntary-support .payment-card summary { display: flex; align-items: center; justify-content: space-between; gap: 8px; box-sizing: border-box; min-height: 44px; padding: 8px 12px; border: 1px solid var(--line); border-radius: 5px; background: var(--panel); color: var(--blue); cursor: pointer; list-style: none; }
+.voluntary-support .payment-card summary::-webkit-details-marker { display: none; }
+.voluntary-support .payment-card summary::after { content: "+"; }
+.voluntary-support .payment-card[open] summary::after { content: "−"; }
+.voluntary-support .payment-card .qr-link { margin-top: 12px; }
+.voluntary-support .payment-card p { margin-bottom: 8px; }
+.voluntary-support .payment-card summary:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.support-preview.voluntary-support .github-support-link { justify-self: start; margin-top: 8px; padding: 8px 12px; font-weight: 500; }
+@media (width <= 720px) {
+  .local-page .contact-content { grid-template-columns: 1fr; gap: 20px; }
+  .local-page .wechat-card .qr-link img { width: 96px; }
+}

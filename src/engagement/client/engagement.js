@@ -16,10 +16,11 @@
     const mobile = root.closest('mzsh-reading')?.querySelector('mobile-outline');
     const controls = mobile?.hasAttribute('data-ready') ? mobile.querySelector('.outline-mobile-controls') : null;
     const target = mobileQuery?.matches ? controls : null;
-    if (target ? root.parentNode === target : root.previousSibling === slot) return;
+    const back = target?.querySelector('.outline-mobile-back');
+    if (target ? root.previousSibling === back : root.previousSibling === slot) return;
     const focused = document.activeElement;
     const preserveFocus = focused && root.contains(focused);
-    if (target) target.append(root); else slot.after(root);
+    if (back) back.after(root); else slot.after(root);
     if (preserveFocus && focused.isConnected && document.activeElement !== focused) focused.focus({preventScroll:true});
   }
   function placeAll() {
@@ -100,9 +101,13 @@
         const action = createLikeAction({ id: data.id, storage, locks: window.navigator.locks, send: () => timedFetch(endpoint + '/like', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' }) });
         const update = (result = { state: action.state }) => {
           like.disabled = result.state !== 'ready';
-          root.querySelector('[data-engagement-like-label]').textContent = result.state === 'liked' ? data.labels.liked : data.labels.like;
+          const label = result.state === 'liked' ? data.labels.liked : data.labels.like;
+          root.querySelector('[data-engagement-like-label]').textContent = label;
+          like.setAttribute('aria-label', label);
+          like.setAttribute('title', label);
+          like.setAttribute('aria-pressed', String(result.state === 'liked'));
           if (result.count !== undefined) { countRevision++; count.textContent = String(result.count); }
-          status.textContent = result.rejected && result.state === 'ready' ? data.labels.rejected : data.labels[result.state] || '';
+          status.textContent = result.rejected && result.state === 'ready' ? data.labels.rejected : result.state === 'liked' ? '' : data.labels[result.state] || '';
         };
         update();
         refreshers.set(root, () => { action.sync(); update(); });

@@ -4432,7 +4432,7 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
-    root.html:1.head:0.meta:2@content: 小毛的开发作品、项目案例与技术记录。
+    root.html:1.head:0.meta:2@content: "小毛的 UE 开发作品、项目案例与技术记录，涵盖多屏显示、VR、插件工具与自动化流程。"
     root.html:1.head:0.title:4.#text:0: 开发作品与项目 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -4449,8 +4449,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: 所有复杂，皆可封装；
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: 所有重复，皆可自动化。
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: 你好，我是小毛
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: 游戏开发 · 数字孪生 · 工具与插件
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "主要做 UE 开发，做过多屏显示和 VR 项目。也在开发插件、工具与自动化流程。"
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: "查看作品"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: 精选作品
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: 查看全部
@@ -5207,8 +5207,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:2.#text:0: ""
   page:contact:
-    root.html:1.head:0.meta:2@content: 交流游戏开发、数字孪生与工具插件合作。
-    root.html:1.head:0.title:4.#text:0: 联系与支持 · 梦之殇魂
+    root.html:1.head:0.meta:2@content: "承接游戏开发、数字孪生与工具插件开发，通过邮箱或微信联系，也可自愿支持作品与分享。"
+    root.html:1.head:0.title:4.#text:0: "联系与支持 · 小毛"
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -5222,8 +5222,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.p:1.#text:0: 游戏开发 / 数字孪生 / 工具与插件
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:0.#text:0: 我能完成的开发内容
+    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.p:1.#text:0: "项目开发合作，欢迎通过邮箱或微信联系。"
+    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:0.#text:0: "承接开发"
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:0.div:1.h3:0.#text:0: 游戏开发
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:0.div:1.p:1.#text:0: 游戏玩法原型、功能开发与场景交互。
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:2.div:1.h3:0.#text:0: 数字孪生
@@ -5258,7 +5258,7 @@ shellSlots:
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.h3:0.#text:0: 网站与维护
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.p:1.#text:0: 保持网站稳定运行，持续改进体验。
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.h2:1.#text:0: 选择你的支持方式
-    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: 微信支持
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: "微信支付"
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3@aria-label: 查看微信收款二维码大图
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3.img:0@alt: 小毛的微信支付收款二维码
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.p:5.#text:0: 使用微信扫码 · 点击查看大图
@@ -5269,7 +5269,7 @@ shellSlots:
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.h3:0.#text:0: GitHub Sponsors
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:1.#text:0: 支持订阅与一次性打赏
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:2.#text:0: 具体档位与权益以 GitHub 页面为准。
-    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.a:5.#text:0: "前往 GitHub 赞助 "
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.a:5.#text:0: "GitHub Sponsors"
     merged.supportTitle: 自愿支持
   page:not-found:
     root.html:1.head:0.title:2.#text:0: 页面未找到 / Page not found | MZSH Docs

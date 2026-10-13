@@ -305,7 +305,7 @@ function localizeJSON(value,dict,entries,locale) {
   return value;
 }
 function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels) {
-  const doc = parse(html,{sourceCodeLocationInfo:true}), edits=[];
+  const doc = parse(html,{sourceCodeLocationInfo:true}), edits=[], excluded=new Set();
   const urls=Object.fromEntries(config.languages.map(l=>[l.code,localeRoute(entry,l.code)]));
   const runtime={...publicLanguages(config),locale,urls,anchors,labels};
   const nav='<label class="site-language-switch"><select data-site-language-select data-current="'+locale+'" aria-label="'+escapeHTML(labels.group)+'">'+config.languages.map(l=>'<option value="'+l.code+'" data-site-locale="'+l.code+'"'+(l.code===locale?' selected':'')+'>'+escapeHTML(l.label)+'</option>').join('')+'</select></label>';
@@ -315,8 +315,14 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   const neutral=article?shareRoute(entry,locale,localeRoute(entry,locale)):null;
   if(article && ![...entry.legacyRoutes,...(config.shareAliases || [])].includes(neutral))throw new Error('通用分享入口未登记: '+neutral);
   walk(doc,node => {
+    if(excluded.has(node))return;
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
+    if(node.tagName==='a' && a.href==='/about/' && (attrs(node.parentNode).class || '').split(/\s+/).includes('header-actions')) {
+      edits.push([loc.startOffset,loc.endOffset,'']);
+      walk(node,child=>excluded.add(child));
+      return;
+    }
     if(article && ['prose','sl-markdown-content'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && (node.parentNode?.tagName==='article' || (a.class || '').includes('sl-markdown-content'))) {
       engagementBodies++;
     }
@@ -324,8 +330,9 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
       engagementSlots++;
       if(!engagementLabels || Object.values(engagementLabels).some(v=>typeof v!=='string'))throw new Error('互动文案缺失');
       const data={id:entry.id,origin:'https://mzsh.me',url:'https://mzsh.me'+neutral,title:entry.sources[config.fallback].data.title,labels:engagementLabels};
-      const markup='<section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="'+escapeHTML(engagementLabels.group)+'"><div class="article-engagement-actions"><button type="button" data-engagement-like hidden><span data-engagement-like-label>'+escapeHTML(engagementLabels.like)+'</span> <span data-engagement-count aria-label="'+escapeHTML(engagementLabels.count)+'">—</span></button><button type="button" data-engagement-share>'+escapeHTML(engagementLabels.share)+'</button></div><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p><label class="article-engagement-manual" data-engagement-manual hidden>'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" data-engagement-url readonly value="'+escapeHTML(data.url)+'"></label><script type="application/json" data-engagement-config>'+safeJSON(data)+'</script><noscript><label class="article-engagement-manual">'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" readonly value="'+escapeHTML(data.url)+'"></label></noscript></section>';
-      edits.push([loc.endTag.endOffset,loc.endTag.endOffset,markup]);
+      const markup='<section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="'+escapeHTML(engagementLabels.group)+'"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>'+escapeHTML(engagementLabels.like)+'</span> <span data-engagement-count aria-label="'+escapeHTML(engagementLabels.count)+'">—</span></button><button type="button" data-engagement-share aria-label="'+escapeHTML(engagementLabels.share)+'" title="'+escapeHTML(engagementLabels.share)+'"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">'+escapeHTML(engagementLabels.share)+'</span></button></div><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p><label class="article-engagement-manual" data-engagement-manual hidden>'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" data-engagement-url readonly value="'+escapeHTML(data.url)+'"></label><script type="application/json" data-engagement-config>'+safeJSON(data)+'</script><noscript><label class="article-engagement-manual">'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" readonly value="'+escapeHTML(data.url)+'"></label></noscript></section>';
+      edits.push([loc.startTag.startOffset,loc.startTag.startOffset,'<div class="article-detail-controls">']);
+      edits.push([loc.endTag.endOffset,loc.endTag.endOffset,markup+'</div>']);
     }
     if(node.nodeName==='#text') {
       const raw=html.slice(loc.startOffset,loc.endOffset);

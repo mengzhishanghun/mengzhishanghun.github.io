@@ -56,10 +56,10 @@ test('two preopened languages reread shared persistent state before sending',asy
 });
 test('late initial read never replaces a confirmed like count',async()=>{
   let finishRead;const read=new Promise(resolve=>{finishRead=resolve;});let click;
-  const parts={'[data-engagement-config]':{textContent:JSON.stringify({id:'doc:guide',origin:'https://mzsh.me',url:'https://mzsh.me/docs/tools/guide/',title:'Guide',labels:{like:'Like',liked:'Liked'}})},'[data-engagement-like]':{hidden:true,addEventListener:(_,fn)=>{click=fn;}},'[data-engagement-like-label]':{},'[data-engagement-count]':{},'[data-engagement-status]':{},'[data-engagement-share]':{addEventListener(){}},'[data-engagement-manual]':{},'[data-engagement-url]':{}};
+  const parts={'[data-engagement-config]':{textContent:JSON.stringify({id:'doc:guide',origin:'https://mzsh.me',url:'https://mzsh.me/docs/tools/guide/',title:'Guide',labels:{like:'Like',liked:'Liked'}})},'[data-engagement-like]':{hidden:true,attrs:{},setAttribute(name,value){this.attrs[name]=value;},addEventListener:(_,fn)=>{click=fn;}},'[data-engagement-like-label]':{},'[data-engagement-count]':{},'[data-engagement-status]':{},'[data-engagement-share]':{addEventListener(){}},'[data-engagement-manual]':{},'[data-engagement-url]':{}};
   const root={isConnected:true,dataset:{},querySelector:selector=>parts[selector]};
   const window={location:{origin:'https://mzsh.me'},localStorage:storage(),navigator:{},addEventListener(){},fetch:async(_url,options)=>options.method==='POST'?{ok:true,status:200,json:async()=>({count:1})}:read};
   const document={readyState:'complete',querySelectorAll:()=>[root],addEventListener(){}};
   vm.runInNewContext(fs.readFileSync(new URL('../engagement/client/engagement.js',import.meta.url),'utf8'),{window,document,URL,AbortController,setTimeout,clearTimeout});
-  await click();finishRead({ok:true,status:200,json:async()=>({count:0})});await new Promise(resolve=>setTimeout(resolve,0));assert.equal(parts['[data-engagement-count]'].textContent,'1');
+  await click();finishRead({ok:true,status:200,json:async()=>({count:0})});await new Promise(resolve=>setTimeout(resolve,0));assert.equal(parts['[data-engagement-count]'].textContent,'1');assert.equal(parts['[data-engagement-like]'].attrs['aria-pressed'],'true');assert.equal(parts['[data-engagement-like]'].attrs['aria-label'],'Liked');assert.equal(parts['[data-engagement-status]'].textContent,'');
 });

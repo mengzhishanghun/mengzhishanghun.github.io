@@ -106,7 +106,6 @@ languages:
       page:blog-index: blog/content/zh/blog-index.md
       page:contact: contact/content/zh/contact.md
       page:not-found: shared/content/zh/not-found.md
-      page:about: about/content/zh/about.md
       blog:ue-source-engine-association: blog/content/zh/ue-source-engine-association.md
       blog:ue-uparam-reference-metadata: blog/content/zh/ue-uparam-reference-metadata.md
       blog:ue-cursor-workflow-notes: blog/content/zh/ue-cursor-workflow-notes.md
@@ -222,7 +221,6 @@ languages:
       page:blog-index: blog/content/en/blog-index.md
       page:contact: contact/content/en/contact.md
       page:not-found: shared/content/en/not-found.md
-      page:about: about/content/en/about.md
       blog:ue-source-engine-association: blog/content/en/ue-source-engine-association.md
       blog:ue-uparam-reference-metadata: blog/content/en/ue-uparam-reference-metadata.md
       blog:ue-cursor-workflow-notes: blog/content/en/ue-cursor-workflow-notes.md

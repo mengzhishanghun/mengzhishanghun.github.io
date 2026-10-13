@@ -4432,7 +4432,7 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
-    root.html:1.head:0.meta:2@content: Xiao Mao's development work, project cases, and technical notes.
+    root.html:1.head:0.meta:2@content: "UE development work, project cases, and technical notes by Xiao Mao, including multi-screen displays, VR, plugins, tools, and automation."
     root.html:1.head:0.title:4.#text:0: Development Work and Projects · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -4449,8 +4449,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: Every complexity can be encapsulated;
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: Every repetition can be automated.
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: Hi, I'm Xiao Mao
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: Game Development · Digital Twins · Tools and Plugins
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I mainly work on UE development, including multi-screen display and VR projects. I also develop plugins, tools, and automation workflows."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: "View works"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: Featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: View all
@@ -5207,8 +5207,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:2.#text:0: ""
   page:contact:
-    root.html:1.head:0.meta:2@content: Discuss game development, digital twins, and tools and plugin collaboration.
-    root.html:1.head:0.title:4.#text:0: Contact & support | MZSH
+    root.html:1.head:0.meta:2@content: "Available for game development, digital twins, and custom tools or plugins. Contact me by email or WeChat, or support my work."
+    root.html:1.head:0.title:4.#text:0: "Contact & support · Xiao Mao"
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -5222,8 +5222,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.p:1.#text:0: Game Development / Digital Twins / Tools and Plugins
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:0.#text:0: Development services
+    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.p:1.#text:0: "Contact me about development projects, or support my work."
+    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:0.#text:0: "Available for development"
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:0.div:1.h3:0.#text:0: Game Development
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:0.div:1.p:1.#text:0: Gameplay prototypes, feature development, and scene interaction.
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:2.div:1.h3:0.#text:0: Digital Twins
@@ -5258,7 +5258,7 @@ shellSlots:
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.h3:0.#text:0: Website and Maintenance
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.p:1.#text:0: Keep the website running reliably and continue improving the experience.
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.h2:1.#text:0: Choose how to support
-    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: Support via WeChat
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: "WeChat Pay"
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3@aria-label: View a larger image of the WeChat payment QR code
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3.img:0@alt: Xiao Mao's WeChat payment QR code
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.p:5.#text:0: Scan with WeChat · Click to enlarge
@@ -5269,7 +5269,7 @@ shellSlots:
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.h3:0.#text:0: GitHub Sponsors
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:1.#text:0: Subscriptions and one-time contributions
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:2.#text:0: See the GitHub page for the available tiers and benefits.
-    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.a:5.#text:0: "Sponsor on GitHub "
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.a:5.#text:0: "GitHub Sponsors"
     merged.supportTitle: Voluntary support
   page:not-found:
     root.html:1.head:0.title:2.#text:0: Page not found | MZSH Docs
@@ -7624,7 +7624,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 1e6d5d0c3368ce0071ef8ec5a05358931a4b7d82e9d4cb888170eae7da3ac8a4
+sourceHash: b33d27e25c213d082894f1e25c63ba782870a63b703f80868192b91c805635fe
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---
