@@ -8,9 +8,9 @@ websiteRoute: /blog/
 template: blog/index.html
 lang: en
 translationKey: blog-index
-sourceHash: ae5ff87038e2002f9849689c40d289d7a5ccafa64b3450118f25b0ce82095db8
+sourceHash: 2484536e1b4082cea849ed4e4f89721b5568b370b5bc8163000d37dceb1d1c9f
 translationStatus: translated
-generatedBodyHash: 51ddbe9a8cfdf7fb4ef1910fbe7869692e2b8e41213159f5d623d770051cbf8e
+generatedBodyHash: 2ff0c1a421fd72bd2882dd4757e3fc26deb6d51e0265ad8478cb5d98458b909f
 ---
 
 ![](/media-occurrence/page%3Ablog-index%3Amedia%3A1)
@@ -27,7 +27,11 @@ Default order
 
 Tags
 
-[## How to Let AI Modify DataAsset Directly
+[## Fixing Missing GI Across Multiple Views in UE 5.3
+
+A UE 5.3 source-build record of changing the maximum view count from 2 to 3 across seven locations, with a source screenshot and version limits.
+
+LumenMultiple viewsUE 5.3](/blog/ue53-multiview-gi/)[## How to Let AI Modify DataAsset Directly
 
 Discusses format selection, property conversion, repeated triggers, and file writes in bidirectional DataAsset and JSON synchronization.
 

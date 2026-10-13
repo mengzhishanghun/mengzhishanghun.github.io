@@ -4058,5 +4058,17 @@
       "oldId": "总结",
       "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
     }
+  ],
+  "blog:ue53-multiview-gi": [
+    {
+      "depth": 2,
+      "oldId": "修改记录",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "相关案例",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
   ]
 }

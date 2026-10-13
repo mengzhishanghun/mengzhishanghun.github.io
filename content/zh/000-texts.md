@@ -13,6 +13,50 @@ languageLabels:
   group: 切换语言
   switchAria: 切换为{language}
 shellSlots:
+  blog:ue53-multiview-gi:
+    root.html:1.head:0.meta:2@content: 以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，记录七处修改的源码截图与适用限制。
+    root.html:1.head:0.title:4.#text:0: 多视角GI丢失问题的解决办法 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 联系
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 多视角GI丢失问题的解决办法
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，记录七处修改的源码截图与适用限制。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   blog:cnblogs-19143267:
     root.html:1.head:0.meta:2@content: 我个人的理解是，Stream 是 Perforce 推出的、类似于传统分支但更智能的“流”。它提供可视化视图，便于查看分支间的同步关系。
     root.html:1.head:0.title:4.#text:0: Stream实战指南 · 小毛
@@ -4828,6 +4872,13 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   page:blog-index:
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37@aria-label: 多视角GI丢失问题的解决办法
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.h2:0.#text:0: 多视角GI丢失问题的解决办法
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.p:1.#text:0: 以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，记录七处修改的源码截图与适用限制。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:1.#text:0: 多视角
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:2.#text:0: UE 5.3
     root.html:1.head:0.meta:2@content: 小毛的开发作品、项目案例与技术记录。
     root.html:1.head:0.title:4.#text:0: 博客 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
@@ -4846,7 +4897,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: 技术思考、排障与开发记录
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: 博客分类
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "26"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "27"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:0.#text:0: C++
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "1"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:0.#text:0: Python
@@ -5198,6 +5249,8 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
 scriptSlots:
+  blog:ue53-multiview-gi:root.html:1.body:1.script:5:1187: Bilibili 播放器
+  blog:ue53-multiview-gi:root.html:1.body:1.script:5:2062: Bilibili 播放器
   _astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:2214: 文章
   _astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:2225: 文章
   _astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:2230: 篇
@@ -5387,6 +5440,9 @@ scriptSlots:
   page:support:root.html:1.body:1.script:5:1187: Bilibili 播放器
   page:support:root.html:1.body:1.script:5:2062: Bilibili 播放器
 bodyUtilitySlots:
+  blog:ue53-multiview-gi:body-utility:1:
+    imageAlt: UE 5.3 引擎源码中的七处多视角上限修改
+    zoomLabel: 放大查看 UE 5.3 多视角修改源码截图
   blog:cnblogs-19143267:body-utility:1:
     root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 创建 Stream Depot（P4Admin）配图 1
     root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。

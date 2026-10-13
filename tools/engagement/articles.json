@@ -93,6 +93,7 @@
     "doc:simple-udp-guide",
     "doc:simple-websocket-guide",
     "doc:ue-package-manager",
-    "doc:ue-quick-start"
+    "doc:ue-quick-start",
+    "blog:ue53-multiview-gi"
   ]
 }

@@ -13,6 +13,50 @@ languageLabels:
   group: Switch language
   switchAria: Switch to {language}
 shellSlots:
+  blog:ue53-multiview-gi:
+    root.html:1.head:0.meta:2@content: A UE 5.3 source-build record of changing the maximum view count from 2 to 3 across seven locations, with a source screenshot and version limits.
+    root.html:1.head:0.title:4.#text:0: Fixing Missing GI Across Multiple Views in UE 5.3 · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Fixing Missing GI Across Multiple Views in UE 5.3
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A UE 5.3 source-build record of changing the maximum view count from 2 to 3 across seven locations, with a source screenshot and version limits.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   blog:cnblogs-19143267:
     root.html:1.head:0.meta:2@content: My understanding is that a Stream is Perforce's smarter counterpart to a traditional branch. Its visual view makes synchronization relationships between branches easier to see.
     root.html:1.head:0.title:4.#text:0: A Practical Guide to Streams · Xiao Mao
@@ -4828,6 +4872,13 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   page:blog-index:
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37@aria-label: Fixing Missing GI Across Multiple Views in UE 5.3
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.h2:0.#text:0: Fixing Missing GI Across Multiple Views in UE 5.3
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.p:1.#text:0: A UE 5.3 source-build record of changing the maximum view count from 2 to 3 across seven locations, with a source screenshot and version limits.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:1.#text:0: Multiple views
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:2.#text:0: UE 5.3
     root.html:1.head:0.meta:2@content: Xiao Mao's development work, project cases, and technical notes.
     root.html:1.head:0.title:4.#text:0: Blog · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
@@ -4846,7 +4897,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: Technical thoughts, troubleshooting, and development notes
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: Note categories
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "26"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "27"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:0.#text:0: C++
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "1"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:0.#text:0: Python
@@ -5198,6 +5249,8 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
 scriptSlots:
+  blog:ue53-multiview-gi:root.html:1.body:1.script:5:1187: Bilibili player
+  blog:ue53-multiview-gi:root.html:1.body:1.script:5:2062: Bilibili player
   _astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:2214: articles
   _astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:2225: articles
   _astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:2230: ""
@@ -5387,6 +5440,9 @@ scriptSlots:
   page:support:root.html:1.body:1.script:5:1187: Bilibili player
   page:support:root.html:1.body:1.script:5:2062: Bilibili player
 bodyUtilitySlots:
+  blog:ue53-multiview-gi:body-utility:1:
+    imageAlt: Seven multi-view limit changes in UE 5.3 engine source
+    zoomLabel: View a larger source screenshot of the UE 5.3 multi-view changes
   blog:cnblogs-19143267:body-utility:1:
     root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Creating a Stream Depot (P4Admin) — Figure 1"
     root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
@@ -6886,7 +6942,7 @@ codeLabels:
   copied: Copied!
 engagementLabels: {"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}
 translationKey: site-copy
-sourceHash: 62dabb1d502ecd29d48c1e842ae149bb4190bb157ff26f2ec0944b168ae20175
+sourceHash: ee9ef383ecfa87fd8e1976f9e2aca2dba4993cc3545adf7482b0ec786905f2dd
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

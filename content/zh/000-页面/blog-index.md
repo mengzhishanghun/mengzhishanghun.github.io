@@ -16,7 +16,7 @@ translationKey: blog-index
 
 技术思考、排障与开发记录
 
-UE26C++1Python1Perforce7随笔1
+UE27C++1Python1Perforce7随笔1
 
 搜索当前分类
 
@@ -24,7 +24,11 @@ UE26C++1Python1Perforce7随笔1
 
 标签
 
-[## 如何让 AI 直接修改 DataAsset
+[## 多视角GI丢失问题的解决办法
+
+以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，记录七处修改的源码截图与适用限制。
+
+Lumen多视角UE 5.3](/blog/ue53-multiview-gi/)[## 如何让 AI 直接修改 DataAsset
 
 讨论 DataAsset 与 JSON 双向同步中的格式选择、属性转换、循环触发和文件写入问题。
 

@@ -18,9 +18,9 @@ coverAlt: Flowchart for resolving inconsistent three-screen display in a driving
 websiteCoverUrl: /assets/cases/driving-simulator-three-screen.png
 lang: en
 translationKey: driving-simulator-three-screen
-sourceHash: c3e31e0ae837331bdefe2075a6698a4fc2991afa6c3324803c5dec5ed3258b9d
+sourceHash: 30d6a9599a8bdac90d377e6edc8567a126b823e12406bf2c6abbd359884e7492
 translationStatus: translated
-generatedBodyHash: deb441f802669c8eb0f4ec808acbe740f31efa1d15fb8b17eaae12c575ab6852
+generatedBodyHash: cf7665e660e561f92582be071cada4d5af91ea5a3ddff3ee16fc0782f56831e0
 ---
 
 ## Background
@@ -51,7 +51,7 @@ Exposure was also out of sync across the views, producing inconsistent screen br
 
 To address the fixed view limit in the engine, the maximum view count in the relevant implementations was changed from 2 to 3. The original record covered seven modifications that needed to be treated as one related set of changes.
 
-These changes were made in engine source code and required rebuilding the modified engine. The existing record explicitly states that comparable changes in a non-source build could not achieve this result.
+These changes were made in engine source code and required rebuilding the modified engine. The existing record explicitly states that comparable changes in a non-source build could not achieve this result. For the recorded modifications and source screenshot, [read the multi-view GI fix](https://mzsh.me/blog/ue53-multiview-gi/).
 
 **Associating exposure data across views**
 

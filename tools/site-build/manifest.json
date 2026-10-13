@@ -2955,6 +2955,29 @@
       "baselineTemplate": "docs/404.html",
       "supplementTranslationKeys": [],
       "mediaOccurrences": []
+    },
+    {
+      "id": "blog:ue53-multiview-gi",
+      "type": "blog",
+      "slug": "ue53-multiview-gi",
+      "legacyRoutes": [
+        "/blog/ue53-multiview-gi/"
+      ],
+      "template": "blog--ue53-multiview-gi.html",
+      "title": "多视角GI丢失问题的解决办法",
+      "translationKey": "ue53-multiview-gi",
+      "baselineTemplate": "blog/ue53-multiview-gi/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": [
+        {
+          "id": "blog:ue53-multiview-gi:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/imported/blog/746c135cbfc3463f7ebd.png",
+          "publicSha256": "746c135cbfc3463f7ebdc796fcc7707de8e3e182b16b1583f8fa1c39848d6dfd",
+          "utilityId": "blog:ue53-multiview-gi:body-utility:1"
+        }
+      ]
     }
   ],
   "redirects": [

@@ -7,6 +7,7 @@ languages:
     enabled: true
     commonSource: 000-texts.md
     sources:
+      blog:ue53-multiview-gi: blog/ue53-multiview-gi.md
       blog:cnblogs-19143267: blog/cnblogs-19143267.md
       blog:cnblogs-19143251: blog/cnblogs-19143251.md
       blog:cnblogs-19143254: blog/cnblogs-19143254.md
@@ -111,6 +112,7 @@ languages:
     enabled: true
     commonSource: 000-texts.md
     sources:
+      blog:ue53-multiview-gi: blog/ue53-multiview-gi.md
       blog:cnblogs-19143267: blog/cnblogs-19143267.md
       blog:cnblogs-19143251: blog/cnblogs-19143251.md
       blog:cnblogs-19143254: blog/cnblogs-19143254.md
