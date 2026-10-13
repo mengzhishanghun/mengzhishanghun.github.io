@@ -309,7 +309,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   const runtime={...publicLanguages(config),locale,urls,anchors,labels};
   const nav='<label class="site-language-switch"><select data-site-language-select data-current="'+locale+'" aria-label="'+escapeHTML(labels.group)+'">'+config.languages.map(l=>'<option value="'+l.code+'" data-site-locale="'+l.code+'"'+(l.code===locale?' selected':'')+'>'+escapeHTML(l.label)+'</option>').join('')+'</select></label>';
   let actions = 0;
-  let engagementBodies=0;
+  let engagementBodies=0,engagementSlots=0;
   const article=articleTypes.has(entry.type);
   const neutral=article?shareRoute(entry,locale,localeRoute(entry,locale)):null;
   if(article && ![...entry.legacyRoutes,...(config.shareAliases || [])].includes(neutral))throw new Error('通用分享入口未登记: '+neutral);
@@ -318,9 +318,12 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if (!loc) return;
     if(article && ['prose','sl-markdown-content'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && (node.parentNode?.tagName==='article' || (a.class || '').includes('sl-markdown-content'))) {
       engagementBodies++;
+    }
+    if(article && (a.class || '').split(/\s+/).includes('article-back') && (attrs(node.parentNode).class || '').split(/\s+/).includes('article-sidebar')) {
+      engagementSlots++;
       if(!engagementLabels || Object.values(engagementLabels).some(v=>typeof v!=='string'))throw new Error('互动文案缺失');
       const data={id:entry.id,origin:'https://mzsh.me',url:'https://mzsh.me'+neutral,title:entry.sources[config.fallback].data.title,labels:engagementLabels};
-      const markup='<section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="'+escapeHTML(engagementLabels.group)+'"><div class="article-engagement-actions"><button type="button" data-engagement-like hidden><span data-engagement-like-label>'+escapeHTML(engagementLabels.like)+'</span> <span data-engagement-count aria-label="'+escapeHTML(engagementLabels.count)+'">—</span></button><button type="button" data-engagement-share>'+escapeHTML(engagementLabels.share)+'</button></div><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p><label class="article-engagement-manual" data-engagement-manual hidden>'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" data-engagement-url readonly value="'+escapeHTML(data.url)+'"></label><script type="application/json" data-engagement-config>'+safeJSON(data)+'</script></section>';
+      const markup='<section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="'+escapeHTML(engagementLabels.group)+'"><div class="article-engagement-actions"><button type="button" data-engagement-like hidden><span data-engagement-like-label>'+escapeHTML(engagementLabels.like)+'</span> <span data-engagement-count aria-label="'+escapeHTML(engagementLabels.count)+'">—</span></button><button type="button" data-engagement-share>'+escapeHTML(engagementLabels.share)+'</button></div><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p><label class="article-engagement-manual" data-engagement-manual hidden>'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" data-engagement-url readonly value="'+escapeHTML(data.url)+'"></label><script type="application/json" data-engagement-config>'+safeJSON(data)+'</script><noscript><label class="article-engagement-manual">'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" readonly value="'+escapeHTML(data.url)+'"></label></noscript></section>';
       edits.push([loc.endTag.endOffset,loc.endTag.endOffset,markup]);
     }
     if(node.nodeName==='#text') {
@@ -369,6 +372,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   });
   if (actions!==1) throw new Error('header-actions不是唯一: '+entry.id);
   if(article && engagementBodies!==1)throw new Error('文章互动正文容器不是唯一: '+entry.id);
+  if(article && engagementSlots!==1)throw new Error('文章互动侧栏插槽不是唯一: '+entry.id);
   return applyEdits(html,edits);
 }
 function redirect({pathname,entry,explicitLocale=null,anchors={},config,labels}) {

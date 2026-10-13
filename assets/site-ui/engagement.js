@@ -1,7 +1,33 @@
 (function () {
   'use strict';
   if (window.SiteEngagement) { window.SiteEngagement.init(); return; }
-  const refreshers = new WeakMap();
+  const refreshers = new WeakMap(), slots = new WeakMap();
+  const mobileQuery = window.matchMedia?.('(max-width:720px)');
+  let navigationGeneration = 0;
+  function place(root) {
+    let slot = slots.get(root);
+    if (!slot) {
+      const sidebar = root.closest?.('.article-sidebar');
+      if (!sidebar) return;
+      slot = document.createComment('article-engagement-slot');
+      root.before(slot);
+      slots.set(root, slot);
+    }
+    const mobile = root.closest('mzsh-reading')?.querySelector('mobile-outline');
+    const controls = mobile?.hasAttribute('data-ready') ? mobile.querySelector('.outline-mobile-controls') : null;
+    const target = mobileQuery?.matches ? controls : null;
+    if (target ? root.parentNode === target : root.previousSibling === slot) return;
+    const focused = document.activeElement;
+    const preserveFocus = focused && root.contains(focused);
+    if (target) target.append(root); else slot.after(root);
+    if (preserveFocus && focused.isConnected && document.activeElement !== focused) focused.focus({preventScroll:true});
+  }
+  function placeAll() {
+    for (const root of document.querySelectorAll('[data-article-engagement]')) place(root);
+  }
+  mobileQuery?.addEventListener('change', placeAll);
+  document.addEventListener('astro:before-preparation', () => { navigationGeneration++; });
+  window.addEventListener?.('pagehide', () => { navigationGeneration++; });
   function createLikeAction({ id, storage, send, locks }) {
     const key = 'article-like:' + id;
     let state, inFlight = false;
@@ -55,17 +81,13 @@
     try { const response = await window.fetch(url, { ...options, signal: controller.signal, credentials: 'omit', cache: 'no-store' }); const data = await response.json(); return { ok: response.ok, status: response.status, json: async () => data }; }
     finally { clearTimeout(timer); }
   }
-  async function share({ url, title, navigator, copy, manual }) {
-    if (typeof navigator.share === 'function') {
-      try { await navigator.share({ title, url }); return 'shared'; }
-      catch (error) { if (error.name === 'AbortError') return 'cancelled'; }
-    }
+  async function share({ url, copy, manual }) {
     try { await copy(url); return 'copied'; }
     catch { manual(url); return 'manual'; }
   }
   function init() {
     for (const root of document.querySelectorAll('[data-article-engagement]')) {
-      if (root.dataset.engagementReady) continue;
+      if (root.dataset.engagementReady) { place(root); continue; }
       root.dataset.engagementReady = 'true';
       const data = JSON.parse(root.querySelector('[data-engagement-config]').textContent);
       const like = root.querySelector('[data-engagement-like]'), count = root.querySelector('[data-engagement-count]'), status = root.querySelector('[data-engagement-status]');
@@ -98,13 +120,16 @@
       shareButton.addEventListener('click', async () => {
         if (shareButton.disabled) return;
         shareButton.disabled = true;
+        const generation = navigationGeneration;
+        const live = () => root.isConnected && generation === navigationGeneration;
         try {
-          const result = await share({ url: data.url, title: data.title, navigator: window.navigator,
+          const result = await share({ url: data.url,
             copy: value => window.navigator.clipboard.writeText(value),
-            manual: value => { manual.hidden = false; link.value = value; link.focus(); link.select(); } });
-          if (result !== 'cancelled') status.textContent = data.labels[result];
-        } finally { shareButton.disabled = false; }
+            manual: value => { if (!live()) return; manual.hidden = false; link.value = value; link.focus({preventScroll:true}); link.select(); } });
+          if (live()) status.textContent = data.labels[result] || '';
+        } finally { if (root.isConnected) shareButton.disabled = false; }
       });
+      place(root);
     }
   }
   window.SiteEngagement = { init, createLikeAction, share };
@@ -113,5 +138,6 @@
     for (const root of document.querySelectorAll('[data-article-engagement]')) refreshers.get(root)?.();
   });
   document.addEventListener('astro:page-load', init);
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true }); else init();
+  if (document.readyState !== 'complete') document.addEventListener('DOMContentLoaded', init, { once: true });
+  if (document.readyState !== 'loading') init();
 }());
