@@ -1,0 +1,19 @@
+{
+  "name": "mzsh-content-import",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node src/build/build.mjs",
+    "check": "node src/build/build.mjs --check",
+    "import": "node src/import/import.mjs",
+    "test:rejection": "node src/import/test-rejection.mjs",
+    "test:cases": "node src/import/test-cases.mjs"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "7.3.0",
+    "parse5": "7.3.0",
+    "rehype-expressive-code": "0.44.2",
+    "pagefind": "1.5.2",
+    "yaml": "2.9.1"
+  }
+}

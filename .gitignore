@@ -1,7 +1,7 @@
 ﻿# ========== Node 项目相关 ==========
 node_modules/
 dist/
-build/
+/build/
 .env
 .env.local
 .env.development.local
@@ -57,3 +57,5 @@ vite.config.js
 .agents/
 .svn/
 .vs/
+__pycache__/
+*.pyc
