@@ -7,7 +7,7 @@ import {publicLanguageCodes} from '../analytics/inject.mjs';
 const manifestPath='src/deploy/release-manifest.json',provenancePath='release-provenance.json';
 const previews=new Set(['design-preview/index.html','design-preview/docs/index.html']);
 const roots=new Set(['_astro','assets','blog-search','blog','cases','contact','docs','en','licenses','media','support','works','zh']);
-const rootFiles=new Set(['.nojekyll','favicon.svg','index.html','site-router.js','sitemap.xml','robots.txt','site-languages.json']);
+const rootFiles=new Set(['.nojekyll','favicon.svg','index.html','site-router.js','sitemap.xml','robots.txt','site-languages.json','about/index.html']);
 const suffixes=new Set(['.html','.css','.js','.json','.xml','.svg','.png','.jpg','.jpeg','.webp','.ico','.txt','.pagefind','.pf_fragment','.pf_index','.pf_meta']);
 const digest=(b,type='sha256')=>createHash(type).update(b).digest('hex');
 const blob=b=>digest(Buffer.concat([Buffer.from(`blob ${b.length}\0`),b]),'sha1');

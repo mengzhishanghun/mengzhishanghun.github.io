@@ -26,8 +26,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -70,8 +70,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -119,8 +119,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -168,8 +168,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -217,8 +217,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -266,8 +266,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -315,8 +315,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -364,8 +364,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -413,8 +413,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -462,8 +462,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -509,8 +509,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -558,8 +558,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -607,8 +607,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -656,8 +656,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -705,8 +705,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -754,8 +754,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -803,8 +803,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -852,8 +852,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -901,8 +901,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -950,8 +950,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -999,8 +999,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1048,8 +1048,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1097,8 +1097,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1146,8 +1146,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1195,8 +1195,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1244,8 +1244,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1293,8 +1293,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1342,8 +1342,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1391,8 +1391,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1440,8 +1440,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1489,8 +1489,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1538,8 +1538,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1587,8 +1587,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1636,8 +1636,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1685,8 +1685,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1734,8 +1734,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
@@ -1781,8 +1781,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -1832,8 +1832,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -1883,8 +1883,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -1933,8 +1933,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -1983,8 +1983,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -2033,8 +2033,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -2084,8 +2084,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -2135,8 +2135,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -2185,8 +2185,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -2235,8 +2235,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
@@ -2285,8 +2285,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2338,8 +2338,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2391,8 +2391,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2444,8 +2444,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2495,8 +2495,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2548,8 +2548,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2602,8 +2602,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2655,8 +2655,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2708,8 +2708,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2761,8 +2761,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2814,8 +2814,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2866,8 +2866,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2919,8 +2919,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -2972,8 +2972,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3025,8 +3025,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3077,8 +3077,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3129,8 +3129,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3181,8 +3181,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3233,8 +3233,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3285,8 +3285,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3338,8 +3338,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3392,8 +3392,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3446,8 +3446,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3501,8 +3501,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
@@ -3558,8 +3558,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3595,8 +3595,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3632,8 +3632,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3669,8 +3669,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3706,8 +3706,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3743,8 +3743,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3780,8 +3780,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3817,8 +3817,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3854,8 +3854,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3891,8 +3891,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3928,8 +3928,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -3965,8 +3965,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4002,8 +4002,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4039,8 +4039,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4076,8 +4076,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4113,8 +4113,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4150,8 +4150,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4187,8 +4187,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4224,8 +4224,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4261,8 +4261,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4298,8 +4298,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4335,8 +4335,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4372,8 +4372,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4409,8 +4409,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -4444,14 +4444,14 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: Every complexity can be encapsulated;
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: Every repetition can be automated.
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: Hi, I'm Xiao Mao
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: Game Development · Digital Twins · Tools and Plugins
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: View works
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:1.#text:0: Get in touch
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: Featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: Featured works
@@ -4545,8 +4545,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: Works
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: Plugins, tools, and games
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: Work categories
@@ -4760,8 +4760,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: Cases
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: From real problems to working results
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: Case categories
@@ -4891,8 +4891,8 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: Blog
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: Technical thoughts, troubleshooting, and development notes
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: Note categories
@@ -5124,7 +5124,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   page:contact:
     root.html:1.head:0.meta:2@content: Discuss game development, digital twins, and tools and plugin collaboration.
-    root.html:1.head:0.title:4.#text:0: Contact and Collaboration · Xiao Mao
+    root.html:1.head:0.title:4.#text:0: Contact & support | MZSH
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -5135,9 +5135,9 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: Contact & Collaboration
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: Contact & support
     root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.p:1.#text:0: Game Development / Digital Twins / Tools and Plugins
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:0.#text:0: Development services
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:0.div:1.h3:0.#text:0: Game Development
@@ -5163,54 +5163,30 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  page:support:
-    root.html:1.head:0.meta:2@content: Voluntary support for Xiao Mao's continued creation and sharing.
-    root.html:1.head:0.title:4.#text:0: Support My Work · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:3.h1:1.#text:0: Support My Work
-    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:3.p:3.#text:0: Support creation and keep sharing alive
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:1.#text:0: Keep creating
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.p:3.#text:0: If my work and articles have helped you, voluntary support is welcome.
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.h3:0.#text:0: Works and Tools
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.p:1.#text:0: Explore new ideas and refine useful tools.
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:3.h3:0.#text:0: Game Creation
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:3.p:1.#text:0: Explore gameplay and create my own games.
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:5.h3:0.#text:0: Articles and Tutorials
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:5.p:1.#text:0: Organize experience and share reusable methods.
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.h3:0.#text:0: Website and Maintenance
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.p:1.#text:0: Keep the website running reliably and continue improving the experience.
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.h2:1.#text:0: Choose how to support
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: Support via WeChat
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3@aria-label: View a larger image of the WeChat payment QR code
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3.img:0@alt: Xiao Mao's WeChat payment QR code
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.p:5.#text:0: Scan with WeChat · Click to enlarge
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.h3:1.#text:0: Alipay
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.a:3@aria-label: View a larger image of the Alipay payment QR code
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.a:3.img:0@alt: 梦之殇魂's Alipay payment QR code
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.p:5.#text:0: Scan with Alipay · Click to enlarge
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.h3:0.#text:0: GitHub Sponsors
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:1.#text:0: Subscriptions and one-time contributions
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:2.#text:0: See the GitHub page for the available tiers and benefits.
-    root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.a:5.#text:0: "Sponsor on GitHub "
-    root.html:1.body:1.div:0.footer:3.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:3.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:3.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:1.#text:0: Keep creating
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.p:3.#text:0: If my work and articles have helped you, voluntary support is welcome.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.h3:0.#text:0: Works and Tools
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.p:1.#text:0: Explore new ideas and refine useful tools.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:3.h3:0.#text:0: Game Creation
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:3.p:1.#text:0: Explore gameplay and create my own games.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:5.h3:0.#text:0: Articles and Tutorials
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:5.p:1.#text:0: Organize experience and share reusable methods.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.h3:0.#text:0: Website and Maintenance
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.p:1.#text:0: Keep the website running reliably and continue improving the experience.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.h2:1.#text:0: Choose how to support
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: Support via WeChat
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3@aria-label: View a larger image of the WeChat payment QR code
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3.img:0@alt: Xiao Mao's WeChat payment QR code
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.p:5.#text:0: Scan with WeChat · Click to enlarge
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.h3:1.#text:0: Alipay
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.a:3@aria-label: View a larger image of the Alipay payment QR code
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.a:3.img:0@alt: 梦之殇魂's Alipay payment QR code
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.p:5.#text:0: Scan with Alipay · Click to enlarge
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.h3:0.#text:0: GitHub Sponsors
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:1.#text:0: Subscriptions and one-time contributions
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:2.#text:0: See the GitHub page for the available tiers and benefits.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.a:5.#text:0: "Sponsor on GitHub "
+    merged.supportTitle: Voluntary support
   page:not-found:
     root.html:1.head:0.title:2.#text:0: Page not found | MZSH Docs
     root.html:1.head:0.meta:8@content: Page not found
@@ -5226,8 +5202,8 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to works
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
@@ -5248,6 +5224,87 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  page:about:
+    root.html:1.head:0.meta:2@content: Hi, I’m Xiaomao. I’m from Yuncheng, Shanxi, and started working in Unreal Engine development in 2018. My work has included multi-screen and VR projects, plugins, tools, and automation.
+    root.html:1.head:0.title:4.#text:0: About me | MZSH
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.p:1.#text:0: Game Development / Digital Twins / Tools and Plugins
+    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:0.#text:0: Development services
+    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:0.div:1.h3:0.#text:0: Game Development
+    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:0.div:1.p:1.#text:0: Gameplay prototypes, feature development, and scene interaction.
+    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:2.div:1.h3:0.#text:0: Digital Twins
+    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:2.div:1.p:1.#text:0: 3D visualization, data presentation, and interactive features.
+    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:4.div:1.h3:0.#text:0: Tools and Plugins
+    root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:4.div:1.p:1.#text:0: Productivity tools, custom plugins, and automated workflows.
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.h2:0.#text:0: Contact details
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:2.div:0.h3:0.#text:0: Email
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:2.div:0.p:1.#text:0: mzsh.me@icloud.com
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:2.div:1.button:0.#text:0: Copy email address
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.a:0@aria-label: View a larger image of the personal WeChat QR code
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.a:0.img:0@alt: Xiao Mao's personal WeChat QR code
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.h3:0.#text:0: Personal WeChat
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:1.#text:0: Scan with WeChat to add me
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:1.#text:2: Click to enlarge
+    root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:4.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:4.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:1.#text:0: Keep creating
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.p:3.#text:0: If my work and articles have helped you, voluntary support is welcome.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.h3:0.#text:0: Works and Tools
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.p:1.#text:0: Explore new ideas and refine useful tools.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:3.h3:0.#text:0: Game Creation
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:3.p:1.#text:0: Explore gameplay and create my own games.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:5.h3:0.#text:0: Articles and Tutorials
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:5.p:1.#text:0: Organize experience and share reusable methods.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.h3:0.#text:0: Website and Maintenance
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.p:1.#text:0: Keep the website running reliably and continue improving the experience.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.h2:1.#text:0: Choose how to support
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: Support via WeChat
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3@aria-label: View a larger image of the WeChat payment QR code
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3.img:0@alt: Xiao Mao's WeChat payment QR code
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.p:5.#text:0: Scan with WeChat · Click to enlarge
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.h3:1.#text:0: Alipay
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.a:3@aria-label: View a larger image of the Alipay payment QR code
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.a:3.img:0@alt: 梦之殇魂's Alipay payment QR code
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:3.p:5.#text:0: Scan with Alipay · Click to enlarge
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.h3:0.#text:0: GitHub Sponsors
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:1.#text:0: Subscriptions and one-time contributions
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:2.#text:0: See the GitHub page for the available tiers and benefits.
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.a:5.#text:0: "Sponsor on GitHub "
+    merged.supportTitle: Voluntary support
+    about.about: About me
+    about.contact: Contact & support
+    about.support: Voluntary support
+    about.age: Age
+    about.bornPrefix: "Born in "
+    about.bornSuffix: ""
+    about.ageFormat: "{age} years old"
+    about.hometown: Hometown
+    about.place: Yuncheng, Shanxi
+    about.started: Started UE development
+    about.year: "2018"
+    about.experience: My background
+    about.intro: Hi, I’m Xiaomao. I’m from Yuncheng, Shanxi, and started working in Unreal Engine development in 2018. My work has included multi-screen and VR projects, plugins, tools, and automation.
+    about.title: About me
+    about.greeting: Hi, I’m Xiaomao
+    about.facts: At a glance
 scriptSlots:
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:1187: Bilibili player
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:2062: Bilibili player
@@ -6940,9 +6997,22 @@ codeLabels:
   terminalWindow: Terminal window
   copyTitle: Copy to clipboard
   copied: Copied!
-engagementLabels: {"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}
+engagementLabels:
+  group: Article actions
+  like: Like
+  liked: Liked on this device
+  count: Total likes
+  share: Share
+  ready: ""
+  pending: The like result is unknown. Please do not submit again.
+  storage: This browser cannot save the like state. Likes are unavailable.
+  rejected: Likes are temporarily unavailable. Please try later.
+  shared: Shared
+  copied: Link copied
+  manual: Select and copy the link below.
+  manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: ee9ef383ecfa87fd8e1976f9e2aca2dba4993cc3545adf7482b0ec786905f2dd
+sourceHash: 3805b2c5fcd7463fbde4da64d1ec16fd81ac3f60d3c6b2386267433ac2dddc78
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

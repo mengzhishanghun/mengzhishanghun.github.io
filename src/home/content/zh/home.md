@@ -17,7 +17,7 @@ translationKey: home
 
 游戏开发 · 数字孪生 · 工具与插件
 
-[查看作品](/works/)[联系合作](/contact/)
+[关于我](/about/)[联系与支持](/contact/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A1)
 

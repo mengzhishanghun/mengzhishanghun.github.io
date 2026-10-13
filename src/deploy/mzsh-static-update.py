@@ -44,7 +44,7 @@ SKIP = {'.nojekyll'}
 PUBLIC_ROOTS = {'_astro', 'assets', 'blog-search', 'blog', 'cases', 'contact', 'docs',
                 'en', 'licenses', 'media', 'support', 'works', 'zh'}
 PUBLIC_ROOT_FILES = {'.nojekyll', 'favicon.svg', 'index.html', 'site-router.js',
-                     'sitemap.xml', 'robots.txt', 'site-languages.json'}
+                     'sitemap.xml', 'robots.txt', 'site-languages.json', 'about/index.html'}
 PRIVATE_ROOTS = {'src', 'tools', 'content', 'ob', 'obsidian', 'website-next'}
 MAX_LANGUAGES = 32
 MAX_TOTAL_BYTES = 150_000_000

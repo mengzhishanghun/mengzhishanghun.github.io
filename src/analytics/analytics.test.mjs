@@ -17,6 +17,7 @@ test('public language metadata admits configured future routes without exposing 
   assert.throws(()=>publicLanguageCodes({...config,languages:[...config.languages,{code:'fr'}]}),/code无效/);
   assert.throws(()=>publicLanguageCodes({...config,languages:config.languages.map(l=>({...l,root:'private'}))}),/来源字段/);
 });
+test('only the exact about alias joins public analytics paths while refresh pages remain excluded',()=>{assert.equal(isPublicPath('about/index.html'),true);for(const p of ['zh/about/index.html','en/about/index.html'])assert.equal(isPublicPath(p),true);for(const p of ['about/extra.html','about/profile.json','about/client.js','src/about/profile.json'])assert.equal(isPublicPath(p),false);assert.equal(isPublicHtml('about/index.html','<html><meta http-equiv="refresh" content="0;url=/zh/about/"></html>'),false);});
 
 function browser(url = 'https://mzsh.me/a/?q=1#top', options = {}) {
   const listeners = new Map();

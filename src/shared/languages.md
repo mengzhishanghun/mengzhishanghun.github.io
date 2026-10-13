@@ -105,8 +105,8 @@ languages:
       page:cases-index: cases/content/zh/cases-index.md
       page:blog-index: blog/content/zh/blog-index.md
       page:contact: contact/content/zh/contact.md
-      page:support: support/content/zh/support.md
       page:not-found: shared/content/zh/not-found.md
+      page:about: about/content/zh/about.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -209,6 +209,6 @@ languages:
       page:cases-index: cases/content/en/cases-index.md
       page:blog-index: blog/content/en/blog-index.md
       page:contact: contact/content/en/contact.md
-      page:support: support/content/en/support.md
       page:not-found: shared/content/en/not-found.md
+      page:about: about/content/en/about.md
 ---

@@ -1218,7 +1218,7 @@
       "mode": "authored"
     },
     {
-      "source": "src/support/client/support-contact.css",
+      "source": "src/contact/client/support-contact.css",
       "outputs": [
         "assets/site-ui/support-contact.css"
       ],
@@ -1226,7 +1226,7 @@
       "mode": "authored"
     },
     {
-      "source": "src/support/client/support-sponsors.css",
+      "source": "src/contact/client/support-sponsors.css",
       "outputs": [
         "assets/site-ui/support-sponsors.css"
       ],
@@ -3528,6 +3528,30 @@
       ],
       "sha256": "4d929e73679017b045adaca4a0ba16e3ddc183479bff441812e2b10a36c0e35b",
       "mode": "frozen"
+    },
+    {
+      "source": "src/about/client/age.mjs",
+      "outputs": [
+        "assets/site-ui/about-age.js"
+      ],
+      "sha256": "316bb81fb363e35554ba12e38e029f918ac4e9975c03117c779e3bceb107c827",
+      "mode": "authored"
+    },
+    {
+      "source": "src/contact/client/merged.css",
+      "outputs": [
+        "assets/site-ui/contact-merged.css"
+      ],
+      "sha256": "c61d77d586cf58750997c8c607585509c359430fa84597b0e5023eaefaf05d95",
+      "mode": "authored"
+    },
+    {
+      "source": "src/shared/i18n/client/navigation.css",
+      "outputs": [
+        "assets/site-ui/navigation.css"
+      ],
+      "sha256": "51acac7175b509da4a93433b35ed5536ac0166630d9855008729c037a520b2c7",
+      "mode": "authored"
     }
   ]
 }

@@ -20,7 +20,7 @@ sudo -n python3 /usr/local/libexec/mzsh-static-update.py --check
 
 ## 公开范围与容量
 
-公开目录与 `src/analytics/inject.mjs` 保持一致：`_astro`、`assets`、`blog-search`、`blog`、`cases`、`contact`、`docs`、`en`、`licenses`、`media`、`support`、`works`、`zh`，再加同提交语言清单中的启用 code。根文件仅允许 `.nojekyll`、`favicon.svg`、`index.html`、`site-router.js`、`sitemap.xml`、`robots.txt`、`site-languages.json`。`content/`、`tools/`、`src/`、Obsidian 来源与版本控制/本机元数据不进入发布树。
+公开目录与 `src/analytics/inject.mjs` 保持一致：`_astro`、`assets`、`blog-search`、`blog`、`cases`、`contact`、`docs`、`en`、`licenses`、`media`、`support`、`works`、`zh`，再加同提交语言清单中的启用 code。根文件仅允许 `.nojekyll`、`favicon.svg`、`index.html`、`site-router.js`、`sitemap.xml`、`robots.txt`、`site-languages.json`；另精确允许 `about/index.html` 通用入口，未开放整个 `about/`，其源码与其他子文件仍拒绝。`content/`、`tools/`、`src/`、Obsidian 来源与版本控制/本机元数据不进入发布树。
 
 启用语言数 `n` 必须在 1–32 之间。公开 HTML 上限为 `200 + 110*n`，公开文件上限为 `1000 + 500*n`，全部公开文件合计不超过 150 MB，单个文件不超过 50 MB。公开符号链接、可执行模式、越界路径、重复路径与未允许类型会被拒绝。语言清单中不得包含来源目录等私有字段。
 

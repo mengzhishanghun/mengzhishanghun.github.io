@@ -1,0 +1,2 @@
+.header-actions { min-width: 0; flex-wrap: wrap; }
+.header-actions > a { min-width: 0; white-space: normal; overflow-wrap: anywhere; }

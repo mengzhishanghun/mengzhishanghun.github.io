@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: f5f00b63ca2beaf096644447df7f70f1c7000cd8f6902f709b6baba6c68271b7
+sourceHash: 6440aec5a5bd44512942baf5b0cea8b6d019698f8ef229c5813eb80717d85e81
 translationStatus: translated
-generatedBodyHash: f2d3dab06485a1c7e1bec299accefb2df65ea43867a7cc8e24fbeb38cddd14d0
+generatedBodyHash: 241377517a7330f660c53cecea6088f8ace146477c9335f60202d7ba4bbdfe7b
 ---
 
 # Complexity can be encapsulated;
@@ -20,7 +20,7 @@ Hi, I'm Xiao Mao
 
 Game Development · Digital Twins · Tools & Plugins
 
-[Explore Works](/works/)[Contact & Collaboration](/contact/)
+[About me](/about/)[Contact & support](/contact/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A1)
 

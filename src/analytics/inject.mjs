@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const uuid = /^[0-9a-f]{8}-[0-9a-f]{4}-[1-8][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i;
 const publicRoots = new Set(['_astro', 'assets', 'blog-search', 'blog', 'cases', 'contact', 'docs', 'en', 'licenses', 'media', 'support', 'works', 'zh']);
-const publicRootFiles = new Set(['favicon.svg', 'index.html', 'site-router.js', '.nojekyll', 'sitemap.xml', 'robots.txt', 'site-languages.json']);
+const publicRootFiles = new Set(['favicon.svg', 'index.html', 'site-router.js', '.nojekyll', 'sitemap.xml', 'robots.txt', 'site-languages.json', 'about/index.html']);
 
 export function publicLanguageCodes(config) {
   if(config?.version!==1 || !Array.isArray(config.languages) || !config.languages.length)throw new Error('公开语言配置无效');

@@ -404,6 +404,11 @@ export function normalizeScriptEntries(entries) {
 export async function buildSite(options) {
   const {site,manifest,output,check=false}=options;
   const {entries,config,copy}=preflight(options),{primary,languages}=config,codes=languages.map(l=>l.code);
+  let profile=null;
+  if(entries.some(entry=>entry.id==='page:about')){
+    profile=JSON.parse(fs.readFileSync(regularPath(options.sourceRoot || path.join(site,'src'),'about/profile.json'),'utf8'));
+    if(Object.keys(profile).length!==1||!Number.isInteger(profile.birthYear)||profile.birthYear<1||profile.birthYear>9999)throw new Error('关于我出生年配置无效');
+  }
   config.shareAliases=(manifest.redirects || []).map(alias=>alias.route);
   const resources = !options.templateRoot?loadResources({site}):new Map(), files=new Map(), rendered = new Map();
   const scriptURLs=new Map(),scriptManifest=path.join(here,'scripts.json');
@@ -438,8 +443,9 @@ export async function buildSite(options) {
     const file=regularPath(options.templateRoot || options.sourceRoot || path.join(site,'src'),entry.template);
     let html=fs.readFileSync(file,'utf8').replaceAll('/blog-search/',`/${locale}/blog-search/`);
     html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
+    if(entry.id==='page:about')html=html.replaceAll('{{profile:birthYear}}',String(profile.birthYear));
     html=html.replace('{{body}}',result.code).replace('{{outline}}',outline(result.headings));
-    if (/\{\{(?:text|body|outline)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
+    if (/\{\{(?:text|body|outline|profile)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
     const anchors = Object.fromEntries(codes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
     html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,config,copy[locale].engagementLabels);
     files.set(routeFile(localeRoute(entry,locale)),Buffer.from(html));

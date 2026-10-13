@@ -2885,7 +2885,7 @@
         "/contact/"
       ],
       "template": "contact/templates/page--contact.html",
-      "title": "联系与合作",
+      "title": "联系与支持",
       "translationKey": "contact",
       "baselineTemplate": "contact/index.html",
       "supplementTranslationKeys": [],
@@ -2903,44 +2903,35 @@
           "state": "public",
           "websiteUrl": "/assets/contact/wechat-personal-qr.webp",
           "publicSha256": "bef638ed4084729c0b0ff2cc93165cee24f74aee47ddc3b4bb3f84eaf1ebe2e6"
-        }
-      ]
-    },
-    {
-      "id": "page:support",
-      "type": "page",
-      "slug": "support",
-      "legacyRoutes": [
-        "/support/"
-      ],
-      "template": "support/templates/page--support.html",
-      "title": "支持",
-      "translationKey": "support",
-      "baselineTemplate": "support/index.html",
-      "supplementTranslationKeys": [],
-      "mediaOccurrences": [
-        {
-          "id": "page:support:media:1",
-          "ordinal": 1,
-          "state": "public",
-          "websiteUrl": "/assets/page-heroes/support-blue-2172.png",
-          "publicSha256": "fd263de10f9402b8832c76a1716444c7870558adae97518187467e5992fd2937"
         },
         {
-          "id": "page:support:media:2",
-          "ordinal": 2,
+          "id": "page:contact:media:3",
+          "ordinal": 3,
           "state": "public",
           "websiteUrl": "/assets/support/wechat-pay-qr.webp",
           "publicSha256": "f80a59a4e6e71a05f27a08331e0294d3e34a820b69a1eff2055bbbe289ab5a7b"
         },
         {
-          "id": "page:support:media:3",
-          "ordinal": 3,
+          "id": "page:contact:media:4",
+          "ordinal": 4,
           "state": "public",
           "websiteUrl": "/assets/support/alipay-qr.webp",
           "publicSha256": "9b4b50787290e0a2091043cee81f868c33016513a03216d6f9f8688334875789"
         }
       ]
+    },
+    {
+      "id": "page:about",
+      "type": "page",
+      "slug": "about",
+      "legacyRoutes": [
+        "/about/"
+      ],
+      "template": "about/templates/page--about.html",
+      "title": "关于我",
+      "translationKey": "about",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
     },
     {
       "id": "page:not-found",
@@ -3255,6 +3246,84 @@
     {
       "route": "/docs/tools/ue-quick-start/",
       "id": "doc:ue-quick-start"
+    },
+    {
+      "route": "/support/",
+      "id": "page:contact",
+      "anchorOverrides": {
+        "zh": {
+          "main-navigation": "main-navigation",
+          "main": "main",
+          "purpose-title": "purpose-title",
+          "methods-title": "methods-title",
+          "wechat-title": "wechat-title",
+          "alipay-title": "alipay-title",
+          "github-support-title": "github-support-title",
+          "page-title": "support-title"
+        },
+        "en": {
+          "main-navigation": "main-navigation",
+          "main": "main",
+          "purpose-title": "purpose-title",
+          "methods-title": "methods-title",
+          "wechat-title": "wechat-title",
+          "alipay-title": "alipay-title",
+          "github-support-title": "github-support-title",
+          "page-title": "support-title"
+        }
+      }
+    },
+    {
+      "route": "/zh/support/",
+      "id": "page:contact",
+      "anchorOverrides": {
+        "zh": {
+          "main-navigation": "main-navigation",
+          "main": "main",
+          "purpose-title": "purpose-title",
+          "methods-title": "methods-title",
+          "wechat-title": "wechat-title",
+          "alipay-title": "alipay-title",
+          "github-support-title": "github-support-title",
+          "page-title": "support-title"
+        },
+        "en": {
+          "main-navigation": "main-navigation",
+          "main": "main",
+          "purpose-title": "purpose-title",
+          "methods-title": "methods-title",
+          "wechat-title": "wechat-title",
+          "alipay-title": "alipay-title",
+          "github-support-title": "github-support-title",
+          "page-title": "support-title"
+        }
+      }
+    },
+    {
+      "route": "/en/support/",
+      "id": "page:contact",
+      "anchorOverrides": {
+        "zh": {
+          "main-navigation": "main-navigation",
+          "main": "main",
+          "purpose-title": "purpose-title",
+          "methods-title": "methods-title",
+          "wechat-title": "wechat-title",
+          "alipay-title": "alipay-title",
+          "github-support-title": "github-support-title",
+          "page-title": "support-title"
+        },
+        "en": {
+          "main-navigation": "main-navigation",
+          "main": "main",
+          "purpose-title": "purpose-title",
+          "methods-title": "methods-title",
+          "wechat-title": "wechat-title",
+          "alipay-title": "alipay-title",
+          "github-support-title": "github-support-title",
+          "page-title": "support-title"
+        }
+      }
     }
   ]
 }

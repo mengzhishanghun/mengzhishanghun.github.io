@@ -4,9 +4,9 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import {generatedPage} from './interaction-fixtures.mjs';
 
-function viewer(relative) {
+function viewer(relative,mediaURL) {
   const fixture=generatedPage(relative);
-  const anchorNode=fixture.select('a[data-media-image]');assert.ok(anchorNode,'the generated article supplies a published image trigger');
+  const anchorNode=mediaURL?fixture.nodes.find(node=>node.tagName==='a'&&fixture.attrs(node)['data-media-image']!==undefined&&fixture.attrs(node).href===mediaURL):fixture.select('a[data-media-image]');assert.ok(anchorNode,'the generated article supplies a published image trigger');
   const frameNode=fixture.closest(anchorNode,'.site-chrome-main,.main-frame');
   assert.ok(frameNode,'the generated page supplies the viewer scroll container');
   const listeners={},windows={},opened=[],fallback=[];let finish,reject;
@@ -30,3 +30,4 @@ test('scrolling during image dependency loading restores the latest position on 
 
 test('English docs use the shared viewer copy slots',async()=>{const x=viewer('en/docs/guides/ue-tools/simple-tcp-client-guide/index.html');const pending=x.click();x.finish();await pending;assert.equal(x.opened[0].options.closeTitle,'Close image');assert.equal(x.opened[0].options.zoomTitle,'Zoom image');});
 test('missing image dimensions fall back to the current image URL',async()=>{const x=viewer();x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:'Image'});const pending=x.click();x.finish();await pending;assert.deepEqual(x.fallback,[x.anchor.href]);});
+test('all three contact/support QR triggers still open the existing shared viewer',async()=>{for(const locale of ['zh','en'])for(const url of ['/assets/contact/wechat-personal-qr.webp','/assets/support/wechat-pay-qr.webp','/assets/support/alipay-qr.webp']){const x=viewer(locale+'/contact/index.html',url);const pending=x.click();x.finish();await pending;assert.equal(x.opened.length,1);assert.equal(x.fallback.length,0);assert.ok(x.opened[0].options.closeTitle);}});

@@ -10,8 +10,13 @@ import test_static_update as old_tests
 S = 'c' * 40
 P = '9' * 40
 
-def setup_protocol(m, manifest_change=None, provenance_change=None, preview=False):
+def setup_protocol(m, manifest_change=None, provenance_change=None, preview=False, about=False):
     entries, bodies = fixture(m)
+    if about:
+        for path in ('about/index.html', 'zh/about/index.html', 'en/about/index.html'):
+            bodies[path] = b'<html>about alias or page</html>'
+            entries.append({'path': path, 'mode': '100644', 'type': 'blob',
+                            'size': len(bodies[path]), 'sha': m.git_blob_hash(bodies[path])})
     if preview:
         for path in m.PAGES_ONLY:
             bodies[path] = b'<html>historic preview</html>'
@@ -51,6 +56,24 @@ def setup_protocol(m, manifest_change=None, provenance_change=None, preview=Fals
     return entries, bodies, manifest, provenance, api
 
 class ReleaseProtocol(unittest.TestCase):
+    def test_exact_about_alias_and_language_pages_bind_without_opening_about_source(self):
+        m = load(); _, bodies, _, _, api = setup_protocol(m, about=True)
+        with patch.object(m, 'api', side_effect=api):
+            entries = m.release_entries(S, P)
+        self.assertEqual(entries['about/index.html']['target'], 'both')
+        with patch.object(m, 'request', side_effect=fake_request(m, bodies)):
+            for pair in entries.items():
+                m.fetch_one(pair)
+        for path in ('about/extra.html', 'about/profile.json', 'about/client.js', 'src/about/profile.json'):
+            with self.subTest(path=path):
+                m = load()
+                def change(manifest):
+                    next(r for r in manifest['files'] if r['path'] == 'about/index.html')['path'] = path
+                    manifest['files'].sort(key=lambda r: r['path'])
+                artifact, _, _, _, api = setup_protocol(m, change, about=True)
+                next(e for e in artifact if e['path'] == 'about/index.html')['path'] = path
+                with patch.object(m, 'api', side_effect=api), self.assertRaises(ValueError):
+                    m.release_entries(S, P)
     def test_independent_commits_bind_successfully(self):
         m = load(); entries, bodies, _, _, api = setup_protocol(m)
         with patch.object(m, 'api', side_effect=api):
