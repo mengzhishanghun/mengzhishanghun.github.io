@@ -257,6 +257,28 @@ class DeploymentTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.m.archive_add_one(manifest, path, b'changed', self.m.git_blob_hash(body), self.m.HISTORIC_RELEASES[0])
 
+    def test_same_asset_name_rejects_changed_bytes_even_with_valid_current_blob(self):
+        self.m.ASTRO_ARCHIVE = Path(self.temp.name).resolve() / 'archive'
+        manifest = {'version': 1, 'files': {}}
+        path = '_astro/app.abcdefgh.js'
+        original = b'console.log(1)\n'
+        changed = b'console.log(1)\r\n'
+        self.m.archive_add_one(manifest, path, original, self.m.git_blob_hash(original), self.m.HISTORIC_RELEASES[0])
+        before = json.loads(json.dumps(manifest))
+        stage = Path(self.temp.name).resolve() / 'stage'
+        (stage / '_astro').mkdir(parents=True)
+        (stage / path).write_bytes(changed)
+        entries = {path: {'sha': self.m.git_blob_hash(changed)}}
+
+        with self.assertRaisesRegex(ValueError, 'hashed asset name collision'):
+            self.m.add_current_assets(manifest, entries, stage, SHA)
+        with self.assertRaisesRegex(ValueError, 'current asset conflicts with history'):
+            self.m.copy_archive_to_stage(manifest, entries, stage)
+
+        self.assertEqual(manifest, before)
+        self.assertEqual((self.m.ASTRO_ARCHIVE / path).read_bytes(), original)
+        self.assertEqual((stage / path).read_bytes(), changed)
+
     def test_three_failures_do_not_mutate_state_or_retry_sha(self):
         self.state.update({'failed_sha': SHA, 'failures': 3})
         with self.assertRaises(ValueError):
