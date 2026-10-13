@@ -16,7 +16,7 @@ translationKey: blog-index
 
 技术思考、排障与开发记录
 
-UE27C++1Python1Perforce7随笔1
+UE35C++2Python4Perforce7
 
 搜索当前分类
 
@@ -24,7 +24,55 @@ UE27C++1Python1Perforce7随笔1
 
 标签
 
-[## 多视角GI丢失问题的解决办法
+[## Windows 源码版 UE：让团队使用一致的引擎关联名称
+
+Windows 下，同一份源码引擎可能在不同电脑上注册成不同标识，导致 `.uproject` 的 `EngineAssociation` 产生无意义变更。统一关联名称可以减少这类差异；它不决定 UnrealBuildTool 是否重新编译。
+
+](/blog/ue-source-engine-association/)[## UE 蓝图函数参数：引用方向与显示名称
+
+UE C++ 的引用参数在蓝图节点上不一定呈现为预期的输入引脚。声明类型、`const` 和参数元数据共同影响节点表现。以下示例用于 UE5 的反射函数声明，未在引擎中编译。
+
+](/blog/ue-uparam-reference-metadata/)[## Windows UE 5.6 与 Cursor：先跑通构建，再处理编辑体验
+
+这是一份 Windows、UE 5.6 的配置经历整理。原记录未留下完整 Cursor 和扩展版本，因此不能视为当前版本兼容性承诺。目标是用 Cursor 编辑 UE C++，并保留独立可用的编译与调试入口。
+
+](/blog/ue-cursor-workflow-notes/)[## Fab 提交经验：把发布包和使用说明一起检查
+
+功能在开发工程里能用，不等于交付包能安装和复现。这份记录提炼过去的 UE 内容发布经验，不介绍具体插件产品，也不声称代表当前 Fab 审核规则。
+
+](/blog/ue-fab-submission-notes/)[## UE DataTable 与 JSON：先验证，再替换
+
+文件夹中的 JSON 行可以汇成 DataTable，但“先清空表再逐文件解析”会在中途失败时丢失旧数据。适用于 UE5 C++ 的编辑器导入工具；运行时修改内存表与保存编辑器资产是两件事。下面给出流程和生命周期片段，未编译为完整工具。
+
+](/blog/ue-datatable-json-import-export/)[## UE 编辑器资产保存：签出、脏标记与保存结果
+
+自动化工具修改了资产，磁盘文件却未更新，常见原因包括包未标脏、目标路径错误或版本控制阻止写入。本文限于 UE5 编辑器资产保存；不把编辑器 API 当成游戏运行时的通用存档方案。
+
+](/blog/ue-editor-asset-saving/)[## 批量拆开 Level Instance：范围明确，失败就停
+
+拆开 Level Instance 可能暴露更多嵌套实例。每轮只要找到实例就继续循环，遇到无法拆开的实例会一直重复。本文仅讨论 UE5 编辑器中的批量展开流程，不能作为运行时操作教程。
+
+](/blog/ue-level-instance-break-safety/)[## 游戏公式解析：先定义语法，再处理优先级
+
+游戏事件需要计算 `1 + 2 * 3` 之类的文本公式。用正则排除几个非法片段，再在数组里删除 token，不足以保证完整语法和运算顺序。本文从原 UE C++ 记录提炼解析方法，去掉项目 Subsystem 依赖；配套样例只实现整数四则运算、括号和一元正负号。
+
+](/blog/ue-expression-parser-basics/)[## C++ 常用选择：容器、排序与值类别
+
+容器和排序应从访问方式与顺序要求选择，而不是根据旧版编译器的实现细节。本文采用 C++17 标准语义，合并容器、算法和引用的常见误区。
+
+](/blog/cpp-algorithms-containers-value-categories/)[## Python 按列名更新 Excel：组合键与独立输出
+
+参照表提供新值，目标表按多个列匹配后更新指定列。原工具把匹配字段用下划线拼起来，`("A_B", "C")` 与 `("A", "B_C")` 就可能撞键。本文将核心处理独立出来，适用于 Python 3 与 openpyxl 的普通 `.xlsx`；不复刻原 GUI。
+
+](/blog/python-excel-column-update/)[## Python 比较目录：先生成内容差异报告
+
+两个大目录只改了一部分文件，希望知道新增、修改和删除项。原方案还复制文件并安排删除；本篇收窄为 Python 3 标准库的只读报告，避免把比对与修改混在一起。
+
+](/blog/python-directory-diff-report/)[## Perforce 切换流工作区：预检与失败边界
+
+一个按钮同时改 Client Stream、同步和清理，容易让本地修改落在错误视图中。本文仅介绍通用 Python 自动化的保护流程，完全去掉私人服务器、账号和工作区信息。配套代码使用 fake P4，不连接真实服务器。
+
+](/blog/python-perforce-stream-switch-safety/)[## 多视角GI丢失问题的解决办法
 
 以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，记录七处修改的源码截图与适用限制。
 

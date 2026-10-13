@@ -17,7 +17,7 @@ coverAlt: Flowchart of the motion capture robot control system
 websiteCoverUrl: /assets/cases/motion-capture-robot-control.png
 lang: en
 translationKey: motion-capture-robot-control
-sourceHash: ca38052f97336844aa99ddad64f27dff3a46abdfd04f5dc010cfb267618fe41e
+sourceHash: a9194931ada9d8f5e2edf00883262c3743526e1e8a9abe2af1ef47b90921314a
 translationStatus: translated
 generatedBodyHash: 9b96d72d603f431c31e1dc2ede791984b65bd5876e26b0e51d996238d2d044e5
 ---

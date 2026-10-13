@@ -18,7 +18,7 @@ coverAlt: Flowchart of the AI digital human interaction integration workflow
 websiteCoverUrl: /assets/cases/ai-digital-human-integration.png
 lang: en
 translationKey: ai-digital-human-integration
-sourceHash: 9041c7c3c3537ffd0f0ef09a988e764e916d7bf5c11c6a65315fcc77b4823c2d
+sourceHash: 8d99d03e87c64f2276ebc08e06c3bb26aa241ca3879655ad81bc0608801000df
 translationStatus: translated
 generatedBodyHash: 28aa93ac35361c66cf219863814f6123821fc2ed8810aa918e6a3cafd3241dd9
 ---

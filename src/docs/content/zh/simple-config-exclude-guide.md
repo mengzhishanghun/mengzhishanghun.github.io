@@ -25,7 +25,7 @@ supplementSources:
 
 **支持的虚幻引擎版本**：5.2–5.8
 
-可视化管理 Unreal Engine 项目打包时哪些配置文件（.ini）被包含或排除。
+以可视化方式管理 Unreal Engine 项目打包时要包含或排除的配置文件（.ini）。
 
 ---
 

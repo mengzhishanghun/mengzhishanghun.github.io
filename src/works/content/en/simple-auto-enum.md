@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: b4b8dc50962f8e032348e96e655bc56d71ccba4ad7a1dbe4366393319e4fcb8a
+sourceHash: f8e9a0c83782c36521bad5e4a4cc393fe6f0dfe00702c02b6dea2e1b10474c18
 translationStatus: translated
 generatedBodyHash: 5ee8e6da9f082235392b68d4f11ae07116906a165eb095bdaa803f287e30499e
 ---

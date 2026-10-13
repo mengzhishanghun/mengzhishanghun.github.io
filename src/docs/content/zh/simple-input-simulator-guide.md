@@ -26,7 +26,7 @@ supplementSources:
 **支持的虚幻引擎版本**：5.2–5.8
 
 **Simple Input Simulator** 是 Unreal Engine 的轻量级输入模拟插件。
-提供**三个蓝图函数**，可以程序化模拟键盘、鼠标和手柄输入。
+提供**三个蓝图函数**，可以通过程序模拟键盘、鼠标和手柄输入。
 
 ---
 
@@ -85,7 +85,7 @@ supplementSources:
 | Legacy Input | ✅ 完全支持                             |
 | Enhanced Input | ✅ 完全支持 - 自动触发 Input Actions     |
 
-插件工作在原始输入层级，因此两种输入系统都会自动接收模拟事件。
+插件在原始输入层工作，因此两种输入系统都会自动接收模拟事件。
 
 ---
 

@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: f44a9bef0fc31b29a088b7351208aef4cd823015ae1d0251224483fcf38bd847
+sourceHash: 9cd4a716bd24bb78f9251a533cd1e28c2f59f6398b1330f1d2990b9eae818e8a
 translationStatus: translated
 generatedBodyHash: 7f9405fef3c5bb76f13196cef851cf0dc9d2752c61aef1f361e6fe1b1a7f2dee
 ---

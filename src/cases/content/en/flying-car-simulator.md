@@ -17,7 +17,7 @@ coverAlt: Flowchart of the flying car simulator
 websiteCoverUrl: /assets/cases/flying-car-simulator.png
 lang: en
 translationKey: flying-car-simulator
-sourceHash: 4f49a21aac221c2a17b62aa86e5d59c93499b20e414760000ee6c82bdfaaa27b
+sourceHash: 25d0529bd432b147e2002e2f426e4650c94166f3742ad8a5a4f93164f7311d91
 translationStatus: translated
 generatedBodyHash: 4c5dee892bf990c890c8422b36b389fdfbe0bab899111ba48efacfb2fed37566
 ---

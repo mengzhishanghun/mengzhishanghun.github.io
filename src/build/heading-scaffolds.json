@@ -3080,7 +3080,13 @@
       "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
     }
   ],
-  "blog:cnblogs-19143258": [],
+  "blog:cnblogs-19143258": [
+    {
+      "depth": 3,
+      "oldId": "补充团队何时保留-binaries",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
   "blog:cnblogs-19143255": [
     {
       "depth": 2,
@@ -3331,24 +3337,29 @@
   "blog:cnblogs-19813721": [],
   "blog:cnblogs-19770934": [
     {
-      "depth": 2,
-      "oldId": "前言",
-      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
     },
     {
-      "depth": 2,
-      "oldId": "基础类型与字节数组",
-      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+      "depth": 3,
+      "oldId": "customthunk-负责取参",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
     },
     {
-      "depth": 2,
-      "oldId": "在蓝图中接收泛型结构体",
-      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+      "depth": 3,
+      "oldId": "原始内存不是持久化协议",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
     },
     {
-      "depth": 2,
-      "oldId": "json-字段名与浮点数输出",
-      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+      "depth": 3,
+      "oldId": "真正解析输入-json",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可验证例与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
     }
   ],
   "blog:cnblogs-19770930": [
@@ -3694,7 +3705,13 @@
       "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
     }
   ],
-  "blog:cnblogs-19174295": [],
+  "blog:cnblogs-19174295": [
+    {
+      "depth": 3,
+      "oldId": "补充windows-头文件冲突",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
   "blog:cnblogs-19165494": [
     {
       "depth": 2,
@@ -4069,6 +4086,290 @@
       "depth": 2,
       "oldId": "相关案例",
       "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:ue-source-engine-association": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "操作",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "检查与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:ue-uparam-reference-metadata": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "一个参数一个意图",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "使用边界",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可验证例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:ue-cursor-workflow-notes": [
+    {
+      "depth": 3,
+      "oldId": "适用环境与目标",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "配置顺序",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "调试器故障怎么处理",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "小项目验证与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:ue-fab-submission-notes": [
+    {
+      "depth": 3,
+      "oldId": "问题与适用范围",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "先准备可复现的交付",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "商品页与描述符",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "一个检查例与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:ue-datatable-json-import-export": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "分两阶段导入",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "导出也要留旧结果",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可验证例与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:ue-editor-asset-saving": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "保存前先明确对象和权限",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "最小流程",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可验证例与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:ue-level-instance-break-safety": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "从一个副本开始",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可验证例与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:ue-expression-parser-basics": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "最小语法",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "错误也是接口的一部分",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可验证例与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "独立样例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:cpp-algorithms-containers-value-categories": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "容器怎么选",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "排序与稳定性",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "引用和值类别",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可验证例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "独立样例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:python-excel-column-update": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "明确输入规则",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "操作顺序与样例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可验证例与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "独立样例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:python-directory-diff-report": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "内容比较而非时间比较",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "使用例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "限制与可验证例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "独立样例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    }
+  ],
+  "blog:python-perforce-stream-switch-safety": [
+    {
+      "depth": 3,
+      "oldId": "问题与环境",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "切换前保护本地状态",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "失败不能笼统称为回滚",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可验证例与限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "独立样例",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
     }
   ]
 }

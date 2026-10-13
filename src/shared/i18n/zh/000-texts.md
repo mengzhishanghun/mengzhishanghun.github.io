@@ -205,7 +205,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   blog:cnblogs-19143258:
-    root.html:1.head:0.meta:2@content: 首先你需要服务器管理员账号来进行操作
+    root.html:1.head:0.meta:2@content: UE 的 Perforce 文件类型与团队二进制协作边界。
     root.html:1.head:0.title:4.#text:0: 如何设置TypeMap · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -225,7 +225,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 如何设置TypeMap
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 首先你需要服务器管理员账号来进行操作
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: UE 的 Perforce 文件类型与团队二进制协作边界。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -595,8 +595,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   blog:cnblogs-19770934:
-    root.html:1.head:0.meta:2@content: 介绍内存表示与字节数组转换、CustomThunk 泛型结构体参数，以及 JSON 字段名和浮点数输出处理。
-    root.html:1.head:0.title:4.#text:0: 如何在蓝图中实现数据序列化与字节转换 · 小毛
+    root.html:1.head:0.meta:2@content: 结构体反射取参、JSON 解析与安全持久化边界。
+    root.html:1.head:0.title:4.#text:0: 蓝图泛型结构体序列化：区分内存表示与持久化格式 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -614,8 +614,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 如何在蓝图中实现数据序列化与字节转换
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 介绍内存表示与字节数组转换、CustomThunk 泛型结构体参数，以及 JSON 字段名和浮点数输出处理。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 蓝图泛型结构体序列化：区分内存表示与持久化格式
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 结构体反射取参、JSON 解析与安全持久化边界。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1183,7 +1183,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   blog:cnblogs-19174295:
-    root.html:1.head:0.meta:2@content: 说说我的方法吧，不知道正不正确，但是能用，哈哈哈哈，跟着官方的第三方库弄的 打包dll那一套我就不赘述了，就说说拿到DLL和Lib怎么办 以官方模板创建得插件TestThird为例 将dll，lib文件放到TestThird\Source\ThirdParty\TestTh…
+    root.html:1.head:0.meta:2@content: UE 中加载 DLL 与排查 Windows 头文件冲突。
     root.html:1.head:0.title:4.#text:0: 如何调用DLL · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -1203,7 +1203,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 如何调用DLL
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 说说我的方法吧，不知道正不正确，但是能用，哈哈哈哈，跟着官方的第三方库弄的 打包dll那一套我就不赘述了，就说说拿到DLL和Lib怎么办 以官方模板创建得插件TestThird为例 将dll，lib文件放到TestThird\Source\ThirdParty\TestTh…
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: UE 中加载 DLL 与排查 Windows 头文件冲突。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -4897,11 +4897,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: 技术思考、排障与开发记录
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: 博客分类
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "27"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "35"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:0.#text:0: C++
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "1"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "2"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:0.#text:0: Python
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:1.#text:0: "1"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:1.#text:0: "4"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:0.#text:0: Perforce
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:1.#text:0: "7"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1@aria-label: 内容列表
@@ -4930,9 +4930,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0@aria-label: 文章标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:0.#text:0: UMG
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:1.#text:0: 渲染
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: 如何在蓝图中实现数据序列化与字节转换
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.h2:0.#text:0: 如何在蓝图中实现数据序列化与字节转换
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.p:1.#text:0: 介绍内存表示与字节数组转换、CustomThunk 泛型结构体参数，以及 JSON 字段名和浮点数输出处理。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: 蓝图泛型结构体序列化：区分内存表示与持久化格式
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.h2:0.#text:0: 蓝图泛型结构体序列化：区分内存表示与持久化格式
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.p:1.#text:0: 结构体反射取参、JSON 解析与安全持久化边界。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0@aria-label: 文章标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:0.#text:0: 蓝图
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:1.#text:0: 序列化
@@ -5000,7 +5000,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:15.div:1.div:0.span:0.#text:0: 多屏显示
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16@aria-label: 如何调用DLL
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:0.h2:0.#text:0: 如何调用DLL
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:0.p:1.#text:0: 说说我的方法吧，不知道正不正确，但是能用，哈哈哈哈，跟着官方的第三方库弄的 打包dll那一套我就不赘述了，就说说拿到DLL和Lib怎么办 以官方模板创建得插件TestThird为例 将dll，lib文件放到TestThird\Source\ThirdParty\TestTh…
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:0.p:1.#text:0: UE 中加载 DLL 与排查 Windows 头文件冲突。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:0@aria-label: 文章标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:0.span:0.#text:0: DLL
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:17@aria-label: PixelStreaming 像素流送
@@ -5080,7 +5080,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:29.div:1.div:0.span:1.#text:0: 中文乱码
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30@aria-label: 如何设置TypeMap
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:0.h2:0.#text:0: 如何设置TypeMap
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:0.p:1.#text:0: 首先你需要服务器管理员账号来进行操作
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:0.p:1.#text:0: UE 的 Perforce 文件类型与团队二进制协作边界。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:1.div:0@aria-label: 文章标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:1.div:0.span:0.#text:0: TypeMap
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:31@aria-label: 客户端安装配置指南
@@ -5122,6 +5122,90 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:0.h2:0.#text:0: Windows 源码版 UE：让团队使用一致的引擎关联名称
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:0.p:1.#text:0: Windows 下，同一份源码引擎可能在不同电脑上注册成不同标识，导致 `.uproject` 的 `EngineAssociation` 产生无意义变更。统一关联名称可以减少这类差异；它不决定 UnrealBuildTool 是否重新编译。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:0.h2:0.#text:0: UE 蓝图函数参数：引用方向与显示名称
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:0.p:1.#text:0: UE C++ 的引用参数在蓝图节点上不一定呈现为预期的输入引脚。声明类型、`const` 和参数元数据共同影响节点表现。以下示例用于 UE5 的反射函数声明，未在引擎中编译。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:0.h2:0.#text:0: Windows UE 5.6 与 Cursor：先跑通构建，再处理编辑体验
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:0.p:1.#text:0: 这是一份 Windows、UE 5.6 的配置经历整理。原记录未留下完整 Cursor 和扩展版本，因此不能视为当前版本兼容性承诺。目标是用 Cursor 编辑 UE C++，并保留独立可用的编译与调试入口。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:0.h2:0.#text:0: Fab 提交经验：把发布包和使用说明一起检查
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:0.p:1.#text:0: 功能在开发工程里能用，不等于交付包能安装和复现。这份记录提炼过去的 UE 内容发布经验，不介绍具体插件产品，也不声称代表当前 Fab 审核规则。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:0.h2:0.#text:0: UE DataTable 与 JSON：先验证，再替换
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:0.p:1.#text:0: 文件夹中的 JSON 行可以汇成 DataTable，但“先清空表再逐文件解析”会在中途失败时丢失旧数据。适用于 UE5 C++ 的编辑器导入工具；运行时修改内存表与保存编辑器资产是两件事。下面给出流程和生命周期片段，未编译为完整工具。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:0.h2:0.#text:0: UE 编辑器资产保存：签出、脏标记与保存结果
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:0.p:1.#text:0: 自动化工具修改了资产，磁盘文件却未更新，常见原因包括包未标脏、目标路径错误或版本控制阻止写入。本文限于 UE5 编辑器资产保存；不把编辑器 API 当成游戏运行时的通用存档方案。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:0.h2:0.#text:0: 批量拆开 Level Instance：范围明确，失败就停
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:0.p:1.#text:0: 拆开 Level Instance 可能暴露更多嵌套实例。每轮只要找到实例就继续循环，遇到无法拆开的实例会一直重复。本文仅讨论 UE5 编辑器中的批量展开流程，不能作为运行时操作教程。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.h2:0.#text:0: 游戏公式解析：先定义语法，再处理优先级
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.p:1.#text:0: 游戏事件需要计算 `1 + 2 * 3` 之类的文本公式。用正则排除几个非法片段，再在数组里删除 token，不足以保证完整语法和运算顺序。本文从原 UE C++ 记录提炼解析方法，去掉项目 Subsystem 依赖；配套样例只实现整数四则运算、括号和一元正负号。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:0.h2:0.#text:0: C++ 常用选择：容器、排序与值类别
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:0.p:1.#text:0: 容器和排序应从访问方式与顺序要求选择，而不是根据旧版编译器的实现细节。本文采用 C++17 标准语义，合并容器、算法和引用的常见误区。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:0.h2:0.#text:0: Python 按列名更新 Excel：组合键与独立输出
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:0.p:1.#text:0: 参照表提供新值，目标表按多个列匹配后更新指定列。原工具把匹配字段用下划线拼起来，`("A_B", "C")` 与 `("A", "B_C")` 就可能撞键。本文将核心处理独立出来，适用于 Python 3 与 openpyxl 的普通 `.xlsx`；不复刻原 GUI。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:0.h2:0.#text:0: Python 比较目录：先生成内容差异报告
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:0.p:1.#text:0: 两个大目录只改了一部分文件，希望知道新增、修改和删除项。原方案还复制文件并安排删除；本篇收窄为 Python 3 标准库的只读报告，避免把比对与修改混在一起。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:0.h2:0.#text:0: Perforce 切换流工作区：预检与失败边界
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:0.p:1.#text:0: 一个按钮同时改 Client Stream、同步和清理，容易让本地修改落在错误视图中。本文仅介绍通用 Python 自动化的保护流程，完全去掉私人服务器、账号和工作区信息。配套代码使用 fake P4，不连接真实服务器。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0@aria-label: 标签
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:2.#text:0: ""
   page:contact:
     root.html:1.head:0.meta:2@content: 交流游戏开发、数字孪生与工具插件合作。
     root.html:1.head:0.title:4.#text:0: 联系与支持 · 梦之殇魂
@@ -5305,6 +5389,534 @@ shellSlots:
     about.title: 关于我
     about.greeting: 你好，我是小毛
     about.facts: 基本信息
+  blog:ue-source-engine-association:
+    root.html:1.head:0.meta:2@content: Windows 下，同一份源码引擎可能在不同电脑上注册成不同标识，导致 `.uproject` 的 `EngineAssociation` 产生无意义变更。统一关联名称可以减少这类差异；它不决定 UnrealBuildTool 是否重新编译。
+    root.html:1.head:0.title:4.#text:0: Windows 源码版 UE：让团队使用一致的引擎关联名称 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Windows 源码版 UE：让团队使用一致的引擎关联名称
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Windows 下，同一份源码引擎可能在不同电脑上注册成不同标识，导致 `.uproject` 的 `EngineAssociation` 产生无意义变更。统一关联名称可以减少这类差异；它不决定 UnrealBuildTool 是否重新编译。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:ue-uparam-reference-metadata:
+    root.html:1.head:0.meta:2@content: UE C++ 的引用参数在蓝图节点上不一定呈现为预期的输入引脚。声明类型、`const` 和参数元数据共同影响节点表现。以下示例用于 UE5 的反射函数声明，未在引擎中编译。
+    root.html:1.head:0.title:4.#text:0: UE 蓝图函数参数：引用方向与显示名称 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: UE 蓝图函数参数：引用方向与显示名称
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: UE C++ 的引用参数在蓝图节点上不一定呈现为预期的输入引脚。声明类型、`const` 和参数元数据共同影响节点表现。以下示例用于 UE5 的反射函数声明，未在引擎中编译。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:ue-cursor-workflow-notes:
+    root.html:1.head:0.meta:2@content: 这是一份 Windows、UE 5.6 的配置经历整理。原记录未留下完整 Cursor 和扩展版本，因此不能视为当前版本兼容性承诺。目标是用 Cursor 编辑 UE C++，并保留独立可用的编译与调试入口。
+    root.html:1.head:0.title:4.#text:0: Windows UE 5.6 与 Cursor：先跑通构建，再处理编辑体验 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Windows UE 5.6 与 Cursor：先跑通构建，再处理编辑体验
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 这是一份 Windows、UE 5.6 的配置经历整理。原记录未留下完整 Cursor 和扩展版本，因此不能视为当前版本兼容性承诺。目标是用 Cursor 编辑 UE C++，并保留独立可用的编译与调试入口。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:ue-fab-submission-notes:
+    root.html:1.head:0.meta:2@content: 功能在开发工程里能用，不等于交付包能安装和复现。这份记录提炼过去的 UE 内容发布经验，不介绍具体插件产品，也不声称代表当前 Fab 审核规则。
+    root.html:1.head:0.title:4.#text:0: Fab 提交经验：把发布包和使用说明一起检查 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Fab 提交经验：把发布包和使用说明一起检查
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 功能在开发工程里能用，不等于交付包能安装和复现。这份记录提炼过去的 UE 内容发布经验，不介绍具体插件产品，也不声称代表当前 Fab 审核规则。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:ue-datatable-json-import-export:
+    root.html:1.head:0.meta:2@content: 文件夹中的 JSON 行可以汇成 DataTable，但“先清空表再逐文件解析”会在中途失败时丢失旧数据。适用于 UE5 C++ 的编辑器导入工具；运行时修改内存表与保存编辑器资产是两件事。下面给出流程和生命周期片段，未编译为完整工具。
+    root.html:1.head:0.title:4.#text:0: UE DataTable 与 JSON：先验证，再替换 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: UE DataTable 与 JSON：先验证，再替换
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 文件夹中的 JSON 行可以汇成 DataTable，但“先清空表再逐文件解析”会在中途失败时丢失旧数据。适用于 UE5 C++ 的编辑器导入工具；运行时修改内存表与保存编辑器资产是两件事。下面给出流程和生命周期片段，未编译为完整工具。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:ue-editor-asset-saving:
+    root.html:1.head:0.meta:2@content: 自动化工具修改了资产，磁盘文件却未更新，常见原因包括包未标脏、目标路径错误或版本控制阻止写入。本文限于 UE5 编辑器资产保存；不把编辑器 API 当成游戏运行时的通用存档方案。
+    root.html:1.head:0.title:4.#text:0: UE 编辑器资产保存：签出、脏标记与保存结果 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: UE 编辑器资产保存：签出、脏标记与保存结果
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 自动化工具修改了资产，磁盘文件却未更新，常见原因包括包未标脏、目标路径错误或版本控制阻止写入。本文限于 UE5 编辑器资产保存；不把编辑器 API 当成游戏运行时的通用存档方案。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:ue-level-instance-break-safety:
+    root.html:1.head:0.meta:2@content: 拆开 Level Instance 可能暴露更多嵌套实例。每轮只要找到实例就继续循环，遇到无法拆开的实例会一直重复。本文仅讨论 UE5 编辑器中的批量展开流程，不能作为运行时操作教程。
+    root.html:1.head:0.title:4.#text:0: 批量拆开 Level Instance：范围明确，失败就停 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 批量拆开 Level Instance：范围明确，失败就停
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 拆开 Level Instance 可能暴露更多嵌套实例。每轮只要找到实例就继续循环，遇到无法拆开的实例会一直重复。本文仅讨论 UE5 编辑器中的批量展开流程，不能作为运行时操作教程。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:ue-expression-parser-basics:
+    root.html:1.head:0.meta:2@content: 游戏事件需要计算 `1 + 2 * 3` 之类的文本公式。用正则排除几个非法片段，再在数组里删除 token，不足以保证完整语法和运算顺序。本文从原 UE C++ 记录提炼解析方法，去掉项目 Subsystem 依赖；配套样例只实现整数四则运算、括号和一元正负号。
+    root.html:1.head:0.title:4.#text:0: 游戏公式解析：先定义语法，再处理优先级 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 游戏公式解析：先定义语法，再处理优先级
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 游戏事件需要计算 `1 + 2 * 3` 之类的文本公式。用正则排除几个非法片段，再在数组里删除 token，不足以保证完整语法和运算顺序。本文从原 UE C++ 记录提炼解析方法，去掉项目 Subsystem 依赖；配套样例只实现整数四则运算、括号和一元正负号。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:cpp-algorithms-containers-value-categories:
+    root.html:1.head:0.meta:2@content: 容器和排序应从访问方式与顺序要求选择，而不是根据旧版编译器的实现细节。本文采用 C++17 标准语义，合并容器、算法和引用的常见误区。
+    root.html:1.head:0.title:4.#text:0: C++ 常用选择：容器、排序与值类别 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: CPP
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: C++ 常用选择：容器、排序与值类别
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 容器和排序应从访问方式与顺序要求选择，而不是根据旧版编译器的实现细节。本文采用 C++17 标准语义，合并容器、算法和引用的常见误区。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:python-excel-column-update:
+    root.html:1.head:0.meta:2@content: 参照表提供新值，目标表按多个列匹配后更新指定列。原工具把匹配字段用下划线拼起来，`("A_B", "C")` 与 `("A", "B_C")` 就可能撞键。本文将核心处理独立出来，适用于 Python 3 与 openpyxl 的普通 `.xlsx`；不复刻原 GUI。
+    root.html:1.head:0.title:4.#text:0: Python 按列名更新 Excel：组合键与独立输出 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: PYTHON
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Python 按列名更新 Excel：组合键与独立输出
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 参照表提供新值，目标表按多个列匹配后更新指定列。原工具把匹配字段用下划线拼起来，`("A_B", "C")` 与 `("A", "B_C")` 就可能撞键。本文将核心处理独立出来，适用于 Python 3 与 openpyxl 的普通 `.xlsx`；不复刻原 GUI。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:python-directory-diff-report:
+    root.html:1.head:0.meta:2@content: 两个大目录只改了一部分文件，希望知道新增、修改和删除项。原方案还复制文件并安排删除；本篇收窄为 Python 3 标准库的只读报告，避免把比对与修改混在一起。
+    root.html:1.head:0.title:4.#text:0: Python 比较目录：先生成内容差异报告 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: PYTHON
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Python 比较目录：先生成内容差异报告
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 两个大目录只改了一部分文件，希望知道新增、修改和删除项。原方案还复制文件并安排删除；本篇收窄为 Python 3 标准库的只读报告，避免把比对与修改混在一起。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:python-perforce-stream-switch-safety:
+    root.html:1.head:0.meta:2@content: 一个按钮同时改 Client Stream、同步和清理，容易让本地修改落在错误视图中。本文仅介绍通用 Python 自动化的保护流程，完全去掉私人服务器、账号和工作区信息。配套代码使用 fake P4，不连接真实服务器。
+    root.html:1.head:0.title:4.#text:0: Perforce 切换流工作区：预检与失败边界 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: PYTHON
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Perforce 切换流工作区：预检与失败边界
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 一个按钮同时改 Client Stream、同步和清理，容易让本地修改落在错误视图中。本文仅介绍通用 Python 自动化的保护流程，完全去掉私人服务器、账号和工作区信息。配套代码使用 fake P4，不连接真实服务器。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回博客列表
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
 scriptSlots:
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:1187: Bilibili 播放器
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:2062: Bilibili 播放器

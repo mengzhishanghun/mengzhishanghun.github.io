@@ -18,7 +18,7 @@ coverAlt: Flowchart for resolving inconsistent three-screen display in a driving
 websiteCoverUrl: /assets/cases/driving-simulator-three-screen.png
 lang: en
 translationKey: driving-simulator-three-screen
-sourceHash: 30d6a9599a8bdac90d377e6edc8567a126b823e12406bf2c6abbd359884e7492
+sourceHash: 7aff9f02e62e291094b0590d82422665eeb75f70493032b753fb9a9d1dd06d80
 translationStatus: translated
 generatedBodyHash: cf7665e660e561f92582be071cada4d5af91ea5a3ddff3ee16fc0782f56831e0
 ---

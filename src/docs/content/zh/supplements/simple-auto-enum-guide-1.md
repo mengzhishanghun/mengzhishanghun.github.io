@@ -91,11 +91,11 @@ LogSimpleAutoEnum: Log: Processed enum binding: EAIType -> UMySettings::AITypeLi
 LogSimpleAutoEnum: Warning: Duplicate value found: "Soldier"
 ```
 
-出问题时一目了然,不用猜。
+这些日志便于排查问题。
 
 ## 使用示例
 
-插件支持三种常见的使用模式,满足不同场景需求。
+插件支持以下三种常见使用模式。
 
 #### 示例1: 标准用法 - 一对一绑定
 

@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginManager
 lang: en
 translationKey: plugin-manager
-sourceHash: 5d0becaf13f0c1a8a1682290b4ea337323ed9316282283ba527c9f1d598ac463
+sourceHash: 8274f8b133262f7ed6e1bbf330bf85dca8fcebd4679a21a72c11af10b400b91e
 translationStatus: translated
 generatedBodyHash: 5a7933b1170ed1d075f38b0c562337eb6963f48be8eb52b6a761c98a048925d4
 ---

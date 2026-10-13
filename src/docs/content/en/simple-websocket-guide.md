@@ -16,7 +16,7 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/simple-websocket-guide/
 lang: en
 translationKey: simple-websocket-guide
-sourceHash: 3a5c53a81fada4d59a47b1727aa8b71781f9901c1f37c97ca6c105c1d37c450f
+sourceHash: 44b5ad3e2b9e1763e55371925c749062dc89112dddeb05c1f33f9967e4ea82a5
 translationStatus: translated
 generatedBodyHash: 47adf97ebed01d1c99e8df5c4af6b6b758b621a61fa6506e8672abbb0da4816f
 ---

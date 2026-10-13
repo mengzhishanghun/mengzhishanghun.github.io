@@ -21,7 +21,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: 56807d61c21f370300bf6abb57c242dae9d5830b417c2fe6fb2cc51b67217a9f
+sourceHash: 0cd7c6ba6da505f5f8997dcbfebf4130509865f2bb46ef2d342c979a2f2f879e
 translationStatus: translated
 generatedBodyHash: a9f64ba2ca69b53bb54a880504929e937a3c0507ff85f3db05ecd5ff08223685
 ---

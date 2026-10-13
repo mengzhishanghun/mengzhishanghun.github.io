@@ -17,7 +17,7 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/ai-data-asset-guide/
 lang: en
 translationKey: ai-data-asset-guide
-sourceHash: e2acfe8c3c8122529f9ce3031738b3743bf091cf87ce49369e3b573d8ff042fe
+sourceHash: eb81f1c0d29c3e01819f52d2d5550b4819d568e3a4767b917499a51073b5ddc8
 translationStatus: translated
 generatedBodyHash: c54da9295e1d041dcbbcc802b9e66f288c4ad1294bdf4f51526c2e58a16d6ae8
 ---

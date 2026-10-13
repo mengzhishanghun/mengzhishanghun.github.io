@@ -24,9 +24,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: 3631f45774f73b84afcffc4245785e3a6946b27f39c2eb4582a117a8426701ab
+sourceHash: 564727a75be4a362ed74077b35b9753be17cb7e7d9ca39dd24d61a71bc135033
 translationStatus: translated
-generatedBodyHash: 52d5cb2d9ca62187b3f33939078c28317e793bf1ecabadd2af88c1513463cadb
+generatedBodyHash: 85f5062b6cb4ddcae149c7bc8870128c7d4e273c810c0281e22fa7c81f359e80
 ---
 
 ## Overview
@@ -39,7 +39,7 @@ Excluded files can also be copied to another target directory as needed for late
 
 Projects often need different configurations for debugging, testing, and production. Manually maintaining inclusion and exclusion entries in DefaultGame.ini requires attention to file paths, existing rules, and editor caches.
 
-The work makes the choice of which configurations ship in a package visible at file level, while providing a separate delivery action for excluded files.
+The plugin aims to let users choose, file by file, which configurations ship with a package, while providing a separate action for delivering excluded files.
 
 ## Core capabilities
 

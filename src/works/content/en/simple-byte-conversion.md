@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: c7e40a20f34778b255733cb9edf67dc10a2918b4d6e003c4e6ea6b59d6c36287
+sourceHash: 34fc7adfca9953f06a772f3b3ed127e42d3ec133592c7153642e3d55b7f8d050
 translationStatus: translated
 generatedBodyHash: 48402ba0fafac3a8a37056c27cf0c3b1cc5adca94c8371bdc4df4e6b3a7f6cfb
 ---

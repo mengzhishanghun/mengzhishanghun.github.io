@@ -26,13 +26,13 @@ translationKey: ue-package-manager
 
 UEPackageManager 是 Windows 上的 Unreal Engine 项目打包工具，提供图形界面与命令行两种入口。
 
-它调用 Unreal Automation Tool 完成 Build、Cook、Stage、Pak、Archive 等步骤，并在打包成功后按规则把附加文件部署到输出包内。项目识别、配置隔离和输出清理共同服务于重复打包时的可控性。
+它调用 Unreal Automation Tool 完成 Build、Cook、Stage、Pak、Archive 等步骤，并在打包成功后按规则把附加文件部署到输出包内。项目识别、配置隔离和输出清理用于控制重复打包的过程。
 
 ## 背景与目标
 
 UE 项目交付时，打包命令和附加文件整理常分散在不同操作中。不同项目的引擎、输出目录、构建类型和附带数据也可能各不相同，误用上一项目的配置会产生错误结果。
 
-作品把这些选择集中到同一个流程，使图形界面服务于当前项目，也保留命令行入口供明确指定项目的自动化调用。
+工具把这些选择集中到同一个流程：图形界面针对当前项目操作，命令行则供明确指定项目的自动化调用。
 
 ## 核心能力
 

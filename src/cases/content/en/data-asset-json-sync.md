@@ -19,7 +19,7 @@ coverAlt: Bidirectional synchronization and self-write filtering workflow betwee
 websiteCoverUrl: /assets/cases/data-asset-json-sync.png
 lang: en
 translationKey: data-asset-json-sync
-sourceHash: 5407cf6797c996e0df9170985b4f52722b4c12ea56dbd82772170b7a0dff7f32
+sourceHash: dc1dc592967d75697daa376ea03f51c9ce0b636465882a82f7063b8c37787271
 translationStatus: translated
 generatedBodyHash: 3ff5eca0470f96befe2767b354598ce42240da90b643ad11f1846ec3ea4059c8
 ---

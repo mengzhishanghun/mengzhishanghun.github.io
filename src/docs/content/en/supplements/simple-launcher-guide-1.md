@@ -23,7 +23,7 @@ workIds:
   - simple-launcher
 lang: en
 translationKey: doc:simple-launcher-guide:supplement:1
-sourceHash: 473db8cca7eafe086c16f860361f452c303bfe7d2b953eecc2119f7cfa098a0d
+sourceHash: b7221c20ea6c44ff3da4b2e3ea26690873f97c513a6af5b79ecaf35c09131e5e
 translationStatus: translated
 generatedBodyHash: 949d2d13e3a6db06dbb8708b08da35757c6eab9f19615981dd35625227b2cab3
 ---

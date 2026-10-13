@@ -40,7 +40,7 @@ translationKey: simple-tcp-server-guide
 ## ⚙️ 静态通道配置（可选）
 
 可通过 **项目设置 → SimpleTCPServer Settings** 定义服务器监听通道。  
-建议使用此方法进行集中管理和调试。
+建议用此方法集中管理和调试。
 
 ### 🔹 通道配置字段
 

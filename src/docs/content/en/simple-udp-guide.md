@@ -16,7 +16,7 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/simple-udp-guide/
 lang: en
 translationKey: simple-udp-guide
-sourceHash: 66a7f58861be0adf5ae3e13be4eaaa20507bf9b089c181c8add7a8a798478b80
+sourceHash: 0b6ed0ab9fbe6ba18060f13390f4cdae458d791ac491621b2024145d7c46f081
 translationStatus: translated
 generatedBodyHash: 69b0569caa5b9dc4b6c8f43f9be0c3a9e99d3ed6fbb4d99d2ab5f1f82c38fbf1
 ---

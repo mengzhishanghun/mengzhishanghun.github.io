@@ -19,7 +19,7 @@ lang: en
 translationKey: simple-asset-namer-guide
 supplementSources:
   - docs/content/en/supplements/simple-asset-namer-guide-1.md
-sourceHash: d44a29badb12efe183b53e8d8a6bf53b550e69aee91fff641a3835e4ecee9462
+sourceHash: b9e9b564a0ea9b054d014e2af9a306cc33c227af6df60f01f527d0e3e4b7987e
 translationStatus: translated
 generatedBodyHash: 849353f6339fc1399ea5f8fc215e418e47e7786bd0433ac84179ea094ca76749
 ---

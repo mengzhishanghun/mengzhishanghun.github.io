@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2025-12-21
 lang: en
 translationKey: md-image-embed
-sourceHash: 2b77b1d8dc848a195469bca55d90e1b71526901cbfc2bf3e3f1c09bf705cf4c2
+sourceHash: 7e0250f86033a7afdc788cc539fb87f35388f1a8e8190a710dcddb61beadf6d0
 translationStatus: translated
 generatedBodyHash: 1b7f65663af1d6aa02119958c86222eb9fa23d69f64f2a5e7a7b7836305a7d61
 ---

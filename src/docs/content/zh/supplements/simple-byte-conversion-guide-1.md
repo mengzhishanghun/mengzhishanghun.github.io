@@ -62,7 +62,7 @@ translationKey: doc:simple-byte-conversion-guide:supplement:1
 
 ### 步骤3：C++ 中使用
 
-如果你在 C++ 中需要使用，可以直接调用 `ByteConverter` 工具类：
+在 C++ 中可以直接调用 `ByteConverter` 工具类：
 
 ```cpp
 #include "ByteConverter.h"

@@ -33,7 +33,7 @@ translationKey: doc:simple-launcher-guide:supplement:1
 
 ### 1.1 预设配置系统
 
-插件采用**预设（Preset）** 的概念管理进程配置：
+插件通过**预设（Preset）** 管理进程配置：
 
 ```cpp
 USTRUCT(BlueprintType)
@@ -53,7 +53,7 @@ struct FLauncherConfig
 };
 ```
 
-你可以在项目设置中预先配置好多个启动器，每个都有独立的名称：
+可以在项目设置中预先配置多个启动器，每个都有独立的名称：
 
 路径：`Edit > Project Settings > Simple Launcher`
 
@@ -88,7 +88,7 @@ StopAllProcesses();
 
 **自动清理：**
 
-当 `bLaunchDetached = false`（默认）时，游戏退出时插件会**自动终止**该进程，用于管理游戏退出时的进程清理。设置为 `true` 的分离进程则会在游戏退出后继续运行。
+当 `bLaunchDetached = false`（默认）时，插件会在游戏退出时**自动终止**该进程。设置为 `true` 的分离进程则会在游戏退出后继续运行。
 
 ### 1.3 多实例支持
 

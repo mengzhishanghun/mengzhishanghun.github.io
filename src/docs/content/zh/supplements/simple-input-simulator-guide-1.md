@@ -55,7 +55,7 @@ translationKey: doc:simple-input-simulator-guide:supplement:1
 
 ### 场景1：自动化游戏测试
 
-不用人坐在电脑前一遍遍点，写个脚本自动跑流程：
+用脚本自动执行流程，减少反复手动操作：
 
 ```
 BeginPlay:

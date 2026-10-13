@@ -19,7 +19,7 @@ lang: en
 translationKey: simple-byte-conversion-guide
 supplementSources:
   - docs/content/en/supplements/simple-byte-conversion-guide-1.md
-sourceHash: c0220a3370735057b86606da154181782f3c4ae4f13cdf4f4bb4d651aef41551
+sourceHash: b37380cc470cd8f445e43be63cf7a80d147db33f860251de35632f126a2f7099
 translationStatus: translated
 generatedBodyHash: 4bac18f699b361fd0e75be09fbf9f1b3afee09967bd1026f1aae622eaf64138f
 ---

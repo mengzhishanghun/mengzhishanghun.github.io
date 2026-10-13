@@ -21,7 +21,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: ecb46e1277f6d0e0c0c59680348f5bfba8bc68feee30c06d63275f2744d066f2
+sourceHash: 543f3e7c46b72fded3c7a1fe7eb3b73ee0468126732067d3fd9f713c95895105
 translationStatus: translated
 generatedBodyHash: 6e947f0d40850957a39590d658a152604186d214a3106c4b06cc86f37e9d744a
 ---

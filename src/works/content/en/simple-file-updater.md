@@ -19,7 +19,7 @@ links:
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
 lang: en
 translationKey: simple-file-updater
-sourceHash: dce1d9ff6d377de9b585dd0cf2029f0d22857e614cdc9ed895c597ec23e7f273
+sourceHash: 9b76ebd545fb79d271447f5839349ebbd7989569a07cf97b181ee62750bc150a
 translationStatus: translated
 generatedBodyHash: 7f6e8116445003bbdc321480e829c7336ff9ee407e8123b3fdd2c22c3eafd2ee
 ---

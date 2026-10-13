@@ -107,7 +107,7 @@ translationKey: doc:simple-asset-cleaner-guide:supplement:1
 
 **典型场景：**
 
-美术同学测试了10个材质球，最终只有2个用在了场景中。提交时插件自动识别未被场景引用的8个材质，自动回滚，提交窗口干干净净。
+美术同学测试了10个材质球，最终只有2个用在了场景中。提交时插件自动识别并回滚未被场景引用的8个材质，提交窗口中只保留需要提交的材质。
 
 ### 全量清理
 
@@ -143,7 +143,7 @@ translationKey: doc:simple-asset-cleaner-guide:supplement:1
 
 ### 根资源配置
 
-SimpleAssetCleaner 通过"根资源"的概念来判断资源是否被使用。
+SimpleAssetCleaner 通过“根资源”判断资源是否被使用。
 
 **什么是根资源？**
 
@@ -170,7 +170,7 @@ SimpleAssetCleaner 通过"根资源"的概念来判断资源是否被使用。
 
 **2\. Custom Root Assets（自定义根资源）**
 
-手动指定特定的资源作为根，适合标记那些很重要但类型不常见的资源。
+手动指定资源作为根，适合标记重要但类型不常见的资源。
 
 例如：
 
@@ -201,7 +201,7 @@ SimpleAssetCleaner 通过"根资源"的概念来判断资源是否被使用。
 
 ### 日志选项
 
-插件提供了可选的详细日志功能，方便调试和监控。
+插件提供可选的详细日志，方便调试和监控。
 
 **启用方式：**  
 在项目设置中勾选 `Enable Verbose Logging`

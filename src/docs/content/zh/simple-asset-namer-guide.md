@@ -157,7 +157,7 @@ supplementSources:
 
 ### 2.2 通过右键菜单批量重命名
 
-右键菜单项统一收纳在 **Simple Asset Namer** 二级子菜单下。
+右键菜单项位于 **Simple Asset Namer** 二级子菜单下。
 
 **资产右键菜单**
 1. 选择一个或多个资产

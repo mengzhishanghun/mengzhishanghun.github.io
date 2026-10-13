@@ -19,7 +19,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: 9dc0ba2dd57308f720529ee34d4e7a19992689edb86e5f52ab56aee3f8acd01e
+sourceHash: e222820a1f758472536badc64ab573c6d1c28c1530179891221e9b881ef73f44
 translationStatus: translated
 generatedBodyHash: 25a3b1b443bb80cfd320e1ca0295ff91451079473264edcb7ae37e2d9049aa78
 ---

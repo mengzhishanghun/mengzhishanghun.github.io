@@ -23,7 +23,7 @@ supplementSources:
 
 # 📘 SimpleStaticMeshMerger 用户指南
 
-本指南详细介绍如何使用 SimpleStaticMeshMerger 插件合并静态网格体实例，优化场景性能。
+本指南介绍如何使用 SimpleStaticMeshMerger 插件合并静态网格体实例，优化场景性能。
 
 ## 兼容性
 
@@ -53,7 +53,7 @@ supplementSources:
 - **Break Level Instances**：递归拆分场景中所有 LevelInstance（包括嵌套的）
 - **Refresh**：手动刷新合并预览
 - **Type Dropdown**：选择合并类型（HISM 或 ISM，默认 HISM）
-- **Merge Selected**：对选中的分组执行合并操作
+- **Merge Selected**：合并选中的分组
 
 ### 2. 配置选项（工具栏下方）
 

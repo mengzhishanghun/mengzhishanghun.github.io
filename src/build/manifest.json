@@ -2969,6 +2969,174 @@
           "utilityId": "blog:ue53-multiview-gi:body-utility:1"
         }
       ]
+    },
+    {
+      "id": "blog:ue-source-engine-association",
+      "type": "blog",
+      "slug": "ue-source-engine-association",
+      "legacyRoutes": [
+        "/blog/ue-source-engine-association/"
+      ],
+      "template": "blog/templates/blog--ue-source-engine-association.html",
+      "title": "Windows 源码版 UE：让团队使用一致的引擎关联名称",
+      "translationKey": "ue-source-engine-association",
+      "baselineTemplate": "blog/ue-source-engine-association/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:ue-uparam-reference-metadata",
+      "type": "blog",
+      "slug": "ue-uparam-reference-metadata",
+      "legacyRoutes": [
+        "/blog/ue-uparam-reference-metadata/"
+      ],
+      "template": "blog/templates/blog--ue-uparam-reference-metadata.html",
+      "title": "UE 蓝图函数参数：引用方向与显示名称",
+      "translationKey": "ue-uparam-reference-metadata",
+      "baselineTemplate": "blog/ue-uparam-reference-metadata/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:ue-cursor-workflow-notes",
+      "type": "blog",
+      "slug": "ue-cursor-workflow-notes",
+      "legacyRoutes": [
+        "/blog/ue-cursor-workflow-notes/"
+      ],
+      "template": "blog/templates/blog--ue-cursor-workflow-notes.html",
+      "title": "Windows UE 5.6 与 Cursor：先跑通构建，再处理编辑体验",
+      "translationKey": "ue-cursor-workflow-notes",
+      "baselineTemplate": "blog/ue-cursor-workflow-notes/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:ue-fab-submission-notes",
+      "type": "blog",
+      "slug": "ue-fab-submission-notes",
+      "legacyRoutes": [
+        "/blog/ue-fab-submission-notes/"
+      ],
+      "template": "blog/templates/blog--ue-fab-submission-notes.html",
+      "title": "Fab 提交经验：把发布包和使用说明一起检查",
+      "translationKey": "ue-fab-submission-notes",
+      "baselineTemplate": "blog/ue-fab-submission-notes/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:ue-datatable-json-import-export",
+      "type": "blog",
+      "slug": "ue-datatable-json-import-export",
+      "legacyRoutes": [
+        "/blog/ue-datatable-json-import-export/"
+      ],
+      "template": "blog/templates/blog--ue-datatable-json-import-export.html",
+      "title": "UE DataTable 与 JSON：先验证，再替换",
+      "translationKey": "ue-datatable-json-import-export",
+      "baselineTemplate": "blog/ue-datatable-json-import-export/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:ue-editor-asset-saving",
+      "type": "blog",
+      "slug": "ue-editor-asset-saving",
+      "legacyRoutes": [
+        "/blog/ue-editor-asset-saving/"
+      ],
+      "template": "blog/templates/blog--ue-editor-asset-saving.html",
+      "title": "UE 编辑器资产保存：签出、脏标记与保存结果",
+      "translationKey": "ue-editor-asset-saving",
+      "baselineTemplate": "blog/ue-editor-asset-saving/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:ue-level-instance-break-safety",
+      "type": "blog",
+      "slug": "ue-level-instance-break-safety",
+      "legacyRoutes": [
+        "/blog/ue-level-instance-break-safety/"
+      ],
+      "template": "blog/templates/blog--ue-level-instance-break-safety.html",
+      "title": "批量拆开 Level Instance：范围明确，失败就停",
+      "translationKey": "ue-level-instance-break-safety",
+      "baselineTemplate": "blog/ue-level-instance-break-safety/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:ue-expression-parser-basics",
+      "type": "blog",
+      "slug": "ue-expression-parser-basics",
+      "legacyRoutes": [
+        "/blog/ue-expression-parser-basics/"
+      ],
+      "template": "blog/templates/blog--ue-expression-parser-basics.html",
+      "title": "游戏公式解析：先定义语法，再处理优先级",
+      "translationKey": "ue-expression-parser-basics",
+      "baselineTemplate": "blog/ue-expression-parser-basics/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:cpp-algorithms-containers-value-categories",
+      "type": "blog",
+      "slug": "cpp-algorithms-containers-value-categories",
+      "legacyRoutes": [
+        "/blog/cpp-algorithms-containers-value-categories/"
+      ],
+      "template": "blog/templates/blog--cpp-algorithms-containers-value-categories.html",
+      "title": "C++ 常用选择：容器、排序与值类别",
+      "translationKey": "cpp-algorithms-containers-value-categories",
+      "baselineTemplate": "blog/cpp-algorithms-containers-value-categories/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:python-excel-column-update",
+      "type": "blog",
+      "slug": "python-excel-column-update",
+      "legacyRoutes": [
+        "/blog/python-excel-column-update/"
+      ],
+      "template": "blog/templates/blog--python-excel-column-update.html",
+      "title": "Python 按列名更新 Excel：组合键与独立输出",
+      "translationKey": "python-excel-column-update",
+      "baselineTemplate": "blog/python-excel-column-update/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:python-directory-diff-report",
+      "type": "blog",
+      "slug": "python-directory-diff-report",
+      "legacyRoutes": [
+        "/blog/python-directory-diff-report/"
+      ],
+      "template": "blog/templates/blog--python-directory-diff-report.html",
+      "title": "Python 比较目录：先生成内容差异报告",
+      "translationKey": "python-directory-diff-report",
+      "baselineTemplate": "blog/python-directory-diff-report/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "blog:python-perforce-stream-switch-safety",
+      "type": "blog",
+      "slug": "python-perforce-stream-switch-safety",
+      "legacyRoutes": [
+        "/blog/python-perforce-stream-switch-safety/"
+      ],
+      "template": "blog/templates/blog--python-perforce-stream-switch-safety.html",
+      "title": "Perforce 切换流工作区：预检与失败边界",
+      "translationKey": "python-perforce-stream-switch-safety",
+      "baselineTemplate": "blog/python-perforce-stream-switch-safety/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
     }
   ],
   "redirects": [

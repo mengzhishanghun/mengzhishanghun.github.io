@@ -88,7 +88,7 @@ Close All SSHTunnel () → Return Value: Bool
 
 📌 **注意**：
 - 默认子系统在引擎关闭时自动关闭所有隧道。
-- 可通过指定自定义 **Subsystem Class** 来定义自定义行为。
+- 可指定自定义 **Subsystem Class** 来调整行为。
 
 ---
 

@@ -23,7 +23,7 @@ workIds:
   - simple-config-exclude
 lang: en
 translationKey: doc:simple-config-exclude-guide:supplement:1
-sourceHash: 44dc60aa2d77f0f147308f11b78436c353660700b1aa704861ce8e38801e954e
+sourceHash: a1d767adf3862fad3dde62465dca9c01470036e517df5d56ebe55ccc4337b1a5
 translationStatus: translated
 generatedBodyHash: 4da4e2320e51e018a5bbdbcc146806510453c36b1b5db584a09783fe9bbc7fd6
 ---

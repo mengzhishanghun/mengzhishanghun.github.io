@@ -17,7 +17,7 @@ coverAlt: Flowchart of the six-degree-of-freedom motion platform integration
 websiteCoverUrl: /assets/cases/six-dof-motion-platform.png
 lang: en
 translationKey: six-dof-motion-platform
-sourceHash: 0107a49032cce324e80acf9289fc36d578f846679d5d404dafb4b1b04ad7d3d7
+sourceHash: 44584c1ddccc2a961f718f902c355474f0540e91a9e35e0eeb9b76fc0c8960e5
 translationStatus: translated
 generatedBodyHash: 90bbe44e7db8aea4ee96b1e2a604726a58f55ada142bd1a94f32c0e0cfe04fdb
 ---

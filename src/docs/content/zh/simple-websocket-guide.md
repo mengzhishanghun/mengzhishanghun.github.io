@@ -20,7 +20,7 @@ translationKey: simple-websocket-guide
 
 # 📘 SimpleWebSocket 用户指南
 
-本指南介绍如何配置和使用 SimpleWebSocket 插件在 Unreal Engine 项目中进行 WebSocket 通信。
+本指南介绍如何配置和使用 SimpleWebSocket 插件在 Unreal Engine 项目中实现 WebSocket 通信。
 
 ## 兼容性
 

@@ -19,7 +19,7 @@ coverAlt: Workflow for previewing and checking head and body animations after ad
 websiteCoverUrl: /assets/cases/metahuman-animation-clipping.png
 lang: en
 translationKey: metahuman-animation-clipping
-sourceHash: ff330f547e3a5f33072c2d1784ee686285fc41ecc5dfe2570ab78692a2b94b83
+sourceHash: b99c513dccb49cab375d593415fb3e2da60dacd67ca189d7ecafc1249c2eca42
 translationStatus: translated
 generatedBodyHash: c2bc9ae8685fa7803a9a4a125fc79909f2d5ef460b4072f7e85f6d452b8d8b62
 ---

@@ -27,7 +27,7 @@ translationKey: doc:md-image-embed-guide:supplement:1
 
 # MDImageEmbed 使用指南
 
-MDImageEmbed 是 Obsidian 插件，通过右键菜单把本地图片转换为 Base64 内嵌格式后复制。这里保留原文章中的插件操作方式。
+MDImageEmbed 是 Obsidian 插件，通过右键菜单把本地图片转换为 Base64 内嵌格式后复制。
 
 ## 安装
 

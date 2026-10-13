@@ -19,7 +19,7 @@ coverAlt: Inheritance scanning and CreationMethod correction workflow for parent
 websiteCoverUrl: /assets/cases/blueprint-inheritance-repair.png
 lang: en
 translationKey: blueprint-inheritance-repair
-sourceHash: 4c6236fdf712011d70a177bb2248b5817f153e5138cac48a0cf111342890981f
+sourceHash: 0043a545fa8f9881fe873391a091c58a4d052a8a6285a890593e5a8df6019cca
 translationStatus: translated
 generatedBodyHash: 082f246399b3271267bb353ca85443c2092c5e30ec347dba588b0d4f59442657
 ---

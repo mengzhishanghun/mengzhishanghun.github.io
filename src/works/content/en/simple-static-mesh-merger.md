@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: 313e3b8e8a11035f958987d269051ab6cbe920327f5b1b128d35e230b52ee0d5
+sourceHash: 602f8570e796e726d37608a4994ffa6aa48a80a52f5a4cde44641cbdf73c9a73
 translationStatus: translated
 generatedBodyHash: 22d401c8753e37870aae685340fc9636b505334090bbf9ff793b556aa4d1db8b
 ---

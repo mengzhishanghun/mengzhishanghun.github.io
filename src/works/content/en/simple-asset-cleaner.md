@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: 25ac54657f3efaa80e563cced13849c6976e7bc38ae5cc7d41d80742452321e4
+sourceHash: 1754c0e5d07ac87e15f302059519fefdbe5a9364f4026b1dd020794738f7bcb1
 translationStatus: translated
 generatedBodyHash: 7ae4b9d6a67b87675ea16cee944f1aaf0096c38432438d384b0ba2c72c9d9561
 ---

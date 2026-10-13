@@ -23,7 +23,7 @@ workIds:
   - simple-asset-cleaner
 lang: en
 translationKey: doc:simple-asset-cleaner-guide:supplement:1
-sourceHash: 7d4c29bff85eea627a4da89c435e3ba458a8274f4a5b10c899a3e7e0b0ec8d69
+sourceHash: 3bea3a594546cb87cb88ee8deaf4c16dfe7474ed064d84e3fd42f76f2fc53142
 translationStatus: translated
 generatedBodyHash: 7ea30da72261d69f9cb63f4f258d1f1448bb347d4201e6cd68b62973951f181c
 ---

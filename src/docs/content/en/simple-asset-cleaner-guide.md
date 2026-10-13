@@ -19,7 +19,7 @@ lang: en
 translationKey: simple-asset-cleaner-guide
 supplementSources:
   - docs/content/en/supplements/simple-asset-cleaner-guide-1.md
-sourceHash: 5dfe55a37a2d2d82680fd2a30731e90180076d38e52ec4a640e195b717c49e2a
+sourceHash: 7deeb9b800f75e9773319b1e3589b3dcf7ab962c1345ab5a3691792190277727
 translationStatus: translated
 generatedBodyHash: d7338c5f297a1adb430035a8104aeacedd6724816c24e916826205351b094b04
 ---

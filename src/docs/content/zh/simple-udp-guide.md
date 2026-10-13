@@ -33,7 +33,7 @@ translationKey: simple-udp-guide
 ## 🔧 插件初始化
 
 插件启用后立即生效。  
-内部注册为 `GameInstanceSubsystem`——无需手动启动或关闭代码。
+内部注册为 `GameInstanceSubsystem`——无需手动编写启动或关闭代码。
 
 ---
 
@@ -158,7 +158,7 @@ translationKey: simple-udp-guide
 
 ## 🔧 推荐配套
 
-配合 **SimpleByteConversion** 插件使用，轻松实现数据与 `TArray<uint8>` 之间的序列化/反序列化。
+配合 **SimpleByteConversion** 插件使用，可实现数据与 `TArray<uint8>` 之间的序列化/反序列化。
 
 ---
 

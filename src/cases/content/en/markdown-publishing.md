@@ -20,7 +20,7 @@ coverAlt: Flowchart for publishing Markdown images together with an article
 websiteCoverUrl: /assets/cases/markdown-publishing.png
 lang: en
 translationKey: markdown-publishing
-sourceHash: 313627d37c40f68712c7c0cfe57bbdbef6ac189ec3da8bbe575d6361d8d3b8d5
+sourceHash: a57f9fdccf3e8349669339c8adac15604a79bd67d3f7a24e5e2510e5dd11e9a1
 translationStatus: translated
 generatedBodyHash: 4781dc139e15c1b992a7a78515a9a51c3a69d997ef290718d11cb9ddacbffa41
 ---

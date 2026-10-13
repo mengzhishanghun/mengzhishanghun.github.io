@@ -8,9 +8,9 @@ websiteRoute: /blog/
 template: blog/index.html
 lang: en
 translationKey: blog-index
-sourceHash: 2484536e1b4082cea849ed4e4f89721b5568b370b5bc8163000d37dceb1d1c9f
+sourceHash: ec65f023ea75b978bbf2d8ea1ccdb23447f8940b9fd497f03c4a9e5dece9a2d1
 translationStatus: translated
-generatedBodyHash: 2ff0c1a421fd72bd2882dd4757e3fc26deb6d51e0265ad8478cb5d98458b909f
+generatedBodyHash: 14b66ce1d6a3b3143923af803df2433acf78d4c000b92f200659cb68c8162f4c
 ---
 
 ![](/media-occurrence/page%3Ablog-index%3Amedia%3A1)
@@ -19,7 +19,7 @@ generatedBodyHash: 2ff0c1a421fd72bd2882dd4757e3fc26deb6d51e0265ad8478cb5d98458b9
 
 Technical thoughts, troubleshooting, and development records
 
-UE 26 · C++ 1 · Python 1 · Perforce 7 · Essays 1
+UE 35 · C++ 2 · Python 4 · Perforce 7
 
 Search this category
 
@@ -27,7 +27,55 @@ Default order
 
 Tags
 
-[## Fixing Missing GI Across Multiple Views in UE 5.3
+[## Source-built Unreal on Windows: a shared engine association
+
+On Windows, copies of the same source-built engine can receive different registration identifiers. That creates unnecessary `EngineAssociation` change
+
+](/blog/ue-source-engine-association/)[## Unreal Blueprint parameters: references and display names
+
+A C++ reference parameter may appear as a different Blueprint pin direction than expected. Type, `const` and metadata all matter. These UE5 reflected
+
+](/blog/ue-uparam-reference-metadata/)[## Cursor with Unreal 5.6 on Windows: establish the build first
+
+These notes describe Windows and UE 5.6. The original record did not preserve complete Cursor or extension versions, so it is not a compatibility prom
+
+](/blog/ue-cursor-workflow-notes/)[## Fab submission notes: review the package and instructions together
+
+A feature working in the development project does not prove that a delivery package can be installed and reproduced. These notes distill past Unreal p
+
+](/blog/ue-fab-submission-notes/)[## Unreal DataTable and JSON: validate before replacing
+
+JSON files can become DataTable rows, but clearing the table before parsing can destroy old data on a later failure. This workflow targets a UE5 C++ e
+
+](/blog/ue-datatable-json-import-export/)[## Saving Unreal editor assets: checkout, dirty state and results
+
+An automation tool may change an asset without updating its file. Possible causes include a clean package, an incorrect target path or source-control
+
+](/blog/ue-editor-asset-saving/)[## Breaking Level Instances in batches: bound the work and stop on failure
+
+Breaking a Level Instance may expose nested instances. A loop that continues whenever it finds an instance can repeat forever when one cannot be broke
+
+](/blog/ue-level-instance-break-safety/)[## Parsing game expressions: define the grammar before precedence
+
+Game events may evaluate text such as `1 + 2 * 3`. Rejecting a few patterns with regex and deleting array tokens does not establish a complete grammar
+
+](/blog/ue-expression-parser-basics/)[## Everyday C++ choices: containers, sorting and value categories
+
+Choose containers and sorting by access patterns and ordering requirements rather than old compiler implementation details. This article uses C++17 se
+
+](/blog/cpp-algorithms-containers-value-categories/)[## Updating Excel by column names in Python: tuple keys and separate output
+
+A reference workbook supplies values to update a target using several matching columns. Joining keys with underscores makes `("A_B", "C")` collide wit
+
+](/blog/python-excel-column-update/)[## Comparing directories in Python: start with a content-difference report
+
+When only some files changed between two large directories, you need additions, modifications and removals. The original workflow also copied files an
+
+](/blog/python-directory-diff-report/)[## Switching Perforce stream workspaces: preflight and failure boundaries
+
+A button that changes Client Stream, syncs and cleans can place local changes under the wrong view. This article describes a generic Python protection
+
+](/blog/python-perforce-stream-switch-safety/)[## Fixing Missing GI Across Multiple Views in UE 5.3
 
 A UE 5.3 source-build record of changing the maximum view count from 2 to 3 across seven locations, with a source screenshot and version limits.
 

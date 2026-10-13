@@ -22,7 +22,7 @@ translationKey: p4-case-sync
 # P4CaseSync
 
 **P4CaseSync** 是一个在 **Perforce 提交前**同步修正**文件路径与文件名大小写**的小工具。  
-在 Windows 下，P4 常把大小写“弱化”，导致上传后目录与文件被小写化。本工具会依据**本地磁盘真实大小写**对 `p4 opened` 中的文件进行纠正，并可手动微调，再一键应用为 `p4 move`。
+在 Windows 下，P4 常把大小写“弱化”，导致上传后目录与文件被小写化。本工具会依据**本地磁盘真实大小写**纠正 `p4 opened` 中的文件路径，并可手动微调，再一键应用为 `p4 move`。
 
 ## ✨ 功能特性
 - 扫描 Changelist（或 default）中的已打开文件
@@ -123,7 +123,7 @@ pyinstaller P4CaseSync.spec
 
 ### ⚠️ 注意事项
 
-**不要使用**命令行参数与 spec 文件混用：
+**不要将**命令行参数与 spec 文件混用：
 ```bash
 # ❌ 错误示例
 pyinstaller -F -w P4CaseSync.spec  # 会报错
@@ -178,7 +178,7 @@ A: 我们默认**过滤**删除类动作（`delete/move/delete`），只显示 `
 
 ## 🧰 导出与还原环境
 
-> 你说的“minicode 虚拟环境”，一般是 **Miniconda**。下面分别给出 **Conda** 与 **pip/venv** 两套方案。
+> “minicode 虚拟环境”一般指 **Miniconda**。下面分别给出 **Conda** 与 **pip/venv** 两套方案。
 
 ### 方案 A：Conda（Miniconda/Anaconda）
 

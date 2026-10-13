@@ -23,7 +23,7 @@ workIds:
   - simple-asset-namer
 lang: en
 translationKey: doc:simple-asset-namer-guide:supplement:1
-sourceHash: 71ee99d7116e9737c597b5d365251872a7468bb699a259016f88b6ca42a1cad6
+sourceHash: 1978d26651530abc618696cb5c2051c69925d079a6bf42bc1e1d4b805fed738d
 translationStatus: translated
 generatedBodyHash: 33cdb995e2e5b7dc02319a4095667a6aa44c229121de5cfb58fa35a5eb7e9d96
 ---

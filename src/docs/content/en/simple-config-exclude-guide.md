@@ -19,7 +19,7 @@ lang: en
 translationKey: simple-config-exclude-guide
 supplementSources:
   - docs/content/en/supplements/simple-config-exclude-guide-1.md
-sourceHash: fc1d017d6a974e9cf3e7154f75d3aa4d6a102304b7de7a9afa4e86bfdba153ed
+sourceHash: 2de352474c341b859e22c50d1d1d054dffcbbfdb202fe88a644b186e6471d528
 translationStatus: translated
 generatedBodyHash: ded1248d848e041f090ddfdaa0600d6ef061f31ad49409561b21bb874628d435
 ---

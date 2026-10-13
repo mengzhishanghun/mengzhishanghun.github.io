@@ -17,9 +17,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/tools/md-blog-packer/
 lang: en
 translationKey: md-blog-packer
-sourceHash: f1e5be7f9dfe337486729592fb08273377fd7cb5928bb1bdc41f8f53ac52a7e2
+sourceHash: b81bc9c402bc6032d786dc122f20f2ba244d0b0d34fd8408d9a06af8eeaa5496
 translationStatus: translated
-generatedBodyHash: 17bf70f5945fe30d6ac60202805950cb830e6578d224360eb697f0d9cd91e77c
+generatedBodyHash: a90872962947b374d07c837bf0d8232a09d816b954988872cda8b57125d9cafb
 ---
 
 # MDBlogPacker
@@ -34,7 +34,7 @@ Images are the most tedious part of publishing a blog post: local images cannot 
 
 ## Features
 
-- Scans all local images in Markdown, supporting both `![](path)` and Obsidian `![[image.png]]` syntax
+- Scans all local images in Markdown, supporting both `![](</path>)` and Obsidian `![[image.png]]` syntax
 - Automatically converts them to embedded `data:image/...;base64,...` format
 - Copies the result directly to the clipboard for immediate publication
 - Supports prefix/suffix content such as copyright notices and anti-reposting notices; enter it in GUI mode or specify template files in CLI mode

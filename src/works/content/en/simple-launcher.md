@@ -23,7 +23,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: 08f59cd320e324c3d5cd55fd6f4a4eb30fc7f3800d133a4274f5abebbb3dac79
+sourceHash: 241135ca57a67a86073ca93806557a066c8c7406da7d32f75d4e0f82663f47b5
 translationStatus: translated
 generatedBodyHash: 4cb189a562e0795ddf83c474365b512a8b7fc05929a867c7d61f341761c0caeb
 ---

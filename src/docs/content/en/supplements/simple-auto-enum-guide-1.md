@@ -23,9 +23,9 @@ workIds:
   - simple-auto-enum
 lang: en
 translationKey: doc:simple-auto-enum-guide:supplement:1
-sourceHash: 4860fe65e67bcb22bcfbebf935ce198d89e416b8f06a0c06103e31c2b0960b60
+sourceHash: e03e1c5f56b73116f760ed2c056b666ffdb79c34040dbf1d485d5b100b2ac535
 translationStatus: translated
-generatedBodyHash: 3bc3a9f53f29dbb5502fe951794de6d7a8748e71cbff8a2dfd2c42ea3b3e3900
+generatedBodyHash: 9beb2c0a4cd93b696256e01165a1c6c553a8e3ee74d7191fa68ffe63eed355b5
 ---
 
 # SimpleAutoEnum User Guide
@@ -94,7 +94,7 @@ LogSimpleAutoEnum: Log: Processed enum binding: EAIType -> UMySettings::AITypeLi
 LogSimpleAutoEnum: Warning: Duplicate value found: "Soldier"
 ```
 
-Problems are visible immediately, without guesswork.
+These logs help diagnose problems.
 
 ## Usage Examples
 

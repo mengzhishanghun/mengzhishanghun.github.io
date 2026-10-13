@@ -21,7 +21,7 @@ translationKey: simple-file-updater
 
 # SimpleFileUpdater 使用指南（本地键值对版本）
 
-SimpleFileUpdater 是一个轻量级的文件同步工具，适用于希望从远程地址批量更新本地文件的用户。程序已打包为 `SimpleFileUpdater.exe`，支持通过配置文件定义目标文件及其下载地址。
+SimpleFileUpdater 是一个轻量级文件同步工具，可从远程地址批量更新本地文件。程序已打包为 `SimpleFileUpdater.exe`，支持通过配置文件定义目标文件及其下载地址。
 
 ---
 
@@ -58,7 +58,7 @@ SimpleFileUpdater.exe MyConfig.txt
 
 ## 🧪 如何从源码运行（开发者或未打包场景）
 
-本项目提供了两种方式用于一键搭建运行环境：
+本项目提供两种一键搭建运行环境的方式：
 
 ### 方式 1：使用 Conda（推荐）
 
@@ -94,4 +94,4 @@ python Main.py
 
 ---
 
-本地文件同步，从未如此简单。Enjoy!
+

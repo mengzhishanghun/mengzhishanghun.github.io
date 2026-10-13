@@ -33,7 +33,7 @@ translationKey: simple-tcp-client-guide
 ## 🔧 插件初始化
 
 插件启用后自动激活。  
-内部注册为 `GameInstanceSubsystem`，无需手动启动或关闭代码。
+内部注册为 `GameInstanceSubsystem`，无需手动编写启动或关闭代码。
 
 ---
 
@@ -121,7 +121,7 @@ translationKey: simple-tcp-client-guide
 
 ## 🔧 推荐配套插件
 
-配合 **SimpleByteConversion** 使用，可轻松将常见 Unreal 类型（FString、float、int 等）与 `TArray<uint8>` 互转，构建结构化协议。
+配合 **SimpleByteConversion** 使用，可将常见 Unreal 类型（FString、float、int 等）与 `TArray<uint8>` 互转，构建结构化协议。
 
 ---
 

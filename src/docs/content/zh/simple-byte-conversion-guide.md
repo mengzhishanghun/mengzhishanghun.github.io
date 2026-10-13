@@ -82,7 +82,7 @@ supplementSources:
 ## 🧪 蓝图节点概览（图片）
 
 - 所有节点均为 `BlueprintPure`——无需执行引脚
-- 可轻松组合用于网络、文件存取或自定义协议
+- 可组合用于网络、文件存取或自定义协议
 
 ![](/media-occurrence/doc%3Asimple-byte-conversion-guide%3Amedia%3A1)
 
@@ -108,7 +108,7 @@ supplementSources:
 ## 🔧 推荐配套插件
 
 与 **SimpleTCPClient** 和 **SimpleUDP** 插件配合使用效果极佳。  
-一起使用可通过 TCP/UDP 发送结构化消息并轻松解码。
+一起使用可通过 TCP/UDP 发送结构化消息并解码。
 
 ---
 

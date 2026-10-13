@@ -107,6 +107,18 @@ languages:
       page:contact: contact/content/zh/contact.md
       page:not-found: shared/content/zh/not-found.md
       page:about: about/content/zh/about.md
+      blog:ue-source-engine-association: blog/content/zh/ue-source-engine-association.md
+      blog:ue-uparam-reference-metadata: blog/content/zh/ue-uparam-reference-metadata.md
+      blog:ue-cursor-workflow-notes: blog/content/zh/ue-cursor-workflow-notes.md
+      blog:ue-fab-submission-notes: blog/content/zh/ue-fab-submission-notes.md
+      blog:ue-datatable-json-import-export: blog/content/zh/ue-datatable-json-import-export.md
+      blog:ue-editor-asset-saving: blog/content/zh/ue-editor-asset-saving.md
+      blog:ue-level-instance-break-safety: blog/content/zh/ue-level-instance-break-safety.md
+      blog:ue-expression-parser-basics: blog/content/zh/ue-expression-parser-basics.md
+      blog:cpp-algorithms-containers-value-categories: blog/content/zh/cpp-algorithms-containers-value-categories.md
+      blog:python-excel-column-update: blog/content/zh/python-excel-column-update.md
+      blog:python-directory-diff-report: blog/content/zh/python-directory-diff-report.md
+      blog:python-perforce-stream-switch-safety: blog/content/zh/python-perforce-stream-switch-safety.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -211,4 +223,16 @@ languages:
       page:contact: contact/content/en/contact.md
       page:not-found: shared/content/en/not-found.md
       page:about: about/content/en/about.md
+      blog:ue-source-engine-association: blog/content/en/ue-source-engine-association.md
+      blog:ue-uparam-reference-metadata: blog/content/en/ue-uparam-reference-metadata.md
+      blog:ue-cursor-workflow-notes: blog/content/en/ue-cursor-workflow-notes.md
+      blog:ue-fab-submission-notes: blog/content/en/ue-fab-submission-notes.md
+      blog:ue-datatable-json-import-export: blog/content/en/ue-datatable-json-import-export.md
+      blog:ue-editor-asset-saving: blog/content/en/ue-editor-asset-saving.md
+      blog:ue-level-instance-break-safety: blog/content/en/ue-level-instance-break-safety.md
+      blog:ue-expression-parser-basics: blog/content/en/ue-expression-parser-basics.md
+      blog:cpp-algorithms-containers-value-categories: blog/content/en/cpp-algorithms-containers-value-categories.md
+      blog:python-excel-column-update: blog/content/en/python-excel-column-update.md
+      blog:python-directory-diff-report: blog/content/en/python-directory-diff-report.md
+      blog:python-perforce-stream-switch-safety: blog/content/en/python-perforce-stream-switch-safety.md
 ---

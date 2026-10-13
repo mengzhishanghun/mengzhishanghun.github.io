@@ -30,7 +30,7 @@ translationKey: simple-static-mesh-merger
 
 SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。它先把可合并对象按网格、材质、移动性和碰撞配置分组，供开发者预览与筛选，再将选中的对象组织为 ISM/HISM 实例。
 
-整个过程以关卡中的实际 Actor 为对象，适合在动手修改场景前核对分组结果，而不是只按网格名称批量替换。
+工具针对关卡中的实际 Actor 分组，方便在修改场景前核对结果，避免只按网格名称批量替换。
 
 ## 背景与目标
 
@@ -48,7 +48,7 @@ SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。�
 
 分组同时比较 Mesh、Static/Stationary/Movable 移动性、所有材质槽，以及碰撞 Profile、ObjectType 和通道响应。预览支持按移动性和最小实例数筛选；选中组后，还可在 Actor 列表中取消勾选不应合并的对象。
 
-这些筛选决定本次操作范围，不要求整组无条件参与。
+这些筛选决定本次操作范围，整组对象不必全部参与。
 
 ### 生成实例化对象
 

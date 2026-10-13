@@ -205,7 +205,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   blog:cnblogs-19143258:
-    root.html:1.head:0.meta:2@content: First, you need a server administrator account to perform this operation.
+    root.html:1.head:0.meta:2@content: Unreal Perforce file types and team binary-delivery boundaries.
     root.html:1.head:0.title:4.#text:0: How to Configure TypeMap · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -225,7 +225,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: How to Configure TypeMap
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: First, you need a server administrator account to perform this operation.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Unreal Perforce file types and team binary-delivery boundaries.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -595,8 +595,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   blog:cnblogs-19770934:
-    root.html:1.head:0.meta:2@content: Memory representation and byte-array conversion, generic struct parameters with CustomThunk, and JSON field-name and floating-point output handling.
-    root.html:1.head:0.title:4.#text:0: Data Serialization and Byte Conversion in Blueprints · Xiao Mao
+    root.html:1.head:0.meta:2@content: Reflected struct arguments, JSON parsing and safe persistence boundaries.
+    root.html:1.head:0.title:4.#text:0: "Blueprint generic struct serialization: memory layout versus persistence · Xiao Mao"
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -614,8 +614,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Data Serialization and Byte Conversion in Blueprints
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Memory representation and byte-array conversion, generic struct parameters with CustomThunk, and JSON field-name and floating-point output handling.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Blueprint generic struct serialization: memory layout versus persistence"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Reflected struct arguments, JSON parsing and safe persistence boundaries.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -1183,7 +1183,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   blog:cnblogs-19174295:
-    root.html:1.head:0.meta:2@content: Here is my approach. I do not know whether it is the correct one, but it works, haha. I followed the official third-party library example. I will skip DLL packaging and focus on what to do once you have the DLL and Lib. Using TestThird, a plugin created from the official template, as an example, put the dll and lib files in TestThird\Source\ThirdParty\TestTh…
+    root.html:1.head:0.meta:2@content: Loading DLLs in Unreal and diagnosing Windows header conflicts.
     root.html:1.head:0.title:4.#text:0: Calling a DLL · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -1203,7 +1203,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Calling a DLL
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Here is my approach. I do not know whether it is the correct one, but it works, haha. I followed the official third-party library example. I will skip DLL packaging and focus on what to do once you have the DLL and Lib. Using TestThird, a plugin created from the official template, as an example, put the dll and lib files in TestThird\Source\ThirdParty\TestTh…
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Loading DLLs in Unreal and diagnosing Windows header conflicts.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -4897,11 +4897,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: Technical thoughts, troubleshooting, and development notes
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: Note categories
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "27"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "35"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:0.#text:0: C++
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "1"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "2"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:0.#text:0: Python
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:1.#text:0: "1"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:1.#text:0: "4"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:0.#text:0: Perforce
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:1.#text:0: "7"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1@aria-label: Content list
@@ -4930,9 +4930,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:0.#text:0: UMG
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:1.#text:0: Rendering
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: Data Serialization and Byte Conversion in Blueprints
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.h2:0.#text:0: Data Serialization and Byte Conversion in Blueprints
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.p:1.#text:0: Memory representation and byte-array conversion, generic struct parameters with CustomThunk, and JSON field-name and floating-point output handling.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: "Blueprint generic struct serialization: memory layout versus persistence"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.h2:0.#text:0: "Blueprint generic struct serialization: memory layout versus persistence"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.p:1.#text:0: Reflected struct arguments, JSON parsing and safe persistence boundaries.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:0.#text:0: Blueprints
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:1.#text:0: Serialization
@@ -5000,7 +5000,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:15.div:1.div:0.span:0.#text:0: Multi-screen Display
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16@aria-label: Calling a DLL
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:0.h2:0.#text:0: Calling a DLL
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:0.p:1.#text:0: Here is my approach. I do not know whether it is the correct one, but it works, haha. I followed the official third-party library example. I will skip DLL packaging and focus on what to do once you have the DLL and Lib. Using TestThird, a plugin created from the official template, as an example, put the dll and lib files in TestThird\Source\ThirdParty\TestTh…
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:0.p:1.#text:0: Loading DLLs in Unreal and diagnosing Windows header conflicts.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:0.span:0.#text:0: DLL
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:17@aria-label: PixelStreaming
@@ -5080,7 +5080,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:29.div:1.div:0.span:1.#text:0: Garbled Chinese Text
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30@aria-label: How to Configure TypeMap
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:0.h2:0.#text:0: How to Configure TypeMap
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:0.p:1.#text:0: First, you need a server administrator account to perform this operation.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:0.p:1.#text:0: Unreal Perforce file types and team binary-delivery boundaries.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:30.div:1.div:0.span:0.#text:0: TypeMap
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:31@aria-label: Client Installation and Configuration Guide
@@ -5122,6 +5122,90 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:0.h2:0.#text:0: "Source-built Unreal on Windows: a shared engine association"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:0.p:1.#text:0: On Windows, copies of the same source-built engine can receive different registration identifiers. That creates unnecessary `EngineAssociation` change
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:38.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:0.h2:0.#text:0: "Unreal Blueprint parameters: references and display names"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:0.p:1.#text:0: "A C++ reference parameter may appear as a different Blueprint pin direction than expected. Type, `const` and metadata all matter. These UE5 reflected "
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:39.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:0.h2:0.#text:0: "Cursor with Unreal 5.6 on Windows: establish the build first"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:0.p:1.#text:0: These notes describe Windows and UE 5.6. The original record did not preserve complete Cursor or extension versions, so it is not a compatibility prom
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:40.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:0.h2:0.#text:0: "Fab submission notes: review the package and instructions together"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:0.p:1.#text:0: A feature working in the development project does not prove that a delivery package can be installed and reproduced. These notes distill past Unreal p
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:41.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:0.h2:0.#text:0: "Unreal DataTable and JSON: validate before replacing"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:0.p:1.#text:0: JSON files can become DataTable rows, but clearing the table before parsing can destroy old data on a later failure. This workflow targets a UE5 C++ e
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:42.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:0.h2:0.#text:0: "Saving Unreal editor assets: checkout, dirty state and results"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:0.p:1.#text:0: "An automation tool may change an asset without updating its file. Possible causes include a clean package, an incorrect target path or source-control "
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:43.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:0.h2:0.#text:0: "Breaking Level Instances in batches: bound the work and stop on failure"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:0.p:1.#text:0: Breaking a Level Instance may expose nested instances. A loop that continues whenever it finds an instance can repeat forever when one cannot be broke
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.h2:0.#text:0: "Parsing game expressions: define the grammar before precedence"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.p:1.#text:0: Game events may evaluate text such as `1 + 2 * 3`. Rejecting a few patterns with regex and deleting array tokens does not establish a complete grammar
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:0.h2:0.#text:0: "Everyday C++ choices: containers, sorting and value categories"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:0.p:1.#text:0: Choose containers and sorting by access patterns and ordering requirements rather than old compiler implementation details. This article uses C++17 se
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:46.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:0.h2:0.#text:0: "Updating Excel by column names in Python: tuple keys and separate output"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:0.p:1.#text:0: A reference workbook supplies values to update a target using several matching columns. Joining keys with underscores makes `("A_B", "C")` collide wit
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:47.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:0.h2:0.#text:0: "Comparing directories in Python: start with a content-difference report"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:0.p:1.#text:0: When only some files changed between two large directories, you need additions, modifications and removals. The original workflow also copied files an
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:48.div:1.div:0.span:2.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:0.h2:0.#text:0: "Switching Perforce stream workspaces: preflight and failure boundaries"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:0.p:1.#text:0: A button that changes Client Stream, syncs and cleans can place local changes under the wrong view. This article describes a generic Python protection
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0@aria-label: Tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:0.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:2.#text:0: ""
   page:contact:
     root.html:1.head:0.meta:2@content: Discuss game development, digital twins, and tools and plugin collaboration.
     root.html:1.head:0.title:4.#text:0: Contact & support | MZSH
@@ -5305,6 +5389,534 @@ shellSlots:
     about.title: About me
     about.greeting: Hi, I’m Xiaomao
     about.facts: At a glance
+  blog:ue-source-engine-association:
+    root.html:1.head:0.meta:2@content: On Windows, copies of the same source-built engine can receive different registration identifiers. That creates unnecessary `EngineAssociation` change
+    root.html:1.head:0.title:4.#text:0: "Source-built Unreal on Windows: a shared engine association · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Source-built Unreal on Windows: a shared engine association"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: On Windows, copies of the same source-built engine can receive different registration identifiers. That creates unnecessary `EngineAssociation` change
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:ue-uparam-reference-metadata:
+    root.html:1.head:0.meta:2@content: "A C++ reference parameter may appear as a different Blueprint pin direction than expected. Type, `const` and metadata all matter. These UE5 reflected "
+    root.html:1.head:0.title:4.#text:0: "Unreal Blueprint parameters: references and display names · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Unreal Blueprint parameters: references and display names"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "A C++ reference parameter may appear as a different Blueprint pin direction than expected. Type, `const` and metadata all matter. These UE5 reflected "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:ue-cursor-workflow-notes:
+    root.html:1.head:0.meta:2@content: These notes describe Windows and UE 5.6. The original record did not preserve complete Cursor or extension versions, so it is not a compatibility prom
+    root.html:1.head:0.title:4.#text:0: "Cursor with Unreal 5.6 on Windows: establish the build first · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Cursor with Unreal 5.6 on Windows: establish the build first"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: These notes describe Windows and UE 5.6. The original record did not preserve complete Cursor or extension versions, so it is not a compatibility prom
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:ue-fab-submission-notes:
+    root.html:1.head:0.meta:2@content: A feature working in the development project does not prove that a delivery package can be installed and reproduced. These notes distill past Unreal p
+    root.html:1.head:0.title:4.#text:0: "Fab submission notes: review the package and instructions together · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Fab submission notes: review the package and instructions together"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A feature working in the development project does not prove that a delivery package can be installed and reproduced. These notes distill past Unreal p
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:ue-datatable-json-import-export:
+    root.html:1.head:0.meta:2@content: JSON files can become DataTable rows, but clearing the table before parsing can destroy old data on a later failure. This workflow targets a UE5 C++ e
+    root.html:1.head:0.title:4.#text:0: "Unreal DataTable and JSON: validate before replacing · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Unreal DataTable and JSON: validate before replacing"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: JSON files can become DataTable rows, but clearing the table before parsing can destroy old data on a later failure. This workflow targets a UE5 C++ e
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:ue-editor-asset-saving:
+    root.html:1.head:0.meta:2@content: "An automation tool may change an asset without updating its file. Possible causes include a clean package, an incorrect target path or source-control "
+    root.html:1.head:0.title:4.#text:0: "Saving Unreal editor assets: checkout, dirty state and results · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Saving Unreal editor assets: checkout, dirty state and results"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "An automation tool may change an asset without updating its file. Possible causes include a clean package, an incorrect target path or source-control "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:ue-level-instance-break-safety:
+    root.html:1.head:0.meta:2@content: Breaking a Level Instance may expose nested instances. A loop that continues whenever it finds an instance can repeat forever when one cannot be broke
+    root.html:1.head:0.title:4.#text:0: "Breaking Level Instances in batches: bound the work and stop on failure · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Breaking Level Instances in batches: bound the work and stop on failure"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Breaking a Level Instance may expose nested instances. A loop that continues whenever it finds an instance can repeat forever when one cannot be broke
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:ue-expression-parser-basics:
+    root.html:1.head:0.meta:2@content: Game events may evaluate text such as `1 + 2 * 3`. Rejecting a few patterns with regex and deleting array tokens does not establish a complete grammar
+    root.html:1.head:0.title:4.#text:0: "Parsing game expressions: define the grammar before precedence · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Parsing game expressions: define the grammar before precedence"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Game events may evaluate text such as `1 + 2 * 3`. Rejecting a few patterns with regex and deleting array tokens does not establish a complete grammar
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:cpp-algorithms-containers-value-categories:
+    root.html:1.head:0.meta:2@content: Choose containers and sorting by access patterns and ordering requirements rather than old compiler implementation details. This article uses C++17 se
+    root.html:1.head:0.title:4.#text:0: "Everyday C++ choices: containers, sorting and value categories · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: CPP
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Everyday C++ choices: containers, sorting and value categories"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Choose containers and sorting by access patterns and ordering requirements rather than old compiler implementation details. This article uses C++17 se
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:python-excel-column-update:
+    root.html:1.head:0.meta:2@content: A reference workbook supplies values to update a target using several matching columns. Joining keys with underscores makes `("A_B", "C")` collide wit
+    root.html:1.head:0.title:4.#text:0: "Updating Excel by column names in Python: tuple keys and separate output · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: PYTHON
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Updating Excel by column names in Python: tuple keys and separate output"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A reference workbook supplies values to update a target using several matching columns. Joining keys with underscores makes `("A_B", "C")` collide wit
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:python-directory-diff-report:
+    root.html:1.head:0.meta:2@content: When only some files changed between two large directories, you need additions, modifications and removals. The original workflow also copied files an
+    root.html:1.head:0.title:4.#text:0: "Comparing directories in Python: start with a content-difference report · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: PYTHON
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Comparing directories in Python: start with a content-difference report"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: When only some files changed between two large directories, you need additions, modifications and removals. The original workflow also copied files an
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:python-perforce-stream-switch-safety:
+    root.html:1.head:0.meta:2@content: A button that changes Client Stream, syncs and cleans can place local changes under the wrong view. This article describes a generic Python protection
+    root.html:1.head:0.title:4.#text:0: "Switching Perforce stream workspaces: preflight and failure boundaries · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: PYTHON
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Switching Perforce stream workspaces: preflight and failure boundaries"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A button that changes Client Stream, syncs and cleans can place local changes under the wrong view. This article describes a generic Python protection
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
 scriptSlots:
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:1187: Bilibili player
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:2062: Bilibili player
@@ -7012,7 +7624,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 3805b2c5fcd7463fbde4da64d1ec16fd81ac3f60d3c6b2386267433ac2dddc78
+sourceHash: 1e6d5d0c3368ce0071ef8ec5a05358931a4b7d82e9d4cb888170eae7da3ac8a4
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

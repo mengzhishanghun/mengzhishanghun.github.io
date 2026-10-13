@@ -77,7 +77,7 @@ TMap<TSoftClassPtr<UObject>, FAssetNamingRule> AssetTypeNamingRules;
 
 **核心名称提取：**
 
-插件不是简单地在名称前加前缀。它会先**分析现有名称结构**，提取出核心名称，再生成标准命名：
+插件会先**分析现有名称结构**，提取核心名称，再生成标准命名，而非直接在原名前加前缀：
 
 ```
 输入: "bp_MyCharacter"    → 核心: "MyCharacter"  → 输出: "BP_MyCharacter"

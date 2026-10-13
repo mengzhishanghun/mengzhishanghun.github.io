@@ -17,15 +17,15 @@ documentKind: product-manual
 websiteRoute: /docs/zh/tools/p4-case-sync/
 lang: en
 translationKey: p4-case-sync
-sourceHash: d6d0056d5edfa9eafadc6cecd92b1345a02a27e7c68f6d0f49568b4b79eb711c
+sourceHash: 3a6100f8ae74ec2d048a4146519a3ee0dc0ede3a1ca5ea9128e11b96f499784a
 translationStatus: translated
-generatedBodyHash: d3695cfa5030e2364218ebb4108b628f90adb868defe289b382a7677c642a6f4
+generatedBodyHash: d0d60c4a547c5b13fd80c09ba278f2ec3485184b9670a51a79b462838247a7b2
 ---
 
 # P4CaseSync
 
 **P4CaseSync** is a small tool that synchronizes and corrects **path and filename capitalization before Perforce submission**.  
-On Windows, P4 often weakens case distinctions, causing uploaded directories and files to become lowercase. This tool corrects files in `p4 opened` using **actual capitalization on the local disk**, allows manual adjustments, and applies changes as `p4 move` operations in one click.
+On Windows, P4 often weakens case distinctions, causing uploaded directories and files to become lowercase. This tool corrects the file paths listed by `p4 opened` using **actual capitalization on the local disk**, allows manual adjustments, and applies changes as `p4 move` operations in one click.
 
 ## ✨ Features
 - Scans opened files in a Changelist (or default)

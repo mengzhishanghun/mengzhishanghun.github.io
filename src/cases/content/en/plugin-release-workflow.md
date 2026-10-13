@@ -21,7 +21,7 @@ coverAlt: Flowchart of the toolchain from plugin development to release
 websiteCoverUrl: /assets/cases/plugin-release-workflow.png
 lang: en
 translationKey: plugin-release-workflow
-sourceHash: 7ab1688579fb161a7d7f568f8f1b54188a2a6247e67a88a6ab793e63e980a29e
+sourceHash: ddaed4bd8e42d161d32a189ef559d34acd8535452aaecd8db643b2c529ae5f46
 translationStatus: translated
 generatedBodyHash: 01a5d119524d7f3ac860d33a54e23eb4a9906889afdf5128c4259de580e58a74
 ---

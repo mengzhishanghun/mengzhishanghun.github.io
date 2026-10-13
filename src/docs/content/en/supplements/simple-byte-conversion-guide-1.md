@@ -23,7 +23,7 @@ workIds:
   - simple-byte-conversion
 lang: en
 translationKey: doc:simple-byte-conversion-guide:supplement:1
-sourceHash: 808ca355c62fd183f3055bfc2227dc0b0970bb0a91fb4e4c74a895af53c0fea4
+sourceHash: 36287edb8c6d8e301b2a2eb98a6a962d3ca8b65abaf14dd52c7b9c98c04076e3
 translationStatus: translated
 generatedBodyHash: 93cc7a987c6df152d62bca8d3edcf47652f91a5745a9ee898c0289f24460cd79
 ---

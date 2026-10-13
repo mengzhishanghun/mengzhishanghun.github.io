@@ -17,7 +17,7 @@ documentKind: product-manual
 websiteRoute: /docs/zh/tools/simple-file-updater/
 lang: en
 translationKey: simple-file-updater
-sourceHash: 242014df8f4fdb1c24177c610c0f33b3a98daadf058d886bf0252c3b3dbd8749
+sourceHash: b954ec8b8d61e0c48a24924f8d6c4112a4fd18054e799b9575cc0e2c8193eb6c
 translationStatus: translated
 generatedBodyHash: efd1e9b7701c77c9dfdfeecac9920fa4f4da88321f3dcbd5885796d324ba9c88
 ---

@@ -19,7 +19,7 @@ lang: en
 translationKey: simple-bp-inherit-fix-guide
 supplementSources:
   - docs/content/en/supplements/simple-bp-inherit-fix-guide-1.md
-sourceHash: 6edfbf266238e3686a86955112ee4c88b4dd39d7b6a72f3ee72622708be7c1cc
+sourceHash: a41767be01b36a8f8df7a5326d97954561f13bea4930bdf84005e156e142232e
 translationStatus: translated
 generatedBodyHash: df3c5fe302ca4095eb5b3cb70ff81bfd6fa5e3dd065727c44db788bce1bd8b78
 ---
