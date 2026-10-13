@@ -377,13 +377,32 @@ function redirect({pathname,entry,explicitLocale=null,anchors={},config,labels})
   const target=urls[locale.code],runtime={...publicLanguages(config),urls,anchors,labels,redirect:{pathname,locale:explicitLocale}};
   return '<!DOCTYPE html><html lang="'+locale.htmlLang+'"><head><meta charset="UTF-8"><meta name="robots" content="noindex"><link rel="canonical" href="https://mzsh.me'+target+'"><title>'+escapeHTML(labels.group)+'</title></head><body><a href="'+target+'">'+escapeHTML(locale.label)+'</a><script type="application/json" data-site-language>'+safeJSON(runtime)+'</script><script defer src="/assets/site-ui/language-switch.js"></script></body></html>';
 }
+export function normalizeScriptEntries(entries) {
+  if(!Array.isArray(entries))throw new Error('脚本清单必须为数组');
+  const sources=new Map(),owners=new Map();
+  const validPath=value=>typeof value==='string' && /^[a-zA-Z0-9_./-]+\.js$/.test(value) && !value.includes('\\') && value.split('/').every(part=>part && part!=='.' && part!=='..');
+  for(const entry of entries) {
+    const record=typeof entry==='string'?{source:entry,aliases:[]}:entry;
+    if(!record || Array.isArray(record) || typeof record!=='object' || Object.keys(record).some(key=>!['source','aliases'].includes(key)) || !validPath(record.source) || (record.aliases!==undefined && !Array.isArray(record.aliases)))throw new Error('脚本条目无效或路径越界');
+    const urls=['/'+record.source,...(record.aliases || [])];
+    for(const url of urls) {
+      if(typeof url!=='string' || !url.startsWith('/') || !validPath(url.slice(1)))throw new Error('脚本别名无效或路径越界');
+      if(owners.has(url) && owners.get(url)!==record.source)throw new Error('脚本别名跨来源冲突: '+url);
+      owners.set(url,record.source);
+    }
+    let normalized=sources.get(record.source);
+    if(!normalized)sources.set(record.source,normalized={source:record.source,urls:[]});
+    for(const url of urls)if(!normalized.urls.includes(url))normalized.urls.push(url);
+  }
+  return [...sources.values()];
+}
 export async function buildSite(options) {
   const {site,manifest,output,check=false}=options;
   const {entries,config,copy}=preflight(options),{primary,languages}=config,codes=languages.map(l=>l.code);
   config.shareAliases=(manifest.redirects || []).map(alias=>alias.route);
   const files = new Map(), rendered = new Map();
   const scriptURLs=new Map(),scriptManifest=path.join(here,'scripts.json');
-  if(!options.templateRoot && fs.existsSync(scriptManifest)) for(const relative of JSON.parse(fs.readFileSync(scriptManifest,'utf8'))) {
+  if(!options.templateRoot && fs.existsSync(scriptManifest)) for(const {source:relative,urls} of normalizeScriptEntries(JSON.parse(fs.readFileSync(scriptManifest,'utf8')))) {
     let code=fs.readFileSync(boundedPath(path.join(here,'scripts'),relative),'utf8');
     const edits=[],tree=acorn.parse(code,{ecmaVersion:'latest',sourceType:'module'});
     const visit=node=>{
@@ -393,7 +412,7 @@ export async function buildSite(options) {
       for(const value of Object.values(node))if(Array.isArray(value))value.forEach(x=>{if(x?.type)visit(x)});else if(value?.type)visit(value);
     };visit(tree);code=applyEdits(code,edits);
     const target='assets/site-ui/i18n/'+path.posix.basename(relative).replace(/\.js$/,'.'+hash(code).slice(0,12)+'.js');
-    files.set(target,Buffer.from(code));scriptURLs.set('/'+relative,'/'+target);
+    files.set(target,Buffer.from(code));for(const url of urls)scriptURLs.set(url,'/'+target);
   }
   for (const entry of entries) for (const locale of codes) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy,primary},site));
   const orderedWorks=entries.filter(e=>e.type==='work').sort((a,b)=>(a.sources[primary].data.categoryOrder ?? 0)-(b.sources[primary].data.categoryOrder ?? 0)||(a.sources[primary].data.order ?? 0)-(b.sources[primary].data.order ?? 0));

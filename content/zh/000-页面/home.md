@@ -101,7 +101,7 @@ Plugin Development and Release Workflow
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A7)
 
-## 精选笔记
+## 精选博客
 
 [查看全部](/blog/)
 

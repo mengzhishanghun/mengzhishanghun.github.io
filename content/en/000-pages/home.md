@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: 2d816aeb68939c1d9fb7a9c389422ae277509484fa6969e0b0f45711bc7c6bd3
+sourceHash: f5f00b63ca2beaf096644447df7f70f1c7000cd8f6902f709b6baba6c68271b7
 translationStatus: translated
-generatedBodyHash: e676934e1c3cef15fca8d3e9c247e5e110face8e68e10f7549004fef126e6485
+generatedBodyHash: f2d3dab06485a1c7e1bec299accefb2df65ea43867a7cc8e24fbeb38cddd14d0
 ---
 
 # Complexity can be encapsulated;
@@ -104,7 +104,7 @@ Turning scattered development operations into dedicated tools for plugin managem
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A7)
 
-## Featured Notes
+## Featured Blog Posts
 
 [View All](/blog/)
 

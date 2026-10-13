@@ -1,5 +1,5 @@
 ---
-title: Notes
+title: Blog
 type: page
 slug: blog-index
 draft: false
@@ -8,14 +8,14 @@ websiteRoute: /blog/
 template: blog/index.html
 lang: en
 translationKey: blog-index
-sourceHash: 9585ac39e00738c1268dc5c873162548305d1f92ee9ec6370f9d21546332c2a2
+sourceHash: ae5ff87038e2002f9849689c40d289d7a5ccafa64b3450118f25b0ce82095db8
 translationStatus: translated
-generatedBodyHash: a39157ff2cb36dd259354cb463c82402b9f754c7caf27143558f95f7727b81e2
+generatedBodyHash: 51ddbe9a8cfdf7fb4ef1910fbe7869692e2b8e41213159f5d623d770051cbf8e
 ---
 
 ![](/media-occurrence/page%3Ablog-index%3Amedia%3A1)
 
-# Notes
+# Blog
 
 Technical thoughts, troubleshooting, and development records
 

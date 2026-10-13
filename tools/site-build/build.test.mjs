@@ -6,6 +6,7 @@ import path from 'node:path';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 import {buildSite,localeRoute,preflight,sourceTags} from './build.mjs';
+import * as builder from './build.mjs';
 import {validateRuntime} from './validate-runtime.mjs';
 const hash = value => createHash('sha256').update(value).digest('hex');
 function fixture(t) {
@@ -225,4 +226,27 @@ test('draft supplemental source refuses publication before changing output',asyn
   fs.writeFileSync(file,fs.readFileSync(file,'utf8').replace('lang: en','lang: en\ndraft: true'));
   await assert.rejects(()=>buildSite(x),/补充草稿不得发布/);
   assert.deepEqual(fs.readdirSync(x.output),['sentinel']);
+});
+
+// These cases exercise the same manifest normalization used by buildSite.
+function normalizeScripts(entries) {
+  assert.equal(typeof builder.normalizeScriptEntries,'function','buildSite must expose its script manifest normalization');
+  return builder.normalizeScriptEntries(entries);
+}
+test('script manifest strings keep their canonical URL',()=>{
+  assert.deepEqual(normalizeScripts(['_astro/one.js']),[{source:'_astro/one.js',urls:['/_astro/one.js']}]);
+});
+test('script aliases share one source and target registration',()=>{
+  assert.deepEqual(normalizeScripts(['_astro/one.js',{source:'_astro/one.js',aliases:['/docs/_astro/one.js']}]),[{source:'_astro/one.js',urls:['/_astro/one.js','/docs/_astro/one.js']}]);
+});
+test('script manifest rejects cross-source aliases and invalid path entries',()=>{
+  for(const entries of [
+    [{source:'_astro/one.js',aliases:['/shared.js']},{source:'_astro/two.js',aliases:['/shared.js']}],
+    [{source:'_astro/one.js',aliases:['/_astro/two.js']},'_astro/two.js'],
+    [{source:'_astro/one.js',aliases:['/docs/../private.js']}],
+    [{source:'../private.js',aliases:[]}],
+    [{source:'_astro/one.js',aliases:'/docs/one.js'}],
+    [{source:'_astro/one.js',unexpected:true}],
+    [null]
+  ]) assert.throws(()=>normalizeScripts(entries),/脚本/);
 });

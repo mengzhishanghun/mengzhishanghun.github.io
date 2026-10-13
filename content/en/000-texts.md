@@ -16,7 +16,7 @@ shellSlots:
   blog:cnblogs-19143267:
     root.html:1.head:0.meta:2@content: My understanding is that a Stream is Perforce's smarter counterpart to a traditional branch. Its visual view makes synchronization relationships between branches easier to see.
     root.html:1.head:0.title:4.#text:0: A Practical Guide to Streams · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -25,17 +25,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: A Practical Guide to Streams
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: My understanding is that a Stream is Perforce's smarter counterpart to a traditional branch. Its visual view makes synchronization relationships between branches easier to see.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -45,11 +45,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Making Conda Available in CMD Without Exposing Python from the Default Environment
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -65,7 +65,7 @@ shellSlots:
   blog:cnblogs-19143251:
     root.html:1.head:0.meta:2@content: Operations in Unreal are much like those in Perforce.
     root.html:1.head:0.title:4.#text:0: UE Source Control Operations Guide · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -74,17 +74,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: UE Source Control Operations Guide
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Operations in Unreal are much like those in Perforce.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -94,11 +94,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: A Practical Guide to Streams
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -114,7 +114,7 @@ shellSlots:
   blog:cnblogs-19143254:
     root.html:1.head:0.meta:2@content: Garbled Chinese text occurs because Unicode mode is not enabled on the server.
     root.html:1.head:0.title:4.#text:0: Fixing Garbled Chinese Text · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -123,17 +123,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Fixing Garbled Chinese Text
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Garbled Chinese text occurs because Unicode mode is not enabled on the server.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -143,11 +143,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: UE Source Control Operations Guide
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -163,7 +163,7 @@ shellSlots:
   blog:cnblogs-19143258:
     root.html:1.head:0.meta:2@content: First, you need a server administrator account to perform this operation.
     root.html:1.head:0.title:4.#text:0: How to Configure TypeMap · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -172,17 +172,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: How to Configure TypeMap
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: First, you need a server administrator account to perform this operation.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -192,11 +192,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Fixing Garbled Chinese Text
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -212,7 +212,7 @@ shellSlots:
   blog:cnblogs-19143255:
     root.html:1.head:0.meta:2@content: Download the P4V client from the official website after selecting your platform and version.
     root.html:1.head:0.title:4.#text:0: Client Installation and Configuration Guide · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -221,17 +221,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Client Installation and Configuration Guide
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Download the P4V client from the official website after selecting your platform and version.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -241,11 +241,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: How to Configure TypeMap
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -261,7 +261,7 @@ shellSlots:
   blog:cnblogs-19143256:
     root.html:1.head:0.meta:2@content: The basics are operations that everyone using Perforce should know.
     root.html:1.head:0.title:4.#text:0: Common Client Operations · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -270,17 +270,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Common Client Operations
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: The basics are operations that everyone using Perforce should know.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -290,11 +290,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Client Installation and Configuration Guide
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -310,7 +310,7 @@ shellSlots:
   blog:cnblogs-19143260:
     root.html:1.head:0.meta:2@content: Both test and Unreal Depot are depots I want to delete. test is intact, while the other was first deleted with stream -f -d and marked deleted, yet the depot still cannot be deleted.
     root.html:1.head:0.title:4.#text:0: What to Do When a Stream Depot Cannot Be Deleted · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -319,17 +319,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: What to Do When a Stream Depot Cannot Be Deleted
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Both test and Unreal Depot are depots I want to delete. test is intact, while the other was first deleted with stream -f -d and marked deleted, yet the depot still cannot be deleted.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -339,11 +339,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Common Client Operations
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -359,7 +359,7 @@ shellSlots:
   blog:cnblogs-19143286:
     root.html:1.head:0.meta:2@content: After installing Miniconda, the system normally uses its base environment by default and can run Python directly from it, making base very easy to contaminate.
     root.html:1.head:0.title:4.#text:0: Making Conda Available in CMD Without Exposing Python from the Default Environment · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -368,17 +368,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Python
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Making Conda Available in CMD Without Exposing Python from the Default Environment
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: After installing Miniconda, the system normally uses its base environment by default and can run Python directly from it, making base very easy to contaminate.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -388,11 +388,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Traversing Actor Properties for Sequence Recording
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -408,7 +408,7 @@ shellSlots:
   blog:cnblogs-20159718:
     root.html:1.head:0.meta:2@content: Format selection, property conversion, trigger loops, and file writes in two-way synchronization between DataAssets and JSON.
     root.html:1.head:0.title:4.#text:0: Letting AI Modify DataAssets Directly · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -417,17 +417,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Letting AI Modify DataAssets Directly
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Format selection, property conversion, trigger loops, and file writes in two-way synchronization between DataAssets and JSON.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -437,11 +437,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -455,7 +455,7 @@ shellSlots:
   blog:cnblogs-20030737:
     root.html:1.head:0.meta:2@content: Examining abnormal CreationMethod values in Actor Blueprint component templates, and how to inspect and repair the inheritance chain, SCS, and ICH.
     root.html:1.head:0.title:4.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -464,17 +464,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Examining abnormal CreationMethod values in Actor Blueprint component templates, and how to inspect and repair the inheritance chain, SCS, and ICH.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -484,11 +484,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Letting AI Modify DataAssets Directly
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -504,7 +504,7 @@ shellSlots:
   blog:cnblogs-19813721:
     root.html:1.head:0.meta:2@content: "When rendering UMG, you may encounter a frustrating issue: its rendered size does not change with the output resolution you set."
     root.html:1.head:0.title:4.#text:0: Fixing UMG Size That Does Not Change During Rendering · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -513,17 +513,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Fixing UMG Size That Does Not Change During Rendering
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "When rendering UMG, you may encounter a frustrating issue: its rendered size does not change with the output resolution you set."
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -533,11 +533,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -553,7 +553,7 @@ shellSlots:
   blog:cnblogs-19770934:
     root.html:1.head:0.meta:2@content: Memory representation and byte-array conversion, generic struct parameters with CustomThunk, and JSON field-name and floating-point output handling.
     root.html:1.head:0.title:4.#text:0: Data Serialization and Byte Conversion in Blueprints · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -562,17 +562,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Data Serialization and Byte Conversion in Blueprints
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Memory representation and byte-array conversion, generic struct parameters with CustomThunk, and JSON field-name and floating-point output handling.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -582,11 +582,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Fixing UMG Size That Does Not Change During Rendering
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -602,7 +602,7 @@ shellSlots:
   blog:cnblogs-19770930:
     root.html:1.head:0.meta:2@content: Staging inclusion and exclusion rules in DefaultGame.ini, along with configuration scanning, file writes, and cache reloads.
     root.html:1.head:0.title:4.#text:0: Managing Configuration File Exclusion During Packaging · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -611,17 +611,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Managing Configuration File Exclusion During Packaging
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Staging inclusion and exclusion rules in DefaultGame.ini, along with configuration scanning, file writes, and cache reloads.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -631,11 +631,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Data Serialization and Byte Conversion in Blueprints
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -651,7 +651,7 @@ shellSlots:
   blog:cnblogs-19379355:
     root.html:1.head:0.meta:2@content: I found this old note while organizing my notes. It creates a rounded rectangle with a material. The values were set for a project with three combined screens, so adjust them before using it.
     root.html:1.head:0.title:4.#text:0: Making a Rounded Rectangle with a Material · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -660,17 +660,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Making a Rounded Rectangle with a Material
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: I found this old note while organizing my notes. It creates a rounded rectangle with a material. The values were set for a project with three combined screens, so adjust them before using it.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -680,11 +680,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Managing Configuration File Exclusion During Packaging
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -700,7 +700,7 @@ shellSlots:
   blog:cnblogs-19379306:
     root.html:1.head:0.meta:2@content: Unlike the usual packaged files, this view shows every configuration file, asset, plugin, and other file included in the packaged project.
     root.html:1.head:0.title:4.#text:0: Seeing Exactly Which Files Were Packaged · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -709,17 +709,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Seeing Exactly Which Files Were Packaged
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Unlike the usual packaged files, this view shows every configuration file, asset, plugin, and other file included in the packaged project.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -729,11 +729,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Making a Rounded Rectangle with a Material
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -749,7 +749,7 @@ shellSlots:
   blog:cnblogs-19379337:
     root.html:1.head:0.meta:2@content: A beginner in our group shared this image a couple of days ago and asked why the material is invisible when dissolve is 0.
     root.html:1.head:0.title:4.#text:0: "Material Basics: The If Node · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -758,17 +758,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Material Basics: The If Node"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A beginner in our group shared this image a couple of days ago and asked why the material is invisible when dissolve is 0.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -778,11 +778,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Seeing Exactly Which Files Were Packaged
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -798,7 +798,7 @@ shellSlots:
   blog:cnblogs-19379365:
     root.html:1.head:0.meta:2@content: The simplest method is to search for \Engine\Config\BaseEngine.ini with Evenyting.
     root.html:1.head:0.title:4.#text:0: Changing the Cache Path · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -807,17 +807,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Changing the Cache Path
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: The simplest method is to search for \Engine\Config\BaseEngine.ini with Evenyting.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -827,11 +827,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: "Material Basics: The If Node"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -847,7 +847,7 @@ shellSlots:
   blog:cnblogs-19204715:
     root.html:1.head:0.meta:2@content: Object organization and loading overhead of independent StaticMeshActors and instanced meshes, and property-handling issues during manual merging.
     root.html:1.head:0.title:4.#text:0: Loading Overhead of StaticMeshActor versus ISM/HISM · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -856,17 +856,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Loading Overhead of StaticMeshActor versus ISM/HISM
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Object organization and loading overhead of independent StaticMeshActors and instanced meshes, and property-handling issues during manual merging.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -876,11 +876,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Changing the Cache Path
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -896,7 +896,7 @@ shellSlots:
   blog:cnblogs-19197541:
     root.html:1.head:0.meta:2@content: The two most important issues in runtime animation recording in UE5.4 are obtaining correct bone data and saving AnimSequence correctly.
     root.html:1.head:0.title:4.#text:0: "The Keys to Runtime Animation Recording: Correct Bone Data and Saving · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -905,17 +905,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "The Keys to Runtime Animation Recording: Correct Bone Data and Saving"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: The two most important issues in runtime animation recording in UE5.4 are obtaining correct bone data and saving AnimSequence correctly.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -925,11 +925,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Loading Overhead of StaticMeshActor versus ISM/HISM
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -945,7 +945,7 @@ shellSlots:
   blog:cnblogs-19192707:
     root.html:1.head:0.meta:2@content: How to create a simple, usable MVVM object in C++. The following steps were tested in UE5.5.
     root.html:1.head:0.title:4.#text:0: A Simple C++ MVVM Application · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -954,17 +954,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: C++
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: A Simple C++ MVVM Application
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: How to create a simple, usable MVVM object in C++. The following steps were tested in UE5.5.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -974,11 +974,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: "The Keys to Runtime Animation Recording: Correct Bone Data and Saving"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -994,7 +994,7 @@ shellSlots:
   blog:cnblogs-19183986:
     root.html:1.head:0.meta:2@content: There seem to be many new UE users lately, so I am collecting a few tips for everyone.
     root.html:1.head:0.title:4.#text:0: Tips for Chinese and English Editor Settings · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1003,17 +1003,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Tips for Chinese and English Editor Settings
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: There seem to be many new UE users lately, so I am collecting a few tips for everyone.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1023,11 +1023,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: A Simple C++ MVVM Application
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1043,7 +1043,7 @@ shellSlots:
   blog:cnblogs-19184043:
     root.html:1.head:0.meta:2@content: This covers quickly creating a usable standard map, excluding World Partition maps.
     root.html:1.head:0.title:4.#text:0: Quickly Creating a Map · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1052,17 +1052,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Quickly Creating a Map
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: This covers quickly creating a usable standard map, excluding World Partition maps.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1072,11 +1072,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Tips for Chinese and English Editor Settings
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1092,7 +1092,7 @@ shellSlots:
   blog:cnblogs-19174288:
     root.html:1.head:0.meta:2@content: This concerns issues after launching a game with multiple monitors combined into one screen using NVIDIA Surround.
     root.html:1.head:0.title:4.#text:0: When Only One Monitor Displays in Multi-Monitor Fullscreen · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1101,17 +1101,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: When Only One Monitor Displays in Multi-Monitor Fullscreen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: This concerns issues after launching a game with multiple monitors combined into one screen using NVIDIA Surround.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1121,11 +1121,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Quickly Creating a Map
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1141,7 +1141,7 @@ shellSlots:
   blog:cnblogs-19174295:
     root.html:1.head:0.meta:2@content: Here is my approach. I do not know whether it is the correct one, but it works, haha. I followed the official third-party library example. I will skip DLL packaging and focus on what to do once you have the DLL and Lib. Using TestThird, a plugin created from the official template, as an example, put the dll and lib files in TestThird\Source\ThirdParty\TestTh…
     root.html:1.head:0.title:4.#text:0: Calling a DLL · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1150,17 +1150,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Calling a DLL
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Here is my approach. I do not know whether it is the correct one, but it works, haha. I followed the official third-party library example. I will skip DLL packaging and focus on what to do once you have the DLL and Lib. Using TestThird, a plugin created from the official template, as an example, put the dll and lib files in TestThird\Source\ThirdParty\TestTh…
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1170,11 +1170,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: When Only One Monitor Displays in Multi-Monitor Fullscreen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1190,7 +1190,7 @@ shellSlots:
   blog:cnblogs-19165494:
     root.html:1.head:0.meta:2@content: Enable the PixelStreaming plugin.
     root.html:1.head:0.title:4.#text:0: PixelStreaming · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1199,17 +1199,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: PixelStreaming
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Enable the PixelStreaming plugin.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1219,11 +1219,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Calling a DLL
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1239,7 +1239,7 @@ shellSlots:
   blog:cnblogs-19165484:
     root.html:1.head:0.meta:2@content: UE network communication through UDP, TCP client, TCP server, and WebSocket examples, with discussion of threading, reconnection, sessions, and serialization.
     root.html:1.head:0.title:4.#text:0: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1248,17 +1248,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: UE network communication through UDP, TCP client, TCP server, and WebSocket examples, with discussion of threading, reconnection, sessions, and serialization.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1268,11 +1268,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: PixelStreaming
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1288,7 +1288,7 @@ shellSlots:
   blog:cnblogs-19165561:
     root.html:1.head:0.meta:2@content: Create a LocalPlayer and override the function.
     root.html:1.head:0.title:4.#text:0: Synchronizing Exposure Across Multiple Screens · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1297,17 +1297,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Synchronizing Exposure Across Multiple Screens
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Create a LocalPlayer and override the function.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1317,11 +1317,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1337,7 +1337,7 @@ shellSlots:
   blog:cnblogs-19165541:
     root.html:1.head:0.meta:2@content: Comparing system SSH clients and libssh2 integration in UE, including port forwarding, threading, and resource cleanup.
     root.html:1.head:0.title:4.#text:0: Implementing SSH Tunnels in UE for Secure Access to Remote Services · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1346,17 +1346,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Implementing SSH Tunnels in UE for Secure Access to Remote Services
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Comparing system SSH clients and libssh2 integration in UE, including port forwarding, threading, and resource cleanup.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1366,11 +1366,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Synchronizing Exposure Across Multiple Screens
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1386,7 +1386,7 @@ shellSlots:
   blog:cnblogs-19165553:
     root.html:1.head:0.meta:2@content: The simplest way to start a listen server is to create a desktop shortcut and set its target to UnrealEditor.exe MyProject.uproject ?listen -game.
     root.html:1.head:0.title:4.#text:0: Setting Up a Listen Server · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1395,17 +1395,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Setting Up a Listen Server
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: The simplest way to start a listen server is to create a desktop shortcut and set its target to UnrealEditor.exe MyProject.uproject ?listen -game.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1415,11 +1415,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Implementing SSH Tunnels in UE for Secure Access to Remote Services
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1435,7 +1435,7 @@ shellSlots:
   blog:cnblogs-19165504:
     root.html:1.head:0.meta:2@content: Unlike level streaming, which loads and unloads sublevels within one map, seamless travel first enters a simple transition map, loads the destination in the background, and then switches to it.
     root.html:1.head:0.title:4.#text:0: Seamless Map Travel · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1444,17 +1444,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Seamless Map Travel
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Unlike level streaming, which loads and unloads sublevels within one map, seamless travel first enters a simple transition map, loads the destination in the background, and then switches to it.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1464,11 +1464,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Setting Up a Listen Server
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1484,7 +1484,7 @@ shellSlots:
   blog:cnblogs-19165500:
     root.html:1.head:0.meta:2@content: Create a class derived from UDeveloperSettings. Config=Game selects Game.ini; adding DefaultConfig selects DefaultGame.ini. The name after config= is the configuration filename, so this example uses DefaultVehicle.ini.
     root.html:1.head:0.title:4.#text:0: Custom Configuration with DeveloperSettings · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1493,17 +1493,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Custom Configuration with DeveloperSettings
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Create a class derived from UDeveloperSettings. Config=Game selects Game.ini; adding DefaultConfig selects DefaultGame.ini. The name after config= is the configuration filename, so this example uses DefaultVehicle.ini.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1513,11 +1513,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Seamless Map Travel
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1533,7 +1533,7 @@ shellSlots:
   blog:cnblogs-19165488:
     root.html:1.head:0.meta:2@content: When you create a Blueprint derived from UObject, you may find that it cannot obtain a PlayerController.
     root.html:1.head:0.title:4.#text:0: Fixing Missing Context in UObject Blueprints · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1542,17 +1542,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Fixing Missing Context in UObject Blueprints
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: When you create a Blueprint derived from UObject, you may find that it cannot obtain a PlayerController.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1562,11 +1562,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Custom Configuration with DeveloperSettings
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1582,7 +1582,7 @@ shellSlots:
   blog:cnblogs-19165520:
     root.html:1.head:0.meta:2@content: Recursively setting structs and all their properties to CPF_Interp so their values can be recorded by LevelSequence.
     root.html:1.head:0.title:4.#text:0: Traversing Actor Properties for Sequence Recording · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1591,17 +1591,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Traversing Actor Properties for Sequence Recording
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Recursively setting structs and all their properties to CPF_Interp so their values can be recorded by LevelSequence.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1611,11 +1611,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Fixing Missing Context in UObject Blueprints
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1631,7 +1631,7 @@ shellSlots:
   blog:cnblogs-19136316:
     root.html:1.head:0.meta:2@content: In a recent MetaHuman project, playing different head and body animations simultaneously caused clipping around the neck. I have not observed this issue in LevelSequence so far.
     root.html:1.head:0.title:4.#text:0: A One-Click Fix for MetaHuman Head Clipping During Animation · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1640,17 +1640,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: A One-Click Fix for MetaHuman Head Clipping During Animation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: In a recent MetaHuman project, playing different head and body animations simultaneously caused clipping around the neck. I have not observed this issue in LevelSequence so far.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1660,11 +1660,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: What to Do When a Stream Depot Cannot Be Deleted
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
@@ -1680,7 +1680,7 @@ shellSlots:
   blog:cnblogs-19136345:
     root.html:1.head:0.meta:2@content: UE enum reflection, configuration-array binding, and subsystem initialization, including data-validation and reuse limitations of the basic approach.
     root.html:1.head:0.title:4.#text:0: Creating Dynamic Enums in UE · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1689,17 +1689,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Creating Dynamic Enums in UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: UE enum reflection, configuration-array binding, and subsystem initialization, including data-validation and reuse limitations of the basic approach.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
@@ -1709,11 +1709,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back to blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: A One-Click Fix for MetaHuman Head Clipping During Animation
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -1727,7 +1727,7 @@ shellSlots:
   case:driving-simulator-three-screen:
     root.html:1.head:0.meta:2@content: Investigating and modifying engine implementations to address failed Lumen GI light reflections and inconsistent exposure across three screens.
     root.html:1.head:0.title:4.#text:0: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1736,7 +1736,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -1778,7 +1778,7 @@ shellSlots:
   case:ai-digital-human-integration:
     root.html:1.head:0.meta:2@content: Connecting a digital human, speech recognition, conversation, speech synthesis, and facial expression driving into a local demonstration workflow.
     root.html:1.head:0.title:4.#text:0: Integrating an AI Digital Human Interaction Workflow · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1787,7 +1787,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -1829,7 +1829,7 @@ shellSlots:
   case:flying-car-simulator:
     root.html:1.head:0.meta:2@content: A flying car simulation system for future mobility.
     root.html:1.head:0.title:4.#text:0: Flying Car Simulator · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1838,7 +1838,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -1879,7 +1879,7 @@ shellSlots:
   case:motion-capture-robot-control:
     root.html:1.head:0.meta:2@content: A real-time robot control approach based on motion capture.
     root.html:1.head:0.title:4.#text:0: Motion Capture Robot Control System · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1888,7 +1888,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -1929,7 +1929,7 @@ shellSlots:
   case:six-dof-motion-platform:
     root.html:1.head:0.meta:2@content: Coordinated control of a Stewart platform and UE simulation.
     root.html:1.head:0.title:4.#text:0: Integrating a Six-Degree-of-Freedom Motion Platform · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1938,7 +1938,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -1979,7 +1979,7 @@ shellSlots:
   case:plugin-release-workflow:
     root.html:1.head:0.meta:2@content: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
     root.html:1.head:0.title:4.#text:0: A Toolchain from Plugin Development to Release · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -1988,7 +1988,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -2030,7 +2030,7 @@ shellSlots:
   case:markdown-publishing:
     root.html:1.head:0.meta:2@content: Reducing manual work when moving articles by converting local image paths into publishable text that can be copied.
     root.html:1.head:0.title:4.#text:0: Publishing Markdown Images Together with the Article · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2039,7 +2039,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -2081,7 +2081,7 @@ shellSlots:
   case:blueprint-inheritance-repair:
     root.html:1.head:0.meta:2@content: Checking component template CreationMethod values along the inheritance chain to address child property changes affecting the parent.
     root.html:1.head:0.title:4.#text:0: Repairing Component State Contamination in Blueprint Inheritance · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2090,7 +2090,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -2131,7 +2131,7 @@ shellSlots:
   case:data-asset-json-sync:
     root.html:1.head:0.meta:2@content: Using JSON to connect external AI tools with DataAsset and address field conversion, repeated triggers, and writes in bidirectional synchronization.
     root.html:1.head:0.title:4.#text:0: Synchronizing DataAsset and JSON in Both Directions · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2140,7 +2140,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -2181,7 +2181,7 @@ shellSlots:
   case:metahuman-animation-clipping:
     root.html:1.head:0.meta:2@content: Adjusting head animation Additive Settings and using a script Blueprint to process the same settings across multiple animations.
     root.html:1.head:0.title:4.#text:0: Addressing Clipping When Combining MetaHuman Head and Body Animations · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2190,7 +2190,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
@@ -2231,7 +2231,7 @@ shellSlots:
   work:simple-file-updater:
     root.html:1.head:0.meta:2@content: Batch-update specified files by configuring local target paths and remote download URLs.
     root.html:1.head:0.title:4.#text:0: Configuration-driven File Updates · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2240,7 +2240,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2284,7 +2284,7 @@ shellSlots:
   work:p4-case-sync:
     root.html:1.head:0.meta:2@content: Check and correct the path capitalization of opened Perforce files against their actual local paths before submitting.
     root.html:1.head:0.title:4.#text:0: Fixing Path Letter Casing · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2293,7 +2293,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2337,7 +2337,7 @@ shellSlots:
   work:md-blog-packer:
     root.html:1.head:0.meta:2@content: Convert local Markdown images to embedded Base64 for export and copying to compatible platforms.
     root.html:1.head:0.title:4.#text:0: Publishing Images with an Article · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2346,7 +2346,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2390,7 +2390,7 @@ shellSlots:
   work:md-image-embed:
     root.html:1.head:0.meta:2@content: Copy Markdown in Obsidian after converting its local images to embedded Base64.
     root.html:1.head:0.title:4.#text:0: Exporting Local Markdown Images · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2399,7 +2399,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2441,7 +2441,7 @@ shellSlots:
   work:simple-bp-inherit-fix:
     root.html:1.head:0.meta:2@content: Scan and repair component state contamination within Actor Blueprint inheritance chains.
     root.html:1.head:0.title:4.#text:0: Repairing Blueprint Inheritance Chains · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2450,7 +2450,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2494,7 +2494,7 @@ shellSlots:
   work:simple-level-seq-smooth:
     root.html:1.head:0.meta:2@content: Filter and smooth Level Sequence data with batch processing and ControlRig parameter section support.
     root.html:1.head:0.title:4.#text:0: Smoothing Animation Curves · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2503,7 +2503,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2548,7 +2548,7 @@ shellSlots:
   work:ai-data-asset:
     root.html:1.head:0.meta:2@content: Link DataAsset properties to JSON files so external programs can read and modify game data.
     root.html:1.head:0.title:4.#text:0: Two-way DataAsset and JSON Synchronization · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2557,7 +2557,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2601,7 +2601,7 @@ shellSlots:
   work:simple-input-simulator:
     root.html:1.head:0.meta:2@content: Simulate key and axis input in Blueprints and clear lingering pressed-key states.
     root.html:1.head:0.title:4.#text:0: Simulating Input in Blueprints · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2610,7 +2610,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2654,7 +2654,7 @@ shellSlots:
   work:simple-byte-conversion:
     root.html:1.head:0.meta:2@content: Convert between basic types, structs, byte arrays, and JSON strings.
     root.html:1.head:0.title:4.#text:0: Struct and Byte Conversion · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2663,7 +2663,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2707,7 +2707,7 @@ shellSlots:
   work:simple-config-exclude:
     root.html:1.head:0.meta:2@content: Manage default, included, and excluded configuration files in Project Settings and copy excluded files.
     root.html:1.head:0.title:4.#text:0: Controlling Configuration Files During Packaging · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2716,7 +2716,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2760,7 +2760,7 @@ shellSlots:
   work:simple-launcher:
     root.html:1.head:0.meta:2@content: Manage external program launch, stop, multiple instances, and exit notifications through presets.
     root.html:1.head:0.title:4.#text:0: Managing External Program Processes · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2769,7 +2769,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2812,7 +2812,7 @@ shellSlots:
   work:simple-asset-namer:
     root.html:1.head:0.meta:2@content: Apply automatic and batch asset renaming using asset type and path rules.
     root.html:1.head:0.title:4.#text:0: Naming Assets by Rules · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2821,7 +2821,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2865,7 +2865,7 @@ shellSlots:
   work:simple-static-mesh-merger:
     root.html:1.head:0.meta:2@content: Preview and filter StaticMeshActor groups, then organize selected objects as ISM/HISM instances.
     root.html:1.head:0.title:4.#text:0: Organizing Meshes and Merging Instances · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2874,7 +2874,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2918,7 +2918,7 @@ shellSlots:
   work:simple-asset-cleaner:
     root.html:1.head:0.meta:2@content: Identify candidate unreferenced assets from roots and references, with submission-time handling and full cleanup actions.
     root.html:1.head:0.title:4.#text:0: Analyzing References and Cleaning Assets · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2927,7 +2927,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -2971,7 +2971,7 @@ shellSlots:
   work:simple-ssh-tunnel:
     root.html:1.head:0.meta:2@content: Expose SSH tunneling as UE Blueprint interfaces using libssh2 and OpenSSL.
     root.html:1.head:0.title:4.#text:0: Secure Connections Through SSH · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -2980,7 +2980,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3023,7 +3023,7 @@ shellSlots:
   work:simple-udp:
     root.html:1.head:0.meta:2@content: Expose UDP sending, receiving, channel configuration, and address filtering through Blueprint interfaces.
     root.html:1.head:0.title:4.#text:0: Multi-channel UDP Communication · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -3032,7 +3032,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3075,7 +3075,7 @@ shellSlots:
   work:simple-tcp-client:
     root.html:1.head:0.meta:2@content: Manage multi-channel TCP client connections, asynchronous processing, and reconnection.
     root.html:1.head:0.title:4.#text:0: TCP Client Communication · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -3084,7 +3084,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3127,7 +3127,7 @@ shellSlots:
   work:simple-tcp-server:
     root.html:1.head:0.meta:2@content: Provide multi-client TCP server sessions and connection event interfaces.
     root.html:1.head:0.title:4.#text:0: TCP Server Session Management · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -3136,7 +3136,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3179,7 +3179,7 @@ shellSlots:
   work:simple-websocket:
     root.html:1.head:0.meta:2@content: Use WebSocket communication in UE through named connections and message delegates.
     root.html:1.head:0.title:4.#text:0: Managing WebSocket Connections · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -3188,7 +3188,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3231,7 +3231,7 @@ shellSlots:
   work:simple-auto-enum:
     root.html:1.head:0.meta:2@content: Bind configuration arrays to enum ranges through macros to reduce repeated initialization code.
     root.html:1.head:0.title:4.#text:0: Binding Configuration Arrays to Enums · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -3240,7 +3240,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3284,7 +3284,7 @@ shellSlots:
   work:ue-package-manager:
     root.html:1.head:0.meta:2@content: Package UE projects through a GUI or CLI and deploy additional files after success.
     root.html:1.head:0.title:4.#text:0: Project Packaging and Deployment · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -3293,7 +3293,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3338,7 +3338,7 @@ shellSlots:
   work:plugin-auto-packer:
     root.html:1.head:0.meta:2@content: Build plugins across UE versions, inspect logs, and prepare release files in one tool.
     root.html:1.head:0.title:4.#text:0: Multi-version UE Plugin Packaging · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -3347,7 +3347,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3392,7 +3392,7 @@ shellSlots:
   work:plugin-manager:
     root.html:1.head:0.meta:2@content: Browse project, Marketplace, and engine plugins together, inspect dependencies, and manage plugin state.
     root.html:1.head:0.title:4.#text:0: Managing UE Plugins in One Place · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -3401,7 +3401,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3447,7 +3447,7 @@ shellSlots:
   work:ue-quick-start:
     root.html:1.head:0.meta:2@content: Detect the project and engine, display build logs, and launch the project after a successful build.
     root.html:1.head:0.title:4.#text:0: Compile and Launch a Project with One Action · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -3456,7 +3456,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
@@ -3513,7 +3513,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3550,7 +3550,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3587,7 +3587,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3624,7 +3624,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3661,7 +3661,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3698,7 +3698,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3735,7 +3735,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3772,7 +3772,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3809,7 +3809,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3846,7 +3846,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3883,7 +3883,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3920,7 +3920,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3957,7 +3957,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -3994,7 +3994,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4031,7 +4031,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4068,7 +4068,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4105,7 +4105,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4142,7 +4142,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4179,7 +4179,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4216,7 +4216,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4253,7 +4253,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4290,7 +4290,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4327,7 +4327,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4364,7 +4364,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to the related work
@@ -4390,7 +4390,7 @@ shellSlots:
   page:home:
     root.html:1.head:0.meta:2@content: Xiao Mao's development work, project cases, and technical notes.
     root.html:1.head:0.title:4.#text:0: Development Work and Projects · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -4399,7 +4399,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: Every complexity can be encapsulated;
@@ -4458,9 +4458,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: "Show: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator"
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: "Show: Integrating an AI Digital Human Interaction Workflow"
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: "Show: A Toolchain from Plugin Development to Release"
-    root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: Featured notes
+    root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: Featured blog posts
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: View all
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1@aria-label: Featured notes
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1@aria-label: Featured blog posts
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0@aria-label: "UE: Letting AI Modify DataAssets Directly"
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: Letting AI Modify DataAssets Directly
@@ -4476,7 +4476,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: Examining abnormal CreationMethod values in Actor Blueprint component templates, and how to inspect and repair the inheritance chain, SCS, and ICH.
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1@aria-label: Switch featured notes
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1@aria-label: Switch featured blog posts
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:0@aria-label: "Show: UE: Letting AI Modify DataAssets Directly"
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:1@aria-label: "Show: UE: A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:2@aria-label: "Show: UE: Component State Contamination in Blueprint Inheritance and a Repair Approach"
@@ -4491,7 +4491,7 @@ shellSlots:
   page:works-index:
     root.html:1.head:0.meta:2@content: Xiao Mao's development work, project cases, and technical notes.
     root.html:1.head:0.title:4.#text:0: Works · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -4500,7 +4500,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: Works
@@ -4706,7 +4706,7 @@ shellSlots:
   page:cases-index:
     root.html:1.head:0.meta:2@content: Xiao Mao's development work, project cases, and technical notes.
     root.html:1.head:0.title:4.#text:0: Cases · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -4715,7 +4715,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: Cases
@@ -4829,8 +4829,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   page:blog-index:
     root.html:1.head:0.meta:2@content: Xiao Mao's development work, project cases, and technical notes.
-    root.html:1.head:0.title:4.#text:0: Notes · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.title:4.#text:0: Blog · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -4839,10 +4839,10 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
-    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: Notes
+    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: Blog
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: Technical thoughts, troubleshooting, and development notes
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: Note categories
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE
@@ -5074,7 +5074,7 @@ shellSlots:
   page:contact:
     root.html:1.head:0.meta:2@content: Discuss game development, digital twins, and tools and plugin collaboration.
     root.html:1.head:0.title:4.#text:0: Contact and Collaboration · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -5083,7 +5083,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: Contact & Collaboration
@@ -5115,7 +5115,7 @@ shellSlots:
   page:support:
     root.html:1.head:0.meta:2@content: Voluntary support for Xiao Mao's continued creation and sharing.
     root.html:1.head:0.title:4.#text:0: Support My Work · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Notes RSS
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
     root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
@@ -5124,7 +5124,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:3.h1:1.#text:0: Support My Work
@@ -5174,7 +5174,7 @@ shellSlots:
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
     root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Notes
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: Contact
     root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Support
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back to works
@@ -6886,7 +6886,7 @@ codeLabels:
   copied: Copied!
 engagementLabels: {"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}
 translationKey: site-copy
-sourceHash: 10664eb2b12f400d7c32b344961c1e5573faa023c2eb1efca70fd8d17e75877b
+sourceHash: 62dabb1d502ecd29d48c1e842ae149bb4190bb157ff26f2ec0944b168ae20175
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

@@ -1,5 +1,5 @@
 ---
-title: 笔记列表
+title: 博客列表
 type: page
 slug: blog-index
 draft: false
@@ -12,7 +12,7 @@ translationKey: blog-index
 
 ![](/media-occurrence/page%3Ablog-index%3Amedia%3A1)
 
-# 笔记
+# 博客
 
 技术思考、排障与开发记录
 
