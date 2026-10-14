@@ -10,6 +10,89 @@ const rememberedTop = (state, key) => {
   const saved = state?.mzshViewport;
   return saved?.key === key && Number.isFinite(saved.top) && saved.top >= 0 ? saved.top : undefined;
 };
+const nativeReplaceState = history.replaceState;
+const objectState = state => state && typeof state === 'object' && !Array.isArray(state) ? state : {};
+const hasRouter = () => !!document.querySelector('meta[name="astro-view-transitions-enabled"]');
+const entryURL = value => {
+  try {const url = new URL(value, location.href);return url.origin === location.origin ? url.pathname + url.search + url.hash : null;} catch {return null;}
+};
+const newIdentity = () => window.crypto?.randomUUID?.() || Date.now().toString(36) + '-' + Math.random().toString(36).slice(2);
+const navigationKey = () => {try {return window.navigation?.currentEntry?.key;} catch {return undefined;}};
+const navigationRecord = () => {
+  const record = history.state?.mzshNavigation;
+  return record && typeof record.id === 'string' && record.id && record.url === viewportURL() ? record : null;
+};
+const makeRecord = (url, index, parent = null) => ({id:newIdentity(), url, index:Number.isFinite(index) ? index : null, parent});
+function stampEntry() {
+  if (navigationRecord()) return;
+  const record = makeRecord(viewportURL(), history.state?.index);
+  const key = navigationKey();if (typeof key === 'string') record.navigationKey = key;
+  Reflect.apply(nativeReplaceState, history, [{...objectState(history.state), mzshNavigation:record}, '']);
+}
+function provenPrevious() {
+  const record = navigationRecord(), parent = record?.parent;
+  if (hasRouter() && parent && typeof parent.id === 'string' && parent.id && parent.id !== record.id && entryURL(parent.url) === parent.url) return parent;
+  // Full-document entries have no Astro push hook. Only the browser's current
+  // entry/key plus the visible, exactly preceding same-origin entry proves back.
+  try {
+    const api = window.navigation, current = api?.currentEntry;
+    if (!current || !Number.isInteger(current.index) || typeof current.key !== 'string' || !current.key || new URL(current.url).href !== location.href) return null;
+    if (record?.navigationKey && record.navigationKey !== current.key) return null;
+    const entries = api.entries();
+    if (!Array.isArray(entries) || !entries.some(entry=>entry.key === current.key && entry.index === current.index && new URL(entry.url).href === location.href)) return null;
+    const previous = entries.find(entry=>entry.index === current.index-1);
+    if (!previous || typeof previous.key !== 'string' || !previous.key || previous.key === current.key) return null;
+    const url = new URL(previous.url);
+    if (url.origin !== location.origin) return null;
+    return {id:previous.key, index:previous.index, url:entryURL(url.href), navigationKey:previous.key};
+  } catch {return null;}
+}
+const returnLabels = new WeakMap();
+let pendingReturn = null, preparation = 0;
+function updateReturnLabels() {
+  const previous = provenPrevious(), label = window.SiteCopy?.['viewport:return-previous'];
+  document.querySelectorAll('a.article-back, a.outline-mobile-back').forEach(anchor=>{
+    let saved = returnLabels.get(anchor);
+    if (!saved) {
+      const text = [...anchor.childNodes].find(node=>node.nodeType === 3 && node.nodeValue?.trim());
+      saved = {text, value:text?.nodeValue, aria:anchor.getAttribute('aria-label')};returnLabels.set(anchor,saved);
+    }
+    if (saved.text) saved.text.nodeValue = previous && label ? label : saved.value;
+    if (previous && label) anchor.setAttribute('aria-label',label);
+    else if (saved.aria !== null) anchor.setAttribute('aria-label',saved.aria);
+    else anchor.removeAttribute('aria-label');
+  });
+}
+function finishReturn() {
+  updateReturnLabels();
+  if (pendingReturn && navigationRecord()?.id !== pendingReturn.from) pendingReturn = null;
+}
+history.replaceState = function replaceState(state, title, url) {
+  if (this !== history) return Reflect.apply(nativeReplaceState, this, arguments);
+  const before = navigationRecord() || makeRecord(viewportURL(),history.state?.index);
+  const nextURL = arguments.length > 2 && url !== undefined ? entryURL(url) : viewportURL();
+  const merged = {...objectState(history.state), ...objectState(state)};
+  const record = {...before, url:nextURL, index:Number.isFinite(merged.index) ? merged.index : null};
+  const key = navigationKey();if (typeof key === 'string') record.navigationKey = key;
+  const args = [...arguments];args[0] = {...merged,mzshNavigation:record};
+  const result = Reflect.apply(nativeReplaceState,this,args);
+  updateReturnLabels();return result;
+};
+document.addEventListener('click', event=>{
+  if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+  const anchor = event.target?.closest?.('a.article-back, a.outline-mobile-back');
+  if (!anchor?.isConnected || anchor.hasAttribute('download') || anchor.getAttribute('target') && anchor.getAttribute('target') !== '_self') return;
+  if (new URL(anchor.href,location.href).origin !== location.origin) return;
+  if (binding && (!connected(binding) || binding.navigationId !== navigationRecord()?.id)) {event.preventDefault();return;}
+  if (pendingReturn) {event.preventDefault();return;}
+  const previous = provenPrevious();
+  if (previous) {
+    event.preventDefault();flush();pendingReturn = {from:navigationRecord()?.id, previous};
+    history.back();return;
+  }
+  if (hasRouter()) anchor.setAttribute('data-astro-history','replace');
+  else {event.preventDefault();flush();location.replace(anchor.href);}
+}, {capture:true});
 const snapshots = new Map();
 const staticIndexes = new WeakSet();
 let binding, frame = 0, navigation = 0;
@@ -47,12 +130,12 @@ function bind() {
   // Restore only after its cumulative batches have established the height.
   const index = element.querySelector?.('[data-content-index]');
   if (index && !['true','failed'].includes(index.dataset.ready) && !staticIndexes.has(index)) return;
-  if (binding?.element === element && binding.documentURL === documentURL() && sameEntry(binding.entry, entry)) return;
+  if (binding?.element === element && binding.documentURL === documentURL() && sameEntry(binding.entry, entry)) {finishReturn();return;}
   binding?.controller.abort();
   cancelAnimationFrame(frame);
   frame = 0;
   const controller = new AbortController();
-  binding = {element, entry, pathname: location.pathname, documentURL: documentURL(), controller};
+  binding = {element, entry, navigationId:navigationRecord()?.id, pathname: location.pathname, documentURL: documentURL(), controller};
   const top = snapshots.get(entryKey(entry))?.top ?? rememberedTop(history.state, entry.key);
   if (top !== undefined) {
     element.scrollTop = top;
@@ -61,24 +144,32 @@ function bind() {
     persist(binding, saved, navigation);
   }
   element.addEventListener('scroll', () => capture(), {passive: true, signal: controller.signal});
+  finishReturn();
 }
 function traverse() {
   navigation++;
   cancelAnimationFrame(frame);
   frame = 0;
+  stampEntry();
   // Cross-document traversals restore after the real DOM swap. Same-document
   // hash traversals have no Astro page-load event, so restore and bind here.
   if (connected(binding) && binding.documentURL === documentURL()) bind();
+  updateReturnLabels();
 }
 // Astro also pushes same-document entries without emitting lifecycle events.
-// Observe only successful native pushes; replacements keep their native method.
+// Establish parents through successful pushes; replacements retain identity.
 const nativePushState = history.pushState;
 history.pushState = function pushState() {
+  if (this !== history) return Reflect.apply(nativePushState,this,arguments);
   const owner = binding, before = currentEntry(), beforeDocument = documentURL();
   const leaving = connected(owner) && owner.entry.index === before.index
     ? {...before, top: owner.element.scrollTop} : undefined;
-  const result = Reflect.apply(nativePushState, this, arguments);
-  if (this !== history) return result;
+  const parentRecord = navigationRecord() || makeRecord(before.key,history.state?.index);
+  const parent = {id:parentRecord.id,index:Number.isFinite(history.state?.index) ? history.state.index : null,url:before.key};
+  const record = makeRecord(arguments.length > 2 && arguments[2] !== undefined ? entryURL(arguments[2]) : before.key,arguments[0]?.index,parent);
+  const args = [...arguments];args[0] = {...objectState(arguments[0]),mzshNavigation:record};
+  const result = Reflect.apply(nativePushState, this, args);
+  pendingReturn = null;
   const entry = currentEntry();
   if (leaving) snapshots.set(entryKey(leaving), leaving);
   if (Number.isFinite(entry.index)) {
@@ -92,9 +183,19 @@ history.pushState = function pushState() {
   // Cross-document pushes happen after Astro swaps the DOM; after-swap binds
   // those containers. A same-document push can keep using the current one.
   if (owner === binding && connected(owner) && beforeDocument === documentURL()) bind();
+  updateReturnLabels();
   return result;
 };
-document.addEventListener('astro:before-preparation', () => {navigation++; flush();});
+document.addEventListener('astro:before-preparation', event => {
+  navigation++;flush();
+  const token = ++preparation, pending = pendingReturn;
+  if (pending && event.signal) {
+    pending.preparation = token;
+    event.signal.addEventListener('abort',()=>{
+      if (pendingReturn === pending && pending.preparation === token && preparation === token) pendingReturn = null;
+    },{once:true});
+  }
+});
 document.addEventListener('astro:after-swap', bind);
 document.addEventListener('astro:page-load', () => {
   bind();
@@ -115,7 +216,9 @@ document.addEventListener('mzsh:content-index-ready', event => {
 });
 window.addEventListener('popstate', traverse);
 window.addEventListener('hashchange', traverse);
-window.addEventListener('pagehide', flush);
+window.addEventListener('pagehide', () => {flush();pendingReturn = null;});
+stampEntry();
+updateReturnLabels();
 bind();
 
 window[installedKey] = true;

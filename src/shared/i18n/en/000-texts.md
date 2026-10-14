@@ -5921,6 +5921,22 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
 scriptSlots:
+  viewport:return-previous: Back to previous page
+  work-topic:editor-assets: "Editor & Asset Tools"
+  work-topic:data-configuration: "Data & Configuration"
+  work-topic:network-communication: "Network Communication"
+  work-topic:animation-processing: "Animation Processing"
+  work-topic:input-process-control: "Input & Process Control"
+  work-topic:development-release: "Development & Release"
+  work-topic:content-file-processing: "File & Content Processing"
+  work-topic:version-control-collaboration: "Version Control & Collaboration"
+  case-topic:simulation-control: "Simulation & Control"
+  case-topic:rendering-display: "Rendering & Display"
+  case-topic:digital-human-animation: "Digital Humans & Animation"
+  case-topic:ai-data-integration: "AI & Data Integration"
+  case-topic:blueprint-component-repair: "Blueprint & Component Repair"
+  case-topic:development-release: "Development & Release"
+  case-topic:content-file-processing: "File & Content Processing"
   content-index:tags-more: More tags
   content-index:tags-less: Fewer tags
   blog-topic:programming-scripting: "Programming & Scripting"
@@ -6132,77 +6148,117 @@ bodyUtilitySlots:
     imageAlt: Seven multi-view limit changes in UE 5.3 engine source
     zoomLabel: View a larger source screenshot of the UE 5.3 multi-view changes
   blog:cnblogs-19143267:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Creating a Stream Depot (P4Admin) — Figure 1"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Creating a Stream Depot (P4Admin) — Figure 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Creating a Stream Depot (P4Admin) — Figure 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Creating a Stream Depot (P4Admin) — Figure 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Creating a Stream Depot (P4Admin) — Figure 1"
   blog:cnblogs-19143267:body-utility:2:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Creating a Mainline — Figure 2"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Creating a Mainline — Figure 2"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Creating a Mainline — Figure 2"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Creating a Mainline — Figure 2"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Creating a Mainline — Figure 2"
   blog:cnblogs-19143267:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Creating a Branch — Figure 3"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Creating a Branch — Figure 3"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Creating a Branch — Figure 3"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Creating a Branch — Figure 3"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Creating a Branch — Figure 3"
   blog:cnblogs-19143267:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Creating a Branch — Figure 4"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Creating a Branch — Figure 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Creating a Branch — Figure 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Creating a Branch — Figure 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Creating a Branch — Figure 4"
   blog:cnblogs-19143267:body-utility:5:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: Perforce: A Practical Guide to Streams · Branch Types — Figure 5"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Branch Types — Figure 5"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Branch Types — Figure 5"
   blog:cnblogs-19143267:body-utility:6:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Branch Types — Figure 6"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Branch Types — Figure 6"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Branch Types — Figure 6"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Branch Types — Figure 6"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Branch Types — Figure 6"
   blog:cnblogs-19143267:body-utility:7:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Branch Types — Figure 7"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Branch Types — Figure 7"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Branch Types — Figure 7"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Branch Types — Figure 7"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Branch Types — Figure 7"
   blog:cnblogs-19143267:body-utility:8:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Branch Types — Figure 8"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Branch Types — Figure 8"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Branch Types — Figure 8"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Branch Types — Figure 8"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Branch Types — Figure 8"
   blog:cnblogs-19143267:body-utility:9:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Creating a Stream Workspace — Figure 9"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Creating a Stream Workspace — Figure 9"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Creating a Stream Workspace — Figure 9"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Creating a Stream Workspace — Figure 9"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Creating a Stream Workspace — Figure 9"
   blog:cnblogs-19143267:body-utility:10:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 10"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 10"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 10"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 10"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 10"
   blog:cnblogs-19143267:body-utility:11:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 11"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 11"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 11"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 11"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 11"
   blog:cnblogs-19143267:body-utility:12:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 12"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 12"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 12"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 12"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 12"
   blog:cnblogs-19143267:body-utility:13:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 13"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 13"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Switching Workspaces (StreamGraph) — Figure 13"
   blog:cnblogs-19143267:body-utility:14:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 14"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Merging and Updating — Figure 14"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 14"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 14"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 14"
   blog:cnblogs-19143267:body-utility:15:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 15"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Merging and Updating — Figure 15"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 15"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 15"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 15"
   blog:cnblogs-19143267:body-utility:16:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 16"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Merging and Updating — Figure 16"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 16"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 16"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 16"
   blog:cnblogs-19143267:body-utility:17:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 17"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Merging and Updating — Figure 17"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 17"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 17"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Merging and Updating — Figure 17"
   blog:cnblogs-19143267:body-utility:18:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 18"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 18"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 18"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 18"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 18"
   blog:cnblogs-19143267:body-utility:19:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 19"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 19"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 19"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 19"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Linking External Files (Similar to SVN Externals) — Figure 19"
   blog:cnblogs-19143267:body-utility:20:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Viewing and Using the Command Line in P4V — Figure 20"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Viewing and Using the Command Line in P4V — Figure 20"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Viewing and Using the Command Line in P4V — Figure 20"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Viewing and Using the Command Line in P4V — Figure 20"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Viewing and Using the Command Line in P4V — Figure 20"
   blog:cnblogs-19143267:body-utility:21:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: A Practical Guide to Streams · Sync Command (Without Downloading Existing Files Again) — Figure 21"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: A Practical Guide to Streams · Sync Command (Without Downloading Existing Files Again) — Figure 21"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: A Practical Guide to Streams · Sync Command (Without Downloading Existing Files Again) — Figure 21"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: A Practical Guide to Streams · Sync Command (Without Downloading Existing Files Again) — Figure 21"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: A Practical Guide to Streams · Sync Command (Without Downloading Existing Files Again) — Figure 21"
   blog:cnblogs-19143251:body-utility:1:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: Perforce: UE Source Control Operations Guide · Connecting to a Perforce Server — Figure 1"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: UE Source Control Operations Guide · Connecting to a Perforce Server — Figure 1"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: UE Source Control Operations Guide · Connecting to a Perforce Server — Figure 1"
   blog:cnblogs-19143251:body-utility:2:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: UE Source Control Operations Guide · Connecting to a Perforce Server — Figure 2"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: UE Source Control Operations Guide · Connecting to a Perforce Server — Figure 2"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: UE Source Control Operations Guide · Connecting to a Perforce Server — Figure 2"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: UE Source Control Operations Guide · Connecting to a Perforce Server — Figure 2"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: UE Source Control Operations Guide · Connecting to a Perforce Server — Figure 2"
   blog:cnblogs-19143251:body-utility:3:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: Perforce: UE Source Control Operations Guide · Perforce Operations — Figure 3"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: UE Source Control Operations Guide · Perforce Operations — Figure 3"
@@ -6224,65 +6280,97 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Client Installation and Configuration Guide · Download and Installation — Figure 2"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Client Installation and Configuration Guide · Download and Installation — Figure 2"
   blog:cnblogs-19143255:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Client Installation and Configuration Guide · Environment Settings (Required on First Use) — Figure 3"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Client Installation and Configuration Guide · Environment Settings (Required on First Use) — Figure 3"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Client Installation and Configuration Guide · Environment Settings (Required on First Use) — Figure 3"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Client Installation and Configuration Guide · Environment Settings (Required on First Use) — Figure 3"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Client Installation and Configuration Guide · Environment Settings (Required on First Use) — Figure 3"
   blog:cnblogs-19143255:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Client Installation and Configuration Guide · Connecting to the Server — Figure 4"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Client Installation and Configuration Guide · Connecting to the Server — Figure 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Client Installation and Configuration Guide · Connecting to the Server — Figure 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Client Installation and Configuration Guide · Connecting to the Server — Figure 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Client Installation and Configuration Guide · Connecting to the Server — Figure 4"
   blog:cnblogs-19143256:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Creating a Workspace — Figure 1"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Creating a Workspace — Figure 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Creating a Workspace — Figure 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Creating a Workspace — Figure 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Creating a Workspace — Figure 1"
   blog:cnblogs-19143256:body-utility:2:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: Perforce: Common Client Operations · Submitting — Figure 2"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Submitting — Figure 2"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Submitting — Figure 2"
   blog:cnblogs-19143256:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Updating — Figure 3"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Updating — Figure 3"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Updating — Figure 3"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Updating — Figure 3"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Updating — Figure 3"
   blog:cnblogs-19143256:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Viewing History — Figure 4"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Viewing History — Figure 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Viewing History — Figure 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Viewing History — Figure 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Viewing History — Figure 4"
   blog:cnblogs-19143256:body-utility:5:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Adding New Files — Figure 5"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Adding New Files — Figure 5"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Adding New Files — Figure 5"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Adding New Files — Figure 5"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Adding New Files — Figure 5"
   blog:cnblogs-19143256:body-utility:6:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Deleting Files — Figure 6"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Deleting Files — Figure 6"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Deleting Files — Figure 6"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Deleting Files — Figure 6"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Deleting Files — Figure 6"
   blog:cnblogs-19143256:body-utility:7:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Checking Out Files — Figure 7"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Checking Out Files — Figure 7"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Checking Out Files — Figure 7"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Checking Out Files — Figure 7"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Checking Out Files — Figure 7"
   blog:cnblogs-19143256:body-utility:8:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Checking Out Files — Figure 8"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Checking Out Files — Figure 8"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Checking Out Files — Figure 8"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Checking Out Files — Figure 8"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Checking Out Files — Figure 8"
   blog:cnblogs-19143256:body-utility:9:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: Perforce: Common Client Operations · Reverting Files — Figure 9"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Reverting Files — Figure 9"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Reverting Files — Figure 9"
   blog:cnblogs-19143256:body-utility:10:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Comparing Files — Figure 10"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Comparing Files — Figure 10"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Comparing Files — Figure 10"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Comparing Files — Figure 10"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Comparing Files — Figure 10"
   blog:cnblogs-19143256:body-utility:11:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Cleaning Files — Figure 11"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Cleaning Files — Figure 11"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Cleaning Files — Figure 11"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Cleaning Files — Figure 11"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Cleaning Files — Figure 11"
   blog:cnblogs-19143256:body-utility:12:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: Perforce: Common Client Operations · Undoing One Submission — Figure 12"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Undoing One Submission — Figure 12"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Undoing One Submission — Figure 12"
   blog:cnblogs-19143256:body-utility:13:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 13"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 13"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 13"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 13"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 13"
   blog:cnblogs-19143256:body-utility:14:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 14"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 14"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 14"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 14"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Undoing All Submissions After a Point — Figure 14"
   blog:cnblogs-19143256:body-utility:15:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: Common Client Operations · Manually Editing Workspace Mappings — Figure 15"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: Common Client Operations · Manually Editing Workspace Mappings — Figure 15"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: Common Client Operations · Manually Editing Workspace Mappings — Figure 15"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: Common Client Operations · Manually Editing Workspace Mappings — Figure 15"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: Common Client Operations · Manually Editing Workspace Mappings — Figure 15"
   blog:cnblogs-19143260:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: What to Do When a Stream Depot Cannot Be Deleted · First, List the Current Streams — Figure 1"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: What to Do When a Stream Depot Cannot Be Deleted · First, List the Current Streams — Figure 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: What to Do When a Stream Depot Cannot Be Deleted · First, List the Current Streams — Figure 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: What to Do When a Stream Depot Cannot Be Deleted · First, List the Current Streams — Figure 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: What to Do When a Stream Depot Cannot Be Deleted · First, List the Current Streams — Figure 1"
   blog:cnblogs-19143260:body-utility:2:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "Perforce: What to Do When a Stream Depot Cannot Be Deleted · Force Deletion — Figure 2"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Perforce: What to Do When a Stream Depot Cannot Be Deleted · Force Deletion — Figure 2"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce: What to Do When a Stream Depot Cannot Be Deleted · Force Deletion — Figure 2"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce: What to Do When a Stream Depot Cannot Be Deleted · Force Deletion — Figure 2"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce: What to Do When a Stream Depot Cannot Be Deleted · Force Deletion — Figure 2"
   blog:cnblogs-19813721:body-utility:1:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: UE: Fixing UMG Size That Does Not Change During Rendering · UE: Fixing UMG Size That Does Not Change During Rendering — Figure 1"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Fixing UMG Size That Does Not Change During Rendering · UE: Fixing UMG Size That Does Not Change During Rendering — Figure 1"
@@ -6324,15 +6412,19 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Material Basics: The If Node · UE: Material Basics: The If Node — Figure 1"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Material Basics: The If Node · UE: Material Basics: The If Node — Figure 1"
   blog:cnblogs-19379365:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 1"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 1"
   blog:cnblogs-19379365:body-utility:2:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 2"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 2"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 2"
   blog:cnblogs-19379365:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 3"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 3"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 3"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 3"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Changing the Cache Path · UE: Changing the Cache Path — Figure 3"
   blog:cnblogs-19192707:body-utility:1:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: UE: A Simple C++ MVVM Application · Setting the Model — Figure 1"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: A Simple C++ MVVM Application · Setting the Model — Figure 1"
@@ -6390,14 +6482,20 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Quickly Creating a Map · UE: Quickly Creating a Map — Figure 6"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Quickly Creating a Map · UE: Quickly Creating a Map — Figure 6"
   blog:cnblogs-19174288:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 1"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 1"
   blog:cnblogs-19174288:body-utility:2:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 2"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 2"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 2"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 2"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: When Only One Monitor Displays in Multi-Monitor Fullscreen · Cause — Figure 2"
   blog:cnblogs-19174295:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "UE: Calling a DLL · UE: Calling a DLL — Figure 1"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: UE: Calling a DLL · UE: Calling a DLL — Figure 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE: Calling a DLL · UE: Calling a DLL — Figure 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Calling a DLL · UE: Calling a DLL — Figure 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Calling a DLL · UE: Calling a DLL — Figure 1"
   blog:cnblogs-19174295:body-utility:2:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: UE: Calling a DLL · UE: Calling a DLL — Figure 2"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Calling a DLL · UE: Calling a DLL — Figure 2"
@@ -6407,8 +6505,10 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Calling a DLL · UE: Calling a DLL — Figure 3"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Calling a DLL · UE: Calling a DLL — Figure 3"
   blog:cnblogs-19174295:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "UE: Calling a DLL · UE: Calling a DLL — Figure 4"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: UE: Calling a DLL · UE: Calling a DLL — Figure 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE: Calling a DLL · UE: Calling a DLL — Figure 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Calling a DLL · UE: Calling a DLL — Figure 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Calling a DLL · UE: Calling a DLL — Figure 4"
   blog:cnblogs-19174295:body-utility:5:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: UE: Calling a DLL · UE: Calling a DLL — Figure 5"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Calling a DLL · UE: Calling a DLL — Figure 5"
@@ -6434,8 +6534,10 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: PixelStreaming · Download from GitHub — Figure 3"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: PixelStreaming · Download from GitHub — Figure 3"
   blog:cnblogs-19165494:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "UE: PixelStreaming · Start the Signalling Server — Figure 4"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: UE: PixelStreaming · Start the Signalling Server — Figure 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE: PixelStreaming · Start the Signalling Server — Figure 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: PixelStreaming · Start the Signalling Server — Figure 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: PixelStreaming · Start the Signalling Server — Figure 4"
   blog:cnblogs-19165494:body-utility:5:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: UE: PixelStreaming · Start the Signalling Server — Figure 5"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: PixelStreaming · Start the Signalling Server — Figure 5"
@@ -6489,8 +6591,10 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Custom Configuration with DeveloperSettings · Access — Figure 6"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Custom Configuration with DeveloperSettings · Access — Figure 6"
   blog:cnblogs-19165500:body-utility:7:
-    root.html:0.body:1.figure:0.strong:0.#text:0: "UE: Custom Configuration with DeveloperSettings · Packaging Exclusion — Figure 7"
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: UE: Custom Configuration with DeveloperSettings · Packaging Exclusion — Figure 7"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE: Custom Configuration with DeveloperSettings · Packaging Exclusion — Figure 7"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Custom Configuration with DeveloperSettings · Packaging Exclusion — Figure 7"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: Custom Configuration with DeveloperSettings · Packaging Exclusion — Figure 7"
   blog:cnblogs-19165500:body-utility:8:
     root.html:0.body:1.figure:0.a:0@aria-label: "View a larger image: UE: Custom Configuration with DeveloperSettings · Packaging Exclusion — Figure 8"
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: Custom Configuration with DeveloperSettings · Packaging Exclusion — Figure 8"
@@ -6528,8 +6632,10 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: "UE: A One-Click Fix for MetaHuman Head Clipping During Animation · Final Result — Figure 5"
     root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE: A One-Click Fix for MetaHuman Head Clipping During Animation · Final Result — Figure 5"
   work:ue-package-manager:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Image not published
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Image not published"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Image not published"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Image not published"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Image not published"
   doc:ai-data-asset-guide:body-utility:1:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “Features”
   doc:ai-data-asset-guide:body-utility:2:
@@ -6548,8 +6654,10 @@ bodyUtilitySlots:
     root.html:0.body:1.p:0.a:0@aria-label: "View a larger image: DataAsset Editor"
     root.html:0.body:1.p:0.a:0.img:0@alt: DataAsset Editor
   doc:ai-data-asset-guide:body-utility:9:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Image not published
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains a local development directory and has been temporarily hidden. The text and code are retained in full.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Image not published"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Image not published"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Image not published"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Image not published"
   doc:ai-data-asset-guide:body-utility:10:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “AI Workflow Example”
   doc:ai-data-asset-guide:body-utility:11:
@@ -7581,8 +7689,10 @@ bodyUtilitySlots:
   doc:ue-package-manager:body-utility:2:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “Graphical Interface”
   doc:ue-package-manager:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Image not published
-    root.html:0.body:1.figure:0.p:1.#text:0: This screenshot contains environment information that still needs verification and has been temporarily hidden. The original image is retained; the text and code are unchanged.
+    root.html:0.body:1.figure:0.a:0@aria-label: "Enlarge image: Image not published"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Image not published"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Image not published"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Image not published"
   doc:ue-package-manager:body-utility:4:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “Isolated Project Configuration”
   doc:ue-package-manager:body-utility:5:
@@ -7643,7 +7753,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 2b85d86067ffa920afb65f04782961df7204ba7ece4a5a97ddd701924da4c36e
+sourceHash: cd3e121e8076460b87ab163a86b83cd4b6bcef7b7134c22f94fc8b6f1df235fb
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

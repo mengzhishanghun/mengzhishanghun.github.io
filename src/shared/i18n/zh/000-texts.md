@@ -5921,6 +5921,22 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
 scriptSlots:
+  viewport:return-previous: 返回上一页
+  work-topic:editor-assets: "编辑器与资产工具"
+  work-topic:data-configuration: "数据与配置"
+  work-topic:network-communication: "网络通信"
+  work-topic:animation-processing: "动画处理"
+  work-topic:input-process-control: "输入与进程控制"
+  work-topic:development-release: "开发与发布"
+  work-topic:content-file-processing: "文件与内容处理"
+  work-topic:version-control-collaboration: "版本协作"
+  case-topic:simulation-control: "仿真与控制"
+  case-topic:rendering-display: "渲染与显示"
+  case-topic:digital-human-animation: "数字人与动画"
+  case-topic:ai-data-integration: "AI与数据集成"
+  case-topic:blueprint-component-repair: "蓝图与组件修复"
+  case-topic:development-release: "开发与发布"
+  case-topic:content-file-processing: "文件与内容处理"
   content-index:tags-more: 更多标签
   content-index:tags-less: 收起标签
   blog-topic:programming-scripting: "编程与脚本"
@@ -6132,77 +6148,117 @@ bodyUtilitySlots:
     imageAlt: UE 5.3 引擎源码中的七处多视角上限修改
     zoomLabel: 放大查看 UE 5.3 多视角修改源码截图
   blog:cnblogs-19143267:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 创建 Stream Depot（P4Admin）配图 1
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 创建 Stream Depot（P4Admin）配图 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 创建 Stream Depot（P4Admin）配图 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 创建 Stream Depot（P4Admin）配图 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 创建 Stream Depot（P4Admin）配图 1"
   blog:cnblogs-19143267:body-utility:2:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 创建主干（Mainline）配图 2
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 创建主干（Mainline）配图 2"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 创建主干（Mainline）配图 2"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 创建主干（Mainline）配图 2"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 创建主干（Mainline）配图 2"
   blog:cnblogs-19143267:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 创建分支（Branch）配图 3
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 创建分支（Branch）配图 3"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 创建分支（Branch）配图 3"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 创建分支（Branch）配图 3"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 创建分支（Branch）配图 3"
   blog:cnblogs-19143267:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 创建分支（Branch）配图 4
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 创建分支（Branch）配图 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 创建分支（Branch）配图 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 创建分支（Branch）配图 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 创建分支（Branch）配图 4"
   blog:cnblogs-19143267:body-utility:5:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：Perforce：Stream实战指南 · 分支类型配图 5
     root.html:0.body:1.figure:0.a:0.img:0@alt: Perforce：Stream实战指南 · 分支类型配图 5
     root.html:0.body:1.figure:0.figcaption:1.#text:0: Perforce：Stream实战指南 · 分支类型配图 5
   blog:cnblogs-19143267:body-utility:6:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 分支类型配图 6
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 分支类型配图 6"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 分支类型配图 6"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 分支类型配图 6"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 分支类型配图 6"
   blog:cnblogs-19143267:body-utility:7:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 分支类型配图 7
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 分支类型配图 7"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 分支类型配图 7"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 分支类型配图 7"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 分支类型配图 7"
   blog:cnblogs-19143267:body-utility:8:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 分支类型配图 8
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 分支类型配图 8"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 分支类型配图 8"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 分支类型配图 8"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 分支类型配图 8"
   blog:cnblogs-19143267:body-utility:9:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 新建 Stream 工作区配图 9
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 新建 Stream 工作区配图 9"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 新建 Stream 工作区配图 9"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 新建 Stream 工作区配图 9"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 新建 Stream 工作区配图 9"
   blog:cnblogs-19143267:body-utility:10:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 10
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 10"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 10"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 10"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 10"
   blog:cnblogs-19143267:body-utility:11:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 11
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 11"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 11"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 11"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 11"
   blog:cnblogs-19143267:body-utility:12:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 12
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 12"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 12"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 12"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 12"
   blog:cnblogs-19143267:body-utility:13:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 13
     root.html:0.body:1.figure:0.a:0.img:0@alt: Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 13
     root.html:0.body:1.figure:0.figcaption:1.#text:0: Perforce：Stream实战指南 · 工作区切换（StreamGraph）配图 13
   blog:cnblogs-19143267:body-utility:14:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 合并与更新配图 14
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 合并与更新配图 14"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 合并与更新配图 14"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 合并与更新配图 14"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 合并与更新配图 14"
   blog:cnblogs-19143267:body-utility:15:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 合并与更新配图 15
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 合并与更新配图 15"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 合并与更新配图 15"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 合并与更新配图 15"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 合并与更新配图 15"
   blog:cnblogs-19143267:body-utility:16:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 合并与更新配图 16
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 合并与更新配图 16"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 合并与更新配图 16"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 合并与更新配图 16"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 合并与更新配图 16"
   blog:cnblogs-19143267:body-utility:17:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 合并与更新配图 17
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 合并与更新配图 17"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 合并与更新配图 17"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 合并与更新配图 17"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 合并与更新配图 17"
   blog:cnblogs-19143267:body-utility:18:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 18
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 18"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 18"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 18"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 18"
   blog:cnblogs-19143267:body-utility:19:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 19
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 19"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 19"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 19"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 连接外部文件（类似 SVN externals）配图 19"
   blog:cnblogs-19143267:body-utility:20:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 在 P4V 中查看/使用命令行配图 20
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 在 P4V 中查看/使用命令行配图 20"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 在 P4V 中查看/使用命令行配图 20"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 在 P4V 中查看/使用命令行配图 20"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 在 P4V 中查看/使用命令行配图 20"
   blog:cnblogs-19143267:body-utility:21:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：Stream实战指南 · 同步指令（不重新下载已存在文件）配图 21
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：Stream实战指南 · 同步指令（不重新下载已存在文件）配图 21"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：Stream实战指南 · 同步指令（不重新下载已存在文件）配图 21"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：Stream实战指南 · 同步指令（不重新下载已存在文件）配图 21"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：Stream实战指南 · 同步指令（不重新下载已存在文件）配图 21"
   blog:cnblogs-19143251:body-utility:1:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：Perforce：UE源码控制操作指南 · 连接Perforce服务器配图 1
     root.html:0.body:1.figure:0.a:0.img:0@alt: Perforce：UE源码控制操作指南 · 连接Perforce服务器配图 1
     root.html:0.body:1.figure:0.figcaption:1.#text:0: Perforce：UE源码控制操作指南 · 连接Perforce服务器配图 1
   blog:cnblogs-19143251:body-utility:2:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：UE源码控制操作指南 · 连接Perforce服务器配图 2
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：UE源码控制操作指南 · 连接Perforce服务器配图 2"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：UE源码控制操作指南 · 连接Perforce服务器配图 2"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：UE源码控制操作指南 · 连接Perforce服务器配图 2"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：UE源码控制操作指南 · 连接Perforce服务器配图 2"
   blog:cnblogs-19143251:body-utility:3:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：Perforce：UE源码控制操作指南 · Perforce相关操作配图 3
     root.html:0.body:1.figure:0.a:0.img:0@alt: Perforce：UE源码控制操作指南 · Perforce相关操作配图 3
@@ -6224,65 +6280,97 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: Perforce：客户端安装配置指南 · 下载与安装配图 2
     root.html:0.body:1.figure:0.figcaption:1.#text:0: Perforce：客户端安装配置指南 · 下载与安装配图 2
   blog:cnblogs-19143255:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端安装配置指南 · 环境设置（首次必做）配图 3
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端安装配置指南 · 环境设置（首次必做）配图 3"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端安装配置指南 · 环境设置（首次必做）配图 3"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端安装配置指南 · 环境设置（首次必做）配图 3"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端安装配置指南 · 环境设置（首次必做）配图 3"
   blog:cnblogs-19143255:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端安装配置指南 · 连接服务器配图 4
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端安装配置指南 · 连接服务器配图 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端安装配置指南 · 连接服务器配图 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端安装配置指南 · 连接服务器配图 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端安装配置指南 · 连接服务器配图 4"
   blog:cnblogs-19143256:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 创建工作区配图 1
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 创建工作区配图 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 创建工作区配图 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 创建工作区配图 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 创建工作区配图 1"
   blog:cnblogs-19143256:body-utility:2:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：Perforce：客户端常用操作 · 提交配图 2
     root.html:0.body:1.figure:0.a:0.img:0@alt: Perforce：客户端常用操作 · 提交配图 2
     root.html:0.body:1.figure:0.figcaption:1.#text:0: Perforce：客户端常用操作 · 提交配图 2
   blog:cnblogs-19143256:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 更新配图 3
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 更新配图 3"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 更新配图 3"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 更新配图 3"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 更新配图 3"
   blog:cnblogs-19143256:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 查看历史记录配图 4
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 查看历史记录配图 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 查看历史记录配图 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 查看历史记录配图 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 查看历史记录配图 4"
   blog:cnblogs-19143256:body-utility:5:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 添加新文件配图 5
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 添加新文件配图 5"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 添加新文件配图 5"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 添加新文件配图 5"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 添加新文件配图 5"
   blog:cnblogs-19143256:body-utility:6:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 删除文件配图 6
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 删除文件配图 6"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 删除文件配图 6"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 删除文件配图 6"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 删除文件配图 6"
   blog:cnblogs-19143256:body-utility:7:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 文件迁出配图 7
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 文件迁出配图 7"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 文件迁出配图 7"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 文件迁出配图 7"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 文件迁出配图 7"
   blog:cnblogs-19143256:body-utility:8:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 文件迁出配图 8
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 文件迁出配图 8"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 文件迁出配图 8"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 文件迁出配图 8"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 文件迁出配图 8"
   blog:cnblogs-19143256:body-utility:9:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：Perforce：客户端常用操作 · 文件还原配图 9
     root.html:0.body:1.figure:0.a:0.img:0@alt: Perforce：客户端常用操作 · 文件还原配图 9
     root.html:0.body:1.figure:0.figcaption:1.#text:0: Perforce：客户端常用操作 · 文件还原配图 9
   blog:cnblogs-19143256:body-utility:10:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 文件比对配图 10
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 文件比对配图 10"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 文件比对配图 10"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 文件比对配图 10"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 文件比对配图 10"
   blog:cnblogs-19143256:body-utility:11:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 文件清理配图 11
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 文件清理配图 11"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 文件清理配图 11"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 文件清理配图 11"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 文件清理配图 11"
   blog:cnblogs-19143256:body-utility:12:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：Perforce：客户端常用操作 · 单次提交撤回配图 12
     root.html:0.body:1.figure:0.a:0.img:0@alt: Perforce：客户端常用操作 · 单次提交撤回配图 12
     root.html:0.body:1.figure:0.figcaption:1.#text:0: Perforce：客户端常用操作 · 单次提交撤回配图 12
   blog:cnblogs-19143256:body-utility:13:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 13
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 13"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 13"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 13"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 13"
   blog:cnblogs-19143256:body-utility:14:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 14
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 14"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 14"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 14"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 撤回这个之后的所有提交配图 14"
   blog:cnblogs-19143256:body-utility:15:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：客户端常用操作 · 手动修改工作区链接配图 15
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：客户端常用操作 · 手动修改工作区链接配图 15"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：客户端常用操作 · 手动修改工作区链接配图 15"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：客户端常用操作 · 手动修改工作区链接配图 15"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：客户端常用操作 · 手动修改工作区链接配图 15"
   blog:cnblogs-19143260:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：无法删除Stream Depot怎么处理 · 先查看当前的流有哪些配图 1
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：无法删除Stream Depot怎么处理 · 先查看当前的流有哪些配图 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：无法删除Stream Depot怎么处理 · 先查看当前的流有哪些配图 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：无法删除Stream Depot怎么处理 · 先查看当前的流有哪些配图 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：无法删除Stream Depot怎么处理 · 先查看当前的流有哪些配图 1"
   blog:cnblogs-19143260:body-utility:2:
-    root.html:0.body:1.figure:0.strong:0.#text:0: Perforce：无法删除Stream Depot怎么处理 · 强制删除配图 2
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：Perforce：无法删除Stream Depot怎么处理 · 强制删除配图 2"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "Perforce：无法删除Stream Depot怎么处理 · 强制删除配图 2"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "Perforce：无法删除Stream Depot怎么处理 · 强制删除配图 2"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "Perforce：无法删除Stream Depot怎么处理 · 强制删除配图 2"
   blog:cnblogs-19813721:body-utility:1:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：UE：如何解决渲染时UMG大小不变的问题 · UE：如何解决渲染时UMG大小不变的问题配图 1
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：如何解决渲染时UMG大小不变的问题 · UE：如何解决渲染时UMG大小不变的问题配图 1
@@ -6324,15 +6412,19 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：材质基础知识之if判断节点 · UE：材质基础知识之if判断节点配图 1
     root.html:0.body:1.figure:0.figcaption:1.#text:0: UE：材质基础知识之if判断节点 · UE：材质基础知识之if判断节点配图 1
   blog:cnblogs-19379365:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: UE：缓存路径修改 · UE：缓存路径修改配图 1
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：UE：缓存路径修改 · UE：缓存路径修改配图 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE：缓存路径修改 · UE：缓存路径修改配图 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE：缓存路径修改 · UE：缓存路径修改配图 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE：缓存路径修改 · UE：缓存路径修改配图 1"
   blog:cnblogs-19379365:body-utility:2:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：UE：缓存路径修改 · UE：缓存路径修改配图 2
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：缓存路径修改 · UE：缓存路径修改配图 2
     root.html:0.body:1.figure:0.figcaption:1.#text:0: UE：缓存路径修改 · UE：缓存路径修改配图 2
   blog:cnblogs-19379365:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: UE：缓存路径修改 · UE：缓存路径修改配图 3
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：UE：缓存路径修改 · UE：缓存路径修改配图 3"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE：缓存路径修改 · UE：缓存路径修改配图 3"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE：缓存路径修改 · UE：缓存路径修改配图 3"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE：缓存路径修改 · UE：缓存路径修改配图 3"
   blog:cnblogs-19192707:body-utility:1:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：UE：C++MVVM简单应用 · 设置模型配图 1
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：C++MVVM简单应用 · 设置模型配图 1
@@ -6390,14 +6482,20 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：快速创建一个地图 · UE：快速创建一个地图配图 6
     root.html:0.body:1.figure:0.figcaption:1.#text:0: UE：快速创建一个地图 · UE：快速创建一个地图配图 6
   blog:cnblogs-19174288:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 1
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 1"
   blog:cnblogs-19174288:body-utility:2:
-    root.html:0.body:1.figure:0.strong:0.#text:0: UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 2
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 2"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 2"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 2"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE：多屏幕全屏后只有一个屏幕显示怎么办 · 原因配图 2"
   blog:cnblogs-19174295:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: UE：如何调用DLL · UE：如何调用DLL配图 1
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：UE：如何调用DLL · UE：如何调用DLL配图 1"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE：如何调用DLL · UE：如何调用DLL配图 1"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE：如何调用DLL · UE：如何调用DLL配图 1"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE：如何调用DLL · UE：如何调用DLL配图 1"
   blog:cnblogs-19174295:body-utility:2:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：UE：如何调用DLL · UE：如何调用DLL配图 2
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：如何调用DLL · UE：如何调用DLL配图 2
@@ -6407,8 +6505,10 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：如何调用DLL · UE：如何调用DLL配图 3
     root.html:0.body:1.figure:0.figcaption:1.#text:0: UE：如何调用DLL · UE：如何调用DLL配图 3
   blog:cnblogs-19174295:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: UE：如何调用DLL · UE：如何调用DLL配图 4
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：UE：如何调用DLL · UE：如何调用DLL配图 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE：如何调用DLL · UE：如何调用DLL配图 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE：如何调用DLL · UE：如何调用DLL配图 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE：如何调用DLL · UE：如何调用DLL配图 4"
   blog:cnblogs-19174295:body-utility:5:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：UE：如何调用DLL · UE：如何调用DLL配图 5
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：如何调用DLL · UE：如何调用DLL配图 5
@@ -6434,8 +6534,10 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：PixelStreaming 像素流送 · GitHub下载配图 3
     root.html:0.body:1.figure:0.figcaption:1.#text:0: UE：PixelStreaming 像素流送 · GitHub下载配图 3
   blog:cnblogs-19165494:body-utility:4:
-    root.html:0.body:1.figure:0.strong:0.#text:0: UE：PixelStreaming 像素流送 · 启动信令服务器配图 4
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：UE：PixelStreaming 像素流送 · 启动信令服务器配图 4"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE：PixelStreaming 像素流送 · 启动信令服务器配图 4"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE：PixelStreaming 像素流送 · 启动信令服务器配图 4"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE：PixelStreaming 像素流送 · 启动信令服务器配图 4"
   blog:cnblogs-19165494:body-utility:5:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：UE：PixelStreaming 像素流送 · 启动信令服务器配图 5
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：PixelStreaming 像素流送 · 启动信令服务器配图 5
@@ -6489,8 +6591,10 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：自定义配置DeveloperSettings · 调用配图 6
     root.html:0.body:1.figure:0.figcaption:1.#text:0: UE：自定义配置DeveloperSettings · 调用配图 6
   blog:cnblogs-19165500:body-utility:7:
-    root.html:0.body:1.figure:0.strong:0.#text:0: UE：自定义配置DeveloperSettings · 打包排除配图 7
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：UE：自定义配置DeveloperSettings · 打包排除配图 7"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "UE：自定义配置DeveloperSettings · 打包排除配图 7"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "UE：自定义配置DeveloperSettings · 打包排除配图 7"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "UE：自定义配置DeveloperSettings · 打包排除配图 7"
   blog:cnblogs-19165500:body-utility:8:
     root.html:0.body:1.figure:0.a:0@aria-label: 放大查看图片：UE：自定义配置DeveloperSettings · 打包排除配图 8
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：自定义配置DeveloperSettings · 打包排除配图 8
@@ -6528,8 +6632,10 @@ bodyUtilitySlots:
     root.html:0.body:1.figure:0.a:0.img:0@alt: UE：一键解决MetaHuman播放动画时头部穿模问题 · 最终效果配图 5
     root.html:0.body:1.figure:0.figcaption:1.#text:0: UE：一键解决MetaHuman播放动画时头部穿模问题 · 最终效果配图 5
   work:ue-package-manager:body-utility:1:
-    root.html:0.body:1.figure:0.strong:0.#text:0: 图片暂未公开
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：图片暂未公开"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "图片暂未公开"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "图片暂未公开"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "图片暂未公开"
   doc:ai-data-asset-guide:body-utility:1:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “功能特性”
   doc:ai-data-asset-guide:body-utility:2:
@@ -6548,8 +6654,10 @@ bodyUtilitySlots:
     root.html:0.body:1.p:0.a:0@aria-label: 放大查看图片：DataAsset 编辑器
     root.html:0.body:1.p:0.a:0.img:0@alt: DataAsset 编辑器
   doc:ai-data-asset-guide:body-utility:9:
-    root.html:0.body:1.figure:0.strong:0.#text:0: 图片暂未公开
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含本地开发目录，已暂时隐藏。正文与代码完整保留。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：图片暂未公开"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "图片暂未公开"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "图片暂未公开"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "图片暂未公开"
   doc:ai-data-asset-guide:body-utility:10:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “AI 工作流示例”
   doc:ai-data-asset-guide:body-utility:11:
@@ -7581,8 +7689,10 @@ bodyUtilitySlots:
   doc:ue-package-manager:body-utility:2:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “图形界面”
   doc:ue-package-manager:body-utility:3:
-    root.html:0.body:1.figure:0.strong:0.#text:0: 图片暂未公开
-    root.html:0.body:1.figure:0.p:1.#text:0: 此截图含待核对的环境信息，已暂时隐藏。原图保留，正文与代码不变。
+    root.html:0.body:1.figure:0.a:0@aria-label: "放大图片：图片暂未公开"
+    root.html:0.body:1.figure:0.a:0@data-media-alt: "图片暂未公开"
+    root.html:0.body:1.figure:0.a:0.img:0@alt: "图片暂未公开"
+    root.html:0.body:1.figure:0.figcaption:1.#text:0: "图片暂未公开"
   doc:ue-package-manager:body-utility:4:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “项目配置隔离”
   doc:ue-package-manager:body-utility:5:

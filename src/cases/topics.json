@@ -1,0 +1,180 @@
+{
+  "version": 1,
+  "topics": [
+    "simulation-control",
+    "rendering-display",
+    "digital-human-animation",
+    "ai-data-integration",
+    "blueprint-component-repair",
+    "development-release",
+    "content-file-processing"
+  ],
+  "articles": {
+    "case:driving-simulator-three-screen": {
+      "topics": [
+        "simulation-control",
+        "rendering-display"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Lumen",
+          "多屏显示",
+          "仿真"
+        ],
+        "en": [
+          "Lumen",
+          "Multi-screen display",
+          "Simulation"
+        ]
+      }
+    },
+    "case:flying-car-simulator": {
+      "topics": [
+        "simulation-control"
+      ],
+      "legacyTags": {
+        "zh": [
+          "仿真",
+          "交通"
+        ],
+        "en": [
+          "Simulation",
+          "Transportation"
+        ]
+      }
+    },
+    "case:motion-capture-robot-control": {
+      "topics": [
+        "simulation-control"
+      ],
+      "legacyTags": {
+        "zh": [
+          "动作捕捉",
+          "机器人"
+        ],
+        "en": [
+          "Motion capture",
+          "Robotics"
+        ]
+      }
+    },
+    "case:six-dof-motion-platform": {
+      "topics": [
+        "simulation-control"
+      ],
+      "legacyTags": {
+        "zh": [
+          "仿真",
+          "硬件联动"
+        ],
+        "en": [
+          "Simulation",
+          "Hardware integration"
+        ]
+      }
+    },
+    "case:ai-digital-human-integration": {
+      "topics": [
+        "digital-human-animation",
+        "ai-data-integration"
+      ],
+      "legacyTags": {
+        "zh": [
+          "AI",
+          "MetaHuman",
+          "语音交互"
+        ],
+        "en": [
+          "AI",
+          "MetaHuman",
+          "Voice interaction"
+        ]
+      }
+    },
+    "case:metahuman-animation-clipping": {
+      "topics": [
+        "digital-human-animation"
+      ],
+      "legacyTags": {
+        "zh": [
+          "MetaHuman",
+          "动画",
+          "批量处理"
+        ],
+        "en": [
+          "MetaHuman",
+          "Animation",
+          "Batch processing"
+        ]
+      }
+    },
+    "case:data-asset-json-sync": {
+      "topics": [
+        "ai-data-integration"
+      ],
+      "legacyTags": {
+        "zh": [
+          "DataAsset",
+          "JSON",
+          "AI"
+        ],
+        "en": [
+          "DataAsset",
+          "JSON",
+          "AI"
+        ]
+      }
+    },
+    "case:blueprint-inheritance-repair": {
+      "topics": [
+        "blueprint-component-repair"
+      ],
+      "legacyTags": {
+        "zh": [
+          "蓝图",
+          "继承链",
+          "组件修复"
+        ],
+        "en": [
+          "Blueprints",
+          "Inheritance chain",
+          "Component repair"
+        ]
+      }
+    },
+    "case:plugin-release-workflow": {
+      "topics": [
+        "development-release"
+      ],
+      "legacyTags": {
+        "zh": [
+          "UnrealEngine",
+          "插件",
+          "自动化"
+        ],
+        "en": [
+          "UnrealEngine",
+          "Plugins",
+          "Automation"
+        ]
+      }
+    },
+    "case:markdown-publishing": {
+      "topics": [
+        "content-file-processing"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Markdown",
+          "图片",
+          "写作工具"
+        ],
+        "en": [
+          "Markdown",
+          "Images",
+          "Writing tools"
+        ]
+      }
+    }
+  }
+}

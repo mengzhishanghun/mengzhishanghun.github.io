@@ -11,11 +11,13 @@ import {assertPublicFields} from './source-schema.mjs';
 import {articleTypes,validateArticleIdentities,shareRoute} from '../engagement/article-identities.mjs';
 import {loadResources,regularPath,resourcePath,safeRelative} from './resources.mjs';
 import {projectBlogTopics} from '../blog/topics.mjs';
+import {projectContentTopics} from './content-topics.mjs';
 const require = createRequire(new URL('../../package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
 const acorn=require('acorn');
 const here = path.dirname(fileURLToPath(import.meta.url));
+const indexContentTypes=new Map([['page:blog-index','blog'],['page:works-index','work'],['page:cases-index','case']]);
 const {createMarkdownProcessor} = await import(pathToFileURL(require.resolve('@astrojs/markdown-remark')));
 const {default:rehypeExpressiveCode} = await import(pathToFileURL(require.resolve('rehype-expressive-code')));
 const escapeHTML = value => String(value ?? '').replace(/[&<>"']/g,c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -118,6 +120,8 @@ export function preflight({sourceRoot,site,manifest}) {
     }
   }
   projectBlogTopics({site,entries,config,copy});
+  projectContentTopics({site,entries,config,copy,type:'work',indexId:'page:works-index',topicsPath:'src/works/topics.json',labelPrefix:'work-topic'});
+  projectContentTopics({site,entries,config,copy,type:'case',indexId:'page:cases-index',topicsPath:'src/cases/topics.json',labelPrefix:'case-topic'});
   return {routes,entries,config,copy};
 }
 function routeFile(route) { return route.slice(1) + (route.endsWith('.html') ? '' : 'index.html'); }
@@ -291,16 +295,16 @@ function translationDictionary(copy,entries,locale,primary) {
   }
   return dict;
 }
-function localizeJSON(value,dict,entries,locale) {
+function localizeJSON(value,dict,entries,locale,contentType) {
   if(typeof value==='string') return mapURL(dict.get(value) ?? value,locale,entries);
   if(Array.isArray(value)) {
-    const result=value.map(v=>localizeJSON(v,dict,entries,locale));
+    const result=value.map(v=>localizeJSON(v,dict,entries,locale,contentType));
     if(result.length && result.every(v=>v && typeof v==='object' && entries.some(e=>e.type==='work' && e.slug===v.slug)))result.sort((a,b)=>entries.find(e=>e.type==='work' && e.slug===a.slug).cardOrder-entries.find(e=>e.type==='work' && e.slug===b.slug).cardOrder);
     return result;
   }
   if(value && typeof value==='object') {
-    const result=Object.fromEntries(Object.entries(value).map(([k,v])=>[k,localizeJSON(v,dict,entries,locale)]));
-    const match=entries.find(e=>e.slug===value.slug && (value.type ? e.type===value.type : true));
+    const result=Object.fromEntries(Object.entries(value).map(([k,v])=>[k,localizeJSON(v,dict,entries,locale,contentType)]));
+    const match=entries.find(e=>e.slug===value.slug && (value.type || contentType ? e.type===(value.type || contentType) : true));
     if(match) for(const field of ['title','description','categoryName','status','order']) if(field in value && match.sources[locale].data[field]!==undefined)result[field]=localizeJSON(match.sources[locale].data[field],dict,entries,locale);
     if(match && 'body' in value)result.body=match.searchBodies?.[locale] || '';
     if(match && ('tags' in value || 'searchTags' in value)){const {tags,searchTags}=contentTags(match,locale);Object.assign(result,{tags,searchTags});}
@@ -311,6 +315,7 @@ function localizeJSON(value,dict,entries,locale) {
 }
 function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels) {
   const doc = parse(html,{sourceCodeLocationInfo:true}), edits=[], excluded=new Set();
+  const contentType=indexContentTypes.get(entry.id);
   const urls=Object.fromEntries(config.languages.map(l=>[l.code,localeRoute(entry,l.code)]));
   const runtime={...publicLanguages(config),locale,urls,anchors,labels};
   const nav='<label class="site-language-switch"><select data-site-language-select data-current="'+locale+'" aria-label="'+escapeHTML(labels.group)+'">'+config.languages.map(l=>'<option value="'+l.code+'" data-site-locale="'+l.code+'"'+(l.code===locale?' selected':'')+'>'+escapeHTML(l.label)+'</option>').join('')+'</select></label>';
@@ -324,7 +329,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(excluded.has(node))return;
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
-    if(entry.id==='page:blog-index' && a['data-content-index']!==undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-tags-display="all" data-content-topic-aliases="'+escapeHTML(safeJSON(entry.topicAliases[locale]))+'"']);
+    if(contentType && a['data-content-index']!==undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-tags-display="all" data-content-topic-aliases="'+escapeHTML(safeJSON(entry.topicAliases?.[locale] || {}))+'"']);
     if(contentIndex && a['data-content-card']!==undefined && loc.attrs?.hidden)edits.push([loc.attrs.hidden.startOffset,loc.attrs.hidden.endOffset,'']);
     if(contentIndex && ['content-category-nav','content-filter'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
     if(contentIndex && a['data-content-pagination']!==undefined && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
@@ -363,19 +368,19 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(node.tagName==='script' && scriptURLs?.has(a.src) && loc.attrs?.src)edits.push([loc.attrs.src.startOffset,loc.attrs.src.endOffset,`src="${scriptURLs.get(a.src)}"`]);
     if(node.tagName==='script' && a.type==='application/json' && loc.startTag && loc.endTag) {
       const raw=html.slice(loc.startTag.endOffset,loc.endTag.startOffset);
-      if(raw.trim()) edits.push([loc.startTag.endOffset,loc.endTag.startOffset,safeJSON(localizeJSON(JSON.parse(raw),dict,entries,locale))]);
+      if(raw.trim()) edits.push([loc.startTag.endOffset,loc.endTag.startOffset,safeJSON(localizeJSON(JSON.parse(raw),dict,entries,locale,contentType))]);
     }
     if(['content-card-tags','work-card-tags'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && loc.startTag && loc.endTag) {
       let card=node;while(card && attrs(card)['data-content-card']===undefined)card=card.parentNode;
-      const target=card?entries.find(e=>e.slug===attrs(card)['data-slug']):entry;
+      const target=card?entries.find(e=>e.slug===attrs(card)['data-slug'] && (!contentType || e.type===contentType)):entry;
       if(!target)throw new Error('标签卡片来源缺失');
       const child=node.childNodes.find(n=>n.tagName),tag=child?.tagName || (node.tagName==='ul'?'li':'span');
       const open=child?.sourceCodeLocation?.startTag?html.slice(child.sourceCodeLocation.startTag.startOffset,child.sourceCodeLocation.startTag.endOffset):'<'+tag+'>';
       edits.push([loc.startTag.endOffset,loc.endTag.startOffset,contentTags(target,locale).tags.map(text=>open+escapeHTML(text)+'</'+tag+'>').join('')]);
     }
     if(a['data-content-card']!==undefined && a['data-slug']){
-      const blog=entries.find(e=>e.type==='blog'&&e.slug===a['data-slug']);
-      if(blog)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-legacy-tags="'+escapeHTML(safeJSON(contentTags(blog,locale).legacyTags))+'"']);
+      const item=contentType?entries.find(e=>e.type===contentType&&e.slug===a['data-slug']):null;
+      if(item)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-legacy-tags="'+escapeHTML(safeJSON(contentTags(item,locale).legacyTags))+'"']);
     }
     if(a['data-content-card']!==undefined && a['data-slug'] && a.style && loc.attrs?.style) {
       const work=entries.find(e=>e.type==='work' && e.slug===a['data-slug']);
