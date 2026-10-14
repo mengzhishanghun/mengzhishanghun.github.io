@@ -1,7 +1,7 @@
 .article-detail-controls { display: flex; flex-wrap: wrap; align-items: flex-start; gap: .5rem; min-width: 0; padding-bottom: .5rem; }
 .site-chrome mzsh-reading .article-detail-controls > .article-back { flex: 0 0 auto; min-height: 44px; box-sizing: border-box; padding: .5rem 0; border: 0; }
-.article-engagement { box-sizing: border-box; flex: 0 1 auto; min-width: 0; max-width: 100%; max-height: min(36dvh, 12rem, max(44px, calc(var(--outline-max-height, calc(100dvh - 185px)) - 8rem))); margin: 0; padding: 0; overflow: auto; overscroll-behavior: contain; color: var(--reading-heading-muted, #c8d8e0); }
-.article-engagement-actions { display: flex; gap: .5rem; align-items: stretch; min-width: 0; }
+.article-engagement { box-sizing: border-box; flex: 1 1 0; min-width: 0; max-width: 100%; max-height: min(36dvh, 12rem, max(44px, calc(var(--outline-max-height, calc(100dvh - 185px)) - 8rem))); margin: 0; padding: 0; overflow: auto; overscroll-behavior: contain; color: var(--reading-heading-muted, #c8d8e0); }
+.article-engagement-actions { display: flex; flex-wrap: wrap; gap: .5rem; align-items: center; min-width: 0; }
 .article-engagement button { display: inline-flex; align-items: center; justify-content: center; gap: .35rem; flex: 0 0 auto; min-width: 44px; max-width: 100%; min-height: 44px; padding: .5rem; border: 0; border-radius: .55rem; background: transparent; color: #eef3f6; font: inherit; line-height: 1.45; white-space: nowrap; cursor: pointer; }
 .article-engagement-icon { flex: none; width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .article-engagement [aria-pressed="true"] .article-engagement-heart { fill: currentColor; }
@@ -10,7 +10,7 @@
 .article-engagement button:focus-visible, .article-engagement input:focus-visible { outline: 3px solid #8ad6e5; outline-offset: 3px; }
 .article-engagement button:disabled { cursor: default; color: #c8d8e0; }
 .article-engagement [hidden] { display: none !important; }
-.article-engagement-status { min-height: 1.5em; margin: .5rem 0 0; font-size: .9rem; line-height: 1.5; overflow-wrap: anywhere; }
+.article-engagement-status { flex: 0 1 auto; min-width: 0; max-width: 100%; margin: 0; font-size: .9rem; line-height: 1.5; overflow-wrap: anywhere; }
 .article-engagement-status:empty { display: none; }
 .article-engagement-manual { display: grid; gap: .5rem; min-width: 0; margin-top: .5rem; overflow-wrap: anywhere; }
 .article-engagement input { box-sizing: border-box; min-height: 44px; width: 100%; max-width: 100%; min-width: 0; padding: .5rem; background: #142733; border: 1px solid #3f6576; color: #eef3f6; font: inherit; }
@@ -24,7 +24,7 @@
   .reading-surface mobile-outline[data-ready] .outline-mobile-controls { justify-content: flex-start; flex-wrap: wrap; gap: .5rem; min-width: 0; }
   .reading-surface mobile-outline[data-ready] :is(.outline-mobile-back, .outline-mobile-toggle) { gap: .5rem; padding-inline: .5rem; }
   .reading-surface mobile-outline[data-ready] .outline-mobile-toggle { margin-left: auto; }
-  mobile-outline .outline-mobile-controls > .article-engagement { flex: 0 1 auto; max-height: min(32dvh, 10rem); }
+  mobile-outline .outline-mobile-controls > .article-engagement { flex: 1 1 0; max-height: min(32dvh, 10rem); }
   .site-chrome mzsh-reading .article-sidebar:has(.article-engagement) { position: static; max-height: none; }
   .article-sidebar:has(.article-engagement) > .article-outline { max-height: 12rem; }
 }
