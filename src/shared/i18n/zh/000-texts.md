@@ -5922,6 +5922,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
 scriptSlots:
   content-index:load-more: 加载更多
+  content-index:all-shown: 已显示全部
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:1187: Bilibili 播放器
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:2062: Bilibili 播放器
   _astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:2214: 文章

@@ -9,6 +9,7 @@ function runtime({query='',io=true,broken=false,locale='en',route='blog'}={}) {
   class Element extends EventTarget {
     dataset={};style={};hidden=false;isConnected=true;children=[];attrs={};value='';
     setAttribute(k,v){this.attrs[k]=v;}focus(){if(focusedElement)focusedElement.focused=false;focusedElement=this;this.focused=true;}scrollIntoView(){this.scrolled=true;}
+    blur(){if(focusedElement===this){focusedElement=null;this.focused=false;}this.dispatchEvent(new Event('blur'));}
     replaceChildren(...children){for(const child of this.children){child.isConnected=false;if(focusedElement===child){child.focused=false;focusedElement=null;}}this.children=children;for(const child of children)child.isConnected=this.isConnected;}
     getBoundingClientRect(){return {top:1200,bottom:1244};}
     querySelector(s){return this.children.find(e=>s==='[data-tag-all]'?e.dataset.tagAll!==undefined:s===`[data-tag="${e.dataset.tag}"]`);}
@@ -24,13 +25,13 @@ function runtime({query='',io=true,broken=false,locale='en',route='blog'}={}) {
   const document=new EventTarget();document.documentElement={lang:'en'};document.createElement=()=>new Element();document.querySelectorAll=s=>s==='[data-content-index]'&&root.isConnected?[root]:[];
   Object.defineProperty(document,'activeElement',{get:()=>focusedElement});
   const window=new EventTarget();window.SiteCopy=fixture.copy;window.SiteLanguageCode='en';window.SitePrimaryCode='zh';
-  const history={state:{index:7,keep:'yes'},replaceState(state,_title,href){this.state=state;if(href)url=new URL(href,url);}};
+  const history={state:{index:7,keep:'yes'},writes:0,replaceState(state,_title,href){this.writes++;this.state=state;if(href)url=new URL(href,url);}};
   const context={document,window,history,get location(){return url;},URLSearchParams,CSS:{escape:s=>s},AbortController,CustomEvent:class extends Event{constructor(name,{detail}={}){super(name);this.detail=detail;}},performance:{clearMarks(){},mark(){}},requestAnimationFrame:fn=>{queue.set(++next,fn);return next;},cancelAnimationFrame:id=>queue.delete(id)};
   if(io)context.IntersectionObserver=class{constructor(fn,options){this.fn=fn;this.options=options;observers.push(this);}observe(target){this.target=target;}disconnect(){this.disconnected=true;}};
   vm.runInNewContext(source,context);
   const flush=()=>{const batch=[...queue.values()];queue.clear();batch.forEach(fn=>fn());};
   const emit=(el,name)=>el.dispatchEvent(new Event(name,{cancelable:true}));
-  return {root,frame,cards,select,document,observers,flush,emit,history,get url(){return url;},visible:()=>cards.filter(c=>!c.hidden).map(c=>c.dataset.slug)};
+  return {root,frame,cards,select,document,observers,queue,flush,emit,history,get url(){return url;},visible:()=>cards.filter(c=>!c.hidden).map(c=>c.dataset.slug)};
 }
 for(const locale of ['zh','en'])for(const route of ['blog','works','cases'])test(`${locale}/${route} exposes every static card and hides JS controls`,()=>{
   const f=generatedPage(`${locale}/${route}/index.html`),cards=f.nodes.filter(n=>f.attrs(n)['data-content-card']!==undefined);
@@ -43,5 +44,15 @@ test('search and category changes reset expanded batches and keep matching resul
 test('tag changes reset batches and keyboard button activation can load remaining matches',()=>{const x=runtime({query:'?page=2',io:false});const tag=x.select('[data-content-tags]').children.find(t=>t.dataset.tag==='even');x.emit(tag,'click');assert.equal(x.visible().length,10);assert.equal(x.url.search,'?tag=even');x.emit(x.select('[data-content-next]'),'click');assert.equal(x.visible().length,13);assert.equal(x.select('[data-content-next]').hidden,true);});
 test('observer uses the actual scroll frame and fills a still-visible sentinel',()=>{const x=runtime();assert.equal(x.observers[0]?.options.root,x.frame);const o=x.observers[0];o.target.getBoundingClientRect=()=>({top:700,bottom:744});o.fn([{target:o.target,isIntersecting:true}]);x.flush();x.flush();assert.equal(x.visible().length,25);assert.equal(x.frame.scrollTop,640);});
 test('automatic append preserves the connected focused tag node while filter changes rebuild tags',()=>{const x=runtime(),tags=x.select('[data-content-tags]'),tag=tags.children.find(t=>t.dataset.tag==='even');tag.focus();const o=x.observers[0];o.fn([{target:o.target,isIntersecting:true}]);assert.equal(x.visible().length,20);assert.equal(tag.isConnected,true);assert.equal(x.document.activeElement,tag);assert.ok(tags.children.includes(tag));x.select('[data-content-query]').value='needle';x.emit(x.select('[data-content-query]'),'input');assert.equal(tag.isConnected,false);assert.deepEqual(x.visible(),['item-24']);});
+for(const mode of ['manual','observer'])test(`${mode} final batch retains focused completion until blur and ignores repeated activation`,()=>{
+  const x=runtime({query:'?page=2',io:mode==='observer'}),button=x.select('[data-content-next]'),pagination=x.select('[data-content-pagination]');button.focus();
+  const append=()=>mode==='manual'?x.emit(button,'click'):x.observers[0].fn([{target:button,isIntersecting:true}]);append();
+  assert.equal(x.visible().length,25);assert.equal(x.document.activeElement,button);assert.equal(button.hidden,false);assert.equal(button.disabled,false);assert.equal(button.attrs['aria-disabled'],'true');assert.equal(pagination.hidden,false);assert.equal(button.textContent,'All items shown');assert.equal(x.frame.scrollTop,640);
+  const writes=x.history.writes;append();x.emit(button,'click');x.flush();x.flush();append();x.flush();assert.equal(x.history.writes,writes);assert.equal(x.queue.size,0);assert.equal(x.url.search,'?page=3');
+  const query=x.select('[data-content-query]');query.value='needle';x.emit(query,'input');assert.equal(x.visible().length,1);assert.equal(pagination.hidden,false);assert.equal(button.hidden,false);assert.equal(x.document.activeElement,button);
+  button.blur();assert.equal(button.hidden,true);assert.equal(pagination.hidden,true);
+  query.focus();query.value='';x.emit(query,'input');assert.equal(x.visible().length,10);assert.equal(button.hidden,false);assert.equal(button.disabled,false);assert.equal(button.attrs['aria-disabled'],'false');assert.equal(button.textContent,'Load more');assert.equal(x.document.activeElement,query);
+});
+test('unfocused final batch hides the exhausted button without changing other focus or scroll',()=>{const x=runtime({query:'?page=2'}),query=x.select('[data-content-query]'),button=x.select('[data-content-next]');query.focus();x.observers[0].fn([{target:button,isIntersecting:true}]);assert.equal(x.visible().length,25);assert.equal(button.hidden,true);assert.equal(x.document.activeElement,query);assert.equal(x.frame.scrollTop,640);});
 test('successful swap disconnects old observer; canceled preparation keeps it usable',()=>{const x=runtime(),o=x.observers[0];assert.ok(o);x.emit(x.document,'astro:before-preparation');o.fn([{target:o.target,isIntersecting:true}]);assert.equal(x.visible().length,20);x.root.isConnected=false;x.emit(x.document,'astro:after-swap');assert.equal(o.disconnected,true);o.fn([{target:o.target,isIntersecting:true}]);assert.equal(x.visible().length,20);});
 for(const locale of ['zh','en'])for(const route of ['blog','works','cases'])test(`${locale}/${route} malformed data leaves all static cards visible and controls hidden`,()=>{const x=runtime({broken:true,locale,route});assert.equal(x.visible().length,26);assert.equal(x.root.dataset.ready,'failed');for(const selector of ['.content-category-nav','.content-filter','[data-content-pagination]'])assert.equal(x.select(selector).hidden,true);});

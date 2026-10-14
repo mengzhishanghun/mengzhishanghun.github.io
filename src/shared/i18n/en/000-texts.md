@@ -5922,6 +5922,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
 scriptSlots:
   content-index:load-more: Load more
+  content-index:all-shown: All items shown
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:1187: Bilibili player
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:2062: Bilibili player
   _astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:2214: articles
@@ -7628,7 +7629,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: da0e6a95a8838537a0ec09ba1f1476b2d0d5d3b8a66a3cfd5694e81f5cd8dba1
+sourceHash: 9633f25dde88bc33c3b51d7b41a28d6897b80e35177f2519f2c3d30f7832acb6
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---
