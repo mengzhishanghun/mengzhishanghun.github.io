@@ -5921,6 +5921,20 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
 scriptSlots:
+  content-index:tags-more: More tags
+  content-index:tags-less: Fewer tags
+  blog-topic:programming-scripting: "Programming & Scripting"
+  blog-topic:blueprints-reflection: "Blueprints & Reflection"
+  blog-topic:editor-tools: "Editor Tools"
+  blog-topic:data-configuration: "Data & Configuration"
+  blog-topic:network-communication: "Network Communication"
+  blog-topic:animation-digital-humans: "Animation & Digital Humans"
+  blog-topic:rendering-materials: "Rendering & Materials"
+  blog-topic:ui-development: "UI Development"
+  blog-topic:scenes-levels: "Scenes & Levels"
+  blog-topic:build-release: "Build & Release"
+  blog-topic:development-environment: "Development Environment"
+  blog-topic:version-control-collaboration: "Version Control & Collaboration"
   content-index:load-more: Load more
   content-index:all-shown: All items shown
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:1187: Bilibili player
@@ -7629,7 +7643,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 9633f25dde88bc33c3b51d7b41a28d6897b80e35177f2519f2c3d30f7832acb6
+sourceHash: 2b85d86067ffa920afb65f04782961df7204ba7ece4a5a97ddd701924da4c36e
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

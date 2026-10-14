@@ -5921,6 +5921,20 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
 scriptSlots:
+  content-index:tags-more: 更多标签
+  content-index:tags-less: 收起标签
+  blog-topic:programming-scripting: "编程与脚本"
+  blog-topic:blueprints-reflection: "蓝图与反射"
+  blog-topic:editor-tools: "编辑器工具"
+  blog-topic:data-configuration: "数据与配置"
+  blog-topic:network-communication: "网络通信"
+  blog-topic:animation-digital-humans: "动画与数字人"
+  blog-topic:rendering-materials: "渲染与材质"
+  blog-topic:ui-development: "界面开发"
+  blog-topic:scenes-levels: "场景与关卡"
+  blog-topic:build-release: "构建与发布"
+  blog-topic:development-environment: "开发环境"
+  blog-topic:version-control-collaboration: "版本协作"
   content-index:load-more: 加载更多
   content-index:all-shown: 已显示全部
   blog:ue53-multiview-gi:root.html:1.body:1.script:5:1187: Bilibili 播放器

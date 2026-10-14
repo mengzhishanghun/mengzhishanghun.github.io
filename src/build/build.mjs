@@ -10,6 +10,7 @@ import {mapMedia} from './media.mjs';
 import {assertPublicFields} from './source-schema.mjs';
 import {articleTypes,validateArticleIdentities,shareRoute} from '../engagement/article-identities.mjs';
 import {loadResources,regularPath,resourcePath,safeRelative} from './resources.mjs';
+import {projectBlogTopics} from '../blog/topics.mjs';
 const require = createRequire(new URL('../../package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -45,6 +46,9 @@ export function sourceTags(source) {
   const tags=source.data.tags ?? [],search=source.data.searchTags ?? [];
   if(![tags,search].every(list=>Array.isArray(list) && list.every(value=>typeof value==='string' && value.trim())))throw new Error('来源标签必须为字符串数组');
   return {tags:[...new Set(tags)],searchTags:[...new Set([...tags,...search])]};
+}
+export function contentTags(entry,locale) {
+  return entry.projectedTags?.[locale] || sourceTags(entry.sources[locale]);
 }
 export function preflight({sourceRoot,site,manifest}) {
   validateArticleIdentities(manifest.entries,JSON.parse(fs.readFileSync(path.join(here,'../engagement/article-identities.json'),'utf8')));
@@ -113,6 +117,7 @@ export function preflight({sourceRoot,site,manifest}) {
       checkSlots(base[group],item[group]);
     }
   }
+  projectBlogTopics({site,entries,config,copy});
   return {routes,entries,config,copy};
 }
 function routeFile(route) { return route.slice(1) + (route.endsWith('.html') ? '' : 'index.html'); }
@@ -298,7 +303,7 @@ function localizeJSON(value,dict,entries,locale) {
     const match=entries.find(e=>e.slug===value.slug && (value.type ? e.type===value.type : true));
     if(match) for(const field of ['title','description','categoryName','status','order']) if(field in value && match.sources[locale].data[field]!==undefined)result[field]=localizeJSON(match.sources[locale].data[field],dict,entries,locale);
     if(match && 'body' in value)result.body=match.searchBodies?.[locale] || '';
-    if(match && ('tags' in value || 'searchTags' in value))Object.assign(result,sourceTags(match.sources[locale]));
+    if(match && ('tags' in value || 'searchTags' in value)){const {tags,searchTags}=contentTags(match,locale);Object.assign(result,{tags,searchTags});}
     if(match && 'coverAlt' in value)result.coverAlt=match.sources[locale].data.coverAlt ?? '';
     return result;
   }
@@ -319,6 +324,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(excluded.has(node))return;
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
+    if(entry.id==='page:blog-index' && a['data-content-index']!==undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-topic-aliases="'+escapeHTML(safeJSON(entry.topicAliases[locale]))+'"']);
     if(contentIndex && a['data-content-card']!==undefined && loc.attrs?.hidden)edits.push([loc.attrs.hidden.startOffset,loc.attrs.hidden.endOffset,'']);
     if(contentIndex && ['content-category-nav','content-filter'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
     if(contentIndex && a['data-content-pagination']!==undefined && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
@@ -365,7 +371,11 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
       if(!target)throw new Error('标签卡片来源缺失');
       const child=node.childNodes.find(n=>n.tagName),tag=child?.tagName || (node.tagName==='ul'?'li':'span');
       const open=child?.sourceCodeLocation?.startTag?html.slice(child.sourceCodeLocation.startTag.startOffset,child.sourceCodeLocation.startTag.endOffset):'<'+tag+'>';
-      edits.push([loc.startTag.endOffset,loc.endTag.startOffset,sourceTags(target.sources[locale]).tags.map(text=>open+escapeHTML(text)+'</'+tag+'>').join('')]);
+      edits.push([loc.startTag.endOffset,loc.endTag.startOffset,contentTags(target,locale).tags.map(text=>open+escapeHTML(text)+'</'+tag+'>').join('')]);
+    }
+    if(a['data-content-card']!==undefined && a['data-slug']){
+      const blog=entries.find(e=>e.type==='blog'&&e.slug===a['data-slug']);
+      if(blog)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-legacy-tags="'+escapeHTML(safeJSON(contentTags(blog,locale).legacyTags))+'"']);
     }
     if(a['data-content-card']!==undefined && a['data-slug'] && a.style && loc.attrs?.style) {
       const work=entries.find(e=>e.type==='work' && e.slug===a['data-slug']);

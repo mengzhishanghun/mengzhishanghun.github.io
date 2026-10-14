@@ -4,34 +4,38 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import {generatedPage} from './interaction-fixtures.mjs';
 const source=fs.readFileSync(new URL('../shared/i18n/scripts/_astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js',import.meta.url),'utf8');
-function runtime({query='',io=true,broken=false,locale='en',route='blog'}={}) {
+function runtime({query='',io=true,broken=false,locale='en',route='blog',documents=null,savedState={},aliases=null}={}) {
   const fixture=generatedPage(`${locale}/${route}/index.html`),queue=new Map(),observers=[];let next=0,url=new URL(`https://mzsh.me/${locale}/${route}/`+query),focusedElement=null;
   class Element extends EventTarget {
     dataset={};style={};hidden=false;isConnected=true;children=[];attrs={};value='';
     setAttribute(k,v){this.attrs[k]=v;}focus(){if(focusedElement)focusedElement.focused=false;focusedElement=this;this.focused=true;}scrollIntoView(){this.scrolled=true;}
     blur(){if(focusedElement===this){focusedElement=null;this.focused=false;}this.dispatchEvent(new Event('blur'));}
+    after(element){this.sibling=element;}append(...children){this.children.push(...children);}
     replaceChildren(...children){for(const child of this.children){child.isConnected=false;if(focusedElement===child){child.focused=false;focusedElement=null;}}this.children=children;for(const child of children)child.isConnected=this.isConnected;}
     getBoundingClientRect(){return {top:1200,bottom:1244};}
     querySelector(s){return this.children.find(e=>s==='[data-tag-all]'?e.dataset.tagAll!==undefined:s===`[data-tag="${e.dataset.tag}"]`);}
+    querySelectorAll(s){return s==='[data-tag]'?this.children.filter(e=>e.dataset.tag!==undefined):[];}
   }
   const elements=new Map();for(const node of fixture.nodes){if(!node.tagName)continue;const el=new Element(),a=fixture.attrs(node);for(const [k,v]of Object.entries(a))if(k.startsWith('data-'))el.dataset[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=v;el.hidden=Object.hasOwn(a,'hidden');elements.set(node,el);}
   const root=elements.get(fixture.select('[data-content-index]'));
+  if(aliases)root.dataset.contentTopicAliases=JSON.stringify(aliases);
   const select=s=>elements.get(fixture.select(s));
   root.querySelector=select;root.querySelectorAll=s=>fixture.nodes.filter(n=>fixture.matches(n,s)).map(n=>elements.get(n));
   const frame=new Element();frame.scrollTop=640;frame.getBoundingClientRect=()=>({top:0,bottom:800});root.closest=s=>s==='.site-chrome-main'?frame:null;
-  const records=Array.from({length:25},(_,i)=>({slug:'item-'+i,categoryId:'ue',categoryName:'UE',title:i===24?'needle':'Entry '+i,description:'',body:'',tags:[i%2?'odd':'even']}));records.push({slug:'other',categoryId:'cpp',categoryName:'C++',title:'Other',description:'',body:'',tags:['even']});
-  const cards=records.map(r=>{const el=new Element();el.dataset.slug=r.slug;return el;});const baseAll=root.querySelectorAll;root.querySelectorAll=s=>s==='[data-content-card]'?cards:baseAll(s);
+  const records=documents || Array.from({length:25},(_,i)=>({slug:'item-'+i,categoryId:'ue',categoryName:'UE',title:i===24?'needle':'Entry '+i,description:'',body:'',tags:[i%2?'odd':'even']}));if(!documents)records.push({slug:'other',categoryId:'cpp',categoryName:'C++',title:'Other',description:'',body:'',tags:['even']});
+  const cards=records.map(r=>{const el=new Element();el.dataset.slug=r.slug;if(r.legacyTags)el.dataset.contentLegacyTags=JSON.stringify(r.legacyTags);return el;});const baseAll=root.querySelectorAll;root.querySelectorAll=s=>s==='[data-content-card]'?cards:baseAll(s);
   select('[data-content-index-data]').textContent=broken?'{':JSON.stringify(records);
-  const document=new EventTarget();document.documentElement={lang:'en'};document.createElement=()=>new Element();document.querySelectorAll=s=>s==='[data-content-index]'&&root.isConnected?[root]:[];
+  const document=new EventTarget();document.documentElement={lang:locale};document.createElement=()=>new Element();document.querySelectorAll=s=>s==='[data-content-index]'&&root.isConnected?[root]:[];
   Object.defineProperty(document,'activeElement',{get:()=>focusedElement});
   const window=new EventTarget();window.SiteCopy=fixture.copy;window.SiteLanguageCode='en';window.SitePrimaryCode='zh';
-  const history={state:{index:7,keep:'yes'},writes:0,replaceState(state,_title,href){this.writes++;this.state=state;if(href)url=new URL(href,url);}};
+  const history={state:{index:7,keep:'yes',...savedState},writes:0,replaceState(state,_title,href){this.writes++;this.state=state;if(href)url=new URL(href,url);}};
   const context={document,window,history,get location(){return url;},URLSearchParams,CSS:{escape:s=>s},AbortController,CustomEvent:class extends Event{constructor(name,{detail}={}){super(name);this.detail=detail;}},performance:{clearMarks(){},mark(){}},requestAnimationFrame:fn=>{queue.set(++next,fn);return next;},cancelAnimationFrame:id=>queue.delete(id)};
   if(io)context.IntersectionObserver=class{constructor(fn,options){this.fn=fn;this.options=options;observers.push(this);}observe(target){this.target=target;}disconnect(){this.disconnected=true;}};
+  const readyStates=[];document.addEventListener('mzsh:content-index-ready',()=>readyStates.push({expanded:select('[data-content-tags]').sibling?.attrs['aria-expanded'],visibleTags:select('[data-content-tags]').children.filter(t=>t.dataset.tag&&!t.hidden).length}));
   vm.runInNewContext(source,context);
   const flush=()=>{const batch=[...queue.values()];queue.clear();batch.forEach(fn=>fn());};
   const emit=(el,name)=>el.dispatchEvent(new Event(name,{cancelable:true}));
-  return {root,frame,cards,select,document,observers,queue,flush,emit,history,get url(){return url;},visible:()=>cards.filter(c=>!c.hidden).map(c=>c.dataset.slug)};
+  return {root,frame,cards,select,document,observers,queue,flush,emit,history,readyStates,toggle:()=>select('[data-content-tags]').sibling,get url(){return url;},visible:()=>cards.filter(c=>!c.hidden).map(c=>c.dataset.slug)};
 }
 for(const locale of ['zh','en'])for(const route of ['blog','works','cases'])test(`${locale}/${route} exposes every static card and hides JS controls`,()=>{
   const f=generatedPage(`${locale}/${route}/index.html`),cards=f.nodes.filter(n=>f.attrs(n)['data-content-card']!==undefined);
@@ -56,3 +60,32 @@ for(const mode of ['manual','observer'])test(`${mode} final batch retains focuse
 test('unfocused final batch hides the exhausted button without changing other focus or scroll',()=>{const x=runtime({query:'?page=2'}),query=x.select('[data-content-query]'),button=x.select('[data-content-next]');query.focus();x.observers[0].fn([{target:button,isIntersecting:true}]);assert.equal(x.visible().length,25);assert.equal(button.hidden,true);assert.equal(x.document.activeElement,query);assert.equal(x.frame.scrollTop,640);});
 test('successful swap disconnects old observer; canceled preparation keeps it usable',()=>{const x=runtime(),o=x.observers[0];assert.ok(o);x.emit(x.document,'astro:before-preparation');o.fn([{target:o.target,isIntersecting:true}]);assert.equal(x.visible().length,20);x.root.isConnected=false;x.emit(x.document,'astro:after-swap');assert.equal(o.disconnected,true);o.fn([{target:o.target,isIntersecting:true}]);assert.equal(x.visible().length,20);});
 for(const locale of ['zh','en'])for(const route of ['blog','works','cases'])test(`${locale}/${route} malformed data leaves all static cards visible and controls hidden`,()=>{const x=runtime({broken:true,locale,route});assert.equal(x.visible().length,26);assert.equal(x.root.dataset.ready,'failed');for(const selector of ['.content-category-nav','.content-filter','[data-content-pagination]'])assert.equal(x.select(selector).hidden,true);});
+
+const topicDocuments=()=>Array.from({length:12},(_,i)=>({slug:'topic-'+i,categoryId:'ue',categoryName:'UE',title:'Topic '+i,description:'',body:'',tags:['theme-'+String(i).padStart(2,'0')],legacyTags:[i<2?'Old exact':'Other'],searchTags:['search-only']}));
+test('collapsed tags expose eight plus selected legacy terms; unknown terms yield zero results',()=>{const x=runtime({documents:topicDocuments(),query:'?tag=theme-11',io:false}),tags=x.select('[data-content-tags]');assert.equal(tags.children.filter(t=>t.dataset.tag&&!t.hidden).length,9);assert.equal(tags.children.find(t=>t.dataset.tag==='theme-11').hidden,false);assert.deepEqual(x.visible(),['topic-11']);const unknown=runtime({documents:topicDocuments(),query:'?tag=unknown',io:false});assert.deepEqual(unknown.visible(),[]);assert.equal(unknown.select('[data-content-tags]').children.find(t=>t.dataset.tag==='unknown')?.attrs['aria-pressed'],'true');unknown.emit(unknown.select('[data-content-tags]').children.find(t=>t.dataset.tag==='unknown'),'click');assert.equal(unknown.visible().length,10);});
+test('legacy memberships retain precise AND semantics and never use broad search tags',()=>{const x=runtime({documents:topicDocuments(),query:'?tag=Old+exact',io:false});assert.deepEqual(x.visible(),['topic-0','topic-1']);const and=runtime({documents:topicDocuments(),query:'?tag=Old+exact&tag=theme-01',io:false});assert.deepEqual(and.visible(),['topic-1']);assert.deepEqual(runtime({documents:topicDocuments(),query:'?tag=search-only',io:false}).visible(),[]);});
+test('stable expand control preserves batches, focus and history; category changes collapse',()=>{const x=runtime({documents:topicDocuments(),query:'?page=2',io:false}),toggle=x.toggle();assert.ok(toggle);toggle.focus();x.emit(toggle,'click');assert.equal(x.toggle(),toggle);assert.equal(toggle.attrs['aria-expanded'],'true');assert.equal(x.visible().length,12);assert.equal(x.url.search,'?page=2');assert.equal(x.frame.scrollTop,640);assert.equal(x.document.activeElement,toggle);assert.equal(x.history.state.keep,'yes');assert.equal(x.history.state.mzshContentTags.expanded,true);x.select('[data-content-query]').value='Topic';x.emit(x.select('[data-content-query]'),'input');assert.equal(toggle.attrs['aria-expanded'],'true');x.emit(x.select('[data-category="cpp"]'),'click');assert.equal(toggle.attrs['aria-expanded'],'false');});
+test('return restores expanded tags before ready, while deselected rare tags move focus to toggle',()=>{const x=runtime({documents:topicDocuments(),io:false,savedState:{mzshContentTags:{key:'/en/blog/',category:'ue',expanded:true},mzshViewport:{key:'/en/blog/',top:640}}});assert.equal(x.toggle()?.attrs['aria-expanded'],'true');assert.deepEqual(x.readyStates,[{expanded:'true',visibleTags:12}]);assert.equal(x.history.state.mzshViewport.top,640);const y=runtime({documents:topicDocuments(),query:'?tag=theme-11',io:false}),tag=y.select('[data-content-tags]').children.find(t=>t.dataset.tag==='theme-11');tag.focus();y.emit(tag,'click');assert.equal(y.select('[data-content-tags]').children.find(t=>t.dataset.tag==='theme-11').hidden,true);assert.equal(y.document.activeElement,y.toggle());});
+test('every published legacy blog tag preserves its original per-category article membership',()=>{
+  const topics=JSON.parse(fs.readFileSync(new URL('../blog/topics.json',import.meta.url)));let comparisons=0;
+  for(const locale of ['zh','en']){
+    const fixture=generatedPage(`${locale}/blog/index.html`),node=fixture.select('[data-content-index-data]'),records=JSON.parse(node.childNodes.map(n=>n.value||'').join('')).map(record=>({...record,legacyTags:topics.articles['blog:'+record.slug].legacyTags[locale]}));
+    for(const category of new Set(records.map(r=>r.categoryId)))for(const tag of new Set(records.filter(r=>r.categoryId===category).flatMap(r=>r.legacyTags))){
+      const expected=records.filter(r=>r.categoryId===category&&r.legacyTags.includes(tag)).map(r=>r.slug).sort(),params=new URLSearchParams({category,tag,page:'99'}),x=runtime({locale,documents:records,query:'?'+params,io:false});assert.deepEqual(x.visible().sort(),expected,`${locale}/${category}/${tag}`);comparisons++;
+    }
+  }
+  assert.ok(comparisons>100);
+});
+test('all twelve topics survive bilingual query carryover with exact membership and legacy AND',()=>{
+  const data=JSON.parse(fs.readFileSync(new URL('../blog/topics.json',import.meta.url)));
+  const fixtures=Object.fromEntries(['zh','en'].map(locale=>{const f=generatedPage(`${locale}/blog/index.html`),node=f.select('[data-content-index-data]');return [locale,{f,records:JSON.parse(node.childNodes.map(n=>n.value||'').join('')).map(r=>({...r,legacyTags:data.articles['blog:'+r.slug].legacyTags[locale]}))}];}));
+  const labels=Object.fromEntries(['zh','en'].map(locale=>[locale,Object.fromEntries(data.topics.map(id=>[id,fixtures[locale].f.copy['blog-topic:'+id]]))]));
+  for(const from of ['zh','en']){const to=from==='zh'?'en':'zh',target=fixtures[to],aliases=Object.fromEntries(data.topics.flatMap(id=>['zh','en'].map(locale=>[labels[locale][id],labels[to][id]])));
+    for(const id of data.topics){const expected=target.records.filter(r=>data.articles['blog:'+r.slug].topics.includes(id)).map(r=>r.slug).sort(),actual=[];
+      for(const category of new Set(target.records.map(r=>r.categoryId))){const params=new URLSearchParams({category,tag:labels[from][id],page:'99'}),x=runtime({locale:to,documents:target.records,aliases,query:'?'+params,io:false});actual.push(...x.visible());assert.equal(x.select('[data-content-tags]').children.find(t=>t.dataset.tag===labels[to][id])?.attrs['aria-pressed'],'true');assert.ok(x.url.search.includes(encodeURIComponent(labels[to][id]).replaceAll('%20','+')));}
+      assert.deepEqual(actual.sort(),expected,from+'->'+to+'/'+id);
+    }
+    const record=target.records.find(r=>r.legacyTags.length),id=data.articles['blog:'+record.slug].topics[0],old=record.legacyTags[0],params=new URLSearchParams({category:record.categoryId,page:'99'});params.append('tag',labels[from][id]);params.append('tag',old);const x=runtime({locale:to,documents:target.records,aliases,query:'?'+params,io:false});assert.deepEqual(x.visible().sort(),target.records.filter(r=>r.categoryId===record.categoryId&&r.tags.includes(labels[to][id])&&r.legacyTags.includes(old)).map(r=>r.slug).sort());const button=x.select('[data-content-tags]').children.find(t=>t.dataset.tag===old);x.emit(button,'click');assert.equal(new URLSearchParams(x.url.search).getAll('tag').includes(old),false);
+  }
+  assert.deepEqual(runtime({documents:topicDocuments(),aliases:{known:'theme-01'},query:'?tag=constructor',io:false}).visible(),[]);
+});

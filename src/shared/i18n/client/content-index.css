@@ -2,3 +2,6 @@
 .content-browser .content-pagination { justify-content: center; }
 .content-browser [data-content-next] { min-width: 44px; min-height: 44px; }
 .content-browser [data-content-next]:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+
+.content-browser .content-tags-toggle { min-width: 44px; min-height: 44px; margin-top: 8px; }
+.content-browser .content-tags-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
