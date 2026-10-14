@@ -1,4 +1,3 @@
-.site-chrome .local-page .page-hero { min-height: 160px; }
 .local-page .contact-content { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 32px; }
 .local-page .capability { padding: 14px 0; gap: 16px; }
 .local-page .capability svg { width: 32px; height: 32px; }
