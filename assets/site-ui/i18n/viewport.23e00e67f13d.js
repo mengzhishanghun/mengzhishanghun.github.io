@@ -11,6 +11,7 @@ const rememberedTop = (state, key) => {
   return saved?.key === key && Number.isFinite(saved.top) && saved.top >= 0 ? saved.top : undefined;
 };
 const snapshots = new Map();
+const staticIndexes = new WeakSet();
 let binding, frame = 0, navigation = 0;
 const connected = owner => owner?.element.isConnected && container() === owner.element && location.pathname === owner.pathname;
 function persist(owner, saved, generation) {
@@ -42,6 +43,10 @@ function flush() {
 function bind() {
   const element = container(), entry = currentEntry();
   if (!element?.isConnected) return;
+  // The list may still be showing its static fallback after an Astro swap.
+  // Restore only after its cumulative batches have established the height.
+  const index = element.querySelector?.('[data-content-index]');
+  if (index && !['true','failed'].includes(index.dataset.ready) && !staticIndexes.has(index)) return;
   if (binding?.element === element && binding.documentURL === documentURL() && sameEntry(binding.entry, entry)) return;
   binding?.controller.abort();
   cancelAnimationFrame(frame);
@@ -91,7 +96,23 @@ history.pushState = function pushState() {
 };
 document.addEventListener('astro:before-preparation', () => {navigation++; flush();});
 document.addEventListener('astro:after-swap', bind);
-document.addEventListener('astro:page-load', bind);
+document.addEventListener('astro:page-load', () => {
+  bind();
+  const element = container(), index = element?.querySelector?.('[data-content-index]');
+  if (!index) return;
+  const entry = currentEntry(), generation = navigation;
+  // Astro emits page-load after module load or error. Let every synchronous
+  // initializer run before accepting an unenhanced, complete static list.
+  queueMicrotask(() => {
+    if (!element.isConnected || container() !== element || element.querySelector?.('[data-content-index]') !== index || generation !== navigation || !sameEntry(entry,currentEntry())) return;
+    if (!['true','failed'].includes(index.dataset.ready)) staticIndexes.add(index);
+    bind();
+  });
+});
+document.addEventListener('mzsh:content-index-ready', event => {
+  const element = container();
+  if (element?.isConnected && element.querySelector?.('[data-content-index]') === event.detail?.element) bind();
+});
 window.addEventListener('popstate', traverse);
 window.addEventListener('hashchange', traverse);
 window.addEventListener('pagehide', flush);
