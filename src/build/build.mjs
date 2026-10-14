@@ -324,7 +324,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(excluded.has(node))return;
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
-    if(entry.id==='page:blog-index' && a['data-content-index']!==undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-topic-aliases="'+escapeHTML(safeJSON(entry.topicAliases[locale]))+'"']);
+    if(entry.id==='page:blog-index' && a['data-content-index']!==undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-tags-display="all" data-content-topic-aliases="'+escapeHTML(safeJSON(entry.topicAliases[locale]))+'"']);
     if(contentIndex && a['data-content-card']!==undefined && loc.attrs?.hidden)edits.push([loc.attrs.hidden.startOffset,loc.attrs.hidden.endOffset,'']);
     if(contentIndex && ['content-category-nav','content-filter'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
     if(contentIndex && a['data-content-pagination']!==undefined && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);

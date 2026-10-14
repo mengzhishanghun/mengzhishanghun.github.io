@@ -17,7 +17,9 @@ const legacyTags=new Map(u.map(card=>{
 }));
 const savedTags=history.state?.mzshContentTags;
 let expanded=savedTags?.key===location.pathname && savedTags.category===j && savedTags.expanded===true;
-const tagToggle=document.createElement('button');
+const tagsAlwaysVisible=e.dataset.contentTagsDisplay==='all';
+const tagToggle=tagsAlwaysVisible?null:document.createElement('button');
+if(tagToggle){
 tagToggle.type='button';tagToggle.className='content-tag content-tags-toggle';tagToggle.dataset.contentTagsToggle='';
 C.id ||= 'content-tags-'+[...document.querySelectorAll('[data-content-index]')].indexOf(e);
 tagToggle.setAttribute('aria-controls',C.id);C.after(tagToggle);
@@ -26,14 +28,16 @@ tagToggle.addEventListener('click',()=>{
   C.querySelectorAll('[data-tag]').forEach(button=>button.hidden=!expanded && button.dataset.tagOverflow==='true' && !M.has(button.dataset.tag));
   updateToggle();I();
 });
+}
 function updateToggle(){
+  if(!tagToggle)return;
   tagToggle.setAttribute('aria-expanded',String(expanded));
   tagToggle.textContent=window.SiteCopy[expanded?'content-index:tags-less':'content-index:tags-more']||'';
 }
 function focusTag(tag){
   const button=C.querySelector('[data-tag="'+CSS.escape(tag)+'"]');
   if(button && !button.hidden)button.focus();
-  else if(!tagToggle.hidden)tagToggle.focus();
+  else if(tagToggle && !tagToggle.hidden)tagToggle.focus();
   else C.querySelector('[data-tag-all]')?.focus();
 }
 
@@ -67,14 +71,14 @@ function P(){let e=n(S.value);return N().map((t,n)=>({document:t,originalIndex:n
   C.replaceChildren(all,...tags.map(tag=>{
     const selected=M.has(tag),matches=records.filter(record=>selected?F(record):F(record,tag)).length;
     const button=document.createElement('button');button.type='button';button.className='content-tag';button.dataset.tag=tag;
-    const overflow=publicTags.indexOf(tag)>=8 || !counts.has(tag);
+    const overflow=!tagsAlwaysVisible && (publicTags.indexOf(tag)>=8 || !counts.has(tag));
     button.dataset.tagOverflow=String(overflow);button.hidden=!expanded && overflow && !selected;
     button.setAttribute('aria-pressed',String(selected));button.disabled=!selected && matches===0;button.textContent=tag;
     button.setAttribute('aria-label',(window.SiteCopy[selected?'_astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:4066':'_astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js:4078']||'')+tag);
     button.addEventListener('click',()=>{M.has(tag)?M.delete(tag):M.add(tag);k=1;B();focusTag(tag);});
     return button;
   }));
-  tagToggle.hidden=publicTags.length<=8;
+  if(tagToggle)tagToggle.hidden=publicTags.length<=8;
   updateToggle();
 }function R(){if(!active()||exhausted||m?.disabled)return;k+=1;B(false)}function z(t){
   if(!f||!m)return;
