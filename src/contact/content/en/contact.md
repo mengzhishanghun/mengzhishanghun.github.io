@@ -8,9 +8,9 @@ websiteRoute: /contact/
 template: contact/index.html
 lang: en
 translationKey: contact
-sourceHash: aa5d992f5f0d6c1f62eadfdd0030a8cfa9ca6e2bf604b0c1791d2f4d5b1bc48d
+sourceHash: bf5c53c6cd9d4bd31706431ccbdbe2017096686d573c53ead42834dc86c19736
 translationStatus: translated
-generatedBodyHash: c6923537959dfea9f9622e73724d4398fdc9b6c1b1c46bf9f2683e0344d26b1c
+generatedBodyHash: 706661ccc1f89e5154bd8a96ecb78949c94f1dbf4be2b53a671e431a98b421d3
 ---
 
 
@@ -19,20 +19,6 @@ generatedBodyHash: c6923537959dfea9f9622e73724d4398fdc9b6c1b1c46bf9f2683e0344d26
 # Contact & support
 
 Contact me about development projects, or support my work.
-
-## Available for development
-
-### Game development
-
-Gameplay prototypes, feature development, and scene interactions.
-
-### Digital twins
-
-3D visualization, data presentation, and interactive features.
-
-### Tools & plugins
-
-Productivity tools, custom plugins, and automation workflows.
 
 ## Contact
 
@@ -48,9 +34,23 @@ Copy email
 
 Scan with WeChat to add me · Click to view full size
 
-## Voluntary support
+## Available for development
 
-### WeChat Pay
+### Game development
+
+Gameplay prototypes, feature development, and scene interactions.
+
+### Digital twins
+
+3D visualization, data presentation, and interactive features.
+
+### Tools & plugins
+
+Productivity tools, custom plugins, and automation workflows.
+
+## Donations & support
+
+### WeChat
 
 [![Xiao Mao's WeChat Pay QR code](/media-occurrence/page%3Acontact%3Amedia%3A3)](/assets/support/wechat-pay-qr.webp)
 
@@ -59,3 +59,21 @@ Scan with WeChat to add me · Click to view full size
 [![Mengzhishanghun's Alipay payment QR code](/media-occurrence/page%3Acontact%3Amedia%3A4)](/assets/support/alipay-qr.webp)
 
 [GitHub Sponsors](https://github.com/sponsors/mengzhishanghun)
+
+## What your support helps with
+
+### Works and Tools
+
+Explore new ideas and refine useful tools.
+
+### Game Creation
+
+Explore gameplay and create my own games.
+
+### Articles and Tutorials
+
+Organize experience and share reusable methods.
+
+### Website and Maintenance
+
+Keep the website running reliably and continue improving the experience.

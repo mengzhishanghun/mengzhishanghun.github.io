@@ -1025,9 +1025,9 @@
     },
     {
       "path": "assets/site-ui/contact-merged.css",
-      "size": 1753,
-      "gitBlob": "e13089c8c3cd46e05a44891a2dfa4e37238d50a7",
-      "sha256": "6b67d973ec1331e9b0b12852e9d3421bcd474c07d4750ba59762e3a8a97d8734",
+      "size": 1763,
+      "gitBlob": "63e236150d4802f453f7d8a5bc20a02fc18f5c97",
+      "sha256": "a5885d2674b77811940076e76cc59c7e503fffa328731b23f6ed07e9ad745614",
       "target": "both"
     },
     {
@@ -4273,9 +4273,9 @@
     },
     {
       "path": "en/contact/index.html",
-      "size": 39454,
-      "gitBlob": "bb3c3661697faf1c487b3d5e3fcb4afc0d47740d",
-      "sha256": "a50b95bc7acff59aabaf3daae079bd62250d5cd236162ee6b02332079e07746a",
+      "size": 40385,
+      "gitBlob": "e463de677467644ea26e2c40434b7ee5f61d5d5b",
+      "sha256": "5c48e8b9c2579c9948d0c1350d74d6500d315259b94a015a13ab0e018c021a9f",
       "target": "both"
     },
     {
@@ -4463,8 +4463,8 @@
     {
       "path": "en/support/index.html",
       "size": 1327,
-      "gitBlob": "71c8070f8ce88d35dd8dcbb5e1350ccce61d6552",
-      "sha256": "46cc6762b47cce591bf589f37d56bd39c63b2464dc2469a217f1f9c77b4bb026",
+      "gitBlob": "1464c99456cdbfd65b4f30403e71d69077df85cd",
+      "sha256": "8c4a0ef82a0ce804f56f453e9b41a7f8bf66269773ff3640f2e5707effa3f1ac",
       "target": "both"
     },
     {
@@ -5443,8 +5443,8 @@
     {
       "path": "support/index.html",
       "size": 1319,
-      "gitBlob": "8cfed98a359d6320eec7dbc49f35450e77378ebf",
-      "sha256": "a7a34511990351bf9eb1e32b199f4dacd8106edeb25d688e140bd131293208ab",
+      "gitBlob": "f6fb292540fc8ea89e21372312f109ca2b84c8bc",
+      "sha256": "a73d8db44f6b0d83718f72ebb2ed7e458c75a2cbb23738cb06ef8ee6f79d514d",
       "target": "both"
     },
     {
@@ -7304,9 +7304,9 @@
     },
     {
       "path": "zh/contact/index.html",
-      "size": 39684,
-      "gitBlob": "7406c831e2966c3c0a0d639bf8e7061c18964dfa",
-      "sha256": "e3dd9cfd7356f7899ea709b3047afb0974c8657ce238a59b58cb3c9a17ed1da8",
+      "size": 40471,
+      "gitBlob": "df84f8af9a550ec4a08b37d4f871ca4f2f06aca7",
+      "sha256": "8a63e2fe5dc04ba68ae678bec6fd6afe174caaa172fe44caef20f2a98c5b03da",
       "target": "both"
     },
     {
@@ -7494,8 +7494,8 @@
     {
       "path": "zh/support/index.html",
       "size": 1322,
-      "gitBlob": "c5b3e75321e28d8cbd17f41c8ad82ca6df976b70",
-      "sha256": "e8d71f038d5f285655ef7dd1280cb931f6ee068293e434b7449653960498ad6c",
+      "gitBlob": "eed91acb4816f250f6905f39b2481bac6ee72688",
+      "sha256": "685ab855ab8cca09582d3147c7b8ec7241dd20605a65b1f94f17dab70983249b",
       "target": "both"
     },
     {

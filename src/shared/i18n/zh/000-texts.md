@@ -5247,7 +5247,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:1.#text:0: 让创作持续发生
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:1.#text:0: "支持用途"
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.p:3.#text:0: 如果作品和文章对你有帮助，欢迎自愿支持。
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.h3:0.#text:0: 作品与工具
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.p:1.#text:0: 探索新想法，打磨实用工具。
@@ -5258,7 +5258,7 @@ shellSlots:
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.h3:0.#text:0: 网站与维护
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.p:1.#text:0: 保持网站稳定运行，持续改进体验。
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.h2:1.#text:0: 选择你的支持方式
-    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: "微信支付"
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: "微信"
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3@aria-label: 查看微信收款二维码大图
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3.img:0@alt: 小毛的微信支付收款二维码
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.p:5.#text:0: 使用微信扫码 · 点击查看大图
@@ -5270,7 +5270,7 @@ shellSlots:
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:1.#text:0: 支持订阅与一次性打赏
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:2.#text:0: 具体档位与权益以 GitHub 页面为准。
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.a:5.#text:0: "GitHub Sponsors"
-    merged.supportTitle: 自愿支持
+    merged.supportTitle: "打赏支持"
   page:not-found:
     root.html:1.head:0.title:2.#text:0: 页面未找到 / Page not found | MZSH Docs
     root.html:1.head:0.meta:8@content: 页面未找到 / Page not found

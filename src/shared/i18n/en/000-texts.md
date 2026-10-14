@@ -5247,7 +5247,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:1.#text:0: Keep creating
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:1.#text:0: "What your support helps with"
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.p:3.#text:0: If my work and articles have helped you, voluntary support is welcome.
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.h3:0.#text:0: Works and Tools
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:1.p:1.#text:0: Explore new ideas and refine useful tools.
@@ -5258,7 +5258,7 @@ shellSlots:
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.h3:0.#text:0: Website and Maintenance
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.ul:5.li:7.p:1.#text:0: Keep the website running reliably and continue improving the experience.
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.h2:1.#text:0: Choose how to support
-    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: "WeChat Pay"
+    support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.h3:1.#text:0: "WeChat"
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3@aria-label: View a larger image of the WeChat payment QR code
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.a:3.img:0@alt: Xiao Mao's WeChat payment QR code
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.div:3.section:1.p:5.#text:0: Scan with WeChat · Click to enlarge
@@ -5270,7 +5270,7 @@ shellSlots:
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:1.#text:0: Subscriptions and one-time contributions
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.div:3.p:2.#text:0: See the GitHub page for the available tiers and benefits.
     support.root.html:1.body:1.div:0.main:2.div:0.div:3.section:3.section:5.a:5.#text:0: "GitHub Sponsors"
-    merged.supportTitle: Voluntary support
+    merged.supportTitle: "Donations & support"
   page:not-found:
     root.html:1.head:0.title:2.#text:0: Page not found | MZSH Docs
     root.html:1.head:0.meta:8@content: Page not found
@@ -7624,7 +7624,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: b33d27e25c213d082894f1e25c63ba782870a63b703f80868192b91c805635fe
+sourceHash: e7647b12fd05cca61d6f647e238ec00a9f80086320a0e07746bbf2ba90facb82
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---
