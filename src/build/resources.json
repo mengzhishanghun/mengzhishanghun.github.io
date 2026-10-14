@@ -3552,6 +3552,14 @@
       ],
       "sha256": "51acac7175b509da4a93433b35ed5536ac0166630d9855008729c037a520b2c7",
       "mode": "authored"
+    },
+    {
+      "source": "src/shared/i18n/client/content-index.css",
+      "outputs": [
+        "assets/site-ui/content-index.css"
+      ],
+      "sha256": "ec2a737597accee42ad8370a063b8378354e90046b91c2ab517ada26b2b0d359",
+      "mode": "authored"
     }
   ]
 }

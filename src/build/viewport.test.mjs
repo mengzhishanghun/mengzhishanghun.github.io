@@ -1,15 +1,15 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';
 import {generatedPage} from './interaction-fixtures.mjs';
-function runtime(docs=false) {
+function runtime(docs=false,list=false) {
   const fixture=generatedPage(docs?'zh/docs/tools/ue-quick-start/index.html':undefined);
   // The real generated DOM decides which of the production container selectors matches.
   assert.ok(fixture.select(docs?'.site-chrome-docs .main-frame':'.site-chrome-main'));
-  const queue=new Map(),writes=[];let next=0;let location=new URL('https://mzsh.me/a/?keep=yes#start');
+  const queue=new Map(),writes=[],microtasks=[];let next=0;let location=new URL('https://mzsh.me/a/?keep=yes#start');
   class Target extends EventTarget { counts=new Map();addEventListener(name,fn,opts){super.addEventListener(name,fn,opts);this.counts.set(name,(this.counts.get(name)||0)+1);opts?.signal?.addEventListener('abort',()=>this.counts.set(name,this.counts.get(name)-1),{once:true});} }
-  const makeFrame=()=>{const frame=new Target();frame.scrollTop=0;frame.isConnected=true;return frame;};let current=makeFrame();
+  const makeFrame=()=>{const frame=new Target();let top=0;const index={dataset:{ready:'false'},isConnected:true};frame.index=index;frame.querySelector=()=>list?index:null;Object.defineProperty(frame,'scrollTop',{get:()=>top,set:value=>{top=list&&index.dataset.ready!=='true'?Math.min(value,100):value;}});frame.scrollTop=0;frame.isConnected=true;return frame;};let current=makeFrame();
   const document=new Target();document.querySelector=selector=>selector==='meta[name="astro-view-transitions-enabled"]'?{}:fixture.select(selector)?current:null;
   const window=new Target();const history={state:{index:0,keep:'preserved'},pushState(state,_title,url){if(this.failPush)throw Error('native push failure');this.state=state;if(url)location=new URL(url,location);},replaceState(state,_title,url){this.state=state;writes.push({url:location.pathname+location.search+location.hash,state:structuredClone(state)});if(url)location=new URL(url,location);}};
-  const context={document,window,history,get location(){return location;},AbortController,requestAnimationFrame:fn=>{queue.set(++next,fn);return next;},cancelAnimationFrame:id=>queue.delete(id)};
+  const context={document,window,history,get location(){return location;},AbortController,queueMicrotask:fn=>microtasks.push(fn),requestAnimationFrame:fn=>{queue.set(++next,fn);return next;},cancelAnimationFrame:id=>queue.delete(id)};
   const script=new URL('../shared/i18n/scripts/viewport.js',import.meta.url);let source;
   if(fs.existsSync(script))source=fs.readFileSync(script,'utf8');else{const template=fs.readFileSync(new URL('./templates/blog--cnblogs-19136316.html',import.meta.url),'utf8');source=template.match(/<script type="module">([^<]*mzshViewport[^<]*)<\/script>/)[1];}
   vm.runInNewContext(source,context);
@@ -19,7 +19,7 @@ function runtime(docs=false) {
   const move=(url,index,state={})=>{location=new URL(url,location);history.state={index,keep:'preserved',...state};};
   const swap=(url,index,state={})=>{current.isConnected=false;current=makeFrame();move(url,index,state);emit(document,'astro:after-swap');emit(document,'astro:page-load');};
   const prepare=()=>{const controller=new AbortController();emit(document,'astro:before-preparation',{signal:controller.signal});return controller;};
-  return {reinstall:()=>vm.runInNewContext('(()=>{'+source+'})();',context),history,writes,queue,flush,scroll,move,swap,prepare,emit,window,document,get frame(){return current;}};
+  return {reinstall:()=>vm.runInNewContext('(()=>{'+source+'})();',context),history,writes,queue,flush,flushMicrotasks:()=>microtasks.splice(0).forEach(fn=>fn()),scroll,move,swap,prepare,emit,window,document,get frame(){return current;}};
 }
 
 test('scroll immediately followed by preparation saves the old entry before its frame',()=>{const x=runtime();x.scroll(420);x.prepare();x.flush();assert.equal(x.history.state.mzshViewport?.top,420);assert.equal(x.history.state.keep,'preserved');});
@@ -36,3 +36,7 @@ test('Astro same-document push without events continues recording and restores o
 test('new push after back replaces reused index snapshots instead of restoring the old branch',()=>{const x=runtime();x.scroll(200);x.flush();x.prepare();x.history.pushState({index:1},'', '/b/');x.swap('/b/',1);x.scroll(700);x.flush();x.swap('/a/?keep=yes#start',0);assert.equal(x.frame.scrollTop,200);x.prepare();x.history.pushState({index:1},'', '/b/');x.swap('/b/',1);assert.equal(x.frame.scrollTop,0);x.scroll(350);x.flush();assert.equal(x.history.state.mzshViewport?.top,350);});
 
 test('a native push exception leaves pending save and listener binding untouched',()=>{const x=runtime();x.scroll(480);const pending=x.queue.size,writes=x.writes.length;x.history.failPush=true;assert.throws(()=>x.history.pushState({index:1},'', '/a/?keep=yes#other'),/native push failure/);assert.equal(x.queue.size,pending);assert.equal(x.writes.length,writes);assert.equal(x.frame.counts.get('scroll'),1);assert.equal(x.history.state.index,0);x.flush();assert.equal(x.history.state.mzshViewport?.top,480);});
+
+test('list return waits for cumulative cards before restoring saved position',()=>{const x=runtime(false,true);x.frame.index.dataset.ready='true';x.emit(x.document,'mzsh:content-index-ready',{detail:{element:x.frame.index}});x.scroll(640);x.flush();x.swap('/b/',1);x.swap('/a/?keep=yes#start',0);assert.equal(x.frame.scrollTop,0);x.frame.index.dataset.ready='true';x.emit(x.document,'mzsh:content-index-ready',{detail:{element:x.frame.index}});assert.equal(x.frame.scrollTop,640);assert.equal(x.history.state.keep,'preserved');});
+
+test('missing list module restores static content after page-load and ignores a stale completion',()=>{const x=runtime(false,true);x.swap('/static/?page=2',1,{mzshViewport:{key:'/static/?page=2',top:80}});assert.equal(x.frame.scrollTop,0);x.flushMicrotasks();assert.equal(x.frame.scrollTop,80);assert.equal(x.frame.index.dataset.ready,'false');x.scroll(90);x.flush();assert.equal(x.history.state.mzshViewport.top,90);assert.equal(x.history.state.keep,'preserved');x.swap('/stale/',2,{mzshViewport:{key:'/stale/',top:70}});x.move('/next/',3);x.flushMicrotasks();assert.equal(x.frame.scrollTop,0);assert.equal(x.history.state.mzshViewport,undefined);});

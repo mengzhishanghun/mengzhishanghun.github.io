@@ -312,12 +312,16 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   let actions = 0;
   let engagementBodies=0,engagementSlots=0;
   const article=articleTypes.has(entry.type);
+  const contentIndex=['page:blog-index','page:works-index','page:cases-index'].includes(entry.id);
   const neutral=article?shareRoute(entry,locale,localeRoute(entry,locale)):null;
   if(article && ![...entry.legacyRoutes,...(config.shareAliases || [])].includes(neutral))throw new Error('通用分享入口未登记: '+neutral);
   walk(doc,node => {
     if(excluded.has(node))return;
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
+    if(contentIndex && a['data-content-card']!==undefined && loc.attrs?.hidden)edits.push([loc.attrs.hidden.startOffset,loc.attrs.hidden.endOffset,'']);
+    if(contentIndex && ['content-category-nav','content-filter'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
+    if(contentIndex && a['data-content-pagination']!==undefined && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
     if(node.tagName==='a' && a.href==='/about/' && (attrs(node.parentNode).class || '').split(/\s+/).includes('header-actions')) {
       edits.push([loc.startOffset,loc.endOffset,'']);
       walk(node,child=>excluded.add(child));
@@ -344,6 +348,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if (node.tagName==='html' && loc.attrs?.lang) edits.push([loc.attrs.lang.startOffset,loc.attrs.lang.endOffset,`lang="${config.languages.find(l=>l.code===locale).htmlLang}"`]);
     if ((a.class || '').split(/\s+/).includes('header-actions')) {actions++;edits.push([loc.endTag.startOffset,loc.endTag.startOffset,nav]);}
     if (node.tagName==='head') {
+      if(contentIndex)edits.push([loc.endTag.startOffset,loc.endTag.startOffset,'<link rel="stylesheet" href="/assets/site-ui/content-index.css">']);
       edits.push([loc.startTag.endOffset,loc.startTag.endOffset,`<script>window.SiteCopy=${safeJSON(scriptSlots || {})};window.SiteLanguageCode=${safeJSON(locale)};window.SitePrimaryCode=${safeJSON(config.primary)}</script>`]);
       edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<link rel="stylesheet" href="/assets/site-ui/language-switch.css">`+config.languages.map(({code:l})=>`<link rel="alternate" hreflang="${l}" href="https://mzsh.me${urls[l]}">`).join('')]);
       if(article)edits.push([loc.endTag.startOffset,loc.endTag.startOffset,'<link rel="stylesheet" href="/assets/site-ui/engagement.css"><script defer src="/assets/site-ui/engagement.js"></script>']);
