@@ -4449,7 +4449,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: 所有复杂，皆可封装；
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: 所有重复，皆可自动化。
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: 你好，我是小毛
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "主要做 UE 开发，做过多屏显示和 VR 项目。也在开发插件、工具与自动化流程。"
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "主要做 UE 开发，做过游戏、模拟器、数字人、数字孪生、VR 项目。"
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "同时也在开发插件、工具与自动化流程。"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: "查看作品"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: 精选作品
@@ -5237,7 +5238,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.a:0@aria-label: 查看个人微信二维码大图
     root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.a:0.img:0@alt: 小毛的个人微信二维码
     root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.h3:0.#text:0: 个人微信
-    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:1.#text:0: 微信扫码添加
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:1.#text:0: "项目合作：欢迎发来需求或参考效果，一起聊聊怎么实现。"
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:2.#text:0: "技术交流：也欢迎聊 UE、插件、工具与自动化。"
     root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:1.#text:2: 点击查看大图
     root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:4.div:0.a:1.#text:0: 晋ICP备2026011728号-2

@@ -1025,9 +1025,9 @@
     },
     {
       "path": "assets/site-ui/contact-merged.css",
-      "size": 1763,
-      "gitBlob": "63e236150d4802f453f7d8a5bc20a02fc18f5c97",
-      "sha256": "a5885d2674b77811940076e76cc59c7e503fffa328731b23f6ed07e9ad745614",
+      "size": 1704,
+      "gitBlob": "0d44ce5e406d0ece5a35434ffcacc25c55143546",
+      "sha256": "eab6aa5cf319a0938440f493a54c2a99ce7fde30338a4e2656aa8033802924eb",
       "target": "both"
     },
     {
@@ -4273,9 +4273,9 @@
     },
     {
       "path": "en/contact/index.html",
-      "size": 40385,
-      "gitBlob": "e463de677467644ea26e2c40434b7ee5f61d5d5b",
-      "sha256": "5c48e8b9c2579c9948d0c1350d74d6500d315259b94a015a13ab0e018c021a9f",
+      "size": 40574,
+      "gitBlob": "40f57e8670e8932e1d72cef9cb1d738c4feff8e2",
+      "sha256": "e9978917c53c942db49c6512891ef74ebd3402e642eefa11cc9b39d6f594821d",
       "target": "both"
     },
     {
@@ -4455,9 +4455,9 @@
     },
     {
       "path": "en/index.html",
-      "size": 54284,
-      "gitBlob": "2742888bed1e64ce8a1affb88bdb78a015a4e380",
-      "sha256": "4c655dc4f0e8abd037641a00500dfa7634a2ec8b17c27c37a67a62e809c54e8d",
+      "size": 54314,
+      "gitBlob": "327bdc3665876f32b687b04bdb6b4a54068d126a",
+      "sha256": "c94f79934a162eb436e94925c8951b1e6eeb8bb2637c68fef23e4de4093e23f8",
       "target": "both"
     },
     {
@@ -7304,9 +7304,9 @@
     },
     {
       "path": "zh/contact/index.html",
-      "size": 40471,
-      "gitBlob": "df84f8af9a550ec4a08b37d4f871ca4f2f06aca7",
-      "sha256": "8a63e2fe5dc04ba68ae678bec6fd6afe174caaa172fe44caef20f2a98c5b03da",
+      "size": 40604,
+      "gitBlob": "7520d042e93ed4d9a04ff0ff3b0f8ed6e93a8bf3",
+      "sha256": "abff5eefc382c1cd0cf6a6c3ec84b47258166ce5f917730a225f6d25de7f4c55",
       "target": "both"
     },
     {
@@ -7486,9 +7486,9 @@
     },
     {
       "path": "zh/index.html",
-      "size": 53674,
-      "gitBlob": "45f3041cca2bfbb50f8a95a93932fe81b8ef6168",
-      "sha256": "a7678466f96829cc0c933eec8ae4fbccf6bd2a369fe4a5da5863e29522667de6",
+      "size": 53716,
+      "gitBlob": "9465314f778d4ec46c74989f749ab71224a05408",
+      "sha256": "b9ef1ca6d66f23acb91f9e0bfdf31ddc7c8be5266ddc95bc150ab250d6f56098",
       "target": "both"
     },
     {

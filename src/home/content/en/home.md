@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: 67be6c5b978730c64cdc5b23a7ae35ce7f9486f9b6d5fb8eeeddb45b12978770
+sourceHash: d9c7497d2df180a45510f1562689c01d2291b4b7e34d859d315c98b21a722ae4
 translationStatus: translated
-generatedBodyHash: 18c75b0dcd730b02eab6bf33efb91260a64862b4c0d631c4eacf9e0f37d826d7
+generatedBodyHash: 1dfd1a4c6bb17388154afeb128d7d02d2b84e72429e634fe5c575fa8c1a4a879
 ---
 
 # Complexity can be encapsulated;
@@ -18,7 +18,9 @@ repetition can be automated.
 
 Hi, I'm Xiao Mao
 
-I mainly work on UE development, including multi-screen display and VR projects. I also develop plugins, tools, and automation workflows.
+I mainly work on UE development, with projects in games, simulators, digital humans, digital twins, and VR.
+
+I also develop plugins, tools, and automation workflows.
 
 [View works](/works/)[Contact & support](/contact/)
 

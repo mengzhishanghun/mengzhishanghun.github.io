@@ -8,9 +8,9 @@ websiteRoute: /contact/
 template: contact/index.html
 lang: en
 translationKey: contact
-sourceHash: bf5c53c6cd9d4bd31706431ccbdbe2017096686d573c53ead42834dc86c19736
+sourceHash: dbf58f7f3f2dce5f2182ca4b8c5735a252c09c78c22b89ce1fcc989de1a00547
 translationStatus: translated
-generatedBodyHash: 706661ccc1f89e5154bd8a96ecb78949c94f1dbf4be2b53a671e431a98b421d3
+generatedBodyHash: a2400c54db6549a714418a6a50ff35af19d2ef9c69944c56a49d4e915e0d4988
 ---
 
 
@@ -32,7 +32,11 @@ Copy email
 
 ### Personal WeChat
 
-Scan with WeChat to add me · Click to view full size
+Project collaboration: Share your requirements or reference examples so we can discuss how to build your project.
+
+Technical discussion: You are also welcome to chat about UE, plugins, tools, and automation.
+
+Click to view full size
 
 ## Available for development
 

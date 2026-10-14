@@ -4449,7 +4449,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: Every complexity can be encapsulated;
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: Every repetition can be automated.
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: Hi, I'm Xiao Mao
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I mainly work on UE development, including multi-screen display and VR projects. I also develop plugins, tools, and automation workflows."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I mainly work on UE development, with projects in games, simulators, digital humans, digital twins, and VR."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "I also develop plugins, tools, and automation workflows."
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: "View works"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: Featured works
@@ -5237,7 +5238,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.a:0@aria-label: View a larger image of the personal WeChat QR code
     root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.a:0.img:0@alt: Xiao Mao's personal WeChat QR code
     root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.h3:0.#text:0: Personal WeChat
-    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:1.#text:0: Scan with WeChat to add me
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:1.#text:0: "Project collaboration: Share your requirements or reference examples so we can discuss how to build your project."
+    root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:2.#text:0: "Technical discussion: You are also welcome to chat about UE, plugins, tools, and automation."
     root.html:1.body:1.div:0.main:2.div:0.div:3.aside:3.section:4.div:1.p:1.#text:2: Click to enlarge
     root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:4.div:0.a:1.#text:0: 晋ICP备2026011728号-2
@@ -7624,7 +7626,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: e7647b12fd05cca61d6f647e238ec00a9f80086320a0e07746bbf2ba90facb82
+sourceHash: d165c02332d0ba1bb2b3c9f4f8846bc2e9312bbf887dd582378ded6894ff1ca4
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---
