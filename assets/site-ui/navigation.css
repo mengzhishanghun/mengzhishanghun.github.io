@@ -1,2 +1,7 @@
 .header-actions { min-width: 0; flex-wrap: wrap; }
 .header-actions > a { min-width: 0; white-space: normal; overflow-wrap: anywhere; }
+@media (width <= 720px) {
+  .site-chrome .main-nav > a { justify-self: stretch; align-self: stretch; width: 100%; box-sizing: border-box; justify-content: center; align-items: center; min-height: 44px; }
+  .site-chrome .main-nav > a::after,
+  .site-chrome .main-nav > a[aria-current="page"]::after { content: none; display: none; }
+}
