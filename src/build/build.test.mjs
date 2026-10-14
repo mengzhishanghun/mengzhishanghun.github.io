@@ -5,10 +5,29 @@ import os from 'node:os';
 import path from 'node:path';
 import vm from 'node:vm';
 import {createHash} from 'node:crypto';
+import {createRequire} from 'node:module';
+import {generatedPage} from './interaction-fixtures.mjs';
 import {buildSite,localeRoute,preflight,sourceTags} from './build.mjs';
 import * as builder from './build.mjs';
 import {validateRuntime} from './validate-runtime.mjs';
 const hash = value => createHash('sha256').update(value).digest('hex');
+test('generated shared image viewer imports resolve to published files',()=>{
+  const page=generatedPage('zh/contact/index.html'),viewer=page.nodes.find(node=>node.tagName==='script' && page.attrs(node).src?.includes('/ImageViewer.'));
+  assert.ok(viewer,'the generated contact page must load the shared image viewer');
+  const root=new URL('../../dist/site/',import.meta.url),url=new URL(page.attrs(viewer).src,'https://mzsh.me');
+  const acorn=createRequire(import.meta.url)('acorn'),code=fs.readFileSync(new URL(url.pathname.slice(1),root),'utf8'),imports=[];
+  const visit=node=>{
+    if(node.type==='ImportExpression'){
+      const source=node.source;
+      if(source.type==='Literal' && typeof source.value==='string')imports.push(source.value);
+      if(source.type==='TemplateLiteral' && source.expressions.length===0)imports.push(source.quasis[0].value.cooked);
+    }
+    for(const value of Object.values(node))if(Array.isArray(value))value.forEach(child=>{if(child?.type)visit(child);});else if(value?.type)visit(value);
+  };
+  visit(acorn.parse(code,{ecmaVersion:'latest',sourceType:'module'}));
+  assert.equal(imports.length,2,'PhotoSwipe and media dimensions must both be loadable');
+  for(const specifier of imports){const dependency=new URL(specifier,url);assert.equal(dependency.origin,url.origin);assert.ok(fs.existsSync(new URL(dependency.pathname.slice(1),root)),dependency.pathname+' must exist in the generated site');}
+});
 function fixture(t) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(),'bilingual-build-test-'));
   t.after(() => fs.rmSync(root,{recursive:true,force:true}));

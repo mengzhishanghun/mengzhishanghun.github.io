@@ -423,8 +423,9 @@ export async function buildSite(options) {
     let code=fs.readFileSync(regularPath(path.join(here,'../shared/i18n/scripts'),relative),'utf8');
     const edits=[],tree=acorn.parse(code,{ecmaVersion:'latest',sourceType:'module'});
     const visit=node=>{
-      if(['ImportDeclaration','ExportNamedDeclaration','ExportAllDeclaration','ImportExpression'].includes(node.type) && node.source?.type==='Literal' && node.source.value.startsWith('.')) {
-        const absolute=path.posix.join('/',path.posix.dirname(relative),node.source.value);edits.push([node.source.start,node.source.end,JSON.stringify(absolute)]);
+      const source=node.source,value=source?.type==='Literal'?source.value:source?.type==='TemplateLiteral' && source.expressions.length===0?source.quasis[0].value.cooked:null;
+      if(['ImportDeclaration','ExportNamedDeclaration','ExportAllDeclaration','ImportExpression'].includes(node.type) && typeof value==='string' && value.startsWith('.')) {
+        const absolute=path.posix.join('/',path.posix.dirname(relative),value);edits.push([source.start,source.end,JSON.stringify(absolute)]);
       }
       for(const value of Object.values(node))if(Array.isArray(value))value.forEach(x=>{if(x?.type)visit(x)});else if(value?.type)visit(value);
     };visit(tree);code=applyEdits(code,edits);
