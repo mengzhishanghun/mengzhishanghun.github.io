@@ -4455,9 +4455,9 @@
     },
     {
       "path": "en/index.html",
-      "size": 54314,
-      "gitBlob": "327bdc3665876f32b687b04bdb6b4a54068d126a",
-      "sha256": "c94f79934a162eb436e94925c8951b1e6eeb8bb2637c68fef23e4de4093e23f8",
+      "size": 54366,
+      "gitBlob": "865a43a8b1628bee2bf7c99d9a08ede046490cba",
+      "sha256": "cf558d5433fd07a61c18541849052fc25f64c1714ff16cb420cb855f3838796d",
       "target": "both"
     },
     {
@@ -7486,9 +7486,9 @@
     },
     {
       "path": "zh/index.html",
-      "size": 53716,
-      "gitBlob": "9465314f778d4ec46c74989f749ab71224a05408",
-      "sha256": "b9ef1ca6d66f23acb91f9e0bfdf31ddc7c8be5266ddc95bc150ab250d6f56098",
+      "size": 53755,
+      "gitBlob": "5ce75837598e24eafa323062e49b077cc4b2807b",
+      "sha256": "91bb0f0821fd6aa18020d1a05ac0376b928d57951dacecd8a60396f580d82d77",
       "target": "both"
     },
     {

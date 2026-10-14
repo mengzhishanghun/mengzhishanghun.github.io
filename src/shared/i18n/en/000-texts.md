@@ -4449,8 +4449,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: Every complexity can be encapsulated;
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: Every repetition can be automated.
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: Hi, I'm Xiao Mao
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I mainly work on UE development, with projects in games, simulators, digital humans, digital twins, and VR."
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "I also develop plugins, tools, and automation workflows."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I mainly work on UE development, using C++, Python, and other languages."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "I have worked on games, simulators, digital humans, digital twins, and VR projects."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:4: "I also develop plugins, tools, and automation workflows."
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: "View works"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: Featured works
@@ -7626,7 +7627,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: d165c02332d0ba1bb2b3c9f4f8846bc2e9312bbf887dd582378ded6894ff1ca4
+sourceHash: f870479425ea00b7db47c74ae63c6000370c6c9ade2b843568f3ecba8cc7407b
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

@@ -4449,8 +4449,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: 所有复杂，皆可封装；
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: 所有重复，皆可自动化。
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: 你好，我是小毛
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "主要做 UE 开发，做过游戏、模拟器、数字人、数字孪生、VR 项目。"
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "同时也在开发插件、工具与自动化流程。"
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "主要从事 UE 开发，使用 C++、Python 等语言。"
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "做过游戏、模拟器、数字人、数字孪生、VR 项目。"
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:4: "同时也在开发插件、工具与自动化流程。"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: "查看作品"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: 精选作品
