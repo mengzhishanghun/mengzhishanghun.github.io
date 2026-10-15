@@ -6,8 +6,8 @@ export function createAgeController({window,document,now=()=>new Date()}){
   const maxTimeout=2147483647;let timer=null,started=false;
   const clear=()=>{if(timer!==null){window.clearTimeout(timer);timer=null;}};
   const update=()=>{
-    clear();const date=now(),nodes=[...document.querySelectorAll('[data-current-age]')].filter(node=>node.isConnected);
-    for(const node of nodes){const birthYear=Number(node.dataset.birthYear);node.textContent=(node.dataset.ageFormat||'{age}').replace('{age}',String(ageForYear(birthYear,date.getFullYear())));}
+    clear();const date=now(),nodes=[...document.querySelectorAll('[data-current-age], [data-year-difference]')].filter(node=>node.isConnected);
+    for(const node of nodes){const general=node.dataset.baseYear!==undefined,baseYear=Number(general?node.dataset.baseYear:node.dataset.birthYear),placeholder=general?'{years}':'{age}',format=(general?node.dataset.yearFormat:node.dataset.ageFormat)||placeholder;node.textContent=format.replace(placeholder,String(ageForYear(baseYear,date.getFullYear())));}
     if(!started||document.visibilityState==='hidden'||!nodes.length)return;
     const untilNewYear=new Date(date.getFullYear()+1,0,1).getTime()-date.getTime()+25;
     timer=window.setTimeout(()=>{timer=null;update();},Math.min(maxTimeout,Math.max(1000,untilNewYear)));
@@ -22,5 +22,8 @@ export function createAgeController({window,document,now=()=>new Date()}){
   };
 }
 if(typeof window!=='undefined'&&typeof document!=='undefined'){
-  window.SiteAge ||= createAgeController({window,document});window.SiteAge.start();
+  const controllerKey=Symbol.for('mzsh.year-difference');
+  if(!window.SiteAge?.[controllerKey]){window.SiteAge?.stop();window.SiteAge=createAgeController({window,document});window.SiteAge[controllerKey]=true;}
+  else if(document.readyState!=='loading')window.SiteAge.update();
+  window.SiteAge.start();
 }
