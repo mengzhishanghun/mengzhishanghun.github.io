@@ -14,8 +14,21 @@ test('about aliases lead to the homepage introduction without publishing a separ
   for(const code of ['zh','en']){const tree=load(code+'/index.html'),intro=all(tree,n=>attrs(n).id==='about');assert.equal(intro.length,1);assert.match(text(intro[0]),/UE/);assert.match(text(intro[0]),/VR/);assert.equal(all(tree,n=>attrs(n)['data-current-age']!==undefined).length,0);}
   for(const route of ['about/index.html','zh/about/index.html','en/about/index.html']){const runtime=JSON.parse(text(all(load(route),n=>attrs(n)['data-site-language']!==undefined)[0]));assert.equal(runtime.urls.zh,'/zh/');assert.equal(runtime.urls.en,'/en/');assert.equal(runtime.anchors.zh['about-experience-title'],'about');assert.equal(runtime.redirect.locale,route.startsWith('zh/')?'zh':route.startsWith('en/')?'en':null);}
 });
-test('home CTA offers works/contact and headers keep only contact',()=>{
-  for(const code of ['zh','en']){const tree=load(code+'/index.html'),hero=all(tree,n=>hasClass(n,'a-hero'))[0];assert.deepEqual(all(hero,n=>n.tagName==='a'&&hasClass(n,'a-button')).map(n=>attrs(n).href),['/'+code+'/works/','/'+code+'/contact/']);const actions=all(tree,n=>hasClass(n,'header-actions'))[0];assert.deepEqual(all(actions,n=>n.tagName==='a').map(n=>attrs(n).href),['/'+code+'/contact/']);assert.ok(all(tree,n=>n.tagName==='a'&&attrs(n).href==='/'+code+'/works/').length>=2);}
+test('home CTA links the cooperation invitation to contact and headers keep only contact',()=>{
+  for(const code of ['zh','en']){
+    const tree=load(code+'/index.html'),hero=all(tree,n=>hasClass(n,'a-hero'))[0];
+    assert.equal(all(hero,n=>n.tagName==='a'&&hasClass(n,'a-button')).length,0);
+    assert.equal(all(hero,n=>hasClass(n,'hero-actions')).length,0);
+    const role=all(hero,n=>hasClass(n,'hero-role'))[0];
+    assert.equal(text(role),code==='zh'?'一名自由职业开发者。':'A freelance developer.');
+    const links=all(hero,n=>n.tagName==='a');
+    assert.equal(links.length,1);
+    assert.equal(attrs(links[0]).href,'/'+code+'/contact/');
+    assert.equal(text(links[0]),code==='zh'?'欢迎联系我聊聊':'Get in touch');
+    const actions=all(tree,n=>hasClass(n,'header-actions'))[0];
+    assert.deepEqual(all(actions,n=>n.tagName==='a').map(n=>attrs(n).href),['/'+code+'/contact/']);
+    assert.ok(all(tree,n=>n.tagName==='a'&&attrs(n).href==='/'+code+'/works/').length>=2);
+  }
 });
 test('merged contact retains copy/QR/Sponsors and exact support aliases and anchors',()=>{
   const ids=['support-title','purpose-title','methods-title','wechat-title','alipay-title','github-support-title'];

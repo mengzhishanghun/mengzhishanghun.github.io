@@ -4432,6 +4432,10 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
+    home.role: "A freelance developer."
+    home.cooperation: "I take on tool, plugin, workflow automation, and game development projects. "
+    home.cooperation.link: "Get in touch"
+    home.cooperation.end: "."
     root.html:1.head:0.meta:2@content: "UE development work, project cases, and technical notes by Xiao Mao, including multi-screen displays, VR, plugins, tools, and automation."
     root.html:1.head:0.title:4.#text:0: Development Work and Projects · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
@@ -4450,10 +4454,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: Every repetition can be automated.
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: Hi, I'm Xiao Mao
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I mainly work on UE development, using C++, Python, and other languages."
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "I have worked on games, simulators, digital humans, digital twins, and VR projects."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "I have worked on games, simulation systems, digital humans, digital twins, and VR projects."
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:4: "I also develop plugins, tools, and automation workflows."
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:0.#text:0: "View works"
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: Featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: Featured works
@@ -7753,7 +7755,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: cd3e121e8076460b87ab163a86b83cd4b6bcef7b7134c22f94fc8b6f1df235fb
+sourceHash: 280797e2798a36798b93b79fe7abd5cfe72ad940d2bb150105d2d388a424e335
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

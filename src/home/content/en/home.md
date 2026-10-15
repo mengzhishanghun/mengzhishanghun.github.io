@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: 2c74f7ad249034f56eb4f5c800138ee107d476bb78360b75483d8d04ad159c8e
+sourceHash: b49df2b25ce9376671fddaeb61f4936eb13222a6566b40d9b67c5ada346868ab
 translationStatus: translated
-generatedBodyHash: 7627e77cfba42365abf18ff09cace57a0b51717acf18be90934a58d4ea43ddb8
+generatedBodyHash: c70e44152e8283aaff68b9434abaf9bcc520fda0a6396d4ef64c468475bef7ca
 ---
 
 # Complexity can be encapsulated;
@@ -18,13 +18,15 @@ repetition can be automated.
 
 Hi, I'm Xiao Mao
 
+A freelance developer.
+
 I mainly work on UE development, using C++, Python, and other languages.
 
-I have worked on games, simulators, digital humans, digital twins, and VR projects.
+I have worked on games, simulation systems, digital humans, digital twins, and VR projects.
 
 I also develop plugins, tools, and automation workflows.
 
-[View works](/works/)[Contact & support](/contact/)
+I take on tool, plugin, workflow automation, and game development projects. [Get in touch](/contact/).
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A1)
 
