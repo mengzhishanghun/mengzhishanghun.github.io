@@ -3532,9 +3532,10 @@
     {
       "source": "src/about/client/age.mjs",
       "outputs": [
-        "assets/site-ui/about-age.js"
+        "assets/site-ui/about-age.js",
+        "assets/site-ui/year-difference.cb62d2411c0b.js"
       ],
-      "sha256": "316bb81fb363e35554ba12e38e029f918ac4e9975c03117c779e3bceb107c827",
+      "sha256": "cb62d2411c0b7899e0e71484668c5678441d0c3407bfce43ef356d609b95f8c6",
       "mode": "authored"
     },
     {

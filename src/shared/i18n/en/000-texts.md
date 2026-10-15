@@ -4432,6 +4432,11 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
+    home.experience.format: "I have {years} years of UE development experience, using C++, Python, and other languages."
+    home.support.prefix: "If my articles or tools help you, you can also "
+    home.support.link: "support my work"
+    home.support.end: "."
+    home.support.purpose: "Your support will go towards tool development, making games, writing tutorials, and maintaining this website."
     home.cooperation.prefix: "For project enquiries, "
     home.cooperation: "I take on tool, plugin, workflow automation, and game development projects."
     home.cooperation.link: "get in touch"
@@ -4453,9 +4458,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: Every complexity can be encapsulated;
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: Every repetition can be automated.
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: "Hi, I'm Xiao Mao, a freelance developer."
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I mainly work on UE development, using C++, Python, and other languages."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I have worked in UE development since 2018, using C++, Python, and other languages."
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "I have worked on games, simulation systems, digital humans, digital twins, and VR projects."
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:4: "I also develop plugins, tools, and automation workflows."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:4: "I also use AI-assisted coding to develop plugins, tools, and automation workflows."
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: Featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: Featured works
@@ -7755,7 +7760,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: a2259b4482c2499a63d661dbcd71fa335f4e9787f45ce16fb5ce71d5a7c23c57
+sourceHash: 93fa9b4c5651b85da707b89148c9a39e7f96e3be85fe4f744a8f7689e2127007
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---
