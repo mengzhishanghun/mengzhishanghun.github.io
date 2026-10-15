@@ -4432,9 +4432,9 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
-    home.role: "A freelance developer."
-    home.cooperation: "I take on tool, plugin, workflow automation, and game development projects. "
-    home.cooperation.link: "Get in touch"
+    home.cooperation.prefix: "For project enquiries, "
+    home.cooperation: "I take on tool, plugin, workflow automation, and game development projects."
+    home.cooperation.link: "get in touch"
     home.cooperation.end: "."
     root.html:1.head:0.meta:2@content: "UE development work, project cases, and technical notes by Xiao Mao, including multi-screen displays, VR, plugins, tools, and automation."
     root.html:1.head:0.title:4.#text:0: Development Work and Projects · Xiao Mao
@@ -4452,7 +4452,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: Every complexity can be encapsulated;
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: Every repetition can be automated.
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: Hi, I'm Xiao Mao
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: "Hi, I'm Xiao Mao, a freelance developer."
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I mainly work on UE development, using C++, Python, and other languages."
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "I have worked on games, simulation systems, digital humans, digital twins, and VR projects."
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:4: "I also develop plugins, tools, and automation workflows."
@@ -7755,7 +7755,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 280797e2798a36798b93b79fe7abd5cfe72ad940d2bb150105d2d388a424e335
+sourceHash: a2259b4482c2499a63d661dbcd71fa335f4e9787f45ce16fb5ce71d5a7c23c57
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 ---

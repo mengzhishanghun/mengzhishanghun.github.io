@@ -4432,8 +4432,8 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
-    home.role: "一名自由职业开发者。"
-    home.cooperation: "承接工具、插件、自动化流程及游戏开发，有相关需求，"
+    home.cooperation.prefix: "有相关需求，"
+    home.cooperation: "承接工具、插件、自动化流程及游戏开发。"
     home.cooperation.link: "欢迎联系我聊聊"
     home.cooperation.end: "。"
     root.html:1.head:0.meta:2@content: "小毛的 UE 开发作品、项目案例与技术记录，涵盖多屏显示、VR、插件工具与自动化流程。"
@@ -4452,7 +4452,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: 所有复杂，皆可封装；
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: 所有重复，皆可自动化。
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: 你好，我是小毛
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: "你好，我是小毛，一名自由职业开发者。"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "主要从事 UE 开发，使用 C++、Python 等语言。"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "做过游戏、仿真系统、数字人、数字孪生和 VR 项目。"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:4: "同时也在开发插件、工具与自动化流程。"
