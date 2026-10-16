@@ -145,3 +145,50 @@
     font-size: 1rem;
   }
 }
+.site-chrome .work-information-card .work-title-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  min-inline-size: 0;
+}
+.site-chrome .work-information-card .work-title-line h1 {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+.site-chrome .work-information-card .work-status {
+  display: inline-flex;
+  flex: none;
+  padding: 3px 10px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: var(--reading-heading-accent);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.site-chrome .work-information-card .work-actions {
+  flex-wrap: wrap;
+}
+.site-chrome .work-information-card .work-action {
+  min-block-size: 44px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+.site-chrome .work-information-card .work-compatibility {
+  margin-block-start: 14px;
+  color: var(--reading-heading-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.site-chrome .work-information-card .work-compatibility-group + .work-compatibility-group {
+  margin-block-start: 8px;
+}
+.site-chrome .work-information-card .work-compatibility p {
+  margin: 0;
+}
+.site-chrome .work-information-card .work-compatibility-label {
+  font-weight: 500;
+}
