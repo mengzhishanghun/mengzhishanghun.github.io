@@ -183,6 +183,12 @@
   line-height: 1.6;
   overflow-wrap: anywhere;
 }
+.site-chrome .work-information-card .work-compatibility-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 20px;
+}
 .site-chrome .work-information-card .work-compatibility-group + .work-compatibility-group {
   margin-block-start: 8px;
 }
