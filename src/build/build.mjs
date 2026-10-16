@@ -440,18 +440,28 @@ export async function buildSite(options) {
   config.shareAliases=(manifest.redirects || []).map(alias=>alias.route);
   const resources = !options.templateRoot?loadResources({site}):new Map(), files=new Map(), rendered = new Map();
   const scriptURLs=new Map(),scriptManifest=path.join(here,'scripts.json');
-  if(!options.templateRoot && fs.existsSync(scriptManifest)) for(const {source:relative,urls} of normalizeScriptEntries(JSON.parse(fs.readFileSync(scriptManifest,'utf8')))) {
-    let code=fs.readFileSync(regularPath(path.join(here,'../shared/i18n/scripts'),relative),'utf8');
-    const edits=[],tree=acorn.parse(code,{ecmaVersion:'latest',sourceType:'module'});
-    const visit=node=>{
-      const source=node.source,value=source?.type==='Literal'?source.value:source?.type==='TemplateLiteral' && source.expressions.length===0?source.quasis[0].value.cooked:null;
-      if(['ImportDeclaration','ExportNamedDeclaration','ExportAllDeclaration','ImportExpression'].includes(node.type) && typeof value==='string' && value.startsWith('.')) {
-        const absolute=path.posix.join('/',path.posix.dirname(relative),value);edits.push([source.start,source.end,JSON.stringify(absolute)]);
-      }
-      for(const value of Object.values(node))if(Array.isArray(value))value.forEach(x=>{if(x?.type)visit(x)});else if(value?.type)visit(value);
-    };visit(tree);code=applyEdits(code,edits);
-    const target='assets/site-ui/i18n/'+path.posix.basename(relative).replace(/\.js$/,'.'+hash(code).slice(0,12)+'.js');
-    files.set(target,Buffer.from(code));for(const url of urls)scriptURLs.set(url,'/'+target);
+  if(!options.templateRoot && fs.existsSync(scriptManifest)) {
+    const scripts=normalizeScriptEntries(JSON.parse(fs.readFileSync(scriptManifest,'utf8'))),byURL=new Map(scripts.flatMap(script=>script.urls.map(url=>[url,script]))),visiting=new Set();
+    const emit=script=>{
+      if(scriptURLs.has('/'+script.source))return scriptURLs.get('/'+script.source);
+      if(visiting.has(script.source))throw new Error('脚本依赖循环: '+script.source);
+      visiting.add(script.source);
+      let code=fs.readFileSync(regularPath(path.join(here,'../shared/i18n/scripts'),script.source),'utf8');
+      const edits=[],tree=acorn.parse(code,{ecmaVersion:'latest',sourceType:'module'});
+      const visit=node=>{
+        const source=node.source,value=source?.type==='Literal'?source.value:source?.type==='TemplateLiteral' && source.expressions.length===0?source.quasis[0].value.cooked:null;
+        if(['ImportDeclaration','ExportNamedDeclaration','ExportAllDeclaration','ImportExpression'].includes(node.type) && typeof value==='string') {
+          const absolute=value.startsWith('.')?path.posix.join('/',path.posix.dirname(script.source),value):value;
+          const dependency=byURL.get(absolute),target=dependency?emit(dependency):absolute;
+          if(value!==target)edits.push([source.start,source.end,JSON.stringify(target)]);
+        }
+        for(const value of Object.values(node))if(Array.isArray(value))value.forEach(x=>{if(x?.type)visit(x)});else if(value?.type)visit(value);
+      };visit(tree);code=applyEdits(code,edits);
+      const target='assets/site-ui/i18n/'+path.posix.basename(script.source).replace(/\.js$/,'.'+hash(code).slice(0,12)+'.js');
+      files.set(target,Buffer.from(code));for(const url of script.urls)scriptURLs.set(url,'/'+target);
+      visiting.delete(script.source);return '/'+target;
+    };
+    scripts.forEach(emit);
   }
   for (const entry of entries) for (const locale of codes) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy,primary},site));
   const orderedWorks=entries.filter(e=>e.type==='work').sort((a,b)=>(a.sources[primary].data.categoryOrder ?? 0)-(b.sources[primary].data.categoryOrder ?? 0)||(a.sources[primary].data.order ?? 0)-(b.sources[primary].data.order ?? 0));

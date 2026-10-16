@@ -1,3 +1,4 @@
+import {rememberSessionPage,prepareSessionReturn,applySessionReturn,clearSessionReturn} from './return-state.js';
 const installedKey = Symbol.for('mzsh.viewport');
 if (!window[installedKey]) {
 const viewportURL = () => location.pathname + location.search + location.hash;
@@ -47,25 +48,25 @@ function provenPrevious() {
     return {id:previous.key, index:previous.index, url:entryURL(url.href), navigationKey:previous.key};
   } catch {return null;}
 }
-const returnLabels = new WeakMap();
 let pendingReturn = null, preparation = 0;
 function updateReturnLabels() {
-  const previous = provenPrevious(), label = window.SiteCopy?.['viewport:return-previous'];
+  const label = window.SiteCopy?.['viewport:return-previous'];
+  if(!label)return;
   document.querySelectorAll('a.article-back, a.outline-mobile-back').forEach(anchor=>{
-    let saved = returnLabels.get(anchor);
-    if (!saved) {
-      const text = [...anchor.childNodes].find(node=>node.nodeType === 3 && node.nodeValue?.trim());
-      saved = {text, value:text?.nodeValue, aria:anchor.getAttribute('aria-label')};returnLabels.set(anchor,saved);
-    }
-    if (saved.text) saved.text.nodeValue = previous && label ? label : saved.value;
-    if (previous && label) anchor.setAttribute('aria-label',label);
-    else if (saved.aria !== null) anchor.setAttribute('aria-label',saved.aria);
-    else anchor.removeAttribute('aria-label');
+    const text = [...anchor.childNodes].find(node=>node.nodeType === 3 && node.nodeValue?.trim());
+    if(text)text.nodeValue=label;
+    anchor.setAttribute('aria-label',label);
   });
+}
+function clearPendingReturn(cancel=false) {
+  const pending=pendingReturn;
+  if(pending?.anchor?.isConnected && pending.href!==undefined)pending.anchor.setAttribute('href',pending.href);
+  if(cancel)clearSessionReturn(pending?.intent);
+  pendingReturn=null;
 }
 function finishReturn() {
   updateReturnLabels();
-  if (pendingReturn && navigationRecord()?.id !== pendingReturn.from) pendingReturn = null;
+  if (pendingReturn && (navigationRecord()?.id !== pendingReturn.from || pendingReturn.anchor && !pendingReturn.anchor.isConnected)) clearPendingReturn(!!pendingReturn.target && pendingReturn.target!==viewportURL());
 }
 history.replaceState = function replaceState(state, title, url) {
   if (this !== history) return Reflect.apply(nativeReplaceState, this, arguments);
@@ -87,11 +88,16 @@ document.addEventListener('click', event=>{
   if (pendingReturn) {event.preventDefault();return;}
   const previous = provenPrevious();
   if (previous) {
-    event.preventDefault();flush();pendingReturn = {from:navigationRecord()?.id, previous};
+    event.preventDefault();flush();clearSessionReturn();pendingReturn = {from:navigationRecord()?.id, previous};
     history.back();return;
   }
-  if (hasRouter()) anchor.setAttribute('data-astro-history','replace');
-  else {event.preventDefault();flush();location.replace(anchor.href);}
+  flush();
+  const prepared=prepareSessionReturn(anchor.href);
+  pendingReturn={from:navigationRecord()?.id,target:prepared.url,intent:prepared.intent,anchor,href:anchor.getAttribute('href')};
+  if (hasRouter()) {
+    anchor.setAttribute('data-astro-history','replace');
+    if(prepared.intent)anchor.setAttribute('href',prepared.url);
+  } else {event.preventDefault();location.replace(prepared.url);}
 }, {capture:true});
 const snapshots = new Map();
 const staticIndexes = new WeakSet();
@@ -101,6 +107,7 @@ function persist(owner, saved, generation) {
   if (generation !== navigation || owner !== binding || !connected(owner) || !sameEntry(saved, currentEntry())) return;
   if (document.querySelector('meta[name="astro-view-transitions-enabled"]') && !Number.isFinite(saved.index)) return;
   history.replaceState({...history.state, mzshViewport: {key: saved.key, top: saved.top}}, '');
+  rememberSessionPage({top:saved.top});
 }
 function capture(schedule = true) {
   const owner = binding, entry = currentEntry();
@@ -124,6 +131,7 @@ function flush() {
   if (saved) persist(binding, saved, navigation);
 }
 function bind() {
+  applySessionReturn();
   const element = container(), entry = currentEntry();
   if (!element?.isConnected) return;
   // The list may still be showing its static fallback after an Astro swap.
@@ -143,6 +151,7 @@ function bind() {
     snapshots.set(entryKey(entry), saved);
     persist(binding, saved, navigation);
   }
+  rememberSessionPage({top:element.scrollTop});
   element.addEventListener('scroll', () => capture(), {passive: true, signal: controller.signal});
   finishReturn();
 }
@@ -169,7 +178,7 @@ history.pushState = function pushState() {
   const record = makeRecord(arguments.length > 2 && arguments[2] !== undefined ? entryURL(arguments[2]) : before.key,arguments[0]?.index,parent);
   const args = [...arguments];args[0] = {...objectState(arguments[0]),mzshNavigation:record};
   const result = Reflect.apply(nativePushState, this, args);
-  pendingReturn = null;
+  clearPendingReturn(pendingReturn?.target!==viewportURL());
   const entry = currentEntry();
   if (leaving) snapshots.set(entryKey(leaving), leaving);
   if (Number.isFinite(entry.index)) {
@@ -192,7 +201,7 @@ document.addEventListener('astro:before-preparation', event => {
   if (pending && event.signal) {
     pending.preparation = token;
     event.signal.addEventListener('abort',()=>{
-      if (pendingReturn === pending && pending.preparation === token && preparation === token) pendingReturn = null;
+      if (pendingReturn === pending && pending.preparation === token && preparation === token) clearPendingReturn(true);
     },{once:true});
   }
 });
@@ -216,7 +225,7 @@ document.addEventListener('mzsh:content-index-ready', event => {
 });
 window.addEventListener('popstate', traverse);
 window.addEventListener('hashchange', traverse);
-window.addEventListener('pagehide', () => {flush();pendingReturn = null;});
+window.addEventListener('pagehide', () => {flush();clearPendingReturn();});
 stampEntry();
 updateReturnLabels();
 bind();

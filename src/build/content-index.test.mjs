@@ -3,8 +3,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import {generatedPage} from './interaction-fixtures.mjs';
-const source=fs.readFileSync(new URL('../shared/i18n/scripts/_astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js',import.meta.url),'utf8');
-function runtime({query='',io=true,broken=false,locale='en',route='blog',documents=null,savedState={},aliases=null,tagDisplay=null}={}) {
+const contentSource=fs.readFileSync(new URL('../shared/i18n/scripts/_astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js',import.meta.url),'utf8');
+const helperSource=fs.readFileSync(new URL('../shared/i18n/scripts/return-state.js',import.meta.url),'utf8').replace(/^export /gm,'');
+const source=helperSource+contentSource.replace(/^import[^;]+;\s*/,'');
+function runtime({query='',io=true,broken=false,locale='en',route='blog',documents=null,savedState={},aliases=null,tagDisplay=null,returnOrder=null}={}) {
   const fixture=generatedPage(`${locale}/${route}/index.html`),queue=new Map(),observers=[];let next=0,url=new URL(`https://mzsh.me/${locale}/${route}/`+query),focusedElement=null;
   class Element extends EventTarget {
     dataset={};style={};hidden=false;isConnected=true;children=[];attrs={};value='';
@@ -26,14 +28,24 @@ function runtime({query='',io=true,broken=false,locale='en',route='blog',documen
   const records=documents || Array.from({length:25},(_,i)=>({slug:'item-'+i,categoryId:'ue',categoryName:'UE',title:i===24?'needle':'Entry '+i,description:'',body:'',tags:[i%2?'odd':'even']}));if(!documents)records.push({slug:'other',categoryId:'cpp',categoryName:'C++',title:'Other',description:'',body:'',tags:['even']});
   const cards=records.map(r=>{const el=new Element();el.dataset.slug=r.slug;if(r.legacyTags)el.dataset.contentLegacyTags=JSON.stringify(r.legacyTags);return el;});const baseAll=root.querySelectorAll;root.querySelectorAll=s=>s==='[data-content-card]'?cards:baseAll(s);
   select('[data-content-index-data]').textContent=broken?'{':JSON.stringify(records);
-  const document=new EventTarget();document.documentElement={lang:locale};document.createElement=()=>new Element();document.querySelectorAll=s=>s==='[data-content-index]'&&root.isConnected?[root]:[];
+  frame.querySelector=selector=>selector==='[data-content-index]'?root:null;
+  const document=new EventTarget();document.querySelector=selector=>selector==='.site-chrome-main'?frame:selector==='meta[name="astro-view-transitions-enabled"]'?{}:null;document.documentElement={lang:locale};document.createElement=()=>new Element();document.querySelectorAll=s=>s==='[data-content-index]'&&root.isConnected?[root]:[];
   Object.defineProperty(document,'activeElement',{get:()=>focusedElement});
-  const window=new EventTarget();window.SiteCopy=fixture.copy;window.SiteLanguageCode='en';window.SitePrimaryCode='zh';
+  const storage=new Map();
+  const window=new EventTarget();window.sessionStorage={getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value),removeItem:key=>storage.delete(key)};window.SiteCopy=fixture.copy;window.SiteLanguageCode='en';window.SitePrimaryCode='zh';
   const history={state:{index:7,keep:'yes',...savedState},writes:0,replaceState(state,_title,href){this.writes++;this.state=state;if(href)url=new URL(href,url);}};
-  const context={document,window,history,get location(){return url;},URLSearchParams,CSS:{escape:s=>s},AbortController,CustomEvent:class extends Event{constructor(name,{detail}={}){super(name);this.detail=detail;}},performance:{clearMarks(){},mark(){}},requestAnimationFrame:fn=>{queue.set(++next,fn);return next;},cancelAnimationFrame:id=>queue.delete(id)};
+  const context={document,window,history,get location(){return url;},queueMicrotask:fn=>fn(),URL,URLSearchParams,CSS:{escape:s=>s},AbortController,CustomEvent:class extends Event{constructor(name,{detail}={}){super(name);this.detail=detail;}},performance:{clearMarks(){},mark(){}},requestAnimationFrame:fn=>{queue.set(++next,fn);return next;},cancelAnimationFrame:id=>queue.delete(id)};
   if(io)context.IntersectionObserver=class{constructor(fn,options){this.fn=fn;this.options=options;observers.push(this);}observe(target){this.target=target;}disconnect(){this.disconnected=true;}};
   const readyStates=[];document.addEventListener('mzsh:content-index-ready',()=>readyStates.push({expanded:select('[data-content-tags]').sibling?.attrs['aria-expanded'],visibleTags:select('[data-content-tags]').children.filter(t=>t.dataset.tag&&!t.hidden).length}));
+  if(returnOrder){
+    vm.runInNewContext('(()=>{'+helperSource+';rememberSessionPage();prepareSessionReturn(location.pathname);})();',context);
+    history.state={index:57,keep:'new entry',mzshNavigation:{id:'target',url:url.pathname+url.search+url.hash,parent:null}};frame.scrollTop=0;
+  }
+  const viewport=fs.readFileSync(new URL('../shared/i18n/scripts/viewport.js',import.meta.url),'utf8').replace(/^import[^;]+;\s*/,'');
+  const loadViewport=()=>vm.runInNewContext('(()=>{'+helperSource+viewport+'})();',context);
+  if(returnOrder==='viewport-first')loadViewport();
   vm.runInNewContext(source,context);
+  if(returnOrder==='list-first')loadViewport();
   const flush=()=>{const batch=[...queue.values()];queue.clear();batch.forEach(fn=>fn());};
   const emit=(el,name)=>el.dispatchEvent(new Event(name,{cancelable:true}));
   return {root,frame,cards,select,document,observers,queue,flush,emit,history,readyStates,toggle:()=>select('[data-content-tags]').sibling,get url(){return url;},visible:()=>cards.filter(c=>!c.hidden).map(c=>c.dataset.slug)};
@@ -110,4 +122,13 @@ for(const [route,type,prefix,themeCount]of [['works','work','work-topic',8],['ca
     const record=records.find(r=>r.legacyTags.length),topic=mapping.articles[type+':'+record.slug].topics[0],params=new URLSearchParams({category:record.categoryId,page:'99'});params.append('tag',fixtures[other].f.copy[prefix+':'+topic]);params.append('tag',record.legacyTags[0]);const x=runtime({route,locale,documents:records,query:'?'+params,io:false});assert.deepEqual(x.visible().sort(),records.filter(r=>r.categoryId===record.categoryId&&r.tags.includes(f.copy[prefix+':'+topic])&&r.legacyTags.includes(record.legacyTags[0])).map(r=>r.slug).sort());
     const button=x.select('[data-content-tags]').children.find(t=>t.dataset.tag===record.legacyTags[0]);button.focus();x.emit(button,'click');assert.equal(x.toggle(),undefined);assert.equal(new URLSearchParams(x.url.search).getAll('tag').includes(record.legacyTags[0]),false);assert.equal(x.frame.scrollTop,640);
   }
+});
+
+for(const returnOrder of ['viewport-first','list-first'])test('cross-document fallback restores cumulative URL, expansion and scroll with '+returnOrder,()=>{
+ const x=runtime({query:'?page=2',documents:topicDocuments(),tagDisplay:'fold',io:false,returnOrder,savedState:{mzshContentTags:{key:'/en/blog/',category:'ue',expanded:true},mzshViewport:{key:'/en/blog/?page=2',top:1530}}});
+ assert.equal(x.visible().length,12);assert.equal(x.url.search,'?page=2');assert.equal(x.toggle().attrs['aria-expanded'],'true');assert.equal(x.frame.scrollTop,1530);assert.equal(x.history.state.index,57);assert.equal(x.history.state.keep,'new entry');assert.equal(x.history.state.mzshNavigation.id,'target');assert.equal(x.history.state.mzshNavigation.parent,null);
+});
+
+for(const returnOrder of ['viewport-first','list-first'])test('failed list keeps its static fallback and restores scroll with '+returnOrder,()=>{
+ const x=runtime({query:'?page=2',broken:true,io:false,returnOrder,savedState:{mzshViewport:{key:'/en/blog/?page=2',top:900}}});assert.equal(x.root.dataset.ready,'failed');assert.equal(x.visible().length,26);assert.equal(x.frame.scrollTop,900);assert.equal(x.history.state.keep,'new entry');
 });

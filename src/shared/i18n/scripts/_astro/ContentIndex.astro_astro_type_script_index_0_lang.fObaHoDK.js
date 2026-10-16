@@ -1,3 +1,4 @@
+import {applySessionReturn,rememberSessionPage} from '../return-state.js';
 const contentOwners=new Map();
 function cleanupIndexes(){
   const current=new Set(document.querySelectorAll('[data-content-index]'));
@@ -15,6 +16,7 @@ const legacyTags=new Map(u.map(card=>{
   if(!Array.isArray(tags)||tags.some(tag=>typeof tag!=='string'))throw Error('Invalid legacy tags');
   return [card.dataset.slug,tags];
 }));
+applySessionReturn();
 const savedTags=history.state?.mzshContentTags;
 let expanded=savedTags?.key===location.pathname && savedTags.category===j && savedTags.expanded===true;
 const tagsAlwaysVisible=e.dataset.contentTagsDisplay==='all';
@@ -60,7 +62,7 @@ if(scrollRoot && m && typeof IntersectionObserver==='function'){
   observer.observe(m);
 }
 contentOwners.set(e,()=>{observer?.disconnect();cancelAnimationFrame(checkFrame);});
-function P(){let e=n(S.value);return N().map((t,n)=>({document:t,originalIndex:n,rank:o(t,e)})).filter(t=>e.length===0||t.rank.matchedTerms>0).sort((t,n)=>e.length>0&&(n.rank.matchedTerms-t.rank.matchedTerms||n.rank.score-t.rank.score)||t.originalIndex-n.originalIndex)}function F(e,t){let n=new Set(M);return t&&n.add(t),[...n].every(t=>e.tags.includes(t) || legacyTags.get(e.slug)?.includes(t))}function I(){let e=new URLSearchParams;j!==d[0].dataset.category&&e.set(`category`,j),S.value.trim()&&e.set(`q`,S.value.trim()),[...M].forEach(t=>e.append(`tag`,t)),k>1&&e.set(`page`,String(k)),history.replaceState({...history.state,mzshContentTags:{key:location.pathname,category:j,expanded}},``,location.pathname+(e.size?`?${e}`:``)+location.hash)}function L(records){
+function P(){let e=n(S.value);return N().map((t,n)=>({document:t,originalIndex:n,rank:o(t,e)})).filter(t=>e.length===0||t.rank.matchedTerms>0).sort((t,n)=>e.length>0&&(n.rank.matchedTerms-t.rank.matchedTerms||n.rank.score-t.rank.score)||t.originalIndex-n.originalIndex)}function F(e,t){let n=new Set(M);return t&&n.add(t),[...n].every(t=>e.tags.includes(t) || legacyTags.get(e.slug)?.includes(t))}function I(){let e=new URLSearchParams;j!==d[0].dataset.category&&e.set(`category`,j),S.value.trim()&&e.set(`q`,S.value.trim()),[...M].forEach(t=>e.append(`tag`,t)),k>1&&e.set(`page`,String(k)),history.replaceState({...history.state,mzshContentTags:{key:location.pathname,category:j,expanded}},``,location.pathname+(e.size?`?${e}`:``)+location.hash);rememberSessionPage()}function L(records){
   const counts=new Map();N().forEach(record=>record.tags.forEach(tag=>counts.set(tag,(counts.get(tag)||0)+1)));
   const publicTags=[...counts.keys()].sort((a,b)=>(counts.get(b)||0)-(counts.get(a)||0)||a.localeCompare(b,document.documentElement.lang));
   const tags=[...publicTags,...[...M].filter(tag=>!counts.has(tag))];
