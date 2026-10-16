@@ -19,8 +19,17 @@ links:
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
 lang: zh
 translationKey: simple-file-updater
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/SimpleFileUpdater
+    - kind: docs
+      href: /docs/zh/tools/simple-file-updater/
+  compatibility:
+    - platforms:
+        - Windows（.exe 打包程序）
+      requirements: []
 ---
-
 ## 作品简介
 
 SimpleFileUpdater 根据配置文件中的“本地目标路径—远程下载地址”映射，批量下载并更新指定文件。

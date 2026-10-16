@@ -20,11 +20,18 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginManager
 lang: en
 translationKey: plugin-manager
-sourceHash: 8274f8b133262f7ed6e1bbf330bf85dca8fcebd4679a21a72c11af10b400b91e
+sourceHash: 12aa6b88ae20b3014204e8a087251fb9149a350b8b9470e9e2b8e117a440753c
 translationStatus: translated
 generatedBodyHash: 5a7933b1170ed1d075f38b0c562337eb6963f48be8eb52b6a761c98a048925d4
+workInfo:
+  channels:
+    - kind: docs
+      href: /docs/zh/tools/plugin-manager/
+  compatibility:
+    - platforms:
+        - UE plugin management tool (operating system to be verified)
+      requirements: []
 ---
-
 ## Overview
 
 UEPluginManager is a desktop tool for viewing and managing UE plugins centrally. It brings project Plugins directories, Marketplace download directories, and bundled engine plugins into one interface, supporting search, dependency inspection, duplicate-name warnings, and enabled-state management.

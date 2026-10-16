@@ -21,11 +21,20 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: 543f3e7c46b72fded3c7a1fe7eb3b73ee0468126732067d3fd9f713c95895105
+sourceHash: c30a58d880538b419b1ab9683f47819feb8a8636ff9166cceac22f92467c3c90
 translationStatus: translated
 generatedBodyHash: 6e947f0d40850957a39590d658a152604186d214a3106c4b06cc86f37e9d744a
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/9e0d0c8c-ac79-4699-925c-abdfe9ac51eb
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-udp-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleUDP provides Blueprint-callable UDP communication for Unreal Engine projects, combining multi-channel sending and receiving, asynchronous reception, address filtering, and runtime configuration in one plugin.

@@ -20,8 +20,15 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginManager
 lang: zh
 translationKey: plugin-manager
+workInfo:
+  channels:
+    - kind: docs
+      href: /docs/zh/tools/plugin-manager/
+  compatibility:
+    - platforms:
+        - UE 插件管理工具（操作系统待核实）
+      requirements: []
 ---
-
 ## 作品简介
 
 UEPluginManager 是集中查看和管理 UE 插件的桌面工具。它把项目 Plugins 目录、商城下载目录及引擎自带插件汇集到同一界面，支持搜索、依赖关系查看、同名冲突提示与启用状态管理。

@@ -24,11 +24,18 @@ docIds:
 sourceDate: 2025-12-21
 lang: en
 translationKey: md-image-embed
-sourceHash: 7e0250f86033a7afdc788cc539fb87f35388f1a8e8190a710dcddb61beadf6d0
+sourceHash: f561b9bb1e66ef9ceaba98cdf7c7bd6744454598a6ba682e9d3336e56a042fe7
 translationStatus: translated
 generatedBodyHash: 1b7f65663af1d6aa02119958c86222eb9fa23d69f64f2a5e7a7b7836305a7d61
+workInfo:
+  channels:
+    - kind: docs
+      href: /docs/zh/guides/writing-tools/md-image-embed-guide/
+  compatibility:
+    - platforms:
+        - Obsidian plugin (operating system to be verified)
+      requirements: []
 ---
-
 ## Overview
 
 MDImageEmbed is a local image export plugin for Obsidian.

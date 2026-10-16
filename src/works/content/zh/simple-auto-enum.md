@@ -24,8 +24,17 @@ docIds:
 sourceDate: 2025-10-12
 lang: zh
 translationKey: simple-auto-enum
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/2d104382-60b1-4da6-86c6-ed93997f9c0a
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-auto-enum-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleAutoEnum 用宏声明配置数组与 UE 枚举之间的绑定，减少为每个枚举重复编写初始化和配置变更处理代码。

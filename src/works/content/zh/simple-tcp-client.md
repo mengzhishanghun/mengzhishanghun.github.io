@@ -21,8 +21,17 @@ links:
 sourceDate: 2025-10-25
 lang: zh
 translationKey: simple-tcp-client
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/6d6d46bf-eaed-4b66-8382-9d69eb56981e
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-tcp-client-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleTCPClient 在 Unreal Engine 中封装 TCP 客户端连接，提供多通道管理、异步处理、自动重连间隔配置，以及面向蓝图的连接状态接口。

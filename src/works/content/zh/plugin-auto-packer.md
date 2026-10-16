@@ -20,8 +20,18 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: zh
 translationKey: plugin-auto-packer
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/UEPluginAutoPacker
+    - kind: docs
+      href: /docs/zh/tools/plugin-auto-packer/
+  compatibility:
+    - platforms:
+        - Windows
+      requirements:
+        - 仅构建 Win64 插件
 ---
-
 ## 作品简介
 
 UEPluginAutoPacker 面向需要为多个 Unreal Engine 引擎版本交付插件的开发者，把引擎配置、插件构建、状态查看和发布文件整理放在一个工具中。

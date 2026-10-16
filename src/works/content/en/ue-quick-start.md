@@ -20,11 +20,18 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 lang: en
 translationKey: ue-quick-start
-sourceHash: c99979b36da776b3c6897980f7618aa93c3ec3958cb90bea95157d2988d82811
+sourceHash: 34a78b308e419b033f67ac8c985ee36bb491c00a30762be8186e0f72ebbd0a7b
 translationStatus: translated
 generatedBodyHash: 6cd56adbe1cf6c3c5cf727cba7f318dfd17ee44eb696a7e4374c2f749cf8757a
+workInfo:
+  channels:
+    - kind: docs
+      href: /docs/zh/tools/ue-quick-start/
+  compatibility:
+    - platforms:
+        - UE project tool (operating system to be verified)
+      requirements: []
 ---
-
 ## Overview
 
 UEQuickStart provides a graphical build and launch entry point for existing Unreal Engine projects. It automatically detects the project and associated engine, displays live build logs, and permits project launch after compilation succeeds.

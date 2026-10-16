@@ -23,11 +23,23 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: 241135ca57a67a86073ca93806557a066c8c7406da7d32f75d4e0f82663f47b5
+sourceHash: dced86f786af17f32aade79449ac0dfc2e6ab8d53a133d754fcb31d717f6c53d
 translationStatus: translated
 generatedBodyHash: 4cb189a562e0795ddf83c474365b512a8b7fc05929a867c7d61f341761c0caeb
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-launcher-guide/
+  compatibility:
+    - platforms:
+        - Windows
+        - Linux
+        - macOS
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleLauncher manages external programs through named presets in UE games. Projects configure launch commands, working directories, and execution modes for services or tools, then start, query, or stop processes by preset.

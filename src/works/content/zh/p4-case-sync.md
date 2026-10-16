@@ -19,8 +19,19 @@ links:
     href: https://github.com/MZSH-Tools/P4CaseSync
 lang: zh
 translationKey: p4-case-sync
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/P4CaseSync
+    - kind: docs
+      href: /docs/zh/tools/p4-case-sync/
+  compatibility:
+    - platforms:
+        - Windows（推荐）
+        - macOS / Linux（文档提供命令）
+      requirements:
+        - Perforce p4 命令行环境
 ---
-
 ## 作品简介
 
 P4CaseSync 在 Perforce 提交前检查已打开文件的路径大小写。它以本地磁盘上的真实路径为参照，核对指定 changelist 或 default 中的文件，并提供预览、人工微调和应用修正的入口。

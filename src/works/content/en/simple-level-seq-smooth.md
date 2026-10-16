@@ -20,11 +20,20 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: en
 translationKey: simple-level-seq-smooth
-sourceHash: 45e686cbdb9404386961a000fc56ca205efa26ef9fe248d9244842ee420d08f3
+sourceHash: 226731364b0457fbb4f01a6482de08348e9517da06f3a446286aa95e83d98350
 translationStatus: translated
 generatedBodyHash: 8eb6a397980af4ec047d955b965bf7ad119fce38d862b6966747a8589cbb12c1
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/b8acac2b-913d-47ce-8596-b4e2d7d6753a
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-level-seq-smooth-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleLevelSeqSmooth provides data filtering and smoothing for Unreal Engine Level Sequence, addressing curve jitter, skipped frames, and similar issues in motion capture, pose estimation, and animation post-processing.

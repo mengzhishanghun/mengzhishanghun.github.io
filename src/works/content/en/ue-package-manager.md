@@ -20,11 +20,21 @@ links:
     href: https://github.com/MZSH-Tools/UEPackageManager
 lang: en
 translationKey: ue-package-manager
-sourceHash: 86e213cb2daf339d494c37569bf4efee06f3ade12ce018318df867599d01673a
+sourceHash: db8a182dad88813b6e7fd7c9335f5f78d5e0e15528355d9981f177e9e88143a3
 translationStatus: translated
 generatedBodyHash: 8d542f72aab450490fe586f1cacea4095b7692599511d7f74db7b4d0f6eddbae
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/UEPackageManager
+    - kind: docs
+      href: /docs/zh/tools/ue-package-manager/
+  compatibility:
+    - platforms:
+        - Windows
+      requirements:
+        - Win64 project packaging; Launcher or source-built engine
 ---
-
 ## Overview
 
 UEPackageManager is a Windows Unreal Engine project packaging tool with graphical and command-line entry points.

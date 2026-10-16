@@ -20,8 +20,18 @@ links:
     href: https://github.com/MZSH-Tools/UEPackageManager
 lang: zh
 translationKey: ue-package-manager
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/UEPackageManager
+    - kind: docs
+      href: /docs/zh/tools/ue-package-manager/
+  compatibility:
+    - platforms:
+        - Windows
+      requirements:
+        - Win64 项目打包；Launcher 或源码引擎
 ---
-
 ## 作品简介
 
 UEPackageManager 是 Windows 上的 Unreal Engine 项目打包工具，提供图形界面与命令行两种入口。

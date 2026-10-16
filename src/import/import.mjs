@@ -4,7 +4,7 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import YAML from 'yaml';
 import {createMarkdownProcessor} from '@astrojs/markdown-remark';
-import {publicFields,commonFields} from '../build/source-schema.mjs';
+import {publicFields,commonFields,assertPublicFields} from '../build/source-schema.mjs';
 import {createLinkResolver} from './links.mjs';
 import {resourcePath} from '../build/resources.mjs';
 
@@ -30,6 +30,7 @@ export async function projectSource(source,record,site,resolveLink){
   if(record.cover && (source.data.cover!==record.cover.source || source.data.websiteCoverUrl!==record.cover.websiteUrl))throw new Error('封面授权漂移');
   if(record.cover && site && binaryHash(fs.readFileSync(resourcePath(site,record.cover.websiteUrl.slice(1))))!==record.cover.publicSha256)throw new Error('封面hash漂移');
   const data=Object.fromEntries((record.kind==='common'?commonFields:publicFields).filter(k=>source.data[k]!==undefined).map(k=>[k,source.data[k]]));
+  assertPublicFields(data,record.kind==='common');
   if(record.kind!=='common' && !record.cover){delete data.coverAlt;delete data.websiteCoverUrl;}
   if(record.kind!=='common')data.lang=record.lang;
   if(record.translationKey)data.translationKey=record.translationKey;

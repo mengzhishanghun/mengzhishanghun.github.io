@@ -21,8 +21,17 @@ links:
 sourceDate: 2025-10-25
 lang: zh
 translationKey: simple-websocket
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/70e9040b-66c0-4793-a219-93203a117545
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-websocket-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleWebSocket 在 Unreal Engine 中封装 WebSocket 连接管理。项目可通过命名连接区分通信对象，绑定消息委托，并从蓝图调用相关接口。

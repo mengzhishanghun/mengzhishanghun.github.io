@@ -24,8 +24,17 @@ docIds:
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-byte-conversion
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-byte-conversion-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleByteConversion 为 UE 蓝图提供常用数据到字节数组、结构体到字节数组，以及结构体与 JSON 字符串的双向转换接口。

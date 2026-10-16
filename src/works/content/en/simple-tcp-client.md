@@ -21,11 +21,20 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: be81c2621d57bf9a9846f9cdca0fe193d996ce7b6e2a322f2b77926752fe940a
+sourceHash: 5042a6d3111f0ebee7ba9ff9b2d182c926ce355f4fe70e1b2c1a8fd24eb08163
 translationStatus: translated
 generatedBodyHash: fc4e24e320f7a22560cfbf4b1f4e791af26bf82e3d989fa07fd2969b5918fee9
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/6d6d46bf-eaed-4b66-8382-9d69eb56981e
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-tcp-client-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleTCPClient wraps TCP client connections in Unreal Engine, providing multi-channel management, asynchronous processing, configurable automatic reconnection intervals, and Blueprint connection state interfaces.

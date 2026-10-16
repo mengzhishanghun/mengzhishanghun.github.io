@@ -23,8 +23,20 @@ docIds:
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-launcher
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-launcher-guide/
+  compatibility:
+    - platforms:
+        - Windows
+        - Linux
+        - macOS
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleLauncher 在 UE 游戏中以命名预设管理外部程序。项目可以为外部服务或工具配置启动命令、工作目录和运行方式，再按预设启动、查询或停止进程。

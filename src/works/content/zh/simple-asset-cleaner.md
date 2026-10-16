@@ -24,8 +24,18 @@ docIds:
 sourceDate: 2025-11-01
 lang: zh
 translationKey: simple-asset-cleaner
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/b0cf0a4d-c1a2-45f6-8bfb-7a92313379c2
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-asset-cleaner-guide/
+  compatibility:
+    - platforms:
+        - Windows（已测试；其他平台待核实）
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleAssetCleaner 为 Unreal Engine 项目提供基于引用关系的候选未引用资产检查。它从配置的根资源出发追踪直接与间接引用，在提交阶段处理候选文件，也提供面向整个受版本控制项目的清理入口。

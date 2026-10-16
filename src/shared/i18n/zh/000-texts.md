@@ -7760,6 +7760,15 @@ engagementLabels:
   manual: 请选择并复制下方链接。
   manualLabel: 分享链接（选择后复制）
 translationKey: site-copy
+workLabels:
+  sale: 在售
+  open-source: 开源
+  saleAction: 跳转到在售页面
+  sourceAction: 跳转到开源页面
+  docsAction: 查看具体文档
+  platforms: 适用平台
+  requirements: 环境要求
+  pending: 待核实
 ---
 
 公共模板正文以外的文字、元信息、图片说明与可访问标签由这些位置键提供。正文与目录从对应 Markdown 生成。

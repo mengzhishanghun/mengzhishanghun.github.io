@@ -21,11 +21,20 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: 0cd7c6ba6da505f5f8997dcbfebf4130509865f2bb46ef2d342c979a2f2f879e
+sourceHash: 6fd755f7fede203a319e3db5b4c85c633207dfa23c5967ce1e69dfb17b448265
 translationStatus: translated
 generatedBodyHash: a9f64ba2ca69b53bb54a880504929e937a3c0507ff85f3db05ecd5ff08223685
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/70e9040b-66c0-4793-a219-93203a117545
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-websocket-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleWebSocket wraps WebSocket connection management in Unreal Engine. Projects distinguish peers using named connections, bind message delegates, and call interfaces from Blueprints.

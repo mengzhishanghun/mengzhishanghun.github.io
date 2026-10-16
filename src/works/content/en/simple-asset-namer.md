@@ -24,11 +24,20 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: 9cd4a716bd24bb78f9251a533cd1e28c2f59f6398b1330f1d2990b9eae818e8a
+sourceHash: fa8201debf1edec57d54744e68940a1b3d8260e0ab6738128090628bbf6e61e5
 translationStatus: translated
 generatedBodyHash: 7f9405fef3c5bb76f13196cef851cf0dc9d2752c61aef1f361e6fe1b1a7f2dee
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/f7c4474c-9a9d-455a-a948-d46d557b457d
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-asset-namer-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleAssetNamer provides type- and path-based naming rules for UE assets. It checks new names on creation, import, or manual rename, and supports batch renaming of assets in existing directories.

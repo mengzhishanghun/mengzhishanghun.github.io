@@ -24,11 +24,20 @@ docIds:
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: f8e9a0c83782c36521bad5e4a4cc393fe6f0dfe00702c02b6dea2e1b10474c18
+sourceHash: d14774c4e44b2005b780087dea7c759ba8683feb642302fd14227ed8910ffb82
 translationStatus: translated
 generatedBodyHash: 5ee8e6da9f082235392b68d4f11ae07116906a165eb095bdaa803f287e30499e
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/2d104382-60b1-4da6-86c6-ed93997f9c0a
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-auto-enum-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleAutoEnum declares bindings between configuration arrays and UE enums with macros, reducing repeated initialization and configuration change handling for each enum.

@@ -24,11 +24,23 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: 564727a75be4a362ed74077b35b9753be17cb7e7d9ca39dd24d61a71bc135033
+sourceHash: 5489f0d47a3bc0fb5e1d099a4f4b88a0ed519458d91d2e2ddc8cbb582bc322eb
 translationStatus: translated
 generatedBodyHash: 85f5062b6cb4ddcae149c7bc8870128c7d4e273c810c0281e22fa7c81f359e80
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/05c2cb8f-cabc-45ef-84e0-9eac988b5a35
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-config-exclude-guide/
+  compatibility:
+    - platforms:
+        - Windows
+        - macOS
+        - Linux
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleConfigExclude is an editor plugin for UE project packaging configuration. It lists ini files in the Config directory in Project Settings, allowing each to use default behavior, forced inclusion, or exclusion, and synchronizes those choices to packaging Staging rules.

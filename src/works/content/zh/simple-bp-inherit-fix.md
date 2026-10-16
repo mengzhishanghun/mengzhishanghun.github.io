@@ -19,8 +19,17 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: zh
 translationKey: simple-bp-inherit-fix
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/320c7471-92b8-4a3e-a88a-2a5fcb98d620
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-bp-inherit-fix-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleBPInheritFix 是处理 Actor 蓝图继承链中组件状态异常的编辑器插件。

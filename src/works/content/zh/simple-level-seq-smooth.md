@@ -20,8 +20,17 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: zh
 translationKey: simple-level-seq-smooth
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/b8acac2b-913d-47ce-8596-b4e2d7d6753a
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-level-seq-smooth-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleLevelSeqSmooth 为 Unreal Engine 的 Level Sequence 提供数据滤波与平滑入口，面向动作捕捉、姿态估计和动画后处理中的曲线抖动、跳帧等问题。

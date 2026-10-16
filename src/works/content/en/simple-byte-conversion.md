@@ -24,11 +24,20 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: 34fc7adfca9953f06a772f3b3ed127e42d3ec133592c7153642e3d55b7f8d050
+sourceHash: e94600a65e830c67d32e4694d148392d0ebff42aa91b081d3e8a0cdd91abf1b2
 translationStatus: translated
 generatedBodyHash: 48402ba0fafac3a8a37056c27cf0c3b1cc5adca94c8371bdc4df4e6b3a7f6cfb
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-byte-conversion-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleByteConversion provides UE Blueprint interfaces for converting common data and structs to byte arrays, and converting structs to and from JSON strings.

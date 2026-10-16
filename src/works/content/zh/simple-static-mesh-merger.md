@@ -24,8 +24,17 @@ docIds:
 sourceDate: 2025-11-09
 lang: zh
 translationKey: simple-static-mesh-merger
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。它先把可合并对象按网格、材质、移动性和碰撞配置分组，供开发者预览与筛选，再将选中的对象组织为 ISM/HISM 实例。

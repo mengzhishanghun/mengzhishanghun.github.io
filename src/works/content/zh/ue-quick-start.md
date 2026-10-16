@@ -20,8 +20,15 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 lang: zh
 translationKey: ue-quick-start
+workInfo:
+  channels:
+    - kind: docs
+      href: /docs/zh/tools/ue-quick-start/
+  compatibility:
+    - platforms:
+        - UE 项目工具（操作系统待核实）
+      requirements: []
 ---
-
 ## 作品简介
 
 UEQuickStart 为已有 Unreal Engine 项目提供图形化的编译与启动入口。工具自动识别项目及其关联引擎，显示实时编译日志，并在编译成功后允许启动项目。

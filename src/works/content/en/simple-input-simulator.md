@@ -24,11 +24,20 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-input-simulator
-sourceHash: 1416b14681871a7870838ff13712ed9c1a1052df1ca53ccc8bd54848f03bbe8a
+sourceHash: 434126248728409459d48bd4bde5bd302c148b078915cca2460166fce1b6f310
 translationStatus: translated
 generatedBodyHash: a7d7fc432e66300574f285b7e5dae6cba1c1218c900431f0ec211e686b9bdcbe
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/dd1ee0a8-f450-4a3d-adc4-4a96f5dec3dd
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-input-simulator-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleInputSimulator provides key and axis input simulation nodes for UE Blueprints, allowing game logic to receive specified actions through its existing input pipeline.

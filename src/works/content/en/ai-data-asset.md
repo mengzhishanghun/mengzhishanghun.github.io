@@ -22,11 +22,20 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: 06f30569e2a18c5714827b17939b6fbb162bbeafebd3f4affb4dc14c91a29cc2
+sourceHash: 069139b0382f6da34527f4865b8051796ee15dbafab6851037096b713b32ca3d
 translationStatus: translated
 generatedBodyHash: f129c11ff6dd82e824487bab1fe5939ec845b1e493f55c8f66ffb24b8dc5eec8
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/e6c92c8b-6e87-4f2f-9975-1c0d85621c60
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/ai-data-asset-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 AIDataAsset maps Unreal Engine DataAsset properties to JSON files, allowing external programs to adjust game data through readable, writable text. Asset changes in the editor can be exported to JSON, and external edits can be imported back into assets.

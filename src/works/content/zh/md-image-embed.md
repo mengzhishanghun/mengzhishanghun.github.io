@@ -24,8 +24,15 @@ docIds:
 sourceDate: 2025-12-21
 lang: zh
 translationKey: md-image-embed
+workInfo:
+  channels:
+    - kind: docs
+      href: /docs/zh/guides/writing-tools/md-image-embed-guide/
+  compatibility:
+    - platforms:
+        - Obsidian 插件（操作系统待核实）
+      requirements: []
 ---
-
 ## 作品简介
 
 MDImageEmbed 是面向 Obsidian 的本地图片导出插件。

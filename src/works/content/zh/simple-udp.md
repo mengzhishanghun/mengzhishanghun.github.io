@@ -21,8 +21,17 @@ links:
 sourceDate: 2025-10-25
 lang: zh
 translationKey: simple-udp
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/9e0d0c8c-ac79-4699-925c-abdfe9ac51eb
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-udp-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleUDP 为 Unreal Engine 项目提供蓝图可调用的 UDP 通信能力，将多通道收发、异步接收、地址过滤和运行时配置集中在一个插件中。

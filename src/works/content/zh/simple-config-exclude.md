@@ -24,8 +24,20 @@ docIds:
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-config-exclude
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/05c2cb8f-cabc-45ef-84e0-9eac988b5a35
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-config-exclude-guide/
+  compatibility:
+    - platforms:
+        - Windows
+        - macOS
+        - Linux
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在项目设置中列出 Config 目录下的 ini 文件，允许逐项选择默认、强制包含或排除，并把选择同步到打包使用的 Staging 规则。

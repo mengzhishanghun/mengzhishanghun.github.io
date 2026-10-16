@@ -19,11 +19,20 @@ links:
     href: https://github.com/MZSH-Tools/MDBlogPacker
 lang: en
 translationKey: md-blog-packer
-sourceHash: a9062dc9ed9766e571148f81ccb071a41b63e40cd135bdc0807f5953e6e12a4d
+sourceHash: c6758379e1cfd8ab9577b4cc7dc4c643223e6e471b61d44f232fe588520ec86d
 translationStatus: translated
 generatedBodyHash: 08288e6ef86ae56732dc9a42c8ba4cb968c9d2624d8836c5ef8ebde9641613b7
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/MDBlogPacker
+    - kind: docs
+      href: /docs/zh/tools/md-blog-packer/
+  compatibility:
+    - platforms:
+        - Markdown tool (operating system to be verified)
+      requirements: []
 ---
-
 ## Overview
 
 MDBlogPacker prepares Markdown containing local images as text that is easier to copy across platforms or export.

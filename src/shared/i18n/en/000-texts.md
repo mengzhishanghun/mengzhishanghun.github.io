@@ -7760,9 +7760,18 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 93fa9b4c5651b85da707b89148c9a39e7f96e3be85fe4f744a8f7689e2127007
+sourceHash: 8e4a70d99e212686348e1a082c8da88c000a22aff3ff9881a95a6563c0e03211
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
+workLabels:
+  sale: On sale
+  open-source: Open source
+  saleAction: View sales page
+  sourceAction: View open-source page
+  docsAction: View documentation
+  platforms: Platforms
+  requirements: Requirements
+  pending: To be verified
 ---
 
 Text outside the shared template body, metadata, image descriptions, and accessible labels are supplied by these position keys. The body and table of contents are generated from the corresponding Markdown.

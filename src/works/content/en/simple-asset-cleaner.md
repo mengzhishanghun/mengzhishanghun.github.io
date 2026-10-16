@@ -24,11 +24,21 @@ docIds:
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: 1754c0e5d07ac87e15f302059519fefdbe5a9364f4026b1dd020794738f7bcb1
+sourceHash: 6312947eca3eb1b89c3da4a013408fe1fe3d7f9de5c8ddda35e57755738db40d
 translationStatus: translated
 generatedBodyHash: 7ae4b9d6a67b87675ea16cee944f1aaf0096c38432438d384b0ba2c72c9d9561
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/b0cf0a4d-c1a2-45f6-8bfb-7a92313379c2
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-asset-cleaner-guide/
+  compatibility:
+    - platforms:
+        - Windows (tested; other platforms to be verified)
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleAssetCleaner checks candidate unreferenced assets in Unreal Engine projects through reference relationships. It traces direct and indirect references from configured root assets, handles candidate files during submission, and provides cleanup for the whole version-controlled project.

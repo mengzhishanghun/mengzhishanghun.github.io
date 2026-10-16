@@ -24,11 +24,20 @@ docIds:
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: 602f8570e796e726d37608a4994ffa6aa48a80a52f5a4cde44641cbdf73c9a73
+sourceHash: 278b4241c7cc4e36635485c6286145888e8b8eff1ce4b01bb3ff35be07079c88
 translationStatus: translated
 generatedBodyHash: 22d401c8753e37870aae685340fc9636b505334090bbf9ff793b556aa4d1db8b
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## Overview
 
 SimpleStaticMeshMerger organizes repeated StaticMeshActors in levels. It first groups merge candidates by mesh, materials, mobility, and collision settings for preview and filtering, then organizes selected objects as ISM/HISM instances.

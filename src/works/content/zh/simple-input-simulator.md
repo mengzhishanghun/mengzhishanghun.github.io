@@ -24,8 +24,17 @@ docIds:
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-input-simulator
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/dd1ee0a8-f450-4a3d-adc4-4a96f5dec3dd
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-input-simulator-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleInputSimulator 为 UE 蓝图提供按键和轴输入模拟节点，让游戏逻辑沿已有输入链路接收指定操作。

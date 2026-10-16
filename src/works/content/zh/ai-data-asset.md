@@ -22,8 +22,17 @@ links:
 sourceDate: 2026-05-25
 lang: zh
 translationKey: ai-data-asset
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/e6c92c8b-6e87-4f2f-9975-1c0d85621c60
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/ai-data-asset-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 AIDataAsset 将 Unreal Engine 的 DataAsset 属性映射到 JSON 文件，让外部程序通过可读写的文本参与游戏数据调整。编辑器中的资产变化可以导出为 JSON，外部修改也可导回资产。

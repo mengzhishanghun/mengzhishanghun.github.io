@@ -19,8 +19,17 @@ links:
     href: https://github.com/MZSH-Tools/MDBlogPacker
 lang: zh
 translationKey: md-blog-packer
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/MDBlogPacker
+    - kind: docs
+      href: /docs/zh/tools/md-blog-packer/
+  compatibility:
+    - platforms:
+        - Markdown 工具（操作系统待核实）
+      requirements: []
 ---
-
 ## 作品简介
 
 MDBlogPacker 用于把带有本地图片的 Markdown 整理成便于跨平台复制或导出的文本。

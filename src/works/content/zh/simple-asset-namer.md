@@ -24,8 +24,17 @@ docIds:
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-asset-namer
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/f7c4474c-9a9d-455a-a948-d46d557b457d
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-asset-namer-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleAssetNamer 为 UE 资产提供基于类型和路径的命名规则。它既能在创建、导入或手动改名时检查新名称，也能对已有目录中的资产进行批量重命名。

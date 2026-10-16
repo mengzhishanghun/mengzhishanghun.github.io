@@ -21,8 +21,17 @@ links:
 sourceDate: 2025-10-25
 lang: zh
 translationKey: simple-tcp-server
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/cc276a4a-389b-43e3-8a04-a6d628534108
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-tcp-server-guide/
+  compatibility:
+    - platforms: []
+      requirements:
+        - UE 5.2–5.8
 ---
-
 ## 作品简介
 
 SimpleTCPServer 为 Unreal Engine 提供 TCP 服务端的多客户端会话管理能力。

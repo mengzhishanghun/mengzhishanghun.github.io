@@ -21,43 +21,56 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: daac1a01383e9405b0a9a12fe194fa8ecfd4b7c3762ad181f39cea4e7540797c
+sourceHash: 65cb6a6ddccb9882b0c39e9822805818641ded0d8161c6cac85ad1e35675a991
 translationStatus: translated
-generatedBodyHash: f209f3b36b62d5a471dc50782cff92505c1f8229429cea3deb308745bc9790fa
+generatedBodyHash: b3fccaed6a9137711671c6b650f1f798adca9c8205d9abadd79f16493de016a2
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/
+  compatibility:
+    - platforms:
+        - Win64
+      requirements:
+        - UE 5.2–5.8
 ---
 
 ## Overview
 
-SimpleSSHTunnel exposes SSH tunneling and port forwarding through interfaces callable from Unreal Engine Blueprints.
+SimpleSSHTunnel is an SSH tunneling plugin for Unreal Engine. It provides local port forwarding to access remote services.
 
-It uses libssh2 for the SSH protocol and OpenSSL for encryption, allowing UE projects that need remote services to initiate connections from Blueprints.
+The plugin uses libssh2 for SSH and OpenSSL for encryption, with Blueprint nodes to manage tunnel connections.
 
 ## Background and goals
 
-Using a system SSH client to access remote services from UE involves executable paths, process management, and platform differences.
+Launching a system SSH client from UE requires additional handling for executable paths, process management, and platform differences.
 
-SimpleSSHTunnel integrates libssh2 and OpenSSL, leaving underlying connection work to the plugin and exposing Blueprint entry points to the project.
+SimpleSSHTunnel wraps these connection operations in the plugin so projects can call them from Blueprints.
 
 ## Core capabilities
 
 ### SSH connection interfaces
 
-The plugin wraps the low-level capabilities needed to establish SSH tunnels, allowing UE interface calls without scattering libssh2 session operations across business Blueprints. Connections require an accessible SSH service and appropriate authentication information.
+The plugin establishes SSH tunnels without requiring projects to write libssh2 session operations directly. Connections require an accessible SSH service and appropriate authentication information.
 
 ### Port forwarding
 
-Tunnels connect local access paths to remote service ports. Projects can call the interfaces where forwarding is needed, routing remote service access through SSH. Forwarding targets, credentials, and network reachability still depend on deployment.
+The SSH tunnel forwards connections received on a local port to a remote service port. Forwarding targets, authentication information, and network reachability depend on the deployment environment.
 
 ### Blueprint calls
 
-Blueprint interfaces reduce the need to write SSH library calls at each usage point. They expose tunnel operations; consuming remote business data after connection remains the responsibility of project communication and business logic.
+After configuring connection parameters in Project Settings, Blueprints can create tunnels, query their status, close a specific tunnel, or close all tunnels.
+
+The remote service protocol and the sending, receiving, and processing of data remain the responsibility of the project's communication and business logic.
 
 ## Use cases
 
-It suits UE applications accessing remote services in restricted networks through SSH tunnels and managing connections in Blueprint workflows. Projects can integrate tunnel connections into their workflow and handle returned service data themselves.
+UE applications that access remote services in restricted networks through SSH can use this plugin to manage connections in Blueprints, then handle returned data in the project.
 
 ## Scope and limitations
 
-This version targets Windows. Check library files and build support before porting to other platforms.
+Windows is currently supported. Check library files and build support before porting to other platforms.
 
-Review SSH credential storage and usage, connection threads, error handling, and session/channel release on shutdown in the target project. The tunnel does not define the remote service protocol.
+The default subsystem closes all tunnels when it is destroyed. In the target project, review SSH credential storage and usage, connection threads, error handling, and whether sessions and channels are released correctly when connections close.

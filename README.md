@@ -24,6 +24,20 @@ node src/import/import.mjs --vault "中文笔记库路径"
 
 私有映射为 `src/import/000-sync.local`，受 `*.local` 忽略规则保护。外语审核指纹或中文公开快照漂移时停止，不自动覆盖用户稿件。页面与公共文案直接在对应功能的 `content/` 内维护，详细格式见 [导入指南](src/import/README.md)。
 
+## 作品详情元数据
+
+作品来源可选填 `workInfo`。`channels` 中每项使用 `kind: sale | open-source | docs` 和 `href`；`compatibility` 按实际适用范围分组，每组含 `platforms`、`requirements` 两个字符串数组。数组为空时页面显示“待核实”，不同平台要求不同版本时分别建组。
+
+只有核实销售页面或开源许可证后才添加对应渠道。已有 `status` 保留；未填 `workInfo` 的旧来源沿用原有按钮。元数据通过公开字段白名单同步，额外嵌套字段与不安全 URL 会被拒绝。
+
+修改后构建网站，再验证作品元数据与生成的 48 个双语页面：
+
+```powershell
+node --test src/works/metadata.test.mjs src/import/projection.test.mjs
+$env:SITE_OUTPUT = 'dist/site'
+node --test src/works/metadata-output.test.mjs
+```
+
 ## 发布
 
 ```powershell
