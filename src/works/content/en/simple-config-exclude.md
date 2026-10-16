@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: 5489f0d47a3bc0fb5e1d099a4f4b88a0ed519458d91d2e2ddc8cbb582bc322eb
+sourceHash: 87ef9915d16b052bba1382cc19badf4a7476c4d4536321d04913b2533f40bb14
 translationStatus: translated
 generatedBodyHash: 85f5062b6cb4ddcae149c7bc8870128c7d4e273c810c0281e22fa7c81f359e80
 workInfo:
@@ -35,7 +35,7 @@ workInfo:
       href: /docs/zh/guides/ue-tools/simple-config-exclude-guide/
   compatibility:
     - platforms:
-        - Windows
+        - Windows (Win64)
         - macOS
         - Linux
       requirements:

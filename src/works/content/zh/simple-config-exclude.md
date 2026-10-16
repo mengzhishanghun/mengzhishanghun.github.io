@@ -32,7 +32,7 @@ workInfo:
       href: /docs/zh/guides/ue-tools/simple-config-exclude-guide/
   compatibility:
     - platforms:
-        - Windows
+        - Windows (Win64)
         - macOS
         - Linux
       requirements:

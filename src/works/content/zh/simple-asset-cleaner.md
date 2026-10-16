@@ -32,7 +32,9 @@ workInfo:
       href: /docs/zh/guides/ue-tools/simple-asset-cleaner-guide/
   compatibility:
     - platforms:
-        - Windows（已测试；其他平台待核实）
+        - Windows (Win64)
+        - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: en
 translationKey: simple-level-seq-smooth
-sourceHash: 226731364b0457fbb4f01a6482de08348e9517da06f3a446286aa95e83d98350
+sourceHash: 99d2dd5a970ed2bd7635106523fda115c74d58b3b06a14b59532aa1a097836e4
 translationStatus: translated
 generatedBodyHash: 8eb6a397980af4ec047d955b965bf7ad119fce38d862b6966747a8589cbb12c1
 workInfo:
@@ -30,7 +30,10 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-level-seq-smooth-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

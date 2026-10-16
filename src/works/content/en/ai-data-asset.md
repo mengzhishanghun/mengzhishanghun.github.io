@@ -22,7 +22,7 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: 069139b0382f6da34527f4865b8051796ee15dbafab6851037096b713b32ca3d
+sourceHash: 05ef7ac2d82bc313eec701d880eb771f811c4f28463a7d05012b79eb52d29719
 translationStatus: translated
 generatedBodyHash: f129c11ff6dd82e824487bab1fe5939ec845b1e493f55c8f66ffb24b8dc5eec8
 workInfo:
@@ -32,7 +32,10 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/ai-data-asset-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

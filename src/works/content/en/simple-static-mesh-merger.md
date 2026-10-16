@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: 278b4241c7cc4e36635485c6286145888e8b8eff1ce4b01bb3ff35be07079c88
+sourceHash: 820ee8ca3433bfa39c6cf8417ee671263505c5667ea82a4258cfeb16983245a5
 translationStatus: translated
 generatedBodyHash: 22d401c8753e37870aae685340fc9636b505334090bbf9ff793b556aa4d1db8b
 workInfo:
@@ -34,7 +34,10 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

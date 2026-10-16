@@ -21,7 +21,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: c30a58d880538b419b1ab9683f47819feb8a8636ff9166cceac22f92467c3c90
+sourceHash: 658d15db4480422450f907fb5e15bcdf19524687b13fb635b3af21fb7281f27c
 translationStatus: translated
 generatedBodyHash: 6e947f0d40850957a39590d658a152604186d214a3106c4b06cc86f37e9d744a
 workInfo:
@@ -31,7 +31,10 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-udp-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

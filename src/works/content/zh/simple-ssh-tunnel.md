@@ -29,7 +29,7 @@ workInfo:
       href: /docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/
   compatibility:
     - platforms:
-        - Win64
+        - Windows (Win64)
       requirements:
         - UE 5.2–5.8
 ---

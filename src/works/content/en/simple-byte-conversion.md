@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: e94600a65e830c67d32e4694d148392d0ebff42aa91b081d3e8a0cdd91abf1b2
+sourceHash: e51d05efcca83aa201c1f4ad0b060851eecdc59443bba9b2ac9935791f07e4f9
 translationStatus: translated
 generatedBodyHash: 48402ba0fafac3a8a37056c27cf0c3b1cc5adca94c8371bdc4df4e6b3a7f6cfb
 workInfo:
@@ -34,7 +34,12 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-byte-conversion-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+        - Android
+        - iOS
       requirements:
         - UE 5.2–5.8
 ---

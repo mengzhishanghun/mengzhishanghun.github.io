@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-input-simulator
-sourceHash: 434126248728409459d48bd4bde5bd302c148b078915cca2460166fce1b6f310
+sourceHash: 3ba0397b911620eccbc69bec3931188fdccc6b711a1805890aa7f1a85ba50ed0
 translationStatus: translated
 generatedBodyHash: a7d7fc432e66300574f285b7e5dae6cba1c1218c900431f0ec211e686b9bdcbe
 workInfo:
@@ -34,7 +34,12 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-input-simulator-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+        - Android
+        - iOS
       requirements:
         - UE 5.2–5.8
 ---

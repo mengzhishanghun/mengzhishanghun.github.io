@@ -21,7 +21,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-server
-sourceHash: 7be5efba3448fb38a1898c3b644b9f252fc2fc7e1ace398f6ae2e87f2ebdadef
+sourceHash: e98428bfa95f6f4d7d5b8072d42051e2239ccc660025fe634a8d4b1100372e17
 translationStatus: translated
 generatedBodyHash: 99ac8c190092a68ac9af112361f460102d94d912d968e6212295a658495b8484
 workInfo:
@@ -31,7 +31,12 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-tcp-server-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+        - Android
+        - iOS
       requirements:
         - UE 5.2–5.8
 ---

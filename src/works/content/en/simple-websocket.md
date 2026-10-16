@@ -21,7 +21,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: 6fd755f7fede203a319e3db5b4c85c633207dfa23c5967ce1e69dfb17b448265
+sourceHash: 1870c8b00c729e11905a3258949ee0a7d5dd795941caa8269f26cb5f65d99014
 translationStatus: translated
 generatedBodyHash: a9f64ba2ca69b53bb54a880504929e937a3c0507ff85f3db05ecd5ff08223685
 workInfo:
@@ -31,7 +31,12 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-websocket-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+        - Android
+        - iOS
       requirements:
         - UE 5.2–5.8
 ---

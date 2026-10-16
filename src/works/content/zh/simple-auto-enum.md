@@ -31,7 +31,12 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-auto-enum-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+        - Android
+        - iOS
       requirements:
         - UE 5.2–5.8
 ---

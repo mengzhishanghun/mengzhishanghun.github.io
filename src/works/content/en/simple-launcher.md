@@ -23,7 +23,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: dced86f786af17f32aade79449ac0dfc2e6ab8d53a133d754fcb31d717f6c53d
+sourceHash: d9ebd4cd12616c68049d82a1bec3d0e8522481b93ff7970502b9dad821548c8f
 translationStatus: translated
 generatedBodyHash: 4cb189a562e0795ddf83c474365b512a8b7fc05929a867c7d61f341761c0caeb
 workInfo:
@@ -34,9 +34,9 @@ workInfo:
       href: /docs/zh/guides/ue-tools/simple-launcher-guide/
   compatibility:
     - platforms:
-        - Windows
-        - Linux
+        - Windows (Win64)
         - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

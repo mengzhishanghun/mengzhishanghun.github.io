@@ -21,7 +21,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: 65cb6a6ddccb9882b0c39e9822805818641ded0d8161c6cac85ad1e35675a991
+sourceHash: 2e7e9737eec3f685cd7f857322ce8d1903748de3ff56329f06a2a425fd74d972
 translationStatus: translated
 generatedBodyHash: b3fccaed6a9137711671c6b650f1f798adca9c8205d9abadd79f16493de016a2
 workInfo:
@@ -32,7 +32,7 @@ workInfo:
       href: /docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/
   compatibility:
     - platforms:
-        - Win64
+        - Windows (Win64)
       requirements:
         - UE 5.2–5.8
 ---

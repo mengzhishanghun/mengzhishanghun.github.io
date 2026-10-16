@@ -21,7 +21,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: 5042a6d3111f0ebee7ba9ff9b2d182c926ce355f4fe70e1b2c1a8fd24eb08163
+sourceHash: 9407c00773944e70abbcda44a4bf3c93756ca61f6391fb101cbc3acebe656933
 translationStatus: translated
 generatedBodyHash: fc4e24e320f7a22560cfbf4b1f4e791af26bf82e3d989fa07fd2969b5918fee9
 workInfo:
@@ -31,7 +31,10 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-tcp-client-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

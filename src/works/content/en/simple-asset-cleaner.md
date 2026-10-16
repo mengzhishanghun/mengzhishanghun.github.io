@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: 6312947eca3eb1b89c3da4a013408fe1fe3d7f9de5c8ddda35e57755738db40d
+sourceHash: ce4c14572a5aa5af3b5e3d9cfd4b9d7afca8d7df7c23ddd5b02f711e1abf1a62
 translationStatus: translated
 generatedBodyHash: 7ae4b9d6a67b87675ea16cee944f1aaf0096c38432438d384b0ba2c72c9d9561
 workInfo:
@@ -35,7 +35,9 @@ workInfo:
       href: /docs/zh/guides/ue-tools/simple-asset-cleaner-guide/
   compatibility:
     - platforms:
-        - Windows (tested; other platforms to be verified)
+        - Windows (Win64)
+        - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

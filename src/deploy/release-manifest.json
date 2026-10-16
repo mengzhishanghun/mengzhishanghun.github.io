@@ -4490,9 +4490,9 @@
     },
     {
       "path": "en/works/ai-data-asset/index.html",
-      "size": 44766,
-      "gitBlob": "96e31d870f75e29cccf0abc1a303b07236713aa5",
-      "sha256": "93111edf3edff947ae86c11383b7a767069bd21d52b9b47a72516a75b6315398",
+      "size": 44783,
+      "gitBlob": "9ef964a6750d4d9a5de2f72ce885e45d42a6a2ae",
+      "sha256": "3e7f1b8c244e1062ddd7991803384a203ce05db1b71c2b7ae9bbeb390cff58ff",
       "target": "both"
     },
     {
@@ -4539,44 +4539,44 @@
     },
     {
       "path": "en/works/simple-asset-cleaner/index.html",
-      "size": 44809,
-      "gitBlob": "61a3199fff4211367a6343273c3607040454c7f9",
-      "sha256": "3983b1d3231fcb25d2f9e9a0efd01bc796ef5041f64110545d293b9f9602a204",
+      "size": 44792,
+      "gitBlob": "bf58940d4da921e9947bd69adadf8b2bf3e75598",
+      "sha256": "aa3935343d45d454004171dc66628b15e63673969bc93a41416594a56f3d8e80",
       "target": "both"
     },
     {
       "path": "en/works/simple-asset-namer/index.html",
-      "size": 44086,
-      "gitBlob": "d7ea6632087d09271a9468ce2507bd4a93cf273d",
-      "sha256": "6abb16ae36835be5cd1bc5e6262b23687a46ed387b90f20542178d4eab82de30",
+      "size": 44103,
+      "gitBlob": "09811683cd1692e9733b383f8a64aea23570c3cf",
+      "sha256": "d37926b51f126798a6da25ba7a920a820218bf87d137e6f3b32475108d3cad51",
       "target": "both"
     },
     {
       "path": "en/works/simple-auto-enum/index.html",
-      "size": 44231,
-      "gitBlob": "55755f1cc07b4981d4fab4d546db3f7f47e8a981",
-      "sha256": "fb6fb6bf575ef1807d3f122e708407cfe3093410b294eb1c29c21baf5dd6d729",
+      "size": 44264,
+      "gitBlob": "ab94327e71ea818bf4e88e68b338d4ace3fda26d",
+      "sha256": "d31c71f076a9650b9619aeae6bf14a5c95460a89fe9c38b672e6dfcd8d0a3910",
       "target": "both"
     },
     {
       "path": "en/works/simple-bp-inherit-fix/index.html",
-      "size": 44305,
-      "gitBlob": "a9a2a7eaad26ef3bfcc38eb6bdb67acab8ea8bcc",
-      "sha256": "f065a2a4ea3f36ec4e869567f11e072c4d47aa42c405f26cb0dfd483be7c523a",
+      "size": 44322,
+      "gitBlob": "f338feec8a92db1c95c1fdc2f788fa6bb15543fc",
+      "sha256": "985af854d8c70ddac547059e8db8a0ce1ac5bff4fb3243417be860a4a8fe19c1",
       "target": "both"
     },
     {
       "path": "en/works/simple-byte-conversion/index.html",
-      "size": 44394,
-      "gitBlob": "1d0b0bbde6e7ab9508bf375428b538f30c19cb6f",
-      "sha256": "8fd1f164a90abaa32a67bcdcefafe0a9669cb65a00e5e43d4c94cb67d89c00e2",
+      "size": 44427,
+      "gitBlob": "e2bcb2aa1ae27225c11fc5eb7b640c73cea997e1",
+      "sha256": "ba12e4bd040d91d17fa8b11d161455216d15b3a57ee1c5c936d42d86d18850df",
       "target": "both"
     },
     {
       "path": "en/works/simple-config-exclude/index.html",
-      "size": 44502,
-      "gitBlob": "16c9b6dedef2b48700c0fc1081047bc6d6c68d8e",
-      "sha256": "4e25b34cdb09c21957b3ab57d43e6ac5585ffed7eef0b8dfe53d4599dd3daff3",
+      "size": 44510,
+      "gitBlob": "9b910d90fe9c1054b0a1abb03ab5b0a9ed92dba8",
+      "sha256": "d65af0dc2ab42b8873b4e67a9a6e076502a7d244c1a51d05baf014636d368545",
       "target": "both"
     },
     {
@@ -4588,65 +4588,65 @@
     },
     {
       "path": "en/works/simple-input-simulator/index.html",
-      "size": 44461,
-      "gitBlob": "f0de29d2dbcb6d20c7a5dce6f8755ae391388cba",
-      "sha256": "001f14b345292cad9825dd9a68c5a9107ba1f2543d9ecbb002179a6ebb28ca39",
+      "size": 44494,
+      "gitBlob": "670d06e47568453eeac6367788d5150184d47bf7",
+      "sha256": "059687d772f3e89d2066aedc01b4fcc81c6aea8740c82d15b373e3db2cebd6da",
       "target": "both"
     },
     {
       "path": "en/works/simple-launcher/index.html",
-      "size": 44157,
-      "gitBlob": "e1d11b3b1b236456f745564c7d2bd20ebd00dc74",
-      "sha256": "16adb7f9f18bcb46f87fd3f0d217f60e9637d661cc2067c86f06e0ea3b0ffb06",
+      "size": 44165,
+      "gitBlob": "d74de8357294a69e5b3b728bf618dc8081a20495",
+      "sha256": "0252782afa779c3763f38f5dc8bbb8ac3d04f4f53e213300513ecff5d5c8fd66",
       "target": "both"
     },
     {
       "path": "en/works/simple-level-seq-smooth/index.html",
-      "size": 44516,
-      "gitBlob": "2c7bddeb291aa7c58e4d8f9ed1637b0c7c9e4675",
-      "sha256": "108ef90d5ecbf3134afbb09399cb34760ded793b148926b3ce64e01e5ec1122a",
+      "size": 44533,
+      "gitBlob": "d4e9a6e767604c12f1c594b64027ae659141112c",
+      "sha256": "62204d71cafb1d042bffb81daf5246e621c6d168db5bb1adfec311f0d59b0cc8",
       "target": "both"
     },
     {
       "path": "en/works/simple-ssh-tunnel/index.html",
-      "size": 43514,
-      "gitBlob": "e85052a521916d32503b6d03d282ac7df13df5a1",
-      "sha256": "1ffc1d111ac5e0dd075e4df7f11a3f5844dad645b69b214685b40f1bbfc7b9b7",
+      "size": 43524,
+      "gitBlob": "71935c9e808e627800b752ca45df94764ecdbdc3",
+      "sha256": "a95190f1a6904d15bcb6a3c0411437a1a64d1e41397eadc2a712476463154cd2",
       "target": "both"
     },
     {
       "path": "en/works/simple-static-mesh-merger/index.html",
-      "size": 44816,
-      "gitBlob": "8cde49293bd3c8198cf8c1988df89fac22b1d24b",
-      "sha256": "db2c69af7beb184d9a749d21bc5c020bd1a36c8c61a13c35e5d48e8943598432",
+      "size": 44833,
+      "gitBlob": "0902aa72cd1e19789126a6d5c6f5b054dacd4778",
+      "sha256": "cbff14a5e63f66cde451432a7c3cbcc4b86799953f7fc61a65d65beac1db4120",
       "target": "both"
     },
     {
       "path": "en/works/simple-tcp-client/index.html",
-      "size": 44171,
-      "gitBlob": "f0d84110418f8f3efbc385b6cd44722299ce271e",
-      "sha256": "c991b73f4b129ee52c9bf7589bf30577b82917cb36467b00ebfdc8d29c0088fb",
+      "size": 44188,
+      "gitBlob": "01e448eb41439e999ec1dcf4cccbb7bdb78bac4a",
+      "sha256": "664f4622e24059c325d3e21893c23f01a35e75608c708415ab629750a2672c2a",
       "target": "both"
     },
     {
       "path": "en/works/simple-tcp-server/index.html",
-      "size": 43718,
-      "gitBlob": "17e9795430cc3f3d5cc84e6388c4c73b752bdaac",
-      "sha256": "6fbc9d9b9b9666fac747f3e3b03cf2bed27a8e76f936f7ba6639e9bfa1da8179",
+      "size": 43751,
+      "gitBlob": "64cdda5e96de8f119dcfbf59a90e2d151d5cf2a0",
+      "sha256": "f7762b1f976bd6218d4f5fa22ad07aa6077ecefbb093ec4a8a48699c5f9f7562",
       "target": "both"
     },
     {
       "path": "en/works/simple-udp/index.html",
-      "size": 44037,
-      "gitBlob": "f22b0cf2b429f11a07afc816e543fed636e6d562",
-      "sha256": "590f7e972870077f51581efedaeae26018fa123fd125b064772f186263cb3d11",
+      "size": 44054,
+      "gitBlob": "c0f55079dafdea15c98df293c4dbd69aed00d12a",
+      "sha256": "4ad7301f9f7cbdc48d9e61c798e763f5e20078380974f3f4139a6eca94a4090c",
       "target": "both"
     },
     {
       "path": "en/works/simple-websocket/index.html",
-      "size": 43506,
-      "gitBlob": "0ee436172414119a06e562ee81083766dd42b94a",
-      "sha256": "0782e9951c26e1ba28e5b178bf9bf27a5d376044a6597a6abf8b2a10e1f2cbbc",
+      "size": 43539,
+      "gitBlob": "5411e424583f0a7ae2f272d82277aa734ba2fd47",
+      "sha256": "86108505ca39d15edb10b2d30dc3235b9153e3850c94bbf345367539f0d7eaf2",
       "target": "both"
     },
     {
@@ -7836,9 +7836,9 @@
     },
     {
       "path": "zh/works/ai-data-asset/index.html",
-      "size": 44543,
-      "gitBlob": "a8149bdbac1f99cc48dffec2573dfb99eea73b0d",
-      "sha256": "144f148a39e0401781f8da719d88847e04602488b96070c18197a7836e4562e4",
+      "size": 44565,
+      "gitBlob": "16419c789ca9c4049d7e1e4df701f0cd5f18e6b1",
+      "sha256": "ddcf85cfeb4acd5e7193565b8da10580d0dcee1bbb0771dd7c4553527df3e03d",
       "target": "both"
     },
     {
@@ -7885,44 +7885,44 @@
     },
     {
       "path": "zh/works/simple-asset-cleaner/index.html",
-      "size": 44848,
-      "gitBlob": "2de042b576ca49a70d340093778ee40b213facec",
-      "sha256": "f2960a5761df32ef4f060951052f776f356cd10dc6c642510d7d2043b460155a",
+      "size": 44833,
+      "gitBlob": "9ce91a3e0a160f21ef0d850e6ae6138d84fc2c5c",
+      "sha256": "56ffea17d50ed37d283bd25ee13b076388b8192740d67be05e30dfdd26d2493a",
       "target": "both"
     },
     {
       "path": "zh/works/simple-asset-namer/index.html",
-      "size": 44261,
-      "gitBlob": "e9bd4739ac53b15070e802051044e07fcaea8504",
-      "sha256": "668719318ea400fd0467d8e6b07444bf4294380da6246b911cc793e5573d9715",
+      "size": 44283,
+      "gitBlob": "6bb7922058ac59d75dd49d7a801019ba05530566",
+      "sha256": "aae49de470909ac82f63eeba19764506f47d5b36c382d62d46e682e2628cb1cb",
       "target": "both"
     },
     {
       "path": "zh/works/simple-auto-enum/index.html",
-      "size": 44305,
-      "gitBlob": "9524933b5715fa49a5258f9f4d3f9ba8f795a38e",
-      "sha256": "073fecd602b4a0aada4d971bb26231bc59e9d18d94199e5aadc6a18c946ccd4d",
+      "size": 44343,
+      "gitBlob": "dcfab6c41d05afac29f1183217561a859bcb62fc",
+      "sha256": "68515eea279ffce592fe77c8225cce3dbdee651c0cad3bc2abd0072bf0c4dee7",
       "target": "both"
     },
     {
       "path": "zh/works/simple-bp-inherit-fix/index.html",
-      "size": 44230,
-      "gitBlob": "66f068863cc28660265aee5d50c40e4169051856",
-      "sha256": "11f35c62bdba796f22bd28dc96f4f1fef5bfc9c929cc1bca80f653c46e6d0ccd",
+      "size": 44252,
+      "gitBlob": "b4e33393ac1dcaed4d537c56d5e8682b41fe1028",
+      "sha256": "137ee8554295e508bd48e2917e436b3b6fa5789ab0bb9036e89c7e0f16420597",
       "target": "both"
     },
     {
       "path": "zh/works/simple-byte-conversion/index.html",
-      "size": 44534,
-      "gitBlob": "6696feb404eb4ad9e064db46fb4b9c9df977893b",
-      "sha256": "567fdac3adffcaadf28ca4f54012d6115d19ded01ebc89b91a4caf7df3449b01",
+      "size": 44572,
+      "gitBlob": "a46db336ae3a9a9bb14563a4d8fc504ba5760ad2",
+      "sha256": "fc38c668f9d0a77b2b087355ef4ed5ce6bbd911b6f0ef596860873bdc921c44b",
       "target": "both"
     },
     {
       "path": "zh/works/simple-config-exclude/index.html",
-      "size": 44405,
-      "gitBlob": "75a84f48625f7349cddd5f7c33af0c2ee524bd73",
-      "sha256": "18749951a21a84a8932dd9a08e2daac4014895d04cb3919d3ddcc62742912539",
+      "size": 44413,
+      "gitBlob": "fc565030f335d6ccac15459f22f4a901eed6fa4c",
+      "sha256": "43f55d823dae453125253069bf7996527372a1c010ef9efed71ee0eade963bf9",
       "target": "both"
     },
     {
@@ -7934,65 +7934,65 @@
     },
     {
       "path": "zh/works/simple-input-simulator/index.html",
-      "size": 44395,
-      "gitBlob": "715ec0ddfd3a18a8788281da54cf11c8ce557c67",
-      "sha256": "5c23304d1508be6d270e99f0326779a67626efafbffe39027addab68762838dc",
+      "size": 44433,
+      "gitBlob": "c1399bfd9ca51fd80f94647b89f855baa15262e5",
+      "sha256": "032aee579db026068c07a95cc3098a8e5af1331212252407e7ca2034a6269d64",
       "target": "both"
     },
     {
       "path": "zh/works/simple-launcher/index.html",
-      "size": 44184,
-      "gitBlob": "99e1139739b9ef3385f20cf120db585186d43ca3",
-      "sha256": "e4f71232217eef61a7095fc705ea333bbd3501398c428b1d2a6765a1acd08944",
+      "size": 44192,
+      "gitBlob": "aabad4237ba43a90330ed9466c9c180add495619",
+      "sha256": "766d1d14c11da4d2cfe34231272dc0538ccc8228097adeefb7ee92de41cf39e5",
       "target": "both"
     },
     {
       "path": "zh/works/simple-level-seq-smooth/index.html",
-      "size": 44427,
-      "gitBlob": "6f88eb0dc104d4b31e154687068a2be1b464d694",
-      "sha256": "3d1d234ae90b6f59116b8dda4cf7e093c8b5748e9b07d6ba750b6d7d9530260e",
+      "size": 44449,
+      "gitBlob": "b2dc02b148d6d322d2ce831993492f5c7ac3623e",
+      "sha256": "6dc0520ab5689019a11cb85c41717e1ed616349236838d6a07278c31f8277eb0",
       "target": "both"
     },
     {
       "path": "zh/works/simple-ssh-tunnel/index.html",
-      "size": 43601,
-      "gitBlob": "cd092949fc1c827d8eefb364bb473c35f9e25f7b",
-      "sha256": "bf9454d9d52774a5c0914c8d6b5c0ed43a6a7561f2d59a2ef52e58e1ac519bac",
+      "size": 43611,
+      "gitBlob": "7f343699b2a8f17ff46d925c82d64f3efa5f7ae7",
+      "sha256": "d1910e8e9ddbe7ceabefd53ef49029371adf9eed9a2bcb231e5bd2eb13618767",
       "target": "both"
     },
     {
       "path": "zh/works/simple-static-mesh-merger/index.html",
-      "size": 44857,
-      "gitBlob": "824d9b9a6a6d5540e90dce6797aba74f8e5c3560",
-      "sha256": "58b25f3c089b90dd43ab800bcc03535b5a21753bc79ff1d4c8d75dc71ce16fb2",
+      "size": 44879,
+      "gitBlob": "02e794a496395500715a0360d8db556d838213d0",
+      "sha256": "91187d298f11bf2552a8441977e040caff5611df8b49c21c42aaaf4959f3f290",
       "target": "both"
     },
     {
       "path": "zh/works/simple-tcp-client/index.html",
-      "size": 43979,
-      "gitBlob": "23825290d846680a2089681b6cec57e0a943dd18",
-      "sha256": "79f125110d50e6aeb72cb333594fc514eaaa6baf39da5ee13350f7ea61959e84",
+      "size": 44001,
+      "gitBlob": "1605a0897611180f8b6b44f2f63dcf49dec053b6",
+      "sha256": "385248175ed9ff4990ced136b51d59d0596449782dfdbaf59065cff0efe6c964",
       "target": "both"
     },
     {
       "path": "zh/works/simple-tcp-server/index.html",
-      "size": 43731,
-      "gitBlob": "dc7d1d17f4cc017a4eac7f701ae36f1a7578ef19",
-      "sha256": "0540b36fc2eae624a418e3bb7b8cbfd511d5213177ee61b70fa9287504cf5671",
+      "size": 43769,
+      "gitBlob": "d2b7b034c228e1ab9392ddc6e98ebd83e39b675c",
+      "sha256": "07a705469428121bf8fd399b352bac24457b82720e6821da0bb2b2d5d26e0bcc",
       "target": "both"
     },
     {
       "path": "zh/works/simple-udp/index.html",
-      "size": 43828,
-      "gitBlob": "2283aca428be4a1a1057a800415f8013db2a8191",
-      "sha256": "6ec2f69f9d08a3b0d4d2478dac6e095ba48d41ce2007fe5361260439c805b115",
+      "size": 43850,
+      "gitBlob": "3d932e9aa088a67d16405e476929453054c88fed",
+      "sha256": "80531f5662c8454ac49d08bbda095ee49e54e7f49e903a8c41b271413056760a",
       "target": "both"
     },
     {
       "path": "zh/works/simple-websocket/index.html",
-      "size": 43517,
-      "gitBlob": "3ecff815a837b25f0596c32e55e765600b375145",
-      "sha256": "58d3d38bff7913b040ca8e939e3bc7f5184a0ea596ffb082698158f845f09ce7",
+      "size": 43555,
+      "gitBlob": "45de191a338fb6e4dcfb86d93ee3f605512fbabc",
+      "sha256": "8fdb7af0281bd0e0d9e8ecd0b4de68b280a3e0a3d84f577c31bd5df6411191bd",
       "target": "both"
     },
     {

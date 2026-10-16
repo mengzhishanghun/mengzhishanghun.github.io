@@ -31,9 +31,9 @@ workInfo:
       href: /docs/zh/guides/ue-tools/simple-launcher-guide/
   compatibility:
     - platforms:
-        - Windows
-        - Linux
+        - Windows (Win64)
         - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

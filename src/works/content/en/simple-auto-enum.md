@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: d14774c4e44b2005b780087dea7c759ba8683feb642302fd14227ed8910ffb82
+sourceHash: e0de21fdfc18085cce315a6518bb2b9134ddc048dd4fae9e256ebd521bf81696
 translationStatus: translated
 generatedBodyHash: 5ee8e6da9f082235392b68d4f11ae07116906a165eb095bdaa803f287e30499e
 workInfo:
@@ -34,7 +34,12 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-auto-enum-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+        - Android
+        - iOS
       requirements:
         - UE 5.2–5.8
 ---

@@ -28,7 +28,10 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-tcp-client-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---

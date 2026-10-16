@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: fa8201debf1edec57d54744e68940a1b3d8260e0ab6738128090628bbf6e61e5
+sourceHash: 459dd367478c0dd64f4cb2587927c15022bb373c317b4603cce6188b7acb0019
 translationStatus: translated
 generatedBodyHash: 7f9405fef3c5bb76f13196cef851cf0dc9d2752c61aef1f361e6fe1b1a7f2dee
 workInfo:
@@ -34,7 +34,10 @@ workInfo:
     - kind: docs
       href: /docs/zh/guides/ue-tools/simple-asset-namer-guide/
   compatibility:
-    - platforms: []
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
       requirements:
         - UE 5.2–5.8
 ---
