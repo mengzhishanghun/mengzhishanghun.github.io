@@ -26,3 +26,17 @@ test('metadata renderer supports sale, source, both, grouped compatibility and l
   for(const kind of kinds)assert.match(result,new RegExp(kind==='sale'?'跳转到在售页面':'跳转到开源页面'));
  }
 });
+
+test('work cards show only verified sale and source badges beside their titles',async()=>{
+ const {renderWorkCardStatuses}=await import('./metadata.mjs');
+ const {parseFragment}=await import('parse5');const {walk,attrs}=await import('../build/extract-dom.mjs');
+ const labels={sale:'在售','open-source':'开源'},html='<a class="content-card" data-content-card data-slug="example"><div class="project-title-group"><h2>Example</h2><p>Secondary</p></div><div class="content-card-tags"><span>Tag</span></div></a>';
+ for(const [kinds,want]of [[['sale'],['在售']],[['open-source'],['开源']],[['sale','open-source'],['在售','开源']],[['docs'],[]],[[],[]]]){
+  const data={workInfo:{...info,channels:info.channels.filter(c=>kinds.includes(c.kind))}},entries=[{type:'work',slug:'example',sources:{zh:{data}}}];
+  const result=renderWorkCardStatuses(html,entries,'zh',labels),doc=parseFragment(result),badges=[];
+  walk(doc,n=>{if((attrs(n).class||'').split(' ').includes('work-status')){assert.equal(attrs(n.parentNode).class,'work-card-title-line');assert.ok(n.parentNode.childNodes.some(child=>child.tagName==='h2'));badges.push(n.childNodes[0].value);}});
+  assert.deepEqual(badges,want);assert.match(result,/<div class="content-card-tags"><span>Tag<\/span><\/div>/);
+ }
+ assert.equal(renderWorkCardStatuses(html,[{type:'case',slug:'example',sources:{zh:{data:{workInfo:info}}}}],'zh',labels),html);
+ assert.equal(renderWorkCardStatuses(html,[{type:'work',slug:'example',sources:{zh:{data:{}}}}],'zh',labels),html);
+});

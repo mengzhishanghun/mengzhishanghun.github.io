@@ -10,7 +10,7 @@ import {mapMedia} from './media.mjs';
 import {assertPublicFields} from './source-schema.mjs';
 import {articleTypes,validateArticleIdentities,shareRoute} from '../engagement/article-identities.mjs';
 import {loadResources,regularPath,resourcePath,safeRelative} from './resources.mjs';
-import {renderWorkMetadata} from '../works/metadata.mjs';
+import {renderWorkMetadata,renderWorkCardStatuses} from '../works/metadata.mjs';
 import {projectBlogTopics} from '../blog/topics.mjs';
 import {projectContentTopics} from './content-topics.mjs';
 const require = createRequire(new URL('../../package.json',import.meta.url));
@@ -472,6 +472,7 @@ export async function buildSite(options) {
     const file=regularPath(options.templateRoot || options.sourceRoot || path.join(site,'src'),entry.template);
     let html=fs.readFileSync(file,'utf8').replaceAll('/blog-search/',`/${locale}/blog-search/`);
     html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
+    if(entry.id==='page:works-index')html=renderWorkCardStatuses(html,entries,locale,copy[locale].workLabels);
     if(entry.type==='work')html=renderWorkMetadata(html,entry.sources[locale].data,copy[locale].workLabels);
     if(entry.id==='page:about')html=html.replaceAll('{{profile:birthYear}}',String(profile.birthYear));
     html=html.replace('{{body}}',result.code).replace('{{outline}}',outline(result.headings));

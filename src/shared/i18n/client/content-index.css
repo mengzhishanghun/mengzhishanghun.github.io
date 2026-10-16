@@ -5,3 +5,27 @@
 
 .content-browser .content-tags-toggle { min-width: 44px; min-height: 44px; margin-top: 8px; }
 .content-browser .content-tags-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
+
+.content-browser .content-card .work-card-title-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  min-inline-size: 0;
+}
+.content-browser .content-card .work-card-title-line h2 {
+  min-inline-size: 0;
+  overflow-wrap: anywhere;
+}
+.content-browser .content-card .work-status {
+  display: inline-flex;
+  flex: none;
+  padding: 2px 8px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  color: #8ad6e5;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  white-space: nowrap;
+}

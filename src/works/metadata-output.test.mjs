@@ -22,3 +22,22 @@ test('all 48 work pages expose verified channels, title statuses and localized d
  }
  assert.equal(pages,48);
 });
+
+test('both work indexes show statuses on all 24 cards without adding badges to other indexes',()=>{
+ for(const lang of ['zh','en']){
+  const root=path.resolve(process.env.SITE_OUTPUT||'dist/site',lang),doc=parse(fs.readFileSync(path.join(root,'works/index.html'),'utf8'));
+  let count=0,stylesheet=false;
+  walk(doc,card=>{
+   const a=attrs(card);if(card.tagName==='link' && a.href==='/assets/site-ui/content-index.css')stylesheet=true;
+   if(a['data-content-card']===undefined)return;
+   const data=parseSource(fs.readFileSync(new URL('./content/'+lang+'/'+a['data-slug']+'.md',import.meta.url),'utf8')).data;
+   const badges=[],tags=[];walk(card,node=>{const classes=(attrs(node).class||'').split(/\s+/);if(classes.includes('work-status')){assert.equal(attrs(node.parentNode).class,'work-card-title-line');badges.push(text(node));}if(classes.includes('content-card-tags'))tags.push(text(node));});
+   const want=data.workInfo.channels.filter(c=>c.kind!=='docs').map(c=>lang==='zh'?{sale:'在售','open-source':'开源'}[c.kind]:{sale:'On sale','open-source':'Open source'}[c.kind]);
+   assert.deepEqual(badges,want,a['data-slug']+' '+lang);assert.equal(tags.length,1);count++;
+  });
+  assert.equal(count,24);assert.equal(stylesheet,true);
+  for(const relative of ['index.html','cases/index.html','blog/index.html']){
+   const other=parse(fs.readFileSync(path.join(root,relative),'utf8')),badges=[];walk(other,node=>{if((attrs(node).class||'').split(/\s+/).includes('work-status'))badges.push(node);});assert.equal(badges.length,0,lang+'/'+relative);
+  }
+ }
+});
