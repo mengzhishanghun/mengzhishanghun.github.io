@@ -66,7 +66,7 @@ def request(url, limit=2_000_000, retries=3):
         try:
             req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT,
                                                         'Accept-Encoding': 'identity'})
-            with urllib.request.urlopen(req, timeout=20) as response:
+            with urllib.request.urlopen(req, timeout=60) as response:
                 final = urllib.parse.urlsplit(response.geturl())
                 allowed = urllib.parse.urlsplit(url).hostname
                 if final.hostname != allowed or response.status != 200:
