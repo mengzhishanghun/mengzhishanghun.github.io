@@ -189,6 +189,96 @@ class NewProtocolDeployment(old_tests.DeploymentTests):
             self.run_main([])
         self.assertEqual(self.m.POINTER.resolve(), self.old)
 
+    def cancel_before_switch_and_resume(self, mode):
+        control = self.m.DownloadControl()
+        release = self.m.ROOT / P
+        original_refs = self.m.assert_refs
+        def interrupted_refs(source_sha, artifact_sha):
+            original_refs(source_sha, artifact_sha)
+            self.assertTrue(release.is_dir())
+            if mode == 'term':
+                self.m.signal.raise_signal(self.m.signal.SIGTERM)
+            else:
+                control.deadline = self.m.time.monotonic() - 1
+        with patch.object(self.m, 'DownloadControl', return_value=control), \
+             patch.object(self.m, 'assert_refs', side_effect=interrupted_refs), \
+             patch.object(self.m, 'add_current_assets'):
+            with self.assertRaises(RuntimeError): self.run_main([])
+        self.assertEqual(self.m.POINTER.resolve(), self.old)
+        self.assertEqual(list(self.m.ROOT.iterdir()), [self.old])
+        self.assertEqual(self.state['failures'], 1)
+        cache = self.m.STATE.parent / 'download-cache-v1'
+        self.assertEqual(len(list(cache.iterdir())), len(self.bodies))
+        # A fresh invocation must use complete cache bytes, with no Pages fetches.
+        self.protocol_request.side_effect = AssertionError('unexpected Pages redownload')
+        with patch.object(self.m, 'add_current_assets'), patch.object(self.m, 'health'):
+            self.run_main([])
+        self.assertEqual(self.m.POINTER.resolve(), release)
+        self.assertEqual(self.state['failures'], 0)
+
+    def test_term_in_final_refs_removes_only_unactivated_release_then_resumes(self):
+        self.cancel_before_switch_and_resume('term')
+
+    def test_expiry_in_final_refs_removes_only_unactivated_release_then_resumes(self):
+        self.cancel_before_switch_and_resume('expiry')
+
+    def test_existing_release_is_preserved_on_failure(self):
+        release = self.m.ROOT / P
+        release.mkdir()
+        sentinel = release / 'existing.txt'; sentinel.write_bytes(b'existing release')
+        with self.assertRaisesRegex(ValueError, 'already exists'):
+            self.run_main([])
+        self.assertEqual(sentinel.read_bytes(), b'existing release')
+        self.assertEqual(self.m.POINTER.resolve(), self.old)
+
+    def test_cleanup_preserves_replaced_release_symlink_and_outside_directory(self):
+        from pathlib import Path
+        import os
+        import shutil
+        outside = Path(self.temp.name).resolve() / 'outside'
+        outside.mkdir()
+        sentinel = outside / 'keep.txt'; sentinel.write_bytes(b'outside boundary')
+        release = self.m.ROOT / P
+        def replace_release_with_link(*_):
+            shutil.rmtree(release)
+            os.symlink(outside, release)
+            raise RuntimeError('release changed outside transaction')
+        with patch.object(self.m, 'assert_refs', side_effect=replace_release_with_link), \
+             patch.object(self.m, 'add_current_assets'):
+            with self.assertRaises(RuntimeError): self.run_main([])
+        self.assertTrue(release.is_symlink())
+        self.assertEqual(sentinel.read_bytes(), b'outside boundary')
+        self.assertEqual(self.m.POINTER.resolve(), self.old)
+
+    def test_cleanup_preserves_replacement_directory_not_owned_by_transaction(self):
+        release = self.m.ROOT / P
+        moved = self.m.ROOT / 'moved-release'
+        def replace_release_directory(*_):
+            release.rename(moved)
+            release.mkdir()
+            (release / 'keep.txt').write_bytes(b'replacement directory')
+            raise RuntimeError('release replaced')
+        with patch.object(self.m, 'assert_refs', side_effect=replace_release_directory), \
+             patch.object(self.m, 'add_current_assets'):
+            with self.assertRaises(RuntimeError): self.run_main([])
+        self.assertEqual((release / 'keep.txt').read_bytes(), b'replacement directory')
+        self.assertTrue(moved.is_dir())
+        self.assertEqual(self.m.POINTER.resolve(), self.old)
+
+    def test_round_exhaustion_counts_once_preserves_cache_and_cleans_stage(self):
+        original = fake_request(self.m, self.bodies)
+        def partial(url, **kwargs):
+            if url.endswith('/assets/file-0.txt'):
+                raise TimeoutError('temporary Pages timeout')
+            return original(url, **kwargs)
+        self.protocol_request.side_effect = partial
+        with patch.object(self.m.DownloadControl, 'pause', lambda control, seconds: control.check()):
+            with self.assertRaises(RuntimeError): self.run_main([])
+        self.assertEqual(self.state['failures'], 1)
+        self.assertEqual(self.m.POINTER.resolve(), self.old)
+        self.assertEqual(list(self.m.ROOT.iterdir()), [self.old])
+        self.assertGreater(len(list((self.m.STATE.parent / 'download-cache-v1').iterdir())), 100)
+
     def test_three_failures_do_not_mutate_state_or_retry_sha(self):
         self.state.update({'failed_sha': P, 'failures': 3})
         with self.assertRaises(ValueError):

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Update mzsh.me from matching public GitHub refs and verified Pages bytes."""
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
 from pathlib import Path, PurePosixPath
 import base64
 import binascii
@@ -8,11 +8,14 @@ import hashlib
 import json
 import os
 import re
+import signal
 import shutil
 import stat
 import subprocess
 import sys
 import time
+import threading
+import urllib.error
 import urllib.parse
 import urllib.request
 
@@ -56,26 +59,81 @@ PROVENANCE_PATH = 'release-provenance.json'
 PAGES_ONLY = {'design-preview/index.html', 'design-preview/docs/index.html'}
 MANIFEST_LIMIT = 8 * 1024 * 1024
 PROVENANCE_LIMIT = 4096
+DOWNLOAD_SECONDS = 15 * 60
+CACHE_KEY = re.compile(r'[0-9a-f]{64}\Z')
+CACHE_TEMP = re.compile(r'\.download-[0-9a-f]{64}-[0-9]+\.tmp\Z')
+
+
+class DownloadControl:
+    def __init__(self, deadline=None):
+        self.deadline = time.monotonic() + DOWNLOAD_SECONDS if deadline is None else deadline
+        self.stop = threading.Event()
+
+    def check(self):
+        if self.stop.is_set():
+            raise RuntimeError('download cancelled')
+        if time.monotonic() >= self.deadline:
+            raise RuntimeError('download budget exhausted')
+
+    def pause(self, seconds):
+        self.check()
+        self.stop.wait(min(seconds, max(0, self.deadline - time.monotonic())))
+        self.check()
+
+
+class NoDownloadRedirect(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, req, fp, code, msg, headers, newurl):
+        fp.close()
+        raise ValueError('Pages redirect rejected')
+
+
+def transient_download_error(exc):
+    if isinstance(exc, urllib.error.HTTPError):
+        return exc.code in (408, 429, 500, 502, 503, 504)
+    if isinstance(exc, urllib.error.URLError):
+        exc = exc.reason
+    return isinstance(exc, (TimeoutError, ConnectionResetError, ConnectionAbortedError))
 
 def say(*items):
     print(*items, flush=True)
 
-def request(url, limit=2_000_000, retries=3):
+def request(url, limit=2_000_000, retries=3, control=None):
     last = None
     for attempt in range(retries):
         try:
             req = urllib.request.Request(url, headers={'User-Agent': USER_AGENT,
                                                         'Accept-Encoding': 'identity'})
-            with urllib.request.urlopen(req, timeout=60) as response:
+            if control is not None:
+                control.check()
+            timeout = min(60, max(0.001, control.deadline - time.monotonic())) if control else 60
+            opener = urllib.request.build_opener(NoDownloadRedirect()) if control else None
+            open_url = opener.open if opener else urllib.request.urlopen
+            with open_url(req, timeout=timeout) as response:
                 final = urllib.parse.urlsplit(response.geturl())
                 allowed = urllib.parse.urlsplit(url).hostname
                 if final.hostname != allowed or response.status != 200:
                     raise ValueError(f'unexpected response destination/status: {final.hostname} {response.status}')
-                body = response.read(limit + 1)
+                if control:
+                    chunks = []; size = 0
+                    while True:
+                        control.check()
+                        chunk = response.read1(min(64 * 1024, limit + 1 - size))
+                        if not chunk:
+                            break
+                        chunks.append(chunk); size += len(chunk)
+                        if size > limit:
+                            raise ValueError('response size limit exceeded')
+                    body = b''.join(chunks)
+                else:
+                    body = response.read(limit + 1)
                 if len(body) > limit:
                     raise ValueError('response size limit exceeded')
                 return body
         except Exception as exc:
+            if isinstance(exc, urllib.error.HTTPError):
+                exc.close()
+            if retries == 1:
+                raise
             last = exc
             if attempt + 1 < retries:
                 time.sleep(2 + attempt * 3)
@@ -372,10 +430,7 @@ def tree_for(sha, *, history=False):
     return entries
 
 
-def fetch_one(pair, stage=None):
-    path, item = pair
-    url = PAGES + urllib.parse.quote(path, safe='/')
-    body = request(url, limit=item['size'] + 1)
+def validate_download(path, item, body):
     if len(body) != item['size'] or git_blob_hash(body) != item['sha']:
         raise ValueError(f'Pages content differs from commit: {path}')
     if 'sha256' in item and hashlib.sha256(body).hexdigest() != item['sha256']:
@@ -384,11 +439,186 @@ def fetch_one(pair, stage=None):
         raise ValueError(f'HTML page invalid: {path}')
     if path == 'index.html' and b'https://mzsh.me' not in body:
         raise ValueError('site origin invalid')
+
+
+def fetch_one(pair, stage=None, control=None):
+    path, item = pair
+    url = PAGES + urllib.parse.quote(path, safe='/')
+    body = request(url, limit=item['size'] + 1, retries=1,
+                   control=control or DownloadControl())
+    validate_download(path, item, body)
     if stage is not None:
         output = stage / path
         output.parent.mkdir(parents=True, exist_ok=True)
         output.write_bytes(body)
     return body
+
+
+def cache_key(path, item):
+    # Legacy S0 has no source SHA-256 credential and cannot seed this cache.
+    if 'sha256' not in item:
+        return None
+    identity = [path, item['size'], item['sha'], item['sha256']]
+    return hashlib.sha256(json.dumps(identity, separators=(',', ':'), ensure_ascii=True).encode()).hexdigest()
+
+
+def private_cache_entry(path, directory=False):
+    info = path.lstat()
+    expected = stat.S_ISDIR if directory else stat.S_ISREG
+    if stat.S_ISLNK(info.st_mode) or not expected(info.st_mode):
+        raise ValueError(f'unsafe download cache type: {path}')
+    if os.name != 'nt' and (stat.S_IMODE(info.st_mode) != (0o700 if directory else 0o600)
+                            or info.st_uid != os.geteuid() or (not directory and info.st_nlink != 1)):
+        raise ValueError(f'unsafe download cache permissions: {path}')
+
+
+def prepare_cache(entries):
+    parent = STATE.parent
+    # STATE is a trusted absolute configuration, but none of its parents may be links.
+    if not parent.is_absolute():
+        raise ValueError('download cache requires absolute state directory')
+    for ancestor in (*reversed(parent.parents), parent):
+        if ancestor.is_symlink():
+            raise ValueError('download cache parent symlink')
+        if ancestor.exists() and not ancestor.is_dir():
+            raise ValueError('download cache parent is not a directory')
+    parent.mkdir(mode=0o755, parents=True, exist_ok=True)
+    info = parent.stat()
+    if os.name != 'nt' and (info.st_uid != os.geteuid() or stat.S_IMODE(info.st_mode) & 0o022):
+        raise ValueError('unsafe download cache parent permissions')
+    cache = parent / 'download-cache-v1'
+    cache.mkdir(mode=0o700, exist_ok=True)
+    private_cache_entry(cache, directory=True)
+    expected = {cache_key(p, e) for p, e in entries.items()} - {None}
+    children = list(cache.iterdir())
+    # Validate everything before deleting any stale entry. Unknowns are preserved.
+    for child in children:
+        private_cache_entry(child)
+        if not (CACHE_KEY.fullmatch(child.name) or CACHE_TEMP.fullmatch(child.name)):
+            raise ValueError(f'unknown download cache entry: {child.name}')
+    for child in children:
+        if child.name not in expected:
+            child.unlink()
+    return cache
+
+
+def cached_download(cache, path, item):
+    key = cache_key(path, item)
+    if key is None:
+        return None
+    target = cache / key
+    if not target.exists() and not target.is_symlink():
+        return None
+    private_cache_entry(target)
+    try:
+        body = regular_bytes(target, limit=item['size'])
+        validate_download(path, item, body)
+        return body
+    except ValueError:
+        # A private regular but incomplete/corrupt item never becomes a cache hit.
+        target.unlink()
+        return None
+
+
+def cache_download(cache, path, item, body):
+    key = cache_key(path, item)
+    if key is None:
+        return
+    temp = cache / f'.download-{key}-{os.getpid()}.tmp'
+    try:
+        with temp.open('xb') as stream:
+            os.chmod(temp, 0o600)
+            stream.write(body)
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.replace(temp, cache / key)
+    finally:
+        temp.unlink(missing_ok=True)
+
+
+def stage_download(stage, path, item, body):
+    if stage is not None and deployable(path, item):
+        output = stage / path
+        output.parent.mkdir(parents=True, exist_ok=True)
+        output.write_bytes(body)
+
+
+def download_entries(entries, stage, control, *, cache=True):
+    control.check()
+    if (sum(e['size'] for p, e in entries.items() if p != PROVENANCE_PATH) > MAX_TOTAL_BYTES
+            or entries.get(PROVENANCE_PATH, {}).get('size', 0) > PROVENANCE_LIMIT):
+        raise ValueError('download capacity exceeded')
+    pairs = {p: e for p, e in entries.items() if p not in SKIP}
+    directory = prepare_cache(pairs) if cache else None
+    pending = {}
+    hits = 0
+    for path, item in pairs.items():
+        control.check()
+        body = cached_download(directory, path, item) if directory else None
+        if body is None:
+            pending[path] = item
+        else:
+            stage_download(stage, path, item, body)
+            hits += 1
+    say('download cache hits', hits, 'missing', len(pending))
+
+    def one(path, item):
+        body = fetch_one((path, item), control=control)
+        if directory:
+            cache_download(directory, path, item, body)
+        stage_download(stage, path, item, body)
+
+    empty_rounds = 0
+    for round_number in range(1, 6):
+        if not pending:
+            control.check()
+            return
+        control.check()
+        before = len(pending)
+        remaining = iter(list(pending.items()))
+        fatal = None
+        with ThreadPoolExecutor(max_workers=6) as pool:
+            running = {}
+            def submit_next():
+                control.check()
+                pair = next(remaining, None)
+                if pair is not None:
+                    running[pool.submit(one, *pair)] = pair[0]
+            try:
+                for _ in range(min(6, len(pending))):
+                    submit_next()
+                while running:
+                    control.check()
+                    completed, _ = wait(running, timeout=min(1, max(0, control.deadline - time.monotonic())),
+                                        return_when=FIRST_COMPLETED)
+                    for future in completed:
+                        path = running.pop(future)
+                        try:
+                            future.result()
+                            del pending[path]
+                        except Exception as exc:
+                            if not transient_download_error(exc):
+                                fatal = exc
+                    if fatal:
+                        raise fatal
+                    for _ in completed:
+                        submit_next()
+            except Exception:
+                control.stop.set()
+                for future in running:
+                    future.cancel()
+                raise
+        gained = before - len(pending)
+        empty_rounds = empty_rounds + 1 if gained == 0 else 0
+        say('download round', round_number, 'success', gained, 'remaining', len(pending),
+            'paths', ','.join(list(pending)[:5]))
+        if not pending:
+            control.check()
+            return
+        if empty_rounds >= 3 or round_number == 5:
+            break
+        control.pause(min(2 ** round_number, 10))
+    raise RuntimeError(f'download incomplete after {round_number} rounds: {len(pending)} files')
 
 
 def strict_json(body):
@@ -545,6 +775,15 @@ def health(expected_home_sha):
         raise ValueError('local HTTPS content does not match commit')
 
 def main():
+    control = DownloadControl()
+    previous = signal.signal(signal.SIGTERM, lambda *_: control.stop.set())
+    try:
+        return update(control)
+    finally:
+        signal.signal(signal.SIGTERM, previous)
+
+
+def update(control):
     check = sys.argv[1:] in (['--check'], ['--preflight'])
     repair_current = sys.argv[1:] == ['--repair-current']
     refresh_current = sys.argv[1:] == ['--refresh-current']
@@ -564,8 +803,7 @@ def main():
         if active is None or not active.is_dir() or active.parent != ROOT:
             raise ValueError('active release pointer invalid')
         verify_archive_in_release(manifest, active)
-        with ThreadPoolExecutor(max_workers=6) as pool:
-            list(pool.map(fetch_one, ((p, e) for p, e in entries.items() if p not in SKIP)))
+        download_entries(entries, None, control, cache=False)
         if POINTER.resolve() != active or hashlib.sha256(CONFIG.read_bytes()).hexdigest() != config_hash:
             raise ValueError('production pointer or Caddyfile changed during preflight')
         assert_refs(main_sha, static_sha)
@@ -590,17 +828,18 @@ def main():
         state_write(state)
         say('no change; live SHA', static_sha, 'HTTPS healthy')
         return
+    release_created = False
+    pointer_switched = False
+    release_identity = None
     try:
         release = ROOT / (static_sha + '-compat2' if refresh_current
                           else static_sha + '-compat' if repair_current else static_sha)
-        if release.exists():
+        if release.exists() or release.is_symlink():
             raise ValueError('release path already exists and is not active')
         stage = ROOT / f'.staging-{static_sha}-{os.getpid()}'
         stage.mkdir(mode=0o755, parents=True)
         try:
-            with ThreadPoolExecutor(max_workers=6) as pool:
-                list(pool.map(lambda pair: fetch_one(pair, stage if deployable(*pair) else None),
-                              ((p, e) for p, e in entries.items() if p not in SKIP)))
+            download_entries(entries, stage, control)
             if sum(p.is_file() for p in stage.rglob('*')) != deployed_count:
                 raise ValueError('staging file count mismatch')
             add_current_assets(manifest, entries, stage, static_sha)
@@ -610,7 +849,11 @@ def main():
             verify_archive_in_release(manifest, stage)
             if hashlib.sha256(CONFIG.read_bytes()).hexdigest() != config_hash:
                 raise ValueError('Caddyfile changed during staging')
+            control.check()
+            info = stage.lstat()
+            release_identity = (info.st_dev, info.st_ino)
             os.replace(stage, release)
+            release_created = True
         finally:
             if stage.exists():
                 shutil.rmtree(stage)
@@ -624,7 +867,10 @@ def main():
             if POINTER.resolve() != old_target or hashlib.sha256(CONFIG.read_bytes()).hexdigest() != config_hash:
                 raise ValueError('production pointer or Caddyfile changed before switch')
             assert_refs(main_sha, static_sha)
+            # Once the switch starts, cancellation cannot interrupt health/rollback.
+            control.check()
             os.replace(temp, POINTER)
+            pointer_switched = True
             try:
                 subprocess.run(['systemctl', 'reload', 'caddy'], check=True, timeout=30)
                 health(entries['index.html']['sha'])
@@ -641,9 +887,21 @@ def main():
         say('deployed', static_sha, 'files', deployed_count,
             'historical_assets', added, 'previous', old_target)
     except Exception:
-        count = state.get('failures', 0) + 1 if state.get('failed_sha') == static_sha else 1
-        state.update({'failed_sha': static_sha, 'failures': count})
-        state_write(state)
+        try:
+            # Only discard our own never-activated directory. A switched release is
+            # retained even after rollback; cache and other releases are untouched.
+            if (release_created and not pointer_switched and ROOT.is_absolute()
+                    and not ROOT.is_symlink() and ROOT.resolve() == ROOT
+                    and release.parent == ROOT and not release.is_symlink()
+                    and release.is_dir() and release.resolve().parent == ROOT
+                    and POINTER.resolve() != release):
+                info = release.lstat()
+                if stat.S_ISDIR(info.st_mode) and (info.st_dev, info.st_ino) == release_identity:
+                    shutil.rmtree(release)
+        finally:
+            count = state.get('failures', 0) + 1 if state.get('failed_sha') == static_sha else 1
+            state.update({'failed_sha': static_sha, 'failures': count})
+            state_write(state)
         raise
 
 if __name__ == '__main__':

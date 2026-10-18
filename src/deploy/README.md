@@ -18,6 +18,16 @@ sudo -n python3 /usr/local/libexec/mzsh-static-update.py --check
 
 正常更新仍由现有服务调用不带参数的入口。`--repair-current` 和 `--refresh-current` 保留既有历史资产修复行为，属于写入模式，不用于普通预检。三次失败的同一提交继续保持熔断，检查不会清零失败记录。
 
+## 下载中断后继续
+
+正式更新将已完整验证的 Pages 文件保存在状态文件旁的 `download-cache-v1/`，默认位置为 `/var/lib/mzsh-static-update/download-cache-v1/`。缓存目录权限为 `0700`，文件为 `0600`。键包含路径、大小、Git blob 和源码 SHA-256；每次重新核对源码与产物绑定后，只复用当前清单中身份完全相同、重新通过大小、摘要和内容检查的文件。跨发布提交也可复用未变化文件。活跃发布目录不作为缓存来源，旧 S0 协议没有源码 SHA-256 凭据，继续从 Pages 下载。
+
+每轮最多六个下载在途，只补缺项，最多五轮；连续三轮没有新增成功文件就停止。仅超时、连接重置/中止、HTTP 408/429/500/502/503/504 可在下一轮补下。证书、重定向、永久 HTTP 错误、来源、容量或摘要校验失败立即停止。单次 Pages 请求不叠加内部重试，socket 超时上限保留 60 秒。程序启动时开始计算 15 分钟下载预算，调度、请求、退避和发布前检查预算；既有外层锁与服务超时不变。一次运行最终失败只计一次提交失败。
+
+只有完整验证成功的文件才原子写入缓存。半文件不续传，损坏普通缓存重新下载；链接、异常类型、权限或未知缓存条目会阻止更新。清理仅限当前缓存内过期的合法键及可识别临时文件。缓存总量仍受清单 150 MB 与来源元数据 4 KiB 上限约束，预览和来源元数据可缓存，但不进入公开发布目录。
+
+收到 TERM 后停止新增下载，清理本次 staging 与临时文件，保留已验证缓存；下次服务运行重新验证 refs 和缓存后补缺。切换指针一旦开始，仍完成原有健康检查及必要回滚。日志沿用 journal，记录轮数、缓存命中、成功和剩余数量，以及少量失败路径。`--check` / `--preflight` 始终从 Pages 验证全部候选文件，不创建、读取或清理下载缓存，也不写状态。
+
 ## 公开范围与容量
 
 公开目录与 `src/analytics/inject.mjs` 保持一致：`_astro`、`assets`、`blog-search`、`blog`、`cases`、`contact`、`docs`、`en`、`licenses`、`media`、`support`、`works`、`zh`，再加同提交语言清单中的启用 code。根文件仅允许 `.nojekyll`、`favicon.svg`、`index.html`、`site-router.js`、`sitemap.xml`、`robots.txt`、`site-languages.json`；另精确允许 `about/index.html` 通用入口，未开放整个 `about/`，其源码与其他子文件仍拒绝。`content/`、`tools/`、`src/`、Obsidian 来源与版本控制/本机元数据不进入发布树。
