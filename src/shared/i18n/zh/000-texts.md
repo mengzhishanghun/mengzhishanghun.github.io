@@ -5181,8 +5181,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:2.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45@aria-label: 标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.h2:0.#text:0: 游戏公式解析：先定义语法，再处理优先级
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.p:1.#text:0: 游戏事件需要计算 `1 + 2 * 3` 之类的文本公式。用正则排除几个非法片段，再在数组里删除 token，不足以保证完整语法和运算顺序。本文从原 UE C++ 记录提炼解析方法，去掉项目 Subsystem 依赖；配套样例只实现整数四则运算、括号和一元正负号。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.h2:0.#text:0: 在 UE 中探索游戏公式的语法解析
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.p:1.#text:0: 从自己的 UE C++ 游戏事件公式实现出发，探索如何把 FString 拆成 Token、读取游戏属性，再按优先级求值，并说明校验、短路和错误处理还需要完善的地方。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0@aria-label: 标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:0.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:1.#text:0: ""
@@ -5708,8 +5708,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   blog:ue-expression-parser-basics:
-    root.html:1.head:0.meta:2@content: 游戏事件需要计算 `1 + 2 * 3` 之类的文本公式。用正则排除几个非法片段，再在数组里删除 token，不足以保证完整语法和运算顺序。本文从原 UE C++ 记录提炼解析方法，去掉项目 Subsystem 依赖；配套样例只实现整数四则运算、括号和一元正负号。
-    root.html:1.head:0.title:4.#text:0: 游戏公式解析：先定义语法，再处理优先级 · 小毛
+    root.html:1.head:0.meta:2@content: 从自己的 UE C++ 游戏事件公式实现出发，探索如何把 FString 拆成 Token、读取游戏属性，再按优先级求值，并说明校验、短路和错误处理还需要完善的地方。
+    root.html:1.head:0.title:4.#text:0: 在 UE 中探索游戏公式的语法解析 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -5727,8 +5727,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 游戏公式解析：先定义语法，再处理优先级
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 游戏事件需要计算 `1 + 2 * 3` 之类的文本公式。用正则排除几个非法片段，再在数组里删除 token，不足以保证完整语法和运算顺序。本文从原 UE C++ 记录提炼解析方法，去掉项目 Subsystem 依赖；配套样例只实现整数四则运算、括号和一元正负号。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 在 UE 中探索游戏公式的语法解析
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 从自己的 UE C++ 游戏事件公式实现出发，探索如何把 FString 拆成 Token、读取游戏属性，再按优先级求值，并说明校验、短路和错误处理还需要完善的地方。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录

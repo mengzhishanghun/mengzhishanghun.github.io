@@ -1,6 +1,6 @@
 ---
-title: 游戏公式解析：先定义语法，再处理优先级
-description: 游戏事件需要计算 `1 + 2 * 3` 之类的文本公式。用正则排除几个非法片段，再在数组里删除 token，不足以保证完整语法和运算顺序。本文从原 UE C++ 记录提炼解析方法，去掉项目 Subsystem 依赖；配套样例只实现整数四则运算、括号和一元正负号。
+title: 在 UE 中探索游戏公式的语法解析
+description: 从自己的 UE C++ 游戏事件公式实现出发，探索如何把 FString 拆成 Token、读取游戏属性，再按优先级求值，并说明校验、短路和错误处理还需要完善的地方。
 type: blog
 slug: ue-expression-parser-basics
 categoryId: ue
@@ -21,111 +21,155 @@ lang: zh
 translationKey: ue-expression-parser-basics
 ---
 
-# 游戏公式解析：先定义语法，再处理优先级
+# 在 UE 中探索游戏公式的语法解析
 
-## 问题与环境
-游戏事件需要计算 `1 + 2 * 3` 之类的文本公式。用正则排除几个非法片段，再在数组里删除 token，不足以保证完整语法和运算顺序。本文从原 UE C++ 记录提炼解析方法，去掉项目 Subsystem 依赖；配套样例只实现整数四则运算、括号和一元正负号。
+我给自己的游戏写过一个简单的公式解析，用来把字符串中的规则算成结果。原来的笔记主要保存代码，这里沿着那份 UE C++ 实现，整理一下公式从文本到计算结果的过程，以及继续完善时需要考虑的问题。
 
-## 最小语法
+## 游戏为什么需要文本公式
+
+如果一个事件需要根据角色属性判断能否触发，或者根据条件计算一个数值，可以把规则写成文本，再交给程序读取。例如下面这条设想中的事件规则：
+
 ```text
-expression = term { ("+" | "-") term }
-term       = unary { ("*" | "/") unary }
-unary      = ("+" | "-") unary | primary
-primary    = integer | "(" expression ")"
+[力量] >= 10 && [金币] >= 100
 ```
 
-词法分析必须从当前位置完整消费输入。数字开头不需要访问前一个 token；空输入直接报错，未知字符不能偷偷当数字，结束时必须消费全部 token。按语法递归求值自然保留顺序，减法和除法从左到右；不要用不保序删除改变 token 次序。
+这里约定用中括号表示游戏属性。解析器需要识别属性名，由游戏提供当前数值，再执行比较和逻辑运算。假设力量是 12、金币是 80，这条规则的结果就是假。
 
-## 错误也是接口的一部分
-把非法输入、括号不匹配、除零和资源上限作为错误，不能都返回零。整数除法需要明确截断规则；样例采用向零截断。外部属性由调用者传入查询函数，未知属性报错，不读取项目单例。若以后增加比较、逻辑和三目运算，还需独立定义优先级、结合性与短路行为，不能把所有分支先算完后再选择。
+同样的形式也可以表达数值选择：
 
-## 可验证例与限制
-样例 `expression.py` 应得到 `1+2*3=7`、`(1+2)*3=9`、`8/2/2=2`、`-7/2=-3`。空串、`1a`、`1+`、空括号和除零应报错。配套样例限制输入长度和递归层数，不支持小数、属性、比较、逻辑或三目；它展示独立解析核心，不是原工程的完整替代。
-
-## 独立样例
-
-保存为 `expression.py`：
-
-```python
-"""Bounded integer arithmetic; no eval, external properties or engine dependency."""
-import re
-
-def calculate(text):
-    if len(text) > 512:
-        raise ValueError('expression too long')
-    tokens = []
-    pos = 0
-    while pos < len(text):
-        if text[pos].isspace():
-            pos += 1
-            continue
-        match = re.match(r'[0-9]+|[()+*/-]', text[pos:])
-        if not match:
-            raise ValueError(f'invalid character at {pos}')
-        tokens.append(match.group())
-        pos += len(match.group())
-    if not tokens:
-        raise ValueError('empty expression')
-    index = 0
-
-    def take(token):
-        nonlocal index
-        if index < len(tokens) and tokens[index] == token:
-            index += 1
-            return True
-        return False
-
-    def unary(depth):
-        nonlocal index
-        if depth > 64:
-            raise ValueError('nesting too deep')
-        if take('+'):
-            return unary(depth + 1)
-        if take('-'):
-            return -unary(depth + 1)
-        if take('('):
-            result = expression(depth + 1)
-            if not take(')'):
-                raise ValueError('missing closing parenthesis')
-            return result
-        if index >= len(tokens) or not tokens[index].isdigit():
-            raise ValueError('expected integer')
-        result = int(tokens[index])
-        index += 1
-        return result
-
-    def term(depth):
-        result = unary(depth)
-        while index < len(tokens) and tokens[index] in ('*', '/'):
-            op = tokens[index]
-            take(op)
-            rhs = unary(depth)
-            if op == '*':
-                result *= rhs
-            else:
-                if rhs == 0:
-                    raise ValueError('division by zero')
-                quotient = abs(result) // abs(rhs)
-                result = -quotient if (result < 0) != (rhs < 0) else quotient
-        return result
-
-    def expression(depth):
-        result = term(depth)
-        while index < len(tokens) and tokens[index] in ('+', '-'):
-            op = tokens[index]
-            take(op)
-            rhs = term(depth)
-            result = result + rhs if op == '+' else result - rhs
-        return result
-
-    result = expression(0)
-    if index != len(tokens):
-        raise ValueError('unexpected trailing token')
-    return result
-
-if __name__ == '__main__':
-    import argparse
-    parser = argparse.ArgumentParser()
-    parser.add_argument('expression')
-    print(calculate(parser.parse_args().expression))
+```text
+[力量] >= 10 ? 100 : 50
 ```
+
+它表示力量达到 10 时取 100，否则取 50。这些例子用来说明想支持的写法；原笔记里的属性表只是演示数据，还没有接到角色属性系统。
+
+这项探索的目标，是在 UE 里让一段字符串具有明确的计算含义。需要处理的不只是加减乘除，还包括括号、比较、逻辑与或、三目运算，以及游戏自己的属性。
+
+## 从 UE 的调用接口看整个流程
+
+原实现把入口放在 `UMyGameEventSubsystem` 中，对蓝图提供两个静态函数：
+
+```cpp
+UFUNCTION(BlueprintCallable)
+static bool CheckStrIsValid(const FString& Str, FString& Error);
+
+UFUNCTION(BlueprintCallable)
+static int32 GetStrValue(FString const& Str);
+```
+
+`CheckStrIsValid` 用来检查字符串，失败时通过 `Error` 返回说明；`GetStrValue` 用来计算结果。结果统一使用 `int32`，比较和逻辑运算的真假会转换成 1 和 0。
+
+两者是分开的入口。`GetStrValue` 内部没有先调用校验函数，因此不能把“蓝图能调用”理解成“任何字符串都能安全计算”。调用方需要先检查输入，求值阶段也仍然需要自己的错误处理。
+
+原工程的基类 `UMyGameSubsystem` 和 `CREATETHISSUBSYSTEM` 宏属于项目自己的封装，不能直接复制到另一个 UE 项目中使用。这里关注的是公式处理过程：
+
+```text
+输入 FString
+  → 统一部分中文标点
+  → 检查允许的字符和符号组合
+  → 拆成 Token
+  → 将属性替换成数值
+  → 按优先级求值
+  → 返回 int32
+```
+
+原代码的校验和求值入口都会做标点转换；校验函数还会检查中括号、圆括号和三目符号是否配对。
+
+## 先把字符串拆成能识别的部分
+
+直接遍历字符串时，每次看到的只是一个字符。但计算需要知道 `123` 是一个完整数字，`>=` 是一个完整运算符，`[HHHH]` 是一个属性引用。这些有含义的片段就是 Token。
+
+原实现用 `ETokenType` 区分数字、加减、乘除、括号、比较、逻辑与、逻辑或、三目符号和自定义属性。每个 Token 保存类型和文本值：
+
+```cpp
+struct FToken {
+    ETokenType Type;
+    FString Value;
+
+    FToken();
+    FToken(const ETokenType InType, const FString& InValue)
+        : Type(InType), Value(InValue) {}
+};
+```
+
+以原笔记末尾的公式为例：
+
+```text
+[HHHH]>=+3-5
+```
+
+按原来的分词意图，它会被识别为属性 `HHHH`、比较符 `>=`、数字 `3`、减号和数字 `5`。`>=` 后面的 `+` 表示正号，不需要作为一次加法保留下来。负号则需要区分“一元取负”和“两个数相减”，原实现尝试把一元负号转换为乘以 `-1`。
+
+这些区别决定了词法分析的职责：完整识别输入中的每一段文本，把它们交给后面的求值步骤。正负号出现在开头、括号后面或运算符后面时，也必须有明确规则。
+
+**用游戏数据替换属性**
+
+分词后，属性还不能直接参与计算。原笔记在 `GetStrValue` 中准备了一份示例映射：
+
+```cpp
+const TMap<FString, int32> CustomProperties = {
+    {TEXT("123"), 123},
+    {TEXT("HHHH"), 555},
+};
+```
+
+随后遍历 Token，把 `CustomProperty` 类型改为 `Number`，并把属性名替换成查到的数值。以上面的公式为例，替换后相当于：
+
+```text
+555 >= +3 - 5
+```
+
+从预期语义看，先算出 `3 - 5 = -2`，再判断 `555 >= -2`，得到 1。原笔记末尾也记录了结果为 1；这是原有记录，本文没有重新运行 UE 验证。
+
+接入实际游戏时，需要由当前计算上下文提供属性值。例如计算某个角色的事件条件，就应读取那个角色的数据。原来的固定 `TMap` 只展示替换方式；未知属性默认取 0 的行为，也需要根据游戏需求重新决定，否则拼错属性名可能被当成正常数值继续计算。
+
+## 求值顺序决定公式的含义
+
+把数字和符号识别出来以后，还要决定先算哪一部分。
+
+```text
+1 + 2 * 3      → 7
+(1 + 2) * 3    → 9
+```
+
+这两个例子说明了期望的优先级。原实现的 `Evaluate` 先找括号，把括号内部的 Token 递归求值，再把这段表达式替换成一个数字。没有括号的部分，依次处理乘除、加减、比较、逻辑与、逻辑或，最后选择三目运算的结果。
+
+以 `(1 + 2) * 3` 为例，处理思路是先把括号里的 `1 + 2` 算成 `3`，整个公式变成 `3 * 3`，再得到 `9`。这是原算法要表达的过程，不代表当前代码已经正确覆盖了所有括号组合。
+
+同一优先级还涉及结合顺序。例如 `8 / 2 / 2` 通常约定从左到右，结果为 2。实现时既要保证乘除先于加减，也要保留同级运算的顺序。
+
+## 这份实现里需要继续探索的地方
+
+原代码可以用来理解处理步骤，但有几处实现会影响结果和安全性，不能直接当作完整的公式解析器使用。
+
+**Token 数组为空时，不能读取前一个元素**
+
+`Tokenize` 在处理正负号和普通数字时都会访问 `Tokens.Last()`。遇到第一个数字或开头的正负号时，数组还可能为空。这部分需要先判断是否存在前一个 Token，再决定当前字符的含义。
+
+**删除括号片段时，不能打乱剩余顺序**
+
+原实现使用 `RemoveAtSwap` 移除括号片段。这个操作不保证剩余元素的顺序，而公式的含义依赖顺序。这里应选择保序的处理方式，或改为通过解析位置消费 Token，避免一边求值一边搬动数组。
+
+**逻辑与三目运算需要考虑短路**
+
+原实现先归约运算，再处理三目选择。这意味着不能假设它具备 C++ 的短路行为。例如下面的预期规则：
+
+```text
+[数量] != 0 && 100 / [数量] > 2
+```
+
+如果希望遵循短路语义，当数量为 0 时就应跳过右侧求值。三目运算也应只求选中的分支。是否采用这种语义，需要在语法设计时确定，并由求值器保留分支结构。
+
+**校验通过与求值成功要分别处理**
+
+原校验函数主要用正则排除非法片段，并检查符号配对。这可以发现部分输入错误，但完整语法还包括操作数是否齐全、运算符能否出现在当前位置、三目分支如何嵌套等问题。
+
+原来的除零、未知属性和部分错误最终都会得到 0，而 0 本身也是合法结果。继续完善时，求值接口需要能区分成功、结果值和错误原因；整数除法、溢出、输入长度和嵌套深度也需要明确约定。
+
+**沿着这个思路继续实现**
+
+下一步可以先在 UE C++ 中把整数、四则运算和括号做成一套语法完整的解析，再逐步加入属性、比较、逻辑与三目运算。每增加一类表达式，都先定义它的合法写法、优先级、结合顺序和错误行为。
+
+例如递归下降解析，可以让不同的解析函数负责不同优先级，通过一个读取位置按顺序消费 Token。逻辑和三目表达式若要支持短路，还需要保存足够的结构，让未选中的部分完成语法检查，却不执行其中的计算。
+
+UE 层负责接收 `FString`、提供当前角色或事件的属性、向蓝图返回结果和错误；解析部分负责理解公式本身。这样继续探索时，既能保留游戏里的使用场景，也能看清每一种语法究竟是怎样被执行的。
