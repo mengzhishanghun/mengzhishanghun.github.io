@@ -38,7 +38,7 @@ test('home CTA links the cooperation invitation to contact and headers keep only
     const links=all(hero,n=>n.tagName==='a');
     assert.equal(links.length,2);
     assert.equal(attrs(links[0]).href,'/'+code+'/contact/');
-    assert.equal(text(links[0]),code==='zh'?'欢迎联系我聊聊':'get in touch');
+    assert.equal(text(links[0]),code==='zh'?'联系我聊聊':'get in touch');
     assert.equal(attrs(links[1]).href,'/'+code+'/contact/#support-title');
     assert.equal(text(links[1]),code==='zh'?'支持我继续创作':'support my work');
     if(code==='zh')assert.equal(text(lines[3]),'如果我的文章或工具对你有帮助，也欢迎支持我继续创作。');

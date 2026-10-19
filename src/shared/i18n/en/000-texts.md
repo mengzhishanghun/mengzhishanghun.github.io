@@ -7757,7 +7757,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: e79c3dc35cbe31d5b5e3e3270c50187a7eb20d0ded61bcfe42a384e4c6254ea4
+sourceHash: c347f449f95b2d0b4d7dbdc58bec1c0ae534950eca27289ec5f09ae1e34a28b8
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:
