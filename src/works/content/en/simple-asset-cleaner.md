@@ -24,9 +24,9 @@ docIds:
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: ce4c14572a5aa5af3b5e3d9cfd4b9d7afca8d7df7c23ddd5b02f711e1abf1a62
+sourceHash: f24aaace633f8e3a08491a55f8aaf747d9bf7fa539cb08ed2e42c3155eed298f
 translationStatus: translated
-generatedBodyHash: 7ae4b9d6a67b87675ea16cee944f1aaf0096c38432438d384b0ba2c72c9d9561
+generatedBodyHash: 172ad9c7cfd988d7c9e4da413c771e960cd15a471d4e309bf5f51e5b779f5a9c
 workInfo:
   channels:
     - kind: sale
@@ -57,9 +57,7 @@ The tool starts from resources the project considers important to form an inspec
 
 ### Configuring analysis roots
 
-Root asset types, custom root assets, and additional root paths define what should be retained. Default root types include map assets. Projects can also add important Blueprints, DataAssets, or specified directories to root and protection scope.
-
-The tool traces reference chains from these roots; only assets outside the chains become candidates. Results are more useful when root configuration reflects actual project usage.
+The tool traces reference chains from project-defined root assets and protected directories, then lists assets outside that coverage as candidates. Configure the retention scope to match actual project usage.
 
 ### Handling candidates during submission
 
@@ -84,3 +82,5 @@ With many asset directories or indirect references, defining roots and protected
 Reference analysis assumes configured roots. Assets outside roots or protected paths that business logic still uses in special workflows must be identified and added by the project.
 
 Full cleanup may delete committed files. Review logs and results on a recoverable version before applying it to a production project.
+
+For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-asset-cleaner-guide/).

@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 lang: en
 translationKey: ue-quick-start
-sourceHash: 34a78b308e419b033f67ac8c985ee36bb491c00a30762be8186e0f72ebbd0a7b
+sourceHash: e65ee6afd00c7d9c8aa3bc16349aea39fe05c8b72a0d452ebe9783d578d634eb
 translationStatus: translated
-generatedBodyHash: 6cd56adbe1cf6c3c5cf727cba7f318dfd17ee44eb696a7e4374c2f749cf8757a
+generatedBodyHash: 0d6b3383579cea1079a7f484ac84d40e97397563c671a0b887d4144e9150fb82
 workInfo:
   channels:
     - kind: docs
@@ -52,7 +52,7 @@ The tool detects the UE project and associated engine from the current environme
 
 ### Pre-build processing
 
-Before compilation, the tool can handle cross-platform line ending differences, converting LF/CR issues in relevant text to Windows CRLF. This prepares an existing project; it does not solve source errors or missing dependencies.
+Before compilation, the tool can normalize source line ending differences caused by cross-platform collaboration. This changes the relevant text files, but does not solve source errors or missing dependencies.
 
 ### Logs and launch
 
@@ -64,4 +64,6 @@ It suits project members with configured environments who need to compile locall
 
 ## Scope and limitations
 
-The machine must already have a configured build environment and have successfully run the project before. The tool does not install UE, compilers, or dependencies, and does not guarantee new source will build. Diagnose and fix code, module, or environment errors using the logs.
+Only Windows is currently supported. The machine must already have a configured build environment and have successfully run the project before. The tool does not install UE, compilers, or dependencies, and does not guarantee new source will build. Diagnose and fix code, module, or environment errors using the logs.
+
+For operation steps and parameter details, see the [user guide](/en/docs/tools/ue-quick-start/).

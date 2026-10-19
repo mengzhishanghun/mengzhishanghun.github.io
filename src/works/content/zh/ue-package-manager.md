@@ -8,6 +8,17 @@ categoryName: 开源工具
 categoryOrder: 1
 order: 0
 status: 正式文档
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/UEPackageManager
+    - kind: docs
+      href: /docs/zh/tools/ue-package-manager/
+  compatibility:
+    - platforms:
+        - Windows
+      requirements:
+        - Win64 项目打包；Launcher 或源码引擎
 featured: false
 draft: false
 sitePublish: false
@@ -20,18 +31,8 @@ links:
     href: https://github.com/MZSH-Tools/UEPackageManager
 lang: zh
 translationKey: ue-package-manager
-workInfo:
-  channels:
-    - kind: open-source
-      href: https://github.com/MZSH-Tools/UEPackageManager
-    - kind: docs
-      href: /docs/zh/tools/ue-package-manager/
-  compatibility:
-    - platforms:
-        - Windows
-      requirements:
-        - Win64 项目打包；Launcher 或源码引擎
 ---
+
 ## 作品简介
 
 UEPackageManager 是 Windows 上的 Unreal Engine 项目打包工具，提供图形界面与命令行两种入口。
@@ -48,19 +49,15 @@ UE 项目交付时，打包命令和附加文件整理常分散在不同操作�
 
 ### 项目识别与配置隔离
 
-图形界面从当前项目目录识别 .uproject 与关联引擎，并把所识别项目固定为当前打包对象。项目路径、引擎目录、输出目录、构建类型和附加复制规则按项目分别保存，避免一个项目的选择直接带入另一个项目。
-
-命令行在无法从当前目录确定项目时要求显式指定。
+自动识别当前 UE 项目和关联引擎，按项目保存打包选项，避免混用其他工程的配置。
 
 ### UE 打包与结果查看
 
-工具调用 UAT 执行构建、烘焙、暂存、打 Pak 和归档，支持 DebugGame、Development、Test 与 Shipping 等构建类型。使用者可在图形界面配置输出并查看过程，或在命令行中验证配置、预览命令和执行打包。
-
-打包结果来自 UAT，工具负责组织调用与反馈。
+通过 UAT 组织项目打包，支持多种构建类型，并提供过程日志。图形界面和命令行都可作为打包入口，实际构建结果仍来自 UAT。
 
 ### 成功后的附加部署
 
-每条复制规则指定来源和包内目标目录，既可复制文件，也可复制文件夹。目录复制支持按名称模式递归忽略无关项，并检查复制后的文件完整性。
+支持按规则把文件或文件夹复制到包内，并过滤不需要交付的内容。
 
 该阶段只在 UE 打包成功后执行，避免把附加内容误放入失败的输出。目标限制在包根目录内部，不能借规则写到任意外部路径。
 
@@ -85,3 +82,5 @@ UE 项目交付时，打包命令和附加文件整理常分散在不同操作�
 ![](/media-occurrence/work%3Aue-package-manager%3Amedia%3A1)
 
 *UEPackageManager 图形界面：配置项目、打包参数和附加文件复制规则。*
+
+操作步骤和参数说明见 [使用教程](/zh/docs/tools/ue-package-manager/)。

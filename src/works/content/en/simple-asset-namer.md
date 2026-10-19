@@ -24,9 +24,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: 459dd367478c0dd64f4cb2587927c15022bb373c317b4603cce6188b7acb0019
+sourceHash: 301524fe1ac0f5b7be103b7671e33a28b72c8bf83c6283488a6ef3bccc7fcdb3
 translationStatus: translated
-generatedBodyHash: 7f9405fef3c5bb76f13196cef851cf0dc9d2752c61aef1f361e6fe1b1a7f2dee
+generatedBodyHash: 31585fcd4c20fa383ef8a1810ef15d6a0ac6d2ba2db3b0be50050702abe09348
 workInfo:
   channels:
     - kind: sale
@@ -57,7 +57,7 @@ The work places conventions in configurable rules and supplies path filters, let
 
 ### Generating names by type
 
-Different asset types can have prefixes and suffixes, with a chosen separator. The tool attempts to recognize existing affixes, extract the core name, and apply current rules. Historical affix lists recognize old forms and help prevent duplicate prefixes caused by simple concatenation.
+Apply prefix, suffix, and separator rules by asset type. Historical affixes can also be recognized to help migrate from old naming conventions.
 
 ### Automatic and batch processing
 
@@ -65,7 +65,7 @@ Automatic processing checks asset creation, import, and manual rename, while the
 
 ### Path and result controls
 
-Included and excluded paths determine scope. After a batch operation, the results dialog lists successful, skipped, and failed entries with reasons, such as an already compliant name, missing rule, or existing target name. Users can adjust rules or narrow scope accordingly.
+Path filters limit the scope, and successful, skipped, and failed results are reported separately so users can check assets that were not processed.
 
 ## Use cases
 
@@ -76,3 +76,5 @@ It suits consistent naming in multi-person projects and migration from old affix
 Renaming changes asset names and may affect references. Check paths, rules, and version control state before batch operations in particular.
 
 The tool reports naming operation results. Projects must still check references, levels, and scripts. Assets without matching rules or with target name conflicts cannot be assumed to be handled automatically.
+
+See the [usage guide](/en/docs/guides/ue-tools/simple-asset-namer-guide/) for steps and parameters.

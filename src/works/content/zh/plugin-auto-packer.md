@@ -8,6 +8,17 @@ categoryName: 开源工具
 categoryOrder: 1
 order: 1
 status: 正式文档
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/UEPluginAutoPacker
+    - kind: docs
+      href: /docs/zh/tools/plugin-auto-packer/
+  compatibility:
+    - platforms:
+        - Windows
+      requirements:
+        - 仅构建 Win64 插件
 featured: false
 draft: false
 sitePublish: false
@@ -20,18 +31,8 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: zh
 translationKey: plugin-auto-packer
-workInfo:
-  channels:
-    - kind: open-source
-      href: https://github.com/MZSH-Tools/UEPluginAutoPacker
-    - kind: docs
-      href: /docs/zh/tools/plugin-auto-packer/
-  compatibility:
-    - platforms:
-        - Windows
-      requirements:
-        - 仅构建 Win64 插件
 ---
+
 ## 作品简介
 
 UEPluginAutoPacker 面向需要为多个 Unreal Engine 引擎版本交付插件的开发者，把引擎配置、插件构建、状态查看和发布文件整理放在一个工具中。
@@ -58,7 +59,7 @@ UEPluginAutoPacker 面向需要为多个 Unreal Engine 引擎版本交付插件�
 
 ### 发布文件整理
 
-构建后可按选项清理 Binaries、Intermediate 等中间内容，复制文档、生成 FilterPlugin.ini，或处理插件描述字段。相关选项可组合使用，输出按插件名和引擎名分目录存放。
+构建后可按需要清理中间产物、复制文档、生成发布过滤配置或处理插件描述字段，输出按插件和引擎版本区分。
 
 工具还提供从 .uplugin 作者信息生成源码版权声明的处理项；启用这类会改动内容的选项时应先核对目标文件。
 
@@ -71,3 +72,5 @@ UEPluginAutoPacker 面向需要为多个 Unreal Engine 引擎版本交付插件�
 当前构建目标是 Windows / Win64，插件目录需要有有效的 .uplugin。
 
 多版本任务的成功状态仍需结合日志和目标引擎实测判断；文件整理选项也应按本次发布要求审查。该工具处理插件包，不承担 UE 项目整体打包。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/tools/plugin-auto-packer/)。

@@ -24,9 +24,9 @@ docIds:
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: 820ee8ca3433bfa39c6cf8417ee671263505c5667ea82a4258cfeb16983245a5
+sourceHash: 151ded14b047517f17f47e2874dab1adac98787585d705a48c0c5a6dc198e20b
 translationStatus: translated
-generatedBodyHash: 22d401c8753e37870aae685340fc9636b505334090bbf9ff793b556aa4d1db8b
+generatedBodyHash: 85796cecae20d83a568d3e9da92d6678f643fac61022e754560142b455c15940
 workInfo:
   channels:
     - kind: sale
@@ -57,13 +57,11 @@ Assess instancing through loading and frame-rate measurements in the target proj
 
 ### Handling nested scenes and refreshing previews
 
-The tool can recursively process nested LevelInstances. It refreshes the merge preview afterward so subsequent grouping uses the expanded scene objects. Users can review which Actors actually participate.
+The tool supports recursively breaking apart nested LevelInstances and refreshing the merge preview of scene objects.
 
 ### Strict grouping and manual filtering
 
-Grouping compares Mesh, Static/Stationary/Movable mobility, every material slot, and collision Profile, ObjectType, and channel responses. Previews can be filtered by mobility and minimum instance count. After selecting a group, users can uncheck Actors that should not be merged.
-
-These filters define the current operation's scope; participation of every group member is not mandatory.
+Objects are grouped by mesh, materials, mobility, and complete collision settings. Users can filter groups in the preview and exclude individual Actors that should not be merged.
 
 ### Creating instanced objects
 
@@ -80,3 +78,5 @@ It suits levels with many repeated static meshes where users want to filter by a
 Merging replaces original scene Actors. Keep a recoverable level version first and inspect materials, mobility, collision, and instance counts afterward.
 
 Loading or runtime improvements depend on the scene and target device and require measurement. Group previews do not replace project acceptance checks after merging.
+
+For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-static-mesh-merger-guide/).

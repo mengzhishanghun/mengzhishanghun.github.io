@@ -8,18 +8,6 @@ categoryName: UE插件
 categoryOrder: 0
 order: 15
 status: 正式文档
-featured: false
-draft: false
-sitePublish: false
-tags:
-  - 动画
-  - 动作捕捉
-  - 滤波
-links:
-  - label: GitHub
-    href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
-lang: zh
-translationKey: simple-level-seq-smooth
 workInfo:
   channels:
     - kind: sale
@@ -33,7 +21,20 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+featured: false
+draft: false
+sitePublish: false
+tags:
+  - 动画
+  - 动作捕捉
+  - 滤波
+links:
+  - label: GitHub
+    href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
+lang: zh
+translationKey: simple-level-seq-smooth
 ---
+
 ## 作品简介
 
 SimpleLevelSeqSmooth 为 Unreal Engine 的 Level Sequence 提供数据滤波与平滑入口，面向动作捕捉、姿态估计和动画后处理中的曲线抖动、跳帧等问题。
@@ -56,9 +57,7 @@ SimpleLevelSeqSmooth 为 Unreal Engine 的 Level Sequence 提供数据滤波与�
 
 ### 序列与参数段处理
 
-可从内容浏览器中的 Level Sequence 打开处理入口，覆盖 ControlRig 的 Transform 与 Scalar 参数段。
-
-工具支持批量选择序列，并检查帧率相关信息，方便在多份素材上执行同类处理和核对输入条件。
+支持批量处理 Level Sequence 中的 ControlRig Transform 与 Scalar 参数段，并读取序列帧率。
 
 ### 输出方式
 
@@ -75,3 +74,5 @@ SimpleLevelSeqSmooth 为 Unreal Engine 的 Level Sequence 提供数据滤波与�
 工具面向 Level Sequence 数据及所支持的 ControlRig 参数段。
 
 滤波可能同时削弱真实的快速动作，跳帧也未必只由曲线噪声引起。算法、参数与是否覆盖原资产都应依据具体序列判断，不能把处理后的曲线直接视为已完成动作质量检查。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-level-seq-smooth-guide/)。

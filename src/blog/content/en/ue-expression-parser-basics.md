@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-expression-parser-basics
 publishedAt: 2026-10-13
-sourceHash: cbdbbc737a4e7b88fa0483821a7fd227dbcb57256ec44289dddfbecb7f6de6c3
-generatedBodyHash: e3cbdde2cb5c5d64f39c8fb8cbc8af39046d6a5ca56c0fed0499a1f4609b9e13
+sourceHash: 8d4a2b018912d33fe11e7e63dc45d07cdb3623c22e22f2d4213651cf93bd6534
+generatedBodyHash: b5b309cca38620f6e661e3dc3d6162f363f8529dc620756b1558301136ef5a1c
 translationStatus: translated
 ---
 
@@ -36,7 +36,7 @@ I wanted game events to express conditions and calculations as text, so I wrote 
 
 The intended syntax covers comparisons, logical AND and OR, arithmetic, parentheses, and ternary expressions.
 
-It also adds recognition and substitution of custom properties to suit the game.
+I also added recognition and substitution of custom properties so formulas can use data from the game.
 
 For example, an event could require both strength and gold to meet a threshold:
 
@@ -85,11 +85,7 @@ public:
 
 ```
 
-The base class in this header was created for my game and needs to be changed when adapting it.
-
-There are two simple interfaces: one checks whether a string is valid and returns a Boolean plus an error message; the other gets the string's calculated value.
-
-All implementation is in the `.cpp` file because it was written specifically for this feature and kept together there.
+The header’s base class comes from my game project and needs adapting in another project. Two interfaces are exposed: one checks string validity and returns a bool and an error message; the other evaluates the string. The implementation stays together in the .cpp file to handle formula parsing.
 
 `CheckStrIsValid` is the validation entry point and `GetStrValue` is the evaluation entry point. `UMyGameSubsystem`, `CREATETHISSUBSYSTEM`, the export macro, and project headers require adaptation in another project. The code also uses the game project's `MyGameLog` category.
 

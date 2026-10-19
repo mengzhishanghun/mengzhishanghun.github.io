@@ -8,6 +8,17 @@ categoryName: UE插件
 categoryOrder: 0
 order: 0
 status: 正式文档
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/
+  compatibility:
+    - platforms:
+        - Windows (Win64)
+      requirements:
+        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -21,17 +32,6 @@ links:
 sourceDate: 2025-10-25
 lang: zh
 translationKey: simple-ssh-tunnel
-workInfo:
-  channels:
-    - kind: sale
-      href: https://www.fab.com/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721
-    - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-      requirements:
-        - UE 5.2–5.8
 ---
 
 ## 作品简介
@@ -71,3 +71,5 @@ SimpleSSHTunnel 将相关连接操作封装在插件内，项目可以直接通�
 目前支持 Windows。移植到其他平台前，需要核对库文件和构建支持。
 
 默认子系统会在销毁时调用关闭全部隧道。接入实际项目时，仍需检查 SSH 凭据的保存与使用、连接线程和错误处理，以及关闭连接时会话与通道是否正确释放。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-ssh-tunnel-guide/)。

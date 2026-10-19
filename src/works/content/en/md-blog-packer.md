@@ -19,9 +19,9 @@ links:
     href: https://github.com/MZSH-Tools/MDBlogPacker
 lang: en
 translationKey: md-blog-packer
-sourceHash: c6758379e1cfd8ab9577b4cc7dc4c643223e6e471b61d44f232fe588520ec86d
+sourceHash: 99741bc56678f863f5c594c6c4b04dc19631ca37ae4a09790fb1f343f0e72e64
 translationStatus: translated
-generatedBodyHash: 08288e6ef86ae56732dc9a42c8ba4cb968c9d2624d8836c5ef8ebde9641613b7
+generatedBodyHash: 75856c92874abbb8176e809477d24fd7c4d95d9604c28527482ab9da03b91594
 workInfo:
   channels:
     - kind: open-source
@@ -74,3 +74,5 @@ The destination platform must accept Base64 images. Some platforms also limit ar
 Base64-encoded image data is usually about one-third larger than the original binary and cannot be cached separately as conveniently. Control image dimensions and check platform rules and final file size before exporting. Large numbers of high-resolution images are better kept as separate files or uploaded using the platform's own method.
 
 For sites where you control resources, the build process can publish the article and images together. Separate images are easier to replace, compress, cache, and maintain.
+
+See the [usage guide](/en/docs/tools/md-blog-packer/) for steps and parameters.

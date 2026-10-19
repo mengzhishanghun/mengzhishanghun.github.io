@@ -450,7 +450,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   blog:cnblogs-20159718:
-    root.html:1.head:0.meta:2@content: 讨论 DataAsset 与 JSON 双向同步中的格式选择、属性转换、循环触发和文件写入问题。
+    root.html:1.head:0.meta:2@content: 探索让 AI 通过 JSON 修改复杂 DataAsset 并实时同步到 UE，讨论类型转换、双向同步、循环触发和资产写入问题。
     root.html:1.head:0.title:4.#text:0: "UE DataAsset 与 JSON 双向同步：接入 AI 工具 · 小毛"
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -470,7 +470,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 如何让 AI 直接修改 DataAsset
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 讨论 DataAsset 与 JSON 双向同步中的格式选择、属性转换、循环触发和文件写入问题。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 探索让 AI 通过 JSON 修改复杂 DataAsset 并实时同步到 UE，讨论类型转换、双向同步、循环触发和资产写入问题。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -2590,7 +2590,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   work:ai-data-asset:
-    root.html:1.head:0.meta:2@content: 将 DataAsset 属性与 JSON 文件关联，供外部程序读取和修改游戏数据。
+    root.html:1.head:0.meta:2@content: 让 AI 通过 JSON 修改复杂的 DataAsset 数据，实时同步到 UE，支持基础类型和大多数结构体。
     root.html:1.head:0.title:4.#text:0: "AIDataAsset：UE DataAsset 与 JSON 双向同步插件 · 小毛"
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -2611,7 +2611,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE插件
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: DataAsset 与 JSON 双向同步
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: AIDataAsset
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 将 DataAsset 属性与 JSON 文件关联，供外部程序读取和修改游戏数据。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 让 AI 通过 JSON 修改复杂的 DataAsset 数据，实时同步到 UE，支持基础类型和大多数结构体。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: DataAsset
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: JSON
@@ -4514,7 +4514,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0@aria-label: UE：如何让 AI 直接修改 DataAsset
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 如何让 AI 直接修改 DataAsset
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 讨论 DataAsset 与 JSON 双向同步中的格式选择、属性转换、循环触发和文件写入问题。
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 探索让 AI 通过 JSON 修改复杂 DataAsset 并实时同步到 UE，讨论类型转换、双向同步、循环触发和资产写入问题。
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1@aria-label: UE：UE网络编程完全指南之UDP TCP WebSocket实现详解
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE
@@ -4592,7 +4592,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2@aria-label: DataAsset 与 JSON 双向同步
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.h2:0.#text:0: DataAsset 与 JSON 双向同步
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.p:1.#text:0: AIDataAsset
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.p:2.#text:0: 将 DataAsset 属性与 JSON 文件关联，供外部程序读取和修改游戏数据。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.p:2.#text:0: 让 AI 通过 JSON 修改复杂的 DataAsset 数据，实时同步到 UE，支持基础类型和大多数结构体。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:0.#text:0: DataAsset
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:1.#text:0: JSON
@@ -4919,7 +4919,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:1@aria-label: 标签筛选
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: 如何让 AI 直接修改 DataAsset
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.h2:0.#text:0: 如何让 AI 直接修改 DataAsset
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.p:1.#text:0: 讨论 DataAsset 与 JSON 双向同步中的格式选择、属性转换、循环触发和文件写入问题。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.p:1.#text:0: 探索让 AI 通过 JSON 修改复杂 DataAsset 并实时同步到 UE，讨论类型转换、双向同步、循环触发和资产写入问题。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0@aria-label: 文章标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: AI
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:1.#text:0: DataAsset

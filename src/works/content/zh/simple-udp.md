@@ -8,19 +8,6 @@ categoryName: UE插件
 categoryOrder: 0
 order: 3
 status: 正式文档
-featured: false
-draft: false
-sitePublish: false
-tags:
-  - UDP
-sourcePlatform: 博客园
-sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
-links:
-  - label: 博客园原文
-    href: https://www.cnblogs.com/mengzhishanghun/p/19165484
-sourceDate: 2025-10-25
-lang: zh
-translationKey: simple-udp
 workInfo:
   channels:
     - kind: sale
@@ -34,7 +21,21 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+featured: false
+draft: false
+sitePublish: false
+tags:
+  - UDP
+sourcePlatform: 博客园
+sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
+links:
+  - label: 博客园原文
+    href: https://www.cnblogs.com/mengzhishanghun/p/19165484
+sourceDate: 2025-10-25
+lang: zh
+translationKey: simple-udp
 ---
+
 ## 作品简介
 
 SimpleUDP 为 Unreal Engine 项目提供蓝图可调用的 UDP 通信能力，将多通道收发、异步接收、地址过滤和运行时配置集中在一个插件中。
@@ -67,4 +68,6 @@ SimpleUDP 将这些通信管理操作封装为蓝图接口。
 
 ## 适用范围与边界
 
-UDP 不保证数据报可靠投递或按发送顺序到达。消息格式解析、丢包后的处理和业务状态维护由项目实现；使用时还需按实际网络与通信协议核对通道、目标地址和过滤规则。
+仅支持 IPv4，不支持 IPv6 或域名解析。UDP 不保证数据报可靠投递或按发送顺序到达。消息格式解析、丢包后的处理和业务状态维护由项目实现；使用时还需按实际网络与通信协议核对通道、目标地址和过滤规则。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-udp-guide/)。

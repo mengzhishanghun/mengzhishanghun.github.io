@@ -8,6 +8,16 @@ categoryName: 开源工具
 categoryOrder: 1
 order: 0
 status: 正式文档
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/MDBlogPacker
+    - kind: docs
+      href: /docs/zh/tools/md-blog-packer/
+  compatibility:
+    - platforms:
+        - Markdown 工具（操作系统待核实）
+      requirements: []
 featured: false
 draft: false
 sitePublish: false
@@ -19,17 +29,8 @@ links:
     href: https://github.com/MZSH-Tools/MDBlogPacker
 lang: zh
 translationKey: md-blog-packer
-workInfo:
-  channels:
-    - kind: open-source
-      href: https://github.com/MZSH-Tools/MDBlogPacker
-    - kind: docs
-      href: /docs/zh/tools/md-blog-packer/
-  compatibility:
-    - platforms:
-        - Markdown 工具（操作系统待核实）
-      requirements: []
 ---
+
 ## 作品简介
 
 MDBlogPacker 用于把带有本地图片的 Markdown 整理成便于跨平台复制或导出的文本。
@@ -71,3 +72,5 @@ MDBlogPacker 用于把带有本地图片的 Markdown 整理成便于跨平台复
 Base64 编码后的图片数据通常比原始二进制大约增加三分之一，也不便单独缓存。导出前应控制图片尺寸并确认平台规则和最终文件大小；大量高清图片更适合独立文件或平台提供的上传方式。
 
 若文章发布在自己可管理资源的站点，可让构建过程把文章和图片一起发布。独立图片更便于替换、压缩、缓存与后续维护。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/tools/md-blog-packer/)。

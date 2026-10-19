@@ -8,6 +8,14 @@ categoryName: 开源工具
 categoryOrder: 1
 order: 3
 status: 正式文档
+workInfo:
+  channels:
+    - kind: docs
+      href: /docs/zh/tools/ue-quick-start/
+  compatibility:
+    - platforms:
+        - UE 项目工具（操作系统待核实）
+      requirements: []
 featured: false
 draft: false
 sitePublish: false
@@ -20,15 +28,8 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 lang: zh
 translationKey: ue-quick-start
-workInfo:
-  channels:
-    - kind: docs
-      href: /docs/zh/tools/ue-quick-start/
-  compatibility:
-    - platforms:
-        - UE 项目工具（操作系统待核实）
-      requirements: []
 ---
+
 ## 作品简介
 
 UEQuickStart 为已有 Unreal Engine 项目提供图形化的编译与启动入口。工具自动识别项目及其关联引擎，显示实时编译日志，并在编译成功后允许启动项目。
@@ -49,7 +50,7 @@ UEQuickStart 为已有 Unreal Engine 项目提供图形化的编译与启动入�
 
 ### 编译前处理
 
-在编译前，工具可处理跨平台换行符差异，把相关文本的 LF/CR 问题调整为 Windows 使用的 CRLF。这个步骤用于已有工程的编译准备，不能替项目解决源码错误或依赖缺失。
+编译前可整理跨平台协作带来的源码换行符差异。这会修改相关文本文件，但不能替项目解决源码错误或依赖缺失。
 
 ### 日志与启动
 
@@ -61,4 +62,6 @@ UEQuickStart 为已有 Unreal Engine 项目提供图形化的编译与启动入�
 
 ## 适用范围与边界
 
-使用前提是本机已配置编译环境，并曾成功运行过该项目。工具不安装 UE、编译器或项目依赖，也不保证新的源码一定能通过构建。遇到实际代码、模块或环境错误时，仍需按日志定位并修复。
+当前仅支持 Windows。使用前提是本机已配置编译环境，并曾成功运行过该项目。工具不安装 UE、编译器或项目依赖，也不保证新的源码一定能通过构建。遇到实际代码、模块或环境错误时，仍需按日志定位并修复。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/tools/ue-quick-start/)。

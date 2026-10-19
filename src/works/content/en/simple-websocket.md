@@ -21,9 +21,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: 1870c8b00c729e11905a3258949ee0a7d5dd795941caa8269f26cb5f65d99014
+sourceHash: 7a8dd685acc38a70d13fe8729383feda212c7d30b1ecd13a2b343e995a6d950a
 translationStatus: translated
-generatedBodyHash: a9f64ba2ca69b53bb54a880504929e937a3c0507ff85f3db05ecd5ff08223685
+generatedBodyHash: 3e0321a4e1087ae39b8cdd49c6962dc9dcb0474c9c0263762c62d357b82c010e
 workInfo:
   channels:
     - kind: sale
@@ -70,4 +70,6 @@ It suits UE projects exchanging real-time messages with existing WebSocket servi
 
 ## Scope and limitations
 
-An accessible WebSocket service and agreed message format are required. Recovery after closure, authentication, and message reliability handling must be designed and verified for project needs.
+Only `ws://` is supported; secure `wss://` connections are not supported. An accessible WebSocket service and agreed message format are required. Recovery after closure, authentication, and message reliability handling must be designed and verified for project needs.
+
+For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-websocket-guide/).

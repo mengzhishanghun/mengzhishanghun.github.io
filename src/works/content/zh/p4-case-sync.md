@@ -8,17 +8,6 @@ categoryName: 开源工具
 categoryOrder: 1
 order: 0
 status: 正式文档
-featured: false
-draft: false
-sitePublish: false
-tags:
-  - Perforce
-  - 版本控制
-links:
-  - label: GitHub
-    href: https://github.com/MZSH-Tools/P4CaseSync
-lang: zh
-translationKey: p4-case-sync
 workInfo:
   channels:
     - kind: open-source
@@ -31,7 +20,19 @@ workInfo:
         - macOS / Linux（文档提供命令）
       requirements:
         - Perforce p4 命令行环境
+featured: false
+draft: false
+sitePublish: false
+tags:
+  - Perforce
+  - 版本控制
+links:
+  - label: GitHub
+    href: https://github.com/MZSH-Tools/P4CaseSync
+lang: zh
+translationKey: p4-case-sync
 ---
+
 ## 作品简介
 
 P4CaseSync 在 Perforce 提交前检查已打开文件的路径大小写。它以本地磁盘上的真实路径为参照，核对指定 changelist 或 default 中的文件，并提供预览、人工微调和应用修正的入口。
@@ -54,7 +55,7 @@ P4CaseSync 在 Perforce 提交前检查已打开文件的路径大小写。它�
 
 ### 对照本地真实大小写
 
-工具结合路径映射和本地磁盘目录，逐级检查文件路径的实际大小写。列表用颜色区分未变化、自动修正和人工修改，使用者可以集中查看需要处理的条目及修正后的目标路径。
+对照本地真实目录逐级检查大小写，并集中预览建议路径与人工调整结果。
 
 ### 人工调整与应用核验
 
@@ -73,3 +74,5 @@ P4CaseSync 在 Perforce 提交前检查已打开文件的路径大小写。它�
 工具依赖可用的 Perforce CLI、正确的工作区映射和登录状态。
 
 路径修正属于版本控制操作，可能改变已打开文件的记录；应在应用前核对目标列表，并在应用后复查 changelist。它只处理路径一致性，不替代内容评审或提交权限检查。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/tools/p4-case-sync/)。

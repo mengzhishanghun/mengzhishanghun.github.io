@@ -1,6 +1,6 @@
 ---
 title: AIDataAsset
-description: 将 DataAsset 属性与 JSON 文件关联，供外部程序读取和修改游戏数据。
+description: 让 AI 通过 JSON 修改复杂的 DataAsset 数据，实时同步到 UE，支持基础类型和大多数结构体。
 type: work
 slug: ai-data-asset
 categoryId: ue-plugins
@@ -8,6 +8,19 @@ categoryName: UE插件
 categoryOrder: 0
 order: 14
 status: 正式文档
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/e6c92c8b-6e87-4f2f-9975-1c0d85621c60
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/ai-data-asset-guide/
+  compatibility:
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+      requirements:
+        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -22,58 +35,46 @@ links:
 sourceDate: 2026-05-25
 lang: zh
 translationKey: ai-data-asset
-workInfo:
-  channels:
-    - kind: sale
-      href: https://www.fab.com/listings/e6c92c8b-6e87-4f2f-9975-1c0d85621c60
-    - kind: docs
-      href: /docs/zh/guides/ue-tools/ai-data-asset-guide/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 ---
+
 ## 作品简介
 
-AIDataAsset 将 Unreal Engine 的 DataAsset 属性映射到 JSON 文件，让外部程序通过可读写的文本参与游戏数据调整。编辑器中的资产变化可以导出为 JSON，外部修改也可导回资产。
+AIDataAsset 让 AI 通过 JSON 读取和修改复杂的 DataAsset 数据，并在 UE 编辑器运行时自动同步回资产。开启自动同步后，插件会处理导出、文件监听和回写，无需每次手动导入导出。
 
-它面向需要在 UE 与脚本、数据工具或 AI 程序之间交换配置的工作流。
+它支持常见基础类型和大多数结构体，适合让 AI 批量调整字段、处理嵌套配置，减少在编辑器中逐项展开和填写数据的工作。
 
 ## 背景与目标
 
-DataAsset 以 UE 资产格式保存，外部程序难以直接理解其中字段。若每次外部生成数据后都要手工搬入编辑器，字段多、迭代频繁时，容易产生重复工作。
+DataAsset 以 UE 资产格式保存，AI 工具难以直接读取和修改其中字段。字段多、迭代频繁时，手工搬运 AI 生成的结果会产生大量重复工作。
 
-JSON 既能被常见程序处理，也能在版本控制中查看文本差异。这个作品的目标是建立两端数据通道，并处理双向同步带来的精度、命名和循环触发问题。
+AIDataAsset 用 JSON 连接外部工具和 UE 资产，让数据修改可以交给 AI，检查和测试仍在游戏工程中完成。
 
 ## 核心能力
 
 ### DataAsset 与 JSON 往返
 
-将 DataAsset 属性导出为对应 JSON，并在 JSON 变化后把数据导入资产。字段名处理使文本中的属性与编辑器中看到的名称更容易对应；浮点数输出也考虑往返转换的精度。
-
-JSON 是交换格式，实际运行所用的资产仍需在 UE 中正确更新和保存。
+将已有 DataAsset 的属性导出为 JSON，再把外部修改同步回资产。字段名与编辑器中的名称保持对应，浮点数输出考虑往返转换的精度。
 
 ### 变化监听与同步控制
 
-通过文件变化监听发现外部修改，同时区分自身写出的 JSON，避免导出触发导入、导入又触发导出的循环。
-
-编辑器启动时两端可能都发生过变化，同步方向需要根据资产与文件状态判断；不能仅凭某一端存在就覆盖另一端。
+编辑器运行期间自动监听资产和 JSON 的变化，并避免双向同步反复触发。启动时也会检查两端文件，按修改时间选择同步方向。
 
 ### 编辑器修改保障
 
-导入数据涉及 DataAsset 写入，插件结合版本控制签出与撤销事务处理编辑器内的修改。对比导出内容可减少无意义写入；资产删除和监听生命周期也属于这条数据通道需要管理的环节。
+导入支持撤销和重做，并结合版本控制签出与资产保存处理修改。保存失败会提示警告，资产仍需在编辑器中处理，不能把内存更新当作已保存。
 
 ## 适用场景
 
-适合把角色数值、技能配置等 DataAsset 数据交给外部脚本或工具批量编辑，再返回 UE 检查。也适合需要审查具体字段变更的团队，因为 JSON 差异比二进制资产变更更直观。
+需要生成关卡配置、批量调整角色数值或修改嵌套结构体时，可以让 AI 读取并修改 JSON，再回到 UE 中检查和测试。LLM、强化学习系统或 Python 等外部工具都可以参与这条数据处理流程。
 
-外部 AI 可以参与生成或修改 JSON，但数据正确性仍由项目方验证。
+策划也可以借助 Excel 等工具集中处理数据。需要团队审查时，可将 JSON 输出到适合版本管理的目录，用文本差异查看字段变化；默认的 Saved 输出目录通常只作为同步中间目录。
 
 ## 适用范围与边界
 
-双向同步会改动资产和磁盘文件，必须确认两端何者为准，并保证资产可写。
+JSON 用来修改 UE 中已有的 DataAsset，单独添加 JSON 不会创建新资产。自动监听只在编辑器运行且自动同步开启时生效。
 
-时间戳判断适用于通常只在一端修改的情形；两端并发编辑、字段结构变化或无效 JSON 仍需人工处理。作品提供数据交换通道，不替代业务规则校验。
+启动同步按文件修改时间选择方向，不会合并两端各自修改的字段。资产需要可写；无效 JSON 或字段结构变化可能导致导入失败。同步完成也不代表数据符合游戏规则，仍需在项目中验证。
+
+配置、启动同步规则、删除行为和常见问题见 [AIDataAsset 使用文档](/zh/docs/guides/ue-tools/ai-data-asset-guide/)。
+
+JSON 选型、循环触发和资产写入的实现经验见 [《如何让 AI 直接修改 DataAsset》](/zh/blog/cnblogs-20159718/)。

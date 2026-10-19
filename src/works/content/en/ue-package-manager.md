@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEPackageManager
 lang: en
 translationKey: ue-package-manager
-sourceHash: db8a182dad88813b6e7fd7c9335f5f78d5e0e15528355d9981f177e9e88143a3
+sourceHash: ce423c1700e5b06b4d91803a0b81119152c845e6a86d7db50c37c26f69af076d
 translationStatus: translated
-generatedBodyHash: 8d542f72aab450490fe586f1cacea4095b7692599511d7f74db7b4d0f6eddbae
+generatedBodyHash: e2a6f37068d094de9609d4d5b79ff0981ff3e8f0b4039b45b927e4bed41eacc1
 workInfo:
   channels:
     - kind: open-source
@@ -51,19 +51,15 @@ The work consolidates these choices into one workflow. Its GUI serves the curren
 
 ### Project detection and configuration isolation
 
-The GUI detects the .uproject and associated engine from the current project directory, fixing that detected project as the packaging target. Project paths, engine directories, output directories, build types, and extra copy rules are stored separately per project to prevent choices from carrying directly into another project.
-
-The CLI requires an explicit project when it cannot determine one from the current directory.
+The tool automatically detects the current UE project and associated engine, and saves packaging options per project to avoid mixing configurations from different projects.
 
 ### UE packaging and result inspection
 
-The tool calls UAT for building, cooking, staging, creating Pak files, and archiving, supporting build types including DebugGame, Development, Test, and Shipping. Users configure output and observe progress in the GUI, or validate configuration, preview commands, and package through the CLI.
-
-Packaging results come from UAT; the tool organizes invocation and feedback.
+The tool organizes project packaging through UAT, supports multiple build types, and provides process logs. Both the GUI and CLI can start packaging; actual build results still come from UAT.
 
 ### Additional deployment after success
 
-Each copy rule specifies a source and destination directory within the package, supporting both files and folders. Directory copying supports recursive exclusion by name patterns and checks copied file integrity.
+Rules can copy files or folders into the package and filter out content that should not be delivered.
 
 This stage only runs after UE packaging succeeds, preventing extra content from being placed into failed outputs. Targets are restricted to the package root, so rules cannot write to arbitrary external paths.
 
@@ -88,3 +84,5 @@ Full Debug builds, standalone plugin packaging, automatic editor closure, and pr
 ![](/media-occurrence/work%3Aue-package-manager%3Amedia%3A1)
 
 *UEPackageManager graphical interface: configuring the project, packaging parameters, and additional file copy rules.*
+
+For operation steps and parameter details, see the [user guide](/en/docs/tools/ue-package-manager/).

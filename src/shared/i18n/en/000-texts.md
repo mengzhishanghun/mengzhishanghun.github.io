@@ -450,7 +450,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   blog:cnblogs-20159718:
-    root.html:1.head:0.meta:2@content: Format selection, property conversion, trigger loops, and file writes in two-way synchronization between DataAssets and JSON.
+    root.html:1.head:0.meta:2@content: Exploring how AI can modify complex DataAssets through JSON and synchronize them to UE in real time, covering type conversion, two-way synchronization, trigger loops, and asset writes.
     root.html:1.head:0.title:4.#text:0: "UE DataAsset & JSON Sync for AI Tool Integration · Xiao Mao"
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -470,7 +470,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Letting AI Modify DataAssets Directly
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Format selection, property conversion, trigger loops, and file writes in two-way synchronization between DataAssets and JSON.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Exploring how AI can modify complex DataAssets through JSON and synchronize them to UE in real time, covering type conversion, two-way synchronization, trigger loops, and asset writes.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -2590,7 +2590,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   work:ai-data-asset:
-    root.html:1.head:0.meta:2@content: Link DataAsset properties to JSON files so external programs can read and modify game data.
+    root.html:1.head:0.meta:2@content: Let AI modify complex DataAsset data through JSON and synchronize it to UE in real time, with support for basic types and most structs.
     root.html:1.head:0.title:4.#text:0: "AIDataAsset: UE DataAsset & JSON Two-Way Sync · Xiao Mao"
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -2611,7 +2611,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Plugins
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Two-way DataAsset and JSON Synchronization
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: AIDataAsset
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Link DataAsset properties to JSON files so external programs can read and modify game data.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Let AI modify complex DataAsset data through JSON and synchronize it to UE in real time, with support for basic types and most structs.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: DataAsset
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: JSON
@@ -4514,7 +4514,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0@aria-label: "UE: Letting AI Modify DataAssets Directly"
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: Letting AI Modify DataAssets Directly
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Format selection, property conversion, trigger loops, and file writes in two-way synchronization between DataAssets and JSON.
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Exploring how AI can modify complex DataAssets through JSON and synchronize them to UE in real time, covering type conversion, two-way synchronization, trigger loops, and asset writes.
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1@aria-label: "UE: A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE
@@ -4592,7 +4592,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2@aria-label: Two-way DataAsset and JSON Synchronization
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.h2:0.#text:0: Two-way DataAsset and JSON Synchronization
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.p:1.#text:0: AIDataAsset
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.p:2.#text:0: Link DataAsset properties to JSON files so external programs can read and modify game data.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.p:2.#text:0: Let AI modify complex DataAsset data through JSON and synchronize it to UE in real time, with support for basic types and most structs.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:0.#text:0: DataAsset
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:1.#text:0: JSON
@@ -4919,7 +4919,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:1@aria-label: Filter by tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: Letting AI Modify DataAssets Directly
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.h2:0.#text:0: Letting AI Modify DataAssets Directly
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.p:1.#text:0: Format selection, property conversion, trigger loops, and file writes in two-way synchronization between DataAssets and JSON.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.p:1.#text:0: Exploring how AI can modify complex DataAssets through JSON and synchronize them to UE in real time, covering type conversion, two-way synchronization, trigger loops, and asset writes.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: AI
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:1.#text:0: DataAsset
@@ -7757,7 +7757,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: ef06ff0eb8cc08b24b9f9c50e205e0067b2e10d9d5e9e3579e1810da17ba097d
+sourceHash: e79c3dc35cbe31d5b5e3e3270c50187a7eb20d0ded61bcfe42a384e4c6254ea4
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

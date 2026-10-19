@@ -8,6 +8,19 @@ categoryName: UE插件
 categoryOrder: 0
 order: 9
 status: 正式文档
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/
+  compatibility:
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+      requirements:
+        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -24,20 +37,8 @@ docIds:
 sourceDate: 2025-11-09
 lang: zh
 translationKey: simple-static-mesh-merger
-workInfo:
-  channels:
-    - kind: sale
-      href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
-    - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 ---
+
 ## 作品简介
 
 SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。它先把可合并对象按网格、材质、移动性和碰撞配置分组，供开发者预览与筛选，再将选中的对象组织为 ISM/HISM 实例。
@@ -54,13 +55,11 @@ SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。�
 
 ### 处理嵌套场景并刷新预览
 
-工具可递归处理嵌套 LevelInstance。完成后刷新合并预览，让后续分组面向展开后的场景对象。使用者可以在预览中重新确认实际参与合并的 Actor。
+支持递归拆分嵌套 LevelInstance，并刷新场景对象的合并预览。
 
 ### 严格分组与人工筛选
 
-分组同时比较 Mesh、Static/Stationary/Movable 移动性、所有材质槽，以及碰撞 Profile、ObjectType 和通道响应。预览支持按移动性和最小实例数筛选；选中组后，还可在 Actor 列表中取消勾选不应合并的对象。
-
-这些筛选决定本次操作范围，整组对象不必全部参与。
+按网格、材质、移动性和完整碰撞设置分组。可通过预览筛选分组，并排除不应合并的个别 Actor。
 
 ### 生成实例化对象
 
@@ -77,3 +76,5 @@ SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。�
 合并会替换场景中的原 Actor，应先保留可恢复的关卡版本，并在结果中检查材质、移动性、碰撞和实例数量。
 
 是否改善加载或运行表现取决于具体场景与目标设备，需要实测；工具的分组预览不能替代合并后的项目验收。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-static-mesh-merger-guide/)。

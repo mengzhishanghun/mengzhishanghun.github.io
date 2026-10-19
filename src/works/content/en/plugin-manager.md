@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginManager
 lang: en
 translationKey: plugin-manager
-sourceHash: 12aa6b88ae20b3014204e8a087251fb9149a350b8b9470e9e2b8e117a440753c
+sourceHash: c97bb7fac3851eb5bd0edf264757383ffc711dd6f8cfe82244bd9b539bece8bd
 translationStatus: translated
-generatedBodyHash: 5a7933b1170ed1d075f38b0c562337eb6963f48be8eb52b6a761c98a048925d4
+generatedBodyHash: ed0182034e0296f823d2a75c6114c6771e5f66a632e744073e2b460eb7db4f1d
 workInfo:
   channels:
     - kind: docs
@@ -48,7 +48,7 @@ The work first displays plugin sources and relationships, then provides explicit
 
 ### Aggregating and searching sources
 
-The tool scans project, Marketplace, and engine plugins automatically and groups them by source. Lists support searches by name, author, category, description, dependencies, and dependents, with multiple keywords narrowing results. Installed and source engines have corresponding detection methods, and duplicate-name conflicts appear in the list.
+The tool brings together project, Marketplace, and engine plugins, supports searching by name, author, dependencies, and other information, and flags duplicate-name conflicts. It can detect installed and source-built engines.
 
 ### Dependencies and state management
 
@@ -71,3 +71,5 @@ It helps investigate why a plugin is ineffective, where a same-named plugin came
 Run the tool in the target UE project directory. Close the editor before moving, deleting, or correcting directories to avoid inconsistencies between an open project and disk state.
 
 Enabled-state changes, read-only attribute handling, and directory operations affect the local project. Inspect .uproject, plugin directories, and project startup afterward.
+
+For operation steps and parameter details, see the [user guide](/en/docs/tools/plugin-manager/).

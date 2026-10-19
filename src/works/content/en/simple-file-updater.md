@@ -19,9 +19,9 @@ links:
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
 lang: en
 translationKey: simple-file-updater
-sourceHash: 3793e52ceba4bd9824e47409f06043944caab85754e70ee01727ce2c867bc0c1
+sourceHash: 848c0b302f4e72de976bcbaf01842f9a3fc3b9de55e083b3dd522251aa995810
 translationStatus: translated
-generatedBodyHash: 7f6e8116445003bbdc321480e829c7336ff9ee407e8123b3fdd2c22c3eafd2ee
+generatedBodyHash: 7bb9b7140c9654646855d0689646d29774dcbb54a562981955e2c7fe5d6310f4
 workInfo:
   channels:
     - kind: open-source
@@ -49,15 +49,15 @@ This tool gathers that information into a readable configuration file so maintai
 
 ### Mapping paths to URLs
 
-Each configuration entry pairs a local file path with its remote URL. Maintainers can see what will be downloaded and where it will be written, and change only the relevant entry when an address or directory changes. Comments are supported to document individual update items.
+A configuration list keeps download URLs and local targets together so sources and output locations can be checked before updating.
 
 ### Directory and path handling
 
-Local targets may use relative or absolute paths. If a target directory does not exist, the tool can create the required directories according to the configuration before writing the downloaded content. One configuration can therefore cover files in different directories, but its resolved paths must be checked in advance.
+Files can be updated into different local directories, with target folders created as needed.
 
 ### Launch options
 
-The tool can start with its default configuration or a different configuration file specified at launch. The project offers a packaged EXE and execution from source, allowing users to choose an entry point for their environment. Both process the same kind of mapping list.
+EXE and source execution options are available, and existing update lists can be reused.
 
 ## Use cases
 
@@ -68,3 +68,5 @@ It suits personal maintenance workflows that regularly fetch several tools, temp
 Updates may overwrite files with the same name at target locations. Check URLs, paths, and existing files before running them.
 
 The tool downloads files according to configuration; it does not determine whether remote content is trustworthy or suitable for the current environment. Use publicly shareable addresses in public configurations and keep internal download sources out of examples.
+
+See the [usage guide](/en/docs/tools/simple-file-updater/) for steps and parameters.

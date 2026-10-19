@@ -24,9 +24,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: e51d05efcca83aa201c1f4ad0b060851eecdc59443bba9b2ac9935791f07e4f9
+sourceHash: 12a056a2495519b02740813ba52e07868204a6cd21ab8030114df90f7e690a24
 translationStatus: translated
-generatedBodyHash: 48402ba0fafac3a8a37056c27cf0c3b1cc5adca94c8371bdc4df4e6b3a7f6cfb
+generatedBodyHash: 8509a63db5fc74d660d00f1f8ccd5b8ce745e4b6e3b2a3c0f63d483640cbcacf
 workInfo:
   channels:
     - kind: sale
@@ -61,7 +61,7 @@ The work organizes these basic conversions into callable nodes, reducing repeate
 
 Paired ToBytes / FromBytes interfaces are provided for int32, int64, float, double, bool, and FString. Basic numeric values are written using their memory representation; strings use UTF-8.
 
-Nodes can be Blueprint pure functions for encoding before sending or restoring data received in the same format.
+These interfaces can encode data before sending or restore data received in the same format.
 
 ### Binary struct conversion
 
@@ -83,6 +83,8 @@ For external program integration, JSON can help verify fields. Network connectio
 
 ## Scope and limitations
 
-The conversion interfaces do not define a cross-language protocol.
+The conversion interfaces do not define a cross-language protocol. Structs containing object references or resource handles are not supported.
 
 Sender and receiver must agree on types, fields, encoding, and versions, and verify round trips using fixed examples. Check compatibility with old data after struct changes. Successfully calling a conversion node does not mean the data has been interpreted correctly.
+
+See the [usage guide](/en/docs/guides/ue-tools/simple-byte-conversion-guide/) for steps and parameters.

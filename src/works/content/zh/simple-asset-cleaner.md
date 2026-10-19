@@ -8,6 +8,19 @@ categoryName: UE插件
 categoryOrder: 0
 order: 7
 status: 正式文档
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/b0cf0a4d-c1a2-45f6-8bfb-7a92313379c2
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-asset-cleaner-guide/
+  compatibility:
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+      requirements:
+        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -24,20 +37,8 @@ docIds:
 sourceDate: 2025-11-01
 lang: zh
 translationKey: simple-asset-cleaner
-workInfo:
-  channels:
-    - kind: sale
-      href: https://www.fab.com/listings/b0cf0a4d-c1a2-45f6-8bfb-7a92313379c2
-    - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-asset-cleaner-guide/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 ---
+
 ## 作品简介
 
 SimpleAssetCleaner 为 Unreal Engine 项目提供基于引用关系的候选未引用资产检查。它从配置的根资源出发追踪直接与间接引用，在提交阶段处理候选文件，也提供面向整个受版本控制项目的清理入口。
@@ -54,9 +55,7 @@ SimpleAssetCleaner 为 Unreal Engine 项目提供基于引用关系的候选未�
 
 ### 配置引用分析的起点
 
-可按根资源类型、自定义根资源和附加根路径确定保留范围。默认根类型包含地图资源；项目也可将重要蓝图、数据资产或指定目录纳入根与保护范围。
-
-工具沿这些起点追踪引用链，未落在链上的资源才进入候选集合。根配置越贴近项目实际使用方式，候选结果越有参考价值。
+按项目设定的根资源和保护目录追踪引用链，再把未覆盖的资源列为候选。保留范围需要结合项目实际使用方式配置。
 
 ### 提交阶段处理候选文件
 
@@ -81,3 +80,5 @@ SimpleAssetCleaner 为 Unreal Engine 项目提供基于引用关系的候选未�
 引用分析以已配置的根为前提。没有纳入根或保护路径、却仍由业务在特殊流程中使用的资产，需要项目自行识别并补充配置。
 
 全量清理可能删除已提交文件，应在可恢复版本上核对日志与结果，再用于正式项目。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-asset-cleaner-guide/)。

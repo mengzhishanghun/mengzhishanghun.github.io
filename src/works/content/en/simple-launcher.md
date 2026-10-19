@@ -23,9 +23,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: d9ebd4cd12616c68049d82a1bec3d0e8522481b93ff7970502b9dad821548c8f
+sourceHash: 4aaab4c010166673a4cdf3a702e9c31a806bcd1734f55712511236e39c2e4979
 translationStatus: translated
-generatedBodyHash: 4cb189a562e0795ddf83c474365b512a8b7fc05929a867c7d61f341761c0caeb
+generatedBodyHash: 094f329c6aeb91aa538a1983f244c41303087f3043901d68c71914bf28d61058
 workInfo:
   channels:
     - kind: sale
@@ -81,3 +81,5 @@ Exit notifications help determine whether an external task has ended. Failure re
 The plugin launches and tracks processes it manages; it does not guarantee that a target program runs successfully or produces correct output.
 
 Detached processes do not close automatically with the game, so configuration must establish who terminates them. Command lines and working directories must reference existing, accessible resources.
+
+See the [usage guide](/en/docs/guides/ue-tools/simple-launcher-guide/) for steps and parameters.

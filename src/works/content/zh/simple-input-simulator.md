@@ -8,6 +8,21 @@ categoryName: UE插件
 categoryOrder: 0
 order: 6
 status: 正式文档
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/dd1ee0a8-f450-4a3d-adc4-4a96f5dec3dd
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-input-simulator-guide/
+  compatibility:
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+        - Android
+        - iOS
+      requirements:
+        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -24,22 +39,8 @@ docIds:
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-input-simulator
-workInfo:
-  channels:
-    - kind: sale
-      href: https://www.fab.com/listings/dd1ee0a8-f450-4a3d-adc4-4a96f5dec3dd
-    - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-input-simulator-guide/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 ---
+
 ## 作品简介
 
 SimpleInputSimulator 为 UE 蓝图提供按键和轴输入模拟节点，让游戏逻辑沿已有输入链路接收指定操作。
@@ -56,21 +57,17 @@ SimpleInputSimulator 为 UE 蓝图提供按键和轴输入模拟节点，让游�
 
 ### 按键事件模拟
 
-Simulate Key Input 接收 UE 的 FKey，处理按下或抬起事件，覆盖键盘键、鼠标按钮与手柄按钮。
-
-使用者可以构造连续操作；按下后需要对应的抬起事件，否则后续逻辑可能继续认为该键被按住。
+支持键盘、鼠标和手柄的按下与抬起事件，可用于组织重复操作。按下后仍需配对释放，避免留下按住状态。
 
 ### 轴输入与玩家选择
 
-Simulate Axis Input 用于鼠标移动、摇杆等轴输入，节点会取得所需 DeltaTime。PlayerIndex 可指定本地玩家，使模拟操作落到对应的 PlayerController。
+支持鼠标移动、摇杆等轴输入，自动取得所需 DeltaTime，并可指定本地玩家。
 
 节点兼容 Legacy Input 与 Enhanced Input，仍需项目本身具备有效的输入映射与控制器。
 
 ### 状态清理
 
-Flush Pressed Keys 清空残留的按下状态，可在测试、演示或回放结束后恢复输入环境。
-
-节点可在编辑器调用，方便验证输入链路，但调用时仍要满足有效 PlayerController 等运行条件。
+提供清空按下状态的入口，方便在测试、演示或回放结束后恢复输入环境。
 
 ## 适用场景
 
@@ -83,3 +80,5 @@ Flush Pressed Keys 清空残留的按下状态，可在测试、演示或回放�
 插件模拟输入事件，不保证目标动作一定发生；角色状态、输入映射和游戏阶段仍会影响结果。
 
 按下与抬起要配对，测试结束要清理状态。没有有效 PlayerController 时无法按预期注入输入，自动化流程应检查这一前提。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-input-simulator-guide/)。

@@ -19,9 +19,9 @@ links:
     href: https://github.com/MZSH-Tools/P4CaseSync
 lang: en
 translationKey: p4-case-sync
-sourceHash: 7950015206b721e96b2368a303c19dfbb2ea39a27cc044447452ab59a7efa5fd
+sourceHash: f288900bb5703c7806f0e773336dc6cdd92949dc4481e75ee79be4ebe496dcf3
 translationStatus: translated
-generatedBodyHash: 4b7da0c7ad3386676baafe2489a248a36e68d19f470bd28eacc98338e0f28c76
+generatedBodyHash: a10993ab36c49d25abfa6884da333bafe3045694bf73957da7d5e2b88510add0
 workInfo:
   channels:
     - kind: open-source
@@ -57,7 +57,7 @@ Its scope matches the submission being handled, allowing path checks before the 
 
 ### Checking actual local capitalization
 
-Using path mappings and local disk directories, the tool checks actual capitalization at each path level. Colors distinguish unchanged entries, automatic corrections, and manual changes, helping users identify items needing attention and their proposed target paths.
+The tool checks capitalization at each level against actual local directories and provides a consolidated preview of suggested paths and manual adjustments.
 
 ### Manual adjustment and verification
 
@@ -76,3 +76,5 @@ For a changelist with several path changes, a consolidated preview makes omissio
 The tool requires an available Perforce CLI, correct workspace mappings, and a valid login.
 
 Path corrections are version control operations and may change opened file records. Check the target list before applying them and review the changelist afterward. The tool handles path consistency; it does not replace content review or submission permission checks.
+
+See the [usage guide](/en/docs/tools/p4-case-sync/) for steps and parameters.

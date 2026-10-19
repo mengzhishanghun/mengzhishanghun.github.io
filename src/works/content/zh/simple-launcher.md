@@ -8,6 +8,19 @@ categoryName: UE插件
 categoryOrder: 0
 order: 12
 status: 正式文档
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-launcher-guide/
+  compatibility:
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+      requirements:
+        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -23,20 +36,8 @@ docIds:
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-launcher
-workInfo:
-  channels:
-    - kind: sale
-      href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
-    - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-launcher-guide/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 ---
+
 ## 作品简介
 
 SimpleLauncher 在 UE 游戏中以命名预设管理外部程序。项目可以为外部服务或工具配置启动命令、工作目录和运行方式，再按预设启动、查询或停止进程。
@@ -78,3 +79,5 @@ SimpleLauncher 在 UE 游戏中以命名预设管理外部程序。项目可以�
 插件负责启动和跟踪由其管理的外部进程，不保证目标程序自身运行成功或输出正确。
 
 分离进程不会随游戏结束自动关闭，配置时必须明确谁负责终止它。命令行和工作目录应指向实际存在且有权限访问的资源。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-launcher-guide/)。

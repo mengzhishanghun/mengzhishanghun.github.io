@@ -8,19 +8,6 @@ categoryName: UE插件
 categoryOrder: 0
 order: 4
 status: 正式文档
-featured: false
-draft: false
-sitePublish: false
-tags:
-  - TCP
-sourcePlatform: 博客园
-sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
-links:
-  - label: 博客园原文
-    href: https://www.cnblogs.com/mengzhishanghun/p/19165484
-sourceDate: 2025-10-25
-lang: zh
-translationKey: simple-tcp-client
 workInfo:
   channels:
     - kind: sale
@@ -34,7 +21,21 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+featured: false
+draft: false
+sitePublish: false
+tags:
+  - TCP
+sourcePlatform: 博客园
+sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
+links:
+  - label: 博客园原文
+    href: https://www.cnblogs.com/mengzhishanghun/p/19165484
+sourceDate: 2025-10-25
+lang: zh
+translationKey: simple-tcp-client
 ---
+
 ## 作品简介
 
 SimpleTCPClient 在 Unreal Engine 中封装 TCP 客户端连接，提供多通道管理、异步处理、自动重连间隔配置，以及面向蓝图的连接状态接口。
@@ -67,4 +68,6 @@ SimpleTCPClient 在 Unreal Engine 中封装 TCP 客户端连接，提供多通�
 
 ## 适用范围与边界
 
-TCP 提供字节流传输，插件的连接管理不自动定义业务消息边界、序列化格式或重连后的状态恢复。应在实际服务端协议下验证断线、重试和数据处理行为，并核对各通道的配置。
+仅支持 IPv4，不支持域名、IPv6 或加密连接。TCP 提供字节流传输，插件的连接管理不自动定义业务消息边界、序列化格式或重连后的状态恢复。应在实际服务端协议下验证断线、重试和数据处理行为，并核对各通道的配置。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-tcp-client-guide/)。

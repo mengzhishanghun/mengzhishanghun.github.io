@@ -21,9 +21,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: 658d15db4480422450f907fb5e15bcdf19524687b13fb635b3af21fb7281f27c
+sourceHash: b6aff4e70c9c71d044764f3908570a4741a5d593eca2031505cc90b2b0c6a439
 translationStatus: translated
-generatedBodyHash: 6e947f0d40850957a39590d658a152604186d214a3106c4b06cc86f37e9d744a
+generatedBodyHash: ac1d014fab1cc440ab3aebc68c65b6ba44bdf804a1e55de20e7c28a19cf970bb
 workInfo:
   channels:
     - kind: sale
@@ -70,4 +70,6 @@ It suits UE projects exchanging UDP data with LAN devices or external programs, 
 
 ## Scope and limitations
 
-UDP does not guarantee reliable delivery or arrival in send order. Projects implement message parsing, packet-loss handling, and business state maintenance. Verify channels, destination addresses, and filters against the actual network and protocol.
+Only IPv4 is supported; IPv6 and domain name resolution are not supported. UDP does not guarantee reliable delivery or arrival in send order. Projects implement message parsing, packet-loss handling, and business state maintenance. Verify channels, destination addresses, and filters against the actual network and protocol.
+
+For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-udp-guide/).

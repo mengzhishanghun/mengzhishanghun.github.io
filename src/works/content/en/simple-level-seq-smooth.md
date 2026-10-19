@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: en
 translationKey: simple-level-seq-smooth
-sourceHash: 99d2dd5a970ed2bd7635106523fda115c74d58b3b06a14b59532aa1a097836e4
+sourceHash: ae2a6a78c36d9b68ed27a632babcd9f9d05f81bac80e4e6239aef5da0f15a303
 translationStatus: translated
-generatedBodyHash: 8eb6a397980af4ec047d955b965bf7ad119fce38d862b6966747a8589cbb12c1
+generatedBodyHash: ba96414d782b3d99804a04c1fac43d13680eb3689f93a41cd265944b66023091
 workInfo:
   channels:
     - kind: sale
@@ -59,9 +59,7 @@ They differ in how they handle spikes, continuous noise, and responsiveness. Cho
 
 ### Sequence and parameter section processing
 
-Processing can be opened from a Level Sequence in the Content Browser, with support for ControlRig Transform and Scalar parameter sections.
-
-The tool supports batch sequence selection and checks frame-rate information, helping apply similar processing to multiple assets and verify input conditions.
+The tool supports batch processing of ControlRig Transform and Scalar parameter sections in Level Sequences and reads sequence frame rates.
 
 ### Output options
 
@@ -78,3 +76,5 @@ For assets that need less jitter while retaining rapid motion, compare algorithm
 The tool targets Level Sequence data and supported ControlRig parameter sections.
 
 Filtering may also weaken genuine fast motion, and skipped frames may have causes beyond curve noise. Select algorithms, parameters, and overwrite behavior for each sequence; processed curves do not by themselves prove that motion quality has been reviewed.
+
+See the [usage guide](/en/docs/guides/ue-tools/simple-level-seq-smooth-guide/) for steps and parameters.

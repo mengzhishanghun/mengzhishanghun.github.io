@@ -8,19 +8,6 @@ categoryName: UE插件
 categoryOrder: 0
 order: 2
 status: 正式文档
-featured: false
-draft: false
-sitePublish: false
-tags:
-  - WebSocket
-sourcePlatform: 博客园
-sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
-links:
-  - label: 博客园原文
-    href: https://www.cnblogs.com/mengzhishanghun/p/19165484
-sourceDate: 2025-10-25
-lang: zh
-translationKey: simple-websocket
 workInfo:
   channels:
     - kind: sale
@@ -36,7 +23,21 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
+featured: false
+draft: false
+sitePublish: false
+tags:
+  - WebSocket
+sourcePlatform: 博客园
+sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
+links:
+  - label: 博客园原文
+    href: https://www.cnblogs.com/mengzhishanghun/p/19165484
+sourceDate: 2025-10-25
+lang: zh
+translationKey: simple-websocket
 ---
+
 ## 作品简介
 
 SimpleWebSocket 在 Unreal Engine 中封装 WebSocket 连接管理。项目可通过命名连接区分通信对象，绑定消息委托，并从蓝图调用相关接口。
@@ -67,4 +68,6 @@ SimpleWebSocket 在 Unreal Engine 中封装 WebSocket 连接管理。项目可�
 
 ## 适用范围与边界
 
-使用前需要可访问的 WebSocket 服务和双方约定的消息格式。连接关闭后的恢复、鉴权方式与消息可靠性处理需按项目需求设计并验证。
+仅支持 `ws://`，不支持 `wss://` 安全连接。使用前需要可访问的 WebSocket 服务和双方约定的消息格式。连接关闭后的恢复、鉴权方式与消息可靠性处理需按项目需求设计并验证。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-websocket-guide/)。

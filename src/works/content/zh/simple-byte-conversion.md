@@ -8,6 +8,21 @@ categoryName: UE插件
 categoryOrder: 0
 order: 1
 status: 正式文档
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-byte-conversion-guide/
+  compatibility:
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+        - Android
+        - iOS
+      requirements:
+        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -24,22 +39,8 @@ docIds:
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-byte-conversion
-workInfo:
-  channels:
-    - kind: sale
-      href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
-    - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-byte-conversion-guide/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 ---
+
 ## 作品简介
 
 SimpleByteConversion 为 UE 蓝图提供常用数据到字节数组、结构体到字节数组，以及结构体与 JSON 字符串的双向转换接口。
@@ -58,7 +59,7 @@ SimpleByteConversion 为 UE 蓝图提供常用数据到字节数组、结构体�
 
 提供 int32、int64、float、double、bool 和 FString 的 ToBytes / FromBytes 成对接口。基础数值按其内存表示写入字节数组，字符串使用 UTF-8。
 
-节点可作为蓝图纯函数使用，适合在发送前编码，或在收到同格式数据后还原。
+可用于发送前编码，或在收到同格式数据后还原。
 
 ### 结构体二进制转换
 
@@ -80,6 +81,8 @@ JSON 更适合与 Python 等外部程序交换或查看字段；插件也处理�
 
 ## 适用范围与边界
 
-转换接口本身不定义跨语言协议。
+转换接口本身不定义跨语言协议。含对象引用或资源句柄的结构体不在支持范围内。
 
 发送端与接收端仍需约定类型、字段、编码和版本，并用固定样例验证往返结果。结构体变更后应重新检查旧数据的兼容性，不能把能成功调用转换节点等同于数据已正确解释。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-byte-conversion-guide/)。

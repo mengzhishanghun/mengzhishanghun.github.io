@@ -19,9 +19,9 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: c2d9ccaffcef7b426488d15219578ca3e5aea65c5b972c44da7ba0a0ad10b1e3
+sourceHash: 339eb0a6e0ac1c682e17bea493916dc3a34a866085d1c31b34e8b21e9dda15f6
 translationStatus: translated
-generatedBodyHash: 25a3b1b443bb80cfd320e1ca0295ff91451079473264edcb7ae37e2d9049aa78
+generatedBodyHash: 6fe8b2dc51f66c7d3576cdbc3f98f5d3ce6aef4241a87e97a0d826eacac74265
 workInfo:
   channels:
     - kind: sale
@@ -73,3 +73,7 @@ In projects with several inheritance levels, chain scanning helps locate affecte
 The plugin only handles component contamination where CreationMethod is marked Instance. Components created dynamically by Construction Script and non-Actor Blueprints are outside its scan scope.
 
 Repairs may involve several Blueprint assets. Review logs, checkout status, and final saved content. Other inheritance, compilation, or component problems require separate diagnosis.
+
+For the principles behind CreationMethod, SCS, and ICH inspection and repair, see [Component State Contamination in Blueprint Inheritance and How to Repair It](/en/blog/cnblogs-20030737/).
+
+See the [usage guide](/en/docs/guides/ue-tools/simple-bp-inherit-fix-guide/) for steps and parameters.

@@ -24,9 +24,9 @@ docIds:
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: e0de21fdfc18085cce315a6518bb2b9134ddc048dd4fae9e256ebd521bf81696
+sourceHash: de9c8833ca2982352c2db3a1b78b0f00b7c0cfbfdb24c34e5676e1a70bf26b04
 translationStatus: translated
-generatedBodyHash: 5ee8e6da9f082235392b68d4f11ae07116906a165eb095bdaa803f287e30499e
+generatedBodyHash: a4120017b0b891a65cc3ab64e5627ddc4b3b1f021b4c00a5d1a807c934491b19
 workInfo:
   channels:
     - kind: sale
@@ -78,3 +78,5 @@ It suits C++ projects where several UE enums receive entries from Project Settin
 Projects must correctly define configuration classes, target enums, and range boundaries, and check that empty and duplicate value handling meets business expectations.
 
 Dynamically changing enum contents may affect existing Blueprint references and persisted data. Projects must validate compatibility; successful binding logs alone do not establish safety.
+
+For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-auto-enum-guide/).

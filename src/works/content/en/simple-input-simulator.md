@@ -24,9 +24,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-input-simulator
-sourceHash: 3ba0397b911620eccbc69bec3931188fdccc6b711a1805890aa7f1a85ba50ed0
+sourceHash: 0e999ec4632f325f0cbec1f6b30990baadb1be96df79f8ffed9b20587360fd52
 translationStatus: translated
-generatedBodyHash: a7d7fc432e66300574f285b7e5dae6cba1c1218c900431f0ec211e686b9bdcbe
+generatedBodyHash: 61d277ca5f1212dc7184307fca9ccfe1b79d778006043767daeb7be4b42926cd
 workInfo:
   channels:
     - kind: sale
@@ -59,21 +59,17 @@ The plugin injects events through PlayerController input interfaces so scripted 
 
 ### Simulating key events
 
-Simulate Key Input accepts a UE FKey and handles press or release events for keyboard keys, mouse buttons, and gamepad buttons.
-
-Users can construct explicit action sequences. Each pressed state needs a corresponding release event, otherwise later logic may continue treating the key as held.
+Press and release events for keyboard keys, mouse buttons, and gamepad buttons can be used to organize repeated actions. Each press still needs a matching release to avoid leaving a key held.
 
 ### Axis input and player selection
 
-Simulate Axis Input handles axes such as mouse movement and joysticks, obtaining the required DeltaTime. PlayerIndex selects a local player so simulated actions reach the corresponding PlayerController.
+The tool supports axis input such as mouse movement and joysticks, automatically obtains the required DeltaTime, and allows a local player to be selected.
 
 The nodes support Legacy Input and Enhanced Input, but the project still needs valid input mappings and controllers.
 
 ### State cleanup
 
-Flush Pressed Keys clears lingering pressed states, restoring the input environment after a test, demonstration, or replay.
-
-Nodes can be called in the editor to verify the input pipeline, but runtime requirements such as a valid PlayerController still apply.
+An action for clearing pressed states helps restore the input environment after a test, demonstration, or replay.
 
 ## Use cases
 
@@ -86,3 +82,5 @@ Recording, timing, and complete test assertions must be provided by higher-level
 The plugin simulates input events without guaranteeing that the intended action occurs. Character state, input mappings, and the current game phase still affect results.
 
 Pair press and release events and clear state when tests finish. Input cannot be injected as intended without a valid PlayerController, so automation should check that prerequisite.
+
+See the [usage guide](/en/docs/guides/ue-tools/simple-input-simulator-guide/) for steps and parameters.

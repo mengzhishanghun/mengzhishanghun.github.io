@@ -21,9 +21,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-server
-sourceHash: e98428bfa95f6f4d7d5b8072d42051e2239ccc660025fe634a8d4b1100372e17
+sourceHash: 05edb85ab868d2753a00372ba57f041d28acb51a1e1deb6d4b93f0a4acb8b3e5
 translationStatus: translated
-generatedBodyHash: 99ac8c190092a68ac9af112361f460102d94d912d968e6212295a658495b8484
+generatedBodyHash: ef70f6d8542464145c5dc6df18aeb71aea6bc7986dde629b69b483eb0fba1770
 workInfo:
   channels:
     - kind: sale
@@ -70,4 +70,6 @@ It suits UE programs acting as TCP servers for several external programs or devi
 
 ## Scope and limitations
 
-Validate connection counts, session lifecycles, timeouts, and data handling in the target environment. TCP streams have no inherent business message boundaries, so projects define encoding and message splitting rules. IP:Port should not serve directly as security authentication.
+Only IPv4 is supported; domain names, IPv6, and encrypted connections are not supported. Validate connection counts, session lifecycles, timeouts, and data handling in the target environment. TCP streams have no inherent business message boundaries, so projects define encoding and message splitting rules. IP:Port should not serve directly as security authentication.
+
+For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-tcp-server-guide/).

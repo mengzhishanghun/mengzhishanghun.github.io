@@ -125,6 +125,8 @@ supplementSources:
 - 排除规则保存在 `DefaultGame.ini` 的 `[Staging]` 段
 - 两个文件都应提交到版本控制
 
+调整规则后，插件会写回 `DefaultGame.ini`，并重新加载配置，让设置面板与磁盘内容对应。写入涉及版本控制签出或只读文件处理，应检查签出状态及最终文件差异。
+
 ### 复制前清理
 
 启用 "Clean Config Before Copy" 时：

@@ -8,6 +8,19 @@ categoryName: UE插件
 categoryOrder: 0
 order: 11
 status: 正式文档
+workInfo:
+  channels:
+    - kind: sale
+      href: https://www.fab.com/listings/05c2cb8f-cabc-45ef-84e0-9eac988b5a35
+    - kind: docs
+      href: /docs/zh/guides/ue-tools/simple-config-exclude-guide/
+  compatibility:
+    - platforms:
+        - Windows (Win64)
+        - macOS
+        - Linux
+      requirements:
+        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -24,20 +37,8 @@ docIds:
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-config-exclude
-workInfo:
-  channels:
-    - kind: sale
-      href: https://www.fab.com/listings/05c2cb8f-cabc-45ef-84e0-9eac988b5a35
-    - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-config-exclude-guide/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 ---
+
 ## 作品简介
 
 SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在项目设置中列出 Config 目录下的 ini 文件，允许逐项选择默认、强制包含或排除，并把选择同步到打包使用的 Staging 规则。
@@ -48,7 +49,7 @@ SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在�
 
 同一个项目常有调试、测试和正式环境所需的不同配置。手工维护 DefaultGame.ini 中的包含和排除条目时，需要同时顾及文件路径、已有规则以及编辑器缓存。
 
-插件的目标是让使用者逐个文件选择“哪些配置随包发布”，同时提供另行交付排除项的入口。
+使用者可以逐个文件选择哪些配置随包发布，再按需要另行交付被排除的文件。
 
 ## 核心能力
 
@@ -60,9 +61,9 @@ SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在�
 
 ### Staging 规则同步
 
-插件读取 DefaultGame.ini 的 Staging 区段，识别现有规则，并在状态调整后写回相应条目。写入前会处理版本控制签出或只读状态，写回后重新加载配置，使设置面板与磁盘内容保持对应。
+将配置选择保存为 UE 打包使用的包含或排除规则，并同步设置状态。
 
-因为这是项目配置文件变更，仍应纳入正常的版本审查。
+这些修改会写入项目配置文件，仍需经过正常的版本审查。
 
 ### 排除文件复制
 
@@ -70,10 +71,14 @@ SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在�
 
 ## 适用场景
 
-适合把调试配置从正式包中排除，或为测试与生产环境准备不同配置集。项目可以先生成不含特定文件的基础包，再按环境另行处理被排除项；这种方式有助于把打包规则和部署步骤分开核查。
+调试开关、性能分析参数、测试服务器地址和开发密钥等开发环境配置，可以按文件从正式包中排除；不需要随包发布的插件内部配置也可以单独管理。测试与生产环境需要不同配置集时，可以先生成不含这些文件的基础包，再按环境处理被排除项，分别核查打包规则和部署步骤。
 
 ## 适用范围与边界
 
 插件管理 Config 下 ini 文件的打包规则和复制动作。
 
 排除配置不等于完成敏感信息保护，目标目录中的副本仍需按项目权限管理。状态调整会修改 DefaultGame.ini；发布前应检查实际包内容、复制目标及版本控制差异。
+
+Staging 规则、直接读取文件与 `GConfig` 缓存重载的实现说明见 [《如何管理打包时的配置文件排除》](/zh/blog/cnblogs-19770930/)。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-config-exclude-guide/)。

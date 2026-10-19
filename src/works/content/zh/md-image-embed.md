@@ -8,6 +8,14 @@ categoryName: Ob插件
 categoryOrder: 3
 order: 1
 status: 正式文档
+workInfo:
+  channels:
+    - kind: docs
+      href: /docs/zh/guides/writing-tools/md-image-embed-guide/
+  compatibility:
+    - platforms:
+        - Obsidian 插件（操作系统待核实）
+      requirements: []
 featured: false
 draft: false
 sitePublish: false
@@ -24,20 +32,13 @@ docIds:
 sourceDate: 2025-12-21
 lang: zh
 translationKey: md-image-embed
-workInfo:
-  channels:
-    - kind: docs
-      href: /docs/zh/guides/writing-tools/md-image-embed-guide/
-  compatibility:
-    - platforms:
-        - Obsidian 插件（操作系统待核实）
-      requirements: []
 ---
+
 ## 作品简介
 
 MDImageEmbed 是面向 Obsidian 的本地图片导出插件。
 
-使用者右键 Markdown 文件，选择 Copy as Base64 format，即可将该文件正文中的本地图片转换为 Base64 内嵌格式后复制，便于把文章转贴到接受这种图片形式的目标平台。
+它把 Markdown 正文中的本地图片转换为 Base64 内嵌内容，并将结果复制到剪贴板，便于转贴到支持这种格式的平台。
 
 ## 背景与目标
 
@@ -49,7 +50,7 @@ Obsidian 笔记可引用库内图片，日常编辑时这种方式易于管理�
 
 ### 右键复制入口
 
-使用者在 Obsidian 中右键 `.md` 文件并选择 Copy as Base64 format，插件处理所选文件并将结果放入剪贴板。
+从 Obsidian 文件右键菜单处理所选笔记，生成带图片数据的复制稿。
 
 原始笔记继续保持日常可编辑的图片引用方式，复制稿用于后续粘贴和发布。
 
@@ -72,3 +73,5 @@ Obsidian 笔记可引用库内图片，日常编辑时这种方式易于管理�
 目标平台必须支持 Base64 图片，或提供能够提取内嵌图片的功能；同时要核对正文长度及上传体积限制。
 
 图片内嵌会让文本明显变大，不能把成功复制等同于平台一定能保存或显示。目标平台的实际效果应在发布前预览。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/writing-tools/md-image-embed-guide/)。

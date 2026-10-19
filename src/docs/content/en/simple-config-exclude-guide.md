@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-config-exclude-guide
 supplementSources:
   - docs/content/en/supplements/simple-config-exclude-guide-1.md
-sourceHash: 2de352474c341b859e22c50d1d1d054dffcbbfdb202fe88a644b186e6471d528
+sourceHash: 228027a9ba045f64167319721217942e58d0c32226bde503691b1a0130ada938
 translationStatus: translated
-generatedBodyHash: ded1248d848e041f090ddfdaa0600d6ef061f31ad49409561b21bb874628d435
+generatedBodyHash: 8e812999de82cd162a3fac7c2465fbcd231f2f64250b66a99a8d67cd5b50c8f4
 ---
 
 # SimpleConfigExclude Tutorial
@@ -127,6 +127,8 @@ The plugin hides `DefaultSimpleConfigExclude.ini` by default because:
 - Plugin settings are stored in `DefaultSimpleConfigExclude.ini`
 - Exclusion rules are stored in the `[Staging]` section of `DefaultGame.ini`
 - Both files should be committed to version control
+
+After rule changes, the plugin writes `DefaultGame.ini` and reloads configuration so the settings panel corresponds to disk contents. Writing involves version-control checkout or read-only file handling; check checkout status and final file differences.
 
 ### Cleanup Before Copying
 

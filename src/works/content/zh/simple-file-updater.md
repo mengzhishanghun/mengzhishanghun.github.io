@@ -8,6 +8,16 @@ categoryName: 开源工具
 categoryOrder: 1
 order: 0
 status: 正式文档
+workInfo:
+  channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/SimpleFileUpdater
+    - kind: docs
+      href: /docs/zh/tools/simple-file-updater/
+  compatibility:
+    - platforms:
+        - Windows（.exe 打包程序）
+      requirements: []
 featured: false
 draft: false
 sitePublish: false
@@ -19,17 +29,8 @@ links:
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
 lang: zh
 translationKey: simple-file-updater
-workInfo:
-  channels:
-    - kind: open-source
-      href: https://github.com/MZSH-Tools/SimpleFileUpdater
-    - kind: docs
-      href: /docs/zh/tools/simple-file-updater/
-  compatibility:
-    - platforms:
-        - Windows（.exe 打包程序）
-      requirements: []
 ---
+
 ## 作品简介
 
 SimpleFileUpdater 根据配置文件中的“本地目标路径—远程下载地址”映射，批量下载并更新指定文件。
@@ -46,15 +47,15 @@ SimpleFileUpdater 根据配置文件中的“本地目标路径—远程下载�
 
 ### 路径与地址映射
 
-每条配置将本地文件路径与对应的远程 URL 配对。维护者可以直接查看将下载什么、写到哪里，并在地址或目录变化时只改相应配置。配置支持注释，便于给不同更新项留下必要说明。
+用配置清单集中记录下载地址和本地目标，便于在更新前检查来源与落盘位置。
 
 ### 目录与路径处理
 
-本地目标可写相对路径或绝对路径。目标目录不存在时，工具可以按配置创建所需目录，再把下载内容写入指定位置。这使一份配置能够覆盖不同目录中的多个文件，但也要求事先核对路径解析结果。
+支持把多个文件更新到不同本地目录，并按需要创建目标文件夹。
 
 ### 启动方式
 
-可以使用默认配置启动，也可在启动时指定另一份配置文件。项目提供打包后的 EXE 与源码运行方式，便于根据使用环境选择入口；两种入口都按同一类映射清单处理文件。
+提供 EXE 和源码运行入口，可复用已有更新清单。
 
 ## 适用场景
 
@@ -65,3 +66,5 @@ SimpleFileUpdater 根据配置文件中的“本地目标路径—远程下载�
 更新可能覆盖目标位置的同名文件，应在运行前核对 URL、路径和现有文件。
 
 工具根据配置下载文件，不负责判断远端内容是否可信或是否适配当前环境。公开展示配置时应使用可公开的地址，避免把内部下载源写进示例。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/tools/simple-file-updater/)。

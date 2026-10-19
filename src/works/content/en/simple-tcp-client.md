@@ -21,9 +21,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: 9407c00773944e70abbcda44a4bf3c93756ca61f6391fb101cbc3acebe656933
+sourceHash: 77b288cc14b0d3d8a82ec9a846bbdbd96e3c4ae1f791e4756c988d95ad76cc92
 translationStatus: translated
-generatedBodyHash: fc4e24e320f7a22560cfbf4b1f4e791af26bf82e3d989fa07fd2969b5918fee9
+generatedBodyHash: c9b62ff831e30c54bdd234710e6cdb550058a1e502c124847180ea1f7b825420
 workInfo:
   channels:
     - kind: sale
@@ -70,4 +70,6 @@ It suits applications where UE initiates TCP connections, maintains several comm
 
 ## Scope and limitations
 
-TCP transports a byte stream. Connection management does not automatically define business message boundaries, serialization, or state recovery after reconnection. Verify disconnection, retry, and data processing against the actual server protocol and check each channel's configuration.
+Only IPv4 is supported; domain names, IPv6, and encrypted connections are not supported. TCP transports a byte stream. Connection management does not automatically define business message boundaries, serialization, or state recovery after reconnection. Verify disconnection, retry, and data processing against the actual server protocol and check each channel's configuration.
+
+For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-tcp-client-guide/).

@@ -8,19 +8,6 @@ categoryName: UE插件
 categoryOrder: 0
 order: 5
 status: 正式文档
-featured: false
-draft: false
-sitePublish: false
-tags:
-  - TCP
-sourcePlatform: 博客园
-sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
-links:
-  - label: 博客园原文
-    href: https://www.cnblogs.com/mengzhishanghun/p/19165484
-sourceDate: 2025-10-25
-lang: zh
-translationKey: simple-tcp-server
 workInfo:
   channels:
     - kind: sale
@@ -36,7 +23,21 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
+featured: false
+draft: false
+sitePublish: false
+tags:
+  - TCP
+sourcePlatform: 博客园
+sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
+links:
+  - label: 博客园原文
+    href: https://www.cnblogs.com/mengzhishanghun/p/19165484
+sourceDate: 2025-10-25
+lang: zh
+translationKey: simple-tcp-server
 ---
+
 ## 作品简介
 
 SimpleTCPServer 为 Unreal Engine 提供 TCP 服务端的多客户端会话管理能力。
@@ -67,4 +68,6 @@ SimpleTCPServer 为 Unreal Engine 提供 TCP 服务端的多客户端会话管�
 
 ## 适用范围与边界
 
-连接数量、会话生命周期、超时和数据处理需要结合目标环境验证。TCP 字节流没有天然的业务消息边界，项目必须自行确定编码和拆包规则；IP:Port 也不应直接作为安全认证依据。
+仅支持 IPv4，不支持域名、IPv6 或加密连接。连接数量、会话生命周期、超时和数据处理需要结合目标环境验证。TCP 字节流没有天然的业务消息边界，项目必须自行确定编码和拆包规则；IP:Port 也不应直接作为安全认证依据。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-tcp-server-guide/)。

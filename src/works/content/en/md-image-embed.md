@@ -24,9 +24,9 @@ docIds:
 sourceDate: 2025-12-21
 lang: en
 translationKey: md-image-embed
-sourceHash: f561b9bb1e66ef9ceaba98cdf7c7bd6744454598a6ba682e9d3336e56a042fe7
+sourceHash: eb941e4d1ebe7df412c4a3e7fd852b556c2851b6634ebc436782f38f64475ca4
 translationStatus: translated
-generatedBodyHash: 1b7f65663af1d6aa02119958c86222eb9fa23d69f64f2a5e7a7b7836305a7d61
+generatedBodyHash: d48af49937a76bb5cfaf1b57e4c599c00ef6fccb429ddb017a11dfba9485cc93
 workInfo:
   channels:
     - kind: docs
@@ -40,7 +40,7 @@ workInfo:
 
 MDImageEmbed is a local image export plugin for Obsidian.
 
-Right-click a Markdown file and choose Copy as Base64 format to copy its body with local images converted to embedded Base64. This makes it easier to repost an article to a platform accepting that image format.
+It converts local images in the Markdown body to embedded Base64 and copies the result to the clipboard, making it easier to repost to platforms that support this format.
 
 ## Background and goals
 
@@ -52,7 +52,7 @@ The plugin performs the conversion inside Obsidian, generating a copy containing
 
 ### Right-click copy action
 
-Right-click a `.md` file in Obsidian and choose Copy as Base64 format. The plugin processes that file and places the result on the clipboard.
+Process a selected `.md` note from the Obsidian file context menu to generate a copy containing image data.
 
 The original note retains its normal editable image references, while the copied version is used for subsequent pasting and publishing.
 
@@ -75,3 +75,5 @@ It suits users who write mainly in Obsidian and occasionally repost articles wit
 The destination must support Base64 images or provide a feature that extracts embedded images. Check body length and upload size limits as well.
 
 Embedding images makes text substantially larger. Successful copying does not guarantee that a platform can save or display it. Preview the actual result before publishing.
+
+See the [usage guide](/en/docs/guides/writing-tools/md-image-embed-guide/) for steps and parameters.

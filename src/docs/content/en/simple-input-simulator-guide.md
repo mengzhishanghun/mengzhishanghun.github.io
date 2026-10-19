@@ -19,9 +19,9 @@ lang: en
 translationKey: simple-input-simulator-guide
 supplementSources:
   - docs/content/en/supplements/simple-input-simulator-guide-1.md
-sourceHash: 36fe9cff12dc412ec9772489675676d3d87e6af640e9964e42609b71bc0d628c
+sourceHash: 0ac64677217373cd56e837ca7d136f43defd3637d0e9075e855afb93ed78a8ee
 translationStatus: translated
-generatedBodyHash: c1c4cd945b1665fda504c46397d063f2dc7bf0347e9fdba3e07e5e7b71f72ba9
+generatedBodyHash: cf1e62cbc6255aa6340f2e026dfa24e95ac73abd557080840dfc1ce0cf57089d
 ---
 
 # 📘 Simple Input Simulator Plugin Tutorial (Blueprint Edition)
@@ -51,7 +51,7 @@ All functions are available in the **Simple Input Simulator** category in Bluepr
 | `Simulate Key Input` | Simulate press/release events for any input key |
 
 **Parameters:**
-- **Key**: Input key to simulate (Space Bar, Left Mouse Button, Gamepad buttons, etc.)
+- **Key**: UE FKey input key to simulate (Space Bar, Left Mouse Button, Gamepad buttons, etc.)
 - **Pressed**: `true` for press, `false` for release
 - **Player Index**: Target player controller (0 = first player)
 
@@ -110,7 +110,8 @@ Simulate mouse movement or gamepad stick input.
 
 - All functions return `bool` indicating success/failure
 - Player Index 0 targets the first player controller
-- Use Flush Pressed Keys to prevent "stuck" key states
+- Pair press events with releases. After a test, demonstration, or replay, use Flush Pressed Keys to clear remaining state and prevent stuck keys
+- Nodes can also be called in the editor, but require a valid PlayerController; without one, input cannot be injected as intended
 - Axis inputs automatically adapt to current frame rate
 - Check Output Log for detailed simulation messages (LogSimpleInputSimulator)
 

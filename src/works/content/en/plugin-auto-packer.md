@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: en
 translationKey: plugin-auto-packer
-sourceHash: e81b77af9af7d22b2db87a9ecc2382589af5510f922accf46aa1446f0926ed25
+sourceHash: d4aa1eac2f310e9d2686b9dd928d8f47ce8a0800035b910eb6d74b8f00e8f073
 translationStatus: translated
-generatedBodyHash: 0b5ec596b3d630f981dd118aa1124bc5566e05c496d8a736f1d4b11c703efa59
+generatedBodyHash: 12b6b688f854e7b72fc43c9c907262cc972a0dc694d15fcad65401ed32939dd4
 workInfo:
   channels:
     - kind: open-source
@@ -61,7 +61,7 @@ The GUI shows waiting, packaging, successful, failed, and canceled states per en
 
 ### Release file preparation
 
-After builds, options can clean Binaries, Intermediate, and other intermediate content, copy documentation, generate FilterPlugin.ini, or process plugin description fields. Options can be combined, with outputs organized by plugin and engine names.
+After builds, options can clean intermediate artifacts, copy documentation, generate release filter configuration, or process plugin description fields as needed. Outputs are separated by plugin and engine version.
 
 The tool also offers source copyright notice generation from .uplugin author information. Check target files before enabling options that change content.
 
@@ -74,3 +74,5 @@ It suits UE plugin authors building several engine versions before release and c
 The current build target is Windows / Win64, and plugin directories require valid .uplugin files.
 
 Successful multi-version tasks still need assessment using logs and tests in target engines. Review preparation options against release requirements. The tool handles plugin packages, not whole UE project packaging.
+
+For operation steps and parameter details, see the [user guide](/en/docs/tools/plugin-auto-packer/).

@@ -21,9 +21,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: 2e7e9737eec3f685cd7f857322ce8d1903748de3ff56329f06a2a425fd74d972
+sourceHash: 84952a71323215aca3c35a3f1d1c91ea212b3383af08f574371ade499f94fa3b
 translationStatus: translated
-generatedBodyHash: b3fccaed6a9137711671c6b650f1f798adca9c8205d9abadd79f16493de016a2
+generatedBodyHash: 37a7425fac84fdc7e0fd49d499f69b436d76962698c4a2732c7e57a76f7130da
 workInfo:
   channels:
     - kind: sale
@@ -74,3 +74,5 @@ UE applications that access remote services in restricted networks through SSH c
 Windows is currently supported. Check library files and build support before porting to other platforms.
 
 The default subsystem closes all tunnels when it is destroyed. In the target project, review SSH credential storage and usage, connection threads, error handling, and whether sessions and channels are released correctly when connections close.
+
+For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-ssh-tunnel-guide/).

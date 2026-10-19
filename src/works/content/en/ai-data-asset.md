@@ -1,6 +1,6 @@
 ---
 title: AIDataAsset
-description: Link DataAsset properties to JSON files so external programs can read and modify game data.
+description: Let AI modify complex DataAsset data through JSON and synchronize it to UE in real time, with support for basic types and most structs.
 type: work
 slug: ai-data-asset
 categoryId: ue-plugins
@@ -22,9 +22,9 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: 05ef7ac2d82bc313eec701d880eb771f811c4f28463a7d05012b79eb52d29719
+sourceHash: cdffab0b876bbaf86eded6e5dd54e07ebc4b4769ed3277c6c51403d670bceb5a
 translationStatus: translated
-generatedBodyHash: f129c11ff6dd82e824487bab1fe5939ec845b1e493f55c8f66ffb24b8dc5eec8
+generatedBodyHash: 2a5049fd89343f9d9cc25d56c227f6ed04148b46cd0011c8c2de6bc6384d0744
 workInfo:
   channels:
     - kind: sale
@@ -41,42 +41,42 @@ workInfo:
 ---
 ## Overview
 
-AIDataAsset maps Unreal Engine DataAsset properties to JSON files, allowing external programs to adjust game data through readable, writable text. Asset changes in the editor can be exported to JSON, and external edits can be imported back into assets.
+AIDataAsset lets AI read and modify complex DataAsset data through JSON and automatically synchronizes changes back to assets while the UE editor is running. With automatic synchronization enabled, the plugin handles export, file monitoring, and writing changes back, without requiring manual import and export each time.
 
-It targets workflows exchanging configuration between UE and scripts, data tools, or AI programs.
+It supports common basic types and most structs, making it suitable for AI-assisted batch field adjustments and nested configuration changes, reducing the need to expand and fill in fields individually in the editor.
 
 ## Background and goals
 
-DataAssets are stored in UE asset format, which external programs cannot easily interpret. Manually copying externally generated data into the editor on every iteration creates repetitive work when there are many fields or frequent updates.
+DataAssets are stored in UE asset format, making their fields difficult for AI tools to read and modify directly. Manually transferring AI-generated results creates repetitive work when there are many fields or frequent updates.
 
-JSON can be processed by common programs and reviewed as text diffs in version control. This work aims to establish a data channel between both sides while addressing precision, naming, and cyclic triggers in bidirectional synchronization.
+AIDataAsset uses JSON to connect external tools with UE assets, allowing AI to handle data modifications while inspection and testing remain in the game project.
 
 ## Core capabilities
 
 ### DataAsset and JSON round trips
 
-DataAsset properties are exported to corresponding JSON, and JSON changes can be imported into the asset. Field name handling makes text properties easier to relate to names shown in the editor. Floating-point output also considers round-trip precision.
-
-JSON is an interchange format. Assets used at runtime must still be updated and saved correctly in UE.
+Export properties from existing DataAssets to JSON, then synchronize external edits back to the assets. Field names correspond to those shown in the editor, and floating-point output accounts for round-trip precision.
 
 ### Change monitoring and synchronization control
 
-File change monitoring detects external edits while distinguishing JSON written by the plugin itself, preventing cycles where export triggers import and import triggers export.
-
-Both sides may have changed before the editor starts. Synchronization direction must be determined from asset and file state; the existence of one side alone is not a reason to overwrite the other.
+While the editor is running, the plugin automatically monitors asset and JSON changes and prevents repeated triggers between the two synchronization directions. At startup, it also checks files on both sides and chooses a synchronization direction based on modification times.
 
 ### Safeguards for editor changes
 
-Importing data writes to DataAssets. The work combines version control checkout and undo transactions for editor modifications. Comparing exported content can reduce unnecessary writes. Asset deletion and the monitoring lifecycle also need management within this data channel.
+Imports support undo and redo, with version control checkout and asset saving used to handle modifications. Save failures produce warnings and still require attention in the editor; an in-memory update must not be treated as saved.
 
 ## Use cases
 
-It suits batch editing of DataAsset data such as character values and skill configurations with external scripts or tools, followed by inspection in UE. It also suits teams reviewing field-level changes, since JSON diffs are clearer than binary asset changes.
+When generating level configurations, adjusting character values in batches, or modifying nested structs, AI can read and edit JSON before the results are inspected and tested in UE. LLMs, reinforcement learning systems, and external tools such as Python can all participate in this data workflow.
 
-External AI may generate or modify JSON, but the project team remains responsible for validating data correctness.
+Designers can also process data centrally with tools such as Excel. For team review, JSON can be output to a directory suitable for version control so field changes can be reviewed as text diffs. The default Saved output directory usually serves only as an intermediate synchronization directory.
 
 ## Scope and limitations
 
-Bidirectional synchronization changes assets and disk files. Confirm which side is authoritative and ensure assets are writable.
+JSON modifies existing DataAssets in UE; adding a JSON file alone does not create a new asset. Automatic monitoring works only while the editor is running and automatic synchronization is enabled.
 
-Timestamp-based decisions suit cases where edits normally occur on only one side. Concurrent edits on both sides, field structure changes, and invalid JSON still require manual handling. The work provides data exchange, not business rule validation.
+Startup synchronization chooses its direction by file modification times and does not merge fields edited independently on both sides. Assets must be writable; invalid JSON or changes to field structures may cause imports to fail. Successful synchronization does not mean the data follows game rules, so it still requires validation in the project.
+
+For configuration, startup synchronization rules, deletion behavior, and common questions, see the [AIDataAsset documentation](/en/docs/guides/ue-tools/ai-data-asset-guide/).
+
+For implementation experience with JSON selection, cyclic triggers, and asset writes, see [How to Let AI Modify DataAssets Directly](/en/blog/cnblogs-20159718/).

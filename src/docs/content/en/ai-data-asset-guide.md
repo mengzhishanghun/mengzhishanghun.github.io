@@ -17,22 +17,22 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/ai-data-asset-guide/
 lang: en
 translationKey: ai-data-asset-guide
-sourceHash: eb81f1c0d29c3e01819f52d2d5550b4819d568e3a4767b917499a51073b5ddc8
+sourceHash: 1b1733efbc4bdcfc88146bee061da98ce390234d4d0f7caf6b64ed9fa47466db
 translationStatus: translated
-generatedBodyHash: c54da9295e1d041dcbbcc802b9e66f288c4ad1294bdf4f51526c2e58a16d6ae8
+generatedBodyHash: 4820c4ad829f529823bea77a8d6bda1d6e79b651a66519c2744cb293474a0b24
 ---
 
 # AI DataAsset
 
-DataAsset and JSON files are automatically bound for two-way synchronization, allowing AI to modify DataAsset directly.
+Read and modify existing DataAssets through JSON, letting AI or other external tools process their data and automatically synchronize it back to UE. Supported data includes common basic types and most structs, including nested structs and properties in common containers such as TArray, TMap, and TSet.
 
 ## Features
 
 - **Two-way synchronization**: DataAsset property changes are automatically exported to JSON; JSON changes are automatically imported back into DataAsset
-- **Initial synchronization**: On editor startup, timestamps are compared and the latest version is synchronized
-- **Orphan cleanup**: Automatically deletes JSON files whose corresponding DataAsset no longer exists
-- **Version control integration**: Automatically checks out files through Perforce/Git/SVN before saving
-- **Loop prevention**: Built-in protection prevents infinite synchronization loops
+- **Initial synchronization**: With automatic synchronization enabled, editor startup chooses a direction using asset and JSON file modification times; equal times are skipped
+- **Orphan cleanup**: Attempts to remove JSON without a corresponding DataAsset when startup scanning reaches cleanup; cleanup is skipped if no DataAssets are found
+- **Version control integration**: When version control is enabled, attempts to check out files through the configured Perforce/Git/SVN provider before saving
+- **Loop prevention**: Avoids repeated import/export triggered by the plugin’s own synchronization results
 - **High-precision output**: JSON export uses full-precision floating-point values
 - **Property name restoration**: JSON field names match the editor display instead of UE's internal camelCase form
 - **Smart writes**: Writes files only when content actually changes, avoiding meaningless changes in version control
@@ -52,15 +52,36 @@ Open **Project Settings > Plugins > AIDataAsset**:
 | JSON Output Directory | `Saved/AIDataAsset` | JSON storage directory, relative to the project root |
 | Enable Auto Sync | `true` | Enable/disable automatic synchronization |
 
+**Output directory and version control.** The default `Saved/AIDataAsset/` directory holds intermediate synchronization files and normally should not be tracked in version control. Runtime data remains in UE assets. To track JSON, change `JSON Output Directory` here to a directory within the project that should be tracked, then add the generated JSON files to version control. An AI tool can help edit this setting; check the actual output location afterward.
+
 ## How It Works
 
-1. When DataAsset properties change in the editor, the plugin automatically exports a JSON file
-2. When an external tool, such as an AI tool, changes the JSON file, the plugin automatically imports the changes into DataAsset
-3. On startup, the plugin performs initial synchronization using file timestamps
+**Choosing data at startup.** With automatic synchronization enabled, the plugin scans DataAssets after project asset scanning completes, performs initial synchronization with a progress display, and then monitors subsequent changes. It uses modification times of the asset and JSON files on disk:
+
+| Asset and JSON state | Result |
+| --- | --- |
+| The UE asset exists but its JSON is missing | Export JSON from the existing asset |
+| Both exist and the asset file is newer | Update JSON with asset contents |
+| Both exist and the JSON file is newer | Import JSON into the existing asset and attempt to save automatically |
+| Both files have the same modification time | Skip this synchronization pass |
+| JSON exists but the corresponding UE asset does not | Do not create an asset. If scanning reaches orphan cleanup, attempt to delete the JSON. If no DataAssets are found, end the scan early without cleaning up orphan JSON |
+
+If both sides have changed, modification times still determine the direction; the plugin does not merge their individual field changes. Back up important edits before synchronizing to avoid overwriting the older side.
+
+**While the editor is running.**
+
+- DataAsset property changes automatically export the corresponding JSON. Temporary changes during continuous interactions such as dragging a slider are skipped rather than exported individually.
+- Adding a DataAsset generates its JSON. Renaming an asset attempts to remove JSON at the old path, then exports to the new path. Reloading an asset and finishing reference updates also triggers export.
+- When AI adds or modifies JSON corresponding to an existing asset, its properties are imported into that asset. The plugin first finds the existing DataAsset by the JSON path. If the asset cannot be found or loaded, it neither imports the file nor creates an asset.
+- Import or export is skipped when the generated JSON text exactly matches the existing contents, avoiding unnecessary writes. The plugin also avoids repeatedly treating its own file writes as external edits.
+
+**Deletion and recovery.** Deleting a UE asset attempts to delete its JSON. Deleting only JSON does not delete the asset or immediately regenerate JSON. If automatic synchronization is enabled and the asset still exists and can be loaded, the next editor startup exports JSON from it again. Another edit to that asset may regenerate JSON earlier.
+
+**Importing and saving.** Import updates the DataAsset in the editor, supports undo and redo, and notifies the editor that properties have changed. When version control is enabled, the plugin attempts to check out the asset before saving it to disk. Failed saves produce a warning and leave the asset marked for saving. Resolve write-access or save problems first, then inspect the asset on disk; values shown in the editor alone do not establish that saving succeeded.
 
 ## AI Integration
 
-This plugin is designed for AI workflows. The following explains how to connect AI tools to DataAsset.
+First create the required DataAsset in UE and let the plugin generate its JSON, then tell the AI where the file is and what to change.
 
 ### JSON File Location
 
@@ -119,13 +140,16 @@ The plugin automatically exports the following JSON:
    }
    ```
 
-3. **The plugin detects the file change and automatically imports it into DataAsset** — no manual action is needed. Changes appear immediately in the UE editor.
+3. **The plugin detects the change and imports it into the existing DataAsset**: Keep the UE editor running with automatic synchronization enabled, then save JSON to see changes in the editor. The plugin next attempts checkout and asset saving. If a save warning appears, follow the log to resolve it.
 
 ### Recommendations
 
-- Keep the UE editor running while AI modifies JSON files — file monitoring is active only in the editor
-- Do not delete or rename the `NativeClass` field — it is required for deserialization
-- AI can create new JSON files using the same path rules — the plugin automatically creates corresponding DataAssets on the next editor startup
+- Keep the UE editor running with automatic synchronization enabled while editing JSON. Monitoring does not run while the editor is closed; edits made then are handled at the next startup under the rules above.
+- Create the UE asset first, then edit its JSON. Creating JSON alone does not create a DataAsset, and orphan JSON may be removed during startup cleanup.
+- Preserve the exported JSON structure, including the sample’s `NativeClass` field. It describes exported type information. Current import finds an existing asset by the JSON path rather than using this field to create one. Changing it cannot make the plugin generate a new asset type.
+- Invalid JSON or asset field-structure changes may cause import to fail. Check logs and actual asset contents after editing, and test in UE. Synchronization does not replace game-rule validation.
+
+**Common situations.** If JSON is not updating, check that automatic synchronization is enabled, the editor is running, and the path corresponds to an existing asset. If asset values changed but a save warning appeared, check file write access and version-control checkout status before saving. JSON not regenerating immediately after deletion follows the deletion rules above; it does not mean the UE asset was deleted.
 
 ## Supported Engine Versions
 

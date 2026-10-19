@@ -24,9 +24,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: 87ef9915d16b052bba1382cc19badf4a7476c4d4536321d04913b2533f40bb14
+sourceHash: da7fe71d309beae966c5385bfcd06bd7c57e26e417c909866ba290378836e078
 translationStatus: translated
-generatedBodyHash: 85f5062b6cb4ddcae149c7bc8870128c7d4e273c810c0281e22fa7c81f359e80
+generatedBodyHash: ada4961128e1a6b6dadc6b39db13b0427ee1ef6ea936fafb3eab5c8a6f7ad93a
 workInfo:
   channels:
     - kind: sale
@@ -51,7 +51,7 @@ Excluded files can also be copied to another target directory as needed for late
 
 Projects often need different configurations for debugging, testing, and production. Manually maintaining inclusion and exclusion entries in DefaultGame.ini requires attention to file paths, existing rules, and editor caches.
 
-The plugin aims to let users choose, file by file, which configurations ship with a package, while providing a separate action for delivering excluded files.
+Users can choose, file by file, which configurations ship with a package, then deliver excluded files separately as needed.
 
 ## Core capabilities
 
@@ -63,7 +63,7 @@ The Project Settings list comes from scanning Config, making it easier to compar
 
 ### Synchronizing Staging rules
 
-The plugin reads the Staging section in DefaultGame.ini, recognizes existing rules, and writes corresponding entries after state changes. It handles version control checkout or read-only state before writing and reloads configuration afterward so the settings panel matches disk content.
+Configuration choices are saved as inclusion or exclusion rules used by UE packaging, with the settings state synchronized accordingly.
 
 These changes to project configuration should still receive normal version review.
 
@@ -73,10 +73,14 @@ For ini files omitted from the base package but needed by some deployment enviro
 
 ## Use cases
 
-It suits excluding debug configuration from production packages or preparing different configuration sets for testing and production. Projects can generate a base package without certain files, then handle excluded items separately by environment, making packaging rules and deployment steps easier to review independently.
+Development configuration, such as debug switches, profiling parameters, test server addresses, and development keys, can be excluded from production packages by file. Internal plugin configuration that does not need to ship can also be managed separately. When testing and production need different configuration sets, projects can first generate a base package without those files, then handle excluded items by environment and review packaging rules and deployment steps separately.
 
 ## Scope and limitations
 
 The plugin manages packaging rules and copying for ini files under Config.
 
 Exclusion does not complete sensitive information protection: destination copies still need project access controls. State changes modify DefaultGame.ini. Before release, check actual package contents, copy destinations, and version control diffs.
+
+For implementation details on Staging rules, direct file reads, and reloading the `GConfig` cache, see [How to Manage Configuration File Exclusion During Packaging](/en/blog/cnblogs-19770930/).
+
+See the [usage guide](/en/docs/guides/ue-tools/simple-config-exclude-guide/) for steps and parameters.

@@ -8,6 +8,14 @@ categoryName: 开源工具
 categoryOrder: 1
 order: 2
 status: 正式文档
+workInfo:
+  channels:
+    - kind: docs
+      href: /docs/zh/tools/plugin-manager/
+  compatibility:
+    - platforms:
+        - UE 插件管理工具（操作系统待核实）
+      requirements: []
 featured: false
 draft: false
 sitePublish: false
@@ -20,15 +28,8 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginManager
 lang: zh
 translationKey: plugin-manager
-workInfo:
-  channels:
-    - kind: docs
-      href: /docs/zh/tools/plugin-manager/
-  compatibility:
-    - platforms:
-        - UE 插件管理工具（操作系统待核实）
-      requirements: []
 ---
+
 ## 作品简介
 
 UEPluginManager 是集中查看和管理 UE 插件的桌面工具。它把项目 Plugins 目录、商城下载目录及引擎自带插件汇集到同一界面，支持搜索、依赖关系查看、同名冲突提示与启用状态管理。
@@ -45,7 +46,7 @@ UEPluginManager 是集中查看和管理 UE 插件的桌面工具。它把项目
 
 ### 来源汇总与检索
 
-自动扫描项目、商城和引擎插件，并按来源分组。列表可按名称、作者、分类、描述、依赖及被依赖关系搜索，支持以多个关键词缩小范围。安装版和源码版引擎都有对应的识别方式，列表也能显示同名插件冲突。
+汇总项目、商城和引擎插件，支持按名称、作者、依赖等信息检索，并提示同名冲突。可识别安装版与源码版引擎。
 
 ### 依赖与状态管理
 
@@ -68,3 +69,5 @@ UEPluginManager 是集中查看和管理 UE 插件的桌面工具。它把项目
 工具需要在目标 UE 项目目录中运行。移动、删除和目录修正前应关闭编辑器，避免打开中的项目与磁盘状态不一致。
 
 启用状态修改、只读属性处理和目录操作都会影响本地项目，完成后仍需检查 .uproject、插件目录和项目启动结果。
+
+操作步骤和参数说明见 [使用教程](/zh/docs/tools/plugin-manager/)。
