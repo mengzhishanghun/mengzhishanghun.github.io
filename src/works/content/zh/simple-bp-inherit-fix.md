@@ -27,6 +27,7 @@ sitePublish: false
 tags:
   - 蓝图
   - 继承链
+  - Simple 系列
 links:
   - label: GitHub
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix

@@ -14,6 +14,7 @@ sitePublish: false
 tags:
   - Packaging
   - Configuration management
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19770930
 links:
@@ -24,7 +25,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: da7fe71d309beae966c5385bfcd06bd7c57e26e417c909866ba290378836e078
+sourceHash: 4e553379adccee94103d2445876b0170d2dcbf5967cf58abab523500ef75f1ed
 translationStatus: translated
 generatedBodyHash: ada4961128e1a6b6dadc6b39db13b0427ee1ef6ea936fafb3eab5c8a6f7ad93a
 workInfo:
@@ -41,6 +42,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleConfigExclude is an editor plugin for UE project packaging configuration. It lists ini files in the Config directory in Project Settings, allowing each to use default behavior, forced inclusion, or exclusion, and synchronizes those choices to packaging Staging rules.

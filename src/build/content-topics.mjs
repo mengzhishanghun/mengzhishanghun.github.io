@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import {regularPath} from './resources.mjs';
 const unique=values=>[...new Set(values)];
 const strings=value=>Array.isArray(value)&&value.every(v=>typeof v==='string'&&v.trim())&&unique(value).length===value.length;
-export function projectContentTopics({site,entries,copy,config,topics,type,indexId,topicsPath,labelPrefix}) {
+export function projectContentTopics({site,entries,copy,config,topics,type,indexId,topicsPath,labelPrefix,maxTopics=2}) {
   const items=entries.filter(e=>e.type===type);if(!items.length)return;
   topics ||= JSON.parse(fs.readFileSync(regularPath(site,topicsPath),'utf8'));
   if(topics.version!==1 || !Array.isArray(topics.topics) || !strings(topics.topics) || topics.topics.some(id=>!/^([a-z]+-)*[a-z]+$/.test(id)) || !topics.articles || typeof topics.articles!=='object')throw Error('内容主题配置无效');
@@ -10,7 +10,7 @@ export function projectContentTopics({site,entries,copy,config,topics,type,index
   if(Object.keys(topics.articles).some(id=>!ids.has(id)))throw Error('内容主题映射含未知身份');
   for(const entry of items){
     const record=topics.articles[entry.id];
-    if(!record || !strings(record.topics) || record.topics.length<1 || record.topics.length>2 || record.topics.some(id=>!topics.topics.includes(id)))throw Error('内容主题映射缺失或重复: '+entry.id);
+    if(!record || !strings(record.topics) || record.topics.length<1 || record.topics.length>maxTopics || record.topics.some(id=>!topics.topics.includes(id)))throw Error('内容主题映射缺失或重复: '+entry.id);
     entry.projectedTags={};
     for(const {code}of config.languages){
       const tags=record.topics.map(id=>{const label=copy[code].scriptSlots?.[labelPrefix+':'+id];if(typeof label!=='string'||!label.trim())throw Error('内容主题译名缺失: '+code+' '+id);return label;});

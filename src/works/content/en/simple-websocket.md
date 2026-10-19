@@ -13,6 +13,7 @@ draft: false
 sitePublish: false
 tags:
   - WebSocket
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
@@ -21,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: 7a8dd685acc38a70d13fe8729383feda212c7d30b1ecd13a2b343e995a6d950a
+sourceHash: 17614fe3016e912a50e3ca90512678f21f9393b6e83a660ea95309aeddea75d8
 translationStatus: translated
 generatedBodyHash: 3e0321a4e1087ae39b8cdd49c6962dc9dcb0474c9c0263762c62d357b82c010e
 workInfo:
@@ -40,6 +41,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleWebSocket wraps WebSocket connection management in Unreal Engine. Projects distinguish peers using named connections, bind message delegates, and call interfaces from Blueprints.

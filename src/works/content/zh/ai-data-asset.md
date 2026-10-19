@@ -27,6 +27,7 @@ sitePublish: false
 tags:
   - DataAsset
   - JSON
+  - AI 系列
 sourcePlatform: 博客园
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/20159718
 links:

@@ -14,6 +14,7 @@ sitePublish: false
 tags:
   - Configuration management
   - Enums
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19136345
 links:
@@ -24,7 +25,7 @@ docIds:
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: de9c8833ca2982352c2db3a1b78b0f00b7c0cfbfdb24c34e5676e1a70bf26b04
+sourceHash: 10ee302860ec9a92a9bd9f66663567b0dc988870d15dd42355e21bb941f444fc
 translationStatus: translated
 generatedBodyHash: a4120017b0b891a65cc3ab64e5627ddc4b3b1f021b4c00a5d1a807c934491b19
 workInfo:
@@ -43,6 +44,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleAutoEnum declares bindings between configuration arrays and UE enums with macros, reducing repeated initialization and configuration change handling for each enum.

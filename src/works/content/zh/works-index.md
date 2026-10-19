@@ -16,7 +16,7 @@ translationKey: works-index
 
 插件、工具与游戏作品
 
-UE插件16开源工具7AI工具0Ob插件1UE游戏0Godot游戏0
+UE插件25开源工具7AI工具1Ob插件1UE游戏0Godot游戏0
 
 搜索当前分类
 
@@ -151,3 +151,73 @@ SimpleAutoEnum
 通过宏将配置数组绑定到枚举范围，减少重复的初始化代码。
 
 配置管理枚举](/works/simple-auto-enum/)
+
+
+## 动画资产与动画蓝图
+
+MCPAnimation 是开发中的 UE 编辑器 MCP 插件，围绕动画蓝图、状态机与动画资产提供工具接口。当前功能与兼容性仍在验证。
+
+[MCPAnimation](/works/mcp-animation/)
+
+
+## 行为树与黑板编辑
+
+MCPBehaviorTree 是开发中的 UE 编辑器 MCP 插件，围绕行为树与黑板资产提供工具接口。当前功能与兼容性仍在验证。
+
+[MCPBehaviorTree](/works/mcp-behavior-tree/)
+
+
+## 蓝图发现、编辑与编译反馈
+
+MCPBlueprint 是开发中的 UE 编辑器 MCP 插件，围绕蓝图发现、编辑与编译反馈提供工具接口。当前功能与兼容性仍在验证。
+
+[MCPBlueprint](/works/mcp-blueprint/)
+
+
+## 资产工具与开发诊断
+
+MCPDevTools 是开发中的 UE 编辑器 MCP 插件，围绕资产工具与只读开发诊断提供工具接口。当前功能与兼容性仍在验证。
+
+[MCPDevTools](/works/mcp-dev-tools/)
+
+
+## Level Sequence 资产编辑
+
+MCPLevelSequence 是开发中的 UE 编辑器 MCP 插件，围绕Level Sequence 序列资产编辑提供工具接口。当前功能与兼容性仍在验证。
+
+[MCPLevelSequence](/works/mcp-level-sequence/)
+
+
+## 材质图与材质实例
+
+MCPMaterial 是开发中的 UE 编辑器 MCP 插件，围绕材质图与材质实例提供工具接口。当前功能与兼容性仍在验证。
+
+[MCPMaterial](/works/mcp-material/)
+
+
+## Niagara 系统与模块
+
+MCPNiagara 是开发中的 UE 编辑器 MCP 插件，围绕Niagara 系统、发射器与模块提供工具接口。当前功能与兼容性仍在验证。
+
+[MCPNiagara](/works/mcp-niagara/)
+
+
+## Widget 树、属性与动画
+
+MCPUMG 是开发中的 UE 编辑器 MCP 插件，围绕Widget 树、属性与动画提供工具接口。当前功能与兼容性仍在验证。
+
+[MCPUMG](/works/mcp-umg/)
+
+
+## Actor、关卡与地形编辑
+
+MCPWorldEditor 是开发中的 UE 编辑器 MCP 插件，围绕Actor、关卡、地形与视口提供工具接口。当前功能与兼容性仍在验证。
+
+[MCPWorldEditor](/works/mcp-world-editor/)
+
+
+## 傻妞：本机 AI 管家
+
+本机运行的 AI 管家，将连续对话、后台任务、执行审核与成果预览集中在同一界面。目前处于开发与测试阶段。
+
+[ShaNiu](/works/shaniu/)

@@ -8,9 +8,9 @@ websiteRoute: /works/
 template: works/index.html
 lang: en
 translationKey: works-index
-sourceHash: 91847c20b68e4dcb35b427624a662a3d1421978f63d06c3f558128ad2ef4a094
+sourceHash: 3b1d57ebd743e0899726cf64af7cd902383701458517aff1a53f6d4f5fcfdf74
 translationStatus: translated
-generatedBodyHash: f85e1df7995b1a75debb3e2aae63eb8af949cbbd502c604a997698d69bcc3b40
+generatedBodyHash: 31054db034adecf617339bad1185036b0394c40be4841961cd2aa269ec17ea71
 ---
 
 ![](/media-occurrence/page%3Aworks-index%3Amedia%3A1)
@@ -19,7 +19,7 @@ generatedBodyHash: f85e1df7995b1a75debb3e2aae63eb8af949cbbd502c604a997698d69bcc3
 
 Plugins, tools, and games
 
-UE Plugins 16 · Open-source Tools 7 · AI Tools 0 · Obsidian Plugins 1 · UE Games 0 · Godot Games 0
+UE Plugins 25 · Open-source Tools 7 · AI Tools 1 · Obsidian Plugins 1 · UE Games 0 · Godot Games 0
 
 Search this category
 
@@ -154,3 +154,73 @@ SimpleAutoEnum
 Bind configuration arrays to enum ranges through macros, reducing repetitive initialization code.
 
 Configuration management · Enums](/works/simple-auto-enum/)
+
+
+## Animation assets and Blueprints
+
+MCPAnimation is an Unreal Editor MCP plugin in development, providing tool interfaces for Animation Blueprints, state machines and animation assets. Features and compatibility are still being verified.
+
+[MCPAnimation](/works/mcp-animation/)
+
+
+## Behavior Trees and Blackboards
+
+MCPBehaviorTree is an Unreal Editor MCP plugin in development, providing tool interfaces for Behavior Tree and Blackboard assets. Features and compatibility are still being verified.
+
+[MCPBehaviorTree](/works/mcp-behavior-tree/)
+
+
+## Blueprint discovery, editing and compilation
+
+MCPBlueprint is an Unreal Editor MCP plugin in development, providing tool interfaces for Blueprint discovery, editing and compilation feedback. Features and compatibility are still being verified.
+
+[MCPBlueprint](/works/mcp-blueprint/)
+
+
+## Asset tools and development diagnostics
+
+MCPDevTools is an Unreal Editor MCP plugin in development, providing tool interfaces for asset tools and read-only development diagnostics. Features and compatibility are still being verified.
+
+[MCPDevTools](/works/mcp-dev-tools/)
+
+
+## Level Sequence asset editing
+
+MCPLevelSequence is an Unreal Editor MCP plugin in development, providing tool interfaces for Level Sequence asset editing. Features and compatibility are still being verified.
+
+[MCPLevelSequence](/works/mcp-level-sequence/)
+
+
+## Material graphs and instances
+
+MCPMaterial is an Unreal Editor MCP plugin in development, providing tool interfaces for material graphs and material instances. Features and compatibility are still being verified.
+
+[MCPMaterial](/works/mcp-material/)
+
+
+## Niagara systems and modules
+
+MCPNiagara is an Unreal Editor MCP plugin in development, providing tool interfaces for Niagara systems, emitters and modules. Features and compatibility are still being verified.
+
+[MCPNiagara](/works/mcp-niagara/)
+
+
+## Widget trees, properties and animations
+
+MCPUMG is an Unreal Editor MCP plugin in development, providing tool interfaces for Widget trees, properties and animations. Features and compatibility are still being verified.
+
+[MCPUMG](/works/mcp-umg/)
+
+
+## Actors, levels and terrain
+
+MCPWorldEditor is an Unreal Editor MCP plugin in development, providing tool interfaces for Actors, levels, terrain and viewports. Features and compatibility are still being verified.
+
+[MCPWorldEditor](/works/mcp-world-editor/)
+
+
+## ShaNiu: a local AI butler
+
+A locally running AI butler bringing continuous conversations, background tasks, execution review and result previews into one interface. It is currently in development and testing.
+
+[ShaNiu](/works/shaniu/)

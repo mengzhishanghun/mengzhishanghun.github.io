@@ -5,7 +5,8 @@ const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&
 export function renderWorkBadges(data,labels){
   if(!data.workInfo)return '';
   assertWorkInfo(data.workInfo);
-  return data.workInfo.channels.filter(c=>c.kind!=='docs').map(c=>'<span class="work-status work-status-'+c.kind+'">'+escapeHTML(labels[c.kind])+'</span>').join('');
+  const stage=data.workInfo.stage?'<span class="work-status work-status-'+data.workInfo.stage+'">'+escapeHTML(labels[data.workInfo.stage])+'</span>':'';
+  return stage+data.workInfo.channels.filter(c=>c.kind!=='docs').map(c=>'<span class="work-status work-status-'+c.kind+'">'+escapeHTML(labels[c.kind])+'</span>').join('');
 }
 export function renderWorkCardStatuses(html,entries,locale,labels){
   const doc=parseFragment(html,{sourceCodeLocationInfo:true}),edits=[];
@@ -32,7 +33,9 @@ export function renderWorkMetadata(html,data,labels){
   const badges=renderWorkBadges(data,labels);
   const h=heading.sourceCodeLocation;
   edits.push([h.startOffset,h.endOffset,'<div class="work-title-line">'+html.slice(h.startOffset,h.endOffset)+badges+'</div>']);
-  const buttons=info.channels.map((c,index)=>'<a class="work-action'+(index===0?' work-action-primary':'')+'" href="'+escapeHTML(c.href)+'"'+(c.href.startsWith('https:')?' target="_blank" rel="noopener noreferrer"':'')+'>'+escapeHTML(labels[c.kind==='sale'?'saleAction':c.kind==='open-source'?'sourceAction':'docsAction'])+'</a>').join('');
+  const support=info.supportHref?'<a class="work-action work-action-primary" href="'+escapeHTML(info.supportHref)+'">'+escapeHTML(labels.supportAction)+'</a>':'';
+  const missing=info.stage==='developing'&&!info.channels.some(c=>c.kind==='docs')?'<span class="work-action work-action-unavailable">'+escapeHTML(labels.noDocs)+'</span>':'';
+  const buttons=support+info.channels.map((c,index)=>'<a class="work-action'+(index===0&&!support?' work-action-primary':'')+'" href="'+escapeHTML(c.href)+'"'+(c.href.startsWith('https:')?' target="_blank" rel="noopener noreferrer"':'')+'>'+escapeHTML(labels[c.kind==='sale'?'saleAction':c.kind==='open-source'?'sourceAction':'docsAction'])+'</a>').join('')+missing;
   // Keep unclassified source links as neutral legacy entries, never as open-source claims.
   const neutral=[];walk(actions,node=>{if(node.tagName==='a' && /^https:\/\/github\.com\//.test(attrs(node).href||'') && !info.channels.some(c=>c.href===attrs(node).href)){const loc=node.sourceCodeLocation;neutral.push(html.slice(loc.startOffset,loc.endOffset));}});
   const rows=(info.compatibility.length?info.compatibility:[{platforms:[],requirements:[]}]).map(group=>'<div class="work-compatibility-group"><p><span class="work-compatibility-label">'+escapeHTML(labels.platforms)+'：</span>'+escapeHTML(group.platforms.join(' / ')||labels.pending)+'</p><p><span class="work-compatibility-label">'+escapeHTML(labels.requirements)+'：</span>'+escapeHTML(group.requirements.join(' / ')||labels.pending)+'</p></div>').join('');

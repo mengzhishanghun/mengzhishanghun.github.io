@@ -27,6 +27,7 @@ sitePublish: false
 tags:
   - 打包
   - 配置管理
+  - Simple 系列
 sourcePlatform: 博客园
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19770930
 links:

@@ -118,6 +118,16 @@ languages:
       blog:python-excel-column-update: blog/content/zh/python-excel-column-update.md
       blog:python-directory-diff-report: blog/content/zh/python-directory-diff-report.md
       blog:python-perforce-stream-switch-safety: blog/content/zh/python-perforce-stream-switch-safety.md
+      work:mcp-animation: works/content/zh/mcp-animation.md
+      work:mcp-behavior-tree: works/content/zh/mcp-behavior-tree.md
+      work:mcp-blueprint: works/content/zh/mcp-blueprint.md
+      work:mcp-dev-tools: works/content/zh/mcp-dev-tools.md
+      work:mcp-level-sequence: works/content/zh/mcp-level-sequence.md
+      work:mcp-material: works/content/zh/mcp-material.md
+      work:mcp-niagara: works/content/zh/mcp-niagara.md
+      work:mcp-umg: works/content/zh/mcp-umg.md
+      work:mcp-world-editor: works/content/zh/mcp-world-editor.md
+      work:shaniu: works/content/zh/shaniu.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -233,4 +243,14 @@ languages:
       blog:python-excel-column-update: blog/content/en/python-excel-column-update.md
       blog:python-directory-diff-report: blog/content/en/python-directory-diff-report.md
       blog:python-perforce-stream-switch-safety: blog/content/en/python-perforce-stream-switch-safety.md
+      work:mcp-animation: works/content/en/mcp-animation.md
+      work:mcp-behavior-tree: works/content/en/mcp-behavior-tree.md
+      work:mcp-blueprint: works/content/en/mcp-blueprint.md
+      work:mcp-dev-tools: works/content/en/mcp-dev-tools.md
+      work:mcp-level-sequence: works/content/en/mcp-level-sequence.md
+      work:mcp-material: works/content/en/mcp-material.md
+      work:mcp-niagara: works/content/en/mcp-niagara.md
+      work:mcp-umg: works/content/en/mcp-umg.md
+      work:mcp-world-editor: works/content/en/mcp-world-editor.md
+      work:shaniu: works/content/en/shaniu.md
 ---

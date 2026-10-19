@@ -14,6 +14,7 @@ sitePublish: false
 tags:
   - Asset management
   - Reference analysis
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19183435
 links:
@@ -24,7 +25,7 @@ docIds:
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: f24aaace633f8e3a08491a55f8aaf747d9bf7fa539cb08ed2e42c3155eed298f
+sourceHash: 21e39d86a1ec31d4530a06d6d69c6204cbf283b52166c6721b43e09377266f37
 translationStatus: translated
 generatedBodyHash: 172ad9c7cfd988d7c9e4da413c771e960cd15a471d4e309bf5f51e5b779f5a9c
 workInfo:
@@ -41,6 +42,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleAssetCleaner checks candidate unreferenced assets in Unreal Engine projects through reference relationships. It traces direct and indirect references from configured root assets, handles candidate files during submission, and provides cleanup for the whole version-controlled project.

@@ -3218,6 +3218,146 @@
       "baselineTemplate": "blog/python-perforce-stream-switch-safety/index.html",
       "supplementTranslationKeys": [],
       "mediaOccurrences": []
+    },
+    {
+      "id": "work:mcp-animation",
+      "type": "work",
+      "slug": "mcp-animation",
+      "legacyRoutes": [
+        "/works/mcp-animation/"
+      ],
+      "template": "works/templates/work--mcp-animation.html",
+      "title": "MCPAnimation",
+      "translationKey": "mcp-animation",
+      "order": 16,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "work:mcp-behavior-tree",
+      "type": "work",
+      "slug": "mcp-behavior-tree",
+      "legacyRoutes": [
+        "/works/mcp-behavior-tree/"
+      ],
+      "template": "works/templates/work--mcp-behavior-tree.html",
+      "title": "MCPBehaviorTree",
+      "translationKey": "mcp-behavior-tree",
+      "order": 17,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "work:mcp-blueprint",
+      "type": "work",
+      "slug": "mcp-blueprint",
+      "legacyRoutes": [
+        "/works/mcp-blueprint/"
+      ],
+      "template": "works/templates/work--mcp-blueprint.html",
+      "title": "MCPBlueprint",
+      "translationKey": "mcp-blueprint",
+      "order": 18,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "work:mcp-dev-tools",
+      "type": "work",
+      "slug": "mcp-dev-tools",
+      "legacyRoutes": [
+        "/works/mcp-dev-tools/"
+      ],
+      "template": "works/templates/work--mcp-dev-tools.html",
+      "title": "MCPDevTools",
+      "translationKey": "mcp-dev-tools",
+      "order": 19,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "work:mcp-level-sequence",
+      "type": "work",
+      "slug": "mcp-level-sequence",
+      "legacyRoutes": [
+        "/works/mcp-level-sequence/"
+      ],
+      "template": "works/templates/work--mcp-level-sequence.html",
+      "title": "MCPLevelSequence",
+      "translationKey": "mcp-level-sequence",
+      "order": 20,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "work:mcp-material",
+      "type": "work",
+      "slug": "mcp-material",
+      "legacyRoutes": [
+        "/works/mcp-material/"
+      ],
+      "template": "works/templates/work--mcp-material.html",
+      "title": "MCPMaterial",
+      "translationKey": "mcp-material",
+      "order": 21,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "work:mcp-niagara",
+      "type": "work",
+      "slug": "mcp-niagara",
+      "legacyRoutes": [
+        "/works/mcp-niagara/"
+      ],
+      "template": "works/templates/work--mcp-niagara.html",
+      "title": "MCPNiagara",
+      "translationKey": "mcp-niagara",
+      "order": 22,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "work:mcp-umg",
+      "type": "work",
+      "slug": "mcp-umg",
+      "legacyRoutes": [
+        "/works/mcp-umg/"
+      ],
+      "template": "works/templates/work--mcp-umg.html",
+      "title": "MCPUMG",
+      "translationKey": "mcp-umg",
+      "order": 23,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "work:mcp-world-editor",
+      "type": "work",
+      "slug": "mcp-world-editor",
+      "legacyRoutes": [
+        "/works/mcp-world-editor/"
+      ],
+      "template": "works/templates/work--mcp-world-editor.html",
+      "title": "MCPWorldEditor",
+      "translationKey": "mcp-world-editor",
+      "order": 24,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "work:shaniu",
+      "type": "work",
+      "slug": "shaniu",
+      "legacyRoutes": [
+        "/works/shaniu/"
+      ],
+      "template": "works/templates/work--shaniu.html",
+      "title": "ShaNiu",
+      "translationKey": "shaniu",
+      "order": 0,
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
     }
   ],
   "redirects": [

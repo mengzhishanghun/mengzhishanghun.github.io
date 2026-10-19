@@ -14,6 +14,7 @@ sitePublish: false
 tags:
   - Blueprints
   - Serialization
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19770934
 links:
@@ -24,7 +25,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: 12a056a2495519b02740813ba52e07868204a6cd21ab8030114df90f7e690a24
+sourceHash: 6830607d1e7ff65f08bbddf84b4c9dc5ef9c1ca4b51e2d2f3bc687e107f63355
 translationStatus: translated
 generatedBodyHash: 8509a63db5fc74d660d00f1f8ccd5b8ce745e4b6e3b2a3c0f63d483640cbcacf
 workInfo:
@@ -43,6 +44,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleByteConversion provides UE Blueprint interfaces for converting common data and structs to byte arrays, and converting structs to and from JSON strings.

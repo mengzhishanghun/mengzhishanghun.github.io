@@ -14,6 +14,7 @@ sitePublish: false
 tags:
   - StaticMesh
   - Instancing
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19204715
 links:
@@ -24,7 +25,7 @@ docIds:
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: 151ded14b047517f17f47e2874dab1adac98787585d705a48c0c5a6dc198e20b
+sourceHash: 54f9a326bf526875a8824313a4db7eed52e841e8bbe9680b28dc27eac0ef4e89
 translationStatus: translated
 generatedBodyHash: 85796cecae20d83a568d3e9da92d6678f643fac61022e754560142b455c15940
 workInfo:
@@ -41,6 +42,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleStaticMeshMerger organizes repeated StaticMeshActors in levels. It first groups merge candidates by mesh, materials, mobility, and collision settings for preview and filtering, then organizes selected objects as ISM/HISM instances.

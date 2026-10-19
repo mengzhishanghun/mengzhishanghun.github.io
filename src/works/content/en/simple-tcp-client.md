@@ -13,6 +13,7 @@ draft: false
 sitePublish: false
 tags:
   - TCP
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
@@ -21,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: 77b288cc14b0d3d8a82ec9a846bbdbd96e3c4ae1f791e4756c988d95ad76cc92
+sourceHash: 3cbe3c824ebdb1f6fb91b98cb10232c69bba1d8e3d8a20770b7aa90445cd83d6
 translationStatus: translated
 generatedBodyHash: c9b62ff831e30c54bdd234710e6cdb550058a1e502c124847180ea1f7b825420
 workInfo:
@@ -38,6 +39,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleTCPClient wraps TCP client connections in Unreal Engine, providing multi-channel management, asynchronous processing, configurable automatic reconnection intervals, and Blueprint connection state interfaces.

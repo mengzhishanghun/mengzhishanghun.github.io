@@ -29,6 +29,7 @@ sitePublish: false
 tags:
   - 配置管理
   - 枚举
+  - Simple 系列
 sourcePlatform: 博客园
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19136345
 links:

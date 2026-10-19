@@ -8,12 +8,16 @@
     "input-process-control",
     "development-release",
     "content-file-processing",
-    "version-control-collaboration"
+    "version-control-collaboration",
+    "simple-series",
+    "ai-series",
+    "mcp-series"
   ],
   "articles": {
     "work:simple-bp-inherit-fix": {
       "topics": [
-        "editor-assets"
+        "editor-assets",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -28,7 +32,8 @@
     },
     "work:simple-asset-namer": {
       "topics": [
-        "editor-assets"
+        "editor-assets",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -43,7 +48,8 @@
     },
     "work:simple-static-mesh-merger": {
       "topics": [
-        "editor-assets"
+        "editor-assets",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -58,7 +64,8 @@
     },
     "work:simple-asset-cleaner": {
       "topics": [
-        "editor-assets"
+        "editor-assets",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -73,7 +80,8 @@
     },
     "work:ai-data-asset": {
       "topics": [
-        "data-configuration"
+        "data-configuration",
+        "ai-series"
       ],
       "legacyTags": {
         "zh": [
@@ -88,7 +96,8 @@
     },
     "work:simple-byte-conversion": {
       "topics": [
-        "data-configuration"
+        "data-configuration",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -103,7 +112,8 @@
     },
     "work:simple-auto-enum": {
       "topics": [
-        "data-configuration"
+        "data-configuration",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -119,7 +129,8 @@
     "work:simple-config-exclude": {
       "topics": [
         "data-configuration",
-        "development-release"
+        "development-release",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -134,7 +145,8 @@
     },
     "work:simple-ssh-tunnel": {
       "topics": [
-        "network-communication"
+        "network-communication",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -147,7 +159,8 @@
     },
     "work:simple-udp": {
       "topics": [
-        "network-communication"
+        "network-communication",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -160,7 +173,8 @@
     },
     "work:simple-tcp-client": {
       "topics": [
-        "network-communication"
+        "network-communication",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -173,7 +187,8 @@
     },
     "work:simple-tcp-server": {
       "topics": [
-        "network-communication"
+        "network-communication",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -186,7 +201,8 @@
     },
     "work:simple-websocket": {
       "topics": [
-        "network-communication"
+        "network-communication",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -199,7 +215,8 @@
     },
     "work:simple-level-seq-smooth": {
       "topics": [
-        "animation-processing"
+        "animation-processing",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -216,7 +233,8 @@
     },
     "work:simple-input-simulator": {
       "topics": [
-        "input-process-control"
+        "input-process-control",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -231,7 +249,8 @@
     },
     "work:simple-launcher": {
       "topics": [
-        "input-process-control"
+        "input-process-control",
+        "simple-series"
       ],
       "legacyTags": {
         "zh": [
@@ -367,6 +386,171 @@
         "en": [
           "Perforce",
           "Version control"
+        ]
+      }
+    },
+    "work:mcp-animation": {
+      "topics": [
+        "animation-processing",
+        "editor-assets",
+        "mcp-series"
+      ],
+      "legacyTags": {
+        "zh": [
+          "动画蓝图、状态机与动画资产",
+          "MCP 系列"
+        ],
+        "en": [
+          "Animation Blueprints, state machines and animation assets",
+          "MCP series"
+        ]
+      }
+    },
+    "work:mcp-behavior-tree": {
+      "topics": [
+        "editor-assets",
+        "mcp-series"
+      ],
+      "legacyTags": {
+        "zh": [
+          "行为树与黑板资产",
+          "MCP 系列"
+        ],
+        "en": [
+          "Behavior Tree and Blackboard assets",
+          "MCP series"
+        ]
+      }
+    },
+    "work:mcp-blueprint": {
+      "topics": [
+        "editor-assets",
+        "development-release",
+        "mcp-series"
+      ],
+      "legacyTags": {
+        "zh": [
+          "蓝图发现、编辑与编译反馈",
+          "MCP 系列"
+        ],
+        "en": [
+          "Blueprint discovery, editing and compilation feedback",
+          "MCP series"
+        ]
+      }
+    },
+    "work:mcp-dev-tools": {
+      "topics": [
+        "editor-assets",
+        "development-release",
+        "mcp-series"
+      ],
+      "legacyTags": {
+        "zh": [
+          "资产工具与只读开发诊断",
+          "MCP 系列"
+        ],
+        "en": [
+          "asset tools and read-only development diagnostics",
+          "MCP series"
+        ]
+      }
+    },
+    "work:mcp-level-sequence": {
+      "topics": [
+        "animation-processing",
+        "editor-assets",
+        "mcp-series"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Level Sequence 序列资产编辑",
+          "MCP 系列"
+        ],
+        "en": [
+          "Level Sequence asset editing",
+          "MCP series"
+        ]
+      }
+    },
+    "work:mcp-material": {
+      "topics": [
+        "editor-assets",
+        "mcp-series"
+      ],
+      "legacyTags": {
+        "zh": [
+          "材质图与材质实例",
+          "MCP 系列"
+        ],
+        "en": [
+          "material graphs and material instances",
+          "MCP series"
+        ]
+      }
+    },
+    "work:mcp-niagara": {
+      "topics": [
+        "editor-assets",
+        "mcp-series"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Niagara 系统、发射器与模块",
+          "MCP 系列"
+        ],
+        "en": [
+          "Niagara systems, emitters and modules",
+          "MCP series"
+        ]
+      }
+    },
+    "work:mcp-umg": {
+      "topics": [
+        "editor-assets",
+        "animation-processing",
+        "mcp-series"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Widget 树、属性与动画",
+          "MCP 系列"
+        ],
+        "en": [
+          "Widget trees, properties and animations",
+          "MCP series"
+        ]
+      }
+    },
+    "work:mcp-world-editor": {
+      "topics": [
+        "editor-assets",
+        "mcp-series"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Actor、关卡、地形与视口",
+          "MCP 系列"
+        ],
+        "en": [
+          "Actors, levels, terrain and viewports",
+          "MCP series"
+        ]
+      }
+    },
+    "work:shaniu": {
+      "topics": [
+        "input-process-control",
+        "development-release"
+      ],
+      "legacyTags": {
+        "zh": [
+          "AI 管家",
+          "后台任务"
+        ],
+        "en": [
+          "AI butler",
+          "Background tasks"
         ]
       }
     }

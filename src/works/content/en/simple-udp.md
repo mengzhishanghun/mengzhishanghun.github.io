@@ -13,6 +13,7 @@ draft: false
 sitePublish: false
 tags:
   - UDP
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
@@ -21,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: b6aff4e70c9c71d044764f3908570a4741a5d593eca2031505cc90b2b0c6a439
+sourceHash: 5f74563097c26d3fcc245fefe04fde6741d7207b1ca59bcc2de5eafbe05c0a38
 translationStatus: translated
 generatedBodyHash: ac1d014fab1cc440ab3aebc68c65b6ba44bdf804a1e55de20e7c28a19cf970bb
 workInfo:
@@ -38,6 +39,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleUDP provides Blueprint-callable UDP communication for Unreal Engine projects, combining multi-channel sending and receiving, asynchronous reception, address filtering, and runtime configuration in one plugin.

@@ -4557,11 +4557,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: Plugins, tools, and games
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: Work categories
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE Plugins
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "16"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "25"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:0.#text:0: Open-source Tools
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "7"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:0.#text:0: AI Tools
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:1.#text:0: "0"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:2.span:1.#text:0: "1"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:0.#text:0: Obsidian Plugins
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:3.span:1.#text:0: "1"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:4.span:0.#text:0: UE Games
@@ -4753,6 +4753,46 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    new:mcp-animation:title: Animation assets and Blueprints
+    new:mcp-animation:name: MCPAnimation
+    new:mcp-animation:description: MCPAnimation is an Unreal Editor MCP plugin in development, providing tool interfaces for Animation Blueprints, state machines and animation assets. Features and compatibility are still being verified.
+    new:mcp-animation:tags: Technical tags
+    new:mcp-behavior-tree:title: Behavior Trees and Blackboards
+    new:mcp-behavior-tree:name: MCPBehaviorTree
+    new:mcp-behavior-tree:description: MCPBehaviorTree is an Unreal Editor MCP plugin in development, providing tool interfaces for Behavior Tree and Blackboard assets. Features and compatibility are still being verified.
+    new:mcp-behavior-tree:tags: Technical tags
+    new:mcp-blueprint:title: Blueprint discovery, editing and compilation
+    new:mcp-blueprint:name: MCPBlueprint
+    new:mcp-blueprint:description: MCPBlueprint is an Unreal Editor MCP plugin in development, providing tool interfaces for Blueprint discovery, editing and compilation feedback. Features and compatibility are still being verified.
+    new:mcp-blueprint:tags: Technical tags
+    new:mcp-dev-tools:title: Asset tools and development diagnostics
+    new:mcp-dev-tools:name: MCPDevTools
+    new:mcp-dev-tools:description: MCPDevTools is an Unreal Editor MCP plugin in development, providing tool interfaces for asset tools and read-only development diagnostics. Features and compatibility are still being verified.
+    new:mcp-dev-tools:tags: Technical tags
+    new:mcp-level-sequence:title: Level Sequence asset editing
+    new:mcp-level-sequence:name: MCPLevelSequence
+    new:mcp-level-sequence:description: MCPLevelSequence is an Unreal Editor MCP plugin in development, providing tool interfaces for Level Sequence asset editing. Features and compatibility are still being verified.
+    new:mcp-level-sequence:tags: Technical tags
+    new:mcp-material:title: Material graphs and instances
+    new:mcp-material:name: MCPMaterial
+    new:mcp-material:description: MCPMaterial is an Unreal Editor MCP plugin in development, providing tool interfaces for material graphs and material instances. Features and compatibility are still being verified.
+    new:mcp-material:tags: Technical tags
+    new:mcp-niagara:title: Niagara systems and modules
+    new:mcp-niagara:name: MCPNiagara
+    new:mcp-niagara:description: MCPNiagara is an Unreal Editor MCP plugin in development, providing tool interfaces for Niagara systems, emitters and modules. Features and compatibility are still being verified.
+    new:mcp-niagara:tags: Technical tags
+    new:mcp-umg:title: Widget trees, properties and animations
+    new:mcp-umg:name: MCPUMG
+    new:mcp-umg:description: MCPUMG is an Unreal Editor MCP plugin in development, providing tool interfaces for Widget trees, properties and animations. Features and compatibility are still being verified.
+    new:mcp-umg:tags: Technical tags
+    new:mcp-world-editor:title: Actors, levels and terrain
+    new:mcp-world-editor:name: MCPWorldEditor
+    new:mcp-world-editor:description: MCPWorldEditor is an Unreal Editor MCP plugin in development, providing tool interfaces for Actors, levels, terrain and viewports. Features and compatibility are still being verified.
+    new:mcp-world-editor:tags: Technical tags
+    new:shaniu:title: "ShaNiu: a local AI butler"
+    new:shaniu:name: ShaNiu
+    new:shaniu:description: A locally running AI butler bringing continuous conversations, background tasks, execution review and result previews into one interface. It is currently in development and testing.
+    new:shaniu:tags: Technical tags
   page:cases-index:
     root.html:1.head:0.meta:2@content: "Read case studies on multi-screen displays, AI digital humans, simulation and developer tools, covering the project context, implementation and limits."
     root.html:1.head:0.title:4.#text:0: "Unreal Simulation, Digital Humans & Tool Case Studies · Xiao Mao"
@@ -5924,6 +5964,506 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  work:mcp-animation:
+    root.html:1.head:0.meta:2@content: MCPAnimation is an Unreal Editor MCP plugin in development, providing tool interfaces for Animation Blueprints, state machines and animation assets. Features and compatibility are still being verified.
+    root.html:1.head:0.title:4.#text:0: Animation assets and Blueprints · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE plugins
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Animation assets and Blueprints
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MCPAnimation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: MCPAnimation is an Unreal Editor MCP plugin in development, providing tool interfaces for Animation Blueprints, state machines and animation assets. Features and compatibility are still being verified.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Animation Blueprints, state machines and animation assets
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MCP series
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
+  work:mcp-behavior-tree:
+    root.html:1.head:0.meta:2@content: MCPBehaviorTree is an Unreal Editor MCP plugin in development, providing tool interfaces for Behavior Tree and Blackboard assets. Features and compatibility are still being verified.
+    root.html:1.head:0.title:4.#text:0: Behavior Trees and Blackboards · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE plugins
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Behavior Trees and Blackboards
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MCPBehaviorTree
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: MCPBehaviorTree is an Unreal Editor MCP plugin in development, providing tool interfaces for Behavior Tree and Blackboard assets. Features and compatibility are still being verified.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Behavior Tree and Blackboard assets
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MCP series
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
+  work:mcp-blueprint:
+    root.html:1.head:0.meta:2@content: MCPBlueprint is an Unreal Editor MCP plugin in development, providing tool interfaces for Blueprint discovery, editing and compilation feedback. Features and compatibility are still being verified.
+    root.html:1.head:0.title:4.#text:0: Blueprint discovery, editing and compilation · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE plugins
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Blueprint discovery, editing and compilation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MCPBlueprint
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: MCPBlueprint is an Unreal Editor MCP plugin in development, providing tool interfaces for Blueprint discovery, editing and compilation feedback. Features and compatibility are still being verified.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Blueprint discovery, editing and compilation feedback
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MCP series
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
+  work:mcp-dev-tools:
+    root.html:1.head:0.meta:2@content: MCPDevTools is an Unreal Editor MCP plugin in development, providing tool interfaces for asset tools and read-only development diagnostics. Features and compatibility are still being verified.
+    root.html:1.head:0.title:4.#text:0: Asset tools and development diagnostics · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE plugins
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Asset tools and development diagnostics
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MCPDevTools
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: MCPDevTools is an Unreal Editor MCP plugin in development, providing tool interfaces for asset tools and read-only development diagnostics. Features and compatibility are still being verified.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: asset tools and read-only development diagnostics
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MCP series
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
+  work:mcp-level-sequence:
+    root.html:1.head:0.meta:2@content: MCPLevelSequence is an Unreal Editor MCP plugin in development, providing tool interfaces for Level Sequence asset editing. Features and compatibility are still being verified.
+    root.html:1.head:0.title:4.#text:0: Level Sequence asset editing · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE plugins
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Level Sequence asset editing
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MCPLevelSequence
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: MCPLevelSequence is an Unreal Editor MCP plugin in development, providing tool interfaces for Level Sequence asset editing. Features and compatibility are still being verified.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Level Sequence asset editing
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MCP series
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
+  work:mcp-material:
+    root.html:1.head:0.meta:2@content: MCPMaterial is an Unreal Editor MCP plugin in development, providing tool interfaces for material graphs and material instances. Features and compatibility are still being verified.
+    root.html:1.head:0.title:4.#text:0: Material graphs and instances · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE plugins
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Material graphs and instances
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MCPMaterial
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: MCPMaterial is an Unreal Editor MCP plugin in development, providing tool interfaces for material graphs and material instances. Features and compatibility are still being verified.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: material graphs and material instances
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MCP series
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
+  work:mcp-niagara:
+    root.html:1.head:0.meta:2@content: MCPNiagara is an Unreal Editor MCP plugin in development, providing tool interfaces for Niagara systems, emitters and modules. Features and compatibility are still being verified.
+    root.html:1.head:0.title:4.#text:0: Niagara systems and modules · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE plugins
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Niagara systems and modules
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MCPNiagara
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: MCPNiagara is an Unreal Editor MCP plugin in development, providing tool interfaces for Niagara systems, emitters and modules. Features and compatibility are still being verified.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Niagara systems, emitters and modules
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MCP series
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
+  work:mcp-umg:
+    root.html:1.head:0.meta:2@content: MCPUMG is an Unreal Editor MCP plugin in development, providing tool interfaces for Widget trees, properties and animations. Features and compatibility are still being verified.
+    root.html:1.head:0.title:4.#text:0: Widget trees, properties and animations · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE plugins
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Widget trees, properties and animations
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MCPUMG
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: MCPUMG is an Unreal Editor MCP plugin in development, providing tool interfaces for Widget trees, properties and animations. Features and compatibility are still being verified.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Widget trees, properties and animations
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MCP series
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
+  work:mcp-world-editor:
+    root.html:1.head:0.meta:2@content: MCPWorldEditor is an Unreal Editor MCP plugin in development, providing tool interfaces for Actors, levels, terrain and viewports. Features and compatibility are still being verified.
+    root.html:1.head:0.title:4.#text:0: Actors, levels and terrain · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE plugins
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Actors, levels and terrain
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MCPWorldEditor
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: MCPWorldEditor is an Unreal Editor MCP plugin in development, providing tool interfaces for Actors, levels, terrain and viewports. Features and compatibility are still being verified.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Actors, levels, terrain and viewports
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MCP series
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
+  work:shaniu:
+    root.html:1.head:0.meta:2@content: A locally running AI butler bringing continuous conversations, background tasks, execution review and result previews into one interface. It is currently in development and testing.
+    root.html:1.head:0.title:4.#text:0: "ShaNiu: a local AI butler · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: AI tools
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "ShaNiu: a local AI butler"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ShaNiu
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A locally running AI butler bringing continuous conversations, background tasks, execution review and result previews into one interface. It is currently in development and testing.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: AI butler
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Background tasks
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    workActions: Support and documentation
 scriptSlots:
   viewport:return-previous: Back
   work-topic:editor-assets: "Editor & Asset Tools"
@@ -6147,6 +6687,29 @@ scriptSlots:
   page:contact:root.html:1.body:1.script:7:463: Copy failed; please select the email address manually
   page:support:root.html:1.body:1.script:5:1187: Bilibili player
   page:support:root.html:1.body:1.script:5:2062: Bilibili player
+  work-topic:simple-series: Simple series
+  work-topic:ai-series: AI series
+  work-topic:mcp-series: MCP series
+  work:mcp-animation:root.html:1.body:1.script:5:1187: Bilibili player
+  work:mcp-animation:root.html:1.body:1.script:5:2062: Bilibili player
+  work:mcp-behavior-tree:root.html:1.body:1.script:5:1187: Bilibili player
+  work:mcp-behavior-tree:root.html:1.body:1.script:5:2062: Bilibili player
+  work:mcp-blueprint:root.html:1.body:1.script:5:1187: Bilibili player
+  work:mcp-blueprint:root.html:1.body:1.script:5:2062: Bilibili player
+  work:mcp-dev-tools:root.html:1.body:1.script:5:1187: Bilibili player
+  work:mcp-dev-tools:root.html:1.body:1.script:5:2062: Bilibili player
+  work:mcp-level-sequence:root.html:1.body:1.script:5:1187: Bilibili player
+  work:mcp-level-sequence:root.html:1.body:1.script:5:2062: Bilibili player
+  work:mcp-material:root.html:1.body:1.script:5:1187: Bilibili player
+  work:mcp-material:root.html:1.body:1.script:5:2062: Bilibili player
+  work:mcp-niagara:root.html:1.body:1.script:5:1187: Bilibili player
+  work:mcp-niagara:root.html:1.body:1.script:5:2062: Bilibili player
+  work:mcp-umg:root.html:1.body:1.script:5:1187: Bilibili player
+  work:mcp-umg:root.html:1.body:1.script:5:2062: Bilibili player
+  work:mcp-world-editor:root.html:1.body:1.script:5:1187: Bilibili player
+  work:mcp-world-editor:root.html:1.body:1.script:5:2062: Bilibili player
+  work:shaniu:root.html:1.body:1.script:5:1187: Bilibili player
+  work:shaniu:root.html:1.body:1.script:5:2062: Bilibili player
 bodyUtilitySlots:
   blog:ue53-multiview-gi:body-utility:1:
     imageAlt: Seven multi-view limit changes in UE 5.3 engine source
@@ -7757,7 +8320,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: c347f449f95b2d0b4d7dbdc58bec1c0ae534950eca27289ec5f09ae1e34a28b8
+sourceHash: c13c5ed72cdaf27728d5da37c5baf63095334cd83701e4e12739817947b8571f
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:
@@ -7769,6 +8332,9 @@ workLabels:
   platforms: Platforms
   requirements: Requirements
   pending: To be verified
----
+  developing: In development
+  supportAction: Support this work
+  noDocs: No documentation available
 
+---
 Text outside the shared template body, metadata, image descriptions, and accessible labels are supplied by these position keys. The body and table of contents are generated from the corresponding Markdown.

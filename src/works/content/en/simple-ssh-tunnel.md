@@ -13,6 +13,7 @@ draft: false
 sitePublish: false
 tags:
   - SSH
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165541
 links:
@@ -21,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: 84952a71323215aca3c35a3f1d1c91ea212b3383af08f574371ade499f94fa3b
+sourceHash: f940ab4815912f8a74df604ace94cd45b86fc06c8e954c5082367f4ef58d2294
 translationStatus: translated
 generatedBodyHash: 37a7425fac84fdc7e0fd49d499f69b436d76962698c4a2732c7e57a76f7130da
 workInfo:

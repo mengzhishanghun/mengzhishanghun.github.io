@@ -424,6 +424,46 @@
     {
       "id": "blog:python-perforce-stream-switch-safety",
       "translationKey": "python-perforce-stream-switch-safety"
+    },
+    {
+      "id": "work:mcp-animation",
+      "translationKey": "mcp-animation"
+    },
+    {
+      "id": "work:mcp-behavior-tree",
+      "translationKey": "mcp-behavior-tree"
+    },
+    {
+      "id": "work:mcp-blueprint",
+      "translationKey": "mcp-blueprint"
+    },
+    {
+      "id": "work:mcp-dev-tools",
+      "translationKey": "mcp-dev-tools"
+    },
+    {
+      "id": "work:mcp-level-sequence",
+      "translationKey": "mcp-level-sequence"
+    },
+    {
+      "id": "work:mcp-material",
+      "translationKey": "mcp-material"
+    },
+    {
+      "id": "work:mcp-niagara",
+      "translationKey": "mcp-niagara"
+    },
+    {
+      "id": "work:mcp-umg",
+      "translationKey": "mcp-umg"
+    },
+    {
+      "id": "work:mcp-world-editor",
+      "translationKey": "mcp-world-editor"
+    },
+    {
+      "id": "work:shaniu",
+      "translationKey": "shaniu"
     }
   ]
 }

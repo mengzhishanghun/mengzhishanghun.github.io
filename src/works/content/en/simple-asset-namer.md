@@ -14,6 +14,7 @@ sitePublish: false
 tags:
   - Asset management
   - Naming conventions
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19770922
 links:
@@ -24,7 +25,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: 301524fe1ac0f5b7be103b7671e33a28b72c8bf83c6283488a6ef3bccc7fcdb3
+sourceHash: 9484ad3c3f6792a0ff9b9cce35487f0c31f96a5f24931f728760c38c40c6fe78
 translationStatus: translated
 generatedBodyHash: 31585fcd4c20fa383ef8a1810ef15d6a0ac6d2ba2db3b0be50050702abe09348
 workInfo:
@@ -41,6 +42,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleAssetNamer provides type- and path-based naming rules for UE assets. It checks new names on creation, import, or manual rename, and supports batch renaming of assets in existing directories.

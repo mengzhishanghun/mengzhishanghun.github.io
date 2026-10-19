@@ -26,6 +26,7 @@ draft: false
 sitePublish: false
 tags:
   - 进程管理
+  - Simple 系列
 sourcePlatform: 博客园
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19770928
 links:

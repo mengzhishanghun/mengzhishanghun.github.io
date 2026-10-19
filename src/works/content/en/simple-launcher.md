@@ -13,6 +13,7 @@ draft: false
 sitePublish: false
 tags:
   - Process management
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19770928
 links:
@@ -23,7 +24,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: 4aaab4c010166673a4cdf3a702e9c31a806bcd1734f55712511236e39c2e4979
+sourceHash: f99a166bbfd3e594440dea243a7d68e7cbfc4e8bd335e226a3ab96c02da7c4f6
 translationStatus: translated
 generatedBodyHash: 094f329c6aeb91aa538a1983f244c41303087f3043901d68c71914bf28d61058
 workInfo:
@@ -40,6 +41,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleLauncher manages external programs through named presets in UE games. Projects configure launch commands, working directories, and execution modes for services or tools, then start, query, or stop processes by preset.

@@ -14,12 +14,13 @@ sitePublish: false
 tags:
   - Blueprints
   - Inheritance chains
+  - Simple series
 links:
   - label: GitHub
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: 339eb0a6e0ac1c682e17bea493916dc3a34a866085d1c31b34e8b21e9dda15f6
+sourceHash: 3ed6a84109df9d36918dd8188a47ac108a5f7e2194360da1ac51bfc4e43dfdd6
 translationStatus: translated
 generatedBodyHash: 6fe8b2dc51f66c7d3576cdbc3f98f5d3ce6aef4241a87e97a0d826eacac74265
 workInfo:
@@ -36,6 +37,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleBPInheritFix is an editor plugin for abnormal component states in Actor Blueprint inheritance chains.

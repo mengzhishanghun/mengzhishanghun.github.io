@@ -27,6 +27,7 @@ sitePublish: false
 tags:
   - 资产管理
   - 命名规范
+  - Simple 系列
 sourcePlatform: 博客园
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19770922
 links:

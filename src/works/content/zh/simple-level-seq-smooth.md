@@ -28,6 +28,7 @@ tags:
   - 动画
   - 动作捕捉
   - 滤波
+  - Simple 系列
 links:
   - label: GitHub
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth

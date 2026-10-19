@@ -14,6 +14,7 @@ sitePublish: false
 tags:
   - DataAsset
   - JSON
+  - AI series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/20159718
 links:
@@ -22,7 +23,7 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: cdffab0b876bbaf86eded6e5dd54e07ebc4b4769ed3277c6c51403d670bceb5a
+sourceHash: 25a4521c1e4b2dcfd7cb915fe4e0739e260e927178b7bd3e08f49e40fab6a754
 translationStatus: translated
 generatedBodyHash: 2a5049fd89343f9d9cc25d56c227f6ed04148b46cd0011c8c2de6bc6384d0744
 workInfo:
@@ -39,6 +40,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 AIDataAsset lets AI read and modify complex DataAsset data through JSON and automatically synchronizes changes back to assets while the UE editor is running. With automatic synchronization enabled, the plugin handles export, file monitoring, and writing changes back, without requiring manual import and export each time.

@@ -14,6 +14,7 @@ sitePublish: false
 tags:
   - Blueprints
   - Input simulation
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19770939
 links:
@@ -24,7 +25,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-input-simulator
-sourceHash: 0e999ec4632f325f0cbec1f6b30990baadb1be96df79f8ffed9b20587360fd52
+sourceHash: f0f3c827e2bef4c089e0e26be06a333e24b8e058450ed0d550a3508cb0c8e149
 translationStatus: translated
 generatedBodyHash: 61d277ca5f1212dc7184307fca9ccfe1b79d778006043767daeb7be4b42926cd
 workInfo:
@@ -43,6 +44,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleInputSimulator provides key and axis input simulation nodes for UE Blueprints, allowing game logic to receive specified actions through its existing input pipeline.

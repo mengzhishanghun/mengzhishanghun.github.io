@@ -13,6 +13,7 @@ draft: false
 sitePublish: false
 tags:
   - TCP
+  - Simple series
 sourcePlatform: CNBlogs
 sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
@@ -21,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-server
-sourceHash: 05edb85ab868d2753a00372ba57f041d28acb51a1e1deb6d4b93f0a4acb8b3e5
+sourceHash: 723e966c26203b0053de54640b20476c18b410506c1e2d85e9a815de15aa9b34
 translationStatus: translated
 generatedBodyHash: ef70f6d8542464145c5dc6df18aeb71aea6bc7986dde629b69b483eb0fba1770
 workInfo:
@@ -40,6 +41,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 ---
+
 ## Overview
 
 SimpleTCPServer provides multi-client TCP server session management for Unreal Engine.
