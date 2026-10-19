@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: 6e6c7fcf54ff28774fe493e4574ad43454a8ee7cbca6bd576df57ab4afa8d274
+sourceHash: a6af717269d51f8384ae8c718b8846fdb2633f9470e77ffd1823ce7101a152a1
 translationStatus: translated
-generatedBodyHash: 1bef431a50262acffb5f2a7b1ce05ece6b314f61b74510461fc2bda6a4d24a80
+generatedBodyHash: 94550e659e0331daa7c0cd40fa90eae3933a84c888c3463e63e5332e3efc3746
 ---
 
 # Complexity can be encapsulated;
@@ -22,15 +22,9 @@ I have worked in UE development since 2018, using C++, Python, and other languag
 
 I have worked on games, simulation systems, digital humans, digital twins, and VR projects.
 
-I also use AI-assisted coding to develop plugins, tools, and automation workflows.
-
-I take on tool, plugin, workflow automation, and game development projects.
-
-For project enquiries, [get in touch](/contact/).
+For tool, plugin, workflow automation, or game development projects, [get in touch](/contact/).
 
 If my articles or tools help you, you can also [support my work](/contact/#support-title).
-
-Your support will go towards tool development, making games, writing tutorials, and maintaining this website.
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A1)
 

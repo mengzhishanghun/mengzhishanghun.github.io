@@ -4436,9 +4436,7 @@ shellSlots:
     home.support.prefix: "如果我的文章或工具对你有帮助，也欢迎"
     home.support.link: "支持我继续创作"
     home.support.end: "。"
-    home.support.purpose: "你的支持将用于工具开发、游戏创作、教程整理和网站维护。"
-    home.cooperation.prefix: "有相关需求，"
-    home.cooperation: "承接工具、插件、自动化流程及游戏开发。"
+    home.cooperation.prefix: "承接工具、插件、自动化流程及游戏开发，"
     home.cooperation.link: "欢迎联系我聊聊"
     home.cooperation.end: "。"
     root.html:1.head:0.meta:2@content: "小毛的 UE 开发作品与技术记录，涵盖插件工具、多屏仿真、数字人和自动化流程，可查看项目案例并联系开发合作。"
@@ -4460,7 +4458,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: "你好，我是小毛，一名自由职业开发者。"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "自 2018 年起从事 UE 开发，使用 C++、Python 等语言。"
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "做过游戏、仿真系统、数字人、数字孪生和 VR 项目。"
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:4: "也在用 AI 辅助编程，开发插件、工具与自动化流程。"
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: 精选作品
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: 精选作品

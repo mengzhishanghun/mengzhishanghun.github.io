@@ -4436,9 +4436,7 @@ shellSlots:
     home.support.prefix: "If my articles or tools help you, you can also "
     home.support.link: "support my work"
     home.support.end: "."
-    home.support.purpose: "Your support will go towards tool development, making games, writing tutorials, and maintaining this website."
-    home.cooperation.prefix: "For project enquiries, "
-    home.cooperation: "I take on tool, plugin, workflow automation, and game development projects."
+    home.cooperation.prefix: "For tool, plugin, workflow automation, or game development projects, "
     home.cooperation.link: "get in touch"
     home.cooperation.end: "."
     root.html:1.head:0.meta:2@content: "Explore Xiao Mao's Unreal Engine plugins, tools and project work, including multi-screen simulation, digital humans and automation. Get in touch about development."
@@ -4460,7 +4458,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: "Hi, I'm Xiao Mao, a freelance developer."
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I have worked in UE development since 2018, using C++, Python, and other languages."
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "I have worked on games, simulation systems, digital humans, digital twins, and VR projects."
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:4: "I also use AI-assisted coding to develop plugins, tools, and automation workflows."
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: Featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: Featured works
@@ -7760,7 +7757,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: cc09d5a280c8edd2472166186dd3c4cb9d5262898458f06b0bb3c72b3321a78a
+sourceHash: ef06ff0eb8cc08b24b9f9c50e205e0067b2e10d9d5e9e3579e1810da17ba097d
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:
