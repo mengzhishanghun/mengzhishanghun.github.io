@@ -5182,7 +5182,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:2.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45@aria-label: 标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.h2:0.#text:0: 在 UE 中探索游戏公式的语法解析
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.p:1.#text:0: 完整保留原笔记的 UE C++ 公式解析实现、说明与检测记录，补充校验、Token 拆分、游戏属性替换和优先级求值的讲解，并说明原实现的边界与改进方向。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.p:1.#text:0: 尝试在 UE C++ 中实现游戏事件公式解析，让文本表达四则运算、条件判断和自定义属性，并结合代码梳理字符串校验、Token 拆分、属性替换与优先级求值。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0@aria-label: 标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:0.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:1.#text:0: ""
@@ -5708,7 +5708,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   blog:ue-expression-parser-basics:
-    root.html:1.head:0.meta:2@content: "记录 UE C++ 游戏公式解析器的校验、Token 拆分、属性替换与优先级求值，保留原实现及检测记录，说明项目依赖和待完善之处。"
+    root.html:1.head:0.meta:2@content: "探索 UE C++ 游戏事件公式解析，梳理字符串校验、Token 拆分、属性替换与优先级求值，以及项目依赖和待完善之处。"
     root.html:1.head:0.title:4.#text:0: "UE C++ 游戏公式解析：校验、Token 与求值 · 小毛"
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -5728,7 +5728,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 在 UE 中探索游戏公式的语法解析
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 完整保留原笔记的 UE C++ 公式解析实现、说明与检测记录，补充校验、Token 拆分、游戏属性替换和优先级求值的讲解，并说明原实现的边界与改进方向。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 尝试在 UE C++ 中实现游戏事件公式解析，让文本表达四则运算、条件判断和自定义属性，并结合代码梳理字符串校验、Token 拆分、属性替换与优先级求值。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录

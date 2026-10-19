@@ -1,6 +1,6 @@
 ---
 title: Exploring syntax parsing for game formulas in UE
-description: The complete original UE C++ formula parser, explanations, and recorded check, with added walkthroughs of validation, tokenization, game attributes, precedence, and implementation limitations.
+description: Exploring a UE C++ parser for game-event formulas, from arithmetic, conditions, and custom attributes to string validation, tokenization, attribute substitution, and evaluation by precedence.
 type: blog
 slug: ue-expression-parser-basics
 categoryId: ue
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-expression-parser-basics
 publishedAt: 2026-10-13
-sourceHash: 11f2ecbb9401a5c66f19cf25df5dabb9a24b9e61fe85d55dec858ec14c5e1720
-generatedBodyHash: 23ec941d6d41f77ef01561578e0376c8d9e31830c534955af2235e988dde6762
+sourceHash: cbdbbc737a4e7b88fa0483821a7fd227dbcb57256ec44289dddfbecb7f6de6c3
+generatedBodyHash: e3cbdde2cb5c5d64f39c8fb8cbc8af39046d6a5ca56c0fed0499a1f4609b9e13
 translationStatus: translated
 ---
 
@@ -28,13 +28,13 @@ translationStatus: translated
 
 Game events sometimes need conditions or calculations stored as strings, evaluated against current attributes. This article starts with a simple parser I wrote for my own game and explores how to handle such formulas in UE C++.
 
-The complete code, original explanations, and recorded check are retained below. The source file is divided into sections by responsibility without changing its code or order. It remains an exploratory implementation with project dependencies and unfinished details.
+The parser processes formulas through string validation, tokenization, attribute substitution, and evaluation by precedence. It depends on classes, macros, and logging from the game project, and several edge cases still need work.
 
 ## Definition and use cases
 
-This is a simple parser I wrote for my game and copied into my notes for future reference.
+I wanted game events to express conditions and calculations as text, so I wrote a simple parser.
 
-The original note describes support for comparisons, logical AND and OR, arithmetic, parentheses, and ternary expressions.
+The intended syntax covers comparisons, logical AND and OR, arithmetic, parentheses, and ternary expressions.
 
 It also adds recognition and substitution of custom properties to suit the game.
 
@@ -50,7 +50,7 @@ For example, an event could require both strength and gold to meet a threshold:
 [Strength] >= 10 ? 100 : 50
 ```
 
-These illustrate the intended syntax. The parser must recognize the text, obtain attribute values from the game, and evaluate the result. The original code uses a fixed demonstration map; character or event data still needs to be connected for a real project.
+These illustrate the intended syntax. The parser must recognize the text, obtain attribute values from the game, and evaluate the result. The code uses a fixed demonstration map; character or event data still needs to be connected for a real project.
 
 The implementation normalizes selected Chinese punctuation, validates the string, tokenizes it, substitutes attributes, and evaluates by precedence. Results use `int32`, with true and false represented as 1 and 0.
 
@@ -91,7 +91,7 @@ There are two simple interfaces: one checks whether a string is valid and return
 
 All implementation is in the `.cpp` file because it was written specifically for this feature and kept together there.
 
-`CheckStrIsValid` is the validation entry point and `GetStrValue` is the evaluation entry point. `UMyGameSubsystem`, `CREATETHISSUBSYSTEM`, the export macro, and project headers require adaptation in another project. The code also uses the original project's `MyGameLog` category.
+`CheckStrIsValid` is the validation entry point and `GetStrValue` is the evaluation entry point. `UMyGameSubsystem`, `CREATETHISSUBSYSTEM`, the export macro, and project headers require adaptation in another project. The code also uses the game project's `MyGameLog` category.
 
 ## Implementation: source file and parsing steps
 
@@ -196,7 +196,7 @@ FString ReplaceChinesePunctuationWithEnglish(const FString& Expression) {
 
 **Validating the formula string**
 
-`IsValidExpression` removes whitespace and checks property-reference syntax. It temporarily substitutes `0` for properties when checking the rest of the expression. It then rejects invalid characters and symbol combinations with regular expressions and checks parentheses and ternary punctuation for matching pairs. All original rules and error messages are preserved below.
+`IsValidExpression` removes whitespace and checks property-reference syntax. It temporarily substitutes `0` for properties when checking the rest of the expression. It then rejects invalid characters and symbol combinations with regular expressions and checks parentheses and ternary punctuation for matching pairs. Each rule has an error message to help identify invalid input.
 
 ```cpp
 bool IsValidExpression(const FString& Expression, FString& ErrorMessage)
@@ -584,7 +584,7 @@ The intended evaluation order can be illustrated with:
 (1 + 2) * 3    → evaluate 1 + 2 inside parentheses, then multiply by 3; expected result: 9
 ```
 
-These illustrate semantics, not fresh execution results. Operators at the same precedence also need preserved order: left-to-right evaluation of `8 / 2 / 2` should yield 2.
+These are examples of intended semantics and have not been verified by running the code. Operators at the same precedence also need preserved order: left-to-right evaluation of `8 / 2 / 2` should yield 2.
 
 **Validation, attribute substitution, and evaluation entry points**
 
@@ -625,11 +625,11 @@ The fixed `TMap` demonstrates substituting attribute names with values. A game c
 
 Result: 1
 
-This preserves the check recorded in the original note. The example map gives `HHHH` a value of 555. Under the intended semantics, the formula is equivalent to `555 >= (3 - 5)`, yielding 1. This article update did not compile or run the original UE project.
+The previously recorded result for this formula is 1. The example map gives `HHHH` a value of 555, so the intended semantics are equivalent to `555 >= (3 - 5)`, consistent with that result. It has not been rechecked by compiling and running the UE project.
 
 ## Limitations and directions for improvement
 
-The code above preserves the original implementation. The following observations are additional explanations based on reading it.
+Reading the code reveals several issues to address before taking this parser further.
 
 **The first token.** `Tokenize` uses `Tokens.Last()` for signs and ordinary numbers, but the array may be empty for the first number or a leading sign. It must check whether a previous token exists before using it to interpret a character.
 

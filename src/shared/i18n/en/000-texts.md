@@ -5182,7 +5182,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:2.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45@aria-label: Tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.h2:0.#text:0: "Exploring syntax parsing for game formulas in UE"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.p:1.#text:0: The complete original UE C++ formula parser, explanations, and recorded check, with added walkthroughs of validation, tokenization, game attributes, precedence, and implementation limitations.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.p:1.#text:0: Exploring a UE C++ parser for game-event formulas, from arithmetic, conditions, and custom attributes to string validation, tokenization, attribute substitution, and evaluation by precedence.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0@aria-label: Tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:0.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:1.#text:0: ""
@@ -5708,7 +5708,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   blog:ue-expression-parser-basics:
-    root.html:1.head:0.meta:2@content: "Explore validation, tokenization, attribute substitution and precedence in a UE C++ game formula parser, with the original code, recorded check and known limitations."
+    root.html:1.head:0.meta:2@content: "Explore validation, tokenization, attribute substitution and precedence in a UE C++ game-event formula parser, including project dependencies and known limitations."
     root.html:1.head:0.title:4.#text:0: "UE C++ Game Formula Parsing: Tokens & Evaluation · Xiao Mao"
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -5728,7 +5728,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Exploring syntax parsing for game formulas in UE"
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: The complete original UE C++ formula parser, explanations, and recorded check, with added walkthroughs of validation, tokenization, game attributes, precedence, and implementation limitations.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Exploring a UE C++ parser for game-event formulas, from arithmetic, conditions, and custom attributes to string validation, tokenization, attribute substitution, and evaluation by precedence.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -7760,7 +7760,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 49a9446df1cca76d33dc56efdd5111b674a510058fe49235092abfa922247d6d
+sourceHash: cc09d5a280c8edd2472166186dd3c4cb9d5262898458f06b0bb3c72b3321a78a
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:
