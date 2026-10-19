@@ -421,7 +421,7 @@ def tree_for(sha, *, history=False):
             raise ValueError(f'duplicate public path: {path}')
         entries[path] = item
         total += item['size']
-    html_limit = 300 if history else 200 + 110 * len(codes)
+    html_limit = 300 if history else 200 + 250 * len(codes)
     file_limit = 800 if history else 1000 + 500 * len(codes)
     if not REQUIRED.issubset(entries) or not 100 <= sum(p.endswith('.html') for p in entries) <= html_limit:
         raise ValueError('critical pages missing or HTML capacity exceeded')

@@ -83,6 +83,33 @@ class PublicTreeTests(unittest.TestCase):
     def test_current_895_public_files_and_328_html_fit(self):
         self.assertEqual(len(self.tree()), 895)
 
+    def test_current_release_424_html_fit(self):
+        entries, bodies = fixture(self.m, html=424)
+        result = self.tree(entries, bodies)
+        self.assertEqual(sum(path.endswith('.html') for path in result), 424)
+
+    def test_current_bilingual_html_capacity_boundary(self):
+        entries, bodies = fixture(self.m, html=700)
+        result = self.tree(entries, bodies)
+        self.assertEqual(sum(path.endswith('.html') for path in result), 700)
+        entries, bodies = fixture(self.m, html=701)
+        with self.assertRaisesRegex(ValueError, 'HTML capacity exceeded'):
+            self.tree(entries, bodies)
+
+    def test_current_required_pages_remain_mandatory(self):
+        entries, bodies = fixture(self.m, html=424)
+        for required in self.m.REQUIRED:
+            with self.subTest(required=required), self.assertRaisesRegex(ValueError, 'critical pages missing'):
+                self.tree([entry for entry in entries if entry['path'] != required], bodies)
+
+    def test_historical_html_capacity_remains_300(self):
+        entries, bodies = fixture(self.m, files=700, html=300)
+        result = self.tree(entries, bodies, sha=self.m.HISTORIC_RELEASES[0], history=True)
+        self.assertEqual(sum(path.endswith('.html') for path in result), 300)
+        entries, bodies = fixture(self.m, files=700, html=301)
+        with self.assertRaisesRegex(ValueError, 'HTML capacity exceeded'):
+            self.tree(entries, bodies, sha=self.m.HISTORIC_RELEASES[0], history=True)
+
     def test_source_and_private_metadata_do_not_enter_public_validation(self):
         entries = self.entries + [
             {'path': 'content/001-zh/draft.md', 'type': 'blob', 'mode': '100644', 'size': 200_000_000},
