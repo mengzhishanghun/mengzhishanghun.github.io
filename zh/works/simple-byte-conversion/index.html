@@ -10,7 +10,7 @@
 <h2 id="核心能力">核心能力</h2>
 <h3 id="基础类型与字节数组">基础类型与字节数组</h3>
 <p>提供 int32、int64、float、double、bool 和 FString 的 ToBytes / FromBytes 成对接口。基础数值按其内存表示写入字节数组，字符串使用 UTF-8。</p>
-<p>节点可作为蓝图纯函数使用，适合在发送前编码，或在收到同格式数据后还原。</p>
+<p>可用于发送前编码，或在收到同格式数据后还原。</p>
 <h3 id="结构体二进制转换">结构体二进制转换</h3>
 <p>StructToBytes 与 BytesToStruct 面向自定义结构体。蓝图接口通过泛型结构体参数接收不同类型，再输出字节数组或还原结构体。</p>
 <p>结构体类型与字段布局是转换双方共同的契约，接收端不能只凭字节长度猜测含义。</p>
@@ -21,8 +21,9 @@
 <p>可用于 UE 项目在 UDP/TCP 通信前整理待发送数据，或在文件存储前把结构化状态转换为字节。</p>
 <p>与外部程序交互时，可选 JSON 来核对字段；这些示例中的网络连接和文件读写应由其他模块完成。</p>
 <h2 id="适用范围与边界">适用范围与边界</h2>
-<p>转换接口本身不定义跨语言协议。</p>
-<p>发送端与接收端仍需约定类型、字段、编码和版本，并用固定样例验证往返结果。结构体变更后应重新检查旧数据的兼容性，不能把能成功调用转换节点等同于数据已正确解释。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>转换接口本身不定义跨语言协议。含对象引用或资源句柄的结构体不在支持范围内。</p>
+<p>发送端与接收端仍需约定类型、字段、编码和版本，并用固定样例验证往返结果。结构体变更后应重新检查旧数据的兼容性，不能把能成功调用转换节点等同于数据已正确解释。</p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/guides/ue-tools/simple-byte-conversion-guide/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

@@ -11,13 +11,14 @@
 <h3 id="项目与引擎识别">项目与引擎识别</h3>
 <p>工具从当前项目环境检测 UE 工程和关联引擎，减少手工选择错误项目或引擎的机会。识别的结果仍应与实际工作目录一致；这一能力针对已经存在的 UE 项目，不负责创建工程。</p>
 <h3 id="编译前处理">编译前处理</h3>
-<p>在编译前，工具可处理跨平台换行符差异，把相关文本的 LF/CR 问题调整为 Windows 使用的 CRLF。这个步骤用于已有工程的编译准备，不能替项目解决源码错误或依赖缺失。</p>
+<p>编译前可整理跨平台协作带来的源码换行符差异。这会修改相关文本文件，但不能替项目解决源码错误或依赖缺失。</p>
 <h3 id="日志与启动">日志与启动</h3>
 <p>编译过程中实时显示日志，使用者可据此判断当前进度并查找失败原因。成功后可从工具启动项目，把编译与打开工程衔接起来；编译失败时仍需根据日志修复实际问题，不能直接视为可运行状态。</p>
 <h2 id="适用场景">适用场景</h2>
 <p>适合环境已经配置好的项目成员，在资源或代码更新后自行完成一次本地编译并打开编辑器。团队也可借助日志把具体错误反馈给负责构建的同事，而不必只转述“项目打不开”。</p>
 <h2 id="适用范围与边界">适用范围与边界</h2>
-<p>使用前提是本机已配置编译环境，并曾成功运行过该项目。工具不安装 UE、编译器或项目依赖，也不保证新的源码一定能通过构建。遇到实际代码、模块或环境错误时，仍需按日志定位并修复。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>当前仅支持 Windows。使用前提是本机已配置编译环境，并曾成功运行过该项目。工具不安装 UE、编译器或项目依赖，也不保证新的源码一定能通过构建。遇到实际代码、模块或环境错误时，仍需按日志定位并修复。</p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/tools/ue-quick-start/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

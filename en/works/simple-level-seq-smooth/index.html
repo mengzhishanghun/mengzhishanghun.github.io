@@ -12,8 +12,7 @@
 <p>Twelve algorithms are provided, including moving average, Gaussian, median, Butterworth, Kalman, and One Euro filters.</p>
 <p>They differ in how they handle spikes, continuous noise, and responsiveness. Choose based on the original curves and intended motion; a large algorithm selection does not mean any parameter set will fit every asset.</p>
 <h3 id="sequence-and-parameter-section-processing">Sequence and parameter section processing</h3>
-<p>Processing can be opened from a Level Sequence in the Content Browser, with support for ControlRig Transform and Scalar parameter sections.</p>
-<p>The tool supports batch sequence selection and checks frame-rate information, helping apply similar processing to multiple assets and verify input conditions.</p>
+<p>The tool supports batch processing of ControlRig Transform and Scalar parameter sections in Level Sequences and reads sequence frame rates.</p>
 <h3 id="output-options">Output options</h3>
 <p>Results can be written to the original sequence or saved as a new one. New sequences suit before-and-after comparisons; overwriting requires confirming that original data can be recovered. Outputs remain sequence assets for UE projects, and their effect should be checked in the target shot.</p>
 <h2 id="use-cases">Use cases</h2>
@@ -21,7 +20,8 @@
 <p>For assets that need less jitter while retaining rapid motion, compare algorithms and parameter settings before choosing the final output.</p>
 <h2 id="scope-and-limitations">Scope and limitations</h2>
 <p>The tool targets Level Sequence data and supported ControlRig parameter sections.</p>
-<p>Filtering may also weaken genuine fast motion, and skipped frames may have causes beyond curve noise. Select algorithms, parameters, and overwrite behavior for each sequence; processed curves do not by themselves prove that motion quality has been reviewed.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>Filtering may also weaken genuine fast motion, and skipped frames may have causes beyond curve noise. Select algorithms, parameters, and overwrite behavior for each sequence; processed curves do not by themselves prove that motion quality has been reviewed.</p>
+<p>See the <a href="/en/docs/guides/ue-tools/simple-level-seq-smooth-guide/">usage guide</a> for steps and parameters.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

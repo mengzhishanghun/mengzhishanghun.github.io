@@ -12,7 +12,7 @@
 <p>工具通过 Perforce CLI 获取指定 changelist 或 default 中的已打开文件。</p>
 <p>检查只针对当前要处理的提交内容，便于在正式提交前核对路径，无需扫描整个仓库中的无关文件。</p>
 <h3 id="对照本地真实大小写">对照本地真实大小写</h3>
-<p>工具结合路径映射和本地磁盘目录，逐级检查文件路径的实际大小写。列表用颜色区分未变化、自动修正和人工修改，使用者可以集中查看需要处理的条目及修正后的目标路径。</p>
+<p>对照本地真实目录逐级检查大小写，并集中预览建议路径与人工调整结果。</p>
 <h3 id="人工调整与应用核验">人工调整与应用核验</h3>
 <p>自动建议之外，使用者可手动微调目标路径。应用修改后，工具再次检查一致性。</p>
 <p>实际修正可能涉及 <code>p4 move</code>，因此列表中的目标路径应在执行前核实，执行后再按正常 Perforce 流程检查待提交内容。</p>
@@ -21,7 +21,8 @@
 <p>对一次包含多个路径变化的 changelist，集中预览更容易发现漏项。</p>
 <h2 id="适用范围与边界">适用范围与边界</h2>
 <p>工具依赖可用的 Perforce CLI、正确的工作区映射和登录状态。</p>
-<p>路径修正属于版本控制操作，可能改变已打开文件的记录；应在应用前核对目标列表，并在应用后复查 changelist。它只处理路径一致性，不替代内容评审或提交权限检查。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>路径修正属于版本控制操作，可能改变已打开文件的记录；应在应用前核对目标列表，并在应用后复查 changelist。它只处理路径一致性，不替代内容评审或提交权限检查。</p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/tools/p4-case-sync/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

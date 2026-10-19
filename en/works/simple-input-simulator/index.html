@@ -9,20 +9,19 @@
 <p>The plugin injects events through PlayerController input interfaces so scripted actions follow normal input handling as closely as possible. Users organize input sequences themselves; the plugin supplies individual input and state management nodes.</p>
 <h2 id="core-capabilities">Core capabilities</h2>
 <h3 id="simulating-key-events">Simulating key events</h3>
-<p>Simulate Key Input accepts a UE FKey and handles press or release events for keyboard keys, mouse buttons, and gamepad buttons.</p>
-<p>Users can construct explicit action sequences. Each pressed state needs a corresponding release event, otherwise later logic may continue treating the key as held.</p>
+<p>Press and release events for keyboard keys, mouse buttons, and gamepad buttons can be used to organize repeated actions. Each press still needs a matching release to avoid leaving a key held.</p>
 <h3 id="axis-input-and-player-selection">Axis input and player selection</h3>
-<p>Simulate Axis Input handles axes such as mouse movement and joysticks, obtaining the required DeltaTime. PlayerIndex selects a local player so simulated actions reach the corresponding PlayerController.</p>
+<p>The tool supports axis input such as mouse movement and joysticks, automatically obtains the required DeltaTime, and allows a local player to be selected.</p>
 <p>The nodes support Legacy Input and Enhanced Input, but the project still needs valid input mappings and controllers.</p>
 <h3 id="state-cleanup">State cleanup</h3>
-<p>Flush Pressed Keys clears lingering pressed states, restoring the input environment after a test, demonstration, or replay.</p>
-<p>Nodes can be called in the editor to verify the input pipeline, but runtime requirements such as a valid PlayerController still apply.</p>
+<p>An action for clearing pressed states helps restore the input environment after a test, demonstration, or replay.</p>
 <h2 id="use-cases">Use cases</h2>
 <p>It suits repeated movement or jumping in smoke tests and driving existing character inputs in tutorials or exhibition demonstrations. It can also replay events with a project’s own recording system or target a second player in local multiplayer tests.</p>
 <p>Recording, timing, and complete test assertions must be provided by higher-level logic.</p>
 <h2 id="scope-and-limitations">Scope and limitations</h2>
 <p>The plugin simulates input events without guaranteeing that the intended action occurs. Character state, input mappings, and the current game phase still affect results.</p>
-<p>Pair press and release events and clear state when tests finish. Input cannot be injected as intended without a valid PlayerController, so automation should check that prerequisite.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>Pair press and release events and clear state when tests finish. Input cannot be injected as intended without a valid PlayerController, so automation should check that prerequisite.</p>
+<p>See the <a href="/en/docs/guides/ue-tools/simple-input-simulator-guide/">usage guide</a> for steps and parameters.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

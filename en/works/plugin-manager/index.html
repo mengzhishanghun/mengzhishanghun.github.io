@@ -9,7 +9,7 @@
 <p>The work first displays plugin sources and relationships, then provides explicit actions for .uproject changes or directory organization, helping users understand the scope before changing it.</p>
 <h2 id="core-capabilities">Core capabilities</h2>
 <h3 id="aggregating-and-searching-sources">Aggregating and searching sources</h3>
-<p>The tool scans project, Marketplace, and engine plugins automatically and groups them by source. Lists support searches by name, author, category, description, dependencies, and dependents, with multiple keywords narrowing results. Installed and source engines have corresponding detection methods, and duplicate-name conflicts appear in the list.</p>
+<p>The tool brings together project, Marketplace, and engine plugins, supports searching by name, author, dependencies, and other information, and flags duplicate-name conflicts. It can detect installed and source-built engines.</p>
 <h3 id="dependencies-and-state-management">Dependencies and state management</h3>
 <p>Users can inspect what a plugin depends on and which plugins depend on it. Enabling or disabling modifies the project’s .uproject configuration; the interface asks for confirmation when dependencies cause cascading changes.</p>
 <p>Restore defaults removes explicit project settings so plugins return to their default states, useful when reviewing configuration left by temporary toggles.</p>
@@ -20,7 +20,8 @@
 <p>It helps investigate why a plugin is ineffective, where a same-named plugin came from, or which dependencies an enable-state change affects. Before adjusting installation directories, users can confirm targets through source and relationship views.</p>
 <h2 id="scope-and-limitations">Scope and limitations</h2>
 <p>Run the tool in the target UE project directory. Close the editor before moving, deleting, or correcting directories to avoid inconsistencies between an open project and disk state.</p>
-<p>Enabled-state changes, read-only attribute handling, and directory operations affect the local project. Inspect .uproject, plugin directories, and project startup afterward.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>Enabled-state changes, read-only attribute handling, and directory operations affect the local project. Inspect .uproject, plugin directories, and project startup afterward.</p>
+<p>For operation steps and parameter details, see the <a href="/en/docs/tools/plugin-manager/">user guide</a>.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

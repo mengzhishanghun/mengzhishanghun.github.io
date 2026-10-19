@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "sourceCommit": "bcef244f5de10f22e771c3708146ca19bec8c83e",
+  "sourceCommit": "d58d051dcac6436a8973c1df039a8a2385944390",
   "manifestPath": "src/deploy/release-manifest.json",
-  "manifestSha256": "6db51f719ea68c456a8ce36079475b11ba7b8dce9c9802561d4316897a989662"
+  "manifestSha256": "b3ddb075efacbbdccdec050fe6c846ddf7f987ea0d63cf998262ca99924a17e0"
 }

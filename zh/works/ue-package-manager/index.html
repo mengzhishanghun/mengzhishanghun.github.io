@@ -9,13 +9,11 @@
 <p>工具把这些选择集中到同一个流程：图形界面针对当前项目操作，命令行则供明确指定项目的自动化调用。</p>
 <h2 id="核心能力">核心能力</h2>
 <h3 id="项目识别与配置隔离">项目识别与配置隔离</h3>
-<p>图形界面从当前项目目录识别 .uproject 与关联引擎，并把所识别项目固定为当前打包对象。项目路径、引擎目录、输出目录、构建类型和附加复制规则按项目分别保存，避免一个项目的选择直接带入另一个项目。</p>
-<p>命令行在无法从当前目录确定项目时要求显式指定。</p>
+<p>自动识别当前 UE 项目和关联引擎，按项目保存打包选项，避免混用其他工程的配置。</p>
 <h3 id="ue-打包与结果查看">UE 打包与结果查看</h3>
-<p>工具调用 UAT 执行构建、烘焙、暂存、打 Pak 和归档，支持 DebugGame、Development、Test 与 Shipping 等构建类型。使用者可在图形界面配置输出并查看过程，或在命令行中验证配置、预览命令和执行打包。</p>
-<p>打包结果来自 UAT，工具负责组织调用与反馈。</p>
+<p>通过 UAT 组织项目打包，支持多种构建类型，并提供过程日志。图形界面和命令行都可作为打包入口，实际构建结果仍来自 UAT。</p>
 <h3 id="成功后的附加部署">成功后的附加部署</h3>
-<p>每条复制规则指定来源和包内目标目录，既可复制文件，也可复制文件夹。目录复制支持按名称模式递归忽略无关项，并检查复制后的文件完整性。</p>
+<p>支持按规则把文件或文件夹复制到包内，并过滤不需要交付的内容。</p>
 <p>该阶段只在 UE 打包成功后执行，避免把附加内容误放入失败的输出。目标限制在包根目录内部，不能借规则写到任意外部路径。</p>
 <h3 id="旧包清理控制">旧包清理控制</h3>
 <p>可选择在打包前清理当前输出位置识别到的旧包，但实际清理仍需确认。切换输出路径不会追溯清理旧位置，防止一次任务波及其他目录。清理和附加部署都围绕当前打包对象执行。</p>
@@ -27,7 +25,8 @@
 <p>完整 Debug 构建、插件独立打包、自动关闭编辑器及项目版本控制操作不在该工具职责内。附加文件的内容、许可和部署位置仍需项目方确认。</p>
 <h2 id="效果展示">效果展示</h2>
 <figure class="media-figure media-image"><a href="/media/manuals/baf8b7b901418c64d1f2.png" class="media-image-trigger" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/baf8b7b901418c64d1f2.png" data-media-alt="图片暂未公开" aria-label="放大图片：图片暂未公开"><img src="/media/manuals/baf8b7b901418c64d1f2.png" alt="图片暂未公开" loading="lazy" decoding="async"></a><figcaption>图片暂未公开</figcaption></figure>
-<p><em>UEPackageManager 图形界面：配置项目、打包参数和附加文件复制规则。</em></p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p><em>UEPackageManager 图形界面：配置项目、打包参数和附加文件复制规则。</em></p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/tools/ue-package-manager/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

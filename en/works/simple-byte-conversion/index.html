@@ -10,7 +10,7 @@
 <h2 id="core-capabilities">Core capabilities</h2>
 <h3 id="basic-types-and-byte-arrays">Basic types and byte arrays</h3>
 <p>Paired ToBytes / FromBytes interfaces are provided for int32, int64, float, double, bool, and FString. Basic numeric values are written using their memory representation; strings use UTF-8.</p>
-<p>Nodes can be Blueprint pure functions for encoding before sending or restoring data received in the same format.</p>
+<p>These interfaces can encode data before sending or restore data received in the same format.</p>
 <h3 id="binary-struct-conversion">Binary struct conversion</h3>
 <p>StructToBytes and BytesToStruct handle custom structs. Blueprint interfaces accept different types through generic struct parameters, then output byte arrays or restore structs.</p>
 <p>The struct type and field layout form a shared contract between both ends. A receiver cannot infer meaning from byte length alone.</p>
@@ -21,8 +21,9 @@
 <p>It can prepare data for UDP/TCP communication in UE or convert structured state to bytes before file storage.</p>
 <p>For external program integration, JSON can help verify fields. Network connections and file I/O in these examples must be supplied by other modules.</p>
 <h2 id="scope-and-limitations">Scope and limitations</h2>
-<p>The conversion interfaces do not define a cross-language protocol.</p>
-<p>Sender and receiver must agree on types, fields, encoding, and versions, and verify round trips using fixed examples. Check compatibility with old data after struct changes. Successfully calling a conversion node does not mean the data has been interpreted correctly.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>The conversion interfaces do not define a cross-language protocol. Structs containing object references or resource handles are not supported.</p>
+<p>Sender and receiver must agree on types, fields, encoding, and versions, and verify round trips using fixed examples. Check compatibility with old data after struct changes. Successfully calling a conversion node does not mean the data has been interpreted correctly.</p>
+<p>See the <a href="/en/docs/guides/ue-tools/simple-byte-conversion-guide/">usage guide</a> for steps and parameters.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

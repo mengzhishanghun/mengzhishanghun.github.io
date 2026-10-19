@@ -9,7 +9,7 @@
 <p>工具先展示插件来源和关系，再提供修改 .uproject 或整理插件目录的入口，帮助使用者在变更前看清影响范围。</p>
 <h2 id="核心能力">核心能力</h2>
 <h3 id="来源汇总与检索">来源汇总与检索</h3>
-<p>自动扫描项目、商城和引擎插件，并按来源分组。列表可按名称、作者、分类、描述、依赖及被依赖关系搜索，支持以多个关键词缩小范围。安装版和源码版引擎都有对应的识别方式，列表也能显示同名插件冲突。</p>
+<p>汇总项目、商城和引擎插件，支持按名称、作者、依赖等信息检索，并提示同名冲突。可识别安装版与源码版引擎。</p>
 <h3 id="依赖与状态管理">依赖与状态管理</h3>
 <p>可查看某插件依赖哪些插件，以及哪些插件依赖它。启用或禁用操作会修改项目的 .uproject 配置；涉及依赖连锁变化时，界面提供确认。</p>
 <p>恢复默认时，工具会移除项目中的显式设置，让插件回到默认状态，适合检查临时开关留下的配置。</p>
@@ -20,7 +20,8 @@
 <p>适合排查项目中某插件为何没有生效、同名插件来自哪里，或某次启用变更会牵连哪些依赖。维护插件安装位置时，也可先通过来源和关系视图确认对象，再执行目录调整。</p>
 <h2 id="适用范围与边界">适用范围与边界</h2>
 <p>工具需要在目标 UE 项目目录中运行。移动、删除和目录修正前应关闭编辑器，避免打开中的项目与磁盘状态不一致。</p>
-<p>启用状态修改、只读属性处理和目录操作都会影响本地项目，完成后仍需检查 .uproject、插件目录和项目启动结果。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>启用状态修改、只读属性处理和目录操作都会影响本地项目，完成后仍需检查 .uproject、插件目录和项目启动结果。</p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/tools/plugin-manager/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

@@ -9,20 +9,19 @@
 <p>这个插件通过 PlayerController 的输入接口注入事件，使脚本化操作尽量沿常规输入处理链路执行。输入序列由使用者自行组织，插件提供的是单次输入与状态管理节点。</p>
 <h2 id="核心能力">核心能力</h2>
 <h3 id="按键事件模拟">按键事件模拟</h3>
-<p>Simulate Key Input 接收 UE 的 FKey，处理按下或抬起事件，覆盖键盘键、鼠标按钮与手柄按钮。</p>
-<p>使用者可以构造连续操作；按下后需要对应的抬起事件，否则后续逻辑可能继续认为该键被按住。</p>
+<p>支持键盘、鼠标和手柄的按下与抬起事件，可用于组织重复操作。按下后仍需配对释放，避免留下按住状态。</p>
 <h3 id="轴输入与玩家选择">轴输入与玩家选择</h3>
-<p>Simulate Axis Input 用于鼠标移动、摇杆等轴输入，节点会取得所需 DeltaTime。PlayerIndex 可指定本地玩家，使模拟操作落到对应的 PlayerController。</p>
+<p>支持鼠标移动、摇杆等轴输入，自动取得所需 DeltaTime，并可指定本地玩家。</p>
 <p>节点兼容 Legacy Input 与 Enhanced Input，仍需项目本身具备有效的输入映射与控制器。</p>
 <h3 id="状态清理">状态清理</h3>
-<p>Flush Pressed Keys 清空残留的按下状态，可在测试、演示或回放结束后恢复输入环境。</p>
-<p>节点可在编辑器调用，方便验证输入链路，但调用时仍要满足有效 PlayerController 等运行条件。</p>
+<p>提供清空按下状态的入口，方便在测试、演示或回放结束后恢复输入环境。</p>
 <h2 id="适用场景">适用场景</h2>
 <p>适合冒烟测试中重复执行前进、跳跃等操作，或在教程、展会演示中驱动已有角色输入。也可配合项目自己的录制系统重放事件，以及在本地多人测试中指定第二位玩家。</p>
 <p>录制、时间调度和完整测试断言需要由上层逻辑提供。</p>
 <h2 id="适用范围与边界">适用范围与边界</h2>
 <p>插件模拟输入事件，不保证目标动作一定发生；角色状态、输入映射和游戏阶段仍会影响结果。</p>
-<p>按下与抬起要配对，测试结束要清理状态。没有有效 PlayerController 时无法按预期注入输入，自动化流程应检查这一前提。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>按下与抬起要配对，测试结束要清理状态。没有有效 PlayerController 时无法按预期注入输入，自动化流程应检查这一前提。</p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/guides/ue-tools/simple-input-simulator-guide/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

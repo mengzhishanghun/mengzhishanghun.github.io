@@ -12,8 +12,7 @@
 <p>提供移动平均、高斯、中值、Butterworth、Kalman、One Euro 等共 12 种算法。</p>
 <p>它们处理尖峰、连续噪声和响应速度的方式不同，使用者可依据原始曲线与目标动作选择；算法种类较多，并不代表一组参数就能适配所有素材。</p>
 <h3 id="序列与参数段处理">序列与参数段处理</h3>
-<p>可从内容浏览器中的 Level Sequence 打开处理入口，覆盖 ControlRig 的 Transform 与 Scalar 参数段。</p>
-<p>工具支持批量选择序列，并检查帧率相关信息，方便在多份素材上执行同类处理和核对输入条件。</p>
+<p>支持批量处理 Level Sequence 中的 ControlRig Transform 与 Scalar 参数段，并读取序列帧率。</p>
 <h3 id="输出方式">输出方式</h3>
 <p>处理结果可写回原序列，也可创建新序列。保留新序列适合对比处理前后的动作；选择覆盖时则需确认原数据的可恢复性。输出仍是供 UE 项目使用的序列资产，实际效果应在目标镜头中查看。</p>
 <h2 id="适用场景">适用场景</h2>
@@ -21,7 +20,8 @@
 <p>对于既要减少抖动又要保留快速动作变化的素材，可以先比较不同算法和参数的处理结果，再决定最终输出。</p>
 <h2 id="适用范围与边界">适用范围与边界</h2>
 <p>工具面向 Level Sequence 数据及所支持的 ControlRig 参数段。</p>
-<p>滤波可能同时削弱真实的快速动作，跳帧也未必只由曲线噪声引起。算法、参数与是否覆盖原资产都应依据具体序列判断，不能把处理后的曲线直接视为已完成动作质量检查。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>滤波可能同时削弱真实的快速动作，跳帧也未必只由曲线噪声引起。算法、参数与是否覆盖原资产都应依据具体序列判断，不能把处理后的曲线直接视为已完成动作质量检查。</p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/guides/ue-tools/simple-level-seq-smooth-guide/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

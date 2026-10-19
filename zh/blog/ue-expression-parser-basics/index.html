@@ -6,8 +6,8 @@
 <p>这个解析器按字符串校验、Token 拆分、属性替换和优先级求值逐步处理公式。实现依赖游戏工程中的基类、宏和日志分类，一些边界情况也还需要完善。</p>
 <h3 id="问题与环境">定义与使用场景</h3>
 <p>我想让游戏事件通过文本表达判断条件和计算规则，于是写了这个简单的解析器。</p>
-<p>该解析可以识别判断，逻辑与或，加减乘除，括号和三目运算符</p>
-<p>为了适配游戏需求，还额外添加了自定义属性的识别和替换</p>
+<p>这个解析器支持比较判断、逻辑与或、四则运算、括号和三目运算符。</p>
+<p>为了让公式使用游戏里的数据，我还添加了自定义属性的识别和替换。</p>
 <p>例如，想让一个事件只在力量和金币都达到要求时触发，可以约定这样的写法：</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>[力量] &gt;= 10 &amp;&amp; [金币] &gt;= 100</span></span></code></pre>
 <p><code>[力量]</code>、<code>[金币]</code> 表示游戏属性，比较运算得到真假，再由 <code>&amp;&amp;</code> 合并条件。也可以用三目运算选择数值：</p>
@@ -39,9 +39,7 @@
 <span class="line"><span style="color:#F97583">	static</span><span style="color:#B392F0"> int32</span><span style="color:#B392F0"> GetStrValue</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FString</span><span style="color:#F97583"> const&amp;</span><span style="color:#FFAB70"> Str</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">};</span></span>
 <span class="line"></span></code></pre>
-<p>头文件这里的基类是我游戏中新建的，需要修改
-这里仅提供了两个简单接口，一个是检测这个字符串是否有效，会返回一个bool和错误信息，一个是获取这个字符串的值
-具体实现全都在.cpp里，因为都是专门为了这个功能写的，所以全都放.cpp里来进行封装</p>
+<p>头文件中的基类来自我的游戏工程，移到其他项目时需要修改。这里提供两个接口：一个检查字符串是否有效，返回 bool 和错误信息；另一个计算字符串的值。具体实现都放在 .cpp 中，集中处理公式解析。</p>
 <p><code>CheckStrIsValid</code> 对应校验入口，<code>GetStrValue</code> 对应求值入口。这里的基类 <code>UMyGameSubsystem</code>、<code>CREATETHISSUBSYSTEM</code> 宏、导出宏和相关头文件属于游戏工程，移到其他项目时需要适配。后面的代码也使用了项目日志分类 <code>MyGameLog</code>。</p>
 <h3 id="错误也是接口的一部分">实现：源文件与解析过程</h3>
 <p><strong>.cpp：Token 类型与结构</strong></p>
@@ -421,7 +419,7 @@
 <span class="line"><span style="color:#F97583">	return</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 <span class="line"></span></code></pre>
-<p>当前实现遇到除零会返回 0，遇到无法识别的运算符会写日志并返回 0。这是当前代码的行为，调用方不能仅凭结果为 0 判断是否出错。</p>
+<p>当前实现遇到除零会返回 0，遇到无法识别的运算符会写日志并返回 0。调用方不能仅凭结果为 0 判断是否出错。</p>
 <p><strong>按括号和优先级归约公式</strong></p>
 <p><code>Evaluate</code> 先找括号，将括号内部递归求值，再把相应片段替换成数字。随后依次处理乘除、加减、比较、逻辑与、逻辑或，最后处理三目选择。</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#B392F0">int32</span><span style="color:#B392F0"> Evaluate</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> TArray</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">FToken</span><span style="color:#E1E4E8">&gt;</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Tokens</span><span style="color:#E1E4E8">) {</span></span>

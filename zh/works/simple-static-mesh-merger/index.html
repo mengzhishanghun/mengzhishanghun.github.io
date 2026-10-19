@@ -9,10 +9,9 @@
 <p>实例化后应以目标项目中的加载与帧率测量评估效果；对象数量减少本身不等于性能按固定比例提升。</p>
 <h2 id="核心能力">核心能力</h2>
 <h3 id="处理嵌套场景并刷新预览">处理嵌套场景并刷新预览</h3>
-<p>工具可递归处理嵌套 LevelInstance。完成后刷新合并预览，让后续分组面向展开后的场景对象。使用者可以在预览中重新确认实际参与合并的 Actor。</p>
+<p>支持递归拆分嵌套 LevelInstance，并刷新场景对象的合并预览。</p>
 <h3 id="严格分组与人工筛选">严格分组与人工筛选</h3>
-<p>分组同时比较 Mesh、Static/Stationary/Movable 移动性、所有材质槽，以及碰撞 Profile、ObjectType 和通道响应。预览支持按移动性和最小实例数筛选；选中组后，还可在 Actor 列表中取消勾选不应合并的对象。</p>
-<p>这些筛选决定本次操作范围，整组对象不必全部参与。</p>
+<p>按网格、材质、移动性和完整碰撞设置分组。可通过预览筛选分组，并排除不应合并的个别 Actor。</p>
 <h3 id="生成实例化对象">生成实例化对象</h3>
 <p>执行合并后，工具创建 ISM/HISM Actor，复制相关材质、移动性和碰撞设置，删除参与合并的原 Actor，并选中新生成的对象供检查。</p>
 <p>可从场景层级和实例数量确认结果，再检查视觉表现和碰撞是否符合预期。</p>
@@ -20,7 +19,8 @@
 <p>适用于同一关卡中大量重复放置静态网格、希望先按实际属性筛选再进行实例化整理的场景。对混有不同材质或碰撞设置的对象，预览分组与逐项排除比直接按模型名称处理更容易核对范围。</p>
 <h2 id="适用范围与边界">适用范围与边界</h2>
 <p>合并会替换场景中的原 Actor，应先保留可恢复的关卡版本，并在结果中检查材质、移动性、碰撞和实例数量。</p>
-<p>是否改善加载或运行表现取决于具体场景与目标设备，需要实测；工具的分组预览不能替代合并后的项目验收。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>是否改善加载或运行表现取决于具体场景与目标设备，需要实测；工具的分组预览不能替代合并后的项目验收。</p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/guides/ue-tools/simple-static-mesh-merger-guide/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

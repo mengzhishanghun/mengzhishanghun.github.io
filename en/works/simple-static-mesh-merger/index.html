@@ -9,10 +9,9 @@
 <p>Assess instancing through loading and frame-rate measurements in the target project. Fewer objects do not imply performance improves by a fixed ratio.</p>
 <h2 id="core-capabilities">Core capabilities</h2>
 <h3 id="handling-nested-scenes-and-refreshing-previews">Handling nested scenes and refreshing previews</h3>
-<p>The tool can recursively process nested LevelInstances. It refreshes the merge preview afterward so subsequent grouping uses the expanded scene objects. Users can review which Actors actually participate.</p>
+<p>The tool supports recursively breaking apart nested LevelInstances and refreshing the merge preview of scene objects.</p>
 <h3 id="strict-grouping-and-manual-filtering">Strict grouping and manual filtering</h3>
-<p>Grouping compares Mesh, Static/Stationary/Movable mobility, every material slot, and collision Profile, ObjectType, and channel responses. Previews can be filtered by mobility and minimum instance count. After selecting a group, users can uncheck Actors that should not be merged.</p>
-<p>These filters define the current operation’s scope; participation of every group member is not mandatory.</p>
+<p>Objects are grouped by mesh, materials, mobility, and complete collision settings. Users can filter groups in the preview and exclude individual Actors that should not be merged.</p>
 <h3 id="creating-instanced-objects">Creating instanced objects</h3>
 <p>Merging creates ISM/HISM Actors, copies relevant material, mobility, and collision settings, deletes participating original Actors, and selects the new objects for inspection.</p>
 <p>Check the scene hierarchy and instance counts, then verify visuals and collision against expectations.</p>
@@ -20,7 +19,8 @@
 <p>It suits levels with many repeated static meshes where users want to filter by actual properties before instancing. For objects with mixed materials or collision settings, preview grouping and individual exclusions make scope easier to inspect than processing solely by model name.</p>
 <h2 id="scope-and-limitations">Scope and limitations</h2>
 <p>Merging replaces original scene Actors. Keep a recoverable level version first and inspect materials, mobility, collision, and instance counts afterward.</p>
-<p>Loading or runtime improvements depend on the scene and target device and require measurement. Group previews do not replace project acceptance checks after merging.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>Loading or runtime improvements depend on the scene and target device and require measurement. Group previews do not replace project acceptance checks after merging.</p>
+<p>For operation steps and parameter details, see the <a href="/en/docs/guides/ue-tools/simple-static-mesh-merger-guide/">user guide</a>.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

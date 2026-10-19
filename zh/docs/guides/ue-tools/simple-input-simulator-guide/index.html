@@ -25,7 +25,7 @@
 <table><thead><tr><th>节点</th><th>说明</th></tr></thead><tbody><tr><td><code>Simulate Key Input</code></td><td>模拟任意输入按键的按下/释放事件</td></tr></tbody></table>
 <p><strong>参数：</strong></p>
 <ul>
-<li><strong>Key</strong>：要模拟的输入按键（空格键、鼠标左键、手柄按钮等）</li>
+<li><strong>Key</strong>：UE 的 FKey 输入按键（空格键、鼠标左键、手柄按钮等）</li>
 <li><strong>Pressed</strong>：<code>true</code> 为按下，<code>false</code> 为释放</li>
 <li><strong>Player Index</strong>：目标玩家控制器（0 = 第一个玩家）</li>
 </ul>
@@ -105,7 +105,8 @@
 <ul>
 <li>所有函数返回 <code>bool</code> 表示成功/失败</li>
 <li>Player Index 0 指向第一个玩家控制器</li>
-<li>使用 Flush Pressed Keys 防止按键”卡住”</li>
+<li>按下与抬起事件要配对；测试、演示或回放结束后，可使用 Flush Pressed Keys 清除残留状态，防止按键“卡住”</li>
+<li>节点也可在编辑器调用，但必须有有效的 PlayerController；没有有效控制器时，无法按预期注入输入</li>
 <li>轴输入自动适应当前帧率</li>
 <li>查看输出日志获取详细模拟信息（LogSimpleInputSimulator）</li>
 </ul>

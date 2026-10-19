@@ -7,7 +7,7 @@
 <h3 id="definition-and-use-cases">Definition and use cases</h3>
 <p>I wanted game events to express conditions and calculations as text, so I wrote a simple parser.</p>
 <p>The intended syntax covers comparisons, logical AND and OR, arithmetic, parentheses, and ternary expressions.</p>
-<p>It also adds recognition and substitution of custom properties to suit the game.</p>
+<p>I also added recognition and substitution of custom properties so formulas can use data from the game.</p>
 <p>For example, an event could require both strength and gold to meet a threshold:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>[Strength] &gt;= 10 &amp;&amp; [Gold] &gt;= 100</span></span></code></pre>
 <p><code>[Strength]</code> and <code>[Gold]</code> denote game attributes. Comparisons produce Boolean results, which <code>&amp;&amp;</code> combines. A ternary expression could also select a value:</p>
@@ -39,9 +39,7 @@
 <span class="line"><span style="color:#F97583">	static</span><span style="color:#B392F0"> int32</span><span style="color:#B392F0"> GetStrValue</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FString</span><span style="color:#F97583"> const&amp;</span><span style="color:#FFAB70"> Str</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">};</span></span>
 <span class="line"></span></code></pre>
-<p>The base class in this header was created for my game and needs to be changed when adapting it.</p>
-<p>There are two simple interfaces: one checks whether a string is valid and returns a Boolean plus an error message; the other gets the string’s calculated value.</p>
-<p>All implementation is in the <code>.cpp</code> file because it was written specifically for this feature and kept together there.</p>
+<p>The header’s base class comes from my game project and needs adapting in another project. Two interfaces are exposed: one checks string validity and returns a bool and an error message; the other evaluates the string. The implementation stays together in the .cpp file to handle formula parsing.</p>
 <p><code>CheckStrIsValid</code> is the validation entry point and <code>GetStrValue</code> is the evaluation entry point. <code>UMyGameSubsystem</code>, <code>CREATETHISSUBSYSTEM</code>, the export macro, and project headers require adaptation in another project. The code also uses the game project’s <code>MyGameLog</code> category.</p>
 <h3 id="implementation-source-file-and-parsing-steps">Implementation: source file and parsing steps</h3>
 <p><strong>.cpp: token types and structure</strong></p>

@@ -14,13 +14,14 @@
 <h3 id="状态和日志">状态和日志</h3>
 <p>图形界面显示每个引擎的等待、打包中、成功、失败与取消状态，并可切换查看对应日志。失败结果会保留日志文件，方便把问题定位到具体引擎版本，而不是只得到整批任务的单一成败结论。</p>
 <h3 id="发布文件整理">发布文件整理</h3>
-<p>构建后可按选项清理 Binaries、Intermediate 等中间内容，复制文档、生成 FilterPlugin.ini，或处理插件描述字段。相关选项可组合使用，输出按插件名和引擎名分目录存放。</p>
+<p>构建后可按需要清理中间产物、复制文档、生成发布过滤配置或处理插件描述字段，输出按插件和引擎版本区分。</p>
 <p>工具还提供从 .uplugin 作者信息生成源码版权声明的处理项；启用这类会改动内容的选项时应先核对目标文件。</p>
 <h2 id="适用场景">适用场景</h2>
 <p>适合 UE 插件作者在发布前构建多个引擎版本，并逐版本检查兼容性与失败原因。需要整理 Fab 交付文件时，可把相应清理和过滤项纳入同一次任务，减少在多个输出目录中重复手工处理的工作。</p>
 <h2 id="适用范围与边界">适用范围与边界</h2>
 <p>当前构建目标是 Windows / Win64，插件目录需要有有效的 .uplugin。</p>
-<p>多版本任务的成功状态仍需结合日志和目标引擎实测判断；文件整理选项也应按本次发布要求审查。该工具处理插件包，不承担 UE 项目整体打包。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>多版本任务的成功状态仍需结合日志和目标引擎实测判断；文件整理选项也应按本次发布要求审查。该工具处理插件包，不承担 UE 项目整体打包。</p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/tools/plugin-auto-packer/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

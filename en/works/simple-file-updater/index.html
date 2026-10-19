@@ -9,16 +9,17 @@
 <p>This tool gathers that information into a readable configuration file so maintainers can inspect the target list before running a batch update.</p>
 <h2 id="core-capabilities">Core capabilities</h2>
 <h3 id="mapping-paths-to-urls">Mapping paths to URLs</h3>
-<p>Each configuration entry pairs a local file path with its remote URL. Maintainers can see what will be downloaded and where it will be written, and change only the relevant entry when an address or directory changes. Comments are supported to document individual update items.</p>
+<p>A configuration list keeps download URLs and local targets together so sources and output locations can be checked before updating.</p>
 <h3 id="directory-and-path-handling">Directory and path handling</h3>
-<p>Local targets may use relative or absolute paths. If a target directory does not exist, the tool can create the required directories according to the configuration before writing the downloaded content. One configuration can therefore cover files in different directories, but its resolved paths must be checked in advance.</p>
+<p>Files can be updated into different local directories, with target folders created as needed.</p>
 <h3 id="launch-options">Launch options</h3>
-<p>The tool can start with its default configuration or a different configuration file specified at launch. The project offers a packaged EXE and execution from source, allowing users to choose an entry point for their environment. Both process the same kind of mapping list.</p>
+<p>EXE and source execution options are available, and existing update lists can be reused.</p>
 <h2 id="use-cases">Use cases</h2>
 <p>It suits personal maintenance workflows that regularly fetch several tools, templates, or public resources from fixed addresses and need a stable record of their local destinations. The same configuration can be reused for subsequent updates, reducing repeated searches for URLs and manual directory organization.</p>
 <h2 id="scope-and-limitations">Scope and limitations</h2>
 <p>Updates may overwrite files with the same name at target locations. Check URLs, paths, and existing files before running them.</p>
-<p>The tool downloads files according to configuration; it does not determine whether remote content is trustworthy or suitable for the current environment. Use publicly shareable addresses in public configurations and keep internal download sources out of examples.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>The tool downloads files according to configuration; it does not determine whether remote content is trustworthy or suitable for the current environment. Use publicly shareable addresses in public configurations and keep internal download sources out of examples.</p>
+<p>See the <a href="/en/docs/tools/simple-file-updater/">usage guide</a> for steps and parameters.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

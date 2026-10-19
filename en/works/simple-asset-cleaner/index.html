@@ -9,8 +9,7 @@
 <p>The tool starts from resources the project considers important to form an inspectable reference scope. Teams can review candidates before submission or consolidated cleanup while configuring special resources separately.</p>
 <h2 id="core-capabilities">Core capabilities</h2>
 <h3 id="configuring-analysis-roots">Configuring analysis roots</h3>
-<p>Root asset types, custom root assets, and additional root paths define what should be retained. Default root types include map assets. Projects can also add important Blueprints, DataAssets, or specified directories to root and protection scope.</p>
-<p>The tool traces reference chains from these roots; only assets outside the chains become candidates. Results are more useful when root configuration reflects actual project usage.</p>
+<p>The tool traces reference chains from project-defined root assets and protected directories, then lists assets outside that coverage as candidates. Configure the retention scope to match actual project usage.</p>
 <h3 id="handling-candidates-during-submission">Handling candidates during submission</h3>
 <p>With automatic cleanup enabled, the plugin checks newly added version-controlled assets during submission. New files considered unreferenced are reverted from the submission list while local files remain, allowing developers to inspect them before deciding what to keep.</p>
 <p>This action targets routine submissions and does not delete all historical files from disk.</p>
@@ -22,7 +21,8 @@
 <p>With many asset directories or indirect references, defining roots and protected paths first helps avoid decisions based only on directory names.</p>
 <h2 id="scope-and-limitations">Scope and limitations</h2>
 <p>Reference analysis assumes configured roots. Assets outside roots or protected paths that business logic still uses in special workflows must be identified and added by the project.</p>
-<p>Full cleanup may delete committed files. Review logs and results on a recoverable version before applying it to a production project.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>Full cleanup may delete committed files. Review logs and results on a recoverable version before applying it to a production project.</p>
+<p>For operation steps and parameter details, see the <a href="/en/docs/guides/ue-tools/simple-asset-cleaner-guide/">user guide</a>.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

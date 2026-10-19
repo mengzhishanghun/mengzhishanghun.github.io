@@ -6,21 +6,23 @@
 <p>被排除的文件也可按需复制到另一个目标目录，供后续部署使用。</p>
 <h2 id="背景与目标">背景与目标</h2>
 <p>同一个项目常有调试、测试和正式环境所需的不同配置。手工维护 DefaultGame.ini 中的包含和排除条目时，需要同时顾及文件路径、已有规则以及编辑器缓存。</p>
-<p>插件的目标是让使用者逐个文件选择“哪些配置随包发布”，同时提供另行交付排除项的入口。</p>
+<p>使用者可以逐个文件选择哪些配置随包发布，再按需要另行交付被排除的文件。</p>
 <h2 id="核心能力">核心能力</h2>
 <h3 id="三态配置选择">三态配置选择</h3>
 <p>每个配置文件可设为 Default、Allowed 或 Disallowed。Default 跟随 UE 原有行为，Allowed 和 Disallowed 则分别对应明确的包含、排除意图。</p>
 <p>项目设置中的列表来自 Config 目录扫描，便于对照实际文件检查遗漏项。</p>
 <h3 id="staging-规则同步">Staging 规则同步</h3>
-<p>插件读取 DefaultGame.ini 的 Staging 区段，识别现有规则，并在状态调整后写回相应条目。写入前会处理版本控制签出或只读状态，写回后重新加载配置，使设置面板与磁盘内容保持对应。</p>
-<p>因为这是项目配置文件变更，仍应纳入正常的版本审查。</p>
+<p>将配置选择保存为 UE 打包使用的包含或排除规则，并同步设置状态。</p>
+<p>这些修改会写入项目配置文件，仍需经过正常的版本审查。</p>
 <h3 id="排除文件复制">排除文件复制</h3>
 <p>不随基础包发布、但某些部署环境仍需要的 ini 文件，可以通过工具复制到指定目录。复制目标和是否清理目标 Config 目录需要由使用者确认，输出文件也应按实际部署环境核对。</p>
 <h2 id="适用场景">适用场景</h2>
-<p>适合把调试配置从正式包中排除，或为测试与生产环境准备不同配置集。项目可以先生成不含特定文件的基础包，再按环境另行处理被排除项；这种方式有助于把打包规则和部署步骤分开核查。</p>
+<p>调试开关、性能分析参数、测试服务器地址和开发密钥等开发环境配置，可以按文件从正式包中排除；不需要随包发布的插件内部配置也可以单独管理。测试与生产环境需要不同配置集时，可以先生成不含这些文件的基础包，再按环境处理被排除项，分别核查打包规则和部署步骤。</p>
 <h2 id="适用范围与边界">适用范围与边界</h2>
 <p>插件管理 Config 下 ini 文件的打包规则和复制动作。</p>
-<p>排除配置不等于完成敏感信息保护，目标目录中的副本仍需按项目权限管理。状态调整会修改 DefaultGame.ini；发布前应检查实际包内容、复制目标及版本控制差异。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>排除配置不等于完成敏感信息保护，目标目录中的副本仍需按项目权限管理。状态调整会修改 DefaultGame.ini；发布前应检查实际包内容、复制目标及版本控制差异。</p>
+<p>Staging 规则、直接读取文件与 <code>GConfig</code> 缓存重载的实现说明见 <a href="/zh/blog/cnblogs-19770930/">《如何管理打包时的配置文件排除》</a>。</p>
+<p>操作步骤和参数说明见 <a href="/zh/docs/guides/ue-tools/simple-config-exclude-guide/">使用教程</a>。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

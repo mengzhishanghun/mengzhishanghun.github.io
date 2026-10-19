@@ -12,7 +12,7 @@
 <p>The tool uses the Perforce CLI to retrieve opened files in a specified changelist or default.</p>
 <p>Its scope matches the submission being handled, allowing path checks before the actual submit without scanning the entire repository for unrelated files.</p>
 <h3 id="checking-actual-local-capitalization">Checking actual local capitalization</h3>
-<p>Using path mappings and local disk directories, the tool checks actual capitalization at each path level. Colors distinguish unchanged entries, automatic corrections, and manual changes, helping users identify items needing attention and their proposed target paths.</p>
+<p>The tool checks capitalization at each level against actual local directories and provides a consolidated preview of suggested paths and manual adjustments.</p>
 <h3 id="manual-adjustment-and-verification">Manual adjustment and verification</h3>
 <p>Users can fine-tune target paths beyond the automatic suggestions. After applying changes, the tool checks consistency again.</p>
 <p>Corrections may involve <code>p4 move</code>. Verify target paths in the list before execution, then inspect the pending submission through the normal Perforce workflow afterward.</p>
@@ -21,7 +21,8 @@
 <p>For a changelist with several path changes, a consolidated preview makes omissions easier to spot.</p>
 <h2 id="scope-and-limitations">Scope and limitations</h2>
 <p>The tool requires an available Perforce CLI, correct workspace mappings, and a valid login.</p>
-<p>Path corrections are version control operations and may change opened file records. Check the target list before applying them and review the changelist afterward. The tool handles path consistency; it does not replace content review or submission permission checks.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p>Path corrections are version control operations and may change opened file records. Check the target list before applying them and review the changelist afterward. The tool handles path consistency; it does not replace content review or submission permission checks.</p>
+<p>See the <a href="/en/docs/tools/p4-case-sync/">usage guide</a> for steps and parameters.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {

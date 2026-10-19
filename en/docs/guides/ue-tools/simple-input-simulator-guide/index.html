@@ -25,7 +25,7 @@ All functions are available in the <strong>Simple Input Simulator</strong> categ
 <table><thead><tr><th>Node</th><th>Description</th></tr></thead><tbody><tr><td><code>Simulate Key Input</code></td><td>Simulate press/release events for any input key</td></tr></tbody></table>
 <p><strong>Parameters:</strong></p>
 <ul>
-<li><strong>Key</strong>: Input key to simulate (Space Bar, Left Mouse Button, Gamepad buttons, etc.)</li>
+<li><strong>Key</strong>: UE FKey input key to simulate (Space Bar, Left Mouse Button, Gamepad buttons, etc.)</li>
 <li><strong>Pressed</strong>: <code>true</code> for press, <code>false</code> for release</li>
 <li><strong>Player Index</strong>: Target player controller (0 = first player)</li>
 </ul>
@@ -105,7 +105,8 @@ All functions are available in the <strong>Simple Input Simulator</strong> categ
 <ul>
 <li>All functions return <code>bool</code> indicating success/failure</li>
 <li>Player Index 0 targets the first player controller</li>
-<li>Use Flush Pressed Keys to prevent “stuck” key states</li>
+<li>Pair press events with releases. After a test, demonstration, or replay, use Flush Pressed Keys to clear remaining state and prevent stuck keys</li>
+<li>Nodes can also be called in the editor, but require a valid PlayerController; without one, input cannot be injected as intended</li>
 <li>Axis inputs automatically adapt to current frame rate</li>
 <li>Check Output Log for detailed simulation messages (LogSimpleInputSimulator)</li>
 </ul>

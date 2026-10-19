@@ -9,13 +9,11 @@
 <p>The work consolidates these choices into one workflow. Its GUI serves the current project, while the command line supports automation with an explicitly specified project.</p>
 <h2 id="core-capabilities">Core capabilities</h2>
 <h3 id="project-detection-and-configuration-isolation">Project detection and configuration isolation</h3>
-<p>The GUI detects the .uproject and associated engine from the current project directory, fixing that detected project as the packaging target. Project paths, engine directories, output directories, build types, and extra copy rules are stored separately per project to prevent choices from carrying directly into another project.</p>
-<p>The CLI requires an explicit project when it cannot determine one from the current directory.</p>
+<p>The tool automatically detects the current UE project and associated engine, and saves packaging options per project to avoid mixing configurations from different projects.</p>
 <h3 id="ue-packaging-and-result-inspection">UE packaging and result inspection</h3>
-<p>The tool calls UAT for building, cooking, staging, creating Pak files, and archiving, supporting build types including DebugGame, Development, Test, and Shipping. Users configure output and observe progress in the GUI, or validate configuration, preview commands, and package through the CLI.</p>
-<p>Packaging results come from UAT; the tool organizes invocation and feedback.</p>
+<p>The tool organizes project packaging through UAT, supports multiple build types, and provides process logs. Both the GUI and CLI can start packaging; actual build results still come from UAT.</p>
 <h3 id="additional-deployment-after-success">Additional deployment after success</h3>
-<p>Each copy rule specifies a source and destination directory within the package, supporting both files and folders. Directory copying supports recursive exclusion by name patterns and checks copied file integrity.</p>
+<p>Rules can copy files or folders into the package and filter out content that should not be delivered.</p>
 <p>This stage only runs after UE packaging succeeds, preventing extra content from being placed into failed outputs. Targets are restricted to the package root, so rules cannot write to arbitrary external paths.</p>
 <h3 id="old-package-cleanup-controls">Old package cleanup controls</h3>
 <p>Users may choose to clean an old package detected at the current output location before packaging, but actual cleanup still requires confirmation. Changing output paths does not retroactively clean the old location, protecting other directories. Cleanup and additional deployment both operate on the current packaging target.</p>
@@ -27,7 +25,8 @@
 <p>Full Debug builds, standalone plugin packaging, automatic editor closure, and project version control operations are outside the tool’s responsibilities. Projects must still confirm additional file content, licensing, and deployment locations.</p>
 <h2 id="screenshots">Screenshots</h2>
 <figure class="media-figure media-image"><a href="/media/manuals/baf8b7b901418c64d1f2.png" class="media-image-trigger" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/baf8b7b901418c64d1f2.png" data-media-alt="Image not published" aria-label="Enlarge image: Image not published"><img src="/media/manuals/baf8b7b901418c64d1f2.png" alt="Image not published" loading="lazy" decoding="async"></a><figcaption>Image not published</figcaption></figure>
-<p><em>UEPackageManager graphical interface: configuring the project, packaging parameters, and additional file copy rules.</em></p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<p><em>UEPackageManager graphical interface: configuring the project, packaging parameters, and additional file copy rules.</em></p>
+<p>For operation steps and parameter details, see the <a href="/en/docs/tools/ue-package-manager/">user guide</a>.</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {
