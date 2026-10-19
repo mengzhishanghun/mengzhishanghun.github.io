@@ -198,3 +198,7 @@
 .site-chrome .work-information-card .work-compatibility-label {
   font-weight: 500;
 }
+
+.work-status-developing{color:#e7c982}.work-action-unavailable{color:var(--muted,#a7bad0);background:transparent;border-style:dashed}.work-action-unavailable:hover{background:transparent;color:var(--muted,#a7bad0)}
+
+.site-chrome .project-hero.work-without-media{grid-template-columns:minmax(0,1fr)}
