@@ -3,9 +3,10 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import {generatedPage} from './interaction-fixtures.mjs';
+import {projectImageViewers} from './media.mjs';
 
 function viewer(relative,mediaURL) {
-  const fixture=generatedPage(relative);
+  const fixture=generatedPage(relative,html=>projectImageViewers(html,relative?.startsWith('en/')?'en':'zh'));
   const anchorNode=mediaURL?fixture.nodes.find(node=>node.tagName==='a'&&fixture.attrs(node)['data-media-image']!==undefined&&fixture.attrs(node).href===mediaURL):fixture.select('a[data-media-image]');assert.ok(anchorNode,'the generated article supplies a published image trigger');
   const frameNode=fixture.closest(anchorNode,'.site-chrome-main,.main-frame');
   assert.ok(frameNode,'the generated page supplies the viewer scroll container');
@@ -17,7 +18,7 @@ function viewer(relative,mediaURL) {
   const window={SiteCopy:fixture.copy,addEventListener:(name,fn)=>windows[name]=fn};
   let source=fs.readFileSync(new URL('../shared/i18n/scripts/_astro/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.js',import.meta.url),'utf8');source=source.replaceAll('import.meta.resolve','false').replaceAll('import.meta.url','"https://mzsh.me/_astro/viewer.js"').replace(/l\(\);\s*$/,'l(testLoader);');
   vm.runInNewContext(source,{document,window,URL,location:{href:'https://mzsh.me/zh/blog/one/',assign:url=>fallback.push(url)},matchMedia:()=>({matches:false}),testLoader:()=>loading});
-  const click=(target=anchor)=>listeners.click({target:{closest:s=>fixture.matches(anchorNode,s)?target:null},button:0,preventDefault(){}});
+  const click=(target=anchor,options={})=>listeners.click({target:{closest:s=>fixture.matches(anchorNode,s)?target:null},button:0,preventDefault(){},...options});
   return {anchor,frame,opened,fallback,click,navigate:()=>listeners['astro:before-preparation'](),hide:()=>windows.pagehide(),finish:(dimensions={})=>finish([{default:Viewer},{},{default:dimensions}]),reject:()=>reject(Error('load failed'))};
 }
 
@@ -30,8 +31,35 @@ test('scrolling during image dependency loading restores the latest position on 
 
 test('English docs use the shared viewer copy slots',async()=>{const x=viewer('en/docs/guides/ue-tools/simple-tcp-client-guide/index.html');const pending=x.click();x.finish();await pending;assert.equal(x.opened[0].options.closeTitle,'Close image');assert.equal(x.opened[0].options.zoomTitle,'Zoom image');});
 test('missing image dimensions fall back to the current image URL',async()=>{const x=viewer();x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:'Image'});const pending=x.click();x.finish();await pending;assert.deepEqual(x.fallback,[x.anchor.href]);});
+test('keyboard activation opens image anchors and modified clicks retain native link behavior',async()=>{
+  for(const options of [{ctrlKey:true},{metaKey:true},{shiftKey:true},{altKey:true},{button:1},{defaultPrevented:true}]){const x=viewer();await x.click(x.anchor,options);assert.equal(x.opened.length,0);assert.equal(x.fallback.length,0);}
+  const x=viewer();const pending=x.click(x.anchor,{detail:0});x.finish();await pending;assert.equal(x.opened.length,1);assert.equal(x.opened[0].options.escKey,true);assert.equal(x.opened[0].options.doubleTapAction,'zoom');
+});
+test('projected home and listing image entries use the existing viewer in both languages',async()=>{
+  for(const locale of ['zh','en'])for(const [page,url]of [['index.html','/assets/home/features/plugin-auto-packer-1280.webp'],['works/index.html','/assets/covers/simple-bp-inherit-fix.png'],['cases/index.html','/assets/cases/driving-simulator-three-screen.png']]){
+    const x=viewer(locale+'/'+page,url);const pending=x.click();x.finish();await pending;assert.equal(x.opened.length,1);x.opened[0].destroy();assert.equal(x.anchor.focused,true);assert.equal(x.frame.scrollTop,125);
+  }
+});
 test('all three contact/support QR triggers still open the existing shared viewer',async()=>{for(const locale of ['zh','en'])for(const url of ['/assets/contact/wechat-personal-qr.webp','/assets/support/wechat-pay-qr.webp','/assets/support/alipay-qr.webp']){const x=viewer(locale+'/contact/index.html',url);const pending=x.click();x.finish();await pending;assert.equal(x.opened.length,1);assert.equal(x.fallback.length,0);assert.ok(x.opened[0].options.closeTitle);}});
 test('all newly approved images open before natural dimensions load and preserve zoom and close restoration',async()=>{
   const frozenURL=new URL('../shared/compat/_astro/media-dimensions.BM-KTszl.js',import.meta.url),code=fs.readFileSync(new URL('../shared/i18n/client/media-dimensions.js',import.meta.url),'utf8').replace("from '/_astro/media-dimensions.BM-KTszl.js'",'from '+JSON.stringify(frozenURL.href)),dimensions=await import('data:text/javascript,'+encodeURIComponent(code)),manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url),'utf8'));assert.equal(Object.keys(dimensions.additionalDimensions).length,45);
   for(const [url,size]of Object.entries(dimensions.additionalDimensions)){const entry=manifest.entries.find(e=>e.mediaOccurrences?.some(o=>o.websiteUrl===url)),route=entry.legacyRoutes[0].replace(/^\/docs\/(?:zh|en)\//,'/docs/');for(const locale of ['zh','en']){const x=viewer(locale+route+'index.html',url);x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:x.anchor.dataset.mediaAlt});const pending=x.click();x.finish(dimensions.default);await pending;assert.equal(x.opened.length,1);assert.equal(x.fallback.length,0);const options=x.opened[0].options;assert.equal(options.dataSource[0].width,size.width);assert.equal(options.dataSource[0].height,size.height);assert.equal(options.initialZoomLevel,'fit');assert.equal(options.maxZoomLevel,2);assert.equal(options.wheelToZoom,true);assert.equal(options.trapFocus,true);x.frame.scrollTop=700;x.opened[0].destroy();assert.equal(x.frame.scrollTop,125);assert.equal(x.anchor.focused,true);}}
+});
+test('restored published blog images open from the dimension registry before lazy loading',async()=>{
+  const frozenURL=new URL('../shared/compat/_astro/media-dimensions.BM-KTszl.js',import.meta.url);
+  const code=fs.readFileSync(new URL('../shared/i18n/client/media-dimensions.js',import.meta.url),'utf8').replace("from '/_astro/media-dimensions.BM-KTszl.js'",'from '+JSON.stringify(frozenURL.href));
+  const {default:dimensions}=await import('data:text/javascript,'+encodeURIComponent(code));
+  const manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url),'utf8'));
+  for(const entry of manifest.entries)for(const occurrence of entry.mediaOccurrences||[]) {
+    const url=occurrence.websiteUrl;
+    if(occurrence.state!=='public'||!url.startsWith('/media/restored-blog/')&&url!=='/media/imported/blog/746c135cbfc3463f7ebd.png')continue;
+    for(const locale of ['zh','en']) {
+      const route=entry.legacyRoutes[0].replace(/^\/docs\/(?:zh|en)\//,'/docs/'),x=viewer(locale+route+'index.html',url);
+      x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:'Image'});
+      const pending=x.click();x.finish(dimensions);await pending;
+      assert.equal(x.opened.length,1,url);assert.equal(x.fallback.length,0,url);
+      assert.equal(x.opened[0].options.dataSource[0].width,dimensions[url].width);
+      assert.equal(x.opened[0].options.dataSource[0].height,dimensions[url].height);
+    }
+  }
 });

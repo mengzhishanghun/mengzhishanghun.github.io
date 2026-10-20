@@ -181,4 +181,114 @@ export const additionalDimensions={
     "height": 1587
   }
 };
-export default {...legacyDimensions,...additionalDimensions};
+const restoredBlogDimensions={
+  "/media/restored-blog/be244c809644612c81331d0711bd3fbf2bc9be7d1192801b2cc5f6ef059d55f3.png": {
+    "width": 966,
+    "height": 588
+  },
+  "/media/restored-blog/f56256c56a7448268435bbcae2d118f05f429e48c043bf4d796fd576aed030f4.png": {
+    "width": 1445,
+    "height": 592
+  },
+  "/media/restored-blog/43a7f9b936b2d53eb149dcf920709ab8e78340dec6de237b506f9baeb8bb3094.png": {
+    "width": 496,
+    "height": 220
+  },
+  "/media/restored-blog/8f9efdbf145b93c9e73b779cbf8af0cc7b1ed3311baa6b4794c3ac56ca4e6c1e.png": {
+    "width": 497,
+    "height": 132
+  },
+  "/media/restored-blog/250266d9b10f339a2ffc14ca068baa6bab3dfca77167e02f1c0e42734d2c92c0.png": {
+    "width": 438,
+    "height": 194
+  },
+  "/media/restored-blog/8ab2c546312f19a851b99eb6a302534560206b3a7c74ac854d1f61f51da55d1f.png": {
+    "width": 488,
+    "height": 61
+  },
+  "/media/restored-blog/172d8895f6cc831c402cc642a4476e04bdc34be456e633e956309289fc9f01e9.png": {
+    "width": 543,
+    "height": 322
+  },
+  "/media/restored-blog/cfd9578b8b3248a41b7088fb159f22425968880766482cd9bcb7cf1773c8d8a1.png": {
+    "width": 461,
+    "height": 89
+  },
+  "/media/restored-blog/a75681a6b5cf5565dd638efbcbc373a338f274306b097fab57531101f5f8deab.png": {
+    "width": 925,
+    "height": 940
+  },
+  "/media/restored-blog/517f23690877d490640a1631b8f288148411ddb0982a0d03f777f9edbfb55985.png": {
+    "width": 925,
+    "height": 940
+  },
+  "/media/restored-blog/c19529bfc3d9312afe76439768af169160f046df762dad6faddd49f2ccee567e.png": {
+    "width": 3828,
+    "height": 1938
+  },
+  "/media/restored-blog/d2647116e2a800d4d25eccfb2fdd91e2bdace91f27d05efeda897f3cb514c202.png": {
+    "width": 3840,
+    "height": 2111
+  },
+  "/media/restored-blog/77683bea7c41be164f65d209ff067a28ff4a96a5d91690d6c3106ad21d08c8b6.png": {
+    "width": 3840,
+    "height": 2100
+  },
+  "/media/restored-blog/2fb652bb0ea9f4db048a26f4c1d685c3f4442536b732932b4cd6f2bad1a75edd.png": {
+    "width": 3840,
+    "height": 2100
+  },
+  "/media/restored-blog/92729c94bd78c624b975e6ef4f07451bfb88a4ce87ac0c85ff6b1af7f71213a3.png": {
+    "width": 3840,
+    "height": 2100
+  },
+  "/media/restored-blog/32fb5e9e145f8de054eaf95e9d9aabb56c25d346b12584c9ed6e32544ccf4ed9.png": {
+    "width": 768,
+    "height": 1065
+  },
+  "/media/restored-blog/3dc553a651ecbacfe6260adb049dbed3ec0ca0fb8fa23b3d912eb3afe7c8e07d.png": {
+    "width": 3840,
+    "height": 2111
+  },
+  "/media/restored-blog/192ebb42dccb7f26aab0272482f915a6826d3088edd6e261f11950f593d70ad0.png": {
+    "width": 1080,
+    "height": 1443
+  },
+  "/media/restored-blog/f713253717b2e7837836b00e4147b4103b7dba260645a5f6209fa529a2cc695e.png": {
+    "width": 1380,
+    "height": 1157
+  },
+  "/media/restored-blog/6b3727b09d4fd0b93f6c51ea5e3eacd1acc4311958fb901fbe5653e9a237135d.png": {
+    "width": 3840,
+    "height": 2100
+  },
+  "/media/restored-blog/ee8a59c2acfe7080dfb7477eb11225e92b4380112725ae41cf48bd6aa285ee28.png": {
+    "width": 3840,
+    "height": 2100
+  },
+  "/media/restored-blog/445df5f984c699f70dd702f68de53168af1752f547beb12ef7d5a80b66c18b16.png": {
+    "width": 675,
+    "height": 641
+  },
+  "/media/restored-blog/6a5093140dab74bf911c7397d945335e89431fe1eca1ad8d45453e527f8e0950.png": {
+    "width": 3840,
+    "height": 2100
+  },
+  "/media/restored-blog/7815693ac1ab7bacb6b3d7ac0969ca168f9c3224d102c44140eefcaf3945f47f.png": {
+    "width": 624,
+    "height": 141
+  },
+  "/media/restored-blog/eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33.png": {
+    "width": 856,
+    "height": 483
+  },
+  "/media/imported/blog/746c135cbfc3463f7ebd.png": {
+    "width": 2229,
+    "height": 1241
+  }
+};
+export default {...legacyDimensions,...additionalDimensions,...restoredBlogDimensions,
+  '/assets/cases/blueprint-inheritance-repair.png':{width:1600,height:800},
+  '/assets/cases/data-asset-json-sync.png':{width:1600,height:800},
+  '/assets/cases/metahuman-animation-clipping.png':{width:1600,height:800}
+};

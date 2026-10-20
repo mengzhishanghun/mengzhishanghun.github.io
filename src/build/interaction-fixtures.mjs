@@ -3,8 +3,8 @@ import {createRequire} from 'node:module';
 import {walk,attrs} from './extract-dom.mjs';
 const require=createRequire(new URL('../../package.json',import.meta.url));
 const {parse}=require('parse5');
-export function generatedPage(relative='zh/blog/cnblogs-19136316/index.html') {
-  const tree=parse(fs.readFileSync(new URL('../../'+(process.env.SITE_OUTPUT||'dist/site')+'/'+relative,import.meta.url),'utf8'));
+export function generatedPage(relative='zh/blog/cnblogs-19136316/index.html',transform=html=>html) {
+  const tree=parse(transform(fs.readFileSync(new URL('../../'+(process.env.SITE_OUTPUT||'dist/site')+'/'+relative,import.meta.url),'utf8')));
   const nodes=[];walk(tree,node=>nodes.push(node));
   const matches=(node,selector)=>{
     const tag=selector.match(/^[a-z][\w-]*/)?.[0],classes=[...selector.matchAll(/\.([\w-]+)/g)].map(x=>x[1]),attributes=[...selector.matchAll(/\[([\w-]+)(?:="([^"]*)")?\]/g)];

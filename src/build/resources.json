@@ -3559,7 +3559,7 @@
       "outputs": [
         "assets/site-ui/content-index.css"
       ],
-      "sha256": "d176a814bfc3c6c22946d692e762b0d40ba7e91160e37de351e4b3f976cea7b7",
+      "sha256": "75df7caae4af09c32a402147742793f7611e05357ae480bc4e250d9549661286",
       "mode": "authored"
     },
     {
@@ -3925,9 +3925,9 @@
     {
       "source": "src/shared/i18n/client/media-dimensions.js",
       "outputs": [
-        "assets/site-ui/media-dimensions.39f08b6fb0d0.js"
+        "assets/site-ui/media-dimensions.7711eefa3c9a.js"
       ],
-      "sha256": "39f08b6fb0d0dd4c342913f02582b824aa1b59e6f9e6529f05ec117de36ea7ff",
+      "sha256": "7711eefa3c9ab3460fc98a194a0e6893f824100dbf27578b8d28a710a56ebe8b",
       "mode": "authored"
     },
     {

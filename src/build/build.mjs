@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {pathToFileURL} from 'node:url';
 import {attrs,walk,applyEdits,templateName} from './extract-dom.mjs';
 import {readLanguages,languageSource,publicLanguages} from './languages.mjs';
-import {mapMedia} from './media.mjs';
+import {mapMedia,projectImageViewers} from './media.mjs';
 import {assertPublicFields} from './source-schema.mjs';
 import {articleTypes,validateArticleIdentities,shareRoute} from '../engagement/article-identities.mjs';
 import {loadResources,regularPath,resourcePath,safeRelative} from './resources.mjs';
@@ -501,6 +501,7 @@ export async function buildSite(options) {
     if (/\{\{(?:text|body|outline|profile)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
     const anchors = Object.fromEntries(codes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
     html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,config,copy[locale].engagementLabels);
+    html=projectImageViewers(html,locale);
     files.set(routeFile(localeRoute(entry,locale)),Buffer.from(html));
   }
   const aliases=new Map();
