@@ -799,14 +799,5 @@
       ]
     }
   },
-  "legacyOnly": [
-    "blog:cnblogs-19136345",
-    "blog:cnblogs-19165484",
-    "blog:cnblogs-19165541",
-    "blog:cnblogs-19204715",
-    "blog:cnblogs-19770930",
-    "blog:cnblogs-19770934",
-    "blog:cnblogs-20030737",
-    "blog:cnblogs-20159718"
-  ]
+  "legacyOnly": []
 }

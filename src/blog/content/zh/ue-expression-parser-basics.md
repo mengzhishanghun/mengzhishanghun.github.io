@@ -21,41 +21,20 @@ lang: zh
 translationKey: ue-expression-parser-basics
 ---
 
-# 在 UE 中探索游戏公式的语法解析
+事件简单公式解析
+===
 
-游戏事件里有时需要把条件或计算规则写成字符串，再根据当前属性算出结果。这篇文章从我给自己游戏写的一个简单解析器出发，探索在 UE C++ 中怎样处理这样的公式。
+# 定义
+这个是给我的游戏写的一个简单解析，摘抄到这里以防不时之需
 
-这个解析器按字符串校验、Token 拆分、属性替换和优先级求值逐步处理公式。实现依赖游戏工程中的基类、宏和日志分类，一些边界情况也还需要完善。
+该解析可以识别判断，逻辑与或，加减乘除，括号和三目运算符
 
-## 定义与使用场景
+为了适配游戏需求，还额外添加了自定义属性的识别和替换
 
-我想让游戏事件通过文本表达判断条件和计算规则，于是写了这个简单的解析器。
+# 实现
 
-这个解析器支持比较判断、逻辑与或、四则运算、括号和三目运算符。
-
-为了让公式使用游戏里的数据，我还添加了自定义属性的识别和替换。
-
-例如，想让一个事件只在力量和金币都达到要求时触发，可以约定这样的写法：
-
-```text
-[力量] >= 10 && [金币] >= 100
-```
-
-`[力量]`、`[金币]` 表示游戏属性，比较运算得到真假，再由 `&&` 合并条件。也可以用三目运算选择数值：
-
-```text
-[力量] >= 10 ? 100 : 50
-```
-
-这两个例子说明想支持的语法。实际解析器需要先读懂文本，再由游戏提供属性值，最后计算结果。代码中的属性映射是固定的演示数据，还需要按项目情况接入角色或事件上下文。
-
-这份实现的处理思路是：统一部分中文标点，校验字符串，拆分 Token，替换属性，再按优先级求值。结果使用 `int32`，比较与逻辑运算的真假以 1 和 0 表示。
-
-## 实现：头文件与 UE 接口
-
-**.h**
-
-```cpp
+## .h
+```C++
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
@@ -81,18 +60,11 @@ public:
 
 
 ```
-
-头文件中的基类来自我的游戏工程，移到其他项目时需要修改。这里提供两个接口：一个检查字符串是否有效，返回 bool 和错误信息；另一个计算字符串的值。具体实现都放在 .cpp 中，集中处理公式解析。
-
-`CheckStrIsValid` 对应校验入口，`GetStrValue` 对应求值入口。这里的基类 `UMyGameSubsystem`、`CREATETHISSUBSYSTEM` 宏、导出宏和相关头文件属于游戏工程，移到其他项目时需要适配。后面的代码也使用了项目日志分类 `MyGameLog`。
-
-## 实现：源文件与解析过程
-
-**.cpp：Token 类型与结构**
-
-计算公式时，需要把 `123` 识别成一个数字，把 `>=` 识别成一个比较符，把 `[HHHH]` 识别成属性引用。这样的片段称为 Token。下面先定义 Token 的分类和保存方式。
-
-```cpp
+头文件这里的基类是我游戏中新建的，需要修改
+这里仅提供了两个简单接口，一个是检测这个字符串是否有效，会返回一个bool和错误信息，一个是获取这个字符串的值
+具体实现全都在.cpp里，因为都是专门为了这个功能写的，所以全都放.cpp里来进行封装
+## .cpp
+```C++
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
@@ -125,13 +97,6 @@ struct FToken {
 		: Type(InType), Value(InValue) {}
 };
 
-```
-
-**字符串替换与中文标点转换**
-
-`RegexReplace` 封装正则替换。`ReplaceChinesePunctuationWithEnglish` 按映射把部分中文标点转换成英文符号，为后面的处理统一输入。映射只是替换规则，转换后的符号是否能用于公式，还需要由校验步骤判断。
-
-```cpp
 FString RegexReplace(FString const& Str, FString const& Regex, FString const& ReplaceStr)
 {
 	return 	UTF8_TO_TCHAR(std::regex_replace(std::string(TCHAR_TO_UTF8(*Str)),
@@ -185,13 +150,6 @@ FString ReplaceChinesePunctuationWithEnglish(const FString& Expression) {
 	return Result;
 }
 
-```
-
-**校验公式字符串**
-
-`IsValidExpression` 先移除空白，再检查属性引用格式。为了检查属性以外的表达式，它临时把属性引用替换为 `0`，然后用一组正则排除非法字符和符号组合，并检查括号与三目符号的配对关系。每条规则都对应一条错误信息，方便定位不合法的输入。
-
-```cpp
 bool IsValidExpression(const FString& Expression, FString& ErrorMessage)
 {
 	FString CheckStr = Expression;
@@ -355,15 +313,6 @@ bool IsValidExpression(const FString& Expression, FString& ErrorMessage)
     return true;;
 }
 
-```
-
-这种写法把校验规则集中在一起，便于对照阅读。不过，排除已知错误的模式不等于定义了完整语法，求值时仍然需要检查操作数和结构。
-
-**把公式拆成 Token**
-
-`Tokenize` 按字符扫描字符串，识别括号、运算符和属性名，并把连续数字合并。它还尝试根据前一个 Token 判断正负号的含义：一元正号不作为加法保留，一元负号转换为乘以 `-1`。
-
-```cpp
 TArray<FToken> Tokenize(const FString& Expression)
 {
 	FString CheckStr = RegexReplace(Expression, TEXT(R"(\s)"), TEXT(""));
@@ -446,15 +395,6 @@ TArray<FToken> Tokenize(const FString& Expression)
 	return Tokens;
 }
 
-```
-
-例如 `[HHHH]>=+3-5` 的分词意图是识别属性 `HHHH`、比较符 `>=`、数字 `3`、减号和数字 `5`。这里的 `+3` 表示正数，并不是缺少左操作数的加法。
-
-**运算符分类与单步计算**
-
-`CheckPrecedence` 判断运算符是否属于当前要处理的类别，实际的优先级顺序由后面的 `Evaluate` 决定。`ApplyOperator` 接收两个整数和运算符，完成一次计算；整数除法采用 C++ 整数除法规则，比较和逻辑运算返回 1 或 0。
-
-```cpp
 bool CheckPrecedence(const ETokenType& Precedence, const FString& Op) {
 	switch (Precedence) {
 	case ETokenType::Operator_Add:
@@ -491,15 +431,6 @@ int32 ApplyOperator(const int32 A, const int32 B, const FString& Op)
 	return 0;
 }
 
-```
-
-当前实现遇到除零会返回 0，遇到无法识别的运算符会写日志并返回 0。调用方不能仅凭结果为 0 判断是否出错。
-
-**按括号和优先级归约公式**
-
-`Evaluate` 先找括号，将括号内部递归求值，再把相应片段替换成数字。随后依次处理乘除、加减、比较、逻辑与、逻辑或，最后处理三目选择。
-
-```cpp
 int32 Evaluate(const TArray<FToken>& Tokens) {
 	
 	TArray<FToken> HandleTokens = Tokens;
@@ -568,22 +499,6 @@ int32 Evaluate(const TArray<FToken>& Tokens) {
 	return HandleTokens.Num() ? FCString::Atoi(*HandleTokens[0].Value) : 0;
 }
 
-```
-
-这段代码想表达的求值顺序，可以用下面两条公式说明：
-
-```text
-1 + 2 * 3      → 先算 2 * 3，再加 1，预期结果为 7
-(1 + 2) * 3    → 先算括号里的 1 + 2，再乘 3，预期结果为 9
-```
-
-这些是预期语义示例，尚未通过运行代码验证。同级运算也需要保持顺序，例如 `8 / 2 / 2` 按从左到右计算应得到 2。
-
-**校验入口、属性替换与求值入口**
-
-最后回到蓝图可以调用的两个函数。校验入口先转换标点，再校验字符串；求值入口先分词，再把属性 Token 转为数字，交给 `Evaluate`。
-
-```cpp
 bool UMyGameEventSubsystem::CheckStrIsValid(const FString& Str, FString& Error)
 {
 	return IsValidExpression(ReplaceChinesePunctuationWithEnglish(Str), Error);
@@ -610,28 +525,6 @@ int32 UMyGameEventSubsystem::GetStrValue(FString const& Str)
 
 ```
 
-这里的固定 `TMap` 只演示属性名如何变为数值。实际游戏中，可以由当前角色或事件提供对应属性。代码把未知属性当作 0，这也意味着拼错属性名可能被当作正常数值参与计算。
-
-## 检测
-
-**[HHHH]>=+3-5**
-
+# 检测
+## [HHHH]>=+3-5
 结果：1
-
-这条公式此前记录的结果为 1。示例映射里 `HHHH` 为 555，按预期语义相当于 `555 >= (3 - 5)`，与这个结果一致。该结果尚未在原 UE 工程中重新编译运行核验。
-
-## 阅读代码时的边界与改进方向
-
-从代码来看，要继续完善这个解析器，还需要处理以下问题。
-
-**首次读取 Token 的边界。** `Tokenize` 在处理正负号和普通数字时使用 `Tokens.Last()`，但遇到第一个数字或开头的正负号时，数组可能为空。需要先判断是否存在前一个 Token，再决定当前字符的含义。
-
-**公式顺序。** 括号归约使用了 `RemoveAtSwap`，它不保证剩余元素的顺序。公式依赖顺序，应改用保序处理，或通过解析位置消费 Token。求值时访问左右操作数，也需要确认索引和操作数类型有效。
-
-**校验与求值的关系。** `GetStrValue` 没有先调用 `CheckStrIsValid`。调用方应先校验输入，但求值器也不能只依赖外部校验：空输入、未知字符、缺少操作数和不完整的三目表达式，都需要明确的处理方式。
-
-**短路与分支。** 当前实现先计算运算，再选择三目结果，不能假定它具有 C++ 的短路语义。例如 `[数量] != 0 && 100 / [数量] > 2`，如果约定短路，在数量为 0 时应跳过右侧求值；三目也应只计算选中的分支。这要求解析过程保留分支结构。
-
-**结果与错误。** 除零、未知属性和部分错误都会得到 0，而 0 也是合法结果。后续接口应区分求值是否成功、结果值和错误信息。整数溢出、输入长度、嵌套深度，以及嵌套三目的合法写法也需要明确规则。
-
-继续探索时，可以保留 UE 的字符串和蓝图调用入口，让解析部分按明确语法读取 Token，再由游戏上下文提供属性。递归下降等方法可以把不同优先级交给不同的解析函数；如果要支持短路，还需要在完成语法检查的同时，控制哪些分支真正执行计算。

@@ -146,9 +146,9 @@ function mapURL(url,locale,entries) {
   return url;
 }
 function withoutSourceAttribution(source) {
-  const parts=source.body.trim().split(/\n\s*\n/),last=parts.at(-1);
-  if(source.data.sourceUrl && source.data.date && last?.includes(source.data.sourceUrl) && last.includes(String(source.data.date)))parts.pop();
-  return parts.join('\n\n');
+  const body=source.body,last=body.trim().split(/\n\s*\n/).at(-1);
+  if(source.data.sourceUrl && source.data.date && last?.includes(source.data.sourceUrl) && last.includes(String(source.data.date)))return body.slice(0,body.lastIndexOf(last));
+  return body;
 }
 async function renderBody(entry,locale,processor,site) {
   const source = entry.sources[locale];

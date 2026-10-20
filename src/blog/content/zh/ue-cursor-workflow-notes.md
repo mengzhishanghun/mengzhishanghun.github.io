@@ -21,19 +21,92 @@ lang: zh
 translationKey: ue-cursor-workflow-notes
 ---
 
-# Windows UE 5.6 与 Cursor：先跑通构建，再处理编辑体验
+Cursor+UE从0开始，入坑到退坑指南
+===
 
-## 适用环境与目标
-这是一份 Windows、UE 5.6 的配置经历整理。原记录未留下完整 Cursor 和扩展版本，因此不能视为当前版本兼容性承诺。目标是用 Cursor 编辑 UE C++，并保留独立可用的编译与调试入口。
+本教程仅提供Windows下安装方法，测试环境为UE5.6版本
 
-## 配置顺序
-1. 按 [Epic 的 Visual Studio 配置文档](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine) 安装对应的 MSVC、Windows SDK 和 C++ 游戏开发组件。先用 Visual Studio 或现有可靠工具完成一次 Development Editor 构建。
-2. 从 [Cursor 官网](https://cursor.com/) 安装编辑器。语言包可选；C++ 扩展解决编辑辅助，不能替代编译器。
-3. 按 [Epic 的 VS Code 工作区说明](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/setting-up-visual-studio-code-for-unreal-engine) 生成工作区，用 Cursor 打开生成的 `.code-workspace`，不要仅打开单个源文件。
-4. 检查生成的构建任务是否指向自己的引擎、项目和 Editor 目标，再配置 IntelliSense。索引报错与真实编译失败分开诊断。
+# 环境部署
 
-## 调试器故障怎么处理
-原记录出现 `cppvsdbg` 不受支持的提示，但没有证据证明某个扩展或设置能修复。遇到它时记录 Cursor、C/C++ 扩展和任务配置版本，核对调试适配器在该编辑器中的支持情况。构建仍可通过已验证入口完成，调试可暂时使用 Visual Studio；不要把反复重装扩展写成确定解法。
+已经安装了编译环境，可以正常运行VS或者Rider的可以跳过这一步
+## 下载安装编译器工具集
 
-## 小项目验证与限制
-新建临时 C++ 项目，完成编译、启动编辑器并确认断点命中，再迁移自己的工作区。F5 通常调用工作区定义的调试流程，不能保证自动选择正确目标。本整理未复现原环境，未使用未经审核的截图。
+[Microsoft Visual C++ （MSVC）编译器工具集](https://visualstudio.microsoft.com/downloads/)。
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A1)
+
+## 配置VS
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A2)
+
+勾选如图三个选项后点击安装
+
+# 配置Cursor
+
+### 下载安装 Cursor
+
+[Cursor：用 AI 编码的最佳方式](https://cursor.com/cn)
+## 打开扩展界面
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A3)
+## 安装中文语言包
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A4)
+
+搜索Chinese，第一个点击安装，安装后会提示重启，点击重启即可。
+## 安装C++ C#扩展
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A5)
+
+搜索C++ 安装C/C++扩展 和 C#扩展
+
+最终扩展应该是这样的
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A6)
+
+这些通常在安装完C/C++以及C#后自动安装的，如果没有你可以重启尝试或者自己手动安装
+
+## 设置VSCode为默认源码编辑器
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A7)
+
+## 重新生成VSCode工作区
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A8)
+
+## 设置为通过Cursor打开工作区
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A9)
+
+## 设置IntelliSense
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A10)
+
+## 调试与运行
+
+打开调试面板
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A11)
+
+选择Editor Development模式
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A12)
+
+点击左侧箭头或者按F5开始编译
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A13)
+
+等待编译结束
+
+# 报错解决
+
+## cppvsdbg不支持
+
+![](/media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A14)
+
+# 参考文档
+
+[为虚幻引擎设置Visual Studio Code | 虚幻引擎 5.6 文档 | Epic Developer Community](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/setting-up-visual-studio-code-for-unreal-engine)
+
+[为虚幻引擎C++项目设置Visual Studio开发环境 | 虚幻引擎 5.6 文档 | Epic Developer Community](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine)
+
+[How to Setup Cursor IDE for Unreal Engine](https://www.youtube.com/watch?v=9Km1GyYCnh4)

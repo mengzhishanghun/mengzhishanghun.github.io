@@ -19,30 +19,49 @@ docIds: []
 lang: en
 translationKey: ue-level-instance-break-safety
 publishedAt: 2026-10-13
-sourceHash: 87e7ef8e455cfa291d55e7f1bc3dbd52b366445cffb914825f2af804a6ac684d
-generatedBodyHash: acf334e0e30cc065e63c64bd8fa55cf8eec83ab0e66d7af7c4086d6fe9963e58
+sourceHash: 8690940c8d7dc9b6e3cf9b989b3366195192ccb601650cdebe7e23eb22ccb649
+generatedBodyHash: 419af752b561a69ac513db660f75df48995cf1838aeabaa27dfb14c7c40fabb3
 translationStatus: translated
 ---
 
-# Breaking Level Instances in batches: bound the work and stop on failure
+Break All LevelInstances
+===
 
-## Problem and environment
-Breaking a Level Instance may expose nested instances. A loop that continues whenever it finds an instance can repeat forever when one cannot be broken. This article describes a UE5 editor workflow, not a runtime operation.
+# Introduction
 
-## Start with a copy
-Back up the map and test a copy. Identify the world, selected instances and allowed nesting depth rather than traversing every world by default. Confirm levels are loaded, editable and permitted by source control. Use the current Level Instance editor API and retain each operation's success or failure result.
+This function recursively breaks all LevelInstances in the scene.
 
-```text
-Set maximum passes and maximum object count
-Take a snapshot of candidates within the intended scope each pass
-No candidates: complete
-Recheck validity and editability, then attempt each break
-Any failure: record the object and reason, then exit
-Collect candidates again and confirm actual state change
-No progress: exit and report; limit reached: report incomplete
+# Implementation
+
+```C++
+UFUNCTION(BlueprintCallable, meta=(WorldContext="WorldContextObject", CallableWithoutWorldContext))  
+static void BreakAllLevelInstance(UObject* WorldContextObject);
 ```
 
-A snapshot Actor may become invalid after another instance is broken, so check it again before use. A function call alone does not prove progress. Candidate count need not decrease either, because nested instances may increase it; compare object identity and operation results. Transactions improve undo, while backups remain the recovery foundation.
-
-## Try it and understand the limits
-Use one ordinary and one nested instance to check scope and results, then test an uneditable object or a failed operation to confirm bounded exit and an incomplete result. Reaching a pass limit is not success. This is a safety workflow; `BreakLevelInstance` was not compiled or called. Check its signature and editor conditions against your engine version.
+```C++
+void UMyBlueprintFunctionLibrary::BreakAllLevelInstance(UObject* WorldContextObject)
+{
+	if(WorldContextObject)
+	{
+		TArray<AActor*> OutActor;
+		bool Stop;
+		do
+		{
+			Stop = true;
+			OutActor.Empty();
+			UGameplayStatics::GetAllActorsOfClass(WorldContextObject, ALevelInstance::StaticClass(), OutActor);
+			for(const auto& It : OutActor)
+			{
+				if(ILevelInstanceInterface* LevelInstance = Cast<ILevelInstanceInterface>(It))
+				{
+					if(!LevelInstance || !Cast<AActor>(LevelInstance))continue;
+					UE_LOG(LogTemp, Log, TEXT("BreakLevelInstance::%s"), *It->GetPathName());
+					WorldContextObject->GetWorld()->GetSubsystem<ULevelInstanceSubsystem>()->BreakLevelInstance(LevelInstance, 1);
+					Stop = false;
+				}
+			}	
+		}
+		while (!Stop);
+	}
+}
+```

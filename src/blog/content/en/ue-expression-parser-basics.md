@@ -19,46 +19,25 @@ docIds: []
 lang: en
 translationKey: ue-expression-parser-basics
 publishedAt: 2026-10-13
-sourceHash: 8d4a2b018912d33fe11e7e63dc45d07cdb3623c22e22f2d4213651cf93bd6534
-generatedBodyHash: b5b309cca38620f6e661e3dc3d6162f363f8529dc620756b1558301136ef5a1c
+sourceHash: aabf23cc97995d9e1ec43e1e370870c1a54a2e269750d57ae5e19b16faf51abc
+generatedBodyHash: 5b93e4544481df519a226b7adc37b019c4d3c23bbf12b356145b5d6b3a3fce6e
 translationStatus: translated
 ---
 
-# Exploring syntax parsing for game formulas in UE
+Simple Formula Parsing for Events
+===
 
-Game events sometimes need conditions or calculations stored as strings, evaluated against current attributes. This article starts with a simple parser I wrote for my own game and explores how to handle such formulas in UE C++.
+# Definition
+This is a simple parser I wrote for my game. I have copied it here in case I need it later.
 
-The parser processes formulas through string validation, tokenization, attribute substitution, and evaluation by precedence. It depends on classes, macros, and logging from the game project, and several edge cases still need work.
+The parser recognizes comparisons, logical AND/OR, addition, subtraction, multiplication, division, parentheses, and the ternary operator.
 
-## Definition and use cases
+To meet the game's needs, I also added recognition and substitution of custom attributes.
 
-I wanted game events to express conditions and calculations as text, so I wrote a simple parser.
+# Implementation
 
-The intended syntax covers comparisons, logical AND and OR, arithmetic, parentheses, and ternary expressions.
-
-I also added recognition and substitution of custom properties so formulas can use data from the game.
-
-For example, an event could require both strength and gold to meet a threshold:
-
-```text
-[Strength] >= 10 && [Gold] >= 100
-```
-
-`[Strength]` and `[Gold]` denote game attributes. Comparisons produce Boolean results, which `&&` combines. A ternary expression could also select a value:
-
-```text
-[Strength] >= 10 ? 100 : 50
-```
-
-These illustrate the intended syntax. The parser must recognize the text, obtain attribute values from the game, and evaluate the result. The code uses a fixed demonstration map; character or event data still needs to be connected for a real project.
-
-The implementation normalizes selected Chinese punctuation, validates the string, tokenizes it, substitutes attributes, and evaluates by precedence. Results use `int32`, with true and false represented as 1 and 0.
-
-## Implementation: header and UE entry points
-
-**.h**
-
-```cpp
+## .h
+```C++
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
@@ -84,18 +63,11 @@ public:
 
 
 ```
-
-The header’s base class comes from my game project and needs adapting in another project. Two interfaces are exposed: one checks string validity and returns a bool and an error message; the other evaluates the string. The implementation stays together in the .cpp file to handle formula parsing.
-
-`CheckStrIsValid` is the validation entry point and `GetStrValue` is the evaluation entry point. `UMyGameSubsystem`, `CREATETHISSUBSYSTEM`, the export macro, and project headers require adaptation in another project. The code also uses the game project's `MyGameLog` category.
-
-## Implementation: source file and parsing steps
-
-**.cpp: token types and structure**
-
-Evaluation needs to recognize `123` as one number, `>=` as one comparison operator, and `[HHHH]` as a property reference. These pieces are tokens. The following definitions classify and store them.
-
-```cpp
+The base class in this header is one I created in my game, so it needs to be changed.
+Only two simple interfaces are provided here: one checks whether the string is valid and returns a bool and an error message; the other obtains the value of the string.
+The entire implementation is in the .cpp file. Since it was all written specifically for this feature, I put everything in .cpp for encapsulation.
+## .cpp
+```C++
 // Fill out your copyright notice in the Description page of Project Settings.
 
 
@@ -128,13 +100,6 @@ struct FToken {
 		: Type(InType), Value(InValue) {}
 };
 
-```
-
-**String replacement and punctuation normalization**
-
-`RegexReplace` wraps regular-expression replacement. `ReplaceChinesePunctuationWithEnglish` maps selected Chinese punctuation to English symbols to normalize input. These mappings only replace characters; validation still determines which resulting symbols are legal in a formula.
-
-```cpp
 FString RegexReplace(FString const& Str, FString const& Regex, FString const& ReplaceStr)
 {
 	return 	UTF8_TO_TCHAR(std::regex_replace(std::string(TCHAR_TO_UTF8(*Str)),
@@ -188,13 +153,6 @@ FString ReplaceChinesePunctuationWithEnglish(const FString& Expression) {
 	return Result;
 }
 
-```
-
-**Validating the formula string**
-
-`IsValidExpression` removes whitespace and checks property-reference syntax. It temporarily substitutes `0` for properties when checking the rest of the expression. It then rejects invalid characters and symbol combinations with regular expressions and checks parentheses and ternary punctuation for matching pairs. Each rule has an error message to help identify invalid input.
-
-```cpp
 bool IsValidExpression(const FString& Expression, FString& ErrorMessage)
 {
 	FString CheckStr = Expression;
@@ -358,15 +316,6 @@ bool IsValidExpression(const FString& Expression, FString& ErrorMessage)
     return true;;
 }
 
-```
-
-This groups validation rules for inspection. Rejecting known invalid patterns does not define a complete grammar, however; evaluation still needs to check operands and structure.
-
-**Tokenizing the formula**
-
-`Tokenize` scans characters, recognizes parentheses, operators, and property names, and combines consecutive digits. It also attempts to interpret signs using the previous token: unary plus is omitted and unary minus becomes multiplication by `-1`.
-
-```cpp
 TArray<FToken> Tokenize(const FString& Expression)
 {
 	FString CheckStr = RegexReplace(Expression, TEXT(R"(\s)"), TEXT(""));
@@ -449,15 +398,6 @@ TArray<FToken> Tokenize(const FString& Expression)
 	return Tokens;
 }
 
-```
-
-For `[HHHH]>=+3-5`, the intended tokens are property `HHHH`, comparison `>=`, number `3`, subtraction, and number `5`. Here `+3` denotes a positive number rather than addition with a missing left operand.
-
-**Operator categories and individual calculations**
-
-`CheckPrecedence` determines whether an operator belongs to the category currently being processed. `Evaluate` supplies the actual category order. `ApplyOperator` takes two integers and an operator, then performs one calculation. Integer division follows C++ integer-division rules; comparisons and logical operations return 1 or 0.
-
-```cpp
 bool CheckPrecedence(const ETokenType& Precedence, const FString& Op) {
 	switch (Precedence) {
 	case ETokenType::Operator_Add:
@@ -494,15 +434,6 @@ int32 ApplyOperator(const int32 A, const int32 B, const FString& Op)
 	return 0;
 }
 
-```
-
-Division by zero currently returns 0. An unrecognized operator writes a log message and returns 0. Consequently, a zero result alone does not tell the caller whether an error occurred.
-
-**Reducing parentheses and evaluating by precedence**
-
-`Evaluate` finds parentheses, recursively evaluates the enclosed tokens, and replaces the segment with a number. It then processes multiplication and division, addition and subtraction, comparisons, logical AND, logical OR, and finally ternary selection.
-
-```cpp
 int32 Evaluate(const TArray<FToken>& Tokens) {
 	
 	TArray<FToken> HandleTokens = Tokens;
@@ -571,22 +502,6 @@ int32 Evaluate(const TArray<FToken>& Tokens) {
 	return HandleTokens.Num() ? FCString::Atoi(*HandleTokens[0].Value) : 0;
 }
 
-```
-
-The intended evaluation order can be illustrated with:
-
-```text
-1 + 2 * 3      → evaluate 2 * 3, then add 1; expected result: 7
-(1 + 2) * 3    → evaluate 1 + 2 inside parentheses, then multiply by 3; expected result: 9
-```
-
-These are examples of intended semantics and have not been verified by running the code. Operators at the same precedence also need preserved order: left-to-right evaluation of `8 / 2 / 2` should yield 2.
-
-**Validation, attribute substitution, and evaluation entry points**
-
-The two Blueprint-callable functions complete the implementation. Validation normalizes punctuation and checks the string. Evaluation tokenizes the input, changes property tokens into numbers, and calls `Evaluate`.
-
-```cpp
 bool UMyGameEventSubsystem::CheckStrIsValid(const FString& Str, FString& Error)
 {
 	return IsValidExpression(ReplaceChinesePunctuationWithEnglish(Str), Error);
@@ -613,28 +528,6 @@ int32 UMyGameEventSubsystem::GetStrValue(FString const& Str)
 
 ```
 
-The fixed `TMap` demonstrates substituting attribute names with values. A game can supply these values from its current character or event. Unknown attributes currently become 0, so a misspelled name may continue through evaluation as an ordinary value.
-
-## Recorded check
-
-**[HHHH]>=+3-5**
-
+# Test
+## [HHHH]>=+3-5
 Result: 1
-
-The previously recorded result for this formula is 1. The example map gives `HHHH` a value of 555, so the intended semantics are equivalent to `555 >= (3 - 5)`, consistent with that result. It has not been rechecked by compiling and running the UE project.
-
-## Limitations and directions for improvement
-
-Reading the code reveals several issues to address before taking this parser further.
-
-**The first token.** `Tokenize` uses `Tokens.Last()` for signs and ordinary numbers, but the array may be empty for the first number or a leading sign. It must check whether a previous token exists before using it to interpret a character.
-
-**Expression order.** Parenthesis reduction uses `RemoveAtSwap`, which does not preserve the order of remaining elements. Formulas require that order. An order-preserving operation or a parser cursor would avoid this problem. Access to left and right operands also needs valid indices and operand types.
-
-**Validation versus evaluation.** `GetStrValue` does not call `CheckStrIsValid` first. Callers should validate input, but the evaluator should not depend solely on external validation. Empty input, unknown characters, missing operands, and incomplete ternary expressions all need explicit handling.
-
-**Short-circuiting and branches.** Operations are reduced before ternary selection, so C++ short-circuit semantics cannot be assumed. With `[Count] != 0 && 100 / [Count] > 2`, short-circuit semantics would skip the right operand when count is zero. A ternary should likewise evaluate only the selected branch. This requires retaining branch structure during parsing.
-
-**Results and errors.** Division by zero, unknown attributes, and some errors produce 0, which is also a valid result. A future interface should distinguish evaluation success, value, and error information. Integer overflow, input length, nesting depth, and legal nested ternary syntax also need explicit rules.
-
-Further exploration can retain the UE string and Blueprint entry points while letting a parser consume tokens according to a defined grammar and obtain attributes from the game context. Recursive descent, for example, can assign precedence levels to separate parsing functions. Supporting short-circuiting also requires controlling which branches execute while still checking their syntax.

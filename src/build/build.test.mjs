@@ -109,6 +109,17 @@ test('builds both locale pages and check detects changes without modifying outpu
   assert.equal(fs.readFileSync(path.join(x.output,'en/index.html'),'utf8'),'drift');
 });
 
+for(const attribution of [false,true])test(`source attribution cleanup preserves exact source bytes (${attribution?'matching tail':'no matching tail'})`,()=>{
+  const implementation=fs.readFileSync(new URL('./build.mjs',import.meta.url),'utf8');
+  const start=implementation.indexOf('function withoutSourceAttribution(source) {'),end=implementation.indexOf('\nasync function renderBody',start);
+  assert.ok(start>=0&&end>start);
+  const cleanup=vm.runInNewContext('('+implementation.slice(start,end)+')');
+  const code='first  \n\n\nthird\t \n',sourceUrl='https://example.com/original',date='2026-10-20';
+  const retained=' \n## Heading\n\n'+String.fromCharCode(96).repeat(3)+'text\n'+code+String.fromCharCode(96).repeat(3)+'\n\nFinal paragraph.\n';
+  const body=retained+(attribution?'\nOriginal '+date+' '+sourceUrl+'\n':'');
+  assert.equal(cleanup({body,data:{sourceUrl,date}}),attribution?retained+'\n':retained);
+});
+
 test('shell CRLF normalization is idempotent and preserves template pre/code and script literal bytes',async t=>{
   const x=fixture(t),templates=path.join(x.site,'templates');fs.mkdirSync(templates);x.templateRoot=templates;
   const literal='<pre><code>line  \r\nnext\t \r\n</code></pre>';

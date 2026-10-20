@@ -19,24 +19,97 @@ docIds: []
 lang: en
 translationKey: ue-cursor-workflow-notes
 publishedAt: 2026-10-13
-sourceHash: 613ed1a2ff3dd0d2c6af6e5bffc6afe9073a14c25bb8b34805d14973705c5cd1
-generatedBodyHash: 83ce0ebb1f4af3b90e6c7f8d8268cf417decbb21b77071a83da8327df39ca04c
+sourceHash: e46efaeef3cdfdad3f3e98a46e57224d7a11db87e56c6f5593fd38899c76b4da
+generatedBodyHash: 52170ed031d610df3e7e6a6a7ee9cffc1a11a76dfcd5f550ef0b1e9d55ba8dfc
 translationStatus: translated
 ---
 
-# Cursor with Unreal 5.6 on Windows: establish the build first
+Cursor + UE from Scratch: A Guide from Getting Started to Giving Up
+===
 
-## Environment and goal
-These notes describe Windows and UE 5.6. The original record did not preserve complete Cursor or extension versions, so it is not a compatibility promise for current releases. The goal is to edit UE C++ in Cursor while retaining a working build and debugger entry point.
+This tutorial only covers installation on Windows. The test environment uses UE5.6.
 
-## Setup order
-1. Follow [Epic's Visual Studio setup](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine) for the matching MSVC, Windows SDK and C++ game-development components. Complete a Development Editor build with Visual Studio or another reliable existing tool first.
-2. Install the editor from [Cursor](https://cursor.com/). A language pack is optional. C++ extensions provide editing assistance, not a compiler.
-3. Follow [Epic's VS Code workspace instructions](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/setting-up-visual-studio-code-for-unreal-engine), then open the generated `.code-workspace` in Cursor rather than a single source file.
-4. Check the generated build tasks for your engine, project and Editor target before configuring IntelliSense. Diagnose indexing errors separately from compiler errors.
+# Environment Setup
 
-## Debug-adapter failures
-The original record shows `cppvsdbg` being unsupported but does not establish a working fix. Record Cursor, C/C++ extension and task-configuration versions, then check debugger support in that editor. Keep building through the verified entry point and use Visual Studio for debugging if needed. Reinstalling extensions repeatedly is not a demonstrated solution.
+If you already have a build environment installed and can run VS or Rider normally, you can skip this step.
+## Download and Install the Compiler Toolset
 
-## Try a small project
-Build a temporary C++ project, launch its editor and confirm a breakpoint is hit before migrating your workspace. F5 invokes the configured debug workflow; it does not guarantee the correct target. This edit did not reproduce the original environment or reuse unreviewed screenshots.
+[Microsoft Visual C++ (MSVC) Compiler Toolset](https://visualstudio.microsoft.com/downloads/).
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A1>)
+
+## Configure VS
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A2>)
+
+Select the three options shown in the image, then click Install.
+
+# Configure Cursor
+
+### Download and Install Cursor
+
+[Cursor: The Best Way to Code with AI](https://cursor.com/cn)
+## Open the Extensions View
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A3>)
+## Install the Chinese Language Pack
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A4>)
+
+Search for Chinese and install the first result. After installation, you will be prompted to restart. Click Restart.
+## Install the C++ and C# Extensions
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A5>)
+
+Search for C++ and install the C/C++ extension and the C# extension.
+
+Your final set of extensions should look like this:
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A6>)
+
+These are usually installed automatically after installing C/C++ and C#. If they are missing, try restarting or install them manually.
+
+## Set VSCode as the Default Source Code Editor
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A7>)
+
+## Regenerate the VSCode Workspace
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A8>)
+
+## Set the Workspace to Open with Cursor
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A9>)
+
+## Configure IntelliSense
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A10>)
+
+## Debug and Run
+
+Open the Debug panel.
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A11>)
+
+Select Editor Development mode.
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A12>)
+
+Click the arrow on the left or press F5 to start compiling.
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A13>)
+
+Wait for compilation to finish.
+
+# Troubleshooting
+
+## cppvsdbg Is Not Supported
+
+![](</media-occurrence/blog%3Aue-cursor-workflow-notes%3Amedia%3A14>)
+
+# References
+
+[Setting Up Visual Studio Code for Unreal Engine | Unreal Engine 5.6 Documentation | Epic Developer Community](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/setting-up-visual-studio-code-for-unreal-engine)
+
+[Setting Up Visual Studio Development Environment for C++ Projects in Unreal Engine | Unreal Engine 5.6 Documentation | Epic Developer Community](https://dev.epicgames.com/documentation/zh-cn/unreal-engine/setting-up-visual-studio-development-environment-for-cplusplus-projects-in-unreal-engine)
+
+[How to Setup Cursor IDE for Unreal Engine](https://www.youtube.com/watch?v=9Km1GyYCnh4)

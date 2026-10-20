@@ -19,23 +19,107 @@ docIds: []
 lang: en
 translationKey: ue-fab-submission-notes
 publishedAt: 2026-10-13
-sourceHash: 33320438752751b62a2c0f918365608831f2e436e061dd64abeceedd2070951a
-generatedBodyHash: e89ce754bfcc5a5d0404d71590bfa8bc35ce67ad930a8d327b126e3971a80aa0
+sourceHash: 06ee03a174d2300633bb5f6ebcd1b82b127c7bd552647e9185959f1f115bc60f
+generatedBodyHash: 458b387abdafb4df331422ca7b108d931a0718e63ac4cbbd7172c74b47213a4b
 translationStatus: translated
 ---
 
-# Fab submission notes: review the package and instructions together
+Notes on Submitting to Fab
+===
 
-## Problem and scope
-A feature working in the development project does not prove that a delivery package can be installed and reproduced. These notes distill past Unreal publishing experience without describing a particular plugin product or claiming to state current Fab review rules.
+# Plugin Structure Template
+Through testing, I have put together a plugin structure template that works best for me.
+```
+MyPlugin/
+		Binaries/
+		Config/
+		Docs/
+			LICENSE.md
+			CHANGLOG.md
+			README.md
+		Resources/
+		Source/
+		ThirdParty/
+		README.md
+		MyPlugin.uplugin
+```
+## Purpose of README.md in the Root Directory
+It serves both as the introduction displayed in the GitHub repository and as the plugin description. When submitting to Fab, copy it into the product description, keeping it within 1,900 characters.
 
-## Prepare a reproducible delivery
-Keep a separate candidate-package directory instead of cleaning the development directory. Check descriptor version, module type, loading phase, content support and platforms against the actual delivery. Instructions should cover installation, supported engine versions, dependencies, the shortest usage path and known limits. Include licensing and third-party dependency information.
+# Example .uplugin File
+```
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "SimpleSSHTunnel",
+	"Description": "A lightweight SSH tunnel plugin for Unreal Engine, developed by mengzhishanghun. Free to use in commercial projects. Redistribution or resale is not allowed.",
+	"Category": "Networking",
+	"CreatedBy": "mengzhishanghun",
+	"DocsURL": "See Docs/README.md included in plugin folder.",
+	"FabURL": "com.epicgames.launcher://ue/Fab/5a9111a1-2699-4ba9-bb00-7cb34a9f0ef7/",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": true,
+	"SupportedTargetPlatforms": [ 
+		"Win64"
+	],
+	"Modules": [
+		{
+			"Name": "SimpleSSHTunnel",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ 
+				"Win64"
+			]
+		}
+	]
+}
+```
 
-Install the candidate in a clean test project, follow the minimum tutorial and check the promised Editor and packaged targets separately. Source and precompiled deliveries need different files. Do not always delete `Binaries`, or assume `Installed: true` makes a source plugin compile in a Blueprint-only project. Check that `FilterPlugin.ini` matches the actual packaged files when additional files are needed.
+# Required Preparations Before Submission
 
-## Listing and descriptor
-Describe supported environments and user tasks, with demonstration images from the candidate version. A documentation URL should lead to accessible documentation rather than contain a sentence describing a file location. Character limits and `FabURL`/`MarketplaceURL` workarounds in the original notes were historical observations, not current requirements here. Use the platform form, official requirements and actual feedback on submission day.
+## Delete Regenerable Folders
+Usually, you need to delete folders that can be generated again, such as Binaries and Intermediate.
+## Compilation in Blueprint-Only Projects
+The plugin must be able to compile itself in a Blueprint-only project. Otherwise, you need to include Binaries and set the following in .uplugin:```
+```
+"Installed": true
+```
 
-## Example check and limits
-Extract the candidate ZIP into a temporary project. Confirm that referenced tutorial files exist, dependencies are documented and versions agree, then record the engines and platforms actually tested. No new upload or current-rule verification was performed for this article; it cannot promise review approval.
+## Write Config/FilterPlugin.ini
+
+If other files need to be included, place them in a folder and specify them in Config/FilterPlugin.ini, as follows:```
+```
+[FilterPlugin]
+
+Docs/...
+
+ThirdParty/...
+
+README.md
+```
+Here, I put LICENSE.md (license), README.md (plugin tutorial), and CHANGLOG.md (changelog) in the Docs folder, all third-party library files in ThirdParty, and also include README.md from the root directory.
+
+## Notes on the .uplugin File
+
+### Restrict Platforms
+```
+"SupportedTargetPlatforms": [
+		"Win64"
+	],
+```
+This tells Fab which platforms my plugin can be packaged for. Otherwise, the submission may fail review.
+
+### Specify Documentation
+```
+"DocsURL": "See Docs/README.md included in plugin folder.",
+```
+If there is no online documentation, write it like this to specify documentation within the plugin. This entry is required; otherwise, the submission will fail review.
+
+### Add FabURL
+```
+	"MarketplaceURL": "com.epicgames.launcher://ue/Fab/5a9111a1-2699-4ba9-bb00-7cb34a9f0ef7/",
+	"FabURL": "com.epicgames.launcher://ue/Fab/5a9111a1-2699-4ba9-bb00-7cb34a9f0ef7/",
+```
+These are two versions of the URL. Fab's current packaging test script has a problem: after UBT, it ignores FabURL and only retains MarketplaceURL. However, Fab review requires FabURL, so for now I can only add it manually. I also retain MarketplaceURL to make copying and editing easier.

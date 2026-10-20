@@ -33,7 +33,7 @@ test('OB category projection covers every entity once, preserves empty categorie
   assert.equal(entries.find(e=>e.id==='work:shaniu').projectedCategory.zh.name,'AI工具');
   const snapshot=JSON.parse(fs.readFileSync(new URL('./taxonomy.json',import.meta.url)));
   assert.deepEqual(snapshot.sections.doc.categories.map(c=>[c.entities.length,c.supplements.length]),[[0,9],[23,0]]);
-  assert.equal(snapshot.legacyOnly.length,8);assert.doesNotMatch(JSON.stringify(snapshot),/sourceFingerprint|publishedFingerprint|[A-Z]:[\\/]|网站\//);
+  assert.equal(snapshot.legacyOnly.length,0);assert.doesNotMatch(JSON.stringify(snapshot),/sourceFingerprint|publishedFingerprint|[A-Z]:[\\/]|网站\//);
 });
 test('generated work index uses the rendered card order in every category',()=>{
   for(const locale of ['zh','en']){const f=generatedPage(locale+'/works/index.html'),node=f.select('[data-content-index-data]'),records=JSON.parse(node.childNodes.map(n=>n.value||'').join(''));

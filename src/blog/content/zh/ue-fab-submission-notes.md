@@ -21,18 +21,103 @@ lang: zh
 translationKey: ue-fab-submission-notes
 ---
 
-# Fab 提交经验：把发布包和使用说明一起检查
+上传Fab须知
+===
 
-## 问题与适用范围
-功能在开发工程里能用，不等于交付包能安装和复现。这份记录提炼过去的 UE 内容发布经验，不介绍具体插件产品，也不声称代表当前 Fab 审核规则。
+# 插件结构模板
+经过测试我总结出来一套最适合自己使用的插件结构模板
+```
+MyPlugin/
+		Binaries/
+		Config/
+		Docs/
+			LICENSE.md
+			CHANGLOG.md
+			README.md
+		Resources/
+		Source/
+		ThirdParty/
+		README.md
+		MyPlugin.uplugin
+```
+## 根目录README.md作用
+一方面，在github仓库中展示，一方面作为插件的介绍使用，上传Fab时拷贝到产品描述中，限定为1900字符以内
 
-## 先准备可复现的交付
-给候选发布包单独留一份目录，避免清理开发目录。检查描述符里的版本、模块类型、加载阶段、内容支持和目标平台是否与实际交付一致。文档应说明安装位置、支持的引擎版本、依赖、最短使用步骤及已知限制；许可和第三方依赖也要随包说明。
+# .uplugin文件示例
+```
+{
+	"FileVersion": 3,
+	"Version": 1,
+	"VersionName": "1.0.0",
+	"FriendlyName": "SimpleSSHTunnel",
+	"Description": "A lightweight SSH tunnel plugin for Unreal Engine, developed by mengzhishanghun. Free to use in commercial projects. Redistribution or resale is not allowed.",
+	"Category": "Networking",
+	"CreatedBy": "mengzhishanghun",
+	"DocsURL": "See Docs/README.md included in plugin folder.",
+	"FabURL": "com.epicgames.launcher://ue/Fab/5a9111a1-2699-4ba9-bb00-7cb34a9f0ef7/",
+	"CanContainContent": false,
+	"IsBetaVersion": false,
+	"Installed": true,
+	"SupportedTargetPlatforms": [ 
+		"Win64"
+	],
+	"Modules": [
+		{
+			"Name": "SimpleSSHTunnel",
+			"Type": "Runtime",
+			"LoadingPhase": "Default",
+			"PlatformAllowList": [ 
+				"Win64"
+			]
+		}
+	]
+}
+```
 
-在干净测试项目中安装候选包，按文档完成最小功能，再分别检查承诺的 Editor 和打包目标。源码交付与预编译交付需要的文件不同，不能一律删除 `Binaries`，也不能假设设置 `Installed: true` 就能解决纯蓝图项目的编译问题。需要额外打包文件时检查 `FilterPlugin.ini` 是否与实际输出一致。
+# 上传前必须的准备
 
-## 商品页与描述符
-商品页说明支持环境和用户能完成的任务，演示图来自候选版本。文档链接应是真实可访问的文档地址，不把一句文件位置说明冒充 URL。原笔记中的字符上限、`FabURL` 与 `MarketplaceURL` 的兼容处理属于当时遇到的问题，本篇不把它们写成当前必需规则；提交当天以平台表单、官方要求和实际验证反馈为准。
+## 删除可生成文件夹
+通常情况下需要删除Binaries，Intermediate等能自己生成的文件夹
+## 纯蓝图项目编译
+必须让插件在纯蓝图项目中可以自己编译，否则需要提交Binaries且在.uplugin中设置```
+```
+"Installed": true
+```
 
-## 一个检查例与限制
-把候选 ZIP 解压到临时项目，确认教程引用的文件存在，依赖已注明，版本与描述一致，并记录实际测试的引擎和平台。本文未进行新的 Fab 上传或平台规则核验，因此不能据此承诺审核通过。
+## 编写Config/FilterPlugin.ini
+
+如果有需要包含的其他文件，放置到一个文件夹中，并且需要在Config/FilterPlugin.ini中说明，如下```
+```
+[FilterPlugin]
+
+Docs/...
+
+ThirdParty/...
+
+README.md
+```
+这里我将LICENSE.md（许可证），README.md（插件教程）,CHANGLOG.md（更新日志）都放置在Docs文件夹中，将第三方库相关文件都放置在ThirdParty，以及再加上根目录的README.md
+
+## .uplugin文件注意事项
+
+### 限定平台
+```
+"SupportedTargetPlatforms": [
+		"Win64"
+	],
+```
+这里是告诉Fab我的插件只能在哪些平台上打包，否则可能出现审核不通过的原因
+
+### 指定文档
+```
+"DocsURL": "See Docs/README.md included in plugin folder.",
+```
+如果没有在线文档就像这样写，需要指定插件中的文档，这条必须加上不然审核不通过
+
+### 添加FabURL
+```
+	"MarketplaceURL": "com.epicgames.launcher://ue/Fab/5a9111a1-2699-4ba9-bb00-7cb34a9f0ef7/",
+	"FabURL": "com.epicgames.launcher://ue/Fab/5a9111a1-2699-4ba9-bb00-7cb34a9f0ef7/",
+```
+这里是两个版本的URL，现在Fab的打包测试脚本有问题，在UBT后会将FabURL忽略，只保留MarketplaceURL，但是Fab审核必须要有FabURL，所以目前只能自己手动添加，我还保留MarketplaceURL的原因是为了方便复制修改
+
