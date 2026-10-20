@@ -10,7 +10,36 @@
 <h2 id="specific-problem">Specific Problem</h2>
 <p>In the parent Blueprint, cut or delete menu actions became unavailable for components that originally belonged to it. In a child Blueprint, even changing a single property could write back to the parent template, breaking the expected isolation of overrides.</p>
 <h2 id="solution">Solution</h2>
-<p>Investigation found that this class of abnormalities was associated with component templates whose <code>CreationMethod</code> was set to <code>Instance</code>. A stable reproduction sequence for the triggering operation was not established, so similar symptoms alone cannot establish the cause; the field state still needs to be checked. For the component template and inheritance override investigation, <a href="/en/blog/cnblogs-20030737/">read the troubleshooting and repair details</a>.</p>
+<p>The four <code>CreationMethod</code> values describe different component origins:</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Value</th><th>Creation origin</th></tr></thead><tbody><tr><td><code>Native</code></td><td>Components created by native C++ code</td></tr><tr><td><code>SimpleConstructionScript</code></td><td>Components defined in the Blueprint Components panel</td></tr><tr><td><code>UserConstructionScript</code></td><td>Components created in the Construction Script</td></tr><tr><td><code>Instance</code></td><td>Components added to a specific Actor instance</td></tr></tbody></table>
+<p>The check targets the specific abnormality of Blueprint component templates incorrectly marked <code>Instance</code>. Manual repair is difficult because the same inheritance relationship may involve both SCS nodes and ICH override records, several parent and child levels may be affected, and the field cannot be changed directly in the Details panel. Assets under source control also require individual writability handling.</p>
+<p>Scanning follows <code>ParentClass</code> upward to collect parent Blueprints and uses Asset Registry <code>GetDerivedClassNames()</code> downward to locate derived classes. Component checks cover SCS <code>AllNodes</code> and ICH <code>CreateRecordIterator()</code> rather than changing only the currently open template.</p>
+<p>Investigation found that this class of abnormalities was associated with component templates whose <code>CreationMethod</code> was set to <code>Instance</code>. A stable reproduction sequence for the triggering operation was not established, so similar symptoms alone cannot establish the cause; the field state still needs to be checked.</p>
 <p>Using the affected Blueprint as an anchor, parent Blueprints were collected upward and derived Blueprints downward. The combined, deduplicated set formed the inspection scope, covering both parent templates and child override records.</p>
 <p>SCS and ICH were scanned separately for each Blueprint to locate abnormal component templates with <code>CreationMethod == Instance</code>. Once the findings were confirmed, the affected assets were checked out and the corresponding fields restored to <code>SimpleConstructionScript</code>.</p>
 <p>After modification, the affected Blueprints were marked dirty for the user to review and save. Components dynamically created by the Construction Script require separate assessment and should not automatically receive the same repair.</p>

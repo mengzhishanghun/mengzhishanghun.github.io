@@ -10,7 +10,36 @@
 <h2 id="具体问题">具体问题</h2>
 <p>父蓝图里，原本属于自身的组件出现剪切或删除菜单不可用；子蓝图里，即使只是修改一个属性，也可能写回父模板，失去预期的覆盖隔离。</p>
 <h2 id="解决方案">解决方案</h2>
-<p>排查发现，这类异常与组件模板的 <code>CreationMethod</code> 被设为 <code>Instance</code> 有关。具体触发操作未形成稳定复现路径，因此不能仅凭相似症状断定原因，仍需检查字段状态。组件模板与继承覆盖的检查过程，可<a href="/zh/blog/cnblogs-20030737/">查看排查与修复详情</a>。</p>
+<p><code>CreationMethod</code> 的四种值对应不同创建来源：</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>值</th><th>创建来源</th></tr></thead><tbody><tr><td><code>Native</code></td><td>C++ 原生创建的组件</td></tr><tr><td><code>SimpleConstructionScript</code></td><td>蓝图 Components 面板定义的组件</td></tr><tr><td><code>UserConstructionScript</code></td><td>Construction Script 中创建的组件</td></tr><tr><td><code>Instance</code></td><td>添加到具体 Actor 实例的组件</td></tr></tbody></table>
+<p>这里检查的是蓝图组件模板被错误标成 <code>Instance</code> 的特定异常。手动修复的难点在于同一继承关系可能同时涉及 SCS 节点和 ICH 覆盖记录，多层父子蓝图也可能有异常，而属性面板不能直接修改这个字段；源码控制下还需要逐份处理资产可写性。</p>
+<p>扫描向上沿 <code>ParentClass</code> 收集父蓝图，向下用 Asset Registry 的 <code>GetDerivedClassNames()</code> 查找派生类。组件检查覆盖 SCS 的 <code>AllNodes</code> 和 ICH 的 <code>CreateRecordIterator()</code>，不能只改当前打开的模板。</p>
+<p>排查发现，这类异常与组件模板的 <code>CreationMethod</code> 被设为 <code>Instance</code> 有关。具体触发操作未形成稳定复现路径，因此不能仅凭相似症状断定原因，仍需检查字段状态。</p>
 <p>以受影响蓝图为锚点，向上收集父蓝图，向下收集派生蓝图，合并去重后形成检查范围。这样可以同时检查父模板和子类覆盖记录。</p>
 <p>对每个蓝图分别扫描 SCS 与 ICH，定位 <code>CreationMethod == Instance</code> 的异常组件模板。确认发现项后，再签出涉及的资产，将对应字段恢复为 <code>SimpleConstructionScript</code>。</p>
 <p>修改完成后，把受影响蓝图标记为脏，交由使用者核对并保存。Construction Script 动态创建的组件需要单独判断，不直接套用同样的修复规则。</p>
