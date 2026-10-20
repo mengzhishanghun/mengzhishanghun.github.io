@@ -367,7 +367,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if (node.tagName==='html' && loc.attrs?.lang) edits.push([loc.attrs.lang.startOffset,loc.attrs.lang.endOffset,`lang="${config.languages.find(l=>l.code===locale).htmlLang}"`]);
     if ((a.class || '').split(/\s+/).includes('header-actions')) {actions++;edits.push([loc.endTag.startOffset,loc.endTag.startOffset,nav]);}
     if (node.tagName==='head') {
-      if(contentIndex)edits.push([loc.endTag.startOffset,loc.endTag.startOffset,'<link rel="stylesheet" href="/assets/site-ui/content-index.css">']);
+      if(contentIndex||entry.id==='page:home')edits.push([loc.endTag.startOffset,loc.endTag.startOffset,'<link rel="stylesheet" href="/assets/site-ui/content-index.css">']);
       edits.push([loc.startTag.endOffset,loc.startTag.endOffset,`<script>window.SiteCopy=${safeJSON(scriptSlots || {})};window.SiteLanguageCode=${safeJSON(locale)};window.SitePrimaryCode=${safeJSON(config.primary)}</script>`]);
       edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<link rel="stylesheet" href="/assets/site-ui/language-switch.css">`+config.languages.map(({code:l})=>`<link rel="alternate" hreflang="${l}" href="https://mzsh.me${urls[l]}">`).join('')]);
       if(article)edits.push([loc.endTag.startOffset,loc.endTag.startOffset,'<link rel="stylesheet" href="/assets/site-ui/engagement.css"><script defer src="/assets/site-ui/engagement.js"></script>']);

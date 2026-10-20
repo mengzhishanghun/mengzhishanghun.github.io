@@ -18,10 +18,12 @@ test('bare content images gain named image links while semantic decoration stays
   assert.equal(links.length,2);assert.equal(attrs(links[0]).class,'feature-art');assert.equal(attrs(links[0])['aria-label'],'View image: Diagram');assert.equal(attrs(links[1]).href,'/media/body.png');
   assert.equal(media.projectImageViewers(x.html,'en'),x.html,'projection is idempotent');
 });
-test('a card remains one sortable and hideable container with sibling image and title links',()=>{
+test('the whole card stays a detail link, including its cover and blank space',()=>{
   const x=project('<section class="content-browser"><div class="grid"><a class="content-card" data-content-card="true" data-slug="one" hidden style="order:4" href="/en/works/one/" aria-label="One"><div class="content-cover-link" aria-hidden="true"><div class="content-cover" aria-hidden="true"><img src="/assets/one.png" alt=""></div></div><div class="content-card-copy"><h2>One</h2></div></a></div></section>');
-  const card=x.nodes.find(n=>attrs(n)['data-content-card']!==undefined);assert.equal(card.tagName,'div');assert.equal(attrs(card).style,'order:4');assert.ok(Object.hasOwn(attrs(card),'hidden'));assert.equal(card.parentNode.childNodes.filter(n=>n.tagName).length,1);
-  const image=x.nodes.find(n=>attrs(n)['data-media-image']!==undefined),title=x.nodes.find(n=>n.tagName==='a'&&attrs(n).href==='/en/works/one/');assert.ok(image);assert.ok(title);assert.equal(attrs(image)['aria-hidden'],undefined);assert.equal(attrs(image)['aria-label'],'View image: One');assert.equal(title.parentNode.tagName,'h2');
+  const card=x.nodes.find(n=>attrs(n)['data-content-card']!==undefined);assert.equal(card.tagName,'a');assert.equal(attrs(card).href,'/en/works/one/');assert.equal(attrs(card).style,'order:4');assert.ok(Object.hasOwn(attrs(card),'hidden'));assert.equal(card.parentNode.childNodes.filter(n=>n.tagName).length,1);
+  assert.equal(x.nodes.filter(n=>Object.hasOwn(attrs(n),'data-media-image')).length,0);
+  assert.equal(x.nodes.filter(n=>n.tagName==='a').length,1);
+  assert.equal(media.projectImageViewers(x.html,'en'),x.html);
   for(const link of x.nodes.filter(n=>n.tagName==='a'))for(let p=link.parentNode;p;p=p.parentNode)assert.notEqual(p.tagName,'a');
 });
 test('functional image links keep their destination and gain a separate enlargement action',()=>{
@@ -37,13 +39,18 @@ test('case covers have byte-verified dimensions available before lazy images loa
     assert.deepEqual(dimensions[url],{width:bytes.readUInt32BE(16),height:bytes.readUInt32BE(20)});
   }
 });
-test('all current homepage feature images and gallery cards gain separate image actions',()=>{
+test('homepage and gallery covers navigate to detail pages instead of opening the viewer',()=>{
   for(const [file,count]of [['home/templates/page--home.html',7],['works/templates/page--works-index.html',23],['cases/templates/page--cases-index.html',10]]) {
     const x=project(fs.readFileSync(new URL('../'+file,import.meta.url),'utf8'));
     const images=x.nodes.filter(n=>attrs(n)['data-media-image']!==undefined);
-    assert.equal(images.length,count,file);
-    for(const image of images)assert.ok(attrs(image)['aria-label']);
-    for(const image of images)for(let parent=image.parentNode;parent;parent=parent.parentNode)if(attrs(parent)['data-content-card']!==undefined)assert.equal(parent.tagName,'div');
+    assert.equal(images.length,0,file);
+    const covers=x.nodes.filter(n=>n.tagName==='img'&&!x.nodes.some(p=>(attrs(p).class||'').includes('hero-backdrop')&&p.childNodes?.includes(n)));
+    assert.ok(covers.length>=count,file);
+    for(const card of x.nodes.filter(n=>Object.hasOwn(attrs(n),'data-content-card')))assert.equal(card.tagName,'a');
+    for(const panel of x.nodes.filter(n=>Object.hasOwn(attrs(n),'data-feature-panel'))){
+      const title=panel.childNodes.find(n=>(attrs(n).class||'').split(/\s+/).includes('feature-copy'));
+      assert.ok(title,file+' feature retains its native detail link');
+    }
   }
 });
 test('every approved public occurrence has lazy dimensions, including byte-verified restored blog images',async()=>{

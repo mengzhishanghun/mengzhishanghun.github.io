@@ -8,7 +8,7 @@ const require=createRequire(new URL('../../package.json',import.meta.url));
 const {parse}=require('parse5');
 // 在翻译、卡片排序和正文投影完成后统一补足图片入口。
 export function projectImageViewers(html,locale) {
-  const doc=parse(html,{sourceCodeLocationInfo:true}),edits=[],cards=new Set();
+  const doc=parse(html,{sourceCodeLocationInfo:true}),edits=[];
   const classes=node=>(attrs(node).class || '').split(/\s+/);
   const closest=(node,test)=>{for(let p=node;p;p=p.parentNode)if(test(p))return p;};
   const text=node=>node.nodeName==='#text'?node.value:(node.childNodes||[]).map(text).join('');
@@ -26,19 +26,13 @@ export function projectImageViewers(html,locale) {
     if(image.tagName!=='img')return;
     const a=attrs(image),loc=image.sourceCodeLocation;
     if(!a.src||!loc||closest(image,n=>classes(n).some(c=>['hero-backdrop','police-record'].includes(c))))return;
+    // 导航卡片的封面沿用整卡跳转，不与正文配图共用放大入口。
+    if(closest(image,n=>classes(n).includes('content-card')||Object.hasOwn(attrs(n),'data-feature-panel')))return;
     const existing=closest(image,n=>n.tagName==='a'&&attrs(n)['data-media-image']!==undefined);
     if(existing)return;
-    const card=closest(image,n=>n.tagName==='a'&&classes(n).includes('content-card'));
-    const scope=card||closest(image,n=>['article','section'].includes(n.tagName));
+    const scope=closest(image,n=>['article','section'].includes(n.tagName));
     const title=scope&&heading(scope),alt=a.alt?.trim()||(title&&text(title).trim())||(locale==='en'?'Image':'图片');
-    if(card&&!cards.has(card)) {
-      cards.add(card);replaceTag(card,'div',['href','aria-label','target','rel']);
-      if(title) {
-        const t=title.sourceCodeLocation;
-        edits.push([t.startTag.endOffset,t.startTag.endOffset,`<a href="${escape(attrs(card).href)}">`],[t.endTag.startOffset,t.endTag.startOffset,'</a>']);
-      }
-    }
-    const link=closest(image,n=>n.tagName==='a'&&n!==card);
+    const link=closest(image,n=>n.tagName==='a');
     if(link) {
       if(attrs(link).href===a.src&&!Object.hasOwn(attrs(link),'download'))replaceTag(link,'a',['href','aria-label'],trigger(a.src,alt));
       else {const end=link.sourceCodeLocation.endOffset;edits.push([end,end,`<a${trigger(a.src,alt)}>${escape(label(alt))}</a>`]);}

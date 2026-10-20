@@ -35,9 +35,21 @@ test('keyboard activation opens image anchors and modified clicks retain native 
   for(const options of [{ctrlKey:true},{metaKey:true},{shiftKey:true},{altKey:true},{button:1},{defaultPrevented:true}]){const x=viewer();await x.click(x.anchor,options);assert.equal(x.opened.length,0);assert.equal(x.fallback.length,0);}
   const x=viewer();const pending=x.click(x.anchor,{detail:0});x.finish();await pending;assert.equal(x.opened.length,1);assert.equal(x.opened[0].options.escKey,true);assert.equal(x.opened[0].options.doubleTapAction,'zoom');
 });
-test('projected home and listing image entries use the existing viewer in both languages',async()=>{
-  for(const locale of ['zh','en'])for(const [page,url]of [['index.html','/assets/home/features/plugin-auto-packer-1280.webp'],['works/index.html','/assets/covers/simple-bp-inherit-fix.png'],['cases/index.html','/assets/cases/driving-simulator-three-screen.png']]){
-    const x=viewer(locale+'/'+page,url);const pending=x.click();x.finish();await pending;assert.equal(x.opened.length,1);x.opened[0].destroy();assert.equal(x.anchor.focused,true);assert.equal(x.frame.scrollTop,125);
+test('published homepage and list cards retain detail navigation without image-viewer interception',()=>{
+  for(const locale of ['zh','en'])for(const page of ['index.html','works/index.html','cases/index.html','blog/index.html']){
+    const f=generatedPage(locale+'/'+page);
+    assert.equal(f.nodes.filter(n=>Object.hasOwn(f.attrs(n),'data-media-image')).length,0,locale+'/'+page);
+    for(const card of f.nodes.filter(n=>Object.hasOwn(f.attrs(n),'data-content-card'))){
+      assert.equal(card.tagName,'a');assert.ok(f.attrs(card).href.startsWith('/'+locale+'/'));
+      assert.equal(card.childNodes.some(n=>n.tagName==='a'),false);
+    }
+    if(page==='index.html'){
+      assert.ok(f.nodes.some(n=>n.tagName==='link'&&f.attrs(n).href==='/assets/site-ui/content-index.css'));
+      for(const panel of f.nodes.filter(n=>Object.hasOwn(f.attrs(n),'data-feature-panel'))){
+        const links=f.nodes.filter(n=>n.tagName==='a'&&f.closest(n,'[data-feature-panel]')===panel);
+        assert.ok(links.length>0);assert.ok(links.every(n=>f.attrs(n).href===f.attrs(links[0]).href));
+      }
+    }
   }
 });
 test('all three contact/support QR triggers still open the existing shared viewer',async()=>{for(const locale of ['zh','en'])for(const url of ['/assets/contact/wechat-personal-qr.webp','/assets/support/wechat-pay-qr.webp','/assets/support/alipay-qr.webp']){const x=viewer(locale+'/contact/index.html',url);const pending=x.click();x.finish();await pending;assert.equal(x.opened.length,1);assert.equal(x.fallback.length,0);assert.ok(x.opened[0].options.closeTitle);}});
