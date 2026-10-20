@@ -19,9 +19,9 @@ coverAlt: Bidirectional synchronization and self-write filtering workflow betwee
 websiteCoverUrl: /assets/cases/data-asset-json-sync.png
 lang: en
 translationKey: data-asset-json-sync
-sourceHash: 262c1da985f1deedb36d51ffa2377340f5cb8723aa2349a4eba69dd9aae88c5d
+sourceHash: 389217fba6f38af07ca450ce49e6e4a4f096de005aa44fc1e4b4f2354b478105
 translationStatus: translated
-generatedBodyHash: e559e999bb486b657b48e3b84b388439bec9a8b174007050198b1f51bd76aead
+generatedBodyHash: 7b887c834a44ca20c63c04770f4df6eb366067dea017ef727e48342e2c76ca6c
 ---
 
 ## Background
@@ -58,8 +58,15 @@ Before writing to DataAsset, the workflow checks whether source control is enabl
 
 The original approach used file modification times to help determine synchronization direction. This suits scenarios where usually only one side changes. When both sides change, timestamp comparison cannot replace field-level conflict assessment, and the choice of changes needs separate review.
 
-## Final Summary
 
 The work established a bidirectional synchronization approach that allows external AI or scripts to modify DataAsset data through JSON, recording the key stages that automation needs to handle.
 
 Property conversion and numeric round trips need to be checked for each asset, and simultaneous changes on both sides require conflict review. After synchronization, the asset content and actual runtime results still need inspection.
+
+## Discuss your project
+
+If you want to modify UE DataAssets in batches with AI or scripts, or establish a JSON import and export workflow, I can help define the field structure, conversion rules, and editor-side synchronization.
+
+A sample asset, the JSON format, and the intended synchronization behavior will help determine whether to use manual exchange or file watching, and how to handle conflicts.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

@@ -17,9 +17,9 @@ coverAlt: Flowchart of the flying car simulator
 websiteCoverUrl: /assets/cases/flying-car-simulator.png
 lang: en
 translationKey: flying-car-simulator
-sourceHash: 25d0529bd432b147e2002e2f426e4650c94166f3742ad8a5a4f93164f7311d91
+sourceHash: 59f5eca29148175c38eda51af2da2a0c2c2f5b63148f853cbe4bf059e323704a
 translationStatus: translated
-generatedBodyHash: 4c5dee892bf990c890c8422b36b389fdfbe0bab899111ba48efacfb2fed37566
+generatedBodyHash: 427ac903024c41f48e31b9d5face3962a31d03d2e255571d87712f27a0e7ef9c
 ---
 
 ## Background
@@ -46,6 +46,13 @@ Dual-mode switching controls were established around flight and ground driving, 
 
 In flight, a physical model drove attitude and dynamics simulation. Cockpit interaction and HUD instruments provided operation entry points and information displays, giving control and state presentation corresponding interfaces.
 
-## Final Summary
 
 The project organized its simulation system around dual-mode control, physical simulation, and cockpit interaction, allowing ground driving and flight to be presented within one experience.
+
+## Discuss your project
+
+If your UE simulation needs both ground driving and flight controls, or additional cockpit interactions and HUD instruments, I can help define the control states and displayed information, then integrate the simulation logic.
+
+Describe the existing physical model, input devices, and intended experience so we can establish the development scope.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

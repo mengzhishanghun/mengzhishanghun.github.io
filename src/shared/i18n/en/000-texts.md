@@ -1724,7 +1724,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   case:ai-digital-human-integration:
-    root.html:1.head:0.meta:2@content: Connecting a digital human, speech recognition, conversation, speech synthesis, and facial expression driving into a local demonstration workflow.
+    root.html:1.head:0.meta:2@content: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
     root.html:1.head:0.title:4.#text:0: "UE AI Digital Human: Voice & Facial Integration · Xiao Mao"
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -1745,7 +1745,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Integrating an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: AI Digital Human Integration
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Connecting a digital human, speech recognition, conversation, speech synthesis, and facial expression driving into a local demonstration workflow.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: AI
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MetaHuman
@@ -4312,7 +4312,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE Projects
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: Integrating an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: AI Digital Human Integration
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: Connecting a digital human, speech recognition, conversation, speech synthesis, and facial expression driving into a local demonstration workflow.
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: A Toolchain from Plugin Development to Release
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: Desktop and Automation
@@ -4638,7 +4638,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: Completed
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.h2:0.#text:0: Integrating an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.p:1.#text:0: AI Digital Human Integration
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.p:2.#text:0: Connecting a digital human, speech recognition, conversation, speech synthesis, and facial expression driving into a local demonstration workflow.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0@aria-label: Case tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:0.#text:0: AI
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:1.#text:0: MetaHuman
@@ -8246,7 +8246,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: c97f9cabcdf12e1190a4dade8eef1ea46c7d38afebd4493ebfc3e0b058aee637
+sourceHash: b550882e3d688399b9a905f45b669ccf8811104a96f0243d838e2bfe27830599
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

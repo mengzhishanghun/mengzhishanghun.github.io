@@ -20,9 +20,9 @@ coverAlt: Flowchart for publishing Markdown images together with an article
 websiteCoverUrl: /assets/cases/markdown-publishing.png
 lang: en
 translationKey: markdown-publishing
-sourceHash: a57f9fdccf3e8349669339c8adac15604a79bd67d3f7a24e5e2510e5dd11e9a1
+sourceHash: c9f5734a84e663e70ea5094df9506e779a4985e538437e2e682518a55e222366
 translationStatus: translated
-generatedBodyHash: 4781dc139e15c1b992a7a78515a9a51c3a69d997ef290718d11cb9ddacbffa41
+generatedBodyHash: 3b20fca41e7f83083d0da6a967c28716c74df0c26c8970aaeb16459b89fdf7c2
 ---
 
 ## Background
@@ -51,8 +51,15 @@ The converted result can be copied or exported to a file as a publishing copy. T
 
 Embedding increases text size, so the target platform's acceptance rules and the final page appearance still need to be checked before publication.
 
-## Final Summary
 
 The work produced an image conversion tool usable through a GUI or CLI, allowing local images to move with exported text and reducing per-image preparation when transferring articles.
 
 Successful display depends on the target platform's support for embedded images. For websites that can manage their own assets, synchronizing images separately remains useful for caching and later replacement.
+
+## Discuss your project
+
+If you need to move Markdown and its images to another platform, start with MDBlogPacker. We can also discuss adapting the tool or automating a workflow for other image reference formats, batch exports, or publishing steps.
+
+A sample document and the target platform will help determine how to handle the images and which platform limits apply.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

@@ -19,9 +19,9 @@ coverAlt: Workflow for previewing and checking head and body animations after ad
 websiteCoverUrl: /assets/cases/metahuman-animation-clipping.png
 lang: en
 translationKey: metahuman-animation-clipping
-sourceHash: b99c513dccb49cab375d593415fb3e2da60dacd67ca189d7ecafc1249c2eca42
+sourceHash: 21cf5a27dd3d7ae7a3032a49dbef584c7ca9b0326b4789ad849688b36e50b45b
 translationStatus: translated
-generatedBodyHash: c2bc9ae8685fa7803a9a4a125fc79909f2d5ef460b4072f7e85f6d452b8d8b62
+generatedBodyHash: eda2441258e9883c0152f6ff1e0dde48647a3edb6265d9050c2ce02168167d02
 ---
 
 ## Background
@@ -50,8 +50,15 @@ The settings in the original screenshot were: `Additive Anim Type` set to `Mesh 
 
 After confirming the settings for one animation, a script Blueprint was used to organize batch modifications. For creating and configuring the script Blueprint, running its function, and screenshots of the results, [read the batch processing steps](https://mzsh.me/blog/cnblogs-19136316/).
 
-## Final Summary
 
 The original record confirms that the method was personally tested successfully in UE 5.6 and records a way to batch process the same animation settings, reducing repeated changes to individual assets.
 
 This result applies to the neck clipping observed when head and body animations were played separately. The LevelSequence record only says that the same symptom had not been found at the time; it does not establish that every playback path was validated.
+
+## Discuss your project
+
+If your MetaHuman clips when combining head and body animations, or you need to update animation asset settings in batches, I can help inspect the playback method, additive settings, and batch workflow.
+
+Share the engine version, animation source, and a video of the issue so we can check whether it matches this case.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

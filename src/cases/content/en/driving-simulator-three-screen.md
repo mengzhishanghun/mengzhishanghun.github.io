@@ -18,9 +18,9 @@ coverAlt: Flowchart for resolving inconsistent three-screen display in a driving
 websiteCoverUrl: /assets/cases/driving-simulator-three-screen.png
 lang: en
 translationKey: driving-simulator-three-screen
-sourceHash: 7aff9f02e62e291094b0590d82422665eeb75f70493032b753fb9a9d1dd06d80
+sourceHash: 92bb1827f944a9eaa89d10384e8e345c8cd5c384fc4944c0e5432c08b85ac094
 translationStatus: translated
-generatedBodyHash: cf7665e660e561f92582be071cada4d5af91ea5a3ddff3ee16fc0782f56831e0
+generatedBodyHash: 611b28ed5e2b1bf3ecd31257caf96d82540950a5e0c8ed3e3353f7d0f1da40b4
 ---
 
 ## Background
@@ -61,8 +61,15 @@ This used the engine's association between primary and secondary views so the re
 
 Lumen view capacity and exposure data association address two different problems. Their respective rationales need to be retained during maintenance, and implementation locations need to be checked again after an engine version change.
 
-## Final Summary
 
 According to the existing project records, the inconsistent lighting and exposure in the three-screen scene were addressed, and the project continued to be used for simulated driving test instruction.
 
 This approach applies to the UE 5.3 / 5.3.2 three-screen scenario in the original records. Engine upgrades require renewed checks of multi-view limits and exposure data association; changes should not simply be applied at the old file locations.
+
+## Discuss your project
+
+If your UE multi-screen project has inconsistent brightness, Lumen lighting issues, or reflection problems between views, I can help inspect the view configuration and engine implementation, identify the cause, and assess changes for your engine version.
+
+Useful details include the engine version, how the displays are configured, and screenshots or video showing the difference.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

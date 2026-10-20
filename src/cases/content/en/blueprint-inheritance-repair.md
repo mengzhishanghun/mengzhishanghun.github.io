@@ -19,9 +19,9 @@ coverAlt: Inheritance scanning and CreationMethod correction workflow for parent
 websiteCoverUrl: /assets/cases/blueprint-inheritance-repair.png
 lang: en
 translationKey: blueprint-inheritance-repair
-sourceHash: 1a7aed5a12091dbcca022cf6331806647488aac776db4f7d24a9cbbceaf95f8b
+sourceHash: a57e4233488e8233d614a8a244dfd0a63d95fe7aa65b1ed09b93feb0e8a20fd0
 translationStatus: translated
-generatedBodyHash: 36bfaa00d679b4b3a01462b31c5a69fc0087102740375e0e14f24497f7bf6f9d
+generatedBodyHash: 55d159f6cf359e0f4290fb1f2ea590d0c4e7ff9d2f9db94a35414fbb35b07117
 ---
 
 ## Background
@@ -63,8 +63,15 @@ SCS and ICH were scanned separately for each Blueprint to locate abnormal compon
 
 After modification, the affected Blueprints were marked dirty for the user to review and save. Components dynamically created by the Construction Script require separate assessment and should not automatically receive the same repair.
 
-## Final Summary
 
 The work established a process for collecting the inheritance chain, scanning both storage locations, checking out assets, correcting the field, and marking assets for saving, giving this class of issues a defined inspection and repair scope.
 
 This process targets abnormal component template creation methods. Similar symptoms require inspection of the component records before deciding whether to apply the same repair.
+
+## Discuss your project
+
+If inherited components cannot be deleted or changes in a child Blueprint affect its parent, I can help inspect the inheritance chain, component templates, and override records to identify the issue and assess the repair scope.
+
+Share the engine version, affected Blueprint hierarchy, and observed behavior. Whether this approach applies depends on the actual assets.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

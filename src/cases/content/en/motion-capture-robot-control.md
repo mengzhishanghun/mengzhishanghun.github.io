@@ -17,9 +17,9 @@ coverAlt: Flowchart of the motion capture robot control system
 websiteCoverUrl: /assets/cases/motion-capture-robot-control.png
 lang: en
 translationKey: motion-capture-robot-control
-sourceHash: a9194931ada9d8f5e2edf00883262c3743526e1e8a9abe2af1ef47b90921314a
+sourceHash: c51facc483e5c10a46dd6f4149e784a6f19c16e1dbb4ce3f7666c8e665f690e2
 translationStatus: translated
-generatedBodyHash: 9b96d72d603f431c31e1dc2ede791984b65bd5876e26b0e51d996238d2d044e5
+generatedBodyHash: eb47fcb8541037861c9c5d0933cedd4a8f80741307b1a3318d3a7da54078d4ed
 ---
 
 ## Background
@@ -44,6 +44,13 @@ Motion capture data acquisition and real-time parsing were integrated first so m
 
 The control stage handled command delivery and the feedback loop, connecting motion synchronization with information from the control side. Acquisition, parsing, mapping, and control each handled part of the process and together supported real-time motion control.
 
-## Final Summary
 
 Data parsing, skeleton mapping, motion synchronization, and control feedback were connected into one approach, forming the project's motion capture robot control workflow.
+
+## Discuss your project
+
+If you need to feed motion capture data into a robot model in UE or connect motion synchronization with control commands and feedback, I can help with data parsing, skeleton mapping, and communication.
+
+Details about the capture device, robot model, and control interface will help establish the integration requirements.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

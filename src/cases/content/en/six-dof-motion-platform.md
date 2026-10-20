@@ -17,9 +17,9 @@ coverAlt: Flowchart of the six-degree-of-freedom motion platform integration
 websiteCoverUrl: /assets/cases/six-dof-motion-platform.png
 lang: en
 translationKey: six-dof-motion-platform
-sourceHash: 44584c1ddccc2a961f718f902c355474f0540e91a9e35e0eeb9b76fc0c8960e5
+sourceHash: 85911c368251473dbf8722254c6da149780f8b1b13c869b79a82ff3c2efbc53b
 translationStatus: translated
-generatedBodyHash: 90bbe44e7db8aea4ee96b1e2a604726a58f55ada142bd1a94f32c0e0cfe04fdb
+generatedBodyHash: 2c122e102a7a65048a98c4c33f06a2cd3441acb0c4230a15a7ea6b874adc0c7c
 ---
 
 ## Background
@@ -44,6 +44,13 @@ Real-time communication for platform pose data was integrated, and motion data f
 
 Integration was calibrated and debugged across multiple degrees of freedom so communication and motion driving could work together on the actual platform. Communication connected the data, while calibration and debugging addressed the platform's response; both contributed to the integration.
 
-## Final Summary
 
 The project approach was completed around real-time communication, motion data driving, and integration calibration, connecting the UE scene to the six-degree-of-freedom motion platform.
+
+## Discuss your project
+
+If your UE simulation needs to work with a six-degree-of-freedom motion platform, I can help integrate the communication interface, prepare motion data, and assist with response calibration and debugging.
+
+Share the platform model, control protocol, existing simulation, and intended motion response so we can define the software and hardware scope.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

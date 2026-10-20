@@ -21,9 +21,9 @@ coverAlt: Flowchart of the toolchain from plugin development to release
 websiteCoverUrl: /assets/cases/plugin-release-workflow.png
 lang: en
 translationKey: plugin-release-workflow
-sourceHash: ddaed4bd8e42d161d32a189ef559d34acd8535452aaecd8db643b2c529ae5f46
+sourceHash: 930a107ce5458240b80f33cb4749feff8fe2cc19ddb200dcd7e7d70bf021f0ee
 translationStatus: translated
-generatedBodyHash: 01a5d119524d7f3ac860d33a54e23eb4a9906889afdf5128c4259de580e58a74
+generatedBodyHash: e8566560a70b648e4fe36a324ca1ca8f1e70bc079c07e576bb5e658dbe053ca9
 ---
 
 ## Background
@@ -50,8 +50,15 @@ UEPluginManager brings together project, marketplace, and engine plugins, offeri
 
 UEPluginAutoPacker runs plugin builds separately for each configured engine, displays each version's status and logs, and organizes release files according to selected options. Success, failure, and cancellation are shown independently for each engine, making it easier to inspect a specific version.
 
-## Final Summary
 
 The work produced two independently usable tools for plugin management and multi-version packaging, concentrating environment checks and build organization into clear operation entry points.
 
 A successful build still requires log review and testing in the target engine to assess compatibility. The packaging tool handles plugin packages; publishing a listing and packaging a complete UE project have their own workflows.
+
+## Discuss your project
+
+If you repeatedly manage UE plugins, package them for multiple engine versions, or organize release files, start with the tools linked to this case. If they do not cover your workflow, we can discuss custom development.
+
+The plugin type, target engine versions, and delivery requirements will help identify which steps need additional support.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

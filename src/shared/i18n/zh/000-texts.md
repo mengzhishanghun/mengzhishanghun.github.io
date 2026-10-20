@@ -1724,7 +1724,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   case:ai-digital-human-integration:
-    root.html:1.head:0.meta:2@content: 将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。
+    root.html:1.head:0.meta:2@content: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
     root.html:1.head:0.title:4.#text:0: "UE AI 数字人：语音对话与表情集成 · 小毛"
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -1745,7 +1745,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 集成 AI 数字人交互流程
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: AI Digital Human Integration
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: AI
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MetaHuman
@@ -4312,7 +4312,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE项目
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: 集成 AI 数字人交互流程
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: AI Digital Human Integration
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: 插件开发到发布的工具链
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: 桌面与自动化
@@ -4638,7 +4638,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: 已完成
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.h2:0.#text:0: 集成 AI 数字人交互流程
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.p:1.#text:0: AI Digital Human Integration
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.p:2.#text:0: 将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0@aria-label: 案例标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:0.#text:0: AI
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:1.#text:0: MetaHuman

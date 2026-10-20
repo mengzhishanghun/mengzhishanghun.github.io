@@ -17,9 +17,9 @@ productIds:
   - p4-stream-switcher
 lang: en
 translationKey: perforce-workspace-pool
-sourceHash: 5544dd1a1076e305f8c493750432dcef2a6fa5500cd114db2c8419bc5cddf7a5
+sourceHash: 98f17e244d5c2039e382035126a7d73a7719e836cea3b826ca52efedfe35b6c7
 translationStatus: translated
-generatedBodyHash: 4668605af508652c0a2f43bba8d1164135455874d73b7165ae458510dbbdacab
+generatedBodyHash: 41d155afdadc8e681ff0c0c6a1f8d6e41da4d2234fab542f63167c96c8ea30f0
 ---
 
 ## Background and constraints
@@ -53,3 +53,11 @@ Normal cleanup can delete extra local files that are not ignored; offline mode c
 - [P4StreamSwitcher work](/en/works/p4-stream-switcher/)
 - [Usage guide](/en/docs/tools/p4-stream-switcher/)
 - [Python stream switching blog](/en/blog/python-perforce-stream-switch-safety/)
+
+## Discuss your project
+
+If your Perforce workflow involves multiple branch directories, local caches, or attaching offline directories, start with P4StreamSwitcher and its guide. We can also discuss adapting it to your naming, directory, or switching rules.
+
+Describe the stream structure, workspace count, and local content that needs to be retained so we can define the boundaries for synchronization, cleanup, and pending changes.
+
+If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.
