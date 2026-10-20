@@ -83,9 +83,9 @@ Three-screen Driving Simulator Display Alignment
 
 UE项目
 
-### [集成 AI 数字人交互流程](/cases/ai-digital-human-integration/)
+### [本地集成 AI 数字人交互流程](/cases/ai-digital-human-integration/)
 
-AI Digital Human Integration
+Local Integration of an AI Digital Human Interaction Workflow
 
 将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。
 

@@ -25,6 +25,42 @@
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
     },
     {
+      "depth": 3,
+      "oldId": "json-中间格式与属性转换",
+      "utilityId": "doc:ai-data-asset-guide:body-utility:15",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "浮点数输出与属性名",
+      "utilityId": "doc:ai-data-asset-guide:body-utility:16",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "启动同步与删除规则",
+      "utilityId": "doc:ai-data-asset-guide:body-utility:17",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "防止循环同步",
+      "utilityId": "doc:ai-data-asset-guide:body-utility:18",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "资产导入签出与保存实现",
+      "utilityId": "doc:ai-data-asset-guide:body-utility:19",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "同步管理器的生命周期",
+      "utilityId": "doc:ai-data-asset-guide:body-utility:20",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
       "depth": 2,
       "oldId": "ai-集成",
       "utilityId": "doc:ai-data-asset-guide:body-utility:5",
@@ -64,6 +100,12 @@
       "depth": 2,
       "oldId": "版本历史",
       "utilityId": "doc:ai-data-asset-guide:body-utility:13",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "技术说明来源",
+      "utilityId": "doc:ai-data-asset-guide:body-utility:21",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
     },
     {
@@ -1088,8 +1130,62 @@
     },
     {
       "depth": 3,
+      "oldId": "适合检查的组件异常",
+      "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:16",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "组件模板为什么会异常",
+      "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:17",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "11-根本原因",
+      "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:18",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4>{{anchor}}</div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "12-为什么会触发",
+      "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:19",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4>{{anchor}}</div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "13-手动修复的麻烦",
+      "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:20",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4>{{anchor}}</div>"
+    },
+    {
+      "depth": 3,
       "oldId": "操作步骤",
       "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:8",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "扫描继承链与组件记录",
+      "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:21",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "继承链扫描范围",
+      "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:22",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4>{{anchor}}</div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "scs-与-ich-两处组件记录",
+      "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:23",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4>{{anchor}}</div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "修复阶段",
+      "utilityId": "doc:simple-bp-inherit-fix-guide:body-utility:24",
       "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>{{anchor}}</div>"
     },
     {

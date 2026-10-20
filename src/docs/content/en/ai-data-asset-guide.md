@@ -17,14 +17,18 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/ai-data-asset-guide/
 lang: en
 translationKey: ai-data-asset-guide
-sourceHash: 1b1733efbc4bdcfc88146bee061da98ce390234d4d0f7caf6b64ed9fa47466db
+sourceHash: ddc7fa3ac47983989fc6a7e841846cf0f05f45f1a1d1834442f12e9729e5dee7
 translationStatus: translated
-generatedBodyHash: 4820c4ad829f529823bea77a8d6bda1d6e79b651a66519c2744cb293474a0b24
+generatedBodyHash: 46afda5e0d29ad68d4ad7e2f9f1915b5c2efbb549fd2190f17cd82cf0202c6c3
 ---
 
 # AI DataAsset
 
 Read and modify existing DataAssets through JSON, letting AI or other external tools process their data and automatically synchronize it back to UE. Supported data includes common basic types and most structs, including nested structs and properties in common containers such as TArray, TMap, and TSet.
+
+DataAssets are stored as UE-serialized .uasset files and commonly hold skill tables, character attributes, loot tables, and AI behavior parameters. External AI tools cannot easily edit these fields directly. JSON provides a channel for modifying basic fields, nested structs, and containers without manually copying AI output into the editor. LLM-generated level configurations, reinforcement-learning balance adjustments, and batch edits by designers can use this channel; results still need checking and testing in UE.
+
+See the [AIDataAsset work page](/en/works/ai-data-asset/) for its purpose and use cases.
 
 ## Features
 
@@ -33,7 +37,7 @@ Read and modify existing DataAssets through JSON, letting AI or other external t
 - **Orphan cleanup**: Attempts to remove JSON without a corresponding DataAsset when startup scanning reaches cleanup; cleanup is skipped if no DataAssets are found
 - **Version control integration**: When version control is enabled, attempts to check out files through the configured Perforce/Git/SVN provider before saving
 - **Loop prevention**: Avoids repeated import/export triggered by the plugin’s own synchronization results
-- **High-precision output**: JSON export uses full-precision floating-point values
+- **Floating-point output**: The historical implementation uses `%.9f` for float and `%.17g` for double; round-trip precision must be checked against the actual numeric range and serialization path
 - **Property name restoration**: JSON field names match the editor display instead of UE's internal camelCase form
 - **Smart writes**: Writes files only when content actually changes, avoiding meaningless changes in version control
 
@@ -56,7 +60,37 @@ Open **Project Settings > Plugins > AIDataAsset**:
 
 ## How It Works
 
-**Choosing data at startup.** With automatic synchronization enabled, the plugin scans DataAssets after project asset scanning completes, performs initial synchronization with a progress display, and then monitors subsequent changes. It uses modification times of the asset and JSON files on disk:
+### JSON as an Intermediate Format and Property Conversion
+
+DataAssets and external tools need a format they can both process. CSV, XML, and YAML are alternatives; I chose JSON because:
+
+- Nearly all programming languages and AI frameworks support it natively.
+- It is human-readable and convenient for debugging.
+- Text diffs let reviewers compare individual field changes.
+- Its flexible structure represents common nested UE data.
+
+UE's built-in `FJsonObjectConverter` provides two main conversion functions:
+
+- **UStructToJsonObject** serializes a UStruct, including a DataAsset's UPROPERTY fields, into FJsonObject.
+- **JsonObjectToUStruct** performs the reverse conversion.
+
+It handles most UPROPERTY types: basic values, FString, FName, enums, nested UStructs, TArray, TMap, TSet, and soft references such as FSoftObjectPath. Check specific property types and soft references against the engine version and asset definition.
+
+For manual, one-way exchange, an editor button is sufficient: export JSON, let an AI tool edit it, then import it manually. Continuous monitoring is only needed for automatic synchronization in both directions.
+
+### Floating-Point Output and Property Names
+
+Output formatting affects readability and round-trip results. The implementation notes used an editor value of `0.3` exporting as `0.30000000000000004` as an example relevant to damage multipliers, probability weights, and physics parameters. Such decimal representations can also arise from binary floating point itself; this example does not establish that all UE JSON conversions lose precision.
+
+The implementation chose a custom JSON PrintPolicy: `%.9f` for float (nine decimal places) and `%.17g` for double (17 significant digits for IEEE 754 double precision). The original notes aimed for identical DataAsset → JSON → DataAsset results, but fixed decimal places are not significant digits. These format strings alone cannot guarantee lossless round trips for floats of every magnitude. Check field types, serialization paths, and acceptable error.
+
+`FJsonObjectConverter` lowercases the first letter of property names when serializing: `MaxHealth` becomes `maxHealth`. This mismatch can confuse AI tools, and a field written using the editor's capitalization may fail to match during deserialization.
+
+The solution recursively restores uppercase initials after export and applies the reverse conversion before import. Check abbreviations, nested structures, and name collisions against the actual fields; initial-letter conversion cannot be assumed reversible for every asset.
+
+### Startup Synchronization and Deletion Rules
+
+**Choosing data at startup.** With automatic synchronization enabled, the plugin scans DataAssets after project asset scanning completes, performs initial synchronization with a progress display, and then monitors subsequent changes. The scan excludes assets under `/Engine/`, finishes initial synchronization, and then registers asset and directory monitoring for the running editor. It uses modification times of the asset and JSON files on disk:
 
 | Asset and JSON state | Result |
 | --- | --- |
@@ -75,9 +109,42 @@ If both sides have changed, modification times still determine the direction; th
 - When AI adds or modifies JSON corresponding to an existing asset, its properties are imported into that asset. The plugin first finds the existing DataAsset by the JSON path. If the asset cannot be found or loaded, it neither imports the file nor creates an asset.
 - Import or export is skipped when the generated JSON text exactly matches the existing contents, avoiding unnecessary writes. The plugin also avoids repeatedly treating its own file writes as external edits.
 
-**Deletion and recovery.** Deleting a UE asset attempts to delete its JSON. Deleting only JSON does not delete the asset or immediately regenerate JSON. If automatic synchronization is enabled and the asset still exists and can be loaded, the next editor startup exports JSON from it again. Another edit to that asset may regenerate JSON earlier.
+**Deletion and recovery.** Startup cleanup identifies orphan JSON using the asset paths collected in that scan. If no DataAssets are found, scanning returns early without cleanup. Deleting a UE asset attempts to delete its JSON. Deleting only JSON does not delete the asset or immediately regenerate JSON. If automatic synchronization is enabled and the asset still exists and can be loaded, the next editor startup exports JSON from it again. Another edit to that asset may regenerate JSON earlier.
 
 **Importing and saving.** Import updates the DataAsset in the editor, supports undo and redo, and notifies the editor that properties have changed. When version control is enabled, the plugin attempts to check out the asset before saving it to disk. Failed saves produce a warning and leave the asset marked for saving. Resolve write-access or save problems first, then inspect the asset on disk; values shown in the editor alone do not establish that saving succeeded.
+
+### Preventing Synchronization Loops
+
+Two-way synchronization can repeatedly follow this path:
+
+1. The user edits a DataAsset in the editor.
+2. Monitoring exports the change to JSON.
+3. The file system reports a JSON change.
+4. Monitoring imports it into the DataAsset.
+5. The cycle returns to step 2.
+
+The implementation uses two layers of protection:
+
+- **Synchronization flag `bIsSyncing`**: Set during startup synchronization and directory-change handling. Property, add, delete, rename, and package-reload callbacks return while synchronization is active, preventing another export during import.
+- **Self-written path set `PendingSelfChanges`**: Records the normalized path after export writes a file. When directory monitoring receives that path's notification, it removes the marker and skips the notification.
+
+File notifications can arrive after the flag resets, so path tracking is also needed. Export compares existing files with the generated JSON text; import compares the current asset's serialized text with the file. Identical strings are skipped. This is a text comparison, not a semantic JSON comparison that ignores whitespace or field order.
+
+During editor operation, `OnObjectPropertyChanged` skips continuous `Interactive` events; other DataAsset property changes and asset additions export JSON. Renaming attempts to delete the old JSON path before exporting the new one. Package reload exports the updated asset during `PostPackageFixup`.
+
+Directory monitoring attempts import only for added or modified `.json` files. It loads an existing DataAsset by path; a missing asset produces a warning and returns without creating an asset. Deleting JSON does not delete the asset.
+
+### Asset Import, Checkout, and Saving
+
+Version-controlled .uasset files, including those managed by Perforce, may be read-only, so asset saving also needs handling.
+
+The current implementation first calls `Modify()` in an undo transaction, writes JSON data into the in-memory asset, and calls `PostEditChange()`. It then checks whether `ISourceControlModule` is enabled, attempts Checkout through the current provider when enabled, and calls `UPackage::Save`.
+
+The Checkout result is not checked here. Only a successful save means the asset on disk has been updated. A failed save marks the package for saving and logs a warning; in-memory property changes alone do not establish persistence.
+
+### Synchronization Manager Lifecycle
+
+Import uses `FScopedTransaction` for undo and redo. Plugin shutdown unregisters `IDirectoryWatcher` and asset/property callbacks so listeners cannot continue referencing a destroyed synchronization manager.
 
 ## AI Integration
 
@@ -113,7 +180,7 @@ The plugin automatically exports the following JSON:
 }
 ```
 
-> **Note**: Field names match the UE editor display (for example, `MaxHealth` rather than `maxHealth`). Floating-point values use full precision to avoid data loss during round trips.
+> **Note**: Field names match the UE editor display (for example, `MaxHealth` rather than `maxHealth`). The fixed decimal places in float’s `%.9f` cannot guarantee exact round trips across its full range; double uses `%.17g`. Check actual fields and acceptable error after editing.
 
 ### AI Workflow Example
 
@@ -160,6 +227,10 @@ The plugin automatically exports the following JSON:
 
 
 Open **Edit → Project Settings**, go to the AI DataAsset settings page, and set **Language** to **English** or **Chinese**. English is the default. User-facing interfaces, prompts, notifications, and functional logs update immediately without restarting the editor; public API names and module startup/shutdown logs always remain in English.
+
+## Technical Source
+
+The two-way synchronization implementation notes were published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/20159718) on 2026-05-25.
 
 ## Contact
 

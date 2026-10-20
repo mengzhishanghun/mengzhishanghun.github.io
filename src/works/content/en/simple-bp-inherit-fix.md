@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: 7980104a238258b58540127509296516f75b3d3243de0c5766857749a9d6f59c
+sourceHash: dd6a9a46661b5836d30acb402e6bbb5014419d39e69f2f2ef92b2e34e2882683
 translationStatus: translated
-generatedBodyHash: 2ea4d2ce3625e9bcc6791589f2701d5963c4dac9526d992c0d37c40bf405bb77
+generatedBodyHash: ee69deb47a4520b5b520ca5741c23559eb664e4c535b6b23424e84e3de609bfb
 workInfo:
   channels:
     - kind: sale
@@ -79,6 +79,6 @@ Repairs may involve several Blueprint assets. Review logs, checkout status, and 
 
 See the [usage guide](/en/docs/guides/ue-tools/simple-bp-inherit-fix-guide/) for steps and parameters.
 
-## Related case
+## Technical Details
 
-For CreationMethod, inheritance chains, and SCS / ICH inspection and repair, see the [development case](/en/cases/blueprint-inheritance-repair/).
+See the [user guide](/en/docs/guides/ue-tools/simple-bp-inherit-fix-guide/) for CreationMethod, inheritance chains, and SCS / ICH diagnosis and repair.

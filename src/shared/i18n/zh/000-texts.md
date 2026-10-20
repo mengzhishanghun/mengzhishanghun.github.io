@@ -1743,15 +1743,15 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 集成 AI 数字人交互流程
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: AI Digital Human Integration
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 本地集成 AI 数字人交互流程
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: AI
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MetaHuman
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 语音交互
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看集成 AI 数字人交互流程示意图大图
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看本地集成 AI 数字人交互流程示意图大图
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -2004,106 +2004,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 写作工具
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看让 Markdown 图片随文章一起发布示意图大图
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  case:blueprint-inheritance-repair:
-    root.html:1.head:0.meta:2@content: 沿继承链检查组件模板的 CreationMethod，处理子类属性修改影响父类的问题。
-    root.html:1.head:0.title:4.#text:0: "UE 蓝图继承组件污染：CreationMethod 修复 · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 修复蓝图继承中的组件状态污染
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 沿继承链检查组件模板的 CreationMethod，处理子类属性修改影响父类的问题。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: 蓝图
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 继承链
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 组件修复
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看修复蓝图继承中的组件状态污染示意图大图
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  case:data-asset-json-sync:
-    root.html:1.head:0.meta:2@content: 以 JSON 衔接外部 AI 工具与 DataAsset，处理双向同步中的字段转换、重复触发和写入问题。
-    root.html:1.head:0.title:4.#text:0: "UE DataAsset 与 JSON 双向同步案例 · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 让 DataAsset 与 JSON 双向同步
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 以 JSON 衔接外部 AI 工具与 DataAsset，处理双向同步中的字段转换、重复触发和写入问题。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: DataAsset
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: JSON
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: AI
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看让 DataAsset 与 JSON 双向同步示意图大图
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -4308,10 +4208,10 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: Three-screen Driving Simulator Display Alignment
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 围绕三屏 Lumen GI 光反射失效与曝光不一致，定位并改写引擎相关实现。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: 集成 AI 数字人交互流程
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: 本地集成 AI 数字人交互流程
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE项目
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: 集成 AI 数字人交互流程
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: AI Digital Human Integration
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: 本地集成 AI 数字人交互流程
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: 插件开发到发布的工具链
@@ -4322,7 +4222,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1@aria-label: 精选案例切换
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: 显示：解决驾考模拟器三屏显示不一致问题
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: 显示：集成 AI 数字人交互流程
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: 显示：本地集成 AI 数字人交互流程
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: 显示：插件开发到发布的工具链
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: 精选博客
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: 查看全部
@@ -4616,9 +4516,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: 从真实问题到落地结果
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: 案例分类
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE项目
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "8"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "6"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:0.#text:0: 桌面与自动化
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "2"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "3"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1@aria-label: 内容列表
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:0.label:0.#text:0: 搜索当前分类
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:0.input:1@placeholder: 输入多个关键词时用空格隔开
@@ -4634,10 +4534,10 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:1.#text:0: 多屏显示
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:2.#text:0: 仿真
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: 集成 AI 数字人交互流程
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: 本地集成 AI 数字人交互流程
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: 已完成
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.h2:0.#text:0: 集成 AI 数字人交互流程
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.p:1.#text:0: AI Digital Human Integration
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.h2:0.#text:0: 本地集成 AI 数字人交互流程
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0@aria-label: 案例标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:0.#text:0: AI
@@ -4685,22 +4585,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:0.#text:0: Markdown
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:1.#text:0: 图片
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:2.#text:0: 写作工具
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7@aria-label: 修复蓝图继承中的组件状态污染
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:1.div:0.span:0.#text:0: 已完成
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:1.div:1.h2:0.#text:0: 修复蓝图继承中的组件状态污染
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:1.p:2.#text:0: 沿继承链检查组件模板的 CreationMethod，处理子类属性修改影响父类的问题。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:2.div:0.span:0.#text:0: 蓝图
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:2.div:0.span:1.#text:0: 继承链
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:2.div:0.span:2.#text:0: 组件修复
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8@aria-label: 让 DataAsset 与 JSON 双向同步
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:1.div:0.span:0.#text:0: 已完成
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:1.div:1.h2:0.#text:0: 让 DataAsset 与 JSON 双向同步
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:1.p:2.#text:0: 以 JSON 衔接外部 AI 工具与 DataAsset，处理双向同步中的字段转换、重复触发和写入问题。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:2.div:0.span:0.#text:0: DataAsset
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:2.div:0.span:1.#text:0: JSON
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:2.div:0.span:2.#text:0: AI
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9@aria-label: 处理 MetaHuman 头身动画叠加时的穿模
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:0.span:0.#text:0: 已完成
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:1.h2:0.#text:0: 处理 MetaHuman 头身动画叠加时的穿模
@@ -6557,10 +6441,6 @@ scriptSlots:
   case:plugin-release-workflow:root.html:1.body:1.script:5:2062: Bilibili 播放器
   case:markdown-publishing:root.html:1.body:1.script:5:1187: Bilibili 播放器
   case:markdown-publishing:root.html:1.body:1.script:5:2062: Bilibili 播放器
-  case:blueprint-inheritance-repair:root.html:1.body:1.script:5:1187: Bilibili 播放器
-  case:blueprint-inheritance-repair:root.html:1.body:1.script:5:2062: Bilibili 播放器
-  case:data-asset-json-sync:root.html:1.body:1.script:5:1187: Bilibili 播放器
-  case:data-asset-json-sync:root.html:1.body:1.script:5:2062: Bilibili 播放器
   case:metahuman-animation-clipping:root.html:1.body:1.script:5:1187: Bilibili 播放器
   case:metahuman-animation-clipping:root.html:1.body:1.script:5:2062: Bilibili 播放器
   work:simple-file-updater:root.html:1.body:1.script:5:1187: Bilibili 播放器
@@ -8211,6 +8091,38 @@ bodyUtilitySlots:
     root.html:0.body:1.a:0.span:1.#text:0: 章节“配置保存与常见问题”的固定链接
   doc:p4-stream-switcher:body-utility:9:
     root.html:0.body:1.a:0.span:1.#text:0: 章节“相关内容”的固定链接
+  doc:ai-data-asset-guide:body-utility:15:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“JSON 中间格式与属性转换”章节
+  doc:ai-data-asset-guide:body-utility:16:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“浮点数输出与属性名”章节
+  doc:ai-data-asset-guide:body-utility:17:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“启动同步与删除规则”章节
+  doc:ai-data-asset-guide:body-utility:18:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“防止循环同步”章节
+  doc:ai-data-asset-guide:body-utility:19:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“资产导入、签出与保存实现”章节
+  doc:ai-data-asset-guide:body-utility:20:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“同步管理器的生命周期”章节
+  doc:ai-data-asset-guide:body-utility:21:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“技术说明来源”章节
+  doc:simple-bp-inherit-fix-guide:body-utility:16:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“适合检查的组件异常”章节
+  doc:simple-bp-inherit-fix-guide:body-utility:17:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“组件模板为什么会异常”章节
+  doc:simple-bp-inherit-fix-guide:body-utility:18:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“1.1 根本原因”章节
+  doc:simple-bp-inherit-fix-guide:body-utility:19:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“1.2 为什么会触发”章节
+  doc:simple-bp-inherit-fix-guide:body-utility:20:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“1.3 手动修复的麻烦”章节
+  doc:simple-bp-inherit-fix-guide:body-utility:21:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“扫描继承链与组件记录”章节
+  doc:simple-bp-inherit-fix-guide:body-utility:22:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“继承链扫描范围”章节
+  doc:simple-bp-inherit-fix-guide:body-utility:23:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“SCS 与 ICH 两处组件记录”章节
+  doc:simple-bp-inherit-fix-guide:body-utility:24:
+    root.html:0.body:1.a:0.span:1.#text:0: 链接到“修复阶段”章节
 missingPublicFileNote: （公开仓库暂无此文件）
 codeLabels:
   terminalWindow: 终端窗口
@@ -8243,6 +8155,6 @@ workLabels:
   developing: 开发中
   supportAction: 去支持
   noDocs: 暂无相关文档
-
 ---
+
 公共模板正文以外的文字、元信息、图片说明与可访问标签由这些位置键提供。正文与目录从对应 Markdown 生成。

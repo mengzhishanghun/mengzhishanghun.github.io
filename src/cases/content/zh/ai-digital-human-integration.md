@@ -1,5 +1,5 @@
 ---
-title: 集成 AI 数字人交互流程
+title: 本地集成 AI 数字人交互流程
 description: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
 type: case
 slug: ai-digital-human-integration
@@ -14,7 +14,7 @@ tags:
   - AI
   - MetaHuman
   - 语音交互
-coverAlt: 集成 AI 数字人交互流程的流程图
+coverAlt: 本地集成 AI 数字人交互流程的流程图
 websiteCoverUrl: /assets/cases/ai-digital-human-integration.png
 lang: zh
 translationKey: ai-digital-human-integration

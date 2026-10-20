@@ -8,9 +8,9 @@ websiteRoute: /cases/
 template: cases/index.html
 lang: en
 translationKey: cases-index
-sourceHash: 7ba7ff0fa8ecad210e4411f7c9934d9fbe925b6ef1baa8047e157b21fcec4588
+sourceHash: 97f0bbdb9bcb5a235206f8522017a75cf0f44e4df8a5fc71b688e99ff88592ba
 translationStatus: translated
-generatedBodyHash: 8a92e2b25d900409c877e6962b8b4cedbefdc5b39b1581de6718b959ecd6097e
+generatedBodyHash: 967efe048ce0cc506d9b91ba6c650a7c60c464aca6983191fcc432ea81d5b30e
 ---
 
 ![](/media-occurrence/page%3Acases-index%3Amedia%3A1)
@@ -19,7 +19,7 @@ generatedBodyHash: 8a92e2b25d900409c877e6962b8b4cedbefdc5b39b1581de6718b959ecd60
 
 From real problems to practical results
 
-UE Projects 8 · Desktop & Automation 2
+UE Projects 6 · Desktop & Automation 3
 
 Search this category
 
@@ -39,9 +39,9 @@ Lumen · Multi-screen display · Simulation](/cases/driving-simulator-three-scre
 
 Completed
 
-## Integrating an AI Digital Human Interaction Workflow
+## Local Integration of an AI Digital Human Interaction Workflow
 
-AI Digital Human Integration
+Local Integration of an AI Digital Human Interaction Workflow
 
 Connecting a digital human, speech recognition, conversation, speech synthesis, and facial expression driving into a local demonstration workflow.
 
@@ -76,22 +76,6 @@ Six-DOF Motion Platform Integration
 Coordinated control of a Stewart platform and UE simulation.
 
 Simulation · Hardware integration](/cases/six-dof-motion-platform/)[![](/media-occurrence/page%3Acases-index%3Amedia%3A7)
-
-Completed
-
-## Repairing Component State Contamination in Blueprint Inheritance
-
-Checking component template CreationMethod values along the inheritance chain to address child property changes affecting the parent.
-
-Blueprints · Inheritance chain · Component repair](/cases/blueprint-inheritance-repair/)[![](/media-occurrence/page%3Acases-index%3Amedia%3A8)
-
-Completed
-
-## Synchronizing DataAsset and JSON in Both Directions
-
-Using JSON to connect external AI tools with DataAsset and address field conversion, repeated triggers, and writes in bidirectional synchronization.
-
-DataAsset · JSON · AI](/cases/data-asset-json-sync/)[![](/media-occurrence/page%3Acases-index%3Amedia%3A9)
 
 Completed
 

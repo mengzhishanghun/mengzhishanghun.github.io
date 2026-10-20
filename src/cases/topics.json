@@ -5,7 +5,6 @@
     "rendering-display",
     "digital-human-animation",
     "ai-data-integration",
-    "blueprint-component-repair",
     "development-release",
     "content-file-processing"
   ],
@@ -105,40 +104,6 @@
           "MetaHuman",
           "Animation",
           "Batch processing"
-        ]
-      }
-    },
-    "case:data-asset-json-sync": {
-      "topics": [
-        "ai-data-integration"
-      ],
-      "legacyTags": {
-        "zh": [
-          "DataAsset",
-          "JSON",
-          "AI"
-        ],
-        "en": [
-          "DataAsset",
-          "JSON",
-          "AI"
-        ]
-      }
-    },
-    "case:blueprint-inheritance-repair": {
-      "topics": [
-        "blueprint-component-repair"
-      ],
-      "legacyTags": {
-        "zh": [
-          "蓝图",
-          "继承链",
-          "组件修复"
-        ],
-        "en": [
-          "Blueprints",
-          "Inheritance chain",
-          "Component repair"
         ]
       }
     },

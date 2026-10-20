@@ -23,9 +23,9 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: b385f264b8bc881404da99e2941e68e6973126086793ebac7283c54b9e7e566a
+sourceHash: 2b1f10f3d880c4fa586278b53d7572578699e26c816cdaf3df4ea530e54df7fb
 translationStatus: translated
-generatedBodyHash: 33f7181b56ca0c93b41d9c52f5498a44778bb64b14b19b5bed433555eb31f79c
+generatedBodyHash: a893f3dd017dc0cb0e1eff3722677d44af39772f325b17503aa17fe328db4785
 workInfo:
   channels:
     - kind: sale
@@ -82,6 +82,6 @@ Startup synchronization chooses its direction by file modification times and doe
 For configuration, startup synchronization rules, deletion behavior, and common questions, see the [AIDataAsset documentation](/en/docs/guides/ue-tools/ai-data-asset-guide/).
 
 
-## Related case
+## Technical Details
 
-For JSON selection, conversion APIs, numeric formats, and asynchronous synchronization, see the [development case](/en/cases/data-asset-json-sync/).
+See the [user manual](/en/docs/guides/ue-tools/ai-data-asset-guide/) for JSON selection, conversion APIs, numeric formatting, and asynchronous synchronization.

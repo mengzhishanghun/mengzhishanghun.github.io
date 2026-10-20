@@ -269,8 +269,6 @@
           "id": "case-6719e60a89e7",
           "entities": [
             "case:ai-digital-human-integration",
-            "case:blueprint-inheritance-repair",
-            "case:data-asset-json-sync",
             "case:driving-simulator-three-screen",
             "case:flying-car-simulator",
             "case:metahuman-animation-clipping",
@@ -296,8 +294,6 @@
           "name": "UE项目",
           "entities": [
             "case:ai-digital-human-integration",
-            "case:blueprint-inheritance-repair",
-            "case:data-asset-json-sync",
             "case:driving-simulator-three-screen",
             "case:flying-car-simulator",
             "case:metahuman-animation-clipping",
@@ -323,8 +319,6 @@
           "name": "UE项目",
           "entities": [
             "case:ai-digital-human-integration",
-            "case:blueprint-inheritance-repair",
-            "case:data-asset-json-sync",
             "case:driving-simulator-three-screen",
             "case:flying-car-simulator",
             "case:metahuman-animation-clipping",
@@ -349,8 +343,6 @@
         "case:six-dof-motion-platform",
         "case:plugin-release-workflow",
         "case:markdown-publishing",
-        "case:blueprint-inheritance-repair",
-        "case:data-asset-json-sync",
         "case:metahuman-animation-clipping",
         "case:perforce-workspace-pool"
       ]

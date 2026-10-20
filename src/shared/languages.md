@@ -47,8 +47,6 @@ languages:
       case:six-dof-motion-platform: cases/content/zh/six-dof-motion-platform.md
       case:plugin-release-workflow: cases/content/zh/plugin-release-workflow.md
       case:markdown-publishing: cases/content/zh/markdown-publishing.md
-      case:blueprint-inheritance-repair: cases/content/zh/blueprint-inheritance-repair.md
-      case:data-asset-json-sync: cases/content/zh/data-asset-json-sync.md
       case:metahuman-animation-clipping: cases/content/zh/metahuman-animation-clipping.md
       work:simple-file-updater: works/content/zh/simple-file-updater.md
       work:p4-case-sync: works/content/zh/p4-case-sync.md
@@ -171,8 +169,6 @@ languages:
       case:six-dof-motion-platform: cases/content/en/six-dof-motion-platform.md
       case:plugin-release-workflow: cases/content/en/plugin-release-workflow.md
       case:markdown-publishing: cases/content/en/markdown-publishing.md
-      case:blueprint-inheritance-repair: cases/content/en/blueprint-inheritance-repair.md
-      case:data-asset-json-sync: cases/content/en/data-asset-json-sync.md
       case:metahuman-animation-clipping: cases/content/en/metahuman-animation-clipping.md
       work:simple-file-updater: works/content/en/simple-file-updater.md
       work:p4-case-sync: works/content/en/p4-case-sync.md

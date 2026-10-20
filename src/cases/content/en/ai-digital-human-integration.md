@@ -1,5 +1,5 @@
 ---
-title: Integrating an AI Digital Human Interaction Workflow
+title: Local Integration of an AI Digital Human Interaction Workflow
 description: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
 type: case
 slug: ai-digital-human-integration
@@ -14,11 +14,11 @@ tags:
   - AI
   - MetaHuman
   - Voice interaction
-coverAlt: Flowchart of the AI digital human interaction integration workflow
+coverAlt: Flowchart of the local integration of an AI digital human interaction workflow
 websiteCoverUrl: /assets/cases/ai-digital-human-integration.png
 lang: en
 translationKey: ai-digital-human-integration
-sourceHash: ef3cfedbb78442f3400e4d0eeb12ad6996f59f8488a42db66a8fb62588cb4677
+sourceHash: 27cca99e36fae790294289bb0391a791dafb5d26178438f9d7908ca925d45d41
 translationStatus: translated
 generatedBodyHash: a4a5b69f598e42baad5b3a5c305ef598bbd0b73396acaf8e8049082d123feb80
 ---

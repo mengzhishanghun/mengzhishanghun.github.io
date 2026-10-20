@@ -75,6 +75,6 @@ SimpleBPInheritFix 是处理 Actor 蓝图继承链中组件状态异常的编辑
 
 操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-bp-inherit-fix-guide/)。
 
-## 相关案例
+## 技术说明
 
-CreationMethod、继承链与 SCS / ICH 的排查和修复原理见[开发案例](</zh/cases/blueprint-inheritance-repair/>)。
+CreationMethod、继承链与 SCS / ICH 的排查和修复原理见[使用文档](/zh/docs/guides/ue-tools/simple-bp-inherit-fix-guide/)。

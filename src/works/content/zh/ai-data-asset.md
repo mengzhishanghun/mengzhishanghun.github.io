@@ -79,6 +79,6 @@ JSON 用来修改 UE 中已有的 DataAsset，单独添加 JSON 不会创建新�
 配置、启动同步规则、删除行为和常见问题见 [AIDataAsset 使用文档](/zh/docs/guides/ue-tools/ai-data-asset-guide/)。
 
 
-## 相关案例
+## 技术说明
 
-JSON 选型、转换 API、数值格式与异步同步的处理见[开发案例](</zh/cases/data-asset-json-sync/>)。
+JSON 选型、转换 API、数值格式与异步同步的处理见[使用文档](/zh/docs/guides/ue-tools/ai-data-asset-guide/)。

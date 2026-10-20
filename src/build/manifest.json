@@ -1281,7 +1281,7 @@
         "/cases/ai-digital-human-integration/"
       ],
       "template": "cases/templates/case--ai-digital-human-integration.html",
-      "title": "集成 AI 数字人交互流程",
+      "title": "本地集成 AI 数字人交互流程",
       "translationKey": "ai-digital-human-integration",
       "baselineTemplate": "cases/ai-digital-human-integration/index.html",
       "supplementTranslationKeys": [],
@@ -1378,42 +1378,6 @@
       "cover": {
         "websiteUrl": "/assets/cases/markdown-publishing.png",
         "sha256": "6f4ef1b8c14c1deba613694739f062f1ea4dac0cbbd13cdd8221509ea6bc603f"
-      },
-      "mediaOccurrences": []
-    },
-    {
-      "id": "case:blueprint-inheritance-repair",
-      "type": "case",
-      "slug": "blueprint-inheritance-repair",
-      "legacyRoutes": [
-        "/cases/blueprint-inheritance-repair/"
-      ],
-      "template": "cases/templates/case--blueprint-inheritance-repair.html",
-      "title": "修复蓝图继承中的组件状态污染",
-      "translationKey": "blueprint-inheritance-repair",
-      "baselineTemplate": "cases/blueprint-inheritance-repair/index.html",
-      "supplementTranslationKeys": [],
-      "cover": {
-        "websiteUrl": "/assets/cases/blueprint-inheritance-repair.png",
-        "sha256": "684f851dad342d9107423f97231f2b12a09899b58e3dfe30cd2a74bb909e4d02"
-      },
-      "mediaOccurrences": []
-    },
-    {
-      "id": "case:data-asset-json-sync",
-      "type": "case",
-      "slug": "data-asset-json-sync",
-      "legacyRoutes": [
-        "/cases/data-asset-json-sync/"
-      ],
-      "template": "cases/templates/case--data-asset-json-sync.html",
-      "title": "让 DataAsset 与 JSON 双向同步",
-      "translationKey": "data-asset-json-sync",
-      "baselineTemplate": "cases/data-asset-json-sync/index.html",
-      "supplementTranslationKeys": [],
-      "cover": {
-        "websiteUrl": "/assets/cases/data-asset-json-sync.png",
-        "sha256": "a951e33ec1a38b825f4e6e4d014ead52cb34fd7a154a338eeafa9c4fe74bdffb"
       },
       "mediaOccurrences": []
     },
@@ -2730,20 +2694,6 @@
         {
           "id": "page:cases-index:media:7",
           "ordinal": 7,
-          "state": "public",
-          "websiteUrl": "/assets/cases/blueprint-inheritance-repair.png",
-          "publicSha256": "684f851dad342d9107423f97231f2b12a09899b58e3dfe30cd2a74bb909e4d02"
-        },
-        {
-          "id": "page:cases-index:media:8",
-          "ordinal": 8,
-          "state": "public",
-          "websiteUrl": "/assets/cases/data-asset-json-sync.png",
-          "publicSha256": "a951e33ec1a38b825f4e6e4d014ead52cb34fd7a154a338eeafa9c4fe74bdffb"
-        },
-        {
-          "id": "page:cases-index:media:9",
-          "ordinal": 9,
           "state": "public",
           "websiteUrl": "/assets/cases/metahuman-animation-clipping.png",
           "publicSha256": "cfbde33b7e2c14a1fe4cc824631062052c16ccf165d06a232e85c3bc6b8569ac"

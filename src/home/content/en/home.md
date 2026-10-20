@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: 6a271aa4d95d0023d473fd58eea2e2165390b5f3ce63a393213a06596ac7055a
+sourceHash: e87f62ca1f3b8efe8f6d0561eefe23c906b78981ecc324098b770eb06829cf59
 translationStatus: translated
-generatedBodyHash: 94550e659e0331daa7c0cd40fa90eae3933a84c888c3463e63e5332e3efc3746
+generatedBodyHash: c122ab0996b06d6949ec3d05a03792fd4a4a82c2269ad792b27e3ce41d934058
 ---
 
 # Complexity can be encapsulated;
@@ -86,9 +86,9 @@ Investigating and modifying engine implementations to address failed Lumen GI li
 
 UE Projects
 
-### [Integrating an AI Digital Human Interaction Workflow](/cases/ai-digital-human-integration/)
+### [Local Integration of an AI Digital Human Interaction Workflow](/cases/ai-digital-human-integration/)
 
-AI Digital Human Integration
+Local Integration of an AI Digital Human Interaction Workflow
 
 Connecting a digital human, speech recognition, conversation, speech synthesis, and facial expression driving into a local demonstration workflow.
 

@@ -16,7 +16,7 @@ translationKey: cases-index
 
 从真实问题到落地结果
 
-UE项目8桌面与自动化2
+UE项目6桌面与自动化3
 
 搜索当前分类
 
@@ -36,9 +36,9 @@ Lumen多屏显示仿真](/cases/driving-simulator-three-screen/)[![](/media-occu
 
 已完成
 
-## 集成 AI 数字人交互流程
+## 本地集成 AI 数字人交互流程
 
-AI Digital Human Integration
+Local Integration of an AI Digital Human Interaction Workflow
 
 将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。
 
@@ -73,22 +73,6 @@ Six-DOF Motion Platform Integration
 Stewart 平台与 UE 仿真的联动控制。
 
 仿真硬件联动](/cases/six-dof-motion-platform/)[![](/media-occurrence/page%3Acases-index%3Amedia%3A7)
-
-已完成
-
-## 修复蓝图继承中的组件状态污染
-
-沿继承链检查组件模板的 CreationMethod，处理子类属性修改影响父类的问题。
-
-蓝图继承链组件修复](/cases/blueprint-inheritance-repair/)[![](/media-occurrence/page%3Acases-index%3Amedia%3A8)
-
-已完成
-
-## 让 DataAsset 与 JSON 双向同步
-
-以 JSON 衔接外部 AI 工具与 DataAsset，处理双向同步中的字段转换、重复触发和写入问题。
-
-DataAssetJSONAI](/cases/data-asset-json-sync/)[![](/media-occurrence/page%3Acases-index%3Amedia%3A9)
 
 已完成
 

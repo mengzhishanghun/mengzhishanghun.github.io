@@ -1743,15 +1743,15 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Integrating an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: AI Digital Human Integration
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Local Integration of an AI Digital Human Interaction Workflow
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: AI
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MetaHuman
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Voice Interaction
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Integrating an AI Digital Human Interaction Workflow
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Local Integration of an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -2004,106 +2004,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Writing Tools
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:blueprint-inheritance-repair:
-    root.html:1.head:0.meta:2@content: Checking component template CreationMethod values along the inheritance chain to address child property changes affecting the parent.
-    root.html:1.head:0.title:4.#text:0: "UE Blueprint Inheritance: CreationMethod Repair · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Repairing Component State Contamination in Blueprint Inheritance
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Checking component template CreationMethod values along the inheritance chain to address child property changes affecting the parent.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Blueprints
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Inheritance Chains
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Component Repair
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Repairing Component State Contamination in Blueprint Inheritance
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:data-asset-json-sync:
-    root.html:1.head:0.meta:2@content: Using JSON to connect external AI tools with DataAsset and address field conversion, repeated triggers, and writes in bidirectional synchronization.
-    root.html:1.head:0.title:4.#text:0: "UE DataAsset & JSON Two-Way Sync Case Study · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Synchronizing DataAsset and JSON in Both Directions
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Using JSON to connect external AI tools with DataAsset and address field conversion, repeated triggers, and writes in bidirectional synchronization.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: DataAsset
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: JSON
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: AI
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Synchronizing DataAsset and JSON in Both Directions
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -4308,10 +4208,10 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: Three-screen Driving Simulator Display Alignment
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Investigating and modifying engine implementations to address failed Lumen GI light reflections and inconsistent exposure across three screens.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: Integrating an AI Digital Human Interaction Workflow
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: Local Integration of an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE Projects
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: Integrating an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: AI Digital Human Integration
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: Local Integration of an AI Digital Human Interaction Workflow
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: A Toolchain from Plugin Development to Release
@@ -4322,7 +4222,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1@aria-label: Switch featured cases
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: "Show: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator"
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: "Show: Integrating an AI Digital Human Interaction Workflow"
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: "Show: Local Integration of an AI Digital Human Interaction Workflow"
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: "Show: A Toolchain from Plugin Development to Release"
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: Featured blog posts
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: View all
@@ -4616,9 +4516,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: From real problems to working results
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: Case categories
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE Projects
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "8"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "6"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:0.#text:0: Desktop and Automation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "2"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "3"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1@aria-label: Content list
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:0.label:0.#text:0: Search this category
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:0.input:1@placeholder: Separate multiple keywords with spaces
@@ -4634,10 +4534,10 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:1.#text:0: Multi-screen Display
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:2.#text:0: Simulation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: Integrating an AI Digital Human Interaction Workflow
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: Local Integration of an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: Completed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.h2:0.#text:0: Integrating an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.p:1.#text:0: AI Digital Human Integration
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.h2:0.#text:0: Local Integration of an AI Digital Human Interaction Workflow
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0@aria-label: Case tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:0.#text:0: AI
@@ -4685,22 +4585,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:0.#text:0: Markdown
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:1.#text:0: Images
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:2.#text:0: Writing Tools
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7@aria-label: Repairing Component State Contamination in Blueprint Inheritance
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:1.div:0.span:0.#text:0: Completed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:1.div:1.h2:0.#text:0: Repairing Component State Contamination in Blueprint Inheritance
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:1.p:2.#text:0: Checking component template CreationMethod values along the inheritance chain to address child property changes affecting the parent.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:2.div:0.span:0.#text:0: Blueprints
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:2.div:0.span:1.#text:0: Inheritance Chains
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:7.div:2.div:0.span:2.#text:0: Component Repair
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8@aria-label: Synchronizing DataAsset and JSON in Both Directions
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:1.div:0.span:0.#text:0: Completed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:1.div:1.h2:0.#text:0: Synchronizing DataAsset and JSON in Both Directions
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:1.p:2.#text:0: Using JSON to connect external AI tools with DataAsset and address field conversion, repeated triggers, and writes in bidirectional synchronization.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:2.div:0.span:0.#text:0: DataAsset
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:2.div:0.span:1.#text:0: JSON
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:8.div:2.div:0.span:2.#text:0: AI
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9@aria-label: Addressing Clipping When Combining MetaHuman Head and Body Animations
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:0.span:0.#text:0: Completed
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:1.h2:0.#text:0: Addressing Clipping When Combining MetaHuman Head and Body Animations
@@ -6572,10 +6456,6 @@ scriptSlots:
   case:plugin-release-workflow:root.html:1.body:1.script:5:2062: Bilibili player
   case:markdown-publishing:root.html:1.body:1.script:5:1187: Bilibili player
   case:markdown-publishing:root.html:1.body:1.script:5:2062: Bilibili player
-  case:blueprint-inheritance-repair:root.html:1.body:1.script:5:1187: Bilibili player
-  case:blueprint-inheritance-repair:root.html:1.body:1.script:5:2062: Bilibili player
-  case:data-asset-json-sync:root.html:1.body:1.script:5:1187: Bilibili player
-  case:data-asset-json-sync:root.html:1.body:1.script:5:2062: Bilibili player
   case:metahuman-animation-clipping:root.html:1.body:1.script:5:1187: Bilibili player
   case:metahuman-animation-clipping:root.html:1.body:1.script:5:2062: Bilibili player
   work:simple-file-updater:root.html:1.body:1.script:5:1187: Bilibili player
@@ -8226,6 +8106,38 @@ bodyUtilitySlots:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “Saved settings and troubleshooting”
   doc:p4-stream-switcher:body-utility:9:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “Related content”
+  doc:ai-data-asset-guide:body-utility:15:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “JSON as an Intermediate Format and Property Conversion” section
+  doc:ai-data-asset-guide:body-utility:16:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Floating-Point Output and Property Names” section
+  doc:ai-data-asset-guide:body-utility:17:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Startup Synchronization and Deletion Rules” section
+  doc:ai-data-asset-guide:body-utility:18:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Preventing Synchronization Loops” section
+  doc:ai-data-asset-guide:body-utility:19:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Asset Import, Checkout, and Saving” section
+  doc:ai-data-asset-guide:body-utility:20:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Synchronization Manager Lifecycle” section
+  doc:ai-data-asset-guide:body-utility:21:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Technical Source” section
+  doc:simple-bp-inherit-fix-guide:body-utility:16:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Component Anomalies to Check” section
+  doc:simple-bp-inherit-fix-guide:body-utility:17:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Why Component Templates Become Abnormal” section
+  doc:simple-bp-inherit-fix-guide:body-utility:18:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “1.1 Root Cause” section
+  doc:simple-bp-inherit-fix-guide:body-utility:19:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “1.2 What Triggers It” section
+  doc:simple-bp-inherit-fix-guide:body-utility:20:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “1.3 Why Manual Repair Is Difficult” section
+  doc:simple-bp-inherit-fix-guide:body-utility:21:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Scanning Inheritance Chains and Component Records” section
+  doc:simple-bp-inherit-fix-guide:body-utility:22:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Inheritance Chain Scan Scope” section
+  doc:simple-bp-inherit-fix-guide:body-utility:23:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Component Records in SCS and ICH” section
+  doc:simple-bp-inherit-fix-guide:body-utility:24:
+    root.html:0.body:1.a:0.span:1.#text:0: Link to “Repair Stages” section
 missingPublicFileNote: (This file is not available in the public repository)
 codeLabels:
   terminalWindow: Terminal window
@@ -8246,7 +8158,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: b550882e3d688399b9a905f45b669ccf8811104a96f0243d838e2bfe27830599
+sourceHash: 4409644ec9f55c0b6b08861c837dfe96ad479a649d39792fb6f8799259198622
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:
@@ -8261,6 +8173,6 @@ workLabels:
   developing: In development
   supportAction: Support this work
   noDocs: No documentation available
-
 ---
+
 Text outside the shared template body, metadata, image descriptions, and accessible labels are supplied by these position keys. The body and table of contents are generated from the corresponding Markdown.
