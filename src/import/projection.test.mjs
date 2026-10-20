@@ -50,6 +50,25 @@ test('missing project local config rejects without falling back to Obsidian or w
   fs.writeFileSync(path.join(vault,'网站/000-sync.md'),'---\nversion: 1\nprimary: zh\nrecords: []\n---\n');
   await assert.rejects(()=>importContent({site,vault}),/同步配置缺失/);assert.deepEqual(fs.readdirSync(site),[]);
 });
+
+test('taxonomy-only does not project body or change sync fingerprints',async t=>{
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'taxonomy-import-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+  const site=path.join(root,'site'),vault=path.join(root,'vault');
+  fs.mkdirSync(path.join(site,'src/import'),{recursive:true});fs.mkdirSync(path.join(site,'src/build'),{recursive:true});
+  fs.mkdirSync(path.join(vault,'网站/003-博客/001-UE开发'),{recursive:true});
+  for(const dir of ['001-作品','002-案例','004-文档'])fs.mkdirSync(path.join(vault,'网站',dir),{recursive:true});
+  const source='网站/003-博客/001-UE开发/001-Example.md';
+  fs.mkdirSync(path.join(site,'src/blog/content/zh'),{recursive:true});fs.writeFileSync(path.join(site,'src/blog/content/zh/example.md'),'---\ncategoryId: ue\ncategoryName: UE\n---\nPublic body');
+  fs.writeFileSync(path.join(vault,source),'---\nslug: example\ntitle: Private title\n---\n\n<img src="private.png">');
+  const config={version:1,primary:'zh',records:[{id:'blog:example',kind:'blog',slug:'example',lang:'zh',source,output:'blog/content/zh/example.md',sourceFingerprint:'historical'}]};
+  const raw='---\n'+JSON.stringify(config)+'\n---\n';fs.writeFileSync(path.join(site,'src/import/000-sync.local'),raw);
+  fs.writeFileSync(path.join(site,'src/build/manifest.json'),JSON.stringify({entries:[{id:'blog:example',type:'blog',slug:'example',legacyRoutes:['/blog/example/']}]}));
+  const result=await importContent({site,vault,taxonomyOnly:true});
+  assert.equal(result.files,1);assert.equal(fs.readFileSync(path.join(site,'src/import/000-sync.local'),'utf8'),raw);
+  const snapshot=JSON.parse(fs.readFileSync(path.join(site,'src/build/taxonomy.json'),'utf8'));
+  assert.equal(snapshot.sections.blog.categories[0].name,'UE开发');assert.deepEqual(snapshot.sections.blog.categories[0].entities,['blog:example']);
+  assert.doesNotMatch(JSON.stringify(snapshot),/Private title|private.png|sourceFingerprint|网站\//);
+});
 for(const kind of ['page','common'])test(`retired ${kind} records reject before any output writes`,async t=>{
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'retired-import-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
   const site=path.join(root,'site'),vault=path.join(root,'vault');fs.mkdirSync(path.join(site,'src/import'),{recursive:true});fs.mkdirSync(vault);

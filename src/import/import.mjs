@@ -7,6 +7,7 @@ import {createMarkdownProcessor} from '@astrojs/markdown-remark';
 import {publicFields,commonFields,assertPublicFields} from '../build/source-schema.mjs';
 import {createLinkResolver} from './links.mjs';
 import {resourcePath} from '../build/resources.mjs';
+import {createTaxonomy} from './taxonomy.mjs';
 
 const here=path.dirname(fileURLToPath(import.meta.url));
 export const canonicalText=value=>String(value).replaceAll('\r\n','\n');
@@ -69,7 +70,7 @@ export async function projectSource(source,record,site,resolveLink){
   for(const [start,end,value]of edits.sort((a,b)=>b[0]-a[0]))body=body.slice(0,start)+value+body.slice(end);
   return {data,body:canonicalText(body),raw:sourceText(data,body)};
 }
-export async function importContent({site,vault,sync,check=false}){
+export async function importContent({site,vault,sync,check=false,taxonomyOnly=false}){
   const configFile=sync?path.resolve(sync):safePath(site,'src/import/000-sync.local');
   if(!fs.existsSync(configFile))throw new Error('本机中文同步配置缺失；请配置 src/import/000-sync.local 或显式指定 --sync');
   const config=parseSource(fs.readFileSync(configFile,'utf8')).data;
@@ -81,6 +82,13 @@ export async function importContent({site,vault,sync,check=false}){
     if(!fs.existsSync(file)||canonicalTextHash(fs.readFileSync(file,'utf8'))!==fingerprint)throw new Error('外语来源存在人工修改，先审核并更新同步指纹');
   }
   const manifest=JSON.parse(fs.readFileSync(safePath(site,'src/build/manifest.json'),'utf8'));
+  if(taxonomyOnly){
+    for(const record of config.records){const output=safePath(contentRoot,record.output);safePath(vault,record.source);if(record.publishedFingerprint&&(!fs.existsSync(output)||canonicalTextHash(fs.readFileSync(output,'utf8'))!==record.publishedFingerprint))throw Error('公开中文来源存在人工修改，保留并等待审核');}
+    const target=safePath(site,'src/build/taxonomy.json'),previous=fs.existsSync(target)?JSON.parse(fs.readFileSync(target,'utf8')):undefined;
+    const raw=JSON.stringify(createTaxonomy({site,vault,config,manifest,parseSource,previous}),null,2)+'\n';
+    const differences=!fs.existsSync(target)||fs.readFileSync(target,'utf8')!==raw?['build/taxonomy.json']:[];
+    if(!check)fs.writeFileSync(target,raw);return {files:1,differences};
+  }
   const resolveLink=createLinkResolver({site,vault,records:config.records,manifest});
   for(const record of config.records){
     if(record.lang!==config.primary)throw new Error('同步仅允许中文来源');
@@ -98,6 +106,6 @@ if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.ur
   const args=process.argv.slice(2),at=args.indexOf('--vault');
   if(at<0||!args[at+1])throw new Error('手动导入必须指定 --vault <中文笔记库>；静态构建请运行 src/build/build.mjs');
   const syncAt=args.indexOf('--sync');if(syncAt>=0&&!args[syncAt+1])throw new Error('--sync 必须指定配置文件路径');
-  const result=await importContent({site:path.resolve(here,'../..'),vault:path.resolve(args[at+1]),sync:syncAt>=0?args[syncAt+1]:undefined,check:args.includes('--check')});
+  const result=await importContent({site:path.resolve(here,'../..'),vault:path.resolve(args[at+1]),sync:syncAt>=0?args[syncAt+1]:undefined,check:args.includes('--check'),taxonomyOnly:args.includes('--taxonomy-only')});
   console.log(`中文公开来源 ${result.files}，差异 ${result.differences.length}`);if(args.includes('--check')&&result.differences.length)process.exitCode=1;
 }

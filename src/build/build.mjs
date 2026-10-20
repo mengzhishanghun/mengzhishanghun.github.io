@@ -13,6 +13,7 @@ import {loadResources,regularPath,resourcePath,safeRelative} from './resources.m
 import {renderWorkMetadata,renderWorkCardStatuses} from '../works/metadata.mjs';
 import {projectBlogTopics} from '../blog/topics.mjs';
 import {projectContentTopics} from './content-topics.mjs';
+import {projectTaxonomy,categoryNavigation} from './taxonomy.mjs';
 const require = createRequire(new URL('../../package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -123,6 +124,7 @@ export function preflight({sourceRoot,site,manifest}) {
   projectBlogTopics({site,entries,config,copy});
   projectContentTopics({site,entries,config,copy,type:'work',indexId:'page:works-index',topicsPath:'src/works/topics.json',labelPrefix:'work-topic',maxTopics:3});
   projectContentTopics({site,entries,config,copy,type:'case',indexId:'page:cases-index',topicsPath:'src/cases/topics.json',labelPrefix:'case-topic'});
+  projectTaxonomy({site,entries,config,copy});
   return {routes,entries,config,copy};
 }
 function routeFile(route) { return route.slice(1) + (route.endsWith('.html') ? '' : 'index.html'); }
@@ -310,6 +312,7 @@ function localizeJSON(value,dict,entries,locale,contentType) {
     if(match && 'body' in value)result.body=match.searchBodies?.[locale] || '';
     if(match && ('tags' in value || 'searchTags' in value)){const {tags,searchTags}=contentTags(match,locale);Object.assign(result,{tags,searchTags});}
     if(match && 'coverAlt' in value)result.coverAlt=match.sources[locale].data.coverAlt ?? '';
+    if(match?.projectedCategory&&'categoryId' in value)Object.assign(result,{categoryId:match.projectedCategory[locale].id,categoryName:match.projectedCategory[locale].name});
     return result;
   }
   return value;
@@ -324,13 +327,15 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   let engagementBodies=0,engagementSlots=0;
   const article=articleTypes.has(entry.type);
   const contentIndex=['page:blog-index','page:works-index','page:cases-index'].includes(entry.id);
+  const cardOrder=new Map();if(contentType)walk(doc,node=>{const a=attrs(node);if(a['data-content-card']!==undefined)cardOrder.set(a['data-slug'],Number(a.style?.match(/order:\s*(\d+)/)?.[1]||0));});
   const neutral=article?shareRoute(entry,locale,localeRoute(entry,locale)):null;
   if(article && ![...entry.legacyRoutes,...(config.shareAliases || [])].includes(neutral))throw new Error('通用分享入口未登记: '+neutral);
   walk(doc,node => {
     if(excluded.has(node))return;
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
-    if(contentType && a['data-content-index']!==undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-tags-display="all" data-content-topic-aliases="'+escapeHTML(safeJSON(entry.topicAliases?.[locale] || {}))+'"']);
+    if(contentType && a['data-content-index']!==undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-tags-display="all" data-content-topic-aliases="'+escapeHTML(safeJSON(entry.topicAliases?.[locale] || {}))+'" data-content-category-queries="'+escapeHTML(safeJSON(Object.fromEntries(Object.entries(entry.taxonomy?.legacyQueries||{}).map(([id,q])=>[id,{name:dict.get(q.name)||q.name,slugs:q.slugs}]))))+'"']);
+    if(contentType&&entry.taxonomy&&(a.class||'').split(/\s+/).includes('content-category-nav'))edits.push([loc.startTag.endOffset,loc.endTag.startOffset,categoryNavigation(entry,locale)]);
     if(contentIndex && a['data-content-card']!==undefined && loc.attrs?.hidden)edits.push([loc.attrs.hidden.startOffset,loc.attrs.hidden.endOffset,'']);
     if(contentIndex && ['content-category-nav','content-filter'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
     if(contentIndex && a['data-content-pagination']!==undefined && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
@@ -352,11 +357,13 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     }
     if(node.nodeName==='#text') {
       const raw=html.slice(loc.startOffset,loc.endOffset);
+      if(entry.projectedCategory&&(attrs(node.parentNode).class||'').split(/\s+/).includes('project-breadcrumb')&&raw.trim()&&node===node.parentNode.childNodes.at(-1)){edits.push([loc.startOffset,loc.endOffset,escapeHTML(entry.projectedCategory[locale].name)]);return;}
       let protectedText=false;
       for(let parent=node.parentNode;parent;parent=parent.parentNode)if(['pre','code','textarea'].includes(parent.tagName))protectedText=true;
       const normalized=protectedText?raw:node.parentNode?.tagName==='script'?(attrs(node.parentNode).type?.includes('json')?raw:raw.replace(/^\s+/,space=>space.replaceAll('\r\n','\n'))):node.parentNode?.tagName==='style'||!raw.trim()?raw.replaceAll('\r\n','\n'):raw;
       if(normalized!==raw)edits.push([loc.startOffset,loc.endOffset,normalized]);
     }
+    if(entry.projectedCategory&&(a.class||'').split(/\s+/).includes('note-category'))edits.push([loc.startTag.endOffset,loc.endTag.startOffset,escapeHTML(entry.projectedCategory[locale].name)]);
     if (node.tagName==='html' && loc.attrs?.lang) edits.push([loc.attrs.lang.startOffset,loc.attrs.lang.endOffset,`lang="${config.languages.find(l=>l.code===locale).htmlLang}"`]);
     if ((a.class || '').split(/\s+/).includes('header-actions')) {actions++;edits.push([loc.endTag.startOffset,loc.endTag.startOffset,nav]);}
     if (node.tagName==='head') {
@@ -369,7 +376,10 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(node.tagName==='script' && scriptURLs?.has(a.src) && loc.attrs?.src)edits.push([loc.attrs.src.startOffset,loc.attrs.src.endOffset,`src="${scriptURLs.get(a.src)}"`]);
     if(node.tagName==='script' && a.type==='application/json' && loc.startTag && loc.endTag) {
       const raw=html.slice(loc.startTag.endOffset,loc.endTag.startOffset);
-      if(raw.trim()) edits.push([loc.startTag.endOffset,loc.endTag.startOffset,safeJSON(localizeJSON(JSON.parse(raw),dict,entries,locale,contentType))]);
+      if(contentType&&entry.taxonomy&&a['data-content-index-data']!==undefined){
+        const records=entries.filter(e=>e.type===contentType).sort((a,b)=>contentType==='work'?a.cardOrder-b.cardOrder:entry.taxonomy.entityOrder.indexOf(a.id)-entry.taxonomy.entityOrder.indexOf(b.id)).map(item=>({slug:item.slug,title:item.sources[locale].data.title,description:item.sources[locale].data.description||'',categoryId:item.projectedCategory[locale].id,categoryName:item.projectedCategory[locale].name,...contentTags(item,locale),body:item.searchBodies[locale],order:contentType==='work'?item.cardOrder:cardOrder.get(item.slug),date:String(item.sources[locale].data.date||'')}));
+        edits.push([loc.startTag.endOffset,loc.endTag.startOffset,safeJSON(records)]);
+      }else if(raw.trim()) edits.push([loc.startTag.endOffset,loc.endTag.startOffset,safeJSON(localizeJSON(JSON.parse(raw),dict,entries,locale,contentType))]);
     }
     if(['content-card-tags','work-card-tags'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && loc.startTag && loc.endTag) {
       let card=node;while(card && attrs(card)['data-content-card']===undefined)card=card.parentNode;
@@ -382,7 +392,9 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(a['data-content-card']!==undefined && a['data-slug']){
       const item=contentType?entries.find(e=>e.type===contentType&&e.slug===a['data-slug']):null;
       if(item)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-legacy-tags="'+escapeHTML(safeJSON(contentTags(item,locale).legacyTags))+'"']);
+      if(item?.projectedCategory)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-category="'+escapeHTML(item.projectedCategory[locale].id)+'" data-category-name="'+escapeHTML(item.projectedCategory[locale].name)+'"']);
     }
+    if(contentType==='case'&&(a.class||'').split(/\s+/).includes('content-card-meta')){let card=node;while(card&&attrs(card)['data-content-card']===undefined)card=card.parentNode;const item=entries.find(e=>e.type===contentType&&e.slug===attrs(card)['data-slug']);if(item?.projectedCategory)edits.push([loc.startTag.endOffset,loc.endTag.startOffset,'<span>'+escapeHTML(item.projectedCategory[locale].name)+'</span>']);}
     if(a['data-content-card']!==undefined && a['data-slug'] && a.style && loc.attrs?.style) {
       const work=entries.find(e=>e.type==='work' && e.slug===a['data-slug']);
       if(work && work.cardOrder!==undefined)edits.push([loc.attrs.style.startOffset,loc.attrs.style.endOffset,`style="${escapeHTML(a.style.replace(/order:\s*\d+/,'order:'+work.cardOrder))}"`]);

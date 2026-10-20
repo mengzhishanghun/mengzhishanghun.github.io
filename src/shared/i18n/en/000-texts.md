@@ -6465,6 +6465,19 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
     workActions: Support and documentation
 scriptSlots:
+  category:UE工具: "UE Tools"
+  category:写作工具: "Writing Tools"
+  category:协作工具: "Collaboration Tools"
+  category:实用工具: "Utility Tools"
+  category:UE插件: "UE Plugins"
+  category:桌面与自动化: "Desktop & Automation"
+  category:UE项目: "UE Projects"
+  category:UE开发: "UE Development"
+  category:Perforce: "Perforce"
+  category:Python: "Python"
+  category:随笔: "Notes"
+  category:C++: "C++"
+  category:产品手册: "Product Manuals"
   viewport:return-previous: Back
   work-topic:editor-assets: "Editor & Asset Tools"
   work-topic:data-configuration: "Data & Configuration"

@@ -21,4 +21,13 @@ node src/build/build.mjs --output "临时输出目录"
 
 公开译文 `sourceHash` 对应公开中文快照，不使用 Obsidian 原始文件摘要。文本摘要统一 LF，保留代码内容与 Unicode；图片摘要使用二进制字节。`--check` 不修改文件，存在待同步差异时退出码为 1。
 
+仅更新二级分类名称、顺序和归属时，使用以下命令：
+
+```powershell
+node src/import/import.mjs --vault "中文笔记库路径" --taxonomy-only
+node src/import/import.mjs --vault "中文笔记库路径" --taxonomy-only --check
+```
+
+此模式生成公开的 `src/build/taxonomy.json`，核对来源身份、目录归属、公开中文与外语快照指纹；不导入正文或媒体，也不更新私有同步配置中的指纹。分类名称和顺序来自四个分区下的数字目录，英文名称由公共文案 `scriptSlots` 中的 `category:<中文名称>` 提供。构建时保留旧分类查询的原实体集合，包括旧空类；历史独立博客通过 `legacyOnly` 显式登记。文档补充稿关联原主文档，不新增文档页面，也不改变章节顺序。
+
 当前拒绝门禁运行 `node src/import/test-rejection.mjs`；案例验收运行 `node src/import/test-cases.mjs`。构建和语言配置见 [构建指南](../build/README.md)。

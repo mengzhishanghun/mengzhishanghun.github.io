@@ -33,6 +33,8 @@ function fixture(t) {
   t.after(() => fs.rmSync(root,{recursive:true,force:true}));
   const vault = path.join(root,'vault'), output = path.join(root,'published');
   fs.mkdirSync(vault); fs.mkdirSync(output); fs.writeFileSync(path.join(output,'sentinel'),'unchanged');
+  fs.mkdirSync(path.join(root,'src/build'),{recursive:true});
+  fs.writeFileSync(path.join(root,'src/build/taxonomy.json'),JSON.stringify({version:1,legacyOnly:[],sections:Object.fromEntries(['work','case','blog','doc'].map(type=>[type,{categories:[],legacyQueries:{},entityOrder:[]}]))}));
   const zh = '---\nlang: zh\ntranslationKey: page:home\ntitle: 中文\ndraft: false\n---\n\n## 章节\n\n内容\n';
   const en = `---\nlang: en\ntitle: English\ndraft: false\ntranslationKey: 'page:home'\nsourceHash: ${hash(zh)}\ngeneratedBodyHash: ${hash('## Chapter\n\nContent')}\ntranslationStatus: translated\n---\n\n## Chapter\n\nContent\n`;
   for(const code of ['zh','en'])fs.mkdirSync(path.join(vault,'网站',code==='zh'?'001-zh':'002-en'),{recursive:true});

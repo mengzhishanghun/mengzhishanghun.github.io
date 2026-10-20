@@ -6,7 +6,7 @@ import {generatedPage} from './interaction-fixtures.mjs';
 const contentSource=fs.readFileSync(new URL('../shared/i18n/scripts/_astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js',import.meta.url),'utf8');
 const helperSource=fs.readFileSync(new URL('../shared/i18n/scripts/return-state.js',import.meta.url),'utf8').replace(/^export /gm,'');
 const source=helperSource+contentSource.replace(/^import[^;]+;\s*/,'');
-function runtime({query='',io=true,broken=false,locale='en',route='blog',documents=null,savedState={},aliases=null,tagDisplay=null,returnOrder=null}={}) {
+function runtime({query='',io=true,broken=false,locale='en',route='blog',documents=null,savedState={},aliases=null,tagDisplay=null,returnOrder=null,categoryQueries=null}={}) {
   const fixture=generatedPage(`${locale}/${route}/index.html`),queue=new Map(),observers=[];let next=0,url=new URL(`https://mzsh.me/${locale}/${route}/`+query),focusedElement=null;
   class Element extends EventTarget {
     dataset={};style={};hidden=false;isConnected=true;children=[];attrs={};value='';
@@ -20,9 +20,13 @@ function runtime({query='',io=true,broken=false,locale='en',route='blog',documen
   }
   const elements=new Map();for(const node of fixture.nodes){if(!node.tagName)continue;const el=new Element(),a=fixture.attrs(node);for(const [k,v]of Object.entries(a))if(k.startsWith('data-'))el.dataset[k.slice(5).replace(/-([a-z])/g,(_,c)=>c.toUpperCase())]=v;el.hidden=Object.hasOwn(a,'hidden');elements.set(node,el);}
   const root=elements.get(fixture.select('[data-content-index]'));
+  // Runtime unit fixtures use synthetic ue/cpp documents, independent of the site's category IDs.
+  const groups=fixture.nodes.filter(n=>fixture.attrs(n)['data-content-group']!==undefined).map(n=>elements.get(n));
+  if(!documents?.some(record=>groups.some(group=>group.dataset.category===record.categoryId))){root.dataset.contentCategoryQueries='{}';groups.forEach((group,i)=>{group.dataset.category=['ue','cpp','python','perforce','notes'][i];});}
   if(tagDisplay)root.dataset.contentTagsDisplay=tagDisplay;
   if(aliases)root.dataset.contentTopicAliases=JSON.stringify(aliases);
-  const select=s=>elements.get(fixture.select(s));
+  if(categoryQueries)root.dataset.contentCategoryQueries=JSON.stringify(categoryQueries);
+  const select=s=>s.match(/^\[data-category="([^"]+)"\]$/)?groups.find(group=>group.dataset.category===s.match(/^\[data-category="([^"]+)"\]$/)[1]):elements.get(fixture.select(s));
   root.querySelector=select;root.querySelectorAll=s=>fixture.nodes.filter(n=>fixture.matches(n,s)).map(n=>elements.get(n));
   const frame=new Element();frame.scrollTop=640;frame.getBoundingClientRect=()=>({top:0,bottom:800});root.closest=s=>s==='.site-chrome-main'?frame:null;
   const records=documents || Array.from({length:25},(_,i)=>({slug:'item-'+i,categoryId:'ue',categoryName:'UE',title:i===24?'needle':'Entry '+i,description:'',body:'',tags:[i%2?'odd':'even']}));if(!documents)records.push({slug:'other',categoryId:'cpp',categoryName:'C++',title:'Other',description:'',body:'',tags:['even']});
@@ -56,6 +60,26 @@ for(const locale of ['zh','en'])for(const route of ['blog','works','cases'])test
   for(const selector of ['.content-category-nav','.content-filter','[data-content-pagination]'])assert.ok(Object.hasOwn(f.attrs(f.select(selector)),'hidden'));
 });
 test('load more keeps earlier cards, scroll, focus and unrelated history state',()=>{const x=runtime({io:false});assert.equal(x.visible().length,10);x.emit(x.select('[data-content-next]'),'click');assert.equal(x.visible().length,20);assert.equal(x.visible()[0],'item-0');assert.equal(x.frame.scrollTop,640);assert.equal(x.select('.content-index-main').focused,undefined);assert.equal(x.url.search,'?page=2');assert.equal(x.history.state.keep,'yes');});
+test('legacy category queries select their exact entity set across new categories and retain empty sets',()=>{
+  const documents=[{slug:'a',categoryId:'new-ue',categoryName:'UE Development',title:'A',description:'',body:'',tags:['even']},{slug:'b',categoryId:'new-cpp',categoryName:'C++',title:'B',description:'',body:'',tags:['odd']}];
+  const categoryQueries={oldcpp:{name:'C++',slugs:['a','b']},empty:{name:'Empty',slugs:[]}};
+  const x=runtime({query:'?category=oldcpp&tag=even',documents,categoryQueries,io:false,returnOrder:'viewport-first',savedState:{mzshViewport:{key:'/en/blog/?category=oldcpp&tag=even',top:900}}});assert.deepEqual(x.visible(),['a']);assert.equal(x.url.search,'?category=oldcpp&tag=even');assert.equal(x.frame.scrollTop,900);
+  assert.deepEqual(runtime({query:'?category=empty',documents,categoryQueries,io:false}).visible(),[]);
+});
+test('published old category URLs preserve exact bilingual memberships and tags',()=>{
+  const taxonomy=JSON.parse(fs.readFileSync(new URL('./taxonomy.json',import.meta.url)));let comparisons=0;
+  for(const [type,route]of [['work','works'],['case','cases'],['blog','blog']])for(const locale of ['zh','en']){
+    const f=generatedPage(`${locale}/${route}/index.html`),node=f.select('[data-content-index-data]'),records=JSON.parse(node.childNodes.map(n=>n.value||'').join(''));
+    const mapping=JSON.parse(fs.readFileSync(new URL(`../${route}/topics.json`,import.meta.url)));
+    const documents=records.map(r=>({...r,legacyTags:mapping.articles[type+':'+r.slug].legacyTags[locale]}));
+    for(const [category,old]of Object.entries(taxonomy.sections[type].legacyQueries)){
+      const params=new URLSearchParams({category,page:'99'}),x=runtime({locale,route,documents,query:'?'+params,io:false});
+      assert.deepEqual(x.visible().sort(),old.entities.map(id=>id.slice(id.indexOf(':')+1)).sort());assert.equal(x.url.searchParams.get('category'),category);comparisons++;
+      const first=documents.find(r=>old.entities.includes(type+':'+r.slug)),tag=first?.tags[0];if(tag){params.set('tag',tag);const y=runtime({locale,route,documents,query:'?'+params,io:false,savedState:{mzshViewport:{key:`/${locale}/${route}/?${params}`,top:800}}});assert.deepEqual(y.visible().sort(),documents.filter(r=>old.entities.includes(type+':'+r.slug)&&(r.tags.includes(tag)||r.legacyTags.includes(tag))).map(r=>r.slug).sort());assert.equal(y.url.searchParams.get('tag'),tag);comparisons++;}
+    }
+  }
+  assert.ok(comparisons>=40);
+});
 test('page links expand all prior batches and invalid pages normalize',()=>{assert.equal(runtime({query:'?page=2',io:false}).visible().length,20);assert.equal(runtime({query:'?page=99',io:false}).visible().length,25);for(const query of ['?page=-1','?page=oops','?page=0']){const x=runtime({query,io:false});assert.equal(x.visible().length,10);assert.equal(x.url.search,'');}});
 test('search and category changes reset expanded batches and keep matching results',()=>{const x=runtime({query:'?page=2',io:false});x.select('[data-content-query]').value='needle';x.emit(x.select('[data-content-query]'),'input');assert.deepEqual(x.visible(),['item-24']);x.select('[data-content-query]').value='';x.emit(x.select('[data-content-query]'),'input');assert.equal(x.visible().length,10);x.emit(x.select('[data-category="cpp"]'),'click');assert.deepEqual(x.visible(),['other']);});
 test('tag changes reset batches and keyboard button activation can load remaining matches',()=>{const x=runtime({query:'?page=2',io:false});const tag=x.select('[data-content-tags]').children.find(t=>t.dataset.tag==='even');x.emit(tag,'click');assert.equal(x.visible().length,10);assert.equal(x.url.search,'?tag=even');x.emit(x.select('[data-content-next]'),'click');assert.equal(x.visible().length,13);assert.equal(x.select('[data-content-next]').hidden,true);});

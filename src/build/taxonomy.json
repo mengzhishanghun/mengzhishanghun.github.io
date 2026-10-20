@@ -1,0 +1,627 @@
+{
+  "version": 1,
+  "sections": {
+    "work": {
+      "categories": [
+        {
+          "order": 1,
+          "name": "UE工具",
+          "id": "work-155a1b649e2e",
+          "entities": [
+            "work:plugin-auto-packer",
+            "work:plugin-manager",
+            "work:ue-package-manager",
+            "work:ue-quick-start"
+          ],
+          "supplements": []
+        },
+        {
+          "order": 2,
+          "name": "写作工具",
+          "id": "work-e426103c2857",
+          "entities": [
+            "work:md-blog-packer",
+            "work:md-image-embed"
+          ],
+          "supplements": []
+        },
+        {
+          "order": 3,
+          "name": "协作工具",
+          "id": "work-e199c51a0212",
+          "entities": [
+            "work:p4-case-sync",
+            "work:shaniu"
+          ],
+          "supplements": []
+        },
+        {
+          "order": 4,
+          "name": "实用工具",
+          "id": "work-da21b765b36d",
+          "entities": [
+            "work:simple-file-updater"
+          ],
+          "supplements": []
+        },
+        {
+          "order": 5,
+          "name": "UE插件",
+          "id": "work-8e4c7b55363f",
+          "entities": [
+            "work:ai-data-asset",
+            "work:mcp-animation",
+            "work:mcp-behavior-tree",
+            "work:mcp-blueprint",
+            "work:mcp-dev-tools",
+            "work:mcp-level-sequence",
+            "work:mcp-material",
+            "work:mcp-niagara",
+            "work:mcp-umg",
+            "work:mcp-world-editor",
+            "work:simple-asset-cleaner",
+            "work:simple-asset-namer",
+            "work:simple-auto-enum",
+            "work:simple-bp-inherit-fix",
+            "work:simple-byte-conversion",
+            "work:simple-config-exclude",
+            "work:simple-input-simulator",
+            "work:simple-launcher",
+            "work:simple-level-seq-smooth",
+            "work:simple-ssh-tunnel",
+            "work:simple-static-mesh-merger",
+            "work:simple-tcp-client",
+            "work:simple-tcp-server",
+            "work:simple-udp",
+            "work:simple-websocket"
+          ],
+          "supplements": []
+        }
+      ],
+      "legacyQueries": {
+        "ue-plugins": {
+          "name": "UE插件",
+          "entities": [
+            "work:ai-data-asset",
+            "work:mcp-animation",
+            "work:mcp-behavior-tree",
+            "work:mcp-blueprint",
+            "work:mcp-dev-tools",
+            "work:mcp-level-sequence",
+            "work:mcp-material",
+            "work:mcp-niagara",
+            "work:mcp-umg",
+            "work:mcp-world-editor",
+            "work:simple-asset-cleaner",
+            "work:simple-asset-namer",
+            "work:simple-auto-enum",
+            "work:simple-bp-inherit-fix",
+            "work:simple-byte-conversion",
+            "work:simple-config-exclude",
+            "work:simple-input-simulator",
+            "work:simple-launcher",
+            "work:simple-level-seq-smooth",
+            "work:simple-ssh-tunnel",
+            "work:simple-static-mesh-merger",
+            "work:simple-tcp-client",
+            "work:simple-tcp-server",
+            "work:simple-udp",
+            "work:simple-websocket"
+          ]
+        },
+        "open-source-tools": {
+          "name": "开源工具",
+          "entities": [
+            "work:md-blog-packer",
+            "work:p4-case-sync",
+            "work:plugin-auto-packer",
+            "work:plugin-manager",
+            "work:simple-file-updater",
+            "work:ue-package-manager",
+            "work:ue-quick-start"
+          ]
+        },
+        "ai-tools": {
+          "name": "AI工具",
+          "entities": [
+            "work:shaniu"
+          ]
+        },
+        "obsidian-plugins": {
+          "name": "Ob插件",
+          "entities": [
+            "work:md-image-embed"
+          ]
+        },
+        "ue-games": {
+          "name": "UE游戏",
+          "entities": []
+        },
+        "godot-games": {
+          "name": "Godot游戏",
+          "entities": []
+        }
+      },
+      "entityOrder": [
+        "work:simple-bp-inherit-fix",
+        "work:simple-level-seq-smooth",
+        "work:ai-data-asset",
+        "work:simple-input-simulator",
+        "work:simple-byte-conversion",
+        "work:simple-config-exclude",
+        "work:simple-launcher",
+        "work:simple-asset-namer",
+        "work:simple-static-mesh-merger",
+        "work:simple-asset-cleaner",
+        "work:simple-ssh-tunnel",
+        "work:simple-udp",
+        "work:simple-tcp-client",
+        "work:simple-tcp-server",
+        "work:simple-websocket",
+        "work:simple-auto-enum",
+        "work:md-blog-packer",
+        "work:p4-case-sync",
+        "work:simple-file-updater",
+        "work:ue-package-manager",
+        "work:plugin-auto-packer",
+        "work:plugin-manager",
+        "work:ue-quick-start",
+        "work:md-image-embed",
+        "work:mcp-animation",
+        "work:mcp-behavior-tree",
+        "work:mcp-blueprint",
+        "work:mcp-dev-tools",
+        "work:mcp-level-sequence",
+        "work:mcp-material",
+        "work:mcp-niagara",
+        "work:mcp-umg",
+        "work:mcp-world-editor",
+        "work:shaniu"
+      ]
+    },
+    "case": {
+      "categories": [
+        {
+          "order": 1,
+          "name": "桌面与自动化",
+          "id": "case-b787d3be0398",
+          "entities": [
+            "case:markdown-publishing",
+            "case:plugin-release-workflow"
+          ],
+          "supplements": []
+        },
+        {
+          "order": 2,
+          "name": "UE项目",
+          "id": "case-6719e60a89e7",
+          "entities": [
+            "case:ai-digital-human-integration",
+            "case:blueprint-inheritance-repair",
+            "case:data-asset-json-sync",
+            "case:driving-simulator-three-screen",
+            "case:flying-car-simulator",
+            "case:metahuman-animation-clipping",
+            "case:motion-capture-robot-control",
+            "case:six-dof-motion-platform"
+          ],
+          "supplements": []
+        }
+      ],
+      "legacyQueries": {
+        "ue-projects": {
+          "name": "UE项目",
+          "entities": [
+            "case:ai-digital-human-integration",
+            "case:blueprint-inheritance-repair",
+            "case:data-asset-json-sync",
+            "case:driving-simulator-three-screen",
+            "case:flying-car-simulator",
+            "case:metahuman-animation-clipping",
+            "case:motion-capture-robot-control",
+            "case:six-dof-motion-platform"
+          ]
+        },
+        "desktop-automation": {
+          "name": "桌面与自动化",
+          "entities": [
+            "case:markdown-publishing",
+            "case:plugin-release-workflow"
+          ]
+        }
+      },
+      "entityOrder": [
+        "case:driving-simulator-three-screen",
+        "case:ai-digital-human-integration",
+        "case:flying-car-simulator",
+        "case:motion-capture-robot-control",
+        "case:six-dof-motion-platform",
+        "case:plugin-release-workflow",
+        "case:markdown-publishing",
+        "case:blueprint-inheritance-repair",
+        "case:data-asset-json-sync",
+        "case:metahuman-animation-clipping"
+      ]
+    },
+    "blog": {
+      "categories": [
+        {
+          "order": 1,
+          "name": "UE开发",
+          "id": "blog-5b81b3e117a9",
+          "entities": [
+            "blog:cnblogs-19136316",
+            "blog:cnblogs-19136345",
+            "blog:cnblogs-19165484",
+            "blog:cnblogs-19165488",
+            "blog:cnblogs-19165494",
+            "blog:cnblogs-19165500",
+            "blog:cnblogs-19165504",
+            "blog:cnblogs-19165520",
+            "blog:cnblogs-19165541",
+            "blog:cnblogs-19165553",
+            "blog:cnblogs-19165561",
+            "blog:cnblogs-19174288",
+            "blog:cnblogs-19174295",
+            "blog:cnblogs-19183986",
+            "blog:cnblogs-19184043",
+            "blog:cnblogs-19192707",
+            "blog:cnblogs-19197541",
+            "blog:cnblogs-19204715",
+            "blog:cnblogs-19379306",
+            "blog:cnblogs-19379337",
+            "blog:cnblogs-19379355",
+            "blog:cnblogs-19379365",
+            "blog:cnblogs-19770930",
+            "blog:cnblogs-19770934",
+            "blog:cnblogs-19813721",
+            "blog:cnblogs-20030737",
+            "blog:cnblogs-20159718",
+            "blog:ue-cursor-workflow-notes",
+            "blog:ue-datatable-json-import-export",
+            "blog:ue-editor-asset-saving",
+            "blog:ue-expression-parser-basics",
+            "blog:ue-fab-submission-notes",
+            "blog:ue-level-instance-break-safety",
+            "blog:ue-source-engine-association",
+            "blog:ue-uparam-reference-metadata",
+            "blog:ue53-multiview-gi"
+          ],
+          "supplements": []
+        },
+        {
+          "order": 2,
+          "name": "Perforce",
+          "id": "blog-ae2a7f3fcbea",
+          "entities": [
+            "blog:cnblogs-19143251",
+            "blog:cnblogs-19143254",
+            "blog:cnblogs-19143255",
+            "blog:cnblogs-19143256",
+            "blog:cnblogs-19143258",
+            "blog:cnblogs-19143260",
+            "blog:cnblogs-19143267"
+          ],
+          "supplements": []
+        },
+        {
+          "order": 3,
+          "name": "Python",
+          "id": "blog-18885f27b5af",
+          "entities": [
+            "blog:cnblogs-19143286",
+            "blog:python-directory-diff-report",
+            "blog:python-excel-column-update",
+            "blog:python-perforce-stream-switch-safety"
+          ],
+          "supplements": []
+        },
+        {
+          "order": 4,
+          "name": "随笔",
+          "id": "blog-041baf3756ee",
+          "entities": [],
+          "supplements": []
+        },
+        {
+          "order": 5,
+          "name": "C++",
+          "id": "blog-f1deb75fa21d",
+          "entities": [
+            "blog:cpp-algorithms-containers-value-categories"
+          ],
+          "supplements": []
+        }
+      ],
+      "legacyQueries": {
+        "ue": {
+          "name": "UE",
+          "entities": [
+            "blog:cnblogs-19136316",
+            "blog:cnblogs-19136345",
+            "blog:cnblogs-19165484",
+            "blog:cnblogs-19165488",
+            "blog:cnblogs-19165494",
+            "blog:cnblogs-19165500",
+            "blog:cnblogs-19165504",
+            "blog:cnblogs-19165520",
+            "blog:cnblogs-19165541",
+            "blog:cnblogs-19165553",
+            "blog:cnblogs-19165561",
+            "blog:cnblogs-19174288",
+            "blog:cnblogs-19174295",
+            "blog:cnblogs-19183986",
+            "blog:cnblogs-19184043",
+            "blog:cnblogs-19197541",
+            "blog:cnblogs-19204715",
+            "blog:cnblogs-19379306",
+            "blog:cnblogs-19379337",
+            "blog:cnblogs-19379355",
+            "blog:cnblogs-19379365",
+            "blog:cnblogs-19770930",
+            "blog:cnblogs-19770934",
+            "blog:cnblogs-19813721",
+            "blog:cnblogs-20030737",
+            "blog:cnblogs-20159718",
+            "blog:ue-cursor-workflow-notes",
+            "blog:ue-datatable-json-import-export",
+            "blog:ue-editor-asset-saving",
+            "blog:ue-expression-parser-basics",
+            "blog:ue-fab-submission-notes",
+            "blog:ue-level-instance-break-safety",
+            "blog:ue-source-engine-association",
+            "blog:ue-uparam-reference-metadata",
+            "blog:ue53-multiview-gi"
+          ]
+        },
+        "cpp": {
+          "name": "C++",
+          "entities": [
+            "blog:cnblogs-19192707",
+            "blog:cpp-algorithms-containers-value-categories"
+          ]
+        },
+        "python": {
+          "name": "Python",
+          "entities": [
+            "blog:cnblogs-19143286",
+            "blog:python-directory-diff-report",
+            "blog:python-excel-column-update",
+            "blog:python-perforce-stream-switch-safety"
+          ]
+        },
+        "perforce": {
+          "name": "Perforce",
+          "entities": [
+            "blog:cnblogs-19143251",
+            "blog:cnblogs-19143254",
+            "blog:cnblogs-19143255",
+            "blog:cnblogs-19143256",
+            "blog:cnblogs-19143258",
+            "blog:cnblogs-19143260",
+            "blog:cnblogs-19143267"
+          ]
+        }
+      },
+      "entityOrder": [
+        "blog:python-perforce-stream-switch-safety",
+        "blog:python-directory-diff-report",
+        "blog:python-excel-column-update",
+        "blog:cpp-algorithms-containers-value-categories",
+        "blog:ue-expression-parser-basics",
+        "blog:ue-level-instance-break-safety",
+        "blog:ue-editor-asset-saving",
+        "blog:ue-datatable-json-import-export",
+        "blog:ue-fab-submission-notes",
+        "blog:ue-cursor-workflow-notes",
+        "blog:ue-uparam-reference-metadata",
+        "blog:ue-source-engine-association",
+        "blog:ue53-multiview-gi",
+        "blog:cnblogs-20159718",
+        "blog:cnblogs-20030737",
+        "blog:cnblogs-19813721",
+        "blog:cnblogs-19770934",
+        "blog:cnblogs-19770930",
+        "blog:cnblogs-19379355",
+        "blog:cnblogs-19379306",
+        "blog:cnblogs-19379337",
+        "blog:cnblogs-19379365",
+        "blog:cnblogs-19204715",
+        "blog:cnblogs-19197541",
+        "blog:cnblogs-19192707",
+        "blog:cnblogs-19183986",
+        "blog:cnblogs-19184043",
+        "blog:cnblogs-19174288",
+        "blog:cnblogs-19174295",
+        "blog:cnblogs-19165494",
+        "blog:cnblogs-19165484",
+        "blog:cnblogs-19165561",
+        "blog:cnblogs-19165541",
+        "blog:cnblogs-19165553",
+        "blog:cnblogs-19165504",
+        "blog:cnblogs-19165500",
+        "blog:cnblogs-19165488",
+        "blog:cnblogs-19165520",
+        "blog:cnblogs-19143286",
+        "blog:cnblogs-19143267",
+        "blog:cnblogs-19143251",
+        "blog:cnblogs-19143254",
+        "blog:cnblogs-19143258",
+        "blog:cnblogs-19143255",
+        "blog:cnblogs-19143256",
+        "blog:cnblogs-19143260",
+        "blog:cnblogs-19136316",
+        "blog:cnblogs-19136345"
+      ]
+    },
+    "doc": {
+      "categories": [
+        {
+          "order": 1,
+          "name": "UE工具",
+          "id": "doc-155a1b649e2e",
+          "entities": [],
+          "supplements": [
+            {
+              "id": "doc:simple-asset-cleaner-guide:supplement:1",
+              "owner": "doc:simple-asset-cleaner-guide"
+            },
+            {
+              "id": "doc:simple-asset-namer-guide:supplement:1",
+              "owner": "doc:simple-asset-namer-guide"
+            },
+            {
+              "id": "doc:simple-auto-enum-guide:supplement:1",
+              "owner": "doc:simple-auto-enum-guide"
+            },
+            {
+              "id": "doc:simple-bp-inherit-fix-guide:supplement:1",
+              "owner": "doc:simple-bp-inherit-fix-guide"
+            },
+            {
+              "id": "doc:simple-byte-conversion-guide:supplement:1",
+              "owner": "doc:simple-byte-conversion-guide"
+            },
+            {
+              "id": "doc:simple-config-exclude-guide:supplement:1",
+              "owner": "doc:simple-config-exclude-guide"
+            },
+            {
+              "id": "doc:simple-input-simulator-guide:supplement:1",
+              "owner": "doc:simple-input-simulator-guide"
+            },
+            {
+              "id": "doc:simple-launcher-guide:supplement:1",
+              "owner": "doc:simple-launcher-guide"
+            },
+            {
+              "id": "doc:simple-static-mesh-merger-guide:supplement:1",
+              "owner": "doc:simple-static-mesh-merger-guide"
+            }
+          ]
+        },
+        {
+          "order": 2,
+          "name": "写作工具",
+          "id": "doc-e426103c2857",
+          "entities": [],
+          "supplements": [
+            {
+              "id": "doc:md-image-embed-guide:supplement:1",
+              "owner": "doc:md-image-embed-guide"
+            }
+          ]
+        },
+        {
+          "order": 3,
+          "name": "产品手册",
+          "id": "doc-b9788392102a",
+          "entities": [
+            "doc:ai-data-asset-guide",
+            "doc:md-blog-packer",
+            "doc:md-image-embed-guide",
+            "doc:p4-case-sync",
+            "doc:plugin-auto-packer",
+            "doc:plugin-manager",
+            "doc:simple-asset-cleaner-guide",
+            "doc:simple-asset-namer-guide",
+            "doc:simple-auto-enum-guide",
+            "doc:simple-bp-inherit-fix-guide",
+            "doc:simple-byte-conversion-guide",
+            "doc:simple-config-exclude-guide",
+            "doc:simple-file-updater",
+            "doc:simple-input-simulator-guide",
+            "doc:simple-launcher-guide",
+            "doc:simple-level-seq-smooth-guide",
+            "doc:simple-ssh-tunnel-guide",
+            "doc:simple-static-mesh-merger-guide",
+            "doc:simple-tcp-client-guide",
+            "doc:simple-tcp-server-guide",
+            "doc:simple-udp-guide",
+            "doc:simple-websocket-guide",
+            "doc:ue-package-manager",
+            "doc:ue-quick-start"
+          ],
+          "supplements": []
+        }
+      ],
+      "legacyQueries": {
+        "ue-plugins": {
+          "name": "UE插件",
+          "entities": [
+            "doc:ai-data-asset-guide",
+            "doc:simple-asset-cleaner-guide",
+            "doc:simple-asset-namer-guide",
+            "doc:simple-auto-enum-guide",
+            "doc:simple-bp-inherit-fix-guide",
+            "doc:simple-byte-conversion-guide",
+            "doc:simple-config-exclude-guide",
+            "doc:simple-input-simulator-guide",
+            "doc:simple-launcher-guide",
+            "doc:simple-level-seq-smooth-guide",
+            "doc:simple-ssh-tunnel-guide",
+            "doc:simple-static-mesh-merger-guide",
+            "doc:simple-tcp-client-guide",
+            "doc:simple-tcp-server-guide",
+            "doc:simple-udp-guide",
+            "doc:simple-websocket-guide"
+          ]
+        },
+        "open-source-tools": {
+          "name": "开源工具",
+          "entities": [
+            "doc:md-blog-packer",
+            "doc:p4-case-sync",
+            "doc:plugin-auto-packer",
+            "doc:plugin-manager",
+            "doc:simple-file-updater",
+            "doc:ue-package-manager",
+            "doc:ue-quick-start"
+          ]
+        },
+        "obsidian-plugins": {
+          "name": "Ob插件",
+          "entities": [
+            "doc:md-image-embed-guide"
+          ]
+        }
+      },
+      "entityOrder": [
+        "doc:ai-data-asset-guide",
+        "doc:md-blog-packer",
+        "doc:md-image-embed-guide",
+        "doc:p4-case-sync",
+        "doc:plugin-auto-packer",
+        "doc:plugin-manager",
+        "doc:simple-asset-cleaner-guide",
+        "doc:simple-asset-namer-guide",
+        "doc:simple-auto-enum-guide",
+        "doc:simple-bp-inherit-fix-guide",
+        "doc:simple-byte-conversion-guide",
+        "doc:simple-config-exclude-guide",
+        "doc:simple-file-updater",
+        "doc:simple-input-simulator-guide",
+        "doc:simple-launcher-guide",
+        "doc:simple-level-seq-smooth-guide",
+        "doc:simple-ssh-tunnel-guide",
+        "doc:simple-static-mesh-merger-guide",
+        "doc:simple-tcp-client-guide",
+        "doc:simple-tcp-server-guide",
+        "doc:simple-udp-guide",
+        "doc:simple-websocket-guide",
+        "doc:ue-package-manager",
+        "doc:ue-quick-start"
+      ]
+    }
+  },
+  "legacyOnly": [
+    "blog:cnblogs-19136345",
+    "blog:cnblogs-19165484",
+    "blog:cnblogs-19165541",
+    "blog:cnblogs-19204715",
+    "blog:cnblogs-19770930",
+    "blog:cnblogs-19770934",
+    "blog:cnblogs-20030737",
+    "blog:cnblogs-20159718"
+  ]
+}
