@@ -6,7 +6,7 @@
 <h2 id="基础">基础</h2>
 <p>基础的意思是每个使用Perforce的人都应该掌握的</p>
 <h3 id="创建工作区">创建工作区</h3>
-<p><img src="/media/imported/blog/4555360e5c32364af7ec.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4555360e5c32364af7ec.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/4555360e5c32364af7ec.png"><img src="/media/imported/blog/4555360e5c32364af7ec.png" alt=""></a></p>
 <p>设置工作区名称和根目录，之后需要选择工作区的链接内容</p>
 <p>√是添加</p>
 <p>-是排除</p>
@@ -14,36 +14,36 @@
 <p>可以自己尝试一下，通过这种办法可以控制哪些文件进入自己的工作区，减少不必要的更新</p>
 <h3 id="提交">提交</h3>
 <p>在Pending中选中要提交的变更列表</p>
-<p><img src="/media/imported/blog/cfe6d55c3ccfb0775ea5.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/cfe6d55c3ccfb0775ea5.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/cfe6d55c3ccfb0775ea5.png"><img src="/media/imported/blog/cfe6d55c3ccfb0775ea5.png" alt=""></a></p>
 <p>右击选择Submit提交</p>
 <h3 id="更新">更新</h3>
 <p>选中需要更新的文件或者文件夹，点击GetLatest或者右击选择GetLatestRevision即可</p>
-<p><img src="/media/imported/blog/90311ad70a7da9321e80.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/90311ad70a7da9321e80.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/90311ad70a7da9321e80.png"><img src="/media/imported/blog/90311ad70a7da9321e80.png" alt=""></a></p>
 <h3 id="查看历史记录">查看历史记录</h3>
-<p><img src="/media/imported/blog/ce15272221e116c86765.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/ce15272221e116c86765.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/ce15272221e116c86765.png"><img src="/media/imported/blog/ce15272221e116c86765.png" alt=""></a></p>
 <p>左键选择对应文件或者文件夹，既可以看到对应文件或者文件夹的历史提交记录</p>
 <p>1.历史提交记录</p>
 <p>2.详细提交记录，包括提交时间，提交人，提交注释等</p>
 <p>3.这次修改的文件</p>
 <h3 id="添加新文件">添加新文件</h3>
-<p><img src="/media/imported/blog/2f8098a0f0162c3666ea.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/2f8098a0f0162c3666ea.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/2f8098a0f0162c3666ea.png"><img src="/media/imported/blog/2f8098a0f0162c3666ea.png" alt=""></a></p>
 <p>右键Mark for Add会将选中文件中，不符合忽略要求的文件添加到变更列表</p>
 <h3 id="删除文件">删除文件</h3>
-<p><img src="/media/imported/blog/992412eb17af9bd61616.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/992412eb17af9bd61616.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/992412eb17af9bd61616.png"><img src="/media/imported/blog/992412eb17af9bd61616.png" alt=""></a></p>
 <p>右键Mark for Delete即可删除所选文件</p>
 <p>不过会先存到变更列表，确认没问题后再上传</p>
 <h3 id="文件迁出">文件迁出</h3>
 <p>p4版本管理中绝大多数文件都是只读的，需要先迁出才可以写入</p>
 <p>这个时候只要右键CheckOut即可迁出，迁出默认是放到默认变更列表里</p>
-<p><img src="/media/imported/blog/23bb9756d4e4e85f23e0.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/23bb9756d4e4e85f23e0.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/23bb9756d4e4e85f23e0.png"><img src="/media/imported/blog/23bb9756d4e4e85f23e0.png" alt=""></a></p>
 <p>如果迁出了很多文件但是只修改了一部分，那剩余的也要跟着提交吗</p>
 <p>答案是不要，因为提交无修改文件没有意义，污染版本库不说还会影响查看历史提交记录</p>
 <p>正确的做法是，将未修改的迁出还原，操作如下</p>
-<p><img src="/media/imported/blog/1643135a2dd489d93e15.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/1643135a2dd489d93e15.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/1643135a2dd489d93e15.png"><img src="/media/imported/blog/1643135a2dd489d93e15.png" alt=""></a></p>
 <p>直接选中变更列表，右键选择RevertUnchangedFiles即可</p>
 <h3 id="文件还原">文件还原</h3>
 <p>文件还原一般用于本地跟库文件内容不同时，或者错误迁出错误修改时，需要还原成库文件时使用</p>
-<p><img src="/media/imported/blog/d10f0997229756ea378f.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d10f0997229756ea378f.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/d10f0997229756ea378f.png"><img src="/media/imported/blog/d10f0997229756ea378f.png" alt=""></a></p>
 <p>在变更列表中选中要还原的文件</p>
 <p>如果这个文件是要添加的，会取消添加，本地文件保留</p>
 <p>如果这个文件是要删除的，会取消删除，本地文件自动重新下载</p>
@@ -52,32 +52,32 @@
 <p>文件对比一般用于合并分支错误时使用对比找到不同点进行修改</p>
 <p>或者想知道本地文件和库文件的区别，如果没有区别，会提示对比失败</p>
 <p>选中文件右键进行对比</p>
-<p><img src="/media/imported/blog/044a055ba7c6808d9a80.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/044a055ba7c6808d9a80.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/044a055ba7c6808d9a80.png"><img src="/media/imported/blog/044a055ba7c6808d9a80.png" alt=""></a></p>
 <h3 id="文件清理">文件清理</h3>
 <p>文件清理一般用来要把本地工作区完全还原成库版本文件</p>
 <p>清理会整理出本地所有与版本库不同的文件，包括不在版本管理中的文件，选择一键清理或者保留</p>
 <p>注意清理不会清理在变更列表中的文件</p>
 <p>操作如下：</p>
 <p>选中文件右键Clean进行清理</p>
-<p><img src="/media/imported/blog/4aa00d3cfdba61d96e61.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4aa00d3cfdba61d96e61.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/4aa00d3cfdba61d96e61.png"><img src="/media/imported/blog/4aa00d3cfdba61d96e61.png" alt=""></a></p>
 <h2 id="进阶">进阶</h2>
 <p>进阶操作的意思是，如果没有把握，就不要做</p>
 <h3 id="提交撤回">提交撤回</h3>
 <h4 id="单次提交撤回">单次提交撤回</h4>
-<p><img src="/media/imported/blog/d10f0997229756ea378f.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d10f0997229756ea378f.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/d10f0997229756ea378f.png"><img src="/media/imported/blog/d10f0997229756ea378f.png" alt=""></a></p>
 <p>在历史记录中选择提交记录，右键Undo即可撤回</p>
 <h4 id="撤回这个之后的所有提交">撤回这个之后的所有提交</h4>
 <p>选择你要撤回的文件或文件夹，右键选择Undo Changes</p>
-<p><img src="/media/imported/blog/61043b2f1cb077d7cb42.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/61043b2f1cb077d7cb42.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/61043b2f1cb077d7cb42.png"><img src="/media/imported/blog/61043b2f1cb077d7cb42.png" alt=""></a></p>
 <p>选择要撤销的内容，从上到下分别是</p>
 <p>撤销单个更改，同时保留后续更改</p>
 <p>撤销一系列更改，同时保留后续更改</p>
 <p>撤销从选定点到最新版本的所有更改</p>
 <p>选择你要撤销的内容后，点击Submit提交即可</p>
-<p><img src="/media/imported/blog/7e0c796783932977d7e8.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/7e0c796783932977d7e8.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/7e0c796783932977d7e8.png"><img src="/media/imported/blog/7e0c796783932977d7e8.png" alt=""></a></p>
 <h3 id="手动修改工作区链接">手动修改工作区链接</h3>
 <p>只有普通工作区可以修改，流工作区无法修改</p>
-<p><img src="/media/imported/blog/d7d38b04920a8f721214.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d7d38b04920a8f721214.png" data-media-alt="Perforce：客户端常用操作" aria-label="放大查看图片：Perforce：客户端常用操作" href="/media/imported/blog/d7d38b04920a8f721214.png"><img src="/media/imported/blog/d7d38b04920a8f721214.png" alt=""></a></p>
 <p>在这里直接文件对应关系，可以是任何库</p>
 <p>例如你的工作区名字是Test</p>
 <p>你想将Save库下的UnrealPlugins中的文件放到工作区文件夹Plugins下</p>
@@ -145,7 +145,7 @@
     document.addEventListener('astro:after-swap', update);
     update();
   }
-</script><script type="module" src="/assets/site-ui/i18n/viewport.04368bad37f2.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.328a65d13d7c.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+</script><script type="module" src="/assets/site-ui/i18n/viewport.04368bad37f2.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.24d8c62d888b.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
 if (!document.documentElement.dataset.mediaViewerBound) {
   document.documentElement.dataset.mediaViewerBound = 'true';
   let opener = null;

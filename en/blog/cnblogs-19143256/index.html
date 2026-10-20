@@ -6,7 +6,7 @@
 <h2 id="basics">Basics</h2>
 <p>By basics, I mean what everyone using Perforce should know</p>
 <h3 id="creating-a-workspace">Creating a Workspace</h3>
-<p><img src="/media/imported/blog/4555360e5c32364af7ec.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4555360e5c32364af7ec.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/4555360e5c32364af7ec.png"><img src="/media/imported/blog/4555360e5c32364af7ec.png" alt=""></a></p>
 <p>Set the workspace name and root directory, then select what the workspace links to</p>
 <p>√ means add</p>
 <p>- means exclude</p>
@@ -14,36 +14,36 @@
 <p>You can try it yourself. This lets you control which files enter your workspace and reduce unnecessary updates</p>
 <h3 id="submitting">Submitting</h3>
 <p>Select the changelist to submit under Pending</p>
-<p><img src="/media/imported/blog/cfe6d55c3ccfb0775ea5.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/cfe6d55c3ccfb0775ea5.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/cfe6d55c3ccfb0775ea5.png"><img src="/media/imported/blog/cfe6d55c3ccfb0775ea5.png" alt=""></a></p>
 <p>Right-click and select Submit to submit it</p>
 <h3 id="updating">Updating</h3>
 <p>Select the files or folders to update, then click GetLatest or right-click and select GetLatestRevision</p>
-<p><img src="/media/imported/blog/90311ad70a7da9321e80.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/90311ad70a7da9321e80.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/90311ad70a7da9321e80.png"><img src="/media/imported/blog/90311ad70a7da9321e80.png" alt=""></a></p>
 <h3 id="viewing-history">Viewing History</h3>
-<p><img src="/media/imported/blog/ce15272221e116c86765.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/ce15272221e116c86765.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/ce15272221e116c86765.png"><img src="/media/imported/blog/ce15272221e116c86765.png" alt=""></a></p>
 <p>Left-click a file or folder to see its submission history</p>
 <p>1.Submission history</p>
 <p>2.Submission details, including submission time, submitter, description, and so on</p>
 <p>3.Files modified in this change</p>
 <h3 id="adding-new-files">Adding New Files</h3>
-<p><img src="/media/imported/blog/2f8098a0f0162c3666ea.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/2f8098a0f0162c3666ea.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/2f8098a0f0162c3666ea.png"><img src="/media/imported/blog/2f8098a0f0162c3666ea.png" alt=""></a></p>
 <p>Right-clicking Mark for Add adds the selected files that do not match the ignore rules to the changelist</p>
 <h3 id="deleting-files">Deleting Files</h3>
-<p><img src="/media/imported/blog/992412eb17af9bd61616.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/992412eb17af9bd61616.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/992412eb17af9bd61616.png"><img src="/media/imported/blog/992412eb17af9bd61616.png" alt=""></a></p>
 <p>Right-click Mark for Delete to delete the selected files</p>
 <p>They will first be placed in a changelist; upload them after confirming everything is correct</p>
 <h3 id="checking-out-files">Checking Out Files</h3>
 <p>Most files under p4 version control are read-only and must be checked out before you can write to them</p>
 <p>Simply right-click CheckOut to check them out. By default, they go into the default changelist</p>
-<p><img src="/media/imported/blog/23bb9756d4e4e85f23e0.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/23bb9756d4e4e85f23e0.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/23bb9756d4e4e85f23e0.png"><img src="/media/imported/blog/23bb9756d4e4e85f23e0.png" alt=""></a></p>
 <p>If you check out many files but only modify some of them, should the remaining files also be submitted?</p>
 <p>The answer is no. Submitting unchanged files serves no purpose, clutters the repository, and makes the submission history harder to read</p>
 <p>The correct approach is to revert unchanged checkouts, as follows</p>
-<p><img src="/media/imported/blog/1643135a2dd489d93e15.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/1643135a2dd489d93e15.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/1643135a2dd489d93e15.png"><img src="/media/imported/blog/1643135a2dd489d93e15.png" alt=""></a></p>
 <p>Select the changelist, right-click, and choose RevertUnchangedFiles</p>
 <h3 id="reverting-files">Reverting Files</h3>
 <p>Reverting is generally used when local content differs from repository files, or after an accidental checkout or edit, and you need to restore the repository version</p>
-<p><img src="/media/imported/blog/d10f0997229756ea378f.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d10f0997229756ea378f.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/d10f0997229756ea378f.png"><img src="/media/imported/blog/d10f0997229756ea378f.png" alt=""></a></p>
 <p>Select the file to revert in the changelist</p>
 <p>If it is a file being added, the addition is canceled and the local file is retained</p>
 <p>If it is a file being deleted, the deletion is canceled and the local file is automatically downloaded again</p>
@@ -52,32 +52,32 @@
 <p>File comparison is generally used to find differences and make corrections when a branch merge goes wrong</p>
 <p>Or when you want to know the difference between the local and repository files. If there is no difference, it reports that the comparison failed</p>
 <p>Select the file and right-click to compare</p>
-<p><img src="/media/imported/blog/044a055ba7c6808d9a80.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/044a055ba7c6808d9a80.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/044a055ba7c6808d9a80.png"><img src="/media/imported/blog/044a055ba7c6808d9a80.png" alt=""></a></p>
 <h3 id="cleaning-files">Cleaning Files</h3>
 <p>File cleanup is generally used to restore the local workspace completely to the repository version</p>
 <p>Clean lists all local files that differ from the repository, including files outside version control, and lets you choose to clean them in one click or keep them</p>
 <p>Note that Clean does not clean files in changelists</p>
 <p>The procedure is as follows:</p>
 <p>Select the files, right-click, and choose Clean</p>
-<p><img src="/media/imported/blog/4aa00d3cfdba61d96e61.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4aa00d3cfdba61d96e61.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/4aa00d3cfdba61d96e61.png"><img src="/media/imported/blog/4aa00d3cfdba61d96e61.png" alt=""></a></p>
 <h2 id="advanced">Advanced</h2>
 <p>By advanced operations, I mean: if you are not confident, do not do them</p>
 <h3 id="undoing-submissions">Undoing Submissions</h3>
 <h4 id="undoing-a-single-submission">Undoing a Single Submission</h4>
-<p><img src="/media/imported/blog/d10f0997229756ea378f.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d10f0997229756ea378f.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/d10f0997229756ea378f.png"><img src="/media/imported/blog/d10f0997229756ea378f.png" alt=""></a></p>
 <p>Select the submission in the history, right-click, and choose Undo</p>
 <h4 id="undoing-all-submissions-after-this-one">Undoing All Submissions After This One</h4>
 <p>Select the files or folders whose changes you want to undo, right-click, and choose Undo Changes</p>
-<p><img src="/media/imported/blog/61043b2f1cb077d7cb42.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/61043b2f1cb077d7cb42.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/61043b2f1cb077d7cb42.png"><img src="/media/imported/blog/61043b2f1cb077d7cb42.png" alt=""></a></p>
 <p>Choose what to undo. From top to bottom, the options are</p>
 <p>Undo a single change while preserving subsequent changes</p>
 <p>Undo a range of changes while preserving subsequent changes</p>
 <p>Undo all changes from the selected point to the latest revision</p>
 <p>After choosing what to undo, click Submit to submit it</p>
-<p><img src="/media/imported/blog/7e0c796783932977d7e8.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/7e0c796783932977d7e8.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/7e0c796783932977d7e8.png"><img src="/media/imported/blog/7e0c796783932977d7e8.png" alt=""></a></p>
 <h3 id="manually-editing-workspace-mappings">Manually Editing Workspace Mappings</h3>
 <p>Only regular workspaces can be edited; Stream workspaces cannot</p>
-<p><img src="/media/imported/blog/d7d38b04920a8f721214.png" alt=""></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d7d38b04920a8f721214.png" data-media-alt="Perforce: Common Client Operations" aria-label="View image: Perforce: Common Client Operations" href="/media/imported/blog/d7d38b04920a8f721214.png"><img src="/media/imported/blog/d7d38b04920a8f721214.png" alt=""></a></p>
 <p>Set the file mappings directly here. They can reference any depot</p>
 <p>For example, suppose your workspace is named Test</p>
 <p>You want to put the files from UnrealPlugins in the Save depot into the Plugins folder of your workspace</p>
@@ -145,7 +145,7 @@
     document.addEventListener('astro:after-swap', update);
     update();
   }
-</script><script type="module" src="/assets/site-ui/i18n/viewport.04368bad37f2.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.328a65d13d7c.js"></script><dialog class="media-viewer" data-media-viewer aria-label="Media preview"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="Show video in fullscreen">Fullscreen</button><button type="button" data-media-close aria-label="Close media preview">Close</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+</script><script type="module" src="/assets/site-ui/i18n/viewport.04368bad37f2.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.24d8c62d888b.js"></script><dialog class="media-viewer" data-media-viewer aria-label="Media preview"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="Show video in fullscreen">Fullscreen</button><button type="button" data-media-close aria-label="Close media preview">Close</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
 if (!document.documentElement.dataset.mediaViewerBound) {
   document.documentElement.dataset.mediaViewerBound = 'true';
   let opener = null;

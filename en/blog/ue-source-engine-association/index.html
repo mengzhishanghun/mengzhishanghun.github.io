@@ -10,7 +10,7 @@
 <span class="line"><span>REG ADD "HKCU\SOFTWARE\Epic Games\Unreal Engine\Builds" /v "%name%" /t REG_SZ  /f /d "%str:~0,-1%"</span></span></code></pre>
 <p>This script adds the Unreal Engine source in the current path to the registry, using the script’s filename as the name
 The benefit is a consistent version identifier in the source engine’s .uproject files
-<img src="/media/restored-blog/eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33.png" alt="">
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/restored-blog/eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33.png" data-media-alt="Modifying Registry Entries for a Source-Built Unreal Engine" aria-label="View image: Modifying Registry Entries for a Source-Built Unreal Engine" href="/media/restored-blog/eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33.png"><img src="/media/restored-blog/eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33.png" alt=""></a>
 This prevents different registry names for the source engine on each computer from causing differences in the .uproject file and triggering recompilation</p>
 <h3 id="updated-bat-commands">Updated BAT Commands</h3>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bat"><code><span class="line"><span style="color:#F97583">@echo</span><span style="color:#F97583"> off</span></span>
@@ -88,7 +88,7 @@ This prevents different registry names for the source engine on each computer fr
     document.addEventListener('astro:after-swap', update);
     update();
   }
-</script><script type="module" src="/assets/site-ui/i18n/viewport.04368bad37f2.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.328a65d13d7c.js"></script><dialog class="media-viewer" data-media-viewer aria-label="Media preview"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="Show video in fullscreen">Fullscreen</button><button type="button" data-media-close aria-label="Close media preview">Close</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+</script><script type="module" src="/assets/site-ui/i18n/viewport.04368bad37f2.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.24d8c62d888b.js"></script><dialog class="media-viewer" data-media-viewer aria-label="Media preview"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="Show video in fullscreen">Fullscreen</button><button type="button" data-media-close aria-label="Close media preview">Close</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
 if (!document.documentElement.dataset.mediaViewerBound) {
   document.documentElement.dataset.mediaViewerBound = 'true';
   let opener = null;

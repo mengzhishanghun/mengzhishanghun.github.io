@@ -10,7 +10,7 @@
 <span class="line"><span>REG ADD "HKCU\SOFTWARE\Epic Games\Unreal Engine\Builds" /v "%name%" /t REG_SZ  /f /d "%str:~0,-1%"</span></span></code></pre>
 <p>这个脚本会把当前路径下的虚幻源码添加到注册表，名字就是这个脚本的命名
 这样做的好处是统一源码的.uproject文件版本号
-<img src="/media/restored-blog/eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33.png" alt="">
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/restored-blog/eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33.png" data-media-alt="Unreal源码版注册表修改" aria-label="放大查看图片：Unreal源码版注册表修改" href="/media/restored-blog/eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33.png"><img src="/media/restored-blog/eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33.png" alt=""></a>
 这样做的好处是可以防止每台电脑源码引擎的注册表名字不同导致的.uproject不同，而重新编译</p>
 <h3 id="bat指令更新">bat指令更新</h3>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bat"><code><span class="line"><span style="color:#F97583">@echo</span><span style="color:#F97583"> off</span></span>
@@ -88,7 +88,7 @@
     document.addEventListener('astro:after-swap', update);
     update();
   }
-</script><script type="module" src="/assets/site-ui/i18n/viewport.04368bad37f2.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.328a65d13d7c.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+</script><script type="module" src="/assets/site-ui/i18n/viewport.04368bad37f2.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.24d8c62d888b.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
 if (!document.documentElement.dataset.mediaViewerBound) {
   document.documentElement.dataset.mediaViewerBound = 'true';
   let opener = null;
