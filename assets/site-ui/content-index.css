@@ -5,7 +5,13 @@
 
 .content-browser .content-tags-toggle { min-width: 44px; min-height: 44px; margin-top: 8px; }
 .content-browser .content-tags-toggle:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; }
-.content-browser .content-card a:focus-visible { outline: 2px solid currentColor; outline-offset: -3px; }
+.content-browser .content-card:focus-visible { outline: 2px solid currentColor; outline-offset: -3px; }
+
+.site-chrome .feature-panel { position: relative; }
+.site-chrome .feature-panel .feature-copy { position: static; z-index: auto; }
+.site-chrome .feature-panel .feature-copy h3 a::after { content: ""; position: absolute; inset: 0; z-index: 2; }
+.site-chrome .feature-panel .feature-copy h3 a:focus-visible::after { outline: 2px solid currentColor; outline-offset: -3px; }
+.site-chrome .feature-panel .feature-action { position: relative; z-index: 3; }
 
 .content-browser .content-card .work-card-title-line {
   display: flex;
