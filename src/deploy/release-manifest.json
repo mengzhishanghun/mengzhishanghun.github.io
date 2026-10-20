@@ -1773,20 +1773,6 @@
       "target": "both"
     },
     {
-      "path": "blog/cnblogs-20030737/index.html",
-      "size": 5281,
-      "gitBlob": "bbd6dbadbf1fb390d83bdc6fc46807faf3f59347",
-      "sha256": "736ae8b3ba9af059599e22b5650871032552107cc86fc04c39d3e45ad83fc960",
-      "target": "both"
-    },
-    {
-      "path": "blog/cnblogs-20159718/index.html",
-      "size": 4149,
-      "gitBlob": "a8235e0b7e7693c63ba63361c75a3da4c1bfcac3",
-      "sha256": "ec9a5f79b7f05767afa3fa7fd5c84fff76f9e4ff5aa670b0e933f268758f8820",
-      "target": "both"
-    },
-    {
       "path": "blog/cpp-algorithms-containers-value-categories/index.html",
       "size": 1924,
       "gitBlob": "b8ea5e41b758a3ece12608f302eed736357abbe2",
@@ -4185,20 +4171,6 @@
       "size": 43907,
       "gitBlob": "2f877953e6d2a28765e6f7206118178882effdab",
       "sha256": "755378e2a227db9b33a682c60534224b8073258dfc2c056d309493047299be90",
-      "target": "both"
-    },
-    {
-      "path": "en/blog/cnblogs-20030737/index.html",
-      "size": 5337,
-      "gitBlob": "65d10cb4219621833674fb19c8b7c309b2e30fcf",
-      "sha256": "0ad87c4c6ca565b419df7bd5db7c47eee4b4aa74675e85f4a3d307f2d04104b7",
-      "target": "both"
-    },
-    {
-      "path": "en/blog/cnblogs-20159718/index.html",
-      "size": 4225,
-      "gitBlob": "27149b496b1eb12b7ab8ecb1f67bb4c4e3b92e11",
-      "sha256": "2d9a5c859396060fb29f0c6f5871ef3f9839bad2fc76db9499059e2b71d13523",
       "target": "both"
     },
     {
@@ -7944,20 +7916,6 @@
       "size": 43514,
       "gitBlob": "48472e41746174a7efda6c581d9c4c7e23afe2ee",
       "sha256": "47401f8e4a325a4f6a59a7b384946632e3b6ab9b827e2105b675b95533a4fc12",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog/cnblogs-20030737/index.html",
-      "size": 5284,
-      "gitBlob": "5cf27c1bfb90ee4026e269c7996010c93730ff72",
-      "sha256": "09ef36f2248defb83ff2bd35f85373cb64bd93223853485dce4bcd18bc7ae8c1",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog/cnblogs-20159718/index.html",
-      "size": 4152,
-      "gitBlob": "1ea7d1561bed1259b37ec58e48bbe8bab88aef4e",
-      "sha256": "cea64cef139cd8cca28006672c59171ebfc85b6487927f978c9a004579438f91",
       "target": "both"
     },
     {
