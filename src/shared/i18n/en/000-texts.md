@@ -449,105 +449,9 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  blog:cnblogs-20159718:
-    root.html:1.head:0.meta:2@content: Exploring how AI can modify complex DataAssets through JSON and synchronize them to UE in real time, covering type conversion, two-way synchronization, trigger loops, and asset writes.
-    root.html:1.head:0.title:4.#text:0: "UE DataAsset & JSON Sync for AI Tool Integration · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Letting AI Modify DataAssets Directly
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Exploring how AI can modify complex DataAssets through JSON and synchronize them to UE in real time, covering type conversion, two-way synchronization, trigger loops, and asset writes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  blog:cnblogs-20030737:
-    root.html:1.head:0.meta:2@content: Examining abnormal CreationMethod values in Actor Blueprint component templates, and how to inspect and repair the inheritance chain, SCS, and ICH.
-    root.html:1.head:0.title:4.#text:0: "UE Blueprint Component Inheritance: SCS & ICH Repair · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Examining abnormal CreationMethod values in Actor Blueprint component templates, and how to inspect and repair the inheritance chain, SCS, and ICH.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Letting AI Modify DataAssets Directly
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Fixing UMG Size That Does Not Change During Rendering
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   blog:cnblogs-19813721:
-    root.html:1.head:0.meta:2@content: "Fix a UMG render size that does not follow the output resolution using Movie Render Pipeline PIE window settings or the corresponding ini configuration."
-    root.html:1.head:0.title:4.#text:0: "UE UMG Render Size Not Matching Output Resolution · Xiao Mao"
+    root.html:1.head:0.meta:2@content: Fix a UMG render size that does not follow the output resolution using Movie Render Pipeline PIE window settings or the corresponding ini configuration.
+    root.html:1.head:0.title:4.#text:0: UE UMG Render Size Not Matching Output Resolution · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -582,8 +486,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Related work
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: SimpleBPInheritFix
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Data Serialization and Byte Conversion in Blueprints
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -4344,15 +4248,15 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
-    home.experience.format: "I have {years} years of UE development experience, using C++, Python, and other languages."
+    home.experience.format: I have {years} years of UE development experience, using C++, Python, and other languages.
     home.support.prefix: "If my articles or tools help you, you can also "
-    home.support.link: "support my work"
-    home.support.end: "."
+    home.support.link: support my work
+    home.support.end: .
     home.cooperation.prefix: "For tool, plugin, workflow automation, or game development projects, "
-    home.cooperation.link: "get in touch"
-    home.cooperation.end: "."
-    root.html:1.head:0.meta:2@content: "Explore Xiao Mao's Unreal Engine plugins, tools and project work, including multi-screen simulation, digital humans and automation. Get in touch about development."
-    root.html:1.head:0.title:4.#text:0: "Unreal Engine Development, Plugins & Projects · Xiao Mao"
+    home.cooperation.link: get in touch
+    home.cooperation.end: .
+    root.html:1.head:0.meta:2@content: Explore Xiao Mao's Unreal Engine plugins, tools and project work, including multi-screen simulation, digital humans and automation. Get in touch about development.
+    root.html:1.head:0.title:4.#text:0: Unreal Engine Development, Plugins & Projects · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -4367,17 +4271,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: Every complexity can be encapsulated;
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: Every repetition can be automated.
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: "Hi, I'm Xiao Mao, a freelance developer."
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "I have worked in UE development since 2018, using C++, Python, and other languages."
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "I have worked on games, simulation systems, digital humans, digital twins, and VR projects."
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: Hi, I'm Xiao Mao, a freelance developer.
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: I have worked in UE development since 2018, using C++, Python, and other languages.
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: I have worked on games, simulation systems, digital humans, digital twins, and VR projects.
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: Featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: Featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0@aria-label: Multi-version UE Plugin Packaging
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: Open-source Tools
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: "Package UE plugins for release"
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: Package UE plugins for release
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: "Prepare UE plugins for release, primarily for Fab submissions and also for other distribution channels."
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Prepare UE plugins for release, primarily for Fab submissions and also for other distribution channels.
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1@aria-label: Multi-channel UDP Communication
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE Plugins
@@ -4389,7 +4293,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: Open-source Tools
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Publishing Images with an Article
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: "The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker."
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker.
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1@aria-label: Switch featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:0@aria-label: "Show: Multi-version UE Plugin Packaging"
@@ -4423,25 +4327,13 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: Featured blog posts
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1@aria-label: Featured blog posts
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0@aria-label: "UE: Letting AI Modify DataAssets Directly"
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: Letting AI Modify DataAssets Directly
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Exploring how AI can modify complex DataAssets through JSON and synchronize them to UE in real time, covering type conversion, two-way synchronization, trigger loops, and asset writes.
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1@aria-label: "UE: A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: UE network communication through UDP, TCP client, TCP server, and WebSocket examples, with discussion of threading, reconnection, sessions, and serialization.
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2@aria-label: "UE: Component State Contamination in Blueprint Inheritance and a Repair Approach"
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: Examining abnormal CreationMethod values in Actor Blueprint component templates, and how to inspect and repair the inheritance chain, SCS, and ICH.
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1@aria-label: Switch featured blog posts
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:0@aria-label: "Show: UE: Letting AI Modify DataAssets Directly"
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:1@aria-label: "Show: UE: A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:2@aria-label: "Show: UE: Component State Contamination in Blueprint Inheritance and a Repair Approach"
     root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:4.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:4.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -4451,8 +4343,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   page:works-index:
-    root.html:1.head:0.meta:2@content: "Browse Xiao Mao's Unreal Engine plugins, desktop tools and Obsidian plugin, with feature descriptions, user guides and links to sales or source code."
-    root.html:1.head:0.title:4.#text:0: "Unreal Engine Plugins & Developer Tools · Xiao Mao"
+    root.html:1.head:0.meta:2@content: Browse Xiao Mao's Unreal Engine plugins, desktop tools and Obsidian plugin, with feature descriptions, user guides and links to sales or source code.
+    root.html:1.head:0.title:4.#text:0: Unreal Engine Plugins & Developer Tools · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -4596,7 +4488,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16@aria-label: Publishing Images with an Article
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:1.h2:0.#text:0: Publishing Images with an Article
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.p:2.#text:0: "The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker."
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.p:2.#text:0: The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0.span:0.#text:0: Markdown
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0.span:1.#text:0: Images
@@ -4614,34 +4506,34 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0.span:0.#text:0: File Updates
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0.span:1.#text:0: Automation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19@aria-label: "Package projects quickly without opening the editor"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.h2:0.#text:0: "Package projects quickly without opening the editor"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19@aria-label: Package projects quickly without opening the editor
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.h2:0.#text:0: Package projects quickly without opening the editor
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.p:1.#text:0: UEPackageManager
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.p:2.#text:0: "Package UE projects directly without opening the editor, using a graphical interface or the command line."
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.p:2.#text:0: Package UE projects directly without opening the editor, using a graphical interface or the command line.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:1.#text:0: Packaging
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:2.#text:0: Automation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20@aria-label: "Package UE plugins for release"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.h2:0.#text:0: "Package UE plugins for release"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20@aria-label: Package UE plugins for release
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.h2:0.#text:0: Package UE plugins for release
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.p:2.#text:0: "Prepare UE plugins for release, primarily for Fab submissions and also for other distribution channels."
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.p:2.#text:0: Prepare UE plugins for release, primarily for Fab submissions and also for other distribution channels.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:1.#text:0: Plugins
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:2.#text:0: Packaging
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21@aria-label: "Browse and manage local UE plugins"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.h2:0.#text:0: "Browse and manage local UE plugins"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21@aria-label: Browse and manage local UE plugins
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.h2:0.#text:0: Browse and manage local UE plugins
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.p:1.#text:0: UEPluginManager
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.p:2.#text:0: "Browse project and engine plugins together, fix garbled directory names, and move plugins between the project and the engine Marketplace directory."
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.p:2.#text:0: Browse project and engine plugins together, fix garbled directory names, and move plugins between the project and the engine Marketplace directory.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:1.#text:0: Plugins
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:2.#text:0: Dependency Analysis
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22@aria-label: "Compile and launch projects with one click"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.h2:0.#text:0: "Compile and launch projects with one click"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22@aria-label: Compile and launch projects with one click
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.h2:0.#text:0: Compile and launch projects with one click
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.p:1.#text:0: UEQuickStart
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.p:2.#text:0: "UE artists, testers, designers, and other non-programmers can compile and open projects locally with one click, avoiding repeated team synchronization of the project Binaries folder."
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.p:2.#text:0: UE artists, testers, designers, and other non-programmers can compile and open projects locally with one click, avoiding repeated team synchronization of the project Binaries folder.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:1.#text:0: Compilation
@@ -4698,9 +4590,16 @@ shellSlots:
     new:shaniu:name: ShaNiu
     new:shaniu:description: A locally running AI butler bringing continuous conversations, background tasks, execution review and result previews into one interface. It is currently in development and testing.
     new:shaniu:tags: Technical tags
+    p4-stream-switcher:card:0: P4StreamSwitcher
+    p4-stream-switcher:card:1: P4StreamSwitcher
+    p4-stream-switcher:card:2: Perforce Stream Workspace Switcher
+    p4-stream-switcher:card:3: Manage a pool of Perforce stream workspaces, switch branches, reuse local directories, and choose between synchronization and offline directory adoption.
+    p4-stream-switcher:card:4: Work tags
+    p4-stream-switcher:card:5: Perforce
+    p4-stream-switcher:card:6: Version control
   page:cases-index:
-    root.html:1.head:0.meta:2@content: "Read case studies on multi-screen displays, AI digital humans, simulation and developer tools, covering the project context, implementation and limits."
-    root.html:1.head:0.title:4.#text:0: "Unreal Simulation, Digital Humans & Tool Case Studies · Xiao Mao"
+    root.html:1.head:0.meta:2@content: Read case studies on multi-screen displays, AI digital humans, simulation and developer tools, covering the project context, implementation and limits.
+    root.html:1.head:0.title:4.#text:0: Unreal Simulation, Digital Humans & Tool Case Studies · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -4822,6 +4721,15 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    perforce-workspace-pool:card:0: Managing Perforce branch workspaces and local caches
+    perforce-workspace-pool:card:1: Desktop and automation
+    perforce-workspace-pool:card:2: Managing Perforce branch workspaces and local caches
+    perforce-workspace-pool:card:3: Perforce Workspace Pool
+    perforce-workspace-pool:card:4: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
+    perforce-workspace-pool:card:5: Case tags
+    perforce-workspace-pool:card:6: Perforce
+    perforce-workspace-pool:card:7: Development tools
+    perforce-workspace-pool:card:8: Perforce
   page:blog-index:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37@aria-label: Fixing Missing GI Across Multiple Views in UE 5.3
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.h2:0.#text:0: Fixing Missing GI Across Multiple Views in UE 5.3
@@ -4830,8 +4738,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:1.#text:0: Multiple views
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:2.#text:0: UE 5.3
-    root.html:1.head:0.meta:2@content: "Development notes on Unreal Engine, C++, Python and Perforce, covering Blueprints, networking, asset handling, automation and troubleshooting."
-    root.html:1.head:0.title:4.#text:0: "Unreal Engine, C++, Python & Perforce Blog · Xiao Mao"
+    root.html:1.head:0.meta:2@content: Development notes on Unreal Engine, C++, Python and Perforce, covering Blueprints, networking, asset handling, automation and troubleshooting.
+    root.html:1.head:0.title:4.#text:0: Unreal Engine, C++, Python & Perforce Blog · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -4862,19 +4770,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:0.span:0.#text:0: Tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:0.button:1.#text:0: Clear filters
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:1@aria-label: Filter by tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: Letting AI Modify DataAssets Directly
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.h2:0.#text:0: Letting AI Modify DataAssets Directly
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.p:1.#text:0: Exploring how AI can modify complex DataAssets through JSON and synchronize them to UE in real time, covering type conversion, two-way synchronization, trigger loops, and asset writes.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0@aria-label: Article tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: AI
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:1.#text:0: DataAsset
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:2.#text:0: JSON
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2@aria-label: Component State Contamination in Blueprint Inheritance and a Repair Approach
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:0.h2:0.#text:0: Component State Contamination in Blueprint Inheritance and a Repair Approach
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:0.p:1.#text:0: Examining abnormal CreationMethod values in Actor Blueprint component templates, and how to inspect and repair the inheritance chain, SCS, and ICH.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:0@aria-label: Article tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:0.span:0.#text:0: Blueprints
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:0.span:1.#text:0: Inheritance Chains
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3@aria-label: Fixing UMG Size That Does Not Change During Rendering
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:0.h2:0.#text:0: Fixing UMG Size That Does Not Change During Rendering
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:0.p:1.#text:0: "When rendering UMG, you may encounter a frustrating issue: its rendered size does not change with the output resolution you set."
@@ -5123,7 +5018,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:44.div:1.div:0.span:2.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45@aria-label: Tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.h2:0.#text:0: "Exploring syntax parsing for game formulas in UE"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.h2:0.#text:0: Exploring syntax parsing for game formulas in UE
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:0.p:1.#text:0: Exploring a UE C++ parser for game-event formulas, from arithmetic, conditions, and custom attributes to string validation, tokenization, attribute substitution, and evaluation by precedence.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0@aria-label: Tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:45.div:1.div:0.span:0.#text:0: ""
@@ -6369,6 +6264,147 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
     workActions: Support and documentation
+  work:p4-stream-switcher:
+    root.html:1.head:0.meta:2@content: Manage a pool of Perforce stream workspaces, switch branches, reuse local directories, and choose between synchronization and offline directory adoption.
+    root.html:1.head:0.title:4.#text:0: P4StreamSwitcher | MZSH
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Open-source Tools
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: P4StreamSwitcher
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: P4StreamSwitcher
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Manage a pool of Perforce stream workspaces, switch branches, reuse local directories, and choose between synchronization and offline directory adoption.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Perforce
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Version control
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:0.#text:0: View documentation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:1@aria-label: GitHub source code, opens in a new tab
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:1.#text:0: GitHub source code
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of P4StreamSwitcher
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  case:perforce-workspace-pool:
+    root.html:1.head:0.meta:2@content: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
+    root.html:1.head:0.title:4.#text:0: Managing Perforce branch workspaces and local caches | MZSH
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Desktop and Automation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Managing Perforce branch workspaces and local caches
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Perforce Workspace Pool
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Perforce
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Development tools
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Writing Tools
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  doc:p4-stream-switcher:
+    root.html:1.head:0.title:2.#text:0: P4StreamSwitcher User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: P4StreamSwitcher User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Install and configure P4StreamSwitcher, manage stream workspaces, normal synchronization, offline directories, and workspace removal.
+    root.html:1.head:0.meta:15@content: Install and configure P4StreamSwitcher, manage stream workspaces, normal synchronization, offline directories, and workspace removal.
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: P4StreamSwitcher User Manual
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Install and configure P4StreamSwitcher, manage stream workspaces, normal synchronization, offline directories, and workspace removal.
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
 scriptSlots:
   category:UE工具: "UE Tools"
   category:写作工具: "Writing Tools"
@@ -8172,6 +8208,24 @@ bodyUtilitySlots:
     root.html:0.body:1.a:0.span:1.#text:0: "Section titled “Q: Are macOS / Linux supported?”"
   page:contact:body-utility:1:
     root.html:0.body:1.button:0.#text:0: Copy email address
+  doc:p4-stream-switcher:body-utility:1:
+    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Installation and connection”
+  doc:p4-stream-switcher:body-utility:2:
+    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Features and settings”
+  doc:p4-stream-switcher:body-utility:3:
+    root.html:0.body:1.a:0.span:1.#text:0: Section titled “First switch”
+  doc:p4-stream-switcher:body-utility:4:
+    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Existing workspaces and resynchronization”
+  doc:p4-stream-switcher:body-utility:5:
+    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Normal mode”
+  doc:p4-stream-switcher:body-utility:6:
+    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Offline directory mode”
+  doc:p4-stream-switcher:body-utility:7:
+    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Workspace reclamation and deletion”
+  doc:p4-stream-switcher:body-utility:8:
+    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Saved settings and troubleshooting”
+  doc:p4-stream-switcher:body-utility:9:
+    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Related content”
 missingPublicFileNote: (This file is not available in the public repository)
 codeLabels:
   terminalWindow: Terminal window
@@ -8192,7 +8246,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 03e0c5d2bd2a8827e1a99da4996cfc12b013d7094eb40f710351fd5bba8c3109
+sourceHash: c97f9cabcdf12e1190a4dade8eef1ea46c7d38afebd4493ebfc3e0b058aee637
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

@@ -19,9 +19,9 @@ coverAlt: Bidirectional synchronization and self-write filtering workflow betwee
 websiteCoverUrl: /assets/cases/data-asset-json-sync.png
 lang: en
 translationKey: data-asset-json-sync
-sourceHash: dc1dc592967d75697daa376ea03f51c9ce0b636465882a82f7063b8c37787271
+sourceHash: 262c1da985f1deedb36d51ffa2377340f5cb8723aa2349a4eba69dd9aae88c5d
 translationStatus: translated
-generatedBodyHash: 3ff5eca0470f96befe2767b354598ce42240da90b643ad11f1846ec3ea4059c8
+generatedBodyHash: e559e999bb486b657b48e3b84b388439bec9a8b174007050198b1f51bd76aead
 ---
 
 ## Background
@@ -44,7 +44,13 @@ In particular, after the editor exports JSON, a directory watcher may import the
 
 ## Solution
 
-Starting with JSON conversion, field names and numeric output formats were handled separately rather than leaving property conversion entirely to default behavior. Specific fields still need to be checked against the asset type. For the field conversion and bidirectional synchronization implementation, [read the synchronization implementation details](https://mzsh.me/blog/cnblogs-20159718/).
+UE provides `FJsonObjectConverter::UStructToJsonObject` and `JsonObjectToUStruct` as conversion entry points between properties and JSON objects. For manual, one-way exchange, an editor button can export JSON and import it again after external edits without continuous watching. Specific property types and soft references still require checks against the engine version and asset definitions.
+
+The historical implementation customized PrintPolicy, using `%.9f` for float and `%.17g` for double. These formats specify decimal places and significant digits respectively. `%.9f` cannot guarantee an exact round trip over the entire float range; judge it against the actual value range and serialization tests rather than treating the historical article's “complete equality” claim as a verified result.
+
+Field names also need an explicit convention. The historical approach handled changes such as `MaxHealth` becoming `maxHealth` by recursively adjusting the first letter of JSON fields after export and reversing that transformation before import. Acronyms, nested structures, and name collisions require field-specific checks; initial-letter conversion cannot be assumed reversible for every asset.
+
+Starting with JSON conversion, field names and numeric output formats were handled separately rather than leaving property conversion entirely to default behavior. Specific fields still need to be checked against the asset type.
 
 A synchronization flag was used during synchronization, alongside tracking of file paths written by the system itself. Path tracking identifies file change notifications that arrive asynchronously, covering the timing gap that a synchronization flag alone cannot handle.
 

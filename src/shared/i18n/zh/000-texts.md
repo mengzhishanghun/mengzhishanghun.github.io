@@ -449,105 +449,9 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  blog:cnblogs-20159718:
-    root.html:1.head:0.meta:2@content: 探索让 AI 通过 JSON 修改复杂 DataAsset 并实时同步到 UE，讨论类型转换、双向同步、循环触发和资产写入问题。
-    root.html:1.head:0.title:4.#text:0: "UE DataAsset 与 JSON 双向同步：接入 AI 工具 · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 如何让 AI 直接修改 DataAsset
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 探索让 AI 通过 JSON 修改复杂 DataAsset 并实时同步到 UE，讨论类型转换、双向同步、循环触发和资产写入问题。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 博客上下篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: 下一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: 蓝图继承中的组件状态污染与修复思路
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  blog:cnblogs-20030737:
-    root.html:1.head:0.meta:2@content: 分析 Actor 蓝图组件模板的 CreationMethod 异常，以及继承链、SCS 和 ICH 的检查与修复流程。
-    root.html:1.head:0.title:4.#text:0: "UE 蓝图继承组件污染：SCS、ICH 与修复流程 · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 蓝图继承中的组件状态污染与修复思路
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 分析 Actor 蓝图组件模板的 CreationMethod 异常，以及继承链、SCS 和 ICH 的检查与修复流程。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 博客上下篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 上一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: 如何让 AI 直接修改 DataAsset
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: 下一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: 如何解决渲染时UMG大小不变的问题
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   blog:cnblogs-19813721:
-    root.html:1.head:0.meta:2@content: "记录 UE UMG 渲染尺寸不随输出分辨率变化的问题，给出 Movie Render Pipeline 的 PIE 窗口尺寸设置与 ini 配置入口。"
-    root.html:1.head:0.title:4.#text:0: "UE UMG 渲染尺寸不随输出分辨率变化的处理 · 小毛"
+    root.html:1.head:0.meta:2@content: 记录 UE UMG 渲染尺寸不随输出分辨率变化的问题，给出 Movie Render Pipeline 的 PIE 窗口尺寸设置与 ini 配置入口。
+    root.html:1.head:0.title:4.#text:0: UE UMG 渲染尺寸不随输出分辨率变化的处理 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -582,8 +486,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: 暂无章节标题
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 博客上下篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 上一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: 蓝图继承中的组件状态污染与修复思路
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 相关作品
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: SimpleBPInheritFix
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: 下一篇
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: 如何在蓝图中实现数据序列化与字节转换
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -4344,15 +4248,15 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
-    home.experience.format: "有 {years} 年 UE 开发经验，使用 C++、Python 等语言。"
-    home.support.prefix: "如果我的文章或工具对你有帮助，也欢迎"
-    home.support.link: "支持我继续创作"
-    home.support.end: "。"
-    home.cooperation.prefix: "承接工具、插件、自动化流程及游戏开发，欢迎"
-    home.cooperation.link: "联系我聊聊"
-    home.cooperation.end: "。"
-    root.html:1.head:0.meta:2@content: "小毛的 UE 开发作品与技术记录，涵盖插件工具、多屏仿真、数字人和自动化流程，可查看项目案例并联系开发合作。"
-    root.html:1.head:0.title:4.#text:0: "UE 开发、插件工具与项目案例 · 小毛"
+    home.experience.format: 有 {years} 年 UE 开发经验，使用 C++、Python 等语言。
+    home.support.prefix: 如果我的文章或工具对你有帮助，也欢迎
+    home.support.link: 支持我继续创作
+    home.support.end: 。
+    home.cooperation.prefix: 承接工具、插件、自动化流程及游戏开发，欢迎
+    home.cooperation.link: 联系我聊聊
+    home.cooperation.end: 。
+    root.html:1.head:0.meta:2@content: 小毛的 UE 开发作品与技术记录，涵盖插件工具、多屏仿真、数字人和自动化流程，可查看项目案例并联系开发合作。
+    root.html:1.head:0.title:4.#text:0: UE 开发、插件工具与项目案例 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -4367,17 +4271,17 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:0: 所有复杂，皆可封装；
     root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.h1:0.#text:2: 所有重复，皆可自动化。
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: "你好，我是小毛，一名自由职业开发者。"
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: "自 2018 年起从事 UE 开发，使用 C++、Python 等语言。"
-    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: "做过游戏、仿真系统、数字人、数字孪生和 VR 项目。"
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:1.#text:0: 你好，我是小毛，一名自由职业开发者。
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:0: 自 2018 年起从事 UE 开发，使用 C++、Python 等语言。
+    root.html:1.body:1.div:0.main:3.div:1.section:0.div:0.p:2.#text:2: 做过游戏、仿真系统、数字人、数字孪生和 VR 项目。
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: 精选作品
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: 精选作品
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0@aria-label: UE 多版本插件打包
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: 开源工具
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: "将 UE 插件打包为可发布版本"
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 将 UE 插件打包为可发布版本
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: "主要用于 Fab 提交流程，将插件打包为可发布版本，也适合其他插件分发场景。"
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 主要用于 Fab 提交流程，将插件打包为可发布版本，也适合其他插件分发场景。
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1@aria-label: UDP 多通道通信
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE插件
@@ -4389,7 +4293,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: 开源工具
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 让图片随文章发布
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: "MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。"
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1@aria-label: 精选作品切换
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:0@aria-label: 显示：UE 多版本插件打包
@@ -4423,25 +4327,13 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: 精选博客
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1@aria-label: 精选博客
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0@aria-label: UE：如何让 AI 直接修改 DataAsset
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 如何让 AI 直接修改 DataAsset
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 探索让 AI 通过 JSON 修改复杂 DataAsset 并实时同步到 UE，讨论类型转换、双向同步、循环触发和资产写入问题。
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1@aria-label: UE：UE网络编程完全指南之UDP TCP WebSocket实现详解
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: UE网络编程完全指南之UDP TCP WebSocket实现详解
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 通过 UDP、TCP 客户端、TCP 服务端和 WebSocket 示例讲解 UE 网络通信，并讨论线程、重连、会话和序列化。
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: 查看内容
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2@aria-label: UE：蓝图继承中的组件状态污染与修复思路
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 蓝图继承中的组件状态污染与修复思路
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 分析 Actor 蓝图组件模板的 CreationMethod 异常，以及继承链、SCS 和 ICH 的检查与修复流程。
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1@aria-label: 精选博客切换
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:0@aria-label: 显示：UE：如何让 AI 直接修改 DataAsset
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:1@aria-label: 显示：UE：UE网络编程完全指南之UDP TCP WebSocket实现详解
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:2@aria-label: 显示：UE：蓝图继承中的组件状态污染与修复思路
     root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:4.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:4.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -4451,8 +4343,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   page:works-index:
-    root.html:1.head:0.meta:2@content: "浏览小毛开发的 UE 插件、桌面工具与 Obsidian 插件，查看功能说明、使用文档及销售或开源入口。"
-    root.html:1.head:0.title:4.#text:0: "UE 插件与开发工具作品 · 小毛"
+    root.html:1.head:0.meta:2@content: 浏览小毛开发的 UE 插件、桌面工具与 Obsidian 插件，查看功能说明、使用文档及销售或开源入口。
+    root.html:1.head:0.title:4.#text:0: UE 插件与开发工具作品 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -4596,7 +4488,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16@aria-label: 让图片随文章发布
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:1.h2:0.#text:0: 让图片随文章发布
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.p:2.#text:0: "MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.p:2.#text:0: MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0.span:0.#text:0: Markdown
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0.span:1.#text:0: 图片
@@ -4614,34 +4506,34 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0.span:0.#text:0: 文件更新
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0.span:1.#text:0: 自动化
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19@aria-label: "无需打开编辑器，快速打包项目"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.h2:0.#text:0: "无需打开编辑器，快速打包项目"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19@aria-label: 无需打开编辑器，快速打包项目
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.h2:0.#text:0: 无需打开编辑器，快速打包项目
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.p:1.#text:0: UEPackageManager
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.p:2.#text:0: "无需打开 UE 编辑器，直接快速打包项目，支持图形界面与命令行操作。"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.p:2.#text:0: 无需打开 UE 编辑器，直接快速打包项目，支持图形界面与命令行操作。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:1.#text:0: 打包
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:2.#text:0: 自动化
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20@aria-label: "将 UE 插件打包为可发布版本"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.h2:0.#text:0: "将 UE 插件打包为可发布版本"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20@aria-label: 将 UE 插件打包为可发布版本
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.h2:0.#text:0: 将 UE 插件打包为可发布版本
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.p:2.#text:0: "主要用于 Fab 提交流程，将插件打包为可发布版本，也适合其他插件分发场景。"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.p:2.#text:0: 主要用于 Fab 提交流程，将插件打包为可发布版本，也适合其他插件分发场景。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:1.#text:0: 插件
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:2.#text:0: 打包
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21@aria-label: "浏览和管理本地 UE 插件"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.h2:0.#text:0: "浏览和管理本地 UE 插件"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21@aria-label: 浏览和管理本地 UE 插件
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.h2:0.#text:0: 浏览和管理本地 UE 插件
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.p:1.#text:0: UEPluginManager
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.p:2.#text:0: "统一浏览项目与引擎插件，修正乱码目录名，并在项目与引擎的 Marketplace 目录之间移动插件。"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.p:2.#text:0: 统一浏览项目与引擎插件，修正乱码目录名，并在项目与引擎的 Marketplace 目录之间移动插件。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:1.#text:0: 插件
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:2.#text:0: 依赖分析
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22@aria-label: "一键编译并启动项目"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.h2:0.#text:0: "一键编译并启动项目"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22@aria-label: 一键编译并启动项目
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.h2:0.#text:0: 一键编译并启动项目
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.p:1.#text:0: UEQuickStart
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.p:2.#text:0: "面向 UE 美术、测试、策划等非程序人员，在本机一键编译并打开项目，避免团队反复同步项目的 Binaries 文件夹。"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.p:2.#text:0: 面向 UE 美术、测试、策划等非程序人员，在本机一键编译并打开项目，避免团队反复同步项目的 Binaries 文件夹。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:1.#text:0: 编译
@@ -4698,9 +4590,16 @@ shellSlots:
     new:shaniu:name: ShaNiu
     new:shaniu:description: 本机运行的 AI 管家，将连续对话、后台任务、执行审核与成果预览集中在同一界面。目前处于开发与测试阶段。
     new:shaniu:tags: 技术标签
+    p4-stream-switcher:card:0: P4StreamSwitcher
+    p4-stream-switcher:card:1: P4StreamSwitcher
+    p4-stream-switcher:card:2: Perforce Stream Workspace Switcher
+    p4-stream-switcher:card:3: 管理 Perforce 流工作区池，在分支间切换、复用本地目录，并区分普通同步与离线目录接入。
+    p4-stream-switcher:card:4: 作品标签
+    p4-stream-switcher:card:5: Perforce
+    p4-stream-switcher:card:6: 版本控制
   page:cases-index:
-    root.html:1.head:0.meta:2@content: "查看三屏显示、AI 数字人、仿真联动及插件工具案例，了解项目背景、问题排查、实现过程与适用范围。"
-    root.html:1.head:0.title:4.#text:0: "UE 仿真、数字人与工具开发案例 · 小毛"
+    root.html:1.head:0.meta:2@content: 查看三屏显示、AI 数字人、仿真联动及插件工具案例，了解项目背景、问题排查、实现过程与适用范围。
+    root.html:1.head:0.title:4.#text:0: UE 仿真、数字人与工具开发案例 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -4822,6 +4721,15 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+    perforce-workspace-pool:card:0: 管理 Perforce 分支工作区与本地缓存
+    perforce-workspace-pool:card:1: 桌面与自动化
+    perforce-workspace-pool:card:2: 管理 Perforce 分支工作区与本地缓存
+    perforce-workspace-pool:card:3: Perforce Workspace Pool
+    perforce-workspace-pool:card:4: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
+    perforce-workspace-pool:card:5: 案例标签
+    perforce-workspace-pool:card:6: Perforce
+    perforce-workspace-pool:card:7: 开发工具
+    perforce-workspace-pool:card:8: Perforce
   page:blog-index:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37@aria-label: 多视角GI丢失问题的解决办法
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.h2:0.#text:0: 多视角GI丢失问题的解决办法
@@ -4830,8 +4738,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:1.#text:0: 多视角
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:1.div:0.span:2.#text:0: UE 5.3
-    root.html:1.head:0.meta:2@content: "小毛的 UE、C++、Python 与 Perforce 开发笔记，记录蓝图、网络通信、资产处理、自动化与实际排障过程。"
-    root.html:1.head:0.title:4.#text:0: "UE、C++、Python 与 Perforce 技术博客 · 小毛"
+    root.html:1.head:0.meta:2@content: 小毛的 UE、C++、Python 与 Perforce 开发笔记，记录蓝图、网络通信、资产处理、自动化与实际排障过程。
+    root.html:1.head:0.title:4.#text:0: UE、C++、Python 与 Perforce 技术博客 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -4862,19 +4770,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:0.span:0.#text:0: 标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:0.button:1.#text:0: 清空筛选
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:2.div:1@aria-label: 标签筛选
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: 如何让 AI 直接修改 DataAsset
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.h2:0.#text:0: 如何让 AI 直接修改 DataAsset
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:0.p:1.#text:0: 探索让 AI 通过 JSON 修改复杂 DataAsset 并实时同步到 UE，讨论类型转换、双向同步、循环触发和资产写入问题。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0@aria-label: 文章标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: AI
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:1.#text:0: DataAsset
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:2.#text:0: JSON
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2@aria-label: 蓝图继承中的组件状态污染与修复思路
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:0.h2:0.#text:0: 蓝图继承中的组件状态污染与修复思路
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:0.p:1.#text:0: 分析 Actor 蓝图组件模板的 CreationMethod 异常，以及继承链、SCS 和 ICH 的检查与修复流程。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:0@aria-label: 文章标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:0.span:0.#text:0: 蓝图
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:0.span:1.#text:0: 继承链
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3@aria-label: 如何解决渲染时UMG大小不变的问题
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:0.h2:0.#text:0: 如何解决渲染时UMG大小不变的问题
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:0.p:1.#text:0: 当你需要将UMG渲染出来的时候你可能会碰到一种很恶心的情况，你渲染出来的UMG大小不跟随你设置的输出分辨率变化
@@ -6369,6 +6264,147 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
     workActions: 支持与文档
+  work:p4-stream-switcher:
+    root.html:1.head:0.meta:2@content: 管理 Perforce 流工作区池，在分支间切换、复用本地目录，并区分普通同步与离线目录接入。
+    root.html:1.head:0.title:4.#text:0: P4StreamSwitcher · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 作品
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 插件、工具与游戏作品。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 作品
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 开源工具
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: P4StreamSwitcher
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: P4StreamSwitcher
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 管理 Perforce 流工作区池，在分支间切换、复用本地目录，并区分普通同步与离线目录接入。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Perforce
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 版本控制
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: 作品购买与文档
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:0.#text:0: 查看文档
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:1@aria-label: GitHub 源码，在新标签页打开
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:1.#text:0: GitHub 源码
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看P4StreamSwitcher示意图大图
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  case:perforce-workspace-pool:
+    root.html:1.head:0.meta:2@content: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
+    root.html:1.head:0.title:4.#text:0: 管理 Perforce 分支工作区与本地缓存 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 桌面与自动化
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 管理 Perforce 分支工作区与本地缓存
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Perforce Workspace Pool
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Perforce
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 开发工具
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 写作工具
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看管理 Perforce 分支工作区与本地缓存示意图大图
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  doc:p4-stream-switcher:
+    root.html:1.head:0.title:2.#text:0: P4StreamSwitcher 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: P4StreamSwitcher 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: 安装与配置 P4StreamSwitcher，管理流工作区、普通同步、离线目录及工作区回收。
+    root.html:1.head:0.meta:15@content: 安装与配置 P4StreamSwitcher，管理流工作区、普通同步、离线目录及工作区回收。
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: P4StreamSwitcher 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: 安装与配置 P4StreamSwitcher，管理流工作区、普通同步、离线目录及工作区回收。
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
 scriptSlots:
   viewport:return-previous: 返回
   work-topic:editor-assets: "编辑器与资产工具"
@@ -8157,6 +8193,24 @@ bodyUtilitySlots:
     root.html:0.body:1.a:0.span:1.#text:0: "Section titled “Q: 支持 macOS / Linux 吗？”"
   page:contact:body-utility:1:
     root.html:0.body:1.button:0.#text:0: 复制邮箱
+  doc:p4-stream-switcher:body-utility:1:
+    root.html:0.body:1.a:0.span:1.#text:0: 章节“安装与连接”的固定链接
+  doc:p4-stream-switcher:body-utility:2:
+    root.html:0.body:1.a:0.span:1.#text:0: 章节“功能与设置”的固定链接
+  doc:p4-stream-switcher:body-utility:3:
+    root.html:0.body:1.a:0.span:1.#text:0: 章节“第一次切换”的固定链接
+  doc:p4-stream-switcher:body-utility:4:
+    root.html:0.body:1.a:0.span:1.#text:0: 章节“已有工作区与重新同步”的固定链接
+  doc:p4-stream-switcher:body-utility:5:
+    root.html:0.body:1.a:0.span:1.#text:0: 章节“普通模式”的固定链接
+  doc:p4-stream-switcher:body-utility:6:
+    root.html:0.body:1.a:0.span:1.#text:0: 章节“离线目录模式”的固定链接
+  doc:p4-stream-switcher:body-utility:7:
+    root.html:0.body:1.a:0.span:1.#text:0: 章节“工作区回收与删除”的固定链接
+  doc:p4-stream-switcher:body-utility:8:
+    root.html:0.body:1.a:0.span:1.#text:0: 章节“配置保存与常见问题”的固定链接
+  doc:p4-stream-switcher:body-utility:9:
+    root.html:0.body:1.a:0.span:1.#text:0: 章节“相关内容”的固定链接
 missingPublicFileNote: （公开仓库暂无此文件）
 codeLabels:
   terminalWindow: 终端窗口

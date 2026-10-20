@@ -4929,5 +4929,61 @@
       "oldId": "实现",
       "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
     }
+  ],
+  "doc:p4-stream-switcher": [
+    {
+      "depth": 2,
+      "oldId": "安装与连接",
+      "utilityId": "doc:p4-stream-switcher:body-utility:1",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "功能与设置",
+      "utilityId": "doc:p4-stream-switcher:body-utility:2",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "第一次切换",
+      "utilityId": "doc:p4-stream-switcher:body-utility:3",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "已有工作区与重新同步",
+      "utilityId": "doc:p4-stream-switcher:body-utility:4",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "普通模式",
+      "utilityId": "doc:p4-stream-switcher:body-utility:5",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "离线目录模式",
+      "utilityId": "doc:p4-stream-switcher:body-utility:6",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "工作区回收与删除",
+      "utilityId": "doc:p4-stream-switcher:body-utility:7",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "配置保存与常见问题",
+      "utilityId": "doc:p4-stream-switcher:body-utility:8",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "相关内容",
+      "utilityId": "doc:p4-stream-switcher:body-utility:9",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    }
   ]
 }

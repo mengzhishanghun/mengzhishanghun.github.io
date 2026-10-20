@@ -61,9 +61,10 @@
         {
           "order": 4,
           "name": "P4工具",
-          "id": "work-e33ea3576874",
+          "id": "work-16d19005e03c",
           "entities": [
-            "work:p4-case-sync"
+            "work:p4-case-sync",
+            "work:p4-stream-switcher"
           ],
           "supplements": []
         },
@@ -214,6 +215,13 @@
           "entities": [
             "work:shaniu"
           ]
+        },
+        "work-16d19005e03c": {
+          "name": "P4工具",
+          "entities": [
+            "work:p4-case-sync",
+            "work:p4-stream-switcher"
+          ]
         }
       },
       "entityOrder": [
@@ -249,7 +257,8 @@
         "work:mcp-niagara",
         "work:mcp-umg",
         "work:mcp-world-editor",
-        "work:shaniu"
+        "work:shaniu",
+        "work:p4-stream-switcher"
       ]
     },
     "case": {
@@ -273,9 +282,10 @@
         {
           "order": 2,
           "name": "桌面与自动化",
-          "id": "case-b787d3be0398",
+          "id": "case-bdf374313b01",
           "entities": [
             "case:markdown-publishing",
+            "case:perforce-workspace-pool",
             "case:plugin-release-workflow"
           ],
           "supplements": []
@@ -321,6 +331,14 @@
             "case:motion-capture-robot-control",
             "case:six-dof-motion-platform"
           ]
+        },
+        "case-bdf374313b01": {
+          "name": "桌面与自动化",
+          "entities": [
+            "case:markdown-publishing",
+            "case:perforce-workspace-pool",
+            "case:plugin-release-workflow"
+          ]
         }
       },
       "entityOrder": [
@@ -333,7 +351,8 @@
         "case:markdown-publishing",
         "case:blueprint-inheritance-repair",
         "case:data-asset-json-sync",
-        "case:metahuman-animation-clipping"
+        "case:metahuman-animation-clipping",
+        "case:perforce-workspace-pool"
       ]
     },
     "blog": {
@@ -368,8 +387,6 @@
             "blog:cnblogs-19770930",
             "blog:cnblogs-19770934",
             "blog:cnblogs-19813721",
-            "blog:cnblogs-20030737",
-            "blog:cnblogs-20159718",
             "blog:ue-cursor-workflow-notes",
             "blog:ue-datatable-json-import-export",
             "blog:ue-editor-asset-saving",
@@ -454,8 +471,6 @@
             "blog:cnblogs-19770930",
             "blog:cnblogs-19770934",
             "blog:cnblogs-19813721",
-            "blog:cnblogs-20030737",
-            "blog:cnblogs-20159718",
             "blog:ue-cursor-workflow-notes",
             "blog:ue-datatable-json-import-export",
             "blog:ue-editor-asset-saving",
@@ -523,8 +538,6 @@
             "blog:cnblogs-19770930",
             "blog:cnblogs-19770934",
             "blog:cnblogs-19813721",
-            "blog:cnblogs-20030737",
-            "blog:cnblogs-20159718",
             "blog:ue-cursor-workflow-notes",
             "blog:ue-datatable-json-import-export",
             "blog:ue-editor-asset-saving",
@@ -582,8 +595,6 @@
         "blog:ue-uparam-reference-metadata",
         "blog:ue-source-engine-association",
         "blog:ue53-multiview-gi",
-        "blog:cnblogs-20159718",
-        "blog:cnblogs-20030737",
         "blog:cnblogs-19813721",
         "blog:cnblogs-19770934",
         "blog:cnblogs-19770930",
@@ -668,11 +679,12 @@
         {
           "order": 3,
           "name": "产品手册",
-          "id": "doc-b9788392102a",
+          "id": "doc-bfa9741814f7",
           "entities": [
             "doc:ai-data-asset-guide",
             "doc:md-blog-packer",
             "doc:p4-case-sync",
+            "doc:p4-stream-switcher",
             "doc:plugin-auto-packer",
             "doc:plugin-manager",
             "doc:simple-asset-cleaner-guide",
@@ -770,6 +782,35 @@
             "doc:ue-package-manager",
             "doc:ue-quick-start"
           ]
+        },
+        "doc-bfa9741814f7": {
+          "name": "产品手册",
+          "entities": [
+            "doc:ai-data-asset-guide",
+            "doc:md-blog-packer",
+            "doc:p4-case-sync",
+            "doc:p4-stream-switcher",
+            "doc:plugin-auto-packer",
+            "doc:plugin-manager",
+            "doc:simple-asset-cleaner-guide",
+            "doc:simple-asset-namer-guide",
+            "doc:simple-auto-enum-guide",
+            "doc:simple-bp-inherit-fix-guide",
+            "doc:simple-byte-conversion-guide",
+            "doc:simple-config-exclude-guide",
+            "doc:simple-file-updater",
+            "doc:simple-input-simulator-guide",
+            "doc:simple-launcher-guide",
+            "doc:simple-level-seq-smooth-guide",
+            "doc:simple-ssh-tunnel-guide",
+            "doc:simple-static-mesh-merger-guide",
+            "doc:simple-tcp-client-guide",
+            "doc:simple-tcp-server-guide",
+            "doc:simple-udp-guide",
+            "doc:simple-websocket-guide",
+            "doc:ue-package-manager",
+            "doc:ue-quick-start"
+          ]
         }
       },
       "entityOrder": [
@@ -795,7 +836,8 @@
         "doc:simple-udp-guide",
         "doc:simple-websocket-guide",
         "doc:ue-package-manager",
-        "doc:ue-quick-start"
+        "doc:ue-quick-start",
+        "doc:p4-stream-switcher"
       ]
     }
   },

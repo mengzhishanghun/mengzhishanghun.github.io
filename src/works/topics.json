@@ -538,6 +538,21 @@
           "Background tasks"
         ]
       }
+    },
+    "work:p4-stream-switcher": {
+      "topics": [
+        "version-control-collaboration"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Perforce",
+          "版本控制"
+        ],
+        "en": [
+          "Perforce",
+          "Version control"
+        ]
+      }
     }
   }
 }

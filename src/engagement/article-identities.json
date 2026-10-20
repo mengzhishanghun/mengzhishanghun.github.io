@@ -464,6 +464,18 @@
     {
       "id": "work:shaniu",
       "translationKey": "shaniu"
+    },
+    {
+      "id": "work:p4-stream-switcher",
+      "translationKey": "p4-stream-switcher"
+    },
+    {
+      "id": "case:perforce-workspace-pool",
+      "translationKey": "perforce-workspace-pool"
+    },
+    {
+      "id": "doc:p4-stream-switcher",
+      "translationKey": "p4-stream-switcher"
     }
   ]
 }

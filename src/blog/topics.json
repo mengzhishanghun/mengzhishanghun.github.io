@@ -499,40 +499,6 @@
         ]
       }
     },
-    "blog:cnblogs-20030737": {
-      "topics": [
-        "blueprints-reflection",
-        "editor-tools"
-      ],
-      "legacyTags": {
-        "zh": [
-          "蓝图",
-          "继承链"
-        ],
-        "en": [
-          "Blueprints",
-          "Inheritance chain"
-        ]
-      }
-    },
-    "blog:cnblogs-20159718": {
-      "topics": [
-        "data-configuration",
-        "editor-tools"
-      ],
-      "legacyTags": {
-        "zh": [
-          "AI",
-          "DataAsset",
-          "JSON"
-        ],
-        "en": [
-          "AI",
-          "DataAsset",
-          "JSON"
-        ]
-      }
-    },
     "blog:cpp-algorithms-containers-value-categories": {
       "topics": [
         "programming-scripting"

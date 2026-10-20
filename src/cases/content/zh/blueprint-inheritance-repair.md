@@ -39,7 +39,20 @@ translationKey: blueprint-inheritance-repair
 
 ## 解决方案
 
-排查发现，这类异常与组件模板的 `CreationMethod` 被设为 `Instance` 有关。具体触发操作未形成稳定复现路径，因此不能仅凭相似症状断定原因，仍需检查字段状态。组件模板与继承覆盖的检查过程，可[查看排查与修复详情](https://mzsh.me/blog/cnblogs-20030737/)。
+`CreationMethod` 的四种值对应不同创建来源：
+
+| 值 | 创建来源 |
+| --- | --- |
+| `Native` | C++ 原生创建的组件 |
+| `SimpleConstructionScript` | 蓝图 Components 面板定义的组件 |
+| `UserConstructionScript` | Construction Script 中创建的组件 |
+| `Instance` | 添加到具体 Actor 实例的组件 |
+
+这里检查的是蓝图组件模板被错误标成 `Instance` 的特定异常。手动修复的难点在于同一继承关系可能同时涉及 SCS 节点和 ICH 覆盖记录，多层父子蓝图也可能有异常，而属性面板不能直接修改这个字段；源码控制下还需要逐份处理资产可写性。
+
+扫描向上沿 `ParentClass` 收集父蓝图，向下用 Asset Registry 的 `GetDerivedClassNames()` 查找派生类。组件检查覆盖 SCS 的 `AllNodes` 和 ICH 的 `CreateRecordIterator()`，不能只改当前打开的模板。
+
+排查发现，这类异常与组件模板的 `CreationMethod` 被设为 `Instance` 有关。具体触发操作未形成稳定复现路径，因此不能仅凭相似症状断定原因，仍需检查字段状态。
 
 以受影响蓝图为锚点，向上收集父蓝图，向下收集派生蓝图，合并去重后形成检查范围。这样可以同时检查父模板和子类覆盖记录。
 

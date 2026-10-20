@@ -175,6 +175,21 @@
           "Writing tools"
         ]
       }
+    },
+    "case:perforce-workspace-pool": {
+      "topics": [
+        "development-release"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Perforce",
+          "开发工具"
+        ],
+        "en": [
+          "Perforce",
+          "Development tools"
+        ]
+      }
     }
   }
 }

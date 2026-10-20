@@ -73,6 +73,8 @@ SimpleBPInheritFix 是处理 Actor 蓝图继承链中组件状态异常的编辑
 
 修复可能涉及多份蓝图资产，使用者需要检查日志、签出状态和最终保存内容。其他类型的继承、编译或组件问题，仍需分别诊断。
 
-CreationMethod、SCS 与 ICH 的检查和修复原理见 [《蓝图继承中的组件状态污染与修复思路》](/zh/blog/cnblogs-20030737/)。
-
 操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-bp-inherit-fix-guide/)。
+
+## 相关案例
+
+CreationMethod、继承链与 SCS / ICH 的排查和修复原理见[开发案例](</zh/cases/blueprint-inheritance-repair/>)。

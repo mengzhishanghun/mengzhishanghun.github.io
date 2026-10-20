@@ -19,7 +19,7 @@ for(const type of ['work','case','blog','doc'])test(`taxonomy refuses a missing 
 test('OB category projection covers every entity once, preserves empty categories and old query sets',()=>{
   const manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url)));
   const {entries}=preflight({site,manifest});
-  const expected={work:[['UE插件',25],['UE工具',4],['实用工具',2],['P4工具',1],['AI工具',1]],case:[['UE项目',8],['桌面与自动化',2]],blog:[['UE开发',36],['Perforce',7],['Python',4],['随笔',0],['C++',1]]};
+  const expected={work:[['UE插件',25],['UE工具',4],['实用工具',2],['P4工具',2],['AI工具',1]],case:[['UE项目',8],['桌面与自动化',3]],blog:[['UE开发',34],['Perforce',7],['Python',4],['随笔',0],['C++',1]]};
   for(const [type,categories]of Object.entries(expected)){
     const index=entries.find(e=>e.id==='page:'+({work:'works',case:'cases',blog:'blog'}[type])+'-index');
     assert.deepEqual(index.taxonomy.categories.map(c=>[c.name,c.entities.length]),categories);
@@ -32,7 +32,7 @@ test('OB category projection covers every entity once, preserves empty categorie
   assert.notEqual(blog.categories.find(c=>c.name==='C++').id,'cpp');
   assert.equal(entries.find(e=>e.id==='work:shaniu').projectedCategory.zh.name,'AI工具');
   const snapshot=JSON.parse(fs.readFileSync(new URL('./taxonomy.json',import.meta.url)));
-  assert.deepEqual(snapshot.sections.doc.categories.map(c=>[c.entities.length,c.supplements.length]),[[0,9],[23,0]]);
+  assert.deepEqual(snapshot.sections.doc.categories.map(c=>[c.entities.length,c.supplements.length]),[[0,9],[24,0]]);
   assert.equal(snapshot.legacyOnly.length,0);assert.doesNotMatch(JSON.stringify(snapshot),/sourceFingerprint|publishedFingerprint|[A-Z]:[\\/]|网站\//);
 });
 test('generated work index uses the rendered card order in every category',()=>{

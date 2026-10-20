@@ -15,8 +15,6 @@ languages:
       blog:cnblogs-19143256: blog/content/zh/cnblogs-19143256.md
       blog:cnblogs-19143260: blog/content/zh/cnblogs-19143260.md
       blog:cnblogs-19143286: blog/content/zh/cnblogs-19143286.md
-      blog:cnblogs-20159718: blog/content/zh/cnblogs-20159718.md
-      blog:cnblogs-20030737: blog/content/zh/cnblogs-20030737.md
       blog:cnblogs-19813721: blog/content/zh/cnblogs-19813721.md
       blog:cnblogs-19770934: blog/content/zh/cnblogs-19770934.md
       blog:cnblogs-19770930: blog/content/zh/cnblogs-19770930.md
@@ -126,6 +124,9 @@ languages:
       work:mcp-umg: works/content/zh/mcp-umg.md
       work:mcp-world-editor: works/content/zh/mcp-world-editor.md
       work:shaniu: works/content/zh/shaniu.md
+      work:p4-stream-switcher: works/content/zh/p4-stream-switcher.md
+      case:perforce-workspace-pool: cases/content/zh/perforce-workspace-pool.md
+      doc:p4-stream-switcher: docs/content/zh/p4-stream-switcher.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -138,8 +139,6 @@ languages:
       blog:cnblogs-19143256: blog/content/en/cnblogs-19143256.md
       blog:cnblogs-19143260: blog/content/en/cnblogs-19143260.md
       blog:cnblogs-19143286: blog/content/en/cnblogs-19143286.md
-      blog:cnblogs-20159718: blog/content/en/cnblogs-20159718.md
-      blog:cnblogs-20030737: blog/content/en/cnblogs-20030737.md
       blog:cnblogs-19813721: blog/content/en/cnblogs-19813721.md
       blog:cnblogs-19770934: blog/content/en/cnblogs-19770934.md
       blog:cnblogs-19770930: blog/content/en/cnblogs-19770930.md
@@ -249,4 +248,7 @@ languages:
       work:mcp-umg: works/content/en/mcp-umg.md
       work:mcp-world-editor: works/content/en/mcp-world-editor.md
       work:shaniu: works/content/en/shaniu.md
+      work:p4-stream-switcher: works/content/en/p4-stream-switcher.md
+      case:perforce-workspace-pool: cases/content/en/perforce-workspace-pool.md
+      doc:p4-stream-switcher: docs/content/en/p4-stream-switcher.md
 ---
