@@ -2,32 +2,42 @@
 .site-chrome .project-title-group{align-content:start;gap:5px;min-width:0;margin:0 0 14px;display:grid}.site-chrome .project-title-group>:is(h1,h2,h3){min-height:0;margin:0}.site-chrome .project-title-group>.project-title-secondary{color:#a9bcc6;overflow-wrap:anywhere;min-height:0;margin:0;font-size:.875rem;line-height:1.45;display:block}.site-chrome .project-hero .project-title-secondary{font-size:clamp(.95rem,1.4vw,1.2rem)}.site-chrome .feature-copy .project-title-secondary{font-size:clamp(.95rem,1.2vw,1.15rem)}
 </style><link rel="stylesheet" href="/_astro/MasterDetail.CHMC8WZC.css"><style>[data-astro-transition-scope="astro-gyrtbwwo-1"] { view-transition-name: astro-gyrtbwwo-1; }@layer astro { ::view-transition-old(astro-gyrtbwwo-1) { animation: none; opacity: 0; mix-blend-mode: normal; }::view-transition-new(astro-gyrtbwwo-1) { animation: none; mix-blend-mode: normal; }::view-transition-group(astro-gyrtbwwo-1) { animation: none } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
 			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
-			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }</style><link rel="stylesheet" href="/assets/reading-area.css"><script defer src="/assets/analytics.js" data-mzsh-analytics data-website-id="9cca2387-fae9-4a77-8e5e-40dfd9897fce"></script><link rel="stylesheet" href="/assets/site-ui/navigation.css"><link rel="stylesheet" href="/assets/site-ui/engagement.css"><script defer src="/assets/site-ui/engagement.js"></script><link rel="stylesheet" href="/assets/site-ui/language-switch.css"><link rel="alternate" hreflang="zh" href="https://mzsh.me/zh/blog/cnblogs-19204715/"><link rel="alternate" hreflang="en" href="https://mzsh.me/en/blog/cnblogs-19204715/"></head><body data-astro-transition-scope="astro-gyrtbwwo-1"><div class="site-chrome"><a class="skip-link" href="#main">Skip to main content</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/en/" aria-label="MZSH home">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">Menu</button><nav id="main-navigation" class="main-nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/works/">works</a><a href="/en/cases/">Cases</a><a href="/en/blog/" aria-current="page">Blog</a></nav><div class="header-actions"><a href="/en/contact/">Contact &amp; support</a><label class="site-language-switch"><select data-site-language-select data-current="en" aria-label="Switch language"><option value="zh" data-site-locale="zh">中文</option><option value="en" data-site-locale="en" selected>English</option></select></label></div></div></header><script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.33765cd5598b.js"></script><script type="module">var e=class extends HTMLElement{controller;finish;connectedCallback(){this.controller?.abort();let e=(this.controller=new AbortController).signal,t=this.querySelector(`.outline-mobile-toggle`),n=this.querySelector(`dialog`),r=this.querySelector(`.outline-mobile-content`),i=this.closest(`mzsh-reading`),a=i?.querySelector(`.article-sidebar .article-outline nav`),o=i?.closest(`.main-frame,.site-chrome-main`);if(!t||!n||!r||!a||typeof n.showModal!=`function`)return;let s=matchMedia(`(max-width:720px)`),c=!1,l=``,u=0,d=!0,f=()=>{c&&(c=!1,o&&(o.style.overflow=l,o.scrollTop=u),t.setAttribute(`aria-expanded`,`false`),d&&t.isConnected&&t.focus({preventScroll:!0}))};this.finish=f;let p=(e=!0)=>{d=e,n.open&&n.close(),f()};t.addEventListener(`click`,()=>{s.matches&&!n.open&&(r.replaceChildren(a.cloneNode(!0)),l=o?.style.overflow||``,u=o?.scrollTop||0,o&&(o.style.overflow=`hidden`),c=!0,d=!0,t.setAttribute(`aria-expanded`,`true`),n.showModal(),n.querySelector(`[data-outline-close]`)?.focus())},{signal:e}),n.addEventListener(`cancel`,e=>{e.preventDefault(),p()},{signal:e}),n.addEventListener(`close`,f,{signal:e}),n.addEventListener(`click`,e=>{let t=e.target;if(t===n||t.closest(`[data-outline-close]`)){p();return}let r=t.closest(`a[href^="#"]`);if(!r)return;let i=e;if(i.button!==0||i.ctrlKey||i.metaKey||i.shiftKey||i.altKey)return;let o=Array.from(a.querySelectorAll(`a`)).find(e=>e.getAttribute(`href`)===r.getAttribute(`href`));o&&(e.preventDefault(),e.stopPropagation(),p(),o.click())},{signal:e}),s.addEventListener(`change`,()=>{s.matches||p(!1)},{signal:e}),document.addEventListener(`astro:before-preparation`,()=>p(!1),{signal:e}),e.addEventListener(`abort`,()=>p(!1),{once:!0}),this.dataset.ready=``}disconnectedCallback(){this.controller?.abort(),this.finish?.(),this.removeAttribute(`data-ready`)}};customElements.get(`mobile-outline`)||customElements.define(`mobile-outline`,e);</script><main id="main" tabindex="-1" class="site-chrome-main"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">Blog</p><p>Technical thoughts, troubleshooting, and development notes.</p></header><section class="shell master-page-body"><mzsh-reading class="reading-surface"><div class="master-detail reading-detail has-project-hero note-detail" data-blog-article="true" data-pagefind-body><header class="project-hero note-hero" data-note-hero><div class="project-hero-copy"><p class="project-breadcrumb" data-pagefind-ignore><a href="/en/blog/">Blog</a><span>/</span><span class="note-category">UE Development</span></p><div class="project-title-group"><h1 id="detail-cnblogs-19204715" data-pagefind-meta="title">Loading Overhead of StaticMeshActor versus ISM/HISM</h1></div><p class="project-description">Object organization and loading overhead of independent StaticMeshActors and instanced meshes, and property-handling issues during manual merging.</p></div></header><mobile-outline data-pagefind-ignore="true"><div class="outline-mobile-controls"><a class="outline-mobile-back" href="/en/blog/" aria-label="Back">Back</a><button type="button" class="outline-mobile-toggle" aria-label="Open this page&#39;s table of contents" aria-expanded="false" aria-haspopup="dialog">Contents <span aria-hidden="true">⌄</span></button></div><dialog class="outline-mobile-dialog" aria-label="This page&#39;s table of contents"><div class="outline-mobile-panel"><header><strong>This page&#39;s table of contents</strong><button type="button" data-outline-close aria-label="Close table of contents">×</button></header><div class="outline-mobile-content article-outline"></div></div></dialog></mobile-outline><aside class="article-sidebar" aria-label="Article navigation" data-pagefind-ignore><div class="article-detail-controls"><a class="article-back" href="/en/blog/" aria-label="Back">Back</a><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/blog/cnblogs-19204715/"></label><script type="application/json" data-engagement-config>{"id":"blog:cnblogs-19204715","origin":"https://mzsh.me","url":"https://mzsh.me/blog/cnblogs-19204715/","title":"Loading Overhead of StaticMeshActor versus ISM/HISM","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/blog/cnblogs-19204715/"></label></noscript></section></div><section class="article-outline"><p class="article-outline-heading">On this page</p><nav aria-label="On this page"><ol class="outline-tree outline-tree-root"><li class="outline-node" data-heading-depth="2"><a href="#1-root-causes-of-loading-stutters" class="outline-link outline-root-link">1. Root Causes of Loading Stutters</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#11-loading-overhead-of-independent-actors" class="outline-link">1.1 Loading Overhead of Independent Actors</a></li><li class="outline-node" data-heading-depth="3"><a href="#12-loading-advantages-of-ismhism" class="outline-link">1.2 Loading Advantages of ISM/HISM</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#2-considerations-for-manual-merging" class="outline-link outline-root-link">2. Considerations for Manual Merging</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#workflow-and-property-handling" class="outline-link">Workflow and Property Handling</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#3-evaluating-merge-results" class="outline-link outline-root-link">3. Evaluating Merge Results</a></li></ol></nav></section></aside><article class="master-panel" aria-labelledby="detail-cnblogs-19204715"><div class="prose"><p>When a large UE scene loads for the first time, serializing many independent StaticMeshActors, initializing components, and registering them with the scene can all incur overhead. This article outlines how independent Actors and instanced meshes are organized and what to consider when merging manually.</p>
-<h2 id="1-root-causes-of-loading-stutters">1. Root Causes of Loading Stutters</h2>
-<h3 id="11-loading-overhead-of-independent-actors">1.1 Loading Overhead of Independent Actors</h3>
-<p>Suppose a scene has 500 identical trees. The traditional approach:</p>
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }</style><link rel="stylesheet" href="/assets/reading-area.css"><script defer src="/assets/analytics.js" data-mzsh-analytics data-website-id="9cca2387-fae9-4a77-8e5e-40dfd9897fce"></script><link rel="stylesheet" href="/assets/site-ui/navigation.css"><link rel="stylesheet" href="/assets/site-ui/engagement.css"><script defer src="/assets/site-ui/engagement.js"></script><link rel="stylesheet" href="/assets/site-ui/language-switch.css"><link rel="alternate" hreflang="zh" href="https://mzsh.me/zh/blog/cnblogs-19204715/"><link rel="alternate" hreflang="en" href="https://mzsh.me/en/blog/cnblogs-19204715/"></head><body data-astro-transition-scope="astro-gyrtbwwo-1"><div class="site-chrome"><a class="skip-link" href="#main">Skip to main content</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/en/" aria-label="MZSH home">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">Menu</button><nav id="main-navigation" class="main-nav" aria-label="Main navigation"><a href="/en/">Home</a><a href="/en/works/">works</a><a href="/en/cases/">Cases</a><a href="/en/blog/" aria-current="page">Blog</a></nav><div class="header-actions"><a href="/en/contact/">Contact &amp; support</a><label class="site-language-switch"><select data-site-language-select data-current="en" aria-label="Switch language"><option value="zh" data-site-locale="zh">中文</option><option value="en" data-site-locale="en" selected>English</option></select></label></div></div></header><script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.33765cd5598b.js"></script><script type="module">var e=class extends HTMLElement{controller;finish;connectedCallback(){this.controller?.abort();let e=(this.controller=new AbortController).signal,t=this.querySelector(`.outline-mobile-toggle`),n=this.querySelector(`dialog`),r=this.querySelector(`.outline-mobile-content`),i=this.closest(`mzsh-reading`),a=i?.querySelector(`.article-sidebar .article-outline nav`),o=i?.closest(`.main-frame,.site-chrome-main`);if(!t||!n||!r||!a||typeof n.showModal!=`function`)return;let s=matchMedia(`(max-width:720px)`),c=!1,l=``,u=0,d=!0,f=()=>{c&&(c=!1,o&&(o.style.overflow=l,o.scrollTop=u),t.setAttribute(`aria-expanded`,`false`),d&&t.isConnected&&t.focus({preventScroll:!0}))};this.finish=f;let p=(e=!0)=>{d=e,n.open&&n.close(),f()};t.addEventListener(`click`,()=>{s.matches&&!n.open&&(r.replaceChildren(a.cloneNode(!0)),l=o?.style.overflow||``,u=o?.scrollTop||0,o&&(o.style.overflow=`hidden`),c=!0,d=!0,t.setAttribute(`aria-expanded`,`true`),n.showModal(),n.querySelector(`[data-outline-close]`)?.focus())},{signal:e}),n.addEventListener(`cancel`,e=>{e.preventDefault(),p()},{signal:e}),n.addEventListener(`close`,f,{signal:e}),n.addEventListener(`click`,e=>{let t=e.target;if(t===n||t.closest(`[data-outline-close]`)){p();return}let r=t.closest(`a[href^="#"]`);if(!r)return;let i=e;if(i.button!==0||i.ctrlKey||i.metaKey||i.shiftKey||i.altKey)return;let o=Array.from(a.querySelectorAll(`a`)).find(e=>e.getAttribute(`href`)===r.getAttribute(`href`));o&&(e.preventDefault(),e.stopPropagation(),p(),o.click())},{signal:e}),s.addEventListener(`change`,()=>{s.matches||p(!1)},{signal:e}),document.addEventListener(`astro:before-preparation`,()=>p(!1),{signal:e}),e.addEventListener(`abort`,()=>p(!1),{once:!0}),this.dataset.ready=``}disconnectedCallback(){this.controller?.abort(),this.finish?.(),this.removeAttribute(`data-ready`)}};customElements.get(`mobile-outline`)||customElements.define(`mobile-outline`,e);</script><main id="main" tabindex="-1" class="site-chrome-main"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">Blog</p><p>Technical thoughts, troubleshooting, and development notes.</p></header><section class="shell master-page-body"><mzsh-reading class="reading-surface"><div class="master-detail reading-detail has-project-hero note-detail" data-blog-article="true" data-pagefind-body><header class="project-hero note-hero" data-note-hero><div class="project-hero-copy"><p class="project-breadcrumb" data-pagefind-ignore><a href="/en/blog/">Blog</a><span>/</span><span class="note-category">UE Development</span></p><div class="project-title-group"><h1 id="detail-cnblogs-19204715" data-pagefind-meta="title">Loading Overhead of StaticMeshActor versus ISM/HISM</h1></div><p class="project-description">Object organization and loading overhead of independent StaticMeshActors and instanced meshes, and property-handling issues during manual merging.</p></div></header><mobile-outline data-pagefind-ignore="true"><div class="outline-mobile-controls"><a class="outline-mobile-back" href="/en/blog/" aria-label="Back">Back</a><button type="button" class="outline-mobile-toggle" aria-label="Open this page&#39;s table of contents" aria-expanded="false" aria-haspopup="dialog">Contents <span aria-hidden="true">⌄</span></button></div><dialog class="outline-mobile-dialog" aria-label="This page&#39;s table of contents"><div class="outline-mobile-panel"><header><strong>This page&#39;s table of contents</strong><button type="button" data-outline-close aria-label="Close table of contents">×</button></header><div class="outline-mobile-content article-outline"></div></div></dialog></mobile-outline><aside class="article-sidebar" aria-label="Article navigation" data-pagefind-ignore><div class="article-detail-controls"><a class="article-back" href="/en/blog/" aria-label="Back">Back</a><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/blog/cnblogs-19204715/"></label><script type="application/json" data-engagement-config>{"id":"blog:cnblogs-19204715","origin":"https://mzsh.me","url":"https://mzsh.me/blog/cnblogs-19204715/","title":"Loading Overhead of StaticMeshActor versus ISM/HISM","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/blog/cnblogs-19204715/"></label></noscript></section></div><section class="article-outline"><p class="article-outline-heading">On this page</p><nav aria-label="On this page"><ol class="outline-tree outline-tree-root"><li class="outline-node" data-heading-depth="2"><a href="#ue-say-goodbye-to-loading-stutters-merge-staticmeshactors-with-one-click" class="outline-link outline-root-link">UE: Say Goodbye to Loading Stutters! Merge StaticMeshActors with One Click</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#introduction" class="outline-link">Introduction</a></li><li class="outline-node" data-heading-depth="3"><a href="#1-the-root-cause-of-loading-stutters" class="outline-link">1. The Root Cause of Loading Stutters</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="4"><a href="#11-loading-overhead-of-separate-actors" class="outline-link">1.1 Loading Overhead of Separate Actors</a></li><li class="outline-node" data-heading-depth="4"><a href="#12-loading-advantages-of-ismhism" class="outline-link">1.2 Loading Advantages of ISM/HISM</a></li></ol></li><li class="outline-node" data-heading-depth="3"><a href="#2-the-difficulties-of-creating-ismhism-manually" class="outline-link">2. The Difficulties of Creating ISM/HISM Manually</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="4"><a href="#21-problems-with-the-manual-workflow" class="outline-link">2.1 Problems with the Manual Workflow</a></li><li class="outline-node" data-heading-depth="4"><a href="#22-the-ideal-solution" class="outline-link">2.2 The Ideal Solution</a></li></ol></li><li class="outline-node" data-heading-depth="3"><a href="#3-simplestaticmeshmerger-solve-all-these-problems-with-one-click" class="outline-link">3. SimpleStaticMeshMerger: Solve All These Problems with One Click</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="4"><a href="#31-core-features" class="outline-link">3.1 Core Features</a></li><li class="outline-node" data-heading-depth="4"><a href="#32-usage-demo" class="outline-link">3.2 Usage Demo</a></li><li class="outline-node" data-heading-depth="4"><a href="#33-technical-safeguards" class="outline-link">3.3 Technical Safeguards</a></li></ol></li><li class="outline-node" data-heading-depth="3"><a href="#4-theoretical-performance-comparison" class="outline-link">4. Theoretical Performance Comparison</a></li><li class="outline-node" data-heading-depth="3"><a href="#5-getting-the-plugin" class="outline-link">5. Getting the Plugin</a></li><li class="outline-node" data-heading-depth="3"><a href="#summary" class="outline-link">Summary</a></li></ol></li></ol></nav></section></aside><article class="master-panel" aria-labelledby="detail-cnblogs-19204715"><div class="prose"><h2 id="ue-say-goodbye-to-loading-stutters-merge-staticmeshactors-with-one-click">UE: Say Goodbye to Loading Stutters! Merge StaticMeshActors with One Click</h2>
+<blockquote>
+<p>© <a href="https://github.com/mengzhishanghun">mengzhishanghun</a> · Original article<br>
+First published on <a href="https://www.cnblogs.com/mengzhishanghun">Cnblogs</a> · Unauthorized reproduction prohibited</p>
+</blockquote>
+<hr>
+<h3 id="introduction">Introduction</h3>
+<p>When a large UE scene loads for the first time after packaging, it often suffers prolonged stutters or even appears to freeze. The reason is the enormous overhead of serializing and instantiating hundreds or thousands of separate StaticMeshActors.</p>
+<p>This article takes a closer look at the underlying reasons <strong>ISM/HISM loads faster than separate Actors</strong>, discusses the difficulties of manual merging, and introduces an efficient workflow for <strong>breaking LevelInstances and merging StaticMeshes with one click using the SimpleStaticMeshMerger plugin</strong>.</p>
+<hr>
+<h3 id="1-the-root-cause-of-loading-stutters">1. The Root Cause of Loading Stutters</h3>
+<h4 id="11-loading-overhead-of-separate-actors">1.1 Loading Overhead of Separate Actors</h4>
+<p>Suppose a scene contains 500 identical trees. The traditional approach:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#6A737D">// 场景中：500个AStaticMeshActor</span></span>
 <span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">int</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&#x3C;</span><span style="color:#79B8FF"> 500</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#E1E4E8">{</span></span>
 <span class="line"><span style="color:#B392F0">    AStaticMeshActor</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> Tree </span><span style="color:#F97583">=</span><span style="color:#B392F0"> SpawnActor</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">AStaticMeshActor</span><span style="color:#E1E4E8">>();</span></span>
 <span class="line"><span style="color:#E1E4E8">    Tree-></span><span style="color:#B392F0">SetStaticMesh</span><span style="color:#E1E4E8">(TreeMesh);</span></span>
 <span class="line"><span style="color:#E1E4E8">    Tree-></span><span style="color:#B392F0">SetActorLocation</span><span style="color:#E1E4E8">(Locations[i]);</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<p><strong>At load time, the engine must:</strong></p>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+</code></pre>
+<p><strong>During loading, the engine needs to:</strong></p>
 <ol>
 <li><strong>Deserialize 500 UObjects</strong> (each AStaticMeshActor + each UStaticMeshComponent)</li>
-<li><strong>Create 500 Components</strong> (each requiring initialization and scene registration)</li>
-<li><strong>Build collision bodies 500 times</strong> (each Component builds them independently, even with identical collision settings)</li>
-<li><strong>Register with the rendering system 500 times</strong> (each Component submits rendering data independently)</li>
+<li><strong>Create 500 Components</strong> (each needs initialization and registration with the scene)</li>
+<li><strong>Build collision bodies 500 times</strong> (each Component builds its own, even with identical collision settings)</li>
+<li><strong>Register with the rendering system 500 times</strong> (each Component submits its rendering data separately)</li>
 </ol>
-<p><strong>Core overhead:</strong></p>
+<p><strong>Main sources of overhead:</strong></p>
 <ul>
-<li>More independent Actors and components mean more serialization work</li>
-<li>Component initialization involves many virtual-function calls and scene registrations</li>
-<li>Collision bodies are built repeatedly, even with identical settings</li>
-<li>Noncontiguous memory results in a low cache hit rate</li>
+<li>UObject serialization overhead is proportional to the number of objects (500 Actors = 500 times the overhead)</li>
+<li>Component initialization requires many virtual function calls and scene registrations</li>
+<li>Collision bodies are built repeatedly (even with identical settings)</li>
+<li>Noncontiguous memory leads to a low cache hit rate</li>
 </ul>
-<h3 id="12-loading-advantages-of-ismhism">1.2 Loading Advantages of ISM/HISM</h3>
+<h4 id="12-loading-advantages-of-ismhism">1.2 Loading Advantages of ISM/HISM</h4>
 <p>After merging with HISM:</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#6A737D">// 合并后：1个AStaticMeshActor + 1个UHierarchicalInstancedStaticMeshComponent</span></span>
 <span class="line"><span style="color:#E1E4E8">UHierarchicalInstancedStaticMeshComponent</span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> HISM </span><span style="color:#F97583">=</span><span style="color:#B392F0"> CreateDefaultSubobject</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">UHierarchicalInstancedStaticMeshComponent</span><span style="color:#E1E4E8">>();</span></span>
@@ -36,59 +46,226 @@
 <span class="line"><span style="color:#F97583">for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">int</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&#x3C;</span><span style="color:#79B8FF"> 500</span><span style="color:#E1E4E8">; i</span><span style="color:#F97583">++</span><span style="color:#E1E4E8">)</span></span>
 <span class="line"><span style="color:#E1E4E8">{</span></span>
 <span class="line"><span style="color:#E1E4E8">    HISM-></span><span style="color:#B392F0">AddInstance</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FTransform</span><span style="color:#E1E4E8">(Locations[i]));</span><span style="color:#6A737D"> // 只添加Transform数据</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
-<p><strong>At load time, the engine must:</strong></p>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+</code></pre>
+<p><strong>During loading, the engine needs to:</strong></p>
 <ol>
 <li><strong>Deserialize 1 UObject</strong> (1 AStaticMeshActor)</li>
 <li><strong>Deserialize 1 HISM Component + 500 Transform matrices</strong> (as a TArray)</li>
-<li><strong>Process the instanced component’s collision data</strong></li>
+<li><strong>Build collision bodies once</strong> (shared by all instances)</li>
 <li><strong>Register with the rendering system once</strong> (submit instance data in a batch)</li>
-<li><strong>Build spatial organization data for instances</strong> (used for instance culling)</li>
+<li><strong>Build an Octree</strong> (specific to HISM, for frustum culling)</li>
 </ol>
 <p><strong>Key optimizations:</strong></p>
 <ul>
-<li>✅ <strong>Far fewer UObjects</strong>: 500 Actors → 1 Actor (substantially less serialization overhead)</li>
-<li>✅ <strong>Far fewer Components</strong>: 500 Components → 1 Component (substantially less initialization overhead)</li>
-<li>✅ <strong>Transform-array serialization</strong>: contiguous memory and efficient loading</li>
-<li>✅ <strong>Centralized instance management</strong>: the instanced component organizes mesh and transform data</li>
-<li>✅ <strong>Batch organization of rendering data</strong>: the instanced component manages multiple instances</li>
+<li>✅ <strong>Far fewer UObjects</strong>: 500 Actors → 1 Actor (significantly lower serialization overhead)</li>
+<li>✅ <strong>Far fewer Components</strong>: 500 Components → 1 Component (significantly lower initialization overhead)</li>
+<li>✅ <strong>Transform array serialization</strong>: contiguous memory for efficient loading</li>
+<li>✅ <strong>Shared collision bodies</strong>: built only once and reused by all instances</li>
+<li>✅ <strong>Batch rendering</strong>: render all instances in 1 DrawCall</li>
 </ul>
-<h2 id="2-considerations-for-manual-merging">2. Considerations for Manual Merging</h2>
-<h3 id="workflow-and-property-handling">Workflow and Property Handling</h3>
-<p>In theory, you can optimize a scene by creating ISM/HISM manually:</p>
+<hr>
+<h3 id="2-the-difficulties-of-creating-ismhism-manually">2. The Difficulties of Creating ISM/HISM Manually</h3>
+<h4 id="21-problems-with-the-manual-workflow">2.1 Problems with the Manual Workflow</h4>
+<p>In theory, you can manually create ISM/HISM to optimize your scene:</p>
 <ol>
-<li>Create an Actor and add an <code>InstancedStaticMeshComponent</code> or <code>HierarchicalInstancedStaticMeshComponent</code></li>
-<li>Add the Transforms of identical StaticMeshActors in the scene to ISM/HISM one at a time</li>
-<li>Delete the original independent Actors</li>
+<li>Create an Actor and add <code>InstancedStaticMeshComponent</code> or <code>HierarchicalInstancedStaticMeshComponent</code></li>
+<li>Add the Transforms of identical StaticMeshActors in the scene to the ISM/HISM one by one</li>
+<li>Delete the original separate Actors</li>
 </ol>
 <p><strong>But this creates serious problems:</strong></p>
 <p><strong>🔴 Disrupted workflow</strong></p>
 <ul>
 <li>Artists can no longer place objects freely (instances must be added through code)</li>
-<li>Adjusting positions requires editing the Transform array, which is highly inefficient</li>
-<li>Standard editor tools cannot be used (move, rotate, duplicate)</li>
+<li>Adjusting positions requires editing the Transform array, which is extremely inefficient</li>
+<li>Standard editor tools (move, rotate, duplicate) cannot be used</li>
 </ul>
 <p><strong>🔴 Error-prone property copying</strong></p>
 <ul>
-<li>Mobility, collision settings, materials, rendering settings, and more must be copied manually</li>
-<li>Missing any setting can cause abnormal behavior after merging, such as broken collision</li>
+<li>You must manually copy Mobility, collision settings, materials, rendering settings, and more</li>
+<li>Missing any setting can cause abnormal behavior after merging (such as broken collision)</li>
 <li>Collision settings include responses for 32 channels, making mistakes very easy</li>
 </ul>
 <p><strong>🔴 Huge workload in complex scenes</strong></p>
 <ul>
 <li>Suppose a scene has 100 different Mesh types, each with dozens to hundreds of instances</li>
-<li>You must create 100 ISM/HISM Actors and manually classify thousands of objects</li>
+<li>You need to create 100 ISM/HISM Actors and manually sort thousands of objects</li>
 <li>Every scene adjustment requires another manual merge</li>
 </ul>
-<p><strong>🔴 LevelInstances cannot be handled</strong></p>
+<p><strong>🔴 Cannot handle LevelInstances</strong></p>
 <ul>
-<li>Breaking apart nested LevelInstances in a scene is extremely tedious</li>
-<li>Breaking one apart may reveal more nesting, requiring repeated operations</li>
+<li>Breaking nested LevelInstances in a scene manually is extremely tedious</li>
+<li>After breaking one, you may discover more nested inside and have to repeat the process</li>
 </ul>
-<h2 id="3-evaluating-merge-results">3. Evaluating Merge Results</h2>
-<p>Instanced meshes can reduce the number of independent Actors and components. Actual loading time, memory usage, and runtime frame rate still need to be measured in the target scene. A reduction in object count cannot be treated as an equivalent proportional performance gain.</p>
-<p>Before merging, check meshes, materials, mobility, and collision settings, and preserve a recoverable version of the scene.</p>
-<hr></div><nav class="blog-adjacent" aria-label="Previous and next blog posts" data-astro-cid-tdz3vnta data-pagefind-ignore><a href="/en/blog/cnblogs-19379365/" rel="prev" data-astro-cid-tdz3vnta><span data-astro-cid-tdz3vnta>Previous article</span><strong data-astro-cid-tdz3vnta>Changing the Cache Path</strong></a><a href="/en/blog/cnblogs-19197541/" rel="next" data-astro-cid-tdz3vnta><span data-astro-cid-tdz3vnta>Next article</span><strong data-astro-cid-tdz3vnta>The Keys to Runtime Animation Recording: Correct Bone Data and Saving</strong></a></nav></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+<h4 id="22-the-ideal-solution">2.2 The Ideal Solution</h4>
+<p><strong>Is there a solution that can:</strong></p>
+<ul>
+<li>✅ <strong>Keep the development workflow unchanged</strong>: artists still freely place StaticMeshActors using standard tools</li>
+<li>✅ <strong>Allow unrestricted scene adjustments</strong>: move, delete, or add objects at any time</li>
+<li>✅ <strong>Optimize with one final click</strong>: obtain an efficient release version through automatic merging when development is complete</li>
+<li>✅ <strong>Handle things intelligently</strong>: automatically identify Actors with matching properties and preserve their behavior after merging</li>
+<li>✅ <strong>Handle LevelInstances</strong>: automatically break nested LevelInstances</li>
+</ul>
+<p><strong>This is exactly the problem the SimpleStaticMeshMerger plugin aims to solve.</strong></p>
+<hr>
+<h3 id="3-simplestaticmeshmerger-solve-all-these-problems-with-one-click">3. SimpleStaticMeshMerger: Solve All These Problems with One Click</h3>
+<p>The <strong>SimpleStaticMeshMerger plugin</strong> was created to address these difficulties, letting you keep a flexible development workflow and produce an efficiently optimized version at the end.</p>
+<h4 id="31-core-features">3.1 Core Features</h4>
+<p><strong>1. Break LevelInstances with one click</strong></p>
+<p>Click the <code>Break Level Instances</code> button:</p>
+<ul>
+<li>Automatically breaks all nested LevelInstances recursively</li>
+<li>Displays progress in real time (Breaking: [Name])</li>
+<li>Automatically refreshes the merge preview when finished</li>
+</ul>
+<p><strong>2. Intelligent grouping preview</strong></p>
+<p>The plugin automatically <strong>groups StaticMeshActors strictly</strong> by the following properties:</p>
+<ul>
+<li>Mesh (same model)</li>
+<li>Mobility (Static/Stationary/Movable)</li>
+<li>Complete collision settings (Profile + ObjectType + responses for 32 channels)</li>
+<li>Materials (materials in all slots)</li>
+</ul>
+<p><strong>3. Real-time filtering and exclusions</strong></p>
+<ul>
+<li><strong>Mobility filter</strong>: show only Static/Stationary/Movable Actors</li>
+<li><strong>Minimum instance count</strong>: filter out groups with too few instances (default: 2, meaning at least 3 are required to merge)</li>
+<li><strong>Actor exclusions</strong>: uncheck Actors you do not want to merge in the list on the right</li>
+</ul>
+<p><strong>4. Merge with one click</strong></p>
+<p>Click the <code>Merge Selected</code> button:</p>
+<ul>
+<li>Automatically creates HISM/ISM Actors</li>
+<li>Copies all properties completely (collision, materials, mobility)</li>
+<li>Deletes the original Actors</li>
+<li>Automatically selects and navigates to the newly created Actors</li>
+</ul>
+<h4 id="32-usage-demo">3.2 Usage Demo</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>工作流程：</span></span>
+<span class="line"><span>1. Window → Static Mesh Merger（打开插件窗口）</span></span>
+<span class="line"><span>2. 点击 Break Level Instances（如果场景中有LevelInstance）</span></span>
+<span class="line"><span>3. 配置筛选条件：</span></span>
+<span class="line"><span>   ☑ Static  ☑ Stationary  ☐ Movable</span></span>
+<span class="line"><span>   Min Instance Count: 2</span></span>
+<span class="line"><span>4. 左侧勾选要合并的组</span></span>
+<span class="line"><span>5. 右侧排除不需要的Actor（可选）</span></span>
+<span class="line"><span>6. 点击 Merge Selected</span></span>
+<span class="line"><span>7. 完成！自动跳转到新创建的HISM Actor</span></span>
+<span class="line"><span></span></span></code></pre>
+<p><strong>Before merging:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Scene Outliner</span></span>
+<span class="line"><span>├── TreeActor_1</span></span>
+<span class="line"><span>├── TreeActor_2</span></span>
+<span class="line"><span>├── TreeActor_3</span></span>
+<span class="line"><span>├── ...</span></span>
+<span class="line"><span>└── TreeActor_125  (125个独立Actor)</span></span>
+<span class="line"><span></span></span></code></pre>
+<p><strong>After merging:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>Scene Outliner</span></span>
+<span class="line"><span>└── MergedActor_SM_Tree_01 (1个HISM Actor，包含125个实例)</span></span>
+<span class="line"><span></span></span></code></pre>
+<h4 id="33-technical-safeguards">3.3 Technical Safeguards</h4>
+<p><strong>1. Strict property matching</strong></p>
+<p>The plugin checks all key properties when grouping Actors:</p>
+<ul>
+<li>Mesh asset path</li>
+<li>Mobility</li>
+<li>Collision Enabled (collision enablement type)</li>
+<li>Collision Profile Name</li>
+<li>Collision Object Type</li>
+<li>Response settings for all 32 collision channels</li>
+<li>Materials in all material slots</li>
+</ul>
+<p><strong>Guarantee:</strong> Only Actors whose properties match completely are merged into the same group, avoiding abnormal behavior after merging</p>
+<p><strong>2. Complete property copying</strong></p>
+<p>During merging, all properties of the original Actors are copied completely to the newly created HISM/ISM:</p>
+<ul>
+<li>Uses the Collision Profile first (if configured)</li>
+<li>Otherwise copies collision settings individually (Enabled, ObjectType, and responses for 32 channels)</li>
+<li>Copies all material slots</li>
+<li>Preserves the Mobility setting</li>
+<li>Copies rendering settings (shadows, outlines, etc.)</li>
+</ul>
+<p><strong>3. User experience improvements</strong></p>
+<ul>
+<li>Deferred refresh: avoids UI stutters caused by frequent configuration changes</li>
+<li>Intelligent scene monitoring: automatically refreshes the preview when Actors change</li>
+<li>Dynamic instance counts: reflects the number available for merging after exclusions in real time</li>
+<li>Automatic navigation after merging: jumps to the newly created Actors for easy inspection</li>
+</ul>
+<hr>
+<h3 id="4-theoretical-performance-comparison">4. Theoretical Performance Comparison</h3>
+<p><strong>Comparison scene:</strong> 500 identical tree models</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Approach</th><th>UObject count</th><th>Component count</th><th>Draw Calls</th></tr></thead><tbody><tr><td>Separate Actors</td><td>1000 (500 Actors + 500 Components)</td><td>500</td><td>500</td></tr><tr><td>ISM/HISM merge</td><td>2 (1 Actor + 1 Component)</td><td>1</td><td>1</td></tr></tbody></table>
+<p><strong>Theoretical advantages:</strong></p>
+<ul>
+<li>✅ <strong>UObject count</strong>: 500 Actors → 1 Actor (99.8% reduction)</li>
+<li>✅ <strong>Component count</strong>: 500 Components → 1 Component (99.8% reduction)</li>
+<li>✅ <strong>Draw Calls</strong>: 500 → 1 (99.8% reduction)</li>
+<li>✅ <strong>Serialization overhead</strong>: proportional to the UObject count, so it decreases significantly</li>
+<li>✅ <strong>Memory usage</strong>: each UObject has a fixed overhead, which is greatly reduced by merging</li>
+</ul>
+<p><strong>Suitable use cases:</strong></p>
+<ul>
+<li>✅ Optimizing large open-world scenes</li>
+<li>✅ Batch merging vegetation and architectural decorations</li>
+<li>✅ Optimization before packaging (reducing stutters on first load)</li>
+<li>✅ Memory optimization (reducing the number of UObjects)</li>
+</ul>
+<p><strong>Notes:</strong></p>
+<ul>
+<li>⚠️ Primarily optimizes loading and memory; runtime FPS improvements are limited</li>
+<li>⚠️ Merging is irreversible; version control is recommended</li>
+<li>⚠️ Only merges Actors with completely identical properties (to preserve gameplay behavior)</li>
+</ul>
+<hr>
+<h3 id="5-getting-the-plugin">5. Getting the Plugin</h3>
+<p><strong>Download links:</strong></p>
+<ul>
+<li><a href="https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5">Fab Store</a></li>
+<li><a href="https://github.com/mengzhishanghun/mengzhishanghun/blob/main/UEPlugins/SimpleStaticMeshMerger/README.md">Full Documentation</a></li>
+</ul>
+<p><strong>Supported versions:</strong> UE 5.2+</p>
+<p><strong>Technical support:</strong> <a href="mailto:mengzhishanghun@outlook.com">mengzhishanghun@outlook.com</a></p>
+<hr>
+<h3 id="summary">Summary</h3>
+<p>The loading advantages of ISM/HISM over separate Actors come from:</p>
+<ol>
+<li><strong>Far fewer UObjects</strong> (lower serialization overhead)</li>
+<li><strong>Far fewer Components</strong> (lower initialization overhead)</li>
+<li><strong>Transforms serialized as an array</strong> (contiguous memory and fast loading)</li>
+<li><strong>Shared collision bodies</strong> (avoiding repeated construction)</li>
+</ol>
+<p>Although creating ISM/HISM manually is possible, the workload becomes enormous in complex scenes. With features such as one-click LevelInstance breaking, intelligent grouping previews, and one-click merging, the <strong>SimpleStaticMeshMerger plugin</strong> turns a tedious manual workflow into a few clicks while ensuring complete property copying and avoiding abnormal behavior after merging.</p>
+<p>If your project suffers from loading stutters, give this plugin a try to make StaticMesh merging efficient and reliable.</p>
+<hr>
+<blockquote>
+<p>Thanks for reading! Likes, follows, and bookmarks are welcome. Feel free to discuss any questions in the comments.<br>
+If this article helped you, click here to <a href="https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/refs/heads/main/Donate/WeChat.jpg?raw=true">donate</a> and support the author.</p>
+</blockquote></div><nav class="blog-adjacent" aria-label="Previous and next blog posts" data-astro-cid-tdz3vnta data-pagefind-ignore><a href="/en/blog/cnblogs-19379365/" rel="prev" data-astro-cid-tdz3vnta><span data-astro-cid-tdz3vnta>Previous article</span><strong data-astro-cid-tdz3vnta>Changing the Cache Path</strong></a><a href="/en/blog/cnblogs-19197541/" rel="next" data-astro-cid-tdz3vnta><span data-astro-cid-tdz3vnta>Next article</span><strong data-astro-cid-tdz3vnta>The Keys to Runtime Animation Recording: Correct Bone Data and Saving</strong></a></nav></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {
@@ -165,4 +342,4 @@ if (!document.documentElement.dataset.mediaViewerBound) {
   document.addEventListener('astro:before-swap', stop); addEventListener('pagehide', stop);
   document.addEventListener('click', event => { const viewer = dialog(); if (event.target === viewer) close(); });
 }
-</script><script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/blog/cnblogs-19204715/","en":"/en/blog/cnblogs-19204715/"},"anchors":{"zh":{"1-root-causes-of-loading-stutters":"一加载卡顿的根本原因","11-loading-overhead-of-independent-actors":"11-独立actor的加载开销","12-loading-advantages-of-ismhism":"12-ismhism的加载优势","2-considerations-for-manual-merging":"二手动合并需要考虑什么","workflow-and-property-handling":"操作流程与属性处理","3-evaluating-merge-results":"三评估合并结果"},"en":{"1-root-causes-of-loading-stutters":"1-root-causes-of-loading-stutters","11-loading-overhead-of-independent-actors":"11-loading-overhead-of-independent-actors","12-loading-advantages-of-ismhism":"12-loading-advantages-of-ismhism","2-considerations-for-manual-merging":"2-considerations-for-manual-merging","workflow-and-property-handling":"workflow-and-property-handling","3-evaluating-merge-results":"3-evaluating-merge-results"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body></html><script type="module">function e(e,t,n=Date.now,r){let i=new Set([`/works/`,`/cases/`,`/blog/`]),a=new Map,o=new Map,s={hits:0,network:0,rejected:0},c=0,l=(e,n)=>{let r=typeof Request<`u`&&e instanceof Request?e:void 0,a=new URL(r?.url??String(e),t);if(a.origin!==t||!i.has(a.pathname)||(n?.method??r?.method??`GET`).toUpperCase()!==`GET`||(n?.credentials??r?.credentials)===`omit`||[`reload`,`no-store`,`no-cache`].includes(n?.cache??r?.cache??``))return;let o=new Headers(n?.headers??r?.headers);if(!(o.has(`authorization`)||o.has(`range`)))return a.pathname},u=(e,t)=>t?t.aborted?Promise.reject(new DOMException(`Aborted`,`AbortError`)):new Promise((n,r)=>{let i=()=>r(new DOMException(`Aborted`,`AbortError`));t.addEventListener(`abort`,i,{once:!0}),e.then(e=>{t.removeEventListener(`abort`,i),t.aborted||n(e)},e=>{t.removeEventListener(`abort`,i),r(e)})}):e,d=async(t,i)=>{let d=l(t,i);if(!d)return e(t,i);let f=typeof Request<`u`&&t instanceof Request?t:void 0,p=i?.signal===null?null:i?.signal??f?.signal;if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);let m=a.get(d);if(m&&m.expires>n()){if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);return s.hits++,typeof performance<`u`&&(performance.clearMarks(`mzsh-index-cache-hit`),performance.mark(`mzsh-index-cache-hit`)),m.response.clone()}a.delete(d);let h=o.get(d);if(!h){s.network++;let l=c,u={...i,signal:void 0};h=e(f?new Request(f,{signal:new AbortController().signal}):t,u).then(async e=>{if(e.status===200&&!e.redirected&&(e.headers.get(`content-type`)??``).includes(`text/html`)){let t=await e.clone().text();if(l===c&&/<meta\b[^>]*name=["']astro-view-transitions-enabled["']/.test(t)&&t.includes(`data-content-index-data`)&&t.includes(`site-chrome`)){a.set(d,{response:e.clone(),expires:n()+6e4});try{r?.(t)}catch{}}else s.rejected++}else s.rejected++;return e}).finally(()=>{o.get(d)===h&&o.delete(d)}),o.set(d,h)}return(await u(h,p)).clone()};return{fetch:d,stats:s,clear(){c++,a.clear(),o.clear()},warm(){return Promise.allSettled([...i].map(e=>d(new URL(e,t),{credentials:`same-origin`})))}}}var t=new Set;function n(e){let n=(e,t)=>e.match(RegExp(`\\b`+t+`=["']([^"']+)["']`,`i`))?.[1];for(let r of e.match(/<(?:link|script)\b[^>]*>/gi)??[]){let e=n(r,`rel`)===`stylesheet`,i=n(r,`type`)===`module`;if(!e&&!i)continue;let a=n(r,e?`href`:`src`);if(!a)continue;let o=new URL(a,location.origin);if(o.origin!==location.origin||!o.pathname.startsWith(`/_astro/`)||t.has(o.href)||t.size>=8||(t.add(o.href),[...document.querySelectorAll(`link[href],script[src]`)].some(e=>(`href`in e?e.href:e.src)===o.href)))continue;let s=document.createElement(`link`);s.rel=e?`preload`:`modulepreload`,e&&(s.as=`style`),s.href=o.href,document.head.append(s)}}var r=e(window.fetch.bind(window),location.origin,Date.now,n);window.fetch=r.fetch,window.addEventListener(`pagehide`,()=>r.clear());var i=navigator.connection;if(!i?.saveData&&!/2g/.test(i?.effectiveType??``)){let e=()=>{r.warm()};`requestIdleCallback`in window?window.requestIdleCallback(e,{timeout:900}):setTimeout(e,200)}for(let e of[`after-preparation`,`after-swap`,`page-load`])document.addEventListener(`astro:`+e,()=>{performance.clearMarks(`mzsh-`+e),performance.mark(`mzsh-`+e)});</script>
+</script><script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/blog/cnblogs-19204715/","en":"/en/blog/cnblogs-19204715/"},"anchors":{"zh":{"ue-say-goodbye-to-loading-stutters-merge-staticmeshactors-with-one-click":"ue告别加载卡顿一键合并staticmeshactor方案","introduction":"前言","1-the-root-cause-of-loading-stutters":"一加载卡顿的根本原因","11-loading-overhead-of-separate-actors":"11-独立actor的加载开销","12-loading-advantages-of-ismhism":"12-ismhism的加载优势","2-the-difficulties-of-creating-ismhism-manually":"二手动创建ismhism的困境","21-problems-with-the-manual-workflow":"21-手动流程的问题","22-the-ideal-solution":"22-理想的解决方案","3-simplestaticmeshmerger-solve-all-these-problems-with-one-click":"三simplestaticmeshmerger插件一键解决所有问题","31-core-features":"31-核心功能","32-usage-demo":"32-使用演示","33-technical-safeguards":"33-技术保障","4-theoretical-performance-comparison":"四理论性能对比","5-getting-the-plugin":"五插件获取","summary":"总结"},"en":{"ue-say-goodbye-to-loading-stutters-merge-staticmeshactors-with-one-click":"ue-say-goodbye-to-loading-stutters-merge-staticmeshactors-with-one-click","introduction":"introduction","1-the-root-cause-of-loading-stutters":"1-the-root-cause-of-loading-stutters","11-loading-overhead-of-separate-actors":"11-loading-overhead-of-separate-actors","12-loading-advantages-of-ismhism":"12-loading-advantages-of-ismhism","2-the-difficulties-of-creating-ismhism-manually":"2-the-difficulties-of-creating-ismhism-manually","21-problems-with-the-manual-workflow":"21-problems-with-the-manual-workflow","22-the-ideal-solution":"22-the-ideal-solution","3-simplestaticmeshmerger-solve-all-these-problems-with-one-click":"3-simplestaticmeshmerger-solve-all-these-problems-with-one-click","31-core-features":"31-core-features","32-usage-demo":"32-usage-demo","33-technical-safeguards":"33-technical-safeguards","4-theoretical-performance-comparison":"4-theoretical-performance-comparison","5-getting-the-plugin":"5-getting-the-plugin","summary":"summary"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body></html><script type="module">function e(e,t,n=Date.now,r){let i=new Set([`/works/`,`/cases/`,`/blog/`]),a=new Map,o=new Map,s={hits:0,network:0,rejected:0},c=0,l=(e,n)=>{let r=typeof Request<`u`&&e instanceof Request?e:void 0,a=new URL(r?.url??String(e),t);if(a.origin!==t||!i.has(a.pathname)||(n?.method??r?.method??`GET`).toUpperCase()!==`GET`||(n?.credentials??r?.credentials)===`omit`||[`reload`,`no-store`,`no-cache`].includes(n?.cache??r?.cache??``))return;let o=new Headers(n?.headers??r?.headers);if(!(o.has(`authorization`)||o.has(`range`)))return a.pathname},u=(e,t)=>t?t.aborted?Promise.reject(new DOMException(`Aborted`,`AbortError`)):new Promise((n,r)=>{let i=()=>r(new DOMException(`Aborted`,`AbortError`));t.addEventListener(`abort`,i,{once:!0}),e.then(e=>{t.removeEventListener(`abort`,i),t.aborted||n(e)},e=>{t.removeEventListener(`abort`,i),r(e)})}):e,d=async(t,i)=>{let d=l(t,i);if(!d)return e(t,i);let f=typeof Request<`u`&&t instanceof Request?t:void 0,p=i?.signal===null?null:i?.signal??f?.signal;if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);let m=a.get(d);if(m&&m.expires>n()){if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);return s.hits++,typeof performance<`u`&&(performance.clearMarks(`mzsh-index-cache-hit`),performance.mark(`mzsh-index-cache-hit`)),m.response.clone()}a.delete(d);let h=o.get(d);if(!h){s.network++;let l=c,u={...i,signal:void 0};h=e(f?new Request(f,{signal:new AbortController().signal}):t,u).then(async e=>{if(e.status===200&&!e.redirected&&(e.headers.get(`content-type`)??``).includes(`text/html`)){let t=await e.clone().text();if(l===c&&/<meta\b[^>]*name=["']astro-view-transitions-enabled["']/.test(t)&&t.includes(`data-content-index-data`)&&t.includes(`site-chrome`)){a.set(d,{response:e.clone(),expires:n()+6e4});try{r?.(t)}catch{}}else s.rejected++}else s.rejected++;return e}).finally(()=>{o.get(d)===h&&o.delete(d)}),o.set(d,h)}return(await u(h,p)).clone()};return{fetch:d,stats:s,clear(){c++,a.clear(),o.clear()},warm(){return Promise.allSettled([...i].map(e=>d(new URL(e,t),{credentials:`same-origin`})))}}}var t=new Set;function n(e){let n=(e,t)=>e.match(RegExp(`\\b`+t+`=["']([^"']+)["']`,`i`))?.[1];for(let r of e.match(/<(?:link|script)\b[^>]*>/gi)??[]){let e=n(r,`rel`)===`stylesheet`,i=n(r,`type`)===`module`;if(!e&&!i)continue;let a=n(r,e?`href`:`src`);if(!a)continue;let o=new URL(a,location.origin);if(o.origin!==location.origin||!o.pathname.startsWith(`/_astro/`)||t.has(o.href)||t.size>=8||(t.add(o.href),[...document.querySelectorAll(`link[href],script[src]`)].some(e=>(`href`in e?e.href:e.src)===o.href)))continue;let s=document.createElement(`link`);s.rel=e?`preload`:`modulepreload`,e&&(s.as=`style`),s.href=o.href,document.head.append(s)}}var r=e(window.fetch.bind(window),location.origin,Date.now,n);window.fetch=r.fetch,window.addEventListener(`pagehide`,()=>r.clear());var i=navigator.connection;if(!i?.saveData&&!/2g/.test(i?.effectiveType??``)){let e=()=>{r.warm()};`requestIdleCallback`in window?window.requestIdleCallback(e,{timeout:900}):setTimeout(e,200)}for(let e of[`after-preparation`,`after-swap`,`page-load`])document.addEventListener(`astro:`+e,()=>{performance.clearMarks(`mzsh-`+e),performance.mark(`mzsh-`+e)});</script>

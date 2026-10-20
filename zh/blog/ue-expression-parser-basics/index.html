@@ -2,537 +2,502 @@
 .site-chrome .project-title-group{align-content:start;gap:5px;min-width:0;margin:0 0 14px;display:grid}.site-chrome .project-title-group>:is(h1,h2,h3){min-height:0;margin:0}.site-chrome .project-title-group>.project-title-secondary{color:#a9bcc6;overflow-wrap:anywhere;min-height:0;margin:0;font-size:.875rem;line-height:1.45;display:block}.site-chrome .project-hero .project-title-secondary{font-size:clamp(.95rem,1.4vw,1.2rem)}.site-chrome .feature-copy .project-title-secondary{font-size:clamp(.95rem,1.2vw,1.15rem)}
 </style><link rel="stylesheet" href="/_astro/MasterDetail.CHMC8WZC.css"><style>[data-astro-transition-scope="astro-gyrtbwwo-1"] { view-transition-name: astro-gyrtbwwo-1; }@layer astro { ::view-transition-old(astro-gyrtbwwo-1) { animation: none; opacity: 0; mix-blend-mode: normal; }::view-transition-new(astro-gyrtbwwo-1) { animation: none; mix-blend-mode: normal; }::view-transition-group(astro-gyrtbwwo-1) { animation: none } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
 			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
-			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }</style><link rel="stylesheet" href="/assets/reading-area.css"><script defer src="/assets/analytics.js" data-mzsh-analytics data-website-id="9cca2387-fae9-4a77-8e5e-40dfd9897fce"></script><link rel="stylesheet" href="/assets/site-ui/navigation.css"><link rel="stylesheet" href="/assets/site-ui/engagement.css"><script defer src="/assets/site-ui/engagement.js"></script><link rel="stylesheet" href="/assets/site-ui/language-switch.css"><link rel="alternate" hreflang="zh" href="https://mzsh.me/zh/blog/ue-expression-parser-basics/"><link rel="alternate" hreflang="en" href="https://mzsh.me/en/blog/ue-expression-parser-basics/"></head><body data-astro-transition-scope="astro-gyrtbwwo-1"><div class="site-chrome"><a class="skip-link" href="#main">跳到主要内容</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/zh/" aria-label="MZSH 首页">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">菜单</button><nav id="main-navigation" class="main-nav" aria-label="主导航"><a href="/zh/">首页</a><a href="/zh/works/">作品</a><a href="/zh/cases/">案例</a><a href="/zh/blog/" aria-current="page">博客</a></nav><div class="header-actions"><a href="/zh/contact/">联系与支持</a><label class="site-language-switch"><select data-site-language-select data-current="zh" aria-label="切换语言"><option value="zh" data-site-locale="zh" selected>中文</option><option value="en" data-site-locale="en">English</option></select></label></div></div></header><script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.33765cd5598b.js"></script><script type="module">var e=class extends HTMLElement{controller;finish;connectedCallback(){this.controller?.abort();let e=(this.controller=new AbortController).signal,t=this.querySelector(`.outline-mobile-toggle`),n=this.querySelector(`dialog`),r=this.querySelector(`.outline-mobile-content`),i=this.closest(`mzsh-reading`),a=i?.querySelector(`.article-sidebar .article-outline nav`),o=i?.closest(`.main-frame,.site-chrome-main`);if(!t||!n||!r||!a||typeof n.showModal!=`function`)return;let s=matchMedia(`(max-width:720px)`),c=!1,l=``,u=0,d=!0,f=()=>{c&&(c=!1,o&&(o.style.overflow=l,o.scrollTop=u),t.setAttribute(`aria-expanded`,`false`),d&&t.isConnected&&t.focus({preventScroll:!0}))};this.finish=f;let p=(e=!0)=>{d=e,n.open&&n.close(),f()};t.addEventListener(`click`,()=>{s.matches&&!n.open&&(r.replaceChildren(a.cloneNode(!0)),l=o?.style.overflow||``,u=o?.scrollTop||0,o&&(o.style.overflow=`hidden`),c=!0,d=!0,t.setAttribute(`aria-expanded`,`true`),n.showModal(),n.querySelector(`[data-outline-close]`)?.focus())},{signal:e}),n.addEventListener(`cancel`,e=>{e.preventDefault(),p()},{signal:e}),n.addEventListener(`close`,f,{signal:e}),n.addEventListener(`click`,e=>{let t=e.target;if(t===n||t.closest(`[data-outline-close]`)){p();return}let r=t.closest(`a[href^="#"]`);if(!r)return;let i=e;if(i.button!==0||i.ctrlKey||i.metaKey||i.shiftKey||i.altKey)return;let o=Array.from(a.querySelectorAll(`a`)).find(e=>e.getAttribute(`href`)===r.getAttribute(`href`));o&&(e.preventDefault(),e.stopPropagation(),p(),o.click())},{signal:e}),s.addEventListener(`change`,()=>{s.matches||p(!1)},{signal:e}),document.addEventListener(`astro:before-preparation`,()=>p(!1),{signal:e}),e.addEventListener(`abort`,()=>p(!1),{once:!0}),this.dataset.ready=``}disconnectedCallback(){this.controller?.abort(),this.finish?.(),this.removeAttribute(`data-ready`)}};customElements.get(`mobile-outline`)||customElements.define(`mobile-outline`,e);</script><main id="main" tabindex="-1" class="site-chrome-main"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">博客</p><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><mzsh-reading class="reading-surface"><div class="master-detail reading-detail has-project-hero note-detail" data-blog-article="true" data-pagefind-body><header class="project-hero note-hero" data-note-hero><div class="project-hero-copy"><p class="project-breadcrumb" data-pagefind-ignore><a href="/zh/blog/">博客</a><span>/</span><span class="note-category">UE开发</span></p><div class="project-title-group"><h1 id="detail-ue-expression-parser-basics" data-pagefind-meta="title">在 UE 中探索游戏公式的语法解析</h1></div><p class="project-description">尝试在 UE C++ 中实现游戏事件公式解析，让文本表达四则运算、条件判断和自定义属性，并结合代码梳理字符串校验、Token 拆分、属性替换与优先级求值。</p></div></header><mobile-outline data-pagefind-ignore="true"><div class="outline-mobile-controls"><a class="outline-mobile-back" href="/zh/blog/" aria-label="返回">返回</a><button type="button" class="outline-mobile-toggle" aria-label="打开本页目录" aria-expanded="false" aria-haspopup="dialog">目录 <span aria-hidden="true">⌄</span></button></div><dialog class="outline-mobile-dialog" aria-label="本页目录"><div class="outline-mobile-panel"><header><strong>本页目录</strong><button type="button" data-outline-close aria-label="关闭目录">×</button></header><div class="outline-mobile-content article-outline"></div></div></dialog></mobile-outline><aside class="article-sidebar" aria-label="文章导航" data-pagefind-ignore><div class="article-detail-controls"><a class="article-back" href="/zh/blog/" aria-label="返回">返回</a><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/blog/ue-expression-parser-basics/"></label><script type="application/json" data-engagement-config>{"id":"blog:ue-expression-parser-basics","origin":"https://mzsh.me","url":"https://mzsh.me/blog/ue-expression-parser-basics/","title":"Exploring syntax parsing for game formulas in UE","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/blog/ue-expression-parser-basics/"></label></noscript></section></div><section class="article-outline"><p class="article-outline-heading">本页大纲</p><nav aria-label="本页大纲"><ol class="outline-tree outline-tree-root"><li class="outline-node" data-heading-depth="3"><a href="#%E9%97%AE%E9%A2%98%E4%B8%8E%E7%8E%AF%E5%A2%83" class="outline-link outline-root-link">定义与使用场景</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E6%9C%80%E5%B0%8F%E8%AF%AD%E6%B3%95" class="outline-link outline-root-link">实现：头文件与 UE 接口</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E9%94%99%E8%AF%AF%E4%B9%9F%E6%98%AF%E6%8E%A5%E5%8F%A3%E7%9A%84%E4%B8%80%E9%83%A8%E5%88%86" class="outline-link outline-root-link">实现：源文件与解析过程</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%8F%AF%E9%AA%8C%E8%AF%81%E4%BE%8B%E4%B8%8E%E9%99%90%E5%88%B6" class="outline-link outline-root-link">检测</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E7%8B%AC%E7%AB%8B%E6%A0%B7%E4%BE%8B" class="outline-link outline-root-link">阅读代码时的边界与改进方向</a></li></ol></nav></section></aside><article class="master-panel" aria-labelledby="detail-ue-expression-parser-basics"><div class="prose"><p>游戏事件里有时需要把条件或计算规则写成字符串，再根据当前属性算出结果。这篇文章从我给自己游戏写的一个简单解析器出发，探索在 UE C++ 中怎样处理这样的公式。</p>
-<p>这个解析器按字符串校验、Token 拆分、属性替换和优先级求值逐步处理公式。实现依赖游戏工程中的基类、宏和日志分类，一些边界情况也还需要完善。</p>
-<h3 id="问题与环境">定义与使用场景</h3>
-<p>我想让游戏事件通过文本表达判断条件和计算规则，于是写了这个简单的解析器。</p>
-<p>这个解析器支持比较判断、逻辑与或、四则运算、括号和三目运算符。</p>
-<p>为了让公式使用游戏里的数据，我还添加了自定义属性的识别和替换。</p>
-<p>例如，想让一个事件只在力量和金币都达到要求时触发，可以约定这样的写法：</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>[力量] &gt;= 10 &amp;&amp; [金币] &gt;= 100</span></span></code></pre>
-<p><code>[力量]</code>、<code>[金币]</code> 表示游戏属性，比较运算得到真假，再由 <code>&amp;&amp;</code> 合并条件。也可以用三目运算选择数值：</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>[力量] &gt;= 10 ? 100 : 50</span></span></code></pre>
-<p>这两个例子说明想支持的语法。实际解析器需要先读懂文本，再由游戏提供属性值，最后计算结果。代码中的属性映射是固定的演示数据，还需要按项目情况接入角色或事件上下文。</p>
-<p>这份实现的处理思路是：统一部分中文标点，校验字符串，拆分 Token，替换属性，再按优先级求值。结果使用 <code>int32</code>，比较与逻辑运算的真假以 1 和 0 表示。</p>
-<h3 id="最小语法">实现：头文件与 UE 接口</h3>
-<p><strong>.h</strong></p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#6A737D">// Fill out your copyright notice in the Description page of Project Settings.</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">#pragma</span><span style="color:#B392F0"> once</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "CoreMinimal.h"</span></span>
-<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "Core/MyGameSubsystem.h"</span></span>
-<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "MyGameEventSubsystem.generated.h"</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">/**</span></span>
-<span class="line"><span style="color:#6A737D"> * </span></span>
-<span class="line"><span style="color:#6A737D"> */</span></span>
-<span class="line"><span style="color:#B392F0">UCLASS</span><span style="color:#E1E4E8">()</span></span>
-<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> LIFESIMULATOR_API</span><span style="color:#B392F0"> UMyGameEventSubsystem</span><span style="color:#E1E4E8"> : </span><span style="color:#F97583">public</span><span style="color:#B392F0"> UMyGameSubsystem</span></span>
-<span class="line"><span style="color:#E1E4E8">{</span></span>
-<span class="line"><span style="color:#B392F0">	GENERATED_BODY</span><span style="color:#E1E4E8">()</span></span>
-<span class="line"><span style="color:#B392F0">	CREATETHISSUBSYSTEM</span><span style="color:#E1E4E8">(UMyGameEventSubsystem)</span></span>
-<span class="line"><span style="color:#F97583">public:</span></span>
-<span class="line"><span style="color:#B392F0">	UFUNCTION</span><span style="color:#E1E4E8">(BlueprintCallable)</span></span>
-<span class="line"><span style="color:#F97583">	static</span><span style="color:#F97583"> bool</span><span style="color:#B392F0"> CheckStrIsValid</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Str</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Error</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#B392F0">	UFUNCTION</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">BlueprintCallable</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#F97583">	static</span><span style="color:#B392F0"> int32</span><span style="color:#B392F0"> GetStrValue</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FString</span><span style="color:#F97583"> const&amp;</span><span style="color:#FFAB70"> Str</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#E1E4E8">};</span></span>
-<span class="line"></span></code></pre>
-<p>头文件中的基类来自我的游戏工程，移到其他项目时需要修改。这里提供两个接口：一个检查字符串是否有效，返回 bool 和错误信息；另一个计算字符串的值。具体实现都放在 .cpp 中，集中处理公式解析。</p>
-<p><code>CheckStrIsValid</code> 对应校验入口，<code>GetStrValue</code> 对应求值入口。这里的基类 <code>UMyGameSubsystem</code>、<code>CREATETHISSUBSYSTEM</code> 宏、导出宏和相关头文件属于游戏工程，移到其他项目时需要适配。后面的代码也使用了项目日志分类 <code>MyGameLog</code>。</p>
-<h3 id="错误也是接口的一部分">实现：源文件与解析过程</h3>
-<p><strong>.cpp：Token 类型与结构</strong></p>
-<p>计算公式时，需要把 <code>123</code> 识别成一个数字，把 <code>&gt;=</code> 识别成一个比较符，把 <code>[HHHH]</code> 识别成属性引用。这样的片段称为 Token。下面先定义 Token 的分类和保存方式。</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#6A737D">// Fill out your copyright notice in the Description page of Project Settings.</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "GameEvent/MyGameEventSubsystem.h"</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> &lt;regex&gt;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "LifeSimulator.h"</span></span>
-<span class="line"><span style="color:#F97583">#include</span><span style="color:#9ECBFF"> "Misc/AutomationTest.h"</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">enum</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8"> : </span><span style="color:#F97583">uint8</span></span>
-<span class="line"><span style="color:#E1E4E8">{</span></span>
-<span class="line"><span style="color:#79B8FF">	Number</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">	Operator_Add</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">	Operator_Mul</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">	Parenthesis</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">	Comparison</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">	Logical_And</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">	Logical_Or</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">	Operator_Conditional</span><span style="color:#E1E4E8">,</span></span>
-<span class="line"><span style="color:#79B8FF">	CustomProperty</span></span>
-<span class="line"><span style="color:#E1E4E8">};</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">struct</span><span style="color:#B392F0"> FToken</span><span style="color:#E1E4E8"> {</span></span>
-<span class="line"><span style="color:#B392F0">	ETokenType</span><span style="color:#E1E4E8"> Type;</span></span>
-<span class="line"><span style="color:#B392F0">	FString</span><span style="color:#E1E4E8"> Value;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0">	FToken</span><span style="color:#E1E4E8">();</span></span>
-<span class="line"><span style="color:#B392F0">	FToken</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> ETokenType</span><span style="color:#FFAB70"> InType</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> InValue</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		: </span><span style="color:#B392F0">Type</span><span style="color:#E1E4E8">(InType), </span><span style="color:#B392F0">Value</span><span style="color:#E1E4E8">(InValue) {}</span></span>
-<span class="line"><span style="color:#E1E4E8">};</span></span>
-<span class="line"></span></code></pre>
-<p><strong>字符串替换与中文标点转换</strong></p>
-<p><code>RegexReplace</code> 封装正则替换。<code>ReplaceChinesePunctuationWithEnglish</code> 按映射把部分中文标点转换成英文符号，为后面的处理统一输入。映射只是替换规则，转换后的符号是否能用于公式，还需要由校验步骤判断。</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#B392F0">FString</span><span style="color:#B392F0"> RegexReplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FString</span><span style="color:#F97583"> const&amp;</span><span style="color:#FFAB70"> Str</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">FString</span><span style="color:#F97583"> const&amp;</span><span style="color:#FFAB70"> Regex</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">FString</span><span style="color:#F97583"> const&amp;</span><span style="color:#FFAB70"> ReplaceStr</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">{</span></span>
-<span class="line"><span style="color:#F97583">	return</span><span style="color:#B392F0"> 	UTF8_TO_TCHAR</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">std</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">regex_replace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">std</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">string</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">TCHAR_TO_UTF8</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">Str)),</span></span>
-<span class="line"><span style="color:#B392F0">		std</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">regex</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">std</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">string</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">TCHAR_TO_UTF8</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">Regex))),</span></span>
-<span class="line"><span style="color:#B392F0">		std</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">string</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">TCHAR_TO_UTF8</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">ReplaceStr))).</span><span style="color:#B392F0">c_str</span><span style="color:#E1E4E8">());</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0">FString</span><span style="color:#B392F0"> ReplaceChinesePunctuationWithEnglish</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Expression</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"><span style="color:#6A737D">	// Define the mappings from Chinese punctuation to English punctuation</span></span>
-<span class="line"><span style="color:#B392F0">	TMap</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">FString</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">FString</span><span style="color:#E1E4E8">&gt; PunctuationMap </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"，"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">","</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"。"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"."</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"！"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"!"</span><span style="color:#E1E4E8">)}, </span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"？"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"?"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"："</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">":"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"；"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">";"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"（"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"("</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"）"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">")"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"【"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"["</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"】"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"]"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"“"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">\"</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"”"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"</span><span style="color:#79B8FF">\"</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"‘"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"'"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"’"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"'"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"《"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"&lt;"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"》"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"&gt;"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"「"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"["</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"」"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"]"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"『"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"["</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"』"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"]"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"、"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">","</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"﹃"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"{"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"﹄"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"}"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"〔"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"["</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"〕"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"]"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"——"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"-"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"……"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"..."</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"—"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"-"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"·"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"."</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"（"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"("</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"）"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">")"</span><span style="color:#E1E4E8">)}</span></span>
-<span class="line"><span style="color:#E1E4E8">	};</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0">	FString</span><span style="color:#E1E4E8"> Result </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Expression;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">	// Replace each Chinese punctuation with the corresponding English punctuation</span></span>
-<span class="line"><span style="color:#F97583">	for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">const</span><span style="color:#F97583"> auto&amp;</span><span style="color:#E1E4E8"> Elem : PunctuationMap) {</span></span>
-<span class="line"><span style="color:#E1E4E8">		Result </span><span style="color:#F97583">=</span><span style="color:#B392F0"> RegexReplace</span><span style="color:#E1E4E8">(Result, Elem.Key, Elem.Value);</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">	return</span><span style="color:#E1E4E8"> Result;</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span></code></pre>
-<p><strong>校验公式字符串</strong></p>
-<p><code>IsValidExpression</code> 先移除空白，再检查属性引用格式。为了检查属性以外的表达式，它临时把属性引用替换为 <code>0</code>，然后用一组正则排除非法字符和符号组合，并检查括号与三目符号的配对关系。每条规则都对应一条错误信息，方便定位不合法的输入。</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">bool</span><span style="color:#B392F0"> IsValidExpression</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Expression</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> ErrorMessage</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">{</span></span>
-<span class="line"><span style="color:#B392F0">	FString</span><span style="color:#E1E4E8"> CheckStr </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Expression;</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">	// 去除空格以及换行等空白符号以简化正则表达式</span></span>
-<span class="line"><span style="color:#E1E4E8">	CheckStr </span><span style="color:#F97583">=</span><span style="color:#B392F0"> RegexReplace</span><span style="color:#E1E4E8">(CheckStr, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(\s)"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">));</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">	// 自定义属性格式应为 [属性名]</span></span>
-<span class="line"><span style="color:#F97583">	for</span><span style="color:#E1E4E8"> (TArray</span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8">TPair</span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8">FString, FString</span><span style="color:#F97583">&gt;&gt;</span><span style="color:#E1E4E8"> InvalidPatterns </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(\[\])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"属性名不能为空"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([\d)]\[|\][\d\(])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"中括号的两边不能相邻数字或不同边括号"</span><span style="color:#E1E4E8">)}, </span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(\]\[)"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"不允许连续的自定义属性"</span><span style="color:#E1E4E8">)} </span></span>
-<span class="line"><span style="color:#E1E4E8">	}; </span><span style="color:#F97583">const</span><span style="color:#F97583"> auto&amp;</span><span style="color:#E1E4E8"> Pattern : InvalidPatterns) {</span></span>
-<span class="line"><span style="color:#B392F0">		FRegexPattern</span><span style="color:#B392F0"> RegexPattern</span><span style="color:#E1E4E8">(Pattern.Key);</span></span>
-<span class="line"><span style="color:#B392F0">		FRegexMatcher</span><span style="color:#B392F0"> Matcher</span><span style="color:#E1E4E8">(RegexPattern, CheckStr);</span></span>
-<span class="line"><span style="color:#F97583">		if</span><span style="color:#E1E4E8"> (Matcher.</span><span style="color:#B392F0">FindNext</span><span style="color:#E1E4E8">()) {</span></span>
-<span class="line"><span style="color:#E1E4E8">			ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Pattern.Value;</span></span>
-<span class="line"><span style="color:#F97583">			return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">	{</span><span style="color:#6A737D">// 检测[]是否成对出现</span></span>
-<span class="line"><span style="color:#B392F0">		int32</span><span style="color:#E1E4E8"> Count </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">		for</span><span style="color:#E1E4E8"> (</span><span style="color:#B392F0">TCHAR</span><span style="color:#E1E4E8"> Ch : CheckStr) {</span></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '['</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"><span style="color:#F97583">				++</span><span style="color:#E1E4E8">Count;</span></span>
-<span class="line"><span style="color:#E1E4E8">			} </span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> ']'</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"><span style="color:#F97583">				--</span><span style="color:#E1E4E8">Count;</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8">(Count </span><span style="color:#F97583">&lt;</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#E1E4E8">				ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#B392F0"> TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"]不匹配"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">				return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;	</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#F97583">			else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (Count </span><span style="color:#F97583">&gt;</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#E1E4E8">				ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#B392F0"> TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"[]不能嵌套"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">				return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;		</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">		if</span><span style="color:#E1E4E8">(Count </span><span style="color:#F97583">!=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#E1E4E8">			ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#B392F0"> TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"[不匹配"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">			return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;		</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">	// 替换自定义属性，方便后续判断</span></span>
-<span class="line"><span style="color:#E1E4E8">	CheckStr </span><span style="color:#F97583">=</span><span style="color:#B392F0"> RegexReplace</span><span style="color:#E1E4E8">(CheckStr, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(\[.*?\])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"0"</span><span style="color:#E1E4E8">));</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">    // 无效表达式的正则表达式模式及其错误信息</span></span>
-<span class="line"><span style="color:#F97583">    for</span><span style="color:#E1E4E8"> (TArray</span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8">TPair</span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8">FString, FString</span><span style="color:#F97583">&gt;&gt;</span><span style="color:#E1E4E8"> InvalidPatterns </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
-<span class="line"><span style="color:#E1E4E8">    	{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([^0-9\+\-\*\/\(\)&lt;&gt;!=&amp;|?:])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"除了自定义属性外只能存在比较运算符、括号、数字、三目运算符、逻辑与或运算符和加减乘除运算符"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">    	// 括号判断</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(\(\))"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"包含空括号"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([0-9\)]\(|\)[\(0-9])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"括号不能与数字和不同边括号相邻"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">    	// 加减乘除判断</span></span>
-<span class="line"><span style="color:#E1E4E8">    	{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([\*\/]{2,})"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"不能有连续的乘除运算符"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">    	{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([\+\-]{3,})"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"不能有三个或更多连续加减运算符"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">    	{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([\+\-][\*\/])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"加减后不能接乘除运算符"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([^0-9][\+\-]{2,})"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"两个加减号前只能是数字"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">    	{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([^0-9\)\*\/][\*\/])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"乘除左边只能是数字和后括号"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">    	{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([\+\-\*\/][^0-9\(\+\-])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"加减乘除右边只能是数字和前括号"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">    	// 逻辑运算符判定</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([^&amp;\|][&amp;\|][^&amp;\|]|[&amp;\|]{3,})"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"逻辑运算符错误"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(&amp;&amp;[^0-9\(-]|[^0-9\(\)]&amp;&amp;)"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"逻辑运算符&amp;&amp;前后必须是数字或括号"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(\|\|[^0-9\(\)-]|[^0-9\(\)-]\|\|)"</span><span style="color:#E1E4E8">),</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"逻辑运算符||前后必须是数字或括号"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">    	// 比较操作符判定</span></span>
-<span class="line"><span style="color:#E1E4E8">    	{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([^=!&gt;&lt;]=[^=])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"不能使用赋值语句"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([!&lt;&gt;][!&lt;&gt;])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"!&lt;&gt;不能搭配使用"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([!&lt;&gt;=]{3,})"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"比较操作符过多"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(![^=])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"!不能单独使用"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(=[!&lt;&gt;])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"比较操作符错误"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([^0-9\)][!&lt;&gt;]|[^0-9\)]==|[&lt;&gt;=][^\-\+=\(0-9])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"比较操作符的错误结合"</span><span style="color:#E1E4E8">)},	</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#6A737D">    	// 三目运算符判定</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([\?:][\?:])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"三目运算符不能连续"</span><span style="color:#E1E4E8">)},	</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"([^0-9\)][\?:]|[\?:][^\-\+\(0-9])"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"三目运算符前后符号错误"</span><span style="color:#E1E4E8">)},</span></span>
-<span class="line"><span style="color:#E1E4E8">    }; </span><span style="color:#F97583">const</span><span style="color:#F97583"> auto&amp;</span><span style="color:#E1E4E8"> Pattern : InvalidPatterns) {</span></span>
-<span class="line"><span style="color:#B392F0">        FRegexPattern</span><span style="color:#B392F0"> RegexPattern</span><span style="color:#E1E4E8">(Pattern.Key);</span></span>
-<span class="line"><span style="color:#B392F0">        FRegexMatcher</span><span style="color:#B392F0"> Matcher</span><span style="color:#E1E4E8">(RegexPattern, CheckStr);</span></span>
-<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> (Matcher.</span><span style="color:#B392F0">FindNext</span><span style="color:#E1E4E8">()) {</span></span>
-<span class="line"><span style="color:#E1E4E8">            ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Pattern.Value </span><span style="color:#F97583">+</span><span style="color:#B392F0"> FString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Printf</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"	请检查:</span><span style="color:#79B8FF">%s</span><span style="color:#9ECBFF">"</span><span style="color:#E1E4E8">), </span><span style="color:#F97583">*</span><span style="color:#E1E4E8">Matcher.</span><span style="color:#B392F0">GetCaptureGroup</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">));</span></span>
-<span class="line"><span style="color:#F97583">            return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">        }</span></span>
-<span class="line"><span style="color:#E1E4E8">    }</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">	{</span><span style="color:#6A737D">// 额外检查括号是否成对出现</span></span>
-<span class="line"><span style="color:#B392F0">		int32</span><span style="color:#E1E4E8"> Count </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">		for</span><span style="color:#E1E4E8"> (</span><span style="color:#B392F0">TCHAR</span><span style="color:#E1E4E8"> Ch : CheckStr) {</span></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '('</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"><span style="color:#F97583">				++</span><span style="color:#E1E4E8">Count;</span></span>
-<span class="line"><span style="color:#E1E4E8">			} </span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> ')'</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"><span style="color:#F97583">				--</span><span style="color:#E1E4E8">Count;</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8">(Count </span><span style="color:#F97583">&lt;</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#E1E4E8">				ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#B392F0"> TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">")不匹配"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">				return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;	</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">		if</span><span style="color:#E1E4E8"> (Count </span><span style="color:#F97583">!=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"><span style="color:#E1E4E8">			ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#B392F0"> TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"(不匹配"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">			return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">	{</span><span style="color:#6A737D">// 检测三目运算符拆分</span></span>
-<span class="line"><span style="color:#B392F0">		int32</span><span style="color:#E1E4E8"> Count </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#B392F0">		int32</span><span style="color:#E1E4E8"> Depth </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">		for</span><span style="color:#E1E4E8"> (</span><span style="color:#F97583">const</span><span style="color:#B392F0"> TCHAR</span><span style="color:#E1E4E8"> Ch : CheckStr)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8">(Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '?'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#F97583">				if</span><span style="color:#E1E4E8">(Depth </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> Count)</span></span>
-<span class="line"><span style="color:#E1E4E8">				{</span></span>
-<span class="line"><span style="color:#E1E4E8">					ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#B392F0"> TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"被嵌套的三目运算符必须用括号包裹"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">					return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;		</span></span>
-<span class="line"><span style="color:#E1E4E8">				}</span></span>
-<span class="line"><span style="color:#F97583">				++</span><span style="color:#E1E4E8">Count;</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#F97583">			else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8">(Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> ':'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#F97583">				--</span><span style="color:#E1E4E8">Count;</span></span>
-<span class="line"><span style="color:#F97583">				if</span><span style="color:#E1E4E8">(Count </span><span style="color:#F97583">&lt;</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">				{</span></span>
-<span class="line"><span style="color:#E1E4E8">					ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#B392F0"> TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"三目运算符:前面必须有?"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">					return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;	</span></span>
-<span class="line"><span style="color:#E1E4E8">				}</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#F97583">			else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8">(Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '('</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#F97583">				++</span><span style="color:#E1E4E8">Depth;</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#F97583">			else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8">(Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> ')'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#F97583">				--</span><span style="color:#E1E4E8">Depth;</span></span>
-<span class="line"><span style="color:#F97583">				if</span><span style="color:#E1E4E8">(Count </span><span style="color:#F97583">!=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">				{</span></span>
-<span class="line"><span style="color:#E1E4E8">					ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#B392F0"> TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"三目运算符不能被拆分"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">					return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;		</span></span>
-<span class="line"><span style="color:#E1E4E8">				}</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">		if</span><span style="color:#E1E4E8">(Count </span><span style="color:#F97583">!=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#E1E4E8">			ErrorMessage </span><span style="color:#F97583">=</span><span style="color:#B392F0"> TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"三目运算符必须成对出现"</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">			return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;	</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">    return</span><span style="color:#79B8FF"> true</span><span style="color:#E1E4E8">;;</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span></code></pre>
-<p>这种写法把校验规则集中在一起，便于对照阅读。不过，排除已知错误的模式不等于定义了完整语法，求值时仍然需要检查操作数和结构。</p>
-<p><strong>把公式拆成 Token</strong></p>
-<p><code>Tokenize</code> 按字符扫描字符串，识别括号、运算符和属性名，并把连续数字合并。它还尝试根据前一个 Token 判断正负号的含义：一元正号不作为加法保留，一元负号转换为乘以 <code>-1</code>。</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#B392F0">TArray</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">FToken</span><span style="color:#E1E4E8">&gt; </span><span style="color:#B392F0">Tokenize</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Expression</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">{</span></span>
-<span class="line"><span style="color:#B392F0">	FString</span><span style="color:#E1E4E8"> CheckStr </span><span style="color:#F97583">=</span><span style="color:#B392F0"> RegexReplace</span><span style="color:#E1E4E8">(Expression, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">R"(\s)"</span><span style="color:#E1E4E8">), </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">""</span><span style="color:#E1E4E8">));</span></span>
-<span class="line"><span style="color:#B392F0">	TArray</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">FToken</span><span style="color:#E1E4E8">&gt; Tokens;</span></span>
-<span class="line"><span style="color:#F97583">	for</span><span style="color:#E1E4E8"> (int32 i </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> CheckStr.</span><span style="color:#B392F0">Len</span><span style="color:#E1E4E8">(); </span><span style="color:#F97583">++</span><span style="color:#E1E4E8">i)</span></span>
-<span class="line"><span style="color:#E1E4E8">	{</span></span>
-<span class="line"><span style="color:#B392F0">		TCHAR</span><span style="color:#E1E4E8"> Ch </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> CheckStr[i];</span></span>
-<span class="line"><span style="color:#F97583">		if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '('</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> ')'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#E1E4E8">			Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Parenthesis, </span><span style="color:#B392F0">FString</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">&amp;</span><span style="color:#E1E4E8">Ch));</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#F97583">		else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '+'</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '-'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#E1E4E8"> FToken</span><span style="color:#F97583">&amp;</span><span style="color:#E1E4E8"> Token </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Tokens.</span><span style="color:#B392F0">Last</span><span style="color:#E1E4E8">();</span></span>
-<span class="line"><span style="color:#E1E4E8">				(Token.Type </span><span style="color:#F97583">==</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Parenthesis </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> Token.Value </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "("</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#F97583">				||</span><span style="color:#E1E4E8"> Token.Type </span><span style="color:#F97583">==</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Operator_Add</span></span>
-<span class="line"><span style="color:#F97583">				||</span><span style="color:#E1E4E8"> Token.Type </span><span style="color:#F97583">==</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Operator_Mul</span></span>
-<span class="line"><span style="color:#F97583">				||</span><span style="color:#E1E4E8"> Token.Type </span><span style="color:#F97583">==</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Comparison)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#F97583">				if</span><span style="color:#E1E4E8">(Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '-'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">				{</span></span>
-<span class="line"><span style="color:#E1E4E8">					Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Number, </span><span style="color:#9ECBFF">"-1"</span><span style="color:#E1E4E8">);	</span></span>
-<span class="line"><span style="color:#E1E4E8">					Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Operator_Mul, </span><span style="color:#9ECBFF">"*"</span><span style="color:#E1E4E8">);	</span></span>
-<span class="line"><span style="color:#E1E4E8">				}</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#F97583">			else</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#E1E4E8">				Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Operator_Add, </span><span style="color:#B392F0">FString</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">&amp;</span><span style="color:#E1E4E8">Ch));		</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#F97583">		else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8">(Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '*'</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '/'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#E1E4E8">			Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Operator_Mul, </span><span style="color:#B392F0">FString</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">&amp;</span><span style="color:#E1E4E8">Ch)); </span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#F97583">		else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '='</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '!'</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '&gt;'</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '&lt;'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#B392F0">			FString</span><span style="color:#B392F0"> Comparison</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">&amp;</span><span style="color:#E1E4E8">Ch);</span></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8"> (i </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#F97583"> &lt;</span><span style="color:#E1E4E8"> CheckStr.</span><span style="color:#B392F0">Len</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> CheckStr[i </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '='</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"><span style="color:#E1E4E8">				Comparison </span><span style="color:#F97583">+=</span><span style="color:#9ECBFF"> '='</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">				++</span><span style="color:#E1E4E8">i;</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#E1E4E8">			Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Comparison, Comparison);</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#F97583">		else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '&amp;'</span><span style="color:#F97583"> &amp;&amp;</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#F97583"> &lt;</span><span style="color:#E1E4E8"> CheckStr.</span><span style="color:#B392F0">Len</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> CheckStr[i </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '&amp;'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#E1E4E8">			Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Logical_And, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"&amp;&amp;"</span><span style="color:#E1E4E8">));</span></span>
-<span class="line"><span style="color:#F97583">			++</span><span style="color:#E1E4E8">i;</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#F97583">		else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '|'</span><span style="color:#F97583"> &amp;&amp;</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#F97583"> &lt;</span><span style="color:#E1E4E8"> CheckStr.</span><span style="color:#B392F0">Len</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> CheckStr[i </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">] </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '|'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#E1E4E8">			Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Logical_Or, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"||"</span><span style="color:#E1E4E8">));</span></span>
-<span class="line"><span style="color:#F97583">			++</span><span style="color:#E1E4E8">i;</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#F97583">		else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '?'</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> ':'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#E1E4E8">			Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Operator_Conditional, </span><span style="color:#B392F0">FString</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">&amp;</span><span style="color:#E1E4E8">Ch));</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#F97583">		else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8"> (Ch </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> '['</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#F97583">			++</span><span style="color:#E1E4E8">i;</span></span>
-<span class="line"><span style="color:#B392F0">			FString</span><span style="color:#E1E4E8"> CustomProperty;</span></span>
-<span class="line"><span style="color:#F97583">			while</span><span style="color:#E1E4E8"> (i </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> CheckStr.</span><span style="color:#B392F0">Len</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> CheckStr[i] </span><span style="color:#F97583">!=</span><span style="color:#9ECBFF"> ']'</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"><span style="color:#E1E4E8">				CustomProperty </span><span style="color:#F97583">+=</span><span style="color:#E1E4E8"> CheckStr[i];</span></span>
-<span class="line"><span style="color:#F97583">				++</span><span style="color:#E1E4E8">i;</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#E1E4E8">			Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::CustomProperty, CustomProperty);</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#F97583">		else</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8">(Tokens.</span><span style="color:#B392F0">Last</span><span style="color:#E1E4E8">().Type </span><span style="color:#F97583">!=</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Number)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#E1E4E8">				Tokens.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Number, </span><span style="color:#B392F0">FString</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">&amp;</span><span style="color:#E1E4E8">Ch));</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#F97583">			else</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#E1E4E8">				Tokens.</span><span style="color:#B392F0">Last</span><span style="color:#E1E4E8">().Value.</span><span style="color:#B392F0">Append</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FString</span><span style="color:#E1E4E8">(</span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">&amp;</span><span style="color:#E1E4E8">Ch));</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"><span style="color:#F97583">	return</span><span style="color:#E1E4E8"> Tokens;</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span></code></pre>
-<p>例如 <code>[HHHH]&gt;=+3-5</code> 的分词意图是识别属性 <code>HHHH</code>、比较符 <code>&gt;=</code>、数字 <code>3</code>、减号和数字 <code>5</code>。这里的 <code>+3</code> 表示正数，并不是缺少左操作数的加法。</p>
-<p><strong>运算符分类与单步计算</strong></p>
-<p><code>CheckPrecedence</code> 判断运算符是否属于当前要处理的类别，实际的优先级顺序由后面的 <code>Evaluate</code> 决定。<code>ApplyOperator</code> 接收两个整数和运算符，完成一次计算；整数除法采用 C++ 整数除法规则，比较和逻辑运算返回 1 或 0。</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">bool</span><span style="color:#B392F0"> CheckPrecedence</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> ETokenType</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Precedence</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Op</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"><span style="color:#F97583">	switch</span><span style="color:#E1E4E8"> (Precedence) {</span></span>
-<span class="line"><span style="color:#F97583">	case</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Operator_Add:</span></span>
-<span class="line"><span style="color:#F97583">		return</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "+"</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "-"</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">	case</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Operator_Mul:</span></span>
-<span class="line"><span style="color:#F97583">		return</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "*"</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "/"</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">	case</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Comparison:</span></span>
-<span class="line"><span style="color:#F97583">		return</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&gt;"</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&lt;"</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&gt;="</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&lt;="</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "=="</span><span style="color:#F97583"> ||</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "!="</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">	case</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Logical_And:</span></span>
-<span class="line"><span style="color:#F97583">		return</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&amp;&amp;"</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">	case</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Logical_Or:</span></span>
-<span class="line"><span style="color:#F97583">		return</span><span style="color:#E1E4E8"> Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "||"</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">	default</span><span style="color:#E1E4E8">: </span></span>
-<span class="line"><span style="color:#F97583">		return</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0">int32</span><span style="color:#B392F0"> ApplyOperator</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> int32</span><span style="color:#FFAB70"> A</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">const</span><span style="color:#B392F0"> int32</span><span style="color:#FFAB70"> B</span><span style="color:#E1E4E8">, </span><span style="color:#F97583">const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Op</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">{</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "+"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">+</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "-"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "*"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">*</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "/"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> B </span><span style="color:#F97583">==</span><span style="color:#79B8FF"> 0</span><span style="color:#F97583"> ?</span><span style="color:#79B8FF"> 0</span><span style="color:#F97583"> :</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">/</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "=="</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">==</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "!="</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">!=</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&gt;"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">&gt;</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&lt;"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&gt;="</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">&gt;=</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&lt;="</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">&lt;=</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "&amp;&amp;"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#F97583">	if</span><span style="color:#E1E4E8"> (Op </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "||"</span><span style="color:#E1E4E8">) </span><span style="color:#F97583">return</span><span style="color:#E1E4E8"> A </span><span style="color:#F97583">||</span><span style="color:#E1E4E8"> B;</span></span>
-<span class="line"><span style="color:#6A737D">	// 错误处理</span></span>
-<span class="line"><span style="color:#B392F0">	UE_LOG</span><span style="color:#E1E4E8">(MyGameLog, Error, </span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Invalid operator"</span><span style="color:#E1E4E8">));</span></span>
-<span class="line"><span style="color:#F97583">	return</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span></code></pre>
-<p>当前实现遇到除零会返回 0，遇到无法识别的运算符会写日志并返回 0。调用方不能仅凭结果为 0 判断是否出错。</p>
-<p><strong>按括号和优先级归约公式</strong></p>
-<p><code>Evaluate</code> 先找括号，将括号内部递归求值，再把相应片段替换成数字。随后依次处理乘除、加减、比较、逻辑与、逻辑或，最后处理三目选择。</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#B392F0">int32</span><span style="color:#B392F0"> Evaluate</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> TArray</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">FToken</span><span style="color:#E1E4E8">&gt;</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Tokens</span><span style="color:#E1E4E8">) {</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0">	TArray</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">FToken</span><span style="color:#E1E4E8">&gt; HandleTokens </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Tokens;</span></span>
-<span class="line"><span style="color:#E1E4E8">	{</span></span>
-<span class="line"><span style="color:#6A737D">		// 先找出括号，直接用递归处理,将所有括号都转变为数字</span></span>
-<span class="line"><span style="color:#B392F0">		int32</span><span style="color:#E1E4E8"> Index </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">		while</span><span style="color:#E1E4E8"> (Index </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> HandleTokens.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">())</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8">(HandleTokens[Index].Type </span><span style="color:#F97583">==</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Parenthesis </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> HandleTokens[Index].Value </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> ")"</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"><span style="color:#F97583">				for</span><span style="color:#E1E4E8">(int32 i </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> Index </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">; i </span><span style="color:#F97583">&gt;=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">; </span><span style="color:#F97583">--</span><span style="color:#E1E4E8">i)</span></span>
-<span class="line"><span style="color:#E1E4E8">				{</span></span>
-<span class="line"><span style="color:#F97583">					if</span><span style="color:#E1E4E8">(HandleTokens[i].Type </span><span style="color:#F97583">==</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Parenthesis </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#E1E4E8"> HandleTokens[i].Value </span><span style="color:#F97583">==</span><span style="color:#9ECBFF"> "("</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">					{</span></span>
-<span class="line"><span style="color:#B392F0">						TArray</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">FToken</span><span style="color:#E1E4E8">&gt; Parenthesis;</span></span>
-<span class="line"><span style="color:#F97583">						for</span><span style="color:#E1E4E8">(int32 j </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> i </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">; j </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> Index; </span><span style="color:#F97583">++</span><span style="color:#E1E4E8">j)</span></span>
-<span class="line"><span style="color:#E1E4E8">						{</span></span>
-<span class="line"><span style="color:#E1E4E8">							Parenthesis.</span><span style="color:#B392F0">Emplace</span><span style="color:#E1E4E8">(HandleTokens[j]);	</span></span>
-<span class="line"><span style="color:#E1E4E8">						}</span></span>
-<span class="line"><span style="color:#E1E4E8">						HandleTokens.</span><span style="color:#B392F0">RemoveAtSwap</span><span style="color:#E1E4E8">(i, Index </span><span style="color:#F97583">-</span><span style="color:#E1E4E8"> i);</span></span>
-<span class="line"><span style="color:#E1E4E8">						Index </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> i;</span></span>
-<span class="line"><span style="color:#E1E4E8">						HandleTokens[Index].Type </span><span style="color:#F97583">=</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Number;</span></span>
-<span class="line"><span style="color:#E1E4E8">						HandleTokens[Index].Value </span><span style="color:#F97583">=</span><span style="color:#B392F0"> FString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">FromInt</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">Evaluate</span><span style="color:#E1E4E8">(Parenthesis));</span></span>
-<span class="line"><span style="color:#F97583">						break</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">					}</span></span>
-<span class="line"><span style="color:#E1E4E8">				}</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#F97583">			++</span><span style="color:#E1E4E8">Index;</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">	auto</span><span style="color:#E1E4E8"> f </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> [</span><span style="color:#F97583">&amp;</span><span style="color:#E1E4E8">](</span><span style="color:#B392F0">ETokenType</span><span style="color:#F97583"> const</span><span style="color:#FFAB70"> TokenType</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">	{</span></span>
-<span class="line"><span style="color:#B392F0">		int32</span><span style="color:#E1E4E8"> Index </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#F97583">		while</span><span style="color:#E1E4E8"> (Index </span><span style="color:#F97583">&lt;</span><span style="color:#E1E4E8"> HandleTokens.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">())</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#F97583">			if</span><span style="color:#E1E4E8">(HandleTokens[Index].Type </span><span style="color:#F97583">==</span><span style="color:#E1E4E8"> TokenType </span><span style="color:#F97583">&amp;&amp;</span><span style="color:#B392F0"> CheckPrecedence</span><span style="color:#E1E4E8">(TokenType, HandleTokens[Index].Value))</span></span>
-<span class="line"><span style="color:#E1E4E8">			{</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">				HandleTokens[Index </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">].Value </span><span style="color:#F97583">=</span><span style="color:#B392F0"> FString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">FromInt</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ApplyOperator</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FCString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Atoi</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">HandleTokens[Index </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">].Value),</span></span>
-<span class="line"><span style="color:#B392F0">					FCString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Atoi</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">HandleTokens[Index </span><span style="color:#F97583">+</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">].Value),</span></span>
-<span class="line"><span style="color:#E1E4E8">					HandleTokens[Index].Value));</span></span>
-<span class="line"><span style="color:#E1E4E8">				HandleTokens[Index].Type </span><span style="color:#F97583">=</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Number;</span></span>
-<span class="line"><span style="color:#E1E4E8">				HandleTokens.</span><span style="color:#B392F0">RemoveAt</span><span style="color:#E1E4E8">(Index </span><span style="color:#F97583">-</span><span style="color:#79B8FF"> 1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#F97583">				--</span><span style="color:#E1E4E8">Index; 	</span></span>
-<span class="line"><span style="color:#E1E4E8">			}</span></span>
-<span class="line"><span style="color:#F97583">			++</span><span style="color:#E1E4E8">Index;</span></span>
-<span class="line"><span style="color:#E1E4E8">		}	</span></span>
-<span class="line"><span style="color:#E1E4E8">	};</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0">	f</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Operator_Mul);</span></span>
-<span class="line"><span style="color:#B392F0">	f</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Operator_Add);</span></span>
-<span class="line"><span style="color:#B392F0">	f</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Comparison);</span></span>
-<span class="line"><span style="color:#B392F0">	f</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Logical_And);</span></span>
-<span class="line"><span style="color:#B392F0">	f</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ETokenType</span><span style="color:#E1E4E8">::Logical_Or);</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#E1E4E8">	{</span><span style="color:#6A737D">// 最后处理三目运算</span></span>
-<span class="line"><span style="color:#F97583">		if</span><span style="color:#E1E4E8">(HandleTokens.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">==</span><span style="color:#79B8FF"> 5</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#F97583">			return</span><span style="color:#B392F0"> FCString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Atoi</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">HandleTokens[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">].Value) </span></span>
-<span class="line"><span style="color:#F97583">			?</span><span style="color:#B392F0"> FCString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Atoi</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">HandleTokens[</span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">].Value)</span></span>
-<span class="line"><span style="color:#F97583">			:</span><span style="color:#B392F0"> FCString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Atoi</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">HandleTokens[</span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">].Value);</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">	return</span><span style="color:#E1E4E8"> HandleTokens.</span><span style="color:#B392F0">Num</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">?</span><span style="color:#B392F0"> FCString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">Atoi</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">*</span><span style="color:#E1E4E8">HandleTokens[</span><span style="color:#79B8FF">0</span><span style="color:#E1E4E8">].Value) </span><span style="color:#F97583">:</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span></code></pre>
-<p>这段代码想表达的求值顺序，可以用下面两条公式说明：</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>1 + 2 * 3      → 先算 2 * 3，再加 1，预期结果为 7</span></span>
-<span class="line"><span>(1 + 2) * 3    → 先算括号里的 1 + 2，再乘 3，预期结果为 9</span></span></code></pre>
-<p>这些是预期语义示例，尚未通过运行代码验证。同级运算也需要保持顺序，例如 <code>8 / 2 / 2</code> 按从左到右计算应得到 2。</p>
-<p><strong>校验入口、属性替换与求值入口</strong></p>
-<p>最后回到蓝图可以调用的两个函数。校验入口先转换标点，再校验字符串；求值入口先分词，再把属性 Token 转为数字，交给 <code>Evaluate</code>。</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#F97583">bool</span><span style="color:#B392F0"> UMyGameEventSubsystem</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">CheckStrIsValid</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">const</span><span style="color:#B392F0"> FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Str</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">FString</span><span style="color:#F97583">&amp;</span><span style="color:#FFAB70"> Error</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">{</span></span>
-<span class="line"><span style="color:#F97583">	return</span><span style="color:#B392F0"> IsValidExpression</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ReplaceChinesePunctuationWithEnglish</span><span style="color:#E1E4E8">(Str), Error);</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0">int32</span><span style="color:#B392F0"> UMyGameEventSubsystem</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">GetStrValue</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">FString</span><span style="color:#F97583"> const&amp;</span><span style="color:#FFAB70"> Str</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#E1E4E8">{</span></span>
-<span class="line"><span style="color:#F97583">	const</span><span style="color:#B392F0"> TMap</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">FString</span><span style="color:#E1E4E8">, </span><span style="color:#B392F0">int32</span><span style="color:#E1E4E8">&gt; CustomProperties </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> {</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"123"</span><span style="color:#E1E4E8">), </span><span style="color:#79B8FF">123</span><span style="color:#E1E4E8">},</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span><span style="color:#B392F0">TEXT</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"HHHH"</span><span style="color:#E1E4E8">), </span><span style="color:#79B8FF">555</span><span style="color:#E1E4E8">}, </span></span>
-<span class="line"><span style="color:#E1E4E8">	};</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0">	TArray</span><span style="color:#E1E4E8">&lt;</span><span style="color:#B392F0">FToken</span><span style="color:#E1E4E8">&gt; Tokens </span><span style="color:#F97583">=</span><span style="color:#B392F0"> Tokenize</span><span style="color:#E1E4E8">(</span><span style="color:#B392F0">ReplaceChinesePunctuationWithEnglish</span><span style="color:#E1E4E8">(Str));</span></span>
-<span class="line"><span style="color:#F97583">	for</span><span style="color:#E1E4E8">(</span><span style="color:#F97583">auto&amp;</span><span style="color:#E1E4E8"> It : Tokens)</span></span>
-<span class="line"><span style="color:#E1E4E8">	{</span></span>
-<span class="line"><span style="color:#F97583">		if</span><span style="color:#E1E4E8">(It.Type </span><span style="color:#F97583">==</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::CustomProperty)</span></span>
-<span class="line"><span style="color:#E1E4E8">		{</span></span>
-<span class="line"><span style="color:#E1E4E8">			It.Type </span><span style="color:#F97583">=</span><span style="color:#B392F0"> ETokenType</span><span style="color:#E1E4E8">::Number;</span></span>
-<span class="line"><span style="color:#E1E4E8">			It.Value </span><span style="color:#F97583">=</span><span style="color:#B392F0"> FString</span><span style="color:#E1E4E8">::</span><span style="color:#B392F0">FromInt</span><span style="color:#E1E4E8">(CustomProperties.</span><span style="color:#B392F0">Contains</span><span style="color:#E1E4E8">(It.Value) </span><span style="color:#F97583">?</span><span style="color:#E1E4E8"> CustomProperties[It.Value] </span><span style="color:#F97583">:</span><span style="color:#79B8FF"> 0</span><span style="color:#E1E4E8">);</span></span>
-<span class="line"><span style="color:#E1E4E8">		}</span></span>
-<span class="line"><span style="color:#E1E4E8">	}</span></span>
-<span class="line"><span style="color:#F97583">	return</span><span style="color:#B392F0"> Evaluate</span><span style="color:#E1E4E8">(Tokens);</span></span>
-<span class="line"><span style="color:#E1E4E8">}</span></span>
-<span class="line"></span></code></pre>
-<p>这里的固定 <code>TMap</code> 只演示属性名如何变为数值。实际游戏中，可以由当前角色或事件提供对应属性。代码把未知属性当作 0，这也意味着拼错属性名可能被当作正常数值参与计算。</p>
-<h3 id="可验证例与限制">检测</h3>
-<p><strong>[HHHH]&gt;=+3-5</strong></p>
-<p>结果：1</p>
-<p>这条公式此前记录的结果为 1。示例映射里 <code>HHHH</code> 为 555，按预期语义相当于 <code>555 &gt;= (3 - 5)</code>，与这个结果一致。该结果尚未在原 UE 工程中重新编译运行核验。</p>
-<h3 id="独立样例">阅读代码时的边界与改进方向</h3>
-<p>从代码来看，要继续完善这个解析器，还需要处理以下问题。</p>
-<p><strong>首次读取 Token 的边界。</strong> <code>Tokenize</code> 在处理正负号和普通数字时使用 <code>Tokens.Last()</code>，但遇到第一个数字或开头的正负号时，数组可能为空。需要先判断是否存在前一个 Token，再决定当前字符的含义。</p>
-<p><strong>公式顺序。</strong> 括号归约使用了 <code>RemoveAtSwap</code>，它不保证剩余元素的顺序。公式依赖顺序，应改用保序处理，或通过解析位置消费 Token。求值时访问左右操作数，也需要确认索引和操作数类型有效。</p>
-<p><strong>校验与求值的关系。</strong> <code>GetStrValue</code> 没有先调用 <code>CheckStrIsValid</code>。调用方应先校验输入，但求值器也不能只依赖外部校验：空输入、未知字符、缺少操作数和不完整的三目表达式，都需要明确的处理方式。</p>
-<p><strong>短路与分支。</strong> 当前实现先计算运算，再选择三目结果，不能假定它具有 C++ 的短路语义。例如 <code>[数量] != 0 &amp;&amp; 100 / [数量] &gt; 2</code>，如果约定短路，在数量为 0 时应跳过右侧求值；三目也应只计算选中的分支。这要求解析过程保留分支结构。</p>
-<p><strong>结果与错误。</strong> 除零、未知属性和部分错误都会得到 0，而 0 也是合法结果。后续接口应区分求值是否成功、结果值和错误信息。整数溢出、输入长度、嵌套深度，以及嵌套三目的合法写法也需要明确规则。</p>
-<p>继续探索时，可以保留 UE 的字符串和蓝图调用入口，让解析部分按明确语法读取 Token，再由游戏上下文提供属性。递归下降等方法可以把不同优先级交给不同的解析函数；如果要支持短路，还需要在完成语法检查的同时，控制哪些分支真正执行计算。</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }</style><link rel="stylesheet" href="/assets/reading-area.css"><script defer src="/assets/analytics.js" data-mzsh-analytics data-website-id="9cca2387-fae9-4a77-8e5e-40dfd9897fce"></script><link rel="stylesheet" href="/assets/site-ui/navigation.css"><link rel="stylesheet" href="/assets/site-ui/engagement.css"><script defer src="/assets/site-ui/engagement.js"></script><link rel="stylesheet" href="/assets/site-ui/language-switch.css"><link rel="alternate" hreflang="zh" href="https://mzsh.me/zh/blog/ue-expression-parser-basics/"><link rel="alternate" hreflang="en" href="https://mzsh.me/en/blog/ue-expression-parser-basics/"></head><body data-astro-transition-scope="astro-gyrtbwwo-1"><div class="site-chrome"><a class="skip-link" href="#main">跳到主要内容</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/zh/" aria-label="MZSH 首页">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">菜单</button><nav id="main-navigation" class="main-nav" aria-label="主导航"><a href="/zh/">首页</a><a href="/zh/works/">作品</a><a href="/zh/cases/">案例</a><a href="/zh/blog/" aria-current="page">博客</a></nav><div class="header-actions"><a href="/zh/contact/">联系与支持</a><label class="site-language-switch"><select data-site-language-select data-current="zh" aria-label="切换语言"><option value="zh" data-site-locale="zh" selected>中文</option><option value="en" data-site-locale="en">English</option></select></label></div></div></header><script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.33765cd5598b.js"></script><script type="module">var e=class extends HTMLElement{controller;finish;connectedCallback(){this.controller?.abort();let e=(this.controller=new AbortController).signal,t=this.querySelector(`.outline-mobile-toggle`),n=this.querySelector(`dialog`),r=this.querySelector(`.outline-mobile-content`),i=this.closest(`mzsh-reading`),a=i?.querySelector(`.article-sidebar .article-outline nav`),o=i?.closest(`.main-frame,.site-chrome-main`);if(!t||!n||!r||!a||typeof n.showModal!=`function`)return;let s=matchMedia(`(max-width:720px)`),c=!1,l=``,u=0,d=!0,f=()=>{c&&(c=!1,o&&(o.style.overflow=l,o.scrollTop=u),t.setAttribute(`aria-expanded`,`false`),d&&t.isConnected&&t.focus({preventScroll:!0}))};this.finish=f;let p=(e=!0)=>{d=e,n.open&&n.close(),f()};t.addEventListener(`click`,()=>{s.matches&&!n.open&&(r.replaceChildren(a.cloneNode(!0)),l=o?.style.overflow||``,u=o?.scrollTop||0,o&&(o.style.overflow=`hidden`),c=!0,d=!0,t.setAttribute(`aria-expanded`,`true`),n.showModal(),n.querySelector(`[data-outline-close]`)?.focus())},{signal:e}),n.addEventListener(`cancel`,e=>{e.preventDefault(),p()},{signal:e}),n.addEventListener(`close`,f,{signal:e}),n.addEventListener(`click`,e=>{let t=e.target;if(t===n||t.closest(`[data-outline-close]`)){p();return}let r=t.closest(`a[href^="#"]`);if(!r)return;let i=e;if(i.button!==0||i.ctrlKey||i.metaKey||i.shiftKey||i.altKey)return;let o=Array.from(a.querySelectorAll(`a`)).find(e=>e.getAttribute(`href`)===r.getAttribute(`href`));o&&(e.preventDefault(),e.stopPropagation(),p(),o.click())},{signal:e}),s.addEventListener(`change`,()=>{s.matches||p(!1)},{signal:e}),document.addEventListener(`astro:before-preparation`,()=>p(!1),{signal:e}),e.addEventListener(`abort`,()=>p(!1),{once:!0}),this.dataset.ready=``}disconnectedCallback(){this.controller?.abort(),this.finish?.(),this.removeAttribute(`data-ready`)}};customElements.get(`mobile-outline`)||customElements.define(`mobile-outline`,e);</script><main id="main" tabindex="-1" class="site-chrome-main"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">博客</p><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><mzsh-reading class="reading-surface"><div class="master-detail reading-detail has-project-hero note-detail" data-blog-article="true" data-pagefind-body><header class="project-hero note-hero" data-note-hero><div class="project-hero-copy"><p class="project-breadcrumb" data-pagefind-ignore><a href="/zh/blog/">博客</a><span>/</span><span class="note-category">UE开发</span></p><div class="project-title-group"><h1 id="detail-ue-expression-parser-basics" data-pagefind-meta="title">在 UE 中探索游戏公式的语法解析</h1></div><p class="project-description">尝试在 UE C++ 中实现游戏事件公式解析，让文本表达四则运算、条件判断和自定义属性，并结合代码梳理字符串校验、Token 拆分、属性替换与优先级求值。</p></div></header><mobile-outline data-pagefind-ignore="true"><div class="outline-mobile-controls"><a class="outline-mobile-back" href="/zh/blog/" aria-label="返回">返回</a><button type="button" class="outline-mobile-toggle" aria-label="打开本页目录" aria-expanded="false" aria-haspopup="dialog">目录 <span aria-hidden="true">⌄</span></button></div><dialog class="outline-mobile-dialog" aria-label="本页目录"><div class="outline-mobile-panel"><header><strong>本页目录</strong><button type="button" data-outline-close aria-label="关闭目录">×</button></header><div class="outline-mobile-content article-outline"></div></div></dialog></mobile-outline><aside class="article-sidebar" aria-label="文章导航" data-pagefind-ignore><div class="article-detail-controls"><a class="article-back" href="/zh/blog/" aria-label="返回">返回</a><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/blog/ue-expression-parser-basics/"></label><script type="application/json" data-engagement-config>{"id":"blog:ue-expression-parser-basics","origin":"https://mzsh.me","url":"https://mzsh.me/blog/ue-expression-parser-basics/","title":"Exploring syntax parsing for game formulas in UE","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/blog/ue-expression-parser-basics/"></label></noscript></section></div><section class="article-outline"><p class="article-outline-heading">本页大纲</p><nav aria-label="本页大纲"><ol class="outline-tree outline-tree-root"><li class="outline-node" data-heading-depth="2"><a href="#%E4%BA%8B%E4%BB%B6%E7%AE%80%E5%8D%95%E5%85%AC%E5%BC%8F%E8%A7%A3%E6%9E%90" class="outline-link outline-root-link">事件简单公式解析</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%AE%9A%E4%B9%89" class="outline-link outline-root-link">定义</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%AE%9E%E7%8E%B0" class="outline-link outline-root-link">实现</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#h" class="outline-link">.h</a></li><li class="outline-node" data-heading-depth="3"><a href="#cpp" class="outline-link">.cpp</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%A3%80%E6%B5%8B" class="outline-link outline-root-link">检测</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#hhhh3-5" class="outline-link">[HHHH]&gt;=+3-5</a></li></ol></li></ol></nav></section></aside><article class="master-panel" aria-labelledby="detail-ue-expression-parser-basics"><div class="prose"><h2 id="事件简单公式解析">事件简单公式解析</h2>
+<h2 id="定义">定义</h2>
+<p>这个是给我的游戏写的一个简单解析，摘抄到这里以防不时之需</p>
+<p>该解析可以识别判断，逻辑与或，加减乘除，括号和三目运算符</p>
+<p>为了适配游戏需求，还额外添加了自定义属性的识别和替换</p>
+<h2 id="实现">实现</h2>
+<h3 id="h">.h</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// Fill out your copyright notice in the Description page of Project Settings.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#pragma once</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#include "CoreMinimal.h"</span></span>
+<span class="line"><span>#include "Core/MyGameSubsystem.h"</span></span>
+<span class="line"><span>#include "MyGameEventSubsystem.generated.h"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>/**</span></span>
+<span class="line"><span> * </span></span>
+<span class="line"><span> */</span></span>
+<span class="line"><span>UCLASS()</span></span>
+<span class="line"><span>class LIFESIMULATOR_API UMyGameEventSubsystem : public UMyGameSubsystem</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>	GENERATED_BODY()</span></span>
+<span class="line"><span>	CREATETHISSUBSYSTEM(UMyGameEventSubsystem)</span></span>
+<span class="line"><span>public:</span></span>
+<span class="line"><span>	UFUNCTION(BlueprintCallable)</span></span>
+<span class="line"><span>	static bool CheckStrIsValid(const FString&amp; Str, FString&amp; Error);</span></span>
+<span class="line"><span>	UFUNCTION(BlueprintCallable)</span></span>
+<span class="line"><span>	static int32 GetStrValue(FString const&amp; Str);</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span></code></pre>
+<p>头文件这里的基类是我游戏中新建的，需要修改
+这里仅提供了两个简单接口，一个是检测这个字符串是否有效，会返回一个bool和错误信息，一个是获取这个字符串的值
+具体实现全都在.cpp里，因为都是专门为了这个功能写的，所以全都放.cpp里来进行封装</p>
+<h3 id="cpp">.cpp</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// Fill out your copyright notice in the Description page of Project Settings.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#include "GameEvent/MyGameEventSubsystem.h"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#include &lt;regex&gt;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>#include "LifeSimulator.h"</span></span>
+<span class="line"><span>#include "Misc/AutomationTest.h"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>enum class ETokenType : uint8</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>	Number,</span></span>
+<span class="line"><span>	Operator_Add,</span></span>
+<span class="line"><span>	Operator_Mul,</span></span>
+<span class="line"><span>	Parenthesis,</span></span>
+<span class="line"><span>	Comparison,</span></span>
+<span class="line"><span>	Logical_And,</span></span>
+<span class="line"><span>	Logical_Or,</span></span>
+<span class="line"><span>	Operator_Conditional,</span></span>
+<span class="line"><span>	CustomProperty</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>struct FToken {</span></span>
+<span class="line"><span>	ETokenType Type;</span></span>
+<span class="line"><span>	FString Value;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	FToken();</span></span>
+<span class="line"><span>	FToken(const ETokenType InType, const FString&amp; InValue)</span></span>
+<span class="line"><span>		: Type(InType), Value(InValue) {}</span></span>
+<span class="line"><span>};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>FString RegexReplace(FString const&amp; Str, FString const&amp; Regex, FString const&amp; ReplaceStr)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>	return 	UTF8_TO_TCHAR(std::regex_replace(std::string(TCHAR_TO_UTF8(*Str)),</span></span>
+<span class="line"><span>		std::regex(std::string(TCHAR_TO_UTF8(*Regex))),</span></span>
+<span class="line"><span>		std::string(TCHAR_TO_UTF8(*ReplaceStr))).c_str());</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>FString ReplaceChinesePunctuationWithEnglish(const FString&amp; Expression) {</span></span>
+<span class="line"><span>	// Define the mappings from Chinese punctuation to English punctuation</span></span>
+<span class="line"><span>	TMap&lt;FString, FString&gt; PunctuationMap = {</span></span>
+<span class="line"><span>		{TEXT("，"), TEXT(",")},</span></span>
+<span class="line"><span>		{TEXT("。"), TEXT(".")},</span></span>
+<span class="line"><span>		{TEXT("！"), TEXT("!")}, </span></span>
+<span class="line"><span>		{TEXT("？"), TEXT("?")},</span></span>
+<span class="line"><span>		{TEXT("："), TEXT(":")},</span></span>
+<span class="line"><span>		{TEXT("；"), TEXT(";")},</span></span>
+<span class="line"><span>		{TEXT("（"), TEXT("(")},</span></span>
+<span class="line"><span>		{TEXT("）"), TEXT(")")},</span></span>
+<span class="line"><span>		{TEXT("【"), TEXT("[")},</span></span>
+<span class="line"><span>		{TEXT("】"), TEXT("]")},</span></span>
+<span class="line"><span>		{TEXT("“"), TEXT("\"")},</span></span>
+<span class="line"><span>		{TEXT("”"), TEXT("\"")},</span></span>
+<span class="line"><span>		{TEXT("‘"), TEXT("'")},</span></span>
+<span class="line"><span>		{TEXT("’"), TEXT("'")},</span></span>
+<span class="line"><span>		{TEXT("《"), TEXT("&lt;")},</span></span>
+<span class="line"><span>		{TEXT("》"), TEXT("&gt;")},</span></span>
+<span class="line"><span>		{TEXT("「"), TEXT("[")},</span></span>
+<span class="line"><span>		{TEXT("」"), TEXT("]")},</span></span>
+<span class="line"><span>		{TEXT("『"), TEXT("[")},</span></span>
+<span class="line"><span>		{TEXT("』"), TEXT("]")},</span></span>
+<span class="line"><span>		{TEXT("、"), TEXT(",")},</span></span>
+<span class="line"><span>		{TEXT("﹃"), TEXT("{")},</span></span>
+<span class="line"><span>		{TEXT("﹄"), TEXT("}")},</span></span>
+<span class="line"><span>		{TEXT("〔"), TEXT("[")},</span></span>
+<span class="line"><span>		{TEXT("〕"), TEXT("]")},</span></span>
+<span class="line"><span>		{TEXT("——"), TEXT("-")},</span></span>
+<span class="line"><span>		{TEXT("……"), TEXT("...")},</span></span>
+<span class="line"><span>		{TEXT("—"), TEXT("-")},</span></span>
+<span class="line"><span>		{TEXT("·"), TEXT(".")},</span></span>
+<span class="line"><span>		{TEXT("（"), TEXT("(")},</span></span>
+<span class="line"><span>		{TEXT("）"), TEXT(")")}</span></span>
+<span class="line"><span>	};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	FString Result = Expression;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	// Replace each Chinese punctuation with the corresponding English punctuation</span></span>
+<span class="line"><span>	for (const auto&amp; Elem : PunctuationMap) {</span></span>
+<span class="line"><span>		Result = RegexReplace(Result, Elem.Key, Elem.Value);</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	return Result;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>bool IsValidExpression(const FString&amp; Expression, FString&amp; ErrorMessage)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>	FString CheckStr = Expression;</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	// 去除空格以及换行等空白符号以简化正则表达式</span></span>
+<span class="line"><span>	CheckStr = RegexReplace(CheckStr, TEXT(R"(\s)"), TEXT(""));</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>	// 自定义属性格式应为 [属性名]</span></span>
+<span class="line"><span>	for (TArray&lt;TPair&lt;FString, FString&gt;&gt; InvalidPatterns = {</span></span>
+<span class="line"><span>		{TEXT(R"(\[\])"), TEXT("属性名不能为空")},</span></span>
+<span class="line"><span>		{TEXT(R"([\d)]\[|\][\d\(])"), TEXT("中括号的两边不能相邻数字或不同边括号")}, </span></span>
+<span class="line"><span>		{TEXT(R"(\]\[)"), TEXT("不允许连续的自定义属性")} </span></span>
+<span class="line"><span>	}; const auto&amp; Pattern : InvalidPatterns) {</span></span>
+<span class="line"><span>		FRegexPattern RegexPattern(Pattern.Key);</span></span>
+<span class="line"><span>		FRegexMatcher Matcher(RegexPattern, CheckStr);</span></span>
+<span class="line"><span>		if (Matcher.FindNext()) {</span></span>
+<span class="line"><span>			ErrorMessage = Pattern.Value;</span></span>
+<span class="line"><span>			return false;</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	{// 检测[]是否成对出现</span></span>
+<span class="line"><span>		int32 Count = 0;</span></span>
+<span class="line"><span>		for (TCHAR Ch : CheckStr) {</span></span>
+<span class="line"><span>			if (Ch == '[') {</span></span>
+<span class="line"><span>				++Count;</span></span>
+<span class="line"><span>			} else if (Ch == ']') {</span></span>
+<span class="line"><span>				--Count;</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>			if(Count &lt; 0)</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				ErrorMessage = TEXT("]不匹配");</span></span>
+<span class="line"><span>				return false;	</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			else if (Count &gt; 1)</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				ErrorMessage = TEXT("[]不能嵌套");</span></span>
+<span class="line"><span>				return false;		</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>		if(Count != 0)</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			ErrorMessage = TEXT("[不匹配");</span></span>
+<span class="line"><span>			return false;		</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	// 替换自定义属性，方便后续判断</span></span>
+<span class="line"><span>	CheckStr = RegexReplace(CheckStr, TEXT(R"(\[.*?\])"), TEXT("0"));</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>    // 无效表达式的正则表达式模式及其错误信息</span></span>
+<span class="line"><span>    for (TArray&lt;TPair&lt;FString, FString&gt;&gt; InvalidPatterns = {</span></span>
+<span class="line"><span>    	{TEXT(R"([^0-9\+\-\*\/\(\)&lt;&gt;!=&amp;|?:])"), TEXT("除了自定义属性外只能存在比较运算符、括号、数字、三目运算符、逻辑与或运算符和加减乘除运算符")},</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    	// 括号判断</span></span>
+<span class="line"><span>		{TEXT(R"(\(\))"), TEXT("包含空括号")},</span></span>
+<span class="line"><span>		{TEXT(R"([0-9\)]\(|\)[\(0-9])"), TEXT("括号不能与数字和不同边括号相邻")},</span></span>
+<span class="line"><span>    	</span></span>
+<span class="line"><span>    	// 加减乘除判断</span></span>
+<span class="line"><span>    	{TEXT(R"([\*\/]{2,})"), TEXT("不能有连续的乘除运算符")},</span></span>
+<span class="line"><span>    	{TEXT(R"([\+\-]{3,})"), TEXT("不能有三个或更多连续加减运算符")},</span></span>
+<span class="line"><span>    	{TEXT(R"([\+\-][\*\/])"), TEXT("加减后不能接乘除运算符")},</span></span>
+<span class="line"><span>		{TEXT(R"([^0-9][\+\-]{2,})"), TEXT("两个加减号前只能是数字")},</span></span>
+<span class="line"><span>    	{TEXT(R"([^0-9\)\*\/][\*\/])"), TEXT("乘除左边只能是数字和后括号")},</span></span>
+<span class="line"><span>    	{TEXT(R"([\+\-\*\/][^0-9\(\+\-])"), TEXT("加减乘除右边只能是数字和前括号")},</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    	// 逻辑运算符判定</span></span>
+<span class="line"><span>		{TEXT(R"([^&amp;\|][&amp;\|][^&amp;\|]|[&amp;\|]{3,})"), TEXT("逻辑运算符错误")},</span></span>
+<span class="line"><span>		{TEXT(R"(&amp;&amp;[^0-9\(-]|[^0-9\(\)]&amp;&amp;)"), TEXT("逻辑运算符&amp;&amp;前后必须是数字或括号")},</span></span>
+<span class="line"><span>		{TEXT(R"(\|\|[^0-9\(\)-]|[^0-9\(\)-]\|\|)"),TEXT("逻辑运算符||前后必须是数字或括号")},</span></span>
+<span class="line"><span>    	</span></span>
+<span class="line"><span>    	// 比较操作符判定</span></span>
+<span class="line"><span>    	{TEXT(R"([^=!&gt;&lt;]=[^=])"), TEXT("不能使用赋值语句")},</span></span>
+<span class="line"><span>		{TEXT(R"([!&lt;&gt;][!&lt;&gt;])"), TEXT("!&lt;&gt;不能搭配使用")},</span></span>
+<span class="line"><span>		{TEXT(R"([!&lt;&gt;=]{3,})"), TEXT("比较操作符过多")},</span></span>
+<span class="line"><span>		{TEXT(R"(![^=])"), TEXT("!不能单独使用")},</span></span>
+<span class="line"><span>		{TEXT(R"(=[!&lt;&gt;])"), TEXT("比较操作符错误")},</span></span>
+<span class="line"><span>		{TEXT(R"([^0-9\)][!&lt;&gt;]|[^0-9\)]==|[&lt;&gt;=][^\-\+=\(0-9])"), TEXT("比较操作符的错误结合")},	</span></span>
+<span class="line"><span>    	</span></span>
+<span class="line"><span>    	// 三目运算符判定</span></span>
+<span class="line"><span>		{TEXT(R"([\?:][\?:])"), TEXT("三目运算符不能连续")},	</span></span>
+<span class="line"><span>		{TEXT(R"([^0-9\)][\?:]|[\?:][^\-\+\(0-9])"), TEXT("三目运算符前后符号错误")},</span></span>
+<span class="line"><span>    }; const auto&amp; Pattern : InvalidPatterns) {</span></span>
+<span class="line"><span>        FRegexPattern RegexPattern(Pattern.Key);</span></span>
+<span class="line"><span>        FRegexMatcher Matcher(RegexPattern, CheckStr);</span></span>
+<span class="line"><span>        if (Matcher.FindNext()) {</span></span>
+<span class="line"><span>            ErrorMessage = Pattern.Value + FString::Printf(TEXT("	请检查:%s"), *Matcher.GetCaptureGroup(0));</span></span>
+<span class="line"><span>            return false;</span></span>
+<span class="line"><span>        }</span></span>
+<span class="line"><span>    }</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	{// 额外检查括号是否成对出现</span></span>
+<span class="line"><span>		int32 Count = 0;</span></span>
+<span class="line"><span>		for (TCHAR Ch : CheckStr) {</span></span>
+<span class="line"><span>			if (Ch == '(') {</span></span>
+<span class="line"><span>				++Count;</span></span>
+<span class="line"><span>			} else if (Ch == ')') {</span></span>
+<span class="line"><span>				--Count;</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>			if(Count &lt; 0)</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				ErrorMessage = TEXT(")不匹配");</span></span>
+<span class="line"><span>				return false;	</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>		if (Count != 0) {</span></span>
+<span class="line"><span>			ErrorMessage = TEXT("(不匹配");</span></span>
+<span class="line"><span>			return false;</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	{// 检测三目运算符拆分</span></span>
+<span class="line"><span>		int32 Count = 0;</span></span>
+<span class="line"><span>		int32 Depth = 0;</span></span>
+<span class="line"><span>		for (const TCHAR Ch : CheckStr)</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			if(Ch == '?')</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				if(Depth &lt; Count)</span></span>
+<span class="line"><span>				{</span></span>
+<span class="line"><span>					ErrorMessage = TEXT("被嵌套的三目运算符必须用括号包裹");</span></span>
+<span class="line"><span>					return false;		</span></span>
+<span class="line"><span>				}</span></span>
+<span class="line"><span>				++Count;</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			else if(Ch == ':')</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				--Count;</span></span>
+<span class="line"><span>				if(Count &lt; 0)</span></span>
+<span class="line"><span>				{</span></span>
+<span class="line"><span>					ErrorMessage = TEXT("三目运算符:前面必须有?");</span></span>
+<span class="line"><span>					return false;	</span></span>
+<span class="line"><span>				}</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			else if(Ch == '(')</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				++Depth;</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			else if(Ch == ')')</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				--Depth;</span></span>
+<span class="line"><span>				if(Count != 0)</span></span>
+<span class="line"><span>				{</span></span>
+<span class="line"><span>					ErrorMessage = TEXT("三目运算符不能被拆分");</span></span>
+<span class="line"><span>					return false;		</span></span>
+<span class="line"><span>				}</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>		if(Count != 0)</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			ErrorMessage = TEXT("三目运算符必须成对出现");</span></span>
+<span class="line"><span>			return false;	</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    return true;;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>TArray&lt;FToken&gt; Tokenize(const FString&amp; Expression)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>	FString CheckStr = RegexReplace(Expression, TEXT(R"(\s)"), TEXT(""));</span></span>
+<span class="line"><span>	TArray&lt;FToken&gt; Tokens;</span></span>
+<span class="line"><span>	for (int32 i = 0; i &lt; CheckStr.Len(); ++i)</span></span>
+<span class="line"><span>	{</span></span>
+<span class="line"><span>		TCHAR Ch = CheckStr[i];</span></span>
+<span class="line"><span>		if (Ch == '(' || Ch == ')')</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			Tokens.Emplace(ETokenType::Parenthesis, FString(1, &amp;Ch));</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>		else if (Ch == '+' || Ch == '-')</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			if(const FToken&amp; Token = Tokens.Last();</span></span>
+<span class="line"><span>				(Token.Type == ETokenType::Parenthesis &amp;&amp; Token.Value == "(")</span></span>
+<span class="line"><span>				|| Token.Type == ETokenType::Operator_Add</span></span>
+<span class="line"><span>				|| Token.Type == ETokenType::Operator_Mul</span></span>
+<span class="line"><span>				|| Token.Type == ETokenType::Comparison)</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				if(Ch == '-')</span></span>
+<span class="line"><span>				{</span></span>
+<span class="line"><span>					Tokens.Emplace(ETokenType::Number, "-1");	</span></span>
+<span class="line"><span>					Tokens.Emplace(ETokenType::Operator_Mul, "*");	</span></span>
+<span class="line"><span>				}</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			else</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				Tokens.Emplace(ETokenType::Operator_Add, FString(1, &amp;Ch));		</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>		else if(Ch == '*' || Ch == '/')</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			Tokens.Emplace(ETokenType::Operator_Mul, FString(1, &amp;Ch)); </span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>		else if (Ch == '=' || Ch == '!' || Ch == '&gt;' || Ch == '&lt;')</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			FString Comparison(1, &amp;Ch);</span></span>
+<span class="line"><span>			if (i + 1 &lt; CheckStr.Len() &amp;&amp; CheckStr[i + 1] == '=') {</span></span>
+<span class="line"><span>				Comparison += '=';</span></span>
+<span class="line"><span>				++i;</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			Tokens.Emplace(ETokenType::Comparison, Comparison);</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>		else if (Ch == '&amp;' &amp;&amp; i + 1 &lt; CheckStr.Len() &amp;&amp; CheckStr[i + 1] == '&amp;')</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			Tokens.Emplace(ETokenType::Logical_And, TEXT("&amp;&amp;"));</span></span>
+<span class="line"><span>			++i;</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>		else if (Ch == '|' &amp;&amp; i + 1 &lt; CheckStr.Len() &amp;&amp; CheckStr[i + 1] == '|')</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			Tokens.Emplace(ETokenType::Logical_Or, TEXT("||"));</span></span>
+<span class="line"><span>			++i;</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>		else if (Ch == '?' || Ch == ':')</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			Tokens.Emplace(ETokenType::Operator_Conditional, FString(1, &amp;Ch));</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>		else if (Ch == '[')</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			++i;</span></span>
+<span class="line"><span>			FString CustomProperty;</span></span>
+<span class="line"><span>			while (i &lt; CheckStr.Len() &amp;&amp; CheckStr[i] != ']') {</span></span>
+<span class="line"><span>				CustomProperty += CheckStr[i];</span></span>
+<span class="line"><span>				++i;</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			Tokens.Emplace(ETokenType::CustomProperty, CustomProperty);</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>		else</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			if(Tokens.Last().Type != ETokenType::Number)</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				Tokens.Emplace(ETokenType::Number, FString(1, &amp;Ch));</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			else</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				Tokens.Last().Value.Append(FString(1, &amp;Ch));</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span>	return Tokens;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>bool CheckPrecedence(const ETokenType&amp; Precedence, const FString&amp; Op) {</span></span>
+<span class="line"><span>	switch (Precedence) {</span></span>
+<span class="line"><span>	case ETokenType::Operator_Add:</span></span>
+<span class="line"><span>		return Op == "+" || Op == "-";</span></span>
+<span class="line"><span>	case ETokenType::Operator_Mul:</span></span>
+<span class="line"><span>		return Op == "*" || Op == "/";</span></span>
+<span class="line"><span>	case ETokenType::Comparison:</span></span>
+<span class="line"><span>		return Op == "&gt;" || Op == "&lt;" || Op == "&gt;=" || Op == "&lt;=" || Op == "==" || Op == "!=";</span></span>
+<span class="line"><span>	case ETokenType::Logical_And:</span></span>
+<span class="line"><span>		return Op == "&amp;&amp;";</span></span>
+<span class="line"><span>	case ETokenType::Logical_Or:</span></span>
+<span class="line"><span>		return Op == "||";</span></span>
+<span class="line"><span>	default: </span></span>
+<span class="line"><span>		return false;</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>int32 ApplyOperator(const int32 A, const int32 B, const FString&amp; Op)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>	if (Op == "+") return A + B;</span></span>
+<span class="line"><span>	if (Op == "-") return A - B;</span></span>
+<span class="line"><span>	if (Op == "*") return A * B;</span></span>
+<span class="line"><span>	if (Op == "/") return B == 0 ? 0 : A / B;</span></span>
+<span class="line"><span>	if (Op == "==") return A == B;</span></span>
+<span class="line"><span>	if (Op == "!=") return A != B;</span></span>
+<span class="line"><span>	if (Op == "&gt;") return A &gt; B;</span></span>
+<span class="line"><span>	if (Op == "&lt;") return A &lt; B;</span></span>
+<span class="line"><span>	if (Op == "&gt;=") return A &gt;= B;</span></span>
+<span class="line"><span>	if (Op == "&lt;=") return A &lt;= B;</span></span>
+<span class="line"><span>	if (Op == "&amp;&amp;") return A &amp;&amp; B;</span></span>
+<span class="line"><span>	if (Op == "||") return A || B;</span></span>
+<span class="line"><span>	// 错误处理</span></span>
+<span class="line"><span>	UE_LOG(MyGameLog, Error, TEXT("Invalid operator"));</span></span>
+<span class="line"><span>	return 0;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>int32 Evaluate(const TArray&lt;FToken&gt;&amp; Tokens) {</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>	TArray&lt;FToken&gt; HandleTokens = Tokens;</span></span>
+<span class="line"><span>	{</span></span>
+<span class="line"><span>		// 先找出括号，直接用递归处理,将所有括号都转变为数字</span></span>
+<span class="line"><span>		int32 Index = 0;</span></span>
+<span class="line"><span>		while (Index &lt; HandleTokens.Num())</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			if(HandleTokens[Index].Type == ETokenType::Parenthesis &amp;&amp; HandleTokens[Index].Value == ")")</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				for(int32 i = Index - 1; i &gt;= 0; --i)</span></span>
+<span class="line"><span>				{</span></span>
+<span class="line"><span>					if(HandleTokens[i].Type == ETokenType::Parenthesis &amp;&amp; HandleTokens[i].Value == "(")</span></span>
+<span class="line"><span>					{</span></span>
+<span class="line"><span>						TArray&lt;FToken&gt; Parenthesis;</span></span>
+<span class="line"><span>						for(int32 j = i + 1; j &lt; Index; ++j)</span></span>
+<span class="line"><span>						{</span></span>
+<span class="line"><span>							Parenthesis.Emplace(HandleTokens[j]);	</span></span>
+<span class="line"><span>						}</span></span>
+<span class="line"><span>						HandleTokens.RemoveAtSwap(i, Index - i);</span></span>
+<span class="line"><span>						Index = i;</span></span>
+<span class="line"><span>						HandleTokens[Index].Type = ETokenType::Number;</span></span>
+<span class="line"><span>						HandleTokens[Index].Value = FString::FromInt(Evaluate(Parenthesis));</span></span>
+<span class="line"><span>						break;</span></span>
+<span class="line"><span>					}</span></span>
+<span class="line"><span>				}</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			++Index;</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	auto f = [&amp;](ETokenType const TokenType)</span></span>
+<span class="line"><span>	{</span></span>
+<span class="line"><span>		int32 Index = 0;</span></span>
+<span class="line"><span>		while (Index &lt; HandleTokens.Num())</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			if(HandleTokens[Index].Type == TokenType &amp;&amp; CheckPrecedence(TokenType, HandleTokens[Index].Value))</span></span>
+<span class="line"><span>			{</span></span>
+<span class="line"><span>				</span></span>
+<span class="line"><span>				HandleTokens[Index + 1].Value = FString::FromInt(ApplyOperator(FCString::Atoi(*HandleTokens[Index - 1].Value),</span></span>
+<span class="line"><span>					FCString::Atoi(*HandleTokens[Index + 1].Value),</span></span>
+<span class="line"><span>					HandleTokens[Index].Value));</span></span>
+<span class="line"><span>				HandleTokens[Index].Type = ETokenType::Number;</span></span>
+<span class="line"><span>				HandleTokens.RemoveAt(Index - 1, 2);</span></span>
+<span class="line"><span>				--Index; 	</span></span>
+<span class="line"><span>			}</span></span>
+<span class="line"><span>			++Index;</span></span>
+<span class="line"><span>		}	</span></span>
+<span class="line"><span>	};</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	f(ETokenType::Operator_Mul);</span></span>
+<span class="line"><span>	f(ETokenType::Operator_Add);</span></span>
+<span class="line"><span>	f(ETokenType::Comparison);</span></span>
+<span class="line"><span>	f(ETokenType::Logical_And);</span></span>
+<span class="line"><span>	f(ETokenType::Logical_Or);</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	{// 最后处理三目运算</span></span>
+<span class="line"><span>		if(HandleTokens.Num() == 5)</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			return FCString::Atoi(*HandleTokens[0].Value) </span></span>
+<span class="line"><span>			? FCString::Atoi(*HandleTokens[2].Value)</span></span>
+<span class="line"><span>			: FCString::Atoi(*HandleTokens[4].Value);</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>	return HandleTokens.Num() ? FCString::Atoi(*HandleTokens[0].Value) : 0;</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>bool UMyGameEventSubsystem::CheckStrIsValid(const FString&amp; Str, FString&amp; Error)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>	return IsValidExpression(ReplaceChinesePunctuationWithEnglish(Str), Error);</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>int32 UMyGameEventSubsystem::GetStrValue(FString const&amp; Str)</span></span>
+<span class="line"><span>{</span></span>
+<span class="line"><span>	const TMap&lt;FString, int32&gt; CustomProperties = {</span></span>
+<span class="line"><span>		{TEXT("123"), 123},</span></span>
+<span class="line"><span>		{TEXT("HHHH"), 555}, </span></span>
+<span class="line"><span>	};</span></span>
+<span class="line"><span>	</span></span>
+<span class="line"><span>	TArray&lt;FToken&gt; Tokens = Tokenize(ReplaceChinesePunctuationWithEnglish(Str));</span></span>
+<span class="line"><span>	for(auto&amp; It : Tokens)</span></span>
+<span class="line"><span>	{</span></span>
+<span class="line"><span>		if(It.Type == ETokenType::CustomProperty)</span></span>
+<span class="line"><span>		{</span></span>
+<span class="line"><span>			It.Type = ETokenType::Number;</span></span>
+<span class="line"><span>			It.Value = FString::FromInt(CustomProperties.Contains(It.Value) ? CustomProperties[It.Value] : 0);</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span>	return Evaluate(Tokens);</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span></code></pre>
+<h2 id="检测">检测</h2>
+<h3 id="hhhh3-5">[HHHH]&gt;=+3-5</h3>
+<p>结果：1</p></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {
@@ -609,4 +574,4 @@ if (!document.documentElement.dataset.mediaViewerBound) {
   document.addEventListener('astro:before-swap', stop); addEventListener('pagehide', stop);
   document.addEventListener('click', event => { const viewer = dialog(); if (event.target === viewer) close(); });
 }
-</script><script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/blog/ue-expression-parser-basics/","en":"/en/blog/ue-expression-parser-basics/"},"anchors":{"zh":{"问题与环境":"问题与环境","最小语法":"最小语法","错误也是接口的一部分":"错误也是接口的一部分","可验证例与限制":"可验证例与限制","独立样例":"独立样例"},"en":{"问题与环境":"definition-and-use-cases","最小语法":"implementation-header-and-ue-entry-points","错误也是接口的一部分":"implementation-source-file-and-parsing-steps","可验证例与限制":"recorded-check","独立样例":"limitations-and-directions-for-improvement"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body></html><script type="module">function e(e,t,n=Date.now,r){let i=new Set([`/works/`,`/cases/`,`/blog/`]),a=new Map,o=new Map,s={hits:0,network:0,rejected:0},c=0,l=(e,n)=>{let r=typeof Request<`u`&&e instanceof Request?e:void 0,a=new URL(r?.url??String(e),t);if(a.origin!==t||!i.has(a.pathname)||(n?.method??r?.method??`GET`).toUpperCase()!==`GET`||(n?.credentials??r?.credentials)===`omit`||[`reload`,`no-store`,`no-cache`].includes(n?.cache??r?.cache??``))return;let o=new Headers(n?.headers??r?.headers);if(!(o.has(`authorization`)||o.has(`range`)))return a.pathname},u=(e,t)=>t?t.aborted?Promise.reject(new DOMException(`Aborted`,`AbortError`)):new Promise((n,r)=>{let i=()=>r(new DOMException(`Aborted`,`AbortError`));t.addEventListener(`abort`,i,{once:!0}),e.then(e=>{t.removeEventListener(`abort`,i),t.aborted||n(e)},e=>{t.removeEventListener(`abort`,i),r(e)})}):e,d=async(t,i)=>{let d=l(t,i);if(!d)return e(t,i);let f=typeof Request<`u`&&t instanceof Request?t:void 0,p=i?.signal===null?null:i?.signal??f?.signal;if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);let m=a.get(d);if(m&&m.expires>n()){if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);return s.hits++,typeof performance<`u`&&(performance.clearMarks(`mzsh-index-cache-hit`),performance.mark(`mzsh-index-cache-hit`)),m.response.clone()}a.delete(d);let h=o.get(d);if(!h){s.network++;let l=c,u={...i,signal:void 0};h=e(f?new Request(f,{signal:new AbortController().signal}):t,u).then(async e=>{if(e.status===200&&!e.redirected&&(e.headers.get(`content-type`)??``).includes(`text/html`)){let t=await e.clone().text();if(l===c&&/<meta\b[^>]*name=["']astro-view-transitions-enabled["']/.test(t)&&t.includes(`data-content-index-data`)&&t.includes(`site-chrome`)){a.set(d,{response:e.clone(),expires:n()+6e4});try{r?.(t)}catch{}}else s.rejected++}else s.rejected++;return e}).finally(()=>{o.get(d)===h&&o.delete(d)}),o.set(d,h)}return(await u(h,p)).clone()};return{fetch:d,stats:s,clear(){c++,a.clear(),o.clear()},warm(){return Promise.allSettled([...i].map(e=>d(new URL(e,t),{credentials:`same-origin`})))}}}var t=new Set;function n(e){let n=(e,t)=>e.match(RegExp(`\\b`+t+`=["']([^"']+)["']`,`i`))?.[1];for(let r of e.match(/<(?:link|script)\b[^>]*>/gi)??[]){let e=n(r,`rel`)===`stylesheet`,i=n(r,`type`)===`module`;if(!e&&!i)continue;let a=n(r,e?`href`:`src`);if(!a)continue;let o=new URL(a,location.origin);if(o.origin!==location.origin||!o.pathname.startsWith(`/_astro/`)||t.has(o.href)||t.size>=8||(t.add(o.href),[...document.querySelectorAll(`link[href],script[src]`)].some(e=>(`href`in e?e.href:e.src)===o.href)))continue;let s=document.createElement(`link`);s.rel=e?`preload`:`modulepreload`,e&&(s.as=`style`),s.href=o.href,document.head.append(s)}}var r=e(window.fetch.bind(window),location.origin,Date.now,n);window.fetch=r.fetch,window.addEventListener(`pagehide`,()=>r.clear());var i=navigator.connection;if(!i?.saveData&&!/2g/.test(i?.effectiveType??``)){let e=()=>{r.warm()};`requestIdleCallback`in window?window.requestIdleCallback(e,{timeout:900}):setTimeout(e,200)}for(let e of[`after-preparation`,`after-swap`,`page-load`])document.addEventListener(`astro:`+e,()=>{performance.clearMarks(`mzsh-`+e),performance.mark(`mzsh-`+e)});</script>
+</script><script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/blog/ue-expression-parser-basics/","en":"/en/blog/ue-expression-parser-basics/"},"anchors":{"zh":{"事件简单公式解析":"事件简单公式解析","定义":"定义","实现":"实现","h":"h","cpp":"cpp","检测":"检测","hhhh3-5":"hhhh3-5"},"en":{"事件简单公式解析":"simple-formula-parsing-for-events","定义":"definition","实现":"implementation","h":"h","cpp":"cpp","检测":"test","hhhh3-5":"hhhh3-5"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body></html><script type="module">function e(e,t,n=Date.now,r){let i=new Set([`/works/`,`/cases/`,`/blog/`]),a=new Map,o=new Map,s={hits:0,network:0,rejected:0},c=0,l=(e,n)=>{let r=typeof Request<`u`&&e instanceof Request?e:void 0,a=new URL(r?.url??String(e),t);if(a.origin!==t||!i.has(a.pathname)||(n?.method??r?.method??`GET`).toUpperCase()!==`GET`||(n?.credentials??r?.credentials)===`omit`||[`reload`,`no-store`,`no-cache`].includes(n?.cache??r?.cache??``))return;let o=new Headers(n?.headers??r?.headers);if(!(o.has(`authorization`)||o.has(`range`)))return a.pathname},u=(e,t)=>t?t.aborted?Promise.reject(new DOMException(`Aborted`,`AbortError`)):new Promise((n,r)=>{let i=()=>r(new DOMException(`Aborted`,`AbortError`));t.addEventListener(`abort`,i,{once:!0}),e.then(e=>{t.removeEventListener(`abort`,i),t.aborted||n(e)},e=>{t.removeEventListener(`abort`,i),r(e)})}):e,d=async(t,i)=>{let d=l(t,i);if(!d)return e(t,i);let f=typeof Request<`u`&&t instanceof Request?t:void 0,p=i?.signal===null?null:i?.signal??f?.signal;if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);let m=a.get(d);if(m&&m.expires>n()){if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);return s.hits++,typeof performance<`u`&&(performance.clearMarks(`mzsh-index-cache-hit`),performance.mark(`mzsh-index-cache-hit`)),m.response.clone()}a.delete(d);let h=o.get(d);if(!h){s.network++;let l=c,u={...i,signal:void 0};h=e(f?new Request(f,{signal:new AbortController().signal}):t,u).then(async e=>{if(e.status===200&&!e.redirected&&(e.headers.get(`content-type`)??``).includes(`text/html`)){let t=await e.clone().text();if(l===c&&/<meta\b[^>]*name=["']astro-view-transitions-enabled["']/.test(t)&&t.includes(`data-content-index-data`)&&t.includes(`site-chrome`)){a.set(d,{response:e.clone(),expires:n()+6e4});try{r?.(t)}catch{}}else s.rejected++}else s.rejected++;return e}).finally(()=>{o.get(d)===h&&o.delete(d)}),o.set(d,h)}return(await u(h,p)).clone()};return{fetch:d,stats:s,clear(){c++,a.clear(),o.clear()},warm(){return Promise.allSettled([...i].map(e=>d(new URL(e,t),{credentials:`same-origin`})))}}}var t=new Set;function n(e){let n=(e,t)=>e.match(RegExp(`\\b`+t+`=["']([^"']+)["']`,`i`))?.[1];for(let r of e.match(/<(?:link|script)\b[^>]*>/gi)??[]){let e=n(r,`rel`)===`stylesheet`,i=n(r,`type`)===`module`;if(!e&&!i)continue;let a=n(r,e?`href`:`src`);if(!a)continue;let o=new URL(a,location.origin);if(o.origin!==location.origin||!o.pathname.startsWith(`/_astro/`)||t.has(o.href)||t.size>=8||(t.add(o.href),[...document.querySelectorAll(`link[href],script[src]`)].some(e=>(`href`in e?e.href:e.src)===o.href)))continue;let s=document.createElement(`link`);s.rel=e?`preload`:`modulepreload`,e&&(s.as=`style`),s.href=o.href,document.head.append(s)}}var r=e(window.fetch.bind(window),location.origin,Date.now,n);window.fetch=r.fetch,window.addEventListener(`pagehide`,()=>r.clear());var i=navigator.connection;if(!i?.saveData&&!/2g/.test(i?.effectiveType??``)){let e=()=>{r.warm()};`requestIdleCallback`in window?window.requestIdleCallback(e,{timeout:900}):setTimeout(e,200)}for(let e of[`after-preparation`,`after-swap`,`page-load`])document.addEventListener(`astro:`+e,()=>{performance.clearMarks(`mzsh-`+e),performance.mark(`mzsh-`+e)});</script>

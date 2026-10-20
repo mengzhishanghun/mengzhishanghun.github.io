@@ -2,63 +2,478 @@
 .site-chrome .project-title-group{align-content:start;gap:5px;min-width:0;margin:0 0 14px;display:grid}.site-chrome .project-title-group>:is(h1,h2,h3){min-height:0;margin:0}.site-chrome .project-title-group>.project-title-secondary{color:#a9bcc6;overflow-wrap:anywhere;min-height:0;margin:0;font-size:.875rem;line-height:1.45;display:block}.site-chrome .project-hero .project-title-secondary{font-size:clamp(.95rem,1.4vw,1.2rem)}.site-chrome .feature-copy .project-title-secondary{font-size:clamp(.95rem,1.2vw,1.15rem)}
 </style><link rel="stylesheet" href="/_astro/MasterDetail.CHMC8WZC.css"><style>[data-astro-transition-scope="astro-gyrtbwwo-1"] { view-transition-name: astro-gyrtbwwo-1; }@layer astro { ::view-transition-old(astro-gyrtbwwo-1) { animation: none; opacity: 0; mix-blend-mode: normal; }::view-transition-new(astro-gyrtbwwo-1) { animation: none; mix-blend-mode: normal; }::view-transition-group(astro-gyrtbwwo-1) { animation: none } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
 			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-gyrtbwwo-1"],
-			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }</style><link rel="stylesheet" href="/assets/reading-area.css"><script defer src="/assets/analytics.js" data-mzsh-analytics data-website-id="9cca2387-fae9-4a77-8e5e-40dfd9897fce"></script><link rel="stylesheet" href="/assets/site-ui/navigation.css"><link rel="stylesheet" href="/assets/site-ui/engagement.css"><script defer src="/assets/site-ui/engagement.js"></script><link rel="stylesheet" href="/assets/site-ui/language-switch.css"><link rel="alternate" hreflang="zh" href="https://mzsh.me/zh/blog/python-perforce-stream-switch-safety/"><link rel="alternate" hreflang="en" href="https://mzsh.me/en/blog/python-perforce-stream-switch-safety/"></head><body data-astro-transition-scope="astro-gyrtbwwo-1"><div class="site-chrome"><a class="skip-link" href="#main">跳到主要内容</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/zh/" aria-label="MZSH 首页">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">菜单</button><nav id="main-navigation" class="main-nav" aria-label="主导航"><a href="/zh/">首页</a><a href="/zh/works/">作品</a><a href="/zh/cases/">案例</a><a href="/zh/blog/" aria-current="page">博客</a></nav><div class="header-actions"><a href="/zh/contact/">联系与支持</a><label class="site-language-switch"><select data-site-language-select data-current="zh" aria-label="切换语言"><option value="zh" data-site-locale="zh" selected>中文</option><option value="en" data-site-locale="en">English</option></select></label></div></div></header><script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.33765cd5598b.js"></script><script type="module">var e=class extends HTMLElement{controller;finish;connectedCallback(){this.controller?.abort();let e=(this.controller=new AbortController).signal,t=this.querySelector(`.outline-mobile-toggle`),n=this.querySelector(`dialog`),r=this.querySelector(`.outline-mobile-content`),i=this.closest(`mzsh-reading`),a=i?.querySelector(`.article-sidebar .article-outline nav`),o=i?.closest(`.main-frame,.site-chrome-main`);if(!t||!n||!r||!a||typeof n.showModal!=`function`)return;let s=matchMedia(`(max-width:720px)`),c=!1,l=``,u=0,d=!0,f=()=>{c&&(c=!1,o&&(o.style.overflow=l,o.scrollTop=u),t.setAttribute(`aria-expanded`,`false`),d&&t.isConnected&&t.focus({preventScroll:!0}))};this.finish=f;let p=(e=!0)=>{d=e,n.open&&n.close(),f()};t.addEventListener(`click`,()=>{s.matches&&!n.open&&(r.replaceChildren(a.cloneNode(!0)),l=o?.style.overflow||``,u=o?.scrollTop||0,o&&(o.style.overflow=`hidden`),c=!0,d=!0,t.setAttribute(`aria-expanded`,`true`),n.showModal(),n.querySelector(`[data-outline-close]`)?.focus())},{signal:e}),n.addEventListener(`cancel`,e=>{e.preventDefault(),p()},{signal:e}),n.addEventListener(`close`,f,{signal:e}),n.addEventListener(`click`,e=>{let t=e.target;if(t===n||t.closest(`[data-outline-close]`)){p();return}let r=t.closest(`a[href^="#"]`);if(!r)return;let i=e;if(i.button!==0||i.ctrlKey||i.metaKey||i.shiftKey||i.altKey)return;let o=Array.from(a.querySelectorAll(`a`)).find(e=>e.getAttribute(`href`)===r.getAttribute(`href`));o&&(e.preventDefault(),e.stopPropagation(),p(),o.click())},{signal:e}),s.addEventListener(`change`,()=>{s.matches||p(!1)},{signal:e}),document.addEventListener(`astro:before-preparation`,()=>p(!1),{signal:e}),e.addEventListener(`abort`,()=>p(!1),{once:!0}),this.dataset.ready=``}disconnectedCallback(){this.controller?.abort(),this.finish?.(),this.removeAttribute(`data-ready`)}};customElements.get(`mobile-outline`)||customElements.define(`mobile-outline`,e);</script><main id="main" tabindex="-1" class="site-chrome-main"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">博客</p><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><mzsh-reading class="reading-surface"><div class="master-detail reading-detail has-project-hero note-detail" data-blog-article="true" data-pagefind-body><header class="project-hero note-hero" data-note-hero><div class="project-hero-copy"><p class="project-breadcrumb" data-pagefind-ignore><a href="/zh/blog/">博客</a><span>/</span><span class="note-category">Python</span></p><div class="project-title-group"><h1 id="detail-python-perforce-stream-switch-safety" data-pagefind-meta="title">Perforce 切换流工作区：预检与失败边界</h1></div><p class="project-description">一个按钮同时改 Client Stream、同步和清理，容易让本地修改落在错误视图中。本文仅介绍通用 Python 自动化的保护流程，完全去掉私人服务器、账号和工作区信息。配套代码使用 fake P4，不连接真实服务器。</p></div></header><mobile-outline data-pagefind-ignore="true"><div class="outline-mobile-controls"><a class="outline-mobile-back" href="/zh/blog/" aria-label="返回">返回</a><button type="button" class="outline-mobile-toggle" aria-label="打开本页目录" aria-expanded="false" aria-haspopup="dialog">目录 <span aria-hidden="true">⌄</span></button></div><dialog class="outline-mobile-dialog" aria-label="本页目录"><div class="outline-mobile-panel"><header><strong>本页目录</strong><button type="button" data-outline-close aria-label="关闭目录">×</button></header><div class="outline-mobile-content article-outline"></div></div></dialog></mobile-outline><aside class="article-sidebar" aria-label="文章导航" data-pagefind-ignore><div class="article-detail-controls"><a class="article-back" href="/zh/blog/" aria-label="返回">返回</a><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/blog/python-perforce-stream-switch-safety/"></label><script type="application/json" data-engagement-config>{"id":"blog:python-perforce-stream-switch-safety","origin":"https://mzsh.me","url":"https://mzsh.me/blog/python-perforce-stream-switch-safety/","title":"Switching Perforce stream workspaces: preflight and failure boundaries","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/blog/python-perforce-stream-switch-safety/"></label></noscript></section></div><section class="article-outline"><p class="article-outline-heading">本页大纲</p><nav aria-label="本页大纲"><ol class="outline-tree outline-tree-root"><li class="outline-node" data-heading-depth="3"><a href="#%E9%97%AE%E9%A2%98%E4%B8%8E%E7%8E%AF%E5%A2%83" class="outline-link outline-root-link">问题与环境</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%88%87%E6%8D%A2%E5%89%8D%E4%BF%9D%E6%8A%A4%E6%9C%AC%E5%9C%B0%E7%8A%B6%E6%80%81" class="outline-link outline-root-link">切换前保护本地状态</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%A4%B1%E8%B4%A5%E4%B8%8D%E8%83%BD%E7%AC%BC%E7%BB%9F%E7%A7%B0%E4%B8%BA%E5%9B%9E%E6%BB%9A" class="outline-link outline-root-link">失败不能笼统称为回滚</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%8F%AF%E9%AA%8C%E8%AF%81%E4%BE%8B%E4%B8%8E%E9%99%90%E5%88%B6" class="outline-link outline-root-link">可验证例与限制</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E7%8B%AC%E7%AB%8B%E6%A0%B7%E4%BE%8B" class="outline-link outline-root-link">独立样例</a></li></ol></nav></section></aside><article class="master-panel" aria-labelledby="detail-python-perforce-stream-switch-safety"><div class="prose"><h3 id="问题与环境">问题与环境</h3>
-<p>一个按钮同时改 Client Stream、同步和清理，容易让本地修改落在错误视图中。本文仅介绍通用 Python 自动化的保护流程，完全去掉私人服务器、账号和工作区信息。配套代码使用 fake P4，不连接真实服务器。</p>
-<h3 id="切换前保护本地状态">切换前保护本地状态</h3>
-<p>明确用户授权的 client、目标 stream 和本地根目录。查询 opened 与 pending changelist，也检查未打开但有修改的文件、离线新增文件和未跟踪文件；只看 opened 不够。存在任何未保护修改时停止，让用户先提交、shelve 或备份，且确认保护结果。备份包含哪些文件必须明确，shelve 也不会自动包含所有未跟踪文件。</p>
-<p>取得当前 client spec 并保留旧 Stream，检查目标可用性及同步预览。不要自动执行 clean、revert 或强制同步。更稳妥的选择是为另一条流使用独立工作区，减少反复映射同一本地目录。</p>
-<h3 id="失败不能笼统称为回滚">失败不能笼统称为回滚</h3>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>预检全部通过 → 保存目标 Stream → 同步</span></span>
-<span class="line"><span>改 Stream 前失败 → 本地状态尚未被该步骤改变</span></span>
-<span class="line"><span>改 Stream 后失败 → 报告状态不完整并停止</span></span></code></pre>
-<p>把旧 Stream 写回仅恢复 spec 字段，不能保证已同步或已删除的磁盘文件、have list 和服务器状态全部复原。记录失败阶段及已完成步骤，重新读取 client 与本地状态后才能制定恢复动作；不要自动重试清理。</p>
-<h3 id="可验证例与限制">可验证例与限制</h3>
-<p><code>p4_switch_fake.py</code> 的 fake 测试覆盖未提交修改阻止切换、成功切换和保存 Stream 后同步失败，后者必须报告 incomplete。该样例是状态流程演示，不是可直接投入使用的 P4 客户端；没有真实同步、锁、权限或恢复测试。</p>
-<h3 id="独立样例">独立样例</h3>
-<p>保存为 <code>p4_switch_fake.py</code>：</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="python"><code><span class="line"><span style="color:#9ECBFF">"""Fake-only state demonstration: intentionally no P4 imports or connections."""</span></span>
-<span class="line"><span style="color:#F97583">from</span><span style="color:#E1E4E8"> dataclasses </span><span style="color:#F97583">import</span><span style="color:#E1E4E8"> dataclass, field</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#B392F0">@dataclass</span></span>
-<span class="line"><span style="color:#F97583">class</span><span style="color:#B392F0"> FakeP4</span><span style="color:#E1E4E8">:</span></span>
-<span class="line"><span style="color:#E1E4E8">    stream: </span><span style="color:#79B8FF">str</span><span style="color:#F97583"> =</span><span style="color:#9ECBFF"> '//example/main'</span></span>
-<span class="line"><span style="color:#E1E4E8">    unprotected_changes: </span><span style="color:#79B8FF">bool</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> False</span></span>
-<span class="line"><span style="color:#E1E4E8">    sync_fails: </span><span style="color:#79B8FF">bool</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> False</span></span>
-<span class="line"><span style="color:#E1E4E8">    events: </span><span style="color:#79B8FF">list</span><span style="color:#F97583"> =</span><span style="color:#E1E4E8"> field(</span><span style="color:#FFAB70">default_factory</span><span style="color:#F97583">=</span><span style="color:#79B8FF">list</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> preflight</span><span style="color:#E1E4E8">(self, target):</span></span>
-<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.events.append(</span><span style="color:#9ECBFF">'preflight'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#F97583">        if</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.unprotected_changes:</span></span>
-<span class="line"><span style="color:#F97583">            raise</span><span style="color:#79B8FF"> ValueError</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'protect local changes first'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8"> target </span><span style="color:#F97583">not</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> (</span><span style="color:#9ECBFF">'//example/main'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'//example/dev'</span><span style="color:#E1E4E8">):</span></span>
-<span class="line"><span style="color:#F97583">            raise</span><span style="color:#79B8FF"> ValueError</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'unknown example stream'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> save_stream</span><span style="color:#E1E4E8">(self, target):</span></span>
-<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.events.append(</span><span style="color:#9ECBFF">'save_stream'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.stream </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> target</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">    def</span><span style="color:#B392F0"> sync</span><span style="color:#E1E4E8">(self):</span></span>
-<span class="line"><span style="color:#79B8FF">        self</span><span style="color:#E1E4E8">.events.append(</span><span style="color:#9ECBFF">'sync'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"><span style="color:#F97583">        if</span><span style="color:#79B8FF"> self</span><span style="color:#E1E4E8">.sync_fails:</span></span>
-<span class="line"><span style="color:#F97583">            raise</span><span style="color:#79B8FF"> RuntimeError</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">'injected sync failure'</span><span style="color:#E1E4E8">)</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">def</span><span style="color:#B392F0"> switch</span><span style="color:#E1E4E8">(fake, target):</span></span>
-<span class="line"><span style="color:#E1E4E8">    before </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> fake.stream</span></span>
-<span class="line"><span style="color:#F97583">    try</span><span style="color:#E1E4E8">:</span></span>
-<span class="line"><span style="color:#E1E4E8">        fake.preflight(target)</span></span>
-<span class="line"><span style="color:#F97583">    except</span><span style="color:#79B8FF"> Exception</span><span style="color:#F97583"> as</span><span style="color:#E1E4E8"> error:</span></span>
-<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">'state'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'blocked'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'old_stream'</span><span style="color:#E1E4E8">: before, </span><span style="color:#9ECBFF">'error'</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">(error)}</span></span>
-<span class="line"><span style="color:#6A737D">    # From this boundary onward, even an exception from a save could be ambiguous.</span></span>
-<span class="line"><span style="color:#F97583">    try</span><span style="color:#E1E4E8">:</span></span>
-<span class="line"><span style="color:#E1E4E8">        fake.save_stream(target)</span></span>
-<span class="line"><span style="color:#E1E4E8">        fake.sync()</span></span>
-<span class="line"><span style="color:#F97583">    except</span><span style="color:#79B8FF"> Exception</span><span style="color:#F97583"> as</span><span style="color:#E1E4E8"> error:</span></span>
-<span class="line"><span style="color:#F97583">        return</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">'state'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'incomplete'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'old_stream'</span><span style="color:#E1E4E8">: before,</span></span>
-<span class="line"><span style="color:#9ECBFF">                'observed_stream'</span><span style="color:#E1E4E8">: fake.stream, </span><span style="color:#9ECBFF">'error'</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">str</span><span style="color:#E1E4E8">(error)}</span></span>
-<span class="line"><span style="color:#F97583">    return</span><span style="color:#E1E4E8"> {</span><span style="color:#9ECBFF">'state'</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">'complete'</span><span style="color:#E1E4E8">, </span><span style="color:#9ECBFF">'old_stream'</span><span style="color:#E1E4E8">: before, </span><span style="color:#9ECBFF">'observed_stream'</span><span style="color:#E1E4E8">: fake.stream}</span></span>
-<span class="line"></span>
-<span class="line"><span style="color:#F97583">if</span><span style="color:#79B8FF"> __name__</span><span style="color:#F97583"> ==</span><span style="color:#9ECBFF"> '__main__'</span><span style="color:#E1E4E8">:</span></span>
-<span class="line"><span style="color:#79B8FF">    print</span><span style="color:#E1E4E8">(switch(FakeP4(</span><span style="color:#FFAB70">sync_fails</span><span style="color:#F97583">=</span><span style="color:#79B8FF">True</span><span style="color:#E1E4E8">), </span><span style="color:#9ECBFF">'//example/dev'</span><span style="color:#E1E4E8">))</span></span></code></pre></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-gyrtbwwo-1"] { animation: none; mix-blend-mode: normal; }</style><link rel="stylesheet" href="/assets/reading-area.css"><script defer src="/assets/analytics.js" data-mzsh-analytics data-website-id="9cca2387-fae9-4a77-8e5e-40dfd9897fce"></script><link rel="stylesheet" href="/assets/site-ui/navigation.css"><link rel="stylesheet" href="/assets/site-ui/engagement.css"><script defer src="/assets/site-ui/engagement.js"></script><link rel="stylesheet" href="/assets/site-ui/language-switch.css"><link rel="alternate" hreflang="zh" href="https://mzsh.me/zh/blog/python-perforce-stream-switch-safety/"><link rel="alternate" hreflang="en" href="https://mzsh.me/en/blog/python-perforce-stream-switch-safety/"></head><body data-astro-transition-scope="astro-gyrtbwwo-1"><div class="site-chrome"><a class="skip-link" href="#main">跳到主要内容</a><header data-astro-transition-persist="site-header" class="site-header"><div class="shell header-inner"><a class="brand" href="/zh/" aria-label="MZSH 首页">MZSH</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="main-navigation">菜单</button><nav id="main-navigation" class="main-nav" aria-label="主导航"><a href="/zh/">首页</a><a href="/zh/works/">作品</a><a href="/zh/cases/">案例</a><a href="/zh/blog/" aria-current="page">博客</a></nav><div class="header-actions"><a href="/zh/contact/">联系与支持</a><label class="site-language-switch"><select data-site-language-select data-current="zh" aria-label="切换语言"><option value="zh" data-site-locale="zh" selected>中文</option><option value="en" data-site-locale="en">English</option></select></label></div></div></header><script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.33765cd5598b.js"></script><script type="module">var e=class extends HTMLElement{controller;finish;connectedCallback(){this.controller?.abort();let e=(this.controller=new AbortController).signal,t=this.querySelector(`.outline-mobile-toggle`),n=this.querySelector(`dialog`),r=this.querySelector(`.outline-mobile-content`),i=this.closest(`mzsh-reading`),a=i?.querySelector(`.article-sidebar .article-outline nav`),o=i?.closest(`.main-frame,.site-chrome-main`);if(!t||!n||!r||!a||typeof n.showModal!=`function`)return;let s=matchMedia(`(max-width:720px)`),c=!1,l=``,u=0,d=!0,f=()=>{c&&(c=!1,o&&(o.style.overflow=l,o.scrollTop=u),t.setAttribute(`aria-expanded`,`false`),d&&t.isConnected&&t.focus({preventScroll:!0}))};this.finish=f;let p=(e=!0)=>{d=e,n.open&&n.close(),f()};t.addEventListener(`click`,()=>{s.matches&&!n.open&&(r.replaceChildren(a.cloneNode(!0)),l=o?.style.overflow||``,u=o?.scrollTop||0,o&&(o.style.overflow=`hidden`),c=!0,d=!0,t.setAttribute(`aria-expanded`,`true`),n.showModal(),n.querySelector(`[data-outline-close]`)?.focus())},{signal:e}),n.addEventListener(`cancel`,e=>{e.preventDefault(),p()},{signal:e}),n.addEventListener(`close`,f,{signal:e}),n.addEventListener(`click`,e=>{let t=e.target;if(t===n||t.closest(`[data-outline-close]`)){p();return}let r=t.closest(`a[href^="#"]`);if(!r)return;let i=e;if(i.button!==0||i.ctrlKey||i.metaKey||i.shiftKey||i.altKey)return;let o=Array.from(a.querySelectorAll(`a`)).find(e=>e.getAttribute(`href`)===r.getAttribute(`href`));o&&(e.preventDefault(),e.stopPropagation(),p(),o.click())},{signal:e}),s.addEventListener(`change`,()=>{s.matches||p(!1)},{signal:e}),document.addEventListener(`astro:before-preparation`,()=>p(!1),{signal:e}),e.addEventListener(`abort`,()=>p(!1),{once:!0}),this.dataset.ready=``}disconnectedCallback(){this.controller?.abort(),this.finish?.(),this.removeAttribute(`data-ready`)}};customElements.get(`mobile-outline`)||customElements.define(`mobile-outline`,e);</script><main id="main" tabindex="-1" class="site-chrome-main"><div class="master-page"><header class="shell master-page-head"><p class="master-section-title">博客</p><p>技术思考、排障与开发记录。</p></header><section class="shell master-page-body"><mzsh-reading class="reading-surface"><div class="master-detail reading-detail has-project-hero note-detail" data-blog-article="true" data-pagefind-body><header class="project-hero note-hero" data-note-hero><div class="project-hero-copy"><p class="project-breadcrumb" data-pagefind-ignore><a href="/zh/blog/">博客</a><span>/</span><span class="note-category">Python</span></p><div class="project-title-group"><h1 id="detail-python-perforce-stream-switch-safety" data-pagefind-meta="title">Perforce 切换流工作区：预检与失败边界</h1></div><p class="project-description">一个按钮同时改 Client Stream、同步和清理，容易让本地修改落在错误视图中。本文仅介绍通用 Python 自动化的保护流程，完全去掉私人服务器、账号和工作区信息。配套代码使用 fake P4，不连接真实服务器。</p></div></header><mobile-outline data-pagefind-ignore="true"><div class="outline-mobile-controls"><a class="outline-mobile-back" href="/zh/blog/" aria-label="返回">返回</a><button type="button" class="outline-mobile-toggle" aria-label="打开本页目录" aria-expanded="false" aria-haspopup="dialog">目录 <span aria-hidden="true">⌄</span></button></div><dialog class="outline-mobile-dialog" aria-label="本页目录"><div class="outline-mobile-panel"><header><strong>本页目录</strong><button type="button" data-outline-close aria-label="关闭目录">×</button></header><div class="outline-mobile-content article-outline"></div></div></dialog></mobile-outline><aside class="article-sidebar" aria-label="文章导航" data-pagefind-ignore><div class="article-detail-controls"><a class="article-back" href="/zh/blog/" aria-label="返回">返回</a><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/blog/python-perforce-stream-switch-safety/"></label><script type="application/json" data-engagement-config>{"id":"blog:python-perforce-stream-switch-safety","origin":"https://mzsh.me","url":"https://mzsh.me/blog/python-perforce-stream-switch-safety/","title":"Switching Perforce stream workspaces: preflight and failure boundaries","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/blog/python-perforce-stream-switch-safety/"></label></noscript></section></div><section class="article-outline"><p class="article-outline-heading">本页大纲</p><nav aria-label="本页大纲"><ol class="outline-tree outline-tree-root"><li class="outline-node" data-heading-depth="2"><a href="#%E4%B8%80%E9%94%AE%E5%88%87%E6%8D%A2perforce%E6%B5%81%E5%B7%A5%E4%BD%9C%E5%8C%BA" class="outline-link outline-root-link">一键切换Perforce流工作区</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8A%9F%E8%83%BD%E8%AF%B4%E6%98%8E" class="outline-link outline-root-link">功能说明</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%89%B9%E6%AE%8A%E6%80%A7%E8%AF%B4%E6%98%8E" class="outline-link outline-root-link">特殊性说明</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%8E%AF%E5%A2%83%E8%AF%B4%E6%98%8E" class="outline-link outline-root-link">环境说明</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%AE%9E%E7%8E%B0" class="outline-link outline-root-link">实现</a></li></ol></nav></section></aside><article class="master-panel" aria-labelledby="detail-python-perforce-stream-switch-safety"><div class="prose"><h2 id="一键切换perforce流工作区">一键切换Perforce流工作区</h2>
+<h2 id="功能说明">功能说明</h2>
+<p>傻瓜式一键切换Perforce流工作区，注意，仅适用于流工作区</p>
+<p>使用前，确保p4v能正常打开使用，p4v能正常使用这个脚本就能正常执行</p>
+<p>使用前需正确设置p4 set</p>
+<p>P4PORT,P4USER都必须设置</p>
+<p>P4CLIENT可以设置也可以不设置，但必须保证这个用户在这台电脑上有至少一个流工作区</p>
+<h2 id="特殊性说明">特殊性说明</h2>
+<p>因为是给公司开发使用，根据公司的实际环境来开发，所以代码并非适配任何情况</p>
+<p>最直接的，公司perforce流都是两次目录，即//Streams/Project/分支</p>
+<h2 id="环境说明">环境说明</h2>
+<p>win11 python 3.10</p>
+<h2 id="实现">实现</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>from P4 import P4, P4Exception, OutputHandler</span></span>
+<span class="line"><span>import socket</span></span>
+<span class="line"><span>import tkinter as tk</span></span>
+<span class="line"><span>from tkinter import ttk</span></span>
+<span class="line"><span>from tkinter import messagebox</span></span>
+<span class="line"><span>import sys</span></span>
+<span class="line"><span>import os</span></span>
+<span class="line"><span>import threading</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 日志信息输出</span></span>
+<span class="line"><span>def log_message(message):</span></span>
+<span class="line"><span>    """在日志输出区添加一条消息"""</span></span>
+<span class="line"><span>    def append_message():</span></span>
+<span class="line"><span>        log_text.configure(state='normal')</span></span>
+<span class="line"><span>        log_text.insert('end', message + '\n')</span></span>
+<span class="line"><span>        log_text.configure(state='disabled')</span></span>
+<span class="line"><span>        log_text.see('end')  # 滚动到最后一行</span></span>
+<span class="line"><span>    root.after(0, append_message)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 清空日志</span></span>
+<span class="line"><span>def clear_log():</span></span>
+<span class="line"><span>    def clear():</span></span>
+<span class="line"><span>        log_text.configure(state='normal')</span></span>
+<span class="line"><span>        log_text.delete('1.0', tk.END)</span></span>
+<span class="line"><span>        log_text.configure(state='disabled')</span></span>
+<span class="line"><span>    root.after(0, clear)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 更新进度条</span></span>
+<span class="line"><span>def update_progress(current, total):</span></span>
+<span class="line"><span>    percentage = int((current / total) * 100)</span></span>
+<span class="line"><span>    def update():</span></span>
+<span class="line"><span>        progress_bar['value'] = percentage</span></span>
+<span class="line"><span>        progress_percentage_label.configure(text=f"{percentage}%")</span></span>
+<span class="line"><span>    root.after(0, update)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 更新当前操作标签</span></span>
+<span class="line"><span>def update_operation_label(text):</span></span>
+<span class="line"><span>    def update():</span></span>
+<span class="line"><span>        operation_label.configure(text=text)</span></span>
+<span class="line"><span>    root.after(0, update)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def get_local_stream_clients():</span></span>
+<span class="line"><span>    # 获取本地主机名</span></span>
+<span class="line"><span>    local_hostname = socket.gethostname()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 获取所有客户端（工作区）</span></span>
+<span class="line"><span>    clients = p4.run_clients()</span></span>
+<span class="line"><span>    local_stream_clients = []</span></span>
+<span class="line"><span>    for client in clients:</span></span>
+<span class="line"><span>        client_host = client.get('Host', '')</span></span>
+<span class="line"><span>        client_user = client.get('Owner', '')</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # 检查 Host 是否与当前主机匹配，并且存在 'Stream' 字段</span></span>
+<span class="line"><span>        if client_host.lower() == local_hostname.lower() and client_user == p4.user and 'Stream' in client:</span></span>
+<span class="line"><span>            local_stream_clients.append(client.get('client', p4.client))</span></span>
+<span class="line"><span>    return local_stream_clients</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 更新客户端下拉列表</span></span>
+<span class="line"><span>def update_client_combobox(event=None):</span></span>
+<span class="line"><span>    client_combo['values'] = get_local_stream_clients()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def select_client_combobox(event=None):</span></span>
+<span class="line"><span>    global select_stream_path</span></span>
+<span class="line"><span>    cur_client = p4_client_var.get()</span></span>
+<span class="line"><span>    for client in p4.run_clients():</span></span>
+<span class="line"><span>        if client.get('client', '') == cur_client:</span></span>
+<span class="line"><span>            select_stream_path = client.get('Stream', '')</span></span>
+<span class="line"><span>            parse_stream = parse_stream_path(select_stream_path)</span></span>
+<span class="line"><span>            p4_project_var.set(parse_stream[0])</span></span>
+<span class="line"><span>            p4_stream_var.set(parse_stream[1])</span></span>
+<span class="line"><span>    # 数据重置</span></span>
+<span class="line"><span>    reset_default_var()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 更新项目下拉列表</span></span>
+<span class="line"><span>def update_project_combobox(event=None):</span></span>
+<span class="line"><span>    # 获取所有流</span></span>
+<span class="line"><span>    streams = p4.run_streams()</span></span>
+<span class="line"><span>    projects = []</span></span>
+<span class="line"><span>    for stream in streams:</span></span>
+<span class="line"><span>        stream_Type = stream.get('Type', '')</span></span>
+<span class="line"><span>        # 仅添加主线类型的流</span></span>
+<span class="line"><span>        if stream_Type == 'mainline':</span></span>
+<span class="line"><span>            parse_stream = parse_stream_path(stream.get('Stream',''))</span></span>
+<span class="line"><span>            projects.append(parse_stream[0])</span></span>
+<span class="line"><span>    project_combo['values'] = projects</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def select_project_combobox(event=None):</span></span>
+<span class="line"><span>    global select_stream_path</span></span>
+<span class="line"><span>    select_project = p4_project_var.get()</span></span>
+<span class="line"><span>    if select_project == default_project_var:</span></span>
+<span class="line"><span>        p4_stream_var.set(default_stream_var)</span></span>
+<span class="line"><span>        select_stream_path = default_stream_path_var</span></span>
+<span class="line"><span>    else:</span></span>
+<span class="line"><span>        # 获取所有流</span></span>
+<span class="line"><span>        streams = p4.run_streams()</span></span>
+<span class="line"><span>        for stream in streams:</span></span>
+<span class="line"><span>            if stream.get('Type') == 'mainline':</span></span>
+<span class="line"><span>                parse_stream = parse_stream_path(stream.get('Stream', ''))</span></span>
+<span class="line"><span>                if parse_stream[0] == select_project:</span></span>
+<span class="line"><span>                    p4_stream_var.set(parse_stream[1])</span></span>
+<span class="line"><span>                    select_stream_path = stream.get('Stream', '')</span></span>
+<span class="line"><span>                    break</span></span>
+<span class="line"><span>    update_workspace_text()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 更新流下拉列表</span></span>
+<span class="line"><span>def update_stream_combobox(event=None):</span></span>
+<span class="line"><span>    # 获取所有流</span></span>
+<span class="line"><span>    streams = p4.run_streams()</span></span>
+<span class="line"><span>    cur_project = p4_project_var.get()</span></span>
+<span class="line"><span>    values = []</span></span>
+<span class="line"><span>    for stream in streams:</span></span>
+<span class="line"><span>        parse_stream = parse_stream_path(stream.get('Stream', ''))</span></span>
+<span class="line"><span>        if parse_stream[0] == cur_project:</span></span>
+<span class="line"><span>            values.append(parse_stream[1])</span></span>
+<span class="line"><span>    stream_combo['values'] = values</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 更新工作区目录</span></span>
+<span class="line"><span>def update_workspace_text():</span></span>
+<span class="line"><span>    global default_workspace_root_var</span></span>
+<span class="line"><span>    p4_workspace_var.set(os.path.join(default_workspace_root_var, p4_project_var.get()))</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def reset_default_var():</span></span>
+<span class="line"><span>    global default_project_var, default_stream_var, default_workspace_root_var ,default_stream_path_var</span></span>
+<span class="line"><span>    default_project_var = p4_project_var.get()</span></span>
+<span class="line"><span>    default_stream_var = p4_stream_var.get()</span></span>
+<span class="line"><span>    cur_client = p4_client_var.get()</span></span>
+<span class="line"><span>    for client in p4.run_clients():</span></span>
+<span class="line"><span>        if client.get('client', '') == cur_client:</span></span>
+<span class="line"><span>            default_stream_path_var = client.get('Stream', '')</span></span>
+<span class="line"><span>            default_workspace_root_var = client.get('Root','')</span></span>
+<span class="line"><span>            workspace_array = default_workspace_root_var.split('\\')[:-1]</span></span>
+<span class="line"><span>            workspace_array.insert(1,'\\')</span></span>
+<span class="line"><span>            default_workspace_root_var = os.path.join(*workspace_array)</span></span>
+<span class="line"><span>            break</span></span>
+<span class="line"><span>    update_workspace_text()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def parse_stream_path(stream_path):</span></span>
+<span class="line"><span>    return stream_path.split('/')[-2:]</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def run_sync_and_clean():</span></span>
+<span class="line"><span>    try:</span></span>
+<span class="line"><span>        update_operation_label("正在连接服务器...")</span></span>
+<span class="line"><span>        command_target = f"//{p4_client_var.get()}/..."</span></span>
+<span class="line"><span>        # 创建新的 P4 实例</span></span>
+<span class="line"><span>        p4_thread = P4()</span></span>
+<span class="line"><span>        p4_thread.connect()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # 使用自定义的Handler来统计总的文件数</span></span>
+<span class="line"><span>        class PreviewOutputHandler(OutputHandler):</span></span>
+<span class="line"><span>            def __init__(self):</span></span>
+<span class="line"><span>                super().__init__()</span></span>
+<span class="line"><span>                self.count = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>            def outputStat(self, stat):</span></span>
+<span class="line"><span>                self.count += 1</span></span>
+<span class="line"><span>                return OutputHandler.HANDLED</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        preview_handler = PreviewOutputHandler()</span></span>
+<span class="line"><span>        total_files = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # 统计sync命令将处理的文件数</span></span>
+<span class="line"><span>        if auto_sync_var.get():</span></span>
+<span class="line"><span>            preview_handler.count = 0  # 重置计数器</span></span>
+<span class="line"><span>            p4_thread.handler = preview_handler</span></span>
+<span class="line"><span>            p4_thread.run("sync", "-k", "-n", command_target)</span></span>
+<span class="line"><span>            total_files += preview_handler.count</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if auto_sync_var.get():</span></span>
+<span class="line"><span>            # 统计clean命令将处理的文件数</span></span>
+<span class="line"><span>            preview_handler.count = 0  # 重置计数器</span></span>
+<span class="line"><span>            p4_thread.handler = preview_handler</span></span>
+<span class="line"><span>            p4_thread.run("clean", "-n", command_target)</span></span>
+<span class="line"><span>            total_files += preview_handler.count</span></span>
+<span class="line"><span>        </span></span>
+<span class="line"><span>        if total_files == 0:</span></span>
+<span class="line"><span>            total_files = 1</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # 显示并初始化进度条</span></span>
+<span class="line"><span>        def show_progress_bar():</span></span>
+<span class="line"><span>            progress_bar['value'] = 0</span></span>
+<span class="line"><span>            progress_bar['maximum'] = 100</span></span>
+<span class="line"><span>            progress_bar.grid()</span></span>
+<span class="line"><span>            progress_label.grid()</span></span>
+<span class="line"><span>            progress_percentage_label.configure(text="0%")</span></span>
+<span class="line"><span>        root.after(0, show_progress_bar)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        # 使用新的Handler来更新进度条</span></span>
+<span class="line"><span>        class MyOutputHandler(OutputHandler):</span></span>
+<span class="line"><span>            def __init__(self):</span></span>
+<span class="line"><span>                super().__init__()</span></span>
+<span class="line"><span>                self.processed_files = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>            def outputStat(self, stat):</span></span>
+<span class="line"><span>                self.processed_files += 1</span></span>
+<span class="line"><span>                update_progress(self.processed_files, total_files)</span></span>
+<span class="line"><span>                log_message(f"{stat.get('depotFile', '')}")</span></span>
+<span class="line"><span>                return OutputHandler.HANDLED</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>            def outputText(self, text):</span></span>
+<span class="line"><span>                log_message(text)</span></span>
+<span class="line"><span>                return OutputHandler.HANDLED</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>            def outputInfo(self, info):</span></span>
+<span class="line"><span>                log_message(info)</span></span>
+<span class="line"><span>                return OutputHandler.HANDLED</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        handler = MyOutputHandler()</span></span>
+<span class="line"><span>        p4_thread.handler = handler</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if auto_sync_var.get():</span></span>
+<span class="line"><span>        # 实时同步操作并显示进度</span></span>
+<span class="line"><span>            update_operation_label("正在链接文件...")</span></span>
+<span class="line"><span>            log_message("开始执行 sync -k 命令...")</span></span>
+<span class="line"><span>            p4_thread.run("sync", "-k", command_target)</span></span>
+<span class="line"><span>            log_message("sync -k 命令已完成，文件状态更新完成。")</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        if auto_clean_var.get():</span></span>
+<span class="line"><span>            # 实时清理操作并显示进度</span></span>
+<span class="line"><span>            update_operation_label("正在清理工作区...")</span></span>
+<span class="line"><span>            log_message("开始执行 clean 命令...")</span></span>
+<span class="line"><span>            p4_thread.run("clean", command_target)</span></span>
+<span class="line"><span>            log_message("clean 命令已完成，工作区已清理。")</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>        update_operation_label("操作已完成。")</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    except P4Exception as e:</span></span>
+<span class="line"><span>        if "up-to-date" in str(e) or "no file(s) to reconcile" in str(e):</span></span>
+<span class="line"><span>            log_message("文件已经是最新状态。")</span></span>
+<span class="line"><span>        else:</span></span>
+<span class="line"><span>            log_message("同步操作中发生错误：" + "\n".join(e.errors))</span></span>
+<span class="line"><span>            raise  # 重新抛出错误，以便终止后续操作</span></span>
+<span class="line"><span>    finally:</span></span>
+<span class="line"><span>        p4_thread.disconnect()</span></span>
+<span class="line"><span>        finish_sync_and_clean()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def finish_sync_and_clean():</span></span>
+<span class="line"><span>    log_message("操作已完成。")</span></span>
+<span class="line"><span>    # 隐藏进度条</span></span>
+<span class="line"><span>    def hide_progress_bar():</span></span>
+<span class="line"><span>        progress_bar.grid_remove()</span></span>
+<span class="line"><span>        progress_label.grid_remove()</span></span>
+<span class="line"><span>    root.after(0, hide_progress_bar)</span></span>
+<span class="line"><span>    # 恢复UI控件</span></span>
+<span class="line"><span>    enable_ui()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def switch_workspace():</span></span>
+<span class="line"><span>    # 清空日志</span></span>
+<span class="line"><span>    clear_log()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    target_workspace = p4_workspace_var.get()</span></span>
+<span class="line"><span>    p4.client = p4_client_var.get()</span></span>
+<span class="line"><span>    log_message(f"切换客户端为：{p4.client}")</span></span>
+<span class="line"><span>    # 获取当前工作区配置</span></span>
+<span class="line"><span>    client_spec = p4.fetch_client()</span></span>
+<span class="line"><span>    # 修改流路径</span></span>
+<span class="line"><span>    client_spec["Stream"] = select_stream_path</span></span>
+<span class="line"><span>    log_message(f"切换流路径：{select_stream_path}")</span></span>
+<span class="line"><span>    client_spec["Root"] = target_workspace</span></span>
+<span class="line"><span>    log_message(f"切换工作区路径：{target_workspace}")</span></span>
+<span class="line"><span>    # 保存更新后的工作区配置</span></span>
+<span class="line"><span>    p4.save_client(client_spec)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    reset_default_var()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 禁用UI控件</span></span>
+<span class="line"><span>    disable_ui()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    threading.Thread(target=run_sync_and_clean, daemon=True).start()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def disable_ui():</span></span>
+<span class="line"><span>    # 禁用所有的输入控件和按钮</span></span>
+<span class="line"><span>    for widget, default_state, default_fg in widgets_defaulte_settings:</span></span>
+<span class="line"><span>        widget.configure(state='disabled')</span></span>
+<span class="line"><span>        if default_fg != '':</span></span>
+<span class="line"><span>            widget.configure(fg='grey')</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>def enable_ui():</span></span>
+<span class="line"><span>    for widget, default_state, default_fg in widgets_defaulte_settings:</span></span>
+<span class="line"><span>        widget.configure(state=default_state)</span></span>
+<span class="line"><span>        if default_fg != '':</span></span>
+<span class="line"><span>            widget.configure(fg=default_fg)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 创建主窗口</span></span>
+<span class="line"><span>root = tk.Tk()</span></span>
+<span class="line"><span>root.title("Perforce流一键切换工具")</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 设置窗口默认尺寸为900×600</span></span>
+<span class="line"><span>root.geometry("900x600")</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 使窗口可以拖拽缩放</span></span>
+<span class="line"><span>root.rowconfigure(0, weight=1)</span></span>
+<span class="line"><span>root.columnconfigure(0, weight=1)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 创建一个框架来容纳所有控件</span></span>
+<span class="line"><span>frame = tk.Frame(root)</span></span>
+<span class="line"><span>frame.grid(row=0, column=0, sticky='nsew')</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 设置框架的行和列权重</span></span>
+<span class="line"><span>for i in range(15):</span></span>
+<span class="line"><span>    frame.rowconfigure(i, weight=1)</span></span>
+<span class="line"><span>frame.columnconfigure(1, weight=1)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index = 0</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>widgets_defaulte_settings = []</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 创建标签和文本框</span></span>
+<span class="line"><span>p4_server_var = tk.StringVar()</span></span>
+<span class="line"><span>p4_server_label = tk.Label(frame, text="服务器:")</span></span>
+<span class="line"><span>p4_server_label.grid(row=row_index, column=0, padx=10, pady=5, sticky='e')</span></span>
+<span class="line"><span>p4_server_entry = tk.Entry(frame, textvariable=p4_server_var, state='readonly')</span></span>
+<span class="line"><span>p4_server_entry.grid(row=row_index, column=1, padx=10, pady=5, sticky='ew')</span></span>
+<span class="line"><span>widgets_defaulte_settings.append([p4_server_entry, p4_server_entry.cget('state'), p4_server_entry.cget('fg')])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 1</span></span>
+<span class="line"><span>pt_user_var = tk.StringVar()</span></span>
+<span class="line"><span>pt_user_label = tk.Label(frame, text="用户:")</span></span>
+<span class="line"><span>pt_user_label.grid(row=row_index, column=0, padx=10, pady=5, sticky='e')</span></span>
+<span class="line"><span>pt_user_entry = tk.Entry(frame, textvariable=pt_user_var,  state='readonly')</span></span>
+<span class="line"><span>pt_user_entry.grid(row=row_index, column=1, padx=10, pady=5, sticky='ew')</span></span>
+<span class="line"><span>widgets_defaulte_settings.append([pt_user_entry, pt_user_entry.cget('state'), pt_user_entry.cget('fg')])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 1</span></span>
+<span class="line"><span># 创建客户端的下拉框，设置为只读</span></span>
+<span class="line"><span>p4_client_var = tk.StringVar()</span></span>
+<span class="line"><span>client_label = tk.Label(frame, text="流客户端:")</span></span>
+<span class="line"><span>client_label.grid(row=row_index, column=0, padx=10, pady=5, sticky='e')</span></span>
+<span class="line"><span>client_combo = ttk.Combobox(frame, textvariable=p4_client_var, state='readonly')</span></span>
+<span class="line"><span>client_combo.grid(row=row_index, column=1, padx=10, pady=5, sticky='ew')</span></span>
+<span class="line"><span>client_combo.bind("&lt;Button-1&gt;", update_client_combobox)</span></span>
+<span class="line"><span>client_combo.bind("&lt;&lt;ComboboxSelected&gt;&gt;", select_client_combobox)</span></span>
+<span class="line"><span>widgets_defaulte_settings.append([client_combo, client_combo.cget('state'), ''])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 1</span></span>
+<span class="line"><span># 创建项目的下拉框，设置为只读</span></span>
+<span class="line"><span>p4_project_var = tk.StringVar()</span></span>
+<span class="line"><span>project_label = tk.Label(frame, text="选择流项目:")</span></span>
+<span class="line"><span>project_label.grid(row=row_index, column=0, padx=10, pady=5, sticky='e')</span></span>
+<span class="line"><span>project_combo = ttk.Combobox(frame, textvariable=p4_project_var, state='readonly')</span></span>
+<span class="line"><span>project_combo.grid(row=row_index, column=1, padx=10, pady=5, sticky='ew')</span></span>
+<span class="line"><span>project_combo.bind("&lt;Button-1&gt;", update_project_combobox)</span></span>
+<span class="line"><span>project_combo.bind("&lt;&lt;ComboboxSelected&gt;&gt;", select_project_combobox)</span></span>
+<span class="line"><span>widgets_defaulte_settings.append([project_combo, project_combo.cget('state'), ''])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 1</span></span>
+<span class="line"><span># 创建分支的下拉框，设置为只读</span></span>
+<span class="line"><span>p4_stream_var = tk.StringVar()</span></span>
+<span class="line"><span>stream_label = tk.Label(frame, text="选择流分支:")</span></span>
+<span class="line"><span>stream_label.grid(row=row_index, column=0, padx=10, pady=5, sticky='e')</span></span>
+<span class="line"><span>stream_combo = ttk.Combobox(frame, textvariable=p4_stream_var, state='readonly')</span></span>
+<span class="line"><span>stream_combo.grid(row=row_index, column=1, padx=10, pady=5, sticky='ew')</span></span>
+<span class="line"><span>stream_combo.bind("&lt;Button-1&gt;", update_stream_combobox)</span></span>
+<span class="line"><span>widgets_defaulte_settings.append([stream_combo, stream_combo.cget('state'), ''])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 1</span></span>
+<span class="line"><span># 工作区预览目录</span></span>
+<span class="line"><span>p4_workspace_var = tk.StringVar()</span></span>
+<span class="line"><span>workspace_label = tk.Label(frame, text="工作区目录:")</span></span>
+<span class="line"><span>workspace_label.grid(row=row_index, column=0, padx=10, pady=5, sticky='e')</span></span>
+<span class="line"><span>p4_workspace_entry = tk.Entry(frame, textvariable=p4_workspace_var)</span></span>
+<span class="line"><span>p4_workspace_entry.grid(row=row_index, column=1, padx=10, pady=5, sticky='ew')</span></span>
+<span class="line"><span>widgets_defaulte_settings.append([p4_workspace_entry, p4_workspace_entry.cget('state'), p4_workspace_entry.cget('fg')])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 1</span></span>
+<span class="line"><span># 创建“自动链接”复选框</span></span>
+<span class="line"><span>auto_sync_var = tk.BooleanVar(value=True)  # 默认选中</span></span>
+<span class="line"><span>auto_sync_check = tk.Checkbutton(frame, text="自动链接服务器文件", variable=auto_sync_var)</span></span>
+<span class="line"><span>auto_sync_check.grid(row=row_index, column=1, sticky='w')</span></span>
+<span class="line"><span>widgets_defaulte_settings.append([auto_sync_check, auto_sync_check.cget('state'), auto_sync_check.cget('fg')])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 1</span></span>
+<span class="line"><span># 创建“自动清理”复选框</span></span>
+<span class="line"><span>auto_clean_var = tk.BooleanVar(value=True)  # 默认选中</span></span>
+<span class="line"><span>auto_clean_check = tk.Checkbutton(frame, text="自动清理，注：该选项为强制清理所有文件，请谨慎选择", variable=auto_clean_var)</span></span>
+<span class="line"><span>auto_clean_check.grid(row=row_index, column=1, sticky='w')</span></span>
+<span class="line"><span>widgets_defaulte_settings.append([auto_clean_check, auto_clean_check.cget('state'), auto_clean_check.cget('fg')])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 1</span></span>
+<span class="line"><span># 添加“一键应用”按钮，放在中间</span></span>
+<span class="line"><span>apply_button = tk.Button(frame, text="一键应用", command=switch_workspace)</span></span>
+<span class="line"><span>apply_button.grid(row=row_index, column=0, columnspan=2, pady=10)</span></span>
+<span class="line"><span>widgets_defaulte_settings.append([apply_button, apply_button.cget('state'), apply_button.cget('fg')])</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 1</span></span>
+<span class="line"><span># 添加进度条和进度标签</span></span>
+<span class="line"><span>progress_bar = ttk.Progressbar(frame, mode='determinate')</span></span>
+<span class="line"><span>progress_label = tk.Frame(frame)</span></span>
+<span class="line"><span>progress_label.grid_columnconfigure(0, weight=1)</span></span>
+<span class="line"><span>progress_label.grid_columnconfigure(1, weight=1)</span></span>
+<span class="line"><span>progress_label.grid_rowconfigure(0, weight=1)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>operation_label = tk.Label(progress_label, text="", name='operation')</span></span>
+<span class="line"><span>operation_label.grid(row=0, column=0, sticky='w')</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>progress_percentage_label = tk.Label(progress_label, text="0%", name='percentage')</span></span>
+<span class="line"><span>progress_percentage_label.grid(row=0, column=1, sticky='e')</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>progress_bar.grid(row=row_index, column=0, columnspan=2, padx=10, pady=5, sticky='ew')</span></span>
+<span class="line"><span>progress_label.grid(row=row_index+1, column=0, columnspan=2, sticky='ew')</span></span>
+<span class="line"><span># 默认隐藏进度条</span></span>
+<span class="line"><span>progress_bar.grid_remove()</span></span>
+<span class="line"><span>progress_label.grid_remove()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>row_index += 2</span></span>
+<span class="line"><span># 添加日志输出区</span></span>
+<span class="line"><span>log_label = tk.Label(frame, text="日志输出：")</span></span>
+<span class="line"><span>log_label.grid(row=row_index, column=0, padx=10, pady=5, sticky='nw')</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>log_text = tk.Text(frame, height=10, state='disabled')</span></span>
+<span class="line"><span>log_text.grid(row=row_index, column=1, padx=10, pady=5, sticky='nsew')</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 设置日志输出区的滚动条</span></span>
+<span class="line"><span>scrollbar = tk.Scrollbar(frame, command=log_text.yview)</span></span>
+<span class="line"><span>scrollbar.grid(row=row_index, column=2, sticky='ns')</span></span>
+<span class="line"><span>log_text.configure(yscrollcommand=scrollbar.set)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span># 调整日志输出区的行权重</span></span>
+<span class="line"><span>frame.rowconfigure(row_index, weight=3)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>try:</span></span>
+<span class="line"><span>    p4 = P4()</span></span>
+<span class="line"><span>    try:</span></span>
+<span class="line"><span>        p4.connect()</span></span>
+<span class="line"><span>    except P4Exception as e:</span></span>
+<span class="line"><span>        messagebox.showerror("连接服务器失败", "请检查p4 set中P4PORT")</span></span>
+<span class="line"><span>        sys.exit()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    log_message("成功连接到 P4 服务器！")</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    p4_server_var.set(p4.port)</span></span>
+<span class="line"><span>    pt_user_var.set(p4.user)</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    local_stream_clients = get_local_stream_clients()</span></span>
+<span class="line"><span>    if p4.client not in local_stream_clients:</span></span>
+<span class="line"><span>        if len(local_stream_clients) &gt; 0:</span></span>
+<span class="line"><span>            p4.client = local_stream_clients[0]</span></span>
+<span class="line"><span>        else:</span></span>
+<span class="line"><span>            messagebox.showerror("未检测到流客户端", f"未在本地检测到用户{p4.user}所属的流客户端")</span></span>
+<span class="line"><span>            sys.exit()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    p4_client_var.set(p4.client)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    select_client_combobox()</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>    # 启动主循环</span></span>
+<span class="line"><span>    root.mainloop()</span></span>
+<span class="line"><span>except P4Exception as e:</span></span>
+<span class="line"><span>    # 捕获异常并获取报错信息</span></span>
+<span class="line"><span>    if 'User' in str(e) and 'doesn\'t exist' in str(e):</span></span>
+<span class="line"><span>         messagebox.showerror("用户设置错误", "请检查p4 set中P4USER")</span></span>
+<span class="line"><span>    messagebox.showerror("程序运行错误", "\n".join(p4.errors))</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    log_message("\n".join(p4.errors))</span></span>
+<span class="line"><span>finally:</span></span>
+<span class="line"><span>    if p4.connected():</span></span>
+<span class="line"><span>        p4.disconnect()</span></span>
+<span class="line"><span>        log_message("P4服务器已断开，请确保服务器正确开启后重启该软件")</span></span>
+<span class="line"><span></span></span></code></pre></div></article></div></mzsh-reading></section></div></main><footer data-astro-transition-persist="site-footer" class="site-footer"><div class="shell legal-footer"><span>© MZSH</span><a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">晋ICP备2026011728号-2</a><a class="police-record" href="https://beian.mps.gov.cn/#/query/webSearch?code=14082502000144" target="_blank" rel="noopener noreferrer"><img src="/assets/beian-official.png" alt="" width="20" height="20" loading="lazy" decoding="async">晋公网安备14082502000144号</a></div></footer></div><script>
   if (!document.documentElement.dataset.siteChromeBound) {
     document.documentElement.dataset.siteChromeBound = 'true';
     const setMenuOpen = (open) => {
@@ -135,4 +550,4 @@ if (!document.documentElement.dataset.mediaViewerBound) {
   document.addEventListener('astro:before-swap', stop); addEventListener('pagehide', stop);
   document.addEventListener('click', event => { const viewer = dialog(); if (event.target === viewer) close(); });
 }
-</script><script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/blog/python-perforce-stream-switch-safety/","en":"/en/blog/python-perforce-stream-switch-safety/"},"anchors":{"zh":{"问题与环境":"问题与环境","切换前保护本地状态":"切换前保护本地状态","失败不能笼统称为回滚":"失败不能笼统称为回滚","可验证例与限制":"可验证例与限制","独立样例":"独立样例"},"en":{"问题与环境":"problem-and-environment","切换前保护本地状态":"protect-local-state-first","失败不能笼统称为回滚":"failure-is-not-necessarily-rollback","可验证例与限制":"try-it-and-understand-the-limits","独立样例":"standalone-sample"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body></html><script type="module">function e(e,t,n=Date.now,r){let i=new Set([`/works/`,`/cases/`,`/blog/`]),a=new Map,o=new Map,s={hits:0,network:0,rejected:0},c=0,l=(e,n)=>{let r=typeof Request<`u`&&e instanceof Request?e:void 0,a=new URL(r?.url??String(e),t);if(a.origin!==t||!i.has(a.pathname)||(n?.method??r?.method??`GET`).toUpperCase()!==`GET`||(n?.credentials??r?.credentials)===`omit`||[`reload`,`no-store`,`no-cache`].includes(n?.cache??r?.cache??``))return;let o=new Headers(n?.headers??r?.headers);if(!(o.has(`authorization`)||o.has(`range`)))return a.pathname},u=(e,t)=>t?t.aborted?Promise.reject(new DOMException(`Aborted`,`AbortError`)):new Promise((n,r)=>{let i=()=>r(new DOMException(`Aborted`,`AbortError`));t.addEventListener(`abort`,i,{once:!0}),e.then(e=>{t.removeEventListener(`abort`,i),t.aborted||n(e)},e=>{t.removeEventListener(`abort`,i),r(e)})}):e,d=async(t,i)=>{let d=l(t,i);if(!d)return e(t,i);let f=typeof Request<`u`&&t instanceof Request?t:void 0,p=i?.signal===null?null:i?.signal??f?.signal;if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);let m=a.get(d);if(m&&m.expires>n()){if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);return s.hits++,typeof performance<`u`&&(performance.clearMarks(`mzsh-index-cache-hit`),performance.mark(`mzsh-index-cache-hit`)),m.response.clone()}a.delete(d);let h=o.get(d);if(!h){s.network++;let l=c,u={...i,signal:void 0};h=e(f?new Request(f,{signal:new AbortController().signal}):t,u).then(async e=>{if(e.status===200&&!e.redirected&&(e.headers.get(`content-type`)??``).includes(`text/html`)){let t=await e.clone().text();if(l===c&&/<meta\b[^>]*name=["']astro-view-transitions-enabled["']/.test(t)&&t.includes(`data-content-index-data`)&&t.includes(`site-chrome`)){a.set(d,{response:e.clone(),expires:n()+6e4});try{r?.(t)}catch{}}else s.rejected++}else s.rejected++;return e}).finally(()=>{o.get(d)===h&&o.delete(d)}),o.set(d,h)}return(await u(h,p)).clone()};return{fetch:d,stats:s,clear(){c++,a.clear(),o.clear()},warm(){return Promise.allSettled([...i].map(e=>d(new URL(e,t),{credentials:`same-origin`})))}}}var t=new Set;function n(e){let n=(e,t)=>e.match(RegExp(`\\b`+t+`=["']([^"']+)["']`,`i`))?.[1];for(let r of e.match(/<(?:link|script)\b[^>]*>/gi)??[]){let e=n(r,`rel`)===`stylesheet`,i=n(r,`type`)===`module`;if(!e&&!i)continue;let a=n(r,e?`href`:`src`);if(!a)continue;let o=new URL(a,location.origin);if(o.origin!==location.origin||!o.pathname.startsWith(`/_astro/`)||t.has(o.href)||t.size>=8||(t.add(o.href),[...document.querySelectorAll(`link[href],script[src]`)].some(e=>(`href`in e?e.href:e.src)===o.href)))continue;let s=document.createElement(`link`);s.rel=e?`preload`:`modulepreload`,e&&(s.as=`style`),s.href=o.href,document.head.append(s)}}var r=e(window.fetch.bind(window),location.origin,Date.now,n);window.fetch=r.fetch,window.addEventListener(`pagehide`,()=>r.clear());var i=navigator.connection;if(!i?.saveData&&!/2g/.test(i?.effectiveType??``)){let e=()=>{r.warm()};`requestIdleCallback`in window?window.requestIdleCallback(e,{timeout:900}):setTimeout(e,200)}for(let e of[`after-preparation`,`after-swap`,`page-load`])document.addEventListener(`astro:`+e,()=>{performance.clearMarks(`mzsh-`+e),performance.mark(`mzsh-`+e)});</script>
+</script><script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/blog/python-perforce-stream-switch-safety/","en":"/en/blog/python-perforce-stream-switch-safety/"},"anchors":{"zh":{"一键切换perforce流工作区":"一键切换perforce流工作区","功能说明":"功能说明","特殊性说明":"特殊性说明","环境说明":"环境说明","实现":"实现"},"en":{"一键切换perforce流工作区":"switch-perforce-stream-workspaces-with-one-click","功能说明":"features","特殊性说明":"special-considerations","环境说明":"environment","实现":"implementation"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body></html><script type="module">function e(e,t,n=Date.now,r){let i=new Set([`/works/`,`/cases/`,`/blog/`]),a=new Map,o=new Map,s={hits:0,network:0,rejected:0},c=0,l=(e,n)=>{let r=typeof Request<`u`&&e instanceof Request?e:void 0,a=new URL(r?.url??String(e),t);if(a.origin!==t||!i.has(a.pathname)||(n?.method??r?.method??`GET`).toUpperCase()!==`GET`||(n?.credentials??r?.credentials)===`omit`||[`reload`,`no-store`,`no-cache`].includes(n?.cache??r?.cache??``))return;let o=new Headers(n?.headers??r?.headers);if(!(o.has(`authorization`)||o.has(`range`)))return a.pathname},u=(e,t)=>t?t.aborted?Promise.reject(new DOMException(`Aborted`,`AbortError`)):new Promise((n,r)=>{let i=()=>r(new DOMException(`Aborted`,`AbortError`));t.addEventListener(`abort`,i,{once:!0}),e.then(e=>{t.removeEventListener(`abort`,i),t.aborted||n(e)},e=>{t.removeEventListener(`abort`,i),r(e)})}):e,d=async(t,i)=>{let d=l(t,i);if(!d)return e(t,i);let f=typeof Request<`u`&&t instanceof Request?t:void 0,p=i?.signal===null?null:i?.signal??f?.signal;if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);let m=a.get(d);if(m&&m.expires>n()){if(p?.aborted)throw new DOMException(`Aborted`,`AbortError`);return s.hits++,typeof performance<`u`&&(performance.clearMarks(`mzsh-index-cache-hit`),performance.mark(`mzsh-index-cache-hit`)),m.response.clone()}a.delete(d);let h=o.get(d);if(!h){s.network++;let l=c,u={...i,signal:void 0};h=e(f?new Request(f,{signal:new AbortController().signal}):t,u).then(async e=>{if(e.status===200&&!e.redirected&&(e.headers.get(`content-type`)??``).includes(`text/html`)){let t=await e.clone().text();if(l===c&&/<meta\b[^>]*name=["']astro-view-transitions-enabled["']/.test(t)&&t.includes(`data-content-index-data`)&&t.includes(`site-chrome`)){a.set(d,{response:e.clone(),expires:n()+6e4});try{r?.(t)}catch{}}else s.rejected++}else s.rejected++;return e}).finally(()=>{o.get(d)===h&&o.delete(d)}),o.set(d,h)}return(await u(h,p)).clone()};return{fetch:d,stats:s,clear(){c++,a.clear(),o.clear()},warm(){return Promise.allSettled([...i].map(e=>d(new URL(e,t),{credentials:`same-origin`})))}}}var t=new Set;function n(e){let n=(e,t)=>e.match(RegExp(`\\b`+t+`=["']([^"']+)["']`,`i`))?.[1];for(let r of e.match(/<(?:link|script)\b[^>]*>/gi)??[]){let e=n(r,`rel`)===`stylesheet`,i=n(r,`type`)===`module`;if(!e&&!i)continue;let a=n(r,e?`href`:`src`);if(!a)continue;let o=new URL(a,location.origin);if(o.origin!==location.origin||!o.pathname.startsWith(`/_astro/`)||t.has(o.href)||t.size>=8||(t.add(o.href),[...document.querySelectorAll(`link[href],script[src]`)].some(e=>(`href`in e?e.href:e.src)===o.href)))continue;let s=document.createElement(`link`);s.rel=e?`preload`:`modulepreload`,e&&(s.as=`style`),s.href=o.href,document.head.append(s)}}var r=e(window.fetch.bind(window),location.origin,Date.now,n);window.fetch=r.fetch,window.addEventListener(`pagehide`,()=>r.clear());var i=navigator.connection;if(!i?.saveData&&!/2g/.test(i?.effectiveType??``)){let e=()=>{r.warm()};`requestIdleCallback`in window?window.requestIdleCallback(e,{timeout:900}):setTimeout(e,200)}for(let e of[`after-preparation`,`after-swap`,`page-load`])document.addEventListener(`astro:`+e,()=>{performance.clearMarks(`mzsh-`+e),performance.mark(`mzsh-`+e)});</script>
