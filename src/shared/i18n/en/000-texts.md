@@ -34,7 +34,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Fixing Missing GI Across Multiple Views in UE 5.3
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A UE 5.3 source-build record of changing the maximum view count from 2 to 3 across seven locations, with a source screenshot and version limits.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "A UE 5.3 source-build record of changing the maximum view count from 2 to 3 across seven locations, with a source screenshot and version limits."
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -2400,7 +2400,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Open-source Tools
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Publishing Images with an Article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Convert local Markdown images to embedded Base64 for export and copying to compatible platforms.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker."
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Markdown
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Images
@@ -2409,57 +2409,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:1@aria-label: GitHub source code, opens in a new tab
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:1.#text:0: GitHub source code
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of MDBlogPacker
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  work:md-image-embed:
-    root.html:1.head:0.meta:2@content: Copy Markdown in Obsidian after converting its local images to embedded Base64.
-    root.html:1.head:0.title:4.#text:0: "MDImageEmbed: Base64 Image Export for Obsidian · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Works
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Plugins, tools, and games.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Obsidian Plugins
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Exporting Local Markdown Images
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MDImageEmbed
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Copy Markdown in Obsidian after converting its local images to embedded Base64.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Images
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Export
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: Purchase and documentation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:0.#text:0: View documentation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of MDImageEmbed
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -3345,9 +3294,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Open-source Tools
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Project Packaging and Deployment
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Package projects quickly without opening the editor"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: UEPackageManager
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Package UE projects through a GUI or CLI and deploy additional files after success.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "Package UE projects directly without opening the editor, using a graphical interface or the command line."
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Packaging
@@ -3399,9 +3348,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Open-source Tools
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Multi-version UE Plugin Packaging
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Package UE plugins for release"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Build plugins across UE versions, inspect logs, and prepare release files in one tool.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "Prepare UE plugins for release, primarily for Fab submissions and also for other distribution channels."
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Plugins
@@ -3453,9 +3402,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Open-source Tools
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Managing UE Plugins in One Place
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Browse and manage local UE plugins"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: UEPluginManager
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Browse project, Marketplace, and engine plugins together, inspect dependencies, and manage plugin state.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "Browse project and engine plugins together, fix garbled directory names, and move plugins between the project and the engine Marketplace directory."
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Plugins
@@ -3508,9 +3457,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Works
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Open-source Tools
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Compile and Launch a Project with One Action
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Compile and launch projects with one click"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: UEQuickStart
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Detect the project and engine, display build logs, and launch the project after a successful build.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "UE artists, testers, designers, and other non-programmers can compile and open projects locally with one click, avoiding repeated team synchronization of the project Binaries folder."
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Compilation
@@ -3576,7 +3525,7 @@ shellSlots:
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: AIDataAsset User Manual
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Complete English product manual for AIDataAsset
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: "Complete English product manual for AIDataAsset"
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -3613,44 +3562,7 @@ shellSlots:
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MDBlogPacker User Manual
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Complete English product manual for MDBlogPacker
-    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
-  doc:md-image-embed-guide:
-    root.html:1.head:0.title:2.#text:0: MDImageEmbed User Guide | MZSH Docs
-    root.html:1.head:0.meta:8@content: "MDImageEmbed User Guide | MZSH Docs"
-    root.html:1.head:0.meta:12@content: "Install MDImageEmbed in Obsidian and copy notes with local images embedded as Base64. Covers image path resolution and export considerations."
-    root.html:1.head:0.meta:15@content: "Install MDImageEmbed in Obsidian and copy notes with local images embedded as Base64. Covers image path resolution and export considerations."
-    root.html:1.body:1.a:0.#text:0: Skip to content
-    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MDImageEmbed User Manual
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Complete English product manual for MDImageEmbed
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: "The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker."
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -4463,9 +4375,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: Featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0@aria-label: Multi-version UE Plugin Packaging
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: Open-source Tools
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: Multi-version UE Plugin Packaging
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: "Package UE plugins for release"
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Build plugins across UE versions, inspect logs, and prepare release files in one tool.
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: "Prepare UE plugins for release, primarily for Fab submissions and also for other distribution channels."
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1@aria-label: Multi-channel UDP Communication
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE Plugins
@@ -4477,7 +4389,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: Open-source Tools
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Publishing Images with an Article
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: Convert local Markdown images to embedded Base64 for export and copying to compatible platforms.
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: "The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker."
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1@aria-label: Switch featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:0@aria-label: "Show: Multi-version UE Plugin Packaging"
@@ -4684,7 +4596,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16@aria-label: Publishing Images with an Article
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:1.h2:0.#text:0: Publishing Images with an Article
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.p:2.#text:0: Convert local Markdown images to embedded Base64 for export and copying to compatible platforms.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.p:2.#text:0: "The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker."
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0.span:0.#text:0: Markdown
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0.span:1.#text:0: Images
@@ -4702,45 +4614,38 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0.span:0.#text:0: File Updates
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0.span:1.#text:0: Automation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19@aria-label: Project Packaging and Deployment
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.h2:0.#text:0: Project Packaging and Deployment
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19@aria-label: "Package projects quickly without opening the editor"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.h2:0.#text:0: "Package projects quickly without opening the editor"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.p:1.#text:0: UEPackageManager
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.p:2.#text:0: Package UE projects through a GUI or CLI and deploy additional files after success.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.p:2.#text:0: "Package UE projects directly without opening the editor, using a graphical interface or the command line."
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:1.#text:0: Packaging
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:2.#text:0: Automation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20@aria-label: Multi-version UE Plugin Packaging
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.h2:0.#text:0: Multi-version UE Plugin Packaging
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20@aria-label: "Package UE plugins for release"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.h2:0.#text:0: "Package UE plugins for release"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.p:2.#text:0: Build plugins across UE versions, inspect logs, and prepare release files in one tool.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.p:2.#text:0: "Prepare UE plugins for release, primarily for Fab submissions and also for other distribution channels."
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:1.#text:0: Plugins
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:2.#text:0: Packaging
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21@aria-label: Managing UE Plugins in One Place
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.h2:0.#text:0: Managing UE Plugins in One Place
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21@aria-label: "Browse and manage local UE plugins"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.h2:0.#text:0: "Browse and manage local UE plugins"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.p:1.#text:0: UEPluginManager
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.p:2.#text:0: Browse project, Marketplace, and engine plugins together, inspect dependencies, and manage plugin state.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.p:2.#text:0: "Browse project and engine plugins together, fix garbled directory names, and move plugins between the project and the engine Marketplace directory."
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:1.#text:0: Plugins
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:2.#text:0: Dependency Analysis
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22@aria-label: Compile and Launch a Project with One Action
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.h2:0.#text:0: Compile and Launch a Project with One Action
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22@aria-label: "Compile and launch projects with one click"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.h2:0.#text:0: "Compile and launch projects with one click"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.p:1.#text:0: UEQuickStart
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.p:2.#text:0: Detect the project and engine, display build logs, and launch the project after a successful build.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.p:2.#text:0: "UE artists, testers, designers, and other non-programmers can compile and open projects locally with one click, avoiding repeated team synchronization of the project Binaries folder."
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0@aria-label: Work tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:1.#text:0: Compilation
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:2.#text:0: Launch Tools
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23@aria-label: Exporting Local Markdown Images
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:1.div:1.h2:0.#text:0: Exporting Local Markdown Images
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:1.div:1.p:1.#text:0: MDImageEmbed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:1.p:2.#text:0: Copy Markdown in Obsidian after converting its local images to embedded Base64.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:2.div:0@aria-label: Work tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:2.div:0.span:0.#text:0: Images
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:2.div:0.span:1.#text:0: Export
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.p:2.#text:0: No works match the current filters. Try fewer tags or different keywords.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3@aria-label: Works pagination
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3.div:0.button:0.#text:0: Previous page
@@ -6469,6 +6374,8 @@ scriptSlots:
   category:写作工具: "Writing Tools"
   category:协作工具: "Collaboration Tools"
   category:实用工具: "Utility Tools"
+  category:P4工具: "P4 Tools"
+  category:AI工具: "AI Tools"
   category:UE插件: "UE Plugins"
   category:桌面与自动化: "Desktop & Automation"
   category:UE项目: "UE Projects"
@@ -6641,8 +6548,6 @@ scriptSlots:
   work:p4-case-sync:root.html:1.body:1.script:5:2062: Bilibili player
   work:md-blog-packer:root.html:1.body:1.script:5:1187: Bilibili player
   work:md-blog-packer:root.html:1.body:1.script:5:2062: Bilibili player
-  work:md-image-embed:root.html:1.body:1.script:5:1187: Bilibili player
-  work:md-image-embed:root.html:1.body:1.script:5:2062: Bilibili player
   work:simple-bp-inherit-fix:root.html:1.body:1.script:5:1187: Bilibili player
   work:simple-bp-inherit-fix:root.html:1.body:1.script:5:2062: Bilibili player
   work:simple-level-seq-smooth:root.html:1.body:1.script:5:1187: Bilibili player
@@ -7270,52 +7175,6 @@ bodyUtilitySlots:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “Notes”
   doc:md-blog-packer:body-utility:11:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “License”
-  doc:md-image-embed-guide:body-utility:1:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Features”
-  doc:md-image-embed-guide:body-utility:2:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Installation Methods”
-  doc:md-image-embed-guide:body-utility:3:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Manual Installation”
-  doc:md-image-embed-guide:body-utility:4:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Build from Source”
-  doc:md-image-embed-guide:body-utility:5:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Usage”
-  doc:md-image-embed-guide:body-utility:6:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Settings”
-  doc:md-image-embed-guide:body-utility:7:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Anti-Reposting Protection”
-  doc:md-image-embed-guide:body-utility:8:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Notes”
-  doc:md-image-embed-guide:body-utility:9:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “License”
-  doc:md-image-embed-guide:body-utility:10:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Contact”
-  doc:md-image-embed-guide:body-utility:11:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Supplementary Usage Instructions”
-  doc:md-image-embed-guide:body-utility:12:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “MDImageEmbed User Guide”
-  doc:md-image-embed-guide:body-utility:13:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Installation”
-  doc:md-image-embed-guide:body-utility:14:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Feature Overview”
-  doc:md-image-embed-guide:body-utility:15:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “One-Click Conversion”
-  doc:md-image-embed-guide:body-utility:16:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Smart Path Resolution”
-  doc:md-image-embed-guide:body-utility:17:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Anti-Reposting Protection”
-  doc:md-image-embed-guide:body-utility:18:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Smart Filtering”
-  doc:md-image-embed-guide:body-utility:19:
-    root.html:0.body:1.a:0.span:1.#text:0: "Section titled “Demonstration: Publishing to CNBlogs”"
-  doc:md-image-embed-guide:body-utility:20:
-    root.html:0.body:1.p:0.a:0@aria-label: "View a larger image: Images"
-  doc:md-image-embed-guide:body-utility:21:
-    root.html:0.body:1.p:0.a:0@aria-label: "View a larger image: Images"
-  doc:md-image-embed-guide:body-utility:22:
-    root.html:0.body:1.p:0.a:0@aria-label: "View a larger image: Images"
-  doc:md-image-embed-guide:body-utility:23:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “Usage Boundaries”
   doc:p4-case-sync:body-utility:1:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “✨ Features”
   doc:p4-case-sync:body-utility:2:
@@ -8333,7 +8192,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: c13c5ed72cdaf27728d5da37c5baf63095334cd83701e4e12739817947b8571f
+sourceHash: 03e0c5d2bd2a8827e1a99da4996cfc12b013d7094eb40f710351fd5bba8c3109
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

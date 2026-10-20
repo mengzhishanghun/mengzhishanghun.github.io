@@ -1,6 +1,6 @@
 ---
 title: MDBlogPacker
-description: 将 Markdown 中的本地图片转成 Base64 内嵌格式，便于导出和复制到支持的平台。
+description: MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。
 type: work
 slug: md-blog-packer
 categoryId: open-source-tools
@@ -33,7 +33,7 @@ translationKey: md-blog-packer
 
 ## 作品简介
 
-MDBlogPacker 用于把带有本地图片的 Markdown 整理成便于跨平台复制或导出的文本。
+MDBlogPacker 是 MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出。MDImageEmbed 后续仅维护其 Python 版本 MDBlogPacker。
 
 它识别普通 Markdown 图片语法和 Obsidian Wiki 图片引用，把本地图片转换为 Base64 内嵌内容，同时保留网络图片与已经内嵌的图片。使用者可以通过图形界面或命令行处理文章，再复制结果或导出文件。
 

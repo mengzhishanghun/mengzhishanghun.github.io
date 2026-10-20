@@ -1,6 +1,6 @@
 ---
 title: UEPluginAutoPacker
-description: 集中完成插件在多个 UE 引擎版本上的构建、日志查看和发布文件整理。
+description: 主要用于 Fab 提交流程，将插件打包为可发布版本，也适合其他插件分发场景。
 type: work
 slug: plugin-auto-packer
 categoryId: open-source-tools
@@ -35,7 +35,7 @@ translationKey: plugin-auto-packer
 
 ## 作品简介
 
-UEPluginAutoPacker 面向需要为多个 Unreal Engine 引擎版本交付插件的开发者，把引擎配置、插件构建、状态查看和发布文件整理放在一个工具中。
+UEPluginAutoPacker 主要用于 Fab 提交流程，将 UE 插件打包为可发布版本，也适合其他插件分发场景。工具把多引擎配置、插件构建、状态查看和发布文件整理放在同一个界面中。
 
 图形界面适合逐个观察各引擎任务，命令行则能对已配置的引擎执行指定插件构建。
 

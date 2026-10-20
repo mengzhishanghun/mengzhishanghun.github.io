@@ -1,6 +1,6 @@
 ---
 title: UEPluginManager
-description: 统一浏览项目、商城与引擎插件，查询依赖并管理插件状态。
+description: 统一浏览项目与引擎插件，修正乱码目录名，并在项目与引擎的 Marketplace 目录之间移动插件。
 type: work
 slug: plugin-manager
 categoryId: open-source-tools
@@ -32,7 +32,7 @@ translationKey: plugin-manager
 
 ## 作品简介
 
-UEPluginManager 是集中查看和管理 UE 插件的桌面工具。它把项目 Plugins 目录、商城下载目录及引擎自带插件汇集到同一界面，支持搜索、依赖关系查看、同名冲突提示与启用状态管理。
+UEPluginManager 是浏览和管理本地 UE 插件的桌面工具。它统一展示项目与引擎插件，支持修正乱码目录名，并在项目与引擎的 Marketplace 目录之间移动插件。引擎自带插件只供浏览和状态判断，不能移动或删除。
 
 对于可操作的项目和商城插件，还提供移动、移至回收站及目录名修正功能。
 

@@ -359,21 +359,6 @@
         ]
       }
     },
-    "work:md-image-embed": {
-      "topics": [
-        "content-file-processing"
-      ],
-      "legacyTags": {
-        "zh": [
-          "图片",
-          "导出"
-        ],
-        "en": [
-          "Images",
-          "Export"
-        ]
-      }
-    },
     "work:p4-case-sync": {
       "topics": [
         "version-control-collaboration"

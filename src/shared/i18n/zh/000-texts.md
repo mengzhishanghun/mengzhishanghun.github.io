@@ -34,7 +34,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 多视角GI丢失问题的解决办法
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，记录七处修改的源码截图与适用限制。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，记录七处修改的源码截图与适用限制。"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -2400,7 +2400,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 开源工具
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 让图片随文章发布
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 将 Markdown 中的本地图片转成 Base64 内嵌格式，便于导出和复制到支持的平台。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Markdown
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 图片
@@ -2409,57 +2409,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:1@aria-label: GitHub 源码，在新标签页打开
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:1.#text:0: GitHub 源码
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看MDBlogPacker示意图大图
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  work:md-image-embed:
-    root.html:1.head:0.meta:2@content: 在 Obsidian 中把 Markdown 的本地图片转换为 Base64 内嵌格式后复制。
-    root.html:1.head:0.title:4.#text:0: "MDImageEmbed：Obsidian 图片 Base64 导出插件 · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 作品
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 插件、工具与游戏作品。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 作品
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Ob插件
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 导出 Markdown 本地图片
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: MDImageEmbed
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 在 Obsidian 中把 Markdown 的本地图片转换为 Base64 内嵌格式后复制。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: 图片
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 导出
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4@aria-label: 作品购买与文档
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.nav:4.a:0.#text:0: 查看文档
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看MDImageEmbed示意图大图
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -3345,9 +3294,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 作品
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 开源工具
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 项目打包与部署
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "无需打开编辑器，快速打包项目"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: UEPackageManager
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 用图形界面或命令行完成 UE 项目打包，并在成功后部署附加文件。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "无需打开 UE 编辑器，直接快速打包项目，支持图形界面与命令行操作。"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 打包
@@ -3399,9 +3348,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 作品
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 开源工具
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: UE 多版本插件打包
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "将 UE 插件打包为可发布版本"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 集中完成插件在多个 UE 引擎版本上的构建、日志查看和发布文件整理。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "主要用于 Fab 提交流程，将插件打包为可发布版本，也适合其他插件分发场景。"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 插件
@@ -3453,9 +3402,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 作品
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 开源工具
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 统一管理 UE 插件
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "浏览和管理本地 UE 插件"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: UEPluginManager
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 统一浏览项目、商城与引擎插件，查询依赖并管理插件状态。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "统一浏览项目与引擎插件，修正乱码目录名，并在项目与引擎的 Marketplace 目录之间移动插件。"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 插件
@@ -3508,9 +3457,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 作品
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 开源工具
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 编译项目，一键启动
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "一键编译并启动项目"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: UEQuickStart
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 识别项目和引擎，显示编译日志，并在编译成功后启动项目。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: "面向 UE 美术、测试、策划等非程序人员，在本机一键编译并打开项目，避免团队反复同步项目的 Binaries 文件夹。"
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 编译
@@ -3576,7 +3525,7 @@ shellSlots:
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: AIDataAsset 使用文档
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: AIDataAsset 的完整中文产品使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: "AIDataAsset 的完整中文产品使用文档"
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -3613,44 +3562,7 @@ shellSlots:
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
     root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MDBlogPacker 使用文档
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MDBlogPacker 的完整中文产品使用文档
-    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
-  doc:md-image-embed-guide:
-    root.html:1.head:0.title:2.#text:0: MDImageEmbed 使用文档 | MZSH Docs
-    root.html:1.head:0.meta:8@content: "MDImageEmbed 使用文档 | MZSH Docs"
-    root.html:1.head:0.meta:12@content: "MDImageEmbed 插件安装与使用指南，介绍在 Obsidian 中将本地图片转为 Base64 后复制笔记，以及路径解析和导出注意事项。"
-    root.html:1.head:0.meta:15@content: "MDImageEmbed 插件安装与使用指南，介绍在 Obsidian 中将本地图片转为 Base64 后复制笔记，以及路径解析和导出注意事项。"
-    root.html:1.body:1.a:0.#text:0: 跳转到内容
-    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MDImageEmbed 使用文档
-    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MDImageEmbed 的完整中文产品使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: "MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。"
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -4463,9 +4375,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: 精选作品
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0@aria-label: UE 多版本插件打包
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: 开源工具
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: UE 多版本插件打包
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: "将 UE 插件打包为可发布版本"
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 集中完成插件在多个 UE 引擎版本上的构建、日志查看和发布文件整理。
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: "主要用于 Fab 提交流程，将插件打包为可发布版本，也适合其他插件分发场景。"
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1@aria-label: UDP 多通道通信
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE插件
@@ -4477,7 +4389,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: 开源工具
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 让图片随文章发布
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 将 Markdown 中的本地图片转成 Base64 内嵌格式，便于导出和复制到支持的平台。
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: "MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。"
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1@aria-label: 精选作品切换
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:0@aria-label: 显示：UE 多版本插件打包
@@ -4684,7 +4596,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16@aria-label: 让图片随文章发布
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:1.h2:0.#text:0: 让图片随文章发布
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.p:2.#text:0: 将 Markdown 中的本地图片转成 Base64 内嵌格式，便于导出和复制到支持的平台。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:1.p:2.#text:0: "MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0.span:0.#text:0: Markdown
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:16.div:2.div:0.span:1.#text:0: 图片
@@ -4702,45 +4614,38 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0.span:0.#text:0: 文件更新
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:2.div:0.span:1.#text:0: 自动化
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19@aria-label: 项目打包与部署
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.h2:0.#text:0: 项目打包与部署
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19@aria-label: "无需打开编辑器，快速打包项目"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.h2:0.#text:0: "无需打开编辑器，快速打包项目"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:1.p:1.#text:0: UEPackageManager
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.p:2.#text:0: 用图形界面或命令行完成 UE 项目打包，并在成功后部署附加文件。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.p:2.#text:0: "无需打开 UE 编辑器，直接快速打包项目，支持图形界面与命令行操作。"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:1.#text:0: 打包
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:2.div:0.span:2.#text:0: 自动化
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20@aria-label: UE 多版本插件打包
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.h2:0.#text:0: UE 多版本插件打包
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20@aria-label: "将 UE 插件打包为可发布版本"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.h2:0.#text:0: "将 UE 插件打包为可发布版本"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.p:2.#text:0: 集中完成插件在多个 UE 引擎版本上的构建、日志查看和发布文件整理。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.p:2.#text:0: "主要用于 Fab 提交流程，将插件打包为可发布版本，也适合其他插件分发场景。"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:1.#text:0: 插件
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:2.div:0.span:2.#text:0: 打包
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21@aria-label: 统一管理 UE 插件
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.h2:0.#text:0: 统一管理 UE 插件
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21@aria-label: "浏览和管理本地 UE 插件"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.h2:0.#text:0: "浏览和管理本地 UE 插件"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.div:1.p:1.#text:0: UEPluginManager
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.p:2.#text:0: 统一浏览项目、商城与引擎插件，查询依赖并管理插件状态。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:1.p:2.#text:0: "统一浏览项目与引擎插件，修正乱码目录名，并在项目与引擎的 Marketplace 目录之间移动插件。"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:1.#text:0: 插件
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:2.div:0.span:2.#text:0: 依赖分析
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22@aria-label: 编译项目，一键启动
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.h2:0.#text:0: 编译项目，一键启动
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22@aria-label: "一键编译并启动项目"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.h2:0.#text:0: "一键编译并启动项目"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.div:1.p:1.#text:0: UEQuickStart
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.p:2.#text:0: 识别项目和引擎，显示编译日志，并在编译成功后启动项目。
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:1.p:2.#text:0: "面向 UE 美术、测试、策划等非程序人员，在本机一键编译并打开项目，避免团队反复同步项目的 Binaries 文件夹。"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0@aria-label: 作品标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:0.#text:0: UnrealEngine
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:1.#text:0: 编译
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:22.div:2.div:0.span:2.#text:0: 启动工具
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23@aria-label: 导出 Markdown 本地图片
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:1.div:1.h2:0.#text:0: 导出 Markdown 本地图片
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:1.div:1.p:1.#text:0: MDImageEmbed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:1.p:2.#text:0: 在 Obsidian 中把 Markdown 的本地图片转换为 Base64 内嵌格式后复制。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:2.div:0@aria-label: 作品标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:2.div:0.span:0.#text:0: 图片
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:23.div:2.div:0.span:1.#text:0: 导出
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.p:2.#text:0: 没有找到符合当前条件的作品，请减少标签或更换关键词。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3@aria-label: 作品分页
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3.div:0.button:0.#text:0: 上一页
@@ -6628,8 +6533,6 @@ scriptSlots:
   work:p4-case-sync:root.html:1.body:1.script:5:2062: Bilibili 播放器
   work:md-blog-packer:root.html:1.body:1.script:5:1187: Bilibili 播放器
   work:md-blog-packer:root.html:1.body:1.script:5:2062: Bilibili 播放器
-  work:md-image-embed:root.html:1.body:1.script:5:1187: Bilibili 播放器
-  work:md-image-embed:root.html:1.body:1.script:5:2062: Bilibili 播放器
   work:simple-bp-inherit-fix:root.html:1.body:1.script:5:1187: Bilibili 播放器
   work:simple-bp-inherit-fix:root.html:1.body:1.script:5:2062: Bilibili 播放器
   work:simple-level-seq-smooth:root.html:1.body:1.script:5:1187: Bilibili 播放器
@@ -7257,52 +7160,6 @@ bodyUtilitySlots:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “注意事项”
   doc:md-blog-packer:body-utility:11:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “许可证”
-  doc:md-image-embed-guide:body-utility:1:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “功能特性”
-  doc:md-image-embed-guide:body-utility:2:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “安装方法”
-  doc:md-image-embed-guide:body-utility:3:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “手动安装”
-  doc:md-image-embed-guide:body-utility:4:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “从源码构建”
-  doc:md-image-embed-guide:body-utility:5:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “使用方法”
-  doc:md-image-embed-guide:body-utility:6:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “设置选项”
-  doc:md-image-embed-guide:body-utility:7:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “防转载保护”
-  doc:md-image-embed-guide:body-utility:8:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “注意事项”
-  doc:md-image-embed-guide:body-utility:9:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “许可证”
-  doc:md-image-embed-guide:body-utility:10:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “联系方式”
-  doc:md-image-embed-guide:body-utility:11:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “使用说明补充”
-  doc:md-image-embed-guide:body-utility:12:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “MDImageEmbed 使用指南”
-  doc:md-image-embed-guide:body-utility:13:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “安装”
-  doc:md-image-embed-guide:body-utility:14:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “功能介绍”
-  doc:md-image-embed-guide:body-utility:15:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “一键转换”
-  doc:md-image-embed-guide:body-utility:16:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “智能路径解析”
-  doc:md-image-embed-guide:body-utility:17:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “防转载保护”
-  doc:md-image-embed-guide:body-utility:18:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “智能过滤”
-  doc:md-image-embed-guide:body-utility:19:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “使用演示：发布到博客园”
-  doc:md-image-embed-guide:body-utility:20:
-    root.html:0.body:1.p:0.a:0@aria-label: 放大查看图片：图片
-  doc:md-image-embed-guide:body-utility:21:
-    root.html:0.body:1.p:0.a:0@aria-label: 放大查看图片：图片
-  doc:md-image-embed-guide:body-utility:22:
-    root.html:0.body:1.p:0.a:0@aria-label: 放大查看图片：图片
-  doc:md-image-embed-guide:body-utility:23:
-    root.html:0.body:1.a:0.span:1.#text:0: Section titled “使用边界”
   doc:p4-case-sync:body-utility:1:
     root.html:0.body:1.a:0.span:1.#text:0: Section titled “✨ 功能特性”
   doc:p4-case-sync:body-utility:2:

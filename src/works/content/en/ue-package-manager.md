@@ -1,6 +1,6 @@
 ---
 title: UEPackageManager
-description: Package UE projects through a GUI or CLI and deploy additional files after success.
+description: Package UE projects directly without opening the editor, using a graphical interface or the command line.
 type: work
 slug: ue-package-manager
 categoryId: open-source-tools
@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEPackageManager
 lang: en
 translationKey: ue-package-manager
-sourceHash: ce423c1700e5b06b4d91803a0b81119152c845e6a86d7db50c37c26f69af076d
+sourceHash: e58009275762b4b1bfd153baf6806ec743b591e5b42867034bd5db7f72c71556
 translationStatus: translated
-generatedBodyHash: e2a6f37068d094de9609d4d5b79ff0981ff3e8f0b4039b45b927e4bed41eacc1
+generatedBodyHash: 97839545369ba78792d1e7e73e38746686a230b472c10b23364a971c573b57e6
 workInfo:
   channels:
     - kind: open-source
@@ -37,7 +37,7 @@ workInfo:
 ---
 ## Overview
 
-UEPackageManager is a Windows Unreal Engine project packaging tool with graphical and command-line entry points.
+UEPackageManager is a Windows Unreal Engine project packaging tool. Package projects quickly without opening the UE editor, using a graphical interface or the command line.
 
 It calls Unreal Automation Tool for Build, Cook, Stage, Pak, Archive, and related steps, then deploys additional files into successful packages according to rules. Project detection, isolated configuration, and output cleanup support controlled repeated packaging.
 

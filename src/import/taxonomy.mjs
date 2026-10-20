@@ -18,7 +18,12 @@ export function createTaxonomy({site,vault,config,manifest,parseSource,previous}
       const meta=numbered(item.name);return {...meta,id:previous?.sections?.[type]?.categories.find(c=>c.name===meta.name)?.id||categoryId(type,meta.name),entities:[],supplements:[],directory:item.name};
     }).sort((a,b)=>a.order-b.order);
     if(new Set(categories.map(c=>c.order)).size!==categories.length||new Set(categories.map(c=>c.name)).size!==categories.length)throw Error('分类编号或名称重复');
-    const legacyQueries=previous?.sections?.[type]?.legacyQueries||{};
+    const legacyQueries=structuredClone(previous?.sections?.[type]?.legacyQueries||{});
+    for(const category of previous?.sections?.[type]?.categories||[]){
+      const query={name:category.name,entities:[...category.entities]};
+      if(legacyQueries[category.id]&&JSON.stringify([...legacyQueries[category.id].entities].sort())!==JSON.stringify([...query.entities].sort()))throw Error('历史分类ID集合冲突');
+      legacyQueries[category.id]=query;
+    }
     const folder=type==='work'?'works':type==='case'?'cases':type;
     const template=path.join(site,`src/${folder}/templates/page--${folder}-index.html`);
     let entityOrder=previous?.sections?.[type]?.entityOrder;
@@ -62,7 +67,12 @@ export function createTaxonomy({site,vault,config,manifest,parseSource,previous}
     category.entities.push(entity.id);legacyOnly.push(entity.id);
     if(!previous){sections.blog.legacyQueries.ue||={name:'UE',entities:[]};sections.blog.legacyQueries.ue.entities.push(entity.id);}
   }
-  for(const section of Object.values(sections))for(const category of section.categories){delete category.directory;category.entities.sort();category.supplements.sort((a,b)=>a.id.localeCompare(b.id));}
+  for(const [type,section]of Object.entries(sections))for(const category of section.categories){
+    delete category.directory;category.entities.sort();category.supplements.sort((a,b)=>a.id.localeCompare(b.id));
+    const old=section.legacyQueries[category.id];
+    if(old&&JSON.stringify([...old.entities].sort())!==JSON.stringify(category.entities))category.id=categoryId(type,JSON.stringify([category.name,category.entities]));
+    section.legacyQueries[category.id]||={name:category.name,entities:[...category.entities]};
+  }
   for(const section of Object.values(sections))for(const query of Object.values(section.legacyQueries))query.entities.sort();
   return {version:1,sections,legacyOnly:legacyOnly.sort()};
 }

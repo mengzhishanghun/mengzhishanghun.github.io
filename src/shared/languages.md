@@ -55,7 +55,6 @@ languages:
       work:simple-file-updater: works/content/zh/simple-file-updater.md
       work:p4-case-sync: works/content/zh/p4-case-sync.md
       work:md-blog-packer: works/content/zh/md-blog-packer.md
-      work:md-image-embed: works/content/zh/md-image-embed.md
       work:simple-bp-inherit-fix: works/content/zh/simple-bp-inherit-fix.md
       work:simple-level-seq-smooth: works/content/zh/simple-level-seq-smooth.md
       work:ai-data-asset: works/content/zh/ai-data-asset.md
@@ -78,7 +77,6 @@ languages:
       work:ue-quick-start: works/content/zh/ue-quick-start.md
       doc:ai-data-asset-guide: docs/content/zh/ai-data-asset-guide.md
       doc:md-blog-packer: docs/content/zh/md-blog-packer.md
-      doc:md-image-embed-guide: docs/content/zh/md-image-embed-guide.md
       doc:p4-case-sync: docs/content/zh/p4-case-sync.md
       doc:plugin-auto-packer: docs/content/zh/plugin-auto-packer.md
       doc:plugin-manager: docs/content/zh/plugin-manager.md
@@ -180,7 +178,6 @@ languages:
       work:simple-file-updater: works/content/en/simple-file-updater.md
       work:p4-case-sync: works/content/en/p4-case-sync.md
       work:md-blog-packer: works/content/en/md-blog-packer.md
-      work:md-image-embed: works/content/en/md-image-embed.md
       work:simple-bp-inherit-fix: works/content/en/simple-bp-inherit-fix.md
       work:simple-level-seq-smooth: works/content/en/simple-level-seq-smooth.md
       work:ai-data-asset: works/content/en/ai-data-asset.md
@@ -203,7 +200,6 @@ languages:
       work:ue-quick-start: works/content/en/ue-quick-start.md
       doc:ai-data-asset-guide: docs/content/en/ai-data-asset-guide.md
       doc:md-blog-packer: docs/content/en/md-blog-packer.md
-      doc:md-image-embed-guide: docs/content/en/md-image-embed-guide.md
       doc:p4-case-sync: docs/content/en/p4-case-sync.md
       doc:plugin-auto-packer: docs/content/en/plugin-auto-packer.md
       doc:plugin-manager: docs/content/en/plugin-manager.md

@@ -1,6 +1,6 @@
 ---
 title: UEPluginAutoPacker
-description: Build plugins across UE versions, inspect logs, and prepare release files in one tool.
+description: Prepare UE plugins for release, primarily for Fab submissions and also for other distribution channels.
 type: work
 slug: plugin-auto-packer
 categoryId: open-source-tools
@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: en
 translationKey: plugin-auto-packer
-sourceHash: d4aa1eac2f310e9d2686b9dd928d8f47ce8a0800035b910eb6d74b8f00e8f073
+sourceHash: 91e34826e296b92cefd6e5c03debafde029c929920e1261be67b3d0c0e41ca61
 translationStatus: translated
-generatedBodyHash: 12b6b688f854e7b72fc43c9c907262cc972a0dc694d15fcad65401ed32939dd4
+generatedBodyHash: 2775ee494b392227d00cf5c5566bbfa98dd81f6d399ef6002f41cf2665c105b7
 workInfo:
   channels:
     - kind: open-source
@@ -37,7 +37,7 @@ workInfo:
 ---
 ## Overview
 
-UEPluginAutoPacker targets developers delivering plugins for several Unreal Engine versions, bringing engine configuration, plugin builds, status inspection, and release file preparation into one tool.
+UEPluginAutoPacker packages UE plugins for release, primarily for Fab submissions and also for other distribution channels. It brings multi-engine configuration, plugin builds, status inspection, and release file preparation into one interface.
 
 The GUI supports observing each engine task, while the CLI builds a specified plugin using configured engines.
 

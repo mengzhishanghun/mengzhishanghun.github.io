@@ -1,6 +1,6 @@
 ---
 title: MDBlogPacker User Manual
-description: Complete English product manual for MDBlogPacker
+description: The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker.
 type: doc
 slug: md-blog-packer
 categoryId: open-source-tools
@@ -17,16 +17,16 @@ documentKind: product-manual
 websiteRoute: /docs/zh/tools/md-blog-packer/
 lang: en
 translationKey: md-blog-packer
-sourceHash: b81bc9c402bc6032d786dc122f20f2ba244d0b0d34fd8408d9a06af8eeaa5496
+sourceHash: a33823caeba79a5aede5a00c95daba69785d638c7b5dcc8a8a737f14206bec42
 translationStatus: translated
-generatedBodyHash: a90872962947b374d07c837bf0d8232a09d816b954988872cda8b57125d9cafb
+generatedBodyHash: d44cf87e74cd662e1db95f4f994e41bf78beaeca7162299fefbfbc1ea27360a9
 ---
 
 # MDBlogPacker
 
-A blogging productivity tool: batch-convert local images in Markdown to embedded Base64, automatically copy the result to the clipboard, and paste it into platforms supporting Base64 images, such as CNBlogs, CSDN, and Juejin, to publish directly — without uploading images one by one.
+MDBlogPacker is the Python version of MDImageEmbed. It exports Markdown with local images embedded as Base64. Future maintenance of MDImageEmbed will focus solely on its Python version, MDBlogPacker.
 
-> 💡 **Obsidian users**: I also made an Obsidian plugin with the same functionality. Right-click a note for one-click conversion → [MDImageEmbed](https://github.com/MZSH-ObsidianPlugins/MDImageEmbed)
+> Future maintenance of MDImageEmbed will focus solely on its Python version, MDBlogPacker. Copy the converted result or export a Markdown file containing the embedded images.
 
 ## Why This Tool
 

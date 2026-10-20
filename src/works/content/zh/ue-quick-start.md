@@ -1,6 +1,6 @@
 ---
 title: UEQuickStart
-description: 识别项目和引擎，显示编译日志，并在编译成功后启动项目。
+description: 面向 UE 美术、测试、策划等非程序人员，在本机一键编译并打开项目，避免团队反复同步项目的 Binaries 文件夹。
 type: work
 slug: ue-quick-start
 categoryId: open-source-tools
@@ -32,7 +32,7 @@ translationKey: ue-quick-start
 
 ## 作品简介
 
-UEQuickStart 为已有 Unreal Engine 项目提供图形化的编译与启动入口。工具自动识别项目及其关联引擎，显示实时编译日志，并在编译成功后允许启动项目。
+UEQuickStart 面向 UE 美术、测试、策划等非程序人员，在本机一键编译并打开已有项目，避免团队反复同步项目的 Binaries 文件夹。工具自动识别项目及其关联引擎，显示实时编译日志，并在编译成功后自动启动项目。
 
 它面向需要更新本地工程但不熟悉命令行构建流程的项目成员。
 
