@@ -31,20 +31,6 @@
         ]
       }
     },
-    "blog:cnblogs-19136345": {
-      "topics": [
-        "blueprints-reflection",
-        "data-configuration"
-      ],
-      "legacyTags": {
-        "zh": [
-          "枚举"
-        ],
-        "en": [
-          "Enums"
-        ]
-      }
-    },
     "blog:cnblogs-19143251": {
       "topics": [
         "version-control-collaboration"
@@ -160,23 +146,6 @@
         ]
       }
     },
-    "blog:cnblogs-19165484": {
-      "topics": [
-        "network-communication"
-      ],
-      "legacyTags": {
-        "zh": [
-          "UDP",
-          "TCP",
-          "WebSocket"
-        ],
-        "en": [
-          "UDP",
-          "TCP",
-          "WebSocket"
-        ]
-      }
-    },
     "blog:cnblogs-19165488": {
       "topics": [
         "blueprints-reflection"
@@ -248,19 +217,6 @@
         "en": [
           "Actor",
           "Sequence"
-        ]
-      }
-    },
-    "blog:cnblogs-19165541": {
-      "topics": [
-        "network-communication"
-      ],
-      "legacyTags": {
-        "zh": [
-          "SSH"
-        ],
-        "en": [
-          "SSH"
         ]
       }
     },
@@ -376,26 +332,6 @@
         ]
       }
     },
-    "blog:cnblogs-19204715": {
-      "topics": [
-        "scenes-levels",
-        "rendering-materials"
-      ],
-      "legacyTags": {
-        "zh": [
-          "StaticMesh",
-          "ISM",
-          "HISM",
-          "性能优化"
-        ],
-        "en": [
-          "StaticMesh",
-          "ISM",
-          "HISM",
-          "Performance optimization"
-        ]
-      }
-    },
     "blog:cnblogs-19379306": {
       "topics": [
         "build-release"
@@ -448,6 +384,38 @@
         "en": [
           "Cache",
           "Configuration management"
+        ]
+      }
+    },
+    "blog:cnblogs-19770930": {
+      "topics": [
+        "build-release",
+        "data-configuration"
+      ],
+      "legacyTags": {
+        "zh": [
+          "打包",
+          "配置管理"
+        ],
+        "en": [
+          "Packaging",
+          "Configuration management"
+        ]
+      }
+    },
+    "blog:cnblogs-19770934": {
+      "topics": [
+        "blueprints-reflection",
+        "data-configuration"
+      ],
+      "legacyTags": {
+        "zh": [
+          "蓝图",
+          "序列化"
+        ],
+        "en": [
+          "Blueprints",
+          "Serialization"
         ]
       }
     },

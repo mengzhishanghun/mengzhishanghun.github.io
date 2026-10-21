@@ -80,4 +80,6 @@ SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在�
 
 排除配置不等于完成敏感信息保护，目标目录中的副本仍需按项目权限管理。状态调整会修改 DefaultGame.ini；发布前应检查实际包内容、复制目标及版本控制差异。
 
+Staging 规则、直接读取文件与 `GConfig` 缓存重载的实现说明见 [《如何管理打包时的配置文件排除》](/zh/blog/cnblogs-19770930/)。
+
 操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-config-exclude-guide/)。

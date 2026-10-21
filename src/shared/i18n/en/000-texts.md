@@ -488,6 +488,106 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Related work
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: SimpleBPInheritFix
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Data Serialization and Byte Conversion in Blueprints
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:cnblogs-19770934:
+    root.html:1.head:0.meta:2@content: "Examine UE CustomThunk struct arguments, JSON parsing and persistence limits, including why raw memory copies are not a general storage format."
+    root.html:1.head:0.title:4.#text:0: "UE Blueprint Struct Serialization & Persistence Limits · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "Blueprint generic struct serialization: memory layout versus persistence"
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Reflected struct arguments, JSON parsing and safe persistence boundaries.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Fixing UMG Size That Does Not Change During Rendering
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Managing Configuration File Exclusion During Packaging
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:cnblogs-19770930:
+    root.html:1.head:0.meta:2@content: Staging inclusion and exclusion rules in DefaultGame.ini, along with configuration scanning, file writes, and cache reloads.
+    root.html:1.head:0.title:4.#text:0: "UE Packaging Config Exclusion with Staging Rules · Xiao Mao"
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Managing Configuration File Exclusion During Packaging
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Staging inclusion and exclusion rules in DefaultGame.ini, along with configuration scanning, file writes, and cache reloads.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Data Serialization and Byte Conversion in Blueprints
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Making a Rounded Rectangle with a Material
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -533,6 +633,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Managing Configuration File Exclusion During Packaging
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Seeing Exactly Which Files Were Packaged
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -680,57 +782,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: "Material Basics: The If Node"
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Loading Overhead of StaticMeshActor versus ISM/HISM
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  blog:cnblogs-19204715:
-    root.html:1.head:0.meta:2@content: Object organization and loading overhead of independent StaticMeshActors and instanced meshes, and property-handling issues during manual merging.
-    root.html:1.head:0.title:4.#text:0: "UE StaticMeshActor & ISM/HISM Loading Overhead · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Loading Overhead of StaticMeshActor versus ISM/HISM
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Object organization and loading overhead of independent StaticMeshActors and instanced meshes, and property-handling issues during manual merging.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Changing the Cache Path
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: "The Keys to Runtime Animation Recording: Correct Bone Data and Saving"
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -776,8 +827,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Loading Overhead of StaticMeshActor versus ISM/HISM
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: A Simple C++ MVVM Application
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -1072,57 +1121,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Calling a DLL
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  blog:cnblogs-19165484:
-    root.html:1.head:0.meta:2@content: UE network communication through UDP, TCP client, TCP server, and WebSocket examples, with discussion of threading, reconnection, sessions, and serialization.
-    root.html:1.head:0.title:4.#text:0: "UE Networking Examples: UDP, TCP & WebSocket · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: UE network communication through UDP, TCP client, TCP server, and WebSocket examples, with discussion of threading, reconnection, sessions, and serialization.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: PixelStreaming
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Synchronizing Exposure Across Multiple Screens
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -1167,60 +1165,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Implementing SSH Tunnels in UE for Secure Access to Remote Services
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  blog:cnblogs-19165541:
-    root.html:1.head:0.meta:2@content: Comparing system SSH clients and libssh2 integration in UE, including port forwarding, threading, and resource cleanup.
-    root.html:1.head:0.title:4.#text:0: "UE SSH Tunnels: System Clients & libssh2 Integration · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Implementing SSH Tunnels in UE for Secure Access to Remote Services
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Comparing system SSH clients and libssh2 integration in UE, including port forwarding, threading, and resource cleanup.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Synchronizing Exposure Across Multiple Screens
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Setting Up a Listen Server
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -1266,8 +1210,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:1.#text:0: No section headings
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: Implementing SSH Tunnels in UE for Secure Access to Remote Services
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Seamless Map Travel
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -1513,55 +1455,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: What to Do When a Stream Depot Cannot Be Deleted
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: Next article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: Creating Dynamic Enums in UE
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  blog:cnblogs-19136345:
-    root.html:1.head:0.meta:2@content: UE enum reflection, configuration-array binding, and subsystem initialization, including data-validation and reuse limitations of the basic approach.
-    root.html:1.head:0.title:4.#text:0: "UE Dynamic Enums: Config Binding & Initialization · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Creating Dynamic Enums in UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: UE enum reflection, configuration-array binding, and subsystem initialization, including data-validation and reuse limitations of the basic approach.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: Previous and next blog posts
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: Previous article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: A One-Click Fix for MetaHuman Head Clipping During Animation
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -4124,14 +4017,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: "Show: A Toolchain from Plugin Development to Release"
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: Featured blog posts
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: View all
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1@aria-label: Featured blog posts
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1@aria-label: "UE: A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: UE network communication through UDP, TCP client, TCP server, and WebSocket examples, with discussion of threading, reconnection, sessions, and serialization.
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1@aria-label: Switch featured blog posts
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:1@aria-label: "Show: UE: A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
     root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:4.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:4.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -4585,6 +4470,18 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:0.#text:0: UMG
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:1.#text:0: Rendering
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: "Blueprint generic struct serialization: memory layout versus persistence"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.h2:0.#text:0: "Blueprint generic struct serialization: memory layout versus persistence"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.p:1.#text:0: Reflected struct arguments, JSON parsing and safe persistence boundaries.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0@aria-label: Article tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:0.#text:0: Blueprints
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:1.#text:0: Serialization
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5@aria-label: Managing Configuration File Exclusion During Packaging
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:0.h2:0.#text:0: Managing Configuration File Exclusion During Packaging
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:0.p:1.#text:0: Staging inclusion and exclusion rules in DefaultGame.ini, along with configuration scanning, file writes, and cache reloads.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:0@aria-label: Article tags
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:0.span:0.#text:0: Packaging
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:0.span:1.#text:0: Configuration Management
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6@aria-label: Making a Rounded Rectangle with a Material
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:0.h2:0.#text:0: Making a Rounded Rectangle with a Material
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:0.p:1.#text:0: I found this old note while organizing my notes. It creates a rounded rectangle with a material. The values were set for a project with three combined screens, so adjust them before using it.
@@ -4606,14 +4503,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:0.span:0.#text:0: Cache
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:0.span:1.#text:0: Configuration Management
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:10@aria-label: Loading Overhead of StaticMeshActor versus ISM/HISM
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:10.div:0.h2:0.#text:0: Loading Overhead of StaticMeshActor versus ISM/HISM
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:10.div:0.p:1.#text:0: Object organization and loading overhead of independent StaticMeshActors and instanced meshes, and property-handling issues during manual merging.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:10.div:1.div:0@aria-label: Article tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:10.div:1.div:0.span:0.#text:0: StaticMesh
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:10.div:1.div:0.span:1.#text:0: ISM
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:10.div:1.div:0.span:2.#text:0: HISM
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:10.div:1.div:0.span:3.#text:0: Performance Optimization
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:11@aria-label: "The Keys to Runtime Animation Recording: Correct Bone Data and Saving"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:11.div:0.h2:0.#text:0: "The Keys to Runtime Animation Recording: Correct Bone Data and Saving"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:11.div:0.p:1.#text:0: The two most important issues in runtime animation recording in UE5.4 are obtaining correct bone data and saving AnimSequence correctly.
@@ -4651,24 +4540,12 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:17.div:0.p:1.#text:0: Enable the PixelStreaming plugin.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:17.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:17.div:1.div:0.span:0.#text:0: PixelStreaming
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18@aria-label: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:0.h2:0.#text:0: "A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations"
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:0.p:1.#text:0: UE network communication through UDP, TCP client, TCP server, and WebSocket examples, with discussion of threading, reconnection, sessions, and serialization.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:1.div:0@aria-label: Article tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:1.div:0.span:0.#text:0: UDP
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:1.div:0.span:1.#text:0: TCP
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:18.div:1.div:0.span:2.#text:0: WebSocket
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19@aria-label: Synchronizing Exposure Across Multiple Screens
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:0.h2:0.#text:0: Synchronizing Exposure Across Multiple Screens
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:0.p:1.#text:0: Create a LocalPlayer and override the function.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:0.span:0.#text:0: Multi-screen Display
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:19.div:1.div:0.span:1.#text:0: Exposure
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20@aria-label: Implementing SSH Tunnels in UE for Secure Access to Remote Services
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:0.h2:0.#text:0: Implementing SSH Tunnels in UE for Secure Access to Remote Services
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:0.p:1.#text:0: Comparing system SSH clients and libssh2 integration in UE, including port forwarding, threading, and resource cleanup.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:0@aria-label: Article tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:20.div:1.div:0.span:0.#text:0: SSH
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21@aria-label: Setting Up a Listen Server
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:0.h2:0.#text:0: Setting Up a Listen Server
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:21.div:0.p:1.#text:0: The simplest way to start a listen server is to create a desktop shortcut and set its target to UnrealEditor.exe MyProject.uproject ?listen -game.
@@ -4748,11 +4625,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:34.div:1.div:0@aria-label: Article tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:34.div:1.div:0.span:0.#text:0: MetaHuman
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:34.div:1.div:0.span:1.#text:0: Animation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:35@aria-label: Creating Dynamic Enums in UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:35.div:0.h2:0.#text:0: Creating Dynamic Enums in UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:35.div:0.p:1.#text:0: UE enum reflection, configuration-array binding, and subsystem initialization, including data-validation and reuse limitations of the basic approach.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:35.div:1.div:0@aria-label: Article tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:35.div:1.div:0.span:0.#text:0: Enums
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.p:2.#text:0: No articles match the current filters. Try fewer tags or different keywords.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3@aria-label: Articles pagination
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3.div:0.button:0.#text:0: Previous page
@@ -6460,6 +6332,10 @@ scriptSlots:
   blog:cnblogs-20030737:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19813721:root.html:1.body:1.script:5:1187: Bilibili player
   blog:cnblogs-19813721:root.html:1.body:1.script:5:2062: Bilibili player
+  blog:cnblogs-19770934:root.html:1.body:1.script:5:1187: Bilibili player
+  blog:cnblogs-19770934:root.html:1.body:1.script:5:2062: Bilibili player
+  blog:cnblogs-19770930:root.html:1.body:1.script:5:1187: Bilibili player
+  blog:cnblogs-19770930:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19379355:root.html:1.body:1.script:5:1187: Bilibili player
   blog:cnblogs-19379355:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19379306:root.html:1.body:1.script:5:1187: Bilibili player
@@ -6468,8 +6344,6 @@ scriptSlots:
   blog:cnblogs-19379337:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19379365:root.html:1.body:1.script:5:1187: Bilibili player
   blog:cnblogs-19379365:root.html:1.body:1.script:5:2062: Bilibili player
-  blog:cnblogs-19204715:root.html:1.body:1.script:5:1187: Bilibili player
-  blog:cnblogs-19204715:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19197541:root.html:1.body:1.script:5:1187: Bilibili player
   blog:cnblogs-19197541:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19192707:root.html:1.body:1.script:5:1187: Bilibili player
@@ -6484,12 +6358,8 @@ scriptSlots:
   blog:cnblogs-19174295:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19165494:root.html:1.body:1.script:5:1187: Bilibili player
   blog:cnblogs-19165494:root.html:1.body:1.script:5:2062: Bilibili player
-  blog:cnblogs-19165484:root.html:1.body:1.script:5:1187: Bilibili player
-  blog:cnblogs-19165484:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19165561:root.html:1.body:1.script:5:1187: Bilibili player
   blog:cnblogs-19165561:root.html:1.body:1.script:5:2062: Bilibili player
-  blog:cnblogs-19165541:root.html:1.body:1.script:5:1187: Bilibili player
-  blog:cnblogs-19165541:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19165553:root.html:1.body:1.script:5:1187: Bilibili player
   blog:cnblogs-19165553:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19165504:root.html:1.body:1.script:5:1187: Bilibili player
@@ -6502,8 +6372,6 @@ scriptSlots:
   blog:cnblogs-19165520:root.html:1.body:1.script:5:2062: Bilibili player
   blog:cnblogs-19136316:root.html:1.body:1.script:5:1187: Bilibili player
   blog:cnblogs-19136316:root.html:1.body:1.script:5:2062: Bilibili player
-  blog:cnblogs-19136345:root.html:1.body:1.script:5:1187: Bilibili player
-  blog:cnblogs-19136345:root.html:1.body:1.script:5:2062: Bilibili player
   case:driving-simulator-three-screen:root.html:1.body:1.script:5:1187: Bilibili player
   case:driving-simulator-three-screen:root.html:1.body:1.script:5:2062: Bilibili player
   case:ai-digital-human-integration:root.html:1.body:1.script:5:1187: Bilibili player
@@ -8220,7 +8088,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 382d4900fa291c50f5e210c36f31456efa3e3342eb805237e9f4f2a28c7752c6
+sourceHash: 1dcd579a7f25cd724fa4951fb1e66ab1dd98e646de0e7144793b9792b0b53124
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

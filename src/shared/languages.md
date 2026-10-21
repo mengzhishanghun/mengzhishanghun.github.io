@@ -16,11 +16,12 @@ languages:
       blog:cnblogs-19143260: blog/content/zh/cnblogs-19143260.md
       blog:cnblogs-19143286: blog/content/zh/cnblogs-19143286.md
       blog:cnblogs-19813721: blog/content/zh/cnblogs-19813721.md
+      blog:cnblogs-19770934: blog/content/zh/cnblogs-19770934.md
+      blog:cnblogs-19770930: blog/content/zh/cnblogs-19770930.md
       blog:cnblogs-19379355: blog/content/zh/cnblogs-19379355.md
       blog:cnblogs-19379306: blog/content/zh/cnblogs-19379306.md
       blog:cnblogs-19379337: blog/content/zh/cnblogs-19379337.md
       blog:cnblogs-19379365: blog/content/zh/cnblogs-19379365.md
-      blog:cnblogs-19204715: blog/content/zh/cnblogs-19204715.md
       blog:cnblogs-19197541: blog/content/zh/cnblogs-19197541.md
       blog:cnblogs-19192707: blog/content/zh/cnblogs-19192707.md
       blog:cnblogs-19183986: blog/content/zh/cnblogs-19183986.md
@@ -28,16 +29,13 @@ languages:
       blog:cnblogs-19174288: blog/content/zh/cnblogs-19174288.md
       blog:cnblogs-19174295: blog/content/zh/cnblogs-19174295.md
       blog:cnblogs-19165494: blog/content/zh/cnblogs-19165494.md
-      blog:cnblogs-19165484: blog/content/zh/cnblogs-19165484.md
       blog:cnblogs-19165561: blog/content/zh/cnblogs-19165561.md
-      blog:cnblogs-19165541: blog/content/zh/cnblogs-19165541.md
       blog:cnblogs-19165553: blog/content/zh/cnblogs-19165553.md
       blog:cnblogs-19165504: blog/content/zh/cnblogs-19165504.md
       blog:cnblogs-19165500: blog/content/zh/cnblogs-19165500.md
       blog:cnblogs-19165488: blog/content/zh/cnblogs-19165488.md
       blog:cnblogs-19165520: blog/content/zh/cnblogs-19165520.md
       blog:cnblogs-19136316: blog/content/zh/cnblogs-19136316.md
-      blog:cnblogs-19136345: blog/content/zh/cnblogs-19136345.md
       case:driving-simulator-three-screen: cases/content/zh/driving-simulator-three-screen.md
       case:ai-digital-human-integration: cases/content/zh/ai-digital-human-integration.md
       case:flying-car-simulator: cases/content/zh/flying-car-simulator.md
@@ -139,11 +137,12 @@ languages:
       blog:cnblogs-19143260: blog/content/en/cnblogs-19143260.md
       blog:cnblogs-19143286: blog/content/en/cnblogs-19143286.md
       blog:cnblogs-19813721: blog/content/en/cnblogs-19813721.md
+      blog:cnblogs-19770934: blog/content/en/cnblogs-19770934.md
+      blog:cnblogs-19770930: blog/content/en/cnblogs-19770930.md
       blog:cnblogs-19379355: blog/content/en/cnblogs-19379355.md
       blog:cnblogs-19379306: blog/content/en/cnblogs-19379306.md
       blog:cnblogs-19379337: blog/content/en/cnblogs-19379337.md
       blog:cnblogs-19379365: blog/content/en/cnblogs-19379365.md
-      blog:cnblogs-19204715: blog/content/en/cnblogs-19204715.md
       blog:cnblogs-19197541: blog/content/en/cnblogs-19197541.md
       blog:cnblogs-19192707: blog/content/en/cnblogs-19192707.md
       blog:cnblogs-19183986: blog/content/en/cnblogs-19183986.md
@@ -151,16 +150,13 @@ languages:
       blog:cnblogs-19174288: blog/content/en/cnblogs-19174288.md
       blog:cnblogs-19174295: blog/content/en/cnblogs-19174295.md
       blog:cnblogs-19165494: blog/content/en/cnblogs-19165494.md
-      blog:cnblogs-19165484: blog/content/en/cnblogs-19165484.md
       blog:cnblogs-19165561: blog/content/en/cnblogs-19165561.md
-      blog:cnblogs-19165541: blog/content/en/cnblogs-19165541.md
       blog:cnblogs-19165553: blog/content/en/cnblogs-19165553.md
       blog:cnblogs-19165504: blog/content/en/cnblogs-19165504.md
       blog:cnblogs-19165500: blog/content/en/cnblogs-19165500.md
       blog:cnblogs-19165488: blog/content/en/cnblogs-19165488.md
       blog:cnblogs-19165520: blog/content/en/cnblogs-19165520.md
       blog:cnblogs-19136316: blog/content/en/cnblogs-19136316.md
-      blog:cnblogs-19136345: blog/content/en/cnblogs-19136345.md
       case:driving-simulator-three-screen: cases/content/en/driving-simulator-three-screen.md
       case:ai-digital-human-integration: cases/content/en/ai-digital-human-integration.md
       case:flying-car-simulator: cases/content/en/flying-car-simulator.md

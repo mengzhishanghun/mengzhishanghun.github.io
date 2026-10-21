@@ -88,7 +88,15 @@ AIDataAssetJSON](/blog/cnblogs-20159718/)[## 蓝图继承中的组件状态污�
 
 当你需要将UMG渲染出来的时候你可能会碰到一种很恶心的情况，你渲染出来的UMG大小不跟随你设置的输出分辨率变化
 
-UMG渲染](/blog/cnblogs-19813721/)[## 如何用材质制作圆角矩形
+UMG渲染](/blog/cnblogs-19813721/)[## 如何在蓝图中实现数据序列化与字节转换
+
+介绍内存表示与字节数组转换、CustomThunk 泛型结构体参数，以及 JSON 字段名和浮点数输出处理。
+
+蓝图序列化](/blog/cnblogs-19770934/)[## 如何管理打包时的配置文件排除
+
+介绍 DefaultGame.ini 的 Staging 包含与排除规则，以及配置扫描、文件写回和缓存重新加载流程。
+
+打包配置管理](/blog/cnblogs-19770930/)[## 如何用材质制作圆角矩形
 
 这个我都记不清是什么之后记录的了，整理笔记的时候翻到了，是通过材质来制作圆角矩形，因为目标是在一个三合一屏幕的项目中使用，所以数值大小按照三块屏幕设置的，如要使用，请注意修改。
 
@@ -104,11 +112,7 @@ UMG渲染](/blog/cnblogs-19813721/)[## 如何用材质制作圆角矩形
 
 最简单的办法就是通过Evenyting搜索\Engine\Config\BaseEngine.ini
 
-缓存配置管理](/blog/cnblogs-19379365/)[## StaticMeshActor 与 ISM/HISM 的加载开销
-
-讨论独立 StaticMeshActor 与实例化网格的对象组织、加载开销，以及手动合并时的属性处理问题。
-
-StaticMeshISMHISM性能优化](/blog/cnblogs-19204715/)[## 论运行时动画录制的关键-正确获取骨骼数据与保存
+缓存配置管理](/blog/cnblogs-19379365/)[## 论运行时动画录制的关键-正确获取骨骼数据与保存
 
 在 UE5.4 中实现运行时动画录制，最关键的两个问题是：
 
@@ -132,19 +136,11 @@ DLL](/blog/cnblogs-19174295/)[## PixelStreaming 像素流送
 
 开启PixelStreaming插件即可
 
-PixelStreaming](/blog/cnblogs-19165494/)[## UE网络编程完全指南之UDP TCP WebSocket实现详解
-
-通过 UDP、TCP 客户端、TCP 服务端和 WebSocket 示例讲解 UE 网络通信，并讨论线程、重连、会话和序列化。
-
-UDPTCPWebSocket](/blog/cnblogs-19165484/)[## 多屏幕如何设置曝光同步
+PixelStreaming](/blog/cnblogs-19165494/)[## 多屏幕如何设置曝光同步
 
 新建一个LocalPlayer，重写函数
 
-多屏显示曝光](/blog/cnblogs-19165561/)[## 如何在UE中实现SSH隧道，安全访问远程服务
-
-比较在 UE 中调用系统 SSH 客户端与集成 libssh2 的方式，并说明端口转发、线程处理和资源释放。
-
-SSH](/blog/cnblogs-19165541/)[## 如何设置监听服务器
+多屏显示曝光](/blog/cnblogs-19165561/)[## 如何设置监听服务器
 
 开启监听服务器的最简单办法，创建一个桌面快捷方式，修改目标为UnrealEditor.exe MyProject.uproject ?listen -game
 
@@ -168,8 +164,4 @@ ActorSequence](/blog/cnblogs-19165520/)[## 一键解决MetaHuman播放动画时�
 
 这是最近做MetaHuman项目发现的问题，当头部和身体同时播放不同动画的时候，脖子附近会出现穿模现象，这个问题在LevelSequence中暂时没有发现。
 
-MetaHuman动画](/blog/cnblogs-19136316/)[## 如何在UE中创建动态枚举
-
-说明 UE 枚举反射、配置数组绑定和子系统初始化，并记录基础方案的数据验证与复用限制。
-
-枚举](/blog/cnblogs-19136345/)
+MetaHuman动画](/blog/cnblogs-19136316/)

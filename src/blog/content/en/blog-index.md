@@ -8,9 +8,9 @@ websiteRoute: /blog/
 template: blog/index.html
 lang: en
 translationKey: blog-index
-sourceHash: 4f9195bf0db48edfed2b216cf961cb3767ea7e34b4f17ed7771c699e4ee5cb63
+sourceHash: fc1492fd8e953d5503fdc8825d0b2d4d1ba6a6979d2305b640ceb420fbc5ac64
 translationStatus: translated
-generatedBodyHash: b591da04053518e0aca985f6f84d68603e6a49a370d8d5e0de6570df113471a1
+generatedBodyHash: e3242b2144928d0a16ae8b00f8f1bdc53060b80659816f643cd530e71e9eba7f
 ---
 
 ![](/media-occurrence/page%3Ablog-index%3Amedia%3A1)
@@ -91,7 +91,15 @@ Blueprints · Inheritance chain](/blog/cnblogs-20030737/)[## How to Fix UMG Size
 
 When rendering UMG, you may encounter a frustrating situation: the rendered UMG size does not change with your chosen output resolution.
 
-UMG · Rendering](/blog/cnblogs-19813721/)[## How to Create Rounded Rectangles with a Material
+UMG · Rendering](/blog/cnblogs-19813721/)[## How to Implement Data Serialization and Byte Conversion in Blueprints
+
+Introduces conversion between memory representations and byte arrays, CustomThunk generic struct parameters, and handling of JSON field names and floating-point output.
+
+Blueprints · Serialization](/blog/cnblogs-19770934/)[## How to Manage Configuration File Exclusions during Packaging
+
+Introduces Staging inclusion and exclusion rules in DefaultGame.ini, along with configuration scanning, file writing, and cache reloading.
+
+Packaging · Configuration management](/blog/cnblogs-19770930/)[## How to Create Rounded Rectangles with a Material
 
 I no longer remember when I recorded this, but found it while organizing my notes. It creates a rounded rectangle through a material. The values were set for three screens because the intended use was a project with a combined three-screen display. Adjust them before using it elsewhere.
 
@@ -107,11 +115,7 @@ Materials](/blog/cnblogs-19379337/)[## Changing the Cache Path
 
 The simplest approach is to search for \Engine\Config\BaseEngine.ini using Everything.
 
-Cache · Configuration management](/blog/cnblogs-19379365/)[## Loading Costs of StaticMeshActor and ISM/HISM
-
-Discusses object organization and loading costs for individual StaticMeshActors and instanced meshes, along with property handling when merging manually.
-
-StaticMesh · ISM · HISM · Performance optimization](/blog/cnblogs-19204715/)[## Keys to Runtime Animation Recording: Correctly Retrieving and Saving Bone Data
+Cache · Configuration management](/blog/cnblogs-19379365/)[## Keys to Runtime Animation Recording: Correctly Retrieving and Saving Bone Data
 
 The two most critical issues when implementing runtime animation recording in UE 5.4 are:
 
@@ -135,19 +139,11 @@ DLL](/blog/cnblogs-19174295/)[## PixelStreaming
 
 Enable the PixelStreaming plugin.
 
-PixelStreaming](/blog/cnblogs-19165494/)[## A Complete Guide to UE Network Programming: UDP, TCP, and WebSocket Implementations
-
-Explains UE network communication through UDP, TCP client, TCP server, and WebSocket examples, covering threads, reconnection, sessions, and serialization.
-
-UDP · TCP · WebSocket](/blog/cnblogs-19165484/)[## How to Synchronize Exposure across Multiple Screens
+PixelStreaming](/blog/cnblogs-19165494/)[## How to Synchronize Exposure across Multiple Screens
 
 Create a LocalPlayer and override the function.
 
-Multi-screen display · Exposure](/blog/cnblogs-19165561/)[## How to Implement an SSH Tunnel in UE for Secure Access to Remote Services
-
-Compares calling the system SSH client from UE with integrating libssh2, explaining port forwarding, thread handling, and resource release.
-
-SSH](/blog/cnblogs-19165541/)[## How to Set Up a Listen Server
+Multi-screen display · Exposure](/blog/cnblogs-19165561/)[## How to Set Up a Listen Server
 
 The simplest way to start a listen server is to create a desktop shortcut and change its target to UnrealEditor.exe MyProject.uproject ?listen -game.
 
@@ -171,8 +167,4 @@ Actor · Sequence](/blog/cnblogs-19165520/)[## Fixing MetaHuman Head Clipping du
 
 I encountered this recently in a MetaHuman project: when different head and body animations play simultaneously, clipping appears around the neck. The same issue has not been observed in LevelSequence so far.
 
-MetaHuman · Animation](/blog/cnblogs-19136316/)[## How to Create Dynamic Enums in UE
-
-Explains UE enum reflection, configuration array binding, and subsystem initialization, recording the basic approach's data validation and reuse limitations.
-
-Enums](/blog/cnblogs-19136345/)
+MetaHuman · Animation](/blog/cnblogs-19136316/)
