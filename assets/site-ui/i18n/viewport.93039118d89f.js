@@ -215,7 +215,7 @@ document.addEventListener('astro:page-load', () => {
   // initializer run before accepting an unenhanced, complete static list.
   queueMicrotask(() => {
     if (!element.isConnected || container() !== element || element.querySelector?.('[data-content-index]') !== index || generation !== navigation || !sameEntry(entry,currentEntry())) return;
-    if (!['true','failed'].includes(index.dataset.ready)) staticIndexes.add(index);
+    if (!['true','failed','loading'].includes(index.dataset.ready)) staticIndexes.add(index);
     bind();
   });
 });
