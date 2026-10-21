@@ -4,6 +4,7 @@
 
 ## API
 
+- `GET /api/engagement/counts?ids={encodeURIComponent(articleIds.join(','))}`：只读批量返回 `200 {"counts":{"blog:note":0}}`。最多 128 个去重后的活动 ID，重复 ID 合并；必须完整返回每个请求 ID，无计数记录时返回 0。缺少或非法参数返回 400，非活动 ID 返回 404，非 GET 返回 405，URL 超过 8 KiB 返回 414；响应最多 64 KiB，计数必须是非负安全整数。沿用全局请求限制，不消耗写入额度。
 - `GET /api/engagement/articles/{encodeURIComponent(articleId)}`：`200 {"count":0}`。
 - `POST /api/engagement/articles/{encodeURIComponent(articleId)}/like`：精确允许配置的 Origin，`Content-Type: application/json`，正文仅 `{}`（最多 256 字节）；原子递增返回 `200 {"count":1}`。
 - 非活动 ID 返回 404；写入前明确拒绝返回相应 4xx 和 `{"error":"...","write":"rejected"}`。5xx、网络错误、超时或无法解析响应可能已写入，禁止自动重试。
@@ -13,7 +14,7 @@
 
 `src/build/manifest.json` 的 `entries[].id` 是永久身份；`article-identities.json` 登记每个 ID 与既有 `translationKey` 的关联。标题、slug、URL、语言及展示分类变动时保留原 ID，不能以新 ID 代替原文章。作品介绍与文档可以共用既有 translationKey，仍是独立 ID 和计数。新增文章显式追加登记；删文时永久登记不删除、不复用，活动 registry 会停止允许该 ID。
 
-执行 `node src/build/build.mjs` 生成仅含公开 ID 的 `dist/services/engagement/articles.json`，部署服务时同步它。正文四类输出互动区，中英共享 ID；分享地址由语言路由去语言段形成，文档的无语言入口必须登记在 manifest redirects，旧文档地址保留。通用分享地址无查询参数或锚点，分享标题取英文。备用 GitHub 域名只分享，不访问 API。
+执行 `node src/build/build.mjs` 生成仅含公开 ID 的 `dist/services/engagement/articles.json`，部署服务时同步它。正文四类输出互动区，中英共享 ID；分享地址由语言路由去语言段形成，文档的无语言入口必须登记在 manifest redirects，旧文档地址保留。通用分享地址无查询参数或锚点，分享标题取英文。备用 GitHub 域名只分享，不访问 API。作品、案例和博客列表在主站默认按点赞数降序，同赞（包括全为 0）保持原始顺序；可切回原有顺序，搜索时沿用原有相关性规则。批量读取失败、超时或缺项时整批回退并提示，不将未知值当作 0。一次浏览使用固定快照，返回时复用，最多缓存六个路由和 ID 集合的快照，六小时后过期。备用域名保持原有顺序，隐藏点赞排序控件。
 
 ## 启动与备份
 

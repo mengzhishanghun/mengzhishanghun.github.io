@@ -4026,6 +4026,9 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   page:works-index:
+    content-sort:label: 排序
+    content-sort:likes: 点赞最多
+    content-sort:original: 原有顺序
     root.html:1.head:0.meta:2@content: 浏览小毛开发的 UE 插件、桌面工具与 Obsidian 插件，查看功能说明、使用文档及销售或开源入口。
     root.html:1.head:0.title:4.#text:0: UE 插件与开发工具作品 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
@@ -4281,6 +4284,9 @@ shellSlots:
     p4-stream-switcher:card:5: Perforce
     p4-stream-switcher:card:6: 版本控制
   page:cases-index:
+    content-sort:label: 排序
+    content-sort:likes: 点赞最多
+    content-sort:original: 原有顺序
     root.html:1.head:0.meta:2@content: 查看三屏显示、AI 数字人、仿真联动及插件工具案例，了解项目背景、问题排查、实现过程与适用范围。
     root.html:1.head:0.title:4.#text:0: UE 仿真、数字人与工具开发案例 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
@@ -4425,6 +4431,9 @@ shellSlots:
     robot-realtime-ik-prototype:card:7: UDP
     robot-realtime-ik-prototype:card:8: 原型
   page:blog-index:
+    content-sort:label: 排序
+    content-sort:likes: 点赞最多
+    content-sort:original: 原有顺序
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37@aria-label: 多视角GI丢失问题的解决办法
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.h2:0.#text:0: 多视角GI丢失问题的解决办法
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.p:1.#text:0: 以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，记录七处修改的源码截图与适用限制。
@@ -6228,6 +6237,9 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
 scriptSlots:
+  content-index:sort-likes: 点赞最多
+  content-index:likes-loading: 正在读取点赞排序…
+  content-index:likes-unavailable: 点赞排序暂不可用，已按原有顺序显示。
   viewport:return-previous: 返回
   work-topic:editor-assets: "编辑器与资产工具"
   work-topic:data-configuration: "数据与配置"

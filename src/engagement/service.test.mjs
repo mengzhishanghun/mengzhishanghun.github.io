@@ -47,3 +47,20 @@ test('a held write body consumes concurrency and the next write is rejected befo
   const rejected=await fetch(url,{method:'POST',headers,body:'{}'});assert.equal(rejected.status,429);assert.deepEqual(await rejected.json(),{error:'concurrency',write:'rejected'});
   slow.end('}');const [response]=await result;response.resume();await once(response,'end');assert.equal(response.statusCode,200);assert.equal(app.db.prepare('SELECT count FROM article_counts').get().count,1);
 });
+
+test('batch counts are complete read-only active-ID snapshots with bounded requests',async t=>{
+ const {createEngagementService}=await import('./service.mjs'),root=fs.mkdtempSync(path.join(os.tmpdir(),'counts-batch-'));
+ const articleIds=Array.from({length:129},(_,i)=>'blog:item-'+i),app=createEngagementService({host:'127.0.0.1',port:0,db:path.join(root,'data/counts.sqlite'),articleIds,origin:'https://mzsh.me'});await app.listen();t.after(async()=>{await app.close();fs.rmSync(root,{recursive:true,force:true});});
+ app.db.prepare('INSERT INTO article_counts VALUES (?,?)').run('blog:item-0',7);
+ const base='http://127.0.0.1:'+app.server.address().port+'/api/engagement/counts';
+ const request=(ids,options)=>fetch(base+'?ids='+encodeURIComponent(ids),options);
+ const response=await request('blog:item-0,blog:item-1,blog:item-0');assert.equal(response.status,200);assert.deepEqual(await response.json(),{counts:{'blog:item-0':7,'blog:item-1':0}});assert.equal(response.headers.get('cache-control'),'no-store');assert.equal(response.headers.get('access-control-allow-origin'),null);
+ assert.equal((await request(articleIds.slice(0,128).join(','))).status,200);
+ for(const [ids,status]of [['',400],['bad',400],['blog:missing',404],[articleIds.join(','),400],['a'.repeat(8200),414]])assert.equal((await request(ids)).status,status);
+ assert.equal((await request('blog:item-0',{method:'POST'})).status,405);
+ assert.equal((await fetch(base+'?ids=blog%3Aitem-0&ids=blog%3Aitem-1')).status,400);
+ assert.deepEqual(app.db.prepare('SELECT * FROM article_counts').all().map(r=>({...r})),[{article_id:'blog:item-0',count:7}]);
+ assert.deepEqual(await (await fetch(base.replace('/counts','/articles/blog%3Aitem-0'))).json(),{count:7});
+});
+
+test('batch requests obey global request budgets and invalid stored counts fail safely',async t=>{const {createEngagementService}=await import('./service.mjs'),root=fs.mkdtempSync(path.join(os.tmpdir(),'batch-safe-'));const app=createEngagementService({host:'127.0.0.1',port:0,db:path.join(root,'data/counts.sqlite'),articleIds:['blog:one'],origin:'https://mzsh.me',requestLimit:3});await app.listen();t.after(async()=>{await app.close();fs.rmSync(root,{recursive:true,force:true});});const url='http://127.0.0.1:'+app.server.address().port+'/api/engagement/counts?ids=blog%3Aone';app.db.prepare('INSERT INTO article_counts VALUES (?,?)').run('blog:one',9007199254740992n);assert.equal((await fetch(url)).status,503);app.db.prepare('DELETE FROM article_counts').run();assert.deepEqual(await (await fetch(url)).json(),{counts:{'blog:one':0}});assert.equal((await fetch(url)).status,200);assert.equal((await fetch(url)).status,429);});

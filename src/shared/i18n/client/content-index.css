@@ -36,3 +36,11 @@
   line-height: 1.5;
   white-space: nowrap;
 }
+
+.content-sort-control { display:flex; flex-wrap:wrap; align-items:center; gap:8px; min-inline-size:0; }
+.content-sort-control select { min-height:44px; max-inline-size:100%; color:inherit; background:var(--panel, #0c1b2b); border:1px solid currentColor; border-radius:6px; padding:8px 12px; font:inherit; }
+.content-sort-control select:focus-visible { outline:2px solid currentColor; outline-offset:3px; }
+[data-content-sort-status] { grid-column:1/-1; flex-basis:100%; margin:0; font-size:.875rem; }
+[data-content-sort-status]:empty { display:none; }
+@media(max-width:720px) { .content-browser.content-blog .content-filter { grid-template-columns:minmax(0,1fr); } .content-sort-control { inline-size:100%; } }
+.content-blog .content-sort-label { display:none; }

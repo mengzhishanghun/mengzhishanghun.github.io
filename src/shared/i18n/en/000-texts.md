@@ -4026,6 +4026,9 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   page:works-index:
+    content-sort:label: Sort by
+    content-sort:likes: Most liked
+    content-sort:original: Original order
     root.html:1.head:0.meta:2@content: Browse Xiao Mao's Unreal Engine plugins, desktop tools and Obsidian plugin, with feature descriptions, user guides and links to sales or source code.
     root.html:1.head:0.title:4.#text:0: Unreal Engine Plugins & Developer Tools · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
@@ -4281,6 +4284,9 @@ shellSlots:
     p4-stream-switcher:card:5: Perforce
     p4-stream-switcher:card:6: Version control
   page:cases-index:
+    content-sort:label: Sort by
+    content-sort:likes: Most liked
+    content-sort:original: Original order
     root.html:1.head:0.meta:2@content: Read case studies on multi-screen displays, AI digital humans, simulation and developer tools, covering the project context, implementation and limits.
     root.html:1.head:0.title:4.#text:0: Unreal Simulation, Digital Humans & Tool Case Studies · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
@@ -4425,6 +4431,9 @@ shellSlots:
     robot-realtime-ik-prototype:card:7: UDP
     robot-realtime-ik-prototype:card:8: Prototype
   page:blog-index:
+    content-sort:label: Sort by
+    content-sort:likes: Most liked
+    content-sort:original: Original order
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37@aria-label: Fixing Missing GI Across Multiple Views in UE 5.3
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.h2:0.#text:0: Fixing Missing GI Across Multiple Views in UE 5.3
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.p:1.#text:0: A UE 5.3 source-build record of changing the maximum view count from 2 to 3 across seven locations, with a source screenshot and version limits.
@@ -6228,6 +6237,9 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
 scriptSlots:
+  content-index:sort-likes: Most liked
+  content-index:likes-loading: Loading like counts…
+  content-index:likes-unavailable: Like counts are unavailable. Showing the original order.
   category:UE工具: "UE Tools"
   category:写作工具: "Writing Tools"
   category:协作工具: "Collaboration Tools"
@@ -8088,7 +8100,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 1dcd579a7f25cd724fa4951fb1e66ab1dd98e646de0e7144793b9792b0b53124
+sourceHash: bc0260e161d7ec84f591fe8e698435af568d2884d23c28490b02ffb768e66b59
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

@@ -43,6 +43,21 @@ export function createEngagementService(config){
   const server=http.createServer(async(req,res)=>{
     if(Date.now()-windowStart>=60000){windowStart=Date.now();writes=0;requests=0;}
     if(++requests>requestLimit){req.resume();return reject(res,429,'rate_limit');}
+    if(/^\/api\/engagement\/counts(?:\?|$)/.test(req.url||'')){
+      req.resume();
+      if(Buffer.byteLength(req.url)>8192)return reject(res,414,'url');
+      if(req.method!=='GET')return reject(res,405,'method');
+      try{
+        const url=new URL(req.url,'http://localhost'),values=url.searchParams.getAll('ids');
+        if(values.length!==1 || [...url.searchParams.keys()].some(key=>key!=='ids'))return reject(res,400,'ids');
+        const requested=[...new Set(values[0].split(','))];
+        if(!requested.length || requested.length>128 || requested.some(id=>!/^[a-z][a-z0-9_-]*:[a-zA-Z0-9_-]+$/.test(id)))return reject(res,400,'ids');
+        if(requested.some(id=>!ids.has(id)))return reject(res,404,'not_found');
+        const counts=Object.fromEntries(requested.map(id=>[id,get.get(id)?.count ?? 0]));
+        if(Object.values(counts).some(count=>!Number.isSafeInteger(count)||count<0) || Buffer.byteLength(JSON.stringify({counts}))>65536)return reply(res,503,{error:'unavailable'});
+        return reply(res,200,{counts});
+      }catch{return reply(res,503,{error:'unavailable'});}
+    }
     let id;const match=req.url?.match(/^\/api\/engagement\/articles\/([^/?#]+)(\/like)?$/);
     try{id=match && decodeURIComponent(match[1]);}catch{}
     if(!id || !ids.has(id)){req.resume();return reject(res,404,'not_found');}
