@@ -488,106 +488,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 博客上下篇
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 相关作品
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: SimpleBPInheritFix
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: 下一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: 如何在蓝图中实现数据序列化与字节转换
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  blog:cnblogs-19770934:
-    root.html:1.head:0.meta:2@content: "讨论 UE CustomThunk 泛型结构体取参、JSON 解析及持久化边界，说明为什么原始内存复制不能直接作为通用存储格式。"
-    root.html:1.head:0.title:4.#text:0: "UE 蓝图泛型结构体序列化：反射与持久化边界 · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 蓝图泛型结构体序列化：区分内存表示与持久化格式
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 结构体反射取参、JSON 解析与安全持久化边界。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 博客上下篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 上一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: 如何解决渲染时UMG大小不变的问题
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: 下一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: 如何管理打包时的配置文件排除
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  blog:cnblogs-19770930:
-    root.html:1.head:0.meta:2@content: 介绍 DefaultGame.ini 的 Staging 包含与排除规则，以及配置扫描、文件写回和缓存重新加载流程。
-    root.html:1.head:0.title:4.#text:0: "UE 打包配置文件排除：DefaultGame.ini Staging · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 如何管理打包时的配置文件排除
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 介绍 DefaultGame.ini 的 Staging 包含与排除规则，以及配置扫描、文件写回和缓存重新加载流程。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 博客上下篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 上一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: 如何在蓝图中实现数据序列化与字节转换
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: 下一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: 如何用材质制作圆角矩形
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
@@ -633,8 +533,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1@aria-label: 博客上下篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.span:0.#text:0: 上一篇
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:0.strong:1.#text:0: 如何管理打包时的配置文件排除
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.span:0.#text:0: 下一篇
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.article:3.nav:1.a:1.strong:1.#text:0: 怎么查看打包到底打包了哪些文件
     root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
@@ -4687,18 +4585,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0@aria-label: 文章标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:0.#text:0: UMG
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:1.#text:0: 渲染
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: 蓝图泛型结构体序列化：区分内存表示与持久化格式
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.h2:0.#text:0: 蓝图泛型结构体序列化：区分内存表示与持久化格式
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:0.p:1.#text:0: 结构体反射取参、JSON 解析与安全持久化边界。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0@aria-label: 文章标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:0.#text:0: 蓝图
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:1.#text:0: 序列化
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5@aria-label: 如何管理打包时的配置文件排除
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:0.h2:0.#text:0: 如何管理打包时的配置文件排除
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:0.p:1.#text:0: 介绍 DefaultGame.ini 的 Staging 包含与排除规则，以及配置扫描、文件写回和缓存重新加载流程。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:0@aria-label: 文章标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:0.span:0.#text:0: 打包
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:0.span:1.#text:0: 配置管理
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6@aria-label: 如何用材质制作圆角矩形
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:0.h2:0.#text:0: 如何用材质制作圆角矩形
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:0.p:1.#text:0: 这个我都记不清是什么之后记录的了，整理笔记的时候翻到了，是通过材质来制作圆角矩形，因为目标是在一个三合一屏幕的项目中使用，所以数值大小按照三块屏幕设置的，如要使用，请注意修改。
@@ -6559,10 +6445,6 @@ scriptSlots:
   blog:cnblogs-20030737:root.html:1.body:1.script:5:2062: Bilibili 播放器
   blog:cnblogs-19813721:root.html:1.body:1.script:5:1187: Bilibili 播放器
   blog:cnblogs-19813721:root.html:1.body:1.script:5:2062: Bilibili 播放器
-  blog:cnblogs-19770934:root.html:1.body:1.script:5:1187: Bilibili 播放器
-  blog:cnblogs-19770934:root.html:1.body:1.script:5:2062: Bilibili 播放器
-  blog:cnblogs-19770930:root.html:1.body:1.script:5:1187: Bilibili 播放器
-  blog:cnblogs-19770930:root.html:1.body:1.script:5:2062: Bilibili 播放器
   blog:cnblogs-19379355:root.html:1.body:1.script:5:1187: Bilibili 播放器
   blog:cnblogs-19379355:root.html:1.body:1.script:5:2062: Bilibili 播放器
   blog:cnblogs-19379306:root.html:1.body:1.script:5:1187: Bilibili 播放器

@@ -8,9 +8,9 @@ websiteRoute: /blog/
 template: blog/index.html
 lang: en
 translationKey: blog-index
-sourceHash: ec65f023ea75b978bbf2d8ea1ccdb23447f8940b9fd497f03c4a9e5dece9a2d1
+sourceHash: 4f9195bf0db48edfed2b216cf961cb3767ea7e34b4f17ed7771c699e4ee5cb63
 translationStatus: translated
-generatedBodyHash: 14b66ce1d6a3b3143923af803df2433acf78d4c000b92f200659cb68c8162f4c
+generatedBodyHash: b591da04053518e0aca985f6f84d68603e6a49a370d8d5e0de6570df113471a1
 ---
 
 ![](/media-occurrence/page%3Ablog-index%3Amedia%3A1)
@@ -91,15 +91,7 @@ Blueprints · Inheritance chain](/blog/cnblogs-20030737/)[## How to Fix UMG Size
 
 When rendering UMG, you may encounter a frustrating situation: the rendered UMG size does not change with your chosen output resolution.
 
-UMG · Rendering](/blog/cnblogs-19813721/)[## How to Implement Data Serialization and Byte Conversion in Blueprints
-
-Introduces conversion between memory representations and byte arrays, CustomThunk generic struct parameters, and handling of JSON field names and floating-point output.
-
-Blueprints · Serialization](/blog/cnblogs-19770934/)[## How to Manage Configuration File Exclusions during Packaging
-
-Introduces Staging inclusion and exclusion rules in DefaultGame.ini, along with configuration scanning, file writing, and cache reloading.
-
-Packaging · Configuration management](/blog/cnblogs-19770930/)[## How to Create Rounded Rectangles with a Material
+UMG · Rendering](/blog/cnblogs-19813721/)[## How to Create Rounded Rectangles with a Material
 
 I no longer remember when I recorded this, but found it while organizing my notes. It creates a rounded rectangle through a material. The values were set for three screens because the intended use was a project with a combined three-screen display. Adjust them before using it elsewhere.
 

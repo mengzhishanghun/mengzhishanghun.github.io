@@ -451,38 +451,6 @@
         ]
       }
     },
-    "blog:cnblogs-19770930": {
-      "topics": [
-        "build-release",
-        "data-configuration"
-      ],
-      "legacyTags": {
-        "zh": [
-          "打包",
-          "配置管理"
-        ],
-        "en": [
-          "Packaging",
-          "Configuration management"
-        ]
-      }
-    },
-    "blog:cnblogs-19770934": {
-      "topics": [
-        "blueprints-reflection",
-        "data-configuration"
-      ],
-      "legacyTags": {
-        "zh": [
-          "蓝图",
-          "序列化"
-        ],
-        "en": [
-          "Blueprints",
-          "Serialization"
-        ]
-      }
-    },
     "blog:cnblogs-19813721": {
       "topics": [
         "ui-development",

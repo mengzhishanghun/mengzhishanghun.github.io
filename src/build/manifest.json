@@ -470,34 +470,6 @@
       ]
     },
     {
-      "id": "blog:cnblogs-19770934",
-      "type": "blog",
-      "slug": "cnblogs-19770934",
-      "legacyRoutes": [
-        "/blog/cnblogs-19770934/"
-      ],
-      "template": "blog/templates/blog--cnblogs-19770934.html",
-      "title": "如何在蓝图中实现数据序列化与字节转换",
-      "translationKey": "cnblogs-19770934",
-      "baselineTemplate": "blog/cnblogs-19770934/index.html",
-      "supplementTranslationKeys": [],
-      "mediaOccurrences": []
-    },
-    {
-      "id": "blog:cnblogs-19770930",
-      "type": "blog",
-      "slug": "cnblogs-19770930",
-      "legacyRoutes": [
-        "/blog/cnblogs-19770930/"
-      ],
-      "template": "blog/templates/blog--cnblogs-19770930.html",
-      "title": "如何管理打包时的配置文件排除",
-      "translationKey": "cnblogs-19770930",
-      "baselineTemplate": "blog/cnblogs-19770930/index.html",
-      "supplementTranslationKeys": [],
-      "mediaOccurrences": []
-    },
-    {
       "id": "blog:cnblogs-19379355",
       "type": "blog",
       "slug": "cnblogs-19379355",

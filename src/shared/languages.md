@@ -16,8 +16,6 @@ languages:
       blog:cnblogs-19143260: blog/content/zh/cnblogs-19143260.md
       blog:cnblogs-19143286: blog/content/zh/cnblogs-19143286.md
       blog:cnblogs-19813721: blog/content/zh/cnblogs-19813721.md
-      blog:cnblogs-19770934: blog/content/zh/cnblogs-19770934.md
-      blog:cnblogs-19770930: blog/content/zh/cnblogs-19770930.md
       blog:cnblogs-19379355: blog/content/zh/cnblogs-19379355.md
       blog:cnblogs-19379306: blog/content/zh/cnblogs-19379306.md
       blog:cnblogs-19379337: blog/content/zh/cnblogs-19379337.md
@@ -141,8 +139,6 @@ languages:
       blog:cnblogs-19143260: blog/content/en/cnblogs-19143260.md
       blog:cnblogs-19143286: blog/content/en/cnblogs-19143286.md
       blog:cnblogs-19813721: blog/content/en/cnblogs-19813721.md
-      blog:cnblogs-19770934: blog/content/en/cnblogs-19770934.md
-      blog:cnblogs-19770930: blog/content/en/cnblogs-19770930.md
       blog:cnblogs-19379355: blog/content/en/cnblogs-19379355.md
       blog:cnblogs-19379306: blog/content/en/cnblogs-19379306.md
       blog:cnblogs-19379337: blog/content/en/cnblogs-19379337.md
