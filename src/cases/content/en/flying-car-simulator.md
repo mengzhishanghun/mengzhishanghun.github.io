@@ -1,6 +1,6 @@
 ---
-title: Flying Car Simulator
-description: A flying car simulation system for future mobility.
+title: Adapting AirSim Controls for UE Flight Simulation
+description: Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
 type: case
 slug: flying-car-simulator
 categoryId: ue-projects
@@ -17,42 +17,31 @@ coverAlt: Flowchart of the flying car simulator
 websiteCoverUrl: /assets/cases/flying-car-simulator.png
 lang: en
 translationKey: flying-car-simulator
-sourceHash: 59f5eca29148175c38eda51af2da2a0c2c2f5b63148f853cbe4bf059e323704a
+sourceHash: 04b15dd22122b832a7a980386df5c28e6aea29ccb36c0a7ea90df3778ec4da42
 translationStatus: translated
-generatedBodyHash: 427ac903024c41f48e31b9d5face3962a31d03d2e255571d87712f27a0e7ef9c
+generatedBodyHash: 0eaedfd23ee1083a4c1867ec2fbaa7f7e21ab3d5122940996d25a289140ed1fe
 ---
 
-## Background
+## Flight Input and Scene Updates
 
-I worked on a flying car simulation project that needed to support both ground driving and flight, with cockpit interaction and HUD instruments presenting vehicle information.
+A flying-car simulation needs to keep sending operator input to AirSim while the UE scene continues updating. My work focused on flight-control integration, yaw handling, and engine-version adaptation. Later work also included six-axis platform integration tests, VR, and a simpler camera setup.
 
-This case records the project's simulation and interaction approach. Dual-mode control, flight attitude, and instrument displays together formed the experience; a single driving mode would not describe the full scenario.
+### Keeping Commands off the Blocking Path
 
-## Reproduction Environment
+The older control interface with a duration parameter waited during the call and affected game-thread updates. I switched the Pawn's Tick path to non-blocking `setVelocityCommandBodyFrame` calls, submitting body-frame velocity each frame. Input changes can continue arriving while the scene processes interaction and visual updates.
 
-The project used Unreal Engine to build a flying car simulation scene, including cockpit interaction and a HUD instrument system. A physical model drove flight attitude and dynamics simulation.
+### Handling Translation and Heading Separately
 
-The cockpit and HUD supported operation and information display, while the physical simulation handled motion in flight.
+During diagonal movement, velocity direction and vehicle heading can interfere. The implementation maintains a separate `TargetYaw` and uses angle-mode yaw control to reduce unwanted turning from translation input. Data exchange between UE and AirSim also converts velocity units and handles the Z direction in NED coordinates.
 
-## Specific Problem
+## Version Adaptation and Integration Scope
 
-The scene needed to present both ground driving and flight and support switching between them. Changes in control state also needed to be reflected in flight attitude and cockpit information within the same simulation experience.
+I adapted AirSim interfaces and initialization for UE 5.6. The project also involved six-axis integration tests, VR, and camera adjustments. See the [six-DOF platform case](/en/cases/six-dof-motion-platform/) for the platform-side software work.
 
-This made the work span control, physical simulation, and interface presentation. A HUD alone or control for a single mode would not cover the requirements.
+This case covers control and integration. Flight dynamics depend on the simulation model used; model accuracy, device response, and the intended experience require project-specific testing.
 
-## Solution
+## Discuss Your Project
 
-Dual-mode switching controls were established around flight and ground driving, bringing both states into the same scene.
+For an existing AirSim or UE flight scene that needs input-device integration, changes to movement and yaw, or an engine migration, share the current version, control interface, and observed behavior so we can define the adaptation work.
 
-In flight, a physical model drove attitude and dynamics simulation. Cockpit interaction and HUD instruments provided operation entry points and information displays, giving control and state presentation corresponding interfaces.
-
-
-The project organized its simulation system around dual-mode control, physical simulation, and cockpit interaction, allowing ground driving and flight to be presented within one experience.
-
-## Discuss your project
-
-If your UE simulation needs both ground driving and flight controls, or additional cockpit interactions and HUD instruments, I can help define the control states and displayed information, then integrate the simulation logic.
-
-Describe the existing physical model, input devices, and intended experience so we can establish the development scope.
-
-If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.
+[Get in touch](/en/contact/) to discuss it.

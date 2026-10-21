@@ -125,6 +125,9 @@ languages:
       work:p4-stream-switcher: works/content/zh/p4-stream-switcher.md
       case:perforce-workspace-pool: cases/content/zh/perforce-workspace-pool.md
       doc:p4-stream-switcher: docs/content/zh/p4-stream-switcher.md
+      case:driving-session-replay: cases/content/zh/driving-session-replay.md
+      case:ue-multiwindow-interface: cases/content/zh/ue-multiwindow-interface.md
+      case:robot-realtime-ik-prototype: cases/content/zh/robot-realtime-ik-prototype.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -247,4 +250,7 @@ languages:
       work:p4-stream-switcher: works/content/en/p4-stream-switcher.md
       case:perforce-workspace-pool: cases/content/en/perforce-workspace-pool.md
       doc:p4-stream-switcher: docs/content/en/p4-stream-switcher.md
+      case:driving-session-replay: cases/content/en/driving-session-replay.md
+      case:ue-multiwindow-interface: cases/content/en/ue-multiwindow-interface.md
+      case:robot-realtime-ik-prototype: cases/content/en/robot-realtime-ik-prototype.md
 ---

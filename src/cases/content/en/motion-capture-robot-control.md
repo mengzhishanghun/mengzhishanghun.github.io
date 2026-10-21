@@ -1,6 +1,6 @@
 ---
-title: Motion Capture Robot Control System
-description: A real-time robot control approach based on motion capture.
+title: Retargeting Motion Capture to Robot Models in UE
+description: Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
 type: case
 slug: motion-capture-robot-control
 categoryId: ue-projects
@@ -17,40 +17,31 @@ coverAlt: Flowchart of the motion capture robot control system
 websiteCoverUrl: /assets/cases/motion-capture-robot-control.png
 lang: en
 translationKey: motion-capture-robot-control
-sourceHash: c51facc483e5c10a46dd6f4149e784a6f19c16e1dbb4ce3f7666c8e665f690e2
+sourceHash: d440d5bee959836f5807bc516abb225e0fbff9bd5d83b298e94b12df1c3220c9
 translationStatus: translated
-generatedBodyHash: eb47fcb8541037861c9c5d0933cedd4a8f80741307b1a3318d3a7da54078d4ed
+generatedBodyHash: 99f15ef4c9d1a980b7f5f5a577cee9dda01eff6c1f57c25d5c9f1c5edb91447e
 ---
 
-## Background
+## Human Motion and Robot Structure
 
-I worked on a project that used motion capture data to control robot movement. The work included a robot skeleton on the UE side, real-time motion synchronization, and control feedback.
+Human joint positions and proportions often differ from those of a robot model. Copying rotations directly can produce unsuitable motion ranges, jitter, or distorted poses. I worked on a retargeting pipeline from motion-capture input to robot models inside UE, allowing input processing and joint mapping to be adjusted separately.
 
-This case focuses on the connection from motion capture input to robot control: after capturing motion, the data still needed to be parsed, mapped to the skeleton, and connected to control commands and feedback.
+## Two Retargeting Stages
 
-## Reproduction Environment
+KinectRetarget reads Kinect skeleton data, filters each joint, and writes the pose to a PN3 PoseableMesh. This input stage handles joint fluctuations before passing pose data to model mapping.
 
-The system used real-time motion capture data, handled robot skeleton mapping and motion synchronization in Unreal Engine, and connected these to the control feedback workflow.
+On the robot side, the implementation reuses URDFForge's RobotRetargetComponent to map motion according to structural proportions. Joints can use IK or direct-angle control, followed by smoothing and angular-speed limits. `SetRelativeRotation` then updates UE scene components.
 
-## Specific Problem
+Joint correspondence, proportions, and motion constraints can therefore be adjusted for each model, rather than tying capture input directly to one robot structure.
 
-Motion capture data needed to serve robot control as well as character animation playback. Data parsing, skeleton correspondence, and control output were separate stages that needed to be connected into one workflow.
+## Implemented Scope and Model Adjustments
 
-In addition to sending motion out, the approach included a feedback loop to receive information returned by the control side.
+This case covers motion retargeting for robot models inside UE. Each model still needs checks of bone directions, joint proportions, and motion ranges. Some pose distortion in the Kinect-to-PN3 path still needs adjustment.
 
-## Solution
+Actuator communication, feedback, and closed-loop control for a physical robot require a separate device-integration assessment.
 
-Motion capture data acquisition and real-time parsing were integrated first so motion input could enter subsequent processing. Robot skeleton mapping was then established on the UE side, with the corresponding motion synchronized.
+## Discuss Your Project
 
-The control stage handled command delivery and the feedback loop, connecting motion synchronization with information from the control side. Acquisition, parsing, mapping, and control each handled part of the process and together supported real-time motion control.
+To drive a robot or non-standard skeleton in UE with motion-capture data, share the input device, model structure, and target movements. I can help define joint mapping, constraints, and pose processing.
 
-
-Data parsing, skeleton mapping, motion synchronization, and control feedback were connected into one approach, forming the project's motion capture robot control workflow.
-
-## Discuss your project
-
-If you need to feed motion capture data into a robot model in UE or connect motion synchronization with control commands and feedback, I can help with data parsing, skeleton mapping, and communication.
-
-Details about the capture device, robot model, and control interface will help establish the integration requirements.
-
-If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.
+[Get in touch](/en/contact/) to discuss it.

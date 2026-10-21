@@ -266,14 +266,17 @@
         {
           "order": 1,
           "name": "UE项目",
-          "id": "case-6719e60a89e7",
+          "id": "case-6c32285e6bbb",
           "entities": [
             "case:ai-digital-human-integration",
+            "case:driving-session-replay",
             "case:driving-simulator-three-screen",
             "case:flying-car-simulator",
             "case:metahuman-animation-clipping",
             "case:motion-capture-robot-control",
-            "case:six-dof-motion-platform"
+            "case:robot-realtime-ik-prototype",
+            "case:six-dof-motion-platform",
+            "case:ue-multiwindow-interface"
           ],
           "supplements": []
         },
@@ -333,6 +336,20 @@
             "case:perforce-workspace-pool",
             "case:plugin-release-workflow"
           ]
+        },
+        "case-6c32285e6bbb": {
+          "name": "UE项目",
+          "entities": [
+            "case:ai-digital-human-integration",
+            "case:driving-session-replay",
+            "case:driving-simulator-three-screen",
+            "case:flying-car-simulator",
+            "case:metahuman-animation-clipping",
+            "case:motion-capture-robot-control",
+            "case:robot-realtime-ik-prototype",
+            "case:six-dof-motion-platform",
+            "case:ue-multiwindow-interface"
+          ]
         }
       },
       "entityOrder": [
@@ -344,7 +361,10 @@
         "case:plugin-release-workflow",
         "case:markdown-publishing",
         "case:metahuman-animation-clipping",
-        "case:perforce-workspace-pool"
+        "case:perforce-workspace-pool",
+        "case:driving-session-replay",
+        "case:ue-multiwindow-interface",
+        "case:robot-realtime-ik-prototype"
       ]
     },
     "blog": {

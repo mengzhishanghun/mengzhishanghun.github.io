@@ -1,6 +1,6 @@
 ---
-title: Integrating a Six-Degree-of-Freedom Motion Platform
-description: Coordinated control of a Stewart platform and UE simulation.
+title: Six-Axis Platform Kinematics and Ocean Recording Integration
+description: Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
 type: case
 slug: six-dof-motion-platform
 categoryId: ue-projects
@@ -17,40 +17,40 @@ coverAlt: Flowchart of the six-degree-of-freedom motion platform integration
 websiteCoverUrl: /assets/cases/six-dof-motion-platform.png
 lang: en
 translationKey: six-dof-motion-platform
-sourceHash: 85911c368251473dbf8722254c6da149780f8b1b13c869b79a82ff3c2efbc53b
+sourceHash: 29af4d0750676da50693ce9f0099f22d36ce9c8e8eb3be4586ffb9a01dd7bf43
 translationStatus: translated
-generatedBodyHash: 2c122e102a7a65048a98c4c33f06a2cd3441acb0c4230a15a7ea6b874adc0c7c
+generatedBodyHash: 7222a2bbe6e7f1204ea7a4ad8a60233b13731d0a3c4d537d7577829f7694c3b6
 ---
 
-## Background
+## Turning Scene Poses into Platform Motion Data
 
-I worked on a project integrating a Stewart six-degree-of-freedom motion platform with UE simulation. The requirement was for motion information in the simulation to drive the physical platform's response, creating an experience in which the scene and hardware worked together.
+Integrating a six-degree-of-freedom platform requires handling the relationship between scene poses, mechanism dimensions, and control data. My work on StewartControl includes platform kinematics, data conversion, limits, and smoothing. It also extends to ocean-scene recording and data sending for virtual production.
 
-This case focuses on real-time communication, motion data driving, and calibration across multiple degrees of freedom, recording the project's integration work.
+### Forward and Inverse Kinematics and Unit Conversion
 
-## Reproduction Environment
+StewartKinematics calculates six rod lengths from a platform pose and also provides forward kinematics to recover a pose from rod lengths. The implementation uses Newton iteration and an analytical Jacobian, with conversions between centimeters and meters and between degrees and radians.
 
-The setup consisted of an Unreal Engine simulation and a Stewart six-degree-of-freedom motion platform. Integration involved platform pose data and motion data from the UE scene.
+Platform data also passes through zero-position handling, limits, per-frame rate limiting, and filtering to turn scene output into constrained motion data. Motion processing includes high-pass and low-pass filtering and tilt coordination.
 
-## Specific Problem
+## Ocean Scenes and Virtual-Production Recording
 
-Motion in the UE scene needed to be connected to the physical platform's response. Visual motion alone or platform control alone could not meet the integration requirement.
+For the ocean scene, I adapted environment parameters and recording workflows. Oceanology supplies the water behavior and force calculations; the project handles parameter changes, time recording, and sequence organization.
 
-Responses across multiple degrees of freedom also required calibration and debugging. Real-time communication, data driving, and actual platform motion needed to be checked within the same workflow.
+- Record Actors through TakePreset, Take Recorder, and Level Sequence.
+- Organize recorded Sequences into saved SubSequences for subsequent sequence workflows.
+- Expose interpolatable time, wavelength, wave height, wave speed, and wave direction properties on the ocean component. Accumulate TimeCode during recording and broadcast parameter changes.
+- Send six-axis parameters as LiveLink Transforms, providing an interface for downstream integration.
 
-## Solution
+The LiveLink scope here is the sender. Receiver devices and full synchronization between platform motion and recorded images still need integration and validation in the specific system.
 
-Real-time communication for platform pose data was integrated, and motion data from the UE scene was used to drive the platform's response, establishing a connection between simulation and hardware.
+## Practical Integration Scope
 
-Integration was calibrated and debugged across multiple degrees of freedom so communication and motion driving could work together on the actual platform. Communication connected the data, while calibration and debugging addressed the platform's response; both contributed to the integration.
+This work provides software implementations for kinematics, data processing, and recording integration. Physical calibration accuracy, mechanism safety, and the final motion experience require the platform dimensions, control protocol, and on-site tests.
 
+The ocean work provides a basis for recording environment parameters and organizing sequences. Wind fields, receivers, and recording-delay compensation are outside the implemented scope of this case.
 
-The project approach was completed around real-time communication, motion data driving, and integration calibration, connecting the UE scene to the six-degree-of-freedom motion platform.
+## Discuss Your Project
 
-## Discuss your project
+For connecting a UE scene to a six-axis platform or recording an adjustable ocean environment, share the mechanism, communication protocol, existing recording workflow, and receiver requirements. We can then define software adaptation and on-site integration work.
 
-If your UE simulation needs to work with a six-degree-of-freedom motion platform, I can help integrate the communication interface, prepare motion data, and assist with response calibration and debugging.
-
-Share the platform model, control protocol, existing simulation, and intended motion response so we can define the software and hardware scope.
-
-If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.
+[Get in touch](/en/contact/) to discuss it.

@@ -476,6 +476,18 @@
     {
       "id": "doc:p4-stream-switcher",
       "translationKey": "p4-stream-switcher"
+    },
+    {
+      "id": "case:driving-session-replay",
+      "translationKey": "driving-session-replay"
+    },
+    {
+      "id": "case:ue-multiwindow-interface",
+      "translationKey": "ue-multiwindow-interface"
+    },
+    {
+      "id": "case:robot-realtime-ik-prototype",
+      "translationKey": "robot-realtime-ik-prototype"
     }
   ]
 }

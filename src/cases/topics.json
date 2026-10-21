@@ -155,6 +155,57 @@
           "Development tools"
         ]
       }
+    },
+    "case:driving-session-replay": {
+      "topics": [
+        "simulation-control"
+      ],
+      "legacyTags": {
+        "zh": [
+          "仿真",
+          "驾驶记录",
+          "回放"
+        ],
+        "en": [
+          "Simulation",
+          "Driving records",
+          "Replay"
+        ]
+      }
+    },
+    "case:ue-multiwindow-interface": {
+      "topics": [
+        "rendering-display"
+      ],
+      "legacyTags": {
+        "zh": [
+          "UMG",
+          "多窗口",
+          "界面工具"
+        ],
+        "en": [
+          "UMG",
+          "Multiwindow",
+          "UI tools"
+        ]
+      }
+    },
+    "case:robot-realtime-ik-prototype": {
+      "topics": [
+        "simulation-control"
+      ],
+      "legacyTags": {
+        "zh": [
+          "机器人",
+          "UDP",
+          "原型"
+        ],
+        "en": [
+          "Robotics",
+          "UDP",
+          "Prototype"
+        ]
+      }
     }
   }
 }

@@ -1299,7 +1299,7 @@
         "/cases/flying-car-simulator/"
       ],
       "template": "cases/templates/case--flying-car-simulator.html",
-      "title": "飞行汽车模拟器",
+      "title": "UE 飞行仿真中的 AirSim 控制适配",
       "translationKey": "flying-car-simulator",
       "baselineTemplate": "cases/flying-car-simulator/index.html",
       "supplementTranslationKeys": [],
@@ -1317,7 +1317,7 @@
         "/cases/motion-capture-robot-control/"
       ],
       "template": "cases/templates/case--motion-capture-robot-control.html",
-      "title": "动捕机器人控制系统",
+      "title": "将动捕骨骼重定向到 UE 机器人模型",
       "translationKey": "motion-capture-robot-control",
       "baselineTemplate": "cases/motion-capture-robot-control/index.html",
       "supplementTranslationKeys": [],
@@ -1335,7 +1335,7 @@
         "/cases/six-dof-motion-platform/"
       ],
       "template": "cases/templates/case--six-dof-motion-platform.html",
-      "title": "六自由度运动平台联动",
+      "title": "六轴平台运动解算与海洋虚拍录制适配",
       "translationKey": "six-dof-motion-platform",
       "baselineTemplate": "cases/six-dof-motion-platform/index.html",
       "supplementTranslationKeys": [],
@@ -3332,6 +3332,48 @@
         "tag": "p",
         "template": "<p id=\"p4streamswitcher\" class=\"article-source-title\">{{sourceTitleMarkup}}</p>"
       },
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "case:driving-session-replay",
+      "type": "case",
+      "slug": "driving-session-replay",
+      "legacyRoutes": [
+        "/cases/driving-session-replay/"
+      ],
+      "template": "cases/templates/case--driving-session-replay.html",
+      "title": "驾驶过程记录与 UE 回放管理",
+      "translationKey": "driving-session-replay",
+      "baselineTemplate": "cases/driving-session-replay/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "case:ue-multiwindow-interface",
+      "type": "case",
+      "slug": "ue-multiwindow-interface",
+      "legacyRoutes": [
+        "/cases/ue-multiwindow-interface/"
+      ],
+      "template": "cases/templates/case--ue-multiwindow-interface.html",
+      "title": "在 UE 中创建独立多窗口界面",
+      "translationKey": "ue-multiwindow-interface",
+      "baselineTemplate": "cases/ue-multiwindow-interface/index.html",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "case:robot-realtime-ik-prototype",
+      "type": "case",
+      "slug": "robot-realtime-ik-prototype",
+      "legacyRoutes": [
+        "/cases/robot-realtime-ik-prototype/"
+      ],
+      "template": "cases/templates/case--robot-realtime-ik-prototype.html",
+      "title": "机器人实时数据与三轴 IK 原型",
+      "translationKey": "robot-realtime-ik-prototype",
+      "baselineTemplate": "cases/robot-realtime-ik-prototype/index.html",
       "supplementTranslationKeys": [],
       "mediaOccurrences": []
     }

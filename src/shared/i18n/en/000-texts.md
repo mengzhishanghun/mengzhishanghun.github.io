@@ -1775,8 +1775,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   case:flying-car-simulator:
-    root.html:1.head:0.meta:2@content: "A UE flying car simulation case covering ground and flight modes, physics-driven motion, cockpit interaction and HUD instruments."
-    root.html:1.head:0.title:4.#text:0: "UE Flying Car Simulator: Dual-Mode Control & Cockpit · Xiao Mao"
+    root.html:1.head:0.meta:2@content: Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
+    root.html:1.head:0.title:4.#text:0: Adapting AirSim Controls for UE Flight Simulation · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -1793,10 +1793,10 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Flying Car Simulator
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Flying Car Simulator
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A flying car simulation system for future mobility.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Adapting AirSim Controls for UE Flight Simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Adapting AirSim Controls for UE Flight Simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Simulation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Transportation
@@ -1825,8 +1825,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   case:motion-capture-robot-control:
-    root.html:1.head:0.meta:2@content: "A motion capture robot case covering real-time data parsing, UE skeleton mapping, motion synchronization, control commands and feedback."
-    root.html:1.head:0.title:4.#text:0: "UE Motion Capture Robot: Skeleton Mapping & Feedback · Xiao Mao"
+    root.html:1.head:0.meta:2@content: Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
+    root.html:1.head:0.title:4.#text:0: Retargeting Motion Capture to Robot Models in UE · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -1843,12 +1843,12 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Motion Capture Robot Control System
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Motion-capture Robot Control
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A real-time robot control approach based on motion capture.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Retargeting Motion Capture to Robot Models in UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Retargeting Motion Capture to Robot Models in UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Motion Capture
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Motion capture
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Robotics
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Motion Capture Robot Control System
@@ -1875,8 +1875,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   case:six-dof-motion-platform:
-    root.html:1.head:0.meta:2@content: "A Stewart six-DOF motion platform case covering real-time communication with UE, simulation-driven motion, calibration and integration testing."
-    root.html:1.head:0.title:4.#text:0: "UE & Stewart Six-DOF Motion Platform Integration · Xiao Mao"
+    root.html:1.head:0.meta:2@content: Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
+    root.html:1.head:0.title:4.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -1893,13 +1893,13 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Integrating a Six-Degree-of-Freedom Motion Platform
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Six-DOF Motion Platform Integration
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Coordinated control of a Stewart platform and UE simulation.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Simulation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Hardware Integration
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Hardware integration
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Integrating a Six-Degree-of-Freedom Motion Platform
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
@@ -4516,7 +4516,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: From real problems to working results
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: Case categories
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE Projects
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "6"
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "9"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:0.#text:0: Desktop and Automation
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:1.span:1.#text:0: "3"
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1@aria-label: Content list
@@ -4543,27 +4543,27 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:0.#text:0: AI
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:1.#text:0: MetaHuman
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:2.#text:0: Voice Interaction
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2@aria-label: Flying Car Simulator
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2@aria-label: Adapting AirSim Controls for UE Flight Simulation
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:0.span:0.#text:0: Archived
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.h2:0.#text:0: Flying Car Simulator
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.p:1.#text:0: Flying Car Simulator
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.p:2.#text:0: A flying car simulation system for future mobility.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.h2:0.#text:0: Adapting AirSim Controls for UE Flight Simulation
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.p:1.#text:0: Adapting AirSim Controls for UE Flight Simulation
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.p:2.#text:0: Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0@aria-label: Case tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:0.#text:0: Simulation
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:1.#text:0: Transportation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3@aria-label: Motion Capture Robot Control System
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3@aria-label: Retargeting Motion Capture to Robot Models in UE
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:0.#text:0: Archived
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:1.h2:0.#text:0: Motion Capture Robot Control System
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:1.p:1.#text:0: Motion-capture Robot Control
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.p:2.#text:0: A real-time robot control approach based on motion capture.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:1.h2:0.#text:0: Retargeting Motion Capture to Robot Models in UE
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:1.p:1.#text:0: Retargeting Motion Capture to Robot Models in UE
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.p:2.#text:0: Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:2.div:0@aria-label: Case tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:2.div:0.span:0.#text:0: Motion Capture
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:2.div:0.span:1.#text:0: Robotics
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: Integrating a Six-Degree-of-Freedom Motion Platform
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: Six-Axis Platform Kinematics and Ocean Recording Integration
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:0.#text:0: Archived
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:1.h2:0.#text:0: Integrating a Six-Degree-of-Freedom Motion Platform
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:1.p:1.#text:0: Six-DOF Motion Platform Integration
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.p:2.#text:0: Coordinated control of a Stewart platform and UE simulation.
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:1.h2:0.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:1.p:1.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
+    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.p:2.#text:0: Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:2.div:0@aria-label: Case tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:2.div:0.span:0.#text:0: Simulation
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:2.div:0.span:1.#text:0: Hardware Integration
@@ -4614,6 +4614,33 @@ shellSlots:
     perforce-workspace-pool:card:6: Perforce
     perforce-workspace-pool:card:7: Development tools
     perforce-workspace-pool:card:8: Perforce
+    driving-session-replay:card:0: Driving Session Recording and UE Replay Management
+    driving-session-replay:card:1: Archived
+    driving-session-replay:card:2: Driving Session Recording and UE Replay Management
+    driving-session-replay:card:3: Driving Session Recording and UE Replay Management
+    driving-session-replay:card:4: Capture driving inputs and vehicle states, save performance statistics, and manage UE Network Replay recordings.
+    driving-session-replay:card:5: Case tags
+    driving-session-replay:card:6: Simulation
+    driving-session-replay:card:7: Driving records
+    driving-session-replay:card:8: Replay
+    ue-multiwindow-interface:card:0: Creating Independent Multiwindow Interfaces in UE
+    ue-multiwindow-interface:card:1: Archived
+    ue-multiwindow-interface:card:2: Creating Independent Multiwindow Interfaces in UE
+    ue-multiwindow-interface:card:3: Creating Independent Multiwindow Interfaces in UE
+    ue-multiwindow-interface:card:4: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
+    ue-multiwindow-interface:card:5: Case tags
+    ue-multiwindow-interface:card:6: UMG
+    ue-multiwindow-interface:card:7: Multiwindow
+    ue-multiwindow-interface:card:8: UI tools
+    robot-realtime-ik-prototype:card:0: Robot Realtime Data and Three-Axis IK Prototype
+    robot-realtime-ik-prototype:card:1: In development
+    robot-realtime-ik-prototype:card:2: Robot Realtime Data and Three-Axis IK Prototype
+    robot-realtime-ik-prototype:card:3: Robot Realtime Data and Three-Axis IK Prototype
+    robot-realtime-ik-prototype:card:4: An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
+    robot-realtime-ik-prototype:card:5: Case tags
+    robot-realtime-ik-prototype:card:6: Robotics
+    robot-realtime-ik-prototype:card:7: UDP
+    robot-realtime-ik-prototype:card:8: Prototype
   page:blog-index:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37@aria-label: Fixing Missing GI Across Multiple Views in UE 5.3
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:37.div:0.h2:0.#text:0: Fixing Missing GI Across Multiple Views in UE 5.3
@@ -6289,6 +6316,159 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  case:driving-session-replay:
+    root.html:1.head:0.meta:2@content: Capture driving inputs and vehicle states, save performance statistics, and manage UE Network Replay recordings.
+    root.html:1.head:0.title:4.#text:0: Driving Session Recording and UE Replay Management · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Driving Session Recording and UE Replay Management
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Driving Session Recording and UE Replay Management
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Capture driving inputs and vehicle states, save performance statistics, and manage UE Network Replay recordings.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Driving records
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Replay
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  case:ue-multiwindow-interface:
+    root.html:1.head:0.meta:2@content: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
+    root.html:1.head:0.title:4.#text:0: Creating Independent Multiwindow Interfaces in UE · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Creating Independent Multiwindow Interfaces in UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Creating Independent Multiwindow Interfaces in UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UMG
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multiwindow
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: UI tools
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  case:robot-realtime-ik-prototype:
+    root.html:1.head:0.meta:2@content: An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
+    root.html:1.head:0.title:4.#text:0: Robot Realtime Data and Three-Axis IK Prototype · Xiao Mao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Robot Realtime Data and Three-Axis IK Prototype
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Robot Realtime Data and Three-Axis IK Prototype
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Robotics
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: UDP
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Prototype
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
 scriptSlots:
   category:UE工具: "UE Tools"
   category:写作工具: "Writing Tools"
@@ -8158,7 +8338,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 4409644ec9f55c0b6b08861c837dfe96ad479a649d39792fb6f8799259198622
+sourceHash: 6f813cc0ea22c71330c5058858790b53123d830f86ccde7d711dd8cd93709650
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

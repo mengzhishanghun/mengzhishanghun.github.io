@@ -8,9 +8,9 @@ websiteRoute: /cases/
 template: cases/index.html
 lang: en
 translationKey: cases-index
-sourceHash: 97f0bbdb9bcb5a235206f8522017a75cf0f44e4df8a5fc71b688e99ff88592ba
+sourceHash: a1aeb3f5eaf2aba0f7d3574b749103c4860bc63ce34ddf872aa9b24ef7a5ce4f
 translationStatus: translated
-generatedBodyHash: 967efe048ce0cc506d9b91ba6c650a7c60c464aca6983191fcc432ea81d5b30e
+generatedBodyHash: 96f4aac5e50aaad456634bcd8bd59171dc36b7a879325f6571cf7f424c8f9a7b
 ---
 
 ![](/media-occurrence/page%3Acases-index%3Amedia%3A1)
@@ -19,7 +19,7 @@ generatedBodyHash: 967efe048ce0cc506d9b91ba6c650a7c60c464aca6983191fcc432ea81d5b
 
 From real problems to practical results
 
-UE Projects 6 · Desktop & Automation 3
+UE Projects 9 · Desktop & Automation 3
 
 Search this category
 
@@ -49,31 +49,31 @@ AI · MetaHuman · Voice interaction](/cases/ai-digital-human-integration/)[![](
 
 Archived
 
-## Flying Car Simulator
+## Adapting AirSim Controls for UE Flight Simulation
 
-Flying Car Simulator
+Adapting AirSim Controls for UE Flight Simulation
 
-A flying car simulation system for future mobility.
+Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
 
 Simulation · Transportation](/cases/flying-car-simulator/)[![](/media-occurrence/page%3Acases-index%3Amedia%3A5)
 
 Archived
 
-## Motion Capture Robot Control System
+## Retargeting Motion Capture to Robot Models in UE
 
-Motion-capture Robot Control
+Retargeting Motion Capture to Robot Models in UE
 
-A real-time robot control approach based on motion capture.
+Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
 
 Motion capture · Robotics](/cases/motion-capture-robot-control/)[![](/media-occurrence/page%3Acases-index%3Amedia%3A6)
 
 Archived
 
-## Integrating a Six-Degree-of-Freedom Motion Platform
+## Six-Axis Platform Kinematics and Ocean Recording Integration
 
-Six-DOF Motion Platform Integration
+Six-Axis Platform Kinematics and Ocean Recording Integration
 
-Coordinated control of a Stewart platform and UE simulation.
+Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
 
 Simulation · Hardware integration](/cases/six-dof-motion-platform/)[![](/media-occurrence/page%3Acases-index%3Amedia%3A7)
 
@@ -84,3 +84,34 @@ Completed
 Adjusting head animation Additive Settings and using a script Blueprint to process the same settings across multiple animations.
 
 MetaHuman · Animation · Batch processing](/cases/metahuman-animation-clipping/)
+
+
+[Archived
+
+## Driving Session Recording and UE Replay Management
+
+Driving Session Recording and UE Replay Management
+
+Capture driving inputs and vehicle states, save performance statistics, and manage UE Network Replay recordings.
+
+Simulation · Driving records · Replay](/cases/driving-session-replay/)
+
+[Archived
+
+## Creating Independent Multiwindow Interfaces in UE
+
+Creating Independent Multiwindow Interfaces in UE
+
+Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
+
+UMG · Multiwindow · UI tools](/cases/ue-multiwindow-interface/)
+
+[In development
+
+## Robot Realtime Data and Three-Axis IK Prototype
+
+Robot Realtime Data and Three-Axis IK Prototype
+
+An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
+
+Robotics · UDP · Prototype](/cases/robot-realtime-ik-prototype/)
