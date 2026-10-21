@@ -17,37 +17,69 @@ coverAlt: Flowchart of the six-degree-of-freedom motion platform integration
 websiteCoverUrl: /assets/cases/six-dof-motion-platform.png
 lang: en
 translationKey: six-dof-motion-platform
-sourceHash: 29af4d0750676da50693ce9f0099f22d36ce9c8e8eb3be4586ffb9a01dd7bf43
+sourceHash: 620515f37fd4c95be3052ac93ab5ec79597ee2f9baccccdfb3eefcd7c7e4742f
 translationStatus: translated
-generatedBodyHash: 7222a2bbe6e7f1204ea7a4ad8a60233b13731d0a3c4d537d7577829f7694c3b6
+generatedBodyHash: 600054193c2dd71b764530bb458aa5a6f8fa93da7d0e337407f16c5aedce5761
 ---
+
 
 ## Turning Scene Poses into Platform Motion Data
 
-Integrating a six-degree-of-freedom platform requires handling the relationship between scene poses, mechanism dimensions, and control data. My work on StewartControl includes platform kinematics, data conversion, limits, and smoothing. It also extends to ocean-scene recording and data sending for virtual production.
+Integrating a six-degree-of-freedom platform means turning UE scene translation and rotation into data the mechanism can use. The scene supplies a pose, while a Stewart platform is supported by six rods. A change in one direction can affect several rods, and units, zero positions, and constraints need explicit handling. My work on StewartControl includes kinematics, data processing, and editor recording integration for an ocean scene.
+
+### Responsibilities in the Motion Pipeline
+
+| Stage | Input and output | Responsibility |
+| --- | --- | --- |
+| Mechanism definition | Six pivots on each platform | Define rod connections and the dimensional basis |
+| Inverse kinematics, IK | Platform pose → six rod lengths | Convert position and rotation into mechanism lengths |
+| Forward kinematics, FK | Six rod lengths → estimated pose | Recover platform position and rotation from lengths |
+| Data constraints | Pose or motion data → constrained data | Handle zero position, filtering, limits, and rate of change |
 
 ### Forward and Inverse Kinematics and Unit Conversion
 
-StewartKinematics calculates six rod lengths from a platform pose and also provides forward kinematics to recover a pose from rod lengths. The implementation uses Newton iteration and an analytical Jacobian, with conversions between centimeters and meters and between degrees and radians.
+Inverse kinematics transforms the upper-platform pivots using the target pose, then measures their distances to the corresponding lower-platform pivots to obtain six rod lengths. This requires the full pivot layout. The platform center alone cannot determine how far each rod should extend.
 
-Platform data also passes through zero-position handling, limits, per-frame rate limiting, and filtering to turn scene output into constrained motion data. Motion processing includes high-pass and low-pass filtering and tilt coordination.
+Forward kinematics estimates the platform pose from rod lengths. The implementation uses Newton iteration and an analytical Jacobian to describe how pose changes affect rod lengths, progressively reducing the discrepancy between estimated and target lengths. Numerical forward solving and geometric inverse calculation have different roles. A length conversion alone does not establish physical calibration.
+
+Centimeters and degrees on the UE side require explicit conversion to meters and radians on the solver side. Mixed units can produce plausible numbers at an incorrect scale. Conversion is kept at the solver boundary so it can be checked against the mechanism parameters.
+
+### Filtering, Pose Limits, and Rate Limits
+
+Data processing includes EMA, median, and Butterworth filters. EMA smooths changes by weighting previous and current results, median filtering handles local spikes, and Butterworth filtering processes signals according to frequency characteristics. Different filters suit different inputs, and smoothing also affects how quickly motion follows changes.
+
+Zero-position handling defines the reference for a pose. Pose limits constrain its allowed range, while per-frame rate limits constrain changes between consecutive outputs. These layers serve different purposes: values within the permitted range can still jump abruptly between positions. Motion processing also includes high-pass and low-pass filtering and tilt coordination to organize motion components with different variation characteristics.
 
 ## Ocean Scenes and Virtual-Production Recording
 
-For the ocean scene, I adapted environment parameters and recording workflows. Oceanology supplies the water behavior and force calculations; the project handles parameter changes, time recording, and sequence organization.
+Oceanology provides the ocean's water behavior and force calculations. My integration focuses on adjustable environment parameters, Actor recording, and sequence organization, preserving the timing relationship between scene content and a recording in editor assets.
 
-- Record Actors through TakePreset, Take Recorder, and Level Sequence.
-- Organize recorded Sequences into saved SubSequences for subsequent sequence workflows.
-- Expose interpolatable time, wavelength, wave height, wave speed, and wave direction properties on the ocean component. Accumulate TimeCode during recording and broadcast parameter changes.
-- Send six-axis parameters as LiveLink Transforms, providing an interface for downstream integration.
+### Animatable Wave Parameters
 
-The LiveLink scope here is the sender. Receiver devices and full synchronization between platform motion and recorded images still need integration and validation in the specific system.
+The ocean component exposes interpolatable time, wavelength, wave height, wave speed, and wave direction properties. Parameter changes broadcast notifications so the water side can update. TimeCode accumulates during recording to describe time progression. Environment parameters therefore have their own adjustment interface without copying water algorithms into recording logic.
+
+These properties cover the implemented wave and time parameters. Wind fields are outside this property set; animatable water parameters do not establish completed wind-field simulation.
+
+### From Recording Start to Saved Sequence
+
+The recording workflow is editor-only and uses TakePreset, Actor sources, and Take Recorder. It creates a new recording while retaining the timing relationship to the original scene Sequence:
+
+1. At recording start, retain the original scene Sequence currently open in the editor and the start time.
+2. Configure TakePreset and the Actor sources, then start Take Recorder to produce a new recording.
+3. When recording finishes, add the original scene Sequence as a SubSequence within the new recorded result.
+4. Apply an offset based on the recording start time to align the original scene sequence with the recorded content, then save the result.
+
+Embedding the original scene sequence in the new recorded result brings existing scene content and newly recorded Actors into one result. This implementation depends on editor data. It describes an editor Take workflow and is not a general recording feature for a packaged application.
+
+### LiveLink Sending
+
+Six-axis parameters can be sent as LiveLink Transforms for downstream integration. The sender organizes and pushes Transforms. How a receiver interprets them, drives a platform, and aligns images with motion requires separate handling in the receiving system.
 
 ## Practical Integration Scope
 
-This work provides software implementations for kinematics, data processing, and recording integration. Physical calibration accuracy, mechanism safety, and the final motion experience require the platform dimensions, control protocol, and on-site tests.
+This work provides software for kinematics, signal processing, editor recording, and LiveLink sending. Filtering and pose constraints do not constitute mechanism-workspace validation or hardware safety protection. Physical accuracy, device control, and the final motion experience require the platform structure, protocol, and on-site tests.
 
-The ocean work provides a basis for recording environment parameters and organizing sequences. Wind fields, receivers, and recording-delay compensation are outside the implemented scope of this case.
+The ocean integration covers environment parameters, recorded sequences, and a sending interface. Receivers, complete physical synchronization, wind fields, and recording-delay compensation are outside the connected pipeline in this case.
 
 ## Discuss Your Project
 
