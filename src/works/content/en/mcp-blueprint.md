@@ -27,9 +27,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-blueprint
-sourceHash: 5747a0d501c98eff3e4661e3a62d9af705aa9c2860587f013a3475a87e752bd4
+sourceHash: 192a6925a815c28c9a0e8dfeb9edcc6ddfc931fc4fdbf69ac53fb2ff889e818e
 generatedBodyHash: 68e195cb4d8488bad52444208f6a6bb6fd6e83468ae5421cb96b3918f439d00b
 translationStatus: translated
+coverAlt: Blueprint discovery, editing and compilation feedback diagram
+websiteCoverUrl: /assets/covers/mcp-blueprint.png
 ---
 
 ## About this work

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Local AI workflow</title><desc id="desc">A local task workflow connects conversation, tools, review and preview.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="180" y="190" width="1240" height="420" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M180 238 H1420" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="205" y="222" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Local workspace</text>
+<circle cx="1395" cy="215" r="3" fill="#8999aa"/>
+<circle cx="1377" cy="215" r="3" fill="#8999aa"/>
+<circle cx="1359" cy="215" r="3" fill="#8999aa"/>
+<rect x="230" y="295" width="245" height="105" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="352.5" y="357.36" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="29" font-weight="500" text-anchor="middle">Conversation</text>
+<rect x="585" y="295" width="245" height="105" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="707.5" y="358.38" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="32" font-weight="500" text-anchor="middle">Task</text>
+<rect x="940" y="295" width="245" height="105" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="1062.5" y="358.38" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="32" font-weight="500" text-anchor="middle">Tools</text>
+<path d="M475 347 L570 347" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M558.4453013912645 354.90499462753047 L570 347 L558.4453013912645 339.09500537246953" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M830 347 L925 347" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M913.4453013912645 354.90499462753047 L925 347 L913.4453013912645 339.09500537246953" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1062 400 V475 H710 V500" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="585" y="500" width="245" height="65" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="707.5" y="542.02" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Review</text>
+<rect x="940" y="500" width="245" height="65" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="1062.5" y="542.02" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Preview</text>
+<path d="M830 532 L925 532" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M913.4453013912645 539.9049946275305 L925 532 L913.4453013912645 524.0950053724695" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Local tasks / execution / review</text>
+</svg>

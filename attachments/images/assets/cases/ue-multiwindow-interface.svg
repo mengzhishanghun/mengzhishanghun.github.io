@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Independent UI windows</title><desc id="desc">A main window relates to two independent native windows hosting UMG.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="150" y="220" width="650" height="370" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<path d="M150 268 H800" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="175" y="252" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Main window</text>
+<circle cx="775" cy="245" r="3" fill="#8999aa"/>
+<circle cx="757" cy="245" r="3" fill="#8999aa"/>
+<circle cx="739" cy="245" r="3" fill="#8999aa"/>
+<rect x="195" y="315" width="560" height="220" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M250 485 L355 370 L480 445 L590 350 L700 485" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M800 405 H875 M875 230 V535" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M875 230 L970 230" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M958.4453013912645 237.9049946275305 L970 230 L958.4453013912645 222.0950053724695" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M875 535 L970 535" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M958.4453013912645 542.9049946275305 L970 535 L958.4453013912645 527.0950053724695" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="985" y="140" width="460" height="230" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M985 188 H1445" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1010" y="172" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Window A</text>
+<circle cx="1420" cy="165" r="3" fill="#8999aa"/>
+<circle cx="1402" cy="165" r="3" fill="#8999aa"/>
+<circle cx="1384" cy="165" r="3" fill="#8999aa"/>
+<rect x="1030" y="225" width="370" height="95" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="1215" y="282.36" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="29" font-weight="500" text-anchor="middle">UMG panel</text>
+<rect x="985" y="420" width="460" height="230" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M985 468 H1445" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1010" y="452" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Window B</text>
+<circle cx="1420" cy="445" r="3" fill="#8999aa"/>
+<circle cx="1402" cy="445" r="3" fill="#8999aa"/>
+<circle cx="1384" cy="445" r="3" fill="#8999aa"/>
+<path d="M1030 515 H1400 M1030 555 H1290" fill="none" stroke="#8999aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1180" y="585" width="220" height="40" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="1290" y="612.82" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="23" font-weight="500" text-anchor="middle">Controls</text>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Slate windows / UMG content</text>
+</svg>

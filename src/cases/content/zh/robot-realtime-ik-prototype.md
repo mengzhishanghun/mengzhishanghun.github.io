@@ -14,6 +14,8 @@ tags:
   - 机器人
   - UDP
   - 原型
+coverAlt: 机器人实时数据与三轴 IK 原型示意图
+websiteCoverUrl: /assets/cases/robot-realtime-ik-prototype.png
 lang: zh
 translationKey: robot-realtime-ik-prototype
 ---

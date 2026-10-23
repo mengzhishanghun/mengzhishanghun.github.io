@@ -24,9 +24,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-animation
-sourceHash: f99a8274c10a434d9d5d0e3eb4677926d775ad6f5a9307efdd1eb7477e85b4c6
+sourceHash: 2ec8fb6a6b3bacdf90a6d4a7f42b27246353775624d4912c779545aa25ceaeb5
 generatedBodyHash: 128a88457b8fa93df4d354f9d0a5fec177e105676586d6cdd127a18bb9fce22c
 translationStatus: translated
+coverAlt: Animation Blueprint states and animation asset tracks diagram
+websiteCoverUrl: /assets/covers/mcp-animation.png
 ---
 
 ## About this work

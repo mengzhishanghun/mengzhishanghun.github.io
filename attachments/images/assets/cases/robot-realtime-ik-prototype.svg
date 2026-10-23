@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Three-axis position IK</title><desc id="desc">UDP JSON and game Tick feed a three-revolute-joint position IK prototype.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="140" y="200" width="300" height="90" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="290" y="255.54" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="500" text-anchor="middle">UDP JSON</text>
+<rect x="140" y="410" width="300" height="90" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="290" y="465.54" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="31" font-weight="500" text-anchor="middle">Game Tick</text>
+<path d="M440 245 H510 V455 H440 M510 350 H600" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="615" y="295" width="320" height="110" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="775" y="361.22" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="33" font-weight="500" text-anchor="middle">Position IK</text>
+<path d="M935 350 L1045 350" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1033.4453013912646 357.90499462753047 L1045 350 L1033.4453013912646 342.09500537246953" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1090 570 V485 L1210 360 L1350 425" fill="none" stroke="#72dae5" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1040 595 H1160 M1065 570 H1115" fill="none" stroke="#8999aa" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1090" cy="485" r="20" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="1130" y="465" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="500" text-anchor="start">J1</text>
+<circle cx="1210" cy="360" r="20" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="1250" y="340" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="500" text-anchor="start">J2</text>
+<circle cx="1350" cy="425" r="20" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="1390" y="405" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="500" text-anchor="start">J3</text>
+<path d="M1370 425 H1420" fill="none" stroke="#72dae5" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1400 290 H1440 M1420 270 V310" fill="none" stroke="#8999aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1420 315 V390" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 8"/>
+<text x="775" y="475" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="500" text-anchor="middle">XYZ target</text>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Realtime input / three-joint position solver</text>
+</svg>

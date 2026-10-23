@@ -290,5 +290,20 @@ const restoredBlogDimensions={
 export default {...legacyDimensions,...additionalDimensions,...restoredBlogDimensions,
   '/assets/cases/blueprint-inheritance-repair.png':{width:1600,height:800},
   '/assets/cases/data-asset-json-sync.png':{width:1600,height:800},
-  '/assets/cases/metahuman-animation-clipping.png':{width:1600,height:800}
+  '/assets/cases/metahuman-animation-clipping.png':{width:1600,height:800},
+  '/assets/covers/p4-stream-switcher.png':{width:1600,height:800},
+  '/assets/covers/mcp-animation.png':{width:1600,height:800},
+  '/assets/covers/mcp-behavior-tree.png':{width:1600,height:800},
+  '/assets/covers/mcp-blueprint.png':{width:1600,height:800},
+  '/assets/covers/mcp-dev-tools.png':{width:1600,height:800},
+  '/assets/covers/mcp-level-sequence.png':{width:1600,height:800},
+  '/assets/covers/mcp-material.png':{width:1600,height:800},
+  '/assets/covers/mcp-niagara.png':{width:1600,height:800},
+  '/assets/covers/mcp-umg.png':{width:1600,height:800},
+  '/assets/covers/mcp-world-editor.png':{width:1600,height:800},
+  '/assets/covers/shaniu.png':{width:1600,height:800},
+  '/assets/cases/perforce-workspace-pool.png':{width:1600,height:800},
+  '/assets/cases/driving-session-replay.png':{width:1600,height:800},
+  '/assets/cases/ue-multiwindow-interface.png':{width:1600,height:800},
+  '/assets/cases/robot-realtime-ik-prototype.png':{width:1600,height:800}
 };

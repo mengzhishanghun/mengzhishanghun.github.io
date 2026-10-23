@@ -24,9 +24,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-world-editor
-sourceHash: f9852150b889480ef1093daddb68a7c72d90d97164b8612870c3dc11d9202ce3
+sourceHash: 4302711b27fe8f99d93b64ddf132cb32b97597301a56b5b4c5d673f9126fd0fe
 generatedBodyHash: 176fd880cbec674bc723b33dab36a4a248e6b6d401022acf58123464fc176cf1
 translationStatus: translated
+coverAlt: Actor, level and terrain editing diagram
+websiteCoverUrl: /assets/covers/mcp-world-editor.png
 ---
 
 ## About this work

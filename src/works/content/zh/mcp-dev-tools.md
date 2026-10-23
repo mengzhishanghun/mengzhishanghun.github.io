@@ -23,6 +23,8 @@ sitePublish: true
 tags:
   - 资产工具与只读开发诊断
   - MCP 系列
+coverAlt: 资产工具与开发诊断示意图
+websiteCoverUrl: /assets/covers/mcp-dev-tools.png
 lang: zh
 translationKey: mcp-dev-tools
 ---

@@ -24,9 +24,11 @@ tags:
   - Background tasks
 lang: en
 translationKey: shaniu
-sourceHash: 246bc55225d1c8d8576a2e4eaac894d1ecd20c06081fc153d0544e876cd43c05
+sourceHash: b93b0aada3f8f14b035671e60bec6cf4ecae3df20cd32093b371d4ec26f2b981
 generatedBodyHash: af5786d5fbe44966d76e2729296e7700dbc62e03da87a0ce470b2d548c3a31eb
 translationStatus: translated
+coverAlt: ShaNiu local AI butler task flow diagram
+websiteCoverUrl: /assets/covers/shaniu.png
 ---
 
 ## About this work

@@ -17,9 +17,11 @@ productIds:
   - p4-stream-switcher
 lang: en
 translationKey: perforce-workspace-pool
-sourceHash: 98f17e244d5c2039e382035126a7d73a7719e836cea3b826ca52efedfe35b6c7
+sourceHash: 42839580c4908c89b8221b33c3cf1a6ee7963dd4abc65d64e274d22bf29919fa
 translationStatus: translated
 generatedBodyHash: 41d155afdadc8e681ff0c0c6a1f8d6e41da4d2234fab542f63167c96c8ea30f0
+coverAlt: Perforce workspace pool and local cache management diagram
+websiteCoverUrl: /assets/cases/perforce-workspace-pool.png
 ---
 
 ## Background and constraints

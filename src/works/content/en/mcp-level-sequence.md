@@ -24,9 +24,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-level-sequence
-sourceHash: 451215e626684aeafdff179095d952edbd0ee363b01ca1f7a9e9c932e5c42150
+sourceHash: 333165652ca15f1ef1f59d179d6a3d78dfb4a7749de29b2631c195946e3be1a0
 generatedBodyHash: 9415da192cff098e6bbd9d0690bc0b656f53537d640258c21cf816f3d6c7d74f
 translationStatus: translated
+coverAlt: Level Sequence tracks and timeline diagram
+websiteCoverUrl: /assets/covers/mcp-level-sequence.png
 ---
 
 ## About this work

@@ -14,6 +14,8 @@ tags:
   - 仿真
   - 驾驶记录
   - 回放
+coverAlt: 驾驶过程记录与 UE 回放管理示意图
+websiteCoverUrl: /assets/cases/driving-session-replay.png
 lang: zh
 translationKey: driving-session-replay
 ---

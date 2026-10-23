@@ -16,9 +16,11 @@ tags:
   - Replay
 lang: en
 translationKey: driving-session-replay
-sourceHash: 7a85b612360d041323c29c3d17995051acf6164398df89713230ad615bfd6d71
+sourceHash: cfa126c4b386a1504304d235e9f3c1007c25579905a730c91e73a3a9dd011064
 translationStatus: translated
 generatedBodyHash: 413b982d437454bc5da174cf7edf948a969d94fbd1f0a6877e56f0d8f54af6a3
+coverAlt: Driving session recording and UE replay management diagram
+websiteCoverUrl: /assets/cases/driving-session-replay.png
 ---
 
 

@@ -24,9 +24,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: 295ae050ab39c0bbab61ec4bbbe9065fde76f68b5f0cea62aba759f501661da7
+sourceHash: 14d535769559a813a4d05c21f24cb01f10c24d00d65403ee4c0346650ef21478
 generatedBodyHash: 10464f11b6dd6421f1a7b0a380653f086ddc654597ffbc776b4a4165aa585f60
 translationStatus: translated
+coverAlt: Widget tree, properties and animation diagram
+websiteCoverUrl: /assets/covers/mcp-umg.png
 ---
 
 ## About this work

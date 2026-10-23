@@ -24,9 +24,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-behavior-tree
-sourceHash: 96292e4810ecaa5bd4b4f46c05a6141f936eee32454ab3c02d5fc3b2519f72ff
+sourceHash: 974006091a62134b3297d18217500f8e43bd7ee2981dfcc84a3849fb60437ef2
 generatedBodyHash: 4f38dc89f40e7b21e7017fc28991afcc155945eebfd33e0a490215e2bc4277b3
 translationStatus: translated
+coverAlt: Behavior Tree and Blackboard editing diagram
+websiteCoverUrl: /assets/covers/mcp-behavior-tree.png
 ---
 
 ## About this work

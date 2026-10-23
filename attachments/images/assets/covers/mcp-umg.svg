@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Widget tree and animation</title><desc id="desc">Widget hierarchy connects to a UI layout with an animation track.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="160" y="210" width="330" height="80" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="325" y="260.88" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="32" font-weight="500" text-anchor="middle">Widget</text>
+<path d="M325 290 V350 H220 V390 M325 350 H500 V390" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="110" y="390" width="220" height="80" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="220" y="439.52" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Panel</text>
+<rect x="390" y="390" width="220" height="80" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="500" y="439.52" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Button</text>
+<path d="M640 350 L800 350" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M788.4453013912645 357.90499462753047 L800 350 L788.4453013912645 342.09500537246953" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="820" y="180" width="630" height="350" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M820 228 H1450" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="845" y="212" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">UI layout</text>
+<circle cx="1425" cy="205" r="3" fill="#8999aa"/>
+<circle cx="1407" cy="205" r="3" fill="#8999aa"/>
+<circle cx="1389" cy="205" r="3" fill="#8999aa"/>
+<rect x="860" y="270" width="170" height="210" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<rect x="1070" y="270" width="335" height="100" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<rect x="1120" y="420" width="235" height="65" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="1237.5" y="461.34" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="500" text-anchor="middle">Button</text>
+<path d="M860 610 H1410" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M900 600 L910 610 L900 620 L890 610 Z" fill="#72dae5"/>
+<path d="M1050 600 L1060 610 L1050 620 L1040 610 Z" fill="#72dae5"/>
+<path d="M1260 600 L1270 610 L1260 620 L1250 610 Z" fill="#72dae5"/>
+<path d="M1370 600 L1380 610 L1370 620 L1360 610 Z" fill="#72dae5"/>
+<text x="820" y="615" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="middle"></text>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Widget hierarchy / layout / animation</text>
+</svg>

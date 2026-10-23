@@ -3925,9 +3925,9 @@
     {
       "source": "src/shared/i18n/client/media-dimensions.js",
       "outputs": [
-        "assets/site-ui/media-dimensions.7711eefa3c9a.js"
+        "assets/site-ui/media-dimensions.a036b4ea8f70.js"
       ],
-      "sha256": "7711eefa3c9ab3460fc98a194a0e6893f824100dbf27578b8d28a710a56ebe8b",
+      "sha256": "a036b4ea8f7062b58d9a13a310c8c0041d571f6c9ac017dcb135912634d9e74d",
       "mode": "authored"
     },
     {
@@ -4129,6 +4129,246 @@
       ],
       "sha256": "eb79ff90f2744777872acceac9dab6ba1583d75089ab69a89ecabaf3c4adfb33",
       "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/assets/covers/p4-stream-switcher.svg",
+      "outputs": [
+        "assets/covers/p4-stream-switcher.svg"
+      ],
+      "sha256": "951c4ffa68b94532eea1765c49adb2a51530961ef936e10aad1f5381ec98e1d3",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/p4-stream-switcher.png",
+      "outputs": [
+        "assets/covers/p4-stream-switcher.png"
+      ],
+      "sha256": "d11c7d86ef285b0a15d23b58642031c69033271879eae0f436baa252402fbd1f",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-animation.svg",
+      "outputs": [
+        "assets/covers/mcp-animation.svg"
+      ],
+      "sha256": "4838cdd6679cda8f4ab518376cf88a565372e75b48f69bc748e39439f33d2e8d",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-animation.png",
+      "outputs": [
+        "assets/covers/mcp-animation.png"
+      ],
+      "sha256": "dc251cd665e5d846c2c9d627bcb425d73e75bfbdb813117e11cc419de822d231",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-behavior-tree.svg",
+      "outputs": [
+        "assets/covers/mcp-behavior-tree.svg"
+      ],
+      "sha256": "32aa8f5488ce291f8faa717bcfbc8a08a9ae2bd0e442c390e68fb78a9d3110d1",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-behavior-tree.png",
+      "outputs": [
+        "assets/covers/mcp-behavior-tree.png"
+      ],
+      "sha256": "ce71ddd4794fd1df9b7dbc53ab2b053bcbf4b5a93b6988f3f9d169cc7655dcf4",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-blueprint.svg",
+      "outputs": [
+        "assets/covers/mcp-blueprint.svg"
+      ],
+      "sha256": "cee06b61861828abda3dbfb600f062f638be70c8758f0afd38ed1287ad54c824",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-blueprint.png",
+      "outputs": [
+        "assets/covers/mcp-blueprint.png"
+      ],
+      "sha256": "1f51974d5f7da9e6277676828218526fb02ae86bdc6f50e3525ea0b57c38b5c7",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-dev-tools.svg",
+      "outputs": [
+        "assets/covers/mcp-dev-tools.svg"
+      ],
+      "sha256": "e4055731eb48bc1a39e6d2ed498b3f1604b29573de5106d2b60ca96b7479ff5d",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-dev-tools.png",
+      "outputs": [
+        "assets/covers/mcp-dev-tools.png"
+      ],
+      "sha256": "3bfe14492ad87f988c966296470c1d73e578aaa43e276ba4972095956e19d1d3",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-level-sequence.svg",
+      "outputs": [
+        "assets/covers/mcp-level-sequence.svg"
+      ],
+      "sha256": "841a063e199c159ac5995765d613a52188d44cbee403aec3b2283392def3a1e4",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-level-sequence.png",
+      "outputs": [
+        "assets/covers/mcp-level-sequence.png"
+      ],
+      "sha256": "09a2f1069f477e2f7633533f23dd4ff44b7584c360917b0b01b9f1575b8d77a0",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-material.svg",
+      "outputs": [
+        "assets/covers/mcp-material.svg"
+      ],
+      "sha256": "4be0528fb60050dba9a5ffd3907c474e8446f5ec6c8ae7842245f9812f1b3a9d",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-material.png",
+      "outputs": [
+        "assets/covers/mcp-material.png"
+      ],
+      "sha256": "e61899309a183ec561013659198304177c9088d5c5b8c86578a90b2ccf4bd935",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-niagara.svg",
+      "outputs": [
+        "assets/covers/mcp-niagara.svg"
+      ],
+      "sha256": "69a44e785440cbfad8fd537a1a47488ef4678b127cb37516165bf8f8d8146cda",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-niagara.png",
+      "outputs": [
+        "assets/covers/mcp-niagara.png"
+      ],
+      "sha256": "8026c22187ad650e915d9d076dd42c49b989876910d441b37d9acb70b2d780d7",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-umg.svg",
+      "outputs": [
+        "assets/covers/mcp-umg.svg"
+      ],
+      "sha256": "60b625791762530faffc53a7be471bc935ea347ee1a170619dbaeacebf245e89",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-umg.png",
+      "outputs": [
+        "assets/covers/mcp-umg.png"
+      ],
+      "sha256": "6f9129d37a43561bac42cbf39fcb12a493c2694e952f93e4235757f7c662253b",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-world-editor.svg",
+      "outputs": [
+        "assets/covers/mcp-world-editor.svg"
+      ],
+      "sha256": "c44f23572312fd02786d8bf8b488ecc7fdf2e8c1e89e3f42cf58feb73d05ccf7",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/mcp-world-editor.png",
+      "outputs": [
+        "assets/covers/mcp-world-editor.png"
+      ],
+      "sha256": "546d69bb083a965c82eafd1af0c10e467f3d1cfc912ee5efc4a7b4941f87fecb",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/shaniu.svg",
+      "outputs": [
+        "assets/covers/shaniu.svg"
+      ],
+      "sha256": "2a3edec43d32b94b05ce9523fe8dce0282f9d5b54e8b16d76c83c77ad22efd8e",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/covers/shaniu.png",
+      "outputs": [
+        "assets/covers/shaniu.png"
+      ],
+      "sha256": "5aa6a34195d553e193f79132d005b0697fca34b0a177a342b27a60be13658561",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/cases/perforce-workspace-pool.svg",
+      "outputs": [
+        "assets/cases/perforce-workspace-pool.svg"
+      ],
+      "sha256": "e741d0d18542032619dd2723b72ad1112fec6ef095d208ad8d1d351c5d40c4d8",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/cases/perforce-workspace-pool.png",
+      "outputs": [
+        "assets/cases/perforce-workspace-pool.png"
+      ],
+      "sha256": "0f5eadd658efc6a4a674b32f93e0a0155675b3845e71b776665ced88370028a4",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/cases/driving-session-replay.svg",
+      "outputs": [
+        "assets/cases/driving-session-replay.svg"
+      ],
+      "sha256": "1fadfb12ded77b2d0eddd489dfb32cda984be36a28b5497d1ab10196c620ead3",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/cases/driving-session-replay.png",
+      "outputs": [
+        "assets/cases/driving-session-replay.png"
+      ],
+      "sha256": "aed23c168a63425757ade384e5bd64eabf93a1999ccb6d188ac4bbc70063f207",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/cases/ue-multiwindow-interface.svg",
+      "outputs": [
+        "assets/cases/ue-multiwindow-interface.svg"
+      ],
+      "sha256": "b4afcf42b92ab27eeb9f552f486965e26ea7057fe52593e7919ac2bfa1866566",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/cases/ue-multiwindow-interface.png",
+      "outputs": [
+        "assets/cases/ue-multiwindow-interface.png"
+      ],
+      "sha256": "e84b5cffdc860640d0b64f21efac26d662c6396388678678897ebce614974d17",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/cases/robot-realtime-ik-prototype.svg",
+      "outputs": [
+        "assets/cases/robot-realtime-ik-prototype.svg"
+      ],
+      "sha256": "3eadce6ad815028bde4542dfdd327578641cc0f3bb299ee87af2853d79578ba5",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/assets/cases/robot-realtime-ik-prototype.png",
+      "outputs": [
+        "assets/cases/robot-realtime-ik-prototype.png"
+      ],
+      "sha256": "351d2590d6e28891328628db1d5293a141aefc042dcfc267c0a766e6c37a1bfc",
+      "mode": "authored"
     }
   ]
 }

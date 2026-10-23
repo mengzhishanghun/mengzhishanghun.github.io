@@ -22,6 +22,8 @@ sitePublish: true
 tags:
   - Widget 树、属性与动画
   - MCP 系列
+coverAlt: Widget 树、属性与动画示意图
+websiteCoverUrl: /assets/covers/mcp-umg.png
 lang: zh
 translationKey: mcp-umg
 ---

@@ -30,9 +30,11 @@ links:
     href: https://github.com/MZSH-Tools/P4StreamSwitcher
 lang: en
 translationKey: p4-stream-switcher
-sourceHash: 3ff2121db609c4f960e5fee13807e5275d941fca2dc47806c80426a2750f2493
+sourceHash: b3d1bc0b5157f83440151a511c554dc06e8900ccb77f6cc1cbab7e98824dad3a
 translationStatus: translated
 generatedBodyHash: 0c45f60a38ad6192bb286dfa83a47595d44eeb2ec2a0b26c238e832829051e7f
+coverAlt: Perforce streams and local workspace pool diagram
+websiteCoverUrl: /assets/covers/p4-stream-switcher.png
 ---
 
 ## Overview

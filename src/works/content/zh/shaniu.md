@@ -22,6 +22,8 @@ sitePublish: true
 tags:
   - AI 管家
   - 后台任务
+coverAlt: 傻妞：本机 AI 管家示意图
+websiteCoverUrl: /assets/covers/shaniu.png
 lang: zh
 translationKey: shaniu
 ---

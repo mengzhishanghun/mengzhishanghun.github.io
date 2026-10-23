@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Blueprint graph</title><desc id="desc">Connected blueprint nodes feed compile feedback.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="140" y="220" width="290" height="125" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="285" y="294.06" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="34" font-weight="500" text-anchor="middle">Event</text>
+<rect x="650" y="335" width="300" height="125" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="800" y="409.06" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="34" font-weight="500" text-anchor="middle">Function</text>
+<rect x="140" y="480" width="290" height="105" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="285" y="543.38" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="32" font-weight="500" text-anchor="middle">Value</text>
+<path d="M430 282 C535 282 540 397 650 397" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M430 532 C545 532 535 430 650 430" fill="none" stroke="#8999aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="430" cy="282" r="7" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="650" cy="397" r="7" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="430" cy="532" r="7" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="650" cy="430" r="7" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M950 397 L1120 397" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1108.4453013912646 404.90499462753047 L1120 397 L1108.4453013912646 389.09500537246953" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1135" y="260" width="330" height="280" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M1135 308 H1465" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1160" y="292" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Compile</text>
+<circle cx="1440" cy="285" r="3" fill="#8999aa"/>
+<circle cx="1422" cy="285" r="3" fill="#8999aa"/>
+<circle cx="1404" cy="285" r="3" fill="#8999aa"/>
+<path d="M1180 360 H1415 M1180 410 H1375 M1180 460 H1400" fill="none" stroke="#8999aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Nodes / connections / feedback</text>
+</svg>

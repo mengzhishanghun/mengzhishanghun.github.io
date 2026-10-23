@@ -16,9 +16,11 @@ tags:
   - UI tools
 lang: en
 translationKey: ue-multiwindow-interface
-sourceHash: a2ed63ccb10ef59922c19dfdae077c37c1e1c22296ffe6289a8cedc2f1dcf522
+sourceHash: bc2bc23cb9d1977c607f9d35566c1521e29d44677a74d63e98434212a64b7bb8
 translationStatus: translated
 generatedBodyHash: e089e623155283605b48e8f8092fd14a55d2a1d9f0bed69dafeb94dfb73449a1
+coverAlt: Independent UE multiwindow interface diagram
+websiteCoverUrl: /assets/cases/ue-multiwindow-interface.png
 ---
 
 

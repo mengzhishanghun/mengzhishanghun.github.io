@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Level Sequence</title><desc id="desc">A sequence timeline with three tracks and keyframes.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="160" y="180" width="1280" height="420" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M160 228 H1440" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="185" y="212" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Level Sequence</text>
+<circle cx="1415" cy="205" r="3" fill="#8999aa"/>
+<circle cx="1397" cy="205" r="3" fill="#8999aa"/>
+<circle cx="1379" cy="205" r="3" fill="#8999aa"/>
+<text x="205" y="355" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="start">Camera</text>
+<rect x="430" y="312" width="940" height="65" rx="8" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M500 335 L510 345 L500 355 L490 345 Z" fill="#72dae5"/>
+<path d="M810 335 L820 345 L810 355 L800 345 Z" fill="#72dae5"/>
+<path d="M1150 335 L1160 345 L1150 355 L1140 345 Z" fill="#72dae5"/>
+<text x="205" y="450" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="start">Transform</text>
+<rect x="430" y="407" width="940" height="65" rx="8" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M555 430 L565 440 L555 450 L545 440 Z" fill="#72dae5"/>
+<path d="M780 430 L790 440 L780 450 L770 440 Z" fill="#72dae5"/>
+<path d="M1210 430 L1220 440 L1210 450 L1200 440 Z" fill="#72dae5"/>
+<text x="205" y="545" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="start">Property</text>
+<rect x="430" y="502" width="940" height="65" rx="8" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M610 525 L620 535 L610 545 L600 535 Z" fill="#72dae5"/>
+<path d="M750 525 L760 535 L750 545 L740 535 Z" fill="#72dae5"/>
+<path d="M1270 525 L1280 535 L1270 545 L1260 535 Z" fill="#72dae5"/>
+<path d="M460 260 V285" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="460" y="250" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" text-anchor="middle">0</text>
+<path d="M610 260 V285" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="610" y="250" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" text-anchor="middle">1</text>
+<path d="M760 260 V285" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="760" y="250" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" text-anchor="middle">2</text>
+<path d="M910 260 V285" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="910" y="250" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" text-anchor="middle">3</text>
+<path d="M1060 260 V285" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1060" y="250" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" text-anchor="middle">4</text>
+<path d="M1210 260 V285" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1210" y="250" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" text-anchor="middle">5</text>
+<path d="M1360 260 V285" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1360" y="250" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="20" font-weight="500" text-anchor="middle">6</text>
+<path d="M955 285 V575" fill="none" stroke="#72dae5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M943 280 H967 L955 296 Z" fill="#72dae5"/>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Tracks / time / keyframes</text>
+</svg>

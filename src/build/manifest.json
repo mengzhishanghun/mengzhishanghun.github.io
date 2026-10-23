@@ -3097,7 +3097,11 @@
       "translationKey": "mcp-animation",
       "order": 16,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/mcp-animation.png",
+        "sha256": "dc251cd665e5d846c2c9d627bcb425d73e75bfbdb813117e11cc419de822d231"
+      }
     },
     {
       "id": "work:mcp-behavior-tree",
@@ -3111,7 +3115,11 @@
       "translationKey": "mcp-behavior-tree",
       "order": 17,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/mcp-behavior-tree.png",
+        "sha256": "ce71ddd4794fd1df9b7dbc53ab2b053bcbf4b5a93b6988f3f9d169cc7655dcf4"
+      }
     },
     {
       "id": "work:mcp-blueprint",
@@ -3125,7 +3133,11 @@
       "translationKey": "mcp-blueprint",
       "order": 18,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/mcp-blueprint.png",
+        "sha256": "1f51974d5f7da9e6277676828218526fb02ae86bdc6f50e3525ea0b57c38b5c7"
+      }
     },
     {
       "id": "work:mcp-dev-tools",
@@ -3139,7 +3151,11 @@
       "translationKey": "mcp-dev-tools",
       "order": 19,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/mcp-dev-tools.png",
+        "sha256": "3bfe14492ad87f988c966296470c1d73e578aaa43e276ba4972095956e19d1d3"
+      }
     },
     {
       "id": "work:mcp-level-sequence",
@@ -3153,7 +3169,11 @@
       "translationKey": "mcp-level-sequence",
       "order": 20,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/mcp-level-sequence.png",
+        "sha256": "09a2f1069f477e2f7633533f23dd4ff44b7584c360917b0b01b9f1575b8d77a0"
+      }
     },
     {
       "id": "work:mcp-material",
@@ -3167,7 +3187,11 @@
       "translationKey": "mcp-material",
       "order": 21,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/mcp-material.png",
+        "sha256": "e61899309a183ec561013659198304177c9088d5c5b8c86578a90b2ccf4bd935"
+      }
     },
     {
       "id": "work:mcp-niagara",
@@ -3181,7 +3205,11 @@
       "translationKey": "mcp-niagara",
       "order": 22,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/mcp-niagara.png",
+        "sha256": "8026c22187ad650e915d9d076dd42c49b989876910d441b37d9acb70b2d780d7"
+      }
     },
     {
       "id": "work:mcp-umg",
@@ -3195,7 +3223,11 @@
       "translationKey": "mcp-umg",
       "order": 23,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/mcp-umg.png",
+        "sha256": "6f9129d37a43561bac42cbf39fcb12a493c2694e952f93e4235757f7c662253b"
+      }
     },
     {
       "id": "work:mcp-world-editor",
@@ -3209,7 +3241,11 @@
       "translationKey": "mcp-world-editor",
       "order": 24,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/mcp-world-editor.png",
+        "sha256": "546d69bb083a965c82eafd1af0c10e467f3d1cfc912ee5efc4a7b4941f87fecb"
+      }
     },
     {
       "id": "work:shaniu",
@@ -3223,7 +3259,11 @@
       "translationKey": "shaniu",
       "order": 0,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/shaniu.png",
+        "sha256": "5aa6a34195d553e193f79132d005b0697fca34b0a177a342b27a60be13658561"
+      }
     },
     {
       "id": "work:p4-stream-switcher",
@@ -3237,7 +3277,11 @@
       "translationKey": "p4-stream-switcher",
       "baselineTemplate": "works/p4-stream-switcher/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/p4-stream-switcher.png",
+        "sha256": "d11c7d86ef285b0a15d23b58642031c69033271879eae0f436baa252402fbd1f"
+      }
     },
     {
       "id": "case:perforce-workspace-pool",
@@ -3251,7 +3295,11 @@
       "translationKey": "perforce-workspace-pool",
       "baselineTemplate": "cases/perforce-workspace-pool/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/cases/perforce-workspace-pool.png",
+        "sha256": "0f5eadd658efc6a4a674b32f93e0a0155675b3845e71b776665ced88370028a4"
+      }
     },
     {
       "id": "doc:p4-stream-switcher",
@@ -3284,7 +3332,11 @@
       "translationKey": "driving-session-replay",
       "baselineTemplate": "cases/driving-session-replay/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/cases/driving-session-replay.png",
+        "sha256": "aed23c168a63425757ade384e5bd64eabf93a1999ccb6d188ac4bbc70063f207"
+      }
     },
     {
       "id": "case:ue-multiwindow-interface",
@@ -3298,7 +3350,11 @@
       "translationKey": "ue-multiwindow-interface",
       "baselineTemplate": "cases/ue-multiwindow-interface/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/cases/ue-multiwindow-interface.png",
+        "sha256": "e84b5cffdc860640d0b64f21efac26d662c6396388678678897ebce614974d17"
+      }
     },
     {
       "id": "case:robot-realtime-ik-prototype",
@@ -3312,7 +3368,11 @@
       "translationKey": "robot-realtime-ik-prototype",
       "baselineTemplate": "cases/robot-realtime-ik-prototype/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/cases/robot-realtime-ik-prototype.png",
+        "sha256": "351d2590d6e28891328628db1d5293a141aefc042dcfc267c0a766e6c37a1bfc"
+      }
     }
   ],
   "redirects": [
