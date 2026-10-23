@@ -7,10 +7,10 @@
 <h2 id="two-retargeting-stages">Two Retargeting Stages</h2>
 <h3 id="kinect-data-and-the-intermediate-skeleton">Kinect Data and the Intermediate Skeleton</h3>
 <p>KinectRetarget reads Kinect skeleton data, filters out missing bones, processes joint positions and Euler angles separately, and writes the pose into a PN3 PoseableMesh. This intermediate model receives the input pose and provides a common reference for subsequent mapping.</p>
-<p>Per-joint processing matters. In one frame, a particular joint can fluctuate while other joints remain usable. Position and angular changes also need separate treatment. Input filtering reduces local jitter before each capture fluctuation becomes robot-joint motion.</p>
+<p>Processing each joint separately accommodates frames where one joint fluctuates while others remain usable. Position and angular changes are also handled separately. Input filtering reduces local jitter before each capture fluctuation becomes robot-joint motion.</p>
 <h3 id="handling-angle-changes-across-180-degrees">Handling Angle Changes across 180 Degrees</h3>
 <p>Euler angles have representation boundaries. A change from 179 degrees to -179 degrees describes a small actual rotation, but direct subtraction produces almost a full turn. The implementation unwraps angle differences across 180 degrees before further processing, reducing sudden flips caused by the numeric representation boundary.</p>
-<p>This addresses angular continuity. Bone-direction mismatches and differences between human and model proportions still belong to retargeting. Filtering alone cannot correct the whole mapping.</p>
+<p>Angle unwrapping addresses angular continuity. Bone-direction mismatches and differences between human and model proportions still need handling during retargeting. Filtering alone cannot correct the whole mapping.</p>
 <h3 id="from-segment-proportions-to-robot-targets">From Segment Proportions to Robot Targets</h3>
 <p>The robot side reuses URDFForge’s RobotRetargetComponent. Joint origins, rotation axes, and limits in the URDF define the mechanism, while human body segments supply the intended motion. Mapping scales individual segments proportionally, bringing human movement into the robot’s scale before constructing IK targets.</p>
 
@@ -42,7 +42,7 @@
 <p>Segment-based proportions are more suitable than copying world coordinates between models with different lengths. A reaching movement should first be interpreted as human-limb extension, then converted into a target for the robot structure. The human endpoint’s absolute distance cannot simply become robot travel.</p>
 <h3 id="ik-and-direct-angle-mapping">IK and Direct-Angle Mapping</h3>
 <p>Chains that track target positions use damped least squares, or DLS IK. It iteratively adjusts joint values from the error between the current pose and the target. Previous joint angles initialize the next solve, making use of continuity between adjacent frames.</p>
-<p>Direct-axis angle mapping drives joints through their correspondence. It has a different role from IK: one gives a target to a mechanism solver, while the other transfers angles along selected axes. Integration should choose according to the joint structure and intended movement rather than putting every joint through the same solving method.</p>
+<p>Direct-axis angle mapping drives corresponding joints by transferring angles along selected axes; IK passes targets to the mechanism solver. The choice depends on joint structure and intended movement. Every joint need not use the same solving method.</p>
 <h3 id="smoothing-and-per-frame-angular-speed-limits">Smoothing and Per-Frame Angular-Speed Limits</h3>
 <p>After calculating joint targets, output passes through interpolation and smoothing, with limits on the angular change allowed each frame. <code>SetRelativeRotation</code> then updates UE scene components. A transition between target and displayed values softens input jumps, but stronger smoothing can slow the response to fast movements. Parameters therefore need adjustment for the intended actions.</p>
 <h2 id="implemented-scope-and-model-adjustments">Implemented Scope and Model Adjustments</h2>

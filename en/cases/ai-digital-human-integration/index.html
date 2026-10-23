@@ -50,20 +50,20 @@
 <p>Local services use separate Python environments managed with Miniconda, with dependencies such as PyTorch and CUDA configured as needed. UE exchanges data with the backend through HTTP and UDP. A backend using WebSocket communication was integrated later for AI questions and answers.</p>
 <p>Here, cloud deployment refers to AI services running remotely. UE still handles the digital human’s rendering and scene interactions.</p>
 <h2 id="specific-problem">Specific Problem</h2>
-<p>The interaction connects several independent stages: speech recognition produces text, the LLM generates a response, speech synthesis converts it into audio, and the character handles audio playback and lip movements.</p>
+<p>Voice interaction connects several independent stages: speech recognition produces text, the LLM generates a response from that text, speech synthesis converts the response into audio, and the character plays the audio and presents lip movements.</p>
 <p>Body sensing provides a separate input path. The user’s position and skeleton movements feed into character control and scene logic, working alongside voice conversation.</p>
 <p>The project also needed to support different service locations: local services, remote services accessed over a network, and combinations of the two.</p>
 <h2 id="solution">Solution</h2>
 <p>The voice interaction follows this sequence:</p>
 <p><strong>User speech → speech recognition → LLM response → speech synthesis → digital human audio playback, lip sync, and facial expressions.</strong></p>
-<p>Speech recognition, conversation, speech synthesis, and character presentation are integrated as separate functional modules, coordinated by the interaction flow. UE handles the scene and character, while the backend services perform their respective AI processing.</p>
+<p>Speech recognition, conversation, speech synthesis, and character presentation are integrated as separate functional modules, with flow-control logic coordinating their execution. UE handles the scene and character, while the backend services perform their respective AI processing.</p>
 <p>Three deployment options were completed:</p>
 <ul>
 <li><strong>Fully local:</strong> All services run locally, including speech recognition, LLM responses, speech synthesis, and lip sync.</li>
 <li><strong>Cloud:</strong> AI processing uses remote services over a network, and UE receives the results to present the digital human’s response.</li>
 <li><strong>Hybrid:</strong> Some services run locally and others are accessed over a network, within the same interaction flow.</li>
 </ul>
-<p>Azure Kinect provides body skeleton data for movement-based scene interaction, including elevator control and having the digital human look toward the user.</p>
+<p>Azure Kinect provides body skeleton data that connects user movements to scene interactions, such as controlling an elevator and making the digital human’s gaze follow the user.</p>
 <p>The original fixed linear sequence was later split into flow control and functional modules. C++ provides the supporting functions, while Blueprints organize the specific interactions, making it easier to adjust the flow and replace services.</p>
 <h2 id="discuss-your-project">Discuss your project</h2>
 <p>If you are building a digital receptionist, a voice-based question-and-answer system, or an interactive exhibition, I can help integrate speech recognition, LLM conversation, speech synthesis, and lip sync. I can also add body sensing and scene interactions to an existing UE project.</p>
