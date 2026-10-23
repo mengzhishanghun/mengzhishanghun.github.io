@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Behavior tree and blackboard</title><desc id="desc">A behavior tree branches beside blackboard keys.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="530" y="170" width="270" height="80" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="665" y="220.88" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="32" font-weight="500" text-anchor="middle">Root</text>
+<path d="M665 250 V300 H350 V340 M665 300 H930 V340" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="215" y="340" width="270" height="80" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="350" y="390.2" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="500" text-anchor="middle">Selector</text>
+<rect x="795" y="340" width="270" height="80" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="930" y="390.2" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="500" text-anchor="middle">Sequence</text>
+<path d="M350 420 V470 H250 V510 M350 470 H500 V510 M930 420 V510" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="145" y="510" width="210" height="80" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="250" y="559.52" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Task A</text>
+<rect x="395" y="510" width="210" height="80" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="500" y="559.52" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Task B</text>
+<rect x="825" y="510" width="210" height="80" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="930" y="559.52" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Task C</text>
+<rect x="1160" y="220" width="300" height="370" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M1160 268 H1460" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1185" y="252" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Blackboard</text>
+<circle cx="1435" cy="245" r="3" fill="#8999aa"/>
+<circle cx="1417" cy="245" r="3" fill="#8999aa"/>
+<circle cx="1399" cy="245" r="3" fill="#8999aa"/>
+<text x="1200" y="330" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="start">Target</text>
+<path d="M1200 350 H1420" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1200" y="420" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="start">Location</text>
+<path d="M1200 440 H1420" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1200" y="510" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="start">State</text>
+<path d="M1200 530 H1420" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Tree structure / shared keys</text>
+</svg>

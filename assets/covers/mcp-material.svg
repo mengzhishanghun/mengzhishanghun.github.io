@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Material and instance</title><desc id="desc">Material nodes connect to an instance parameter panel.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="150" y="210" width="250" height="95" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="275" y="267.7" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="500" text-anchor="middle">Texture</text>
+<rect x="150" y="465" width="250" height="95" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="275" y="522.7" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="500" text-anchor="middle">Scalar</text>
+<rect x="575" y="335" width="260" height="115" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="705" y="403.38" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="32" font-weight="500" text-anchor="middle">Material</text>
+<path d="M400 258 C490 258 485 375 575 375 M400 512 C490 512 485 410 575 410" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M835 392 L1015 392" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1003.4453013912645 399.90499462753047 L1015 392 L1003.4453013912645 384.09500537246953" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1030" y="210" width="410" height="370" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M1030 258 H1440" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1055" y="242" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Material Instance</text>
+<circle cx="1415" cy="235" r="3" fill="#8999aa"/>
+<circle cx="1397" cy="235" r="3" fill="#8999aa"/>
+<circle cx="1379" cy="235" r="3" fill="#8999aa"/>
+<text x="1065" y="325" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="500" text-anchor="start">Color</text>
+<path d="M1240 317 H1390" fill="none" stroke="#445363" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1280" cy="317" r="8" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="1065" y="410" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="500" text-anchor="start">Roughness</text>
+<path d="M1240 402 H1390" fill="none" stroke="#445363" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1310" cy="402" r="8" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="1065" y="495" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="500" text-anchor="start">Scale</text>
+<path d="M1240 487 H1390" fill="none" stroke="#445363" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1340" cy="487" r="8" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Material graph / instance parameters</text>
+</svg>

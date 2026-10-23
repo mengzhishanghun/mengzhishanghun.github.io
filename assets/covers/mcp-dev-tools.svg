@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Asset tools and diagnostics</title><desc id="desc">An asset search grid with a separate read-only diagnostic panel.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="150" y="180" width="760" height="430" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M150 228 H910" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="175" y="212" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Assets</text>
+<circle cx="885" cy="205" r="3" fill="#8999aa"/>
+<circle cx="867" cy="205" r="3" fill="#8999aa"/>
+<circle cx="849" cy="205" r="3" fill="#8999aa"/>
+<rect x="190" y="260" width="680" height="65" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="220" cy="290" r="12" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M230 300 L240 310" fill="none" stroke="#8999aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="275" y="302" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="500" text-anchor="start">Search assets</text>
+<rect x="190" y="360" width="145" height="80" rx="10" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M215 385 H305 M215 410 H280" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="365" y="360" width="145" height="80" rx="10" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<path d="M390 385 H480 M390 410 H455" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="540" y="360" width="145" height="80" rx="10" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M565 385 H655 M565 410 H630" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="715" y="360" width="145" height="80" rx="10" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M740 385 H830 M740 410 H805" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="190" y="470" width="145" height="80" rx="10" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M215 495 H305 M215 520 H280" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="365" y="470" width="145" height="80" rx="10" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M390 495 H480 M390 520 H455" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="540" y="470" width="145" height="80" rx="10" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M565 495 H655 M565 520 H630" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="715" y="470" width="145" height="80" rx="10" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M740 495 H830 M740 520 H805" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1010" y="230" width="440" height="330" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M1010 278 H1450" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1035" y="262" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Diagnostics</text>
+<circle cx="1425" cy="255" r="3" fill="#8999aa"/>
+<circle cx="1407" cy="255" r="3" fill="#8999aa"/>
+<circle cx="1389" cy="255" r="3" fill="#8999aa"/>
+<circle cx="1055" cy="330" r="6" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="1090" y="340" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="start">Assets</text>
+<circle cx="1055" cy="410" r="6" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="1090" y="420" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="start">References</text>
+<circle cx="1055" cy="490" r="6" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="1090" y="500" fill="#72dae5" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="start">Read only</text>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Asset discovery / read-only diagnostics</text>
+</svg>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Animation assets</title><desc id="desc">Animation blueprint states and animation asset tracks.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="150" y="185" width="620" height="390" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M150 233 H770" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="175" y="217" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Animation Blueprint</text>
+<circle cx="745" cy="210" r="3" fill="#8999aa"/>
+<circle cx="727" cy="210" r="3" fill="#8999aa"/>
+<circle cx="709" cy="210" r="3" fill="#8999aa"/>
+<rect x="205" y="285" width="190" height="85" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="300" y="337.02" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">State A</text>
+<rect x="510" y="285" width="190" height="85" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="605" y="337.02" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">State B</text>
+<path d="M395 327 L500 327" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M488.4453013912645 334.90499462753047 L500 327 L488.4453013912645 319.09500537246953" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M605 385 V460 H300 V385" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M300 385 L300 372" fill="none" stroke="#8999aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M307.90499462753047 383.5546986087355 L300 372 L292.09500537246953 383.5546986087355" fill="none" stroke="#8999aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="850" y="240" width="600" height="335" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M850 288 H1450" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="875" y="272" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Animation assets</text>
+<circle cx="1425" cy="265" r="3" fill="#8999aa"/>
+<circle cx="1407" cy="265" r="3" fill="#8999aa"/>
+<circle cx="1389" cy="265" r="3" fill="#8999aa"/>
+<text x="895" y="350" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="500" text-anchor="start">Pose</text>
+<path d="M1000 342 H1390" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1060 334 L1068 342 L1060 350 L1052 342 Z" fill="#72dae5"/>
+<path d="M1170 334 L1178 342 L1170 350 L1162 342 Z" fill="#72dae5"/>
+<path d="M1340 334 L1348 342 L1340 350 L1332 342 Z" fill="#72dae5"/>
+<text x="895" y="425" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="500" text-anchor="start">Curve</text>
+<path d="M1000 417 H1390" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1060 409 L1068 417 L1060 425 L1052 417 Z" fill="#72dae5"/>
+<path d="M1205 409 L1213 417 L1205 425 L1197 417 Z" fill="#72dae5"/>
+<path d="M1340 409 L1348 417 L1340 425 L1332 417 Z" fill="#72dae5"/>
+<text x="895" y="500" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="24" font-weight="500" text-anchor="start">Notify</text>
+<path d="M1000 492 H1390" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1060 484 L1068 492 L1060 500 L1052 492 Z" fill="#72dae5"/>
+<path d="M1240 484 L1248 492 L1240 500 L1232 492 Z" fill="#72dae5"/>
+<path d="M1340 484 L1348 492 L1340 500 L1332 492 Z" fill="#72dae5"/>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">States / animation tracks</text>
+</svg>

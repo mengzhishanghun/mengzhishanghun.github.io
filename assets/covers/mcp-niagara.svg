@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Niagara system</title><desc id="desc">Emitter module stacks lead to an abstract particle field.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="155" y="180" width="560" height="420" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M155 228 H715" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="180" y="212" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Niagara System</text>
+<circle cx="690" cy="205" r="3" fill="#8999aa"/>
+<circle cx="672" cy="205" r="3" fill="#8999aa"/>
+<circle cx="654" cy="205" r="3" fill="#8999aa"/>
+<rect x="205" y="270" width="460" height="55" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="435" y="306.68" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="500" text-anchor="middle">Emitter</text>
+<rect x="205" y="345" width="460" height="55" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="435" y="381.68" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="500" text-anchor="middle">Spawn</text>
+<rect x="205" y="420" width="460" height="55" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="435" y="456.68" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="500" text-anchor="middle">Update</text>
+<rect x="205" y="495" width="460" height="55" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="435" y="531.68" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="27" font-weight="500" text-anchor="middle">Render</text>
+<path d="M715 390 L880 390" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M868.4453013912645 397.90499462753047 L880 390 L868.4453013912645 382.09500537246953" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="1110" cy="390" r="155" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="1135" cy="390" r="8" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="1064" cy="432" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1119" cy="291" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1193" cy="498" r="8" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1082" cy="385" r="4" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="1165" cy="355" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1084" cy="489" r="8" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1046" cy="267" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1139" cy="401" r="4" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="1047" cy="416" r="8" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1155" cy="295" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1153" cy="525" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1081" cy="373" r="8" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="1179" cy="375" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1048" cy="478" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1091" cy="246" r="8" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1138" cy="414" r="4" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="1036" cy="393" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1189" cy="312" r="8" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1103" cy="538" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1084" cy="359" r="4" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="1186" cy="400" r="8" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1016" cy="455" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1143" cy="243" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<circle cx="1131" cy="427" r="8" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<circle cx="1034" cy="366" r="4" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<path d="M930 540 Q1110 620 1330 470" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 12"/>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Emitter stack / particle system</text>
+</svg>

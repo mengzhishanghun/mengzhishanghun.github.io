@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">Driving records and replay</title><desc id="desc">Driving curves, scores and UE Network Replay are parallel records.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="155" y="315" width="280" height="150" rx="16" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<text x="295" y="400.2" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="500" text-anchor="middle">Driving session</text>
+<path d="M435 390 H520 M520 215 V565" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M520 215 L650 215" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M638.4453013912645 222.9049946275305 L650 215 L638.4453013912645 207.0950053724695" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M520 390 L650 390" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M638.4453013912645 397.90499462753047 L650 390 L638.4453013912645 382.09500537246953" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M520 565 L650 565" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M638.4453013912645 572.9049946275305 L650 565 L638.4453013912645 557.0950053724695" fill="none" stroke="#72dae5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="665" y="170" width="350" height="90" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="840" y="225.2" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="500" text-anchor="middle">Process JSON</text>
+<rect x="665" y="345" width="350" height="90" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="840" y="400.2" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="500" text-anchor="middle">Score JSON</text>
+<rect x="665" y="520" width="350" height="90" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<text x="840" y="575.2" fill="#edf3f6" font-family="Segoe UI,Arial,sans-serif" font-size="30" font-weight="500" text-anchor="middle">UE Replay</text>
+<path d="M1070 250 H1430 M1070 250 V160" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1090 220 Q1140 150 1190 195 T1300 185 T1420 165" fill="none" stroke="#72dae5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1250" y="310" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="26" font-weight="500" text-anchor="middle">Timed channels</text>
+<rect x="1080" y="350" width="350" height="80" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M1120 380 H1390 M1120 405 H1310" fill="none" stroke="#8999aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1080" y="520" width="350" height="90" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M1220 542 L1220 590 L1265 566 Z" fill="#72dae5"/>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Continuous data / results / engine replay</text>
+</svg>

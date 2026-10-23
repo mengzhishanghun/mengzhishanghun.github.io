@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="800" viewBox="0 0 1600 800" role="img" aria-labelledby="title desc">
+<title id="title">World editor</title><desc id="desc">Actor hierarchy beside a level and wireframe landscape viewport.</desc>
+<rect width="1600" height="800" fill="#090c0e"/>
+<rect x="140" y="200" width="370" height="385" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M140 248 H510" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="165" y="232" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Actors / Level</text>
+<circle cx="485" cy="225" r="3" fill="#8999aa"/>
+<circle cx="467" cy="225" r="3" fill="#8999aa"/>
+<circle cx="449" cy="225" r="3" fill="#8999aa"/>
+<text x="190" y="310" fill="#72dae5" font-family="Segoe UI,Arial,sans-serif" font-size="29" font-weight="500" text-anchor="start">Level</text>
+<text x="225" y="400" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="29" font-weight="500" text-anchor="start">Actor A</text>
+<text x="225" y="490" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="29" font-weight="500" text-anchor="start">Actor B</text>
+<path d="M190 335 V475 H215 M190 385 H215" fill="none" stroke="#445363" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="620" y="150" width="840" height="460" rx="16" fill="#10171d" stroke="#445363" stroke-width="3"/>
+<path d="M620 198 H1460" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="645" y="182" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="500" text-anchor="start">Viewport</text>
+<circle cx="1435" cy="175" r="3" fill="#8999aa"/>
+<circle cx="1417" cy="175" r="3" fill="#8999aa"/>
+<circle cx="1399" cy="175" r="3" fill="#8999aa"/>
+<path d="M675 530 L875 325" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M795 530 L935 325" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M915 530 L995 325" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1035 530 L1055 325" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1155 530 L1115 325" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1275 530 L1175 325" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M675 530 H1390" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M725 485 H1340" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M775 440 H1290" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M825 395 H1240" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M875 350 H1190" fill="none" stroke="#445363" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M700 470 L860 370 L1010 435 L1170 300 L1360 430" fill="none" stroke="#72dae5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="1060" y="355" width="70" height="85" rx="3" fill="#10272d" stroke="#72dae5" stroke-width="3"/>
+<path d="M1095 397 V280 M1095 397 H1210 M1095 397 L1030 455" fill="none" stroke="#8999aa" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="800" y="690" fill="#8999aa" font-family="Segoe UI,Arial,sans-serif" font-size="28" font-weight="500" text-anchor="middle">Actors / level / landscape / viewport</text>
+</svg>
