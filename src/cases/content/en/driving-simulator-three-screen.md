@@ -18,22 +18,22 @@ coverAlt: Flowchart for resolving inconsistent three-screen display in a driving
 websiteCoverUrl: /assets/cases/driving-simulator-three-screen.png
 lang: en
 translationKey: driving-simulator-three-screen
-sourceHash: 92bb1827f944a9eaa89d10384e8e345c8cd5c384fc4944c0e5432c08b85ac094
+sourceHash: 8e278a89bf8640441c5ba7e25d29ffeefe1c8e1f0c6897a07a403d35268b3d3f
 translationStatus: translated
-generatedBodyHash: 611b28ed5e2b1bf3ecd31257caf96d82540950a5e0c8ed3e3353f7d0f1da40b4
+generatedBodyHash: fca23a166adaee8802ac13910fa02b471a4acf7b513ff0dcba2c3aac1c7a1405
 ---
 
 ## Background
 
 A driving training scenario used three screens and needed consistent training visuals across different viewpoints. Together, the screens formed the driving scene, so differences in lighting and exposure directly affected its overall appearance.
 
-This case records my work on inconsistent Lumen indirect lighting and exposure in a three-screen scenario. The work focused on engine support for multiple views and the association of exposure data between views. These two areas were investigated and modified separately.
+I helped address inconsistent Lumen indirect lighting and exposure in a three-screen scenario. The work focused on engine support for multiple views and exposure data association between views. The two areas were investigated and modified separately.
 
 ## Reproduction Environment
 
 The scene used Unreal Engine, Lumen, and a three-screen display. The original record of the Lumen multi-view fix used UE 5.3 as its example and required a source build that allowed the engine to be modified and rebuilt.
 
-The exposure synchronization implementation was recorded against UE 5.3.2 and involved LocalPlayer, FSceneView, and the views' StereoPass settings. These versions are retained to identify the engine implementation locations checked at the time.
+The exposure synchronization implementation was recorded against UE 5.3.2 and involved LocalPlayer, FSceneView, and the views' StereoPass settings. The version identifies the engine implementation locations checked at the time.
 
 ## Specific Problem
 
@@ -49,7 +49,7 @@ Exposure was also out of sync across the views, producing inconsistent screen br
 
 **Extending Lumen support for multiple views**
 
-To address the fixed view limit in the engine, the maximum view count in the relevant implementations was changed from 2 to 3. The original record covered seven modifications that needed to be treated as one related set of changes.
+The fixed maximum view count in the relevant engine implementations was changed from 2 to 3. The seven recorded modifications are related and need to be treated as one set of changes.
 
 These changes were made in engine source code and required rebuilding the modified engine. The existing record explicitly states that comparable changes in a non-source build could not achieve this result. For the recorded modifications and source screenshot, [read the multi-view GI fix](https://mzsh.me/blog/ue53-multiview-gi/).
 
@@ -59,7 +59,7 @@ Exposure synchronization was handled through custom LocalPlayer view constructio
 
 This used the engine's association between primary and secondary views so the relevant views could reuse the data needed for exposure calculation. The UE 5.3.2 record located the corresponding condition in the `FSceneView` constructor. For the code and condition location, [read the exposure synchronization implementation details](https://mzsh.me/blog/cnblogs-19165561/).
 
-Lumen view capacity and exposure data association address two different problems. Their respective rationales need to be retained during maintenance, and implementation locations need to be checked again after an engine version change.
+Lumen view capacity and exposure data association address two different problems. Maintenance needs to preserve the rationale for each change and check implementation locations again after an engine version change.
 
 
 According to the existing project records, the inconsistent lighting and exposure in the three-screen scene were addressed, and the project continued to be used for simulated driving test instruction.

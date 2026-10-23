@@ -17,9 +17,9 @@ productIds:
   - p4-stream-switcher
 lang: en
 translationKey: perforce-workspace-pool
-sourceHash: 42839580c4908c89b8221b33c3cf1a6ee7963dd4abc65d64e274d22bf29919fa
+sourceHash: c7319d73a9a593c6e1aa7a55a53a1e2fd940f26182fb4f27eec426667b3dc908
 translationStatus: translated
-generatedBodyHash: 41d155afdadc8e681ff0c0c6a1f8d6e41da4d2234fab542f63167c96c8ea30f0
+generatedBodyHash: 1f6131752f5f4fe4fd3cc6bcee00b24a122b6ae28825a366e2927a78cc625f28
 coverAlt: Perforce workspace pool and local cache management diagram
 websiteCoverUrl: /assets/cases/perforce-workspace-pool.png
 ---
@@ -28,11 +28,11 @@ websiteCoverUrl: /assets/cases/perforce-workspace-pool.png
 
 P4StreamSwitcher targets Perforce development across multiple projects and branches. Workspace counts need to be controlled while branch directories may contain local UE caches. Repeatedly changing client configuration by hand makes workspace, stream, and directory associations harder to track.
 
-This case describes the implementation in the source. Its scope is Windows and the two-level stream layout `//depot/project/branch`.
+This implementation in the source applies to Windows and the two-level stream layout `//depot/project/branch`.
 
 ## Breaking down the problem
 
-Switching branches involves locating a workspace, deciding whether to create a client, selecting a directory, and deciding whether to update it from the server or preserve local content. Treating all of this as an unconditional sync misses the difference between existing workspaces and offline directories.
+Switching to a target branch requires locating a workspace, deciding whether to create a client, selecting a directory, and choosing whether to update it from the server or preserve local content. Treating these actions as an unconditional sync misses the difference between existing workspaces and offline directories.
 
 A full pool also requires reclaiming clients. Deleting by name alone does not account for usage order or opened files.
 
@@ -42,7 +42,7 @@ The tool identifies workspaces as “tag_project_branch” and stores the direct
 
 The pool chooses an eviction candidate using local timestamps, then checks its opened files and whether P4V is running before deletion. Tag conflict checks help prevent hosts from sharing a tag; ordinary manually created workspaces outside the naming convention are excluded from the pool.
 
-Directory handling follows two paths. Normal mode updates the have list, applies built-in cache protection and .p4ignore rules, removes extra files, then downloads changed or missing files. Offline mode updates the have list and runs reconcile, opening local additions, edits, and deletions in the default changelist for user review.
+Directories can be handled in two modes. Normal mode first updates the have list, then applies built-in cache protection and .p4ignore rules, removes extra files, and finally downloads files whose content differs or that are missing. Offline mode updates the have list before running reconcile, opening local additions, edits, and deletions in the default changelist for user review.
 
 ## Results and boundaries
 

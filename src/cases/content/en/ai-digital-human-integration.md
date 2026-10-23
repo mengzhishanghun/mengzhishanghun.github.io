@@ -18,9 +18,9 @@ coverAlt: Flowchart of the local integration of an AI digital human interaction 
 websiteCoverUrl: /assets/cases/ai-digital-human-integration.png
 lang: en
 translationKey: ai-digital-human-integration
-sourceHash: 27cca99e36fae790294289bb0391a791dafb5d26178438f9d7908ca925d45d41
+sourceHash: 4f9fabda58f92a5b39dfa893997e5bf37b5a88b68daa0a17c4c6001dad2291c4
 translationStatus: translated
-generatedBodyHash: a4a5b69f598e42baad5b3a5c305ef598bbd0b73396acaf8e8049082d123feb80
+generatedBodyHash: 85fed92dffff4189965e96114e9796d7aea186972bc66d3d5dc542a853b062d7
 ---
 
 ## Background
@@ -48,7 +48,7 @@ Here, cloud deployment refers to AI services running remotely. UE still handles 
 
 ## Specific Problem
 
-The interaction connects several independent stages: speech recognition produces text, the LLM generates a response, speech synthesis converts it into audio, and the character handles audio playback and lip movements.
+Voice interaction connects several independent stages: speech recognition produces text, the LLM generates a response from that text, speech synthesis converts the response into audio, and the character plays the audio and presents lip movements.
 
 Body sensing provides a separate input path. The user's position and skeleton movements feed into character control and scene logic, working alongside voice conversation.
 
@@ -60,7 +60,7 @@ The voice interaction follows this sequence:
 
 **User speech → speech recognition → LLM response → speech synthesis → digital human audio playback, lip sync, and facial expressions.**
 
-Speech recognition, conversation, speech synthesis, and character presentation are integrated as separate functional modules, coordinated by the interaction flow. UE handles the scene and character, while the backend services perform their respective AI processing.
+Speech recognition, conversation, speech synthesis, and character presentation are integrated as separate functional modules, with flow-control logic coordinating their execution. UE handles the scene and character, while the backend services perform their respective AI processing.
 
 Three deployment options were completed:
 
@@ -68,7 +68,7 @@ Three deployment options were completed:
 - **Cloud:** AI processing uses remote services over a network, and UE receives the results to present the digital human's response.
 - **Hybrid:** Some services run locally and others are accessed over a network, within the same interaction flow.
 
-Azure Kinect provides body skeleton data for movement-based scene interaction, including elevator control and having the digital human look toward the user.
+Azure Kinect provides body skeleton data that connects user movements to scene interactions, such as controlling an elevator and making the digital human's gaze follow the user.
 
 The original fixed linear sequence was later split into flow control and functional modules. C++ provides the supporting functions, while Blueprints organize the specific interactions, making it easier to adjust the flow and replace services.
 

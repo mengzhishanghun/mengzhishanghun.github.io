@@ -16,9 +16,9 @@ tags:
   - Replay
 lang: en
 translationKey: driving-session-replay
-sourceHash: cfa126c4b386a1504304d235e9f3c1007c25579905a730c91e73a3a9dd011064
+sourceHash: 48b85af1b1a1e4fee125dfafa081e6f124bbcb36848ba04901498dc84e3f13bd
 translationStatus: translated
-generatedBodyHash: 413b982d437454bc5da174cf7edf948a969d94fbd1f0a6877e56f0d8f54af6a3
+generatedBodyHash: 9aaeb7934035b99c08babed811f4f40762ce1ccf0b9c1a6902e49abc6c6cddfd
 coverAlt: Driving session recording and UE replay management diagram
 websiteCoverUrl: /assets/cases/driving-session-replay.png
 ---
@@ -26,9 +26,9 @@ websiteCoverUrl: /assets/cases/driving-session-replay.png
 
 ## Recording Inputs and Keeping a Viewable Replay
 
-Driving training needs both an assessment of the session and a way to inspect what the driver did. A results table supports completion times and behavior counts. Continuous data shows changes in steering, braking, and speed, while scene replay lets the user watch the drive again. My implementation organizes process JSON, performance JSON, and UE Network Replay separately, giving each a defined recording responsibility.
+Driving training needs both an assessment of the session and a way to inspect what the driver did. A results table provides completion times and behavior counts. Continuous data shows changes in steering, braking, and speed, while scene replay lets the user watch the drive again. The implementation I contributed to separates these records into process JSON, performance JSON, and UE Network Replay.
 
-This separation also affects integration. A results interface can read statistics, an analysis tool can read curves, and scene review can use the engine's recording manager. Similar fields, or data from the same training session, do not make these formats interchangeable.
+During integration, a results interface can read statistics, an analysis tool can read curves, and scene review can use the engine's recording manager. These formats are not interchangeable, even when they contain similar fields or come from the same training session.
 
 ## Driving Data and Performance Statistics
 
@@ -55,7 +55,7 @@ The generated JSON contains session fields, curve ControlPoints, and discrete Ev
 
 Raw points are fitted and simplified per channel before control points are saved. The tolerance applies to fitting distance in the `(time, value)` plane. Both time and the field value participate in that distance. Steering, speed, and position use different units, so the same numeric tolerance cannot be interpreted as the same physical error.
 
-Reducing keys aims to describe a changing curve with fewer data points. Which discontinuities to preserve, acceptable error, and the intended use remain business decisions. Identifying when braking starts, for example, has different detail requirements from viewing a speed trend. The implementation processes channels separately and does not establish a compression ratio or uniform physical accuracy here.
+The aim of reducing keys is to describe a changing curve with fewer data points, but application requirements still determine which discontinuities to preserve, how much error to allow, and how the curves will be used. Identifying when braking starts, for example, requires different detail from viewing a speed trend. The implementation processes channels separately, without promising a compression ratio or uniform physical accuracy.
 
 ### Background Saving and Completion
 

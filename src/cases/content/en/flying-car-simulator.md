@@ -17,15 +17,15 @@ coverAlt: Flowchart of the flying car simulator
 websiteCoverUrl: /assets/cases/flying-car-simulator.png
 lang: en
 translationKey: flying-car-simulator
-sourceHash: 4a3ef18ffe61ede154f4fdeb0a84f78886f7163dae1ba25c22a4080e651bbf5b
+sourceHash: 8e40abd4a0e95d2e972e53599c0f5b50c63fcf2bc8592386e715255b908ed9da
 translationStatus: translated
-generatedBodyHash: 1c3d24b343dfa974dbf90c96ee62b683ff63eb6c714b8b961b6753fbda4c9ec5
+generatedBodyHash: dfc2be689a6678be01cf19130432c3b13235d310b4af7e24f11d85356ec420da
 ---
 
 
 ## Flight Input and Scene Updates
 
-A flying-car simulation must keep receiving operator input while updating the vehicle, scene, and camera. My work focused on AirSim control integration, yaw handling, and adaptation for UE 5.6. The difficulty is that input devices express forward, sideways, vertical, and turning intentions, while the flight interface expects velocity and heading in specific coordinate systems. The calling pattern also affects whether the game thread can keep updating.
+A flying-car simulation must keep receiving operator input while updating the vehicle, scene, and camera. My work focused on AirSim control integration, yaw handling, and adaptation for UE 5.6. Forward, sideways, vertical, and turning inputs need conversion into velocity and heading in the flight interface's coordinate systems. How that interface is called also affects whether the game thread can keep updating.
 
 ### From Input Axes to Flight Commands
 
@@ -44,7 +44,7 @@ Per-axis clamps limit individual inputs. The combined diagonal velocity can stil
 
 The older control path used an interface with a duration parameter; waiting during the call affected the game thread. This path switches to non-blocking `setVelocityCommandBodyFrame`. Each Pawn Tick submits a command for the current input, then continues processing scene logic. Subsequent frames maintain continuous control instead of waiting for an entire movement to finish inside one call.
 
-This separates the desired movement for the current frame from how long control continues. When device input changes, the next frame can calculate a new target. The game thread can also process UI, cameras, and other interactions. Actual response still depends on simulation stepping and the runtime environment; a non-blocking interface alone does not guarantee a fixed frame rate.
+The movement target for each frame is handled separately from control duration. When device input changes, the next frame can calculate a new target, while the game thread continues processing UI, cameras, and other interactions. Actual response still depends on simulation stepping and the runtime environment; a non-blocking interface alone does not guarantee a fixed frame rate.
 
 ### Handling Translation and Heading Separately
 
@@ -56,7 +56,7 @@ Horizontal velocity conversion uses current yaw only, rotating forward and sidew
 
 UE commonly uses centimeters, while AirSim velocity interfaces organize data in meters per second. Exchanges require unit conversion. NED has a downward Z axis and UE an upward Z axis, so the vertical component also changes sign. Mixing these conversions into input mappings can produce reversed vertical motion or an incorrect speed scale. They are therefore handled at the interface boundary.
 
-Angle, velocity, and angular-rate gain entries are configured separately. These settings currently use the proportional P term with I and D set to zero. They describe proportional-control settings for this configuration; the presence of PID-shaped parameters does not establish a fully tuned PID flight controller.
+Angle, velocity, and angular-rate gains are configured separately. These settings currently use the proportional P term, with I and D set to zero. This configuration uses proportional control; the parameter structure alone does not establish a fully tuned PID flight controller.
 
 ## Version Adaptation and Integration Scope
 

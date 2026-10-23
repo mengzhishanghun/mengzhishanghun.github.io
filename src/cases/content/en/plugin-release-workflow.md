@@ -21,16 +21,16 @@ coverAlt: Flowchart of the toolchain from plugin development to release
 websiteCoverUrl: /assets/cases/plugin-release-workflow.png
 lang: en
 translationKey: plugin-release-workflow
-sourceHash: 930a107ce5458240b80f33cb4749feff8fe2cc19ddb200dcd7e7d70bf021f0ee
+sourceHash: c407713a991c6ccbb9e79e7c4a0f570effa79fda8ad093fcc1af1f57d95584be
 translationStatus: translated
-generatedBodyHash: e8566560a70b648e4fe36a324ca1ca8f1e70bc079c07e576bb5e658dbe053ca9
+generatedBodyHash: 51a01a8ca11737338421001e69206c4f1c8881fb563a4632889b43ab1ea6e963
 ---
 
 ## Background
 
 During UE plugin development and release, I turned repeated operations in plugin discovery, dependency analysis, and multi-version packaging into two dedicated tools: UEPluginManager and UEPluginAutoPacker.
 
-This case explains how the toolchain divides development and release work. Plugin management first helps clarify the project environment, then the packaging tool builds against configured engine versions and organizes the output.
+During development and release, the plugin manager can first inspect the project environment, then the packaging tool builds against configured engine versions and organizes the output.
 
 ## Reproduction Environment
 
@@ -46,12 +46,12 @@ Multi-version release preparation also requires repeatedly selecting engines, ru
 
 ## Solution
 
-UEPluginManager brings together project, marketplace, and engine plugins, offering search, dependency and dependent relationships, and warnings about same-name conflicts. Plugin sources and relationships can be established before any necessary status or directory operations.
+UEPluginManager brings together project, marketplace, and engine plugins. It supports search, shows dependency and dependent relationships, and warns about same-name conflicts. Plugin sources and relationships can be checked before changing plugin status or directories as needed.
 
 UEPluginAutoPacker runs plugin builds separately for each configured engine, displays each version's status and logs, and organizes release files according to selected options. Success, failure, and cancellation are shown independently for each engine, making it easier to inspect a specific version.
 
 
-The work produced two independently usable tools for plugin management and multi-version packaging, concentrating environment checks and build organization into clear operation entry points.
+The two tools can be used independently: the plugin manager checks the environment, and the multi-version packaging tool runs builds and organizes files.
 
 A successful build still requires log review and testing in the target engine to assess compatibility. The packaging tool handles plugin packages; publishing a listing and packaging a complete UE project have their own workflows.
 

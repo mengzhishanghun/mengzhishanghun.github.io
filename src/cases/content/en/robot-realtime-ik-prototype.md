@@ -16,9 +16,9 @@ tags:
   - Prototype
 lang: en
 translationKey: robot-realtime-ik-prototype
-sourceHash: eca2a11884cc6c89ae30eb31f93398db41449daeb57de47f697db207ce65b5a7
+sourceHash: 849c008760c48c401c3cb055ebd4ed568a96bf1b855be388867c7a76be07522e
 translationStatus: translated
-generatedBodyHash: 483938759e6bfa1fe3e42c1361df59739c50fc847c7671f91ba2a3a809d56ed0
+generatedBodyHash: e098641db4bee98d0497433811926cea8dc9155c0af12091bc112bed884ce7ba
 coverAlt: Realtime robot data and three-axis IK prototype diagram
 websiteCoverUrl: /assets/cases/robot-realtime-ik-prototype.png
 ---
@@ -26,7 +26,7 @@ websiteCoverUrl: /assets/cases/robot-realtime-ik-prototype.png
 
 ## Prototype Goal
 
-RoBoBuilder is in development for robot realtime-data integration and three-axis position IK. I separated transport, scheduling, filtering, and solving to build a UE-side prototype. It handles how external data enters the scene, how output changes when input stops, and how a target position becomes joint values.
+RoBoBuilder is being developed for realtime robot-data integration and three-axis position IK. I separated transport, scheduling, filtering, and solving to build a UE-side prototype that brings external data into the scene, handles output changes when input stops, and converts a target position into joint values.
 
 A realtime pipeline involves more than receiving JSON. Network reception and game Tick are not synchronized, and valid input does not mean the mechanism can reach a target. The prototype therefore expresses reception state and IK-solving state separately so higher-level logic can interpret output. Testing with the actual mechanism's URDF and real data remains outstanding.
 
@@ -36,7 +36,7 @@ A realtime pipeline involves more than receiving JSON. Network reception and gam
 
 RoboUdpTransport sends and receives JSON in a UDP worker thread and retains the latest parsed frame. Game Tick consumes updates by generation, allowing network reception and scene processing to advance independently. This structure follows the latest state instead of queuing every received packet as an action that must be executed in order.
 
-Freshness is assessed using local receive time. Consecutive valid packets in the recovery condition means a count of consecutively parseable packets, not strict continuity in sender sequence numbers. There is currently no sequence-number deduplication or remote-clock synchronization. Parseable format, message ordering, and time bases are separate issues.
+Freshness is assessed using local receive time. The recovery condition counts consecutive packets that can be parsed; it does not require strictly continuous sender sequence numbers. There is currently no sequence-number deduplication or remote-clock synchronization. A parseable format, message order, and the time base are separate issues.
 
 ### Timeout, Zero Output, and Recovery
 
@@ -46,7 +46,7 @@ Zeroing here is a protocol-data rule. It is not a physical safe-home command. Wh
 
 ### Filtering According to Movement Speed
 
-The prototype adjusts filter cutoff frequency according to estimated movement and angular speed. Slow movements can receive more suppression of small fluctuations, while fast movements need less delay from strong smoothing. Rotations use normalized Slerp interpolation and are processed separately from position data.
+The prototype adjusts filter cutoff frequency according to estimated movement and angular speed. Slow movements can receive stronger suppression of small fluctuations, while fast movements need less tracking delay from excessive smoothing. Rotations use normalized Slerp interpolation and are processed separately from position data.
 
 This adaptive processing trades jitter suppression against response. Smoother output alone does not establish a suitable setting. Integration with real data needs observation of stationary fluctuations, fast movements, and pose changes during recovery.
 
@@ -74,7 +74,7 @@ This prevents ongoing network traffic from being mistaken for usable joint value
 
 ## Development Status
 
-Software prototypes exist for UDP transport, latest-frame handoff, timeout recovery, adaptive filtering, and three-joint position solving. The actual mechanism's URDF, real-data link, and device behavior still need testing. This case remains work in development. Protocol zeroing and solving status are available to higher-level logic, while final device behavior requires device-side rules.
+Software prototypes exist for UDP transport, latest-frame handoff, timeout recovery, adaptive filtering, and three-joint position solving. The actual mechanism's URDF, real-data link, and device behavior still need testing, so this case is presented as work in development. Higher-level logic can use protocol zeroing and solving status, while final device behavior still requires device-side rules.
 
 To assess a similar project, share the mechanism structure, joint ranges, data format, and target-position constraints so we can identify reusable parts of the prototype.
 

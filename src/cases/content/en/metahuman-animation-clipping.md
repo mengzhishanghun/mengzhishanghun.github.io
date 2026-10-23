@@ -19,22 +19,22 @@ coverAlt: Workflow for previewing and checking head and body animations after ad
 websiteCoverUrl: /assets/cases/metahuman-animation-clipping.png
 lang: en
 translationKey: metahuman-animation-clipping
-sourceHash: 21cf5a27dd3d7ae7a3032a49dbef584c7ca9b0326b4789ad849688b36e50b45b
+sourceHash: 592ac8dad6d4c501f244b39c0b4ce59bc2d901aa792e2f183f05ef2116c8b7e4
 translationStatus: translated
-generatedBodyHash: eda2441258e9883c0152f6ff1e0dde48647a3edb6265d9050c2ce02168167d02
+generatedBodyHash: f7e2869e32a60af43189bb0b986d848eb864109dc6b11334633805b219caed28
 ---
 
 ## Background
 
 While working on a MetaHuman project, I encountered clipping around the neck when different head and body animations played simultaneously. I first addressed the settings of the head animation asset, then organized the same settings into a batch operation.
 
-The single-animation method was based on a public tutorial. My record includes its actual use in UE 5.6 and a method for batch processing with a script Blueprint.
+The single-animation method was based on a public tutorial. I used it in UE 5.6 and processed the same settings in batches with a script Blueprint.
 
 ## Reproduction Environment
 
 The scene used Unreal Engine 5.6 and MetaHuman, with separate animations playing on the head and body. The original record noted that the same problem had not been observed in LevelSequence at the time.
 
-The reference video demonstrated UE 5.2. This case therefore retains the distinction between the two versions and does not extend one project's validation to all versions and animation combinations.
+The reference video used UE 5.2, while the project used UE 5.6. Validation in this project does not establish the result for all versions and animation combinations.
 
 ## Specific Problem
 
@@ -51,9 +51,9 @@ The settings in the original screenshot were: `Additive Anim Type` set to `Mesh 
 After confirming the settings for one animation, a script Blueprint was used to organize batch modifications. For creating and configuring the script Blueprint, running its function, and screenshots of the results, [read the batch processing steps](https://mzsh.me/blog/cnblogs-19136316/).
 
 
-The original record confirms that the method was personally tested successfully in UE 5.6 and records a way to batch process the same animation settings, reducing repeated changes to individual assets.
+I tested the method successfully in UE 5.6. Batch processing the same animation settings reduces repeated changes to individual assets.
 
-This result applies to the neck clipping observed when head and body animations were played separately. The LevelSequence record only says that the same symptom had not been found at the time; it does not establish that every playback path was validated.
+This result applies to the neck clipping observed with separate head and body animations playing together. The LevelSequence record only says that the same symptom had not been found at the time; it does not establish that every playback path was validated.
 
 ## Discuss your project
 

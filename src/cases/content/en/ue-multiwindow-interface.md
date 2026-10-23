@@ -16,9 +16,9 @@ tags:
   - UI tools
 lang: en
 translationKey: ue-multiwindow-interface
-sourceHash: bc2bc23cb9d1977c607f9d35566c1521e29d44677a74d63e98434212a64b7bb8
+sourceHash: de3c2a3c24ac185bac798ce859ecac66e2ee24ec0b599f0202dc5374319d802c
 translationStatus: translated
-generatedBodyHash: e089e623155283605b48e8f8092fd14a55d2a1d9f0bed69dafeb94dfb73449a1
+generatedBodyHash: 018e1ada34fafa5a3cd746240a7962679bb58738806b7ebf2a4ad2d074c6effc
 coverAlt: Independent UE multiwindow interface diagram
 websiteCoverUrl: /assets/cases/ue-multiwindow-interface.png
 ---
@@ -28,7 +28,7 @@ websiteCoverUrl: /assets/cases/ue-multiwindow-interface.png
 
 UE tools and simulations sometimes need parameter panels, debug information, or operator interfaces in separate windows to keep the main view available. This involves more than making UMG content: native-window creation, input forwarding, size changes, and closing behavior also need handling.
 
-The NorthTravel project configuration enables the Marketplace MultiWindow plugin. This case describes the existing plugin's window capabilities and integration approach. The underlying window implementation belongs to that plugin, whose source-file headers credit YWT20. It uses Slate to create native windows and host UMG, providing a basis for independent control panels.
+The NorthTravel project configuration enables the Marketplace MultiWindow plugin. The underlying window implementation belongs to that plugin, whose source-file headers credit YWT20. It uses Slate to create native windows and host UMG, providing a basis for integrating independent control panels.
 
 ## Window Creation and Lifecycle
 
@@ -61,11 +61,11 @@ This changes rendered widget size rather than automatically rearranging every co
 
 Closing explicitly through the plugin clears related references and bindings before requesting closure. Clicking the native window's close button follows a different path, whose existing callback primarily broadcasts a close event. The two paths do not have identical cleanup responsibilities, and the UMG pointer's lifecycle also needs attention.
 
-Integration should therefore define what happens to the corresponding Actor, widget references, and business state after a close event. A disappeared window does not establish that all related objects have been released. Panels that open repeatedly also need a decision on rebuilding each time or retaining state for redisplay.
+Integration should therefore define what happens to the corresponding Actor, widget references, and business state after a close event. A window disappearing does not mean that all related objects have been released. For panels that open repeatedly, the application must also decide whether to rebuild each time or retain state for redisplay.
 
 ## Scope
 
-The existing plugin targets independent tool windows and control panels. Its enabled state in NorthTravel is confirmed, but the project's two C++ modules contain no direct MultiWindow calls. Blueprint invocation and actual runtime behavior remain unconfirmed. This case describes integration capabilities and does not claim personal authorship of the plugin or an on-site delivered implementation.
+The existing plugin targets independent tool windows and control panels. Its enabled state in NorthTravel is confirmed, but the project's two C++ modules contain no direct MultiWindow calls. Blueprint invocation and actual runtime behavior remain unconfirmed. The evidence supports describing the plugin's integration capabilities, without claiming personal authorship or an implementation delivered and running on site.
 
 A native window hosting UMG does not automatically have an independent UWorld or camera render. Showing different camera views in different windows requires further assessment of viewports, image sources, and rendering resources. Ordinary parameter panels can begin with window relationships, focus, scaling, and closing lifecycles.
 

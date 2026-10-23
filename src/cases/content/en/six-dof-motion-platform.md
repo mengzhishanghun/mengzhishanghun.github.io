@@ -17,9 +17,9 @@ coverAlt: Flowchart of the six-degree-of-freedom motion platform integration
 websiteCoverUrl: /assets/cases/six-dof-motion-platform.png
 lang: en
 translationKey: six-dof-motion-platform
-sourceHash: 620515f37fd4c95be3052ac93ab5ec79597ee2f9baccccdfb3eefcd7c7e4742f
+sourceHash: 1ae32b36b6283f679070d2977430a7e552932cc43e2d5d976c83d06f69687474
 translationStatus: translated
-generatedBodyHash: 600054193c2dd71b764530bb458aa5a6f8fa93da7d0e337407f16c5aedce5761
+generatedBodyHash: 1de6231b00e27372ebc0e8b3a123839caa0f64809406e741c80aa03d03e14b36
 ---
 
 
@@ -40,7 +40,7 @@ Integrating a six-degree-of-freedom platform means turning UE scene translation 
 
 Inverse kinematics transforms the upper-platform pivots using the target pose, then measures their distances to the corresponding lower-platform pivots to obtain six rod lengths. This requires the full pivot layout. The platform center alone cannot determine how far each rod should extend.
 
-Forward kinematics estimates the platform pose from rod lengths. The implementation uses Newton iteration and an analytical Jacobian to describe how pose changes affect rod lengths, progressively reducing the discrepancy between estimated and target lengths. Numerical forward solving and geometric inverse calculation have different roles. A length conversion alone does not establish physical calibration.
+Forward kinematics estimates the platform pose from rod lengths. The implementation uses Newton iteration and an analytical Jacobian to describe how pose changes affect rod lengths, progressively reducing the discrepancy between estimated and target lengths. The forward solver uses numerical methods and the inverse solver uses geometry, each with its own role. A length conversion alone does not establish physical calibration.
 
 Centimeters and degrees on the UE side require explicit conversion to meters and radians on the solver side. Mixed units can produce plausible numbers at an incorrect scale. Conversion is kept at the solver boundary so it can be checked against the mechanism parameters.
 
@@ -58,7 +58,7 @@ Oceanology provides the ocean's water behavior and force calculations. My integr
 
 The ocean component exposes interpolatable time, wavelength, wave height, wave speed, and wave direction properties. Parameter changes broadcast notifications so the water side can update. TimeCode accumulates during recording to describe time progression. Environment parameters therefore have their own adjustment interface without copying water algorithms into recording logic.
 
-These properties cover the implemented wave and time parameters. Wind fields are outside this property set; animatable water parameters do not establish completed wind-field simulation.
+These properties cover the existing wave and time parameters, but not wind fields. Animatable water parameters do not mean that wind-field simulation is complete.
 
 ### From Recording Start to Saved Sequence
 
@@ -73,7 +73,7 @@ Embedding the original scene sequence in the new recorded result brings existing
 
 ### LiveLink Sending
 
-Six-axis parameters can be sent as LiveLink Transforms for downstream integration. The sender organizes and pushes Transforms. How a receiver interprets them, drives a platform, and aligns images with motion requires separate handling in the receiving system.
+Six-axis parameters can be sent as LiveLink Transforms for downstream integration. The sender organizes and pushes Transforms; the receiving system must separately handle how to interpret them, drive the platform, and align images with motion.
 
 ## Practical Integration Scope
 
