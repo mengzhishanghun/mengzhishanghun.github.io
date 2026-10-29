@@ -75,3 +75,12 @@ test('restored published blog images open from the dimension registry before laz
     }
   }
 });
+test('Fab project screenshots open in the existing viewer before their natural dimensions load',async()=>{
+  const frozenURL=new URL('../shared/compat/_astro/media-dimensions.BM-KTszl.js',import.meta.url),code=fs.readFileSync(new URL('../shared/i18n/client/media-dimensions.js',import.meta.url),'utf8').replace("from '/_astro/media-dimensions.BM-KTszl.js'",'from '+JSON.stringify(frozenURL.href)),dimensions=await import('data:text/javascript,'+encodeURIComponent(code));
+  assert.deepEqual(dimensions.default['/media/works/fab/simple-bp-inherit-fix-01.jpg'],{width:1920,height:1202});
+  const config=JSON.parse(fs.readFileSync(new URL('./project-galleries.json',import.meta.url),'utf8')),manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url),'utf8'));
+  for(const gallery of config.galleries)for(const item of gallery.items.filter(item=>item.kind==='image'&&item.sourcePage)){
+    const entry=manifest.entries.find(entry=>entry.id===gallery.entryId);
+    for(const locale of ['zh','en']){const x=viewer(locale+entry.legacyRoutes[0]+'index.html',item.websiteUrl);x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:x.anchor.dataset.mediaAlt});const pending=x.click();x.finish(dimensions.default);await pending;assert.equal(x.opened.length,1,item.websiteUrl);assert.equal(x.fallback.length,0);assert.equal(x.opened[0].options.dataSource[0].width,item.width);assert.equal(x.opened[0].options.dataSource[0].height,item.height);assert.equal(x.opened[0].options.wheelToZoom,true);assert.equal(x.opened[0].options.trapFocus,true);}
+  }
+});

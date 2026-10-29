@@ -26,6 +26,7 @@ export function projectImageViewers(html,locale) {
     if(image.tagName!=='img')return;
     const a=attrs(image),loc=image.sourceCodeLocation;
     if(!a.src||!loc||closest(image,n=>classes(n).some(c=>['hero-backdrop','police-record'].includes(c))))return;
+    if(closest(image,n=>Object.hasOwn(attrs(n),'data-gallery-select')))return;
     // 导航卡片的封面沿用整卡跳转，不与正文配图共用放大入口。
     if(closest(image,n=>classes(n).includes('content-card')||Object.hasOwn(attrs(n),'data-feature-panel')))return;
     const existing=closest(image,n=>n.tagName==='a'&&attrs(n)['data-media-image']!==undefined);

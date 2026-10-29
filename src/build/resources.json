@@ -3927,7 +3927,7 @@
       "outputs": [
         "assets/site-ui/media-dimensions.a036b4ea8f70.js"
       ],
-      "sha256": "a036b4ea8f7062b58d9a13a310c8c0041d571f6c9ac017dcb135912634d9e74d",
+      "sha256": "6487125bfc19fe9dd7d3fd7c4185476ac2901436b276298571cbe5694e622333",
       "mode": "authored"
     },
     {
@@ -4369,6 +4369,150 @@
       ],
       "sha256": "351d2590d6e28891328628db1d5293a141aefc042dcfc267c0a766e6c37a1bfc",
       "mode": "authored"
+    },
+    {
+      "source": "src/shared/project-gallery/client.js",
+      "outputs": [
+        "assets/site-ui/project-gallery.js"
+      ],
+      "sha256": "aef2776c2e0376ca69ca341c403febb982ee5af393b8175cc9b415b25864d240",
+      "mode": "authored"
+    },
+    {
+      "source": "src/shared/project-gallery/client.css",
+      "outputs": [
+        "assets/site-ui/project-gallery.css"
+      ],
+      "sha256": "a4078ae1a92e353262572d92813f640118fa6716f33f8d9d6a28ab66f239d576",
+      "mode": "authored"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-bp-inherit-fix-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-bp-inherit-fix-01.jpg"
+      ],
+      "sha256": "4d9245dacfdee14072bebea78e79c5ddc71bf914e8600e84d1b97f12ac66f61f",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/ai-data-asset-01.jpg",
+      "outputs": [
+        "media/works/fab/ai-data-asset-01.jpg"
+      ],
+      "sha256": "cd4962afa2a58c40e6679c1b6947551ca3dd209102bcfb40312fbd8ca0e9e780",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-asset-cleaner-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-asset-cleaner-01.jpg"
+      ],
+      "sha256": "f6777f082e292fc89dda11f4b2a4e142d951653fea2063514d7c6d40f1d3a820",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-asset-namer-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-asset-namer-01.jpg"
+      ],
+      "sha256": "8dd19192b12f66b26f2da9e2b69d337e419998751d81a06def69fe3128712729",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-auto-enum-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-auto-enum-01.jpg"
+      ],
+      "sha256": "519bb442740494b221a8c5c190be6860679ee50b23c132aa73dae27b18b6d865",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-byte-conversion-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-byte-conversion-01.jpg"
+      ],
+      "sha256": "f3ed3369b11ea709e18edfae9056aae17b435c712d523f3adbb6d0b24a701a0d",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-config-exclude-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-config-exclude-01.jpg"
+      ],
+      "sha256": "a278609a04f297d4c8d8db68f4f956ec577831b5450bf1ebf99120c3b3c48ad1",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-input-simulator-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-input-simulator-01.jpg"
+      ],
+      "sha256": "83e3227f13e351c9f279e365a91d10fb3d8c3ce5ac27108406016968b1a97762",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-launcher-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-launcher-01.jpg"
+      ],
+      "sha256": "b3cd3b69c2421ea8c9478c0e2928908db52a3939dd6847fc71f2938dc478067d",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-ssh-tunnel-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-ssh-tunnel-01.jpg"
+      ],
+      "sha256": "9194ef1772536564872b6a43b0711de5ad6f2f6f060720ea56e83556bd8c4fab",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-level-seq-smooth-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-level-seq-smooth-01.jpg"
+      ],
+      "sha256": "da3fb0abc1670063d98b4391b1eed0825dc294d98a5958ba508939a8ab910665",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-static-mesh-merger-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-static-mesh-merger-01.jpg"
+      ],
+      "sha256": "3363ba8baf3f0fa93260556cd682809bb4664b009626dd4fae887f95f317a12c",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-tcp-client-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-tcp-client-01.jpg"
+      ],
+      "sha256": "dceeb2f45b1ff0813ea2023bedee3d019230ef9301ef2b5aa79dc1d3ae61b9ed",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-udp-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-udp-01.jpg"
+      ],
+      "sha256": "460f60293a408bc51b5211b585e0c327b48170beb9854c50b16df28315c212ae",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-tcp-server-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-tcp-server-01.jpg"
+      ],
+      "sha256": "2c86322ef85b5a1635899881cdc7bec42461867496965c0dc26852c4ebecd1a1",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/works/fab/simple-websocket-01.jpg",
+      "outputs": [
+        "media/works/fab/simple-websocket-01.jpg"
+      ],
+      "sha256": "1161978f08f233dda37d8a83bfddbeaa1d19759a2e79938675b432ccd31711aa",
+      "mode": "frozen"
     }
   ]
 }

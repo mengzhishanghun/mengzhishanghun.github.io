@@ -287,7 +287,73 @@ const restoredBlogDimensions={
     "height": 1241
   }
 };
-export default {...legacyDimensions,...additionalDimensions,...restoredBlogDimensions,
+export const galleryDimensions={
+  "/media/works/fab/simple-bp-inherit-fix-01.jpg": {
+    "width": 1920,
+    "height": 1202
+  },
+  "/media/works/fab/ai-data-asset-01.jpg": {
+    "width": 2560,
+    "height": 1394
+  },
+  "/media/works/fab/simple-asset-cleaner-01.jpg": {
+    "width": 2560,
+    "height": 1505
+  },
+  "/media/works/fab/simple-asset-namer-01.jpg": {
+    "width": 1279,
+    "height": 1034
+  },
+  "/media/works/fab/simple-auto-enum-01.jpg": {
+    "width": 1280,
+    "height": 720
+  },
+  "/media/works/fab/simple-byte-conversion-01.jpg": {
+    "width": 1919,
+    "height": 1306
+  },
+  "/media/works/fab/simple-config-exclude-01.jpg": {
+    "width": 1918,
+    "height": 1095
+  },
+  "/media/works/fab/simple-input-simulator-01.jpg": {
+    "width": 1919,
+    "height": 1111
+  },
+  "/media/works/fab/simple-launcher-01.jpg": {
+    "width": 2559,
+    "height": 1577
+  },
+  "/media/works/fab/simple-ssh-tunnel-01.jpg": {
+    "width": 1919,
+    "height": 1065
+  },
+  "/media/works/fab/simple-level-seq-smooth-01.jpg": {
+    "width": 1279,
+    "height": 872
+  },
+  "/media/works/fab/simple-static-mesh-merger-01.jpg": {
+    "width": 2560,
+    "height": 1390
+  },
+  "/media/works/fab/simple-tcp-client-01.jpg": {
+    "width": 1918,
+    "height": 1065
+  },
+  "/media/works/fab/simple-udp-01.jpg": {
+    "width": 1920,
+    "height": 1067
+  },
+  "/media/works/fab/simple-tcp-server-01.jpg": {
+    "width": 1919,
+    "height": 1409
+  },
+  "/media/works/fab/simple-websocket-01.jpg": {
+    "width": 2560,
+    "height": 1453
+  }
+};
+export default {...galleryDimensions,...legacyDimensions,...additionalDimensions,...restoredBlogDimensions,
   '/assets/cases/blueprint-inheritance-repair.png':{width:1600,height:800},
   '/assets/cases/data-asset-json-sync.png':{width:1600,height:800},
   '/assets/cases/metahuman-animation-clipping.png':{width:1600,height:800},

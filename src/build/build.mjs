@@ -14,6 +14,7 @@ import {renderWorkMetadata,renderWorkCardStatuses} from '../works/metadata.mjs';
 import {projectBlogTopics} from '../blog/topics.mjs';
 import {projectContentTopics} from './content-topics.mjs';
 import {projectTaxonomy,categoryNavigation} from './taxonomy.mjs';
+import {loadProjectGalleries,projectGallery} from './project-gallery.mjs';
 const require = createRequire(new URL('../../package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -125,7 +126,8 @@ export function preflight({sourceRoot,site,manifest}) {
   projectContentTopics({site,entries,config,copy,type:'work',indexId:'page:works-index',topicsPath:'src/works/topics.json',labelPrefix:'work-topic',maxTopics:3});
   projectContentTopics({site,entries,config,copy,type:'case',indexId:'page:cases-index',topicsPath:'src/cases/topics.json',labelPrefix:'case-topic'});
   projectTaxonomy({site,entries,config,copy});
-  return {routes,entries,config,copy};
+  const galleries=loadProjectGalleries({site,entries,codes});
+  return {routes,entries,config,copy,galleries};
 }
 function routeFile(route) { return route.slice(1) + (route.endsWith('.html') ? '' : 'index.html'); }
 function mapURL(url,locale,entries) {
@@ -443,7 +445,7 @@ export function normalizeScriptEntries(entries) {
 }
 export async function buildSite(options) {
   const {site,manifest,output,check=false}=options;
-  const {entries,config,copy}=preflight(options),{primary,languages}=config,codes=languages.map(l=>l.code);
+  const {entries,config,copy,galleries}=preflight(options),{primary,languages}=config,codes=languages.map(l=>l.code);
   let profile=null;
   if(entries.some(entry=>entry.id==='page:about')){
     profile=JSON.parse(fs.readFileSync(regularPath(options.sourceRoot || path.join(site,'src'),'about/profile.json'),'utf8'));
@@ -501,6 +503,7 @@ export async function buildSite(options) {
     if (/\{\{(?:text|body|outline|profile)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
     const anchors = Object.fromEntries(codes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
     html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,config,copy[locale].engagementLabels);
+    html=projectGallery(html,entry,locale,galleries);
     html=projectImageViewers(html,locale);
     files.set(routeFile(localeRoute(entry,locale)),Buffer.from(html));
   }
