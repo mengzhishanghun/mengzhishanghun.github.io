@@ -18,12 +18,14 @@
         "zh": [
           "Lumen",
           "多屏显示",
-          "仿真"
+          "仿真",
+          "驾驶记录"
         ],
         "en": [
           "Lumen",
           "Multi-screen display",
-          "Simulation"
+          "Simulation",
+          "Driving records"
         ]
       }
     },
@@ -34,41 +36,49 @@
       "legacyTags": {
         "zh": [
           "仿真",
-          "交通"
+          "交通",
+          "飞行控制"
         ],
         "en": [
           "Simulation",
-          "Transportation"
+          "Transportation",
+          "Flight control"
         ]
       }
     },
     "case:motion-capture-robot-control": {
       "topics": [
-        "simulation-control"
+        "simulation-control",
+        "digital-human-animation"
       ],
       "legacyTags": {
         "zh": [
           "动作捕捉",
-          "机器人"
+          "机器人",
+          "原型"
         ],
         "en": [
           "Motion capture",
-          "Robotics"
+          "Robotics",
+          "Prototype"
         ]
       }
     },
     "case:six-dof-motion-platform": {
       "topics": [
-        "simulation-control"
+        "simulation-control",
+        "rendering-display"
       ],
       "legacyTags": {
         "zh": [
           "仿真",
-          "硬件联动"
+          "硬件联动",
+          "虚拟拍摄"
         ],
         "en": [
           "Simulation",
-          "Hardware integration"
+          "Hardware integration",
+          "Virtual filming"
         ]
       }
     },
@@ -81,129 +91,32 @@
         "zh": [
           "AI",
           "MetaHuman",
-          "语音交互"
+          "语音交互",
+          "数字人"
         ],
         "en": [
           "AI",
           "MetaHuman",
-          "Voice interaction"
+          "Voice interaction",
+          "Digital humans"
         ]
       }
     },
-    "case:metahuman-animation-clipping": {
+    "case:herbal-exhibition": {
       "topics": [
-        "digital-human-animation"
-      ],
-      "legacyTags": {
-        "zh": [
-          "MetaHuman",
-          "动画",
-          "批量处理"
-        ],
-        "en": [
-          "MetaHuman",
-          "Animation",
-          "Batch processing"
-        ]
-      }
-    },
-    "case:plugin-release-workflow": {
-      "topics": [
-        "development-release"
-      ],
-      "legacyTags": {
-        "zh": [
-          "UnrealEngine",
-          "插件",
-          "自动化"
-        ],
-        "en": [
-          "UnrealEngine",
-          "Plugins",
-          "Automation"
-        ]
-      }
-    },
-    "case:markdown-publishing": {
-      "topics": [
-        "content-file-processing"
-      ],
-      "legacyTags": {
-        "zh": [
-          "Markdown",
-          "图片",
-          "写作工具"
-        ],
-        "en": [
-          "Markdown",
-          "Images",
-          "Writing tools"
-        ]
-      }
-    },
-    "case:perforce-workspace-pool": {
-      "topics": [
-        "development-release"
-      ],
-      "legacyTags": {
-        "zh": [
-          "Perforce",
-          "开发工具"
-        ],
-        "en": [
-          "Perforce",
-          "Development tools"
-        ]
-      }
-    },
-    "case:driving-session-replay": {
-      "topics": [
-        "simulation-control"
-      ],
-      "legacyTags": {
-        "zh": [
-          "仿真",
-          "驾驶记录",
-          "回放"
-        ],
-        "en": [
-          "Simulation",
-          "Driving records",
-          "Replay"
-        ]
-      }
-    },
-    "case:ue-multiwindow-interface": {
-      "topics": [
+        "content-file-processing",
         "rendering-display"
       ],
       "legacyTags": {
         "zh": [
-          "UMG",
-          "多窗口",
-          "界面工具"
+          "交互展示",
+          "中药",
+          "数据管理"
         ],
         "en": [
-          "UMG",
-          "Multiwindow",
-          "UI tools"
-        ]
-      }
-    },
-    "case:robot-realtime-ik-prototype": {
-      "topics": [
-        "simulation-control"
-      ],
-      "legacyTags": {
-        "zh": [
-          "机器人",
-          "UDP",
-          "原型"
-        ],
-        "en": [
-          "Robotics",
-          "UDP",
-          "Prototype"
+          "Interactive exhibition",
+          "Herbal content",
+          "Data management"
         ]
       }
     }

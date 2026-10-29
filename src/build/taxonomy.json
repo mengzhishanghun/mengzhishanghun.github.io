@@ -268,26 +268,12 @@
           "name": "UE项目",
           "id": "case-6c32285e6bbb",
           "entities": [
-            "case:ai-digital-human-integration",
-            "case:driving-session-replay",
             "case:driving-simulator-three-screen",
             "case:flying-car-simulator",
-            "case:metahuman-animation-clipping",
-            "case:motion-capture-robot-control",
-            "case:robot-realtime-ik-prototype",
             "case:six-dof-motion-platform",
-            "case:ue-multiwindow-interface"
-          ],
-          "supplements": []
-        },
-        {
-          "order": 2,
-          "name": "桌面与自动化",
-          "id": "case-bdf374313b01",
-          "entities": [
-            "case:markdown-publishing",
-            "case:perforce-workspace-pool",
-            "case:plugin-release-workflow"
+            "case:ai-digital-human-integration",
+            "case:motion-capture-robot-control",
+            "case:herbal-exhibition"
           ],
           "supplements": []
         }
@@ -299,24 +285,17 @@
             "case:ai-digital-human-integration",
             "case:driving-simulator-three-screen",
             "case:flying-car-simulator",
-            "case:metahuman-animation-clipping",
             "case:motion-capture-robot-control",
             "case:six-dof-motion-platform"
           ]
         },
         "desktop-automation": {
           "name": "桌面与自动化",
-          "entities": [
-            "case:markdown-publishing",
-            "case:plugin-release-workflow"
-          ]
+          "entities": []
         },
         "case-b787d3be0398": {
           "name": "桌面与自动化",
-          "entities": [
-            "case:markdown-publishing",
-            "case:plugin-release-workflow"
-          ]
+          "entities": []
         },
         "case-6719e60a89e7": {
           "name": "UE项目",
@@ -324,47 +303,33 @@
             "case:ai-digital-human-integration",
             "case:driving-simulator-three-screen",
             "case:flying-car-simulator",
-            "case:metahuman-animation-clipping",
             "case:motion-capture-robot-control",
             "case:six-dof-motion-platform"
           ]
         },
         "case-bdf374313b01": {
           "name": "桌面与自动化",
-          "entities": [
-            "case:markdown-publishing",
-            "case:perforce-workspace-pool",
-            "case:plugin-release-workflow"
-          ]
+          "entities": []
         },
         "case-6c32285e6bbb": {
           "name": "UE项目",
           "entities": [
-            "case:ai-digital-human-integration",
-            "case:driving-session-replay",
             "case:driving-simulator-three-screen",
             "case:flying-car-simulator",
-            "case:metahuman-animation-clipping",
-            "case:motion-capture-robot-control",
-            "case:robot-realtime-ik-prototype",
             "case:six-dof-motion-platform",
-            "case:ue-multiwindow-interface"
+            "case:ai-digital-human-integration",
+            "case:motion-capture-robot-control",
+            "case:herbal-exhibition"
           ]
         }
       },
       "entityOrder": [
         "case:driving-simulator-three-screen",
-        "case:ai-digital-human-integration",
         "case:flying-car-simulator",
-        "case:motion-capture-robot-control",
         "case:six-dof-motion-platform",
-        "case:plugin-release-workflow",
-        "case:markdown-publishing",
-        "case:metahuman-animation-clipping",
-        "case:perforce-workspace-pool",
-        "case:driving-session-replay",
-        "case:ue-multiwindow-interface",
-        "case:robot-realtime-ik-prototype"
+        "case:ai-digital-human-integration",
+        "case:motion-capture-robot-control",
+        "case:herbal-exhibition"
       ]
     },
     "blog": {
@@ -403,7 +368,15 @@
             "blog:ue-level-instance-break-safety",
             "blog:ue-source-engine-association",
             "blog:ue-uparam-reference-metadata",
-            "blog:ue53-multiview-gi"
+            "blog:ue53-multiview-gi",
+            "blog:ai-digital-human-integration",
+            "blog:flying-car-simulator",
+            "blog:motion-capture-robot-control",
+            "blog:six-dof-motion-platform",
+            "blog:plugin-release-workflow",
+            "blog:driving-session-replay",
+            "blog:ue-multiwindow-interface",
+            "blog:robot-realtime-ik-prototype"
           ],
           "supplements": []
         },
@@ -418,7 +391,8 @@
             "blog:cnblogs-19143256",
             "blog:cnblogs-19143258",
             "blog:cnblogs-19143260",
-            "blog:cnblogs-19143267"
+            "blog:cnblogs-19143267",
+            "blog:perforce-workspace-pool"
           ],
           "supplements": []
         },
@@ -438,7 +412,9 @@
           "order": 4,
           "name": "随笔",
           "id": "blog-041baf3756ee",
-          "entities": [],
+          "entities": [
+            "blog:markdown-publishing"
+          ],
           "supplements": []
         },
         {
@@ -546,7 +522,15 @@
             "blog:ue-level-instance-break-safety",
             "blog:ue-source-engine-association",
             "blog:ue-uparam-reference-metadata",
-            "blog:ue53-multiview-gi"
+            "blog:ue53-multiview-gi",
+            "blog:ai-digital-human-integration",
+            "blog:flying-car-simulator",
+            "blog:motion-capture-robot-control",
+            "blog:six-dof-motion-platform",
+            "blog:plugin-release-workflow",
+            "blog:driving-session-replay",
+            "blog:ue-multiwindow-interface",
+            "blog:robot-realtime-ik-prototype"
           ]
         },
         "blog-ae2a7f3fcbea": {
@@ -558,7 +542,8 @@
             "blog:cnblogs-19143256",
             "blog:cnblogs-19143258",
             "blog:cnblogs-19143260",
-            "blog:cnblogs-19143267"
+            "blog:cnblogs-19143267",
+            "blog:perforce-workspace-pool"
           ]
         },
         "blog-18885f27b5af": {
@@ -572,7 +557,9 @@
         },
         "blog-041baf3756ee": {
           "name": "随笔",
-          "entities": []
+          "entities": [
+            "blog:markdown-publishing"
+          ]
         },
         "blog-f1deb75fa21d": {
           "name": "C++",
@@ -623,7 +610,17 @@
         "blog:cnblogs-19143255",
         "blog:cnblogs-19143256",
         "blog:cnblogs-19143260",
-        "blog:cnblogs-19136316"
+        "blog:cnblogs-19136316",
+        "blog:ai-digital-human-integration",
+        "blog:flying-car-simulator",
+        "blog:motion-capture-robot-control",
+        "blog:six-dof-motion-platform",
+        "blog:plugin-release-workflow",
+        "blog:markdown-publishing",
+        "blog:perforce-workspace-pool",
+        "blog:driving-session-replay",
+        "blog:ue-multiwindow-interface",
+        "blog:robot-realtime-ik-prototype"
       ]
     },
     "doc": {

@@ -1,12 +1,12 @@
 ---
 title: 在 UE 中创建独立多窗口界面
 description: 用 Slate 原生窗口承载 UMG，提供窗口生命周期、位置尺寸、显隐与 DPI 控制。
-type: case
+type: blog
 slug: ue-multiwindow-interface
-categoryId: ue-projects
-categoryName: UE项目
+categoryId: blog-5b81b3e117a9
+categoryName: UE开发
 categoryOrder: 0
-status: 归档
+status: 已发布
 featured: false
 draft: false
 sitePublish: true
@@ -18,13 +18,15 @@ coverAlt: 在 UE 中创建独立多窗口界面示意图
 websiteCoverUrl: /assets/cases/ue-multiwindow-interface.png
 lang: zh
 translationKey: ue-multiwindow-interface
+date: 2026-10-29
+publishedAt: 2026-10-29
 ---
 
 ## 主画面之外的控制界面
 
 UE 工具或仿真程序有时需要把参数面板、调试信息或操作界面放到独立窗口，减少它们对主画面的占用。这类需求除了制作 UMG，还涉及原生窗口的创建、输入转交、尺寸变化和关闭流程。
 
-NorthTravel 项目配置启用了 Marketplace 的 MultiWindow 插件。窗口底层实现来自该插件，源码文件头署名为 YWT20。插件可以用 Slate 创建原生窗口并承载 UMG，为接入独立控制面板提供基础。
+该项目 项目配置启用了 Marketplace 的 MultiWindow 插件。窗口底层实现来自该插件，源码文件头署名为 YWT20。插件可以用 Slate 创建原生窗口并承载 UMG，为接入独立控制面板提供基础。
 
 ## 创建窗口与管理生命周期
 
@@ -61,12 +63,6 @@ MultiWindowActor 保存窗口相关对象，并提供位置、尺寸、标题、
 
 ## 适用范围
 
-现有插件面向独立工具窗口和控制面板。可以确认 NorthTravel 配置中已启用该插件，项目两个 C++ 模块没有直接调用 MultiWindow 的记录；蓝图调用和实际运行情况尚未确认。目前可说明的是插件的接入能力，不能将其视为个人原创插件或现场运行交付。
+现有插件面向独立工具窗口和控制面板。可以确认 该项目 配置中已启用该插件，项目两个 C++ 模块没有直接调用 MultiWindow 的记录；蓝图调用和实际运行情况尚未确认。目前可说明的是插件的接入能力，不能将其视为个人原创插件或现场运行交付。
 
 原生窗口承载 UMG，也不意味着它拥有独立 UWorld 或独立相机渲染。需要在不同窗口展示多路视角时，应继续评估视口、画面来源和渲染资源；普通参数面板则可以先围绕窗口关系、焦点、缩放和关闭生命周期确定范围。
-
-## 相关需求
-
-如果 UE 程序需要单独的参数面板、调试窗口或操作界面，可以先提供界面内容、窗口关系和运行环境。我可以协助接入 UMG，处理窗口控制和事件联动。
-
-欢迎[联系我聊聊](/zh/contact/)。

@@ -1,12 +1,12 @@
 ---
 title: Managing Perforce branch workspaces and local caches
 description: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
-type: case
+type: blog
 slug: perforce-workspace-pool
-categoryId: desktop-automation
-categoryName: Desktop and automation
+categoryId: blog-ae2a7f3fcbea
+categoryName: Perforce
 categoryOrder: 1
-status: Development case
+status: Published
 featured: false
 draft: false
 sitePublish: true
@@ -17,11 +17,13 @@ productIds:
   - p4-stream-switcher
 lang: en
 translationKey: perforce-workspace-pool
-sourceHash: c7319d73a9a593c6e1aa7a55a53a1e2fd940f26182fb4f27eec426667b3dc908
-translationStatus: translated
-generatedBodyHash: 1f6131752f5f4fe4fd3cc6bcee00b24a122b6ae28825a366e2927a78cc625f28
 coverAlt: Perforce workspace pool and local cache management diagram
 websiteCoverUrl: /assets/cases/perforce-workspace-pool.png
+date: 2026-10-29
+publishedAt: 2026-10-29
+sourceHash: 6723a8a90d34abe2e455c2898efef14583ea3c26ae35ad74a479b833d803a7aa
+translationStatus: translated
+generatedBodyHash: 561ee435092a237b75595ecfa6614e1156d3d9ca87206f80ffd7fb95ec53fd28
 ---
 
 ## Background and constraints
@@ -55,11 +57,3 @@ Normal cleanup can delete extra local files that are not ignored; offline mode c
 - [P4StreamSwitcher work](/en/works/p4-stream-switcher/)
 - [Usage guide](/en/docs/tools/p4-stream-switcher/)
 - [Python stream switching blog](/en/blog/python-perforce-stream-switch-safety/)
-
-## Discuss your project
-
-If your Perforce workflow involves multiple branch directories, local caches, or attaching offline directories, start with P4StreamSwitcher and its guide. We can also discuss adapting it to your naming, directory, or switching rules.
-
-Describe the stream structure, workspace count, and local content that needs to be retained so we can define the boundaries for synchronization, cleanup, and pending changes.
-
-If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.

@@ -1,12 +1,12 @@
 ---
 title: Robot Realtime Data and Three-Axis IK Prototype
 description: An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
-type: case
+type: blog
 slug: robot-realtime-ik-prototype
-categoryId: ue-projects
-categoryName: Unreal Engine Projects
+categoryId: blog-5b81b3e117a9
+categoryName: Unreal Engine
 categoryOrder: 0
-status: In development
+status: Published
 featured: false
 draft: false
 sitePublish: true
@@ -16,17 +16,18 @@ tags:
   - Prototype
 lang: en
 translationKey: robot-realtime-ik-prototype
-sourceHash: 849c008760c48c401c3cb055ebd4ed568a96bf1b855be388867c7a76be07522e
-translationStatus: translated
-generatedBodyHash: e098641db4bee98d0497433811926cea8dc9155c0af12091bc112bed884ce7ba
 coverAlt: Realtime robot data and three-axis IK prototype diagram
 websiteCoverUrl: /assets/cases/robot-realtime-ik-prototype.png
+date: 2026-10-29
+publishedAt: 2026-10-29
+sourceHash: e6a199aaca51b2833e64366d6b6850ed73879b74ed4b0df79bfb5fc0eb9b82d4
+translationStatus: translated
+generatedBodyHash: 7863749efb185bb61257735713ae5d25c9790be5a0d5e435589f5294cc632bfb
 ---
-
 
 ## Prototype Goal
 
-RoBoBuilder is being developed for realtime robot-data integration and three-axis position IK. I separated transport, scheduling, filtering, and solving to build a UE-side prototype that brings external data into the scene, handles output changes when input stops, and converts a target position into joint values.
+The robot control prototype is being developed for realtime robot-data integration and three-axis position IK. I separated transport, scheduling, filtering, and solving to build a UE-side prototype that brings external data into the scene, handles output changes when input stops, and converts a target position into joint values.
 
 A realtime pipeline involves more than receiving JSON. Network reception and game Tick are not synchronized, and valid input does not mean the mechanism can reach a target. The prototype therefore expresses reception state and IK-solving state separately so higher-level logic can interpret output. Testing with the actual mechanism's URDF and real data remains outstanding.
 
@@ -74,8 +75,12 @@ This prevents ongoing network traffic from being mistaken for usable joint value
 
 ## Development Status
 
-Software prototypes exist for UDP transport, latest-frame handoff, timeout recovery, adaptive filtering, and three-joint position solving. The actual mechanism's URDF, real-data link, and device behavior still need testing, so this case is presented as work in development. Higher-level logic can use protocol zeroing and solving status, while final device behavior still requires device-side rules.
+Software prototypes exist for UDP transport, latest-frame handoff, timeout recovery, adaptive filtering, and three-joint position solving. The actual mechanism's URDF, real-data link, and device behavior still need testing, so this article is presented as work in development. Higher-level logic can use protocol zeroing and solving status, while final device behavior still requires device-side rules.
 
 To assess a similar project, share the mechanism structure, joint ranges, data format, and target-position constraints so we can identify reusable parts of the prototype.
 
 [Get in touch](/en/contact/) to discuss it.
+
+## Project overview
+
+[Motion capture and robot control](/cases/motion-capture-robot/)

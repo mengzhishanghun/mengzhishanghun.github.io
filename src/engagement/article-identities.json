@@ -488,6 +488,50 @@
     {
       "id": "case:robot-realtime-ik-prototype",
       "translationKey": "robot-realtime-ik-prototype"
+    },
+    {
+      "id": "blog:ai-digital-human-integration",
+      "translationKey": "ai-digital-human-integration"
+    },
+    {
+      "id": "blog:flying-car-simulator",
+      "translationKey": "flying-car-simulator"
+    },
+    {
+      "id": "blog:motion-capture-robot-control",
+      "translationKey": "motion-capture-robot-control"
+    },
+    {
+      "id": "blog:six-dof-motion-platform",
+      "translationKey": "six-dof-motion-platform"
+    },
+    {
+      "id": "blog:plugin-release-workflow",
+      "translationKey": "plugin-release-workflow"
+    },
+    {
+      "id": "blog:markdown-publishing",
+      "translationKey": "markdown-publishing"
+    },
+    {
+      "id": "blog:perforce-workspace-pool",
+      "translationKey": "perforce-workspace-pool"
+    },
+    {
+      "id": "blog:driving-session-replay",
+      "translationKey": "driving-session-replay"
+    },
+    {
+      "id": "blog:ue-multiwindow-interface",
+      "translationKey": "ue-multiwindow-interface"
+    },
+    {
+      "id": "blog:robot-realtime-ik-prototype",
+      "translationKey": "robot-realtime-ik-prototype"
+    },
+    {
+      "id": "case:herbal-exhibition",
+      "translationKey": "herbal-exhibition"
     }
   ]
 }

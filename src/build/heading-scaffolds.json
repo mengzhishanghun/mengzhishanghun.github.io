@@ -4713,5 +4713,385 @@
       "utilityId": "doc:p4-stream-switcher:body-utility:9",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
     }
+  ],
+  "blog:ai-digital-human-integration": [
+    {
+      "depth": 2,
+      "oldId": "背景介绍",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "复现环境",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "具体问题",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "解决方案",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "项目展示",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:flying-car-simulator": [
+    {
+      "depth": 2,
+      "oldId": "飞行输入与场景更新",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 3,
+      "oldId": "从操作轴到飞行指令",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "避免控制指令阻塞游戏线程",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "平移与朝向分别处理",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "单位坐标与控制参数",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 2,
+      "oldId": "版本适配与联动范围",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "项目展示",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:motion-capture-robot-control": [
+    {
+      "depth": 2,
+      "oldId": "人体动作与机器人结构的差异",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "两段重定向管线",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 3,
+      "oldId": "kinect-数据与中间骨架",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "处理跨越-180-度的角度变化",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "从骨段比例到机器人目标",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "ik-与直接角度映射",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "平滑与每帧角速度限制",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 2,
+      "oldId": "已实现范围与模型调整",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "项目展示",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:six-dof-motion-platform": [
+    {
+      "depth": 2,
+      "oldId": "把场景姿态转换成平台运动数据",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 3,
+      "oldId": "运动链路中的职责",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "正解逆解与单位换算",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "滤波限幅与限速分别解决问题",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 2,
+      "oldId": "海洋场景与虚拍录制",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可动画的海浪参数",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "从起录到保存-sequence",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "livelink-的发送职责",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 2,
+      "oldId": "平台接入的实际范围",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "项目展示",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:plugin-release-workflow": [
+    {
+      "depth": 2,
+      "oldId": "背景介绍",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "复现环境",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "具体问题",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "解决方案",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "相关作品",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:markdown-publishing": [
+    {
+      "depth": 2,
+      "oldId": "背景介绍",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "复现环境",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "具体问题",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "解决方案",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:perforce-workspace-pool": [
+    {
+      "depth": 2,
+      "oldId": "背景与约束",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "问题拆分",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "实现方案",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "结果与边界",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "相关内容",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:driving-session-replay": [
+    {
+      "depth": 2,
+      "oldId": "记录操作过程也保留可查看的回放",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "驾驶数据与成绩统计",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 3,
+      "oldId": "采样时间与批次",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "连续曲线与状态事件",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "曲线拟合与误差口径",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "后台保存与完成通知",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "成绩统计单独组织",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 2,
+      "oldId": "复用-ue-network-replay",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "项目展示",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:ue-multiwindow-interface": [
+    {
+      "depth": 2,
+      "oldId": "主画面之外的控制界面",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "创建窗口与管理生命周期",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 3,
+      "oldId": "创建参数如何变成窗口",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "一个窗口对应一个管理-actor",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "自动缩放的实际含义",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "显式关闭与原生关闭",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 2,
+      "oldId": "适用范围",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "blog:robot-realtime-ik-prototype": [
+    {
+      "depth": 2,
+      "oldId": "原型目标",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "数据接入与失联处理",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 3,
+      "oldId": "接收线程与-tick-交接",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "超时归零与恢复",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "按动作快慢调整滤波",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "目标频率与实际调度",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 2,
+      "oldId": "三关节位置求解",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 3,
+      "oldId": "将外部目标转成机构坐标",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 3,
+      "oldId": "区分输入有效与求解有效",
+      "template": "<h3 id=\"{{headingId}}\">{{headingMarkup}}</h3>"
+    },
+    {
+      "depth": 2,
+      "oldId": "开发状态",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    },
+    {
+      "depth": 2,
+      "oldId": "项目展示",
+      "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
   ]
 }

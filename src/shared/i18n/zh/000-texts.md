@@ -1464,8 +1464,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   case:driving-simulator-three-screen:
-    root.html:1.head:0.meta:2@content: "记录 UE 三屏驾考场景中 Lumen GI 与曝光不一致的排查，涉及源码版引擎视角上限修改及 LocalPlayer 曝光数据关联。"
-    root.html:1.head:0.title:4.#text:0: "UE 驾考模拟器：三屏 Lumen 与曝光同步 · 小毛"
+    root.html:1.head:0.meta:2@content: 面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
+    root.html:1.head:0.title:4.#text:0: 驾驶仿真 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -1479,19 +1479,19 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 项目展示与开发记录。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 解决驾考模拟器三屏显示不一致问题
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Three-screen Driving Simulator Display Alignment
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 围绕三屏 Lumen GI 光反射失效与曝光不一致，定位并改写引擎相关实现。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 驾驶仿真
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Driving simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看解决驾考模拟器三屏显示不一致问题示意图大图
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1514,9 +1514,10 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+    project-cover-note: AI 概念封面
   case:ai-digital-human-integration:
-    root.html:1.head:0.meta:2@content: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
-    root.html:1.head:0.title:4.#text:0: "UE AI 数字人：语音对话与表情集成 · 小毛"
+    root.html:1.head:0.meta:2@content: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
+    root.html:1.head:0.title:4.#text:0: AI 数字人交互 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -1530,19 +1531,19 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 项目展示与开发记录。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 本地集成 AI 数字人交互流程
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: AI 数字人交互
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: AI digital human interaction
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: AI
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MetaHuman
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 语音交互
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看本地集成 AI 数字人交互流程示意图大图
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1565,9 +1566,10 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+    project-cover-note: AI 概念封面
   case:flying-car-simulator:
-    root.html:1.head:0.meta:2@content: 处理逐帧飞行指令、偏航控制与坐标换算，并适配 UE 5.6 接口。
-    root.html:1.head:0.title:4.#text:0: UE 飞行仿真中的 AirSim 控制适配 · 小毛
+    root.html:1.head:0.meta:2@content: 基于 UE 与 AirSim 的飞行仿真项目，涉及操作输入、飞行控制、观察视角和引擎版本适配。
+    root.html:1.head:0.title:4.#text:0: 飞行仿真 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -1581,18 +1583,19 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 项目展示与开发记录。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: UE 飞行仿真中的 AirSim 控制适配
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Adapting AirSim Controls for UE Flight Simulation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 处理逐帧飞行指令、偏航控制与坐标换算，并适配 UE 5.6 接口。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 飞行仿真
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Flight simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 基于 UE 与 AirSim 的飞行仿真项目，涉及操作输入、飞行控制、观察视角和引擎版本适配。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: 仿真
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 交通
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看飞行汽车模拟器示意图大图
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1615,9 +1618,10 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+    project-cover-note: AI 概念封面
   case:motion-capture-robot-control:
-    root.html:1.head:0.meta:2@content: 从 Kinect 骨骼滤波到机器人关节映射，处理结构比例、IK、平滑与转速限制。
-    root.html:1.head:0.title:4.#text:0: 将动捕骨骼重定向到 UE 机器人模型 · 小毛
+    root.html:1.head:0.meta:2@content: 将人体动捕、机器人模型重定向、实时数据通信与三轴 IK 整理到同一个 UE 项目，部分能力仍处于原型阶段。
+    root.html:1.head:0.title:4.#text:0: 动捕与机器人控制 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -1631,18 +1635,19 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 项目展示与开发记录。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 将动捕骨骼重定向到 UE 机器人模型
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Retargeting Motion Capture to Robot Models in UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 从 Kinect 骨骼滤波到机器人关节映射，处理结构比例、IK、平滑与转速限制。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 动捕与机器人控制
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Motion capture and robot control
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 将人体动捕、机器人模型重定向、实时数据通信与三轴 IK 整理到同一个 UE 项目，部分能力仍处于原型阶段。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: 动作捕捉
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 机器人
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看动捕机器人控制系统示意图大图
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1665,9 +1670,10 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+    project-cover-note: AI 概念封面
   case:six-dof-motion-platform:
-    root.html:1.head:0.meta:2@content: 实现 Stewart 平台正逆解、运动数据处理，以及海洋场景的 Take Recorder、Sequence 与 LiveLink 发送适配。
-    root.html:1.head:0.title:4.#text:0: 六轴平台运动解算与海洋虚拍录制适配 · 小毛
+    root.html:1.head:0.meta:2@content: 围绕六轴平台的软件运动解算、信号处理、海洋场景参数联动和编辑器虚拟拍摄录制。
+    root.html:1.head:0.title:4.#text:0: 六轴平台与虚拟拍摄 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -1681,18 +1687,19 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 项目展示与开发记录。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 六轴平台运动解算与海洋虚拍录制适配
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 实现 Stewart 平台正逆解、运动数据处理，以及海洋场景的 Take Recorder、Sequence 与 LiveLink 发送适配。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 六轴平台与虚拟拍摄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Motion platform and virtual filming
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 围绕六轴平台的软件运动解算、信号处理、海洋场景参数联动和编辑器虚拟拍摄录制。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: 仿真
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 硬件联动
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看六自由度运动平台联动示意图大图
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1715,158 +1722,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  case:plugin-release-workflow:
-    root.html:1.head:0.meta:2@content: "以 UEPluginManager 与 UEPluginAutoPacker 串联插件检索、依赖检查和多引擎版本打包，说明构建整理与发布审核的边界。"
-    root.html:1.head:0.title:4.#text:0: "UE 插件管理与多版本打包工具链 · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 桌面与自动化
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 插件开发到发布的工具链
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Plugin Development and Release Workflow
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 插件
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 自动化
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看插件开发到发布的工具链示意图大图
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  case:markdown-publishing:
-    root.html:1.head:0.meta:2@content: "记录 MDBlogPacker 将 Markdown 本地图片转为 Base64 发布副本的流程，说明图片路径、导出方式及目标平台限制。"
-    root.html:1.head:0.title:4.#text:0: "Markdown 图片发布：本地路径转 Base64 · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 桌面与自动化
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 让 Markdown 图片随文章一起发布
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Markdown Image Publishing
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 从本地图片路径到可复制的发布文本，减少文章迁移时的手动整理。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Markdown
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 图片
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 写作工具
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看让 Markdown 图片随文章一起发布示意图大图
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  case:metahuman-animation-clipping:
-    root.html:1.head:0.meta:2@content: 调整头部动画的 Additive Settings，并通过脚本蓝图批量处理同类动画设置。
-    root.html:1.head:0.title:4.#text:0: "MetaHuman 头身动画穿模处理案例 · 小毛"
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 处理 MetaHuman 头身动画叠加时的穿模
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 调整头部动画的 Additive Settings，并通过脚本蓝图批量处理同类动画设置。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: MetaHuman
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 动画
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 批量处理
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看处理 MetaHuman 头身动画叠加时的穿模示意图大图
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+    project-cover-note: AI 概念封面
   work:simple-file-updater:
     root.html:1.head:0.meta:2@content: 将本地目标路径与远程下载地址写入配置，批量更新指定文件。
     root.html:1.head:0.title:4.#text:0: "SimpleFileUpdater：配置驱动的文件更新工具 · 小毛"
@@ -3993,28 +3849,28 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.h2:0.#text:0: 精选案例
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1@aria-label: 精选案例
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0@aria-label: 解决驾考模拟器三屏显示不一致问题
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0@aria-label: 驾驶仿真
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE项目
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 解决驾考模拟器三屏显示不一致问题
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: Three-screen Driving Simulator Display Alignment
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 围绕三屏 Lumen GI 光反射失效与曝光不一致，定位并改写引擎相关实现。
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 驾驶仿真
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: Driving simulation
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: 本地集成 AI 数字人交互流程
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: AI 数字人交互
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE项目
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: 本地集成 AI 数字人交互流程
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: AI 数字人交互
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: AI digital human interaction
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: 查看内容
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: 插件开发到发布的工具链
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: 桌面与自动化
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 插件开发到发布的工具链
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: Plugin Development and Release Workflow
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: 中药展示
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE项目
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 中药展示
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: Herbal exhibition
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1@aria-label: 精选案例切换
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: 显示：解决驾考模拟器三屏显示不一致问题
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: 显示：本地集成 AI 数字人交互流程
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: 显示：插件开发到发布的工具链
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: 显示：驾驶仿真
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: 显示：AI 数字人交互
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: 显示：中药展示
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: 精选博客
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
@@ -4287,8 +4143,8 @@ shellSlots:
     content-sort:label: 排序
     content-sort:likes: 点赞最多
     content-sort:original: 原有顺序
-    root.html:1.head:0.meta:2@content: 查看三屏显示、AI 数字人、仿真联动及插件工具案例，了解项目背景、问题排查、实现过程与适用范围。
-    root.html:1.head:0.title:4.#text:0: UE 仿真、数字人与工具开发案例 · 小毛
+    root.html:1.head:0.meta:2@content: 查看驾驶仿真、飞行仿真、虚拟拍摄、AI 数字人、机器人与中药展示项目，了解我负责的工作和实现成果。
+    root.html:1.head:0.title:4.#text:0: 项目案例 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -4302,7 +4158,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: 从真实问题到落地结果
+    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: 做过的项目与负责的工作
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: 案例分类
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE项目
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:1.#text:0: "9"
@@ -4314,74 +4170,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:1.div:0.span:0.#text:0: 标签
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:1.div:0.button:1.#text:0: 清空筛选
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:1.div:1@aria-label: 标签筛选
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0@aria-label: 解决驾考模拟器三屏显示不一致问题
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:0.span:0.#text:0: 已完成
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:1.h2:0.#text:0: 解决驾考模拟器三屏显示不一致问题
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:1.p:1.#text:0: Three-screen Driving Simulator Display Alignment
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.p:2.#text:0: 围绕三屏 Lumen GI 光反射失效与曝光不一致，定位并改写引擎相关实现。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:0.#text:0: Lumen
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:1.#text:0: 多屏显示
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:2.#text:0: 仿真
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: 本地集成 AI 数字人交互流程
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: 已完成
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.h2:0.#text:0: 本地集成 AI 数字人交互流程
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:0.#text:0: AI
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:1.#text:0: MetaHuman
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:2.#text:0: 语音交互
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2@aria-label: UE 飞行仿真中的 AirSim 控制适配
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:0.span:0.#text:0: 归档
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.h2:0.#text:0: UE 飞行仿真中的 AirSim 控制适配
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.p:1.#text:0: Adapting AirSim Controls for UE Flight Simulation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.p:2.#text:0: 处理逐帧飞行指令、偏航控制与坐标换算，并适配 UE 5.6 接口。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:0.#text:0: 仿真
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:1.#text:0: 交通
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3@aria-label: 将动捕骨骼重定向到 UE 机器人模型
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:0.#text:0: 归档
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:1.h2:0.#text:0: 将动捕骨骼重定向到 UE 机器人模型
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:1.p:1.#text:0: Retargeting Motion Capture to Robot Models in UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.p:2.#text:0: 从 Kinect 骨骼滤波到机器人关节映射，处理结构比例、IK、平滑与转速限制。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:2.div:0.span:0.#text:0: 动作捕捉
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:2.div:0.span:1.#text:0: 机器人
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: 六轴平台运动解算与海洋虚拍录制适配
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:0.#text:0: 归档
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:1.h2:0.#text:0: 六轴平台运动解算与海洋虚拍录制适配
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:1.p:1.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.p:2.#text:0: 实现 Stewart 平台正逆解、运动数据处理，以及海洋场景的 Take Recorder、Sequence 与 LiveLink 发送适配。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:2.div:0.span:0.#text:0: 仿真
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:2.div:0.span:1.#text:0: 硬件联动
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5@aria-label: 插件开发到发布的工具链
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:0.span:0.#text:0: 已完成
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:1.h2:0.#text:0: 插件开发到发布的工具链
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:1.p:1.#text:0: Plugin Development and Release Workflow
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.p:2.#text:0: 围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:2.div:0.span:0.#text:0: UnrealEngine
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:2.div:0.span:1.#text:0: 插件
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:2.div:0.span:2.#text:0: 自动化
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6@aria-label: 让 Markdown 图片随文章一起发布
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:1.div:0.span:0.#text:0: 已完成
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:1.div:1.h2:0.#text:0: 让 Markdown 图片随文章一起发布
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:1.div:1.p:1.#text:0: Markdown Image Publishing
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:1.p:2.#text:0: 从本地图片路径到可复制的发布文本，减少文章迁移时的手动整理。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:0.#text:0: Markdown
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:1.#text:0: 图片
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:2.#text:0: 写作工具
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9@aria-label: 处理 MetaHuman 头身动画叠加时的穿模
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:0.span:0.#text:0: 已完成
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:1.h2:0.#text:0: 处理 MetaHuman 头身动画叠加时的穿模
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.p:2.#text:0: 调整头部动画的 Additive Settings，并通过脚本蓝图批量处理同类动画设置。
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:2.div:0@aria-label: 案例标签
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:2.div:0.span:0.#text:0: MetaHuman
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:2.div:0.span:1.#text:0: 动画
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:2.div:0.span:2.#text:0: 批量处理
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.p:2.#text:0: 没有找到符合当前条件的案例，请减少标签或更换关键词。
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3@aria-label: 案例分页
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3.div:0.button:0.#text:0: 上一页
@@ -4394,42 +4182,36 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    perforce-workspace-pool:card:0: 管理 Perforce 分支工作区与本地缓存
-    perforce-workspace-pool:card:1: 桌面与自动化
-    perforce-workspace-pool:card:2: 管理 Perforce 分支工作区与本地缓存
-    perforce-workspace-pool:card:3: Perforce Workspace Pool
-    perforce-workspace-pool:card:4: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
-    perforce-workspace-pool:card:5: 案例标签
-    perforce-workspace-pool:card:6: Perforce
-    perforce-workspace-pool:card:7: 开发工具
-    perforce-workspace-pool:card:8: Perforce
-    driving-session-replay:card:0: 驾驶过程记录与 UE 回放管理
-    driving-session-replay:card:1: 归档
-    driving-session-replay:card:2: 驾驶过程记录与 UE 回放管理
-    driving-session-replay:card:3: Driving Session Recording and UE Replay Management
-    driving-session-replay:card:4: 采集驾驶操作与车辆状态，保存成绩统计，并配套管理 UE Network Replay 录制文件。
-    driving-session-replay:card:5: 案例标签
-    driving-session-replay:card:6: 仿真
-    driving-session-replay:card:7: 驾驶记录
-    driving-session-replay:card:8: 回放
-    ue-multiwindow-interface:card:0: 在 UE 中创建独立多窗口界面
-    ue-multiwindow-interface:card:1: 归档
-    ue-multiwindow-interface:card:2: 在 UE 中创建独立多窗口界面
-    ue-multiwindow-interface:card:3: Creating Independent Multiwindow Interfaces in UE
-    ue-multiwindow-interface:card:4: 用 Slate 原生窗口承载 UMG，提供窗口生命周期、位置尺寸、显隐与 DPI 控制。
-    ue-multiwindow-interface:card:5: 案例标签
-    ue-multiwindow-interface:card:6: UMG
-    ue-multiwindow-interface:card:7: 多窗口
-    ue-multiwindow-interface:card:8: 界面工具
-    robot-realtime-ik-prototype:card:0: 机器人实时数据与三轴 IK 原型
-    robot-realtime-ik-prototype:card:1: 开发中
-    robot-realtime-ik-prototype:card:2: 机器人实时数据与三轴 IK 原型
-    robot-realtime-ik-prototype:card:3: Robot Realtime Data and Three-Axis IK Prototype
-    robot-realtime-ik-prototype:card:4: 开发中的 UDP JSON 数据接入与三关节位置 IK 原型，真实机构与真实数据测试待完成。
-    robot-realtime-ik-prototype:card:5: 案例标签
-    robot-realtime-ik-prototype:card:6: 机器人
-    robot-realtime-ik-prototype:card:7: UDP
-    robot-realtime-ik-prototype:card:8: 原型
+    project-card:driving-simulation:title: 驾驶仿真
+    project-card:driving-simulation:secondary: Driving simulation
+    project-card:driving-simulation:description: 面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
+    project-card:driving-simulation:category: UE项目
+    project-card:driving-simulation:tag: 仿真
+    project-card:flight-simulation:title: 飞行仿真
+    project-card:flight-simulation:secondary: Flight simulation
+    project-card:flight-simulation:description: 基于 UE 与 AirSim 的飞行仿真项目，涉及操作输入、飞行控制、观察视角和引擎版本适配。
+    project-card:flight-simulation:category: UE项目
+    project-card:flight-simulation:tag: 仿真
+    project-card:motion-platform-filming:title: 六轴平台与虚拟拍摄
+    project-card:motion-platform-filming:secondary: Motion platform and virtual filming
+    project-card:motion-platform-filming:description: 围绕六轴平台的软件运动解算、信号处理、海洋场景参数联动和编辑器虚拟拍摄录制。
+    project-card:motion-platform-filming:category: UE项目
+    project-card:motion-platform-filming:tag: 仿真
+    project-card:digital-human-interaction:title: AI 数字人交互
+    project-card:digital-human-interaction:secondary: AI digital human interaction
+    project-card:digital-human-interaction:description: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
+    project-card:digital-human-interaction:category: UE项目
+    project-card:digital-human-interaction:tag: AI
+    project-card:motion-capture-robot:title: 动捕与机器人控制
+    project-card:motion-capture-robot:secondary: Motion capture and robot control
+    project-card:motion-capture-robot:description: 将人体动捕、机器人模型重定向、实时数据通信与三轴 IK 整理到同一个 UE 项目，部分能力仍处于原型阶段。
+    project-card:motion-capture-robot:category: UE项目
+    project-card:motion-capture-robot:tag: 动作捕捉
+    project-card:herbal-exhibition:title: 中药展示
+    project-card:herbal-exhibition:secondary: Herbal exhibition
+    project-card:herbal-exhibition:description: 基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
+    project-card:herbal-exhibition:category: UE项目
+    project-card:herbal-exhibition:tag: 交互展示
   page:blog-index:
     content-sort:label: 排序
     content-sort:likes: 点赞最多
@@ -4730,6 +4512,46 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:0.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:2.#text:0: ""
+    migrated-blog:ai-digital-human-integration:title: AI 数字人交互
+    migrated-blog:ai-digital-human-integration:description: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
+    migrated-blog:ai-digital-human-integration:category: UE开发
+    migrated-blog:ai-digital-human-integration:tag: AI
+    migrated-blog:flying-car-simulator:title: 飞行仿真
+    migrated-blog:flying-car-simulator:description: 基于 UE 与 AirSim 的飞行仿真项目，涉及操作输入、飞行控制、观察视角和引擎版本适配。
+    migrated-blog:flying-car-simulator:category: UE开发
+    migrated-blog:flying-car-simulator:tag: 仿真
+    migrated-blog:motion-capture-robot-control:title: 动捕与机器人控制
+    migrated-blog:motion-capture-robot-control:description: 将人体动捕、机器人模型重定向、实时数据通信与三轴 IK 整理到同一个 UE 项目，部分能力仍处于原型阶段。
+    migrated-blog:motion-capture-robot-control:category: UE开发
+    migrated-blog:motion-capture-robot-control:tag: 动作捕捉
+    migrated-blog:six-dof-motion-platform:title: 六轴平台与虚拟拍摄
+    migrated-blog:six-dof-motion-platform:description: 围绕六轴平台的软件运动解算、信号处理、海洋场景参数联动和编辑器虚拟拍摄录制。
+    migrated-blog:six-dof-motion-platform:category: UE开发
+    migrated-blog:six-dof-motion-platform:tag: 仿真
+    migrated-blog:plugin-release-workflow:title: 插件开发到发布的工具链
+    migrated-blog:plugin-release-workflow:description: 围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
+    migrated-blog:plugin-release-workflow:category: UE开发
+    migrated-blog:plugin-release-workflow:tag: UnrealEngine
+    migrated-blog:markdown-publishing:title: 让 Markdown 图片随文章一起发布
+    migrated-blog:markdown-publishing:description: 从本地图片路径到可复制的发布文本，减少文章迁移时的手动整理。
+    migrated-blog:markdown-publishing:category: 随笔
+    migrated-blog:markdown-publishing:tag: Markdown
+    migrated-blog:perforce-workspace-pool:title: 管理 Perforce 分支工作区与本地缓存
+    migrated-blog:perforce-workspace-pool:description: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
+    migrated-blog:perforce-workspace-pool:category: Perforce
+    migrated-blog:perforce-workspace-pool:tag: Perforce
+    migrated-blog:driving-session-replay:title: 驾驶过程记录与 UE 回放管理
+    migrated-blog:driving-session-replay:description: 采集驾驶操作与车辆状态，保存成绩统计，并配套管理 UE Network Replay 录制文件。
+    migrated-blog:driving-session-replay:category: UE开发
+    migrated-blog:driving-session-replay:tag: 仿真
+    migrated-blog:ue-multiwindow-interface:title: 在 UE 中创建独立多窗口界面
+    migrated-blog:ue-multiwindow-interface:description: 用 Slate 原生窗口承载 UMG，提供窗口生命周期、位置尺寸、显隐与 DPI 控制。
+    migrated-blog:ue-multiwindow-interface:category: UE开发
+    migrated-blog:ue-multiwindow-interface:tag: UMG
+    migrated-blog:robot-realtime-ik-prototype:title: 机器人实时数据与三轴 IK 原型
+    migrated-blog:robot-realtime-ik-prototype:description: 开发中的 UDP JSON 数据接入与三关节位置 IK 原型，真实机构与真实数据测试待完成。
+    migrated-blog:robot-realtime-ik-prototype:category: UE开发
+    migrated-blog:robot-realtime-ik-prototype:tag: 机器人
   page:contact:
     root.html:1.head:0.meta:2@content: "承接游戏开发、数字孪生与工具插件开发，通过邮箱或微信联系，也可自愿支持作品与分享。"
     root.html:1.head:0.title:4.#text:0: "开发合作、联系与支持 · 小毛"
@@ -5995,57 +5817,6 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  case:perforce-workspace-pool:
-    root.html:1.head:0.meta:2@content: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
-    root.html:1.head:0.title:4.#text:0: 管理 Perforce 分支工作区与本地缓存 · 小毛
-    root.html:1.head:0.link:7@title: 小毛博客 RSS
-    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: 桌面与自动化
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 管理 Perforce 分支工作区与本地缓存
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Perforce Workspace Pool
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Perforce
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 开发工具
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 写作工具
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看管理 Perforce 分支工作区与本地缓存示意图大图
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: 媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   doc:p4-stream-switcher:
     root.html:1.head:0.title:2.#text:0: P4StreamSwitcher 使用文档 | MZSH Docs
     root.html:1.head:0.meta:8@content: P4StreamSwitcher 使用文档 | MZSH Docs
@@ -6083,7 +5854,315 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
-  case:driving-session-replay:
+  blog:ai-digital-human-integration:
+    root.html:1.head:0.meta:2@content: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
+    root.html:1.head:0.title:4.#text:0: 本地集成 AI 数字人交互流程 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE开发
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 本地集成 AI 数字人交互流程
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 在 Unreal Engine 中接入语音识别、大模型问答、语音合成和嘴型驱动，完成纯本地、纯云端和混合三种部署方式。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:flying-car-simulator:
+    root.html:1.head:0.meta:2@content: 处理逐帧飞行指令、偏航控制与坐标换算，并适配 UE 5.6 接口。
+    root.html:1.head:0.title:4.#text:0: UE 飞行仿真中的 AirSim 控制适配 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE开发
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: UE 飞行仿真中的 AirSim 控制适配
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 处理逐帧飞行指令、偏航控制与坐标换算，并适配 UE 5.6 接口。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:motion-capture-robot-control:
+    root.html:1.head:0.meta:2@content: 从 Kinect 骨骼滤波到机器人关节映射，处理结构比例、IK、平滑与转速限制。
+    root.html:1.head:0.title:4.#text:0: 将动捕骨骼重定向到 UE 机器人模型 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE开发
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 将动捕骨骼重定向到 UE 机器人模型
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 从 Kinect 骨骼滤波到机器人关节映射，处理结构比例、IK、平滑与转速限制。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:six-dof-motion-platform:
+    root.html:1.head:0.meta:2@content: 实现 Stewart 平台正逆解、运动数据处理，以及海洋场景的 Take Recorder、Sequence 与 LiveLink 发送适配。
+    root.html:1.head:0.title:4.#text:0: 六轴平台运动解算与海洋虚拍录制适配 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE开发
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 六轴平台运动解算与海洋虚拍录制适配
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 实现 Stewart 平台正逆解、运动数据处理，以及海洋场景的 Take Recorder、Sequence 与 LiveLink 发送适配。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:plugin-release-workflow:
+    root.html:1.head:0.meta:2@content: 围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
+    root.html:1.head:0.title:4.#text:0: 插件开发到发布的工具链 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE开发
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 插件开发到发布的工具链
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:markdown-publishing:
+    root.html:1.head:0.meta:2@content: 从本地图片路径到可复制的发布文本，减少文章迁移时的手动整理。
+    root.html:1.head:0.title:4.#text:0: 让 Markdown 图片随文章一起发布 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: 随笔
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 让 Markdown 图片随文章一起发布
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 从本地图片路径到可复制的发布文本，减少文章迁移时的手动整理。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:perforce-workspace-pool:
+    root.html:1.head:0.meta:2@content: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
+    root.html:1.head:0.title:4.#text:0: 管理 Perforce 分支工作区与本地缓存 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 管理 Perforce 分支工作区与本地缓存
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  blog:driving-session-replay:
     root.html:1.head:0.meta:2@content: 采集驾驶操作与车辆状态，保存成绩统计，并配套管理 UE Network Replay 录制文件。
     root.html:1.head:0.title:4.#text:0: 驾驶过程记录与 UE 回放管理 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
@@ -6098,20 +6177,13 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE开发
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 驾驶过程记录与 UE 回放管理
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Driving Session Recording and UE Replay Management
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 采集驾驶操作与车辆状态，保存成绩统计，并配套管理 UE Network Replay 录制文件。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: 仿真
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 驾驶记录
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 回放
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看管理 Perforce 分支工作区与本地缓存示意图大图
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -6134,7 +6206,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  case:ue-multiwindow-interface:
+  blog:ue-multiwindow-interface:
     root.html:1.head:0.meta:2@content: 用 Slate 原生窗口承载 UMG，提供窗口生命周期、位置尺寸、显隐与 DPI 控制。
     root.html:1.head:0.title:4.#text:0: 在 UE 中创建独立多窗口界面 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
@@ -6149,20 +6221,13 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE开发
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 在 UE 中创建独立多窗口界面
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Creating Independent Multiwindow Interfaces in UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 用 Slate 原生窗口承载 UMG，提供窗口生命周期、位置尺寸、显隐与 DPI 控制。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UMG
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多窗口
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 界面工具
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看管理 Perforce 分支工作区与本地缓存示意图大图
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -6185,7 +6250,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-  case:robot-realtime-ik-prototype:
+  blog:robot-realtime-ik-prototype:
     root.html:1.head:0.meta:2@content: 开发中的 UDP JSON 数据接入与三关节位置 IK 原型，真实机构与真实数据测试待完成。
     root.html:1.head:0.title:4.#text:0: 机器人实时数据与三轴 IK 原型 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
@@ -6200,20 +6265,13 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 从真实问题到落地结果。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 技术思考、排障与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 博客
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: UE开发
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 机器人实时数据与三轴 IK 原型
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Robot Realtime Data and Three-Axis IK Prototype
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 开发中的 UDP JSON 数据接入与三关节位置 IK 原型，真实机构与真实数据测试待完成。
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: 机器人
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: UDP
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 原型
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看管理 Perforce 分支工作区与本地缓存示意图大图
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -6236,6 +6294,58 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+  case:herbal-exhibition:
+    root.html:1.head:0.meta:2@content: 基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
+    root.html:1.head:0.title:4.#text:0: 中药展示 · 小毛
+    root.html:1.head:0.link:7@title: 小毛博客 RSS
+    root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: 案例
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: 项目展示与开发记录。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 中药展示
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Herbal exhibition
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: 文章导航
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: 返回
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: 媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: 视频全屏
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+    project-cover-note: AI 概念封面
 scriptSlots:
   content-index:sort-likes: 点赞最多
   content-index:likes-loading: 正在读取点赞排序…

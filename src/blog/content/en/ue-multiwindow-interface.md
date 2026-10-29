@@ -1,12 +1,12 @@
 ---
 title: Creating Independent Multiwindow Interfaces in UE
 description: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
-type: case
+type: blog
 slug: ue-multiwindow-interface
-categoryId: ue-projects
-categoryName: Unreal Engine Projects
+categoryId: blog-5b81b3e117a9
+categoryName: Unreal Engine
 categoryOrder: 0
-status: Archived
+status: Published
 featured: false
 draft: false
 sitePublish: true
@@ -16,19 +16,20 @@ tags:
   - UI tools
 lang: en
 translationKey: ue-multiwindow-interface
-sourceHash: de3c2a3c24ac185bac798ce859ecac66e2ee24ec0b599f0202dc5374319d802c
-translationStatus: translated
-generatedBodyHash: 018e1ada34fafa5a3cd746240a7962679bb58738806b7ebf2a4ad2d074c6effc
 coverAlt: Independent UE multiwindow interface diagram
 websiteCoverUrl: /assets/cases/ue-multiwindow-interface.png
+date: 2026-10-29
+publishedAt: 2026-10-29
+sourceHash: 4facc3fcf500b4872ab49e9f5f7803fd028a15491fb306282d164a5dbea7f79d
+translationStatus: translated
+generatedBodyHash: 9958d47b04893cccd1e9a587dbfccc10feabd8bffa28f7b7f708a621a44ff512
 ---
-
 
 ## Controls outside the Main View
 
 UE tools and simulations sometimes need parameter panels, debug information, or operator interfaces in separate windows to keep the main view available. This involves more than making UMG content: native-window creation, input forwarding, size changes, and closing behavior also need handling.
 
-The NorthTravel project configuration enables the Marketplace MultiWindow plugin. The underlying window implementation belongs to that plugin, whose source-file headers credit YWT20. It uses Slate to create native windows and host UMG, providing a basis for integrating independent control panels.
+The project configuration enables the Marketplace MultiWindow plugin. The underlying window implementation belongs to that plugin, whose source-file headers credit YWT20. It uses Slate to create native windows and host UMG, providing a basis for integrating independent control panels.
 
 ## Window Creation and Lifecycle
 
@@ -65,12 +66,6 @@ Integration should therefore define what happens to the corresponding Actor, wid
 
 ## Scope
 
-The existing plugin targets independent tool windows and control panels. Its enabled state in NorthTravel is confirmed, but the project's two C++ modules contain no direct MultiWindow calls. Blueprint invocation and actual runtime behavior remain unconfirmed. The evidence supports describing the plugin's integration capabilities, without claiming personal authorship or an implementation delivered and running on site.
+The existing plugin targets independent tool windows and control panels. Its enabled state in the project is confirmed, but the project's two C++ modules contain no direct MultiWindow calls. Blueprint invocation and actual runtime behavior remain unconfirmed. The evidence supports describing the plugin's integration capabilities, without claiming personal authorship or an implementation delivered and running on site.
 
 A native window hosting UMG does not automatically have an independent UWorld or camera render. Showing different camera views in different windows requires further assessment of viewports, image sources, and rendering resources. Ordinary parameter panels can begin with window relationships, focus, scaling, and closing lifecycles.
-
-## Discuss Your Project
-
-If a UE application needs separate parameter panels, debug windows, or operator interfaces, share the UI content, window relationships, and runtime environment. I can help connect UMG and handle window controls and events.
-
-[Get in touch](/en/contact/) to discuss it.

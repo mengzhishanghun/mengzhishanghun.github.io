@@ -1464,8 +1464,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   case:driving-simulator-three-screen:
-    root.html:1.head:0.meta:2@content: "A UE driving simulator case covering three-screen Lumen GI and exposure issues, source-engine view limits and LocalPlayer exposure data sharing."
-    root.html:1.head:0.title:4.#text:0: "UE Driving Simulator: Three-Screen Lumen & Exposure · Xiao Mao"
+    root.html:1.head:0.meta:2@content: A driving training project combining three-screen display, session recording, results and scene replay.
+    root.html:1.head:0.title:4.#text:0: Driving simulation · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -1483,15 +1483,15 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Three-screen Driving Simulator Display Alignment
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Investigating and modifying engine implementations to address failed Lumen GI light reflections and inconsistent exposure across three screens.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Driving simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A driving training project combining three-screen display, session recording, results and scene replay.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Simulation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Resolving Inconsistent Three-Screen Display in a Driving Test Simulator
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Driving simulation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -1514,9 +1514,10 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    project-cover-note: AI concept cover
   case:ai-digital-human-integration:
-    root.html:1.head:0.meta:2@content: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
-    root.html:1.head:0.title:4.#text:0: "UE AI Digital Human: Voice & Facial Integration · Xiao Mao"
+    root.html:1.head:0.meta:2@content: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
+    root.html:1.head:0.title:4.#text:0: AI digital human interaction · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -1534,15 +1535,15 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: AI digital human interaction
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: AI
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: MetaHuman
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Voice Interaction
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Simulation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Local Integration of an AI Digital Human Interaction Workflow
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Driving simulation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -1565,261 +1566,10 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    project-cover-note: AI concept cover
   case:flying-car-simulator:
-    root.html:1.head:0.meta:2@content: Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
-    root.html:1.head:0.title:4.#text:0: Adapting AirSim Controls for UE Flight Simulation · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Adapting AirSim Controls for UE Flight Simulation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Adapting AirSim Controls for UE Flight Simulation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Simulation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Transportation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Flying Car Simulator
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:motion-capture-robot-control:
-    root.html:1.head:0.meta:2@content: Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
-    root.html:1.head:0.title:4.#text:0: Retargeting Motion Capture to Robot Models in UE · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Retargeting Motion Capture to Robot Models in UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Retargeting Motion Capture to Robot Models in UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Motion capture
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Robotics
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Motion Capture Robot Control System
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:six-dof-motion-platform:
-    root.html:1.head:0.meta:2@content: Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
-    root.html:1.head:0.title:4.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration · Xiao Mao
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Simulation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Hardware integration
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Integrating a Six-Degree-of-Freedom Motion Platform
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:plugin-release-workflow:
-    root.html:1.head:0.meta:2@content: "A workflow using UEPluginManager and UEPluginAutoPacker for plugin discovery, dependency checks and multi-engine builds, with packaging and release limits."
-    root.html:1.head:0.title:4.#text:0: "UE Plugin Management & Multi-Version Packaging · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Desktop and Automation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: A Toolchain from Plugin Development to Release
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Plugin Development and Release Workflow
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UnrealEngine
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Plugins
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Automation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of A Toolchain from Plugin Development to Release
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:markdown-publishing:
-    root.html:1.head:0.meta:2@content: "A MDBlogPacker case covering local Markdown images, Base64 export copies, path handling and the limits imposed by the destination publishing platform."
-    root.html:1.head:0.title:4.#text:0: "Publishing Markdown Images: Local Files to Base64 · Xiao Mao"
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Desktop and Automation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Publishing Markdown Images Together with the Article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Markdown Image Publishing
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Reducing manual work when moving articles by converting local image paths into publishable text that can be copied.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Markdown
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Images
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Writing Tools
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:metahuman-animation-clipping:
-    root.html:1.head:0.meta:2@content: Adjusting head animation Additive Settings and using a script Blueprint to process the same settings across multiple animations.
-    root.html:1.head:0.title:4.#text:0: "MetaHuman Head & Body Animation Clipping Case · Xiao Mao"
+    root.html:1.head:0.meta:2@content: An Unreal Engine and AirSim flight simulation project covering input, flight control, camera behavior and engine adaptation.
+    root.html:1.head:0.title:4.#text:0: Flight simulation · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -1837,14 +1587,15 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Addressing Clipping When Combining MetaHuman Head and Body Animations
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Adjusting head animation Additive Settings and using a script Blueprint to process the same settings across multiple animations.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Flight simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: An Unreal Engine and AirSim flight simulation project covering input, flight control, camera behavior and engine adaptation.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: MetaHuman
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Animation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Batch Processing
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Simulation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Addressing Clipping When Combining MetaHuman Head and Body Animations
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Driving simulation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -1867,6 +1618,111 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    project-cover-note: AI concept cover
+  case:motion-capture-robot-control:
+    root.html:1.head:0.meta:2@content: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
+    root.html:1.head:0.title:4.#text:0: Motion capture and robot control · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Motion capture and robot control
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Driving simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    project-cover-note: AI concept cover
+  case:six-dof-motion-platform:
+    root.html:1.head:0.meta:2@content: Software motion solving and signal processing for a six-axis platform, with ocean parameter animation and editor recording.
+    root.html:1.head:0.title:4.#text:0: Motion platform and virtual filming · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Motion platform and virtual filming
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Software motion solving and signal processing for a six-axis platform, with ocean parameter animation and editor recording.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Driving simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    project-cover-note: AI concept cover
   work:simple-file-updater:
     root.html:1.head:0.meta:2@content: Batch-update specified files by configuring local target paths and remote download URLs.
     root.html:1.head:0.title:4.#text:0: "SimpleFileUpdater: File Updates from Config · Xiao Mao"
@@ -3993,28 +3849,28 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.h2:0.#text:0: Featured cases
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1@aria-label: Featured cases
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0@aria-label: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0@aria-label: Driving simulation
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE Projects
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: Three-screen Driving Simulator Display Alignment
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Investigating and modifying engine implementations to address failed Lumen GI light reflections and inconsistent exposure across three screens.
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: Driving simulation
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: A driving training project combining three-screen display, session recording, results and scene replay.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: Local Integration of an AI Digital Human Interaction Workflow
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: AI digital human interaction
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE Projects
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: AI digital human interaction
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: A Toolchain from Plugin Development to Release
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: Desktop and Automation
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: A Toolchain from Plugin Development to Release
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: Plugin Development and Release Workflow
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: Herbal exhibition
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: Unreal Engine Projects
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Herbal exhibition
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: ""
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: An interactive UE herbal exhibition combining search, illustrated and audio content, 3D models, microscope slides and external content maintenance.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1@aria-label: Switch featured cases
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: "Show: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator"
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: "Show: Local Integration of an AI Digital Human Interaction Workflow"
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: "Show: A Toolchain from Plugin Development to Release"
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: "Show: Driving simulation"
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: "Show: AI digital human interaction"
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: "Show: Herbal exhibition"
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: Featured blog posts
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
@@ -4287,8 +4143,8 @@ shellSlots:
     content-sort:label: Sort by
     content-sort:likes: Most liked
     content-sort:original: Original order
-    root.html:1.head:0.meta:2@content: Read case studies on multi-screen displays, AI digital humans, simulation and developer tools, covering the project context, implementation and limits.
-    root.html:1.head:0.title:4.#text:0: Unreal Simulation, Digital Humans & Tool Case Studies · Xiao Mao
+    root.html:1.head:0.meta:2@content: Explore driving, flight, virtual filming, digital human, robotics and herbal exhibition projects and my contributions.
+    root.html:1.head:0.title:4.#text:0: Project cases · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -4314,74 +4170,6 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:1.div:0.span:0.#text:0: Tags
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:1.div:0.button:1.#text:0: Clear filters
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:0.div:1.div:1@aria-label: Filter by tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0@aria-label: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:0.span:0.#text:0: Completed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:1.h2:0.#text:0: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.div:1.p:1.#text:0: Three-screen Driving Simulator Display Alignment
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:1.p:2.#text:0: Investigating and modifying engine implementations to address failed Lumen GI light reflections and inconsistent exposure across three screens.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:0.#text:0: Lumen
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:1.#text:0: Multi-screen Display
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:0.div:2.div:0.span:2.#text:0: Simulation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1@aria-label: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:0.span:0.#text:0: Completed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.h2:0.#text:0: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.div:1.p:1.#text:0: Local Integration of an AI Digital Human Interaction Workflow
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:1.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:0.#text:0: AI
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:1.#text:0: MetaHuman
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:1.div:2.div:0.span:2.#text:0: Voice Interaction
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2@aria-label: Adapting AirSim Controls for UE Flight Simulation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:0.span:0.#text:0: Archived
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.h2:0.#text:0: Adapting AirSim Controls for UE Flight Simulation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.div:1.p:1.#text:0: Adapting AirSim Controls for UE Flight Simulation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:1.p:2.#text:0: Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:0.#text:0: Simulation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:2.div:2.div:0.span:1.#text:0: Transportation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3@aria-label: Retargeting Motion Capture to Robot Models in UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:0.span:0.#text:0: Archived
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:1.h2:0.#text:0: Retargeting Motion Capture to Robot Models in UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.div:1.p:1.#text:0: Retargeting Motion Capture to Robot Models in UE
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:1.p:2.#text:0: Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:2.div:0.span:0.#text:0: Motion Capture
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:3.div:2.div:0.span:1.#text:0: Robotics
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4@aria-label: Six-Axis Platform Kinematics and Ocean Recording Integration
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:0.span:0.#text:0: Archived
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:1.h2:0.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.div:1.p:1.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:1.p:2.#text:0: Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:2.div:0.span:0.#text:0: Simulation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:4.div:2.div:0.span:1.#text:0: Hardware Integration
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5@aria-label: A Toolchain from Plugin Development to Release
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:0.span:0.#text:0: Completed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:1.h2:0.#text:0: A Toolchain from Plugin Development to Release
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.div:1.p:1.#text:0: Plugin Development and Release Workflow
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:1.p:2.#text:0: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:2.div:0.span:0.#text:0: UnrealEngine
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:2.div:0.span:1.#text:0: Plugins
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:5.div:2.div:0.span:2.#text:0: Automation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6@aria-label: Publishing Markdown Images Together with the Article
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:1.div:0.span:0.#text:0: Completed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:1.div:1.h2:0.#text:0: Publishing Markdown Images Together with the Article
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:1.div:1.p:1.#text:0: Markdown Image Publishing
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:1.p:2.#text:0: Reducing manual work when moving articles by converting local image paths into publishable text that can be copied.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:0.#text:0: Markdown
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:1.#text:0: Images
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:6.div:2.div:0.span:2.#text:0: Writing Tools
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9@aria-label: Addressing Clipping When Combining MetaHuman Head and Body Animations
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:0.span:0.#text:0: Completed
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.div:1.h2:0.#text:0: Addressing Clipping When Combining MetaHuman Head and Body Animations
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:1.p:2.#text:0: Adjusting head animation Additive Settings and using a script Blueprint to process the same settings across multiple animations.
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:2.div:0@aria-label: Case tags
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:2.div:0.span:0.#text:0: MetaHuman
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:2.div:0.span:1.#text:0: Animation
-    root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:9.div:2.div:0.span:2.#text:0: Batch Processing
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.p:2.#text:0: No cases match the current filters. Try fewer tags or different keywords.
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3@aria-label: Cases pagination
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.nav:3.div:0.button:0.#text:0: Previous page
@@ -4394,42 +4182,36 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    perforce-workspace-pool:card:0: Managing Perforce branch workspaces and local caches
-    perforce-workspace-pool:card:1: Desktop and automation
-    perforce-workspace-pool:card:2: Managing Perforce branch workspaces and local caches
-    perforce-workspace-pool:card:3: Perforce Workspace Pool
-    perforce-workspace-pool:card:4: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
-    perforce-workspace-pool:card:5: Case tags
-    perforce-workspace-pool:card:6: Perforce
-    perforce-workspace-pool:card:7: Development tools
-    perforce-workspace-pool:card:8: Perforce
-    driving-session-replay:card:0: Driving Session Recording and UE Replay Management
-    driving-session-replay:card:1: Archived
-    driving-session-replay:card:2: Driving Session Recording and UE Replay Management
-    driving-session-replay:card:3: Driving Session Recording and UE Replay Management
-    driving-session-replay:card:4: Capture driving inputs and vehicle states, save performance statistics, and manage UE Network Replay recordings.
-    driving-session-replay:card:5: Case tags
-    driving-session-replay:card:6: Simulation
-    driving-session-replay:card:7: Driving records
-    driving-session-replay:card:8: Replay
-    ue-multiwindow-interface:card:0: Creating Independent Multiwindow Interfaces in UE
-    ue-multiwindow-interface:card:1: Archived
-    ue-multiwindow-interface:card:2: Creating Independent Multiwindow Interfaces in UE
-    ue-multiwindow-interface:card:3: Creating Independent Multiwindow Interfaces in UE
-    ue-multiwindow-interface:card:4: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
-    ue-multiwindow-interface:card:5: Case tags
-    ue-multiwindow-interface:card:6: UMG
-    ue-multiwindow-interface:card:7: Multiwindow
-    ue-multiwindow-interface:card:8: UI tools
-    robot-realtime-ik-prototype:card:0: Robot Realtime Data and Three-Axis IK Prototype
-    robot-realtime-ik-prototype:card:1: In development
-    robot-realtime-ik-prototype:card:2: Robot Realtime Data and Three-Axis IK Prototype
-    robot-realtime-ik-prototype:card:3: Robot Realtime Data and Three-Axis IK Prototype
-    robot-realtime-ik-prototype:card:4: An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
-    robot-realtime-ik-prototype:card:5: Case tags
-    robot-realtime-ik-prototype:card:6: Robotics
-    robot-realtime-ik-prototype:card:7: UDP
-    robot-realtime-ik-prototype:card:8: Prototype
+    project-card:driving-simulation:title: Driving simulation
+    project-card:driving-simulation:secondary: ""
+    project-card:driving-simulation:description: A driving training project combining three-screen display, session recording, results and scene replay.
+    project-card:driving-simulation:category: Unreal Engine Projects
+    project-card:driving-simulation:tag: Simulation
+    project-card:flight-simulation:title: Flight simulation
+    project-card:flight-simulation:secondary: ""
+    project-card:flight-simulation:description: An Unreal Engine and AirSim flight simulation project covering input, flight control, camera behavior and engine adaptation.
+    project-card:flight-simulation:category: Unreal Engine Projects
+    project-card:flight-simulation:tag: Simulation
+    project-card:motion-platform-filming:title: Motion platform and virtual filming
+    project-card:motion-platform-filming:secondary: ""
+    project-card:motion-platform-filming:description: Software motion solving and signal processing for a six-axis platform, with ocean parameter animation and editor recording.
+    project-card:motion-platform-filming:category: Unreal Engine Projects
+    project-card:motion-platform-filming:tag: Simulation
+    project-card:digital-human-interaction:title: AI digital human interaction
+    project-card:digital-human-interaction:secondary: ""
+    project-card:digital-human-interaction:description: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
+    project-card:digital-human-interaction:category: Unreal Engine Projects
+    project-card:digital-human-interaction:tag: AI
+    project-card:motion-capture-robot:title: Motion capture and robot control
+    project-card:motion-capture-robot:secondary: ""
+    project-card:motion-capture-robot:description: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
+    project-card:motion-capture-robot:category: Unreal Engine Projects
+    project-card:motion-capture-robot:tag: Motion capture
+    project-card:herbal-exhibition:title: Herbal exhibition
+    project-card:herbal-exhibition:secondary: ""
+    project-card:herbal-exhibition:description: An interactive UE herbal exhibition combining search, illustrated and audio content, 3D models, microscope slides and external content maintenance.
+    project-card:herbal-exhibition:category: Unreal Engine Projects
+    project-card:herbal-exhibition:tag: Interactive exhibition
   page:blog-index:
     content-sort:label: Sort by
     content-sort:likes: Most liked
@@ -4730,6 +4512,46 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:0.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:2.#text:0: ""
+    migrated-blog:ai-digital-human-integration:title: AI digital human interaction
+    migrated-blog:ai-digital-human-integration:description: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
+    migrated-blog:ai-digital-human-integration:category: Unreal Engine
+    migrated-blog:ai-digital-human-integration:tag: AI
+    migrated-blog:flying-car-simulator:title: Flight simulation
+    migrated-blog:flying-car-simulator:description: An Unreal Engine and AirSim flight simulation project covering input, flight control, camera behavior and engine adaptation.
+    migrated-blog:flying-car-simulator:category: Unreal Engine
+    migrated-blog:flying-car-simulator:tag: Simulation
+    migrated-blog:motion-capture-robot-control:title: Motion capture and robot control
+    migrated-blog:motion-capture-robot-control:description: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
+    migrated-blog:motion-capture-robot-control:category: Unreal Engine
+    migrated-blog:motion-capture-robot-control:tag: Motion capture
+    migrated-blog:six-dof-motion-platform:title: Motion platform and virtual filming
+    migrated-blog:six-dof-motion-platform:description: Software motion solving and signal processing for a six-axis platform, with ocean parameter animation and editor recording.
+    migrated-blog:six-dof-motion-platform:category: Unreal Engine
+    migrated-blog:six-dof-motion-platform:tag: Simulation
+    migrated-blog:plugin-release-workflow:title: A Toolchain from Plugin Development to Release
+    migrated-blog:plugin-release-workflow:description: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
+    migrated-blog:plugin-release-workflow:category: Unreal Engine
+    migrated-blog:plugin-release-workflow:tag: UnrealEngine
+    migrated-blog:markdown-publishing:title: Publishing Markdown Images Together with the Article
+    migrated-blog:markdown-publishing:description: Reducing manual work when moving articles by converting local image paths into publishable text that can be copied.
+    migrated-blog:markdown-publishing:category: Notes
+    migrated-blog:markdown-publishing:tag: Markdown
+    migrated-blog:perforce-workspace-pool:title: Managing Perforce branch workspaces and local caches
+    migrated-blog:perforce-workspace-pool:description: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
+    migrated-blog:perforce-workspace-pool:category: Perforce
+    migrated-blog:perforce-workspace-pool:tag: Perforce
+    migrated-blog:driving-session-replay:title: Driving Session Recording and UE Replay Management
+    migrated-blog:driving-session-replay:description: Capture driving inputs and vehicle states, save performance statistics, and manage UE Network Replay recordings.
+    migrated-blog:driving-session-replay:category: Unreal Engine
+    migrated-blog:driving-session-replay:tag: Simulation
+    migrated-blog:ue-multiwindow-interface:title: Creating Independent Multiwindow Interfaces in UE
+    migrated-blog:ue-multiwindow-interface:description: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
+    migrated-blog:ue-multiwindow-interface:category: Unreal Engine
+    migrated-blog:ue-multiwindow-interface:tag: UMG
+    migrated-blog:robot-realtime-ik-prototype:title: Robot Realtime Data and Three-Axis IK Prototype
+    migrated-blog:robot-realtime-ik-prototype:description: An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
+    migrated-blog:robot-realtime-ik-prototype:category: Unreal Engine
+    migrated-blog:robot-realtime-ik-prototype:tag: Robotics
   page:contact:
     root.html:1.head:0.meta:2@content: "Available for game development, digital twins, and custom tools or plugins. Contact me by email or WeChat, or support my work."
     root.html:1.head:0.title:4.#text:0: "Development Enquiries, Contact & Support · Xiao Mao"
@@ -5995,57 +5817,6 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:perforce-workspace-pool:
-    root.html:1.head:0.meta:2@content: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
-    root.html:1.head:0.title:4.#text:0: Managing Perforce branch workspaces and local caches | MZSH
-    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
-    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
-    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
-    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
-    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
-    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
-    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
-    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Desktop and Automation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Managing Perforce branch workspaces and local caches
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Perforce Workspace Pool
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Perforce
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Development tools
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Writing Tools
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
-    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
-    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
-    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
-    root.html:1.body:1.dialog:4@aria-label: Media preview
-    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
-    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
-    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   doc:p4-stream-switcher:
     root.html:1.head:0.title:2.#text:0: P4StreamSwitcher User Guide | MZSH Docs
     root.html:1.head:0.meta:8@content: P4StreamSwitcher User Guide | MZSH Docs
@@ -6083,9 +5854,317 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
-  case:driving-session-replay:
+  blog:ai-digital-human-integration:
+    root.html:1.head:0.meta:2@content: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
+    root.html:1.head:0.title:4.#text:0: Local Integration of an AI Digital Human Interaction Workflow · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Unreal Engine
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Local Integration of an AI Digital Human Interaction Workflow
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Integrating speech recognition, LLM responses, speech synthesis, and lip sync in Unreal Engine, with local, cloud, and hybrid deployments.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:flying-car-simulator:
+    root.html:1.head:0.meta:2@content: Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
+    root.html:1.head:0.title:4.#text:0: Adapting AirSim Controls for UE Flight Simulation · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Unreal Engine
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Adapting AirSim Controls for UE Flight Simulation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Adapt frame-by-frame flight commands, yaw control, coordinate conversion, and AirSim interfaces for UE 5.6.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:motion-capture-robot-control:
+    root.html:1.head:0.meta:2@content: Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
+    root.html:1.head:0.title:4.#text:0: Retargeting Motion Capture to Robot Models in UE · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Unreal Engine
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Retargeting Motion Capture to Robot Models in UE
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Map filtered Kinect skeleton data to robot joints using structural proportions, IK, smoothing, and angular-speed limits.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:six-dof-motion-platform:
+    root.html:1.head:0.meta:2@content: Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
+    root.html:1.head:0.title:4.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Unreal Engine
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Six-Axis Platform Kinematics and Ocean Recording Integration
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Implement Stewart platform kinematics and motion processing, with Take Recorder, Sequence, and LiveLink sending for an ocean scene.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:plugin-release-workflow:
+    root.html:1.head:0.meta:2@content: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
+    root.html:1.head:0.title:4.#text:0: A Toolchain from Plugin Development to Release · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Unreal Engine
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: A Toolchain from Plugin Development to Release
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:markdown-publishing:
+    root.html:1.head:0.meta:2@content: Reducing manual work when moving articles by converting local image paths into publishable text that can be copied.
+    root.html:1.head:0.title:4.#text:0: Publishing Markdown Images Together with the Article · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Notes
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Publishing Markdown Images Together with the Article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Reducing manual work when moving articles by converting local image paths into publishable text that can be copied.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:perforce-workspace-pool:
+    root.html:1.head:0.meta:2@content: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
+    root.html:1.head:0.title:4.#text:0: Managing Perforce branch workspaces and local caches · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Perforce
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Managing Perforce branch workspaces and local caches
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Organize branch switching with a workspace pool, separate server synchronization from offline directory adoption, and define cache protection and cleanup boundaries.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  blog:driving-session-replay:
     root.html:1.head:0.meta:2@content: Capture driving inputs and vehicle states, save performance statistics, and manage UE Network Replay recordings.
-    root.html:1.head:0.title:4.#text:0: Driving Session Recording and UE Replay Management · Xiao Mao
+    root.html:1.head:0.title:4.#text:0: Driving Session Recording and UE Replay Management · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -6098,20 +6177,13 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Unreal Engine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Driving Session Recording and UE Replay Management
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Driving Session Recording and UE Replay Management
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Capture driving inputs and vehicle states, save performance statistics, and manage UE Network Replay recordings.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Simulation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Driving records
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Replay
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -6134,9 +6206,9 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:ue-multiwindow-interface:
+  blog:ue-multiwindow-interface:
     root.html:1.head:0.meta:2@content: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
-    root.html:1.head:0.title:4.#text:0: Creating Independent Multiwindow Interfaces in UE · Xiao Mao
+    root.html:1.head:0.title:4.#text:0: Creating Independent Multiwindow Interfaces in UE · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -6149,20 +6221,13 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Cases
-    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Unreal Engine
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Creating Independent Multiwindow Interfaces in UE
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Creating Independent Multiwindow Interfaces in UE
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: UMG
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multiwindow
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: UI tools
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -6185,9 +6250,53 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-  case:robot-realtime-ik-prototype:
+  blog:robot-realtime-ik-prototype:
     root.html:1.head:0.meta:2@content: An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
-    root.html:1.head:0.title:4.#text:0: Robot Realtime Data and Three-Axis IK Prototype · Xiao Mao
+    root.html:1.head:0.title:4.#text:0: Robot Realtime Data and Three-Axis IK Prototype · Xiaomao
+    root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
+    root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:0.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:0.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:0.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: Technical thoughts, troubleshooting, and development notes.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Blog
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:2.#text:0: Unreal Engine
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Robot Realtime Data and Three-Axis IK Prototype
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2@aria-label: Article navigation
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0@aria-label: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.a:0.#text:0: Back
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.aside:2.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:0.footer:5.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:0.footer:5.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:0.footer:5.div:0.a:2.#text:1: 晋公网安备14082502000144号
+    root.html:1.body:1.dialog:4@aria-label: Media preview
+    root.html:1.body:1.dialog:4.div:0.button:0@aria-label: Show video in fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
+    root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
+    root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+  case:herbal-exhibition:
+    root.html:1.head:0.meta:2@content: An interactive UE herbal exhibition combining search, illustrated and audio content, 3D models, microscope slides and external content maintenance.
+    root.html:1.head:0.title:4.#text:0: Herbal exhibition · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -6204,16 +6313,16 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.header:0.p:1.#text:0: From real problems to working results.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: Unreal Engine Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Robot Realtime Data and Three-Axis IK Prototype
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Robot Realtime Data and Three-Axis IK Prototype
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: An in-development UDP JSON and three-joint position-IK prototype, awaiting testing with the actual mechanism and real data.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Herbal exhibition
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: An interactive UE herbal exhibition combining search, illustrated and audio content, 3D models, microscope slides and external content maintenance.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Robotics
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: UDP
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Prototype
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: Simulation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: Get in touch
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Publishing Markdown Images Together with the Article
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: View a larger illustration of Resolving Inconsistent Three-Screen Display in a Driving Test Simulator
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: Back
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: Open this page's table of contents
@@ -6236,6 +6345,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    project-cover-note: AI concept cover
 scriptSlots:
   content-index:sort-likes: Most liked
   content-index:likes-loading: Loading like counts…
@@ -8100,7 +8210,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: bc0260e161d7ec84f591fe8e698435af568d2884d23c28490b02ffb768e66b59
+sourceHash: 628555a8e8ff5130d72b48fec5c0c095f90f3d91d52c4431ea6ec68867d40f3d
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

@@ -1,12 +1,12 @@
 ---
 title: Driving Session Recording and UE Replay Management
 description: Capture driving inputs and vehicle states, save performance statistics, and manage UE Network Replay recordings.
-type: case
+type: blog
 slug: driving-session-replay
-categoryId: ue-projects
-categoryName: Unreal Engine Projects
+categoryId: blog-5b81b3e117a9
+categoryName: Unreal Engine
 categoryOrder: 0
-status: Archived
+status: Published
 featured: false
 draft: false
 sitePublish: true
@@ -16,13 +16,14 @@ tags:
   - Replay
 lang: en
 translationKey: driving-session-replay
-sourceHash: 48b85af1b1a1e4fee125dfafa081e6f124bbcb36848ba04901498dc84e3f13bd
-translationStatus: translated
-generatedBodyHash: 9aaeb7934035b99c08babed811f4f40762ce1ccf0b9c1a6902e49abc6c6cddfd
 coverAlt: Driving session recording and UE replay management diagram
 websiteCoverUrl: /assets/cases/driving-session-replay.png
+date: 2026-10-29
+publishedAt: 2026-10-29
+sourceHash: 389744e3c2e69718e447375119930e472877661f1e32dcad2e87801c8a29c9f9
+translationStatus: translated
+generatedBodyHash: 970943307b858c1161f8ce0eb94ef9cb98ee5f402837f6687bf3606d3807a4ea
 ---
-
 
 ## Recording Inputs and Keeping a Viewable Replay
 
@@ -73,8 +74,6 @@ Scene replay uses UE Network Replay. Its management interface wraps starting rec
 
 Process capture, performance statistics, and engine replay are three complementary mechanisms. Process JSON is not a custom engine for reconstructing the entire scene. Which Actors and replicated states are reproduced, and the resulting playback behavior, need checking against the project's UE replay configuration. Data queries, file management, and scene review can therefore have separate acceptance requirements.
 
-## Discuss Your Project
+## Project overview
 
-For driving training or other simulations that need process records, result queries, and scene review, start with the capture fields, scoring rules, and states to reproduce. I can help define the responsibilities of data recording and engine replay and connect them to the existing interface.
-
-[Get in touch](/en/contact/) to discuss it.
+[Driving simulation](/cases/driving-simulation/)

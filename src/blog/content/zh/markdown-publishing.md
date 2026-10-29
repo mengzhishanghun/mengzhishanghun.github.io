@@ -1,13 +1,13 @@
 ---
 title: 让 Markdown 图片随文章一起发布
 description: 从本地图片路径到可复制的发布文本，减少文章迁移时的手动整理。
-type: case
+type: blog
 slug: markdown-publishing
-categoryId: desktop-automation
-categoryName: 桌面与自动化
+categoryId: blog-041baf3756ee
+categoryName: 随笔
 categoryOrder: 1
-status: 已完成
-featured: true
+status: 已发布
+featured: false
 draft: false
 sitePublish: true
 tags:
@@ -20,6 +20,8 @@ coverAlt: 让 Markdown 图片随文章一起发布的流程图
 websiteCoverUrl: /assets/cases/markdown-publishing.png
 lang: zh
 translationKey: markdown-publishing
+date: 2026-10-29
+publishedAt: 2026-10-29
 ---
 
 ## 背景介绍
@@ -52,11 +54,3 @@ MDBlogPacker 识别标准 Markdown 图片语法和 Wiki 图片引用，读取本
 通过 GUI 或 CLI 完成转换后，迁移文章时便可减少逐张处理本地图片的工作。
 
 是否成功显示取决于目标平台对内嵌图片的支持。对于能自行管理资源的网站，独立同步图片仍便于缓存和后续替换。
-
-## 相关需求
-
-如果你需要将 Markdown 连同图片一起迁移到其他平台，可以先查看 MDBlogPacker。对于不同的图片引用格式、批量导出或发布流程，也可以联系我讨论工具适配与自动化。
-
-可以提供一份示例文档和目标平台，先确认图片处理方式与平台限制。
-
-有相关需求，欢迎[联系我聊聊](https://mzsh.me/zh/contact/)。

@@ -71,37 +71,37 @@ MDBlogPacker
 
 UE项目
 
-### [解决驾考模拟器三屏显示不一致问题](/cases/driving-simulator-three-screen/)
+### [驾驶仿真](/cases/driving-simulation/)
 
 Three-screen Driving Simulator Display Alignment
 
-围绕三屏 Lumen GI 光反射失效与曝光不一致，定位并改写引擎相关实现。
+面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
 
-[查看内容](/cases/driving-simulator-three-screen/)
+[查看内容](/cases/driving-simulation/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A5)
 
 UE项目
 
-### [本地集成 AI 数字人交互流程](/cases/ai-digital-human-integration/)
+### [AI 数字人交互](/cases/digital-human-interaction/)
 
 Local Integration of an AI Digital Human Interaction Workflow
 
 将数字人、语音识别、对话、语音合成与表情驱动串联为本地演示流程。
 
-[查看内容](/cases/ai-digital-human-integration/)
+[查看内容](/cases/digital-human-interaction/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A6)
 
 桌面与自动化
 
-### [插件开发到发布的工具链](/cases/plugin-release-workflow/)
+### [中药展示](/cases/herbal-exhibition/)
 
 Plugin Development and Release Workflow
 
-围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
+基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
 
-[查看内容](/cases/plugin-release-workflow/)
+[查看内容](/cases/herbal-exhibition/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A7)
 

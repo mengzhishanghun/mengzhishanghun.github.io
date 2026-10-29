@@ -1,12 +1,12 @@
 ---
 title: 驾驶过程记录与 UE 回放管理
 description: 采集驾驶操作与车辆状态，保存成绩统计，并配套管理 UE Network Replay 录制文件。
-type: case
+type: blog
 slug: driving-session-replay
-categoryId: ue-projects
-categoryName: UE项目
+categoryId: blog-5b81b3e117a9
+categoryName: UE开发
 categoryOrder: 0
-status: 归档
+status: 已发布
 featured: false
 draft: false
 sitePublish: true
@@ -18,6 +18,8 @@ coverAlt: 驾驶过程记录与 UE 回放管理示意图
 websiteCoverUrl: /assets/cases/driving-session-replay.png
 lang: zh
 translationKey: driving-session-replay
+date: 2026-10-29
+publishedAt: 2026-10-29
 ---
 
 ## 记录操作过程，也保留可查看的回放
@@ -69,8 +71,6 @@ translationKey: driving-session-replay
 
 这里的过程采集、成绩统计和引擎回放是三种配套机制。过程 JSON 没有承担重建完整场景的自研回放引擎职责；需要重现的 Actor、复制状态及具体回放表现，要按项目的 UE 回放配置检查。数据查询、文件管理与场景回看因而可以分别确定验收要求。
 
-## 相关需求
+## 项目展示
 
-如果驾驶训练或其他仿真项目需要过程留档、成绩查询与场景回看，可以先列出采集字段、统计规则和需要重现的状态。我可以协助拆分数据记录与引擎回放的职责，并接入现有界面。
-
-欢迎[联系我聊聊](/zh/contact/)。
+[驾驶仿真](/cases/driving-simulation/)

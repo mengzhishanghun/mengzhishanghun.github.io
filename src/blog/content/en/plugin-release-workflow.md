@@ -1,13 +1,13 @@
 ---
 title: A Toolchain from Plugin Development to Release
 description: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
-type: case
+type: blog
 slug: plugin-release-workflow
-categoryId: desktop-automation
-categoryName: Desktop & Automation
+categoryId: blog-5b81b3e117a9
+categoryName: Unreal Engine
 categoryOrder: 1
-status: Completed
-featured: true
+status: Published
+featured: false
 draft: false
 sitePublish: true
 tags:
@@ -21,9 +21,11 @@ coverAlt: Flowchart of the toolchain from plugin development to release
 websiteCoverUrl: /assets/cases/plugin-release-workflow.png
 lang: en
 translationKey: plugin-release-workflow
-sourceHash: c407713a991c6ccbb9e79e7c4a0f570effa79fda8ad093fcc1af1f57d95584be
+date: 2026-10-29
+publishedAt: 2026-10-29
+sourceHash: 4f24f9fc51d8f5c0f2a517e447cd534424420e83ed5e126d0a0fd2ed732ab3c0
 translationStatus: translated
-generatedBodyHash: 51a01a8ca11737338421001e69206c4f1c8881fb563a4632889b43ab1ea6e963
+generatedBodyHash: 69b6a760a47fb516eae38e794791ea3175d0ccd15f7194f34ad9bf70acd72f96
 ---
 
 ## Background
@@ -55,10 +57,7 @@ The two tools can be used independently: the plugin manager checks the environme
 
 A successful build still requires log review and testing in the target engine to assess compatibility. The packaging tool handles plugin packages; publishing a listing and packaging a complete UE project have their own workflows.
 
-## Discuss your project
+## Related tools
 
-If you repeatedly manage UE plugins, package them for multiple engine versions, or organize release files, start with the tools linked to this case. If they do not cover your workflow, we can discuss custom development.
-
-The plugin type, target engine versions, and delivery requirements will help identify which steps need additional support.
-
-If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.
+- [UE plugin manager](/works/plugin-manager/)
+- [UE multi-version plugin packer](/works/plugin-auto-packer/)

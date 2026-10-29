@@ -566,6 +566,168 @@
           "UE 5.3"
         ]
       }
+    },
+    "blog:ai-digital-human-integration": {
+      "topics": [
+        "animation-digital-humans"
+      ],
+      "legacyTags": {
+        "zh": [
+          "AI",
+          "MetaHuman",
+          "语音交互"
+        ],
+        "en": [
+          "AI",
+          "MetaHuman",
+          "Voice interaction"
+        ]
+      }
+    },
+    "blog:flying-car-simulator": {
+      "topics": [
+        "programming-scripting"
+      ],
+      "legacyTags": {
+        "zh": [
+          "仿真",
+          "交通"
+        ],
+        "en": [
+          "Simulation",
+          "Transportation"
+        ]
+      }
+    },
+    "blog:motion-capture-robot-control": {
+      "topics": [
+        "animation-digital-humans"
+      ],
+      "legacyTags": {
+        "zh": [
+          "动作捕捉",
+          "机器人"
+        ],
+        "en": [
+          "Motion capture",
+          "Robotics"
+        ]
+      }
+    },
+    "blog:six-dof-motion-platform": {
+      "topics": [
+        "programming-scripting"
+      ],
+      "legacyTags": {
+        "zh": [
+          "仿真",
+          "硬件联动"
+        ],
+        "en": [
+          "Simulation",
+          "Hardware integration"
+        ]
+      }
+    },
+    "blog:plugin-release-workflow": {
+      "topics": [
+        "build-release"
+      ],
+      "legacyTags": {
+        "zh": [
+          "UnrealEngine",
+          "插件",
+          "自动化"
+        ],
+        "en": [
+          "UnrealEngine",
+          "Plugins",
+          "Automation"
+        ]
+      }
+    },
+    "blog:markdown-publishing": {
+      "topics": [
+        "data-configuration"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Markdown",
+          "图片",
+          "写作工具"
+        ],
+        "en": [
+          "Markdown",
+          "Images",
+          "Writing tools"
+        ]
+      }
+    },
+    "blog:perforce-workspace-pool": {
+      "topics": [
+        "version-control-collaboration"
+      ],
+      "legacyTags": {
+        "zh": [
+          "Perforce",
+          "开发工具"
+        ],
+        "en": [
+          "Perforce",
+          "Development tools"
+        ]
+      }
+    },
+    "blog:driving-session-replay": {
+      "topics": [
+        "data-configuration"
+      ],
+      "legacyTags": {
+        "zh": [
+          "仿真",
+          "驾驶记录",
+          "回放"
+        ],
+        "en": [
+          "Simulation",
+          "Driving records",
+          "Replay"
+        ]
+      }
+    },
+    "blog:ue-multiwindow-interface": {
+      "topics": [
+        "ui-development"
+      ],
+      "legacyTags": {
+        "zh": [
+          "UMG",
+          "多窗口",
+          "界面工具"
+        ],
+        "en": [
+          "UMG",
+          "Multiwindow",
+          "UI tools"
+        ]
+      }
+    },
+    "blog:robot-realtime-ik-prototype": {
+      "topics": [
+        "animation-digital-humans"
+      ],
+      "legacyTags": {
+        "zh": [
+          "机器人",
+          "UDP",
+          "原型"
+        ],
+        "en": [
+          "Robotics",
+          "UDP",
+          "Prototype"
+        ]
+      }
     }
   }
 }

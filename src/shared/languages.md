@@ -41,9 +41,6 @@ languages:
       case:flying-car-simulator: cases/content/zh/flying-car-simulator.md
       case:motion-capture-robot-control: cases/content/zh/motion-capture-robot-control.md
       case:six-dof-motion-platform: cases/content/zh/six-dof-motion-platform.md
-      case:plugin-release-workflow: cases/content/zh/plugin-release-workflow.md
-      case:markdown-publishing: cases/content/zh/markdown-publishing.md
-      case:metahuman-animation-clipping: cases/content/zh/metahuman-animation-clipping.md
       work:simple-file-updater: works/content/zh/simple-file-updater.md
       work:p4-case-sync: works/content/zh/p4-case-sync.md
       work:md-blog-packer: works/content/zh/md-blog-packer.md
@@ -119,11 +116,18 @@ languages:
       work:mcp-world-editor: works/content/zh/mcp-world-editor.md
       work:shaniu: works/content/zh/shaniu.md
       work:p4-stream-switcher: works/content/zh/p4-stream-switcher.md
-      case:perforce-workspace-pool: cases/content/zh/perforce-workspace-pool.md
       doc:p4-stream-switcher: docs/content/zh/p4-stream-switcher.md
-      case:driving-session-replay: cases/content/zh/driving-session-replay.md
-      case:ue-multiwindow-interface: cases/content/zh/ue-multiwindow-interface.md
-      case:robot-realtime-ik-prototype: cases/content/zh/robot-realtime-ik-prototype.md
+      blog:ai-digital-human-integration: blog/content/zh/ai-digital-human-integration.md
+      blog:flying-car-simulator: blog/content/zh/flying-car-simulator.md
+      blog:motion-capture-robot-control: blog/content/zh/motion-capture-robot-control.md
+      blog:six-dof-motion-platform: blog/content/zh/six-dof-motion-platform.md
+      blog:plugin-release-workflow: blog/content/zh/plugin-release-workflow.md
+      blog:markdown-publishing: blog/content/zh/markdown-publishing.md
+      blog:perforce-workspace-pool: blog/content/zh/perforce-workspace-pool.md
+      blog:driving-session-replay: blog/content/zh/driving-session-replay.md
+      blog:ue-multiwindow-interface: blog/content/zh/ue-multiwindow-interface.md
+      blog:robot-realtime-ik-prototype: blog/content/zh/robot-realtime-ik-prototype.md
+      case:herbal-exhibition: cases/content/zh/herbal-exhibition.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -162,9 +166,6 @@ languages:
       case:flying-car-simulator: cases/content/en/flying-car-simulator.md
       case:motion-capture-robot-control: cases/content/en/motion-capture-robot-control.md
       case:six-dof-motion-platform: cases/content/en/six-dof-motion-platform.md
-      case:plugin-release-workflow: cases/content/en/plugin-release-workflow.md
-      case:markdown-publishing: cases/content/en/markdown-publishing.md
-      case:metahuman-animation-clipping: cases/content/en/metahuman-animation-clipping.md
       work:simple-file-updater: works/content/en/simple-file-updater.md
       work:p4-case-sync: works/content/en/p4-case-sync.md
       work:md-blog-packer: works/content/en/md-blog-packer.md
@@ -240,9 +241,16 @@ languages:
       work:mcp-world-editor: works/content/en/mcp-world-editor.md
       work:shaniu: works/content/en/shaniu.md
       work:p4-stream-switcher: works/content/en/p4-stream-switcher.md
-      case:perforce-workspace-pool: cases/content/en/perforce-workspace-pool.md
       doc:p4-stream-switcher: docs/content/en/p4-stream-switcher.md
-      case:driving-session-replay: cases/content/en/driving-session-replay.md
-      case:ue-multiwindow-interface: cases/content/en/ue-multiwindow-interface.md
-      case:robot-realtime-ik-prototype: cases/content/en/robot-realtime-ik-prototype.md
+      blog:ai-digital-human-integration: blog/content/en/ai-digital-human-integration.md
+      blog:flying-car-simulator: blog/content/en/flying-car-simulator.md
+      blog:motion-capture-robot-control: blog/content/en/motion-capture-robot-control.md
+      blog:six-dof-motion-platform: blog/content/en/six-dof-motion-platform.md
+      blog:plugin-release-workflow: blog/content/en/plugin-release-workflow.md
+      blog:markdown-publishing: blog/content/en/markdown-publishing.md
+      blog:perforce-workspace-pool: blog/content/en/perforce-workspace-pool.md
+      blog:driving-session-replay: blog/content/en/driving-session-replay.md
+      blog:ue-multiwindow-interface: blog/content/en/ue-multiwindow-interface.md
+      blog:robot-realtime-ik-prototype: blog/content/en/robot-realtime-ik-prototype.md
+      case:herbal-exhibition: cases/content/en/herbal-exhibition.md
 ---

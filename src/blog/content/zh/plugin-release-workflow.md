@@ -1,13 +1,13 @@
 ---
 title: 插件开发到发布的工具链
 description: 围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
-type: case
+type: blog
 slug: plugin-release-workflow
-categoryId: desktop-automation
-categoryName: 桌面与自动化
+categoryId: blog-5b81b3e117a9
+categoryName: UE开发
 categoryOrder: 1
-status: 已完成
-featured: true
+status: 已发布
+featured: false
 draft: false
 sitePublish: true
 tags:
@@ -21,6 +21,8 @@ coverAlt: 插件开发到发布的工具链的流程图
 websiteCoverUrl: /assets/cases/plugin-release-workflow.png
 lang: zh
 translationKey: plugin-release-workflow
+date: 2026-10-29
+publishedAt: 2026-10-29
 ---
 
 ## 背景介绍
@@ -52,10 +54,7 @@ UEPluginAutoPacker 对已配置的多个引擎分别执行插件构建，展示�
 
 构建成功仍需结合日志和目标引擎实测判断兼容性；打包工具处理插件包，发布上架和 UE 项目整体打包另有对应流程。
 
-## 相关需求
+## 相关作品
 
-如果你在 UE 插件管理、多引擎版本打包或发布文件整理上有重复操作，可以先查看本案例关联的工具；已有工具无法覆盖的部分，也可以联系我讨论定制。
-
-说明插件类型、目标引擎版本和交付要求，会更方便判断需要补充哪些流程。
-
-有相关需求，欢迎[联系我聊聊](https://mzsh.me/zh/contact/)。
+- [UE 插件管理工具](/works/plugin-manager/)
+- [UE 插件多版本打包工具](/works/plugin-auto-packer/)

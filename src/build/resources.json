@@ -4513,6 +4513,54 @@
       ],
       "sha256": "1161978f08f233dda37d8a83bfddbeaa1d19759a2e79938675b432ccd31711aa",
       "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/assets/cases/driving-simulation-cover.png",
+      "outputs": [
+        "assets/cases/driving-simulation-cover.png"
+      ],
+      "sha256": "d47921baa84e80c2be87def9bc2c16678552ad0eed5e4cb3e96e516996778e8c",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/assets/cases/flight-simulation-cover.png",
+      "outputs": [
+        "assets/cases/flight-simulation-cover.png"
+      ],
+      "sha256": "70f19284a745ddac2a0f519b3e5031e5914051079902c00286753df38d6a3e66",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/assets/cases/motion-platform-filming-cover.png",
+      "outputs": [
+        "assets/cases/motion-platform-filming-cover.png"
+      ],
+      "sha256": "e1b6641ead5630149b558b090e0e5bc3db10095376385bddb1d52cfe716874f0",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/assets/cases/digital-human-interaction-cover.png",
+      "outputs": [
+        "assets/cases/digital-human-interaction-cover.png"
+      ],
+      "sha256": "a4e9f754abbf68ca99541697c5796265bf05cb9592a1b9ad16464cbfa8c2c46b",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/assets/cases/motion-capture-robot-cover.png",
+      "outputs": [
+        "assets/cases/motion-capture-robot-cover.png"
+      ],
+      "sha256": "ba70a4522277c1f65078d5af3c173bed27ffa1267f4d2eaa5e6b850e086ce9bb",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/assets/cases/herbal-exhibition-cover.png",
+      "outputs": [
+        "assets/cases/herbal-exhibition-cover.png"
+      ],
+      "sha256": "23bed7ffdb93eab5bb66b89846052ae3f9b25bf1bbfb2f48a3ff97a4efb95bea",
+      "mode": "frozen"
     }
   ]
 }

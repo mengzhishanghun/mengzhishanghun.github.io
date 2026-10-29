@@ -1,12 +1,12 @@
 ---
 title: 机器人实时数据与三轴 IK 原型
 description: 开发中的 UDP JSON 数据接入与三关节位置 IK 原型，真实机构与真实数据测试待完成。
-type: case
+type: blog
 slug: robot-realtime-ik-prototype
-categoryId: ue-projects
-categoryName: UE项目
+categoryId: blog-5b81b3e117a9
+categoryName: UE开发
 categoryOrder: 0
-status: 开发中
+status: 已发布
 featured: false
 draft: false
 sitePublish: true
@@ -18,11 +18,13 @@ coverAlt: 机器人实时数据与三轴 IK 原型示意图
 websiteCoverUrl: /assets/cases/robot-realtime-ik-prototype.png
 lang: zh
 translationKey: robot-realtime-ik-prototype
+date: 2026-10-29
+publishedAt: 2026-10-29
 ---
 
 ## 原型目标
 
-RoBoBuilder 正在开发机器人实时数据接入与三轴位置 IK。我先将传输、调度、滤波和求解分开，建立 UE 侧原型：让外部数据进入场景，处理输入中断后的输出变化，并将目标位置转换为关节值。
+机器人控制原型 正在开发机器人实时数据接入与三轴位置 IK。我先将传输、调度、滤波和求解分开，建立 UE 侧原型：让外部数据进入场景，处理输入中断后的输出变化，并将目标位置转换为关节值。
 
 实时链路的困难不只在于收到 JSON。网络收包和游戏 Tick 并不同步，输入有效也不代表机构一定能够到达目标。因此原型把接收状态与 IK 求解状态分别表达，方便上层判断当前输出的含义。真实机构 URDF 与真实数据测试仍待完成。
 
@@ -70,8 +72,12 @@ RoboThreeAxisIkSolver 复用 URDFForge。目标数据进入求解前处理米到
 
 ## 开发状态
 
-目前已有 UDP 传输、最新帧交接、超时恢复、自适应滤波与三关节位置求解的软件原型。真实机构 URDF、真实数据链路和设备表现仍需测试，本案例按开发中展示。协议归零和求解状态可供上层处理，最终设备行为仍需设备侧规则配合。
+目前已有 UDP 传输、最新帧交接、超时恢复、自适应滤波与三关节位置求解的软件原型。真实机构 URDF、真实数据链路和设备表现仍需测试，本文按开发中记录。协议归零和求解状态可供上层处理，最终设备行为仍需设备侧规则配合。
 
 如果要评估类似需求，可以先提供机构结构、关节范围、数据格式和目标位置约束，再判断原型中哪些部分可以复用。
 
 欢迎[联系我聊聊](/zh/contact/)。
+
+## 项目展示
+
+[动捕与机器人控制](/cases/motion-capture-robot/)

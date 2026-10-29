@@ -1,75 +1,47 @@
 ---
-title: Resolving Inconsistent Three-Screen Display in a Driving Test Simulator
-description: Investigating and modifying engine implementations to address failed Lumen GI light reflections and inconsistent exposure across three screens.
+title: Driving simulation
+description: A driving training project combining three-screen display, session recording, results and scene replay.
 type: case
-slug: driving-simulator-three-screen
+slug: driving-simulation
 categoryId: ue-projects
 categoryName: Unreal Engine Projects
 categoryOrder: 0
+order: 0
 status: Completed
-featured: false
+featured: true
 draft: false
 sitePublish: true
 tags:
-  - Lumen
-  - Multi-screen display
   - Simulation
-coverAlt: Flowchart for resolving inconsistent three-screen display in a driving test simulator
-websiteCoverUrl: /assets/cases/driving-simulator-three-screen.png
-lang: en
+  - Driving records
+  - Multi-screen display
+coverAlt: AI concept cover for Driving simulation, not a project screenshot
+websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 translationKey: driving-simulator-three-screen
-sourceHash: 8e278a89bf8640441c5ba7e25d29ffeefe1c8e1f0c6897a07a403d35268b3d3f
+lang: en
+sourceHash: 28c882666cbc8d8fddf77333db2dfcb1481fb8f897783055d00699f84d3f26c3
 translationStatus: translated
-generatedBodyHash: fca23a166adaee8802ac13910fa02b471a4acf7b513ff0dcba2c3aac1c7a1405
+generatedBodyHash: f4abf82a6b1286113e71d4397c697e333495acc91f752b842e0f1a3b4b65706c
 ---
 
-## Background
+## Project overview
 
-A driving training scenario used three screens and needed consistent training visuals across different viewpoints. Together, the screens formed the driving scene, so differences in lighting and exposure directly affected its overall appearance.
+This Unreal Engine project supports driving training and simulated tests. Three screens form the driving environment, while session data, results and scene recordings support review after a training run.
 
-I helped address inconsistent Lumen indirect lighting and exposure in a three-screen scenario. The work focused on engine support for multiple views and exposure data association between views. The two areas were investigated and modified separately.
+## My contribution
 
-## Reproduction Environment
+- Addressed inconsistent Lumen lighting and exposure across three screens through engine multi-view changes and view data association.
+- Integrated time-based recording of steering, braking, throttle, speed, position and other vehicle states.
+- Organized results and queries, and integrated recording, playback and file management through UE Network Replay.
 
-The scene used Unreal Engine, Lumen, and a three-screen display. The original record of the Lumen multi-view fix used UE 5.3 as its example and required a source build that allowed the engine to be modified and rebuilt.
+## Implementation and results
 
-The exposure synchronization implementation was recorded against UE 5.3.2 and involved LocalPlayer, FSceneView, and the views' StereoPass settings. The version identifies the engine implementation locations checked at the time.
+The display work addressed lighting and exposure differences across the three views. The data pipeline stores continuous curves, discrete events and results separately. Scene review uses the engine replay system, with each record serving a different purpose.
 
-## Specific Problem
+The display changes were made against UE 5.3 / 5.3.2 source implementations. Process data is saved in the background; completion notification is still needed to coordinate the final batch with session end and application exit. Starting a save does not confirm that the file has been written.
 
-**Abnormal Lumen lighting across three screens**
+## Technical notes
 
-Lumen GI light reflections failed in the three-screen display, affecting lighting across the different viewpoints. The original troubleshooting record identified a maximum view count fixed at 2 in the relevant engine implementation, which did not match the three views required by the project.
-
-**Inconsistent exposure between views**
-
-Exposure was also out of sync across the views, producing inconsistent screen brightness. The association of exposure data needed separate treatment: increasing Lumen's view count still left the question of how the views would share the data used to calculate exposure.
-
-## Solution
-
-**Extending Lumen support for multiple views**
-
-The fixed maximum view count in the relevant engine implementations was changed from 2 to 3. The seven recorded modifications are related and need to be treated as one set of changes.
-
-These changes were made in engine source code and required rebuilding the modified engine. The existing record explicitly states that comparable changes in a non-source build could not achieve this result. For the recorded modifications and source screenshot, [read the multi-view GI fix](https://mzsh.me/blog/ue53-multiview-gi/).
-
-**Associating exposure data across views**
-
-Exposure synchronization was handled through custom LocalPlayer view construction logic, setting the `StereoPass` of non-primary player views to `eSSP_SECONDARY`.
-
-This used the engine's association between primary and secondary views so the relevant views could reuse the data needed for exposure calculation. The UE 5.3.2 record located the corresponding condition in the `FSceneView` constructor. For the code and condition location, [read the exposure synchronization implementation details](https://mzsh.me/blog/cnblogs-19165561/).
-
-Lumen view capacity and exposure data association address two different problems. Maintenance needs to preserve the rationale for each change and check implementation locations again after an engine version change.
-
-
-According to the existing project records, the inconsistent lighting and exposure in the three-screen scene were addressed, and the project continued to be used for simulated driving test instruction.
-
-This approach applies to the UE 5.3 / 5.3.2 three-screen scenario in the original records. Engine upgrades require renewed checks of multi-view limits and exposure data association; changes should not simply be applied at the old file locations.
-
-## Discuss your project
-
-If your UE multi-screen project has inconsistent brightness, Lumen lighting issues, or reflection problems between views, I can help inspect the view configuration and engine implementation, identify the cause, and assess changes for your engine version.
-
-Useful details include the engine version, how the displays are configured, and screenshots or video showing the difference.
-
-If you have a related project, [get in touch](https://mzsh.me/en/contact/) to discuss it.
+- [Driving session recording and UE replay management](/blog/driving-session-replay/)
+- [Fixing missing GI across multiple views](/blog/ue53-multiview-gi/)
+- [Synchronizing exposure across multiple screens](/blog/cnblogs-19165561/)

@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: b051152300ca64ff72fba28335236b128b947ea0216bed1ab1502413edcfe35c
+sourceHash: 64254a8865cc89cba0c23726f0ce6584d22ed59d9b26b300ac144cb6282f5e3a
 translationStatus: translated
-generatedBodyHash: f6cd794250039b623daa56cf8634902265766e859a9b2992dbda1a413fbf6e78
+generatedBodyHash: 2a5821f94d2da5cdfa206b13dc8080a3ca7074573e24ab1b1600d3e2d807e877
 ---
 
 # Complexity can be encapsulated;
@@ -74,37 +74,37 @@ Convert local Markdown images to Base64 embedded format for export and copying t
 
 UE Projects
 
-### [Resolving Inconsistent Three-Screen Display in a Driving Test Simulator](/cases/driving-simulator-three-screen/)
+### [Driving simulation](/cases/driving-simulation/)
 
 Three-screen Driving Simulator Display Alignment
 
-Investigating and modifying engine implementations to address failed Lumen GI light reflections and inconsistent exposure across three screens.
+A driving training project combining three-screen display, session recording, results and scene replay.
 
-[View Details](/cases/driving-simulator-three-screen/)
+[View Details](/cases/driving-simulation/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A5)
 
 UE Projects
 
-### [Local Integration of an AI Digital Human Interaction Workflow](/cases/ai-digital-human-integration/)
+### [AI digital human interaction](/cases/digital-human-interaction/)
 
-Local Integration of an AI Digital Human Interaction Workflow
+AI digital human interaction
 
 Connecting a digital human, speech recognition, conversation, speech synthesis, and facial expression driving into a local demonstration workflow.
 
-[View Details](/cases/ai-digital-human-integration/)
+[View Details](/cases/digital-human-interaction/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A6)
 
 Desktop & Automation
 
-### [A Toolchain from Plugin Development to Release](/cases/plugin-release-workflow/)
+### [Herbal exhibition](/cases/herbal-exhibition/)
 
 Plugin Development and Release Workflow
 
-Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
+An interactive UE herbal exhibition combining search, illustrated and audio content, 3D models, microscope slides and external content maintenance.
 
-[View Details](/cases/plugin-release-workflow/)
+[View Details](/cases/herbal-exhibition/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A7)
 

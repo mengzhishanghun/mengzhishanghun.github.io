@@ -1,12 +1,12 @@
 ---
 title: 管理 Perforce 分支工作区与本地缓存
 description: 用工作区池组织分支切换，区分服务端同步与离线目录接入，明确缓存保护和清理边界。
-type: case
+type: blog
 slug: perforce-workspace-pool
-categoryId: desktop-automation
-categoryName: 桌面与自动化
+categoryId: blog-ae2a7f3fcbea
+categoryName: Perforce
 categoryOrder: 1
-status: 开发案例
+status: 已发布
 featured: false
 draft: false
 sitePublish: true
@@ -19,6 +19,8 @@ coverAlt: 管理 Perforce 分支工作区与本地缓存示意图
 websiteCoverUrl: /assets/cases/perforce-workspace-pool.png
 lang: zh
 translationKey: perforce-workspace-pool
+date: 2026-10-29
+publishedAt: 2026-10-29
 ---
 
 ## 背景与约束
@@ -52,11 +54,3 @@ P4StreamSwitcher 面向多项目、多分支的 Perforce 开发环境。工作�
 - [P4StreamSwitcher 作品](</zh/works/p4-stream-switcher/>)
 - [使用文档](</zh/docs/tools/p4-stream-switcher/>)
 - [Python 切流工具博客](</zh/blog/python-perforce-stream-switch-safety/>)
-
-## 相关需求
-
-如果你的 Perforce 工作流涉及多个分支目录、本地缓存或离线目录接入，可以先查看 P4StreamSwitcher 及使用文档；需要适配现有命名、目录或切换规则时，也可以联系我讨论。
-
-可以说明流结构、工作区数量和需要保留的本地内容，先核对同步、清理及待提交记录的处理边界。
-
-有相关需求，欢迎[联系我聊聊](https://mzsh.me/zh/contact/)。
