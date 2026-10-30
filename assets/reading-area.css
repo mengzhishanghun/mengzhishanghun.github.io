@@ -107,6 +107,17 @@
 .site-chrome-docs .article-outline .outline-link {
   text-decoration: none;
 }
+.site-chrome .docs-reading-surface .article-outline .outline-node > .outline-tree {
+  margin-left: 5px;
+  padding-left: 8px;
+}
+.site-chrome .docs-reading-surface .article-outline .outline-tree:not(.outline-tree-root) > .outline-node > .outline-link::before {
+  width: 6px;
+  left: -9px;
+}
+.site-chrome .docs-reading-surface .article-outline .outline-tree:not(.outline-tree-root) > .outline-node > .outline-link[aria-current="location"]::after {
+  left: -12px;
+}
 :where(.master-panel .prose, .site-chrome-docs .sl-markdown-content) table {
   display: block;
   max-inline-size: 100%;
