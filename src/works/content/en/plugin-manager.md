@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginManager
 lang: en
 translationKey: plugin-manager
-sourceHash: 60d4086123eb373bea0b918a449134284dc62d6b6f29266aa896f1f61a288a6b
+sourceHash: 47b7ef1d5003bd75ff363f92b083b07fbffc70e6dcc0e1478d4bf538d4148e8a
 translationStatus: translated
 generatedBodyHash: 192913ba4c8e8052b6752cadcd0e5481e55c2f95335ff31fddfa58a6842a7c47
 workInfo:
@@ -31,7 +31,10 @@ workInfo:
     - platforms:
         - UE plugin management tool (operating system to be verified)
       requirements: []
+websiteCoverUrl: /media/imported/works/plugin-manager-cover.png
+coverAlt: Illustration of Unreal Engine plugin management
 ---
+
 ## Overview
 
 UEPluginManager is a desktop tool for browsing and managing local UE plugins. It displays project and engine plugins together, fixes garbled directory names, and moves plugins between the project and the engine Marketplace directory. Bundled engine plugins are available for browsing and state inspection only; they cannot be moved or deleted.

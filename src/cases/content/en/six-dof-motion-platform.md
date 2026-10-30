@@ -18,7 +18,7 @@ coverAlt: AI concept cover for Motion platform and virtual filming, not a projec
 websiteCoverUrl: /assets/cases/motion-platform-filming-cover.png
 translationKey: six-dof-motion-platform
 lang: en
-sourceHash: 58f1798dbc74c2f9602a61b6387c87a580f0a1475e12a43bca468a64683487f6
+sourceHash: e4e338513c79975fc6788424466201b9be3c750573e7a1b70a911be43b260eaa
 translationStatus: translated
 generatedBodyHash: 1069821f93f9966101681f31cab1cc75cde439443f1ec5b1453288045386d24b
 ---

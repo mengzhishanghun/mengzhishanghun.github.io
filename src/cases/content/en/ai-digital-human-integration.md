@@ -19,7 +19,7 @@ coverAlt: AI concept cover for AI digital human interaction, not a project scree
 websiteCoverUrl: /assets/cases/digital-human-interaction-cover.png
 translationKey: ai-digital-human-integration
 lang: en
-sourceHash: a666b3944cd840d07adf05687cfe764cd954755e7f2e544626a6a9ac5b042f8f
+sourceHash: 823683128e8f1cc14f647f26695a4fc053634332ddd0bb72e9fb964e193744e8
 translationStatus: translated
 generatedBodyHash: 0b11264f50dc8a1fc68cc72ee01ec3ba7bdba5bb0269fe92810b9d4a443d2561
 ---

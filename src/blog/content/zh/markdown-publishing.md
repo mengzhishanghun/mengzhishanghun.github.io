@@ -8,6 +8,8 @@ categoryName: 随笔
 categoryOrder: 1
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -20,8 +22,6 @@ coverAlt: 让 Markdown 图片随文章一起发布的流程图
 websiteCoverUrl: /assets/cases/markdown-publishing.png
 lang: zh
 translationKey: markdown-publishing
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 背景介绍

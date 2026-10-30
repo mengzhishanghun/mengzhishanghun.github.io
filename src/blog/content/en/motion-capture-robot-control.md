@@ -19,7 +19,7 @@ lang: en
 translationKey: motion-capture-robot-control
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 0fa1e700d5ea51f13a3489402ea74ddba5c6fbb9a5922dac05f3f8465bf339be
+sourceHash: bbc73cb01d924dc6e101128e39b1d53d81ff3890588b1e58cad3ab67dbb17860
 translationStatus: translated
 generatedBodyHash: da1ddb180801497cb6f0e98edbf223b710cf32d200c649ef0e33ec4b2a09aa34
 ---

@@ -8,6 +8,8 @@ categoryName: UE开发
 categoryOrder: 0
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -17,8 +19,6 @@ coverAlt: 六自由度运动平台联动的流程图
 websiteCoverUrl: /assets/cases/six-dof-motion-platform.png
 lang: zh
 translationKey: six-dof-motion-platform
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 把场景姿态转换成平台运动数据

@@ -25,9 +25,9 @@ docIds:
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: 54f9a326bf526875a8824313a4db7eed52e841e8bbe9680b28dc27eac0ef4e89
+sourceHash: 3f8e417e5dcf5a8d87f59e5f91f6c32c2b085e3c3a69451af5ec17b47849ae28
 translationStatus: translated
-generatedBodyHash: 85796cecae20d83a568d3e9da92d6678f643fac61022e754560142b455c15940
+generatedBodyHash: 8a5fb1c38b176766221de9e2cf285c3c3232da5e3df100e08f29ec401483ae1c
 workInfo:
   channels:
     - kind: sale
@@ -41,6 +41,7 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-static-mesh-merger.png
 ---
 
 ## Overview
@@ -81,4 +82,4 @@ Merging replaces original scene Actors. Keep a recoverable level version first a
 
 Loading or runtime improvements depend on the scene and target device and require measurement. Group previews do not replace project acceptance checks after merging.
 
-For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-static-mesh-merger-guide/).
+See the [user guide](/en/docs/guides/ue-tools/simple-static-mesh-merger-guide/) for scene grouping, merge steps, and loading overhead.

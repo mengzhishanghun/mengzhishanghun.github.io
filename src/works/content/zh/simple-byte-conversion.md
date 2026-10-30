@@ -37,6 +37,7 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19770934
 docIds:
   - simple-byte-conversion-guide
+websiteCoverUrl: /assets/covers/simple-byte-conversion.png
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-byte-conversion

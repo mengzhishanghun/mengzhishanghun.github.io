@@ -20,7 +20,7 @@ coverAlt: Driving session recording and UE replay management diagram
 websiteCoverUrl: /assets/cases/driving-session-replay.png
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 389744e3c2e69718e447375119930e472877661f1e32dcad2e87801c8a29c9f9
+sourceHash: 04982e797884474eaf2d225ec55e8134e430eb768cd9ebbf6dea017c2a9d55c5
 translationStatus: translated
 generatedBodyHash: 970943307b858c1161f8ce0eb94ef9cb98ee5f402837f6687bf3606d3807a4ea
 ---

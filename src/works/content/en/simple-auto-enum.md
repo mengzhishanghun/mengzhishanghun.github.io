@@ -25,9 +25,9 @@ docIds:
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: 10ee302860ec9a92a9bd9f66663567b0dc988870d15dd42355e21bb941f444fc
+sourceHash: ce0d29246bb50f5727051251f58b5cc3466c03bdfb31fc4afb1b3bd395904ff4
 translationStatus: translated
-generatedBodyHash: a4120017b0b891a65cc3ab64e5627ddc4b3b1f021b4c00a5d1a807c934491b19
+generatedBodyHash: 95a5586ceb55ba055b206689c480cabc6192d66d222334f344c62814cdc3ac69
 workInfo:
   channels:
     - kind: sale
@@ -43,6 +43,7 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-auto-enum.png
 ---
 
 ## Overview
@@ -81,4 +82,4 @@ Projects must correctly define configuration classes, target enums, and range bo
 
 Dynamically changing enum contents may affect existing Blueprint references and persisted data. Projects must validate compatibility; successful binding logs alone do not establish safety.
 
-For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-auto-enum-guide/).
+See the [user guide](/en/docs/guides/ue-tools/simple-auto-enum-guide/) for macro binding, configuration examples, and manual initialization.

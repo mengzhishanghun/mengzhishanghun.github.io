@@ -18,7 +18,7 @@ coverAlt: AI concept cover for Flight simulation, not a project screenshot
 websiteCoverUrl: /assets/cases/flight-simulation-cover.png
 translationKey: flying-car-simulator
 lang: en
-sourceHash: 52b4652c71a1022e32e4ae78765722192d00b892aabbad86f5833f56d60bb6df
+sourceHash: 924d068d3fe355fd88e0682c7dc53e004fcbaf78812b3beaf96a9ff0a92855dc
 translationStatus: translated
 generatedBodyHash: 66e7e34683884cea91009ee5ac5f6395b82c65a93b3f42fe130d6108fd5fd71c
 ---

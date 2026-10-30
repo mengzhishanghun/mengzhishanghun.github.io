@@ -35,6 +35,7 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19204715
 docIds:
   - simple-static-mesh-merger-guide
+websiteCoverUrl: /assets/covers/simple-static-mesh-merger.png
 sourceDate: 2025-11-09
 lang: zh
 translationKey: simple-static-mesh-merger
@@ -78,4 +79,4 @@ SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。�
 
 是否改善加载或运行表现取决于具体场景与目标设备，需要实测；工具的分组预览不能替代合并后的项目验收。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-static-mesh-merger-guide/)。
+场景分组、合并步骤与加载开销说明见 [使用教程](/zh/docs/guides/ue-tools/simple-static-mesh-merger-guide/)。

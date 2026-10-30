@@ -17,8 +17,8 @@ tags:
   - 语音交互
 coverAlt: AI 数字人交互的 AI 概念封面，非项目实拍
 websiteCoverUrl: /assets/cases/digital-human-interaction-cover.png
-translationKey: ai-digital-human-integration
 lang: zh
+translationKey: ai-digital-human-integration
 ---
 
 ## 项目介绍

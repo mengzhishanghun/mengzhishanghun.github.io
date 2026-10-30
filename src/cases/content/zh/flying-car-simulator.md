@@ -16,8 +16,8 @@ tags:
   - 飞行控制
 coverAlt: 飞行仿真的 AI 概念封面，非项目实拍
 websiteCoverUrl: /assets/cases/flight-simulation-cover.png
-translationKey: flying-car-simulator
 lang: zh
+translationKey: flying-car-simulator
 ---
 
 ## 项目介绍

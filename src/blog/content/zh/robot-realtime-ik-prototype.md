@@ -8,6 +8,8 @@ categoryName: UE开发
 categoryOrder: 0
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -18,8 +20,6 @@ coverAlt: 机器人实时数据与三轴 IK 原型示意图
 websiteCoverUrl: /assets/cases/robot-realtime-ik-prototype.png
 lang: zh
 translationKey: robot-realtime-ik-prototype
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 原型目标

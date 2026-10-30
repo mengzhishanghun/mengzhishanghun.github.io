@@ -34,6 +34,7 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165484
+websiteCoverUrl: /assets/covers/simple-websocket.png
 sourceDate: 2025-10-25
 lang: zh
 translationKey: simple-websocket
@@ -71,4 +72,4 @@ SimpleWebSocket 在 Unreal Engine 中封装 WebSocket 连接管理。项目可�
 
 仅支持 `ws://`，不支持 `wss://` 安全连接。使用前需要可访问的 WebSocket 服务和双方约定的消息格式。连接关闭后的恢复、鉴权方式与消息可靠性处理需按项目需求设计并验证。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-websocket-guide/)。
+命名连接、消息委托与模块示例见 [使用教程](/zh/docs/guides/ue-tools/simple-websocket-guide/)。

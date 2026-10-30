@@ -31,6 +31,8 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
+coverAlt: 蓝图继承组件修复功能示意封面
+websiteCoverUrl: /assets/covers/simple-bp-inherit-fix.png
 lang: zh
 translationKey: simple-bp-inherit-fix
 ---

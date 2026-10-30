@@ -23,7 +23,7 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: 2b1f10f3d880c4fa586278b53d7572578699e26c816cdaf3df4ea530e54df7fb
+sourceHash: 6f022862727569781ae5f1da4394d500e7f351b0bd67c8fcfb8c3f616f1a4806
 translationStatus: translated
 generatedBodyHash: a893f3dd017dc0cb0e1eff3722677d44af39772f325b17503aa17fe328db4785
 workInfo:
@@ -39,6 +39,7 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/ai-data-asset.png
 ---
 
 ## Overview

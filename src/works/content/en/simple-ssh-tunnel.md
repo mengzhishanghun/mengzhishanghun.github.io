@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: f940ab4815912f8a74df604ace94cd45b86fc06c8e954c5082367f4ef58d2294
+sourceHash: 6bf0d3afe225deda01e74765568bad8e209c3970d8251e52c99881621e801741
 translationStatus: translated
-generatedBodyHash: 37a7425fac84fdc7e0fd49d499f69b436d76962698c4a2732c7e57a76f7130da
+generatedBodyHash: 6d9d4e01195b39ada53556e3bb4331f17a1dffb0c069253bc402a02a2482d200
 workInfo:
   channels:
     - kind: sale
@@ -36,6 +36,7 @@ workInfo:
         - Windows (Win64)
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-ssh-tunnel.png
 ---
 
 ## Overview
@@ -76,4 +77,4 @@ Windows is currently supported. Check library files and build support before por
 
 The default subsystem closes all tunnels when it is destroyed. In the target project, review SSH credential storage and usage, connection threads, error handling, and whether sessions and channels are released correctly when connections close.
 
-For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-ssh-tunnel-guide/).
+See the [user guide](/en/docs/guides/ue-tools/simple-ssh-tunnel-guide/) for connection configuration, Blueprint calls, and implementation details.

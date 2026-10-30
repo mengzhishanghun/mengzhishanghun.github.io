@@ -30,6 +30,7 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165541
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165541
+websiteCoverUrl: /assets/covers/simple-ssh-tunnel.png
 sourceDate: 2025-10-25
 lang: zh
 translationKey: simple-ssh-tunnel
@@ -73,4 +74,4 @@ SimpleSSHTunnel 将相关连接操作封装在插件内，项目可以直接通�
 
 默认子系统会在销毁时调用关闭全部隧道。接入实际项目时，仍需检查 SSH 凭据的保存与使用、连接线程和错误处理，以及关闭连接时会话与通道是否正确释放。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-ssh-tunnel-guide/)。
+连接配置、蓝图调用与底层实现说明见 [使用教程](/zh/docs/guides/ue-tools/simple-ssh-tunnel-guide/)。

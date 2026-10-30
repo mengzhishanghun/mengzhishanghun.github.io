@@ -35,6 +35,7 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19770922
 docIds:
   - simple-asset-namer-guide
+websiteCoverUrl: /assets/covers/simple-asset-namer.png
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-asset-namer

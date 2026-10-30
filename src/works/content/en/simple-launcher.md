@@ -24,7 +24,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: f99a166bbfd3e594440dea243a7d68e7cbfc4e8bd335e226a3ab96c02da7c4f6
+sourceHash: a456c9efb5c22e9882b10b4fe74bdc1a3cdbf5d6f97cdcfcd91c24011e920de8
 translationStatus: translated
 generatedBodyHash: 094f329c6aeb91aa538a1983f244c41303087f3043901d68c71914bf28d61058
 workInfo:
@@ -40,6 +40,7 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-launcher.png
 ---
 
 ## Overview

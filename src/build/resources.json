@@ -4144,7 +4144,7 @@
         "assets/covers/p4-stream-switcher.png"
       ],
       "sha256": "d11c7d86ef285b0a15d23b58642031c69033271879eae0f436baa252402fbd1f",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-animation.svg",
@@ -4160,7 +4160,7 @@
         "assets/covers/mcp-animation.png"
       ],
       "sha256": "dc251cd665e5d846c2c9d627bcb425d73e75bfbdb813117e11cc419de822d231",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-behavior-tree.svg",
@@ -4176,7 +4176,7 @@
         "assets/covers/mcp-behavior-tree.png"
       ],
       "sha256": "ce71ddd4794fd1df9b7dbc53ab2b053bcbf4b5a93b6988f3f9d169cc7655dcf4",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-blueprint.svg",
@@ -4192,7 +4192,7 @@
         "assets/covers/mcp-blueprint.png"
       ],
       "sha256": "1f51974d5f7da9e6277676828218526fb02ae86bdc6f50e3525ea0b57c38b5c7",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-dev-tools.svg",
@@ -4208,7 +4208,7 @@
         "assets/covers/mcp-dev-tools.png"
       ],
       "sha256": "3bfe14492ad87f988c966296470c1d73e578aaa43e276ba4972095956e19d1d3",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-level-sequence.svg",
@@ -4224,7 +4224,7 @@
         "assets/covers/mcp-level-sequence.png"
       ],
       "sha256": "09a2f1069f477e2f7633533f23dd4ff44b7584c360917b0b01b9f1575b8d77a0",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-material.svg",
@@ -4240,7 +4240,7 @@
         "assets/covers/mcp-material.png"
       ],
       "sha256": "e61899309a183ec561013659198304177c9088d5c5b8c86578a90b2ccf4bd935",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-niagara.svg",
@@ -4256,7 +4256,7 @@
         "assets/covers/mcp-niagara.png"
       ],
       "sha256": "8026c22187ad650e915d9d076dd42c49b989876910d441b37d9acb70b2d780d7",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-umg.svg",
@@ -4272,7 +4272,7 @@
         "assets/covers/mcp-umg.png"
       ],
       "sha256": "6f9129d37a43561bac42cbf39fcb12a493c2694e952f93e4235757f7c662253b",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-world-editor.svg",
@@ -4288,7 +4288,7 @@
         "assets/covers/mcp-world-editor.png"
       ],
       "sha256": "546d69bb083a965c82eafd1af0c10e467f3d1cfc912ee5efc4a7b4941f87fecb",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/shaniu.svg",
@@ -4304,7 +4304,7 @@
         "assets/covers/shaniu.png"
       ],
       "sha256": "5aa6a34195d553e193f79132d005b0697fca34b0a177a342b27a60be13658561",
-      "mode": "authored"
+      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/cases/perforce-workspace-pool.svg",

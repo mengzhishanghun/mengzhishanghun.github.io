@@ -17,8 +17,8 @@ tags:
   - 多屏显示
 coverAlt: 驾驶仿真的 AI 概念封面，非项目实拍
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
-translationKey: driving-simulator-three-screen
 lang: zh
+translationKey: driving-simulator-three-screen
 ---
 
 ## 项目介绍

@@ -8,6 +8,7 @@ import {publicFields,commonFields,assertPublicFields} from '../build/source-sche
 import {createLinkResolver} from './links.mjs';
 import {resourcePath} from '../build/resources.mjs';
 import {createTaxonomy} from './taxonomy.mjs';
+import {createMediaPlan} from './project-media.mjs';
 
 const here=path.dirname(fileURLToPath(import.meta.url));
 export const canonicalText=value=>String(value).replaceAll('\r\n','\n');
@@ -24,13 +25,14 @@ export function parseSource(raw){
 }
 export const sourceText=(data,body)=>'---\n'+YAML.stringify(data,{lineWidth:0})+'---\n\n'+canonicalText(body).replace(/^\n/,'');
 const binaryHash=bytes=>createHash('sha256').update(bytes).digest('hex');
-export async function projectSource(source,record,site,resolveLink){
+export async function projectSource(source,record,site,resolveLink,preparedCover=false){
   if(source.data.draft===true)throw new Error('草稿不得同步');
   if(source.data.lang!==undefined && source.data.lang!==record.lang)throw new Error('同步语言身份不符');
   if(record.slug && source.data.slug!==undefined && source.data.slug!==record.slug)throw new Error('同步slug身份不符');
-  if(record.cover && (source.data.cover!==record.cover.source || source.data.websiteCoverUrl!==record.cover.websiteUrl))throw new Error('封面授权漂移');
-  if(record.cover && site && binaryHash(fs.readFileSync(resourcePath(site,record.cover.websiteUrl.slice(1))))!==record.cover.publicSha256)throw new Error('封面hash漂移');
+  if(!preparedCover && record.cover && (source.data.cover!==record.cover.source || source.data.websiteCoverUrl!==record.cover.websiteUrl))throw new Error('封面授权漂移');
+  if(!preparedCover && record.cover && site && binaryHash(fs.readFileSync(resourcePath(site,record.cover.websiteUrl.slice(1))))!==record.cover.publicSha256)throw new Error('封面hash漂移');
   const data=Object.fromEntries((record.kind==='common'?commonFields:publicFields).filter(k=>source.data[k]!==undefined).map(k=>[k,source.data[k]]));
+  if(preparedCover&&record.cover)data.websiteCoverUrl=record.cover.websiteUrl;
   assertPublicFields(data,record.kind==='common');
   if(record.kind!=='common' && !record.cover){delete data.coverAlt;delete data.websiteCoverUrl;}
   if(record.kind!=='common')data.lang=record.lang;
@@ -70,10 +72,13 @@ export async function projectSource(source,record,site,resolveLink){
   for(const [start,end,value]of edits.sort((a,b)=>b[0]-a[0]))body=body.slice(0,start)+value+body.slice(end);
   return {data,body:canonicalText(body),raw:sourceText(data,body)};
 }
-export async function importContent({site,vault,sync,check=false,taxonomyOnly=false}){
+export async function importContent({site,vault,sync,check=false,taxonomyOnly=false,only,approveMedia=false}){
   const configFile=sync?path.resolve(sync):safePath(site,'src/import/000-sync.local');
   if(!fs.existsSync(configFile))throw new Error('本机中文同步配置缺失；请配置 src/import/000-sync.local 或显式指定 --sync');
-  const config=parseSource(fs.readFileSync(configFile,'utf8')).data;
+  if(fs.lstatSync(configFile).isSymbolicLink())throw Error('同步配置符号链接越界');
+  const configRaw=fs.readFileSync(configFile),initial=new Map([[configFile,configRaw]]);
+  const config=parseSource(configRaw.toString('utf8')).data;
+  if(taxonomyOnly&&(approveMedia||only!==undefined))throw Error('--taxonomy-only不能与媒体审批或选择导入组合');
   if(config.version!==1||config.primary!=='zh'||!Array.isArray(config.records))throw new Error('中文同步配置无效');
   if(config.records.some(record=>!['blog','work','case','doc','supplement'].includes(record.kind)||record.id==='site-copy'||record.id?.startsWith('page:')))throw new Error('页面与公共文案仅在网站仓库维护，不得从笔记库同步');
   const contentRoot=path.join(site,'src'),files=new Map(),updates=[];
@@ -81,7 +86,8 @@ export async function importContent({site,vault,sync,check=false,taxonomyOnly=fa
     const file=safePath(contentRoot,relative);
     if(!fs.existsSync(file)||canonicalTextHash(fs.readFileSync(file,'utf8'))!==fingerprint)throw new Error('外语来源存在人工修改，先审核并更新同步指纹');
   }
-  const manifest=JSON.parse(fs.readFileSync(safePath(site,'src/build/manifest.json'),'utf8'));
+  const manifestFile=safePath(site,'src/build/manifest.json'),manifestRaw=fs.readFileSync(manifestFile);initial.set(manifestFile,manifestRaw);
+  const manifest=JSON.parse(manifestRaw);
   if(taxonomyOnly){
     for(const record of config.records){const output=safePath(contentRoot,record.output);safePath(vault,record.source);if(record.publishedFingerprint&&(!fs.existsSync(output)||canonicalTextHash(fs.readFileSync(output,'utf8'))!==record.publishedFingerprint))throw Error('公开中文来源存在人工修改，保留并等待审核');}
     const target=safePath(site,'src/build/taxonomy.json'),previous=fs.existsSync(target)?JSON.parse(fs.readFileSync(target,'utf8')):undefined;
@@ -89,23 +95,50 @@ export async function importContent({site,vault,sync,check=false,taxonomyOnly=fa
     const differences=!fs.existsSync(target)||fs.readFileSync(target,'utf8')!==raw?['build/taxonomy.json']:[];
     if(!check)fs.writeFileSync(target,raw);return {files:1,differences};
   }
-  const resolveLink=createLinkResolver({site,vault,records:config.records,manifest});
-  for(const record of config.records){
+    const ids=only===undefined?undefined:new Set(Array.isArray(only)?only:String(only).split(','));
+  if(ids&&(!ids.size||[...ids].some(id=>!id||!config.records.some(r=>r.id===id))))throw Error('--only包含未知记录');
+  if(approveMedia&&!ids)throw Error('--approve-media必须显式指定--only');
+  const selected=config.records.filter(record=>!ids||ids.has(record.id));
+  if(approveMedia&&selected.some(record=>!['work','case'].includes(record.kind)))throw Error('媒体审批仅允许作品与案例');
+  const resolveLink=createLinkResolver({site,vault,records:config.records.map(record=>selected.includes(record)?record:{...record,attachments:[]}),manifest});
+  const media=createMediaPlan({site,vault,manifest});
+  for(const record of selected){
     if(record.lang!==config.primary)throw new Error('同步仅允许中文来源');
     const output=safePath(contentRoot,record.output),input=safePath(vault,record.source);
     if(files.has(output))throw new Error('同步输出重复');
+    initial.set(output,fs.existsSync(output)?fs.readFileSync(output):null);
     if(record.publishedFingerprint && (!fs.existsSync(output)||canonicalTextHash(fs.readFileSync(output,'utf8'))!==record.publishedFingerprint))throw new Error('公开中文来源存在人工修改，保留并等待审核');
-    const raw=fs.readFileSync(input,'utf8'),projection=await projectSource(parseSource(raw),record,site,resolveLink);
+        const raw=fs.readFileSync(input,'utf8'),source=parseSource(raw);
+    if(['work','case'].includes(record.kind)&&approveMedia){media.approve(source,record);continue;}
+    const managed=['work','case'].includes(record.kind)&&record.projectMedia?.some(item=>item.role==='cover')===true;
+    if(['work','case'].includes(record.kind))media.project(source,record);
+    const projection=await projectSource(source,record,site,resolveLink,managed);
     files.set(output,projection.raw);updates.push({record,publishedFingerprint:canonicalTextHash(projection.raw),sourceFingerprint:binaryHash(Buffer.from(raw))});
   }
-  const differences=[...files].filter(([file,raw])=>!fs.existsSync(file)||canonicalText(fs.readFileSync(file,'utf8'))!==raw).map(([file])=>path.relative(contentRoot,file).replaceAll('\\','/'));
-  if(!check){for(const [file,raw]of files){fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,raw)}for(const update of updates)Object.assign(update.record,{publishedFingerprint:update.publishedFingerprint,sourceFingerprint:update.sourceFingerprint});fs.writeFileSync(configFile,sourceText(config,'本机中文手动同步配置；包含私有路径与媒体权限，禁止提交。\n'));}
+  if(!approveMedia){for(const [file,bytes]of media.finish())files.set(file,bytes);for(const [file,bytes]of media.initial)if(!initial.has(file))initial.set(file,bytes);}
+  for(const update of updates)Object.assign(update.record,{publishedFingerprint:update.publishedFingerprint,sourceFingerprint:update.sourceFingerprint});
+  files.set(configFile,sourceText(config,'本机中文手动同步配置；包含私有路径与媒体权限，禁止提交。\n'));
+  const changed=[...files].filter(([file,bytes])=>!fs.existsSync(file)||!fs.readFileSync(file).equals(Buffer.isBuffer(bytes)?bytes:Buffer.from(bytes)));
+  const differences=changed.map(([file])=>path.relative(site,file).replaceAll('\\','/'));
+  if(!check){
+    const originals=new Map(changed.map(([file])=>[file,initial.has(file)?initial.get(file):fs.existsSync(file)?fs.readFileSync(file):null])),written=[];
+    try{for(const [file,bytes]of changed){
+      const previous=originals.get(file),current=fs.existsSync(file)?fs.readFileSync(file):null;
+      if(previous===null?current!==null:current===null||!previous.equals(current))throw Error('写入前目标发生人工漂移: '+file);
+      fs.mkdirSync(path.dirname(file),{recursive:true});written.push(file);fs.writeFileSync(file,bytes);
+    }}catch(error){
+      const failures=[];
+      for(const file of written.reverse())try{const original=originals.get(file);if(original===null)fs.rmSync(file,{force:true});else fs.writeFileSync(file,original);}catch(restore){failures.push(file+': '+restore.message);}
+      if(failures.length)throw new AggregateError([error],'写入失败且回滚恢复失败: '+failures.join('; '),{cause:error});throw error;
+    }
+  }
   return {files:files.size,differences};
 }
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)){
   const args=process.argv.slice(2),at=args.indexOf('--vault');
   if(at<0||!args[at+1])throw new Error('手动导入必须指定 --vault <中文笔记库>；静态构建请运行 src/build/build.mjs');
+  if(args.includes('--only')&&(!args[args.indexOf('--only')+1]||args[args.indexOf('--only')+1].startsWith('--')))throw Error('--only必须指定记录ID列表');
   const syncAt=args.indexOf('--sync');if(syncAt>=0&&!args[syncAt+1])throw new Error('--sync 必须指定配置文件路径');
-  const result=await importContent({site:path.resolve(here,'../..'),vault:path.resolve(args[at+1]),sync:syncAt>=0?args[syncAt+1]:undefined,check:args.includes('--check'),taxonomyOnly:args.includes('--taxonomy-only')});
+  const result=await importContent({site:path.resolve(here,'../..'),vault:path.resolve(args[at+1]),sync:syncAt>=0?args[syncAt+1]:undefined,check:args.includes('--check'),taxonomyOnly:args.includes('--taxonomy-only'),approveMedia:args.includes('--approve-media'),only:args.includes('--only')?args[args.indexOf('--only')+1]:undefined});
   console.log(`中文公开来源 ${result.files}，差异 ${result.differences.length}`);if(args.includes('--check')&&result.differences.length)process.exitCode=1;
 }

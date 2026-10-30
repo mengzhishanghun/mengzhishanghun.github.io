@@ -32,6 +32,7 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165484
+websiteCoverUrl: /assets/covers/simple-udp.png
 sourceDate: 2025-10-25
 lang: zh
 translationKey: simple-udp
@@ -71,4 +72,4 @@ SimpleUDP 将这些通信管理操作封装为蓝图接口。
 
 仅支持 IPv4，不支持 IPv6 或域名解析。UDP 不保证数据报可靠投递或按发送顺序到达。消息格式解析、丢包后的处理和业务状态维护由项目实现；使用时还需按实际网络与通信协议核对通道、目标地址和过滤规则。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-udp-guide/)。
+通道配置、收发示例与协议限制见 [使用教程](/zh/docs/guides/ue-tools/simple-udp-guide/)。

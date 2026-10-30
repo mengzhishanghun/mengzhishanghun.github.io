@@ -19,7 +19,7 @@ lang: en
 translationKey: six-dof-motion-platform
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: e335844ce015dad46f0cdbacc41a1f21019b150996efe9f9194f8312a22492e9
+sourceHash: 93c0dd5c4cfcbc3a0af2fdf08680066d1f41d865ba3a011185c0f3c1ad049897
 translationStatus: translated
 generatedBodyHash: f3f4c599d3ea782093ef75374d9f6bc8a0fdaa9a5dd849a92bb564255884eb7b
 ---

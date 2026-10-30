@@ -42,7 +42,7 @@ REQUIRED = {'index.html', 'works/index.html', 'cases/index.html', 'blog/index.ht
             'contact/index.html', 'support/index.html', 'blog/cnblogs-19143258/index.html'}
 ALLOWED_SUFFIX = {'.html', '.css', '.js', '.json', '.xml', '.svg', '.png', '.jpg',
                   '.jpeg', '.webp', '.ico', '.txt', '.pagefind', '.pf_fragment',
-                  '.pf_index', '.pf_meta'}
+                  '.pf_index', '.pf_meta', '.mp4', '.webm'}
 SKIP = {'.nojekyll'}
 PUBLIC_ROOTS = {'_astro', 'assets', 'blog-search', 'blog', 'cases', 'contact', 'docs',
                 'en', 'licenses', 'media', 'support', 'works', 'zh'}
@@ -435,6 +435,11 @@ def validate_download(path, item, body):
         raise ValueError(f'Pages content differs from commit: {path}')
     if 'sha256' in item and hashlib.sha256(body).hexdigest() != item['sha256']:
         raise ValueError(f'Pages content differs from source manifest: {path}')
+    suffix = PurePosixPath(path).suffix.lower()
+    if suffix == '.mp4' and not (len(body) >= 16 and body[4:8] == b'ftyp'):
+        raise ValueError(f'Video signature invalid: {path}')
+    if suffix == '.webm' and not (len(body) >= 8 and body[:4] == b'\x1a\x45\xdf\xa3' and b'webm' in body):
+        raise ValueError(f'Video signature invalid: {path}')
     if path in REQUIRED and b'<html' not in body.lower():
         raise ValueError(f'HTML page invalid: {path}')
     if path == 'index.html' and b'https://mzsh.me' not in body:

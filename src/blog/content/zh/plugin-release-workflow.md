@@ -8,6 +8,8 @@ categoryName: UE开发
 categoryOrder: 1
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -21,8 +23,6 @@ coverAlt: 插件开发到发布的工具链的流程图
 websiteCoverUrl: /assets/cases/plugin-release-workflow.png
 lang: zh
 translationKey: plugin-release-workflow
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 背景介绍

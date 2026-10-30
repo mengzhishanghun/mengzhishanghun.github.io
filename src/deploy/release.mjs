@@ -8,7 +8,11 @@ const manifestPath='src/deploy/release-manifest.json',provenancePath='release-pr
 const previews=new Set(['design-preview/index.html','design-preview/docs/index.html']);
 const roots=new Set(['_astro','assets','blog-search','blog','cases','contact','docs','en','licenses','media','support','works','zh']);
 const rootFiles=new Set(['.nojekyll','favicon.svg','index.html','site-router.js','sitemap.xml','robots.txt','site-languages.json','about/index.html']);
-const suffixes=new Set(['.html','.css','.js','.json','.xml','.svg','.png','.jpg','.jpeg','.webp','.ico','.txt','.pagefind','.pf_fragment','.pf_index','.pf_meta']);
+const suffixes=new Set(['.html','.css','.js','.json','.xml','.svg','.png','.jpg','.jpeg','.webp','.ico','.txt','.pagefind','.pf_fragment','.pf_index','.pf_meta','.mp4','.webm']);
+function validateVideo(relative,bytes){
+  const ext=path.extname(relative).toLowerCase();
+  if(ext==='.mp4'&&!(bytes.length>=16&&bytes.toString('ascii',4,8)==='ftyp')||ext==='.webm'&&!(bytes.length>=8&&bytes.subarray(0,4).equals(Buffer.from([0x1a,0x45,0xdf,0xa3]))&&bytes.includes(Buffer.from('webm'))))throw new Error('视频签名无效: '+relative);
+}
 const digest=(b,type='sha256')=>createHash(type).update(b).digest('hex');
 const blob=b=>digest(Buffer.concat([Buffer.from(`blob ${b.length}\0`),b]),'sha1');
 const exact=(value,fields)=>value&&typeof value==='object'&&!Array.isArray(value)&&Object.keys(value).length===fields.length&&fields.every(k=>Object.hasOwn(value,k));
@@ -33,7 +37,7 @@ function validateManifest(manifest,codes){
   if(total>150_000_000)throw new Error('发布大小超限');
 }
 export function createReleaseManifest({siteOutput}){
-  const codes=languageCodes(siteOutput),files=filesIn(siteOutput).filter(p=>p!==provenancePath).map(relative=>{const bytes=fs.readFileSync(regularPath(siteOutput,relative));return {path:relative,size:bytes.length,gitBlob:blob(bytes),sha256:digest(bytes),target:targetFor(relative,codes)};});
+  const codes=languageCodes(siteOutput),files=filesIn(siteOutput).filter(p=>p!==provenancePath).map(relative=>{const bytes=fs.readFileSync(regularPath(siteOutput,relative));validateVideo(relative,bytes);return {path:relative,size:bytes.length,gitBlob:blob(bytes),sha256:digest(bytes),target:targetFor(relative,codes)};});
   const manifest={version:1,files};validateManifest(manifest,codes);return manifest;
 }
 function validateProvenance(value){
@@ -44,7 +48,7 @@ export function verifyRelease({siteOutput,manifest,manifestBytes}){
   const actual=filesIn(siteOutput),metadata=actual.includes(provenancePath),expected=manifest.files.map(r=>r.path);
   if(metadata){const bytes=fs.readFileSync(regularPath(siteOutput,provenancePath));if(bytes.length>4096)throw new Error('发布来源元数据超限');const provenance=JSON.parse(bytes);validateProvenance(provenance);if(manifestBytes&&provenance.manifestSha256!==digest(manifestBytes))throw new Error('发布来源清单摘要不符');}
   if(JSON.stringify(actual.filter(p=>p!==provenancePath))!==JSON.stringify(expected))throw new Error('发布文件集合不符');
-  for(const record of manifest.files){const bytes=fs.readFileSync(regularPath(siteOutput,record.path));if(bytes.length!==record.size||blob(bytes)!==record.gitBlob||digest(bytes)!==record.sha256)throw new Error('发布字节不符: '+record.path);}
+  for(const record of manifest.files){const bytes=fs.readFileSync(regularPath(siteOutput,record.path));validateVideo(record.path,bytes);if(bytes.length!==record.size||blob(bytes)!==record.gitBlob||digest(bytes)!==record.sha256)throw new Error('发布字节不符: '+record.path);}
   return true;
 }
 export function writeProvenance({siteOutput,sourceCommit,manifestBytes}){

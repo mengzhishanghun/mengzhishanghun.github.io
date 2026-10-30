@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: en
 translationKey: plugin-auto-packer
-sourceHash: 91e34826e296b92cefd6e5c03debafde029c929920e1261be67b3d0c0e41ca61
+sourceHash: c2770efa44a85789cf1bbe6c1b1fad2f0cb6735e127d407cd645547344e5f1ee
 translationStatus: translated
 generatedBodyHash: 2775ee494b392227d00cf5c5566bbfa98dd81f6d399ef6002f41cf2665c105b7
 workInfo:
@@ -34,7 +34,10 @@ workInfo:
         - Windows
       requirements:
         - Win64 plugin builds only
+websiteCoverUrl: /media/imported/works/plugin-auto-packer-cover.png
+coverAlt: Illustration of Unreal Engine plugin packaging across versions
 ---
+
 ## Overview
 
 UEPluginAutoPacker packages UE plugins for release, primarily for Fab submissions and also for other distribution channels. It brings multi-engine configuration, plugin builds, status inspection, and release file preparation into one interface.

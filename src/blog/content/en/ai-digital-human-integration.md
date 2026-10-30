@@ -20,7 +20,7 @@ lang: en
 translationKey: ai-digital-human-integration
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: b0ca2d8ba3d0f8308acb759c2ce454b39a7796a1c58e2e88b9f6199e1a18986d
+sourceHash: 80adf253a4b436e40ada9da5a688da43fb4600810c5978dffae688947ac34300
 translationStatus: translated
 generatedBodyHash: 1c8793d43b71f71372ddf70c693953ea180de9347a29c92bc43c6c3e05ee6a2e
 ---

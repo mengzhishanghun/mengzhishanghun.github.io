@@ -33,6 +33,7 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/20159718
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/20159718
+websiteCoverUrl: /assets/covers/ai-data-asset.png
 sourceDate: 2026-05-25
 lang: zh
 translationKey: ai-data-asset

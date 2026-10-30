@@ -8,6 +8,8 @@ categoryName: UE开发
 categoryOrder: 0
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -17,8 +19,6 @@ coverAlt: 飞行汽车模拟器的流程图
 websiteCoverUrl: /assets/cases/flying-car-simulator.png
 lang: zh
 translationKey: flying-car-simulator
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 飞行输入与场景更新

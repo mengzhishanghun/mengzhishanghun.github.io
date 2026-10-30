@@ -17,10 +17,6 @@
       "entryId": "work:ue-package-manager",
       "items": [
         {
-          "id": "cover",
-          "hero": true
-        },
-        {
           "id": "interface",
           "occurrenceId": "work:ue-package-manager:media:1"
         }
@@ -29,10 +25,6 @@
     {
       "entryId": "work:simple-bp-inherit-fix",
       "items": [
-        {
-          "id": "cover",
-          "hero": true
-        },
         {
           "id": "fab-interface",
           "kind": "image",
@@ -52,10 +44,6 @@
       "entryId": "work:ai-data-asset",
       "items": [
         {
-          "id": "cover",
-          "hero": true
-        },
-        {
           "id": "fab-interface",
           "kind": "image",
           "websiteUrl": "/media/works/fab/ai-data-asset-01.jpg",
@@ -73,10 +61,6 @@
     {
       "entryId": "work:simple-asset-cleaner",
       "items": [
-        {
-          "id": "cover",
-          "hero": true
-        },
         {
           "id": "fab-interface",
           "kind": "image",
@@ -96,10 +80,6 @@
       "entryId": "work:simple-asset-namer",
       "items": [
         {
-          "id": "cover",
-          "hero": true
-        },
-        {
           "id": "fab-interface",
           "kind": "image",
           "websiteUrl": "/media/works/fab/simple-asset-namer-01.jpg",
@@ -117,10 +97,6 @@
     {
       "entryId": "work:simple-auto-enum",
       "items": [
-        {
-          "id": "cover",
-          "hero": true
-        },
         {
           "id": "fab-interface",
           "kind": "image",
@@ -140,10 +116,6 @@
       "entryId": "work:simple-byte-conversion",
       "items": [
         {
-          "id": "cover",
-          "hero": true
-        },
-        {
           "id": "fab-interface",
           "kind": "image",
           "websiteUrl": "/media/works/fab/simple-byte-conversion-01.jpg",
@@ -161,10 +133,6 @@
     {
       "entryId": "work:simple-config-exclude",
       "items": [
-        {
-          "id": "cover",
-          "hero": true
-        },
         {
           "id": "fab-interface",
           "kind": "image",
@@ -184,10 +152,6 @@
       "entryId": "work:simple-input-simulator",
       "items": [
         {
-          "id": "cover",
-          "hero": true
-        },
-        {
           "id": "fab-interface",
           "kind": "image",
           "websiteUrl": "/media/works/fab/simple-input-simulator-01.jpg",
@@ -205,10 +169,6 @@
     {
       "entryId": "work:simple-launcher",
       "items": [
-        {
-          "id": "cover",
-          "hero": true
-        },
         {
           "id": "fab-interface",
           "kind": "image",
@@ -228,10 +188,6 @@
       "entryId": "work:simple-ssh-tunnel",
       "items": [
         {
-          "id": "cover",
-          "hero": true
-        },
-        {
           "id": "fab-interface",
           "kind": "image",
           "websiteUrl": "/media/works/fab/simple-ssh-tunnel-01.jpg",
@@ -249,10 +205,6 @@
     {
       "entryId": "work:simple-level-seq-smooth",
       "items": [
-        {
-          "id": "cover",
-          "hero": true
-        },
         {
           "id": "fab-interface",
           "kind": "image",
@@ -272,10 +224,6 @@
       "entryId": "work:simple-static-mesh-merger",
       "items": [
         {
-          "id": "cover",
-          "hero": true
-        },
-        {
           "id": "fab-interface",
           "kind": "image",
           "websiteUrl": "/media/works/fab/simple-static-mesh-merger-01.jpg",
@@ -293,10 +241,6 @@
     {
       "entryId": "work:simple-tcp-client",
       "items": [
-        {
-          "id": "cover",
-          "hero": true
-        },
         {
           "id": "fab-interface",
           "kind": "image",
@@ -316,10 +260,6 @@
       "entryId": "work:simple-udp",
       "items": [
         {
-          "id": "cover",
-          "hero": true
-        },
-        {
           "id": "fab-interface",
           "kind": "image",
           "websiteUrl": "/media/works/fab/simple-udp-01.jpg",
@@ -338,10 +278,6 @@
       "entryId": "work:simple-tcp-server",
       "items": [
         {
-          "id": "cover",
-          "hero": true
-        },
-        {
           "id": "fab-interface",
           "kind": "image",
           "websiteUrl": "/media/works/fab/simple-tcp-server-01.jpg",
@@ -359,10 +295,6 @@
     {
       "entryId": "work:simple-websocket",
       "items": [
-        {
-          "id": "cover",
-          "hero": true
-        },
         {
           "id": "fab-interface",
           "kind": "image",

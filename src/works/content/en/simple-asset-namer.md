@@ -25,7 +25,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: 9484ad3c3f6792a0ff9b9cce35487f0c31f96a5f24931f728760c38c40c6fe78
+sourceHash: 65e42a08de684965f3c9ff37f10a220d638f25c757db6f13e20a5bbe4adc6e41
 translationStatus: translated
 generatedBodyHash: 31585fcd4c20fa383ef8a1810ef15d6a0ac6d2ba2db3b0be50050702abe09348
 workInfo:
@@ -41,6 +41,7 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-asset-namer.png
 ---
 
 ## Overview

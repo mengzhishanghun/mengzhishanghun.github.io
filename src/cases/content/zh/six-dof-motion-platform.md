@@ -16,8 +16,8 @@ tags:
   - 虚拟拍摄
 coverAlt: 六轴平台与虚拟拍摄的 AI 概念封面，非项目实拍
 websiteCoverUrl: /assets/cases/motion-platform-filming-cover.png
-translationKey: six-dof-motion-platform
 lang: zh
+translationKey: six-dof-motion-platform
 ---
 
 ## 项目介绍

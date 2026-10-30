@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: 5f74563097c26d3fcc245fefe04fde6741d7207b1ca59bcc2de5eafbe05c0a38
+sourceHash: a6affaef98c91a7e7dba3c43fee487f21faacfd485c07e8a1f2b349bcc95d782
 translationStatus: translated
-generatedBodyHash: ac1d014fab1cc440ab3aebc68c65b6ba44bdf804a1e55de20e7c28a19cf970bb
+generatedBodyHash: 0e54ee824d9b7cd20826851cb75db3d8bb5ce4c8f4de6ff7804f715685d91bca
 workInfo:
   channels:
     - kind: sale
@@ -38,6 +38,7 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-udp.png
 ---
 
 ## Overview
@@ -74,4 +75,4 @@ It suits UE projects exchanging UDP data with LAN devices or external programs, 
 
 Only IPv4 is supported; IPv6 and domain name resolution are not supported. UDP does not guarantee reliable delivery or arrival in send order. Projects implement message parsing, packet-loss handling, and business state maintenance. Verify channels, destination addresses, and filters against the actual network and protocol.
 
-For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-udp-guide/).
+See the [user guide](/en/docs/guides/ue-tools/simple-udp-guide/) for channel configuration, send and receive examples, and protocol limitations.

@@ -8,6 +8,8 @@ categoryName: UE开发
 categoryOrder: 0
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -18,8 +20,6 @@ coverAlt: 驾驶过程记录与 UE 回放管理示意图
 websiteCoverUrl: /assets/cases/driving-session-replay.png
 lang: zh
 translationKey: driving-session-replay
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 记录操作过程，也保留可查看的回放

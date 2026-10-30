@@ -25,7 +25,7 @@ docIds:
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: 21e39d86a1ec31d4530a06d6d69c6204cbf283b52166c6721b43e09377266f37
+sourceHash: 49ff6952f40d562b786169819b5b6ec15ff75b8a3f0282d9cfa14494af74ea2f
 translationStatus: translated
 generatedBodyHash: 172ad9c7cfd988d7c9e4da413c771e960cd15a471d4e309bf5f51e5b779f5a9c
 workInfo:
@@ -41,6 +41,7 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-asset-cleaner.png
 ---
 
 ## Overview

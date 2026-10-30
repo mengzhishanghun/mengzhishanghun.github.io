@@ -8,6 +8,8 @@ categoryName: UE开发
 categoryOrder: 0
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -18,8 +20,6 @@ coverAlt: 本地集成 AI 数字人交互流程的流程图
 websiteCoverUrl: /assets/cases/ai-digital-human-integration.png
 lang: zh
 translationKey: ai-digital-human-integration
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 背景介绍

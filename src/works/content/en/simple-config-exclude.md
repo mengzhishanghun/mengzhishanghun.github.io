@@ -25,9 +25,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: 4e553379adccee94103d2445876b0170d2dcbf5967cf58abab523500ef75f1ed
+sourceHash: d5c7815dd14b66137d0ecc85b67bffde657b6c874eade11db9f3fdaa834e29aa
 translationStatus: translated
-generatedBodyHash: ada4961128e1a6b6dadc6b39db13b0427ee1ef6ea936fafb3eab5c8a6f7ad93a
+generatedBodyHash: 47b87ddd144c43e1435b9f62c5ba32e02e75b342a62aec74ab710cf72810db56
 workInfo:
   channels:
     - kind: sale
@@ -41,6 +41,7 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-config-exclude.png
 ---
 
 ## Overview
@@ -82,7 +83,5 @@ Development configuration, such as debug switches, profiling parameters, test se
 The plugin manages packaging rules and copying for ini files under Config.
 
 Exclusion does not complete sensitive information protection: destination copies still need project access controls. State changes modify DefaultGame.ini. Before release, check actual package contents, copy destinations, and version control diffs.
-
-For implementation details on Staging rules, direct file reads, and reloading the `GConfig` cache, see [How to Manage Configuration File Exclusion During Packaging](/en/blog/cnblogs-19770930/).
 
 See the [usage guide](/en/docs/guides/ue-tools/simple-config-exclude-guide/) for steps and parameters.

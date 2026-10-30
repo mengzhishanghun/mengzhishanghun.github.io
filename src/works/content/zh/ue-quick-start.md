@@ -26,6 +26,8 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEQuickStart
+coverAlt: UE 项目编译与启动功能示意封面
+websiteCoverUrl: /media/imported/works/ue-quick-start-cover.png
 lang: zh
 translationKey: ue-quick-start
 ---

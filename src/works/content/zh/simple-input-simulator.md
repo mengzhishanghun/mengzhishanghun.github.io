@@ -37,6 +37,7 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19770939
 docIds:
   - simple-input-simulator-guide
+websiteCoverUrl: /assets/covers/simple-input-simulator.png
 sourceDate: 2026-03-25
 lang: zh
 translationKey: simple-input-simulator

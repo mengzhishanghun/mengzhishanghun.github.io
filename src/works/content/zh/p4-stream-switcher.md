@@ -63,6 +63,6 @@ P4StreamSwitcher 是面向 Windows 的 Perforce 流工作区切换工具，使�
 ## 相关内容
 
 - [使用文档](</zh/docs/tools/p4-stream-switcher/>)
-- [工作区池开发案例](</zh/cases/perforce-workspace-pool/>)
+- [工作区池开发案例](</zh/blog/perforce-workspace-pool/>)
 - [Python 切流工具博客](</zh/blog/python-perforce-stream-switch-safety/>)
 - [公开源码仓库](https://github.com/MZSH-Tools/P4StreamSwitcher)

@@ -20,7 +20,7 @@ coverAlt: Independent UE multiwindow interface diagram
 websiteCoverUrl: /assets/cases/ue-multiwindow-interface.png
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 4facc3fcf500b4872ab49e9f5f7803fd028a15491fb306282d164a5dbea7f79d
+sourceHash: a72c13299ad3740bfbdb8f8b063edcbae270fd0730e2d3619dd1f0be77266064
 translationStatus: translated
 generatedBodyHash: 9958d47b04893cccd1e9a587dbfccc10feabd8bffa28f7b7f708a621a44ff512
 ---

@@ -19,7 +19,7 @@ coverAlt: AI concept cover for Motion capture and robot control, not a project s
 websiteCoverUrl: /assets/cases/motion-capture-robot-cover.png
 translationKey: motion-capture-robot-control
 lang: en
-sourceHash: bed108c6a82e17d2c2e1f221f001961f8e0ecf793ee50c11a6d11671f520bbe2
+sourceHash: 4a347f62eebd5055a466abd017bcfcfa30cddbd8b8430acd26c4ed2eec7639eb
 translationStatus: translated
 generatedBodyHash: b3b7fc2cf6020907509c02a5a5944ebfa8ec72c7515d952c981fb557b05ddaa9
 ---

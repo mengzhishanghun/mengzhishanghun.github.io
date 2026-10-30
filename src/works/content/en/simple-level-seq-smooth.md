@@ -21,7 +21,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: en
 translationKey: simple-level-seq-smooth
-sourceHash: 3edda10791bd7c03c225570269c8c8429fd5e3736d8e48aa06c010d6b5318b5b
+sourceHash: cce28eae463bcdfedb4980782ee2784d6cce4acbe111515e615fb2a7afce5039
 translationStatus: translated
 generatedBodyHash: ba96414d782b3d99804a04c1fac43d13680eb3689f93a41cd265944b66023091
 workInfo:
@@ -37,6 +37,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-level-seq-smooth.png
+coverAlt: Illustration of animation sequence smoothing
 ---
 
 ## Overview

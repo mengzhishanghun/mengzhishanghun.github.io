@@ -23,7 +23,7 @@ lang: en
 translationKey: plugin-release-workflow
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 4f24f9fc51d8f5c0f2a517e447cd534424420e83ed5e126d0a0fd2ed732ab3c0
+sourceHash: 26504de26e19edbb8e425d515001582ca662c3bd30a8a0995b1f018d22472203
 translationStatus: translated
 generatedBodyHash: 69b6a760a47fb516eae38e794791ea3175d0ccd15f7194f34ad9bf70acd72f96
 ---

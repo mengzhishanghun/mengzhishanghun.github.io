@@ -8,6 +8,8 @@ categoryName: UE开发
 categoryOrder: 0
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -18,8 +20,6 @@ coverAlt: 在 UE 中创建独立多窗口界面示意图
 websiteCoverUrl: /assets/cases/ue-multiwindow-interface.png
 lang: zh
 translationKey: ue-multiwindow-interface
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 主画面之外的控制界面

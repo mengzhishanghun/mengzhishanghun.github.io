@@ -1296,7 +1296,11 @@
       "translationKey": "simple-file-updater",
       "baselineTemplate": "works/simple-file-updater/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/imported/works/simple-file-updater-cover.png",
+        "sha256": "d70e21f618518e37e6f78ff7c63eaf958fdabba19641c458f17d8ee67ec1289a"
+      }
     },
     {
       "id": "work:p4-case-sync",
@@ -1310,7 +1314,11 @@
       "translationKey": "p4-case-sync",
       "baselineTemplate": "works/p4-case-sync/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/imported/works/p4-case-sync-cover.png",
+        "sha256": "76fb2f467607f58d8b57da236f771d4f49bbb517a5a769fda7a7a2ee33cfecba"
+      }
     },
     {
       "id": "work:md-blog-packer",
@@ -1324,7 +1332,11 @@
       "translationKey": "md-blog-packer",
       "baselineTemplate": "works/md-blog-packer/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/imported/works/md-blog-packer-cover.png",
+        "sha256": "39d57a1cf3f5423407c70e55acfb54a380b64b99e1acaf5aa90b683e5c1ad0b2"
+      }
     },
     {
       "id": "work:simple-bp-inherit-fix",
@@ -1340,7 +1352,11 @@
       "githubCreatedAt": "2026-04-16",
       "order": 13,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-bp-inherit-fix.png",
+        "sha256": "3ff5cfe111a937a6a5cc88fae6927ef26156e8d9f16cb7b8fe1e56bdd0063275"
+      }
     },
     {
       "id": "work:simple-level-seq-smooth",
@@ -1356,7 +1372,11 @@
       "githubCreatedAt": "2026-05-13T07:13:03Z",
       "order": 15,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-level-seq-smooth.png",
+        "sha256": "94cc40ffb822ff07f819d0def77713dbda0c56605b24668ccb5d1494086c26c0"
+      }
     },
     {
       "id": "work:ai-data-asset",
@@ -1372,7 +1392,11 @@
       "githubCreatedAt": "2026-05-13T07:12:59Z",
       "order": 14,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/ai-data-asset.png",
+        "sha256": "f9783595bc60cff42b691cb5f3489f24d58a74276229d137cd58e2eb79fdabb4"
+      }
     },
     {
       "id": "work:simple-input-simulator",
@@ -1388,7 +1412,11 @@
       "githubCreatedAt": "2025-08-25",
       "order": 6,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-input-simulator.png",
+        "sha256": "f315d80f8d6724f6f1c651c921df2e68fb075e137f67cbd0c19d435c7d03c0fc"
+      }
     },
     {
       "id": "work:simple-byte-conversion",
@@ -1404,7 +1432,11 @@
       "githubCreatedAt": "2025-04-25",
       "order": 1,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-byte-conversion.png",
+        "sha256": "1c0619337fbc1aec90c4ce0896a420b1b0cc126f5bed1e98ceb25242ee8b4109"
+      }
     },
     {
       "id": "work:simple-config-exclude",
@@ -1420,7 +1452,11 @@
       "githubCreatedAt": "2025-12-19",
       "order": 11,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-config-exclude.png",
+        "sha256": "62afa64ae53e1eee029182ed6f52fbdd1b67765168737296892b9f15f01a7767"
+      }
     },
     {
       "id": "work:simple-launcher",
@@ -1436,7 +1472,11 @@
       "githubCreatedAt": "2026-02-01",
       "order": 12,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-launcher.png",
+        "sha256": "7bbe977ee99fd091acf61b868d889f50eacaee71e597946ae92e17f161b7b92b"
+      }
     },
     {
       "id": "work:simple-asset-namer",
@@ -1452,7 +1492,11 @@
       "githubCreatedAt": "2025-11-15",
       "order": 10,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-asset-namer.png",
+        "sha256": "6dbf2eca37be53c53cab18f27f3cc93f5be17c33aadfeacd0a99e05f9aecfd3f"
+      }
     },
     {
       "id": "work:simple-static-mesh-merger",
@@ -1468,7 +1512,11 @@
       "githubCreatedAt": "2025-11-03",
       "order": 9,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-static-mesh-merger.png",
+        "sha256": "ed35822514e1304ddd9e125085283ae17c1911007419362058b4e94b79b40e94"
+      }
     },
     {
       "id": "work:simple-asset-cleaner",
@@ -1484,7 +1532,11 @@
       "githubCreatedAt": "2025-09-20",
       "order": 7,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-asset-cleaner.png",
+        "sha256": "0fe60eb030d5cf7bb5c9f321ba9184cc132391341670eab94464232fd93fae62"
+      }
     },
     {
       "id": "work:simple-ssh-tunnel",
@@ -1500,7 +1552,11 @@
       "githubCreatedAt": "2025-04-15",
       "order": 0,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-ssh-tunnel.png",
+        "sha256": "503618cb9880279cfe2daeef1572bb20a9f115fb58c90e237e5866bedabab817"
+      }
     },
     {
       "id": "work:simple-udp",
@@ -1516,7 +1572,11 @@
       "githubCreatedAt": "2025-05-26",
       "order": 3,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-udp.png",
+        "sha256": "034eb08208434fff3eb58d40f66e28ff14355bf0014d97f921db48a1e0811b81"
+      }
     },
     {
       "id": "work:simple-tcp-client",
@@ -1532,7 +1592,11 @@
       "githubCreatedAt": "2025-07-05",
       "order": 4,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-tcp-client.png",
+        "sha256": "e040e5783105d3573e31d2975a4e8fb9d86797acf79896782b14ad79194998d2"
+      }
     },
     {
       "id": "work:simple-tcp-server",
@@ -1548,7 +1612,11 @@
       "githubCreatedAt": "2025-07-19",
       "order": 5,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-tcp-server.png",
+        "sha256": "92d0cd89401244df79e5d9f7255611bbbb16aef3f33e0a62f415cb31ba2da3d9"
+      }
     },
     {
       "id": "work:simple-websocket",
@@ -1564,7 +1632,11 @@
       "githubCreatedAt": "2025-05-19",
       "order": 2,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-websocket.png",
+        "sha256": "639816c1532f3c36be166fbc6f3ec70e9cf5cddf8acbf9924e83cdd225aa4c92"
+      }
     },
     {
       "id": "work:simple-auto-enum",
@@ -1580,7 +1652,11 @@
       "githubCreatedAt": "2025-09-25",
       "order": 8,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/assets/covers/simple-auto-enum.png",
+        "sha256": "e457b24eb81acc08fbe8d71719ef71f9b71f1f287a08186bb41e62f07a568ee0"
+      }
     },
     {
       "id": "work:ue-package-manager",
@@ -1603,7 +1679,11 @@
           "websiteUrl": "/media/manuals/baf8b7b901418c64d1f2.png",
           "publicSha256": "baf8b7b901418c64d1f25311f6c9e82592e1ad2bdf8350c95ed6db071e699e2a"
         }
-      ]
+      ],
+      "cover": {
+        "websiteUrl": "/media/imported/works/ue-package-manager-cover.png",
+        "sha256": "8b8368a51e281671cedeab9e6a3c05fcee6b4c3bc3ac49f9cb5c31b11d624696"
+      }
     },
     {
       "id": "work:plugin-auto-packer",
@@ -1617,7 +1697,11 @@
       "translationKey": "plugin-auto-packer",
       "baselineTemplate": "works/plugin-auto-packer/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/imported/works/plugin-auto-packer-cover.png",
+        "sha256": "c6a5c1cf49643e98ac019df2cd344cc33824a187af3d2a600244a4724153a7ac"
+      }
     },
     {
       "id": "work:plugin-manager",
@@ -1631,7 +1715,11 @@
       "translationKey": "plugin-manager",
       "baselineTemplate": "works/plugin-manager/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/imported/works/plugin-manager-cover.png",
+        "sha256": "ca50b98a1703a799f10d69b2c345bccca349aaa419f13b515d2b03fa583d7aa6"
+      }
     },
     {
       "id": "work:ue-quick-start",
@@ -1645,7 +1733,11 @@
       "translationKey": "ue-quick-start",
       "baselineTemplate": "works/ue-quick-start/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/imported/works/ue-quick-start-cover.png",
+        "sha256": "9e96dda799003ddb0182499b4ab04b2818c5734fe89211c5c617aecdc44a6960"
+      }
     },
     {
       "id": "doc:ai-data-asset-guide",

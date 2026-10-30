@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: 17614fe3016e912a50e3ca90512678f21f9393b6e83a660ea95309aeddea75d8
+sourceHash: 73fe8675154adaf5a59ebde8ce263d297ebb8ad53e94ace41c34ff84c43d0af5
 translationStatus: translated
-generatedBodyHash: 3e0321a4e1087ae39b8cdd49c6962dc9dcb0474c9c0263762c62d357b82c010e
+generatedBodyHash: f3031ebb67d1831f79d49bdb31a6ad49b2842c09d1dc68c82e9c8eb5f1d93090
 workInfo:
   channels:
     - kind: sale
@@ -40,6 +40,7 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-websocket.png
 ---
 
 ## Overview
@@ -74,4 +75,4 @@ It suits UE projects exchanging real-time messages with existing WebSocket servi
 
 Only `ws://` is supported; secure `wss://` connections are not supported. An accessible WebSocket service and agreed message format are required. Recovery after closure, authentication, and message reliability handling must be designed and verified for project needs.
 
-For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-websocket-guide/).
+See the [user guide](/en/docs/guides/ue-tools/simple-websocket-guide/) for named connections, message delegates, and module examples.

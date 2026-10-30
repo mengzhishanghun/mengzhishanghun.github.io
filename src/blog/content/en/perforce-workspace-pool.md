@@ -21,7 +21,7 @@ coverAlt: Perforce workspace pool and local cache management diagram
 websiteCoverUrl: /assets/cases/perforce-workspace-pool.png
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 6723a8a90d34abe2e455c2898efef14583ea3c26ae35ad74a479b833d803a7aa
+sourceHash: de0287741a1f50a13b45dcd9746df6bc77a47f9c3e48843900ee1dfcc77b31c8
 translationStatus: translated
 generatedBodyHash: 561ee435092a237b75595ecfa6614e1156d3d9ca87206f80ffd7fb95ec53fd28
 ---

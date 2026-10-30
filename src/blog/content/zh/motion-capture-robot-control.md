@@ -8,6 +8,8 @@ categoryName: UE开发
 categoryOrder: 0
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -17,8 +19,6 @@ coverAlt: 动捕机器人控制系统的流程图
 websiteCoverUrl: /assets/cases/motion-capture-robot-control.png
 lang: zh
 translationKey: motion-capture-robot-control
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 人体动作与机器人结构的差异

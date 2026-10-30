@@ -19,7 +19,7 @@ links:
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
 lang: en
 translationKey: simple-file-updater
-sourceHash: 848c0b302f4e72de976bcbaf01842f9a3fc3b9de55e083b3dd522251aa995810
+sourceHash: 9080a91404a9c154bd1fcb51ee440990111e37654979fbc800d972d7f2dd9312
 translationStatus: translated
 generatedBodyHash: 7bb9b7140c9654646855d0689646d29774dcbb54a562981955e2c7fe5d6310f4
 workInfo:
@@ -32,7 +32,10 @@ workInfo:
     - platforms:
         - Windows (.exe packaged application)
       requirements: []
+websiteCoverUrl: /media/imported/works/simple-file-updater-cover.png
+coverAlt: Illustration of configuration-driven file updates
 ---
+
 ## Overview
 
 SimpleFileUpdater downloads and updates specified files in batches using the mappings between local target paths and remote download URLs in a configuration file.

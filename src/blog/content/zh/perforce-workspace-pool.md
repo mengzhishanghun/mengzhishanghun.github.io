@@ -8,6 +8,8 @@ categoryName: Perforce
 categoryOrder: 1
 status: 已发布
 featured: false
+date: 2026-10-29
+publishedAt: 2026-10-29
 draft: false
 sitePublish: true
 tags:
@@ -19,8 +21,6 @@ coverAlt: 管理 Perforce 分支工作区与本地缓存示意图
 websiteCoverUrl: /assets/cases/perforce-workspace-pool.png
 lang: zh
 translationKey: perforce-workspace-pool
-date: 2026-10-29
-publishedAt: 2026-10-29
 ---
 
 ## 背景与约束

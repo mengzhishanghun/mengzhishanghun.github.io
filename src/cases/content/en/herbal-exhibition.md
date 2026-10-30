@@ -19,7 +19,7 @@ coverAlt: AI concept cover for Herbal exhibition, not a project screenshot
 websiteCoverUrl: /assets/cases/herbal-exhibition-cover.png
 translationKey: herbal-exhibition
 lang: en
-sourceHash: 58e502b97979e613468f7321eee7786c7ed1a625c3694e81ac6adbca2b58b4bb
+sourceHash: 9e8d798d93ce1f0b5ef59c748571900594ec38abc79ef4ad81368770a6920dc1
 translationStatus: translated
 generatedBodyHash: 71598f59d6d9fe504620d9ee5e9dc072f22691f0390c6ba45fe2d0fcfcb39dec
 ---

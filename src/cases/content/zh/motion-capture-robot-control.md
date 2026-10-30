@@ -17,8 +17,8 @@ tags:
   - 原型
 coverAlt: 动捕与机器人控制的 AI 概念封面，非项目实拍
 websiteCoverUrl: /assets/cases/motion-capture-robot-cover.png
-translationKey: motion-capture-robot-control
 lang: zh
+translationKey: motion-capture-robot-control
 ---
 
 ## 项目介绍

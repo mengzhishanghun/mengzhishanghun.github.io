@@ -29,6 +29,8 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPackageManager
+coverAlt: UE 项目打包工具功能示意封面
+websiteCoverUrl: /media/imported/works/ue-package-manager-cover.png
 lang: zh
 translationKey: ue-package-manager
 ---

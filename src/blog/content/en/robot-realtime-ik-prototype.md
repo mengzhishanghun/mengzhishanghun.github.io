@@ -20,7 +20,7 @@ coverAlt: Realtime robot data and three-axis IK prototype diagram
 websiteCoverUrl: /assets/cases/robot-realtime-ik-prototype.png
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: e6a199aaca51b2833e64366d6b6850ed73879b74ed4b0df79bfb5fc0eb9b82d4
+sourceHash: 2d075e18158f2a1629614c52b1d8b9736e6042e509672499d7c047b5c464bde8
 translationStatus: translated
 generatedBodyHash: 7863749efb185bb61257735713ae5d25c9790be5a0d5e435589f5294cc632bfb
 ---

@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: 3cbe3c824ebdb1f6fb91b98cb10232c69bba1d8e3d8a20770b7aa90445cd83d6
+sourceHash: 24c78012d9eff350d17d6b5a8825a371010caf338a5303d5f737106c6c00700c
 translationStatus: translated
-generatedBodyHash: c9b62ff831e30c54bdd234710e6cdb550058a1e502c124847180ea1f7b825420
+generatedBodyHash: f286cf7a1e66d326713aadf0b5371e62b01fadfbb548772f42755c603cc1ca7d
 workInfo:
   channels:
     - kind: sale
@@ -38,6 +38,7 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-tcp-client.png
 ---
 
 ## Overview
@@ -74,4 +75,4 @@ It suits applications where UE initiates TCP connections, maintains several comm
 
 Only IPv4 is supported; domain names, IPv6, and encrypted connections are not supported. TCP transports a byte stream. Connection management does not automatically define business message boundaries, serialization, or state recovery after reconnection. Verify disconnection, retry, and data processing against the actual server protocol and check each channel's configuration.
 
-For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-tcp-client-guide/).
+See the [user guide](/en/docs/guides/ue-tools/simple-tcp-client-guide/) for connection configuration, native examples, and a network communication overview.

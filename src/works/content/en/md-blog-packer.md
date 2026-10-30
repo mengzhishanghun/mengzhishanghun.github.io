@@ -19,7 +19,7 @@ links:
     href: https://github.com/MZSH-Tools/MDBlogPacker
 lang: en
 translationKey: md-blog-packer
-sourceHash: c69fe988b3ce55c78d4bed987a4fa5e3381e4cbcb9ea8c60e2166e3a5001c867
+sourceHash: 227c165905f5bb38ac9fc9bf7661fdf08ca021d1a236b7abce745d843ec1bff8
 translationStatus: translated
 generatedBodyHash: 8b0598e6a83a60d0d6ee527959b6c356ea4440b0b66abac9845519cd5cc33182
 workInfo:
@@ -32,7 +32,10 @@ workInfo:
     - platforms:
         - Markdown tool (operating system to be verified)
       requirements: []
+websiteCoverUrl: /media/imported/works/md-blog-packer-cover.png
+coverAlt: Illustration of Markdown image publishing
 ---
+
 ## Overview
 
 MDBlogPacker is the Python version of MDImageEmbed. It exports Markdown with local images embedded as Base64. Future maintenance of MDImageEmbed will focus solely on its Python version, MDBlogPacker.

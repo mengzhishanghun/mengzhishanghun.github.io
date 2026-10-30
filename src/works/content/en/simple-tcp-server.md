@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-server
-sourceHash: 723e966c26203b0053de54640b20476c18b410506c1e2d85e9a815de15aa9b34
+sourceHash: f45cf4bd0aecbebc432c45f8881d8cc3646ef3ec11d37b5d7156a69175f1f619
 translationStatus: translated
-generatedBodyHash: ef70f6d8542464145c5dc6df18aeb71aea6bc7986dde629b69b483eb0fba1770
+generatedBodyHash: 53f075104460eb73de9233102da77248d7a0fb9aa00b1f2567b8fc3e13bdc80b
 workInfo:
   channels:
     - kind: sale
@@ -40,6 +40,7 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
+websiteCoverUrl: /assets/covers/simple-tcp-server.png
 ---
 
 ## Overview
@@ -74,4 +75,4 @@ It suits UE programs acting as TCP servers for several external programs or devi
 
 Only IPv4 is supported; domain names, IPv6, and encrypted connections are not supported. Validate connection counts, session lifecycles, timeouts, and data handling in the target environment. TCP streams have no inherent business message boundaries, so projects define encoding and message splitting rules. IP:Port should not serve directly as security authentication.
 
-For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-tcp-server-guide/).
+See the [user guide](/en/docs/guides/ue-tools/simple-tcp-server-guide/) for listener configuration, session management, and native examples.

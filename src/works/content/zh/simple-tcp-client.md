@@ -32,6 +32,7 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165484
+websiteCoverUrl: /assets/covers/simple-tcp-client.png
 sourceDate: 2025-10-25
 lang: zh
 translationKey: simple-tcp-client
@@ -71,4 +72,4 @@ SimpleTCPClient 在 Unreal Engine 中封装 TCP 客户端连接，提供多通�
 
 仅支持 IPv4，不支持域名、IPv6 或加密连接。TCP 提供字节流传输，插件的连接管理不自动定义业务消息边界、序列化格式或重连后的状态恢复。应在实际服务端协议下验证断线、重试和数据处理行为，并核对各通道的配置。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-tcp-client-guide/)。
+连接配置、原生示例与网络通信导览见 [使用教程](/zh/docs/guides/ue-tools/simple-tcp-client-guide/)。

@@ -30,9 +30,9 @@ links:
     href: https://github.com/MZSH-Tools/P4StreamSwitcher
 lang: en
 translationKey: p4-stream-switcher
-sourceHash: b3d1bc0b5157f83440151a511c554dc06e8900ccb77f6cc1cbab7e98824dad3a
+sourceHash: a06529d14419c33e24313e0515b3b98570256757626b80b4ea162dd2b584a40d
 translationStatus: translated
-generatedBodyHash: 0c45f60a38ad6192bb286dfa83a47595d44eeb2ec2a0b26c238e832829051e7f
+generatedBodyHash: b79994a66f0b3557d8d90e8f507da8b8e4ddf01bc5b25938c7ab8a9b57c65c09
 coverAlt: Perforce streams and local workspace pool diagram
 websiteCoverUrl: /assets/covers/p4-stream-switcher.png
 ---
@@ -66,6 +66,6 @@ The pool manages workspaces for the current host and user that match its naming 
 ## Related content
 
 - [Usage guide](/en/docs/tools/p4-stream-switcher/)
-- [Workspace pool development case](/en/cases/perforce-workspace-pool/)
+- [Workspace pool development case](/en/blog/perforce-workspace-pool/)
 - [Python stream switching blog](/en/blog/python-perforce-stream-switch-safety/)
 - [Public source repository](https://github.com/MZSH-Tools/P4StreamSwitcher)

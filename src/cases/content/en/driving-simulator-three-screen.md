@@ -19,7 +19,7 @@ coverAlt: AI concept cover for Driving simulation, not a project screenshot
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 translationKey: driving-simulator-three-screen
 lang: en
-sourceHash: 28c882666cbc8d8fddf77333db2dfcb1481fb8f897783055d00699f84d3f26c3
+sourceHash: 7aa2ff9c6cfc0f19f9b0579273c12fa114fa0d8ad5e0e487d6966c22204a21cd
 translationStatus: translated
 generatedBodyHash: f4abf82a6b1286113e71d4397c697e333495acc91f752b842e0f1a3b4b65706c
 ---

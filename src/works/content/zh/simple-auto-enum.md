@@ -37,6 +37,7 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19136345
 docIds:
   - simple-auto-enum-guide
+websiteCoverUrl: /assets/covers/simple-auto-enum.png
 sourceDate: 2025-10-12
 lang: zh
 translationKey: simple-auto-enum
@@ -78,4 +79,4 @@ SimpleAutoEnum 用宏声明配置数组与 UE 枚举之间的绑定，减少为�
 
 动态改变枚举内容可能影响已有蓝图引用和持久化数据；具体兼容性必须由项目验证，不能仅凭绑定成功日志判断安全。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-auto-enum-guide/)。
+宏绑定、配置示例与手动初始化原理见 [使用教程](/zh/docs/guides/ue-tools/simple-auto-enum-guide/)。
