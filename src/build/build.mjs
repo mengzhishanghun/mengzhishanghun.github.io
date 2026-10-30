@@ -15,6 +15,7 @@ import {projectBlogTopics} from '../blog/topics.mjs';
 import {projectContentTopics} from './content-topics.mjs';
 import {projectTaxonomy,categoryNavigation} from './taxonomy.mjs';
 import {loadProjectGalleries,projectGallery} from './project-gallery.mjs';
+import {projectPublication,filterPublicationHTML} from './publication.mjs';
 const require = createRequire(new URL('../../package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -445,13 +446,14 @@ export function normalizeScriptEntries(entries) {
 }
 export async function buildSite(options) {
   const {site,manifest,output,check=false}=options;
-  const {entries,config,copy,galleries}=preflight(options),{primary,languages}=config,codes=languages.map(l=>l.code);
+  const validated=preflight(options),{config,copy,galleries}=validated,{primary,languages}=config,codes=languages.map(l=>l.code);
+  const publication=projectPublication({...validated,site,redirects:manifest.redirects}),{entries,redirects}=publication;
   let profile=null;
   if(entries.some(entry=>entry.id==='page:about')){
     profile=JSON.parse(fs.readFileSync(regularPath(options.sourceRoot || path.join(site,'src'),'about/profile.json'),'utf8'));
     if(Object.keys(profile).length!==1||!Number.isInteger(profile.birthYear)||profile.birthYear<1||profile.birthYear>9999)throw new Error('关于我出生年配置无效');
   }
-  config.shareAliases=(manifest.redirects || []).map(alias=>alias.route);
+  config.shareAliases=redirects.map(alias=>alias.route);
   const resources = !options.templateRoot?loadResources({site}):new Map(), files=new Map(), rendered = new Map();
   const scriptURLs=new Map(),scriptManifest=path.join(here,'scripts.json');
   if(!options.templateRoot && fs.existsSync(scriptManifest)) {
@@ -477,7 +479,7 @@ export async function buildSite(options) {
     };
     scripts.forEach(emit);
   }
-  for (const entry of entries) for (const locale of codes) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy,primary},site));
+  for (const entry of entries) for (const locale of codes) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy,primary,publication},site));
   const orderedWorks=entries.filter(e=>e.type==='work').sort((a,b)=>(a.sources[primary].data.categoryOrder ?? 0)-(b.sources[primary].data.categoryOrder ?? 0)||(a.sources[primary].data.order ?? 0)-(b.sources[primary].data.order ?? 0));
   orderedWorks.forEach((e,i)=>e.cardOrder=i);
   for(const entry of entries) {
@@ -496,6 +498,7 @@ export async function buildSite(options) {
     const file=regularPath(options.templateRoot || options.sourceRoot || path.join(site,'src'),entry.template);
     let html=fs.readFileSync(file,'utf8').replaceAll('/blog-search/',`/${locale}/blog-search/`);
     html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
+    html=filterPublicationHTML(html,publication);
     if(entry.id==='page:works-index')html=renderWorkCardStatuses(html,entries,locale,copy[locale].workLabels);
     if(entry.type==='work')html=renderWorkMetadata(html,entry.sources[locale].data,copy[locale].workLabels);
     if(entry.id==='page:about')html=html.replaceAll('{{profile:birthYear}}',String(profile.birthYear));
@@ -505,10 +508,11 @@ export async function buildSite(options) {
     html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,config,copy[locale].engagementLabels);
     html=projectGallery(html,entry,locale,galleries);
     html=projectImageViewers(html,locale);
+    html=filterPublicationHTML(html,publication);
     files.set(routeFile(localeRoute(entry,locale)),Buffer.from(html));
   }
   const aliases=new Map();
-  for(const alias of [...entries.flatMap(e=>e.legacyRoutes.filter(route=>route!=='/').map(route=>({route,id:e.id}))),...manifest.redirects || []]) {
+  for(const alias of [...entries.flatMap(e=>e.legacyRoutes.filter(route=>route!=='/').map(route=>({route,id:e.id}))),...redirects]) {
     if(!/^\/[a-zA-Z0-9/_-]*(?:\.html)?\/?$/.test(alias.route))throw new Error('旧链路径无效');
     const entry=entries.find(e=>e.id===alias.id);if(!entry)throw new Error('旧链目标缺失: '+alias.route);
     if(files.has(routeFile(alias.route)))throw new Error('旧链覆盖正文或资源: '+alias.route);
@@ -569,7 +573,7 @@ export async function buildSite(options) {
       }
     }finally{await pagefind.close();}
   }
-  for(const [relative,bytes]of resources){if(files.has(relative))throw new Error('生成产物覆盖资源: '+relative);files.set(relative,bytes);}
+  for(const [relative,bytes]of resources){if(publication.hiddenResources.has('/'+relative))continue;if(files.has(relative))throw new Error('生成产物覆盖资源: '+relative);files.set(relative,bytes);}
   const differences=[];
   const registry=Buffer.from(JSON.stringify({version:1,articleIds:entries.filter(e=>articleTypes.has(e.type)).map(e=>e.id)},null,2)+'\n');
   const registryOutput=options.registryOutput || path.join(site,'dist/services/engagement/articles.json');

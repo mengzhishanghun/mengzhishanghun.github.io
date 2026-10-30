@@ -4,6 +4,17 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {validateRuntime} from './validate-runtime.mjs';
+import {projectPublication} from './publication.mjs';
+
+test('runtime gate rejects leftover hidden routes rather than treating missing pages as optional',t=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'site-hidden-test-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+ const config={primary:'zh',languages:[{code:'zh'}]},entry={id:'work:prototype',type:'work',slug:'prototype',legacyRoutes:['/works/prototype/'],languageCodes:['zh'],sources:{zh:{data:{status:'开发中'}}}};
+ const manifest={entries:[entry]},publication=projectPublication({entries:[entry],config});
+ assert.deepEqual(validateRuntime({manifest,publication,output:root,languageConfig:config,validateAliases:false}).errors,[]);
+ fs.mkdirSync(path.join(root,'zh/works/prototype'),{recursive:true});fs.writeFileSync(path.join(root,'zh/works/prototype/index.html'),'stale');
+ assert.deepEqual(validateRuntime({manifest,publication,output:root,languageConfig:config,validateAliases:false}).errors,[{route:'/zh/works/prototype/',kind:'hiddenOutput'}]);
+ assert.throws(()=>validateRuntime({manifest:{entries:[{...entry,legacyRoutes:['/works/missing/']}]},output:root,languageConfig:config,validateAliases:false}),/ENOENT/);
+});
 test('runtime gate rejects broken anchors and source order overridden by old list data',t=>{
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'site-runtime-test-'));
   t.after(()=>fs.rmSync(root,{recursive:true,force:true}));

@@ -51,6 +51,20 @@ test('developing works retain lifecycle, safe support and noninteractive missing
  const result=renderWorkMetadata('<div class="project-title-group"><h1>Example</h1></div><nav class="work-actions"></nav>',{workInfo},labels);
  assert.match(renderWorkBadges({workInfo},labels),/开发中/);
  assert.match(result,/<a class="work-action work-action-primary" href="\/contact\/#support-title">去支持<\/a>/);
- assert.match(result,/<span class="work-action work-action-unavailable">暂无相关文档<\/span>/);
+ assert.match(result,/<button type="button" class="work-action work-action-unavailable" disabled>暂无相关文档<\/button>/);
  assert.doesNotMatch(result,/href="[^"]*docs|work-status-open-source|work-status-sale/);
+});
+
+test('missing documentation renders a disabled button regardless of development stage',async()=>{
+ const {renderWorkMetadata}=await import('./metadata.mjs');
+ const {parseFragment}=await import('parse5');const {walk,attrs}=await import('../build/extract-dom.mjs');
+ const labels={noDocs:'暂无相关文档',pending:'待核实',platforms:'适用平台',requirements:'环境要求'};
+ const html='<div class="project-title-group"><h1>Example</h1></div><nav class="work-actions"></nav>';
+ for(const stage of [undefined,'developing']){
+  const result=renderWorkMetadata(html,{workInfo:{...(stage?{stage}:{}),channels:[],compatibility:[]}},labels),buttons=[];
+  walk(parseFragment(result),node=>{if((attrs(node).class||'').split(' ').includes('work-action-unavailable'))buttons.push(node);});
+  assert.equal(buttons.length,1);assert.equal(buttons[0].tagName,'button');
+  assert.equal(attrs(buttons[0]).type,'button');assert.ok(Object.hasOwn(attrs(buttons[0]),'disabled'));
+  assert.equal(attrs(buttons[0]).href,undefined);
+ }
 });

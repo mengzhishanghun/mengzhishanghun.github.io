@@ -2,6 +2,8 @@
 
 Obsidian 仅保存中文作品、案例、博客和文档，四个分类直接位于 `网站/` 下。仓库各功能的 `src/*/content/` 保存公开中文快照和已审核译文，页面及公共文案直接在仓库维护。此入口只在用户授权手动同步时读取 `--vault`，不执行 Git 或部署。
 
+作品和案例使用 `status: 开发中` 标记开发状态；已有的 `workInfo.stage: developing` 也会生效。同步后，构建会排除这些内容，Obsidian 原稿仍保留。关联教程可以独立发布。项目可以公开时，更新中文原稿中的开发状态，并同步、审核译文后重新构建；如果两个标记同时存在，需要一并更新。
+
 ```powershell
 npm ci
 node src/import/import.mjs --vault "中文笔记库路径" --check

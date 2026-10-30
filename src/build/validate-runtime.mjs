@@ -3,12 +3,20 @@ import path from 'node:path';
 import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
 import {attrs,walk} from './extract-dom.mjs';
-import {localeRoute} from './build.mjs';
+import {localeRoute,preflight} from './build.mjs';
+import {projectPublication,isHiddenURL} from './publication.mjs';
 const require=createRequire(new URL('../../package.json',import.meta.url));
 const {parse}=require('parse5');
-export function validateRuntime({manifest,output,site,languageConfig,validateAliases=true}) {
+export function validateRuntime({manifest,output,site,languageConfig,validateAliases=true,publication}) {
   const errors=[],counts={pages:0,media:0,headings:0,codeFrames:0,inlineScripts:0};
   const config=languageConfig || JSON.parse(fs.readFileSync(path.join(output,'site-languages.json'),'utf8'));
+  if(publication){
+    for(const route of [...publication.hiddenRoutes,...publication.hiddenResources]){
+      const file=route.slice(1)+(route.endsWith('/')?'index.html':'');
+      if(fs.existsSync(path.join(output,file)))errors.push({route,kind:'hiddenOutput'});
+    }
+    manifest={...manifest,entries:publication.entries,redirects:publication.redirects};
+  }
   const pageIDs=new Map();
   for(const entry of manifest.entries)for(const {code:locale} of config.languages) {
     const route=localeRoute(entry,locale),relative=route.slice(1)+(route.endsWith('.html')?'':'index.html');
@@ -35,6 +43,7 @@ export function validateRuntime({manifest,output,site,languageConfig,validateAli
       if(a.href?.startsWith('#') && a.href.length>1 && !ids.has(decodeURIComponent(a.href.slice(1))))errors.push({route,kind:'missingAnchor',target:a.href});
       for(const key of ['href','src']) {
         const value=a[key];if(!value || /^(?:[a-z]+:|\/\/|#)/i.test(value))continue;
+        if(publication&&isHiddenURL(value,publication))errors.push({route,kind:'hiddenLink',target:value});
         const url=new URL(value,'https://mzsh.me'+route),target=decodeURIComponent(url.pathname);
         const file=target.slice(1)+(target.endsWith('/')?'index.html':'');
         if(!fs.existsSync(path.join(output,file)))errors.push({route,kind:'missingLocalFile',target});
@@ -69,7 +78,9 @@ export function validateRuntime({manifest,output,site,languageConfig,validateAli
 }
 if(process.argv[1] && path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
   const here=path.dirname(fileURLToPath(import.meta.url)),args=process.argv.slice(2),value=n=>args[args.indexOf(n)+1];
-  const result=validateRuntime({manifest:JSON.parse(fs.readFileSync(path.join(here,'manifest.json'),'utf8')),output:value('--output'),site:path.resolve(here,'../..')});
+  const manifest=JSON.parse(fs.readFileSync(path.join(here,'manifest.json'),'utf8')),site=path.resolve(here,'../..');
+  const publication=projectPublication({...preflight({manifest,site}),site,redirects:manifest.redirects});
+  const result=validateRuntime({manifest,publication,output:value('--output'),site});
   if(args.includes('--report'))fs.writeFileSync(value('--report'),JSON.stringify(result,null,2)+'\n');
   console.log(JSON.stringify(result.counts)+`，运行契约错误 ${result.errors.length}`);
   if(result.errors.length)process.exitCode=1;

@@ -27,12 +27,12 @@ function one(node,predicate) { const found = find(node,predicate); assert.equal(
 function text(node) { return node.nodeName === '#text' ? node.value : (node.childNodes || []).map(text).join(''); }
 const list = parse(fs.readFileSync(path.join(output,'zh/cases/index.html'),'utf8'));
 const records = JSON.parse(text(one(list,(n,a) => a['data-content-index-data'] !== undefined)));
-const projectSlugs=['driving-simulation','flight-simulation','motion-platform-filming','digital-human-interaction','motion-capture-robot','herbal-exhibition'];
+const projectSlugs=['driving-simulation','flight-simulation','motion-platform-filming','digital-human-interaction','herbal-exhibition'];
 assert.deepEqual(records.map(x=>x.slug),projectSlugs);
-assert.equal(new Set(records.map(x => x.slug)).size,6);
-assert.equal(find(list,(n,a) => a['data-content-card'] !== undefined).length,6);
+assert.equal(new Set(records.map(x => x.slug)).size,5);
+assert.equal(find(list,(n,a) => a['data-content-card'] !== undefined).length,5);
 assert.ok(records.every(record=>record.categoryName==='UE项目'));
-for (const [category,count] of [[records[0].categoryId,'6']]) {
+for (const [category,count] of [[records[0].categoryId,'5']]) {
   const button = one(list,(n,a) => n.tagName === 'button' && a['data-category'] === category);
   assert.equal(text(one(button,(n,a) => a.class?.split(' ').includes('content-category-count'))),count);
 }
@@ -47,6 +47,7 @@ for (const entry of manifest.entries.filter(e=>e.type==='case')) {
   const source = fs.readFileSync(path.join(sourceRoot,languageSource(primary,primary.sources[entry.id])),'utf8');
   const match = source.match(/^---\s*\r?\n([\s\S]*?)\r?\n---\s*\r?\n/);
   const data = YAML.parse(match[1]);
+  if(data.status==='开发中'||data.workInfo?.stage==='developing'){assert.equal(fs.existsSync(path.join(output,localeRoute(entry,'zh').slice(1),'index.html')),false);continue;}
   const record = records.find(x => x.slug === data.slug);
   assert.ok(record);
   assert.equal(record.description,data.description);
@@ -81,4 +82,4 @@ for (const entry of manifest.entries.filter(e=>e.type==='case')) {
   context.query = data.title;
   assert.ok(vm.runInContext('o(record,n(query)).score',context) > 0,'项目无法被实际搜索函数命中');
 }
-console.log('六个项目案例的路由、卡片、正文、封面、放大链接、分类与搜索：通过');
+console.log('公开项目案例的路由、卡片、正文、封面、放大链接、分类与搜索：通过');
