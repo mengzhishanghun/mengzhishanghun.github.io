@@ -6346,6 +6346,339 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
     project-cover-note: AI concept cover
+  doc:mcp-world-editor-guide:
+    root.html:1.head:0.title:2.#text:0: MCPWorldEditor User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPWorldEditor User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Installation, connection, tools and limitations of MCPWorldEditor
+    root.html:1.head:0.meta:15@content: Installation, connection, tools and limitations of MCPWorldEditor
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPWorldEditor User Guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Installation, connection, tools and limitations of MCPWorldEditor
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-level-sequence-guide:
+    root.html:1.head:0.title:2.#text:0: MCPLevelSequence User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPLevelSequence User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Installation, connection, tools and limitations of MCPLevelSequence
+    root.html:1.head:0.meta:15@content: Installation, connection, tools and limitations of MCPLevelSequence
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPLevelSequence User Guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Installation, connection, tools and limitations of MCPLevelSequence
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-niagara-guide:
+    root.html:1.head:0.title:2.#text:0: MCPNiagara User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPNiagara User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Installation, connection, tools and limitations of MCPNiagara
+    root.html:1.head:0.meta:15@content: Installation, connection, tools and limitations of MCPNiagara
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPNiagara User Guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Installation, connection, tools and limitations of MCPNiagara
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-animation-guide:
+    root.html:1.head:0.title:2.#text:0: MCPAnimation User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPAnimation User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Installation, connection, tools and limitations of MCPAnimation
+    root.html:1.head:0.meta:15@content: Installation, connection, tools and limitations of MCPAnimation
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPAnimation User Guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Installation, connection, tools and limitations of MCPAnimation
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-umg-guide:
+    root.html:1.head:0.title:2.#text:0: MCPUMG User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPUMG User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Installation, connection, tools and limitations of MCPUMG
+    root.html:1.head:0.meta:15@content: Installation, connection, tools and limitations of MCPUMG
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPUMG User Guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Installation, connection, tools and limitations of MCPUMG
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-material-guide:
+    root.html:1.head:0.title:2.#text:0: MCPMaterial User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPMaterial User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Installation, connection, tools and limitations of MCPMaterial
+    root.html:1.head:0.meta:15@content: Installation, connection, tools and limitations of MCPMaterial
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPMaterial User Guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Installation, connection, tools and limitations of MCPMaterial
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-blueprint-guide:
+    root.html:1.head:0.title:2.#text:0: MCPBlueprint User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPBlueprint User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Installation, connection, tools and limitations of MCPBlueprint
+    root.html:1.head:0.meta:15@content: Installation, connection, tools and limitations of MCPBlueprint
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPBlueprint User Guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Installation, connection, tools and limitations of MCPBlueprint
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-behavior-tree-guide:
+    root.html:1.head:0.title:2.#text:0: MCPBehaviorTree User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPBehaviorTree User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Installation, connection, tools and limitations of MCPBehaviorTree
+    root.html:1.head:0.meta:15@content: Installation, connection, tools and limitations of MCPBehaviorTree
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPBehaviorTree User Guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Installation, connection, tools and limitations of MCPBehaviorTree
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-dev-tools-guide:
+    root.html:1.head:0.title:2.#text:0: MCPDevTools User Guide | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPDevTools User Guide | MZSH Docs
+    root.html:1.head:0.meta:12@content: Installation, connection, tools and limitations of MCPDevTools
+    root.html:1.head:0.meta:15@content: Installation, connection, tools and limitations of MCPDevTools
+    root.html:1.body:1.a:0.#text:0: Skip to content
+    root.html:1.body:1.div:1.a:0.#text:0: Skip to main content
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH home
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: Menu
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: Main navigation
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: Home
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: Works
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: Cases
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: Blog
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: About me
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: Contact & support
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: Open this page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "Contents "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: This page's table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: Close table of contents
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: Article navigation
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: Back
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: On this page
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: User guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPDevTools User Guide
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: Installation, connection, tools and limitations of MCPDevTools
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
 scriptSlots:
   content-index:sort-likes: Most liked
   content-index:likes-loading: Loading like counts…
@@ -8210,7 +8543,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 628555a8e8ff5130d72b48fec5c0c095f90f3d91d52c4431ea6ec68867d40f3d
+sourceHash: 4f49418043a908a3ec48f0384f29f8f6f0b5efa1acd758226e43a2b6818a2acd
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

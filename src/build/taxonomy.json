@@ -672,9 +672,18 @@
         {
           "order": 3,
           "name": "产品手册",
-          "id": "doc-bfa9741814f7",
+          "id": "doc-743b68e23927",
           "entities": [
             "doc:ai-data-asset-guide",
+            "doc:mcp-animation-guide",
+            "doc:mcp-behavior-tree-guide",
+            "doc:mcp-blueprint-guide",
+            "doc:mcp-dev-tools-guide",
+            "doc:mcp-level-sequence-guide",
+            "doc:mcp-material-guide",
+            "doc:mcp-niagara-guide",
+            "doc:mcp-umg-guide",
+            "doc:mcp-world-editor-guide",
             "doc:md-blog-packer",
             "doc:p4-case-sync",
             "doc:p4-stream-switcher",
@@ -804,6 +813,44 @@
             "doc:ue-package-manager",
             "doc:ue-quick-start"
           ]
+        },
+        "doc-743b68e23927": {
+          "name": "产品手册",
+          "entities": [
+            "doc:ai-data-asset-guide",
+            "doc:mcp-animation-guide",
+            "doc:mcp-behavior-tree-guide",
+            "doc:mcp-blueprint-guide",
+            "doc:mcp-dev-tools-guide",
+            "doc:mcp-level-sequence-guide",
+            "doc:mcp-material-guide",
+            "doc:mcp-niagara-guide",
+            "doc:mcp-umg-guide",
+            "doc:mcp-world-editor-guide",
+            "doc:md-blog-packer",
+            "doc:p4-case-sync",
+            "doc:p4-stream-switcher",
+            "doc:plugin-auto-packer",
+            "doc:plugin-manager",
+            "doc:simple-asset-cleaner-guide",
+            "doc:simple-asset-namer-guide",
+            "doc:simple-auto-enum-guide",
+            "doc:simple-bp-inherit-fix-guide",
+            "doc:simple-byte-conversion-guide",
+            "doc:simple-config-exclude-guide",
+            "doc:simple-file-updater",
+            "doc:simple-input-simulator-guide",
+            "doc:simple-launcher-guide",
+            "doc:simple-level-seq-smooth-guide",
+            "doc:simple-ssh-tunnel-guide",
+            "doc:simple-static-mesh-merger-guide",
+            "doc:simple-tcp-client-guide",
+            "doc:simple-tcp-server-guide",
+            "doc:simple-udp-guide",
+            "doc:simple-websocket-guide",
+            "doc:ue-package-manager",
+            "doc:ue-quick-start"
+          ]
         }
       },
       "entityOrder": [
@@ -830,7 +877,16 @@
         "doc:simple-websocket-guide",
         "doc:ue-package-manager",
         "doc:ue-quick-start",
-        "doc:p4-stream-switcher"
+        "doc:p4-stream-switcher",
+        "doc:mcp-world-editor-guide",
+        "doc:mcp-level-sequence-guide",
+        "doc:mcp-niagara-guide",
+        "doc:mcp-animation-guide",
+        "doc:mcp-umg-guide",
+        "doc:mcp-material-guide",
+        "doc:mcp-blueprint-guide",
+        "doc:mcp-behavior-tree-guide",
+        "doc:mcp-dev-tools-guide"
       ]
     }
   },

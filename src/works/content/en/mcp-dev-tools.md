@@ -11,7 +11,9 @@ status: In development
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-dev-tools-guide/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -25,8 +27,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-dev-tools
-sourceHash: fc16d0f2846ad5471a94e136b148b18e2b24074810536c785bcdc8d0573b7c1f
-generatedBodyHash: bdecdcee70d4c596d88401ae86801e02d147f7823e5672f2f910edd6e85cd430
+sourceHash: 962ff60283a9faa2fd52d044738b94bcbea29a39dbb0a13b65ec26b61fce44c1
+generatedBodyHash: 6897f18c4a581179c315af0642d81c1f2907a64388a34215e288bafc44ad3d49
 translationStatus: translated
 coverAlt: Asset tools and development diagnostics diagram
 websiteCoverUrl: /assets/covers/mcp-dev-tools.png
@@ -42,4 +44,4 @@ The project focuses on asset tools and read-only development diagnostics, connec
 
 ## Development status
 
-The project is in development and has no public usage documentation yet. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPDevTools user guide](/docs/guides/ue-tools/mcp-dev-tools-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

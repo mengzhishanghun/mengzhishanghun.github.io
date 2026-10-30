@@ -11,7 +11,9 @@ status: In development
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-behavior-tree-guide/
   compatibility:
     - platforms: []
       requirements:
@@ -24,8 +26,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-behavior-tree
-sourceHash: 974006091a62134b3297d18217500f8e43bd7ee2981dfcc84a3849fb60437ef2
-generatedBodyHash: 4f38dc89f40e7b21e7017fc28991afcc155945eebfd33e0a490215e2bc4277b3
+sourceHash: 133327ca34d7abaa5ac3dd8acfd9dd2f9b92d8c8ecbaab833a204fb83c4b448c
+generatedBodyHash: e1d1b9f613da453087122efc288a95b7f83054db76f24acd2fb2c067ff9c82cf
 translationStatus: translated
 coverAlt: Behavior Tree and Blackboard editing diagram
 websiteCoverUrl: /assets/covers/mcp-behavior-tree.png
@@ -41,4 +43,4 @@ The project focuses on Behavior Tree and Blackboard assets, connecting external 
 
 ## Development status
 
-The project is in development and has no public usage documentation yet. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPBehaviorTree user guide](/docs/guides/ue-tools/mcp-behavior-tree-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

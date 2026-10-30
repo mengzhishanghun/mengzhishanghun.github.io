@@ -3521,6 +3521,215 @@
         "websiteUrl": "/assets/cases/herbal-exhibition-cover.png",
         "sha256": "23bed7ffdb93eab5bb66b89846052ae3f9b25bf1bbfb2f48a3ff97a4efb95bea"
       }
+    },
+    {
+      "id": "doc:mcp-world-editor-guide",
+      "type": "doc",
+      "slug": "mcp-world-editor-guide",
+      "legacyRoutes": [
+        "/docs/zh/guides/ue-tools/mcp-world-editor-guide/"
+      ],
+      "template": "docs/templates/doc--mcp-world-editor-guide.html",
+      "title": "MCPWorldEditor 使用文档",
+      "translationKey": "mcp-world-editor-guide",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:mcp-level-sequence-guide",
+      "type": "doc",
+      "slug": "mcp-level-sequence-guide",
+      "legacyRoutes": [
+        "/docs/zh/guides/ue-tools/mcp-level-sequence-guide/"
+      ],
+      "template": "docs/templates/doc--mcp-level-sequence-guide.html",
+      "title": "MCPLevelSequence 使用文档",
+      "translationKey": "mcp-level-sequence-guide",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:mcp-niagara-guide",
+      "type": "doc",
+      "slug": "mcp-niagara-guide",
+      "legacyRoutes": [
+        "/docs/zh/guides/ue-tools/mcp-niagara-guide/"
+      ],
+      "template": "docs/templates/doc--mcp-niagara-guide.html",
+      "title": "MCPNiagara 使用文档",
+      "translationKey": "mcp-niagara-guide",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:mcp-animation-guide",
+      "type": "doc",
+      "slug": "mcp-animation-guide",
+      "legacyRoutes": [
+        "/docs/zh/guides/ue-tools/mcp-animation-guide/"
+      ],
+      "template": "docs/templates/doc--mcp-animation-guide.html",
+      "title": "MCPAnimation 使用文档",
+      "translationKey": "mcp-animation-guide",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:mcp-umg-guide",
+      "type": "doc",
+      "slug": "mcp-umg-guide",
+      "legacyRoutes": [
+        "/docs/zh/guides/ue-tools/mcp-umg-guide/"
+      ],
+      "template": "docs/templates/doc--mcp-umg-guide.html",
+      "title": "MCPUMG 使用文档",
+      "translationKey": "mcp-umg-guide",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:mcp-material-guide",
+      "type": "doc",
+      "slug": "mcp-material-guide",
+      "legacyRoutes": [
+        "/docs/zh/guides/ue-tools/mcp-material-guide/"
+      ],
+      "template": "docs/templates/doc--mcp-material-guide.html",
+      "title": "MCPMaterial 使用文档",
+      "translationKey": "mcp-material-guide",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:mcp-blueprint-guide",
+      "type": "doc",
+      "slug": "mcp-blueprint-guide",
+      "legacyRoutes": [
+        "/docs/zh/guides/ue-tools/mcp-blueprint-guide/"
+      ],
+      "template": "docs/templates/doc--mcp-blueprint-guide.html",
+      "title": "MCPBlueprint 使用文档",
+      "translationKey": "mcp-blueprint-guide",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": [
+        {
+          "id": "doc:mcp-blueprint-guide:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/0fb1edd8bf48404ba784.png",
+          "publicSha256": "0fb1edd8bf48404ba78409cba3870b64b9bff1c0aaafd32a1292574b7fe4fc66"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:2",
+          "ordinal": 2,
+          "state": "public",
+          "websiteUrl": "/media/manuals/943ecc6db1c96366fd4c.png",
+          "publicSha256": "943ecc6db1c96366fd4c801c717465369caf82a97e184b278337f268be75885c"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:3",
+          "ordinal": 3,
+          "state": "public",
+          "websiteUrl": "/media/manuals/075b1cd3a9bc736b4265.png",
+          "publicSha256": "075b1cd3a9bc736b42654391e9989cf25162d86fab102179f34f95d022d6f9e6"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:4",
+          "ordinal": 4,
+          "state": "public",
+          "websiteUrl": "/media/manuals/4791402417933b6e4910.png",
+          "publicSha256": "4791402417933b6e4910194282d7a33002e543484a700424edaa66619e06eaea"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:5",
+          "ordinal": 5,
+          "state": "public",
+          "websiteUrl": "/media/manuals/378ce896a9ca6592b82f.png",
+          "publicSha256": "378ce896a9ca6592b82fe75750093789ee3a02f681e343403c64eb44bb9ff58e"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:6",
+          "ordinal": 6,
+          "state": "public",
+          "websiteUrl": "/media/manuals/43fba5611a6d54d31320.png",
+          "publicSha256": "43fba5611a6d54d31320bfc2ba7390cbcfc1b6d3cf880b954abea503274e386f"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:7",
+          "ordinal": 7,
+          "state": "public",
+          "websiteUrl": "/media/manuals/f46cdde0706b4e88adc8.png",
+          "publicSha256": "f46cdde0706b4e88adc8dd90feb36caa0630f80adb03234adea8852397b14462"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:8",
+          "ordinal": 8,
+          "state": "public",
+          "websiteUrl": "/media/manuals/2cc65c2a8b248c6cb1d2.png",
+          "publicSha256": "2cc65c2a8b248c6cb1d28aa00540f42672534ba8c2ec2f8e9af5e850a45b042b"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:9",
+          "ordinal": 9,
+          "state": "public",
+          "websiteUrl": "/media/manuals/bf009f8369aff97bcab3.png",
+          "publicSha256": "bf009f8369aff97bcab3045a0e0b52484647583affd1cd6f81aff595b301efb2"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:10",
+          "ordinal": 10,
+          "state": "public",
+          "websiteUrl": "/media/manuals/1b8fc70569fcd085606f.png",
+          "publicSha256": "1b8fc70569fcd085606f27893191c13c8c31c3bc5947a442671a4da36a4e7459"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:11",
+          "ordinal": 11,
+          "state": "public",
+          "websiteUrl": "/media/manuals/c95dbbdd74a1e85308fa.png",
+          "publicSha256": "c95dbbdd74a1e85308fa0ee51e509f69431eaf1a19dda445badf5ee460e6c8ee"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:12",
+          "ordinal": 12,
+          "state": "public",
+          "websiteUrl": "/media/manuals/047b7290d5dde5478ce6.png",
+          "publicSha256": "047b7290d5dde5478ce6f701145e957157ebc5df35a5b7940fb11e4d38e884ca"
+        },
+        {
+          "id": "doc:mcp-blueprint-guide:media:13",
+          "ordinal": 13,
+          "state": "public",
+          "websiteUrl": "/media/manuals/76c2960fc16d6af47ec7.png",
+          "publicSha256": "76c2960fc16d6af47ec710e8536a0648b3bcf93aac9964bf3840fa1d769c8bf3"
+        }
+      ]
+    },
+    {
+      "id": "doc:mcp-behavior-tree-guide",
+      "type": "doc",
+      "slug": "mcp-behavior-tree-guide",
+      "legacyRoutes": [
+        "/docs/zh/guides/ue-tools/mcp-behavior-tree-guide/"
+      ],
+      "template": "docs/templates/doc--mcp-behavior-tree-guide.html",
+      "title": "MCPBehaviorTree 使用文档",
+      "translationKey": "mcp-behavior-tree-guide",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:mcp-dev-tools-guide",
+      "type": "doc",
+      "slug": "mcp-dev-tools-guide",
+      "legacyRoutes": [
+        "/docs/zh/guides/ue-tools/mcp-dev-tools-guide/"
+      ],
+      "template": "docs/templates/doc--mcp-dev-tools-guide.html",
+      "title": "MCPDevTools 使用文档",
+      "translationKey": "mcp-dev-tools-guide",
+      "supplementTranslationKeys": [],
+      "mediaOccurrences": []
     }
   ],
   "redirects": [
@@ -4578,6 +4787,42 @@
     {
       "route": "/en/cases/robot-realtime-ik-prototype/",
       "id": "case:motion-capture-robot-control"
+    },
+    {
+      "route": "/docs/guides/ue-tools/mcp-world-editor-guide/",
+      "id": "doc:mcp-world-editor-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/mcp-level-sequence-guide/",
+      "id": "doc:mcp-level-sequence-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/mcp-niagara-guide/",
+      "id": "doc:mcp-niagara-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/mcp-animation-guide/",
+      "id": "doc:mcp-animation-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/mcp-umg-guide/",
+      "id": "doc:mcp-umg-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/mcp-material-guide/",
+      "id": "doc:mcp-material-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/mcp-blueprint-guide/",
+      "id": "doc:mcp-blueprint-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/mcp-behavior-tree-guide/",
+      "id": "doc:mcp-behavior-tree-guide"
+    },
+    {
+      "route": "/docs/guides/ue-tools/mcp-dev-tools-guide/",
+      "id": "doc:mcp-dev-tools-guide"
     }
   ]
 }

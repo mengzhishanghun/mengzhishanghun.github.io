@@ -11,7 +11,9 @@ status: In development
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-material-guide/
   compatibility:
     - platforms: []
       requirements:
@@ -24,8 +26,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-material
-sourceHash: 58db0b6cf120edd2ecad5f2eb8e574053457ad3e8a840dff1884bcb387999b08
-generatedBodyHash: 1a514ea04737f8a38f30e85fa3bce97a8a56b8499199c5bfb92307ba503b93bb
+sourceHash: 3f4517a79a36da9aac22fbfec1a53524e49270054fab2896264ed80fa1a1f1bc
+generatedBodyHash: d4f053274ae36004e495bddfd198536e511404ffb37aae6d1d1a7a6061f9104e
 translationStatus: translated
 coverAlt: Material graph and material instance diagram
 websiteCoverUrl: /assets/covers/mcp-material.png
@@ -41,4 +43,4 @@ The project focuses on material graphs and material instances, connecting extern
 
 ## Development status
 
-The project is in development and has no public usage documentation yet. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPMaterial user guide](/docs/guides/ue-tools/mcp-material-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

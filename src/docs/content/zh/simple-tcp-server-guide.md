@@ -127,6 +127,76 @@ translationKey: simple-tcp-server-guide
 
 ---
 
+## 原生 TCP 服务端实现
+
+### 2.3 TCP Server基础实现
+
+**监听端口:**
+
+```cpp
+bool StartTCPServer(int32 Port)
+{
+    ISocketSubsystem* SocketSubsystem = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM);
+
+    // 创建监听Socket
+    FSocket* ListenSocket = SocketSubsystem->CreateSocket(NAME_Stream, TEXT("TCP Server"), false);
+
+    // 绑定端口
+    TSharedRef<FInternetAddr> Addr = SocketSubsystem->CreateInternetAddr();
+    Addr->SetPort(Port);
+    Addr->SetAnyAddress();
+
+    if (!ListenSocket->Bind(*Addr))
+    {
+        UE_LOG(LogTemp, Error, TEXT("绑定端口失败: %d"), Port);
+        return false;
+    }
+
+    // 开始监听(最大8个待连接队列)
+    if (!ListenSocket->Listen(8))
+    {
+        UE_LOG(LogTemp, Error, TEXT("监听失败"));
+        return false;
+    }
+
+    UE_LOG(LogTemp, Log, TEXT("TCP服务器启动,端口: %d"), Port);
+    return true;
+}
+```
+
+**接受客户端连接:**
+
+```cpp
+void AcceptClients(FSocket* ListenSocket)
+{
+    ISocketSubsystem* SocketSubsystem = ISocketSubsystem::Get(PLATFORM_SOCKETSUBSYSTEM);
+    TSharedRef<FInternetAddr> ClientAddr = SocketSubsystem->CreateInternetAddr();
+    FSocket* ClientSocket = ListenSocket->Accept(*ClientAddr, TEXT("TCP Client"));
+
+    if (ClientSocket)
+    {
+        FString ClientIP = ClientAddr->ToString(false);
+        int32 ClientPort = ClientAddr->GetPort();
+
+        UE_LOG(LogTemp, Log, TEXT("客户端连接: %s:%d"), *ClientIP, ClientPort);
+
+        // 存储客户端Socket用于后续通讯
+    }
+}
+```
+
+* * *
+
+### 监听与会话的生命周期
+
+这两段原生示例展示 `Bind`、`Listen` 与 `Accept`，不是 SimpleTCPServer 的蓝图接口。监听 Socket 和已接受 Socket 都需要保存所有权并在失败、停止或断开时释放；示例函数里的局部指针没有组成完整的服务器生命周期。
+
+`Listen(8)` 设置待接受连接队列，并不是插件允许的总客户端数。`IP:Port` 能区分网络端点，不能当成长期用户身份或认证。读取客户端数据时仍需要处理字节流分帧、部分读写、超时和权限；多客户端示例也应避免阻塞主线程。
+
+协议选型与共同的线程、重连和字节转换入口见 [TCP 客户端与网络通信导览](/zh/docs/guides/ue-tools/simple-tcp-client-guide/)。
+
+原生通信示例于 2025-10-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19165484)。
+
 ## 版本历史
 
 

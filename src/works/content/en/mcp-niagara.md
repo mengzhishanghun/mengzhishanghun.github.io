@@ -11,7 +11,9 @@ status: In development
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-niagara-guide/
   compatibility:
     - platforms: []
       requirements:
@@ -24,8 +26,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-niagara
-sourceHash: b7673ad964e77786a1073521b02c797046eb24ea5efd0702cf535466e95bd52e
-generatedBodyHash: 1c5963404233128b5a7a10fce179b284b8ad284927a3dbef479a86ef02ac8642
+sourceHash: 63fde9f919a178f710e07a57ebbecbecab2f6d028d991af20d36c504fd9a8161
+generatedBodyHash: 843ae91c9c691c43591cf567b349097788e7e80d80fcbea944bd53a98127db0d
 translationStatus: translated
 coverAlt: Niagara system and module editing diagram
 websiteCoverUrl: /assets/covers/mcp-niagara.png
@@ -41,4 +43,4 @@ The project focuses on Niagara systems, emitters and modules, connecting externa
 
 ## Development status
 
-The project is in development and has no public usage documentation yet. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPNiagara user guide](/docs/guides/ue-tools/mcp-niagara-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

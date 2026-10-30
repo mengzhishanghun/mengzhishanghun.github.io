@@ -11,7 +11,9 @@ status: In development
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-blueprint-guide/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -27,8 +29,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-blueprint
-sourceHash: 192a6925a815c28c9a0e8dfeb9edcc6ddfc931fc4fdbf69ac53fb2ff889e818e
-generatedBodyHash: 68e195cb4d8488bad52444208f6a6bb6fd6e83468ae5421cb96b3918f439d00b
+sourceHash: be885800dfa8499854a272fbad877128cba13518a92f5315cde313157756f0b3
+generatedBodyHash: bd7a514c72663386995c68c03bbcb512723f93df14493d26c66156dfcbd050f0
 translationStatus: translated
 coverAlt: Blueprint discovery, editing and compilation feedback diagram
 websiteCoverUrl: /assets/covers/mcp-blueprint.png
@@ -44,4 +46,4 @@ The project focuses on Blueprint discovery, editing and compilation feedback, co
 
 ## Development status
 
-The project is in development and has no public usage documentation yet. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPBlueprint user guide](/docs/guides/ue-tools/mcp-blueprint-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

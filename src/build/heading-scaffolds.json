@@ -2194,6 +2194,11 @@
   "doc:simple-ssh-tunnel-guide": [
     {
       "depth": 2,
+      "oldId": "ssh-隧道与远程服务",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
       "oldId": "兼容性",
       "utilityId": "doc:simple-ssh-tunnel-guide:body-utility:1",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
@@ -2251,6 +2256,41 @@
       "oldId": "4-补充说明",
       "utilityId": "doc:simple-ssh-tunnel-guide:body-utility:10",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "c-中建立-ssh-隧道的两种方式",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "调用系统ssh客户端",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "集成ssh库",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "如何使用这两个库",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "两种方式对比",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "示例中的进程与连接资源",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "致谢与开源库",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
     },
     {
       "depth": 2,
@@ -2540,6 +2580,11 @@
   "doc:simple-tcp-client-guide": [
     {
       "depth": 2,
+      "oldId": "网络通信选型与教程入口",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
       "oldId": "兼容性",
       "utilityId": "doc:simple-tcp-client-guide:body-utility:1",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
@@ -2642,6 +2687,31 @@
     },
     {
       "depth": 2,
+      "oldId": "原生-tcp-客户端实现",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "21-适用场景",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "22-tcp-client基础实现",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "连接所有权与字节流处理",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "多通道线程重连与消息格式",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
       "oldId": "版本历史",
       "utilityId": "doc:simple-tcp-client-guide:body-utility:23",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
@@ -2737,6 +2807,21 @@
       "oldId": "-推荐配套插件",
       "utilityId": "doc:simple-tcp-server-guide:body-utility:15",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "原生-tcp-服务端实现",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "23-tcp-server基础实现",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "监听与会话的生命周期",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
     },
     {
       "depth": 2,
@@ -2874,6 +2959,26 @@
     },
     {
       "depth": 2,
+      "oldId": "原生-udp-socket-实现与场景选择",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "11-适用场景",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "12-基础实现",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "原生示例与插件通道的区别",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
       "oldId": "版本历史",
       "utilityId": "doc:simple-udp-guide:body-utility:27",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
@@ -2921,6 +3026,31 @@
       "oldId": "-注意事项",
       "utilityId": "doc:simple-websocket-guide:body-utility:8",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>{{anchor}}</div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "ue-websockets-模块的原生示例",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "31-适用场景",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "32-ue内置websocket模块",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "33-基础实现",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "区分模块能力与插件支持范围",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
     },
     {
       "depth": 2,
@@ -5092,6 +5222,899 @@
       "depth": 2,
       "oldId": "项目展示",
       "template": "<h2 id=\"{{headingId}}\">{{headingMarkup}}</h2>"
+    }
+  ],
+  "doc:mcp-world-editor-guide": [
+    {
+      "depth": 2,
+      "oldId": "概述",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "配置",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "mcp-连接",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "claude-code",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "其他-ai-客户端",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "要求",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "工具与编辑器状态合同",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "保存地图检查与构建",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "植被与实例化网格",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "actor-摆放与样条",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "world-partition-data-layer-与-level-instance",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "landscape-绘制层与专用样条",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "landscape-高度数据安全合同",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "world-partition-区域加载",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "材质实例创建",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "actor-编组",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "actor-附加事务",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "组件创建安全",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "world-settings-编辑",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "world-partition-区域生命周期",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "受限控制台命令",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "material-instance-资产持久化",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    }
+  ],
+  "doc:mcp-level-sequence-guide": [
+    {
+      "depth": 2,
+      "oldId": "安装与连接",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "23-个工具",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "tracksection-与-channel",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "时间单位与帧率",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "分页与输出上限",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "写入事务与资产生命周期",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "调用示例",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "与-ue-58-官方实验-toolset-的边界",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    }
+  ],
+  "doc:mcp-niagara-guide": [
+    {
+      "depth": 2,
+      "oldId": "资产发现与分页",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "模块详情",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "emitter-编辑",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "renderer-编辑",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "user-parameter-编辑",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "资产生命周期与预览",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "版本与使用限制",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    }
+  ],
+  "doc:mcp-animation-guide": [
+    {
+      "depth": 2,
+      "oldId": "连接方式",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "工具29-个",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "发现与只读详情",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "animation-blueprint-与状态机编辑",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "montagenotify-与-blendspace-编辑",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "资产生命周期",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "路径事务与保存",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "schema分页与有界输出",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "与-ue-58-官方动画-mcp-的能力边界",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "限制",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    }
+  ],
+  "doc:mcp-umg-guide": [
+    {
+      "depth": 2,
+      "oldId": "概述",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "安装与更新",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "工具基础版-71-个主动启用-mvvm-增强模块后另增-6-个",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "发现与读取",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "widget-树编辑",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "umg-动画11-个工具",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "事件逻辑",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "配置",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "mcp-连接",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "版本与保存排障",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "claude-code",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "其他-ai-客户端",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "要求",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "imagetoumg",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "参考图到-umg-工作流",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "工作流",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "运行版本与文件锁预检",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "widget-spec-v1",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "样式与素材",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 5,
+      "oldId": "布局检查不等于布局通过",
+      "template": "<div class=\"sl-heading-wrapper level-h5\"><h5 id=\"{{headingId}}\">{{headingMarkup}}</h5></div>"
+    },
+    {
+      "depth": 5,
+      "oldId": "属性更新清零与恢复默认",
+      "template": "<div class=\"sl-heading-wrapper level-h5\"><h5 id=\"{{headingId}}\">{{headingMarkup}}</h5></div>"
+    },
+    {
+      "depth": 5,
+      "oldId": "显式圆角和按钮内边距",
+      "template": "<div class=\"sl-heading-wrapper level-h5\"><h5 id=\"{{headingId}}\">{{headingMarkup}}</h5></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "安全边界",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "layoutandsession",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "布局会话与命中检查",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "连接到正确的项目",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "结构化布局",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "解释裁切与缩放",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "检查按钮为什么无法命中",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "navigation",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "umg-导航工具",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "读取当前六方向",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "局部更新与预检",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "components",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "组件实例与-named-slot",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "为-named-slot-创建内容",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "设置嵌套-userwidget-的实例参数",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "commonstyles",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "通用控件样式",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "扩展控件",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "文本与富文本限制",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "preview",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "capturewidgetpreview",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "参数",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "runtimeworkflow",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "运行时交互与诊断",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "输入列表与操作编号",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "性能采样和-trace",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "themes",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "widget-主题",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "导出主题",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "应用主题",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "previewmatrix",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "capturewidgetpreviewmatrix",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "animationworkflow",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "动画工作流",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "componentextraction",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "提取可复用组件",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "batchmigration",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "批量属性迁移",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "performance",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "widget-性能结构诊断",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "返回内容",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "optionaluiframeworks",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "可选-ui-框架",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "commonui",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 4,
+      "oldId": "mvvm",
+      "template": "<div class=\"sl-heading-wrapper level-h4\"><h4 id=\"{{headingId}}\">{{headingMarkup}}</h4></div>"
+    },
+    {
+      "depth": 5,
+      "oldId": "主动启用的-mvvm-增强模块",
+      "template": "<div class=\"sl-heading-wrapper level-h5\"><h5 id=\"{{headingId}}\">{{headingMarkup}}</h5></div>"
+    }
+  ],
+  "doc:mcp-material-guide": [
+    {
+      "depth": 2,
+      "oldId": "能力",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "安全工作流",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "编译结果",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "编辑既有节点",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "结构化实例参数",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "重要边界",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    }
+  ],
+  "doc:mcp-blueprint-guide": [
+    {
+      "depth": 2,
+      "oldId": "要求与安装",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "连接-ai-客户端",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "功能概览",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "概念区分先选对编辑对象",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "69-个工具逐项功能总表",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "重点教程默认值签名组件与继承",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "1-modifyvariable声明默认值不是节点值",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "2-modifyfunctionsignature函数参数不是普通节点-pin",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "3-setpindefaults只改未连接输入-pin-的字面量",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "4-setcomponentproperties改-scs-模板不改实例",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "getcomponentproperties读取继承-scs-模板",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "5-setclassdefaults改-cdo可覆盖继承属性",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "6-reparentblueprint-与-reparentcomponent两个父级完全不同",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "推荐操作流程",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "教程创建计算函数",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "正常编辑器截图与业务规则修改对比",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "正常图表示例",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "复杂正式业务流程全图",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "修改-1region-1-增加首单免运费",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "修改-2积分基数排除运费",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "修改-3首单折扣由固定值改为小计-5",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "查找资产与图表",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "编辑函数局部变量",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "安全添加图表逻辑",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "成员函数struct-与-enum",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "函数重命名示例",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "函数事件与绑定事件示例",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "连接-event-dispatcher",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "修改改名与删除信号",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "修改本地函数显示编辑器与声明属性",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "修改自定义事件属性与-rpc",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "组件与类默认值",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "资产生命周期",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "截取图表",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "设置",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "当前限制",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "故障排查",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "支持",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "读取蓝图类设置",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "创建与使用宏",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    },
+    {
+      "depth": 3,
+      "oldId": "修改重命名与删除已有宏",
+      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
+    }
+  ],
+  "doc:mcp-behavior-tree-guide": [
+    {
+      "depth": 2,
+      "oldId": "连接",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "工具",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "推荐流程",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "黑板键规则",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "编辑行为",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "与-unreal-engine-58-官方能力比较",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "限制",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    }
+  ],
+  "doc:mcp-dev-tools-guide": [
+    {
+      "depth": 2,
+      "oldId": "启用和连接",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "工具",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "只读开发诊断",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "建议操作顺序",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "值和限制",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
+    },
+    {
+      "depth": 2,
+      "oldId": "能力限制",
+      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
     }
   ]
 }

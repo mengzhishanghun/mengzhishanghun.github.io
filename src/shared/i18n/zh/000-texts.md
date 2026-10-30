@@ -6346,6 +6346,339 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
     project-cover-note: AI 概念封面
+  doc:mcp-world-editor-guide:
+    root.html:1.head:0.title:2.#text:0: MCPWorldEditor 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPWorldEditor 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: MCPWorldEditor 的安装、连接、工具用法与限制
+    root.html:1.head:0.meta:15@content: MCPWorldEditor 的安装、连接、工具用法与限制
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPWorldEditor 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MCPWorldEditor 的安装、连接、工具用法与限制
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-level-sequence-guide:
+    root.html:1.head:0.title:2.#text:0: MCPLevelSequence 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPLevelSequence 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: MCPLevelSequence 的安装、连接、工具用法与限制
+    root.html:1.head:0.meta:15@content: MCPLevelSequence 的安装、连接、工具用法与限制
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPLevelSequence 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MCPLevelSequence 的安装、连接、工具用法与限制
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-niagara-guide:
+    root.html:1.head:0.title:2.#text:0: MCPNiagara 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPNiagara 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: MCPNiagara 的安装、连接、工具用法与限制
+    root.html:1.head:0.meta:15@content: MCPNiagara 的安装、连接、工具用法与限制
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPNiagara 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MCPNiagara 的安装、连接、工具用法与限制
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-animation-guide:
+    root.html:1.head:0.title:2.#text:0: MCPAnimation 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPAnimation 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: MCPAnimation 的安装、连接、工具用法与限制
+    root.html:1.head:0.meta:15@content: MCPAnimation 的安装、连接、工具用法与限制
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPAnimation 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MCPAnimation 的安装、连接、工具用法与限制
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-umg-guide:
+    root.html:1.head:0.title:2.#text:0: MCPUMG 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPUMG 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: MCPUMG 的安装、连接、工具用法与限制
+    root.html:1.head:0.meta:15@content: MCPUMG 的安装、连接、工具用法与限制
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPUMG 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MCPUMG 的安装、连接、工具用法与限制
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-material-guide:
+    root.html:1.head:0.title:2.#text:0: MCPMaterial 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPMaterial 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: MCPMaterial 的安装、连接、工具用法与限制
+    root.html:1.head:0.meta:15@content: MCPMaterial 的安装、连接、工具用法与限制
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPMaterial 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MCPMaterial 的安装、连接、工具用法与限制
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-blueprint-guide:
+    root.html:1.head:0.title:2.#text:0: MCPBlueprint 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPBlueprint 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: MCPBlueprint 的安装、连接、工具用法与限制
+    root.html:1.head:0.meta:15@content: MCPBlueprint 的安装、连接、工具用法与限制
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPBlueprint 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MCPBlueprint 的安装、连接、工具用法与限制
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-behavior-tree-guide:
+    root.html:1.head:0.title:2.#text:0: MCPBehaviorTree 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPBehaviorTree 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: MCPBehaviorTree 的安装、连接、工具用法与限制
+    root.html:1.head:0.meta:15@content: MCPBehaviorTree 的安装、连接、工具用法与限制
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPBehaviorTree 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MCPBehaviorTree 的安装、连接、工具用法与限制
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:mcp-dev-tools-guide:
+    root.html:1.head:0.title:2.#text:0: MCPDevTools 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:8@content: MCPDevTools 使用文档 | MZSH Docs
+    root.html:1.head:0.meta:12@content: MCPDevTools 的安装、连接、工具用法与限制
+    root.html:1.head:0.meta:15@content: MCPDevTools 的安装、连接、工具用法与限制
+    root.html:1.body:1.a:0.#text:0: 跳转到内容
+    root.html:1.body:1.div:1.a:0.#text:0: 跳到主要内容
+    root.html:1.body:1.div:1.header:1.div:0.a:0@aria-label: MZSH 首页
+    root.html:1.body:1.div:1.header:1.div:0.a:0.#text:0: MZSH
+    root.html:1.body:1.div:1.header:1.div:0.button:1.#text:0: 菜单
+    root.html:1.body:1.div:1.header:1.div:0.nav:2@aria-label: 主导航
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:0.#text:0: 首页
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:1.#text:0: 作品
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:2.#text:0: 案例
+    root.html:1.body:1.div:1.header:1.div:0.nav:2.a:3.#text:0: 博客
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:0.#text:0: 关于我
+    root.html:1.body:1.div:1.header:1.div:0.div:3.a:1.#text:0: 联系与支持
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1@aria-label: 打开本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.#text:0: "目录 "
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.div:0.button:1.span:1.#text:0: ⌄
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1@aria-label: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.strong:0.#text:0: 本页目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1@aria-label: 关闭目录
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.mobile-outline:0.dialog:1.div:0.header:0.button:1.#text:0: ×
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1@aria-label: 文章导航
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0@aria-label: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.a:0.#text:0: 返回
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.p:0.#text:0: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.aside:1.section:1.nav:1@aria-label: 本页大纲
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:0.#text:0: 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.h1:1.#text:0: MCPDevTools 使用文档
+    root.html:1.body:1.div:1.div:6.div:0.div:0.mzsh-reading:0.div:0.div:2.main:0.div:0.div:0.header:0.p:2.#text:0: MCPDevTools 的安装、连接、工具用法与限制
+    root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
+    root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
+    root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
 scriptSlots:
   content-index:sort-likes: 点赞最多
   content-index:likes-loading: 正在读取点赞排序…

@@ -4561,6 +4561,110 @@
       ],
       "sha256": "23bed7ffdb93eab5bb66b89846052ae3f9b25bf1bbfb2f48a3ff97a4efb95bea",
       "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/0fb1edd8bf48404ba784.png",
+      "outputs": [
+        "media/manuals/0fb1edd8bf48404ba784.png"
+      ],
+      "sha256": "0fb1edd8bf48404ba78409cba3870b64b9bff1c0aaafd32a1292574b7fe4fc66",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/943ecc6db1c96366fd4c.png",
+      "outputs": [
+        "media/manuals/943ecc6db1c96366fd4c.png"
+      ],
+      "sha256": "943ecc6db1c96366fd4c801c717465369caf82a97e184b278337f268be75885c",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/075b1cd3a9bc736b4265.png",
+      "outputs": [
+        "media/manuals/075b1cd3a9bc736b4265.png"
+      ],
+      "sha256": "075b1cd3a9bc736b42654391e9989cf25162d86fab102179f34f95d022d6f9e6",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/4791402417933b6e4910.png",
+      "outputs": [
+        "media/manuals/4791402417933b6e4910.png"
+      ],
+      "sha256": "4791402417933b6e4910194282d7a33002e543484a700424edaa66619e06eaea",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/378ce896a9ca6592b82f.png",
+      "outputs": [
+        "media/manuals/378ce896a9ca6592b82f.png"
+      ],
+      "sha256": "378ce896a9ca6592b82fe75750093789ee3a02f681e343403c64eb44bb9ff58e",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/43fba5611a6d54d31320.png",
+      "outputs": [
+        "media/manuals/43fba5611a6d54d31320.png"
+      ],
+      "sha256": "43fba5611a6d54d31320bfc2ba7390cbcfc1b6d3cf880b954abea503274e386f",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/f46cdde0706b4e88adc8.png",
+      "outputs": [
+        "media/manuals/f46cdde0706b4e88adc8.png"
+      ],
+      "sha256": "f46cdde0706b4e88adc8dd90feb36caa0630f80adb03234adea8852397b14462",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/2cc65c2a8b248c6cb1d2.png",
+      "outputs": [
+        "media/manuals/2cc65c2a8b248c6cb1d2.png"
+      ],
+      "sha256": "2cc65c2a8b248c6cb1d28aa00540f42672534ba8c2ec2f8e9af5e850a45b042b",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/bf009f8369aff97bcab3.png",
+      "outputs": [
+        "media/manuals/bf009f8369aff97bcab3.png"
+      ],
+      "sha256": "bf009f8369aff97bcab3045a0e0b52484647583affd1cd6f81aff595b301efb2",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/1b8fc70569fcd085606f.png",
+      "outputs": [
+        "media/manuals/1b8fc70569fcd085606f.png"
+      ],
+      "sha256": "1b8fc70569fcd085606f27893191c13c8c31c3bc5947a442671a4da36a4e7459",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/c95dbbdd74a1e85308fa.png",
+      "outputs": [
+        "media/manuals/c95dbbdd74a1e85308fa.png"
+      ],
+      "sha256": "c95dbbdd74a1e85308fa0ee51e509f69431eaf1a19dda445badf5ee460e6c8ee",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/047b7290d5dde5478ce6.png",
+      "outputs": [
+        "media/manuals/047b7290d5dde5478ce6.png"
+      ],
+      "sha256": "047b7290d5dde5478ce6f701145e957157ebc5df35a5b7940fb11e4d38e884ca",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/manuals/76c2960fc16d6af47ec7.png",
+      "outputs": [
+        "media/manuals/76c2960fc16d6af47ec7.png"
+      ],
+      "sha256": "76c2960fc16d6af47ec710e8536a0648b3bcf93aac9964bf3840fa1d769c8bf3",
+      "mode": "frozen"
     }
   ]
 }

@@ -11,7 +11,9 @@ status: In development
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-animation-guide/
   compatibility:
     - platforms: []
       requirements:
@@ -24,8 +26,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-animation
-sourceHash: 2ec8fb6a6b3bacdf90a6d4a7f42b27246353775624d4912c779545aa25ceaeb5
-generatedBodyHash: 128a88457b8fa93df4d354f9d0a5fec177e105676586d6cdd127a18bb9fce22c
+sourceHash: c5cb5b618491f4d0816b7f8ba3bc1c11902655b672176e43f6074bdf11c967f6
+generatedBodyHash: c19a248e1d9bdb012d7b779bed354325b82a711a1976b5b69b57e3c8f97e16dc
 translationStatus: translated
 coverAlt: Animation Blueprint states and animation asset tracks diagram
 websiteCoverUrl: /assets/covers/mcp-animation.png
@@ -41,4 +43,4 @@ The project focuses on Animation Blueprints, state machines and animation assets
 
 ## Development status
 
-The project is in development and has no public usage documentation yet. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPAnimation user guide](/docs/guides/ue-tools/mcp-animation-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

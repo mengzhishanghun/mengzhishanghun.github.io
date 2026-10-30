@@ -11,7 +11,9 @@ status: In development
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-world-editor-guide/
   compatibility:
     - platforms: []
       requirements:
@@ -24,8 +26,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-world-editor
-sourceHash: 4302711b27fe8f99d93b64ddf132cb32b97597301a56b5b4c5d673f9126fd0fe
-generatedBodyHash: 176fd880cbec674bc723b33dab36a4a248e6b6d401022acf58123464fc176cf1
+sourceHash: b40124af6c46e6ddd363799672b1bba2b470da673e1b93658538a4bd6650230b
+generatedBodyHash: a4af96eaff9850c243434648296de015fa6fd76bfd682a0ea550be90202d69b1
 translationStatus: translated
 coverAlt: Actor, level and terrain editing diagram
 websiteCoverUrl: /assets/covers/mcp-world-editor.png
@@ -41,4 +43,4 @@ The project focuses on Actors, levels, terrain and viewports, connecting externa
 
 ## Development status
 
-The project is in development and has no public usage documentation yet. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPWorldEditor user guide](/docs/guides/ue-tools/mcp-world-editor-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

@@ -532,6 +532,42 @@
     {
       "id": "case:herbal-exhibition",
       "translationKey": "herbal-exhibition"
+    },
+    {
+      "id": "doc:mcp-world-editor-guide",
+      "translationKey": "mcp-world-editor-guide"
+    },
+    {
+      "id": "doc:mcp-level-sequence-guide",
+      "translationKey": "mcp-level-sequence-guide"
+    },
+    {
+      "id": "doc:mcp-niagara-guide",
+      "translationKey": "mcp-niagara-guide"
+    },
+    {
+      "id": "doc:mcp-animation-guide",
+      "translationKey": "mcp-animation-guide"
+    },
+    {
+      "id": "doc:mcp-umg-guide",
+      "translationKey": "mcp-umg-guide"
+    },
+    {
+      "id": "doc:mcp-material-guide",
+      "translationKey": "mcp-material-guide"
+    },
+    {
+      "id": "doc:mcp-blueprint-guide",
+      "translationKey": "mcp-blueprint-guide"
+    },
+    {
+      "id": "doc:mcp-behavior-tree-guide",
+      "translationKey": "mcp-behavior-tree-guide"
+    },
+    {
+      "id": "doc:mcp-dev-tools-guide",
+      "translationKey": "mcp-dev-tools-guide"
     }
   ]
 }

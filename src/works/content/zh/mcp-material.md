@@ -11,7 +11,9 @@ status: 开发中
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-material-guide/
   compatibility:
     - platforms: []
       requirements:
@@ -38,4 +40,4 @@ MCPMaterial 是开发中的 UE 编辑器 MCP 插件，围绕材质图与材质�
 
 ## 开发状态
 
-项目处于开发阶段，尚无公开使用文档。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。
+项目处于开发阶段，使用说明见[MCPMaterial 教程](/zh/docs/guides/ue-tools/mcp-material-guide/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。

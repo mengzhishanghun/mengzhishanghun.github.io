@@ -128,6 +128,15 @@ languages:
       blog:ue-multiwindow-interface: blog/content/zh/ue-multiwindow-interface.md
       blog:robot-realtime-ik-prototype: blog/content/zh/robot-realtime-ik-prototype.md
       case:herbal-exhibition: cases/content/zh/herbal-exhibition.md
+      doc:mcp-world-editor-guide: docs/content/zh/mcp-world-editor-guide.md
+      doc:mcp-level-sequence-guide: docs/content/zh/mcp-level-sequence-guide.md
+      doc:mcp-niagara-guide: docs/content/zh/mcp-niagara-guide.md
+      doc:mcp-animation-guide: docs/content/zh/mcp-animation-guide.md
+      doc:mcp-umg-guide: docs/content/zh/mcp-umg-guide.md
+      doc:mcp-material-guide: docs/content/zh/mcp-material-guide.md
+      doc:mcp-blueprint-guide: docs/content/zh/mcp-blueprint-guide.md
+      doc:mcp-behavior-tree-guide: docs/content/zh/mcp-behavior-tree-guide.md
+      doc:mcp-dev-tools-guide: docs/content/zh/mcp-dev-tools-guide.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -253,4 +262,13 @@ languages:
       blog:ue-multiwindow-interface: blog/content/en/ue-multiwindow-interface.md
       blog:robot-realtime-ik-prototype: blog/content/en/robot-realtime-ik-prototype.md
       case:herbal-exhibition: cases/content/en/herbal-exhibition.md
+      doc:mcp-world-editor-guide: docs/content/en/mcp-world-editor-guide.md
+      doc:mcp-level-sequence-guide: docs/content/en/mcp-level-sequence-guide.md
+      doc:mcp-niagara-guide: docs/content/en/mcp-niagara-guide.md
+      doc:mcp-animation-guide: docs/content/en/mcp-animation-guide.md
+      doc:mcp-umg-guide: docs/content/en/mcp-umg-guide.md
+      doc:mcp-material-guide: docs/content/en/mcp-material-guide.md
+      doc:mcp-blueprint-guide: docs/content/en/mcp-blueprint-guide.md
+      doc:mcp-behavior-tree-guide: docs/content/en/mcp-behavior-tree-guide.md
+      doc:mcp-dev-tools-guide: docs/content/en/mcp-dev-tools-guide.md
 ---

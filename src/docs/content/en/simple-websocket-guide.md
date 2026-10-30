@@ -16,9 +16,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/guides/ue-tools/simple-websocket-guide/
 lang: en
 translationKey: simple-websocket-guide
-sourceHash: 44b5ad3e2b9e1763e55371925c749062dc89112dddeb05c1f33f9967e4ea82a5
+sourceHash: c5d48d9e6e067fed2278c198cac320f01229ae671414428b73bd48caa5142649
 translationStatus: translated
-generatedBodyHash: 47adf97ebed01d1c99e8df5c4af6b6b758b621a61fa6506e8672abbb0da4816f
+generatedBodyHash: 22529f53a27052f7e07ec696b8e8867b2cdb4bd2ef7a66664c19e19a822eeb02
 ---
 
 # 📘 SimpleWebSocket User Guide
@@ -80,6 +80,93 @@ You can use GameInstance-level Blueprint functions to connect, send, receive, an
 - Each connection name can have multiple bound callbacks, allowing modular event handling.
 
 ---
+
+## Native examples with the UE WebSockets module
+
+### 3.1 Use cases
+
+- Web frontend control panels
+- Real-time push messages from cloud services
+- Communication with browsers or mobile clients
+- A shared protocol across languages and platforms
+
+### 3.2 UE's built-in WebSockets module
+
+UE provides the `WebSockets` module. Add these dependencies to `.Build.cs`:
+
+```csharp
+PublicDependencyModuleNames.AddRange(new string[] {
+    "Core",
+    "WebSockets",
+    "Http"
+});
+```
+
+### 3.3 Basic implementation
+
+**Connect a WebSocket:**
+
+```cpp
+#include "IWebSocket.h"
+#include "WebSocketsModule.h"
+
+void ConnectWebSocket(const FString& URL)
+{
+    // 创建WebSocket实例
+    TSharedPtr<IWebSocket> WebSocket = FWebSocketsModule::Get().CreateWebSocket(URL);
+
+    // 绑定连接成功事件
+    WebSocket->OnConnected().AddLambda([]()
+    {
+        UE_LOG(LogTemp, Log, TEXT("WebSocket连接成功"));
+    });
+
+    // 绑定消息接收事件
+    WebSocket->OnMessage().AddLambda([](const FString& Message)
+    {
+        UE_LOG(LogTemp, Log, TEXT("收到消息: %s"), *Message);
+    });
+
+    // 绑定连接关闭事件
+    WebSocket->OnClosed().AddLambda([](int32 StatusCode, const FString& Reason, bool bWasClean)
+    {
+        UE_LOG(LogTemp, Warning, TEXT("WebSocket关闭: %s"), *Reason);
+    });
+
+    // 发起连接
+    WebSocket->Connect();
+}
+```
+
+**Send a message:**
+
+```cpp
+void SendWebSocketMessage(TSharedPtr<IWebSocket> WebSocket, const FString& Message)
+{
+    if (WebSocket.IsValid() && WebSocket->IsConnected())
+    {
+        WebSocket->Send(Message);
+    }
+}
+```
+
+**Connection notes:**
+
+- Use `127.0.0.1` instead of `localhost` when troubleshooting name resolution in packaged builds.
+- The SimpleWebSocket plugin in this guide supports only `ws://`. Check the engine, backend, and certificate configuration for native UE WebSockets module support for `wss://`.
+- Example connection URL: `ws://127.0.0.1:8080`.
+
+### Module capabilities and plugin support
+
+These three blocks show `.Build.cs` dependencies, connection creation, event binding, and text messages. They are not SimpleWebSocket node declarations. The project must retain the native `IWebSocket` object until the connection ends. The local `TSharedPtr` does not show where to keep it, and the example does not cover complete connection-error handling, delegate unbinding, or reconnection.
+
+The original technical record described the `ws://` limitation as a general limitation of UE's WebSockets module. That scope was too broad: this guide documents the limitation for SimpleWebSocket, which does not establish that every UE version and underlying backend lacks `wss://` support. For a custom native connection, check the engine version, backend, and certificate configuration.
+
+`127.0.0.1` is the local loopback address, suitable for a service on the same machine. Use the actual destination address for a service on another host. Avoiding `localhost` is a troubleshooting recommendation here; it does not mean remote services should use loopback.
+
+See the [TCP client and network communication guide](/en/docs/guides/ue-tools/simple-tcp-client-guide/) for other protocols and shared architecture.
+
+The native communication examples were published on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19165484) on 2025-10-25.
 
 ## Version History
 

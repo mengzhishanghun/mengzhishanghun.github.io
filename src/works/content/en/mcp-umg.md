@@ -11,7 +11,9 @@ status: In development
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-umg-guide/
   compatibility:
     - platforms: []
       requirements:
@@ -24,8 +26,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: 14d535769559a813a4d05c21f24cb01f10c24d00d65403ee4c0346650ef21478
-generatedBodyHash: 10464f11b6dd6421f1a7b0a380653f086ddc654597ffbc776b4a4165aa585f60
+sourceHash: aa7b8a4dc4b724692b068e092971d90efc11cebed8e4a6c4c350ce2893ebbcad
+generatedBodyHash: 69f1f4af1bd1fb51be61da48e0be9cd83a7f8990fc17ea17583e06759ae89d31
 translationStatus: translated
 coverAlt: Widget tree, properties and animation diagram
 websiteCoverUrl: /assets/covers/mcp-umg.png
@@ -41,4 +43,4 @@ The project focuses on Widget trees, properties and animations, connecting exter
 
 ## Development status
 
-The project is in development and has no public usage documentation yet. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPUMG user guide](/docs/guides/ue-tools/mcp-umg-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

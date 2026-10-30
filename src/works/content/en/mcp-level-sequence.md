@@ -11,7 +11,9 @@ status: In development
 workInfo:
   stage: developing
   supportHref: /contact/#support-title
-  channels: []
+  channels:
+    - kind: docs
+      href: /docs/guides/ue-tools/mcp-level-sequence-guide/
   compatibility:
     - platforms: []
       requirements:
@@ -24,8 +26,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-level-sequence
-sourceHash: 333165652ca15f1ef1f59d179d6a3d78dfb4a7749de29b2631c195946e3be1a0
-generatedBodyHash: 9415da192cff098e6bbd9d0690bc0b656f53537d640258c21cf816f3d6c7d74f
+sourceHash: 4333b54ad930b2416d0e105f0c65aa5a8c3ede6635c5b17333553de9d6294ad8
+generatedBodyHash: 1dd064db8a464f26e2954f32d65d7d0eb4d7e5bccc7adf516590701695e1da3b
 translationStatus: translated
 coverAlt: Level Sequence tracks and timeline diagram
 websiteCoverUrl: /assets/covers/mcp-level-sequence.png
@@ -41,4 +43,4 @@ The project focuses on Level Sequence asset editing, connecting external AI tool
 
 ## Development status
 
-The project is in development and has no public usage documentation yet. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPLevelSequence user guide](/docs/guides/ue-tools/mcp-level-sequence-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
