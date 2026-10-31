@@ -303,13 +303,6 @@
       "target": "both"
     },
     {
-      "path": "assets/cases/motion-capture-robot-cover.png",
-      "size": 1817718,
-      "gitBlob": "9534ff493a89e45dcc59718791d0d806202c0db0",
-      "sha256": "ba70a4522277c1f65078d5af3c173bed27ffa1267f4d2eaa5e6b850e086ce9bb",
-      "target": "both"
-    },
-    {
       "path": "assets/cases/motion-platform-filming-cover.png",
       "size": 2000113,
       "gitBlob": "449b160bc9855a88a7a23fdd8fdefeb3e481a9b6",
@@ -422,24 +415,10 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/mcp-animation.png",
-      "size": 56003,
-      "gitBlob": "4fbe4f31d6f93368fbd049050077e2194241d1a5",
-      "sha256": "dc251cd665e5d846c2c9d627bcb425d73e75bfbdb813117e11cc419de822d231",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/mcp-animation.svg",
       "size": 4244,
       "gitBlob": "2b5db7ee6a5adf29f0910465fc05e51e5353afd5",
       "sha256": "4838cdd6679cda8f4ab518376cf88a565372e75b48f69bc748e39439f33d2e8d",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/mcp-behavior-tree.png",
-      "size": 61969,
-      "gitBlob": "369d1ad81d88265c9f8f70be8b528499a6192c11",
-      "sha256": "ce71ddd4794fd1df9b7dbc53ab2b053bcbf4b5a93b6988f3f9d169cc7655dcf4",
       "target": "both"
     },
     {
@@ -450,24 +429,10 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/mcp-blueprint.png",
-      "size": 56922,
-      "gitBlob": "8f0712d96f3df856193685f5ac22a00e81ddc22a",
-      "sha256": "1f51974d5f7da9e6277676828218526fb02ae86bdc6f50e3525ea0b57c38b5c7",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/mcp-blueprint.svg",
       "size": 2873,
       "gitBlob": "840251e018fe34424bd05885930d4ec2543591ba",
       "sha256": "cee06b61861828abda3dbfb600f062f638be70c8758f0afd38ed1287ad54c824",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/mcp-dev-tools.png",
-      "size": 62992,
-      "gitBlob": "794bea5e47b7e816ee07837e6451f6193dda8547",
-      "sha256": "3bfe14492ad87f988c966296470c1d73e578aaa43e276ba4972095956e19d1d3",
       "target": "both"
     },
     {
@@ -478,24 +443,10 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/mcp-level-sequence.png",
-      "size": 51712,
-      "gitBlob": "7c69600bfbc6ef9efac02a3453e68fc4e302fb49",
-      "sha256": "09a2f1069f477e2f7633533f23dd4ff44b7584c360917b0b01b9f1575b8d77a0",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/mcp-level-sequence.svg",
       "size": 4370,
       "gitBlob": "33ebd05b5c3ebd8c9b4b53a32f32a110a253bd82",
       "sha256": "841a063e199c159ac5995765d613a52188d44cbee403aec3b2283392def3a1e4",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/mcp-material.png",
-      "size": 63727,
-      "gitBlob": "2e12d6cca2fbc4cfeab4333d5a69d2592febf05c",
-      "sha256": "e61899309a183ec561013659198304177c9088d5c5b8c86578a90b2ccf4bd935",
       "target": "both"
     },
     {
@@ -506,13 +457,6 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/mcp-niagara.png",
-      "size": 72720,
-      "gitBlob": "84f4dcec66141d062a412b6133d21823365c798c",
-      "sha256": "8026c22187ad650e915d9d076dd42c49b989876910d441b37d9acb70b2d780d7",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/mcp-niagara.svg",
       "size": 4792,
       "gitBlob": "faf2db1079aa68bd8ee41857302a36101cc249cc",
@@ -520,24 +464,10 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/mcp-umg.png",
-      "size": 55662,
-      "gitBlob": "cd4f7090a8e720ceda96de40a0d9fa69c5562802",
-      "sha256": "6f9129d37a43561bac42cbf39fcb12a493c2694e952f93e4235757f7c662253b",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/mcp-umg.svg",
       "size": 3284,
       "gitBlob": "ff6d30c647d8ed719f24da0a5cd0d77393b8361f",
       "sha256": "60b625791762530faffc53a7be471bc935ea347ee1a170619dbaeacebf245e89",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/mcp-world-editor.png",
-      "size": 73102,
-      "gitBlob": "2526357a713c44bbde4e580f6ac42eeac72b4806",
-      "sha256": "546d69bb083a965c82eafd1af0c10e467f3d1cfc912ee5efc4a7b4941f87fecb",
       "target": "both"
     },
     {
@@ -573,13 +503,6 @@
       "size": 2878,
       "gitBlob": "b7e859b0243cf4234de8e005f6ba3f6280d7467d",
       "sha256": "951c4ffa68b94532eea1765c49adb2a51530961ef936e10aad1f5381ec98e1d3",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/shaniu.png",
-      "size": 56691,
-      "gitBlob": "ecf78405832c0e51843ce1534af16c195cc27479",
-      "sha256": "5aa6a34195d553e193f79132d005b0697fca34b0a177a342b27a60be13658561",
       "target": "both"
     },
     {
@@ -1263,9 +1186,9 @@
     },
     {
       "path": "assets/reading-area.css",
-      "size": 6590,
-      "gitBlob": "392788ad9152e6d115f4cc648e1db92eb7f48068",
-      "sha256": "b19deecb0a15b1732cb3cd5cd1960c7aff74d7e392efd05da85f6c1e1b064e0b",
+      "size": 6652,
+      "gitBlob": "fb4142adf2e561b1aa7b3aec2ffb3f4143dcfa7c",
+      "sha256": "c71e725e5a5a078b4ce719a889018adaf6a5fbd526351b1f0a0b02fb7123bed0",
       "target": "both"
     },
     {
@@ -2270,20 +2193,6 @@
       "target": "both"
     },
     {
-      "path": "cases/motion-capture-robot-control/index.html",
-      "size": 1233,
-      "gitBlob": "983bc87254ed728461fdd745648f564a29c4d710",
-      "sha256": "efbcc92917d42c286811795ce1c626f0103dfae1caac18e55b6d7b3fb91e7e37",
-      "target": "both"
-    },
-    {
-      "path": "cases/motion-capture-robot/index.html",
-      "size": 1225,
-      "gitBlob": "051d98f81d00d10212ecac8ec67c2d4e91d625d3",
-      "sha256": "9b508cf25d285e2212fa1ddf85d1aa4aa6a00b682a31389d858c5caf0ccdefc2",
-      "target": "both"
-    },
-    {
       "path": "cases/motion-platform-filming/index.html",
       "size": 1240,
       "gitBlob": "88e2c8179fee5f40e173e097eebd025fc4f04188",
@@ -2302,13 +2211,6 @@
       "size": 1238,
       "gitBlob": "f30528591bebd31d5107878da23771725dc3b5f6",
       "sha256": "7ae0e62b61ca1a884b0cc7521e6444ac08765d8ce391fdb089da36c019f950d2",
-      "target": "both"
-    },
-    {
-      "path": "cases/robot-realtime-ik-prototype/index.html",
-      "size": 1232,
-      "gitBlob": "cfe76e8cca4cc10efe23573d57dc87d1a1b8b756",
-      "sha256": "42b7def8384b08a86efde134a0e58506ad05047335e61eace2fad9869112b76e",
       "target": "both"
     },
     {
@@ -3138,13 +3040,6 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/fragment/en_05f83d9.pf_fragment",
-      "size": 596,
-      "gitBlob": "59ab3f51abfd32f9a34040d472402ce49d4faeb6",
-      "sha256": "b069942ac38a0a833cdf254a4bd842bb5eec37dcc908dbbdf95b946586433135",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/fragment/en_0639cea.pf_fragment",
       "size": 1261,
       "gitBlob": "0c44f4be9cfe34cc0c382ef3fbd2e2b8b3f0d2d4",
@@ -3219,20 +3114,6 @@
       "size": 2470,
       "gitBlob": "e10f9ad2f0d9f54ad61e078f11224fd60653c7bc",
       "sha256": "36d756f08b32bf62ae813c93cc487bea705105ca8acebc2769880a53feb161c1",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/fragment/en_1c43bae.pf_fragment",
-      "size": 599,
-      "gitBlob": "5de759278528de15c8a3333bb8dd7d7b0af11191",
-      "sha256": "c1a272ccd33b18bdbadb03d9725ff2234a825585b4c058d86b44dc99a96d565c",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/fragment/en_1db905e.pf_fragment",
-      "size": 588,
-      "gitBlob": "5c358a1c3248666ef898aaf2edd5c30c176f8fbb",
-      "sha256": "f3e68e6b8decf51b48251b9d2a71fe68c21ac39e3aa884d12cfae8a7cab1a09f",
       "target": "both"
     },
     {
@@ -3317,13 +3198,6 @@
       "size": 847,
       "gitBlob": "8d2f0e0071d56be4205b691401cf2fa957a56e93",
       "sha256": "205201d976d9a2223ad906bac7b8c62792bebab77297e30bd2b4231228883de2",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/fragment/en_30a1ed1.pf_fragment",
-      "size": 591,
-      "gitBlob": "90e63983d3d6c2f338a92a25195ef9791da616b0",
-      "sha256": "f728c9bef5aa27b8ae5bbe47f2e14ec88ca7034fc3f539ed4fbd652f06462d4a",
       "target": "both"
     },
     {
@@ -3453,13 +3327,6 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/fragment/en_571ae9b.pf_fragment",
-      "size": 602,
-      "gitBlob": "a95b5dd96f7f79ef4eb5a428a435097412ddaa3d",
-      "sha256": "17fdc37259c59c17a6931ef867257255966d8a89ca7204f90a13f3c335f4a86b",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/fragment/en_59c5744.pf_fragment",
       "size": 519,
       "gitBlob": "7939832cfdef05e64888b5b95e22dc55a3fa1683",
@@ -3506,13 +3373,6 @@
       "size": 1346,
       "gitBlob": "a89581c4d3516409e493787e0d6c66e086ad7f3c",
       "sha256": "f17a2a728866d4c4a3383d23ce2d74584bc110c5c9a9726bbef07fb5653ff8ed",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/fragment/en_63cf59d.pf_fragment",
-      "size": 600,
-      "gitBlob": "e90cb24531909893ad493c14cf00a1290f3dee49",
-      "sha256": "e7c11c76eebcfa8c45905edf1a0c531524b9723e9bdc851d3d8333d950f21e98",
       "target": "both"
     },
     {
@@ -3572,13 +3432,6 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/fragment/en_752bfab.pf_fragment",
-      "size": 581,
-      "gitBlob": "8c5e70ff21781de3d49d28152c559588d0de74ff",
-      "sha256": "b3f2870a8b795317c9f74bdebb717cc9697292831eb46cc8db8b6f5310ff6d3c",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/fragment/en_779824b.pf_fragment",
       "size": 905,
       "gitBlob": "ace58b7289f9e640297fc5524c198bc56133cd88",
@@ -3618,13 +3471,6 @@
       "size": 1464,
       "gitBlob": "0c389542a173d4ae27ea2fa97232ee67249f110d",
       "sha256": "bad5784b0ed35dcb62513470a66130bb9c5f60c6aeb070f4172dcb1a3e2e81cd",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/fragment/en_84b1ef2.pf_fragment",
-      "size": 588,
-      "gitBlob": "049038dee2d928eb081d21e0d0cbd88d6ce8b224",
-      "sha256": "0850aacb6c9f79f05f72a85e5961c26d4d80d6deaa906b5fb8631f7fb6b47978",
       "target": "both"
     },
     {
@@ -3674,13 +3520,6 @@
       "size": 4237,
       "gitBlob": "3a79c934a0b9a108ca4a161089506aa7b74b3662",
       "sha256": "390cb8224eb2233167f79595e09831664f37efe12b7d84eb7ac4ccb6357b534f",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/fragment/en_91f3952.pf_fragment",
-      "size": 602,
-      "gitBlob": "9cb5fe716fc01f814a0a68fbb225e4247f95e1fd",
-      "sha256": "0105896a3a9a7d44ac6e54f22c83d0314996e7b098131aacbb809951f00fe5de",
       "target": "both"
     },
     {
@@ -3786,13 +3625,6 @@
       "size": 3132,
       "gitBlob": "dac1fb028795a7806ba2f8179a7fd780d9c064ab",
       "sha256": "9bee5bf85f49f82662d780d1b8000649c24930290679ad91d658ffb175619e6c",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/fragment/en_b821416.pf_fragment",
-      "size": 938,
-      "gitBlob": "32ab499bc2da50c6e71ac11068874b6bbdebd835",
-      "sha256": "a61e80d3a504bb08e7fd957874427bdd30b833edb5df22862280c3a021cb1f81",
       "target": "both"
     },
     {
@@ -3975,13 +3807,6 @@
       "size": 1417,
       "gitBlob": "c3419ae313f07e3d7c466722d08da1fe85c42107",
       "sha256": "a6aaf4bacf0b4d930efd49196005a60670c43e5bd770e0bba502300764c25417",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/fragment/en_df422d9.pf_fragment",
-      "size": 594,
-      "gitBlob": "44eae2201e09c03d14ce471283077a4f8d7f9667",
-      "sha256": "b645af4343af67d0d398e5366eac6cca55792f91d985d4435f9f695795831844",
       "target": "both"
     },
     {
@@ -4174,27 +3999,6 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_18c621f.pf_index",
-      "size": 31582,
-      "gitBlob": "6fcba3c08a8a3ceb555aba5f22708ba6bccb48cb",
-      "sha256": "f97e05617806766dbda4c22d5659e755249fb00f64d38e1c0ebfb80582c728b3",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/index/en_199bc2e.pf_index",
-      "size": 31722,
-      "gitBlob": "8309ea76e54bbb257bcac3d5f6cd87b7f304a7ef",
-      "sha256": "865d58a5135fdf43f2e9318f39b05397b4d326c4a33b2875f650dec816fbf3a5",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/index/en_1b56a42.pf_index",
-      "size": 34816,
-      "gitBlob": "f064630734457b43e837dadcd5aa0ecc4c47f032",
-      "sha256": "25568c5315a39aa30a976d041a12d2d43c2f9aadaceb611778ed7ec06592e75e",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/index/en_2396e34.pf_index",
       "size": 31897,
       "gitBlob": "9d2f57e682ffe313eeec9e17b735160a3ae9a5a1",
@@ -4209,10 +4013,17 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_3b6aee7.pf_index",
-      "size": 34626,
-      "gitBlob": "60942559b6a922b8667a25fee301f0e49362dfd4",
-      "sha256": "f97ab585c2d8d4cff5849e26c7fc0ec19f69d2ede9b8854142a5c153b9af6bff",
+      "path": "en/blog-search/index/en_355e7d3.pf_index",
+      "size": 35818,
+      "gitBlob": "920f3942fed78f1c384cc45a2153433b1af42945",
+      "sha256": "b70d917b7617cf5ae60ffb474116e87c209ce668f610ac3b5a92b968857a257f",
+      "target": "both"
+    },
+    {
+      "path": "en/blog-search/index/en_391c8c2.pf_index",
+      "size": 34356,
+      "gitBlob": "b7bbcece3a0840d83b9a0f55eae63ac2bc487f53",
+      "sha256": "b275318f22171883b8c57d2f23a4a0c53453279285e8b35222411ca79a83a2fe",
       "target": "both"
     },
     {
@@ -4230,13 +4041,6 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_4e63cc4.pf_index",
-      "size": 33974,
-      "gitBlob": "bf9e46225fad0e2f7230be2c155f78d1a0a33d69",
-      "sha256": "7684a397c305aa90dd66056ed7cbd33606f12265c87401070c66dc9a0a026c8f",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/index/en_51aed78.pf_index",
       "size": 32393,
       "gitBlob": "47cd55db5a75d051d8c1fc88ccec9c19d21c5565",
@@ -4248,13 +4052,6 @@
       "size": 33081,
       "gitBlob": "0ca0355962baab710ff3f09cc370888afd3889f2",
       "sha256": "21ad0b6ae0035e789480944cd63417fa20159a6a4ee1234225b1392c9af289bb",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/index/en_5b63193.pf_index",
-      "size": 2375,
-      "gitBlob": "a44fadb19b7c1568abfa81c630999ebe941228c7",
-      "sha256": "462aee5bc0465306b4e9b06816a44222a97de4bc06991fd834669e1c8a15dd37",
       "target": "both"
     },
     {
@@ -4286,10 +4083,10 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_7685e7d.pf_index",
-      "size": 39965,
-      "gitBlob": "fe63f42f45da4a0dbacd0467dabab87f1c032ae5",
-      "sha256": "5fa1f76d6f847381325b022e467c83f437715fd3649fe7d733851a1a1e1bddd6",
+      "path": "en/blog-search/index/en_7f635f5.pf_index",
+      "size": 32021,
+      "gitBlob": "1d06b5a52d5c3b32f153fb1b50f6ce01c54c1fa7",
+      "sha256": "747c8121e7b4be53902d163a3913c56366bf0d837c8becc1198fa6916c6d23ca",
       "target": "both"
     },
     {
@@ -4314,20 +4111,6 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_991bc5a.pf_index",
-      "size": 35690,
-      "gitBlob": "21056ef4921c53859b6d5d7ba3bf84cca94d4902",
-      "sha256": "7691e77e73fbc7189abe3979f1ae01ccda9eebcd4045560bdec8c92615fbd0a7",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/index/en_9977b4a.pf_index",
-      "size": 35934,
-      "gitBlob": "004fa895bc783083d851fd5f037100d3edd3977a",
-      "sha256": "639cf992768932834b98c1a242fd47e5d26a84329f310e70d3334d7b565a68fb",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/index/en_b0df56b.pf_index",
       "size": 31071,
       "gitBlob": "d1dc5652af5f6d345ac6f3fdb69e2fccc15c9c49",
@@ -4335,10 +4118,38 @@
       "target": "both"
     },
     {
+      "path": "en/blog-search/index/en_b7f2932.pf_index",
+      "size": 34384,
+      "gitBlob": "9ef66bbccab99aaea8058841fb2f64cb3205e16f",
+      "sha256": "66711f4d0e2146d36e6de00e62d17cf29589ce86a3ccf10ff3c5dbc70c03d878",
+      "target": "both"
+    },
+    {
+      "path": "en/blog-search/index/en_bda128d.pf_index",
+      "size": 31888,
+      "gitBlob": "03e90073f60614ff105c487b3504ff121204eb03",
+      "sha256": "0a97b65d84ac622f5d330d10d147e9213fe92c9694a0be07843c713de363633a",
+      "target": "both"
+    },
+    {
+      "path": "en/blog-search/index/en_c0d8c18.pf_index",
+      "size": 36241,
+      "gitBlob": "3277e7a0e1bbc0418fe4be888363edcad1f4ccb4",
+      "sha256": "bc9abad305dddf653f7b9624c1ca96961ee87d65ba1b4c6d91ea868a013cf215",
+      "target": "both"
+    },
+    {
       "path": "en/blog-search/index/en_c480836.pf_index",
       "size": 6984,
       "gitBlob": "fb75b90dd79fecb93df050b4bb46110248baeab4",
       "sha256": "a53d8265f19f89cc3e6f79a7c207874277dcaa8b4544176a681bfd47e66903d9",
+      "target": "both"
+    },
+    {
+      "path": "en/blog-search/index/en_c5b73a5.pf_index",
+      "size": 36595,
+      "gitBlob": "efed1454eae4bc16af8320d040a4206dcad9b359",
+      "sha256": "d56dd3f63764c3e6aee8e20946417aa34717dbc8564a356ed30e9fa2af915f25",
       "target": "both"
     },
     {
@@ -4356,10 +4167,10 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_e15542f.pf_index",
-      "size": 34446,
-      "gitBlob": "91cdf8194386fdb75f923d1584ef41d4f5a5186a",
-      "sha256": "383634fda70e28ad10b22da46124ecf82bff5b98fd31f4a2ef3efab4d82debb9",
+      "path": "en/blog-search/index/en_e0332d9.pf_index",
+      "size": 34729,
+      "gitBlob": "ff80217ef3baec66db06138ba5082d919d73dae9",
+      "sha256": "3ada3e5a10b03473daf164ca7197cde6b6eaa747b2af75cc5b220a845fad3e28",
       "target": "both"
     },
     {
@@ -4367,6 +4178,13 @@
       "size": 32461,
       "gitBlob": "3141b01a1506139723b348bbe3a5530f832f4135",
       "sha256": "d382be30ecba03699c79513e119198d27ea750b586ee2d7456583f1aabe040dc",
+      "target": "both"
+    },
+    {
+      "path": "en/blog-search/index/en_ed51123.pf_index",
+      "size": 35671,
+      "gitBlob": "c86ca9876193e86195ca2bdff963319d421df42d",
+      "sha256": "d2ed8375c6c8eb1ba583a7a41cda2021eaf88193ccd864cf6db0b90a8475551f",
       "target": "both"
     },
     {
@@ -4414,8 +4232,8 @@
     {
       "path": "en/blog-search/pagefind-entry.json",
       "size": 173,
-      "gitBlob": "b6ba7ecb9efb75984ba6ee7499a6edb4d55d30e6",
-      "sha256": "8de5de1fd256c1d08ba1bfb2a3ceb5c248331d897948090fad13de7abf0648c7",
+      "gitBlob": "673ba394d2309670d1adaebe246d1267f2fb0bf7",
+      "sha256": "ef676d2c2c128f8d5b672c58b3f5693989e26438512869a9af41054647e96ee6",
       "target": "both"
     },
     {
@@ -4461,10 +4279,10 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/pagefind.en_20a9371aa3.pf_meta",
-      "size": 1220,
-      "gitBlob": "d340618fd9b9f789a8579747feb066b060262358",
-      "sha256": "51c512effbcfc32902452c72aef0c0de08f70fff37605724ae364e327cc527d3",
+      "path": "en/blog-search/pagefind.en_2359be5f11.pf_meta",
+      "size": 1130,
+      "gitBlob": "d76680a854361980cd4c9f167df5fd2c3f82eb36",
+      "sha256": "d4df900c7bbaed8771a783b03f45ccefdfb194f2fa0aadf532e45a2da32263e2",
       "target": "both"
     },
     {
@@ -4770,9 +4588,9 @@
     },
     {
       "path": "en/blog/motion-capture-robot-control/index.html",
-      "size": 49163,
-      "gitBlob": "3e77fd66a25fff25fc5394aeda161861c70d61d7",
-      "sha256": "6f7a2efbe71ca394a39adf69811f71d292ff86c12b3edd61eb907eae84657535",
+      "size": 49117,
+      "gitBlob": "c9ffe9faa70104362438604294b4e661ee576ec0",
+      "sha256": "5d7f79c58a22e3f94a46621804f32449b562a43a121e332780bd66278f067843",
       "target": "both"
     },
     {
@@ -4812,9 +4630,9 @@
     },
     {
       "path": "en/blog/robot-realtime-ik-prototype/index.html",
-      "size": 50456,
-      "gitBlob": "f7794907c8ca00d28a33554b153e84420515513d",
-      "sha256": "aef54712d3b93287c6e49ad046d3193e44a468e792a4b650ecf13b2b274bbd56",
+      "size": 50410,
+      "gitBlob": "23caa8fca1e1e46eaf617e48e42a360bb88de709",
+      "sha256": "5158628dd8f526cbfbca58cbcde7d3c695ca357dd2eb71fbe7c89608014067e9",
       "target": "both"
     },
     {
@@ -4959,9 +4777,9 @@
     },
     {
       "path": "en/cases/index.html",
-      "size": 60066,
-      "gitBlob": "d9fa440306b642df1d76323c18f32dee7fe7f014",
-      "sha256": "87e829d9adec2e7b4baf3d7938a7b8c65dbc2cb4af7aa467bcea90d0ca09f69c",
+      "size": 56731,
+      "gitBlob": "cd92f1ec2d549b85563f113d8a1b382006e05695",
+      "sha256": "161f052a510d67c3df1b81eb84c0365979c9bb1f396f244bae229e8f3d6e17a9",
       "target": "both"
     },
     {
@@ -4976,20 +4794,6 @@
       "size": 1775,
       "gitBlob": "a1e61867368032f2db640f1159ce616808099df0",
       "sha256": "87f25a1e4c3fb358e954f4cad3a7bfd5dcabdbe42af1f587f2d81b6464763ab3",
-      "target": "both"
-    },
-    {
-      "path": "en/cases/motion-capture-robot-control/index.html",
-      "size": 1259,
-      "gitBlob": "95b5c59513c39fa93040bca9dc0fe2318f34c715",
-      "sha256": "a0bd1a91f8813b08d66739f71919a5b517e8e6104b4e719b50fc49de6ed09c1c",
-      "target": "both"
-    },
-    {
-      "path": "en/cases/motion-capture-robot/index.html",
-      "size": 43499,
-      "gitBlob": "4dbb5699329ea44684a5826ae6ce16b32efe6eae",
-      "sha256": "376cb1f07b907dad347d4f61dbb440cc4d5e5d07f754245cc513e40d502c3383",
       "target": "both"
     },
     {
@@ -5011,13 +4815,6 @@
       "size": 1268,
       "gitBlob": "8e186347b405335831ff7b0178cb0a5eaf873513",
       "sha256": "b8d5eeb76adb061543f597b4a5587ade5b2f55e83f8c5504f28ff0890bd97d9a",
-      "target": "both"
-    },
-    {
-      "path": "en/cases/robot-realtime-ik-prototype/index.html",
-      "size": 1258,
-      "gitBlob": "374e49af0267ae8bf6baa70675829eae6d264ed8",
-      "sha256": "e7c9c7691fdabf5f45993912ac1b4c8a41041fe628ee10f44171352587dce63c",
       "target": "both"
     },
     {
@@ -5057,65 +4854,65 @@
     },
     {
       "path": "en/docs/guides/ue-tools/mcp-animation-guide/index.html",
-      "size": 44670,
-      "gitBlob": "6809fc0afaee4a1ad93bb678a691a41b600cba66",
-      "sha256": "5cde7310d9fb37771ff30b2d2bf6a9a0a9c991c9061b41f82dee6a2e8f9e6864",
+      "size": 44541,
+      "gitBlob": "9fc87c9df8e04297059395caaf1ee053ebb51333",
+      "sha256": "f928744ab688b55c4abe806b6ace997b535fc05733324dedde58537ae541022a",
       "target": "both"
     },
     {
       "path": "en/docs/guides/ue-tools/mcp-behavior-tree-guide/index.html",
-      "size": 42788,
-      "gitBlob": "241def90b185048951808bef32aa2042bc45173e",
-      "sha256": "edcac6c1b755618bd51b4f08b1446d91c37c40e23ca8b467e9515a2330cfa27d",
+      "size": 42651,
+      "gitBlob": "551cbe0c052a1da0104c7476ed6b79396cf8e00e",
+      "sha256": "71f5523d8bb792950d613f512b472d23480fb810814cc53f03e90ed5d45674cd",
       "target": "both"
     },
     {
       "path": "en/docs/guides/ue-tools/mcp-blueprint-guide/index.html",
-      "size": 210367,
-      "gitBlob": "51dda241c6b51f0925af9384de1f931d907010a2",
-      "sha256": "5ef015cfe4bb3081aed343bf6b50ea9506674ceb7fa665135cd6e64c92916070",
+      "size": 210238,
+      "gitBlob": "4b2f7eba3d4d2ec2daef84bc0fff9bae52c940de",
+      "sha256": "5a4a47ef4a7f6b359de71b386af85a066a1250e0084fc28e02455d691f6bd71a",
       "target": "both"
     },
     {
       "path": "en/docs/guides/ue-tools/mcp-dev-tools-guide/index.html",
-      "size": 73553,
-      "gitBlob": "bc169a83d343645615fedf87ac8a4e2357ce4b32",
-      "sha256": "6ef7393b331856419c92ed7dbcbbf60fa56211ba8def3b941a9903f1205c92f9",
+      "size": 73424,
+      "gitBlob": "9ee60d6b533a2fc204019666cb1c1a5f6feafdd4",
+      "sha256": "f2e5a9d33ae7ff5a5e4d40ad562440bad73c56908c7027b7a48987d8fd8e5144",
       "target": "both"
     },
     {
       "path": "en/docs/guides/ue-tools/mcp-level-sequence-guide/index.html",
-      "size": 71333,
-      "gitBlob": "329338639db728c7ccf5057d6f35b331bacc51e5",
-      "sha256": "5e7675eaa921eb21ce16578df4f0a1710092ff0017a186411c477c284c739cd5",
+      "size": 71194,
+      "gitBlob": "a073f8ec281f4a64a062b672edddb3b43bef8c07",
+      "sha256": "73f5929968ec8e0dc5e350e37cf66e1fe5299a1eceb19e43b925364911e82ade",
       "target": "both"
     },
     {
       "path": "en/docs/guides/ue-tools/mcp-material-guide/index.html",
-      "size": 74272,
-      "gitBlob": "7a3bf90a3524011ea42b5cfb40e2af604be8de4b",
-      "sha256": "65bde911ae4193c57e45f6c21940afc8c3cf3efd1ca8a333aa5fd0299231c913",
+      "size": 74145,
+      "gitBlob": "5aac0d75b91b0d382b6a12e943c91a91d2e097b8",
+      "sha256": "f3633b7a29afd5b904b1bd560abff2278bc319f909f91574055b41aefb52a0ba",
       "target": "both"
     },
     {
       "path": "en/docs/guides/ue-tools/mcp-niagara-guide/index.html",
-      "size": 45173,
-      "gitBlob": "cb033d5bac76cbc320d4822ae381f445312a2815",
-      "sha256": "a97c10588ee72485d74362b2bbad64148595e55046b09be989f46afd1e1f5812",
+      "size": 45048,
+      "gitBlob": "4701e484565a9bf95b9f1d2fd0b6415a57616d53",
+      "sha256": "95094f17c3c8ff8efa82515506733bf2ef52e86f5b556a178714a3f063b3b629",
       "target": "both"
     },
     {
       "path": "en/docs/guides/ue-tools/mcp-umg-guide/index.html",
-      "size": 207853,
-      "gitBlob": "6b0bcaf17a9063e84ac511668db578099635456b",
-      "sha256": "071bf0ea3d972061a30d5fa29beca037909d382b3007825dcc78dd8d083d0308",
+      "size": 207736,
+      "gitBlob": "17c1be25516e727ba2bfcb439ad8856963de46ec",
+      "sha256": "7af9e8e3a9f9ca2b75d4866b248c3b87014d3dc62ea8006f9d98eb967309e5f8",
       "target": "both"
     },
     {
       "path": "en/docs/guides/ue-tools/mcp-world-editor-guide/index.html",
-      "size": 93408,
-      "gitBlob": "bde247713584b70ed0d015155b2587103739aaa9",
-      "sha256": "a9eeeb0b8ae0cefdb40d94853f4a863d368d70335fd53c0753e38001ab6053a5",
+      "size": 93273,
+      "gitBlob": "d3233b2a3da07e68249b6c26dd168939b44d29a0",
+      "sha256": "1cac018befc822a80f9efa7d8d848c3017c2acc208aa909807869a594310b15a",
       "target": "both"
     },
     {
@@ -5309,72 +5106,9 @@
     },
     {
       "path": "en/works/index.html",
-      "size": 173091,
-      "gitBlob": "5014cdb76e8faa78fc3f6d260c5d1a0c033b7c4b",
-      "sha256": "ef2a7392bf762874c862d1164a4ed99526319f991596d45446852860d44b089d",
-      "target": "both"
-    },
-    {
-      "path": "en/works/mcp-animation/index.html",
-      "size": 42889,
-      "gitBlob": "f6bde0335f813cef0e75b00848d5b5df7a82ba4d",
-      "sha256": "fed1ab78638fd1a03cb37776131b22520f559e494fe3131b771fd0a19aabd79b",
-      "target": "both"
-    },
-    {
-      "path": "en/works/mcp-behavior-tree/index.html",
-      "size": 42869,
-      "gitBlob": "53c5657f2109d374f65910d5e606b589c5c96f3d",
-      "sha256": "f2cfc69e8f3ce4907dbc462610eb2998b9baf3941aabc35f6e76e828bebf6277",
-      "target": "both"
-    },
-    {
-      "path": "en/works/mcp-blueprint/index.html",
-      "size": 42930,
-      "gitBlob": "d806444ebce00e67f76bc4498a3199e7ad8971a0",
-      "sha256": "bb2f0f8d3ace448aa35e2b69f44db138bcd701fa23af7c9dbd86a084b2a82a99",
-      "target": "both"
-    },
-    {
-      "path": "en/works/mcp-dev-tools/index.html",
-      "size": 42870,
-      "gitBlob": "dcbf0bc2d1b54292c31894ed3f2aa61307c16bb4",
-      "sha256": "5c275cfcc33472dea406a90aba83f6714c0145a9815fc4234f780de009037307",
-      "target": "both"
-    },
-    {
-      "path": "en/works/mcp-level-sequence/index.html",
-      "size": 42893,
-      "gitBlob": "f9efdb33ce73080117e78ec34a815ebdbbfc5727",
-      "sha256": "8fd426ec597409c352af41bd684e4a3570d14e892c680bfdeaf60d4fa5fc1d0a",
-      "target": "both"
-    },
-    {
-      "path": "en/works/mcp-material/index.html",
-      "size": 42762,
-      "gitBlob": "a090c6e87b4e856aea51da0f9fb39079ac9f12ba",
-      "sha256": "520ad80d258e9e5386474aa58cc9272db53e6c9530d6eff9da99e5f35a5549a3",
-      "target": "both"
-    },
-    {
-      "path": "en/works/mcp-niagara/index.html",
-      "size": 42718,
-      "gitBlob": "9b46771a1f9ebae91c473edd4f1eaebd47efd9fb",
-      "sha256": "b1ae065f670e58a49f2dba3adf7568a85715afeecacb36449ac5c0eb5b804256",
-      "target": "both"
-    },
-    {
-      "path": "en/works/mcp-umg/index.html",
-      "size": 42671,
-      "gitBlob": "94fa7d52381193fc54bd71ea99c35e54ca358241",
-      "sha256": "2963bb12845b1d6e4515c8dee6191e602f6a62d09b419fee12522e8ff2033cc9",
-      "target": "both"
-    },
-    {
-      "path": "en/works/mcp-world-editor/index.html",
-      "size": 42842,
-      "gitBlob": "f3ce8b25a9fd52fb38d878f6b19032893b4a8b52",
-      "sha256": "dad906f82fbf9e32ba44d8c09ace49d1be8e61ca8e23ec6927a84975647e4651",
+      "size": 146957,
+      "gitBlob": "0bbb7e73b7f48e93675f11ecdc05cb6ff7e8635c",
+      "sha256": "a7d0ecc40a1cda190fd718bbc4e0610ab7702cf5b0a9f5f1ca9650633153d9e1",
       "target": "both"
     },
     {
@@ -5417,13 +5151,6 @@
       "size": 46358,
       "gitBlob": "be8cbf74fac9275c32cbc5e6ec4be8f81c6170ce",
       "sha256": "fb46443048516fc196587668ca3e35686b3b331325e03f015ef511866e5a61d4",
-      "target": "both"
-    },
-    {
-      "path": "en/works/shaniu/index.html",
-      "size": 42529,
-      "gitBlob": "9c2dfa15fac013ad6cd5c18ead49b777c3734006",
-      "sha256": "b385170a59bb1b7da8b967c24ea8368855583683b062e42b26de2f24eb0c3161",
       "target": "both"
     },
     {
@@ -7038,9 +6765,9 @@
     },
     {
       "path": "sitemap.xml",
-      "size": 69304,
-      "gitBlob": "532229f3fee7f5bcab397c63307154e18a6c6ad3",
-      "sha256": "2ffb77076c60a40bf19e3449d48f6b5e7b15e52fac3b34fdeebf6acd35f1a7ab",
+      "size": 63984,
+      "gitBlob": "e42a3fc0ebd8250dbb84a6816502340a5d4bf141",
+      "sha256": "87782d9cbf9fa55a9cfe838327188630a48a7fabc0ba34e5d996942c101e5f91",
       "target": "both"
     },
     {
@@ -7072,69 +6799,6 @@
       "target": "both"
     },
     {
-      "path": "works/mcp-animation/index.html",
-      "size": 1079,
-      "gitBlob": "5a8ace2b1f93410125ffd2969c902e34df045167",
-      "sha256": "0375e2690b513ab0ec39cb634673bcceb91e242d01b4152e473439e5526b2f32",
-      "target": "both"
-    },
-    {
-      "path": "works/mcp-behavior-tree/index.html",
-      "size": 1099,
-      "gitBlob": "7e1f3089c6e2b82ea0cda58b1316cf13a964a11e",
-      "sha256": "91fa73661ebbf8491095dbaedc93efb71755256f3f0d462356ba979dd4e87959",
-      "target": "both"
-    },
-    {
-      "path": "works/mcp-blueprint/index.html",
-      "size": 1079,
-      "gitBlob": "737ec2fd1ed3586cf714b7c76acf9b23874a3ccc",
-      "sha256": "e1a1f745c437254e4a8cb041147b27ab8f9276f41567c6a1fc9947d5b35c9e63",
-      "target": "both"
-    },
-    {
-      "path": "works/mcp-dev-tools/index.html",
-      "size": 1079,
-      "gitBlob": "4cd05421060043cf8f59888c9af56ec28e86f8a5",
-      "sha256": "af861c73b7c2b1a8474d5738a4c8f59f275cf302a566211cfa0f674d00987f98",
-      "target": "both"
-    },
-    {
-      "path": "works/mcp-level-sequence/index.html",
-      "size": 1104,
-      "gitBlob": "91b95e4a16de4170641a55bc7c739ae4e382a942",
-      "sha256": "ac9954bf3b3371ffc4913eefbb1269ffeb867d418cb31312efaab1502f683a09",
-      "target": "both"
-    },
-    {
-      "path": "works/mcp-material/index.html",
-      "size": 1074,
-      "gitBlob": "cbf049fa599154d01fd298e1b213d2302ae4b1c2",
-      "sha256": "a7747758673d607b6876ac476e85fc236896beb49b09cf57657157b21197ef7a",
-      "target": "both"
-    },
-    {
-      "path": "works/mcp-niagara/index.html",
-      "size": 1069,
-      "gitBlob": "1a933988dc59d81f920b1f0c5177fff58a6e90ff",
-      "sha256": "3d1907b1e543139969dfe521f1ed949f8fe29d5df6f0606a73dc9e40fca7c8e8",
-      "target": "both"
-    },
-    {
-      "path": "works/mcp-umg/index.html",
-      "size": 1049,
-      "gitBlob": "1067d098044297df34a8ab9726f5d43b53e42c4e",
-      "sha256": "aa9dd1a98f5f64706476bd4a5dcab3bb65eedb173fd9f362fd516be9bd36907c",
-      "target": "both"
-    },
-    {
-      "path": "works/mcp-world-editor/index.html",
-      "size": 1094,
-      "gitBlob": "fc89ae2276236caae305ee5bc0a2e527a5d57221",
-      "sha256": "642699209f27e55dd8023e823a1885dab299ce8196e1c5964ffaea0fbee4a535",
-      "target": "both"
-    },
-    {
       "path": "works/md-blog-packer/index.html",
       "size": 1550,
       "gitBlob": "5db6a40cff315d11ca48ca5ecec37863982926b4",
@@ -7146,13 +6810,6 @@
       "size": 2685,
       "gitBlob": "9188483f5faa4729badcbbba1ecd1dc85499955c",
       "sha256": "f95704e64d3e66e2211eada039fda706ed5eafcbfaeb3f37d0e11b0b56a3033c",
-      "target": "both"
-    },
-    {
-      "path": "works/motion-capture-robot-control/index.html",
-      "size": 1233,
-      "gitBlob": "5b5cab6565fe6ace627d98723fe697e8c649fe6c",
-      "sha256": "d8eb201dca6bff26c6ab39ad6d69af42a451328d76e4a282a6874a61fed173f3",
       "target": "both"
     },
     {
@@ -7181,13 +6838,6 @@
       "size": 1523,
       "gitBlob": "3d4d26d38bb1c95872c6f5264bdec52b019d0097",
       "sha256": "644dd75f85d863af41fa84d62828de624b035573814d7c6a9577862d0b4cd689",
-      "target": "both"
-    },
-    {
-      "path": "works/shaniu/index.html",
-      "size": 1040,
-      "gitBlob": "ebfdbb839a7178ad67f33823235013861d3b5d5b",
-      "sha256": "7561928cf630937bc7c09a15dd16f2a759aa924752a5f6ac14fcfac404897293",
       "target": "both"
     },
     {
@@ -7352,13 +7002,6 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/fragment/zh-cn_1c8aa35.pf_fragment",
-      "size": 701,
-      "gitBlob": "99b5588953871ffb8a811444e12f244459af7f90",
-      "sha256": "622b9f6a5f772e92fe1094c8bd35d28fb7225de8c2261349ee763a2919c144ac",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/fragment/zh-cn_1d35381.pf_fragment",
       "size": 1423,
       "gitBlob": "feeba3aa8cfedd6d6cb6313c23b56d2897b6dec5",
@@ -7496,13 +7139,6 @@
       "size": 1739,
       "gitBlob": "e31f7c84dac33799c1a19c7d9744d55d35c60bbd",
       "sha256": "8e369f07e5fb85a75fcd3c1bf10f43048faf1c1dcfaa4cd168f4cf55d3ff1447",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/fragment/zh-cn_3adb4be.pf_fragment",
-      "size": 696,
-      "gitBlob": "83d4accedd7ce4e9ec6bd904a02826d5345f07de",
-      "sha256": "bcc23dc84fcf236b5c7e15afb45a1029d29f295b7e553168cd0316b8df9326c5",
       "target": "both"
     },
     {
@@ -7674,13 +7310,6 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/fragment/zh-cn_6087783.pf_fragment",
-      "size": 707,
-      "gitBlob": "87da4c7a6bbdaf568ef75b23d59dd5605d64072b",
-      "sha256": "76c19e8a8208331c4057c6e2c0654dbd6e95c125379c6db0bb76b01def8c1913",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/fragment/zh-cn_60c8f9e.pf_fragment",
       "size": 29317,
       "gitBlob": "7761c0ded4155c5bbee43ac4bfd9e6c755949a7b",
@@ -7702,13 +7331,6 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/fragment/zh-cn_64383cd.pf_fragment",
-      "size": 1194,
-      "gitBlob": "3af13a68ee553d092993a7fbc2196c5512dc7eea",
-      "sha256": "0d075ceeb14ef26312878d717ad6cfd0324107bfa7809a53c8876d2c9afdd7fa",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/fragment/zh-cn_64ddd63.pf_fragment",
       "size": 1736,
       "gitBlob": "5ec42c20b6ce0589966a73e50016d793e3f30a3a",
@@ -7720,13 +7342,6 @@
       "size": 3233,
       "gitBlob": "c273d0d0a577c49c81f73b10126aa94a4ef3b1e4",
       "sha256": "8ede88ec02bb97332232a536b98602e0d7fa9f213190c185db8c91072ebfe749",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/fragment/zh-cn_6674c16.pf_fragment",
-      "size": 702,
-      "gitBlob": "2bd945348128cad53f003135e9e7f4fbb3ebf827",
-      "sha256": "96d240ba55c58fc9c8be835bbc5f1a882f7345075a2a3ebf86557c14796d9c4a",
       "target": "both"
     },
     {
@@ -7790,13 +7405,6 @@
       "size": 5591,
       "gitBlob": "1676dc728027460a5f5c25318eca1a3c5dcaa8ba",
       "sha256": "988d5cfa256a85bf81a86182216de5c24edd2fc4af42c7ea0a51bc797bb3e2d2",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/fragment/zh-cn_8336995.pf_fragment",
-      "size": 698,
-      "gitBlob": "3fe6cfb3283d2416537f9460d617ba98bc22fcdc",
-      "sha256": "52f41e6e8f9229dee5d38046615c218e965d1bedf85179733e1f4a6f6b5a9d9e",
       "target": "both"
     },
     {
@@ -7968,13 +7576,6 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/fragment/zh-cn_a546b85.pf_fragment",
-      "size": 695,
-      "gitBlob": "d49f09013e44a0d012ca34a0cce91fbc6343a612",
-      "sha256": "30e57b3f79ef26b771c2b5bf9a15f8ed6f794b5c8f7bc3fd08da5b4d5337bc85",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/fragment/zh-cn_a5ddf4b.pf_fragment",
       "size": 1692,
       "gitBlob": "287b36881b327afe95d5b94e784fa08d44dddc23",
@@ -8035,13 +7636,6 @@
       "size": 1613,
       "gitBlob": "f70e32398f0cbe444045f620873d873f72b1ae06",
       "sha256": "912bec5e936702e8311a6f8b2ae91c789c7278119b935a48e2a9321e27982fae",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/fragment/zh-cn_b2da181.pf_fragment",
-      "size": 697,
-      "gitBlob": "1cd39291865b497c3ce6dcd05ffcbbbecaf448e2",
-      "sha256": "572fd30effc5ed539670167ef5f52ffc20efb18e89da3960b05ebe36b0dc97ab",
       "target": "both"
     },
     {
@@ -8234,20 +7828,6 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/fragment/zh-cn_df7660d.pf_fragment",
-      "size": 701,
-      "gitBlob": "5655949b797a2a5bc537cc7852b394222193161b",
-      "sha256": "90cfbb637a90dee4a616adf947b07e8966a762d93cb7e14f13050edf7264f2ae",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/fragment/zh-cn_e08747b.pf_fragment",
-      "size": 685,
-      "gitBlob": "1d205db5f63131c492d83c7b686d988c848a0dd6",
-      "sha256": "0ba131f1d4c9ec54fb35c16e7ee3d8944861b78c3a06ba7e645de969779d14d1",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/fragment/zh-cn_e1792f8.pf_fragment",
       "size": 6487,
       "gitBlob": "1a7111baf2d66aa9f6722db73e9b0beacf5aa643",
@@ -8280,13 +7860,6 @@
       "size": 751,
       "gitBlob": "09be657b67d850012cac42f349aecb1748368ece",
       "sha256": "13c15ef1d533e42400ad3335cb55b8be536ac89d5f000eaec416ceeaf2126674",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/fragment/zh-cn_ecfdea3.pf_fragment",
-      "size": 702,
-      "gitBlob": "e8ccde215b50e7755bf03e739636e1d51303e172",
-      "sha256": "1595ff614c4063865b9f2fa10ac28ce7de0275f7261392d4285f1949c25fa324",
       "target": "both"
     },
     {
@@ -8360,17 +7933,17 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_1269e46.pf_index",
-      "size": 31501,
-      "gitBlob": "ad175bee23c3f1cd145fc734afcb357637a6f8e5",
-      "sha256": "dfacfe6c6aaf9ebd2bcf0472c32ae42e0200443c54437b2dd1fbaa38d420577f",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/index/zh-cn_147ee88.pf_index",
       "size": 4214,
       "gitBlob": "7bdf715997453009eb29f3800428581007bc88fb",
       "sha256": "323865a96b1c09474e205fd00cc2bdf778492abe174becb82be54b592e31c7ed",
+      "target": "both"
+    },
+    {
+      "path": "zh/blog-search/index/zh-cn_19631b9.pf_index",
+      "size": 640,
+      "gitBlob": "b3bd0074333fddf0d879f61f1e028a48d4064920",
+      "sha256": "b02b176b671882bfc3ca39db5abab8aa2f3c20df10eeaa8d4e795747dd15dc5a",
       "target": "both"
     },
     {
@@ -8388,13 +7961,6 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_3d19db7.pf_index",
-      "size": 31070,
-      "gitBlob": "0ed1fc64fd1a2c6d7b36dd2a5fba84d4537f41fe",
-      "sha256": "f08ce166e075a80ddbd36204709b524e2354d57f86c2f80fcb663814d7084e18",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/index/zh-cn_41a7224.pf_index",
       "size": 30078,
       "gitBlob": "373fd00d761e00d112a097cba8536836d78f1f5e",
@@ -8402,10 +7968,10 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_49982e9.pf_index",
-      "size": 37133,
-      "gitBlob": "2b014db73529acce837ae2e9a5dcda02095338de",
-      "sha256": "2a21a0196cc52ec7f0333d22fffd107336b1328b5aecff91f8268bc9a78ee928",
+      "path": "zh/blog-search/index/zh-cn_4c94b1d.pf_index",
+      "size": 37319,
+      "gitBlob": "45300263816e91a430c34e22dcd9e9891ea9b640",
+      "sha256": "0ea3603dc8cbcc613a7c32518f24db8032cbd539831c6036713ed9acd5b22baf",
       "target": "both"
     },
     {
@@ -8420,13 +7986,6 @@
       "size": 30245,
       "gitBlob": "3630051fea4a589e2f77bd521356b793f1753544",
       "sha256": "8177246b9a810b16b1547888c6a612c6cc272c7870da7c85698e8d8de8b74f91",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/index/zh-cn_77276c2.pf_index",
-      "size": 31159,
-      "gitBlob": "6b669e0693a2cb2cbb087cc3c1a59ef147e8d6b6",
-      "sha256": "20d03cb83f0268a207e0337722ce77420c9c781422414e9517a8267032d1b884",
       "target": "both"
     },
     {
@@ -8451,17 +8010,24 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_87b006e.pf_index",
-      "size": 39614,
-      "gitBlob": "db5bd5a51c089c11b5909e187a14627f28ab4135",
-      "sha256": "dc18b3673e1a24e537b83487d8d407891d7634a634a570a6f7f0b10f53ef89a9",
+      "path": "zh/blog-search/index/zh-cn_862d0e6.pf_index",
+      "size": 39852,
+      "gitBlob": "eda0989eaa81871b1fcfc8562df49de6bb3ec415",
+      "sha256": "b201c7a139122214238deeeb5bcdb2cec20e7d713e360d77c8336e18257084f1",
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_8eba889.pf_index",
-      "size": 31410,
-      "gitBlob": "2674b0477dbc45017049064c1acc1bcba319bacf",
-      "sha256": "53a3b1c96de9feda3593c75fb4506d3cce3f60a54af4dc59e73bf1fe4d53ecd2",
+      "path": "zh/blog-search/index/zh-cn_8c1f8bd.pf_index",
+      "size": 31244,
+      "gitBlob": "b4fc40639927a8cc66d40cfa6e7054a6d1fe4fc9",
+      "sha256": "0b79dff154d8d02c45dd209f8e388657de6426c1412fb69d9bb008d3a5a39754",
+      "target": "both"
+    },
+    {
+      "path": "zh/blog-search/index/zh-cn_968fee3.pf_index",
+      "size": 31092,
+      "gitBlob": "c89078ad76f49f111fe390d41db398ec2f70e9c8",
+      "sha256": "cceb99ad9afcfb06bd2d12ed822627c15436388731d57ba919a816ef00f78b7e",
       "target": "both"
     },
     {
@@ -8472,10 +8038,17 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_afe0e3e.pf_index",
-      "size": 31173,
-      "gitBlob": "2e895739c5ff0cf95452f48b1f94411802aa98ee",
-      "sha256": "40802cca760bc19fc4001ae4367bcfe7e9c7c6cb790e438c39779d402e91202f",
+      "path": "zh/blog-search/index/zh-cn_bb4c38c.pf_index",
+      "size": 36955,
+      "gitBlob": "3b8da62fa50b3a054f2ee5cb9342db9352031e37",
+      "sha256": "ad839d4f14fd9d8d5e5e6642a9de9fe5d7734848288904a2754f72e1ff73ec22",
+      "target": "both"
+    },
+    {
+      "path": "zh/blog-search/index/zh-cn_be6220d.pf_index",
+      "size": 31597,
+      "gitBlob": "51cf04e45170bf7a6e5d91cb552e067e1c85870b",
+      "sha256": "85d084e9d4943a7803d279b506835111c9e67e2d28901dc33103bd5497799f2a",
       "target": "both"
     },
     {
@@ -8507,13 +8080,6 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_d2f45f1.pf_index",
-      "size": 31631,
-      "gitBlob": "100827620b57352bd1cc03638901df8887a391b6",
-      "sha256": "60e482b4c1a2dc8e297e9be7fc089028348793adaf5f9fbe4f1d25a67474b9d3",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/index/zh-cn_d896f8c.pf_index",
       "size": 30333,
       "gitBlob": "f16147c20967c313c9ccd099a11c54bf3af1936b",
@@ -8525,6 +8091,20 @@
       "size": 30196,
       "gitBlob": "9280d262830819aea9e47cc78e4f22ed0aea9a3c",
       "sha256": "10118dae016db781d1fd58b9ea06c87f4fc84b305ae0d3e88be4ee5fae050680",
+      "target": "both"
+    },
+    {
+      "path": "zh/blog-search/index/zh-cn_dde8303.pf_index",
+      "size": 31949,
+      "gitBlob": "8feb86c21d72f2a0e44fcaa40be7ef53165db634",
+      "sha256": "886f8dcf78707d62dac3458ebb93559c88575992e0939d85cd8d20eae60158d7",
+      "target": "both"
+    },
+    {
+      "path": "zh/blog-search/index/zh-cn_e7a28b4.pf_index",
+      "size": 31593,
+      "gitBlob": "eb71771533297f831e2700557a9592f1a3bce6f0",
+      "sha256": "175aa88ae7de8f603d62726e799eda23b4941d8676e748d34363f3aacc83249e",
       "target": "both"
     },
     {
@@ -8556,10 +8136,10 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_f6ade45.pf_index",
-      "size": 6028,
-      "gitBlob": "7bb33e3b96e9fafddbabbf9898ae5cf8ea6f5e60",
-      "sha256": "c88822c0802d94ec7db9800e796b58acfda0c501f7ae6e9ecb221f8d99855f8a",
+      "path": "zh/blog-search/index/zh-cn_f7bf76d.pf_index",
+      "size": 32119,
+      "gitBlob": "4e6a2e969a08be1bb8177acd9efadc299bf516e6",
+      "sha256": "6b2304885fdbb801a01a48e25a6d35466f4d19e29cdd989d3535a1d3ab70e0b2",
       "target": "both"
     },
     {
@@ -8591,13 +8171,6 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_fedc9e1.pf_index",
-      "size": 37392,
-      "gitBlob": "a099923779142e8de849218159e362cc13bfd61b",
-      "sha256": "23efed2a27a45e503e1709c654dd189a3820130914abc409a6c9c6a7ba763db6",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/pagefind-component-ui.css",
       "size": 43339,
       "gitBlob": "35b565ee2cbdbcb18308e11fe390ae0395920ba6",
@@ -8614,8 +8187,8 @@
     {
       "path": "zh/blog-search/pagefind-entry.json",
       "size": 182,
-      "gitBlob": "b3998a9102d34a50ce58cd4da97c9ade7b9d97eb",
-      "sha256": "754740b3a9fda7243e4dbce204b7a75fa2a2eca120b896d3cf474f9d68348ef6",
+      "gitBlob": "92a7c6339fe115b7772a20e24ba8ee59e2124e83",
+      "sha256": "75f11f8584a5c472cc6c205b27d52946d76617906659c7471c5a8d55dd4b4285",
       "target": "both"
     },
     {
@@ -8682,13 +8255,6 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/pagefind.zh-cn_a4f9597ed8aea.pf_meta",
-      "size": 1289,
-      "gitBlob": "b5b2094e64742d78cdc90f3425330c58c287aa66",
-      "sha256": "288bf3835afc399184714af950dbd256cf0e18a4f8ce47e05c9d1a32c016747a",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/pagefind.zh-cn_c7db437c8af5a.pf_meta",
       "size": 973,
       "gitBlob": "10d538866d3cf39ad9cf767185a29d7244480ef3",
@@ -8700,6 +8266,13 @@
       "size": 945,
       "gitBlob": "cd2abf1411e252e85cc7afbaa567becb322fcadb",
       "sha256": "4d929e73679017b045adaca4a0ba16e3ddc183479bff441812e2b10a36c0e35b",
+      "target": "both"
+    },
+    {
+      "path": "zh/blog-search/pagefind.zh-cn_e872e168c5975.pf_meta",
+      "size": 1199,
+      "gitBlob": "5761913d2bf753c6f45f7ed8805bc53d4c1e891e",
+      "sha256": "dee9b7f31ec7f25cdeb1e69a8bc706dafd4b3993e2521ccac1b1a81eb15551e5",
       "target": "both"
     },
     {
@@ -8963,9 +8536,9 @@
     },
     {
       "path": "zh/blog/motion-capture-robot-control/index.html",
-      "size": 48308,
-      "gitBlob": "e9199facb091e9391f4d3c6a2ee81f0b27a4a34b",
-      "sha256": "c480f6c3f2881ec6785780abea5a39bc593beb3b57490a3d229766008589d5ff",
+      "size": 48262,
+      "gitBlob": "3033e71f8d31fc8e227d93e5733052383f298533",
+      "sha256": "e970012baa2cdd4fa4edc4735dbff344d9f2ecf15fe7a41097623f25df462910",
       "target": "both"
     },
     {
@@ -9005,9 +8578,9 @@
     },
     {
       "path": "zh/blog/robot-realtime-ik-prototype/index.html",
-      "size": 49119,
-      "gitBlob": "c39bdcf61a06232ffb84d54658156a836205cb92",
-      "sha256": "625c335129ecbe4b9a4c8ccd1b8c393a973cc96f0d1062d4e30926f9073dba71",
+      "size": 49073,
+      "gitBlob": "3bfe3bd699ff7c877f5d84a588909a269dfb2561",
+      "sha256": "591211edc6279e4c42495f1291976a0aa0d62edca833b2a281a23f69b5834943",
       "target": "both"
     },
     {
@@ -9152,9 +8725,9 @@
     },
     {
       "path": "zh/cases/index.html",
-      "size": 58106,
-      "gitBlob": "c1f282b24b11a8981aecf1bba54963fa784149b9",
-      "sha256": "61127f7d31f9469c599ec05f07df545bebde838b2eb2a22d098e981373db2762",
+      "size": 54982,
+      "gitBlob": "f4f4924d977f5c20d8a57f10db0de22ea8fb1063",
+      "sha256": "8e8309a8c3de23aa70d6b7137880a903184ed5bd5ff1ae54f2b13dd9f322f536",
       "target": "both"
     },
     {
@@ -9169,20 +8742,6 @@
       "size": 1696,
       "gitBlob": "69502b96b4ac7bcbf315c4010c43097ef379d417",
       "sha256": "0d65b5a82b234a84a7aca4ad9cc9630b5464abfa3d4c3288c67ef28ff106f052",
-      "target": "both"
-    },
-    {
-      "path": "zh/cases/motion-capture-robot-control/index.html",
-      "size": 1236,
-      "gitBlob": "e8157554970d91431cc02c012664346d4173e336",
-      "sha256": "58e5edf31fe85a016420d76510e1de48a9f4e5f7822adff7db126e307ac0d29d",
-      "target": "both"
-    },
-    {
-      "path": "zh/cases/motion-capture-robot/index.html",
-      "size": 43053,
-      "gitBlob": "8a91548e67f59a8e2a42587ce3592a57a6321050",
-      "sha256": "00912d7e4fcbaddd62f5af9fe6a1c6d45280add5bbc96375977cc4a04f4a1825",
       "target": "both"
     },
     {
@@ -9204,13 +8763,6 @@
       "size": 1241,
       "gitBlob": "6a097bdc2f74f326a9a244ceded802852224f7b7",
       "sha256": "959e42dcd123f31a82882cad3183f05c89aa749d1a23613b2e6c5a7cc5b6bba3",
-      "target": "both"
-    },
-    {
-      "path": "zh/cases/robot-realtime-ik-prototype/index.html",
-      "size": 1235,
-      "gitBlob": "972fd25fc7c5e06f9c39dfe2917a8956b62f378a",
-      "sha256": "6232c6f46da89868df59782d0cd95326120b8854f6b8631ba3c25c368da6012c",
       "target": "both"
     },
     {
@@ -9250,65 +8802,65 @@
     },
     {
       "path": "zh/docs/guides/ue-tools/mcp-animation-guide/index.html",
-      "size": 44116,
-      "gitBlob": "d475138970fb636182715b80341f096bcc9cb57c",
-      "sha256": "19f2cf8ad974802928cb812def26542ded754d6c6b8d6e691d35ea2c7d07bdf2",
+      "size": 43983,
+      "gitBlob": "ef8f347f16a6d3aa8c6378e7d72c706f1b98304f",
+      "sha256": "8100c14fbabc918a37dd378da999fef3faf54717ef5da7bb70979a487ace438a",
       "target": "both"
     },
     {
       "path": "zh/docs/guides/ue-tools/mcp-behavior-tree-guide/index.html",
-      "size": 42200,
-      "gitBlob": "49aa86f93d6cc3de3094e1dec1735f47d7edd245",
-      "sha256": "85fa844c383bfcec1edf8540a3565783495d79103fe40eb4399c0c6c5217c4de",
+      "size": 42059,
+      "gitBlob": "20b0ef10aab5aa02e9f2845671f01c2c6f46cb60",
+      "sha256": "2bb266b5d492a774b7c96ce93fc2dbb82d0c24cb75c8a0fc8c75d6ab36aa1953",
       "target": "both"
     },
     {
       "path": "zh/docs/guides/ue-tools/mcp-blueprint-guide/index.html",
-      "size": 205169,
-      "gitBlob": "f53d9fa6e6786653858706b50d8f1c9625a2a2ff",
-      "sha256": "768a3ab7d13760dd045c81ea08702d043085cc6f18fed8d3462b9b0dddf3dc97",
+      "size": 205036,
+      "gitBlob": "a277e5a5b9cd98791b3364aefafe151c48cc4365",
+      "sha256": "4ab33d81f76cba1fd3bee17235c0fff178cf35fca5e0f35c00a53f821fd39bc8",
       "target": "both"
     },
     {
       "path": "zh/docs/guides/ue-tools/mcp-dev-tools-guide/index.html",
-      "size": 71702,
-      "gitBlob": "02aef4ac862e63a7854063a5572a3a84027161c2",
-      "sha256": "5790fc1b01c14a05f48b27c32697bb4fe1b49608269a757334730bc00eaa941f",
+      "size": 71569,
+      "gitBlob": "56b9aacecb05f59500a3767a216bf8778277ae62",
+      "sha256": "2e821bb6e2b6d24e8231061e4942015ddf5aa46586a908d8b8996e9fe99f20a4",
       "target": "both"
     },
     {
       "path": "zh/docs/guides/ue-tools/mcp-level-sequence-guide/index.html",
-      "size": 70629,
-      "gitBlob": "a099d30e8c860dc50837cb13fbfe3d06b8a96944",
-      "sha256": "a2a29b6b28a8e4ec3a2cc65b1b325c5e8177d06c7ef66f03feb13acecd3b8380",
+      "size": 70486,
+      "gitBlob": "4288d352b2944d82581c36bb6682905c20471bd4",
+      "sha256": "86135ca66e8c856e640e416f1786035929ced8a6751522adcfd16e2c11db6333",
       "target": "both"
     },
     {
       "path": "zh/docs/guides/ue-tools/mcp-material-guide/index.html",
-      "size": 73120,
-      "gitBlob": "0da1a07f529ffb9cd4b9d3a58a87e5ad0a9bcf4d",
-      "sha256": "9388d3a4acf922cab4375d776379976c1b9f0f4e702401132f250a8353af5e3a",
+      "size": 72989,
+      "gitBlob": "fa0bc1e00e92e388fa512aded587423475b044c5",
+      "sha256": "7d5c554203c270b2f832b01681cb0f510e55a0d112ee80e32e463566aabe4006",
       "target": "both"
     },
     {
       "path": "zh/docs/guides/ue-tools/mcp-niagara-guide/index.html",
-      "size": 43908,
-      "gitBlob": "41f6cec78e0492d5d4fbbfe6cfa428dba5a2123a",
-      "sha256": "1027ce27b7926e6befd58b7d7e2a7bf093d0033f2bf61ab98704d269acc47cc0",
+      "size": 43779,
+      "gitBlob": "14b717e80c1798ab0091f66d485892a137892efd",
+      "sha256": "5d57f76be0771e04a81d2eb1e8182d931ad293dbfada479026db3ded65ce078d",
       "target": "both"
     },
     {
       "path": "zh/docs/guides/ue-tools/mcp-umg-guide/index.html",
-      "size": 202769,
-      "gitBlob": "cbaea3f4a982fe65fc9d0aee8a1c8805582e5a2b",
-      "sha256": "35081369b03de98e92c60c7ab03f4fe507c10efc7d178c4063edd8635ee19957",
+      "size": 202648,
+      "gitBlob": "4b440bd5986fcbb65594b10ae84183d0a2087e35",
+      "sha256": "5383be8e2213c37065aaa7e2f55380e9acdb05713d39de1f1868a0551e8a8ddc",
       "target": "both"
     },
     {
       "path": "zh/docs/guides/ue-tools/mcp-world-editor-guide/index.html",
-      "size": 91183,
-      "gitBlob": "6b3528100d8f6790143b9bf1e78709377d415dac",
-      "sha256": "9f6dd445b2c371572286c46f4b293a4e1a04a43d3e0a55cd821ee827cac449ba",
+      "size": 91044,
+      "gitBlob": "10c93b833e246477c48a0703f6af15848e2f7368",
+      "sha256": "fd5e81482ce1a2193c81b2053261faa0190beadf3a7b2439d20ed815de13fbcc",
       "target": "both"
     },
     {
@@ -9502,72 +9054,9 @@
     },
     {
       "path": "zh/works/index.html",
-      "size": 159209,
-      "gitBlob": "38a5a160f58f5721479320c645d66789bcaf6055",
-      "sha256": "e6b859578c24542d3cd11e435215acc99852882a91af033ed3800218a59f3e5f",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/mcp-animation/index.html",
-      "size": 42236,
-      "gitBlob": "d9f55ad84b83f56d7ffb009a6b7a8313fc5aeb59",
-      "sha256": "7c805ce24829efd7f8b88bc3330c7c91252b0c04177c4119dd64f49a7607408a",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/mcp-behavior-tree/index.html",
-      "size": 42248,
-      "gitBlob": "51dcaa53837a7ea9fb6988319a30436b82550132",
-      "sha256": "ee98d3fc1a2b30914564e8349ed61e637836ccaaa7eceb0754d0b65a80f466bb",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/mcp-blueprint/index.html",
-      "size": 42267,
-      "gitBlob": "9544ee8519cef1d0935aa6cff7c021000b628748",
-      "sha256": "1dc43d8b8e7dfc16ada748ca4497ab4f73b8772ecb1af0c83dffff18776c32b6",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/mcp-dev-tools/index.html",
-      "size": 42212,
-      "gitBlob": "fd62e8659742f514a3466bcd8e127ab0b78bc29e",
-      "sha256": "0dbef0895de97bd589350892ad3aeff76e7aad951744bbe0c304643b5448ad52",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/mcp-level-sequence/index.html",
-      "size": 42338,
-      "gitBlob": "e3f6a95326430ffd6500951b127c0974685152b2",
-      "sha256": "f532b1f19a63ab0df756cb7e912eb894628fd61def2f48c119a58b34990ef9cc",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/mcp-material/index.html",
-      "size": 42122,
-      "gitBlob": "20f18c6345809b60e7ea91dba9ca77c7daab8b1c",
-      "sha256": "a01e695b73ab86597b5625230f6581a1b40acafa3056447bc29ca9f27e57a9be",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/mcp-niagara/index.html",
-      "size": 42137,
-      "gitBlob": "492f8f96c8bdaf6ca9d598d4916b2eb93c455c16",
-      "sha256": "c65e4ac52284bc212e1d2e28aed9a09b3098268d0476ce4185647ac7559778da",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/mcp-umg/index.html",
-      "size": 42032,
-      "gitBlob": "b335c1176a77a37d0b96b182446559c7b1ee4c90",
-      "sha256": "e21a1bcddd0cd32444d83bf480372951d52350072582278f83171cee5dc8729a",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/mcp-world-editor/index.html",
-      "size": 42263,
-      "gitBlob": "e52abab0ff4e61ec74ac1e6f7b6d5ed06671ddb7",
-      "sha256": "7e85b1b09add7d3f709040d58c42b81bbe42f4ccc58ee6ba4e623959999d4b30",
+      "size": 135830,
+      "gitBlob": "f3e258be2568afb1a295494ee25590e4ef5849b2",
+      "sha256": "83de43ea15990732ef536ac18176ca7644fcc626872f46862700e9d51e32cedd",
       "target": "both"
     },
     {
@@ -9610,13 +9099,6 @@
       "size": 45480,
       "gitBlob": "493e70c6f754e00536887120b187b80c324a0482",
       "sha256": "0f7eab537dff8ea7e55d7a145cc0c935352e207c12bcc70c6d3b5b1bc161c3b1",
-      "target": "both"
-    },
-    {
-      "path": "zh/works/shaniu/index.html",
-      "size": 41929,
-      "gitBlob": "64a35a199f80e49921ee3b2b34ae694598bfd144",
-      "sha256": "9f3c921015d518a4ce6a1acdaf89b4cda28cb70044c2966f9ff697315d998874",
       "target": "both"
     },
     {
