@@ -210,6 +210,6 @@
   font-weight: 500;
 }
 
-.work-status-developing{color:#e7c982}.work-action-unavailable{color:var(--muted,#a7bad0);background:transparent;border-style:dashed}.work-action-unavailable:hover{background:transparent;color:var(--muted,#a7bad0)}
+.work-status-developing{color:#e7c982}.work-action-unavailable:disabled{font:inherit;color:var(--muted,#a7bad0);background:transparent;border-style:solid;opacity:.55;cursor:not-allowed}.work-action-unavailable:disabled:hover{background:transparent;color:var(--muted,#a7bad0)}
 
 .site-chrome .project-hero.work-without-media{grid-template-columns:minmax(0,1fr)}
