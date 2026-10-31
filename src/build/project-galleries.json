@@ -2,12 +2,12 @@
   "version": 1,
   "labels": {
     "zh": {
-      "cover": "封面示意图",
+      "cover": "封面",
       "image": "项目图片",
       "video": "项目视频"
     },
     "en": {
-      "cover": "Cover illustration",
+      "cover": "Cover",
       "image": "Project image",
       "video": "Project video"
     }

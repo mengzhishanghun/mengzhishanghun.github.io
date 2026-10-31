@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginManager
 lang: en
 translationKey: plugin-manager
-sourceHash: 47b7ef1d5003bd75ff363f92b083b07fbffc70e6dcc0e1478d4bf538d4148e8a
+sourceHash: 76da005a3db8befba62219cf155eb7725181b24764c34f8ca8891fcf37e250b5
 translationStatus: translated
 generatedBodyHash: 192913ba4c8e8052b6752cadcd0e5481e55c2f95335ff31fddfa58a6842a7c47
 workInfo:
@@ -32,7 +32,7 @@ workInfo:
         - UE plugin management tool (operating system to be verified)
       requirements: []
 websiteCoverUrl: /media/imported/works/plugin-manager-cover.png
-coverAlt: Illustration of Unreal Engine plugin management
+coverAlt: UEPluginManager cover
 ---
 
 ## Overview

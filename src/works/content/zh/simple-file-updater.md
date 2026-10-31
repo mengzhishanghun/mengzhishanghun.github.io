@@ -27,7 +27,7 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
-coverAlt: 配置驱动的文件更新功能示意封面
+coverAlt: SimpleFileUpdater封面
 websiteCoverUrl: /media/imported/works/simple-file-updater-cover.png
 lang: zh
 translationKey: simple-file-updater

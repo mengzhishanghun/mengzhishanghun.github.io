@@ -1514,7 +1514,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: AI concept cover
+    project-cover-note: Cover
   case:ai-digital-human-integration:
     root.html:1.head:0.meta:2@content: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
     root.html:1.head:0.title:4.#text:0: AI digital human interaction · Xiaomao
@@ -1566,7 +1566,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: AI concept cover
+    project-cover-note: Cover
   case:flying-car-simulator:
     root.html:1.head:0.meta:2@content: An Unreal Engine and AirSim flight simulation project covering input, flight control, camera behavior and engine adaptation.
     root.html:1.head:0.title:4.#text:0: Flight simulation · Xiaomao
@@ -1618,7 +1618,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: AI concept cover
+    project-cover-note: Cover
   case:motion-capture-robot-control:
     root.html:1.head:0.meta:2@content: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
     root.html:1.head:0.title:4.#text:0: Motion capture and robot control · Xiaomao
@@ -1670,7 +1670,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: AI concept cover
+    project-cover-note: Cover
   case:six-dof-motion-platform:
     root.html:1.head:0.meta:2@content: Software motion solving and signal processing for a six-axis platform, with ocean parameter animation and editor recording.
     root.html:1.head:0.title:4.#text:0: Motion platform and virtual filming · Xiaomao
@@ -1722,7 +1722,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: AI concept cover
+    project-cover-note: Cover
   work:simple-file-updater:
     root.html:1.head:0.meta:2@content: Batch-update specified files by configuring local target paths and remote download URLs.
     root.html:1.head:0.title:4.#text:0: "SimpleFileUpdater: File Updates from Config · Xiao Mao"
@@ -3881,6 +3881,20 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1@aria-label: Featured blog posts
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0@aria-label: "UE: A Toolchain from Plugin Development to Release"
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: A Toolchain from Plugin Development to Release
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2@aria-label: "UE: Creating Independent Multiwindow Interfaces in UE"
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Creating Independent Multiwindow Interfaces in UE
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1@aria-label: Switch featured blog posts
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:0@aria-label: "Show: A Toolchain from Plugin Development to Release"
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:2@aria-label: "Show: Creating Independent Multiwindow Interfaces in UE"
   page:works-index:
     content-sort:label: Sort by
     content-sort:likes: Most liked
@@ -6345,7 +6359,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: AI concept cover
+    project-cover-note: Cover
   doc:mcp-world-editor-guide:
     root.html:1.head:0.title:2.#text:0: MCPWorldEditor User Guide | MZSH Docs
     root.html:1.head:0.meta:8@content: MCPWorldEditor User Guide | MZSH Docs
@@ -8543,7 +8557,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 4f49418043a908a3ec48f0384f29f8f6f0b5efa1acd758226e43a2b6818a2acd
+sourceHash: aa7bce4a95b5f9a52c64b2514a1c48f9d9c315a23ac903f28354e984d549ac61
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

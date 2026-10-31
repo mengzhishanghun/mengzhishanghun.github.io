@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-Tools/UEPackageManager
 lang: en
 translationKey: ue-package-manager
-sourceHash: a1ac29fbf7e88cf7bb74055683117edfbe1917a34f98d70486ea15ac96a9af8e
+sourceHash: ac47b6374cb5a07e264d0d58ce59e22ad26e8148008b3628b60f1d42336500b1
 translationStatus: translated
 generatedBodyHash: 97839545369ba78792d1e7e73e38746686a230b472c10b23364a971c573b57e6
 workInfo:
@@ -35,7 +35,7 @@ workInfo:
       requirements:
         - Win64 project packaging; Launcher or source-built engine
 websiteCoverUrl: /media/imported/works/ue-package-manager-cover.png
-coverAlt: Illustration of Unreal Engine project packaging
+coverAlt: UEPackageManager cover
 ---
 
 ## Overview

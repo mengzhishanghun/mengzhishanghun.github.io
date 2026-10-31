@@ -19,7 +19,7 @@ links:
     href: https://github.com/MZSH-Tools/P4CaseSync
 lang: en
 translationKey: p4-case-sync
-sourceHash: c953fdcf7b1bb4e6ee5e17192e8ef2dfda5a2c50fa024787fe8e86e499bca4d0
+sourceHash: 5296321e9c534a9d220fc7d165d5075bedf1a094b673e9b683dadc4c864da477
 translationStatus: translated
 generatedBodyHash: a10993ab36c49d25abfa6884da333bafe3045694bf73957da7d5e2b88510add0
 workInfo:
@@ -35,7 +35,7 @@ workInfo:
       requirements:
         - Perforce p4 command-line environment
 websiteCoverUrl: /media/imported/works/p4-case-sync-cover.png
-coverAlt: Illustration of Perforce path case correction
+coverAlt: P4CaseSync cover
 ---
 
 ## Overview

@@ -27,10 +27,10 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-dev-tools
-sourceHash: 962ff60283a9faa2fd52d044738b94bcbea29a39dbb0a13b65ec26b61fce44c1
+sourceHash: 98f356d7024266fed72d5344ef1e754853b28250ec903a9229a21755fc898381
 generatedBodyHash: 6897f18c4a581179c315af0642d81c1f2907a64388a34215e288bafc44ad3d49
 translationStatus: translated
-coverAlt: Asset tools and development diagnostics diagram
+coverAlt: MCPDevTools cover
 websiteCoverUrl: /assets/covers/mcp-dev-tools.png
 ---
 

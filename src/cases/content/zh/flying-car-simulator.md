@@ -14,7 +14,7 @@ sitePublish: true
 tags:
   - 仿真
   - 飞行控制
-coverAlt: 飞行仿真的 AI 概念封面，非项目实拍
+coverAlt: 飞行仿真封面
 websiteCoverUrl: /assets/cases/flight-simulation-cover.png
 lang: zh
 translationKey: flying-car-simulator

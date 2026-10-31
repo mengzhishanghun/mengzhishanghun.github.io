@@ -24,7 +24,7 @@ sitePublish: true
 tags:
   - 动画蓝图、状态机与动画资产
   - MCP 系列
-coverAlt: 动画资产与动画蓝图示意图
+coverAlt: MCPAnimation封面
 websiteCoverUrl: /assets/covers/mcp-animation.png
 lang: zh
 translationKey: mcp-animation

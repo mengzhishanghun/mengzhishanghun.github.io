@@ -28,7 +28,7 @@ tags:
 links:
   - label: 公开源码仓库
     href: https://github.com/MZSH-Tools/P4StreamSwitcher
-coverAlt: P4StreamSwitcher示意图
+coverAlt: P4StreamSwitcher封面
 websiteCoverUrl: /assets/covers/p4-stream-switcher.png
 lang: zh
 translationKey: p4-stream-switcher

@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: en
 translationKey: plugin-auto-packer
-sourceHash: c2770efa44a85789cf1bbe6c1b1fad2f0cb6735e127d407cd645547344e5f1ee
+sourceHash: f75657b2c22c422920bb1686505a16d44f9542ac55313867a93172b7856130bd
 translationStatus: translated
 generatedBodyHash: 2775ee494b392227d00cf5c5566bbfa98dd81f6d399ef6002f41cf2665c105b7
 workInfo:
@@ -35,7 +35,7 @@ workInfo:
       requirements:
         - Win64 plugin builds only
 websiteCoverUrl: /media/imported/works/plugin-auto-packer-cover.png
-coverAlt: Illustration of Unreal Engine plugin packaging across versions
+coverAlt: UEPluginAutoPacker cover
 ---
 
 ## Overview

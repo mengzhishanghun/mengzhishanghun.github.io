@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: 629791963b703e5b0f26acf1234656d7030c86d2678a2c0e7b2905b14a1da8fe
+sourceHash: 346a799ae8e142c044b4c7a264bbebd0c1092010d052b4efbbd144af541704d9
 translationStatus: translated
 generatedBodyHash: ee69deb47a4520b5b520ca5741c23559eb664e4c535b6b23424e84e3de609bfb
 workInfo:
@@ -37,7 +37,7 @@ workInfo:
       requirements:
         - UE 5.2–5.8
 websiteCoverUrl: /assets/covers/simple-bp-inherit-fix.png
-coverAlt: Illustration of Blueprint inherited-component repair
+coverAlt: SimpleBPInheritFix cover
 ---
 
 ## Overview

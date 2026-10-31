@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 lang: en
 translationKey: ue-quick-start
-sourceHash: aa52a4bcba7869e664a7210a7c0106671d23edea0435f18b3dab0449deb34318
+sourceHash: 75202dd7bec5a3960e55870ca39c79cc085296999e655d3ffe7117f98f1548c3
 translationStatus: translated
 generatedBodyHash: f7432fdfe35e7ee45c630b7ccc676348781d7a543a71602062799b5ec3e7440c
 workInfo:
@@ -32,7 +32,7 @@ workInfo:
         - UE project tool (operating system to be verified)
       requirements: []
 websiteCoverUrl: /media/imported/works/ue-quick-start-cover.png
-coverAlt: Illustration of Unreal Engine project compilation and launch
+coverAlt: UEQuickStart cover
 ---
 
 ## Overview

@@ -14,7 +14,7 @@ sitePublish: true
 tags:
   - 仿真
   - 虚拟拍摄
-coverAlt: 六轴平台与虚拟拍摄的 AI 概念封面，非项目实拍
+coverAlt: 六轴平台与虚拟拍摄封面
 websiteCoverUrl: /assets/cases/motion-platform-filming-cover.png
 lang: zh
 translationKey: six-dof-motion-platform

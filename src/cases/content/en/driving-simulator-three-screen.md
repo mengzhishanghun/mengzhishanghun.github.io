@@ -15,11 +15,11 @@ tags:
   - Simulation
   - Driving records
   - Multi-screen display
-coverAlt: AI concept cover for Driving simulation, not a project screenshot
+coverAlt: Driving simulation cover
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 translationKey: driving-simulator-three-screen
 lang: en
-sourceHash: 7aa2ff9c6cfc0f19f9b0579273c12fa114fa0d8ad5e0e487d6966c22204a21cd
+sourceHash: fe1d2a189b87cd2c2bb80dc1f06aed570c8adc14c9f33d1d8829e4e0397db57f
 translationStatus: translated
 generatedBodyHash: f4abf82a6b1286113e71d4397c697e333495acc91f752b842e0f1a3b4b65706c
 ---

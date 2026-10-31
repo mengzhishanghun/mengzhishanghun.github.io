@@ -32,7 +32,7 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
-coverAlt: 动画序列平滑工具功能示意封面
+coverAlt: SimpleLevelSeqSmooth封面
 websiteCoverUrl: /assets/covers/simple-level-seq-smooth.png
 lang: zh
 translationKey: simple-level-seq-smooth

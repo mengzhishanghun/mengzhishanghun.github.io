@@ -14,11 +14,11 @@ sitePublish: true
 tags:
   - Simulation
   - Flight control
-coverAlt: AI concept cover for Flight simulation, not a project screenshot
+coverAlt: Flight simulation cover
 websiteCoverUrl: /assets/cases/flight-simulation-cover.png
 translationKey: flying-car-simulator
 lang: en
-sourceHash: 924d068d3fe355fd88e0682c7dc53e004fcbaf78812b3beaf96a9ff0a92855dc
+sourceHash: eb3981088cdd07ef4064b4155c8891275265769565e5a310dfa2e56d65ee5aa1
 translationStatus: translated
 generatedBodyHash: 66e7e34683884cea91009ee5ac5f6395b82c65a93b3f42fe130d6108fd5fd71c
 ---

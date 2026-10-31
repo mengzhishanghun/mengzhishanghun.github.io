@@ -27,7 +27,7 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/MDBlogPacker
-coverAlt: Markdown 图片发布工具功能示意封面
+coverAlt: MDBlogPacker封面
 websiteCoverUrl: /media/imported/works/md-blog-packer-cover.png
 lang: zh
 translationKey: md-blog-packer

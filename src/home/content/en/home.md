@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: 64254a8865cc89cba0c23726f0ce6584d22ed59d9b26b300ac144cb6282f5e3a
+sourceHash: 7d042f6ac7e1876a3f5566b980583ad6b4ff1487f34351db3fd1b296481f75f0
 translationStatus: translated
-generatedBodyHash: 2a5821f94d2da5cdfa206b13dc8080a3ca7074573e24ab1b1600d3e2d807e877
+generatedBodyHash: febc4550385e2b10f4cb559778c787636eafe70955f3f225e88464c68c106b31
 ---
 
 # Complexity can be encapsulated;
@@ -114,20 +114,20 @@ An interactive UE herbal exhibition combining search, illustrated and audio cont
 
 UE
 
-### [How to Let AI Modify DataAsset Directly](/blog/cnblogs-20159718/)
+### [A Toolchain from Plugin Development to Release](/blog/plugin-release-workflow/)
 
-Discusses format selection, property conversion, repeated triggers, and file writes in bidirectional DataAsset and JSON synchronization.
+Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
 
-[View Details](/blog/cnblogs-20159718/)
+[View Details](/blog/plugin-release-workflow/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A8)
 
 UE
 
-### [Component State Contamination and Repair in Blueprint Inheritance](/blog/cnblogs-20030737/)
+### [Creating Independent Multiwindow Interfaces in UE](/blog/ue-multiwindow-interface/)
 
-Analyzes abnormal CreationMethod values in Actor Blueprint component templates and the inspection and repair workflow across inheritance chains, SCS, and ICH.
+Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
 
-[View Details](/blog/cnblogs-20030737/)
+[View Details](/blog/ue-multiwindow-interface/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A9)

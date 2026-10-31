@@ -1491,7 +1491,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1514,7 +1514,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: AI 概念封面
+    project-cover-note: 封面
   case:ai-digital-human-integration:
     root.html:1.head:0.meta:2@content: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
     root.html:1.head:0.title:4.#text:0: AI 数字人交互 · 小毛
@@ -1543,7 +1543,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1566,7 +1566,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: AI 概念封面
+    project-cover-note: 封面
   case:flying-car-simulator:
     root.html:1.head:0.meta:2@content: 基于 UE 与 AirSim 的飞行仿真项目，涉及操作输入、飞行控制、观察视角和引擎版本适配。
     root.html:1.head:0.title:4.#text:0: 飞行仿真 · 小毛
@@ -1595,7 +1595,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1618,7 +1618,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: AI 概念封面
+    project-cover-note: 封面
   case:motion-capture-robot-control:
     root.html:1.head:0.meta:2@content: 将人体动捕、机器人模型重定向、实时数据通信与三轴 IK 整理到同一个 UE 项目，部分能力仍处于原型阶段。
     root.html:1.head:0.title:4.#text:0: 动捕与机器人控制 · 小毛
@@ -1647,7 +1647,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1670,7 +1670,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: AI 概念封面
+    project-cover-note: 封面
   case:six-dof-motion-platform:
     root.html:1.head:0.meta:2@content: 围绕六轴平台的软件运动解算、信号处理、海洋场景参数联动和编辑器虚拟拍摄录制。
     root.html:1.head:0.title:4.#text:0: 六轴平台与虚拟拍摄 · 小毛
@@ -1699,7 +1699,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -1722,7 +1722,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: AI 概念封面
+    project-cover-note: 封面
   work:simple-file-updater:
     root.html:1.head:0.meta:2@content: 将本地目标路径与远程下载地址写入配置，批量更新指定文件。
     root.html:1.head:0.title:4.#text:0: "SimpleFileUpdater：配置驱动的文件更新工具 · 小毛"
@@ -3881,6 +3881,20 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1@aria-label: 精选博客
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0@aria-label: UE：插件开发到发布的工具链
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 插件开发到发布的工具链
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2@aria-label: UE：在 UE 中创建独立多窗口界面
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 在 UE 中创建独立多窗口界面
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 用 Slate 原生窗口承载 UMG，提供窗口生命周期、位置尺寸、显隐与 DPI 控制。
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1@aria-label: 精选博客切换
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:0@aria-label: 显示：插件开发到发布的工具链
+    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:2@aria-label: 显示：在 UE 中创建独立多窗口界面
   page:works-index:
     content-sort:label: 排序
     content-sort:likes: 点赞最多
@@ -6322,7 +6336,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:2.#text:0: 仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.a:4.#text:0: 联系合作
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看 AI 概念封面
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.figure:1.a:0@aria-label: 查看封面
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0@aria-label: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.a:0.#text:0: 返回
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.mobile-outline:1.div:0.button:1@aria-label: 打开本页目录
@@ -6345,7 +6359,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: AI 概念封面
+    project-cover-note: 封面
   doc:mcp-world-editor-guide:
     root.html:1.head:0.title:2.#text:0: MCPWorldEditor 使用文档 | MZSH Docs
     root.html:1.head:0.meta:8@content: MCPWorldEditor 使用文档 | MZSH Docs

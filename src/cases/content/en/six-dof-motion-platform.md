@@ -14,11 +14,11 @@ sitePublish: true
 tags:
   - Simulation
   - Virtual filming
-coverAlt: AI concept cover for Motion platform and virtual filming, not a project screenshot
+coverAlt: Motion platform and virtual filming cover
 websiteCoverUrl: /assets/cases/motion-platform-filming-cover.png
 translationKey: six-dof-motion-platform
 lang: en
-sourceHash: e4e338513c79975fc6788424466201b9be3c750573e7a1b70a911be43b260eaa
+sourceHash: 128afb6deaf56d889e4e5f01ef52e25def9ffbd6d6d87c1c0c2903687c24738d
 translationStatus: translated
 generatedBodyHash: 1069821f93f9966101681f31cab1cc75cde439443f1ec5b1453288045386d24b
 ---

@@ -26,10 +26,10 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-material
-sourceHash: 3f4517a79a36da9aac22fbfec1a53524e49270054fab2896264ed80fa1a1f1bc
+sourceHash: 9430e4ec331c70f083bd1163428aeac17bccf7a4445cfcd26b9262b1b23ea236
 generatedBodyHash: d4f053274ae36004e495bddfd198536e511404ffb37aae6d1d1a7a6061f9104e
 translationStatus: translated
-coverAlt: Material graph and material instance diagram
+coverAlt: MCPMaterial cover
 websiteCoverUrl: /assets/covers/mcp-material.png
 ---
 

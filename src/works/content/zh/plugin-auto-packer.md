@@ -29,7 +29,7 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
-coverAlt: UE 多版本插件打包器功能示意封面
+coverAlt: UEPluginAutoPacker封面
 websiteCoverUrl: /media/imported/works/plugin-auto-packer-cover.png
 lang: zh
 translationKey: plugin-auto-packer

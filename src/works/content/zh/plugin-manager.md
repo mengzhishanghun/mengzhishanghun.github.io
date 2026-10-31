@@ -26,7 +26,7 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPluginManager
-coverAlt: UE 插件管理工具功能示意封面
+coverAlt: UEPluginManager封面
 websiteCoverUrl: /media/imported/works/plugin-manager-cover.png
 lang: zh
 translationKey: plugin-manager

@@ -26,10 +26,10 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-niagara
-sourceHash: 63fde9f919a178f710e07a57ebbecbecab2f6d028d991af20d36c504fd9a8161
+sourceHash: c0b8e99eac350d71d4b2ffe2478a780e745d9d953af57f3202eaf28212a318af
 generatedBodyHash: 843ae91c9c691c43591cf567b349097788e7e80d80fcbea944bd53a98127db0d
 translationStatus: translated
-coverAlt: Niagara system and module editing diagram
+coverAlt: MCPNiagara cover
 websiteCoverUrl: /assets/covers/mcp-niagara.png
 ---
 

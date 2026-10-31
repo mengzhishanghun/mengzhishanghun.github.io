@@ -15,11 +15,11 @@ tags:
   - Motion capture
   - Robotics
   - Prototype
-coverAlt: AI concept cover for Motion capture and robot control, not a project screenshot
+coverAlt: Motion capture and robot control cover
 websiteCoverUrl: /assets/cases/motion-capture-robot-cover.png
 translationKey: motion-capture-robot-control
 lang: en
-sourceHash: 4a347f62eebd5055a466abd017bcfcfa30cddbd8b8430acd26c4ed2eec7639eb
+sourceHash: fdfeae5bc6badc175e6659baf226bf98381ab61f99fdac3821e87fead9fa6cd3
 translationStatus: translated
 generatedBodyHash: b3b7fc2cf6020907509c02a5a5944ebfa8ec72c7515d952c981fb557b05ddaa9
 ---

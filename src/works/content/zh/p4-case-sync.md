@@ -29,7 +29,7 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/P4CaseSync
-coverAlt: Perforce 路径大小写修正功能示意封面
+coverAlt: P4CaseSync封面
 websiteCoverUrl: /media/imported/works/p4-case-sync-cover.png
 lang: zh
 translationKey: p4-case-sync

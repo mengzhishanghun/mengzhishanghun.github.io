@@ -111,20 +111,20 @@ Plugin Development and Release Workflow
 
 UE
 
-### [如何让 AI 直接修改 DataAsset](/blog/cnblogs-20159718/)
+### [插件开发到发布的工具链](/blog/plugin-release-workflow/)
 
-讨论 DataAsset 与 JSON 双向同步中的格式选择、属性转换、循环触发和文件写入问题。
+围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
 
-[查看内容](/blog/cnblogs-20159718/)
+[查看内容](/blog/plugin-release-workflow/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A8)
 
 UE
 
-### [蓝图继承中的组件状态污染与修复思路](/blog/cnblogs-20030737/)
+### [在 UE 中创建独立多窗口界面](/blog/ue-multiwindow-interface/)
 
-分析 Actor 蓝图组件模板的 CreationMethod 异常，以及继承链、SCS 和 ICH 的检查与修复流程。
+用 Slate 原生窗口承载 UMG，提供窗口生命周期、位置尺寸、显隐与 DPI 控制。
 
-[查看内容](/blog/cnblogs-20030737/)
+[查看内容](/blog/ue-multiwindow-interface/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A9)

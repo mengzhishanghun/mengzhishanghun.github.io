@@ -15,7 +15,7 @@ tags:
   - 仿真
   - 驾驶记录
   - 多屏显示
-coverAlt: 驾驶仿真的 AI 概念封面，非项目实拍
+coverAlt: 驾驶仿真封面
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 lang: zh
 translationKey: driving-simulator-three-screen

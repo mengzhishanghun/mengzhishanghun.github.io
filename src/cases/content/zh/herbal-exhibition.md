@@ -15,7 +15,7 @@ tags:
   - 交互展示
   - 中药
   - 数据管理
-coverAlt: 中药展示的 AI 概念封面，非项目实拍
+coverAlt: 中药展示封面
 websiteCoverUrl: /assets/cases/herbal-exhibition-cover.png
 lang: zh
 translationKey: herbal-exhibition

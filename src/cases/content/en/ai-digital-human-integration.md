@@ -15,11 +15,11 @@ tags:
   - AI
   - Digital humans
   - Voice interaction
-coverAlt: AI concept cover for AI digital human interaction, not a project screenshot
+coverAlt: AI digital human interaction cover
 websiteCoverUrl: /assets/cases/digital-human-interaction-cover.png
 translationKey: ai-digital-human-integration
 lang: en
-sourceHash: 823683128e8f1cc14f647f26695a4fc053634332ddd0bb72e9fb964e193744e8
+sourceHash: 340dffc0f3d6c1977748253aa853c50f7d4b559df74462e8ea30302273ff2a57
 translationStatus: translated
 generatedBodyHash: 0b11264f50dc8a1fc68cc72ee01ec3ba7bdba5bb0269fe92810b9d4a443d2561
 ---

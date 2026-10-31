@@ -24,7 +24,7 @@ sitePublish: true
 tags:
   - Niagara 系统、发射器与模块
   - MCP 系列
-coverAlt: Niagara 系统与模块示意图
+coverAlt: MCPNiagara封面
 websiteCoverUrl: /assets/covers/mcp-niagara.png
 lang: zh
 translationKey: mcp-niagara

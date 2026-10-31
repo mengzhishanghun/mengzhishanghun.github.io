@@ -2460,15 +2460,15 @@
           "id": "page:home:media:8",
           "ordinal": 8,
           "state": "public",
-          "websiteUrl": "/assets/home/features/ai-data-asset-article-1280.webp",
-          "publicSha256": "52bb047e555e9ac3261cd8bc72b532f59f43148167dd82d16bda9e01e31b03d8"
+          "websiteUrl": "/assets/cases/plugin-release-workflow.png",
+          "publicSha256": "4592c7624e1ae30ef9c5cf274d96714de1a16411c9634d56220b765ffcb7da0d"
         },
         {
           "id": "page:home:media:9",
           "ordinal": 9,
           "state": "public",
-          "websiteUrl": "/assets/home/features/blueprint-inheritance-article-1280.webp",
-          "publicSha256": "332e4c96523858797ecbfecc35a49bde944703b7ccd1d377d8c06c3911bedad5"
+          "websiteUrl": "/assets/cases/ue-multiwindow-interface.png",
+          "publicSha256": "e84b5cffdc860640d0b64f21efac26d662c6396388678678897ebce614974d17"
         }
       ]
     },
