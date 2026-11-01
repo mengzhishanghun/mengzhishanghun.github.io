@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: python-excel-column-update
+websiteCoverUrl: "/media/covers/blog/python-excel-column-update-20261101.webp"
+coverAlt: "用 Python 按列名匹配并批量更新 Excel 数据封面"
 ---
 
 Execl表根据列名替换

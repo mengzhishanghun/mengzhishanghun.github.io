@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: ue-datatable-json-import-export
 publishedAt: 2026-10-13
-sourceHash: 3e1802519ed249d4c7312ce81c7da45e7659628117f018c4e2a9ebcaaf0c5789
+sourceHash: "a8aabe7915af31573af2b50885b94a68e06bed822fa0b116286b1d76006b1c74"
 generatedBodyHash: c90bed1d2f46712c2525850c50aa35e007c25e99c9a34882752836aa8469c0a0
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/ue-datatable-json-import-export-20261101.webp"
+coverAlt: "Unreal DataTable and JSON: validate before replacing cover"
 ---
 
 Importing and Exporting DataTables with Json

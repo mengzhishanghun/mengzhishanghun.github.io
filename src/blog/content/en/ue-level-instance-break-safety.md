@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: ue-level-instance-break-safety
 publishedAt: 2026-10-13
-sourceHash: 8690940c8d7dc9b6e3cf9b989b3366195192ccb601650cdebe7e23eb22ccb649
+sourceHash: "65dee66a262764ffc47470abd42da229c5b4a4dc62569acea84dcca91656f506"
 generatedBodyHash: 419af752b561a69ac513db660f75df48995cf1838aeabaa27dfb14c7c40fabb3
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/ue-level-instance-break-safety-20261101.webp"
+coverAlt: "Breaking Level Instances in batches: bound the work and stop on failure cover"
 ---
 
 Break All LevelInstances

@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: python-directory-diff-report
 publishedAt: 2026-10-13
-sourceHash: a25716d8130f2fe56df9b8921da1fc558f0f94c7d78ab595e8baa1900b843a00
+sourceHash: "f3c6d24e02ef4a394742317ef64916bf702fc498e2aff39e0552e3251ec09ae8"
 generatedBodyHash: 742be2f97bc48ff3b38dda55773a42d4a9ca72a07aa138d30c3ccef248796d5e
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/python-directory-diff-report-20261101.webp"
+coverAlt: "Comparing directories in Python: start with a content-difference report cover"
 ---
 
 Batch File Comparison

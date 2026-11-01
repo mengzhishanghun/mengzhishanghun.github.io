@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: ue-editor-asset-saving
+websiteCoverUrl: "/media/covers/blog/ue-editor-asset-saving-20261101.webp"
+coverAlt: "UE 自定义资产保存：SaveLoadedAsset 声明与实现封面"
 ---
 
 资产保存

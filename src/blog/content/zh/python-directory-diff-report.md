@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: python-directory-diff-report
+websiteCoverUrl: "/media/covers/blog/python-directory-diff-report-20261101.webp"
+coverAlt: "Python 目录差异补丁：复制增改文件与生成删除清单封面"
 ---
 
 文件批量对比

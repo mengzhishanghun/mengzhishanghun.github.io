@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: ue-editor-asset-saving
 publishedAt: 2026-10-13
-sourceHash: 6d25eddcf62c6be4132828e472ce7d50f96994f6a1d7f874cf0725a847375b5e
+sourceHash: "b5dc2a4afbcdd6586370f4270b2d7f24ec84fd86379428346231c1b4df3e9323"
 generatedBodyHash: 3049ef36c2b5044b925341194c62e32e50621beb1a56bc35ae8c1ce3962e86b3
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/ue-editor-asset-saving-20261101.webp"
+coverAlt: "Saving Unreal editor assets: checkout, dirty state and results cover"
 ---
 
 Asset Saving

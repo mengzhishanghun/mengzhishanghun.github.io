@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: cpp-algorithms-containers-value-categories
+websiteCoverUrl: "/media/covers/blog/cpp-algorithms-containers-value-categories-20261101.webp"
+coverAlt: "C++ 常用排序算法、STL 容器与左右值引用封面"
 ---
 
 常用算法

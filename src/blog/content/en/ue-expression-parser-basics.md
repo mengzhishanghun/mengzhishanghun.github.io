@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: ue-expression-parser-basics
 publishedAt: 2026-10-13
-sourceHash: aabf23cc97995d9e1ec43e1e370870c1a54a2e269750d57ae5e19b16faf51abc
+sourceHash: "40ff8d340d347ed658eabd4ac87841de751ce3e3e86fc42ce96d71db9a0281a8"
 generatedBodyHash: 5b93e4544481df519a226b7adc37b019c4d3c23bbf12b356145b5d6b3a3fce6e
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/ue-expression-parser-basics-20261101.webp"
+coverAlt: "Exploring syntax parsing for game formulas in UE cover"
 ---
 
 Simple Formula Parsing for Events

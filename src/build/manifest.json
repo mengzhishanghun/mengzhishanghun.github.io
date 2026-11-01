@@ -3074,7 +3074,11 @@
       "translationKey": "ue-datatable-json-import-export",
       "baselineTemplate": "blog/ue-datatable-json-import-export/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/ue-datatable-json-import-export-20261101.webp",
+        "sha256": "b5a47fb04a7c092c6bec829e9eaec3fade2f89f98135613efa319e88dd7bb689"
+      }
     },
     {
       "id": "blog:ue-editor-asset-saving",
@@ -3088,7 +3092,11 @@
       "translationKey": "ue-editor-asset-saving",
       "baselineTemplate": "blog/ue-editor-asset-saving/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/ue-editor-asset-saving-20261101.webp",
+        "sha256": "9f56ee467a39f063f326fbf2f1870948eb7bcb75af7ef4c927db493cbc4c4eb9"
+      }
     },
     {
       "id": "blog:ue-level-instance-break-safety",
@@ -3102,7 +3110,11 @@
       "translationKey": "ue-level-instance-break-safety",
       "baselineTemplate": "blog/ue-level-instance-break-safety/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/ue-level-instance-break-safety-20261101.webp",
+        "sha256": "d56f452ec211799fc39527d6d1f0e1b8f80481d02c2325aa95acdbb421cdfa62"
+      }
     },
     {
       "id": "blog:ue-expression-parser-basics",
@@ -3116,7 +3128,11 @@
       "translationKey": "ue-expression-parser-basics",
       "baselineTemplate": "blog/ue-expression-parser-basics/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/ue-expression-parser-basics-20261101.webp",
+        "sha256": "5638d8d7f77e7e94115cca046db985959db2fc13b0046f53beb30028f6f9cf26"
+      }
     },
     {
       "id": "blog:cpp-algorithms-containers-value-categories",
@@ -3187,7 +3203,11 @@
           "websiteUrl": "/media/restored-blog/cfd9578b8b3248a41b7088fb159f22425968880766482cd9bcb7cf1773c8d8a1.png",
           "publicSha256": "cfd9578b8b3248a41b7088fb159f22425968880766482cd9bcb7cf1773c8d8a1"
         }
-      ]
+      ],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/cpp-algorithms-containers-value-categories-20261101.webp",
+        "sha256": "c313fbccbe7d89f8d9ab12521d64698bf38614b655bb3a02fa172c8b03ed29c2"
+      }
     },
     {
       "id": "blog:python-excel-column-update",
@@ -3216,7 +3236,11 @@
           "websiteUrl": "/media/restored-blog/517f23690877d490640a1631b8f288148411ddb0982a0d03f777f9edbfb55985.png",
           "publicSha256": "517f23690877d490640a1631b8f288148411ddb0982a0d03f777f9edbfb55985"
         }
-      ]
+      ],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/python-excel-column-update-20261101.webp",
+        "sha256": "e2034dd4087547bab2b9a268690137137492e04b2f6fe2b13255bf1774269fda"
+      }
     },
     {
       "id": "blog:python-directory-diff-report",
@@ -3230,7 +3254,11 @@
       "translationKey": "python-directory-diff-report",
       "baselineTemplate": "blog/python-directory-diff-report/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/python-directory-diff-report-20261101.webp",
+        "sha256": "b2e3d9b8fa600cae65c589ecf03f08bc34ba05240777746c02c68aa87361f312"
+      }
     },
     {
       "id": "blog:python-perforce-stream-switch-safety",
@@ -3244,7 +3272,11 @@
       "translationKey": "python-perforce-stream-switch-safety",
       "baselineTemplate": "blog/python-perforce-stream-switch-safety/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/python-perforce-stream-switch-safety-20261101.webp",
+        "sha256": "a4a3cbbd6ef5f694f69a978797666f448e07e98d0c2556f722628e234172d64f"
+      }
     },
     {
       "id": "work:mcp-animation",

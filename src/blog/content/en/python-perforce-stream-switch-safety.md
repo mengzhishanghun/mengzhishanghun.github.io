@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: python-perforce-stream-switch-safety
 publishedAt: 2026-10-13
-sourceHash: 9d4ed3a1ea7e2b31a71b6bc0cade467a7b90f79cd5a855f19bcc7d44854aec66
+sourceHash: "d28577bfce61a3dc4842261b952a8812bd57e759fc8f10ce0e912e109298bbea"
 generatedBodyHash: c289e658d1b06ffa6a060f9f3b7814ea242827dc499919c7571475e156344bd5
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/python-perforce-stream-switch-safety-20261101.webp"
+coverAlt: "Switching Perforce stream workspaces: preflight and failure boundaries cover"
 ---
 
 Switch Perforce Stream Workspaces with One Click

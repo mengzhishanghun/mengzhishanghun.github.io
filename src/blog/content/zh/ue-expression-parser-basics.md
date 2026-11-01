@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: ue-expression-parser-basics
+websiteCoverUrl: "/media/covers/blog/ue-expression-parser-basics-20261101.webp"
+coverAlt: "UE C++ 游戏公式解析：四则运算、条件判断与属性读取封面"
 ---
 
 事件简单公式解析

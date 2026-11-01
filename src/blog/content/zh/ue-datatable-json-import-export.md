@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: ue-datatable-json-import-export
+websiteCoverUrl: "/media/covers/blog/ue-datatable-json-import-export-20261101.webp"
+coverAlt: "UE 中 DataTable 与 JSON 文件夹的双向转换封面"
 ---
 
 Json导入导出DataTable

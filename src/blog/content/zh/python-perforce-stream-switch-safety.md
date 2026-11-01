@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: python-perforce-stream-switch-safety
+websiteCoverUrl: "/media/covers/blog/python-perforce-stream-switch-safety-20261101.webp"
+coverAlt: "用 Python 制作 Perforce 工作区切流工具封面"
 ---
 
 一键切换Perforce流工作区

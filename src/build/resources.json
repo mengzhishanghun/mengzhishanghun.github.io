@@ -4921,6 +4921,70 @@
       ],
       "sha256": "affc339fe33c74dae678e2a74ff50acf6cfe8990a2c91d7b270970bf8adf99db",
       "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ue-datatable-json-import-export-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ue-datatable-json-import-export-20261101.webp"
+      ],
+      "sha256": "b5a47fb04a7c092c6bec829e9eaec3fade2f89f98135613efa319e88dd7bb689",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ue-editor-asset-saving-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ue-editor-asset-saving-20261101.webp"
+      ],
+      "sha256": "9f56ee467a39f063f326fbf2f1870948eb7bcb75af7ef4c927db493cbc4c4eb9",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ue-level-instance-break-safety-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ue-level-instance-break-safety-20261101.webp"
+      ],
+      "sha256": "d56f452ec211799fc39527d6d1f0e1b8f80481d02c2325aa95acdbb421cdfa62",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ue-expression-parser-basics-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ue-expression-parser-basics-20261101.webp"
+      ],
+      "sha256": "5638d8d7f77e7e94115cca046db985959db2fc13b0046f53beb30028f6f9cf26",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cpp-algorithms-containers-value-categories-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cpp-algorithms-containers-value-categories-20261101.webp"
+      ],
+      "sha256": "c313fbccbe7d89f8d9ab12521d64698bf38614b655bb3a02fa172c8b03ed29c2",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/python-excel-column-update-20261101.webp",
+      "outputs": [
+        "media/covers/blog/python-excel-column-update-20261101.webp"
+      ],
+      "sha256": "e2034dd4087547bab2b9a268690137137492e04b2f6fe2b13255bf1774269fda",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/python-directory-diff-report-20261101.webp",
+      "outputs": [
+        "media/covers/blog/python-directory-diff-report-20261101.webp"
+      ],
+      "sha256": "b2e3d9b8fa600cae65c589ecf03f08bc34ba05240777746c02c68aa87361f312",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/python-perforce-stream-switch-safety-20261101.webp",
+      "outputs": [
+        "media/covers/blog/python-perforce-stream-switch-safety-20261101.webp"
+      ],
+      "sha256": "a4a3cbbd6ef5f694f69a978797666f448e07e98d0c2556f722628e234172d64f",
+      "mode": "frozen"
     }
   ]
 }

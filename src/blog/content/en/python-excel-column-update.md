@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: python-excel-column-update
 publishedAt: 2026-10-13
-sourceHash: f199d1f053ec3fd54ede13eee0b85e311b81b3b53bc2651defb31e209552d2d8
+sourceHash: "20327c47c8a4710f2c5b6897b3a694134bfdb6ce60304c490f78be4fa79caa62"
 generatedBodyHash: 0f585d005a8c64015fcfe6b0446acfba315d4503c62af5db04a133a33c3e867f
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/python-excel-column-update-20261101.webp"
+coverAlt: "Updating Excel by column names in Python: tuple keys and separate output cover"
 ---
 
 Replacing Values in an Execl Table by Column Name

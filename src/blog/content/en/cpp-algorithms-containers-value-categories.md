@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: cpp-algorithms-containers-value-categories
 publishedAt: 2026-10-13
-sourceHash: a2c3c266f9e2a1c87f8a584428490ba9610475cd2db0f65effb85abddebf4765
+sourceHash: "9568af26e4bc1c67c50b9c7f426202246d84d0431cf5c830b262c5ce38ecfe0a"
 generatedBodyHash: fb3a32efc8cd0e474dfff23965ac3cbea2de97617bcbf54df7dda347180b4d08
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/cpp-algorithms-containers-value-categories-20261101.webp"
+coverAlt: "Everyday C++ choices: containers, sorting and value categories cover"
 ---
 
 Common Algorithms

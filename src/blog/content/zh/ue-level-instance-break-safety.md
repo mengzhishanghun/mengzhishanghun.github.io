@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: ue-level-instance-break-safety
+websiteCoverUrl: "/media/covers/blog/ue-level-instance-break-safety-20261101.webp"
+coverAlt: "UE 递归拆开场景中的 LevelInstance封面"
 ---
 
 破坏所有LevelInstance
