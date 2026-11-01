@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: a6affaef98c91a7e7dba3c43fee487f21faacfd485c07e8a1f2b349bcc95d782
+sourceHash: "3970e0986b3c22783fb81f134ddd0b910a124173f23320631f9ff7b612ce4a28"
 translationStatus: translated
 generatedBodyHash: 0e54ee824d9b7cd20826851cb75db3d8bb5ce4c8f4de6ff7804f715685d91bca
 workInfo:
@@ -38,7 +38,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-udp.png
+websiteCoverUrl: "/media/covers/works/simple-udp-20261101.webp"
+coverAlt: "SimpleUDP cover"
 ---
 
 ## Overview

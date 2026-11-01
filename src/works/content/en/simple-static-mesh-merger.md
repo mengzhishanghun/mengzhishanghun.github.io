@@ -25,7 +25,7 @@ docIds:
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: 3f8e417e5dcf5a8d87f59e5f91f6c32c2b085e3c3a69451af5ec17b47849ae28
+sourceHash: "d01c8a8c757b479129081481c69eb03fe45bf1717f2cd6fa31f40a4e1d1fbaee"
 translationStatus: translated
 generatedBodyHash: 8a5fb1c38b176766221de9e2cf285c3c3232da5e3df100e08f29ec401483ae1c
 workInfo:
@@ -41,7 +41,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-static-mesh-merger.png
+websiteCoverUrl: "/media/covers/works/simple-static-mesh-merger-20261101.webp"
+coverAlt: "SimpleStaticMeshMerger cover"
 ---
 
 ## Overview

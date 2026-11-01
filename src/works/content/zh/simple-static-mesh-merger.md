@@ -35,10 +35,11 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19204715
 docIds:
   - simple-static-mesh-merger-guide
-websiteCoverUrl: /assets/covers/simple-static-mesh-merger.png
+websiteCoverUrl: "/media/covers/works/simple-static-mesh-merger-20261101.webp"
 sourceDate: 2025-11-09
-lang: zh
+lang: "zh"
 translationKey: simple-static-mesh-merger
+coverAlt: "SimpleStaticMeshMerger封面"
 ---
 
 ## 作品简介

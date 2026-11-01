@@ -1622,8 +1622,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-static-mesh-merger.png",
-        "sha256": "ed35822514e1304ddd9e125085283ae17c1911007419362058b4e94b79b40e94"
+        "websiteUrl": "/media/covers/works/simple-static-mesh-merger-20261101.webp",
+        "sha256": "310fc1f819c4ee326433d70bb1466d71a7b875e480c20f688228a3691184c968"
       }
     },
     {
@@ -1642,8 +1642,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-asset-cleaner.png",
-        "sha256": "0fe60eb030d5cf7bb5c9f321ba9184cc132391341670eab94464232fd93fae62"
+        "websiteUrl": "/media/covers/works/simple-asset-cleaner-20261101.webp",
+        "sha256": "3cc31d5502d75f8a29d78d66e03aa980c33c1cd7cfa92a9677c0a7a4b9249676"
       }
     },
     {
@@ -1662,8 +1662,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-ssh-tunnel.png",
-        "sha256": "503618cb9880279cfe2daeef1572bb20a9f115fb58c90e237e5866bedabab817"
+        "websiteUrl": "/media/covers/works/simple-ssh-tunnel-20261101.webp",
+        "sha256": "6fe33d3e4b7bcf6a7b3154c353e67cc2c3526f6c18fe452c238d3220fe76d4fc"
       }
     },
     {
@@ -1682,8 +1682,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-udp.png",
-        "sha256": "034eb08208434fff3eb58d40f66e28ff14355bf0014d97f921db48a1e0811b81"
+        "websiteUrl": "/media/covers/works/simple-udp-20261101.webp",
+        "sha256": "257e57f94c775974532f67a821fa033ca73df0671914c04bd5c70201b87995e0"
       }
     },
     {
@@ -1702,8 +1702,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-tcp-client.png",
-        "sha256": "e040e5783105d3573e31d2975a4e8fb9d86797acf79896782b14ad79194998d2"
+        "websiteUrl": "/media/covers/works/simple-tcp-client-20261101.webp",
+        "sha256": "4a07c5a2e595660fce5254757122ff0573fa4fb9630ee57d8467f82809c70869"
       }
     },
     {
@@ -1722,8 +1722,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-tcp-server.png",
-        "sha256": "92d0cd89401244df79e5d9f7255611bbbb16aef3f33e0a62f415cb31ba2da3d9"
+        "websiteUrl": "/media/covers/works/simple-tcp-server-20261101.webp",
+        "sha256": "0e89d9f879c7dd866c6a8973b605a008b678af8c01cfdbf5fad0c249fafc14b7"
       }
     },
     {
@@ -1742,8 +1742,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-websocket.png",
-        "sha256": "639816c1532f3c36be166fbc6f3ec70e9cf5cddf8acbf9924e83cdd225aa4c92"
+        "websiteUrl": "/media/covers/works/simple-websocket-20261101.webp",
+        "sha256": "5ece119b48818a30745259d74f0e4f491777ef8a7eb9e47d7c22ad39e6b974d7"
       }
     },
     {
@@ -1762,8 +1762,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-auto-enum.png",
-        "sha256": "e457b24eb81acc08fbe8d71719ef71f9b71f1f287a08186bb41e62f07a568ee0"
+        "websiteUrl": "/media/covers/works/simple-auto-enum-20261101.webp",
+        "sha256": "3216e5a0ed617c90acfa2b4f75db7454cfd95d1e848eb3b6cd42d575ef201094"
       }
     },
     {
@@ -2533,8 +2533,8 @@
           "id": "page:home:media:3",
           "ordinal": 3,
           "state": "public",
-          "websiteUrl": "/assets/home/features/simple-udp-1280.webp",
-          "publicSha256": "41e995e10cd606c21f6742594b63edfbaba2d8b565a0adee25f09419bc50a117"
+          "websiteUrl": "/media/covers/works/simple-udp-20261101.webp",
+          "publicSha256": "257e57f94c775974532f67a821fa033ca73df0671914c04bd5c70201b87995e0"
         },
         {
           "id": "page:home:media:4",
@@ -2660,57 +2660,57 @@
           "id": "page:works-index:media:10",
           "ordinal": 10,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-static-mesh-merger.png",
-          "publicSha256": "ed35822514e1304ddd9e125085283ae17c1911007419362058b4e94b79b40e94"
+          "websiteUrl": "/media/covers/works/simple-static-mesh-merger-20261101.webp",
+          "publicSha256": "310fc1f819c4ee326433d70bb1466d71a7b875e480c20f688228a3691184c968"
         },
         {
           "id": "page:works-index:media:11",
           "ordinal": 11,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-asset-cleaner.png",
-          "publicSha256": "0fe60eb030d5cf7bb5c9f321ba9184cc132391341670eab94464232fd93fae62"
+          "websiteUrl": "/media/covers/works/simple-asset-cleaner-20261101.webp",
+          "publicSha256": "3cc31d5502d75f8a29d78d66e03aa980c33c1cd7cfa92a9677c0a7a4b9249676"
         },
         {
           "id": "page:works-index:media:12",
           "ordinal": 12,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-ssh-tunnel.png",
-          "publicSha256": "503618cb9880279cfe2daeef1572bb20a9f115fb58c90e237e5866bedabab817"
+          "websiteUrl": "/media/covers/works/simple-ssh-tunnel-20261101.webp",
+          "publicSha256": "6fe33d3e4b7bcf6a7b3154c353e67cc2c3526f6c18fe452c238d3220fe76d4fc"
         },
         {
           "id": "page:works-index:media:13",
           "ordinal": 13,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-udp.png",
-          "publicSha256": "034eb08208434fff3eb58d40f66e28ff14355bf0014d97f921db48a1e0811b81"
+          "websiteUrl": "/media/covers/works/simple-udp-20261101.webp",
+          "publicSha256": "257e57f94c775974532f67a821fa033ca73df0671914c04bd5c70201b87995e0"
         },
         {
           "id": "page:works-index:media:14",
           "ordinal": 14,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-tcp-client.png",
-          "publicSha256": "e040e5783105d3573e31d2975a4e8fb9d86797acf79896782b14ad79194998d2"
+          "websiteUrl": "/media/covers/works/simple-tcp-client-20261101.webp",
+          "publicSha256": "4a07c5a2e595660fce5254757122ff0573fa4fb9630ee57d8467f82809c70869"
         },
         {
           "id": "page:works-index:media:15",
           "ordinal": 15,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-tcp-server.png",
-          "publicSha256": "92d0cd89401244df79e5d9f7255611bbbb16aef3f33e0a62f415cb31ba2da3d9"
+          "websiteUrl": "/media/covers/works/simple-tcp-server-20261101.webp",
+          "publicSha256": "0e89d9f879c7dd866c6a8973b605a008b678af8c01cfdbf5fad0c249fafc14b7"
         },
         {
           "id": "page:works-index:media:16",
           "ordinal": 16,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-websocket.png",
-          "publicSha256": "639816c1532f3c36be166fbc6f3ec70e9cf5cddf8acbf9924e83cdd225aa4c92"
+          "websiteUrl": "/media/covers/works/simple-websocket-20261101.webp",
+          "publicSha256": "5ece119b48818a30745259d74f0e4f491777ef8a7eb9e47d7c22ad39e6b974d7"
         },
         {
           "id": "page:works-index:media:17",
           "ordinal": 17,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-auto-enum.png",
-          "publicSha256": "e457b24eb81acc08fbe8d71719ef71f9b71f1f287a08186bb41e62f07a568ee0"
+          "websiteUrl": "/media/covers/works/simple-auto-enum-20261101.webp",
+          "publicSha256": "3216e5a0ed617c90acfa2b4f75db7454cfd95d1e848eb3b6cd42d575ef201094"
         }
       ]
     },

@@ -25,7 +25,7 @@ docIds:
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: ce0d29246bb50f5727051251f58b5cc3466c03bdfb31fc4afb1b3bd395904ff4
+sourceHash: "85d56cfc542a1e49bc39015d6967146add2b5f0a637b4807ef20deab4d2db77f"
 translationStatus: translated
 generatedBodyHash: 95a5586ceb55ba055b206689c480cabc6192d66d222334f344c62814cdc3ac69
 workInfo:
@@ -43,7 +43,8 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-auto-enum.png
+websiteCoverUrl: "/media/covers/works/simple-auto-enum-20261101.webp"
+coverAlt: "SimpleAutoEnum cover"
 ---
 
 ## Overview

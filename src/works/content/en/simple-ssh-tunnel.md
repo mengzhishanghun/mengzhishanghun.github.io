@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: 6bf0d3afe225deda01e74765568bad8e209c3970d8251e52c99881621e801741
+sourceHash: "754dabb6f5676543a87ab7b0960016c5fbe009acd09956d1c0a4ab58d4d89718"
 translationStatus: translated
 generatedBodyHash: 6d9d4e01195b39ada53556e3bb4331f17a1dffb0c069253bc402a02a2482d200
 workInfo:
@@ -36,7 +36,8 @@ workInfo:
         - Windows (Win64)
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-ssh-tunnel.png
+websiteCoverUrl: "/media/covers/works/simple-ssh-tunnel-20261101.webp"
+coverAlt: "SimpleSSHTunnel cover"
 ---
 
 ## Overview

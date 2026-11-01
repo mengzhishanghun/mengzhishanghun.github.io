@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: 24c78012d9eff350d17d6b5a8825a371010caf338a5303d5f737106c6c00700c
+sourceHash: "e9bffdeeaee47f3c64416557fe35e37e925ae509d335a28041f7b84387086600"
 translationStatus: translated
 generatedBodyHash: f286cf7a1e66d326713aadf0b5371e62b01fadfbb548772f42755c603cc1ca7d
 workInfo:
@@ -38,7 +38,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-tcp-client.png
+websiteCoverUrl: "/media/covers/works/simple-tcp-client-20261101.webp"
+coverAlt: "SimpleTCPClient cover"
 ---
 
 ## Overview

@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: 73fe8675154adaf5a59ebde8ce263d297ebb8ad53e94ace41c34ff84c43d0af5
+sourceHash: "146115ca9f55fa716d8f19eaf2cfd01d24b3d74d9c2caf7e252a4f1ff0d15887"
 translationStatus: translated
 generatedBodyHash: f3031ebb67d1831f79d49bdb31a6ad49b2842c09d1dc68c82e9c8eb5f1d93090
 workInfo:
@@ -40,7 +40,8 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-websocket.png
+websiteCoverUrl: "/media/covers/works/simple-websocket-20261101.webp"
+coverAlt: "SimpleWebSocket cover"
 ---
 
 ## Overview

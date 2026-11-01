@@ -34,10 +34,11 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165484
-websiteCoverUrl: /assets/covers/simple-tcp-server.png
+websiteCoverUrl: "/media/covers/works/simple-tcp-server-20261101.webp"
 sourceDate: 2025-10-25
-lang: zh
+lang: "zh"
 translationKey: simple-tcp-server
+coverAlt: "SimpleTCPServer封面"
 ---
 
 ## 作品简介

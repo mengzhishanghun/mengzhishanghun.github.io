@@ -37,10 +37,11 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19136345
 docIds:
   - simple-auto-enum-guide
-websiteCoverUrl: /assets/covers/simple-auto-enum.png
+websiteCoverUrl: "/media/covers/works/simple-auto-enum-20261101.webp"
 sourceDate: 2025-10-12
-lang: zh
+lang: "zh"
 translationKey: simple-auto-enum
+coverAlt: "SimpleAutoEnum封面"
 ---
 
 ## 作品简介

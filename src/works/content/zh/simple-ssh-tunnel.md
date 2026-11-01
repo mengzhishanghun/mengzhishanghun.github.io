@@ -30,10 +30,11 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165541
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165541
-websiteCoverUrl: /assets/covers/simple-ssh-tunnel.png
+websiteCoverUrl: "/media/covers/works/simple-ssh-tunnel-20261101.webp"
 sourceDate: 2025-10-25
-lang: zh
+lang: "zh"
 translationKey: simple-ssh-tunnel
+coverAlt: "SimpleSSHTunnel封面"
 ---
 
 ## 作品简介

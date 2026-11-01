@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-server
-sourceHash: f45cf4bd0aecbebc432c45f8881d8cc3646ef3ec11d37b5d7156a69175f1f619
+sourceHash: "3416fdcf282fc987f88f7ab51afefb92c7b5a6a317cfa8b928f6c39c6c1a7821"
 translationStatus: translated
 generatedBodyHash: 53f075104460eb73de9233102da77248d7a0fb9aa00b1f2567b8fc3e13bdc80b
 workInfo:
@@ -40,7 +40,8 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-tcp-server.png
+websiteCoverUrl: "/media/covers/works/simple-tcp-server-20261101.webp"
+coverAlt: "SimpleTCPServer cover"
 ---
 
 ## Overview

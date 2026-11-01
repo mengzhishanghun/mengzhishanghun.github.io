@@ -35,10 +35,11 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19183435
 docIds:
   - simple-asset-cleaner-guide
-websiteCoverUrl: /assets/covers/simple-asset-cleaner.png
+websiteCoverUrl: "/media/covers/works/simple-asset-cleaner-20261101.webp"
 sourceDate: 2025-11-01
-lang: zh
+lang: "zh"
 translationKey: simple-asset-cleaner
+coverAlt: "SimpleAssetCleaner封面"
 ---
 
 ## 作品简介

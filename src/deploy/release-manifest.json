@@ -506,13 +506,6 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/simple-asset-cleaner.png",
-      "size": 58787,
-      "gitBlob": "c0a4968e6dd170d939fdfbd659b7ff5791ca3207",
-      "sha256": "0fe60eb030d5cf7bb5c9f321ba9184cc132391341670eab94464232fd93fae62",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/simple-asset-cleaner.svg",
       "size": 16452,
       "gitBlob": "0fec0f70dc59dd9ba4e919260f3195991dd44575",
@@ -524,13 +517,6 @@
       "size": 16314,
       "gitBlob": "234e7d74f1f0d325449093ae41c3ddc1e9cd6440",
       "sha256": "b38178b6edbc23e6516ba17b253c112c66d2fcaa1be34a6b24cd533561b5f267",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/simple-auto-enum.png",
-      "size": 47328,
-      "gitBlob": "d74d4b8da0c68bf43f2b28417cb8e9817448eddc",
-      "sha256": "e457b24eb81acc08fbe8d71719ef71f9b71f1f287a08186bb41e62f07a568ee0",
       "target": "both"
     },
     {
@@ -583,24 +569,10 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/simple-ssh-tunnel.png",
-      "size": 56808,
-      "gitBlob": "e855459b377ea7672fc27b2ae92f7d437a9cb9e9",
-      "sha256": "503618cb9880279cfe2daeef1572bb20a9f115fb58c90e237e5866bedabab817",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/simple-ssh-tunnel.svg",
       "size": 21212,
       "gitBlob": "31c350ee25ad63df9b40f906609d009858e0cb6c",
       "sha256": "d6ee975d27c6f568f011eec315597bf05a374121a52a56277f0a86e18824b615",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/simple-static-mesh-merger.png",
-      "size": 59426,
-      "gitBlob": "bb1244efeedc4107d34083c9e10573c96e5109b3",
-      "sha256": "ed35822514e1304ddd9e125085283ae17c1911007419362058b4e94b79b40e94",
       "target": "both"
     },
     {
@@ -611,24 +583,10 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/simple-tcp-client.png",
-      "size": 61515,
-      "gitBlob": "b150b91fcac019ed7366973b0b2c24d151c89b9f",
-      "sha256": "e040e5783105d3573e31d2975a4e8fb9d86797acf79896782b14ad79194998d2",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/simple-tcp-client.svg",
       "size": 16458,
       "gitBlob": "6626661de34db893f740ec89693c7e2d85b05011",
       "sha256": "f1e0425a7390a15fa896972e7f9d8e7d7fc5913912d6fec565a64387c4c4275e",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/simple-tcp-server.png",
-      "size": 57803,
-      "gitBlob": "a61d9b76f3e3911ee306b2bde2b1a97c1522f5cb",
-      "sha256": "92d0cd89401244df79e5d9f7255611bbbb16aef3f33e0a62f415cb31ba2da3d9",
       "target": "both"
     },
     {
@@ -639,24 +597,10 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/simple-udp.png",
-      "size": 49455,
-      "gitBlob": "a43e3505f44a2012066ee98075cdd09dfec06a8f",
-      "sha256": "034eb08208434fff3eb58d40f66e28ff14355bf0014d97f921db48a1e0811b81",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/simple-udp.svg",
       "size": 18547,
       "gitBlob": "2406dd200bda449e7d8bf6b35f9ddcc7dcaa3a9b",
       "sha256": "1572773ccc95e7b95e785fd06356b1cf1f15c7e0280864decc578a5e521d3b3b",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/simple-websocket.png",
-      "size": 47852,
-      "gitBlob": "bbb56fb9b5f3923d958af1fa282bd2bc72e280b7",
-      "sha256": "639816c1532f3c36be166fbc6f3ec70e9cf5cddf8acbf9924e83cdd225aa4c92",
       "target": "both"
     },
     {
@@ -5029,9 +4973,9 @@
     },
     {
       "path": "en/index.html",
-      "size": 54495,
-      "gitBlob": "cb79422c8cf37851942ce728f7a08eeded6d69c4",
-      "sha256": "23380bd07f76ba04ec9d6270fa2db18577f4007f214b946bbecc9d923d9f0167",
+      "size": 54390,
+      "gitBlob": "bdcc90f2776a8b87c8172836eebc1bede8f6733b",
+      "sha256": "9f17e44c5c5ff86c2d26a2f806041eff6e3508133dc055a44f7d51b8b40fea31",
       "target": "both"
     },
     {
@@ -5050,9 +4994,9 @@
     },
     {
       "path": "en/works/index.html",
-      "size": 147087,
-      "gitBlob": "b4376a74e1ba4c7e9db09fa572cb50880cfa08c8",
-      "sha256": "5340fe7138b2b629543b47d484d22ff58b53b23e0e2365d3b8d3f2c656bf83ad",
+      "size": 147207,
+      "gitBlob": "8136d82f863601f9a04b553e6b77467062415b2d",
+      "sha256": "368288fdf83d97f78bbf71f3a1bf8bc92e6981dc9904995898bcad64c93e6332",
       "target": "both"
     },
     {
@@ -5448,10 +5392,24 @@
       "target": "both"
     },
     {
+      "path": "media/covers/works/simple-asset-cleaner-20261101.webp",
+      "size": 52114,
+      "gitBlob": "b0d168f2ee0de1f3077b1b14149a18b7affd915a",
+      "sha256": "3cc31d5502d75f8a29d78d66e03aa980c33c1cd7cfa92a9677c0a7a4b9249676",
+      "target": "both"
+    },
+    {
       "path": "media/covers/works/simple-asset-namer-20261101.webp",
       "size": 80438,
       "gitBlob": "f417dd2cef44004cb1daf17923d4900cfdf08e2d",
       "sha256": "25b6c2b692991edbd04120ceffb27595e168449ee54755e2cf5c3360d01638f3",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-auto-enum-20261101.webp",
+      "size": 53518,
+      "gitBlob": "b17911d5b91bcaf89ee2d1a3dffb66733c35ad32",
+      "sha256": "3216e5a0ed617c90acfa2b4f75db7454cfd95d1e848eb3b6cd42d575ef201094",
       "target": "both"
     },
     {
@@ -5501,6 +5459,48 @@
       "size": 45674,
       "gitBlob": "75c7745c86a7f31d1a823a26b6f01412c6cf74bb",
       "sha256": "b5eb9b20baf0b5e0a173eb1230f016ac4062f95da67f64c537f65d4acb58ddc4",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-ssh-tunnel-20261101.webp",
+      "size": 61686,
+      "gitBlob": "4036e41bfa54d0e6c23d9697a2183d947d223ed3",
+      "sha256": "6fe33d3e4b7bcf6a7b3154c353e67cc2c3526f6c18fe452c238d3220fe76d4fc",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-static-mesh-merger-20261101.webp",
+      "size": 90584,
+      "gitBlob": "ab4cc91420f625ff94383cee53d92dce3a0773fc",
+      "sha256": "310fc1f819c4ee326433d70bb1466d71a7b875e480c20f688228a3691184c968",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-tcp-client-20261101.webp",
+      "size": 69282,
+      "gitBlob": "d09692ce24e00ddf830e24469260e13cfb4789b5",
+      "sha256": "4a07c5a2e595660fce5254757122ff0573fa4fb9630ee57d8467f82809c70869",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-tcp-server-20261101.webp",
+      "size": 78976,
+      "gitBlob": "4062291f710fdc978398fffec333c71f385ca673",
+      "sha256": "0e89d9f879c7dd866c6a8973b605a008b678af8c01cfdbf5fad0c249fafc14b7",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-udp-20261101.webp",
+      "size": 38798,
+      "gitBlob": "c7716078d2090c6df7faee6fc8b957844e83e724",
+      "sha256": "257e57f94c775974532f67a821fa033ca73df0671914c04bd5c70201b87995e0",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-websocket-20261101.webp",
+      "size": 53810,
+      "gitBlob": "29c17fcdda07fb636b3aeb9ac892b0a3654c15b1",
+      "sha256": "5ece119b48818a30745259d74f0e4f491777ef8a7eb9e47d7c22ad39e6b974d7",
       "target": "both"
     },
     {
@@ -9222,9 +9222,9 @@
     },
     {
       "path": "zh/index.html",
-      "size": 53702,
-      "gitBlob": "e1306dc8fe30c44525b90486744500794e6de395",
-      "sha256": "d6b4858f95761854b467e99bf513d72958e227456bf51411902d8943c7a82179",
+      "size": 53597,
+      "gitBlob": "97a3cdb94035eac4cc2e2986dedfa30bde1676ba",
+      "sha256": "93132b13bb821ec3584d28f67b85ba08d410d8e011fb811ba405eb8b664cba62",
       "target": "both"
     },
     {
@@ -9243,9 +9243,9 @@
     },
     {
       "path": "zh/works/index.html",
-      "size": 135960,
-      "gitBlob": "df5d1ef41cbbbe2ccfa8e3b09f2a769a77623af4",
-      "sha256": "82407873e508982d6566e5b5ec958d8a0a08a62aac62e4f31ae80fed4e5003bc",
+      "size": 136080,
+      "gitBlob": "af34c00e634d89020302912deb2905c6263dc7ac",
+      "sha256": "9bc8ac33cbeb63f46a73f4c6eb72e9129085ae640010fe62bb521611d2b500f9",
       "target": "both"
     },
     {
