@@ -34,10 +34,11 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19770928
 docIds:
   - simple-launcher-guide
-websiteCoverUrl: /assets/covers/simple-launcher.png
+websiteCoverUrl: "/media/covers/works/simple-launcher-20261101.webp"
 sourceDate: 2026-03-25
-lang: zh
+lang: "zh"
 translationKey: simple-launcher
+coverAlt: "SimpleLauncher封面"
 ---
 
 ## 作品简介

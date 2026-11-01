@@ -25,7 +25,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: 7e74d76a1620eb4e4310a86943d48d69ae87c920d7ef83efb6f8d6ffcb8be0b6
+sourceHash: "2f9534b92283e840419c41d49729a32da4a2eabe68ad4c29a55fc5d0123ae8a5"
 translationStatus: translated
 generatedBodyHash: 8509a63db5fc74d660d00f1f8ccd5b8ce745e4b6e3b2a3c0f63d483640cbcacf
 workInfo:
@@ -43,7 +43,8 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-byte-conversion.png
+websiteCoverUrl: "/media/covers/works/simple-byte-conversion-20261101.webp"
+coverAlt: "SimpleByteConversion cover"
 ---
 
 ## Overview

@@ -25,7 +25,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: d5c7815dd14b66137d0ecc85b67bffde657b6c874eade11db9f3fdaa834e29aa
+sourceHash: "922439716cded800a7651180d3f9d79ded80da0ad9b8a92150e10ec834e52b0b"
 translationStatus: translated
 generatedBodyHash: 47b87ddd144c43e1435b9f62c5ba32e02e75b342a62aec74ab710cf72810db56
 workInfo:
@@ -41,7 +41,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-config-exclude.png
+websiteCoverUrl: "/media/covers/works/simple-config-exclude-20261101.webp"
+coverAlt: "SimpleConfigExclude cover"
 ---
 
 ## Overview

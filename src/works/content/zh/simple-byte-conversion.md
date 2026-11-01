@@ -37,10 +37,11 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19770934
 docIds:
   - simple-byte-conversion-guide
-websiteCoverUrl: /assets/covers/simple-byte-conversion.png
+websiteCoverUrl: "/media/covers/works/simple-byte-conversion-20261101.webp"
 sourceDate: 2026-03-25
-lang: zh
+lang: "zh"
 translationKey: simple-byte-conversion
+coverAlt: "SimpleByteConversion封面"
 ---
 
 ## 作品简介

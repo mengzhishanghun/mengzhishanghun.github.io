@@ -37,10 +37,11 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19770939
 docIds:
   - simple-input-simulator-guide
-websiteCoverUrl: /assets/covers/simple-input-simulator.png
+websiteCoverUrl: "/media/covers/works/simple-input-simulator-20261101.webp"
 sourceDate: 2026-03-25
-lang: zh
+lang: "zh"
 translationKey: simple-input-simulator
+coverAlt: "SimpleInputSimulator封面"
 ---
 
 ## 作品简介

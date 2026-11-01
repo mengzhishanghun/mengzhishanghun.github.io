@@ -520,13 +520,6 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/simple-asset-namer.png",
-      "size": 47059,
-      "gitBlob": "21a381cfb56a75cc477e17664c2340c1a1b67276",
-      "sha256": "6dbf2eca37be53c53cab18f27f3cc93f5be17c33aadfeacd0a99e05f9aecfd3f",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/simple-asset-namer.svg",
       "size": 16314,
       "gitBlob": "234e7d74f1f0d325449093ae41c3ddc1e9cd6440",
@@ -555,24 +548,10 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/simple-byte-conversion.png",
-      "size": 51678,
-      "gitBlob": "e9f7d56e7c9bf6eb569c055565986603aa3f2304",
-      "sha256": "1c0619337fbc1aec90c4ce0896a420b1b0cc126f5bed1e98ceb25242ee8b4109",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/simple-byte-conversion.svg",
       "size": 17918,
       "gitBlob": "bbcf39a7d23bbb1a82f7d3d1d009b330823960c9",
       "sha256": "4a8c6e8933360f600a9783bf5690b318c755c5255a01b39527f513e60a090e04",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/simple-config-exclude.png",
-      "size": 49452,
-      "gitBlob": "a97d2d194b6693d3853b33691a83d82d4f3dab48",
-      "sha256": "62afa64ae53e1eee029182ed6f52fbdd1b67765168737296892b9f15f01a7767",
       "target": "both"
     },
     {
@@ -583,24 +562,10 @@
       "target": "both"
     },
     {
-      "path": "assets/covers/simple-input-simulator.png",
-      "size": 55778,
-      "gitBlob": "df8807005972cba08478ea28dc5af55366fa6718",
-      "sha256": "f315d80f8d6724f6f1c651c921df2e68fb075e137f67cbd0c19d435c7d03c0fc",
-      "target": "both"
-    },
-    {
       "path": "assets/covers/simple-input-simulator.svg",
       "size": 16430,
       "gitBlob": "fa052d845e12679cee4987219cb78fe67e62b463",
       "sha256": "957128c0f6d7b87351843902c0c98bde6bfd4e3aa0caf13ad737da86e89a6e49",
-      "target": "both"
-    },
-    {
-      "path": "assets/covers/simple-launcher.png",
-      "size": 53664,
-      "gitBlob": "d584c45008f3fdc55d49b61c28693bfd4b101fdb",
-      "sha256": "7bbe977ee99fd091acf61b868d889f50eacaee71e597946ae92e17f161b7b92b",
       "target": "both"
     },
     {
@@ -5085,9 +5050,9 @@
     },
     {
       "path": "en/works/index.html",
-      "size": 147012,
-      "gitBlob": "18e6e71e3400af12004a2feaf0afa906d154b6e5",
-      "sha256": "d72a995ce2a6a03a59af75abce3bfd0ee9cc0915b79fb35a08e08ac63d88704d",
+      "size": 147087,
+      "gitBlob": "b4376a74e1ba4c7e9db09fa572cb50880cfa08c8",
+      "sha256": "5340fe7138b2b629543b47d484d22ff58b53b23e0e2365d3b8d3f2c656bf83ad",
       "target": "both"
     },
     {
@@ -5483,6 +5448,13 @@
       "target": "both"
     },
     {
+      "path": "media/covers/works/simple-asset-namer-20261101.webp",
+      "size": 80438,
+      "gitBlob": "f417dd2cef44004cb1daf17923d4900cfdf08e2d",
+      "sha256": "25b6c2b692991edbd04120ceffb27595e168449ee54755e2cf5c3360d01638f3",
+      "target": "both"
+    },
+    {
       "path": "media/covers/works/simple-bp-inherit-fix-20261101.webp",
       "size": 48678,
       "gitBlob": "07a9d35a2a129ea16d8cb8bc4e27bd38a9039506",
@@ -5490,10 +5462,38 @@
       "target": "both"
     },
     {
+      "path": "media/covers/works/simple-byte-conversion-20261101.webp",
+      "size": 78578,
+      "gitBlob": "df9290c79975d7d0d2b012bc0aff73a5d4a64590",
+      "sha256": "15bed14a9add5f352fe09962844d1d354fa7c53d3c4765801fa8e723b349d67d",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-config-exclude-20261101.webp",
+      "size": 69870,
+      "gitBlob": "aff486a578d4876feb814c6a5705902067f84ba4",
+      "sha256": "cf0a140f8b997cf7ad23c103cbea816a5231825918a7cd63e0bad8c98631b0b4",
+      "target": "both"
+    },
+    {
       "path": "media/covers/works/simple-file-updater-20261101.webp",
       "size": 52836,
       "gitBlob": "c8a44289a7993fd11a7a17c095b702be5eaa4381",
       "sha256": "4bbd65912590d2dd61c27e8a68c98a08a6c122b49ff664f381c7eff838e41944",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-input-simulator-20261101.webp",
+      "size": 68582,
+      "gitBlob": "6f1c97b2aa1eb27c520e3a2814d1fd9405ab5cb4",
+      "sha256": "0f151b2f5f54c936afe4962d833469692cdb83f0d1673194ecb0f8ef1ef0d6b6",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/works/simple-launcher-20261101.webp",
+      "size": 36588,
+      "gitBlob": "5495b0ac50221e273acea0ab0d350daea7620b5c",
+      "sha256": "027209b8c5640ebb8a1379a038d2285c7fc79dd02e0da41aa205c9421f3b040e",
       "target": "both"
     },
     {
@@ -9243,9 +9243,9 @@
     },
     {
       "path": "zh/works/index.html",
-      "size": 135885,
-      "gitBlob": "fb36a756c37891d64ebbffd24576e5b30f28bf41",
-      "sha256": "717bb3761b83f93149d6863f60ae38dc9560765426616143603057dbda9596f5",
+      "size": 135960,
+      "gitBlob": "df5d1ef41cbbbe2ccfa8e3b09f2a769a77623af4",
+      "sha256": "82407873e508982d6566e5b5ec958d8a0a08a62aac62e4f31ae80fed4e5003bc",
       "target": "both"
     },
     {

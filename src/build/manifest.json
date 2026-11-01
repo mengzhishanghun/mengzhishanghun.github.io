@@ -1522,8 +1522,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-input-simulator.png",
-        "sha256": "f315d80f8d6724f6f1c651c921df2e68fb075e137f67cbd0c19d435c7d03c0fc"
+        "websiteUrl": "/media/covers/works/simple-input-simulator-20261101.webp",
+        "sha256": "0f151b2f5f54c936afe4962d833469692cdb83f0d1673194ecb0f8ef1ef0d6b6"
       }
     },
     {
@@ -1542,8 +1542,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-byte-conversion.png",
-        "sha256": "1c0619337fbc1aec90c4ce0896a420b1b0cc126f5bed1e98ceb25242ee8b4109"
+        "websiteUrl": "/media/covers/works/simple-byte-conversion-20261101.webp",
+        "sha256": "15bed14a9add5f352fe09962844d1d354fa7c53d3c4765801fa8e723b349d67d"
       }
     },
     {
@@ -1562,8 +1562,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-config-exclude.png",
-        "sha256": "62afa64ae53e1eee029182ed6f52fbdd1b67765168737296892b9f15f01a7767"
+        "websiteUrl": "/media/covers/works/simple-config-exclude-20261101.webp",
+        "sha256": "cf0a140f8b997cf7ad23c103cbea816a5231825918a7cd63e0bad8c98631b0b4"
       }
     },
     {
@@ -1582,8 +1582,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-launcher.png",
-        "sha256": "7bbe977ee99fd091acf61b868d889f50eacaee71e597946ae92e17f161b7b92b"
+        "websiteUrl": "/media/covers/works/simple-launcher-20261101.webp",
+        "sha256": "027209b8c5640ebb8a1379a038d2285c7fc79dd02e0da41aa205c9421f3b040e"
       }
     },
     {
@@ -1602,8 +1602,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/simple-asset-namer.png",
-        "sha256": "6dbf2eca37be53c53cab18f27f3cc93f5be17c33aadfeacd0a99e05f9aecfd3f"
+        "websiteUrl": "/media/covers/works/simple-asset-namer-20261101.webp",
+        "sha256": "25b6c2b692991edbd04120ceffb27595e168449ee54755e2cf5c3360d01638f3"
       }
     },
     {
@@ -2625,36 +2625,36 @@
           "id": "page:works-index:media:5",
           "ordinal": 5,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-input-simulator.png",
-          "publicSha256": "f315d80f8d6724f6f1c651c921df2e68fb075e137f67cbd0c19d435c7d03c0fc"
+          "websiteUrl": "/media/covers/works/simple-input-simulator-20261101.webp",
+          "publicSha256": "0f151b2f5f54c936afe4962d833469692cdb83f0d1673194ecb0f8ef1ef0d6b6"
         },
         {
           "id": "page:works-index:media:6",
           "ordinal": 6,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-byte-conversion.png",
-          "publicSha256": "1c0619337fbc1aec90c4ce0896a420b1b0cc126f5bed1e98ceb25242ee8b4109"
+          "websiteUrl": "/media/covers/works/simple-byte-conversion-20261101.webp",
+          "publicSha256": "15bed14a9add5f352fe09962844d1d354fa7c53d3c4765801fa8e723b349d67d"
         },
         {
           "id": "page:works-index:media:7",
           "ordinal": 7,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-config-exclude.png",
-          "publicSha256": "62afa64ae53e1eee029182ed6f52fbdd1b67765168737296892b9f15f01a7767"
+          "websiteUrl": "/media/covers/works/simple-config-exclude-20261101.webp",
+          "publicSha256": "cf0a140f8b997cf7ad23c103cbea816a5231825918a7cd63e0bad8c98631b0b4"
         },
         {
           "id": "page:works-index:media:8",
           "ordinal": 8,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-launcher.png",
-          "publicSha256": "7bbe977ee99fd091acf61b868d889f50eacaee71e597946ae92e17f161b7b92b"
+          "websiteUrl": "/media/covers/works/simple-launcher-20261101.webp",
+          "publicSha256": "027209b8c5640ebb8a1379a038d2285c7fc79dd02e0da41aa205c9421f3b040e"
         },
         {
           "id": "page:works-index:media:9",
           "ordinal": 9,
           "state": "public",
-          "websiteUrl": "/assets/covers/simple-asset-namer.png",
-          "publicSha256": "6dbf2eca37be53c53cab18f27f3cc93f5be17c33aadfeacd0a99e05f9aecfd3f"
+          "websiteUrl": "/media/covers/works/simple-asset-namer-20261101.webp",
+          "publicSha256": "25b6c2b692991edbd04120ceffb27595e168449ee54755e2cf5c3360d01638f3"
         },
         {
           "id": "page:works-index:media:10",

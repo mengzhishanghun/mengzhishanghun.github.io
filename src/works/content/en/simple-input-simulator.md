@@ -25,7 +25,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-input-simulator
-sourceHash: 00cfd0e4fe06fef9768021fe84726cf13d7ba22a5be91ae8c04178982b6d2b7d
+sourceHash: "9ef0f7fb07fd95f4ff3fd997eb18289522c095334243afb2ad5096472747834c"
 translationStatus: translated
 generatedBodyHash: 61d277ca5f1212dc7184307fca9ccfe1b79d778006043767daeb7be4b42926cd
 workInfo:
@@ -43,7 +43,8 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-input-simulator.png
+websiteCoverUrl: "/media/covers/works/simple-input-simulator-20261101.webp"
+coverAlt: "SimpleInputSimulator cover"
 ---
 
 ## Overview
