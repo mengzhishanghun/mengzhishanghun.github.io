@@ -24,9 +24,9 @@ sitePublish: true
 tags:
   - Actor、关卡、地形与视口
   - MCP 系列
-coverAlt: MCPWorldEditor封面
-websiteCoverUrl: /assets/covers/mcp-world-editor.png
-lang: zh
+coverAlt: "MCPWorldEditor封面"
+websiteCoverUrl: "/media/covers/works/mcp-world-editor-20261101.webp"
+lang: "zh"
 translationKey: mcp-world-editor
 ---
 

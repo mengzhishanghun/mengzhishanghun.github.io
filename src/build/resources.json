@@ -162,14 +162,6 @@
       "mode": "frozen"
     },
     {
-      "source": "attachments/images/assets/cases/ai-digital-human-integration.png",
-      "outputs": [
-        "assets/cases/ai-digital-human-integration.png"
-      ],
-      "sha256": "053100ee9c253871b9935e9bcecb4c0687cf9e401994db3ec32a99c6655b590d",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/cases/ai-digital-human-integration.svg",
       "outputs": [
         "assets/cases/ai-digital-human-integration.svg"
@@ -226,14 +218,6 @@
       "mode": "frozen"
     },
     {
-      "source": "attachments/images/assets/cases/flying-car-simulator.png",
-      "outputs": [
-        "assets/cases/flying-car-simulator.png"
-      ],
-      "sha256": "ea5bd7b45740a309c3177a36dbf8452850511e17d8d7826457fa66fa54e96177",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/cases/flying-car-simulator.svg",
       "outputs": [
         "assets/cases/flying-car-simulator.svg"
@@ -271,14 +255,6 @@
         "assets/cases/metahuman-animation-clipping.svg"
       ],
       "sha256": "70e3c986f96b38031f1f73a32431af7d6965371ebac422d5388d7d64423877b5",
-      "mode": "frozen"
-    },
-    {
-      "source": "attachments/images/assets/cases/motion-capture-robot-control.png",
-      "outputs": [
-        "assets/cases/motion-capture-robot-control.png"
-      ],
-      "sha256": "e09607cf97c01a94927aec116548656e3cb2ad16a625a776e2868441ef98fe96",
       "mode": "frozen"
     },
     {
@@ -3971,14 +3947,6 @@
       "mode": "authored"
     },
     {
-      "source": "attachments/images/assets/covers/p4-stream-switcher.png",
-      "outputs": [
-        "assets/covers/p4-stream-switcher.png"
-      ],
-      "sha256": "d11c7d86ef285b0a15d23b58642031c69033271879eae0f436baa252402fbd1f",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/covers/mcp-animation.svg",
       "outputs": [
         "assets/covers/mcp-animation.svg"
@@ -4051,28 +4019,12 @@
       "mode": "authored"
     },
     {
-      "source": "attachments/images/assets/covers/mcp-world-editor.png",
-      "outputs": [
-        "assets/covers/mcp-world-editor.png"
-      ],
-      "sha256": "546d69bb083a965c82eafd1af0c10e467f3d1cfc912ee5efc4a7b4941f87fecb",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/covers/shaniu.svg",
       "outputs": [
         "assets/covers/shaniu.svg"
       ],
       "sha256": "2a3edec43d32b94b05ce9523fe8dce0282f9d5b54e8b16d76c83c77ad22efd8e",
       "mode": "authored"
-    },
-    {
-      "source": "attachments/images/assets/covers/shaniu.png",
-      "outputs": [
-        "assets/covers/shaniu.png"
-      ],
-      "sha256": "5aa6a34195d553e193f79132d005b0697fca34b0a177a342b27a60be13658561",
-      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/cases/perforce-workspace-pool.svg",
@@ -4984,6 +4936,70 @@
         "media/covers/works/mcp-umg-20261101.webp"
       ],
       "sha256": "cb4325f2e5a4c69ff99063ad63f13b759fe70c3aa8e08411ded54063f7a09dec",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/mcp-world-editor-20261101.webp",
+      "outputs": [
+        "media/covers/works/mcp-world-editor-20261101.webp"
+      ],
+      "sha256": "b376fee6212a8d9ecf6d9814338a868a30e1d1c2bf312a9baf9d55df8312b189",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/shaniu-20261101.webp",
+      "outputs": [
+        "media/covers/works/shaniu-20261101.webp"
+      ],
+      "sha256": "72a5ee3e8615c11daf66acd960c97205566d8f953c04cc54b94cf1c70270d767",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19770930-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19770930-20261101.webp"
+      ],
+      "sha256": "4bc55c91852d07c2325ce9726f9b9da39289ad46345ffa5000831f009275f466",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19770934-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19770934-20261101.webp"
+      ],
+      "sha256": "f5baf07aa4ae2d82e731457d022421f00bbd12dd758e96049e84e376e55af875",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/p4-stream-switcher-20261101.webp",
+      "outputs": [
+        "media/covers/works/p4-stream-switcher-20261101.webp"
+      ],
+      "sha256": "a639800d678d3dcc91ee20214fc4e5c27e557d9f3c48ab9f71831c59f696143f",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ai-digital-human-integration-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ai-digital-human-integration-20261101.webp"
+      ],
+      "sha256": "ee4de69257624da10cdde9131af3f6956c9215b9a8f65f6da7ebf3ce1a9af6d8",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/flying-car-simulator-20261101.webp",
+      "outputs": [
+        "media/covers/blog/flying-car-simulator-20261101.webp"
+      ],
+      "sha256": "48654fc19eb8f30d9a48e74b14ec0e042abdb9d510de0bf87c4f1cc6ebc212e9",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/motion-capture-robot-control-20261101.webp",
+      "outputs": [
+        "media/covers/blog/motion-capture-robot-control-20261101.webp"
+      ],
+      "sha256": "ba8a642af11b5d7ebff9cea33b549ee26e37ea2c5297e17e071a7ba8a98e08e3",
       "mode": "frozen"
     }
   ]

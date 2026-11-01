@@ -22,9 +22,9 @@ sitePublish: true
 tags:
   - AI 管家
   - 后台任务
-coverAlt: ShaNiu封面
-websiteCoverUrl: /assets/covers/shaniu.png
-lang: zh
+coverAlt: "ShaNiu封面"
+websiteCoverUrl: "/media/covers/works/shaniu-20261101.webp"
+lang: "zh"
 translationKey: shaniu
 ---
 

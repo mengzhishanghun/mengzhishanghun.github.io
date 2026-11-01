@@ -13,13 +13,13 @@ sitePublish: true
 tags:
   - Simulation
   - Transportation
-coverAlt: Flowchart of the flying car simulator
-websiteCoverUrl: /assets/cases/flying-car-simulator.png
+coverAlt: "Adapting AirSim Controls for UE Flight Simulation cover"
+websiteCoverUrl: "/media/covers/blog/flying-car-simulator-20261101.webp"
 lang: en
 translationKey: flying-car-simulator
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 5c8a0b9bfdc61838a45584614f5d6d8861f04d81bef34876140756bae5b9fa0c
+sourceHash: "642ea9df6349c6ad66ab6f9e71c6d6d4de266d99b1bcd9770082b54a341da49d"
 translationStatus: translated
 generatedBodyHash: 1aa128153b055cc9e01888234ef720e76b1759f8fb5aa2fe5b6a29781c239d11
 ---

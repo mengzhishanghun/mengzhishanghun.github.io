@@ -15,9 +15,9 @@ sitePublish: true
 tags:
   - 动作捕捉
   - 机器人
-coverAlt: 动捕机器人控制系统的流程图
-websiteCoverUrl: /assets/cases/motion-capture-robot-control.png
-lang: zh
+coverAlt: "将动捕骨骼重定向到 UE 机器人模型封面"
+websiteCoverUrl: "/media/covers/blog/motion-capture-robot-control-20261101.webp"
+lang: "zh"
 translationKey: motion-capture-robot-control
 ---
 

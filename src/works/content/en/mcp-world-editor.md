@@ -26,11 +26,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-world-editor
-sourceHash: 5319940d3d4f0553a7bddfa005881ce756fb55146254249863c333de9499787a
+sourceHash: "0789b03d516f4e9dec09e37ab5f8a581fa632eb357ce8a4ad4bf6b52b896192b"
 generatedBodyHash: a4af96eaff9850c243434648296de015fa6fd76bfd682a0ea550be90202d69b1
 translationStatus: translated
-coverAlt: MCPWorldEditor cover
-websiteCoverUrl: /assets/covers/mcp-world-editor.png
+coverAlt: "MCPWorldEditor cover"
+websiteCoverUrl: "/media/covers/works/mcp-world-editor-20261101.webp"
 ---
 
 ## About this work

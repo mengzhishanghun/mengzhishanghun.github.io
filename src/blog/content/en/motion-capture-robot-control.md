@@ -13,13 +13,13 @@ sitePublish: true
 tags:
   - Motion capture
   - Robotics
-coverAlt: Flowchart of the motion capture robot control system
-websiteCoverUrl: /assets/cases/motion-capture-robot-control.png
+coverAlt: "Retargeting Motion Capture to Robot Models in UE cover"
+websiteCoverUrl: "/media/covers/blog/motion-capture-robot-control-20261101.webp"
 lang: en
 translationKey: motion-capture-robot-control
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: bbc73cb01d924dc6e101128e39b1d53d81ff3890588b1e58cad3ab67dbb17860
+sourceHash: "7be55c4de53a6191c5e78b177d1c87dbcb580db32585d406a34e2154e29a352b"
 translationStatus: translated
 generatedBodyHash: da1ddb180801497cb6f0e98edbf223b710cf32d200c649ef0e33ec4b2a09aa34
 ---

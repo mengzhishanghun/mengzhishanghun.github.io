@@ -517,7 +517,11 @@
       "translationKey": "cnblogs-19770934",
       "baselineTemplate": "blog/cnblogs-19770934/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/cnblogs-19770934-20261101.webp",
+        "sha256": "f5baf07aa4ae2d82e731457d022421f00bbd12dd758e96049e84e376e55af875"
+      }
     },
     {
       "id": "blog:cnblogs-19770930",
@@ -531,7 +535,11 @@
       "translationKey": "cnblogs-19770930",
       "baselineTemplate": "blog/cnblogs-19770930/index.html",
       "supplementTranslationKeys": [],
-      "mediaOccurrences": []
+      "mediaOccurrences": [],
+      "cover": {
+        "websiteUrl": "/media/covers/blog/cnblogs-19770930-20261101.webp",
+        "sha256": "4bc55c91852d07c2325ce9726f9b9da39289ad46345ffa5000831f009275f466"
+      }
     },
     {
       "id": "blog:cnblogs-19379355",
@@ -3436,8 +3444,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/mcp-world-editor.png",
-        "sha256": "546d69bb083a965c82eafd1af0c10e467f3d1cfc912ee5efc4a7b4941f87fecb"
+        "websiteUrl": "/media/covers/works/mcp-world-editor-20261101.webp",
+        "sha256": "b376fee6212a8d9ecf6d9814338a868a30e1d1c2bf312a9baf9d55df8312b189"
       }
     },
     {
@@ -3454,8 +3462,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/shaniu.png",
-        "sha256": "5aa6a34195d553e193f79132d005b0697fca34b0a177a342b27a60be13658561"
+        "websiteUrl": "/media/covers/works/shaniu-20261101.webp",
+        "sha256": "72a5ee3e8615c11daf66acd960c97205566d8f953c04cc54b94cf1c70270d767"
       }
     },
     {
@@ -3472,8 +3480,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/covers/p4-stream-switcher.png",
-        "sha256": "d11c7d86ef285b0a15d23b58642031c69033271879eae0f436baa252402fbd1f"
+        "websiteUrl": "/media/covers/works/p4-stream-switcher-20261101.webp",
+        "sha256": "a639800d678d3dcc91ee20214fc4e5c27e557d9f3c48ab9f71831c59f696143f"
       }
     },
     {
@@ -3508,8 +3516,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/cases/ai-digital-human-integration.png",
-        "sha256": "053100ee9c253871b9935e9bcecb4c0687cf9e401994db3ec32a99c6655b590d"
+        "websiteUrl": "/media/covers/blog/ai-digital-human-integration-20261101.webp",
+        "sha256": "ee4de69257624da10cdde9131af3f6956c9215b9a8f65f6da7ebf3ce1a9af6d8"
       }
     },
     {
@@ -3525,8 +3533,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/cases/flying-car-simulator.png",
-        "sha256": "ea5bd7b45740a309c3177a36dbf8452850511e17d8d7826457fa66fa54e96177"
+        "websiteUrl": "/media/covers/blog/flying-car-simulator-20261101.webp",
+        "sha256": "48654fc19eb8f30d9a48e74b14ec0e042abdb9d510de0bf87c4f1cc6ebc212e9"
       }
     },
     {
@@ -3542,8 +3550,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/cases/motion-capture-robot-control.png",
-        "sha256": "e09607cf97c01a94927aec116548656e3cb2ad16a625a776e2868441ef98fe96"
+        "websiteUrl": "/media/covers/blog/motion-capture-robot-control-20261101.webp",
+        "sha256": "ba8a642af11b5d7ebff9cea33b549ee26e37ea2c5297e17e071a7ba8a98e08e3"
       }
     },
     {

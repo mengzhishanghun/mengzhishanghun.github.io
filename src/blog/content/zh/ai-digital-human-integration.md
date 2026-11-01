@@ -16,9 +16,9 @@ tags:
   - AI
   - MetaHuman
   - 语音交互
-coverAlt: 本地集成 AI 数字人交互流程的流程图
-websiteCoverUrl: /assets/cases/ai-digital-human-integration.png
-lang: zh
+coverAlt: "本地集成 AI 数字人交互流程封面"
+websiteCoverUrl: "/media/covers/blog/ai-digital-human-integration-20261101.webp"
+lang: "zh"
 translationKey: ai-digital-human-integration
 ---
 

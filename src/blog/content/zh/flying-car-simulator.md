@@ -15,9 +15,9 @@ sitePublish: true
 tags:
   - 仿真
   - 交通
-coverAlt: 飞行汽车模拟器的流程图
-websiteCoverUrl: /assets/cases/flying-car-simulator.png
-lang: zh
+coverAlt: "UE 飞行仿真中的 AirSim 控制适配封面"
+websiteCoverUrl: "/media/covers/blog/flying-car-simulator-20261101.webp"
+lang: "zh"
 translationKey: flying-car-simulator
 ---
 

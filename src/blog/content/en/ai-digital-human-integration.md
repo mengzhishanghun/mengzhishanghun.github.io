@@ -14,13 +14,13 @@ tags:
   - AI
   - MetaHuman
   - Voice interaction
-coverAlt: Flowchart of the local integration of an AI digital human interaction workflow
-websiteCoverUrl: /assets/cases/ai-digital-human-integration.png
+coverAlt: "Local Integration of an AI Digital Human Interaction Workflow cover"
+websiteCoverUrl: "/media/covers/blog/ai-digital-human-integration-20261101.webp"
 lang: en
 translationKey: ai-digital-human-integration
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 80adf253a4b436e40ada9da5a688da43fb4600810c5978dffae688947ac34300
+sourceHash: "e3924d295d04a842e476ed5c722c7494eb6d62b7e9bf73c28abba65286aa4cf7"
 translationStatus: translated
 generatedBodyHash: 1c8793d43b71f71372ddf70c693953ea180de9347a29c92bc43c6c3e05ee6a2e
 ---

@@ -24,11 +24,11 @@ tags:
   - Background tasks
 lang: en
 translationKey: shaniu
-sourceHash: fa450f8fc4c4639a038882f16d83b253cae7e4c25f2f42c23d12baef9d1651cb
+sourceHash: "2c99a70b8e83eab80af7ed7de3da319f5cc2d95ae57162dbf6625082964f2ecd"
 generatedBodyHash: af5786d5fbe44966d76e2729296e7700dbc62e03da87a0ce470b2d548c3a31eb
 translationStatus: translated
-coverAlt: ShaNiu cover
-websiteCoverUrl: /assets/covers/shaniu.png
+coverAlt: "ShaNiu cover"
+websiteCoverUrl: "/media/covers/works/shaniu-20261101.webp"
 ---
 
 ## About this work
