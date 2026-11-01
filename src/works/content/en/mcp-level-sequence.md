@@ -26,11 +26,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-level-sequence
-sourceHash: 69fdef873c383648302ea3156dd4eef7d22b6da3b61a92d194a1a7b46dcbda0a
+sourceHash: "2de797e6a07627dd9526841af6b94bb9102d25fda26a75e10da31c35b9759c71"
 generatedBodyHash: 1dd064db8a464f26e2954f32d65d7d0eb4d7e5bccc7adf516590701695e1da3b
 translationStatus: translated
-coverAlt: MCPLevelSequence cover
-websiteCoverUrl: /assets/covers/mcp-level-sequence.png
+coverAlt: "MCPLevelSequence cover"
+websiteCoverUrl: "/media/covers/works/mcp-level-sequence-20261101.webp"
 ---
 
 ## About this work

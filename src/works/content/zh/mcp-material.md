@@ -24,9 +24,9 @@ sitePublish: true
 tags:
   - 材质图与材质实例
   - MCP 系列
-coverAlt: MCPMaterial封面
-websiteCoverUrl: /assets/covers/mcp-material.png
-lang: zh
+coverAlt: "MCPMaterial封面"
+websiteCoverUrl: "/media/covers/works/mcp-material-20261101.webp"
+lang: "zh"
 translationKey: mcp-material
 ---
 

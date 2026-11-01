@@ -29,11 +29,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-blueprint
-sourceHash: f24adfeaee1a17b570755ff2d785f697c40270ee8eb5b98ccb1fe2c514d53198
+sourceHash: "1afad64f85a465e931fb9d43575ae3ce23d81a052bbca94453bd87b02dfd4f29"
 generatedBodyHash: bd7a514c72663386995c68c03bbcb512723f93df14493d26c66156dfcbd050f0
 translationStatus: translated
-coverAlt: MCPBlueprint cover
-websiteCoverUrl: /assets/covers/mcp-blueprint.png
+coverAlt: "MCPBlueprint cover"
+websiteCoverUrl: "/media/covers/works/mcp-blueprint-20261101.webp"
 ---
 
 ## About this work

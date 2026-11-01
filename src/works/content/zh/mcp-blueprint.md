@@ -27,9 +27,9 @@ sitePublish: true
 tags:
   - 蓝图发现、编辑与编译反馈
   - MCP 系列
-coverAlt: MCPBlueprint封面
-websiteCoverUrl: /assets/covers/mcp-blueprint.png
-lang: zh
+coverAlt: "MCPBlueprint封面"
+websiteCoverUrl: "/media/covers/works/mcp-blueprint-20261101.webp"
+lang: "zh"
 translationKey: mcp-blueprint
 ---
 

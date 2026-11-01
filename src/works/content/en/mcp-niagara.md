@@ -26,11 +26,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-niagara
-sourceHash: c0b8e99eac350d71d4b2ffe2478a780e745d9d953af57f3202eaf28212a318af
+sourceHash: "27f997f06f7162f3fbb3e5153f30ad555de78c34649b5db232b8ec910368b1fa"
 generatedBodyHash: 843ae91c9c691c43591cf567b349097788e7e80d80fcbea944bd53a98127db0d
 translationStatus: translated
-coverAlt: MCPNiagara cover
-websiteCoverUrl: /assets/covers/mcp-niagara.png
+coverAlt: "MCPNiagara cover"
+websiteCoverUrl: "/media/covers/works/mcp-niagara-20261101.webp"
 ---
 
 ## About this work

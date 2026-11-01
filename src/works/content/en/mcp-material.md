@@ -26,11 +26,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-material
-sourceHash: 9430e4ec331c70f083bd1163428aeac17bccf7a4445cfcd26b9262b1b23ea236
+sourceHash: "3338ec971fd0e2a61ccdeb82dbd9f78ab2f81ed93b8a3518ee6fd5c703e15199"
 generatedBodyHash: d4f053274ae36004e495bddfd198536e511404ffb37aae6d1d1a7a6061f9104e
 translationStatus: translated
-coverAlt: MCPMaterial cover
-websiteCoverUrl: /assets/covers/mcp-material.png
+coverAlt: "MCPMaterial cover"
+websiteCoverUrl: "/media/covers/works/mcp-material-20261101.webp"
 ---
 
 ## About this work

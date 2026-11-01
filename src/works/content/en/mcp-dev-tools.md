@@ -27,11 +27,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-dev-tools
-sourceHash: 98f356d7024266fed72d5344ef1e754853b28250ec903a9229a21755fc898381
+sourceHash: "457e6a9612f2adf35d83842762fcb2aee586e0b6bdc39136e65efcef25752ad4"
 generatedBodyHash: 6897f18c4a581179c315af0642d81c1f2907a64388a34215e288bafc44ad3d49
 translationStatus: translated
-coverAlt: MCPDevTools cover
-websiteCoverUrl: /assets/covers/mcp-dev-tools.png
+coverAlt: "MCPDevTools cover"
+websiteCoverUrl: "/media/covers/works/mcp-dev-tools-20261101.webp"
 ---
 
 ## About this work

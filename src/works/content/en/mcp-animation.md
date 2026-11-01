@@ -26,11 +26,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-animation
-sourceHash: 5feb6292af2fe8ccce1c91968725cc82d04407ea61098747fcb6dc89b8ce2cba
+sourceHash: "ab9a28aaab610890290f9d03a85366cc6234a9af2bb9ac70d0228a74adc061da"
 generatedBodyHash: c19a248e1d9bdb012d7b779bed354325b82a711a1976b5b69b57e3c8f97e16dc
 translationStatus: translated
-coverAlt: MCPAnimation cover
-websiteCoverUrl: /assets/covers/mcp-animation.png
+coverAlt: "MCPAnimation cover"
+websiteCoverUrl: "/media/covers/works/mcp-animation-20261101.webp"
 ---
 
 ## About this work

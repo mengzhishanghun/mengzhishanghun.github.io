@@ -26,11 +26,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-behavior-tree
-sourceHash: da1c13d86301f202d2ed8d24ac88fcb3422374cc9cd38c9f421a63bb4afa2177
+sourceHash: "aebb57562482db983d0a215531a4b5c7b0a41d06f1399aa3aa6a98438323af6b"
 generatedBodyHash: e1d1b9f613da453087122efc288a95b7f83054db76f24acd2fb2c067ff9c82cf
 translationStatus: translated
-coverAlt: MCPBehaviorTree cover
-websiteCoverUrl: /assets/covers/mcp-behavior-tree.png
+coverAlt: "MCPBehaviorTree cover"
+websiteCoverUrl: "/media/covers/works/mcp-behavior-tree-20261101.webp"
 ---
 
 ## About this work

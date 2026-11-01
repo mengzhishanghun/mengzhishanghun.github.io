@@ -26,11 +26,11 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: a85e4f1f899eb0da4bf362830cd50912d4b20b1f95c1f15b5ff60524a62eacd7
+sourceHash: "cdd497a73d5eab6bce786d50f40752e58b42dd16c9597a847d424d19d31a24e4"
 generatedBodyHash: 69f1f4af1bd1fb51be61da48e0be9cd83a7f8990fc17ea17583e06759ae89d31
 translationStatus: translated
-coverAlt: MCPUMG cover
-websiteCoverUrl: /assets/covers/mcp-umg.png
+coverAlt: "MCPUMG cover"
+websiteCoverUrl: "/media/covers/works/mcp-umg-20261101.webp"
 ---
 
 ## About this work

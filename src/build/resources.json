@@ -3987,28 +3987,12 @@
       "mode": "authored"
     },
     {
-      "source": "attachments/images/assets/covers/mcp-animation.png",
-      "outputs": [
-        "assets/covers/mcp-animation.png"
-      ],
-      "sha256": "dc251cd665e5d846c2c9d627bcb425d73e75bfbdb813117e11cc419de822d231",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/covers/mcp-behavior-tree.svg",
       "outputs": [
         "assets/covers/mcp-behavior-tree.svg"
       ],
       "sha256": "32aa8f5488ce291f8faa717bcfbc8a08a9ae2bd0e442c390e68fb78a9d3110d1",
       "mode": "authored"
-    },
-    {
-      "source": "attachments/images/assets/covers/mcp-behavior-tree.png",
-      "outputs": [
-        "assets/covers/mcp-behavior-tree.png"
-      ],
-      "sha256": "ce71ddd4794fd1df9b7dbc53ab2b053bcbf4b5a93b6988f3f9d169cc7655dcf4",
-      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-blueprint.svg",
@@ -4019,28 +4003,12 @@
       "mode": "authored"
     },
     {
-      "source": "attachments/images/assets/covers/mcp-blueprint.png",
-      "outputs": [
-        "assets/covers/mcp-blueprint.png"
-      ],
-      "sha256": "1f51974d5f7da9e6277676828218526fb02ae86bdc6f50e3525ea0b57c38b5c7",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/covers/mcp-dev-tools.svg",
       "outputs": [
         "assets/covers/mcp-dev-tools.svg"
       ],
       "sha256": "e4055731eb48bc1a39e6d2ed498b3f1604b29573de5106d2b60ca96b7479ff5d",
       "mode": "authored"
-    },
-    {
-      "source": "attachments/images/assets/covers/mcp-dev-tools.png",
-      "outputs": [
-        "assets/covers/mcp-dev-tools.png"
-      ],
-      "sha256": "3bfe14492ad87f988c966296470c1d73e578aaa43e276ba4972095956e19d1d3",
-      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-level-sequence.svg",
@@ -4051,28 +4019,12 @@
       "mode": "authored"
     },
     {
-      "source": "attachments/images/assets/covers/mcp-level-sequence.png",
-      "outputs": [
-        "assets/covers/mcp-level-sequence.png"
-      ],
-      "sha256": "09a2f1069f477e2f7633533f23dd4ff44b7584c360917b0b01b9f1575b8d77a0",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/covers/mcp-material.svg",
       "outputs": [
         "assets/covers/mcp-material.svg"
       ],
       "sha256": "4be0528fb60050dba9a5ffd3907c474e8446f5ec6c8ae7842245f9812f1b3a9d",
       "mode": "authored"
-    },
-    {
-      "source": "attachments/images/assets/covers/mcp-material.png",
-      "outputs": [
-        "assets/covers/mcp-material.png"
-      ],
-      "sha256": "e61899309a183ec561013659198304177c9088d5c5b8c86578a90b2ccf4bd935",
-      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-niagara.svg",
@@ -4083,28 +4035,12 @@
       "mode": "authored"
     },
     {
-      "source": "attachments/images/assets/covers/mcp-niagara.png",
-      "outputs": [
-        "assets/covers/mcp-niagara.png"
-      ],
-      "sha256": "8026c22187ad650e915d9d076dd42c49b989876910d441b37d9acb70b2d780d7",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/covers/mcp-umg.svg",
       "outputs": [
         "assets/covers/mcp-umg.svg"
       ],
       "sha256": "60b625791762530faffc53a7be471bc935ea347ee1a170619dbaeacebf245e89",
       "mode": "authored"
-    },
-    {
-      "source": "attachments/images/assets/covers/mcp-umg.png",
-      "outputs": [
-        "assets/covers/mcp-umg.png"
-      ],
-      "sha256": "6f9129d37a43561bac42cbf39fcb12a493c2694e952f93e4235757f7c662253b",
-      "mode": "frozen"
     },
     {
       "source": "attachments/images/assets/covers/mcp-world-editor.svg",
@@ -4984,6 +4920,70 @@
         "media/covers/blog/python-perforce-stream-switch-safety-20261101.webp"
       ],
       "sha256": "a4a3cbbd6ef5f694f69a978797666f448e07e98d0c2556f722628e234172d64f",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/mcp-animation-20261101.webp",
+      "outputs": [
+        "media/covers/works/mcp-animation-20261101.webp"
+      ],
+      "sha256": "e9226a1a0830749a560c38a0d76d22e1dfb0739d258319d6f91a4d48972f4eb0",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/mcp-behavior-tree-20261101.webp",
+      "outputs": [
+        "media/covers/works/mcp-behavior-tree-20261101.webp"
+      ],
+      "sha256": "cfbb1becc8eaa441b3c3504912b1eda5c85ca152b716dcb5e64a2ac7afa2c965",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/mcp-blueprint-20261101.webp",
+      "outputs": [
+        "media/covers/works/mcp-blueprint-20261101.webp"
+      ],
+      "sha256": "acd79853c6a8974853a5e41565ff4cff8aab6a7c4bf9522ed49e939aceb77013",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/mcp-dev-tools-20261101.webp",
+      "outputs": [
+        "media/covers/works/mcp-dev-tools-20261101.webp"
+      ],
+      "sha256": "8d6a1b7d6919506818f2e39004ed3f8ff1827789d8391d77d546b8b4c01aeba5",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/mcp-level-sequence-20261101.webp",
+      "outputs": [
+        "media/covers/works/mcp-level-sequence-20261101.webp"
+      ],
+      "sha256": "b62366b79fb0b3729a8f67534382e27d1ad518b8918f1d854f156dc957975e9c",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/mcp-material-20261101.webp",
+      "outputs": [
+        "media/covers/works/mcp-material-20261101.webp"
+      ],
+      "sha256": "b80779387bf9000aacd7491415bbcc77255db092d5c018f6ec19baf4f1515584",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/mcp-niagara-20261101.webp",
+      "outputs": [
+        "media/covers/works/mcp-niagara-20261101.webp"
+      ],
+      "sha256": "86442a10d461987b3b1964ae735a6b5a649d6c7b10fef43824b93738870b9d3e",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/mcp-umg-20261101.webp",
+      "outputs": [
+        "media/covers/works/mcp-umg-20261101.webp"
+      ],
+      "sha256": "cb4325f2e5a4c69ff99063ad63f13b759fe70c3aa8e08411ded54063f7a09dec",
       "mode": "frozen"
     }
   ]

@@ -24,9 +24,9 @@ sitePublish: true
 tags:
   - Level Sequence 序列资产编辑
   - MCP 系列
-coverAlt: MCPLevelSequence封面
-websiteCoverUrl: /assets/covers/mcp-level-sequence.png
-lang: zh
+coverAlt: "MCPLevelSequence封面"
+websiteCoverUrl: "/media/covers/works/mcp-level-sequence-20261101.webp"
+lang: "zh"
 translationKey: mcp-level-sequence
 ---
 

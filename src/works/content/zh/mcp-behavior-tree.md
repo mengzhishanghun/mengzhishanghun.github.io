@@ -24,9 +24,9 @@ sitePublish: true
 tags:
   - 行为树与黑板资产
   - MCP 系列
-coverAlt: MCPBehaviorTree封面
-websiteCoverUrl: /assets/covers/mcp-behavior-tree.png
-lang: zh
+coverAlt: "MCPBehaviorTree封面"
+websiteCoverUrl: "/media/covers/works/mcp-behavior-tree-20261101.webp"
+lang: "zh"
 translationKey: mcp-behavior-tree
 ---
 
