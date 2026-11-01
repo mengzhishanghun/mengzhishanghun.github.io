@@ -3824,11 +3824,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: 精选作品
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: 精选作品
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0@aria-label: UE 多版本插件打包
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0@aria-label: "项目快速打包"
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: 开源工具
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 将 UE 插件打包为可发布版本
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: UEPluginAutoPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 主要用于 Fab 提交流程，将插件打包为可发布版本，也适合其他插件分发场景。
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: "项目快速打包"
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: "UEPackageManager"
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: "无需打开 UE 编辑器，直接快速打包项目，支持图形界面与命令行操作。"
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1@aria-label: UDP 多通道通信
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE插件
@@ -3843,7 +3843,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1@aria-label: 精选作品切换
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:0@aria-label: 显示：UE 多版本插件打包
+    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:0@aria-label: "显示：项目快速打包"
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:1@aria-label: 显示：UDP 多通道通信
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:2@aria-label: 显示：让图片随文章发布
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.h2:0.#text:0: 精选案例

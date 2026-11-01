@@ -16,8 +16,8 @@ tags:
   - UMG
   - 多窗口
   - 界面工具
-coverAlt: 在 UE 中创建独立多窗口界面示意图
-websiteCoverUrl: /assets/cases/ue-multiwindow-interface.png
+coverAlt: UE 多窗口封面
+websiteCoverUrl: /assets/cases/ue-multiwindow-interface-v2.png
 lang: zh
 translationKey: ue-multiwindow-interface
 ---

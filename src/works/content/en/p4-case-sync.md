@@ -19,7 +19,7 @@ links:
     href: https://github.com/MZSH-Tools/P4CaseSync
 lang: en
 translationKey: p4-case-sync
-sourceHash: 5296321e9c534a9d220fc7d165d5075bedf1a094b673e9b683dadc4c864da477
+sourceHash: be7a38d7866ff7fedb9df469a733fc89cfb95f2beec0edd28ded372979efebcf
 translationStatus: translated
 generatedBodyHash: a10993ab36c49d25abfa6884da333bafe3045694bf73957da7d5e2b88510add0
 workInfo:
@@ -34,7 +34,7 @@ workInfo:
         - macOS / Linux (commands documented)
       requirements:
         - Perforce p4 command-line environment
-websiteCoverUrl: /media/imported/works/p4-case-sync-cover.png
+websiteCoverUrl: /media/imported/works/p4-case-sync-cover-v2.png
 coverAlt: P4CaseSync cover
 ---
 

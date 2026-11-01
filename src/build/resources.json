@@ -2826,11 +2826,11 @@
       "mode": "frozen"
     },
     {
-      "source": "attachments/images/media/imported/works/p4-case-sync-cover.png",
+      "source": "attachments/images/media/imported/works/p4-case-sync-cover-v2.png",
       "outputs": [
-        "media/imported/works/p4-case-sync-cover.png"
+        "media/imported/works/p4-case-sync-cover-v2.png"
       ],
-      "sha256": "76fb2f467607f58d8b57da236f771d4f49bbb517a5a769fda7a7a2ee33cfecba",
+      "sha256": "3583ecab82398952454a16c59eeb1a415cfbedf509886a548a2b80da61fe04b9",
       "mode": "frozen"
     },
     {
@@ -2874,11 +2874,11 @@
       "mode": "frozen"
     },
     {
-      "source": "attachments/images/media/imported/works/ue-package-manager-cover.png",
+      "source": "attachments/images/media/imported/works/ue-package-manager-cover-v2.png",
       "outputs": [
-        "media/imported/works/ue-package-manager-cover.png"
+        "media/imported/works/ue-package-manager-cover-v2.png"
       ],
-      "sha256": "8b8368a51e281671cedeab9e6a3c05fcee6b4c3bc3ac49f9cb5c31b11d624696",
+      "sha256": "bd25dc68d55e2aeff090ef182d620320e18ec8340153358914b29f713bbde894",
       "mode": "frozen"
     },
     {
@@ -4347,11 +4347,11 @@
       "mode": "authored"
     },
     {
-      "source": "attachments/images/assets/cases/ue-multiwindow-interface.png",
+      "source": "attachments/images/assets/cases/ue-multiwindow-interface-v2.png",
       "outputs": [
-        "assets/cases/ue-multiwindow-interface.png"
+        "assets/cases/ue-multiwindow-interface-v2.png"
       ],
-      "sha256": "e84b5cffdc860640d0b64f21efac26d662c6396388678678897ebce614974d17",
+      "sha256": "5e4061c371e47bc966e2a921e4a213c3f3f9f7a47152ff40af667e02f2b34521",
       "mode": "authored"
     },
     {

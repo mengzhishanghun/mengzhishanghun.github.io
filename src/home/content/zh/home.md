@@ -31,13 +31,13 @@ translationKey: home
 
 开源工具
 
-### [UE 多版本插件打包](/works/plugin-auto-packer/)
+### [项目快速打包](/works/ue-package-manager/)
 
-UEPluginAutoPacker
+UEPackageManager
 
-集中完成插件在多个 UE 引擎版本上的构建、日志查看和发布文件整理。
+无需打开 UE 编辑器，直接快速打包项目，支持图形界面与命令行操作。
 
-[查看内容](/works/plugin-auto-packer/)
+[查看内容](/works/ue-package-manager/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A2)
 

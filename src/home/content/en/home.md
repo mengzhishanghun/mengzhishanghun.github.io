@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: 7d042f6ac7e1876a3f5566b980583ad6b4ff1487f34351db3fd1b296481f75f0
+sourceHash: 53acf87e8cd4aa3026cd7a022bf882bdd5eb2394d8188e5fd71874f01db6acb8
 translationStatus: translated
-generatedBodyHash: febc4550385e2b10f4cb559778c787636eafe70955f3f225e88464c68c106b31
+generatedBodyHash: a8832d7ccf280678503fed66489da26406a1fb5be82b1aa8e5287dee16b70353
 ---
 
 # Complexity can be encapsulated;
@@ -34,13 +34,13 @@ If my articles or tools help you, you can also [support my work](/contact/#suppo
 
 Open-source Tools
 
-### [Multi-version UE Plugin Packaging](/works/plugin-auto-packer/)
+### [Package UE projects directly](/works/ue-package-manager/)
 
-UEPluginAutoPacker
+UEPackageManager
 
-Build plugins across multiple UE engine versions, review logs, and organize release files in one place.
+Package UE projects directly without opening the editor, using a graphical interface or the command line.
 
-[View Details](/works/plugin-auto-packer/)
+[View Details](/works/ue-package-manager/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A2)
 

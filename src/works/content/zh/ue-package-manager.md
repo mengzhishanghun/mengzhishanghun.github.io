@@ -30,7 +30,7 @@ links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPackageManager
 coverAlt: UEPackageManager封面
-websiteCoverUrl: /media/imported/works/ue-package-manager-cover.png
+websiteCoverUrl: /media/imported/works/ue-package-manager-cover-v2.png
 lang: zh
 translationKey: ue-package-manager
 ---

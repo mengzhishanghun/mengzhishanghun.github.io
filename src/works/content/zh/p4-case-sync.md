@@ -30,7 +30,7 @@ links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/P4CaseSync
 coverAlt: P4CaseSync封面
-websiteCoverUrl: /media/imported/works/p4-case-sync-cover.png
+websiteCoverUrl: /media/imported/works/p4-case-sync-cover-v2.png
 lang: zh
 translationKey: p4-case-sync
 ---
