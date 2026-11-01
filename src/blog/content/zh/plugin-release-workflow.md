@@ -19,9 +19,9 @@ tags:
 productIds:
   - plugin-auto-packer
   - plugin-manager
-coverAlt: 插件开发到发布的工具链的流程图
-websiteCoverUrl: /assets/cases/plugin-release-workflow.png
-lang: zh
+coverAlt: "插件开发到发布的工具链封面"
+websiteCoverUrl: "/media/covers/blog/plugin-release-workflow-20261101.webp"
+lang: "zh"
 translationKey: plugin-release-workflow
 ---
 

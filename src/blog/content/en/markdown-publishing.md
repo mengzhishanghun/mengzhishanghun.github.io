@@ -16,13 +16,13 @@ tags:
   - Writing tools
 productIds:
   - md-blog-packer
-coverAlt: Flowchart for publishing Markdown images together with an article
-websiteCoverUrl: /assets/cases/markdown-publishing.png
+coverAlt: "Publishing Markdown Images Together with the Article cover"
+websiteCoverUrl: "/media/covers/blog/markdown-publishing-20261101.webp"
 lang: en
 translationKey: markdown-publishing
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: e2619c4302f95ff3e9e474ddf2604d5a2d47302a277fb5dd2e1f6387782ffbde
+sourceHash: "44ae0642f2c02435b53abb2256f15685dbde746a1759d7c92512ebfaf8dd4b9c"
 translationStatus: translated
 generatedBodyHash: f8d467d16167ca7e23ad156d3acbe43326f91ac8bc7d102f0cfaad555a8695a1
 ---

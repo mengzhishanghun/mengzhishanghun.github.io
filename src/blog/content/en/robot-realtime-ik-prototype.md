@@ -16,11 +16,11 @@ tags:
   - Prototype
 lang: en
 translationKey: robot-realtime-ik-prototype
-coverAlt: Realtime robot data and three-axis IK prototype diagram
-websiteCoverUrl: /assets/cases/robot-realtime-ik-prototype.png
+coverAlt: "Robot Realtime Data and Three-Axis IK Prototype cover"
+websiteCoverUrl: "/media/covers/blog/robot-realtime-ik-prototype-20261101.webp"
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 2d075e18158f2a1629614c52b1d8b9736e6042e509672499d7c047b5c464bde8
+sourceHash: "47b8bdade5d61a3267b095bc246475204d6da3792b1667e1fb9dddf61672c8e3"
 translationStatus: translated
 generatedBodyHash: 7863749efb185bb61257735713ae5d25c9790be5a0d5e435589f5294cc632bfb
 ---

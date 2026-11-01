@@ -191,13 +191,6 @@
       "target": "both"
     },
     {
-      "path": "assets/cases/driving-session-replay.png",
-      "size": 66106,
-      "gitBlob": "ad4cd2ac2b90cd55c1472c7ab0f393cb1b48410b",
-      "sha256": "aed23c168a63425757ade384e5bd64eabf93a1999ccb6d188ac4bbc70063f207",
-      "target": "both"
-    },
-    {
       "path": "assets/cases/driving-session-replay.svg",
       "size": 3498,
       "gitBlob": "b12726e916165538240470d1fa63fafa7cdf68a2",
@@ -247,13 +240,6 @@
       "target": "both"
     },
     {
-      "path": "assets/cases/markdown-publishing.png",
-      "size": 68218,
-      "gitBlob": "17200185a802e5e5f6415c842b0b47de5453ccfa",
-      "sha256": "6f4ef1b8c14c1deba613694739f062f1ea4dac0cbbd13cdd8221509ea6bc603f",
-      "target": "both"
-    },
-    {
       "path": "assets/cases/markdown-publishing.svg",
       "size": 34927,
       "gitBlob": "d7bb98d8032cdf176cf0feb9bf94a31e93ea6e5e",
@@ -289,24 +275,10 @@
       "target": "both"
     },
     {
-      "path": "assets/cases/perforce-workspace-pool.png",
-      "size": 66494,
-      "gitBlob": "f285c2e1a03605d07be24704989586158e69a0e0",
-      "sha256": "0f5eadd658efc6a4a674b32f93e0a0155675b3845e71b776665ced88370028a4",
-      "target": "both"
-    },
-    {
       "path": "assets/cases/perforce-workspace-pool.svg",
       "size": 4085,
       "gitBlob": "9e6c0e802dc3af35fc93fb23806826834621d9f9",
       "sha256": "e741d0d18542032619dd2723b72ad1112fec6ef095d208ad8d1d351c5d40c4d8",
-      "target": "both"
-    },
-    {
-      "path": "assets/cases/plugin-release-workflow.png",
-      "size": 77285,
-      "gitBlob": "23f5cc284c1e99d629434c3123e455a2558bf6be",
-      "sha256": "4592c7624e1ae30ef9c5cf274d96714de1a16411c9634d56220b765ffcb7da0d",
       "target": "both"
     },
     {
@@ -317,24 +289,10 @@
       "target": "both"
     },
     {
-      "path": "assets/cases/robot-realtime-ik-prototype.png",
-      "size": 60779,
-      "gitBlob": "55680f6b125e90186018de6f5913c339d70a4f8b",
-      "sha256": "351d2590d6e28891328628db1d5293a141aefc042dcfc267c0a766e6c37a1bfc",
-      "target": "both"
-    },
-    {
       "path": "assets/cases/robot-realtime-ik-prototype.svg",
       "size": 3288,
       "gitBlob": "c827b026ff6e1a6478222f4d5e16d841cecfda4d",
       "sha256": "3eadce6ad815028bde4542dfdd327578641cc0f3bb299ee87af2853d79578ba5",
-      "target": "both"
-    },
-    {
-      "path": "assets/cases/six-dof-motion-platform.png",
-      "size": 66171,
-      "gitBlob": "474b32cc183d9a61a38ab43fa5f4e2ff40461a05",
-      "sha256": "83215c240e484063b405fb461c7bd190c3578b875773ffdbb4d002f7d0635a5f",
       "target": "both"
     },
     {
@@ -4427,9 +4385,9 @@
     },
     {
       "path": "en/blog/index.html",
-      "size": 320354,
-      "gitBlob": "1e97c037a57d76c641e7ee81cae2d83ad341e403",
-      "sha256": "d3e6dabe2c7706a68b796f8c2273c838cf3d9cffbcd0e1042d39a8508a76a29c",
+      "size": 320444,
+      "gitBlob": "390b875e48a291c7c039dbd1011ebc9dab3c0836",
+      "sha256": "f0aa1bb0a3476fb8574da8b5e419d264b30daf756052a114bb0188efaf9d0bbc",
       "target": "both"
     },
     {
@@ -4945,9 +4903,9 @@
     },
     {
       "path": "en/index.html",
-      "size": 54390,
-      "gitBlob": "bdcc90f2776a8b87c8172836eebc1bede8f6733b",
-      "sha256": "9f17e44c5c5ff86c2d26a2f806041eff6e3508133dc055a44f7d51b8b40fea31",
+      "size": 54405,
+      "gitBlob": "46013946f1e02ee950b8f227e5f58a8a046bd055",
+      "sha256": "9426107147536dca11f47e079aeedf93c61522ef1080f146ed4ac5027061ec6e",
       "target": "both"
     },
     {
@@ -5378,6 +5336,13 @@
       "target": "both"
     },
     {
+      "path": "media/covers/blog/driving-session-replay-20261101.webp",
+      "size": 59122,
+      "gitBlob": "fe4b65b9ec0196eabe7ac31ea4a796bcaeb36898",
+      "sha256": "2b019505cf4e220808f8888a6adbe53ebfc6f013fca675e95ff6c4936439e71c",
+      "target": "both"
+    },
+    {
       "path": "media/covers/blog/flying-car-simulator-20261101.webp",
       "size": 85896,
       "gitBlob": "62be7f781682f0dd56b2e396223746966bda2750",
@@ -5385,10 +5350,31 @@
       "target": "both"
     },
     {
+      "path": "media/covers/blog/markdown-publishing-20261101.webp",
+      "size": 67988,
+      "gitBlob": "f666bd56ce90e7e00243041d39ce7dc7e126cf3e",
+      "sha256": "82dc68162ea91575daa8db248347aaa37243e356ad25cae4af2aac9105c020d6",
+      "target": "both"
+    },
+    {
       "path": "media/covers/blog/motion-capture-robot-control-20261101.webp",
       "size": 75354,
       "gitBlob": "d7862b3b96a40d238100aa36a9619c05e03b8066",
       "sha256": "ba8a642af11b5d7ebff9cea33b549ee26e37ea2c5297e17e071a7ba8a98e08e3",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/blog/perforce-workspace-pool-20261101.webp",
+      "size": 60096,
+      "gitBlob": "2d79013b048333696bc06dc73039f606dabf2d0e",
+      "sha256": "d213338697b2d5e3e05ac082289f2a38af3e4d17776a665fcc611809a4040136",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/blog/plugin-release-workflow-20261101.webp",
+      "size": 84970,
+      "gitBlob": "a0cd490a5dda691e3e99afe1f347800ebf77f861",
+      "sha256": "9ddfb46dc90c88640d51eadc60371f29b2116110c13e5d54a3b7ed34ad4cbd00",
       "target": "both"
     },
     {
@@ -5410,6 +5396,20 @@
       "size": 62622,
       "gitBlob": "c9c4022a2b2da715b109e1ac578615ba3f2b5744",
       "sha256": "a4a3cbbd6ef5f694f69a978797666f448e07e98d0c2556f722628e234172d64f",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/blog/robot-realtime-ik-prototype-20261101.webp",
+      "size": 67532,
+      "gitBlob": "e8de4e7d43f1d438670b620d0127ac3710130219",
+      "sha256": "857de3de1ac69d876bd36533bc0b520de6244d79e5cbf28aadf293151d0bc8c1",
+      "target": "both"
+    },
+    {
+      "path": "media/covers/blog/six-dof-motion-platform-20261101.webp",
+      "size": 81650,
+      "gitBlob": "4a66edb45233a0a5d7eaabfd0a79b27b469b69fb",
+      "sha256": "8ca68822917a3d6358e779be0fc60f311633fa88849236a45a4ccf71f119328c",
       "target": "both"
     },
     {
@@ -8809,9 +8809,9 @@
     },
     {
       "path": "zh/blog/index.html",
-      "size": 300921,
-      "gitBlob": "fdc3a52024ff8cb44e7418177dc230b2526d42aa",
-      "sha256": "cfd710f2504745322583d600f9b884081ad7b550abdf97ec60567f879c6b0fc1",
+      "size": 301011,
+      "gitBlob": "ba63afde73c57c0e97824c645e818e8cefb839dc",
+      "sha256": "25a815b3f45ce5e5e99a9bfbd236a7aefadc6f1b638b2be115d6b3aa1b13b5d0",
       "target": "both"
     },
     {
@@ -9327,9 +9327,9 @@
     },
     {
       "path": "zh/index.html",
-      "size": 53597,
-      "gitBlob": "97a3cdb94035eac4cc2e2986dedfa30bde1676ba",
-      "sha256": "93132b13bb821ec3584d28f67b85ba08d410d8e011fb811ba405eb8b664cba62",
+      "size": 53612,
+      "gitBlob": "d49e8da4fc2804438cfdb3354fe48ccb1ef2e987",
+      "sha256": "5d9057baea236d1dbe49e0a1bad4b2e4b56a78e9267b02b09d92d01e283c48aa",
       "target": "both"
     },
     {

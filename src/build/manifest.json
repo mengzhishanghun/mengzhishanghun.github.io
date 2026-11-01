@@ -2576,8 +2576,8 @@
           "id": "page:home:media:8",
           "ordinal": 8,
           "state": "public",
-          "websiteUrl": "/assets/cases/plugin-release-workflow.png",
-          "publicSha256": "4592c7624e1ae30ef9c5cf274d96714de1a16411c9634d56220b765ffcb7da0d"
+          "websiteUrl": "/media/covers/blog/plugin-release-workflow-20261101.webp",
+          "publicSha256": "9ddfb46dc90c88640d51eadc60371f29b2116110c13e5d54a3b7ed34ad4cbd00"
         },
         {
           "id": "page:home:media:9",
@@ -3567,8 +3567,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/cases/six-dof-motion-platform.png",
-        "sha256": "83215c240e484063b405fb461c7bd190c3578b875773ffdbb4d002f7d0635a5f"
+        "websiteUrl": "/media/covers/blog/six-dof-motion-platform-20261101.webp",
+        "sha256": "8ca68822917a3d6358e779be0fc60f311633fa88849236a45a4ccf71f119328c"
       }
     },
     {
@@ -3584,8 +3584,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/cases/plugin-release-workflow.png",
-        "sha256": "4592c7624e1ae30ef9c5cf274d96714de1a16411c9634d56220b765ffcb7da0d"
+        "websiteUrl": "/media/covers/blog/plugin-release-workflow-20261101.webp",
+        "sha256": "9ddfb46dc90c88640d51eadc60371f29b2116110c13e5d54a3b7ed34ad4cbd00"
       }
     },
     {
@@ -3601,8 +3601,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/cases/markdown-publishing.png",
-        "sha256": "6f4ef1b8c14c1deba613694739f062f1ea4dac0cbbd13cdd8221509ea6bc603f"
+        "websiteUrl": "/media/covers/blog/markdown-publishing-20261101.webp",
+        "sha256": "82dc68162ea91575daa8db248347aaa37243e356ad25cae4af2aac9105c020d6"
       }
     },
     {
@@ -3618,8 +3618,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/cases/perforce-workspace-pool.png",
-        "sha256": "0f5eadd658efc6a4a674b32f93e0a0155675b3845e71b776665ced88370028a4"
+        "websiteUrl": "/media/covers/blog/perforce-workspace-pool-20261101.webp",
+        "sha256": "d213338697b2d5e3e05ac082289f2a38af3e4d17776a665fcc611809a4040136"
       }
     },
     {
@@ -3635,8 +3635,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/cases/driving-session-replay.png",
-        "sha256": "aed23c168a63425757ade384e5bd64eabf93a1999ccb6d188ac4bbc70063f207"
+        "websiteUrl": "/media/covers/blog/driving-session-replay-20261101.webp",
+        "sha256": "2b019505cf4e220808f8888a6adbe53ebfc6f013fca675e95ff6c4936439e71c"
       }
     },
     {
@@ -3669,8 +3669,8 @@
       "supplementTranslationKeys": [],
       "mediaOccurrences": [],
       "cover": {
-        "websiteUrl": "/assets/cases/robot-realtime-ik-prototype.png",
-        "sha256": "351d2590d6e28891328628db1d5293a141aefc042dcfc267c0a766e6c37a1bfc"
+        "websiteUrl": "/media/covers/blog/robot-realtime-ik-prototype-20261101.webp",
+        "sha256": "857de3de1ac69d876bd36533bc0b520de6244d79e5cbf28aadf293151d0bc8c1"
       }
     },
     {

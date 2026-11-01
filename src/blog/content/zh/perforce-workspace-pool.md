@@ -17,9 +17,9 @@ tags:
   - 开发工具
 productIds:
   - p4-stream-switcher
-coverAlt: 管理 Perforce 分支工作区与本地缓存示意图
-websiteCoverUrl: /assets/cases/perforce-workspace-pool.png
-lang: zh
+coverAlt: "管理 Perforce 分支工作区与本地缓存封面"
+websiteCoverUrl: "/media/covers/blog/perforce-workspace-pool-20261101.webp"
+lang: "zh"
 translationKey: perforce-workspace-pool
 ---
 

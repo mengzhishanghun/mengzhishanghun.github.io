@@ -13,13 +13,13 @@ sitePublish: true
 tags:
   - Simulation
   - Hardware integration
-coverAlt: Flowchart of the six-degree-of-freedom motion platform integration
-websiteCoverUrl: /assets/cases/six-dof-motion-platform.png
+coverAlt: "Six-Axis Platform Kinematics and Ocean Recording Integration cover"
+websiteCoverUrl: "/media/covers/blog/six-dof-motion-platform-20261101.webp"
 lang: en
 translationKey: six-dof-motion-platform
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 93c0dd5c4cfcbc3a0af2fdf08680066d1f41d865ba3a011185c0f3c1ad049897
+sourceHash: "8c8b646a11531690d2251bc0efc0664f0a80b4236f13ec82f61322b566e0fbad"
 translationStatus: translated
 generatedBodyHash: f3f4c599d3ea782093ef75374d9f6bc8a0fdaa9a5dd849a92bb564255884eb7b
 ---

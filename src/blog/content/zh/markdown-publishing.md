@@ -18,9 +18,9 @@ tags:
   - 写作工具
 productIds:
   - md-blog-packer
-coverAlt: 让 Markdown 图片随文章一起发布的流程图
-websiteCoverUrl: /assets/cases/markdown-publishing.png
-lang: zh
+coverAlt: "让 Markdown 图片随文章一起发布封面"
+websiteCoverUrl: "/media/covers/blog/markdown-publishing-20261101.webp"
+lang: "zh"
 translationKey: markdown-publishing
 ---
 

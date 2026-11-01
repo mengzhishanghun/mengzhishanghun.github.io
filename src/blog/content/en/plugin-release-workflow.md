@@ -17,13 +17,13 @@ tags:
 productIds:
   - plugin-auto-packer
   - plugin-manager
-coverAlt: Flowchart of the toolchain from plugin development to release
-websiteCoverUrl: /assets/cases/plugin-release-workflow.png
+coverAlt: "A Toolchain from Plugin Development to Release cover"
+websiteCoverUrl: "/media/covers/blog/plugin-release-workflow-20261101.webp"
 lang: en
 translationKey: plugin-release-workflow
 date: 2026-10-29
 publishedAt: 2026-10-29
-sourceHash: 26504de26e19edbb8e425d515001582ca662c3bd30a8a0995b1f018d22472203
+sourceHash: "887f1b524afb662f838d54531248e1196bd7fe7cfc5e06d34b57230e42ff607c"
 translationStatus: translated
 generatedBodyHash: 69b6a760a47fb516eae38e794791ea3175d0ccd15f7194f34ad9bf70acd72f96
 ---

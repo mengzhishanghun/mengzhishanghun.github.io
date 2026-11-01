@@ -15,9 +15,9 @@ sitePublish: true
 tags:
   - 仿真
   - 硬件联动
-coverAlt: 六自由度运动平台联动的流程图
-websiteCoverUrl: /assets/cases/six-dof-motion-platform.png
-lang: zh
+coverAlt: "六轴平台运动解算与海洋虚拍录制适配封面"
+websiteCoverUrl: "/media/covers/blog/six-dof-motion-platform-20261101.webp"
+lang: "zh"
 translationKey: six-dof-motion-platform
 ---
 
