@@ -19,7 +19,7 @@ links:
     href: https://github.com/MZSH-Tools/MDBlogPacker
 lang: en
 translationKey: md-blog-packer
-sourceHash: ecd9cb851c5151348360e300d425c2d3139dbd63ca634625868f332559a19474
+sourceHash: "b64f63c5272d0ee68b3c8347dec2404d606a2a8ee3beb88d8f5ed3ef560f5828"
 translationStatus: translated
 generatedBodyHash: 8b0598e6a83a60d0d6ee527959b6c356ea4440b0b66abac9845519cd5cc33182
 workInfo:
@@ -32,8 +32,8 @@ workInfo:
     - platforms:
         - Markdown tool (operating system to be verified)
       requirements: []
-websiteCoverUrl: /media/imported/works/md-blog-packer-cover.png
-coverAlt: MDBlogPacker cover
+websiteCoverUrl: "/media/covers/works/md-blog-packer-20261101.webp"
+coverAlt: "MDBlogPacker cover"
 ---
 
 ## Overview

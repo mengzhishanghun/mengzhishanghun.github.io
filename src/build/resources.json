@@ -346,14 +346,6 @@
       "mode": "frozen"
     },
     {
-      "source": "attachments/images/assets/covers/ai-data-asset.png",
-      "outputs": [
-        "assets/covers/ai-data-asset.png"
-      ],
-      "sha256": "f9783595bc60cff42b691cb5f3489f24d58a74276229d137cd58e2eb79fdabb4",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/covers/ai-data-asset.svg",
       "outputs": [
         "assets/covers/ai-data-asset.svg"
@@ -426,14 +418,6 @@
       "mode": "frozen"
     },
     {
-      "source": "attachments/images/assets/covers/simple-bp-inherit-fix.png",
-      "outputs": [
-        "assets/covers/simple-bp-inherit-fix.png"
-      ],
-      "sha256": "3ff5cfe111a937a6a5cc88fae6927ef26156e8d9f16cb7b8fe1e56bdd0063275",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/assets/covers/simple-bp-inherit-fix.svg",
       "outputs": [
         "assets/covers/simple-bp-inherit-fix.svg"
@@ -503,14 +487,6 @@
         "assets/covers/simple-launcher.svg"
       ],
       "sha256": "52740461d68164bd3df453ca47805532523e3b9f2ebaefef2a0d86b0da17c1cc",
-      "mode": "frozen"
-    },
-    {
-      "source": "attachments/images/assets/covers/simple-level-seq-smooth.png",
-      "outputs": [
-        "assets/covers/simple-level-seq-smooth.png"
-      ],
-      "sha256": "94cc40ffb822ff07f819d0def77713dbda0c56605b24668ccb5d1494086c26c0",
       "mode": "frozen"
     },
     {
@@ -2818,14 +2794,6 @@
       "mode": "frozen"
     },
     {
-      "source": "attachments/images/media/imported/works/md-blog-packer-cover.png",
-      "outputs": [
-        "media/imported/works/md-blog-packer-cover.png"
-      ],
-      "sha256": "39d57a1cf3f5423407c70e55acfb54a380b64b99e1acaf5aa90b683e5c1ad0b2",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/media/imported/works/p4-case-sync-cover-v2.png",
       "outputs": [
         "media/imported/works/p4-case-sync-cover-v2.png"
@@ -2855,14 +2823,6 @@
         "media/imported/works/simple-bp-inherit-fix-cover.png"
       ],
       "sha256": "8eaae075af2054f1343198dd712cc04c82dc9d9da8431ada4dd830d51e91bc05",
-      "mode": "frozen"
-    },
-    {
-      "source": "attachments/images/media/imported/works/simple-file-updater-cover.png",
-      "outputs": [
-        "media/imported/works/simple-file-updater-cover.png"
-      ],
-      "sha256": "d70e21f618518e37e6f78ff7c63eaf958fdabba19641c458f17d8ee67ec1289a",
       "mode": "frozen"
     },
     {
@@ -4664,6 +4624,262 @@
         "media/manuals/76c2960fc16d6af47ec7.png"
       ],
       "sha256": "76c2960fc16d6af47ec710e8536a0648b3bcf93aac9964bf3840fa1d769c8bf3",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/simple-file-updater-20261101.webp",
+      "outputs": [
+        "media/covers/works/simple-file-updater-20261101.webp"
+      ],
+      "sha256": "4bbd65912590d2dd61c27e8a68c98a08a6c122b49ff664f381c7eff838e41944",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19143267-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19143267-20261101.webp"
+      ],
+      "sha256": "3224dbe2410a89a1d35b475f88bf43c3f120b639df456ab6c9b1a90fa9f06f04",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19143251-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19143251-20261101.webp"
+      ],
+      "sha256": "ad4243894030cfa924a850c3e8a5cf068caa559924819eca427f89e9d3bf032f",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19143254-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19143254-20261101.webp"
+      ],
+      "sha256": "29b398a903885cf5613408266b3f95b83fea82b5c15947c0d7f8ca2605dfe3a8",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19143258-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19143258-20261101.webp"
+      ],
+      "sha256": "9fefde73343ad395bf1094a1ddca5ff9eea957622a50851a87d4d2e7a0865a30",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19143255-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19143255-20261101.webp"
+      ],
+      "sha256": "b6643a18afc0dacb4cfffe2038332e7024581500b3adfe779b3e0bb0710c4e49",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19143256-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19143256-20261101.webp"
+      ],
+      "sha256": "ecbb9c62d6fed79833698f5f4431c6ddc18fbf302b5a9b1f8268e19a955d460b",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19143260-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19143260-20261101.webp"
+      ],
+      "sha256": "891fea49c532e63ff4b46f36cc407d53bd2b4b98b746c39d97d12f9987cf2947",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19143286-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19143286-20261101.webp"
+      ],
+      "sha256": "282fc428b89167fb19410b2c33b12194d48246e87850bcfbb75bbb38c5eae16c",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19813721-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19813721-20261101.webp"
+      ],
+      "sha256": "a18e2a9dea420cde3946dc4c6e3bd9f44127ba1b9364a7be48da9b99d7e18d9d",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19379355-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19379355-20261101.webp"
+      ],
+      "sha256": "39707096bcfee0afa8fef41801108bbff6a5cfbe26f77efa6b51f7c52fc4b3f5",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19379306-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19379306-20261101.webp"
+      ],
+      "sha256": "3bf9e4076bd1ce1b34d813a1de5d2fcd85dfd978cfa92d617eea05f58284ca4f",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19379337-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19379337-20261101.webp"
+      ],
+      "sha256": "0c8edd0952290732679ca21af8576fc68f33f22582fcf5bce1a3dbde983856cd",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19379365-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19379365-20261101.webp"
+      ],
+      "sha256": "d757d2fbf491c37d3fa3fb75d42daa2a64e82bce2c0dee4fd9f45bdf36c9b658",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19197541-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19197541-20261101.webp"
+      ],
+      "sha256": "f2da1e87b948eb45e96a6ba78fbf584a0b3fbe31d70bc3876d30d0cbe0ae3094",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19192707-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19192707-20261101.webp"
+      ],
+      "sha256": "de2c0188c564322a2ee4ca70636f18eb4622e499a319da9a65466af8b9701d7f",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19183986-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19183986-20261101.webp"
+      ],
+      "sha256": "41ae4d4c8ef30903c5348db08399892cfc4265cda872f7b6dc42f75150bb5113",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19184043-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19184043-20261101.webp"
+      ],
+      "sha256": "ebc91638769ea554ac465e1a7ee154ecbf1132c706c02759758c9b6ee59dc271",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19174288-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19174288-20261101.webp"
+      ],
+      "sha256": "ad3fe4975dd7135089b20d25d15587624aa34209677264432ccd5458268ea9b7",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19174295-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19174295-20261101.webp"
+      ],
+      "sha256": "6c18e784cbdd662d01494534d3909bb1536076531bed5e35f41cc4b473b72a63",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19165494-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19165494-20261101.webp"
+      ],
+      "sha256": "d9b71321bc7a90c6be390bfa870fcf5d2ad866eecb063f4a2632b75721484db7",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19165561-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19165561-20261101.webp"
+      ],
+      "sha256": "78916ca2b66f526b37ca6ec35635cfa45b10ace2b2b4343a22d138dcfc300bbc",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19165553-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19165553-20261101.webp"
+      ],
+      "sha256": "9da930d3c86e00eaef9cb92afd3df51ace3a2d87d9edee86cdf3881c376536ae",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19165504-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19165504-20261101.webp"
+      ],
+      "sha256": "8bebc0323db4f277268443f071c1db1c703b13283060fc03c08fff00776cafb9",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19165500-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19165500-20261101.webp"
+      ],
+      "sha256": "b1bc958e62d9d322b209a63e98cc86a5bf48912d1df724639652a4e32b40c601",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19165488-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19165488-20261101.webp"
+      ],
+      "sha256": "65f997304d0dcc541730c9bae7a788b088e48f3567412d3c738783e47418b691",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19165520-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19165520-20261101.webp"
+      ],
+      "sha256": "e7a1fc32b719124ab06d64bc1c7616325bc161ed23ae8c4c230eb072772815c8",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/cnblogs-19136316-20261101.webp",
+      "outputs": [
+        "media/covers/blog/cnblogs-19136316-20261101.webp"
+      ],
+      "sha256": "62d289e0eb12dad8ec1f964ccff636c2185a3351350a43dcd7ba58122ce3f33a",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/md-blog-packer-20261101.webp",
+      "outputs": [
+        "media/covers/works/md-blog-packer-20261101.webp"
+      ],
+      "sha256": "4454b1ecdcd4b9b72ac65a83e10dc50310a59a953e67b1e8797c23e965d348ee",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/simple-bp-inherit-fix-20261101.webp",
+      "outputs": [
+        "media/covers/works/simple-bp-inherit-fix-20261101.webp"
+      ],
+      "sha256": "db3f36441fd480ec18799d4423e9379687760a4db6091533562ea9325ba179f1",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/simple-level-seq-smooth-20261101.webp",
+      "outputs": [
+        "media/covers/works/simple-level-seq-smooth-20261101.webp"
+      ],
+      "sha256": "b5eb9b20baf0b5e0a173eb1230f016ac4062f95da67f64c537f65d4acb58ddc4",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/ai-data-asset-20261101.webp",
+      "outputs": [
+        "media/covers/works/ai-data-asset-20261101.webp"
+      ],
+      "sha256": "2852dabbb6b0cac9d0a7425157126928729d79d6b5069f81a627df0089a1d495",
       "mode": "frozen"
     }
   ]

@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: 346a799ae8e142c044b4c7a264bbebd0c1092010d052b4efbbd144af541704d9
+sourceHash: "5299ff70047ecdf02b5c56f466d71e073d162bf106e9dfd5c2cf03110db51747"
 translationStatus: translated
 generatedBodyHash: ee69deb47a4520b5b520ca5741c23559eb664e4c535b6b23424e84e3de609bfb
 workInfo:
@@ -36,8 +36,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-bp-inherit-fix.png
-coverAlt: SimpleBPInheritFix cover
+websiteCoverUrl: "/media/covers/works/simple-bp-inherit-fix-20261101.webp"
+coverAlt: "SimpleBPInheritFix cover"
 ---
 
 ## Overview

@@ -19,7 +19,7 @@ links:
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
 lang: en
 translationKey: simple-file-updater
-sourceHash: c90588f21348fc56194ac9b29f5a261c3ed095560030741f48b9d4999d6537ac
+sourceHash: "c449af5bb130c18ec9ec1c3b84487543d93f8d88177476322df6a90e5309e938"
 translationStatus: translated
 generatedBodyHash: 7bb9b7140c9654646855d0689646d29774dcbb54a562981955e2c7fe5d6310f4
 workInfo:
@@ -32,8 +32,8 @@ workInfo:
     - platforms:
         - Windows (.exe packaged application)
       requirements: []
-websiteCoverUrl: /media/imported/works/simple-file-updater-cover.png
-coverAlt: SimpleFileUpdater cover
+websiteCoverUrl: "/media/covers/works/simple-file-updater-20261101.webp"
+coverAlt: "SimpleFileUpdater cover"
 ---
 
 ## Overview

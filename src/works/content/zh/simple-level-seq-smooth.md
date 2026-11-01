@@ -32,9 +32,9 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
-coverAlt: SimpleLevelSeqSmooth封面
-websiteCoverUrl: /assets/covers/simple-level-seq-smooth.png
-lang: zh
+coverAlt: "SimpleLevelSeqSmooth封面"
+websiteCoverUrl: "/media/covers/works/simple-level-seq-smooth-20261101.webp"
+lang: "zh"
 translationKey: simple-level-seq-smooth
 ---
 

@@ -27,9 +27,9 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
-coverAlt: SimpleFileUpdater封面
-websiteCoverUrl: /media/imported/works/simple-file-updater-cover.png
-lang: zh
+coverAlt: "SimpleFileUpdater封面"
+websiteCoverUrl: "/media/covers/works/simple-file-updater-20261101.webp"
+lang: "zh"
 translationKey: simple-file-updater
 ---
 

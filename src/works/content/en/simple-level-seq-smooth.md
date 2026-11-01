@@ -21,7 +21,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: en
 translationKey: simple-level-seq-smooth
-sourceHash: ce05c39e2a213f1e2d20b9b8b7db494122106e7bd567f0ef5d6d7eb3d3b1774a
+sourceHash: "8a3581b7e66115e5f55c5878a1f9094d44355d78baa6b0187f91164dc1584fbf"
 translationStatus: translated
 generatedBodyHash: ba96414d782b3d99804a04c1fac43d13680eb3689f93a41cd265944b66023091
 workInfo:
@@ -37,8 +37,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: /assets/covers/simple-level-seq-smooth.png
-coverAlt: SimpleLevelSeqSmooth cover
+websiteCoverUrl: "/media/covers/works/simple-level-seq-smooth-20261101.webp"
+coverAlt: "SimpleLevelSeqSmooth cover"
 ---
 
 ## Overview

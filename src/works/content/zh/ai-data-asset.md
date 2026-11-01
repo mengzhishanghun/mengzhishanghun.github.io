@@ -33,10 +33,11 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/20159718
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/20159718
-websiteCoverUrl: /assets/covers/ai-data-asset.png
+websiteCoverUrl: "/media/covers/works/ai-data-asset-20261101.webp"
 sourceDate: 2026-05-25
-lang: zh
+lang: "zh"
 translationKey: ai-data-asset
+coverAlt: "AIDataAsset封面"
 ---
 
 ## 作品简介
