@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: ue-fab-submission-notes
+websiteCoverUrl: "/media/covers/blog/ue-fab-submission-notes-20261101.webp"
+coverAlt: "UE 插件提交 Fab：目录结构、描述符与打包文件封面"
 ---
 
 上传Fab须知

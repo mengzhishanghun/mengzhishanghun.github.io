@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: ue-source-engine-association
+websiteCoverUrl: "/media/covers/blog/ue-source-engine-association-20261101.webp"
+coverAlt: "Windows 源码版 UE：用批处理统一引擎关联名称封面"
 ---
 
 Unreal源码版注册表修改

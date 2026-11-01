@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: ue-source-engine-association
 publishedAt: 2026-10-13
-sourceHash: 1d5e447e56fb52aa4b94f906f8a25be56a10af549ea9e746450768c924d65574
+sourceHash: "cc274cc7861538cbd0463bf6c086d62830c9fcdee90525dbed9d1467a08004e5"
 generatedBodyHash: 95837c4a7b5df66d3871b5caab176e02666e0f6c1f808674fe06c34a021ecfa1
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/ue-source-engine-association-20261101.webp"
+coverAlt: "Source-built Unreal on Windows: a shared engine association cover"
 ---
 
 Modifying Registry Entries for a Source-Built Unreal Engine

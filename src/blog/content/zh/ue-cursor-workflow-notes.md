@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: ue-cursor-workflow-notes
+websiteCoverUrl: "/media/covers/blog/ue-cursor-workflow-notes-20261101.webp"
+coverAlt: "Windows UE 5.6 的 Cursor 安装、配置与调试记录封面"
 ---
 
 Cursor+UE从0开始，入坑到退坑指南

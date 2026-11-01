@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: ue-uparam-reference-metadata
 publishedAt: 2026-10-13
-sourceHash: e75567aab77cefb23850ab293e901518fdd638f3cc343f2de799434083635e3f
+sourceHash: "a07aca200069b36ec2c9f1756ddca8a8a2900b93b6d35d6170f0c17f0ac689d1"
 generatedBodyHash: 1676ef8a5bc5ba4065e087ee9aed773a7911eece2b0cbdb81a3836fbd651c00f
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/ue-uparam-reference-metadata-20261101.webp"
+coverAlt: "Unreal Blueprint parameters: references and display names cover"
 ---
 
 Less Common Function Parameters

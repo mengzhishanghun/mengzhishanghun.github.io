@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: en
 translationKey: plugin-auto-packer
-sourceHash: f75657b2c22c422920bb1686505a16d44f9542ac55313867a93172b7856130bd
+sourceHash: "102126f7ebfbd290ee15653595432c979479cb425680012b8ed336453771ba4d"
 translationStatus: translated
 generatedBodyHash: 2775ee494b392227d00cf5c5566bbfa98dd81f6d399ef6002f41cf2665c105b7
 workInfo:
@@ -34,8 +34,8 @@ workInfo:
         - Windows
       requirements:
         - Win64 plugin builds only
-websiteCoverUrl: /media/imported/works/plugin-auto-packer-cover.png
-coverAlt: UEPluginAutoPacker cover
+websiteCoverUrl: "/media/covers/works/plugin-auto-packer-20261101.webp"
+coverAlt: "UEPluginAutoPacker cover"
 ---
 
 ## Overview

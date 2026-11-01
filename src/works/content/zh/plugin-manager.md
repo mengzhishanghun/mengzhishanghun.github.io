@@ -26,9 +26,9 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPluginManager
-coverAlt: UEPluginManager封面
-websiteCoverUrl: /media/imported/works/plugin-manager-cover.png
-lang: zh
+coverAlt: "UEPluginManager封面"
+websiteCoverUrl: "/media/covers/works/plugin-manager-20261101.webp"
+lang: "zh"
 translationKey: plugin-manager
 ---
 

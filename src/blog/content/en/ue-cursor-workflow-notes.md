@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: ue-cursor-workflow-notes
 publishedAt: 2026-10-13
-sourceHash: e46efaeef3cdfdad3f3e98a46e57224d7a11db87e56c6f5593fd38899c76b4da
+sourceHash: "820f5e12466bf42b0af8ebbc11bb59b0140df09455124f692ef516a18adb7368"
 generatedBodyHash: 52170ed031d610df3e7e6a6a7ee9cffc1a11a76dfcd5f550ef0b1e9d55ba8dfc
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/ue-cursor-workflow-notes-20261101.webp"
+coverAlt: "Cursor with Unreal 5.6 on Windows: establish the build first cover"
 ---
 
 Cursor + UE from Scratch: A Guide from Getting Started to Giving Up

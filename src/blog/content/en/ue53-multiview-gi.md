@@ -19,9 +19,11 @@ tags:
   - UE 5.3
 lang: en
 translationKey: ue53-multiview-gi
-sourceHash: 28450c9fd8c8be502da445a67086378caabc8e817ecef03732a9874a7bbeab98
+sourceHash: "733f881a1ac880ca9fea55bbcdc6996c7da191bd196b9a111e5f6bb8fb428e1a"
 translationStatus: translated
 generatedBodyHash: 4c74508b6d95981f84f123ce0954f14e13be03b00a94d6fd6386aa235411ca9b
+websiteCoverUrl: "/media/covers/blog/ue53-multiview-gi-20261101.webp"
+coverAlt: "Fixing Missing GI Across Multiple Views in UE 5.3 cover"
 ---
 
 How to Fix Missing GI in Multiple Views

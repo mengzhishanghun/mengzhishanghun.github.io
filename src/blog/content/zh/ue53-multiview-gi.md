@@ -17,8 +17,10 @@ tags:
   - Lumen
   - 多视角
   - UE 5.3
-lang: zh
+lang: "zh"
 translationKey: ue53-multiview-gi
+websiteCoverUrl: "/media/covers/blog/ue53-multiview-gi-20261101.webp"
+coverAlt: "UE 5.3 多视角 Lumen GI：视角数量上限修改封面"
 ---
 
 多视角GI丢失问题的解决办法

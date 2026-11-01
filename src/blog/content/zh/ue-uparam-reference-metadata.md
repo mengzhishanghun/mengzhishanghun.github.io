@@ -17,8 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: zh
+lang: "zh"
 translationKey: ue-uparam-reference-metadata
+websiteCoverUrl: "/media/covers/blog/ue-uparam-reference-metadata-20261101.webp"
+coverAlt: "UE C++ 函数参数：UPARAM 元数据与 Lambda 回调封面"
 ---
 
 不常见的函数参数

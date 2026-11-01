@@ -29,9 +29,9 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
-coverAlt: UEPluginAutoPacker封面
-websiteCoverUrl: /media/imported/works/plugin-auto-packer-cover.png
-lang: zh
+coverAlt: "UEPluginAutoPacker封面"
+websiteCoverUrl: "/media/covers/works/plugin-auto-packer-20261101.webp"
+lang: "zh"
 translationKey: plugin-auto-packer
 ---
 

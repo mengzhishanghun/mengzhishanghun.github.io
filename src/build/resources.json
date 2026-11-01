@@ -2698,22 +2698,6 @@
       "mode": "frozen"
     },
     {
-      "source": "attachments/images/media/imported/works/plugin-auto-packer-cover.png",
-      "outputs": [
-        "media/imported/works/plugin-auto-packer-cover.png"
-      ],
-      "sha256": "c6a5c1cf49643e98ac019df2cd344cc33824a187af3d2a600244a4724153a7ac",
-      "mode": "frozen"
-    },
-    {
-      "source": "attachments/images/media/imported/works/plugin-manager-cover.png",
-      "outputs": [
-        "media/imported/works/plugin-manager-cover.png"
-      ],
-      "sha256": "ca50b98a1703a799f10d69b2c345bccca349aaa419f13b515d2b03fa583d7aa6",
-      "mode": "frozen"
-    },
-    {
       "source": "attachments/images/media/imported/works/simple-bp-inherit-fix-cover.png",
       "outputs": [
         "media/imported/works/simple-bp-inherit-fix-cover.png"
@@ -2735,14 +2719,6 @@
         "media/imported/works/ue-package-manager-cover-v2.png"
       ],
       "sha256": "bd25dc68d55e2aeff090ef182d620320e18ec8340153358914b29f713bbde894",
-      "mode": "frozen"
-    },
-    {
-      "source": "attachments/images/media/imported/works/ue-quick-start-cover.png",
-      "outputs": [
-        "media/imported/works/ue-quick-start-cover.png"
-      ],
-      "sha256": "9e96dda799003ddb0182499b4ab04b2818c5734fe89211c5c617aecdc44a6960",
       "mode": "frozen"
     },
     {
@@ -4880,6 +4856,70 @@
         "media/covers/works/simple-auto-enum-20261101.webp"
       ],
       "sha256": "3216e5a0ed617c90acfa2b4f75db7454cfd95d1e848eb3b6cd42d575ef201094",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/plugin-auto-packer-20261101.webp",
+      "outputs": [
+        "media/covers/works/plugin-auto-packer-20261101.webp"
+      ],
+      "sha256": "b02d43fb5e004454bfae27946ca2c5f41e3e656db9fdf9b48689b0fef9e85a1a",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/plugin-manager-20261101.webp",
+      "outputs": [
+        "media/covers/works/plugin-manager-20261101.webp"
+      ],
+      "sha256": "8e0d2085a709e7e9274d11cbd63458be9c0a18d1b8688bc91956dd5cff024368",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/works/ue-quick-start-20261101.webp",
+      "outputs": [
+        "media/covers/works/ue-quick-start-20261101.webp"
+      ],
+      "sha256": "87a894d70ce2811860b767013b88dea2cbaba38b07629c2f03e83cfc7ff80b47",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ue53-multiview-gi-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ue53-multiview-gi-20261101.webp"
+      ],
+      "sha256": "93b4eb7855f5c6d41e043ab83df5b228dcb0ebe0aed7eab32f45d8202693ca38",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ue-source-engine-association-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ue-source-engine-association-20261101.webp"
+      ],
+      "sha256": "3e446e6f8aa020e2bc1461423ad480ec31b70fee5c5bede638bbf77ced358e6e",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ue-uparam-reference-metadata-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ue-uparam-reference-metadata-20261101.webp"
+      ],
+      "sha256": "51503dd4f3a1494f149a581dc7100240903d13577e7a02ebccc89b72f1fd5e9c",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ue-cursor-workflow-notes-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ue-cursor-workflow-notes-20261101.webp"
+      ],
+      "sha256": "aa82a756015c8e421728b905b5aadca398876e94c9ef151e4160fe763c749412",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/covers/blog/ue-fab-submission-notes-20261101.webp",
+      "outputs": [
+        "media/covers/blog/ue-fab-submission-notes-20261101.webp"
+      ],
+      "sha256": "affc339fe33c74dae678e2a74ff50acf6cfe8990a2c91d7b270970bf8adf99db",
       "mode": "frozen"
     }
   ]

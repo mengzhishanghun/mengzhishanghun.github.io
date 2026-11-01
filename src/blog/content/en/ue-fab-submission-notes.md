@@ -19,9 +19,11 @@ docIds: []
 lang: en
 translationKey: ue-fab-submission-notes
 publishedAt: 2026-10-13
-sourceHash: 06ee03a174d2300633bb5f6ebcd1b82b127c7bd552647e9185959f1f115bc60f
+sourceHash: "323c6b4f66b47f7d8974416aa329f2924d7b0eac7a92205dd43b9dc331b40a71"
 generatedBodyHash: 458b387abdafb4df331422ca7b108d931a0718e63ac4cbbd7172c74b47213a4b
 translationStatus: translated
+websiteCoverUrl: "/media/covers/blog/ue-fab-submission-notes-20261101.webp"
+coverAlt: "Fab submission notes: review the package and instructions together cover"
 ---
 
 Notes on Submitting to Fab
