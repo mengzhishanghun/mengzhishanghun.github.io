@@ -125,7 +125,7 @@ export function preflight({sourceRoot,site,manifest}) {
   }
   projectBlogTopics({site,entries,config,copy});
   projectContentTopics({site,entries,config,copy,type:'work',indexId:'page:works-index',topicsPath:'src/works/topics.json',labelPrefix:'work-topic',maxTopics:3});
-  projectContentTopics({site,entries,config,copy,type:'case',indexId:'page:cases-index',topicsPath:'src/cases/topics.json',labelPrefix:'case-topic'});
+  projectContentTopics({site,entries,config,copy,type:'case',indexId:'page:cases-index',topicsPath:'src/cases/topics.json',labelPrefix:'case-topic',maxTopics:5});
   projectTaxonomy({site,entries,config,copy});
   const galleries=loadProjectGalleries({site,entries,codes});
   return {routes,entries,config,copy,galleries};

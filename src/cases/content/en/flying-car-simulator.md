@@ -12,13 +12,14 @@ featured: false
 draft: false
 sitePublish: true
 tags:
-  - Simulation
-  - Flight control
+  - "Simulation control"
+  - "Flight control"
+  - "Motion platforms"
 coverAlt: Flight simulation cover
 websiteCoverUrl: /assets/cases/flight-simulation-cover.png
 translationKey: flying-car-simulator
 lang: en
-sourceHash: eb3981088cdd07ef4064b4155c8891275265769565e5a310dfa2e56d65ee5aa1
+sourceHash: 7613da0dba735c5eefb5aca4ccf7ce7034393eb6cd7e9e7f56ad6541d77a8e09
 translationStatus: translated
 generatedBodyHash: 66e7e34683884cea91009ee5ac5f6395b82c65a93b3f42fe130d6108fd5fd71c
 ---

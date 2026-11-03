@@ -12,7 +12,8 @@ featured: false
 draft: false
 sitePublish: true
 tags:
-  - 仿真
+  - 仿真控制
+  - 运动平台
   - 虚拟拍摄
 coverAlt: 六轴平台与虚拟拍摄封面
 websiteCoverUrl: /assets/cases/motion-platform-filming-cover.png

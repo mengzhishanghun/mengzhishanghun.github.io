@@ -12,14 +12,15 @@ featured: true
 draft: false
 sitePublish: true
 tags:
-  - AI
-  - Digital humans
-  - Voice interaction
+  - "Digital humans"
+  - "AI interaction"
+  - "Voice interaction"
+  - "Body sensing"
 coverAlt: AI digital human interaction cover
 websiteCoverUrl: /assets/cases/digital-human-interaction-cover.png
 translationKey: ai-digital-human-integration
 lang: en
-sourceHash: 340dffc0f3d6c1977748253aa853c50f7d4b559df74462e8ea30302273ff2a57
+sourceHash: 467443558c2fe10055ab12eaa2e3fb1407a169db103ec7634877d63c70978b25
 translationStatus: translated
 generatedBodyHash: 0b11264f50dc8a1fc68cc72ee01ec3ba7bdba5bb0269fe92810b9d4a443d2561
 ---

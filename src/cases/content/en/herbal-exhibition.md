@@ -12,14 +12,15 @@ featured: false
 draft: false
 sitePublish: true
 tags:
-  - Interactive exhibition
-  - Herbal content
-  - Data management
+  - "Interactive exhibition"
+  - "Herbal education"
+  - "Multimedia display"
+  - "Content management"
 coverAlt: Herbal exhibition cover
 websiteCoverUrl: /assets/cases/herbal-exhibition-cover.png
 translationKey: herbal-exhibition
 lang: en
-sourceHash: e4591f3fe6c46e54de29552a9bac0ce5a1d4e5ec1a514a1929da29608e0fc589
+sourceHash: 0cba3098d924cc03b958f00ce9a83990ef10d9d26ddce32406b7d399a6fad887
 translationStatus: translated
 generatedBodyHash: 71598f59d6d9fe504620d9ee5e9dc072f22691f0390c6ba45fe2d0fcfcb39dec
 ---

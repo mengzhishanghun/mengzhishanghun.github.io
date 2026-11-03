@@ -12,13 +12,14 @@ featured: false
 draft: false
 sitePublish: true
 tags:
-  - Simulation
-  - Virtual filming
+  - "Simulation control"
+  - "Motion platforms"
+  - "Virtual production"
 coverAlt: Motion platform and virtual filming cover
 websiteCoverUrl: /assets/cases/motion-platform-filming-cover.png
 translationKey: six-dof-motion-platform
 lang: en
-sourceHash: 128afb6deaf56d889e4e5f01ef52e25def9ffbd6d6d87c1c0c2903687c24738d
+sourceHash: dc7751c4627c1ce264f8d958129f828e3f66ae24bc4336ae2694fca9edb3c20a
 translationStatus: translated
 generatedBodyHash: 1069821f93f9966101681f31cab1cc75cde439443f1ec5b1453288045386d24b
 ---

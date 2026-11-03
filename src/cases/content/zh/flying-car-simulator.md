@@ -12,8 +12,9 @@ featured: false
 draft: false
 sitePublish: true
 tags:
-  - 仿真
+  - 仿真控制
   - 飞行控制
+  - 运动平台
 coverAlt: 飞行仿真封面
 websiteCoverUrl: /assets/cases/flight-simulation-cover.png
 lang: zh

@@ -13,8 +13,9 @@ draft: false
 sitePublish: true
 tags:
   - 动作捕捉
-  - 机器人
-  - 原型
+  - 机器人控制
+  - 骨骼重定向
+  - 实时通信
 coverAlt: 动捕与机器人控制封面
 websiteCoverUrl: /assets/cases/motion-capture-robot-cover.png
 lang: zh

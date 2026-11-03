@@ -30,7 +30,7 @@ node src/import/test-cases.mjs
 
 正文与补充稿的 `translationKey` 必须与清单身份一致。译文的 `sourceHash` 绑定对应公开中文快照，`generatedBodyHash` 与 `translationStatus: translated` 记录已审核正文；文本摘要统一 LF，媒体摘要始终按原始二进制字节计算。缺稿、过期、人工正文漂移、身份错误、草稿或越界会在任何发布树写入前拒绝。
 
-博客、作品和案例的公开主题分别由 `src/blog/topics.json`、`src/works/topics.json`、`src/cases/topics.json` 按固定内容身份维护，每项指定 1～2 个语义主题 ID。主题译名保存在各语言公共文案的 `scriptSlots`，键分别为 `blog-topic:<主题ID>`、`work-topic:<主题ID>`、`case-topic:<主题ID>`。`src/build/content-topics.mjs` 共用投影和兼容校验；博客包装保留原配置格式。构建先验证原稿及翻译指纹，再将同一主题投影用于列表 JSON 和卡片标签；不改写导入快照或正文。
+博客、作品和案例的公开主题分别由 `src/blog/topics.json`、`src/works/topics.json`、`src/cases/topics.json` 按固定内容身份维护。博客每项指定 1～2 个语义主题 ID，作品支持 1～3 个，案例支持 1～5 个。主题译名保存在各语言公共文案的 `scriptSlots`，键分别为 `blog-topic:<主题ID>`、`work-topic:<主题ID>`、`case-topic:<主题ID>`。`src/build/content-topics.mjs` 共用投影和兼容校验；博客包装保留原配置格式。构建先验证原稿及翻译指纹，再将同一主题投影用于列表 JSON 和卡片标签；不改写导入快照或正文。
 
 新增内容时，需要补齐对应类型的主题映射和各语言的旧公开 `tags` 兼容快照。启用新语言时，需要提供全部主题译名和该语言快照；缺映射、重复主题、缺译名或主题与旧标签同名但内容集合不同，构建会停止。兼容快照保留已有链接的筛选含义，后续维护不得用搜索词替换它。原 `tags`、原 `searchTags`、兼容快照及主题名合并进入搜索；旧 `?tag=` 只按原公开标签的内容集合过滤，未知词显示零结果并可取消。
 

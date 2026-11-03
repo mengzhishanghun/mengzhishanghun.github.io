@@ -12,9 +12,10 @@ featured: true
 draft: false
 sitePublish: true
 tags:
-  - AI
   - 数字人
+  - AI交互
   - 语音交互
+  - 人体感知
 coverAlt: AI 数字人交互封面
 websiteCoverUrl: /assets/cases/digital-human-interaction-cover.png
 lang: zh

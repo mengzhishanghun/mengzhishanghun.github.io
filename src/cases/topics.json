@@ -2,121 +2,167 @@
   "version": 1,
   "topics": [
     "simulation-control",
-    "rendering-display",
-    "digital-human-animation",
-    "ai-data-integration",
-    "development-release",
-    "content-file-processing"
+    "driver-training",
+    "multi-screen-display",
+    "recording-replay",
+    "flight-control",
+    "motion-platform",
+    "virtual-production",
+    "digital-human",
+    "ai-interaction",
+    "voice-interaction",
+    "body-sensing",
+    "motion-capture",
+    "robot-control",
+    "skeletal-retargeting",
+    "realtime-communication",
+    "interactive-exhibition",
+    "herbal-education",
+    "multimedia-display",
+    "content-management"
   ],
   "articles": {
     "case:driving-simulator-three-screen": {
       "topics": [
         "simulation-control",
-        "rendering-display"
+        "driver-training",
+        "multi-screen-display",
+        "recording-replay"
       ],
       "legacyTags": {
         "zh": [
           "Lumen",
           "多屏显示",
           "仿真",
-          "驾驶记录"
+          "驾驶记录",
+          "仿真与控制",
+          "渲染与显示"
         ],
         "en": [
           "Lumen",
           "Multi-screen display",
           "Simulation",
-          "Driving records"
+          "Driving records",
+          "Simulation & Control",
+          "Rendering & Display"
         ]
       }
     },
     "case:flying-car-simulator": {
       "topics": [
-        "simulation-control"
+        "simulation-control",
+        "flight-control",
+        "motion-platform"
       ],
       "legacyTags": {
         "zh": [
           "仿真",
           "交通",
-          "飞行控制"
+          "飞行控制",
+          "仿真与控制"
         ],
         "en": [
           "Simulation",
           "Transportation",
-          "Flight control"
-        ]
-      }
-    },
-    "case:motion-capture-robot-control": {
-      "topics": [
-        "simulation-control",
-        "digital-human-animation"
-      ],
-      "legacyTags": {
-        "zh": [
-          "动作捕捉",
-          "机器人",
-          "原型"
-        ],
-        "en": [
-          "Motion capture",
-          "Robotics",
-          "Prototype"
+          "Flight control",
+          "Simulation & Control"
         ]
       }
     },
     "case:six-dof-motion-platform": {
       "topics": [
         "simulation-control",
-        "rendering-display"
+        "motion-platform",
+        "virtual-production"
       ],
       "legacyTags": {
         "zh": [
           "仿真",
           "硬件联动",
-          "虚拟拍摄"
+          "虚拟拍摄",
+          "仿真与控制",
+          "渲染与显示"
         ],
         "en": [
           "Simulation",
           "Hardware integration",
-          "Virtual filming"
+          "Virtual filming",
+          "Simulation & Control",
+          "Rendering & Display"
         ]
       }
     },
     "case:ai-digital-human-integration": {
       "topics": [
-        "digital-human-animation",
-        "ai-data-integration"
+        "digital-human",
+        "ai-interaction",
+        "voice-interaction",
+        "body-sensing"
       ],
       "legacyTags": {
         "zh": [
           "AI",
           "MetaHuman",
           "语音交互",
-          "数字人"
+          "数字人",
+          "数字人与动画",
+          "AI与数据集成"
         ],
         "en": [
           "AI",
           "MetaHuman",
           "Voice interaction",
-          "Digital humans"
+          "Digital humans",
+          "Digital Humans & Animation",
+          "AI & Data Integration"
+        ]
+      }
+    },
+    "case:motion-capture-robot-control": {
+      "topics": [
+        "motion-capture",
+        "robot-control",
+        "skeletal-retargeting",
+        "realtime-communication"
+      ],
+      "legacyTags": {
+        "zh": [
+          "动作捕捉",
+          "机器人",
+          "原型",
+          "仿真与控制",
+          "数字人与动画"
+        ],
+        "en": [
+          "Motion capture",
+          "Robotics",
+          "Prototype",
+          "Simulation & Control",
+          "Digital Humans & Animation"
         ]
       }
     },
     "case:herbal-exhibition": {
       "topics": [
-        "content-file-processing",
-        "rendering-display"
+        "interactive-exhibition",
+        "herbal-education",
+        "multimedia-display",
+        "content-management"
       ],
       "legacyTags": {
         "zh": [
           "交互展示",
           "中药",
-          "数据管理"
+          "数据管理",
+          "文件与内容处理",
+          "渲染与显示"
         ],
         "en": [
           "Interactive exhibition",
           "Herbal content",
-          "Data management"
+          "Data management",
+          "File & Content Processing",
+          "Rendering & Display"
         ]
       }
     }

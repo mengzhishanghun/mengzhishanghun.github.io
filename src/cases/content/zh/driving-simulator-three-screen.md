@@ -12,9 +12,10 @@ featured: true
 draft: false
 sitePublish: true
 tags:
-  - 仿真
-  - 驾驶记录
+  - 仿真控制
+  - 驾驶训练
   - 多屏显示
+  - 记录回放
 coverAlt: 驾驶仿真封面
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 lang: zh

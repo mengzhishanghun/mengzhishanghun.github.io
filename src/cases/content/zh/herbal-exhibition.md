@@ -13,8 +13,9 @@ draft: false
 sitePublish: true
 tags:
   - 交互展示
-  - 中药
-  - 数据管理
+  - 中药科普
+  - 多媒体展示
+  - 资料管理
 coverAlt: 中药展示封面
 websiteCoverUrl: /assets/cases/herbal-exhibition-cover.png
 lang: zh

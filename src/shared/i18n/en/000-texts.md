@@ -6721,13 +6721,31 @@ scriptSlots:
   work-topic:development-release: "Development & Release"
   work-topic:content-file-processing: "File & Content Processing"
   work-topic:version-control-collaboration: "Version Control & Collaboration"
-  case-topic:simulation-control: "Simulation & Control"
+  case-topic:simulation-control: "Simulation control"
   case-topic:rendering-display: "Rendering & Display"
   case-topic:digital-human-animation: "Digital Humans & Animation"
   case-topic:ai-data-integration: "AI & Data Integration"
   case-topic:blueprint-component-repair: "Blueprint & Component Repair"
   case-topic:development-release: "Development & Release"
   case-topic:content-file-processing: "File & Content Processing"
+  case-topic:driver-training: "Driver training"
+  case-topic:multi-screen-display: "Multi-screen display"
+  case-topic:recording-replay: "Recording & replay"
+  case-topic:flight-control: "Flight control"
+  case-topic:motion-platform: "Motion platforms"
+  case-topic:virtual-production: "Virtual production"
+  case-topic:digital-human: "Digital humans"
+  case-topic:ai-interaction: "AI interaction"
+  case-topic:voice-interaction: "Voice interaction"
+  case-topic:body-sensing: "Body sensing"
+  case-topic:motion-capture: "Motion capture"
+  case-topic:robot-control: "Robot control"
+  case-topic:skeletal-retargeting: "Skeletal retargeting"
+  case-topic:realtime-communication: "Live data communication"
+  case-topic:interactive-exhibition: "Interactive exhibition"
+  case-topic:herbal-education: "Herbal education"
+  case-topic:multimedia-display: "Multimedia display"
+  case-topic:content-management: "Content management"
   content-index:tags-more: More tags
   content-index:tags-less: Fewer tags
   blog-topic:programming-scripting: "Programming & Scripting"
@@ -8557,7 +8575,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 3fe9bfd900ab37c4dfb8806af258bba966ec1cc4be530f9ea2e4a3b26195b783
+sourceHash: 3cc227820f43ace7b127b041150df58fa31a15279eed7e6eac29647123d92bc4
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

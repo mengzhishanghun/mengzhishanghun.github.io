@@ -12,14 +12,15 @@ featured: false
 draft: false
 sitePublish: true
 tags:
-  - Motion capture
-  - Robotics
-  - Prototype
+  - "Motion capture"
+  - "Robot control"
+  - "Skeletal retargeting"
+  - "Live data communication"
 coverAlt: Motion capture and robot control cover
 websiteCoverUrl: /assets/cases/motion-capture-robot-cover.png
 translationKey: motion-capture-robot-control
 lang: en
-sourceHash: fdfeae5bc6badc175e6659baf226bf98381ab61f99fdac3821e87fead9fa6cd3
+sourceHash: 441f14a405995c71551785c6f1044034c228ec17cd4b0bc9cb6e3bcb1ef62f80
 translationStatus: translated
 generatedBodyHash: b3b7fc2cf6020907509c02a5a5944ebfa8ec72c7515d952c981fb557b05ddaa9
 ---
