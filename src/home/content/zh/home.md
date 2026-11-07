@@ -71,11 +71,11 @@ MDBlogPacker
 
 UE项目
 
-### [驾驶仿真](/cases/driving-simulation/)
+### [六轴三屏驾驶模拟器](/cases/driving-simulation/)
 
-Three-screen Driving Simulator Display Alignment
+Six-axis triple-screen driving simulator
 
-面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
+面向场景漫游、驾驶模拟与模拟驾校训练的 UE 项目，结合三屏显示、六轴运动反馈、AI 教练后台与车辆录制回放。
 
 [查看内容](/cases/driving-simulation/)
 

@@ -1464,8 +1464,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   case:driving-simulator-three-screen:
-    root.html:1.head:0.meta:2@content: 面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
-    root.html:1.head:0.title:4.#text:0: 驾驶仿真 · 小毛
+    root.html:1.head:0.meta:2@content: 面向场景漫游、驾驶模拟与模拟驾校训练的 UE 项目，结合三屏显示、六轴运动反馈、AI 教练后台与车辆录制回放。
+    root.html:1.head:0.title:4.#text:0: 六轴三屏驾驶模拟器 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -1483,9 +1483,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 驾驶仿真
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Driving simulation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 六轴三屏驾驶模拟器
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Six-axis triple-screen driving simulator
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 面向场景漫游、驾驶模拟与模拟驾校训练的 UE 项目，结合三屏显示、六轴运动反馈、AI 教练后台与车辆录制回放。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
@@ -3849,11 +3849,11 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.h2:0.#text:0: 精选案例
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1@aria-label: 精选案例
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0@aria-label: 驾驶仿真
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0@aria-label: 六轴三屏驾驶模拟器
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE项目
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 驾驶仿真
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: Driving simulation
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 六轴三屏驾驶模拟器
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: Six-axis triple-screen driving simulator
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 面向场景漫游、驾驶模拟与模拟驾校训练的 UE 项目，结合三屏显示、六轴运动反馈、AI 教练后台与车辆录制回放。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: AI 数字人交互
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE项目
@@ -3868,7 +3868,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1@aria-label: 精选案例切换
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: 显示：驾驶仿真
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: 显示：六轴三屏驾驶模拟器
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: 显示：AI 数字人交互
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: 显示：中药展示
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: 精选博客
@@ -4157,7 +4157,7 @@ shellSlots:
     content-sort:label: 排序
     content-sort:likes: 点赞最多
     content-sort:original: 原有顺序
-    root.html:1.head:0.meta:2@content: 查看驾驶仿真、飞行仿真、虚拟拍摄、AI 数字人、机器人与中药展示项目，了解我负责的工作和实现成果。
+    root.html:1.head:0.meta:2@content: 查看六轴三屏驾驶模拟器、飞行仿真、虚拟拍摄、AI 数字人、机器人与中药展示项目，了解我负责的工作和实现成果。
     root.html:1.head:0.title:4.#text:0: 项目案例 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -4196,9 +4196,9 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-card:driving-simulation:title: 驾驶仿真
-    project-card:driving-simulation:secondary: Driving simulation
-    project-card:driving-simulation:description: 面向驾驶训练的三屏仿真项目，结合显示适配、驾驶过程采集、成绩统计与场景回放。
+    project-card:driving-simulation:title: 六轴三屏驾驶模拟器
+    project-card:driving-simulation:secondary: Six-axis triple-screen driving simulator
+    project-card:driving-simulation:description: 面向场景漫游、驾驶模拟与模拟驾校训练的 UE 项目，结合三屏显示、六轴运动反馈、AI 教练后台与车辆录制回放。
     project-card:driving-simulation:category: UE项目
     project-card:driving-simulation:tag: 仿真
     project-card:flight-simulation:title: 飞行仿真

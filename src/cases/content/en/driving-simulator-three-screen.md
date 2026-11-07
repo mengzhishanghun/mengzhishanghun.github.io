@@ -1,6 +1,6 @@
 ---
-title: Driving simulation
-description: A driving training project combining three-screen display, session recording, results and scene replay.
+title: "Six-axis triple-screen driving simulator"
+description: "An Unreal Engine simulator for scene exploration and driving-school practice, with three screens, six-axis motion, an AI coaching backend and vehicle recording and replay."
 type: case
 slug: driving-simulation
 categoryId: ue-projects
@@ -16,87 +16,115 @@ tags:
   - "Driver training"
   - "Multi-screen display"
   - "Recording & replay"
-coverAlt: Driving simulation cover
+coverAlt: "Six-axis triple-screen driving simulator cover"
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 translationKey: driving-simulator-three-screen
 lang: en
-sourceHash: c121376e261fa0e33b44b0fe87b92ee91be915672451f760c98461b8f5ac93dc
+sourceHash: 06f7737ae6fb942e7d58aed4df9f2242c3a84c099ba80eb6ab0a17d4d61139b9
 translationStatus: translated
-generatedBodyHash: 388945491bbe4ff4f1e59c3c8753118896e06bce0da3f8ce01d630eddf008e9a
+generatedBodyHash: 54d4a15baddcd85e572a9e67be639a9526819c21309ffdb6dbf700b3eb687749
 ---
 
 ## Project overview
 
-This Unreal Engine project supports driving practice and simulated examinations. Three screens present the driving environment while the application captures controls and vehicle state. Results, time series and scene replays provide different ways to review a session.
+This Unreal Engine project combines scene exploration, driving simulation and driving-school practice. Three screens present the driving environment, a six-axis platform provides motion feedback, and trainees practise vehicle controls on the simulator with an AI coach as part of the training interaction.
 
-The project needed consistent lighting and exposure across the screens, together with records that explain the driver's actions and session outcome. My work covered rendering adjustments, driving data collection, results and UE replay management.
+The system brings together scenes, vehicle simulation, device input, training workflows and coaching services. My work covers third-party vehicle model integration, plugins and client APIs, UI and settings, multi-screen rendering, platform motion processing, driving-school functions, vehicle recording and replay, and the AI coaching backend. I also worked on scene optimization and frame-rate issues.
 
-| Area | Scope |
+## My responsibilities
+
+### Scene exploration and vehicle model integration
+
+I integrated a third-party vehicle driving model into UE scenes and connected its motion states and controls to the application. Steering, throttle, braking, gears and indicators feed the driving state system. Speed, acceleration, angular velocity and vehicle pose are available to the interface, training logic and device communication.
+
+Scene exploration and simulated driving share the project's scenes and vehicle capabilities. My integration work connects the model to UE and the application; the underlying vehicle dynamics come from the third-party simulation model.
+
+### Plugins and client APIs
+
+I developed supporting functions for training workflows, vehicle states, device input, recording, replay and data storage, then exposed them through APIs for the client. C++ manages states and core logic, while Blueprints and the interface use those APIs to organize interactions.
+
+The application can read vehicle states, start or reset training, trigger scoring events, and control recording and replay without duplicating low-level data handling across interfaces and levels.
+
+### Client interface, CommonUI and settings
+
+I handled UI layout and CommonUI integration for training and settings screens, including supporting buttons, activatable pages and settings list components. The interface reads and changes application state through client APIs connected to the vehicle and training systems.
+
+| Area | Implementation |
 | --- | --- |
-| Use | Driving practice, simulated examinations and session review |
-| Display | Three screens with multiple views |
-| Engine | Relevant source changes for UE 5.3 / 5.3.2 |
-| Records | Process JSON, results JSON and UE Network Replay |
-| My contribution | Rendering fixes, process and results data, replay integration |
+| Interface | UI layout, CommonUI pages and buttons, input handling |
+| Custom controls | Keyboard and driving-control bindings, with key-conflict prompts |
+| Display | Resolution, windowed and fullscreen modes |
+| Graphics | Graphics quality options and display parameters |
+| Configuration | Loading, editing, saving and applying settings |
 
-## Features I worked on
+Control rebinding is connected to interface prompts. Display and graphics choices update the runtime configuration through the settings system, allowing the client to be adjusted for the device and the user's preferences.
 
-### Lighting and exposure across three screens
+### Driving-school training and scoring
 
-I addressed missing Lumen global illumination and inconsistent automatic exposure in the three-screen setup. The changes involved engine view limits, view data associations and the LocalPlayer view construction path.
+Training is organized by project, subject and mode. Step configuration connects the workflow to scene triggers, prompts and vehicle states. The training system maintains the current step and score, with controls to start, stop and reset a session and update results when scoring events occur.
 
-This work required changes to specific engine versions; it was not a general project setting that could be enabled without modifying source.
+Steps use their own workflows and resources. Text, sound, images, video and scene sequences provide instructions and prompts. Results are stored by training step for later review.
 
-### Driving data collection
+### Three-screen display and six-axis motion feedback
 
-A WorldSubsystem coordinates continuous collection. Steering, brake, throttle, speed, head orientation, position and direction are stored in channels with timestamps. Position is converted from UE centimetres to metres at the recording boundary.
+I worked on global illumination, consistent exposure and display integration across multiple views. The three screens present a continuous driving environment, so differences in brightness and rendering affect observation and control.
 
-Continuous values and discrete states have different representations. Steering, brake and speed become curves, while gear and indicator changes become events with a time and value. This supports both trend review and inspection of individual actions.
+On the platform side, vehicle telemetry supplies speed, acceleration, angular velocity and pose for device communication. Motion processing includes high-pass and low-pass filtering, integration, tilt coordination and angular-velocity limits. My work covers software signal processing and communication integration; the platform protocol and device parameters determine the motion range and execution.
 
-### Results and queries
+### AI coaching backend
 
-Session results are stored separately, including result labels, turning and starting counts, completion time, reaction time and date, with record filtering. Results answer outcome queries; process data describes the actions behind them.
+I built the AI coaching backend, including speech-to-text, text-to-speech and mouth animation synchronization, and connected these functions to the UE training scene.
 
-### Scene recording and replay management
+Speech recognition converts the trainee's voice to text. Speech synthesis turns the coach's response into audio, while character playback coordinates the sound with mouth animation. The backend and UE application handle the interaction from speech input to the coach's response. My work includes service setup, functional integration and end-to-end integration testing. The driving application manages training steps and rule-based scoring.
 
-I integrated UE Network Replay and wrapped recording, playback, enumeration, renaming and deletion for use by the application interface. Scene playback uses the engine's replay system. The process curves are not a custom engine for reconstructing the entire scene.
+### Recording vehicle and model data with LevelSequence
 
-## Challenges and implementation
+I connected the vehicle driving model and its states to UE LevelSequence for recording and replay. The recorded data includes body and four-wheel transforms, control input, vehicle states, the engine, transmission and dashboard.
 
-### Supporting a third view in the rendering path
+The implementation gathers these states in a recording Actor, exposes nested properties for interpolation, and uses Take Recorder to organize recording. During playback, LevelSequence updates the states on its timeline and writes them back to the vehicle replay streams, reproducing body, wheel and vehicle behaviour from the same recording.
 
-Adding a third screen affected more than the final image. Relevant UE 5.3 code used a fixed maximum view count, which affected GI when the project exceeded that limit.
+The supporting APIs provide playback start and end times, playback rate, stop controls and completion notifications. Take Recorder recording runs in the UE editor; LevelSequence organizes and plays the recorded result.
 
-I traced the related source paths, changed the applicable maximum from two views to three and documented seven modification locations. The associated data paths needed to support the additional view together, rather than changing only the display entry point. The detailed source references are linked below.
+### Driving-session and result records
 
-### Sharing exposure data between LocalPlayers
+The application captures steering, throttle, braking, speed, head direction, vehicle position and direction. Continuous values form curves over time. Gear and indicator changes are stored separately so they can be located alongside operating trends.
 
-Independent automatic exposure could produce noticeably different brightness across screens showing the same driving environment.
+Session data and results are saved separately as JSON. Session data preserves control details, while result records store scoring events and time information by training step. Vehicle and model replay handles scene reproduction. An earlier version also integrated UE Network Replay with recording, playback, listing, renaming and deletion controls.
 
-For the UE 5.3.2 view construction path, I used a custom LocalPlayer to assign Secondary StereoPass to the relevant non-primary views, associating exposure calculations with the same view data. This solution depends on that engine version and view arrangement; other versions require source review.
+## Technical challenges
 
-### Keeping results, process curves and scene replays distinct
+### Bringing vehicle simulation states onto the UE timeline
 
-Each record serves a different review task. Results describe completion and action counts; curves show how controls and vehicle values changed; scene replays let the user watch the session again. A single format would obscure what each record can represent.
+Vehicle behaviour depends on body, wheel, controller, engine and transmission states. Recording only an Actor's position and rotation does not fully reproduce the vehicle's motion and model behaviour.
 
-I kept these records separate so that statistics, process analysis and replay management can use the appropriate data. Similar fields from the same session are not treated as interchangeable records.
+I organized those states as recordable, interpolated properties and built read and write paths between the vehicle replay streams and LevelSequence. Recording captures the states; playback writes them back under timeline control. The integration also handles mode changes between recording, playback and stopping, allowing vehicle pose and model states to be reviewed at the same timeline position.
 
-### Variable sampling and background saves
+### Coordinating coaching audio and mouth animation
 
-Collection follows Tick, so it cannot assume a fixed sampling frequency. Samples retain their time coordinates and are processed in batches. The threshold of 3,000 samples is a buffer threshold, not a fixed time interval. Curves are fitted and simplified per channel and read using their actual timestamps.
+Backend speech processing and UE character presentation are separate parts of the system. Recognized text, response audio and character playback need to pass between them, and generated speech must be coordinated with mouth animation.
 
-Serialization and file writes run in the background. A lock coordinates writes to the same path, and a completion callback can return to the game thread. This separates file work from collection and distinguishes starting a save from finishing it.
+I built the speech-processing functions and connected them to UE audio and mouth animation, then worked through the interaction from the trainee speaking to the character responding. The coaching backend provides the interaction, while the driving system manages steps, vehicle states and scoring.
 
-## Results and scope
+### Inconsistent lighting and exposure across three screens
 
-The project combines three-screen display adjustments, process collection, results queries and engine replay management. Lighting and exposure are handled on the display side; curves, events, results and scene recordings support different review tasks.
+In the historical UE 5.3 implementation, view-count limits in related rendering data affected global illumination in the third view. Multiple LocalPlayers calculating exposure independently could also produce different brightness levels within the same driving scene.
 
-Curve simplification uses an error threshold in the time-value plane, which does not imply the same physical accuracy for every channel. The current collection caller also does not wait for background saves when exiting. Reliable retention of the final batch requires coordination between session shutdown and completion notifications.
+I investigated and addressed the multiview GI limits and adjusted StereoPass settings for secondary views through a custom LocalPlayer to connect their exposure data. These changes target the engine versions used at the time; later versions require their corresponding implementations to be checked.
 
-The rendering changes apply to the engine versions used at the time. Other versions need their corresponding source checked. Which actors and states a replay reproduces depends on the project's replication and Replay configuration.
+### Scene complexity and vehicle updates
+
+Driving simulation continuously updates vehicle motion, device input, several views and the interface. A low frame rate affects visual smoothness and can expose problems in how vehicle updates handle frame timing.
+
+I worked on scene optimization and runtime stalls, investigated multi-screen rendering and vehicle update paths, and addressed rear-view mirror ghosting and abnormally reduced vehicle speed at low frame rates. Scene rendering, vehicle motion and device input were checked separately before integration testing in the project.
+
+## Results and version scope
+
+The project combines three-screen display and six-axis motion feedback for scene exploration and driving-school practice, with an AI coaching backend. Client APIs expose vehicle, training and data functions. Session details and results can be stored and queried, while LevelSequence records and replays the vehicle and its model states.
+
+The vehicle model uses third-party simulation capabilities. My contribution covers application integration, supporting plugins and training functions. Historical rendering work targets UE 5.3 and 5.3.2; a later project version includes a UE 5.5 configuration. Recording, replay and display integration are maintained for their respective versions.
 
 ## Related records
 
-- [Driving data recording and UE replay management](/blog/driving-session-replay/): channels, events, results, background saves and replay responsibilities.
-- [Resolving missing GI with multiple views](/blog/ue53-multiview-gi/): source changes to the relevant UE 5.3 view limits.
-- [Synchronizing exposure across screens](/blog/cnblogs-19165561/): LocalPlayer, StereoPass and exposure data in UE 5.3.2.
+- [Driving-session recording and UE replay management](/blog/driving-session-replay/): session capture, JSON storage, result records and the earlier Network Replay integration.
+- [Fixing missing GI in multiple views](/blog/ue53-multiview-gi/): multiview global illumination integration in UE 5.3.
+- [Synchronizing exposure across multiple screens](/blog/cnblogs-19165561/): LocalPlayer, StereoPass and exposure data handling.

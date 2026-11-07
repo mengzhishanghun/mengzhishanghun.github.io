@@ -8,9 +8,9 @@ websiteRoute: /cases/
 template: cases/index.html
 lang: en
 translationKey: cases-index
-sourceHash: de2f6e049691fd35b594d8890352361ba3a5fc887209e10c2506eab0372513a9
+sourceHash: "3ac64b26c6db4d90e1af95f1f7df9ec9e64c7734522a60d34f26a5bc601a4c0f"
 translationStatus: translated
-generatedBodyHash: 22c5d3e2fdf0ee22650ecd138c62911f00cfa072ef824c271f40da4985a60675
+generatedBodyHash: "e2138347e2525642aa79df4690b408002643ab44d7e818d341ab557b5a33fea3"
 ---
 
 ![](/media-occurrence/page%3Acases-index%3Amedia%3A1)
@@ -21,9 +21,9 @@ Projects and my contributions
 
 ![](/media-occurrence/page%3Acases-index%3Amedia%3A2)
 
-## [Driving simulation](/cases/driving-simulation/)
+## [Six-axis triple-screen driving simulator](/cases/driving-simulation/)
 
-A driving training project combining three-screen display, session recording, results and scene replay.
+An Unreal Engine simulator for scene exploration and driving-school practice, with three screens, six-axis motion, an AI coaching backend and vehicle recording and replay.
 
 ![](/media-occurrence/page%3Acases-index%3Amedia%3A3)
 

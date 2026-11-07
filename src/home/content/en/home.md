@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: 53acf87e8cd4aa3026cd7a022bf882bdd5eb2394d8188e5fd71874f01db6acb8
+sourceHash: "a4eba5790a09977375d10ff0c9eb29f3ca5d436cf81d94fac4a221b6cf19545a"
 translationStatus: translated
-generatedBodyHash: a8832d7ccf280678503fed66489da26406a1fb5be82b1aa8e5287dee16b70353
+generatedBodyHash: "ac78bf5e688328119ce4159b617df8bd267dfadfbb413006655ae31f5a0f3065"
 ---
 
 # Complexity can be encapsulated;
@@ -74,11 +74,11 @@ Convert local Markdown images to Base64 embedded format for export and copying t
 
 UE Projects
 
-### [Driving simulation](/cases/driving-simulation/)
+### [Six-axis triple-screen driving simulator](/cases/driving-simulation/)
 
-Three-screen Driving Simulator Display Alignment
+Six-axis triple-screen driving simulator
 
-A driving training project combining three-screen display, session recording, results and scene replay.
+An Unreal Engine simulator for scene exploration and driving-school practice, with three screens, six-axis motion, an AI coaching backend and vehicle recording and replay.
 
 [View Details](/cases/driving-simulation/)
 
