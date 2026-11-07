@@ -20,9 +20,9 @@ coverAlt: "Six-axis triple-screen driving simulator cover"
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 translationKey: driving-simulator-three-screen
 lang: en
-sourceHash: "e2fafbc1bb9c26371a878c6d7316c23966158dd2b424d41ef947f4e330b4f834"
+sourceHash: "18fea10105653ea0aceaa60f1320ee3f0666d35f8f85f542a6e92ad314b58131"
 translationStatus: translated
-generatedBodyHash: "1eaa0363615ad6ae2ec8337738967ead8cf6e04fc392abfe535683d5ec6044fd"
+generatedBodyHash: "c686a72fd5a1891127bb978354ae593e598c15dd36c999d73ce9cb078efc41b6"
 ---
 
 ## Project overview
@@ -79,9 +79,9 @@ Speech recognition converts the trainee's voice to text. The backend prepares a 
 
 ### Recording vehicle and model data with LevelSequence
 
-I connected the core data from the third-party vehicle dynamics model to UE LevelSequence for recording and replay. The recording preserves the data needed to reproduce vehicle motion and model states. Playback uses those recorded values, while the system automatically fills in and generates the remaining data.
+I connected the core data from the third-party vehicle dynamics model to UE LevelSequence for recording and replay. The recording preserves the data needed to reproduce vehicle motion and model states. Playback uses those recorded values, and the system calculates the remaining data from them.
 
-The implementation gathers relevant body and four-wheel transforms, control input, vehicle states, engine, transmission and dashboard data in a recording Actor. Nested properties are exposed for interpolation, and Take Recorder organizes recording. During playback, LevelSequence updates the recorded core data on its timeline and writes it back to the third-party model's vehicle replay streams for state reconstruction and automatic completion of the remaining data. My work focuses on connecting the recording and playback data paths and keeping replay data consistent with the original driving states.
+The implementation gathers relevant body and four-wheel transforms, control input, vehicle states, engine, transmission and dashboard data in a recording Actor. Nested properties are exposed for interpolation, and Take Recorder organizes recording. During playback, LevelSequence updates the recorded core data on its timeline and writes it back to the third-party model's vehicle replay streams. The system uses that data to reconstruct vehicle states and calculate the remaining data. My work focuses on connecting the recording and playback data paths and keeping replay data consistent with the original driving states.
 
 The supporting APIs provide playback start and end times, playback rate, stop controls and completion notifications. Take Recorder recording runs in the UE editor; LevelSequence organizes and plays the recorded result.
 
@@ -95,9 +95,9 @@ Session data and results are saved separately as JSON. Session data preserves co
 
 ### Bringing vehicle simulation states onto the UE timeline
 
-Vehicle replay needs to reproduce states from the third-party dynamics model. Body and wheel motion also involves control input, engine and transmission data. Recording must preserve the core states so that playback can use them to reproduce the model's behaviour, with the remaining data filled in automatically.
+Vehicle replay needs to reproduce states from the third-party dynamics model. Body and wheel motion also involves control input, engine and transmission data. Recording must preserve the core states so that playback can use them to reproduce the model's behaviour and calculate the remaining data.
 
-I organized the relevant states as recordable, interpolated properties, built read and write paths between the vehicle replay streams and LevelSequence, and handled mode changes between recording, playback and stopping. The challenge was to write the timeline's core data back to the third-party model correctly, keep vehicle motion and model states consistent with the original recording, and connect the automatic completion of the remaining data.
+I organized the relevant states as recordable, interpolated properties, built read and write paths between the vehicle replay streams and LevelSequence, and handled mode changes between recording, playback and stopping. The challenge was to write the timeline's core data back to the third-party model correctly, keep vehicle motion and model states consistent with the original recording, and connect the calculation of the remaining data to playback.
 
 ### Coordinating coaching audio and mouth animation
 
