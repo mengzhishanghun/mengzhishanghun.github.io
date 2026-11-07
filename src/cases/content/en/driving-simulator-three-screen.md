@@ -20,9 +20,9 @@ coverAlt: "Six-axis triple-screen driving simulator cover"
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 translationKey: driving-simulator-three-screen
 lang: en
-sourceHash: 06f7737ae6fb942e7d58aed4df9f2242c3a84c099ba80eb6ab0a17d4d61139b9
+sourceHash: "e2fafbc1bb9c26371a878c6d7316c23966158dd2b424d41ef947f4e330b4f834"
 translationStatus: translated
-generatedBodyHash: 54d4a15baddcd85e572a9e67be639a9526819c21309ffdb6dbf700b3eb687749
+generatedBodyHash: "1eaa0363615ad6ae2ec8337738967ead8cf6e04fc392abfe535683d5ec6044fd"
 ---
 
 ## Project overview
@@ -73,15 +73,15 @@ On the platform side, vehicle telemetry supplies speed, acceleration, angular ve
 
 ### AI coaching backend
 
-I built the AI coaching backend, including speech-to-text, text-to-speech and mouth animation synchronization, and connected these functions to the UE training scene.
+I built the AI coaching backend for speech-to-text, AI question handling and response generation, text-to-speech, and mouth animation synchronization, then connected these functions to the UE training scene.
 
-Speech recognition converts the trainee's voice to text. Speech synthesis turns the coach's response into audio, while character playback coordinates the sound with mouth animation. The backend and UE application handle the interaction from speech input to the coach's response. My work includes service setup, functional integration and end-to-end integration testing. The driving application manages training steps and rule-based scoring.
+Speech recognition converts the trainee's voice to text. The backend prepares a request from that text and calls the AI service to generate the coach's response. Speech synthesis then turns the response into audio, which UE plays alongside synchronized mouth animation. My work includes backend setup, AI service integration, request and response handling, and integration across the backend and UE client. The driving application manages training steps and rule-based scoring.
 
 ### Recording vehicle and model data with LevelSequence
 
-I connected the vehicle driving model and its states to UE LevelSequence for recording and replay. The recorded data includes body and four-wheel transforms, control input, vehicle states, the engine, transmission and dashboard.
+I connected the core data from the third-party vehicle dynamics model to UE LevelSequence for recording and replay. The recording preserves the data needed to reproduce vehicle motion and model states. Playback uses those recorded values, while the system automatically fills in and generates the remaining data.
 
-The implementation gathers these states in a recording Actor, exposes nested properties for interpolation, and uses Take Recorder to organize recording. During playback, LevelSequence updates the states on its timeline and writes them back to the vehicle replay streams, reproducing body, wheel and vehicle behaviour from the same recording.
+The implementation gathers relevant body and four-wheel transforms, control input, vehicle states, engine, transmission and dashboard data in a recording Actor. Nested properties are exposed for interpolation, and Take Recorder organizes recording. During playback, LevelSequence updates the recorded core data on its timeline and writes it back to the third-party model's vehicle replay streams for state reconstruction and automatic completion of the remaining data. My work focuses on connecting the recording and playback data paths and keeping replay data consistent with the original driving states.
 
 The supporting APIs provide playback start and end times, playback rate, stop controls and completion notifications. Take Recorder recording runs in the UE editor; LevelSequence organizes and plays the recorded result.
 
@@ -95,15 +95,15 @@ Session data and results are saved separately as JSON. Session data preserves co
 
 ### Bringing vehicle simulation states onto the UE timeline
 
-Vehicle behaviour depends on body, wheel, controller, engine and transmission states. Recording only an Actor's position and rotation does not fully reproduce the vehicle's motion and model behaviour.
+Vehicle replay needs to reproduce states from the third-party dynamics model. Body and wheel motion also involves control input, engine and transmission data. Recording must preserve the core states so that playback can use them to reproduce the model's behaviour, with the remaining data filled in automatically.
 
-I organized those states as recordable, interpolated properties and built read and write paths between the vehicle replay streams and LevelSequence. Recording captures the states; playback writes them back under timeline control. The integration also handles mode changes between recording, playback and stopping, allowing vehicle pose and model states to be reviewed at the same timeline position.
+I organized the relevant states as recordable, interpolated properties, built read and write paths between the vehicle replay streams and LevelSequence, and handled mode changes between recording, playback and stopping. The challenge was to write the timeline's core data back to the third-party model correctly, keep vehicle motion and model states consistent with the original recording, and connect the automatic completion of the remaining data.
 
 ### Coordinating coaching audio and mouth animation
 
-Backend speech processing and UE character presentation are separate parts of the system. Recognized text, response audio and character playback need to pass between them, and generated speech must be coordinated with mouth animation.
+The interaction from trainee speech to a character response passes through speech recognition, AI request handling and response generation, speech synthesis, and UE audio and mouth animation playback. Recognized text goes to the AI service, the generated response goes to speech synthesis, and audio playback needs to stay synchronized with mouth animation.
 
-I built the speech-processing functions and connected them to UE audio and mouth animation, then worked through the interaction from the trainee speaking to the character responding. The coaching backend provides the interaction, while the driving system manages steps, vehicle states and scoring.
+I built the backend flow, integrated the AI service and handled requests and responses, then connected the generated speech to the UE character and worked through the complete interaction. The coaching backend provides the interaction, while the driving system manages steps, vehicle states and scoring.
 
 ### Inconsistent lighting and exposure across three screens
 
