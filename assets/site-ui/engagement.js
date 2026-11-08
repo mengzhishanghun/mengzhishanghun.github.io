@@ -94,7 +94,7 @@
       const like = root.querySelector('[data-engagement-like]'), count = root.querySelector('[data-engagement-count]'), status = root.querySelector('[data-engagement-status]');
       const endpoint = '/api/engagement/articles/' + encodeURIComponent(data.id);
       const main = window.location.origin === data.origin;
-      if (main) {
+      if (main && data.likesEnabled !== false) {
         like.hidden = false;
         let storage; try { storage = window.localStorage; } catch { storage = { getItem() { throw Error('storage'); } }; }
         let countRevision = 0;
