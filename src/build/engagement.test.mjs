@@ -63,3 +63,18 @@ test('late initial read never replaces a confirmed like count',async()=>{
   vm.runInNewContext(fs.readFileSync(new URL('../engagement/client/engagement.js',import.meta.url),'utf8'),{window,document,URL,AbortController,setTimeout,clearTimeout});
   await click();finishRead({ok:true,status:200,json:async()=>({count:0})});await new Promise(resolve=>setTimeout(resolve,0));assert.equal(parts['[data-engagement-count]'].textContent,'1');assert.equal(parts['[data-engagement-like]'].attrs['aria-pressed'],'true');assert.equal(parts['[data-engagement-like]'].attrs['aria-label'],'Liked');assert.equal(parts['[data-engagement-status]'].textContent,'');
 });
+
+test('main-host unlisted reprints disable all like requests while copy and manual sharing remain available',async()=>{
+ const listeners=new Map(),copied=[],parts={};
+ const button=name=>({hidden:true,disabled:false,setAttribute(){},addEventListener(event,fn){listeners.set(name,fn);}});
+ Object.assign(parts,{'[data-engagement-config]':{textContent:JSON.stringify({id:'reprint:guide',origin:'https://mzsh.me',url:'https://mzsh.me/zh/blog/reprints/guide/',likesEnabled:false,labels:{copied:'已复制',manual:'手动复制',like:'赞'}})},'[data-engagement-like]':button('like'),'[data-engagement-like-label]':{},'[data-engagement-count]':{},'[data-engagement-status]':{},'[data-engagement-share]':button('share'),'[data-engagement-manual]':{hidden:true},'[data-engagement-url]':{focus(){this.focused=true;},select(){this.selected=true;}}});
+ const root={isConnected:true,dataset:{},querySelector:selector=>parts[selector]};
+ let requests=0,blocked=false;
+ const window={location:{origin:'https://mzsh.me'},localStorage:storage(),navigator:{clipboard:{async writeText(value){if(blocked)throw Error('clipboard denied');copied.push(value);}}},fetch:async()=>{requests++;return {ok:false,status:404,json:async()=>({})};}};
+ const document={readyState:'complete',querySelectorAll:()=>[root],addEventListener(){}};
+ vm.runInNewContext(fs.readFileSync(new URL('../engagement/client/engagement.js',import.meta.url),'utf8'),{window,document,URL,AbortController,setTimeout,clearTimeout});
+ await listeners.get('share')();
+ assert.equal(requests,0);assert.equal(parts['[data-engagement-like]'].hidden,true);assert.equal(listeners.has('like'),false);
+ assert.deepEqual(copied,['https://mzsh.me/zh/blog/reprints/guide/']);
+ blocked=true;await listeners.get('share')();assert.equal(parts['[data-engagement-manual]'].hidden,false);assert.equal(parts['[data-engagement-url]'].value,'https://mzsh.me/zh/blog/reprints/guide/');assert.equal(parts['[data-engagement-url]'].selected,true);assert.equal(requests,0);
+});

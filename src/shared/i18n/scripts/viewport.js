@@ -53,6 +53,7 @@ function updateReturnLabels() {
   const label = window.SiteCopy?.['viewport:return-previous'];
   if(!label)return;
   document.querySelectorAll('a.article-back, a.outline-mobile-back').forEach(anchor=>{
+    if(anchor.hasAttribute('data-fixed-return'))return;
     const text = [...anchor.childNodes].find(node=>node.nodeType === 3 && node.nodeValue?.trim());
     if(text)text.nodeValue=label;
     anchor.setAttribute('aria-label',label);
@@ -82,6 +83,7 @@ history.replaceState = function replaceState(state, title, url) {
 document.addEventListener('click', event=>{
   if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
   const anchor = event.target?.closest?.('a.article-back, a.outline-mobile-back');
+  if (anchor?.hasAttribute('data-fixed-return'))return;
   if (!anchor?.isConnected || anchor.hasAttribute('download') || anchor.getAttribute('target') && anchor.getAttribute('target') !== '_self') return;
   if (new URL(anchor.href,location.href).origin !== location.origin) return;
   if (binding && (!connected(binding) || binding.navigationId !== navigationRecord()?.id)) {event.preventDefault();return;}

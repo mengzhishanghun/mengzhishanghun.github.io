@@ -96,3 +96,11 @@ test('an unrelated fallback replacement clears intent and does not lock the dest
 });
 
 test('page-load cannot release scroll restoration while asynchronous like counts are loading',()=>{const x=runtime(false,true,{url:'https://mzsh.me/zh/blog/?sort=original&page=2',state:{mzshViewport:{key:'/zh/blog/?sort=original&page=2',top:900}}});x.frame.index.dataset.ready='loading';x.emit(x.document,'astro:page-load');x.flushMicrotasks();assert.equal(x.frame.scrollTop,0);assert.equal(x.frame.counts.get('scroll'),undefined);x.frame.index.dataset.ready='true';x.emit(x.document,'mzsh:content-index-ready',{detail:{element:x.frame.index}});assert.equal(x.frame.scrollTop,900);assert.equal(x.frame.counts.get('scroll'),1);});
+test('fixed blog returns retain their label and bypass history and cached return targets',()=>{
+ const x=runtime();
+ for(const link of x.links){link.setAttribute('data-fixed-return','');link.setAttribute('href','/zh/blog/');link.childNodes=[{nodeType:3,nodeValue:'返回博客'}];}
+ x.history.pushState({index:1},'', '/zh/blog/reprints/example/');
+ for(const link of x.links){assert.equal(link.textContent,'返回博客');assert.equal(link.getAttribute('href'),'/zh/blog/');}
+ assert.equal(x.click().defaultPrevented,false);assert.equal(x.click(true).defaultPrevented,false);
+ assert.equal(x.history.backCalls,0);assert.deepEqual(x.replacements,[]);
+});

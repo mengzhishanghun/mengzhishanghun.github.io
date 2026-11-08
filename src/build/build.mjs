@@ -11,6 +11,7 @@ import {assertPublicFields} from './source-schema.mjs';
 import {articleTypes,validateArticleIdentities,shareRoute} from '../engagement/article-identities.mjs';
 import {loadResources,regularPath,resourcePath,safeRelative} from './resources.mjs';
 import {renderWorkMetadata,renderWorkCardStatuses} from '../works/metadata.mjs';
+import {loadReprints,reprintTemplate} from '../blog/reprints.mjs';
 import {projectBlogTopics} from '../blog/topics.mjs';
 import {projectContentTopics} from './content-topics.mjs';
 import {projectTaxonomy,categoryNavigation} from './taxonomy.mjs';
@@ -35,6 +36,7 @@ export function boundedPath(root,relative,label='路径') {
   return result;
 }
 export function localeRoute(entry,locale) {
+  if(entry.original)return entry.route;
   const original = entry.legacyRoutes[0];
   if (original === '/') return `/${locale}/`;
   if (original === '/docs/404.html') return `/${locale}/docs/404.html`;
@@ -128,7 +130,8 @@ export function preflight({sourceRoot,site,manifest}) {
   projectContentTopics({site,entries,config,copy,type:'case',indexId:'page:cases-index',topicsPath:'src/cases/topics.json',labelPrefix:'case-topic',maxTopics:5});
   projectTaxonomy({site,entries,config,copy});
   const galleries=loadProjectGalleries({site,entries,codes});
-  return {routes,entries,config,copy,galleries};
+  const reprints=loadReprints({site,routes});
+  return {routes,entries,config,copy,galleries,reprints};
 }
 function routeFile(route) { return route.slice(1) + (route.endsWith('.html') ? '' : 'index.html'); }
 function mapURL(url,locale,entries) {
@@ -159,8 +162,9 @@ async function renderBody(entry,locale,processor,site) {
   const tokens=[];
   const mediaPlugin = () => tree => {
     const visit = node => {
-      if (node.type === 'html') throw new Error('来源含未批准HTML: '+entry.id);
+      if (node.type === 'html' && !(entry.original && /^(?:<strong>|<\/strong>|[^<>])+$/.test(node.value))) throw new Error('来源含未批准HTML: '+entry.id);
       if (node.type === 'image') {
+        if(entry.original){const url=entry.mediaMap.get(decodeURIComponent(node.url));if(!url)throw new Error('转载媒体未登记');node.url=url;return;}
         if(entry.mediaOccurrences) {
           const occurrence=entry.mediaOccurrences[mediaOrdinal++];
           if(!occurrence || '/media-occurrence/'+encodeURIComponent(occurrence.id)!==node.url)throw new Error('媒体occurrence歧义: '+entry.id+' '+mediaOrdinal);
@@ -181,17 +185,17 @@ async function renderBody(entry,locale,processor,site) {
           node.type='text';node.value=label+note;delete node.url;delete node.children;
         } else {if(/^(?:javascript|data|file|obsidian):/i.test(node.url))throw new Error('不安全链接');node.url = mapURL(node.url,locale,processor.entries);}
       }
-      if (node.type === 'heading' && entry.type==='blog') node.depth=Math.min(6,node.depth+1);
+      if (node.type === 'heading' && entry.type==='blog' && !entry.original) node.depth=Math.min(6,node.depth+1);
       if (node.type === 'code' && node.lang==='blueprint')node.lang='text';
       if (node.type === 'code' && node.lang==='C')node.lang='plaintext';
       for (const child of node.children || []) visit(child);
     }; visit(tree);
   };
   const markdown = await createMarkdownProcessor({syntaxHighlight:entry.type==='blog'?'shiki':false,shikiConfig:{theme:'github-dark'},remarkPlugins:[mediaPlugin],rehypePlugins:entry.type==='blog'?[]:[rehypeExpressiveCode]});
-  let body = withoutSourceAttribution(source).replace(/^\s*# [^\n]+\n/,'');
+  let body = entry.original?source.body:withoutSourceAttribution(source).replace(/^\s*# [^\n]+\n/,'');
   if(entry.type==='page' && entry.slug==='not-found')body=source.body.trim().split(/\n\s*\n/).at(-1);
   if(entry.type==='blog')body=body.replace(/^(`{3,})C\+\+\s*$/gm,'$1plaintext');
-  if(entry.type==='blog')body=body.replace(/\n原文于 \d{4}-\d{2}-\d{2} 发表于\[[^\]]+\]\([^\n]+\)\。?\s*$/,'');
+  if(entry.type==='blog'&&!entry.original)body=body.replace(/\n原文于 \d{4}-\d{2}-\d{2} 发表于\[[^\]]+\]\([^\n]+\)\。?\s*$/,'');
   if(entry.supplements?.length) {
     const headingRecords=JSON.parse(fs.readFileSync(path.join(here,'heading-scaffolds.json'),'utf8'))[entry.id];
     const delimiter=headingRecords.find(r=>r.oldId==='使用说明补充');
@@ -258,7 +262,7 @@ async function renderBody(entry,locale,processor,site) {
   }
   if(entry.mediaOccurrences && mediaOrdinal!==entry.mediaOccurrences.length)throw new Error('媒体occurrence数量漂移: '+entry.id);
   const headings=result.metadata.headings;
-  if(['doc','blog'].includes(entry.type)) {
+  if(['doc','blog'].includes(entry.type) && !entry.original) {
     const records=JSON.parse(fs.readFileSync(path.join(here,'heading-scaffolds.json'),'utf8'))[entry.id];
     if(records?.length!==headings.length)throw new Error('heading结构不能唯一配对: '+entry.id+' source='+headings.length+' DOM='+records?.length);
     const fragment=parseFragment(code,{sourceCodeLocationInfo:true}),nodes=[];
@@ -331,8 +335,8 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   const article=articleTypes.has(entry.type);
   const contentIndex=['page:blog-index','page:works-index','page:cases-index'].includes(entry.id);
   const cardOrder=new Map();if(contentType)walk(doc,node=>{const a=attrs(node);if(a['data-content-card']!==undefined)cardOrder.set(a['data-slug'],Number(a.style?.match(/order:\s*(\d+)/)?.[1]||0));});
-  const neutral=article?shareRoute(entry,locale,localeRoute(entry,locale)):null;
-  if(article && ![...entry.legacyRoutes,...(config.shareAliases || [])].includes(neutral))throw new Error('通用分享入口未登记: '+neutral);
+  const neutral=article?(entry.original?entry.route:shareRoute(entry,locale,localeRoute(entry,locale))):null;
+  if(article && !entry.original && ![...entry.legacyRoutes,...(config.shareAliases || [])].includes(neutral))throw new Error('通用分享入口未登记: '+neutral);
   walk(doc,node => {
     if(excluded.has(node))return;
     const a=attrs(node),loc=node.sourceCodeLocation;
@@ -353,7 +357,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(article && (a.class || '').split(/\s+/).includes('article-back') && (attrs(node.parentNode).class || '').split(/\s+/).includes('article-sidebar')) {
       engagementSlots++;
       if(!engagementLabels || Object.values(engagementLabels).some(v=>typeof v!=='string'))throw new Error('互动文案缺失');
-      const data={id:entry.id,origin:'https://mzsh.me',url:'https://mzsh.me'+neutral,title:entry.sources[config.fallback].data.title,labels:engagementLabels};
+      const data={id:entry.id,origin:'https://mzsh.me',url:'https://mzsh.me'+neutral,title:entry.sources[config.fallback].data.title,labels:engagementLabels,...(entry.original?{likesEnabled:false}:{})};
       const markup='<section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="'+escapeHTML(engagementLabels.group)+'"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>'+escapeHTML(engagementLabels.like)+'</span> <span data-engagement-count aria-label="'+escapeHTML(engagementLabels.count)+'">—</span></button><button type="button" data-engagement-share aria-label="'+escapeHTML(engagementLabels.share)+'" title="'+escapeHTML(engagementLabels.share)+'"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">'+escapeHTML(engagementLabels.share)+'</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" data-engagement-url readonly value="'+escapeHTML(data.url)+'"></label><script type="application/json" data-engagement-config>'+safeJSON(data)+'</script><noscript><label class="article-engagement-manual">'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" readonly value="'+escapeHTML(data.url)+'"></label></noscript></section>';
       edits.push([loc.startTag.startOffset,loc.startTag.startOffset,'<div class="article-detail-controls">']);
       edits.push([loc.endTag.endOffset,loc.endTag.endOffset,markup+'</div>']);
@@ -479,7 +483,8 @@ export async function buildSite(options) {
     };
     scripts.forEach(emit);
   }
-  for (const entry of entries) for (const locale of codes) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy,primary,publication},site));
+  const pageEntries=[...entries,...validated.reprints];
+  for (const entry of pageEntries) for (const locale of entry.languageCodes) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy,primary,publication},site));
   const orderedWorks=entries.filter(e=>e.type==='work').sort((a,b)=>(a.sources[primary].data.categoryOrder ?? 0)-(b.sources[primary].data.categoryOrder ?? 0)||(a.sources[primary].data.order ?? 0)-(b.sources[primary].data.order ?? 0));
   orderedWorks.forEach((e,i)=>e.cardOrder=i);
   for(const entry of entries) {
@@ -490,27 +495,31 @@ export async function buildSite(options) {
       visit(parseFragment(rendered.get(entry.id+':'+locale).code));entry.searchBodies[locale]=text.trim();
     }
   }
-  for (const entry of entries) for (const locale of codes) {
+  for (const entry of pageEntries) for (const locale of entry.languageCodes) {
+    const pageConfig=entry.original?{...config,primary:'zh',fallback:'zh',languages:languages.filter(l=>l.code==='zh')}:config;
+    const pageCodes=entry.languageCodes;
     const result=rendered.get(entry.id+':'+locale), other=rendered.get(entry.id+':'+primary);
     if (result.headings.length!==other.headings.length) throw new Error('章节映射歧义: '+entry.id);
-    const slots=copy[locale].shellSlots?.[entry.id], dict=translationDictionary(copy,entries,locale,primary);
+    const slots=copy[locale].shellSlots?.[entry.shellId || entry.id], dict=translationDictionary(copy,entries,locale,primary);
     if (!slots) throw new Error('外壳译文缺失: '+entry.id+' '+locale);
     const file=regularPath(options.templateRoot || options.sourceRoot || path.join(site,'src'),entry.template);
     let html=fs.readFileSync(file,'utf8').replaceAll('/blog-search/',`/${locale}/blog-search/`);
-    html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
+    if(entry.original)html=reprintTemplate(html,entry,escapeHTML);
+    html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.shellId || entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
     html=filterPublicationHTML(html,publication);
     if(entry.id==='page:works-index')html=renderWorkCardStatuses(html,entries,locale,copy[locale].workLabels);
     if(entry.type==='work')html=renderWorkMetadata(html,entry.sources[locale].data,copy[locale].workLabels);
     if(entry.id==='page:about')html=html.replaceAll('{{profile:birthYear}}',String(profile.birthYear));
     html=html.replace('{{body}}',result.code).replace('{{outline}}',outline(result.headings));
     if (/\{\{(?:text|body|outline|profile)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
-    const anchors = Object.fromEntries(codes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
-    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,config,copy[locale].engagementLabels);
+    const anchors = Object.fromEntries(pageCodes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
+    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,pageConfig,copy[locale].engagementLabels);
     html=projectGallery(html,entry,locale,galleries);
     html=projectImageViewers(html,locale);
     html=filterPublicationHTML(html,publication);
     files.set(routeFile(localeRoute(entry,locale)),Buffer.from(html));
   }
+  for(const entry of validated.reprints)for(const media of entry.media){const target=media.websiteUrl.slice(1);if(files.has(target)||resources.has(target))throw Error('转载媒体输出冲突');files.set(target,fs.readFileSync(regularPath(path.join(site,'src/blog/reprints'),media.source)));}
   const aliases=new Map();
   for(const alias of [...entries.flatMap(e=>e.legacyRoutes.filter(route=>route!=='/').map(route=>({route,id:e.id}))),...redirects]) {
     if(!/^\/[a-zA-Z0-9/_-]*(?:\.html)?\/?$/.test(alias.route))throw new Error('旧链路径无效');
@@ -593,7 +602,7 @@ export async function buildSite(options) {
     const file=boundedPath(output,relative);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,bytes);
   }
   if(!check){fs.mkdirSync(path.dirname(registryOutput),{recursive:true});fs.writeFileSync(registryOutput,registry);}
-  return {pages:entries.length*codes.length,differences,files:[...files.keys()]};
+  return {pages:entries.length*codes.length+validated.reprints.length,differences,files:[...files.keys()]};
 }
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const args = process.argv.slice(2), value = name => args[args.indexOf(name)+1];
