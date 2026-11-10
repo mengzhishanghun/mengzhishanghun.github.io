@@ -1,6 +1,6 @@
 ---
 title: Python 按列名更新 Excel：组合键与独立输出
-description: 参照表提供新值，目标表按多个列匹配后更新指定列。原工具把匹配字段用下划线拼起来，`("A_B", "C")` 与 `("A", "B_C")` 就可能撞键。本文将核心处理独立出来，适用于 Python 3 与 openpyxl 的普通 `.xlsx`；不复刻原 GUI。
+description: 用 Tkinter 选择参照表和待修改表，按多列匹配并更新指定列，支持日志导出与文件保存，并说明组合键冲突、工作表选择和覆盖保存的注意事项。
 type: blog
 slug: python-excel-column-update
 categoryId: python
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: Python 按列名更新 Excel：组合键与独立输出封面
+websiteCoverUrl: /media/covers/blog/python-excel-column-update-20261101.webp
+lang: zh
 translationKey: python-excel-column-update
-websiteCoverUrl: "/media/covers/blog/python-excel-column-update-20261101.webp"
-coverAlt: "用 Python 按列名匹配并批量更新 Excel 数据封面"
 ---
 
 Execl表根据列名替换

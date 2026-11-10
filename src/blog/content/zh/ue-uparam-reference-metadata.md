@@ -1,6 +1,6 @@
 ---
 title: UE 蓝图函数参数：引用方向与显示名称
-description: UE C++ 的引用参数在蓝图节点上不一定呈现为预期的输入引脚。声明类型、`const` 和参数元数据共同影响节点表现。以下示例用于 UE5 的反射函数声明，未在引擎中编译。
+description: 通过完整声明示例说明蓝图引用参数、显示名称、抽象类选择、接口约束，以及 TFunctionRef 接收 Lambda 的写法。
 type: blog
 slug: ue-uparam-reference-metadata
 categoryId: ue
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: UE 蓝图函数参数：引用方向与显示名称封面
+websiteCoverUrl: /media/covers/blog/ue-uparam-reference-metadata-20261101.webp
+lang: zh
 translationKey: ue-uparam-reference-metadata
-websiteCoverUrl: "/media/covers/blog/ue-uparam-reference-metadata-20261101.webp"
-coverAlt: "UE C++ 函数参数：UPARAM 元数据与 Lambda 回调封面"
 ---
 
 不常见的函数参数

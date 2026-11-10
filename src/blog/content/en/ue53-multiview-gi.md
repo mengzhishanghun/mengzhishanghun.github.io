@@ -1,6 +1,6 @@
 ---
 title: Fixing Missing GI Across Multiple Views in UE 5.3
-description: A UE 5.3 source-build record of changing the maximum view count from 2 to 3 across seven locations, with a source screenshot and version limits.
+description: "Increase the maximum view count from two to three in a UE 5.3 source build to address missing Lumen GI in a three-screen scene. Screenshots mark seven source changes; the engine must be rebuilt."
 type: blog
 slug: ue53-multiview-gi
 categoryId: ue
@@ -19,9 +19,9 @@ tags:
   - UE 5.3
 lang: en
 translationKey: ue53-multiview-gi
-sourceHash: "733f881a1ac880ca9fea55bbcdc6996c7da191bd196b9a111e5f6bb8fb428e1a"
+sourceHash: "ffccc5248e47f32b12f605d40a5b481ed541b402d813fe98e17fedca6b88245f"
 translationStatus: translated
-generatedBodyHash: 4c74508b6d95981f84f123ce0954f14e13be03b00a94d6fd6386aa235411ca9b
+generatedBodyHash: "4c74508b6d95981f84f123ce0954f14e13be03b00a94d6fd6386aa235411ca9b"
 websiteCoverUrl: "/media/covers/blog/ue53-multiview-gi-20261101.webp"
 coverAlt: "Fixing Missing GI Across Multiple Views in UE 5.3 cover"
 ---

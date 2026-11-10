@@ -20,9 +20,9 @@ coverAlt: Herbal exhibition cover
 websiteCoverUrl: /assets/cases/herbal-exhibition-cover.png
 translationKey: herbal-exhibition
 lang: en
-sourceHash: 49e42615e6e52892eb103d8ab504a40d7f39a32096d68e5dba58f42dbc903321
+sourceHash: "02b75a0753021fc4e28868c7f089408f518d75cd0c2113b72225a0b2ad3715bf"
 translationStatus: translated
-generatedBodyHash: b482c0a4c143350c4456c5a4ac9482088732f4c660dc820ab5bb7dfbea3a014f
+generatedBodyHash: "1bfe9a8080c69dbc6f43b1bea521d3ac0eb996b95047e70ed1fd9c1996c437ee"
 ---
 
 ## Project overview
@@ -39,7 +39,7 @@ Users can find herbs by category or name, view the selected information and mode
 | Data and resources | Display and management applications | Organization and reading of herbs, categories, regions, slides and media |
 | External management tool | Content maintainers | Adding and editing records, importing media, validation and saving |
 
-## Features I worked on
+## Features and implementation
 
 ### Search and category browsing
 
@@ -59,31 +59,7 @@ I organized the relationship between slide records and magnification images, inc
 
 The companion tool supports adding and editing herb and slide records and importing and checking images, audio and models. After maintainers save updates, restarting the display application loads the latest content.
 
-Supported media includes PNG, JPG and JPEG images; OGG, WAV and MP3 audio; and self-contained GLB models. Imported media must meet the display application's format requirements.
-
-## Challenges and implementation
-
-### Associating several media types with one record
-
-Descriptions, images, voice, models and slides need different presentation methods. A text list alone cannot support the full browsing experience.
-
-I organized media associations around content records, then passed the current selection to the corresponding presentation logic. Queries, resource preparation and scene presentation can be handled separately, including multiple models and slide images for one herb.
-
-### Coordinating selection and resource loading
-
-Models, images and audio need to be prepared after a user selects content. I integrated asynchronous preloading and coordinated resource preparation with presentation, keeping data queries and media loading as separate responsibilities.
-
-### Browsing built-in and external content together
-
-The application contains built-in information and content added through the management tool. Separate interaction paths for each would fragment browsing and maintenance.
-
-I organized both sources into the same browsing list while retaining the separation between queries and scene presentation. Maintainers update records and resources externally, and the display reads saved content at startup.
-
-### Checking records together with their media
-
-Adding content requires more than a name: images, audio and models must meet the display's reading requirements. The management tool therefore provides record editing, media import and save-time checks together.
-
-Models use self-contained GLB files, while images and audio are checked against supported formats. The tool handles maintenance operations and the display focuses on reading and presenting the content.
+Supported media includes PNG, JPG and JPEG images; OGG, WAV and MP3 audio; and self-contained GLB models. Import checks cover image decoding, audio headers and extensions, and GLB structure and internal references so that saved media meets the display application's requirements.
 
 ## Maintenance workflow
 

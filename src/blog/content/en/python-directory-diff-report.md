@@ -1,6 +1,6 @@
 ---
 title: "Comparing directories in Python: start with a content-difference report"
-description: When only some files changed between two large directories, you need additions, modifications and removals. The original workflow also copied files an
+description: "Compare old and new directories with dircmp, copy additions and modifications, and generate a deletion list. Explains shallow comparison, filtering and cleanup risks, with a report-only implementation."
 type: blog
 slug: python-directory-diff-report
 categoryId: python
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: python-directory-diff-report
 publishedAt: 2026-10-13
-sourceHash: "f3c6d24e02ef4a394742317ef64916bf702fc498e2aff39e0552e3251ec09ae8"
-generatedBodyHash: 742be2f97bc48ff3b38dda55773a42d4a9ca72a07aa138d30c3ccef248796d5e
+sourceHash: "aab1e28e682a21a2358d2f1f5a688f9e19f0bd955aa3c99ca40c5ccd2621f8bd"
+generatedBodyHash: "742be2f97bc48ff3b38dda55773a42d4a9ca72a07aa138d30c3ccef248796d5e"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/python-directory-diff-report-20261101.webp"
 coverAlt: "Comparing directories in Python: start with a content-difference report cover"

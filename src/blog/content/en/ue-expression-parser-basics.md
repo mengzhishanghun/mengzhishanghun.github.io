@@ -1,6 +1,6 @@
 ---
-title: Exploring syntax parsing for game formulas in UE
-description: Exploring a UE C++ parser for game-event formulas, from arithmetic, conditions, and custom attributes to string validation, tokenization, attribute substitution, and evaluation by precedence.
+title: "Game formula parsing: grammar and operator precedence"
+description: "Parse text formulas containing arithmetic, conditions and game attributes with UE C++, from syntax checking to the calculated result."
 type: blog
 slug: ue-expression-parser-basics
 categoryId: ue
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-expression-parser-basics
 publishedAt: 2026-10-13
-sourceHash: "40ff8d340d347ed658eabd4ac87841de751ce3e3e86fc42ce96d71db9a0281a8"
-generatedBodyHash: 5b93e4544481df519a226b7adc37b019c4d3c23bbf12b356145b5d6b3a3fce6e
+sourceHash: "18c18eaa374c8c485641e770b0b15ee2a887c45101edb905b3db742b33932e8c"
+generatedBodyHash: "5b93e4544481df519a226b7adc37b019c4d3c23bbf12b356145b5d6b3a3fce6e"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/ue-expression-parser-basics-20261101.webp"
 coverAlt: "Exploring syntax parsing for game formulas in UE cover"

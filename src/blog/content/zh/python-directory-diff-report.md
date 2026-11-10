@@ -1,6 +1,6 @@
 ---
 title: Python 比较目录：先生成内容差异报告
-description: 两个大目录只改了一部分文件，希望知道新增、修改和删除项。原方案还复制文件并安排删除；本篇收窄为 Python 3 标准库的只读报告，避免把比对与修改混在一起。
+description: 用 dircmp 比较新旧目录，复制新增和修改文件并生成删除清单，说明浅比较、过滤规则和清理风险，并给出只生成报告的实现。
 type: blog
 slug: python-directory-diff-report
 categoryId: python
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: Python 比较目录：先生成内容差异报告封面
+websiteCoverUrl: /media/covers/blog/python-directory-diff-report-20261101.webp
+lang: zh
 translationKey: python-directory-diff-report
-websiteCoverUrl: "/media/covers/blog/python-directory-diff-report-20261101.webp"
-coverAlt: "Python 目录差异补丁：复制增改文件与生成删除清单封面"
 ---
 
 文件批量对比

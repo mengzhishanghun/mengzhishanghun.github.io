@@ -1,6 +1,6 @@
 ---
 title: "Unreal Blueprint parameters: references and display names"
-description: "A C++ reference parameter may appear as a different Blueprint pin direction than expected. Type, `const` and metadata all matter. These UE5 reflected "
+description: "Complete declaration examples for Blueprint reference parameters, display names, abstract-class selection, interface constraints and passing Lambdas to TFunctionRef."
 type: blog
 slug: ue-uparam-reference-metadata
 categoryId: ue
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-uparam-reference-metadata
 publishedAt: 2026-10-13
-sourceHash: "a07aca200069b36ec2c9f1756ddca8a8a2900b93b6d35d6170f0c17f0ac689d1"
-generatedBodyHash: 1676ef8a5bc5ba4065e087ee9aed773a7911eece2b0cbdb81a3836fbd651c00f
+sourceHash: "6e5bc0eb65051833c033af10bd0954267dc9f1eb86d9afee48efe602a7f8cd83"
+generatedBodyHash: "1676ef8a5bc5ba4065e087ee9aed773a7911eece2b0cbdb81a3836fbd651c00f"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/ue-uparam-reference-metadata-20261101.webp"
 coverAlt: "Unreal Blueprint parameters: references and display names cover"

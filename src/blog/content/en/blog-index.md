@@ -8,9 +8,9 @@ websiteRoute: /blog/
 template: blog/index.html
 lang: en
 translationKey: blog-index
-sourceHash: bee2cc540b8f6993ac2fdad014d02da4c0bdd21f1fc4e059a5d36eef06ab9a7b
+sourceHash: "4bc4d610f7023b0cffa8a9102deeed4bf4e65af36310742bba8f8ae9eb15f02f"
 translationStatus: translated
-generatedBodyHash: d2cfa3c365bde88696b59508f4b7a32450d6e2100c9cb93b46ee2d2b1e15de88
+generatedBodyHash: "830377d90930155bceb24933540cd3f84d84190dd88d62fbc490baf5fbeab85f"
 ---
 
 ![](/media-occurrence/page%3Ablog-index%3Amedia%3A1)
@@ -56,7 +56,7 @@ Technical notes, debugging and development practice.
 - [Unreal DataTable and JSON: validate before replacing](/blog/ue-datatable-json-import-export/)
 - [Saving Unreal editor assets: checkout, dirty state and results](/blog/ue-editor-asset-saving/)
 - [Breaking Level Instances in batches: bound the work and stop on failure](/blog/ue-level-instance-break-safety/)
-- [Exploring syntax parsing for game formulas in UE](/blog/ue-expression-parser-basics/)
+- [Game formula parsing: grammar and operator precedence](/blog/ue-expression-parser-basics/)
 - [Everyday C++ choices: containers, sorting and value categories](/blog/cpp-algorithms-containers-value-categories/)
 - [Updating Excel by column names in Python: tuple keys and separate output](/blog/python-excel-column-update/)
 - [Comparing directories in Python: start with a content-difference report](/blog/python-directory-diff-report/)

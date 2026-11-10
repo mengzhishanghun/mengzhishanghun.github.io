@@ -1,6 +1,6 @@
 ---
 title: "Fab submission notes: review the package and instructions together"
-description: A feature working in the development project does not prove that a delivery package can be installed and reproduced. These notes distill past Unreal p
+description: "Directory layout, .uplugin descriptors and FilterPlugin.ini configuration for submitting UE plugins to Fab, with Blueprint-only project compilation and delivery-package checks."
 type: blog
 slug: ue-fab-submission-notes
 categoryId: ue
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-fab-submission-notes
 publishedAt: 2026-10-13
-sourceHash: "323c6b4f66b47f7d8974416aa329f2924d7b0eac7a92205dd43b9dc331b40a71"
-generatedBodyHash: 458b387abdafb4df331422ca7b108d931a0718e63ac4cbbd7172c74b47213a4b
+sourceHash: "6717ac7465cc0bbe8971fa90fb3063611a1c7ca442e3c938afbc749fefbba9d1"
+generatedBodyHash: "458b387abdafb4df331422ca7b108d931a0718e63ac4cbbd7172c74b47213a4b"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/ue-fab-submission-notes-20261101.webp"
 coverAlt: "Fab submission notes: review the package and instructions together cover"

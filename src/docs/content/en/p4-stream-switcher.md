@@ -17,9 +17,9 @@ documentKind: product-manual
 websiteRoute: /docs/zh/tools/p4-stream-switcher/
 lang: en
 translationKey: p4-stream-switcher
-sourceHash: 5c9712de65e28e0d8cd2a130ac192e101524f2a733e50a51937a8d1056caf711
+sourceHash: "f9e8ece425a210d25b17e7bf0b903dffab00fed059ed1cb8603d08a2c985f91c"
 translationStatus: translated
-generatedBodyHash: e4c9801f7d9e07747a887c904fcbc84d318bde45c3c80c9be21a1e9786577e17
+generatedBodyHash: "e4c9801f7d9e07747a887c904fcbc84d318bde45c3c80c9be21a1e9786577e17"
 ---
 
 # P4StreamSwitcher usage guide

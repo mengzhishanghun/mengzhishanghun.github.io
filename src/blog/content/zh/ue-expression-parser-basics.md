@@ -1,6 +1,6 @@
 ---
-title: 在 UE 中探索游戏公式的语法解析
-description: 尝试在 UE C++ 中实现游戏事件公式解析，让文本表达四则运算、条件判断和自定义属性，并结合代码梳理字符串校验、Token 拆分、属性替换与优先级求值。
+title: 游戏公式解析：先定义语法，再处理优先级
+description: 用 UE C++ 解析包含四则运算、条件判断和游戏属性的文本公式，说明从语法检查到计算结果的实现过程。
 type: blog
 slug: ue-expression-parser-basics
 categoryId: ue
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: 游戏公式解析：先定义语法，再处理优先级封面
+websiteCoverUrl: /media/covers/blog/ue-expression-parser-basics-20261101.webp
+lang: zh
 translationKey: ue-expression-parser-basics
-websiteCoverUrl: "/media/covers/blog/ue-expression-parser-basics-20261101.webp"
-coverAlt: "UE C++ 游戏公式解析：四则运算、条件判断与属性读取封面"
 ---
 
 事件简单公式解析

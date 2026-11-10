@@ -30,9 +30,9 @@ links:
     href: https://github.com/MZSH-Tools/P4StreamSwitcher
 lang: en
 translationKey: p4-stream-switcher
-sourceHash: "f3d697c34af886b8c65ef73a896d2473f6b8227a0a6990f15a7babf9ef4a7782"
+sourceHash: "20b3f6e04789b23009e0f40f0398a71f75c16c45852add010aceaabaaa0849bc"
 translationStatus: translated
-generatedBodyHash: b79994a66f0b3557d8d90e8f507da8b8e4ddf01bc5b25938c7ab8a9b57c65c09
+generatedBodyHash: "b79994a66f0b3557d8d90e8f507da8b8e4ddf01bc5b25938c7ab8a9b57c65c09"
 coverAlt: "P4StreamSwitcher cover"
 websiteCoverUrl: "/media/covers/works/p4-stream-switcher-20261101.webp"
 ---

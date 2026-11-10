@@ -1,6 +1,6 @@
 ---
 title: "Unreal DataTable and JSON: validate before replacing"
-description: JSON files can become DataTable rows, but clearing the table before parsing can destroy old data on a later failure. This workflow targets a UE5 C++ e
+description: "Use C++ to import a folder of JSON files into a DataTable and export each row back to JSON. Covers the implementation and considerations for both directions."
 type: blog
 slug: ue-datatable-json-import-export
 categoryId: ue
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-datatable-json-import-export
 publishedAt: 2026-10-13
-sourceHash: "a8aabe7915af31573af2b50885b94a68e06bed822fa0b116286b1d76006b1c74"
-generatedBodyHash: c90bed1d2f46712c2525850c50aa35e007c25e99c9a34882752836aa8469c0a0
+sourceHash: "8758be2647b0f7834cb99142139c0645bf070d090197fd9dd26b4f7a3ab59758"
+generatedBodyHash: "c90bed1d2f46712c2525850c50aa35e007c25e99c9a34882752836aa8469c0a0"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/ue-datatable-json-import-export-20261101.webp"
 coverAlt: "Unreal DataTable and JSON: validate before replacing cover"

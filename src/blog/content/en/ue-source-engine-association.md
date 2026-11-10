@@ -1,6 +1,6 @@
 ---
 title: "Source-built Unreal on Windows: a shared engine association"
-description: On Windows, copies of the same source-built engine can receive different registration identifiers. That creates unnecessary `EngineAssociation` change
+description: "Register a source-engine directory in Windows with a batch script and use a shared association name for .uproject files. Includes the initial script, a deduplicated revision and registry precautions."
 type: blog
 slug: ue-source-engine-association
 categoryId: ue
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-source-engine-association
 publishedAt: 2026-10-13
-sourceHash: "cc274cc7861538cbd0463bf6c086d62830c9fcdee90525dbed9d1467a08004e5"
-generatedBodyHash: 95837c4a7b5df66d3871b5caab176e02666e0f6c1f808674fe06c34a021ecfa1
+sourceHash: "ed22fcede0f52bd9e68cd4dc5d18e7bbe518ff29d79cd3d3b72238c8d2478ab0"
+generatedBodyHash: "95837c4a7b5df66d3871b5caab176e02666e0f6c1f808674fe06c34a021ecfa1"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/ue-source-engine-association-20261101.webp"
 coverAlt: "Source-built Unreal on Windows: a shared engine association cover"

@@ -1,6 +1,6 @@
 ---
 title: Windows 源码版 UE：让团队使用一致的引擎关联名称
-description: Windows 下，同一份源码引擎可能在不同电脑上注册成不同标识，导致 `.uproject` 的 `EngineAssociation` 产生无意义变更。统一关联名称可以减少这类差异；它不决定 UnrealBuildTool 是否重新编译。
+description: 用批处理脚本把源码引擎目录注册到 Windows，并用一致的名称关联 .uproject，附初版、去重更新版与注册表修改注意事项。
 type: blog
 slug: ue-source-engine-association
 categoryId: ue
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: Windows 源码版 UE：让团队使用一致的引擎关联名称封面
+websiteCoverUrl: /media/covers/blog/ue-source-engine-association-20261101.webp
+lang: zh
 translationKey: ue-source-engine-association
-websiteCoverUrl: "/media/covers/blog/ue-source-engine-association-20261101.webp"
-coverAlt: "Windows 源码版 UE：用批处理统一引擎关联名称封面"
 ---
 
 Unreal源码版注册表修改

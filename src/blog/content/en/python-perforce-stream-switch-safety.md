@@ -1,6 +1,6 @@
 ---
 title: "Switching Perforce stream workspaces: preflight and failure boundaries"
-description: A button that changes Client Stream, syncs and cleans can place local changes under the wrong view. This article describes a generic Python protection
+description: "Use P4Python and Tkinter to select local stream workspaces, projects and branches and change Stream and Root. Covers sync -k, clean, progress, logs, local-change protection and failure handling."
 type: blog
 slug: python-perforce-stream-switch-safety
 categoryId: python
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: python-perforce-stream-switch-safety
 publishedAt: 2026-10-13
-sourceHash: "d28577bfce61a3dc4842261b952a8812bd57e759fc8f10ce0e912e109298bbea"
-generatedBodyHash: c289e658d1b06ffa6a060f9f3b7814ea242827dc499919c7571475e156344bd5
+sourceHash: "96cc1c834fe6f487d16078fd809ce262d757cf2c39800d2ab9fb1fe9ff399058"
+generatedBodyHash: "c289e658d1b06ffa6a060f9f3b7814ea242827dc499919c7571475e156344bd5"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/python-perforce-stream-switch-safety-20261101.webp"
 coverAlt: "Switching Perforce stream workspaces: preflight and failure boundaries cover"

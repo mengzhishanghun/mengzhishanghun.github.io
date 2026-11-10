@@ -1,6 +1,6 @@
 ---
 title: "Breaking Level Instances in batches: bound the work and stop on failure"
-description: Breaking a Level Instance may expose nested instances. A loop that continues whenever it finds an instance can repeat forever when one cannot be broke
+description: "Break Level Instances in a scene with C++, including nested instances exposed during the process, and examine the loop's exit conditions."
 type: blog
 slug: ue-level-instance-break-safety
 categoryId: ue
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-level-instance-break-safety
 publishedAt: 2026-10-13
-sourceHash: "65dee66a262764ffc47470abd42da229c5b4a4dc62569acea84dcca91656f506"
-generatedBodyHash: 419af752b561a69ac513db660f75df48995cf1838aeabaa27dfb14c7c40fabb3
+sourceHash: "24db9d75aa1f4f15fdda454d7aed48ebf50de39d1ad4dbf234844c25f4dc240a"
+generatedBodyHash: "419af752b561a69ac513db660f75df48995cf1838aeabaa27dfb14c7c40fabb3"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/ue-level-instance-break-safety-20261101.webp"
 coverAlt: "Breaking Level Instances in batches: bound the work and stop on failure cover"

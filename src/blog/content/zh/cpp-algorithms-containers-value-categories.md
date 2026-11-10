@@ -1,6 +1,6 @@
 ---
 title: C++ 常用选择：容器、排序与值类别
-description: 容器和排序应从访问方式与顺序要求选择，而不是根据旧版编译器的实现细节。本文采用 C++17 标准语义，合并容器、算法和引用的常见误区。
+description: 介绍常用排序算法的步骤与稳定性、vector/deque/list 的构造和选择、容器适配器及左右值引用，结合示例说明历史实现记录与 C++17 标准语义的区别。
 type: blog
 slug: cpp-algorithms-containers-value-categories
 categoryId: cpp
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: C++ 常用选择：容器、排序与值类别封面
+websiteCoverUrl: /media/covers/blog/cpp-algorithms-containers-value-categories-20261101.webp
+lang: zh
 translationKey: cpp-algorithms-containers-value-categories
-websiteCoverUrl: "/media/covers/blog/cpp-algorithms-containers-value-categories-20261101.webp"
-coverAlt: "C++ 常用排序算法、STL 容器与左右值引用封面"
 ---
 
 常用算法

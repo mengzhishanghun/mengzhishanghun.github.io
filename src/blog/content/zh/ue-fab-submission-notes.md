@@ -1,6 +1,6 @@
 ---
 title: Fab 提交经验：把发布包和使用说明一起检查
-description: 功能在开发工程里能用，不等于交付包能安装和复现。这份记录提炼过去的 UE 内容发布经验，不介绍具体插件产品，也不声称代表当前 Fab 审核规则。
+description: 介绍 UE 插件上传 Fab 时的目录结构、.uplugin 描述符和 FilterPlugin.ini 配置，以及纯蓝图项目编译与交付包检查。
 type: blog
 slug: ue-fab-submission-notes
 categoryId: ue
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: Fab 提交经验：把发布包和使用说明一起检查封面
+websiteCoverUrl: /media/covers/blog/ue-fab-submission-notes-20261101.webp
+lang: zh
 translationKey: ue-fab-submission-notes
-websiteCoverUrl: "/media/covers/blog/ue-fab-submission-notes-20261101.webp"
-coverAlt: "UE 插件提交 Fab：目录结构、描述符与打包文件封面"
 ---
 
 上传Fab须知

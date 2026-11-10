@@ -1,6 +1,6 @@
 ---
 title: 批量拆开 Level Instance：范围明确，失败就停
-description: 拆开 Level Instance 可能暴露更多嵌套实例。每轮只要找到实例就继续循环，遇到无法拆开的实例会一直重复。本文仅讨论 UE5 编辑器中的批量展开流程，不能作为运行时操作教程。
+description: 用 C++ 批量拆开场景中的 Level Instance，包括拆开后出现的嵌套实例，并分析循环退出条件。
 type: blog
 slug: ue-level-instance-break-safety
 categoryId: ue
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: 批量拆开 Level Instance：范围明确，失败就停封面
+websiteCoverUrl: /media/covers/blog/ue-level-instance-break-safety-20261101.webp
+lang: zh
 translationKey: ue-level-instance-break-safety
-websiteCoverUrl: "/media/covers/blog/ue-level-instance-break-safety-20261101.webp"
-coverAlt: "UE 递归拆开场景中的 LevelInstance封面"
 ---
 
 破坏所有LevelInstance

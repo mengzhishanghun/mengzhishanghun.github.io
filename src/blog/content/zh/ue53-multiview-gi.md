@@ -1,6 +1,6 @@
 ---
 title: 多视角GI丢失问题的解决办法
-description: 以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，记录七处修改的源码截图与适用限制。
+description: 以 UE 5.3 源码版为例，将相关实现的最大视角数量从 2 调整为 3，处理三屏场景的 Lumen GI 丢失问题。七处源码修改用截图标出，修改后需要重新构建引擎。
 type: blog
 slug: ue53-multiview-gi
 categoryId: ue
@@ -17,10 +17,10 @@ tags:
   - Lumen
   - 多视角
   - UE 5.3
-lang: "zh"
+coverAlt: 多视角GI丢失问题的解决办法封面
+websiteCoverUrl: /media/covers/blog/ue53-multiview-gi-20261101.webp
+lang: zh
 translationKey: ue53-multiview-gi
-websiteCoverUrl: "/media/covers/blog/ue53-multiview-gi-20261101.webp"
-coverAlt: "UE 5.3 多视角 Lumen GI：视角数量上限修改封面"
 ---
 
 多视角GI丢失问题的解决办法

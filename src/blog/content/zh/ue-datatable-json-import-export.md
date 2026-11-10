@@ -1,6 +1,6 @@
 ---
 title: UE DataTable 与 JSON：先验证，再替换
-description: 文件夹中的 JSON 行可以汇成 DataTable，但“先清空表再逐文件解析”会在中途失败时丢失旧数据。适用于 UE5 C++ 的编辑器导入工具；运行时修改内存表与保存编辑器资产是两件事。下面给出流程和生命周期片段，未编译为完整工具。
+description: 用 C++ 将 JSON 文件夹导入 DataTable，再把表中每一行导出为 JSON 文件，说明双向转换的实现与注意事项。
 type: blog
 slug: ue-datatable-json-import-export
 categoryId: ue
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: UE DataTable 与 JSON：先验证，再替换封面
+websiteCoverUrl: /media/covers/blog/ue-datatable-json-import-export-20261101.webp
+lang: zh
 translationKey: ue-datatable-json-import-export
-websiteCoverUrl: "/media/covers/blog/ue-datatable-json-import-export-20261101.webp"
-coverAlt: "UE 中 DataTable 与 JSON 文件夹的双向转换封面"
 ---
 
 Json导入导出DataTable

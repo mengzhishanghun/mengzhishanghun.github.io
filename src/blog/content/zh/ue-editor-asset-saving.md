@@ -1,6 +1,6 @@
 ---
 title: UE 编辑器资产保存：签出、脏标记与保存结果
-description: 自动化工具修改了资产，磁盘文件却未更新，常见原因包括包未标脏、目标路径错误或版本控制阻止写入。本文限于 UE5 编辑器资产保存；不把编辑器 API 当成游戏运行时的通用存档方案。
+description: 给出 SaveLoadedAsset 的完整声明与实现，说明包标脏、路径转换和保存结果，并区分文件只读属性与 Perforce 签出权限。
 type: blog
 slug: ue-editor-asset-saving
 categoryId: ue
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: UE 编辑器资产保存：签出、脏标记与保存结果封面
+websiteCoverUrl: /media/covers/blog/ue-editor-asset-saving-20261101.webp
+lang: zh
 translationKey: ue-editor-asset-saving
-websiteCoverUrl: "/media/covers/blog/ue-editor-asset-saving-20261101.webp"
-coverAlt: "UE 自定义资产保存：SaveLoadedAsset 声明与实现封面"
 ---
 
 资产保存

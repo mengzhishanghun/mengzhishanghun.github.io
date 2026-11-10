@@ -1,6 +1,6 @@
 ---
 title: Windows UE 5.6 与 Cursor：先跑通构建，再处理编辑体验
-description: 这是一份 Windows、UE 5.6 的配置经历整理。原记录未留下完整 Cursor 和扩展版本，因此不能视为当前版本兼容性承诺。目标是用 Cursor 编辑 UE C++，并保留独立可用的编译与调试入口。
+description: 记录 Windows、UE 5.6 环境下安装编译工具与扩展、生成工作区、设置 IntelliSense、启动编译调试的步骤，以及遇到的 cppvsdbg 不受支持问题。
 type: blog
 slug: ue-cursor-workflow-notes
 categoryId: ue
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: Windows UE 5.6 与 Cursor：先跑通构建，再处理编辑体验封面
+websiteCoverUrl: /media/covers/blog/ue-cursor-workflow-notes-20261101.webp
+lang: zh
 translationKey: ue-cursor-workflow-notes
-websiteCoverUrl: "/media/covers/blog/ue-cursor-workflow-notes-20261101.webp"
-coverAlt: "Windows UE 5.6 的 Cursor 安装、配置与调试记录封面"
 ---
 
 Cursor+UE从0开始，入坑到退坑指南

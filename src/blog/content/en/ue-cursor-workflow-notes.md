@@ -1,6 +1,6 @@
 ---
 title: "Cursor with Unreal 5.6 on Windows: establish the build first"
-description: These notes describe Windows and UE 5.6. The original record did not preserve complete Cursor or extension versions, so it is not a compatibility prom
+description: "Windows and UE 5.6 notes on build tools and extensions, workspace generation, IntelliSense, building and debugging, including the encountered unsupported cppvsdbg issue."
 type: blog
 slug: ue-cursor-workflow-notes
 categoryId: ue
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-cursor-workflow-notes
 publishedAt: 2026-10-13
-sourceHash: "820f5e12466bf42b0af8ebbc11bb59b0140df09455124f692ef516a18adb7368"
-generatedBodyHash: 52170ed031d610df3e7e6a6a7ee9cffc1a11a76dfcd5f550ef0b1e9d55ba8dfc
+sourceHash: "c11ac58dd9a5feb641be8d99bd9c788758a46aee5f826049012a5cf6abd8c616"
+generatedBodyHash: "52170ed031d610df3e7e6a6a7ee9cffc1a11a76dfcd5f550ef0b1e9d55ba8dfc"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/ue-cursor-workflow-notes-20261101.webp"
 coverAlt: "Cursor with Unreal 5.6 on Windows: establish the build first cover"

@@ -1,6 +1,6 @@
 ---
 title: Perforce 切换流工作区：预检与失败边界
-description: 一个按钮同时改 Client Stream、同步和清理，容易让本地修改落在错误视图中。本文仅介绍通用 Python 自动化的保护流程，完全去掉私人服务器、账号和工作区信息。配套代码使用 fake P4，不连接真实服务器。
+description: 用 P4Python 与 Tkinter 筛选本机流工作区、选择项目和分支、修改 Stream 与 Root，结合 sync -k、clean 显示进度和日志，并说明切换前的本地保护与失败处理。
 type: blog
 slug: python-perforce-stream-switch-safety
 categoryId: python
@@ -17,10 +17,10 @@ tags: []
 productIds: []
 workIds: []
 docIds: []
-lang: "zh"
+coverAlt: Perforce 切换流工作区：预检与失败边界封面
+websiteCoverUrl: /media/covers/blog/python-perforce-stream-switch-safety-20261101.webp
+lang: zh
 translationKey: python-perforce-stream-switch-safety
-websiteCoverUrl: "/media/covers/blog/python-perforce-stream-switch-safety-20261101.webp"
-coverAlt: "用 Python 制作 Perforce 工作区切流工具封面"
 ---
 
 一键切换Perforce流工作区

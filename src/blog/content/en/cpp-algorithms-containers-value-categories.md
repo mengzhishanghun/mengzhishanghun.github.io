@@ -1,6 +1,6 @@
 ---
 title: "Everyday C++ choices: containers, sorting and value categories"
-description: Choose containers and sorting by access patterns and ordering requirements rather than old compiler implementation details. This article uses C++17 se
+description: "Common sorting steps and stability, vector/deque/list construction and selection, container adapters and value references. Examples distinguish historical implementation notes from C++17 semantics."
 type: blog
 slug: cpp-algorithms-containers-value-categories
 categoryId: cpp
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: cpp-algorithms-containers-value-categories
 publishedAt: 2026-10-13
-sourceHash: "9568af26e4bc1c67c50b9c7f426202246d84d0431cf5c830b262c5ce38ecfe0a"
-generatedBodyHash: fb3a32efc8cd0e474dfff23965ac3cbea2de97617bcbf54df7dda347180b4d08
+sourceHash: "90565d61025d1caee0ab7ac5b6769a260954c862c5dbf2aa0cfb7481ad5b9f22"
+generatedBodyHash: "fb3a32efc8cd0e474dfff23965ac3cbea2de97617bcbf54df7dda347180b4d08"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/cpp-algorithms-containers-value-categories-20261101.webp"
 coverAlt: "Everyday C++ choices: containers, sorting and value categories cover"

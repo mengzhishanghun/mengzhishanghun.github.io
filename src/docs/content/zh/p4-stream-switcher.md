@@ -113,5 +113,5 @@ Config/Local/*
 ## 相关内容
 
 - [作品介绍](</zh/works/p4-stream-switcher/>)
-- [开发案例](</zh/cases/perforce-workspace-pool/>)
+- [开发案例](</zh/blog/perforce-workspace-pool/>)
 - [Python 切流工具博客](</zh/blog/python-perforce-stream-switch-safety/>)

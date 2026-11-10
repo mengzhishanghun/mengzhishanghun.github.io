@@ -1,6 +1,6 @@
 ---
 title: "Updating Excel by column names in Python: tuple keys and separate output"
-description: A reference workbook supplies values to update a target using several matching columns. Joining keys with underscores makes `("A_B", "C")` collide wit
+description: "Select reference and target workbooks with Tkinter and update chosen columns using multiple matching columns. Includes log export, saving, composite-key collisions, worksheet selection and overwrite considerations."
 type: blog
 slug: python-excel-column-update
 categoryId: python
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: python-excel-column-update
 publishedAt: 2026-10-13
-sourceHash: "20327c47c8a4710f2c5b6897b3a694134bfdb6ce60304c490f78be4fa79caa62"
-generatedBodyHash: 0f585d005a8c64015fcfe6b0446acfba315d4503c62af5db04a133a33c3e867f
+sourceHash: "e42919f20f78b3956765ce4b819ec3455f7727d566a52d27a3f713dbae56ea0d"
+generatedBodyHash: "0f585d005a8c64015fcfe6b0446acfba315d4503c62af5db04a133a33c3e867f"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/python-excel-column-update-20261101.webp"
 coverAlt: "Updating Excel by column names in Python: tuple keys and separate output cover"

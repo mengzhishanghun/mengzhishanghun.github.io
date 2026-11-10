@@ -1,6 +1,6 @@
 ---
 title: "Saving Unreal editor assets: checkout, dirty state and results"
-description: "An automation tool may change an asset without updating its file. Possible causes include a clean package, an incorrect target path or source-control "
+description: "The complete SaveLoadedAsset declaration and implementation, including package dirty flags, path conversion and save results. Distinguishes read-only file attributes from Perforce checkout permissions."
 type: blog
 slug: ue-editor-asset-saving
 categoryId: ue
@@ -19,8 +19,8 @@ docIds: []
 lang: en
 translationKey: ue-editor-asset-saving
 publishedAt: 2026-10-13
-sourceHash: "b5dc2a4afbcdd6586370f4270b2d7f24ec84fd86379428346231c1b4df3e9323"
-generatedBodyHash: 3049ef36c2b5044b925341194c62e32e50621beb1a56bc35ae8c1ce3962e86b3
+sourceHash: "0ac9d7e9f6489eb6c27a934258d51e904c367dae7db02a4c485962dffc1bbf94"
+generatedBodyHash: "3049ef36c2b5044b925341194c62e32e50621beb1a56bc35ae8c1ce3962e86b3"
 translationStatus: translated
 websiteCoverUrl: "/media/covers/blog/ue-editor-asset-saving-20261101.webp"
 coverAlt: "Saving Unreal editor assets: checkout, dirty state and results cover"
