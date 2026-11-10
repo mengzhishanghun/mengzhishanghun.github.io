@@ -19,9 +19,9 @@ coverAlt: Flight simulation cover
 websiteCoverUrl: /assets/cases/flight-simulation-cover.png
 translationKey: flying-car-simulator
 lang: en
-sourceHash: "113d0735de950d65f311d71577144ed94e631c1d9ee791a6af7419a712ba7bbd"
+sourceHash: "ce7d862af38c5aa29bdd5166dfd049beefe6ffa1bf76ed1ef3fa4bbb3a640843"
 translationStatus: translated
-generatedBodyHash: "81334653f012ae44736ddbc5a3c6efe5689fd27fb0dbd15b4d677c7a1fd8db7e"
+generatedBodyHash: "a1b11f16e833430c01bd402a7d6b5e1fa3c7d6c55ae84d6d04a8363d5a18733e"
 ---
 
 ## Project overview
@@ -83,15 +83,3 @@ The previous path used an interface with a movement duration, and waiting for th
 I switched to nonblocking `setVelocityCommandBodyFrame`. Each Pawn Tick submits the current velocity and heading target, then lets the game thread continue. Subsequent frames maintain control instead of one call waiting for an entire action to finish.
 
 If both the project's camera system and AirSim camera management initialize, a viewpoint change can look like a vehicle motion problem. I adjusted CameraDirector initialization, separated flight control from the observation view and camera ownership, and worked on the related VR and camera configuration.
-
-## Results and scope
-
-The integration provides a path from input through velocity and yaw calculation, coordinate conversion and command submission each frame. Nonblocking calls let the game thread continue after submission, while translation and heading can be adjusted independently.
-
-The current per-axis limits do not impose a uniform maximum diagonal speed. The control gains use P with I and D set to zero; complete PID tuning still requires separate validation. Dynamics accuracy, frame rate and device response depend on the model, simulation step and runtime environment.
-
-Motion platform and VR work covers the corresponding integration and tests. Complete hardware synchronization and the full VR experience still require validation with the actual devices and usage scenario.
-
-## Related projects
-
-- [Motion platform and virtual filming](/cases/motion-platform-filming/): related motion solving, signal processing and data transmission.

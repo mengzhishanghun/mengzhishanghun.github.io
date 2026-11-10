@@ -20,9 +20,9 @@ coverAlt: Six-axis triple-screen driving simulator cover
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 translationKey: driving-simulator-three-screen
 lang: en
-sourceHash: 50ccdb6dbe9713a9706cd5fdf5a7df3c8dae1d9aa6c712069a0cbfa55fe99835
+sourceHash: "07818b480b12aeb4dd84fe42c8992ad2b1318ffaeb16a00f2a5cce7bdf3bce0c"
 translationStatus: translated
-generatedBodyHash: c1d32f39ffe7a593db72f23567fd4f4bda35ae1581b13bc81cdac9a3d4b80baf
+generatedBodyHash: "cb044f74f89c1c2fe531693f962d5ae5ec11c60ea2fa877ac1db34de88c1e7a0"
 ---
 
 ## Project overview
@@ -87,7 +87,7 @@ I worked on global illumination, consistent exposure and display integration acr
 
 In the historical UE 5.3 implementation, view-count limits in related rendering data affected global illumination in the third view. Multiple LocalPlayers calculating exposure independently could also produce different brightness levels within the same driving scene.
 
-I investigated and addressed the multiview GI limits and adjusted StereoPass settings for secondary views through a custom LocalPlayer to connect their exposure data. These changes target the engine versions used at the time; later versions require their corresponding implementations to be checked.
+I investigated and addressed the multiview GI limits and adjusted StereoPass settings for secondary views through a custom LocalPlayer so the views share exposure calculation data. These changes target the engine versions used at the time; later versions require their corresponding implementations to be checked.
 
 #### Related blogs
 
@@ -157,9 +157,3 @@ I worked on scene optimization and runtime stalls, investigated multi-screen ren
 Driving simulation continuously updates vehicle motion, device input, several views and the interface. A low frame rate affects visual smoothness and can expose problems in how vehicle updates handle frame timing.
 
 I checked scene rendering, vehicle motion and device input separately, then verified adjustments through integration in the running project.
-
-## Results and version scope
-
-The project combines three-screen display and six-axis motion feedback for scene exploration and driving-school practice, with an AI coaching backend. Client APIs expose vehicle, training and data functions. Session details and results can be stored and queried, while LevelSequence records and replays the vehicle and its model states.
-
-The vehicle model uses third-party simulation capabilities. My contribution covers application integration, supporting plugins and training functions. Historical rendering work targets UE 5.3 and 5.3.2; a later project version includes a UE 5.5 configuration. Recording, replay and display integration are maintained for their respective versions.

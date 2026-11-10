@@ -1672,7 +1672,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
     project-cover-note: Cover
   case:six-dof-motion-platform:
-    root.html:1.head:0.meta:2@content: Software motion solving and signal processing for a six-axis platform, with ocean parameter animation and editor recording.
+    root.html:1.head:0.meta:2@content: A UE virtual filming project for ocean scenes, with automatic ship assembly, multi-device controls, weather management, full-scene recording and six-axis platform integration.
     root.html:1.head:0.title:4.#text:0: Motion platform and virtual filming · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -1693,7 +1693,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Motion platform and virtual filming
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: Software motion solving and signal processing for a six-axis platform, with ocean parameter animation and editor recording.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A UE virtual filming project for ocean scenes, with automatic ship assembly, multi-device controls, weather management, full-scene recording and six-axis platform integration.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
@@ -4208,7 +4208,7 @@ shellSlots:
     project-card:flight-simulation:tag: Simulation
     project-card:motion-platform-filming:title: Motion platform and virtual filming
     project-card:motion-platform-filming:secondary: ""
-    project-card:motion-platform-filming:description: Software motion solving and signal processing for a six-axis platform, with ocean parameter animation and editor recording.
+    project-card:motion-platform-filming:description: A UE virtual filming project for ocean scenes, with automatic ship assembly, multi-device controls, weather management, full-scene recording and six-axis platform integration.
     project-card:motion-platform-filming:category: Unreal Engine Projects
     project-card:motion-platform-filming:tag: Simulation
     project-card:digital-human-interaction:title: AI digital human interaction
@@ -4539,7 +4539,7 @@ shellSlots:
     migrated-blog:motion-capture-robot-control:category: Unreal Engine
     migrated-blog:motion-capture-robot-control:tag: Motion capture
     migrated-blog:six-dof-motion-platform:title: Motion platform and virtual filming
-    migrated-blog:six-dof-motion-platform:description: Software motion solving and signal processing for a six-axis platform, with ocean parameter animation and editor recording.
+    migrated-blog:six-dof-motion-platform:description: A UE virtual filming project for ocean scenes, with automatic ship assembly, multi-device controls, weather management, full-scene recording and six-axis platform integration.
     migrated-blog:six-dof-motion-platform:category: Unreal Engine
     migrated-blog:six-dof-motion-platform:tag: Simulation
     migrated-blog:plugin-release-workflow:title: A Toolchain from Plugin Development to Release
@@ -8575,7 +8575,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: "d21b46a91f81c4052e18ac6bb4a69f54091bde28865596909c942c10f851b17e"
+sourceHash: "9ef17c3621395f816223f9d3b2bd46421529bb517577e6ec29620b81cbe1cee0"
 translationStatus: translated
 generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
 workLabels:

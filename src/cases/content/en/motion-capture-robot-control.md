@@ -20,9 +20,9 @@ coverAlt: Motion capture and robot control cover
 websiteCoverUrl: /assets/cases/motion-capture-robot-cover.png
 translationKey: motion-capture-robot-control
 lang: en
-sourceHash: "2165ff52de0cb8b4920a1886a414788b1653f7836105433a832621f177f90afc"
+sourceHash: "673e32a1a1b673d64a8b1a4ebd55aabd5a1a141be178794a07f0947b885d1b62"
 translationStatus: translated
-generatedBodyHash: "e59942f894b176ca3ec067b56e78f3f334f3055adeb78e123c5bde4fcbdf07ff"
+generatedBodyHash: "f6b7b843554b376b4e47d04590fdd9075954a8631775df872f2740e2d07ff11c"
 ---
 
 ## Project overview
@@ -88,11 +88,3 @@ The three-axis prototype reuses existing mechanism capabilities, converts units 
 #### Challenges and implementation
 
 A target can pass input checks without producing a usable position IK result. The interface therefore separates `input_valid` and `ik_valid`. If input is valid but solving fails, joint output is cleared while the two states remain distinguishable for application logic.
-
-## Results and development status
-
-The implementation covers Kinect input, an intermediate skeleton and motion mapping to robot components in UE. The live-data path includes prototypes for frame handoff, timeout recovery, adaptive filtering and three-joint position solving.
-
-Specific Kinect-to-intermediate-model pose distortion, the actual mechanism URDF, real data and device behaviour still need adjustment and testing. The three-axis prototype targets position rather than general end-effector orientation. Protocol zero output is not a physical safe-return command.
-
-UE model motion and protocol output do not establish completed actuator communication, feedback or a hardware control loop. This project remains in development.

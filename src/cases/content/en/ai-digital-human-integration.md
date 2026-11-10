@@ -20,9 +20,9 @@ coverAlt: AI digital human interaction cover
 websiteCoverUrl: /assets/cases/digital-human-interaction-cover.png
 translationKey: ai-digital-human-integration
 lang: en
-sourceHash: "233a58f848f9264e0fa2f72f32d2c31f2343966914d3a4d39f00d7e1f2839c24"
+sourceHash: "0898555e1c133bf8028b0f96cff9893c94407590f28e3cb9670860c41f5ccbeb"
 translationStatus: translated
-generatedBodyHash: "d2813a7e2b644f4f2c4110fc92e4277e9352c11ce143fd2a2dde8c81912903ef"
+generatedBodyHash: "1471472884dba3388fcd48e2d56265fffd7224e12b09f7bbaf7e7784417f988e"
 ---
 
 ## Project overview
@@ -81,9 +81,3 @@ Body sensing and voice conversation are separate inputs: one supplies position a
 I integrated and tested local-only, cloud-only and mixed service arrangements. Local Python environments are managed with Miniconda, including PyTorch and CUDA dependencies. UE connects to the corresponding services and coordinates the interaction.
 
 The original fixed linear logic was later separated into flow control and functional modules. C++ provides underlying support, while Blueprints organize application interactions, allowing service replacement and flow changes without changing the entire character presentation at the same time.
-
-## Results and scope
-
-The project integrates speech recognition, AI responses, speech synthesis and character presentation, with body sensing for gaze and gesture triggers. Local, cloud and mixed service combinations were integrated and tested, and flow control was separated from functional modules.
-
-My work covers service integration, flow organization and UE presentation. Recognition, language models and synthesis use existing solutions. Response speed and resource use depend on the selected models, hardware and network conditions.

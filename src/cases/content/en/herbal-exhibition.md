@@ -20,9 +20,9 @@ coverAlt: Herbal exhibition cover
 websiteCoverUrl: /assets/cases/herbal-exhibition-cover.png
 translationKey: herbal-exhibition
 lang: en
-sourceHash: "02b75a0753021fc4e28868c7f089408f518d75cd0c2113b72225a0b2ad3715bf"
+sourceHash: "53d9907956e7c95f335e24cd9d863cdd94dc03e4be358e7904f731843a97047a"
 translationStatus: translated
-generatedBodyHash: "1bfe9a8080c69dbc6f43b1bea521d3ac0eb996b95047e70ed1fd9c1996c437ee"
+generatedBodyHash: "9709ccc23db1085fb21f07a4761ba8ea3cd17045f1614f2e186243ac156ff6d1"
 ---
 
 ## Project overview
@@ -67,9 +67,3 @@ Supported media includes PNG, JPG and JPEG images; OGG, WAV and MP3 audio; and s
 2. Import images, audio and self-contained GLB models, then configure media order and slide magnifications.
 3. Check and save records and resources in a form the display can read.
 4. Restart the display application and inspect the updated list, models and slide images.
-
-## Results and scope
-
-The project connects information queries, multimedia presentation, microscope slide browsing and external content maintenance. Visitors use the display application; maintainers update records and resources in the companion tool.
-
-Presentation depends on the configured content, available magnification images and supported formats. External updates are read after saving and restarting, rather than through seamless runtime hot updates. Herbal knowledge and media creation are outside my development contribution.

@@ -1672,7 +1672,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
     project-cover-note: 封面
   case:six-dof-motion-platform:
-    root.html:1.head:0.meta:2@content: 围绕六轴平台的软件运动解算、信号处理、海洋场景参数联动和编辑器虚拟拍摄录制。
+    root.html:1.head:0.meta:2@content: 面向海洋场景的 UE 虚拟拍摄项目，涵盖船只自动装配、多设备操控、天气管理、全场景录制回放与六轴平台联动。
     root.html:1.head:0.title:4.#text:0: 六轴平台与虚拟拍摄 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -1693,7 +1693,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 六轴平台与虚拟拍摄
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Motion platform and virtual filming
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 围绕六轴平台的软件运动解算、信号处理、海洋场景参数联动和编辑器虚拟拍摄录制。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 面向海洋场景的 UE 虚拟拍摄项目，涵盖船只自动装配、多设备操控、天气管理、全场景录制回放与六轴平台联动。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
@@ -4208,7 +4208,7 @@ shellSlots:
     project-card:flight-simulation:tag: 仿真
     project-card:motion-platform-filming:title: 六轴平台与虚拟拍摄
     project-card:motion-platform-filming:secondary: Motion platform and virtual filming
-    project-card:motion-platform-filming:description: 围绕六轴平台的软件运动解算、信号处理、海洋场景参数联动和编辑器虚拟拍摄录制。
+    project-card:motion-platform-filming:description: 面向海洋场景的 UE 虚拟拍摄项目，涵盖船只自动装配、多设备操控、天气管理、全场景录制回放与六轴平台联动。
     project-card:motion-platform-filming:category: UE项目
     project-card:motion-platform-filming:tag: 仿真
     project-card:digital-human-interaction:title: AI 数字人交互
@@ -4539,7 +4539,7 @@ shellSlots:
     migrated-blog:motion-capture-robot-control:category: UE开发
     migrated-blog:motion-capture-robot-control:tag: 动作捕捉
     migrated-blog:six-dof-motion-platform:title: 六轴平台与虚拟拍摄
-    migrated-blog:six-dof-motion-platform:description: 围绕六轴平台的软件运动解算、信号处理、海洋场景参数联动和编辑器虚拟拍摄录制。
+    migrated-blog:six-dof-motion-platform:description: 面向海洋场景的 UE 虚拟拍摄项目，涵盖船只自动装配、多设备操控、天气管理、全场景录制回放与六轴平台联动。
     migrated-blog:six-dof-motion-platform:category: UE开发
     migrated-blog:six-dof-motion-platform:tag: 仿真
     migrated-blog:plugin-release-workflow:title: 插件开发到发布的工具链
