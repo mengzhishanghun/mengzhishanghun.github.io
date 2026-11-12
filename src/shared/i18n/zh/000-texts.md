@@ -1516,7 +1516,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
     project-cover-note: 封面
   case:ai-digital-human-integration:
-    root.html:1.head:0.meta:2@content: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
+    root.html:1.head:0.meta:2@content: 面向多类交互需求的 UE 数字人项目，支持本地与云端大模型切换，结合语音对话、视线跟随、提示词效果与人物行为触发。
     root.html:1.head:0.title:4.#text:0: AI 数字人交互 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -1537,7 +1537,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: AI 数字人交互
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: AI digital human interaction
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 面向多类交互需求的 UE 数字人项目，支持本地与云端大模型切换，结合语音对话、视线跟随、提示词效果与人物行为触发。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
@@ -3859,7 +3859,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE项目
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: AI 数字人交互
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: AI digital human interaction
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 面向多类交互需求的 UE 数字人项目，支持本地与云端大模型切换，结合语音对话、视线跟随、提示词效果与人物行为触发。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: 中药展示
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE项目
@@ -4213,7 +4213,7 @@ shellSlots:
     project-card:motion-platform-filming:tag: 仿真
     project-card:digital-human-interaction:title: AI 数字人交互
     project-card:digital-human-interaction:secondary: AI digital human interaction
-    project-card:digital-human-interaction:description: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
+    project-card:digital-human-interaction:description: 面向多类交互需求的 UE 数字人项目，支持本地与云端大模型切换，结合语音对话、视线跟随、提示词效果与人物行为触发。
     project-card:digital-human-interaction:category: UE项目
     project-card:digital-human-interaction:tag: AI
     project-card:motion-capture-robot:title: 动捕与机器人控制
@@ -4527,7 +4527,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:2.#text:0: ""
     migrated-blog:ai-digital-human-integration:title: AI 数字人交互
-    migrated-blog:ai-digital-human-integration:description: 将语音识别、AI 对话、语音合成、口型和人体感知接入 UE 数字人，支持本地、云端及混合部署。
+    migrated-blog:ai-digital-human-integration:description: 面向多类交互需求的 UE 数字人项目，支持本地与云端大模型切换，结合语音对话、视线跟随、提示词效果与人物行为触发。
     migrated-blog:ai-digital-human-integration:category: UE开发
     migrated-blog:ai-digital-human-integration:tag: AI
     migrated-blog:flying-car-simulator:title: 飞行仿真

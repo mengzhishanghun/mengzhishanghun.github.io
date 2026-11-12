@@ -1935,16 +1935,16 @@
     },
     {
       "path": "cases/ai-digital-human-integration/index.html",
-      "size": 1938,
-      "gitBlob": "bf142b257c044ed8acb89994567b61200a0825a7",
-      "sha256": "08dc95e6657e98ac635d300bbc49a763960ac92eb6d730fc611a413d96b206fa",
+      "size": 2580,
+      "gitBlob": "5af99471b4ffc50b90d5d793987fbabbba0a7a9a",
+      "sha256": "226c80b01c38e52279484c0e43c246a1500548bf4e648e044f9f98b096fb03e0",
       "target": "both"
     },
     {
       "path": "cases/digital-human-interaction/index.html",
-      "size": 1935,
-      "gitBlob": "00b7b069803f90ee1411d23e20489b38dbdf92bf",
-      "sha256": "fdd7ae225aad387bc3cf22c15e3b5b103636804b19bb05d91434f65af289aaf3",
+      "size": 2577,
+      "gitBlob": "73efe3f236f84ab74ef0c0103a5c801e98b6afbe",
+      "sha256": "c96cc1b943e3607907f020695104c85ed8fa2102d770de6832d4d1d9ba4df694",
       "target": "both"
     },
     {
@@ -2858,13 +2858,6 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/fragment/en_06a89be.pf_fragment",
-      "size": 1927,
-      "gitBlob": "34555c51b229b4f053ba106a24a8f57c9f8c1ff4",
-      "sha256": "8aec5415cb258b236ae6ddb61eb196d0c1a42101671451ec5890289f14bc854f",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/fragment/en_0bc94dd.pf_fragment",
       "size": 2381,
       "gitBlob": "8dd0d21bd3dd2456be6394fb0212c1d0cef8a4fb",
@@ -3453,6 +3446,13 @@
       "target": "both"
     },
     {
+      "path": "en/blog-search/fragment/en_b4710ad.pf_fragment",
+      "size": 4234,
+      "gitBlob": "a315759ff559fd6bf1039742a8dbb62326d4feb1",
+      "sha256": "18abf46b81a319062b3e51695b654088509e248499c3546b716fc0e7e28bb705",
+      "target": "both"
+    },
+    {
       "path": "en/blog-search/fragment/en_b47eb4b.pf_fragment",
       "size": 3132,
       "gitBlob": "dac1fb028795a7806ba2f8179a7fd780d9c064ab",
@@ -3817,6 +3817,13 @@
       "target": "both"
     },
     {
+      "path": "en/blog-search/index/en_1b363a6.pf_index",
+      "size": 33615,
+      "gitBlob": "6b433e33f6c28a882fa5c7d45dcb1e6c0f3c6cb8",
+      "sha256": "e23df7554c7ec9dd0fec2f9b025ffe30bdd8091d2ff54d4397b16cf841100b63",
+      "target": "both"
+    },
+    {
       "path": "en/blog-search/index/en_2396e34.pf_index",
       "size": 31897,
       "gitBlob": "9d2f57e682ffe313eeec9e17b735160a3ae9a5a1",
@@ -3824,10 +3831,10 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_29fb89e.pf_index",
-      "size": 35028,
-      "gitBlob": "1f85dc788fbd78fb652f9520ee6753f6ffe5dd3d",
-      "sha256": "dcd6cd66dbf524562234dd6bb7c9b79700bf7a261dddbe471ba2d93cd7973c56",
+      "path": "en/blog-search/index/en_2cb745d.pf_index",
+      "size": 31555,
+      "gitBlob": "7903f6ca08d002194c0627b3b6993464a7427c6a",
+      "sha256": "8b36bb6113a0cfc3cd38cd8176aacae1936d950aec1b30caaa8abda25869fc4e",
       "target": "both"
     },
     {
@@ -3835,13 +3842,6 @@
       "size": 31086,
       "gitBlob": "c80494d212b80185a2ea0e9468687dcce1e4bade",
       "sha256": "4601058cbefabfeb3b2ce5bb02f64a25bd19da459ff0161d1565fefb9b16e2ec",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/index/en_387262d.pf_index",
-      "size": 34329,
-      "gitBlob": "ecb35261a11180137f0ee009724231ba5dbdf9e4",
-      "sha256": "469aff5dcc1aaab9e1e50982035ad1d1844eebbaacdbd201fdf6ba6039519729",
       "target": "both"
     },
     {
@@ -3859,10 +3859,10 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_3e34d54.pf_index",
-      "size": 32201,
-      "gitBlob": "f62ca0a9065cc5847c831f367c0142458879d604",
-      "sha256": "8385fbc59d59bd05faee6b0e87ee9450d91f26f9001c77bf6607e341940bf151",
+      "path": "en/blog-search/index/en_512dd52.pf_index",
+      "size": 35175,
+      "gitBlob": "789a0f11ede1519e7b33f577264549922916babd",
+      "sha256": "771520e3a5b84690304bf402ba7692d9a8789d1b99cfff04ec01dddf40c1ead4",
       "target": "both"
     },
     {
@@ -3873,6 +3873,13 @@
       "target": "both"
     },
     {
+      "path": "en/blog-search/index/en_5299452.pf_index",
+      "size": 33832,
+      "gitBlob": "c8a97fb2f55c94bcc049eaa679023e73f6e328ee",
+      "sha256": "91568bf602faa5913ff7f6e8ee57568458b444e982af8cb1987f3d4b149ebb49",
+      "target": "both"
+    },
+    {
       "path": "en/blog-search/index/en_556a68c.pf_index",
       "size": 33081,
       "gitBlob": "0ca0355962baab710ff3f09cc370888afd3889f2",
@@ -3880,17 +3887,17 @@
       "target": "both"
     },
     {
+      "path": "en/blog-search/index/en_615ef4c.pf_index",
+      "size": 36397,
+      "gitBlob": "120344f4f94937aa1871e3b4f930984d0c2a714a",
+      "sha256": "12e015536f8a3c8313c74e91ea368d8fe153212c8871eba518a02c402019187c",
+      "target": "both"
+    },
+    {
       "path": "en/blog-search/index/en_6382565.pf_index",
       "size": 31899,
       "gitBlob": "3ce252a5acf6720ee1e35b1540db05d4dfe789c6",
       "sha256": "eb9e7167798f9e83451387c39199a22a1c5799640183e3d0756d64129412c2ec",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/index/en_6563d2b.pf_index",
-      "size": 35741,
-      "gitBlob": "e911d42d606feab8a2b1718c3d33d1844ec89c8d",
-      "sha256": "112df9f20a55d0ef9c00cd078f30ebbd97b35eddc110e607da846a0af775980d",
       "target": "both"
     },
     {
@@ -3936,17 +3943,10 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_97f62c9.pf_index",
-      "size": 31610,
-      "gitBlob": "c9dd85a0fbe2a5a6ea968882ebba30dfdfa24e06",
-      "sha256": "e109c008c4a1687dc7ef8933ef653def72842e95cda42616793ff4f7b113c150",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/index/en_9ecee64.pf_index",
-      "size": 34724,
-      "gitBlob": "040f49816514c7d1f651983c20cba5b9dd82260a",
-      "sha256": "e3890faf62fb0795032ed2223b09f7335f37101f91a75bf28f9f9e04e0952bb0",
+      "path": "en/blog-search/index/en_9b76d49.pf_index",
+      "size": 33983,
+      "gitBlob": "17bbcd7da898b2d7c9db979a57afeed83fb121aa",
+      "sha256": "ddb5ab5803241b3854b8853bfb4bc49416da8acbb5d89bcadbfa78e41746b988",
       "target": "both"
     },
     {
@@ -3957,24 +3957,17 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_b959d3d.pf_index",
-      "size": 29292,
-      "gitBlob": "965829c760e524af2be62d5e5254ab83337f4783",
-      "sha256": "a78c090b54fdde30ccc687d54c7cdd6cf276614176b2c8cc796e29b5bdc6ebdb",
-      "target": "both"
-    },
-    {
-      "path": "en/blog-search/index/en_ba63d49.pf_index",
-      "size": 33935,
-      "gitBlob": "ba10efa74944d3df7b2065a44e539540950fc52b",
-      "sha256": "cc17d502f95626e80b0539cc8867a7a19f464bf1491f2771e9ea1976cfce2bbd",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/index/en_c480836.pf_index",
       "size": 6984,
       "gitBlob": "fb75b90dd79fecb93df050b4bb46110248baeab4",
       "sha256": "a53d8265f19f89cc3e6f79a7c207874277dcaa8b4544176a681bfd47e66903d9",
+      "target": "both"
+    },
+    {
+      "path": "en/blog-search/index/en_c5ae98c.pf_index",
+      "size": 32624,
+      "gitBlob": "1c3eca05c00b88c4f31b64b42ea26c2fb0f69205",
+      "sha256": "07644ea3522100bcac10709ea0befd680ca2215b43eeb42e56c2d40a8fa4bf81",
       "target": "both"
     },
     {
@@ -3985,17 +3978,17 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/index/en_cea1b98.pf_index",
-      "size": 33310,
-      "gitBlob": "629957400d41ec28b3f8842374305238ddda4354",
-      "sha256": "14910f64642766c85989816032a8ceee14ffccfbfdbe16cf1dda7c4179179efc",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/index/en_d61063c.pf_index",
       "size": 32857,
       "gitBlob": "2e41fde76f43863eed20b6ac3feedff9d13531da",
       "sha256": "7f183d68fbb885973a29a45762261a765214e9e8cb7ceaa6afd5679ce89c781c",
+      "target": "both"
+    },
+    {
+      "path": "en/blog-search/index/en_d793ef7.pf_index",
+      "size": 30685,
+      "gitBlob": "12d04b257ab1b3b9370ccfc6e4643de0087798f0",
+      "sha256": "d46845a04b7f4a8f9bff59750dc552c851f8ff8aced8f74800f6d95963891f30",
       "target": "both"
     },
     {
@@ -4010,6 +4003,13 @@
       "size": 34509,
       "gitBlob": "4c3fbe70e2910c8bf0d01fe5be4cb466deddd173",
       "sha256": "1fe4b3995e5f0b642a26abff3386b31c6284108fe541b7fa7f51f500b0172eda",
+      "target": "both"
+    },
+    {
+      "path": "en/blog-search/index/en_f144ecf.pf_index",
+      "size": 34662,
+      "gitBlob": "3c778fca6d0e9300e043aa253f048f61518969e4",
+      "sha256": "8eb5ef0d06722e38882d32bc99fbba3a048ce0296575cdff22713009b759cfa0",
       "target": "both"
     },
     {
@@ -4050,8 +4050,8 @@
     {
       "path": "en/blog-search/pagefind-entry.json",
       "size": 173,
-      "gitBlob": "1e90a4ee38e9a140f08da27937a04f2addc9bc40",
-      "sha256": "bfa6784290df550233fb797d54dd239f49e893a7519512fb70440941f8fb87ec",
+      "gitBlob": "205be96e3e22a714a63f0efc1a17d0e84143c4c7",
+      "sha256": "f2f0872a3fca1f88391f4adaac8ad6461d468ed09d24ff42edf06cfc6c884e6f",
       "target": "both"
     },
     {
@@ -4097,13 +4097,6 @@
       "target": "both"
     },
     {
-      "path": "en/blog-search/pagefind.en_17adeed274.pf_meta",
-      "size": 1126,
-      "gitBlob": "983d8e095cedbdddbe85fc0c6d6e7f158c281d13",
-      "sha256": "3e65fefc010cb42d94d590e875439e390cc0679978174ff0564620ae950fb069",
-      "target": "both"
-    },
-    {
       "path": "en/blog-search/pagefind.en_623979ec6e.pf_meta",
       "size": 920,
       "gitBlob": "3270ae940bb240c0a27b3cac7e914c3e7885dbc4",
@@ -4115,6 +4108,13 @@
       "size": 915,
       "gitBlob": "998288dd7bdcd4e457ea464f7f5ffbb7789cdcfd",
       "sha256": "bac0357009a511966299e45d556170ebbec0ae72d11a000083d4094cf6035342",
+      "target": "both"
+    },
+    {
+      "path": "en/blog-search/pagefind.en_75595460d6.pf_meta",
+      "size": 1143,
+      "gitBlob": "c530e23effa962d892d96216570889c92ffb4501",
+      "sha256": "1042e1f11c507921a69e8b512890d05256d860625cca9c20fc24ac364de0aed2",
       "target": "both"
     },
     {
@@ -4385,9 +4385,9 @@
     },
     {
       "path": "en/blog/index.html",
-      "size": 323606,
-      "gitBlob": "a1f11334e6431bad88ba093b59f99d10915a2cd9",
-      "sha256": "7c29df4557c51c8e98828a1a0f587810b200da0748b379c98310d92e45c28847",
+      "size": 323625,
+      "gitBlob": "bdf6870206d267bd7d1ab0f2d9931a6fec8bc397",
+      "sha256": "ba333fffedbb74e64547cb9cde1e562a037e24258a1c41b843f876d1e3a1317c",
       "target": "both"
     },
     {
@@ -4539,16 +4539,16 @@
     },
     {
       "path": "en/cases/ai-digital-human-integration/index.html",
-      "size": 2062,
-      "gitBlob": "1dd1901f67c9d3fbd18332a9e976da3fbbe5ae1b",
-      "sha256": "4f556f765d9621f3cd10e2d148caa3868e3e5fa8bf897d86cd3760c0cdd9cf56",
+      "size": 2756,
+      "gitBlob": "8abd88eda6eb20729929afbe694c9a044e7b754a",
+      "sha256": "c66e902d768f4ebd3dd5c37b45749e76692db5fbc6b5c88a976c36ea868c9ef3",
       "target": "both"
     },
     {
       "path": "en/cases/digital-human-interaction/index.html",
-      "size": 49086,
-      "gitBlob": "7f7d2d99b4f5e07a5db55ec3bc50fb7c3ceb795e",
-      "sha256": "cb6bcece9207f592e6f147fdc63adc566da3a6fc85b21226c28d7f5273adb59a",
+      "size": 58949,
+      "gitBlob": "afe0d0df4e8b8f63b9070311f2ff47e201534bf9",
+      "sha256": "931622398a3fb917957eb7c395c78edc2744be549a45541f9332732b12886f56",
       "target": "both"
     },
     {
@@ -4595,9 +4595,9 @@
     },
     {
       "path": "en/cases/index.html",
-      "size": 86784,
-      "gitBlob": "329efd2d560f71cc07000bbd5a7879900987ddab",
-      "sha256": "adf6a9f4956f4e0077c6a4b6873815d35da14fcf5897f3c70cb2d4ae7339c657",
+      "size": 94470,
+      "gitBlob": "ec3db2b5137ff6683d4fb303714c355e7598a2e8",
+      "sha256": "474c21d7303931e83db25c80bb7c811042f117ab7d293c7dd0a20feafe8d5e64",
       "target": "both"
     },
     {
@@ -4903,9 +4903,9 @@
     },
     {
       "path": "en/index.html",
-      "size": 55523,
-      "gitBlob": "88245ebbf9d9ceb3f6b248f97a0a89db749f6ea8",
-      "sha256": "d9ad842e37ee2e6c6357d53432e8fba699b57d97f54ac1b19599fdda393073b4",
+      "size": 55542,
+      "gitBlob": "4354863fd5f2a951d4aaa71f049e0119d6e1f477",
+      "sha256": "b57ac2b9b16db5b2152e9bb1e9991dc4c28553c57c406dd096a06509c019b2f4",
       "target": "both"
     },
     {
@@ -8059,6 +8059,13 @@
       "target": "both"
     },
     {
+      "path": "zh/blog-search/fragment/zh-cn_9839f59.pf_fragment",
+      "size": 4941,
+      "gitBlob": "8d28ec432b82ab7caeb5b6915e4542a844a7069e",
+      "sha256": "211e87478408e4894dab1e12c6ecbe2d4c00c6e64e74797f089ca1faa6d9f24b",
+      "target": "both"
+    },
+    {
       "path": "zh/blog-search/fragment/zh-cn_99617b4.pf_fragment",
       "size": 4957,
       "gitBlob": "dbcb6b597418aab7710603594b680cbc5ea42621",
@@ -8231,13 +8238,6 @@
       "size": 4126,
       "gitBlob": "d05a6dddb19d6355aa412394b5a7ff4a61d34a59",
       "sha256": "0955d504ec417ad6941f498dde967b86489a7ef971eac18dbd1f2a94b6478cb4",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/fragment/zh-cn_d1d8b13.pf_fragment",
-      "size": 2336,
-      "gitBlob": "e55dd0af6b31df2df7567a1b95a0309faf38bbb5",
-      "sha256": "68a1b58e7ce7bbda5e490ee93b82f2c7229af59eadff3a01fea748665bbb5e1c",
       "target": "both"
     },
     {
@@ -8458,24 +8458,17 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_18cd452.pf_index",
-      "size": 36612,
-      "gitBlob": "9d5d70bca01ba43a256c0287062e42fa465630b8",
-      "sha256": "49edb41cd62cc92ea8ebb9a90a13fa9b4347ea7e1846561cb182357ab8992317",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/index/zh-cn_27f59b7.pf_index",
-      "size": 30599,
-      "gitBlob": "0cda546497efae6e0a2431c6727b624820cddfdd",
-      "sha256": "7aee65b43447c064fae029ea2af1aece95f150204610e34432d1cf44c0ff7c8b",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/index/zh-cn_2a20771.pf_index",
       "size": 5120,
       "gitBlob": "241a477678aca59b5030a5280b9c4c9c3b08b846",
       "sha256": "cc30284c08d401952d7b2717ff167a01275affd525391ee27a91e18d70147501",
+      "target": "both"
+    },
+    {
+      "path": "zh/blog-search/index/zh-cn_2b30d1e.pf_index",
+      "size": 39006,
+      "gitBlob": "636fcd0b3ad6b48a1c3aa0ffc2829b19f167628d",
+      "sha256": "f3be110239ca4fa149644aef424f5b5f5a3c0192d40d079082f591f7d76b7bb2",
       "target": "both"
     },
     {
@@ -8486,24 +8479,17 @@
       "target": "both"
     },
     {
+      "path": "zh/blog-search/index/zh-cn_392badd.pf_index",
+      "size": 30501,
+      "gitBlob": "cae2e5d2bc3675beea4b4bcfadbbf53562a5f321",
+      "sha256": "6a98ddc73996b1beb404506ad62e0eb2f062e7a5fbabeba3b1c807c2fbb69ef9",
+      "target": "both"
+    },
+    {
       "path": "zh/blog-search/index/zh-cn_41a7224.pf_index",
       "size": 30078,
       "gitBlob": "373fd00d761e00d112a097cba8536836d78f1f5e",
       "sha256": "bbed4b8e9d5620e39560be4a37c7a6f9662b08afa773881423fabbf8408a46f2",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/index/zh-cn_4294d9d.pf_index",
-      "size": 30753,
-      "gitBlob": "a7de9ed32f284904aa5ab2f1f7a51d83f0689895",
-      "sha256": "7fb54100913b1f7c36af2eaf9c5ce9b8d22162361799e1fde350aa2b6ca805b5",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/index/zh-cn_44be9a1.pf_index",
-      "size": 36846,
-      "gitBlob": "7cc71d732d0dec956f7f39b1c84a2567f937cbf8",
-      "sha256": "23a33fb30b62ccfaf3f0f220d37165f268828ca4526e84c80424632f308883fe",
       "target": "both"
     },
     {
@@ -8542,6 +8528,13 @@
       "target": "both"
     },
     {
+      "path": "zh/blog-search/index/zh-cn_97e182b.pf_index",
+      "size": 36680,
+      "gitBlob": "f74b8c96a6d442f2a146fd7d65d34cde441c58f9",
+      "sha256": "82c8b74e9c8e141ed2de594a82e8edf463fbb7034b89b592c3a554447b2883cb",
+      "target": "both"
+    },
+    {
       "path": "zh/blog-search/index/zh-cn_9d8b7c5.pf_index",
       "size": 30402,
       "gitBlob": "e5e2ea7305b645f7e0f461686d5c5e5135af554f",
@@ -8549,10 +8542,24 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_a518230.pf_index",
-      "size": 31166,
-      "gitBlob": "f3d5df3e29ac61a8e12f3a9c808c62e53e4883bd",
-      "sha256": "2c3ff09c8fc62c5d11ec05850fb82825af219506f4306cb1baf2116260eb5dc2",
+      "path": "zh/blog-search/index/zh-cn_b16feb6.pf_index",
+      "size": 31216,
+      "gitBlob": "4fca207a9db94d0b1904f5d80f00ca2de7b190cd",
+      "sha256": "ddd0e798edd95b98dfe28f51750d5d6bff514432c408f397dd9c07ea2bbc23db",
+      "target": "both"
+    },
+    {
+      "path": "zh/blog-search/index/zh-cn_b8d72fa.pf_index",
+      "size": 36593,
+      "gitBlob": "0cdc75f7cb89e6759305995ebed71b5f0f54a4fb",
+      "sha256": "72256496cf1d1e135dc2a16f3b95ecf172a4e7153119f785691e2591617955ec",
+      "target": "both"
+    },
+    {
+      "path": "zh/blog-search/index/zh-cn_c2c89fa.pf_index",
+      "size": 31027,
+      "gitBlob": "455a68e4746918e19b038106cb8a4b5fbd08caac",
+      "sha256": "bf38838ec8e7617fd7bb2cea38309d65176924e83ad34f7d4f5dd39c1197eb26",
       "target": "both"
     },
     {
@@ -8560,13 +8567,6 @@
       "size": 30282,
       "gitBlob": "cd6127529ed0e267d749164e9850f8663cbb2b19",
       "sha256": "2512e8b6ef775d5fed3a5695c23ea6ff7eae6f4d2fd33149990078b2b508de31",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/index/zh-cn_c4d910d.pf_index",
-      "size": 25988,
-      "gitBlob": "ff816f958fd6fa255b16c0bdd6c86151ec4b79c5",
-      "sha256": "d62883db68e37e134ca91a81f5bb0648c999a8d5a54c0db3b30da18070e9d194",
       "target": "both"
     },
     {
@@ -8591,6 +8591,13 @@
       "target": "both"
     },
     {
+      "path": "zh/blog-search/index/zh-cn_d6866cd.pf_index",
+      "size": 30713,
+      "gitBlob": "f91f1d3f393ce1da5bd7a481187e4af5ca6d688a",
+      "sha256": "1d3b32b65bbe271371163b99830472cf02e687f0835df3d45cb78a9ccb54222a",
+      "target": "both"
+    },
+    {
       "path": "zh/blog-search/index/zh-cn_d896f8c.pf_index",
       "size": 30333,
       "gitBlob": "f16147c20967c313c9ccd099a11c54bf3af1936b",
@@ -8598,24 +8605,10 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/index/zh-cn_d9a23d0.pf_index",
-      "size": 31333,
-      "gitBlob": "4d71c69f71fd1a297d38fa7d2b8b267bd82a1316",
-      "sha256": "992fd991f5563000627fde3864c4ec0de8fb2a4fb0e8db617ed01b689d24e6fe",
-      "target": "both"
-    },
-    {
       "path": "zh/blog-search/index/zh-cn_dbc69d2.pf_index",
       "size": 30196,
       "gitBlob": "9280d262830819aea9e47cc78e4f22ed0aea9a3c",
       "sha256": "10118dae016db781d1fd58b9ea06c87f4fc84b305ae0d3e88be4ee5fae050680",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/index/zh-cn_ec42afe.pf_index",
-      "size": 31183,
-      "gitBlob": "ae1d8f37f0f871bb20f4c4a06e73fa29cffc4f9d",
-      "sha256": "76a0170eb3ae8a5c259d1b355d010deed83119a9058595bace408ee083dc24bf",
       "target": "both"
     },
     {
@@ -8640,6 +8633,13 @@
       "target": "both"
     },
     {
+      "path": "zh/blog-search/index/zh-cn_f52cde7.pf_index",
+      "size": 28561,
+      "gitBlob": "a9242bfde67f044076567fd5eccbf26844fb24fd",
+      "sha256": "b0eafb3100c5d7b94ca2239375d5a35e5bc95e6ab56c61db93dd930f52161e66",
+      "target": "both"
+    },
+    {
       "path": "zh/blog-search/index/zh-cn_f6a7013.pf_index",
       "size": 32873,
       "gitBlob": "2c88d047b8400f45e390a0725df9b4490a63aa4e",
@@ -8661,17 +8661,17 @@
       "target": "both"
     },
     {
+      "path": "zh/blog-search/index/zh-cn_f9be9ea.pf_index",
+      "size": 31435,
+      "gitBlob": "52e89ab5c1196b74c08d04bf2fb7fa8eefa85987",
+      "sha256": "b68907cb660ede59b3de915ffc813d23a8586204767655a5544cbc4cb031d545",
+      "target": "both"
+    },
+    {
       "path": "zh/blog-search/index/zh-cn_fc7dbf5.pf_index",
       "size": 30405,
       "gitBlob": "92bc4d3cb27d72431c8897818a0a460ed8e2bedc",
       "sha256": "b960ed0c8a9f5b1e532d09dad7c906f23b59f8f706962b47299d84fbba600670",
-      "target": "both"
-    },
-    {
-      "path": "zh/blog-search/index/zh-cn_fd8faa3.pf_index",
-      "size": 39010,
-      "gitBlob": "7a04b260206070770e809b910d22ee1c089ca73b",
-      "sha256": "5ea931a0931a75e75275c9f793fbbe48cac86c6cb934b7539bc7f9d7c59995e4",
       "target": "both"
     },
     {
@@ -8698,8 +8698,8 @@
     {
       "path": "zh/blog-search/pagefind-entry.json",
       "size": 182,
-      "gitBlob": "92bf5c8d4c7cff16965dca554f3843c246f1fd90",
-      "sha256": "005f914897dce9616b6f3ecb4b081857e2dd924e7375731e087721da038755eb",
+      "gitBlob": "3ebd1c8fd95c35cf3d996c63aa1673352c2c997e",
+      "sha256": "29b39d77b0a21d711140957134b1971670eebcdd0efc255c4390faedecbdc808",
       "target": "both"
     },
     {
@@ -8752,10 +8752,10 @@
       "target": "both"
     },
     {
-      "path": "zh/blog-search/pagefind.zh-cn_5f6fa4a344299.pf_meta",
-      "size": 1183,
-      "gitBlob": "0fe50b03d5879a58d120731d8395569b4f025b1d",
-      "sha256": "8e07e0b19421dc50dc5cfee0f0a83d3596f80cff4dec5e453df321214e110bad",
+      "path": "zh/blog-search/pagefind.zh-cn_6172db52b154e.pf_meta",
+      "size": 1199,
+      "gitBlob": "a14c5a36d988dc673dd1d1ce51ffdba679c0eaae",
+      "sha256": "528842e2013043caa1851cbe52619ebd432d4af56b06a5e33d872e45fe049717",
       "target": "both"
     },
     {
@@ -9026,9 +9026,9 @@
     },
     {
       "path": "zh/blog/index.html",
-      "size": 302563,
-      "gitBlob": "8c4e3e3abbfb3ef4b4c6246a5f723a78f628c7d4",
-      "sha256": "08c296a78d61b9f04fea2a978e5e737e77fa68ee740735789e7778b57c233362",
+      "size": 302599,
+      "gitBlob": "5d19190aa7a642e9d9cca4693068d14fbd6d2170",
+      "sha256": "e526bfe7c286e03ca8259b19a704d25737394f0680ee30696a0c4b842a81224f",
       "target": "both"
     },
     {
@@ -9194,16 +9194,16 @@
     },
     {
       "path": "zh/cases/ai-digital-human-integration/index.html",
-      "size": 1941,
-      "gitBlob": "96203e1a9b6a8022f14b30b8e7e41aed0c151ed5",
-      "sha256": "24672f67574f5211376b06e50aaa3cba444ea4a8f97cdfddfe3bbd91670c2523",
+      "size": 2583,
+      "gitBlob": "6a6f9a184604b15d32adc43e5013eef24483ee07",
+      "sha256": "9f33b310a70900431f480e036b6090369e726a6119b0790846a7d66e244ac15a",
       "target": "both"
     },
     {
       "path": "zh/cases/digital-human-interaction/index.html",
-      "size": 48249,
-      "gitBlob": "7e2a7b005989648b4589a82761e755ef1699f0ca",
-      "sha256": "60168210a57c35d710c5c9c82594d5c2fb3b421f7e763cb2ab7ecd991547d2dc",
+      "size": 57246,
+      "gitBlob": "4ad6af3fe045a3e341a6182493f2d58652a9ab31",
+      "sha256": "5b260a1b6fa0822b7f4cfe75dbb866aafca220a831d979e840a6d910a51dcb37",
       "target": "both"
     },
     {
@@ -9250,9 +9250,9 @@
     },
     {
       "path": "zh/cases/index.html",
-      "size": 80907,
-      "gitBlob": "ca219411e51656798e3c20a80ab0f145b4c31dda",
-      "sha256": "4da856b6ff37d7fd989ce41b7bdf3c4fc099f196b7d8f1ea201204266669ceca",
+      "size": 87579,
+      "gitBlob": "3c00ce3f13ea594c898e220b4a8bb857a6f765d7",
+      "sha256": "914205895821d58a510251c275d304e95f68fb8a23b43d58ab94c0c94242d22c",
       "target": "both"
     },
     {
@@ -9558,9 +9558,9 @@
     },
     {
       "path": "zh/index.html",
-      "size": 54601,
-      "gitBlob": "18c00f35f7b4d74317da0c23f533bcb5502e0f64",
-      "sha256": "f6cb617eaf46e35d00b294e1c71b368acb30d66145166cf7899a880151bcb37d",
+      "size": 54637,
+      "gitBlob": "d55603ee43e45dd60cb1f79a51fb7bba8a0f4d47",
+      "sha256": "24da5b0d24351bd50f35f0537f2c80c089a4ad20350a8bff2d9f5ad6bcd77e25",
       "target": "both"
     },
     {

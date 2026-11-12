@@ -1516,7 +1516,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
     project-cover-note: Cover
   case:ai-digital-human-integration:
-    root.html:1.head:0.meta:2@content: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
+    root.html:1.head:0.meta:2@content: A UE digital human project supporting local and cloud language model switching, voice conversation, gaze following, phrase effects and responses to human behaviour.
     root.html:1.head:0.title:4.#text:0: AI digital human interaction · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -1537,7 +1537,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: AI digital human interaction
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A UE digital human project supporting local and cloud language model switching, voice conversation, gaze following, phrase effects and responses to human behaviour.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
@@ -3859,7 +3859,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE Projects
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: AI digital human interaction
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: ""
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: A UE digital human project supporting local and cloud language model switching, voice conversation, gaze following, phrase effects and responses to human behaviour.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: Herbal exhibition
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: Unreal Engine Projects
@@ -4213,7 +4213,7 @@ shellSlots:
     project-card:motion-platform-filming:tag: Simulation
     project-card:digital-human-interaction:title: AI digital human interaction
     project-card:digital-human-interaction:secondary: ""
-    project-card:digital-human-interaction:description: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
+    project-card:digital-human-interaction:description: A UE digital human project supporting local and cloud language model switching, voice conversation, gaze following, phrase effects and responses to human behaviour.
     project-card:digital-human-interaction:category: Unreal Engine Projects
     project-card:digital-human-interaction:tag: AI
     project-card:motion-capture-robot:title: Motion capture and robot control
@@ -4527,7 +4527,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.section:1.div:1.a:49.div:1.div:0.span:2.#text:0: ""
     migrated-blog:ai-digital-human-integration:title: AI digital human interaction
-    migrated-blog:ai-digital-human-integration:description: An Unreal Engine digital human integrating speech recognition, AI conversation, voice, lip sync and body sensing across local and cloud services.
+    migrated-blog:ai-digital-human-integration:description: A UE digital human project supporting local and cloud language model switching, voice conversation, gaze following, phrase effects and responses to human behaviour.
     migrated-blog:ai-digital-human-integration:category: Unreal Engine
     migrated-blog:ai-digital-human-integration:tag: AI
     migrated-blog:flying-car-simulator:title: Flight simulation
@@ -8575,7 +8575,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: "977eb23fc454fd3d92916ee797cfd557ac2fae3bf80ab7fa5bf2a7544fe3137c"
+sourceHash: "64ebc5fa3eadffa24021eac049e13bb0e9b3684ecc3602acb7cf82727895b0ca"
 translationStatus: translated
 generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
 workLabels:
