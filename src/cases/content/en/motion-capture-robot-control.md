@@ -1,13 +1,13 @@
 ---
 title: Motion capture and robot control
-description: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
+description: "A shared robot motion-following system using a dedicated capture model, live or recorded input, URDF adaptation and IK."
 type: case
 slug: motion-capture-robot
 categoryId: ue-projects
 categoryName: Unreal Engine Projects
 categoryOrder: 0
 order: 4
-status: In development
+status: "Published"
 featured: false
 draft: false
 sitePublish: true
@@ -20,71 +20,97 @@ coverAlt: Motion capture and robot control cover
 websiteCoverUrl: /assets/cases/motion-capture-robot-cover.png
 translationKey: motion-capture-robot-control
 lang: en
-sourceHash: "673e32a1a1b673d64a8b1a4ebd55aabd5a1a141be178794a07f0947b885d1b62"
+sourceHash: "bd3f9417c15f28e0d144a6b749aef6526cf7369a66cf48d4daf608103e2869a5"
 translationStatus: translated
-generatedBodyHash: "f6b7b843554b376b4e47d04590fdd9075954a8631775df872f2740e2d07ff11c"
+generatedBodyHash: "9fbc9e517973978ac6f3b2f64ea91820e753a65507870c21c36635313a73cf8b"
 ---
 
 ## Project overview
 
-This project maps human movement and live data to a robot mechanism in UE. Input from Kinect or external data is processed into skeleton poses and target positions, then converted into model motion or joint values using the robot's structure.
+The robot model in UE is based on a real industrial robot. It has a human-like structure, with joint arrangements, limb proportions and movement limits that differ from the human body.
 
-Motion retargeting, live communication and three-axis IK are different parts of the same project. My work covers input integration, an intermediate skeleton, robot mapping, UDP frame handoff, filtering and position solving. Some capabilities remain software prototypes or require further model adjustment.
+I built a shared motion-following system that makes the robot follow a dedicated motion-capture model. That model can receive live body poses from Kinect or play a recorded and filtered Level Sequence (LS). Both sources use the same reference model. The robot calculates its movement from its own URDF structure description and the configured joint correspondences.
 
-## Features and implementation
+My work covers bringing live capture and recorded playback into this shared system, integrating motion data and filtering, configuring the reference model, adapting robot URDFs, and implementing and tuning the IK logic. The project also includes a UDP communication and three-axis position-IK prototype. Hardware integration and testing with the real data link remain to be verified for that part.
 
-| Feature | Scope |
+## My work
+
+| Module | Main work |
 | --- | --- |
-| Motion input | Kinect skeleton reading, missing-joint filtering, position and angle filtering |
-| Intermediate skeleton | A common reference model for the input pose |
-| Robot retargeting | Bone proportions, joint origins, rotation axes and limits |
-| Live communication | UDP JSON, latest-frame handoff, timeout and recovery |
-| Motion solving | Reusing mechanism definitions and IK, with separate input and solution validity |
+| Recorded motion processing and playback | Filter motion captured as LS assets, then use playback to drive the reference model |
+| Live capture and the intermediate skeleton | Capture body joints with Kinect and update the reference model in real time |
+| Filtering and angle handling | Process recorded motion curves and live joint data, including angle changes across ±180° in the live input |
+| Shared following logic and IK | Read the reference model's pose, construct targets from the robot URDF and limb proportions, and solve joint movement |
+| Debugging and configuration | Provide mock input, skeleton lines, targets and error displays to inspect mapping and solving |
+| Live data communication | UDP JSON transport, latest-frame handoff, input timeout and recovery |
+| Three-axis position solving | Implement and tune position IK, read mechanism parameters, convert coordinates and report solution status |
 
-### From motion capture to the robot model
+### Recorded motion processing and playback
 
-#### Implementation
+Motion recorded with a capture device is supplied as a Level Sequence (LS). I filter its motion curves, then play the processed motion on the dedicated reference model. The robot follows through the shared adaptation logic.
 
-The input side reads Kinect skeletons, processes position and Euler angles separately and writes poses to a PN3 intermediate model. The robot side uses URDF joint definitions and bone proportions to construct IK targets or direct angle mappings. Smoothing and limits on per-frame angle changes are applied before updating UE components.
+The filtered sequence can be saved as a separate asset for comparison with the original recording and for repeated checks of the same motion.
 
-Separating input processing from robot mapping makes it possible to inspect capture noise, skeleton poses and mechanism parameters independently.
+### Live capture and the intermediate skeleton
 
-#### Challenges and implementation
+The project also supports capturing body joints with Kinect and synchronising movement in real time. I integrated the device's skeleton data, selected the tracked person through configuration, and mapped capture joints to the dedicated PN3 reference model. Joint positions and rotations are filtered before being written to this model. The robot uses the same IK following logic as recorded playback.
 
-Humans and robots differ in joint counts, rotation axes, proportions and movement limits. Copying captured rotations directly can cause end-point offsets, joint-limit violations or distorted poses.
+The component checks that the target model and mapped bone names exist. At runtime, it checks the device, skeleton data and joint indices before updating the model.
 
-I first form a more stable intermediate skeleton, then apply proportional conversion and joint mapping for the robot. IK is used where a chain must track a target position; direct axis-angle mapping remains available for appropriate joints.
+Each mapping can apply position and rotation separately. In the default configuration, the root receives both, while the other mappings mainly pass rotation. The reference model acts as the intermediate skeleton, providing a common pose source and allowing capture data and robot movement to be inspected separately.
 
-A change from 179 to -179 degrees represents a small rotation, but direct subtraction produces a change close to a full turn. I unwrap differences across the boundary before filtering, then apply interpolation, smoothing and per-frame angular limits at output.
+### Filtering and angle continuity
 
-These stages address numeric continuity and input noise. Skeleton directions and model proportions remain responsibilities of the retargeting configuration.
+Filtering covers recorded sequences and live input. The LS side smooths recorded motion curves; the Kinect side processes live position and rotation for each joint. Both provide several filtering methods and adjustable parameters to suit the motion.
 
-#### Related technical record
+#### Challenge: angle boundaries affecting filtering
 
-- [Retargeting Motion Capture to Robot Models in UE](/blog/motion-capture-robot-control/)
+A change from 179° to -179° represents a small rotation, but direct subtraction produces a difference close to a full turn. Passing that difference straight into a filter can disrupt the pose transition.
 
-### Live data communication and updates
+For live Kinect input, I bring the difference between adjacent frames into the ±180° range, accumulate continuous angles, then filter and convert them back into rotation data. The three position components use separate filter channels.
 
-#### Implementation
+Related technical record: [Retargeting Motion Capture to Robot Models in UE](/en/blog/motion-capture-robot-control/).
 
-A UDP worker thread retains the latest parsed frame, which the game Tick reads by data generation. On timeout, the prototype outputs zero values according to the protocol and resets filtering. New input restarts processing after recovery.
+### Shared motion following and IK
 
-#### Challenges and implementation
+The robot follows the current skeleton pose of the dedicated reference model. Differences between motion sources are handled on the input side. I packaged the following behaviour into shared logic so that live capture and recorded playback use the same robot adaptation and solving process.
 
-UDP reception and game Tick progress separately. Queuing every packet as a required action would conflict with the goal of following the latest state.
+For adaptation, I read each joint's connection, rotation direction and movement range from the robot's URDF, then configure the correspondence between capture bones and robot joints. Differences in limb length also require proportional conversion of the motion targets.
 
-The prototype uses latest-frame handoff and local receive time to determine data freshness. Filtering adapts to movement speed to balance stationary jitter against lag during fast motion.
+I implemented and tuned the IK following logic: calculating the joint angles needed to reach a motion target within the robot's structure and movement limits. Joints suited to direct angle transfer have separate settings for rotation direction, motion scale and initial offset.
 
-#### Related technical record
+The results are smoothed, with joint angle changes limited according to elapsed time, before updating UE scene components.
 
-- [Robot Realtime Data and Three-Axis IK Prototype](/blog/robot-realtime-ik-prototype/)
+#### Challenge: differences between human and robot structures
 
-### Three-axis position solving and validity
+The joints of this human-like industrial robot do not fully correspond to human joints. Segment lengths, joint counts and rotation directions differ. Copying a human end-point position or rotation directly can move the model away from the intended pose, so targets must be constructed for the actual mechanism and converted into joint movement through IK.
 
-#### Implementation
+I scale motion using corresponding human and robot segment lengths, then calculate the target positions for the robot. Solving starts from the previous frame's joint angles and uses the human elbow position to guide the arm's bending direction. Joints suited to direct angle transfer are mapped separately. Structural adaptation and output smoothing are adjusted independently to distinguish mapping errors from input noise.
 
-The three-axis prototype reuses existing mechanism capabilities, converts units and coordinate conventions and turns a target position into three joint values. Input reception and IK results have separate status fields, so incoming network data is not treated as proof of a usable joint solution.
+Related technical record: [Retargeting Motion Capture to Robot Models in UE](/en/blog/motion-capture-robot-control/).
 
-#### Challenges and implementation
+### Mock input and visual debugging
 
-A target can pass input checks without producing a usable position IK result. The interface therefore separates `input_valid` and `ik_valid`. If input is valid but solving fails, joint output is cleared while the two states remain distinguishable for application logic.
+I added mock skeleton input to check the data-processing path without a Kinect feed. It generates arm swings, leg movement and root motion from the reference pose of the intermediate model to check mapping, filtering and model updates.
+
+Debug views can show the capture skeleton and model bones together, with joint names. The robot side also displays targets, actual joint positions, rotation axes and errors, helping identify whether an issue comes from the input pose, proportional conversion or joint configuration. Mock input is for software debugging and does not replace real capture or device testing.
+
+### Live data communication and adaptive filtering
+
+The live prototype sends and receives JSON over UDP. The receiving thread retains the latest parsed frame, which the game Tick reads by data generation. This avoids turning every packet into a queued action that must be executed. Tick schedules output at the configured interval, with the actual timing still affected by the game frame rate.
+
+I use local receive time to detect input timeout and a count of consecutive parseable packets to determine recovery. Invalid input produces zero position and joint values, with rotation reset to identity, and resets filtering. Recovery initialises the filter from the new raw input. These are protocol output rules; they do not mean that a physical robot performs a safe return to its home position.
+
+This part uses a separate adaptive filter. It adjusts the cutoff frequency from movement and angular speed, interpolates positions, and uses normalised quaternion interpolation for rotations. It is configured separately from the per-joint capture filters for its own input path.
+
+Related technical record: [Robot Realtime Data and Three-Axis IK Prototype](/en/blog/robot-realtime-ik-prototype/).
+
+### Three-axis position solving and status output
+
+I implemented and tuned three-axis position solving. It calculates the angles needed at three joints from the target position, mechanism dimensions and joint movement limits. Each adjustment is limited, and the result is checked against the target.
+
+The current prototype handles a serial mechanism with three rotating joints and a fixed tool point, with restrictions on the joints' initial orientations. It solves for the end-point position and does not yet handle the end-point orientation.
+
+Output provides separate `input_valid` and `ik_valid` fields to distinguish acceptable input from a usable joint solution. If input is valid but IK fails, joint output is cleared while the status fields remain available for application logic. Blueprints can start or stop live processing, read the latest result or subscribe to output events.
+
+Related technical record: [Robot Realtime Data and Three-Axis IK Prototype](/en/blog/robot-realtime-ik-prototype/).

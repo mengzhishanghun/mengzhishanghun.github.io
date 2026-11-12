@@ -1620,7 +1620,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
     project-cover-note: 封面
   case:motion-capture-robot-control:
-    root.html:1.head:0.meta:2@content: 将人体动捕、机器人模型重定向、实时数据通信与三轴 IK 整理到同一个 UE 项目，部分能力仍处于原型阶段。
+    root.html:1.head:0.meta:2@content: 以动捕专用模型统一承接实时采集与录制动作，通过 URDF 结构适配和 IK 算法驱动机器人跟随。
     root.html:1.head:0.title:4.#text:0: 动捕与机器人控制 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -1641,7 +1641,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 动捕与机器人控制
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Motion capture and robot control
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 将人体动捕、机器人模型重定向、实时数据通信与三轴 IK 整理到同一个 UE 项目，部分能力仍处于原型阶段。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 以动捕专用模型统一承接实时采集与录制动作，通过 URDF 结构适配和 IK 算法驱动机器人跟随。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
@@ -4218,7 +4218,7 @@ shellSlots:
     project-card:digital-human-interaction:tag: AI
     project-card:motion-capture-robot:title: 动捕与机器人控制
     project-card:motion-capture-robot:secondary: Motion capture and robot control
-    project-card:motion-capture-robot:description: 将人体动捕、机器人模型重定向、实时数据通信与三轴 IK 整理到同一个 UE 项目，部分能力仍处于原型阶段。
+    project-card:motion-capture-robot:description: 以动捕专用模型统一承接实时采集与录制动作，通过 URDF 结构适配和 IK 算法驱动机器人跟随。
     project-card:motion-capture-robot:category: UE项目
     project-card:motion-capture-robot:tag: 动作捕捉
     project-card:herbal-exhibition:title: 中药展示
@@ -4535,7 +4535,7 @@ shellSlots:
     migrated-blog:flying-car-simulator:category: UE开发
     migrated-blog:flying-car-simulator:tag: 仿真
     migrated-blog:motion-capture-robot-control:title: 动捕与机器人控制
-    migrated-blog:motion-capture-robot-control:description: 将人体动捕、机器人模型重定向、实时数据通信与三轴 IK 整理到同一个 UE 项目，部分能力仍处于原型阶段。
+    migrated-blog:motion-capture-robot-control:description: 以动捕专用模型统一承接实时采集与录制动作，通过 URDF 结构适配和 IK 算法驱动机器人跟随。
     migrated-blog:motion-capture-robot-control:category: UE开发
     migrated-blog:motion-capture-robot-control:tag: 动作捕捉
     migrated-blog:six-dof-motion-platform:title: 六轴平台与虚拟拍摄

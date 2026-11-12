@@ -1620,7 +1620,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
     project-cover-note: Cover
   case:motion-capture-robot-control:
-    root.html:1.head:0.meta:2@content: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
+    root.html:1.head:0.meta:2@content: A shared robot motion-following system using a dedicated capture model, live or recorded input, URDF adaptation and IK.
     root.html:1.head:0.title:4.#text:0: Motion capture and robot control · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -1641,7 +1641,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Motion capture and robot control
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A shared robot motion-following system using a dedicated capture model, live or recorded input, URDF adaptation and IK.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
@@ -4218,7 +4218,7 @@ shellSlots:
     project-card:digital-human-interaction:tag: AI
     project-card:motion-capture-robot:title: Motion capture and robot control
     project-card:motion-capture-robot:secondary: ""
-    project-card:motion-capture-robot:description: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
+    project-card:motion-capture-robot:description: A shared robot motion-following system using a dedicated capture model, live or recorded input, URDF adaptation and IK.
     project-card:motion-capture-robot:category: Unreal Engine Projects
     project-card:motion-capture-robot:tag: Motion capture
     project-card:herbal-exhibition:title: Herbal exhibition
@@ -4535,7 +4535,7 @@ shellSlots:
     migrated-blog:flying-car-simulator:category: Unreal Engine
     migrated-blog:flying-car-simulator:tag: Simulation
     migrated-blog:motion-capture-robot-control:title: Motion capture and robot control
-    migrated-blog:motion-capture-robot-control:description: A UE project combining body motion capture, robot retargeting, live data transport and three-axis IK, with some features still in prototype development.
+    migrated-blog:motion-capture-robot-control:description: A shared robot motion-following system using a dedicated capture model, live or recorded input, URDF adaptation and IK.
     migrated-blog:motion-capture-robot-control:category: Unreal Engine
     migrated-blog:motion-capture-robot-control:tag: Motion capture
     migrated-blog:six-dof-motion-platform:title: Motion platform and virtual filming
@@ -8575,7 +8575,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: "64ebc5fa3eadffa24021eac049e13bb0e9b3684ecc3602acb7cf82727895b0ca"
+sourceHash: "5fd903b15ece7cc5d9703f2be577197c7356487f5ae083aebb0f39af1b0c6fcb"
 translationStatus: translated
 generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
 workLabels:
