@@ -3861,16 +3861,16 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: A UE digital human project supporting local and cloud language model switching, voice conversation, gaze following, phrase effects and responses to human behaviour.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: Herbal exhibition
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: Traditional Chinese medicine visualization
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: Unreal Engine Projects
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Herbal exhibition
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Traditional Chinese medicine visualization
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: ""
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: An interactive UE herbal exhibition combining search, illustrated and audio content, 3D models, microscope slides and external content maintenance.
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: A UE application for exploring herbal 3D models, microscope slides, medicinal properties and meridians, with search and content maintenance tools.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1@aria-label: Switch featured cases
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: "Show: Six-axis triple-screen driving simulator"
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: "Show: AI digital human interaction"
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: "Show: Herbal exhibition"
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: "Show: Traditional Chinese medicine visualization"
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: Featured blog posts
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
@@ -4221,9 +4221,9 @@ shellSlots:
     project-card:motion-capture-robot:description: A shared robot motion-following system using a dedicated capture model, live or recorded input, URDF adaptation and IK.
     project-card:motion-capture-robot:category: Unreal Engine Projects
     project-card:motion-capture-robot:tag: Motion capture
-    project-card:herbal-exhibition:title: Herbal exhibition
+    project-card:herbal-exhibition:title: Traditional Chinese medicine visualization
     project-card:herbal-exhibition:secondary: ""
-    project-card:herbal-exhibition:description: An interactive UE herbal exhibition combining search, illustrated and audio content, 3D models, microscope slides and external content maintenance.
+    project-card:herbal-exhibition:description: A UE application for exploring herbal 3D models, microscope slides, medicinal properties and meridians, with search and content maintenance tools.
     project-card:herbal-exhibition:category: Unreal Engine Projects
     project-card:herbal-exhibition:tag: Interactive exhibition
   page:blog-index:
@@ -6309,8 +6309,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
   case:herbal-exhibition:
-    root.html:1.head:0.meta:2@content: An interactive UE herbal exhibition combining search, illustrated and audio content, 3D models, microscope slides and external content maintenance.
-    root.html:1.head:0.title:4.#text:0: Herbal exhibition · Xiaomao
+    root.html:1.head:0.meta:2@content: A UE application for exploring herbal 3D models, microscope slides, medicinal properties and meridians, with search and content maintenance tools.
+    root.html:1.head:0.title:4.#text:0: Traditional Chinese medicine visualization · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -6328,9 +6328,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: Cases
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Herbal exhibition
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Traditional Chinese medicine visualization
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: An interactive UE herbal exhibition combining search, illustrated and audio content, 3D models, microscope slides and external content maintenance.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A UE application for exploring herbal 3D models, microscope slides, medicinal properties and meridians, with search and content maintenance tools.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
@@ -8575,7 +8575,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: "5fd903b15ece7cc5d9703f2be577197c7356487f5ae083aebb0f39af1b0c6fcb"
+sourceHash: "5b7824356aa0e088f86c91eb76ed5ccaba4bb706318e53cc78f42201e88c0187"
 translationStatus: translated
 generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
 workLabels:

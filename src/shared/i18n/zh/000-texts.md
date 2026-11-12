@@ -3861,16 +3861,16 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: AI digital human interaction
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 面向多类交互需求的 UE 数字人项目，支持本地与云端大模型切换，结合语音对话、视线跟随、提示词效果与人物行为触发。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: 查看内容
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: 中药展示
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: 中医药可视化展示
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE项目
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 中药展示
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: Herbal exhibition
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 中医药可视化展示
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: Traditional Chinese medicine visualization
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 基于 UE 展示药材三维模型、显微切片、药材功效与经脉走向，并提供资料检索和内容维护功能。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1@aria-label: 精选案例切换
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:0@aria-label: 显示：六轴三屏驾驶模拟器
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:1@aria-label: 显示：AI 数字人交互
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: 显示：中药展示
+    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:1.button:2@aria-label: 显示：中医药可视化展示
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.h2:0.#text:0: 精选博客
     root.html:1.body:1.div:0.main:3.div:1.section:3.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.footer:4.div:0.span:0.#text:0: © MZSH
@@ -4157,7 +4157,7 @@ shellSlots:
     content-sort:label: 排序
     content-sort:likes: 点赞最多
     content-sort:original: 原有顺序
-    root.html:1.head:0.meta:2@content: 查看六轴三屏驾驶模拟器、飞行仿真、虚拟拍摄、AI 数字人、机器人与中药展示项目，了解我负责的工作和实现成果。
+    root.html:1.head:0.meta:2@content: 查看六轴三屏驾驶模拟器、飞行仿真、虚拟拍摄、AI 数字人、机器人与中医药可视化展示项目，了解我负责的工作和实现成果。
     root.html:1.head:0.title:4.#text:0: 项目案例 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -4221,9 +4221,9 @@ shellSlots:
     project-card:motion-capture-robot:description: 以动捕专用模型统一承接实时采集与录制动作，通过 URDF 结构适配和 IK 算法驱动机器人跟随。
     project-card:motion-capture-robot:category: UE项目
     project-card:motion-capture-robot:tag: 动作捕捉
-    project-card:herbal-exhibition:title: 中药展示
-    project-card:herbal-exhibition:secondary: Herbal exhibition
-    project-card:herbal-exhibition:description: 基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
+    project-card:herbal-exhibition:title: 中医药可视化展示
+    project-card:herbal-exhibition:secondary: Traditional Chinese medicine visualization
+    project-card:herbal-exhibition:description: 基于 UE 展示药材三维模型、显微切片、药材功效与经脉走向，并提供资料检索和内容维护功能。
     project-card:herbal-exhibition:category: UE项目
     project-card:herbal-exhibition:tag: 交互展示
   page:blog-index:
@@ -6309,8 +6309,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
   case:herbal-exhibition:
-    root.html:1.head:0.meta:2@content: 基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
-    root.html:1.head:0.title:4.#text:0: 中药展示 · 小毛
+    root.html:1.head:0.meta:2@content: 基于 UE 展示药材三维模型、显微切片、药材功效与经脉走向，并提供资料检索和内容维护功能。
+    root.html:1.head:0.title:4.#text:0: 中医药可视化展示 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -6328,9 +6328,9 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.a:0.#text:0: 案例
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.span:1.#text:0: /
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 中药展示
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Herbal exhibition
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 基于 UE 的中药交互展示项目，整合药材检索、图文与语音资料、三维模型、显微切片及外部内容维护。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 中医药可视化展示
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Traditional Chinese medicine visualization
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 基于 UE 展示药材三维模型、显微切片、药材功效与经脉走向，并提供资料检索和内容维护功能。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
