@@ -1,6 +1,6 @@
 # 中文手动同步
 
-Obsidian 仅保存中文作品、案例、博客和文档，四个分类直接位于 `网站/` 下。仓库各功能的 `src/*/content/` 保存公开中文快照和已审核译文，页面及公共文案直接在仓库维护。此入口只在用户授权手动同步时读取 `--vault`，不执行 Git 或部署。
+Obsidian 保存中文作品、案例、博客、文档和转载原稿。普通内容的四个分类直接位于 `网站/` 下，转载原稿位于 `网站/005-转载/`。仓库各功能的 `src/*/content/` 保存公开中文快照和已审核译文，页面及公共文案直接在仓库维护。此入口只在用户授权手动同步时读取 `--vault`，不执行 Git 或部署。
 
 作品和案例使用 `status: 开发中` 标记开发状态；已有的 `workInfo.stage: developing` 也会生效。同步后，构建会排除这些内容，Obsidian 原稿仍保留。关联教程可以独立发布。项目可以公开时，更新中文原稿中的开发状态，并同步、审核译文后重新构建；如果两个标记同时存在，需要一并更新。
 
@@ -21,7 +21,7 @@ node src/build/build.mjs --output "临时输出目录"
 
 需要公开引用本地许可证时，在该来源记录的 `attachments` 中精确登记库根相对 `source`、原字节 `sha256` 与 `websiteUrl`。目标必须是对应公开实体已有 `relativeLinkTargets` 中固定版本的 HTTPS 地址，附件只在笔记库保留，导入验证原字节后投影链接，不复制为网站文件。构建器继续只读取仓库，不读取笔记库或本机同步配置。
 
-公开译文 `sourceHash` 对应公开中文快照，不使用 Obsidian 原始文件摘要。文本摘要统一 LF，保留代码内容与 Unicode；图片摘要使用二进制字节。`--check` 不修改文件，存在待同步差异时退出码为 1。
+公开译文 `sourceHash` 对应公开中文快照，不使用 Obsidian 原始文件摘要。普通公开中文快照的文本摘要统一 LF，保留代码内容与 Unicode；转载原稿、转载公开快照和图片使用原字节摘要。`--check` 不修改文件，存在待同步差异时退出码为 1。
 
 仅更新二级分类名称、顺序和归属时，使用以下命令：
 
@@ -64,3 +64,20 @@ node src/import/import.mjs --vault "中文笔记库路径" --only work:example,c
 封面保持已登记的公开 URL；首次登记从现有模板首屏图片和资源清单核对，不按 slug 猜测。更换封面时须重新审批，导入同步资源摘要与 manifest 的封面摘要。公开类型与所选附件不一致时拒绝，交由人工处理。所有验证在公开写入前完成；写入失败会尝试恢复本次已改文件，私有配置最后写入。这不是跨文件原子事务。
 
 本轮仅修改导入及发布门禁源码，不部署。服务器上的更新器仍需在另一次获准部署中更新后，才可接收新增的视频类型。
+
+## 转载原稿
+
+转载使用私有配置中的独立 `reprints` 数组，不加入普通 `records`、翻译映射或分类实体。未配置时视为空数组。默认导入两组记录；`--only` 可选择普通内容、转载或混合记录，仍使用同一次写入及失败回滚流程。`--taxonomy-only` 不读取或导入转载。
+
+```powershell
+node src/import/import.mjs --vault "中文笔记库路径" --only reprint:eian-claude-codex-seedance,reprint:claude-max-account-guide --check
+node src/import/import.mjs --vault "中文笔记库路径" --only reprint:eian-claude-codex-seedance,reprint:claude-max-account-guide
+```
+
+每条私有转载记录保存 `id`（`reprint:<slug>`）、原稿的库根相对 `source`、`sourceFingerprint`、`publishedFingerprint`，以及 `images`。每张图片的授权包含库根相对 `source`、公开转载清单已有的 `originalPath` 和原图 `sha256`。这些路径和授权只保留在本机配置中。
+
+原稿必须声明与已有公开转载一致的 `slug`、`websiteRoute`、`sitePublish: true` 和 `visibility: unlisted`。`draft: true` 的转载原稿会在任何文件写入前拒绝，即使已设置 `sitePublish: true`。公开快照的 frontmatter 只投影 `title`、`author`、`source`，内部属性及注释不会发布。frontmatter 按字段语义投影，不保证保留所有 YAML 排版。正文不重新序列化，仅按 Markdown 图片节点的精确位置替换图片 URL，保留 alt、title、链接包装、空白和代码。
+
+转载同步先校验现有公开原文和图片的 SHA-256，再校验私有快照指纹、原稿身份和每张图片的授权。笔记库图片、私有授权、公开清单和现有公开图片必须逐张对应、字节一致；新增、替换、缺失、重复、越界或符号链接图片都会拒绝。本入口不审批或复制转载图片，`--approve-media` 选中转载时会拒绝。
+
+转载保留无属性的 `<strong>` 标签，其他原始 HTML 拒绝；普通内容仍拒绝原始 HTML。HTTP/HTTPS 链接、邮件、电话链接及页内锚点可保留，其他本地链接和引用式图片不支持。代码块里的图片示例不作为媒体引用。转载仍使用既有的中文独立 URL，不进入公开列表、搜索、RSS 或 sitemap，也不生成转载目录页。

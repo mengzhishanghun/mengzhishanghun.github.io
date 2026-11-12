@@ -9,6 +9,7 @@ import {createLinkResolver} from './links.mjs';
 import {resourcePath} from '../build/resources.mjs';
 import {createTaxonomy} from './taxonomy.mjs';
 import {createMediaPlan} from './project-media.mjs';
+import {prepareReprints} from './reprints.mjs';
 
 const here=path.dirname(fileURLToPath(import.meta.url));
 export const canonicalText=value=>String(value).replaceAll('\r\n','\n');
@@ -96,8 +97,12 @@ export async function importContent({site,vault,sync,check=false,taxonomyOnly=fa
     if(!check)fs.writeFileSync(target,raw);return {files:1,differences};
   }
     const ids=only===undefined?undefined:new Set(Array.isArray(only)?only:String(only).split(','));
-  if(ids&&(!ids.size||[...ids].some(id=>!id||!config.records.some(r=>r.id===id))))throw Error('--only包含未知记录');
+  const reprintRecords=config.reprints??[];
+  if(!Array.isArray(reprintRecords)||reprintRecords.some(record=>typeof record?.id!=='string'||!/^reprint:[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.id))||new Set(reprintRecords.map(record=>record.id)).size!==reprintRecords.length)throw Error('转载同步配置无效');
+  if(ids&&(!ids.size||[...ids].some(id=>!id||![...config.records,...reprintRecords].some(r=>r.id===id))))throw Error('--only包含未知记录');
   if(approveMedia&&!ids)throw Error('--approve-media必须显式指定--only');
+  const selectedReprints=reprintRecords.filter(record=>!ids||ids.has(record.id));
+  if(approveMedia&&selectedReprints.length)throw Error('媒体审批不支持转载');
   const selected=config.records.filter(record=>!ids||ids.has(record.id));
   if(approveMedia&&selected.some(record=>!['work','case'].includes(record.kind)))throw Error('媒体审批仅允许作品与案例');
   const resolveLink=createLinkResolver({site,vault,records:config.records.map(record=>selected.includes(record)?record:{...record,attachments:[]}),manifest});
@@ -116,6 +121,10 @@ export async function importContent({site,vault,sync,check=false,taxonomyOnly=fa
     files.set(output,projection.raw);updates.push({record,publishedFingerprint:canonicalTextHash(projection.raw),sourceFingerprint:binaryHash(Buffer.from(raw))});
   }
   if(!approveMedia){for(const [file,bytes]of media.finish())files.set(file,bytes);for(const [file,bytes]of media.initial)if(!initial.has(file))initial.set(file,bytes);}
+  const reprints=prepareReprints({site,vault,records:selectedReprints,ordinaryRecords:config.records});
+  for(const [file,bytes]of reprints.files){if(files.has(file))throw Error('转载同步输出冲突');files.set(file,bytes);}
+  for(const [file,bytes]of reprints.initial)if(!initial.has(file))initial.set(file,bytes);
+  updates.push(...reprints.updates);
   for(const update of updates)Object.assign(update.record,{publishedFingerprint:update.publishedFingerprint,sourceFingerprint:update.sourceFingerprint});
   files.set(configFile,sourceText(config,'本机中文手动同步配置；包含私有路径与媒体权限，禁止提交。\n'));
   const changed=[...files].filter(([file,bytes])=>!fs.existsSync(file)||!fs.readFileSync(file).equals(Buffer.isBuffer(bytes)?bytes:Buffer.from(bytes)));

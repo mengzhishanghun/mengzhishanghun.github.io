@@ -11,7 +11,7 @@ import {assertPublicFields} from './source-schema.mjs';
 import {articleTypes,validateArticleIdentities,shareRoute} from '../engagement/article-identities.mjs';
 import {loadResources,regularPath,resourcePath,safeRelative} from './resources.mjs';
 import {renderWorkMetadata,renderWorkCardStatuses} from '../works/metadata.mjs';
-import {loadReprints,reprintTemplate} from '../blog/reprints.mjs';
+import {loadReprints,reprintTemplate,isReprintHTML} from '../blog/reprints.mjs';
 import {projectBlogTopics} from '../blog/topics.mjs';
 import {projectContentTopics} from './content-topics.mjs';
 import {projectTaxonomy,categoryNavigation} from './taxonomy.mjs';
@@ -162,7 +162,7 @@ async function renderBody(entry,locale,processor,site) {
   const tokens=[];
   const mediaPlugin = () => tree => {
     const visit = node => {
-      if (node.type === 'html' && !(entry.original && /^(?:<strong>|<\/strong>|[^<>])+$/.test(node.value))) throw new Error('来源含未批准HTML: '+entry.id);
+      if (node.type === 'html' && !(entry.original && isReprintHTML(node.value))) throw new Error('来源含未批准HTML: '+entry.id);
       if (node.type === 'image') {
         if(entry.original){const url=entry.mediaMap.get(decodeURIComponent(node.url));if(!url)throw new Error('转载媒体未登记');node.url=url;return;}
         if(entry.mediaOccurrences) {

@@ -2,10 +2,17 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
 import YAML from 'yaml';
+import {fromMarkdown} from 'mdast-util-from-markdown';
 import {parse} from 'parse5';
 import {regularPath,safeRelative} from '../build/resources.mjs';
 import {walk,attrs,applyEdits} from '../build/extract-dom.mjs';
 const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
+export const isReprintHTML=value=>typeof value==='string'&&/^(?:<strong>|<\/strong>|[^<>])+$/.test(value);
+export function parseReprintBody(body){
+ const tree=fromMarkdown(body),images=[];
+ const visit=node=>{if(node.type==='imageReference')throw Error('转载媒体引用未登记');if(node.type==='image')images.push(node);for(const child of node.children||[])visit(child);};visit(tree);
+ return {tree,images};
+}
 export function loadReprints({site,routes=new Map(),manifest}){
  const root=path.join(site,'src/blog/reprints');
  if(!manifest&&!fs.existsSync(root))return [];
@@ -23,7 +30,7 @@ export function loadReprints({site,routes=new Map(),manifest}){
   if(!match)throw Error('转载frontmatter缺失');
   const data=YAML.parse(match[1]),body=raw.slice(match[0].length);
   if(['title','author','source'].some(key=>typeof data[key]!=='string'||!data[key].trim())||!/^https:\/\/x\.com\/[A-Za-z0-9_]+\/status\/\d+$/.test(data.source))throw Error('转载归因缺失');
-  const imagePaths=[...body.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g)].map(m=>decodeURIComponent(m[1]));
+  const imagePaths=parseReprintBody(body).images.map(node=>decodeURIComponent(node.url));
   const mediaMap=new Map();
   for(const media of record.media){
    safeRelative(media.originalPath);
