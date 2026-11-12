@@ -1568,7 +1568,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
     project-cover-note: 封面
   case:flying-car-simulator:
-    root.html:1.head:0.meta:2@content: 基于 UE 与 AirSim 的飞行仿真项目，涉及操作输入、飞行控制、观察视角和引擎版本适配。
+    root.html:1.head:0.meta:2@content: 基于 UE 与 AirSim 的 VR 飞行仿真项目，包含飞行手柄接入、飞控适配、相机配置与六轴平台联动。
     root.html:1.head:0.title:4.#text:0: 飞行仿真 · 小毛
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
@@ -1589,7 +1589,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE项目
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: 飞行仿真
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: Flight simulation
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 基于 UE 与 AirSim 的飞行仿真项目，涉及操作输入、飞行控制、观察视角和引擎版本适配。
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: 基于 UE 与 AirSim 的 VR 飞行仿真项目，包含飞行手柄接入、飞控适配、相机配置与六轴平台联动。
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: 技术标签
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: 多屏显示
@@ -4203,7 +4203,7 @@ shellSlots:
     project-card:driving-simulation:tag: 仿真
     project-card:flight-simulation:title: 飞行仿真
     project-card:flight-simulation:secondary: Flight simulation
-    project-card:flight-simulation:description: 基于 UE 与 AirSim 的飞行仿真项目，涉及操作输入、飞行控制、观察视角和引擎版本适配。
+    project-card:flight-simulation:description: 基于 UE 与 AirSim 的 VR 飞行仿真项目，包含飞行手柄接入、飞控适配、相机配置与六轴平台联动。
     project-card:flight-simulation:category: UE项目
     project-card:flight-simulation:tag: 仿真
     project-card:motion-platform-filming:title: 六轴平台与虚拟拍摄
@@ -4531,7 +4531,7 @@ shellSlots:
     migrated-blog:ai-digital-human-integration:category: UE开发
     migrated-blog:ai-digital-human-integration:tag: AI
     migrated-blog:flying-car-simulator:title: 飞行仿真
-    migrated-blog:flying-car-simulator:description: 基于 UE 与 AirSim 的飞行仿真项目，涉及操作输入、飞行控制、观察视角和引擎版本适配。
+    migrated-blog:flying-car-simulator:description: 基于 UE 与 AirSim 的 VR 飞行仿真项目，包含飞行手柄接入、飞控适配、相机配置与六轴平台联动。
     migrated-blog:flying-car-simulator:category: UE开发
     migrated-blog:flying-car-simulator:tag: 仿真
     migrated-blog:motion-capture-robot-control:title: 动捕与机器人控制

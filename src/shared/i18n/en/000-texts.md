@@ -1568,7 +1568,7 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
     project-cover-note: Cover
   case:flying-car-simulator:
-    root.html:1.head:0.meta:2@content: An Unreal Engine and AirSim flight simulation project covering input, flight control, camera behavior and engine adaptation.
+    root.html:1.head:0.meta:2@content: A UE and AirSim VR flight simulation project with flight stick integration, flight control adaptation, camera configuration and six-axis platform integration.
     root.html:1.head:0.title:4.#text:0: Flight simulation · Xiaomao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
@@ -1589,7 +1589,7 @@ shellSlots:
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:0.#text:2: UE Projects
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.h1:0.#text:0: Flight simulation
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.div:1.p:1.#text:0: ""
-    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: An Unreal Engine and AirSim flight simulation project covering input, flight control, camera behavior and engine adaptation.
+    root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.p:2.#text:0: A UE and AirSim VR flight simulation project with flight stick integration, flight control adaptation, camera configuration and six-axis platform integration.
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3@aria-label: Technology tags
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:0.#text:0: Lumen
     root.html:1.body:1.div:0.main:4.div:0.section:1.mzsh-reading:0.div:0.header:0.div:0.ul:3.li:1.#text:0: Multi-screen Display
@@ -4203,7 +4203,7 @@ shellSlots:
     project-card:driving-simulation:tag: Simulation
     project-card:flight-simulation:title: Flight simulation
     project-card:flight-simulation:secondary: ""
-    project-card:flight-simulation:description: An Unreal Engine and AirSim flight simulation project covering input, flight control, camera behavior and engine adaptation.
+    project-card:flight-simulation:description: A UE and AirSim VR flight simulation project with flight stick integration, flight control adaptation, camera configuration and six-axis platform integration.
     project-card:flight-simulation:category: Unreal Engine Projects
     project-card:flight-simulation:tag: Simulation
     project-card:motion-platform-filming:title: Motion platform and virtual filming
@@ -4531,7 +4531,7 @@ shellSlots:
     migrated-blog:ai-digital-human-integration:category: Unreal Engine
     migrated-blog:ai-digital-human-integration:tag: AI
     migrated-blog:flying-car-simulator:title: Flight simulation
-    migrated-blog:flying-car-simulator:description: An Unreal Engine and AirSim flight simulation project covering input, flight control, camera behavior and engine adaptation.
+    migrated-blog:flying-car-simulator:description: A UE and AirSim VR flight simulation project with flight stick integration, flight control adaptation, camera configuration and six-axis platform integration.
     migrated-blog:flying-car-simulator:category: Unreal Engine
     migrated-blog:flying-car-simulator:tag: Simulation
     migrated-blog:motion-capture-robot-control:title: Motion capture and robot control
@@ -8575,7 +8575,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: "9ef17c3621395f816223f9d3b2bd46421529bb517577e6ec29620b81cbe1cee0"
+sourceHash: "977eb23fc454fd3d92916ee797cfd557ac2fae3bf80ab7fa5bf2a7544fe3137c"
 translationStatus: translated
 generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
 workLabels:
