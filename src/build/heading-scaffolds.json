@@ -5894,11 +5894,6 @@
     },
     {
       "depth": 3,
-      "oldId": "getcomponentproperties读取继承-scs-模板",
-      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
-    },
-    {
-      "depth": 3,
       "oldId": "5-setclassdefaults改-cdo可覆盖继承属性",
       "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
     },
@@ -5954,11 +5949,6 @@
     },
     {
       "depth": 2,
-      "oldId": "编辑函数局部变量",
-      "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
-    },
-    {
-      "depth": 2,
       "oldId": "安全添加图表逻辑",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
     },
@@ -5975,26 +5965,6 @@
     {
       "depth": 3,
       "oldId": "函数事件与绑定事件示例",
-      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
-    },
-    {
-      "depth": 3,
-      "oldId": "连接-event-dispatcher",
-      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
-    },
-    {
-      "depth": 3,
-      "oldId": "修改改名与删除信号",
-      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
-    },
-    {
-      "depth": 3,
-      "oldId": "修改本地函数显示编辑器与声明属性",
-      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
-    },
-    {
-      "depth": 3,
-      "oldId": "修改自定义事件属性与-rpc",
       "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
     },
     {
@@ -6031,21 +6001,6 @@
       "depth": 2,
       "oldId": "支持",
       "template": "<div class=\"sl-heading-wrapper level-h2\"><h2 id=\"{{headingId}}\">{{headingMarkup}}</h2></div>"
-    },
-    {
-      "depth": 3,
-      "oldId": "读取蓝图类设置",
-      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
-    },
-    {
-      "depth": 3,
-      "oldId": "创建与使用宏",
-      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
-    },
-    {
-      "depth": 3,
-      "oldId": "修改重命名与删除已有宏",
-      "template": "<div class=\"sl-heading-wrapper level-h3\"><h3 id=\"{{headingId}}\">{{headingMarkup}}</h3></div>"
     }
   ],
   "doc:mcp-behavior-tree-guide": [
