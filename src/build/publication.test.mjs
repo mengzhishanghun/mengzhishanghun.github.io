@@ -13,6 +13,23 @@ test('development projects are excluded while independent tutorials and legacy p
  hidden.sources.zh.data.status='完成';assert.ok(projectPublication({entries,config:{primary:'zh'}}).entries.some(e=>e.id===hidden.id));
  assert.throws(()=>projectPublication({entries,config:{primary:'zh'},redirects:[{id:'missing',route:'/bad/'}]}),/旧链目标缺失/);
 });
+
+test('development blogs are removed individually from routes, category membership and discovery markup',()=>{
+ const hidden=item('blog:draft','blog','开发中'),ready=item('blog:ready','blog','完成');
+ const index={id:'page:blog-index',type:'page',taxonomy:{categories:[{id:'notes',entities:[hidden.id,ready.id],supplements:[]}],entityOrder:[hidden.id,ready.id],legacyQueries:{notes:{entities:[hidden.id,ready.id]}}}};
+ const options={entries:[hidden,ready,index],config:{primary:'zh'},redirects:[{id:hidden.id,route:'/old-draft/'},{id:ready.id,route:'/old-ready/'}]};
+ const result=projectPublication(options),taxonomy=result.entries.at(-1).taxonomy;
+ assert.deepEqual(result.entries.map(e=>e.id),['blog:ready','page:blog-index']);
+ assert.deepEqual(result.redirects,[{id:'blog:ready',route:'/old-ready/'}]);
+ assert.deepEqual([...result.hiddenRoutes].sort(),['/blog/draft/','/en/blog/draft/','/old-draft/','/zh/blog/draft/']);
+ assert.deepEqual(taxonomy.categories,[{id:'notes',entities:['blog:ready'],supplements:[]}]);
+ assert.deepEqual(taxonomy.entityOrder,['blog:ready']);
+ assert.deepEqual(taxonomy.legacyQueries.notes.slugs,['ready']);
+ const html='<a data-content-card data-slug="draft" href="/blog/draft/">draft card</a><a data-content-card data-slug="ready" href="/blog/ready/">ready card</a><script type="application/json">[{"id":"blog:draft","slug":"draft","type":"blog"},{"id":"blog:ready","slug":"ready","type":"blog"}]</script>';
+ const markup=filterPublicationHTML(html,result);assert.doesNotMatch(markup,/draft/);assert.match(markup,/ready card/);
+ hidden.sources.zh.data.status='完成';
+ const restored=projectPublication(options);assert.deepEqual(restored.entries.map(e=>e.id),['blog:draft','blog:ready','page:blog-index']);assert.equal(restored.hiddenRoutes.size,0);
+});
 test('removed list cards do not grant resource sharing, but public article bodies do',t=>{
  const site=fs.mkdtempSync(path.join(os.tmpdir(),'publication-resource-'));t.after(()=>fs.rmSync(site,{recursive:true,force:true}));fs.mkdirSync(path.join(site,'src'));
  const hidden=item('case:robot','case','开发中');hidden.cover={websiteUrl:'/assets/robot.png'};

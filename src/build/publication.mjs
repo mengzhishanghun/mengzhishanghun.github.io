@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {attrs,walk,applyEdits} from './extract-dom.mjs';
 import {regularPath} from './resources.mjs';
-export const isDeveloping=(entry,primary='zh')=>['work','case'].includes(entry.type)&&(entry.sources[primary].data.status==='开发中'||entry.sources[primary].data.workInfo?.stage==='developing');
+export const isDeveloping=(entry,primary='zh')=>['work','case','blog'].includes(entry.type)&&(entry.sources[primary].data.status==='开发中'||entry.sources[primary].data.workInfo?.stage==='developing');
 const route=(entry,code)=>'/'+code+(entry.legacyRoutes[0]==='/'?'/':entry.legacyRoutes[0].replace(/^\/docs\/(?:zh|en)\//,'/docs/'));
 export function projectPublication({entries,config,redirects=[] ,galleries=new Map(),site}){
  const hidden=entries.filter(e=>isDeveloping(e,config.primary)),hiddenIDs=new Set(hidden.map(e=>e.id));
