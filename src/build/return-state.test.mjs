@@ -36,3 +36,19 @@ test('session page cache is bounded and expires rather than growing across paths
 });
 
 test('sort override returns with the exact filter URL, page and scroll',()=>{const x=session({url:'https://mzsh.me/en/works/?sort=original&category=tools&q=cpp&tag=UE&page=2#cards'});x.api.rememberSessionPage();x.move('/en/works/simple-udp/');const result=x.api.prepareSessionReturn('/en/works/');assert.equal(result.url,'/en/works/?sort=original&category=tools&q=cpp&tag=UE&page=2#cards');x.move(result.url);assert.equal(x.api.applySessionReturn(),true);assert.equal(x.history.state.mzshViewport.top,1530);});
+
+test('category policy restores complete same-category and compatible historical-query state',()=>{
+ const policy={path:'/zh/blog/',firstCategory:'first',compatibleCategories:['ue','old'],skipCache:false};
+ for(const category of ['ue','old']){const x=session({url:'https://mzsh.me/zh/blog/?category='+category+'&q=shader&tag=render&page=3#cards'});x.api.rememberSessionPage();x.move('/zh/blog/detail/');const result=x.api.prepareSessionReturn('/zh/blog/?category=ue',policy);assert.equal(result.url,'/zh/blog/?category='+category+'&q=shader&tag=render&page=3#cards');assert.ok(result.intent);x.move(result.url);assert.equal(x.api.applySessionReturn(),true);assert.equal(x.history.state.mzshViewport.top,1530);assert.equal(x.history.state.mzshContentTags.expanded,true);}
+});
+test('category policy refuses incompatible, absent-member, empty and invalid policies without stale intents',()=>{
+ const x=session();x.api.rememberSessionPage();x.move('/zh/blog/detail/');
+ const policy={path:'/zh/blog/',firstCategory:'first',compatibleCategories:['other'],skipCache:false};
+ for(const override of [{},{skipCache:true},{compatibleCategories:[]},{path:'/en/blog/'},{firstCategory:null},{compatibleCategories:'ue'}]){const result=x.api.prepareSessionReturn('/zh/blog/?category=other',{...policy,...override});assert.equal(result.url,'/zh/blog/?category=other');assert.equal(result.intent,null);}
+ assert.equal(x.api.prepareSessionReturn('/zh/blog/',null).intent,null);
+});
+test('missing cached category means the current first category; explicit empty or repeated categories are not compatible',()=>{
+ const policy={path:'/zh/blog/',firstCategory:'first',compatibleCategories:['first'],skipCache:false};
+ for(const [suffix,want]of [['?q=shader&page=3#cards',true],['?category=&q=shader',false],['?category=first&category=other',false]]){const x=session({url:'https://mzsh.me/zh/blog/'+suffix});x.api.rememberSessionPage();x.move('/zh/blog/detail/');const result=x.api.prepareSessionReturn('/zh/blog/?category=first',policy);assert.equal(!!result.intent,want);if(want)assert.equal(result.url,'/zh/blog/'+suffix);}
+ const x=session({url:'https://mzsh.me/zh/blog/?q=shader'});x.api.rememberSessionPage();x.move('/zh/blog/detail/');assert.equal(x.api.prepareSessionReturn('/zh/blog/?category=second',{...policy,compatibleCategories:['second']}).intent,null);
+});

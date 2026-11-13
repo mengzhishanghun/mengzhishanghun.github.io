@@ -52,8 +52,7 @@ export function reprintTemplate(html,entry,escapeHTML){
  const edits=[];
  walk(parse(html,{sourceCodeLocationInfo:true}),node=>{
   const a=attrs(node),loc=node.sourceCodeLocation;if(!loc)return;
-  if((a.class||'').split(/\s+/).includes('note-hero'))edits.push([loc.startOffset,loc.endOffset,'<header class="project-hero note-hero"><p class="project-breadcrumb">转载 · '+escapeHTML(entry.sources.zh.data.author)+' · <a href="'+escapeHTML(entry.sources.zh.data.source)+'">原文</a></p></header>']);
-  if(['article-back','outline-mobile-back'].includes(a.class))edits.push([loc.startOffset,loc.endOffset,'<a class="'+a.class+'" href="/zh/blog/" data-fixed-return aria-label="返回博客">返回博客</a>']);
+  if((a.class||'').split(/\s+/).includes('note-hero'))edits.push([loc.startOffset,loc.endOffset,'']);
   if(node.tagName==='article'&&loc.attrs?.['aria-labelledby']){const at=loc.attrs['aria-labelledby'];edits.push([at.startOffset,at.endOffset,'aria-label="'+escapeHTML(entry.sources.zh.data.title)+'"']);}
   if(node.tagName==='title')edits.push([loc.startTag.endOffset,loc.endTag.startOffset,escapeHTML(entry.sources.zh.data.title)]);
   if(node.tagName==='meta'&&a.name==='description')edits.push([loc.startOffset,loc.endOffset,'<meta name="description" content="'+escapeHTML(entry.sources.zh.data.title)+'">']);

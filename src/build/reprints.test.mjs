@@ -7,6 +7,7 @@ import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
 import {walk,attrs} from './extract-dom.mjs';
 import {buildSite,preflight} from './build.mjs';
+import * as builder from './build.mjs';
 const site=path.resolve(import.meta.dirname,'../..');
 const manifest=JSON.parse(fs.readFileSync(path.join(site,'src/build/manifest.json')));
 const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
@@ -34,7 +35,8 @@ test('unlisted reprints preserve source and images without entering public disco
   assert.deepEqual(nodes.filter(n=>n.tagName==='img'&&attrs(n).src?.startsWith('/media/reprints/')).map(n=>attrs(n).src),entry.media.map(m=>m.websiteUrl));
   const backs=nodes.filter(n=>['article-back','outline-mobile-back'].includes(attrs(n).class));
   assert.equal(backs.length,2);
-  for(const n of backs){assert.equal(attrs(n).href,'/zh/blog/');assert.equal(attrs(n)['data-fixed-return'],'');}
+  for(const n of backs){const first=validated.entries.find(e=>e.id==='page:blog-index').taxonomy.categories[0].id;assert.equal(attrs(n).href,'/zh/blog/?category='+encodeURIComponent(first));assert.equal(attrs(n)['data-fixed-return'],undefined);assert.equal(attrs(n)['aria-label'],'返回');assert.equal(JSON.parse(attrs(n)['data-return-policy']).skipCache,true);}
+  assert.equal(nodes.some(n=>(attrs(n).class||'').split(/\s+/).includes('note-hero')),false);
   const engagement=JSON.parse(nodes.find(n=>attrs(n)['data-engagement-config']!==undefined).childNodes[0].value);
   assert.equal(engagement.likesEnabled,false);
   const runtime=JSON.parse(nodes.find(n=>attrs(n)['data-site-language']!==undefined).childNodes[0].value);
@@ -67,4 +69,42 @@ test('reprint article accessibility names never refer to the borrowed template i
  const article=nodes.find(node=>node.tagName==='article');
  assert.equal(attrs(article)['aria-labelledby'],undefined);
  assert.equal(attrs(article)['aria-label'],entry.sources.zh.data.title);
+});
+
+
+test('reprint shell removes the extra hero and leaves both standard return controls intact',async()=>{
+ const {loadReprints,reprintTemplate}=await import('../blog/reprints.mjs');const entry=loadReprints({site})[0];
+ const template=fs.readFileSync(path.join(site,'src',entry.template),'utf8'),html=reprintTemplate(template,entry,value=>value);
+ const controls=markup=>{const result=[];walk(parse(markup,{sourceCodeLocationInfo:true}),node=>{if(['article-back','outline-mobile-back'].includes(attrs(node).class)){const loc=node.sourceCodeLocation;result.push(markup.slice(loc.startOffset,loc.endOffset));}});return result;};
+ assert.deepEqual(controls(html),controls(template));
+ const nodes=[];walk(parse(html),node=>nodes.push(node));assert.equal(nodes.some(n=>(attrs(n).class||'').split(/\s+/).includes('note-hero')),false);
+});
+function returnFixture(){return [{id:'page:blog-index',legacyRoutes:['/blog/'],taxonomy:{categories:[{id:'first',entities:['blog:first']},{id:'second',entities:['blog:member']}],legacyQueries:{old:{entities:['blog:member']},unrelated:{entities:['blog:first']}}}}];}
+test('return projection derives membership, first-category order and compatible historical queries',()=>{
+ assert.equal(typeof builder.articleReturnTarget,'function');const entries=returnFixture();
+ assert.deepEqual(builder.articleReturnTarget({id:'blog:member'},'/zh/blog/','zh',entries),{href:'/zh/blog/?category=second',policy:{path:'/zh/blog/',firstCategory:'first',compatibleCategories:['second','old'],skipCache:false}});
+ const unlisted={id:'reprint:other'};assert.equal(builder.articleReturnTarget(unlisted,'/zh/blog/','zh',entries).href,'/zh/blog/?category=first');
+ entries[0].taxonomy.categories.reverse();const projected=builder.articleReturnTarget(unlisted,'/zh/blog/','zh',entries);assert.equal(projected.href,'/zh/blog/?category=second');assert.deepEqual(projected.policy.compatibleCategories,[]);assert.equal(projected.policy.skipCache,true);
+});
+test('return projection preserves explicit and non-list destinations, refuses ambiguity and handles empty lists',()=>{
+ assert.equal(typeof builder.articleReturnTarget,'function');const entries=returnFixture(),entry={id:'blog:member'};
+ for(const href of ['/zh/blog/?category=old&q=explicit#cards','/zh/blog/#outline','/zh/works/tool/'])assert.deepEqual(builder.articleReturnTarget(entry,href,'zh',entries),{href});
+ assert.throws(()=>builder.articleReturnTarget(entry,'/zh/blog/','zh',[]),/返回列表/);
+ entries[0].taxonomy.categories[0].entities.push(entry.id);assert.throws(()=>builder.articleReturnTarget(entry,'/zh/blog/','zh',entries),/多个分类/);
+ entries[0].taxonomy.categories=[];const result=builder.articleReturnTarget(entry,'/zh/blog/','zh',entries);assert.equal(result.href,'/zh/blog/');assert.equal(result.policy.firstCategory,null);assert.equal(result.policy.skipCache,true);
+});
+
+test('generated public article and reprint returns carry category policies without extra reprint chrome',async()=>{
+ const {projectPublication}=await import('./publication.mjs'),validated=preflight({site,manifest}),published=projectPublication({...validated,site,redirects:manifest.redirects}).entries;
+ const output=path.join(site,process.env.SITE_OUTPUT||'dist/site');
+ const types={blog:'blog',work:'works',case:'cases'};
+ for(const entry of [...published.filter(e=>Object.hasOwn(types,e.type)),...validated.reprints])for(const locale of entry.languageCodes){
+  const html=fs.readFileSync(path.join(output,builder.localeRoute(entry,locale).slice(1),'index.html'),'utf8'),nodes=[];walk(parse(html),node=>nodes.push(node));
+  const backs=nodes.filter(n=>['article-back','outline-mobile-back'].includes(attrs(n).class));assert.equal(backs.length,2,entry.id);
+  const index=published.find(e=>e.id==='page:'+types[entry.type]+'-index'),categories=index.taxonomy.categories,member=categories.find(c=>c.entities.includes(entry.id)),expected=member?.id??categories[0]?.id;
+  for(const back of backs){const a=attrs(back),url=new URL(a.href,'https://mzsh.me');assert.equal(url.pathname,'/'+locale+'/'+types[entry.type]+'/');assert.equal(url.searchParams.get('category'),expected??null);assert.equal(a['aria-label'],locale==='zh'?'返回':'Back');assert.equal(a['data-fixed-return'],undefined);
+   const policy=JSON.parse(a['data-return-policy']);assert.deepEqual(Object.keys(policy).sort(),['compatibleCategories','firstCategory','path','skipCache']);assert.equal(policy.path,url.pathname);assert.equal(policy.firstCategory,categories[0]?.id??null);assert.equal(policy.skipCache,!member);assert.equal(policy.compatibleCategories.includes(member?.id),!!member);
+  }
+  if(entry.original)assert.equal(nodes.some(n=>(attrs(n).class||'').split(/\s+/).includes('note-hero')),false);
+ }
 });

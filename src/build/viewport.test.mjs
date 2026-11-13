@@ -96,11 +96,35 @@ test('an unrelated fallback replacement clears intent and does not lock the dest
 });
 
 test('page-load cannot release scroll restoration while asynchronous like counts are loading',()=>{const x=runtime(false,true,{url:'https://mzsh.me/zh/blog/?sort=original&page=2',state:{mzshViewport:{key:'/zh/blog/?sort=original&page=2',top:900}}});x.frame.index.dataset.ready='loading';x.emit(x.document,'astro:page-load');x.flushMicrotasks();assert.equal(x.frame.scrollTop,0);assert.equal(x.frame.counts.get('scroll'),undefined);x.frame.index.dataset.ready='true';x.emit(x.document,'mzsh:content-index-ready',{detail:{element:x.frame.index}});assert.equal(x.frame.scrollTop,900);assert.equal(x.frame.counts.get('scroll'),1);});
-test('fixed blog returns retain their label and bypass history and cached return targets',()=>{
- const x=runtime();
- for(const link of x.links){link.setAttribute('data-fixed-return','');link.setAttribute('href','/zh/blog/');link.childNodes=[{nodeType:3,nodeValue:'返回博客'}];}
- x.history.pushState({index:1},'', '/zh/blog/reprints/example/');
- for(const link of x.links){assert.equal(link.textContent,'返回博客');assert.equal(link.getAttribute('href'),'/zh/blog/');}
- assert.equal(x.click().defaultPrevented,false);assert.equal(x.click(true).defaultPrevented,false);
- assert.equal(x.history.backCalls,0);assert.deepEqual(x.replacements,[]);
+
+function setReturnTarget(x,href,policy){for(const link of x.links){link.setAttribute('href',href);if(policy===undefined)link.removeAttribute('data-return-policy');else link.setAttribute('data-return-policy',JSON.stringify(policy));}}
+function cacheCategoryList(storage,category='second'){
+ const list=runtime(false,true,{storage,url:'https://mzsh.me/zh/blog/?category='+category+'&q=needle&tag=render&page=3#cards',listPath:'/zh/blog/'});
+ list.frame.index.dataset.ready='true';list.emit(list.document,'mzsh:content-index-ready',{detail:{element:list.frame.index}});list.history.replaceState({...list.history.state,mzshContentTags:{key:'/zh/blog/',category,expanded:true}},'');list.scroll(1530);list.flush();
+}
+test('category return policy reaches both controls and cancellation restores their static target',()=>{
+ for(const mobile of [false,true]){
+  const storage=new Map();cacheCategoryList(storage);
+  const detail=runtime(false,false,{storage,url:'https://mzsh.me/zh/blog/detail/'}),href='/zh/blog/?category=second';
+  setReturnTarget(detail,href,{path:'/zh/blog/',firstCategory:'first',compatibleCategories:['second'],skipCache:false});
+  detail.click(mobile);assert.equal(detail.links[mobile?1:0].getAttribute('href'),'/zh/blog/?category=second&q=needle&tag=render&page=3#cards');assert.equal(detail.click(!mobile).defaultPrevented,true);
+  const pending=detail.prepare();pending.abort();assert.equal(detail.links[mobile?1:0].getAttribute('href'),href);assert.equal([...storage.keys()].some(key=>key.includes('intent')),false);
+  detail.click(mobile);assert.match(detail.links[mobile?1:0].href,/q=needle/);assert.equal(detail.history.backCalls,0);
+ }
+});
+test('unlisted and incompatible fallback policies keep first-category targets while trusted history still wins',()=>{
+ for(const mobile of [false,true])for(const skipCache of [false,true]){
+  const storage=new Map();cacheCategoryList(storage,'other');
+  const detail=runtime(true,false,{storage,url:'https://mzsh.me/zh/docs/guide/'}),href='/zh/blog/?category=first';
+  setReturnTarget(detail,href,{path:'/zh/blog/',firstCategory:'first',compatibleCategories:skipCache?[]:['first'],skipCache});
+  detail.click(mobile);assert.deepEqual(detail.replacements,['https://mzsh.me'+href]);assert.equal([...storage.keys()].some(key=>key.includes('intent')),false);
+ }
+ const x=runtime();pushAfterSwap(x,'/zh/blog/reprints/example/',1);
+ setReturnTarget(x,'/zh/blog/?category=first',{path:'/zh/blog/',firstCategory:'first',compatibleCategories:[],skipCache:true});
+ assert.equal(x.links[0].textContent,'返回');x.click();assert.equal(x.history.backCalls,1);assert.deepEqual(x.replacements,[]);
+});
+test('malformed return policy never restores a cached fallback and modified clicks remain native',()=>{
+ const storage=new Map();cacheCategoryList(storage);const x=runtime(true,false,{storage,url:'https://mzsh.me/zh/docs/guide/'});
+ setReturnTarget(x,'/zh/blog/',undefined);x.links[0].setAttribute('data-return-policy','{bad');assert.equal(x.click(false,{ctrlKey:true}).defaultPrevented,false);assert.equal(x.replacements.length,0);
+ x.click();assert.deepEqual(x.replacements,['https://mzsh.me/zh/blog/']);assert.equal([...storage.keys()].some(key=>key.includes('intent')),false);
 });

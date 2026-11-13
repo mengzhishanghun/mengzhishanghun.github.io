@@ -324,6 +324,20 @@ function localizeJSON(value,dict,entries,locale,contentType) {
   }
   return value;
 }
+export function articleReturnTarget(entry,href,locale,entries){
+  const target=new URL(href,'https://mzsh.me');
+  if(target.origin!=='https://mzsh.me')return {href};
+  const match=target.pathname.match(new RegExp('^/(?:'+locale+'/)?(blog|works|cases)/$'));
+  if(!match)return {href};
+  const indexes=entries.filter(item=>item.id==='page:'+match[1]+'-index');
+  if(indexes.length!==1||!Array.isArray(indexes[0].taxonomy?.categories))throw Error('返回列表不存在或分类缺失: '+target.pathname);
+  if(target.search||target.hash)return {href};
+  const index=indexes[0],categories=index.taxonomy.categories,members=categories.filter(category=>category.entities.includes(entry.id));
+  if(members.length>1)throw Error('返回文章属于多个分类: '+entry.id);
+  const firstCategory=categories[0]?.id??null,category=members[0]?.id??firstCategory,path=localeRoute(index,locale);
+  const compatibleCategories=members.length?[...new Set([members[0].id,...Object.entries(index.taxonomy.legacyQueries||{}).filter(([,query])=>query.entities.includes(entry.id)).map(([id])=>id)])]:[];
+  return {href:path+(category?'?category='+encodeURIComponent(category):''),policy:{path,firstCategory,compatibleCategories,skipCache:!members.length}};
+}
 function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels) {
   const doc = parse(html,{sourceCodeLocationInfo:true}), edits=[], excluded=new Set();
   const contentType=indexContentTypes.get(entry.id);
@@ -414,6 +428,10 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     for (const name of ['href','action']) {
       if (!a[name] || !loc.attrs?.[name]) continue;
       let value = mapURL(a[name],locale,entries);
+      if(article&&name==='href'&&node.tagName==='a'&&['article-back','outline-mobile-back'].some(cls=>(a.class||'').split(/\s+/).includes(cls))){
+        const result=articleReturnTarget(entry,value,locale,entries);value=result.href;
+        if(result.policy)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-return-policy="'+escapeHTML(safeJSON(result.policy))+'"']);
+      }
       if (node.tagName==='link' && a.rel==='canonical') value='https://mzsh.me'+urls[locale];
       if (value!==a[name]) edits.push([loc.attrs[name].startOffset,loc.attrs[name].endOffset,`${name}="${escapeHTML(value)}"`]);
     }
