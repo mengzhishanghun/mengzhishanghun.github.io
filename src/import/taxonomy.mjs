@@ -10,6 +10,27 @@ const numbered=name=>{const match=/^(\d{3})-(.+)$/.exec(name);if(!match||Number(
 const categoryId=(type,name)=>type+'-'+createHash('sha256').update(name).digest('hex').slice(0,12);
 export function createTaxonomy({site,vault,config,manifest,parseSource,previous}) {
   const sections={},mapped=new Set(),outputs=new Set();
+  const hiddenSources=new Set(),hiddenDirectories=new Set(),hiddenIDs=new Set(),sourceKeys=new Set(),blogRoot='网站/'+roots.blog+'/';
+  if(!Array.isArray(config.reprints??[]))throw Error('隐藏转载配置无效');
+  for(const record of config.reprints??[]){
+    if(typeof record.source!=='string'||!record.source.startsWith(blogRoot))continue;
+    const parts=record.source.split('/'),slug=record.id?.match(/^reprint:([a-z0-9]+(?:-[a-z0-9]+)*)$/)?.[1];
+    if(!slug||parts.length<4||!/^\d+-.+\.md$/.test(parts.at(-1)))throw Error('隐藏转载来源目录或编号不符');
+    numbered(parts[2]);
+    const file=regularPath(vault,record.source),key=process.platform==='win32'?file.toLowerCase():file;
+    if(sourceKeys.has(key)||hiddenIDs.has(record.id))throw Error('隐藏转载来源或身份重复');sourceKeys.add(key);hiddenIDs.add(record.id);
+    const {data}=parseSource(fs.readFileSync(file,'utf8'));
+    if(data.slug!==slug||data.websiteRoute!=='/zh/blog/reprints/'+slug+'/'||data.sitePublish!==true||data.visibility!=='unlisted')throw Error('隐藏转载来源身份不符');
+    hiddenSources.add(record.source);hiddenDirectories.add(parts[2]);
+  }
+  const assertNoPublicReprints=({categories=[],legacyQueries={}}={})=>{
+    for(const directory of hiddenDirectories){
+      const {name}=numbered(directory);
+      if(categories.some(category=>category.name===name)||Object.values(legacyQueries).some(query=>query.name===name))throw Error('已有公开分类不得转为隐藏转载分类');
+    }
+  };
+  for(const directory of hiddenDirectories)if(config.records.some(record=>record.source.startsWith(blogRoot+directory+'/')))throw Error('普通记录不得与隐藏转载混用分类');
+  assertNoPublicReprints(previous?.sections?.blog);
   for(const [type,root]of Object.entries(roots)){
     const relative='网站/'+root,base=path.join(vault,relative);
     if(fs.lstatSync(base).isSymbolicLink())throw Error('分类目录符号链接越界');
@@ -31,12 +52,14 @@ export function createTaxonomy({site,vault,config,manifest,parseSource,previous}
       const a=attrs(node);if(a['data-content-group']!==undefined)legacyQueries[a['data-category']]={name:a['data-category-name'],entities:[]};
       if(a['data-content-index-data']!==undefined)entityOrder=JSON.parse(node.childNodes.map(n=>n.value||'').join('')).map(r=>type+':'+r.slug);
     });
-    sections[type]={categories,legacyQueries,entityOrder:entityOrder||manifest.entries.filter(e=>e.type===type).map(e=>e.id)};
+    if(type==='blog')assertNoPublicReprints({legacyQueries});
+    sections[type]={categories:type==='blog'?categories.filter(category=>!hiddenDirectories.has(category.directory)):categories,legacyQueries,entityOrder:entityOrder||manifest.entries.filter(e=>e.type===type).map(e=>e.id)};
     const scan=dir=>{for(const item of fs.readdirSync(path.join(vault,dir),{withFileTypes:true})){
       const relative=dir+'/'+item.name;if(item.isSymbolicLink())throw Error('分类来源符号链接越界');
       if(item.isDirectory())scan(relative);else if(item.name.endsWith('.md')&&item.name!=='README.md')mapped.add(relative);
     }};scan(relative);
   }
+  for(const source of hiddenSources)if(!mapped.delete(source))throw Error('隐藏转载来源未在博客扫描中登记');
   const seen=new Set();
   for(const record of config.records){
     const type=record.kind==='supplement'?'doc':record.kind,section=sections[type];
