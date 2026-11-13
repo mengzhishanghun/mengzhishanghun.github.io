@@ -33,6 +33,13 @@ test('unlisted reprints preserve source and images without entering public disco
   const sourceCode=[...entry.sources.zh.body.matchAll(/^```[^\n]*\n([\s\S]*?)^```[^\n]*$/gm)].map(m=>m[1].replace(/\r\n/g,'\n').trimEnd());
   assert.deepEqual(nodes.filter(n=>n.tagName==='pre').map(n=>text(n).trimEnd()),sourceCode,'all original code and prompt blocks must remain complete');
   assert.deepEqual(nodes.filter(n=>n.tagName==='img'&&attrs(n).src?.startsWith('/media/reprints/')).map(n=>attrs(n).src),entry.media.map(m=>m.websiteUrl));
+  for(const image of nodes.filter(n=>n.tagName==='img'&&attrs(n).src?.startsWith('/media/reprints/'))){
+   let link=image.parentNode;while(link&&link.tagName!=='a')link=link.parentNode;
+   assert.ok(link,'each reprint image must be the enlargement action itself');
+   assert.equal(attrs(link).href,attrs(image).src,'clicking the image must not navigate to X');
+   assert.ok(Object.hasOwn(attrs(link),'data-media-image'),'use the shared blog image viewer');
+   assert.equal(attrs(link)['data-media-src'],attrs(image).src);
+  }
   const backs=nodes.filter(n=>['article-back','outline-mobile-back'].includes(attrs(n).class));
   assert.equal(backs.length,2);
   for(const n of backs){const first=validated.entries.find(e=>e.id==='page:blog-index').taxonomy.categories[0].id;assert.equal(attrs(n).href,'/zh/blog/?category='+encodeURIComponent(first));assert.equal(attrs(n)['data-fixed-return'],undefined);assert.equal(attrs(n)['aria-label'],'返回');assert.equal(JSON.parse(attrs(n)['data-return-policy']).skipCache,true);}

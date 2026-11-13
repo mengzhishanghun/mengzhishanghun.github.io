@@ -25,6 +25,17 @@ function viewer(relative,mediaURL) {
 test('delayed viewer load after navigation cannot open or redirect',async()=>{const x=viewer();const pending=x.click();x.navigate();x.finish();await pending;assert.equal(x.opened.length,0);assert.equal(x.fallback.length,0);});
 test('rapid image clicks open only the latest request and close restores article scroll',async()=>{const x=viewer();const one=x.click();const two=x.click();x.finish();await Promise.all([one,two]);assert.equal(x.opened.length,1);x.frame.scrollTop=400;x.opened[0].destroy();assert.equal(x.frame.scrollTop,125);assert.equal(x.anchor.focused,true);});
 test('current load failure falls back to the image URL',async()=>{const x=viewer();const pending=x.click();x.reject();await pending;assert.deepEqual(x.fallback,[x.anchor.href]);});
+test('all reprint images open in the shared viewer and restore article position on close',async()=>{
+  const manifest=JSON.parse(fs.readFileSync(new URL('../blog/reprints/manifest.json',import.meta.url),'utf8'));
+  for(const entry of manifest.entries)for(const media of entry.media){
+    const x=viewer('zh/blog/reprints/'+entry.slug+'/index.html',media.websiteUrl);
+    const pending=x.click();x.finish();await pending;
+    assert.equal(x.opened.length,1,media.websiteUrl);assert.deepEqual(x.fallback,[]);
+    assert.equal(x.opened[0].options.dataSource[0].src,media.websiteUrl);
+    assert.equal(x.opened[0].options.wheelToZoom,true);assert.equal(x.opened[0].options.escKey,true);
+    x.frame.scrollTop=500;x.opened[0].destroy();assert.equal(x.frame.scrollTop,125);assert.equal(x.anchor.focused,true);
+  }
+});
 test('pagehide destroys an active viewer without restoring stale page focus or scroll',async()=>{const x=viewer();const pending=x.click();x.finish();await pending;x.frame.scrollTop=500;x.hide();assert.equal(x.opened[0].active,false);assert.equal(x.frame.scrollTop,500);assert.equal(x.anchor.focused,undefined);});
 
 test('scrolling during image dependency loading restores the latest position on close',async()=>{const x=viewer();const pending=x.click();x.frame.scrollTop=400;x.finish();await pending;x.frame.scrollTop=700;x.opened[0].destroy();assert.equal(x.frame.scrollTop,400);assert.equal(x.anchor.focused,true);});

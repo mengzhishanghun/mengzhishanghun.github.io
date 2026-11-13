@@ -177,7 +177,12 @@ async function renderBody(entry,locale,processor,site) {
         throw new Error('未知媒体公开权限: '+entry.id);
       }
       if (node.type === 'link') {
-        if(entry.relativeLinkTargets?.[node.url])node.url=entry.relativeLinkTargets[node.url];
+        if(entry.original && node.children?.length===1 && node.children[0].type==='image') {
+          const url=entry.mediaMap.get(decodeURIComponent(node.children[0].url));
+          if(!url)throw new Error('转载媒体未登记');
+          node.url=url;
+        }
+        else if(entry.relativeLinkTargets?.[node.url])node.url=entry.relativeLinkTargets[node.url];
         else if(/^(?:\.{1,2}\/)*CHANGELOG\.md$/i.test(node.url)) {
           const note=processor.copy[locale].missingPublicFileNote;
           if(typeof note!=='string')throw new Error('缺失公共文件提示来源: '+entry.id);
