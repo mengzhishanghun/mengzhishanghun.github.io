@@ -1,17 +1,18 @@
 ---
 title: MCPBlueprint
-description: MCPBlueprint 是开发中的 UE 编辑器 MCP 插件，围绕蓝图发现、编辑与编译反馈提供工具接口。当前功能与兼容性仍在验证。
+description: 通过 MCP 连接 AI 工具，编辑 Unreal Engine 蓝图、管理成员与组件，并获取编译反馈。
 type: work
 slug: mcp-blueprint
 categoryId: ue-plugins
 categoryName: UE插件
 categoryOrder: 0
 order: 18
-status: 开发中
+status: 在售
 workInfo:
-  stage: developing
   supportHref: /contact/#support-title
   channels:
+    - kind: sale
+      href: https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713
     - kind: docs
       href: /docs/guides/ue-tools/mcp-blueprint-guide/
   compatibility:
@@ -20,27 +21,27 @@ workInfo:
         - macOS
         - Linux
       requirements:
-        - UE 5.2–5.8（开发中，兼容性待确认）
+        - UE 5.2–5.8（使用与引擎小版本匹配的发行包）
 featured: false
 draft: false
 sitePublish: true
 tags:
   - 蓝图发现、编辑与编译反馈
   - MCP 系列
-coverAlt: "MCPBlueprint封面"
-websiteCoverUrl: "/media/covers/works/mcp-blueprint-20261101.webp"
-lang: "zh"
+coverAlt: MCPBlueprint封面
+websiteCoverUrl: /media/covers/works/mcp-blueprint-20261101.webp
+lang: zh
 translationKey: mcp-blueprint
 ---
 
 ## 作品简介
 
-MCPBlueprint 是开发中的 UE 编辑器 MCP 插件，围绕蓝图发现、编辑与编译反馈提供工具接口。当前功能与兼容性仍在验证。
+MCPBlueprint 是已在 Fab 发售的 UE 编辑器插件，让 AI 工具通过 MCP 发现和编辑蓝图，管理成员、组件与类默认值，并读取编译反馈和图表截图。
 
-## 开发方向
+## 主要功能
 
-围绕蓝图发现、编辑与编译反馈，让外部 AI 工具通过 MCP 接入 UE 编辑器中的相关工作流程。具体操作范围和反馈能力随开发迭代调整。
+支持查找蓝图与图表、编辑节点和连线、管理变量与函数、调整组件和类默认值，以及编译、保存和截取图表。具体工具、参数和限制见使用教程。
 
-## 开发状态
+## 购买与文档
 
-项目处于开发阶段，使用说明见[MCPBlueprint 教程](/zh/docs/guides/ue-tools/mcp-blueprint-guide/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。
+在 [Fab 商品页](https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713)购买插件，安装与使用说明见 [MCPBlueprint 教程](/docs/guides/ue-tools/mcp-blueprint-guide/)。网站教程对应已发布版本。

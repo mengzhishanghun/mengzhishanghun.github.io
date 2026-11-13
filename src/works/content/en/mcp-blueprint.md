@@ -1,17 +1,18 @@
 ---
 title: MCPBlueprint
-description: MCPBlueprint is an Unreal Editor MCP plugin in development, providing tool interfaces for Blueprint discovery, editing and compilation feedback. Features and compatibility are still being verified.
+description: Connect AI tools through MCP to edit Unreal Engine Blueprints, manage members and components, and read compilation feedback.
 type: work
 slug: mcp-blueprint
 categoryId: ue-plugins
 categoryName: UE plugins
 categoryOrder: 0
 order: 18
-status: In development
+status: On sale
 workInfo:
-  stage: developing
   supportHref: /contact/#support-title
   channels:
+    - kind: sale
+      href: https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713
     - kind: docs
       href: /docs/guides/ue-tools/mcp-blueprint-guide/
   compatibility:
@@ -20,7 +21,7 @@ workInfo:
         - macOS
         - Linux
       requirements:
-        - UE 5.2–5.8 (in development; compatibility to be confirmed)
+        - UE 5.2–5.8 (use a release package matching your engine minor version)
 featured: false
 draft: false
 sitePublish: true
@@ -29,21 +30,21 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-blueprint
-sourceHash: "1afad64f85a465e931fb9d43575ae3ce23d81a052bbca94453bd87b02dfd4f29"
-generatedBodyHash: bd7a514c72663386995c68c03bbcb512723f93df14493d26c66156dfcbd050f0
+sourceHash: 1926f46c7bd6259a47dcbdde991020354743a7860387c3d394dc45669e4faf08
+generatedBodyHash: 3f87959894bb695bbf9fc2c1192d46ba8f01739b5d656c7c3b4180dd4d35a700
 translationStatus: translated
-coverAlt: "MCPBlueprint cover"
-websiteCoverUrl: "/media/covers/works/mcp-blueprint-20261101.webp"
+coverAlt: MCPBlueprint cover
+websiteCoverUrl: /media/covers/works/mcp-blueprint-20261101.webp
 ---
 
 ## About this work
 
-MCPBlueprint is an Unreal Editor MCP plugin in development, providing tool interfaces for Blueprint discovery, editing and compilation feedback. Features and compatibility are still being verified.
+MCPBlueprint is an Unreal Editor plugin available on Fab. It lets AI tools discover and edit Blueprints through MCP, manage members, components and class defaults, and read compilation feedback and graph screenshots.
 
-## Development direction
+## Main features
 
-The project focuses on Blueprint discovery, editing and compilation feedback, connecting external AI tools to related Unreal Editor workflows through MCP. The scope of operations and feedback capabilities may change as development continues.
+Find Blueprints and graphs, edit nodes and connections, manage variables and functions, adjust components and class defaults, compile and save assets, and capture graph screenshots. See the user guide for tools, parameters and limitations.
 
-## Development status
+## Purchase and documentation
 
-The project is in development. See the [MCPBlueprint user guide](/docs/guides/ue-tools/mcp-blueprint-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+Buy the plugin on [Fab](https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713). See the [MCPBlueprint user guide](/docs/guides/ue-tools/mcp-blueprint-guide/) for installation and usage. The website guide covers the published release.
