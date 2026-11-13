@@ -35,13 +35,25 @@ export function clearSessionReturn(expected){
   if(expected){const value=read(intentKey);if(value?.url!==expected.url||value?.time!==expected.time)return;}
   remove(intentKey);
 }
-export function prepareSessionReturn(href){
+export function prepareSessionReturn(href,policy){
   clearSessionReturn();
   const target=localURL(href),from=localURL(currentURL());
   const fallback={url:target?target.pathname+target.search+target.hash:href,intent:null};
-  if(!target||!from||target.search||target.hash||!language(from)||language(from)!==language(target))return fallback;
+  if(!target||!from||!language(from)||language(from)!==language(target))return fallback;
+  if(policy===undefined){if(target.search||target.hash)return fallback;}
+  else{
+    const category=value=>typeof value==='string'&&value.length>0&&value.length<=200;
+    const valid=policy&&typeof policy==='object'&&!Array.isArray(policy)&&policy.path===target.pathname&&localURL(policy.path)?.pathname===policy.path&&category(policy.firstCategory)&&Array.isArray(policy.compatibleCategories)&&policy.compatibleCategories.every(category)&&new Set(policy.compatibleCategories).size===policy.compatibleCategories.length&&typeof policy.skipCache==='boolean';
+    if(!valid||policy.skipCache||!policy.compatibleCategories.length||target.hash)return fallback;
+    const parameters=[...target.searchParams.keys()];
+    if(parameters.length&&(parameters.length!==1||parameters[0]!=='category'||!policy.compatibleCategories.includes(target.searchParams.get('category'))))return fallback;
+  }
   const saved=pages().find(record=>localURL(record.url)?.pathname===target.pathname);
   if(!saved)return fallback;
+  if(policy!==undefined){
+    const cached=localURL(saved.url),categories=cached.searchParams.getAll('category');
+    if(categories.length>1||!policy.compatibleCategories.includes(categories.length?categories[0]:policy.firstCategory))return fallback;
+  }
   const intent={...saved,time:Date.now()};
   return write(intentKey,intent)?{url:intent.url,intent:{url:intent.url,time:intent.time}}:fallback;
 }
