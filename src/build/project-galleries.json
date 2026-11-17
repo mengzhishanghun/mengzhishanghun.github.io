@@ -309,6 +309,118 @@
           }
         }
       ]
+    },
+    {
+      "entryId": "case:herbal-exhibition",
+      "items": [
+        {
+          "id": "ob-video",
+          "grantId": "case:herbal-exhibition:ob:video:1",
+          "alt": {
+            "zh": "项目视频",
+            "en": "Project video"
+          },
+          "poster": {
+            "grantId": "case:herbal-exhibition:ob:videoPoster:1",
+            "width": 1920,
+            "height": 1080,
+            "alt": {
+              "zh": "项目图片",
+              "en": "Project image"
+            }
+          }
+        },
+        {
+          "id": "ob-gallery-c533e8c0a53dd605532f2023e04b06c4b68c465348161f82316a39d60f6b1f00",
+          "grantId": "case:herbal-exhibition:ob:gallery:c533e8c0a53dd605532f2023e04b06c4b68c465348161f82316a39d60f6b1f00",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-5bee59760214163b1cfa58941af73c70cefb59170e60eff411453832b6b33b03",
+          "grantId": "case:herbal-exhibition:ob:gallery:5bee59760214163b1cfa58941af73c70cefb59170e60eff411453832b6b33b03",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-fa41ea58cabf9597bb38479fc7896e6f424f5920196873a10fdc290336065643",
+          "grantId": "case:herbal-exhibition:ob:gallery:fa41ea58cabf9597bb38479fc7896e6f424f5920196873a10fdc290336065643",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-cfb2dc56c684ee5095c0feabdc1a77e1063930ac004df423d987444b0ec50af8",
+          "grantId": "case:herbal-exhibition:ob:gallery:cfb2dc56c684ee5095c0feabdc1a77e1063930ac004df423d987444b0ec50af8",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-2e8771f9b9fe98d32922db0814f61308bb1d9572c1cc9a52560944ef08528dcb",
+          "grantId": "case:herbal-exhibition:ob:gallery:2e8771f9b9fe98d32922db0814f61308bb1d9572c1cc9a52560944ef08528dcb",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-d73d009c31d90222ed00be589a11cf9b8f6ba5f10bd19dbae5c457d757052319",
+          "grantId": "case:herbal-exhibition:ob:gallery:d73d009c31d90222ed00be589a11cf9b8f6ba5f10bd19dbae5c457d757052319",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-7e52e60f4b6429f5676ca4861fe8da4a8ee28fadc34509f15496e798598b133e",
+          "grantId": "case:herbal-exhibition:ob:gallery:7e52e60f4b6429f5676ca4861fe8da4a8ee28fadc34509f15496e798598b133e",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-1ab3425556ea0b2803f7a2865b5c78399ed27847e3591480b1b9b1a7b83a2d12",
+          "grantId": "case:herbal-exhibition:ob:gallery:1ab3425556ea0b2803f7a2865b5c78399ed27847e3591480b1b9b1a7b83a2d12",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-4b7ede88b00f9492ac57b503535501caa31b968e263949dfc1a29a3e3fb7cf53",
+          "grantId": "case:herbal-exhibition:ob:gallery:4b7ede88b00f9492ac57b503535501caa31b968e263949dfc1a29a3e3fb7cf53",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        }
+      ]
     }
   ]
 }

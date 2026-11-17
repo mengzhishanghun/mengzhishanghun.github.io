@@ -83,6 +83,15 @@ class PublicTreeTests(unittest.TestCase):
     def test_current_895_public_files_and_328_html_fit(self):
         self.assertEqual(len(self.tree()), 895)
 
+    def test_public_files_accept_100mb_without_aggregate_limit(self):
+        for name in ('a', 'b'):
+            self.entries.append({'path': f'assets/large-{name}.txt', 'type': 'blob',
+                                 'mode': '100644', 'size': 100_000_000, 'sha': 'c' * 40})
+        self.assertEqual(len(self.tree()), 897)
+        self.entries[-1]['size'] = 100_000_001
+        with self.assertRaisesRegex(ValueError, 'invalid public file size'):
+            self.tree()
+
     def test_current_release_424_html_fit(self):
         entries, bodies = fixture(self.m, html=424)
         result = self.tree(entries, bodies)
@@ -487,13 +496,13 @@ m.download_entries(json.loads(sys.argv[4]),Path(sys.argv[5]),m.DownloadControl()
             self.download({'assets/a.txt': self.entries['assets/a.txt']})
         self.assertEqual(self.calls, {'assets/a.txt': 1})
 
-    def test_budget_cancel_capacity_and_read_only_never_seed_cache(self):
+    def test_budget_cancel_metadata_capacity_and_read_only_never_seed_cache(self):
         expired = self.m.DownloadControl(deadline=self.m.time.monotonic() - 1)
         with self.assertRaises(RuntimeError): self.download(control=expired)
         stopped = self.m.DownloadControl(); stopped.stop.set()
         with self.assertRaises(RuntimeError): self.download(control=stopped)
-        with patch.object(self.m, 'MAX_TOTAL_BYTES', 3), self.assertRaises(ValueError):
-            self.download()
+        with self.assertRaises(ValueError):
+            self.download({self.m.PROVENANCE_PATH: {'size': 4097}})
         self.assertEqual(self.calls, {})
         self.assertFalse(self.m.STATE.parent.exists())
         self.download(cache=False)

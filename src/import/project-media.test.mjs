@@ -6,6 +6,14 @@ import path from 'node:path';
 import {createHash} from 'node:crypto';
 import {importContent,sourceText,parseSource} from './import.mjs';
 const sha=b=>createHash('sha256').update(b).digest('hex');
+test('media approval and publication accept 100 MB files without an aggregate byte limit',async t=>{
+ const x=fixture(t),video=path.join(x.vault,'large.mp4'),image=path.join(x.vault,'large.png');
+ fs.writeFileSync(video,Buffer.concat([Buffer.from([0,0,0,24]),Buffer.from('ftypisom'),Buffer.alloc(16)]));fs.truncateSync(video,100_000_000);
+ fs.writeFileSync(image,x.png);fs.truncateSync(image,80_000_000);
+ fs.writeFileSync(path.join(x.vault,'a.md'),sourceText({title:'A',video:'large.mp4',videoPoster:'cover.png',gallery:['large.png']},'Body'));
+ await x.run({approveMedia:true});await x.run({});assert.deepEqual((await x.run({check:true})).differences,[]);
+ fs.truncateSync(video,100_000_001);await assert.rejects(()=>x.run({approveMedia:true}),/媒体大小超限/);
+});
 function fixture(t){
  const root=fs.mkdtempSync(path.join(os.tmpdir(),'ob-media-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));const site=path.join(root,'site'),vault=path.join(root,'vault');
  for(const dir of ['src/import','src/build','src/cases','src/templates','src/media'])fs.mkdirSync(path.join(site,dir),{recursive:true});fs.mkdirSync(vault);

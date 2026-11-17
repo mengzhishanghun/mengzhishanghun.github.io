@@ -50,7 +50,7 @@ PUBLIC_ROOT_FILES = {'.nojekyll', 'favicon.svg', 'index.html', 'site-router.js',
                      'sitemap.xml', 'robots.txt', 'site-languages.json', 'about/index.html'}
 PRIVATE_ROOTS = {'src', 'tools', 'content', 'ob', 'obsidian', 'website-next'}
 MAX_LANGUAGES = 32
-MAX_TOTAL_BYTES = 150_000_000
+MAX_FILE_BYTES = 100_000_000
 REGISTRY_LIMIT = 64_000
 USER_AGENT = 'mzsh-static-update/1.0 (public repository read only)'
 LEGACY_BASELINE_SHA = 'c0b7e4fbf4a30c0c8eb968256225ad4f99b25de8'
@@ -351,7 +351,7 @@ def validate_public_item(item):
     if item['type'] != 'blob' or item['mode'] != '100644':
         raise ValueError(f'nonregular public entry: {path}')
     size = item.get('size', -1)
-    if type(size) is not int or not 0 <= size <= 50_000_000:
+    if type(size) is not int or not 0 <= size <= MAX_FILE_BYTES:
         raise ValueError(f'invalid public file size: {path}')
     if PurePosixPath(path).suffix.lower() not in ALLOWED_SUFFIX and path not in PUBLIC_ROOT_FILES:
         raise ValueError(f'unexpected public file type: {path}')
@@ -408,7 +408,6 @@ def tree_for(sha, *, history=False):
         raise ValueError('current commit is missing site-languages.json')
     roots = PUBLIC_ROOTS | codes
     entries = {}
-    total = 0
     for item in result['tree']:
         path = item['path']
         # 私有/源码树不参与公开容量与类型门禁；可疑公开路径仍按原值拒绝。
@@ -420,12 +419,11 @@ def tree_for(sha, *, history=False):
         if path in entries:
             raise ValueError(f'duplicate public path: {path}')
         entries[path] = item
-        total += item['size']
     html_limit = 300 if history else 200 + 250 * len(codes)
     file_limit = 800 if history else 1000 + 500 * len(codes)
     if not REQUIRED.issubset(entries) or not 100 <= sum(p.endswith('.html') for p in entries) <= html_limit:
         raise ValueError('critical pages missing or HTML capacity exceeded')
-    if not 100 <= len(entries) <= file_limit or total > MAX_TOTAL_BYTES or not any(p.startswith('_astro/') for p in entries):
+    if not 100 <= len(entries) <= file_limit or not any(p.startswith('_astro/') for p in entries):
         raise ValueError('public tree size or assets invalid')
     return entries
 
@@ -550,8 +548,7 @@ def stage_download(stage, path, item, body):
 
 def download_entries(entries, stage, control, *, cache=True):
     control.check()
-    if (sum(e['size'] for p, e in entries.items() if p != PROVENANCE_PATH) > MAX_TOTAL_BYTES
-            or entries.get(PROVENANCE_PATH, {}).get('size', 0) > PROVENANCE_LIMIT):
+    if entries.get(PROVENANCE_PATH, {}).get('size', 0) > PROVENANCE_LIMIT:
         raise ValueError('download capacity exceeded')
     pairs = {p: e for p, e in entries.items() if p not in SKIP}
     directory = prepare_cache(pairs) if cache else None
@@ -714,12 +711,12 @@ def release_entries(source_sha, artifact_sha):
             or not isinstance(manifest['files'], list) or not manifest['files']
             or len(manifest['files']) > 1000 + 500 * MAX_LANGUAGES + len(PAGES_ONLY)):
         raise ValueError('source release manifest invalid')
-    records = {}; previous = ''; total = 0
+    records = {}; previous = ''
     for record in manifest['files']:
         if (not isinstance(record, dict)
                 or set(record) != {'path', 'size', 'gitBlob', 'sha256', 'target'}
                 or not isinstance(record['path'], str) or record['path'] <= previous
-                or type(record['size']) is not int or not 0 <= record['size'] <= 50_000_000
+                or type(record['size']) is not int or not 0 <= record['size'] <= MAX_FILE_BYTES
                 or not isinstance(record['gitBlob'], str) or not re.fullmatch('[0-9a-f]{40}', record['gitBlob'])
                 or not isinstance(record['sha256'], str) or not re.fullmatch('[0-9a-f]{64}', record['sha256'])
                 or record['target'] not in ('both', 'pages-only')
@@ -736,10 +733,7 @@ def release_entries(source_sha, artifact_sha):
             body = strict_blob(item, record['size'])
             if hashlib.sha256(body).hexdigest() != record['sha256']:
                 raise ValueError('skipped artifact differs from source manifest')
-        total += record['size']
         records[path] = {**item, 'target': record['target'], 'sha256': record['sha256']}
-    if total > MAX_TOTAL_BYTES:
-        raise ValueError('release total size exceeded')
     expected = set(records) | {PROVENANCE_PATH}
     actual = {p for p, item in artifact.items() if item.get('type') != 'tree'}
     parents = {str(parent) for p in expected for parent in PurePosixPath(p).parents if str(parent) != '.'}

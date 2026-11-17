@@ -29,12 +29,11 @@ function targetFor(relative,codes){
 }
 function validateManifest(manifest,codes){
   if(!exact(manifest,['version','files'])||manifest.version!==1||!Array.isArray(manifest.files)||!manifest.files.length||Buffer.byteLength(JSON.stringify(manifest))>8*1024*1024)throw new Error('发布清单格式或大小无效');
-  let previous='',total=0;
+  let previous='';
   for(const record of manifest.files){
-    if(!exact(record,['path','size','gitBlob','sha256','target'])||typeof record.path!=='string'||record.path<=previous||!Number.isSafeInteger(record.size)||record.size<0||record.size>50_000_000||!/^[a-f0-9]{40}$/.test(record.gitBlob)||!/^[a-f0-9]{64}$/.test(record.sha256)||targetFor(record.path,codes)!==record.target)throw new Error('发布记录无效、重复或未排序');
-    total+=record.size;previous=record.path;
+    if(!exact(record,['path','size','gitBlob','sha256','target'])||typeof record.path!=='string'||record.path<=previous||!Number.isSafeInteger(record.size)||record.size<0||record.size>100_000_000||!/^[a-f0-9]{40}$/.test(record.gitBlob)||!/^[a-f0-9]{64}$/.test(record.sha256)||targetFor(record.path,codes)!==record.target)throw new Error('发布记录无效、重复或未排序');
+    previous=record.path;
   }
-  if(total>150_000_000)throw new Error('发布大小超限');
 }
 export function createReleaseManifest({siteOutput}){
   const codes=languageCodes(siteOutput),files=filesIn(siteOutput).filter(p=>p!==provenancePath).map(relative=>{const bytes=fs.readFileSync(regularPath(siteOutput,relative));validateVideo(relative,bytes);return {path:relative,size:bytes.length,gitBlob:blob(bytes),sha256:digest(bytes),target:targetFor(relative,codes)};});

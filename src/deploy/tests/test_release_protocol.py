@@ -56,6 +56,21 @@ def setup_protocol(m, manifest_change=None, provenance_change=None, preview=Fals
     return entries, bodies, manifest, provenance, api
 
 class ReleaseProtocol(unittest.TestCase):
+    def test_manifest_accepts_100mb_files_without_aggregate_limit(self):
+        m = load()
+        def change(manifest):
+            for record in manifest['files']:
+                if record['path'] in ('assets/file-0.txt', 'assets/file-1.txt'):
+                    record['size'] = 100_000_000
+        entries, _, _, _, api = setup_protocol(m, change)
+        for item in entries:
+            if item['path'] in ('assets/file-0.txt', 'assets/file-1.txt'):
+                item['size'] = 100_000_000
+        with patch.object(m, 'api', side_effect=api):
+            result = m.release_entries(S, P)
+        self.assertEqual(result['assets/file-0.txt']['size'], 100_000_000)
+        self.assertEqual(result['assets/file-1.txt']['size'], 100_000_000)
+
     def test_exact_about_alias_and_language_pages_bind_without_opening_about_source(self):
         m = load(); _, bodies, _, _, api = setup_protocol(m, about=True)
         with patch.object(m, 'api', side_effect=api):
