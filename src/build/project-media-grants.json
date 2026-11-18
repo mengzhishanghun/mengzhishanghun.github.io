@@ -280,6 +280,22 @@
       "websiteUrl": "/media/imported/projects/748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9.jpg",
       "sha256": "748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9",
       "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:flying-car-simulator:ob:video:1",
+      "entryId": "case:flying-car-simulator",
+      "kind": "video",
+      "websiteUrl": "/media/imported/projects/0a90ad4502f6e27a54061bed8741ef893759ef0f2813c38fb8abae4d91aa83f3.mp4",
+      "sha256": "0a90ad4502f6e27a54061bed8741ef893759ef0f2813c38fb8abae4d91aa83f3",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:flying-car-simulator:ob:videoPoster:1",
+      "entryId": "case:flying-car-simulator",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/d5b087e08e1fc62d0d929b604a2935129bdf6c83b69ea536d1da2cd1e70e1f65.jpg",
+      "sha256": "d5b087e08e1fc62d0d929b604a2935129bdf6c83b69ea536d1da2cd1e70e1f65",
+      "basis": "owner-explicit-publication"
     }
   ]
 }

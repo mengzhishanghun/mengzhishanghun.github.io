@@ -667,6 +667,28 @@
           }
         }
       ]
+    },
+    {
+      "entryId": "case:flying-car-simulator",
+      "items": [
+        {
+          "id": "ob-video",
+          "grantId": "case:flying-car-simulator:ob:video:1",
+          "alt": {
+            "zh": "项目视频",
+            "en": "Project video"
+          },
+          "poster": {
+            "grantId": "case:flying-car-simulator:ob:videoPoster:1",
+            "width": 1920,
+            "height": 1050,
+            "alt": {
+              "zh": "项目图片",
+              "en": "Project image"
+            }
+          }
+        }
+      ]
     }
   ]
 }
