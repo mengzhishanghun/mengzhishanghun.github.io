@@ -687,6 +687,36 @@
               "en": "Project image"
             }
           }
+        },
+        {
+          "id": "ob-gallery-5013b5b1fbb23f541377ecc336cf89214e8e9060bda090000cf2663ec198a9a1",
+          "grantId": "case:flying-car-simulator:ob:gallery:5013b5b1fbb23f541377ecc336cf89214e8e9060bda090000cf2663ec198a9a1",
+          "width": 1920,
+          "height": 978,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-a66e273fd80d3949b0349f7cf1d22e6ad296b0c3d7574e2cf98c0c3290bb6fa1",
+          "grantId": "case:flying-car-simulator:ob:gallery:a66e273fd80d3949b0349f7cf1d22e6ad296b0c3d7574e2cf98c0c3290bb6fa1",
+          "width": 1920,
+          "height": 978,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-1832c060d72cb08c55dedcc5c50c5f19713c58ff0b238e01b830668fad35c3ee",
+          "grantId": "case:flying-car-simulator:ob:gallery:1832c060d72cb08c55dedcc5c50c5f19713c58ff0b238e01b830668fad35c3ee",
+          "width": 1920,
+          "height": 978,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
         }
       ]
     }
