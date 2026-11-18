@@ -421,6 +421,118 @@
           }
         }
       ]
+    },
+    {
+      "entryId": "case:six-dof-motion-platform",
+      "items": [
+        {
+          "id": "ob-video",
+          "grantId": "case:six-dof-motion-platform:ob:video:1",
+          "alt": {
+            "zh": "项目视频",
+            "en": "Project video"
+          },
+          "poster": {
+            "grantId": "case:six-dof-motion-platform:ob:videoPoster:1",
+            "width": 1920,
+            "height": 1050,
+            "alt": {
+              "zh": "项目图片",
+              "en": "Project image"
+            }
+          }
+        },
+        {
+          "id": "ob-gallery-9811ea295208758e68a9b1fe4fb40dd477bfa3dd552e844cccd277d3de131d3f",
+          "grantId": "case:six-dof-motion-platform:ob:gallery:9811ea295208758e68a9b1fe4fb40dd477bfa3dd552e844cccd277d3de131d3f",
+          "width": 1920,
+          "height": 1050,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-6ac61141fe55099fcf8579db18857cd795e35b1dcbc9305b7e21ed0b2fa34b69",
+          "grantId": "case:six-dof-motion-platform:ob:gallery:6ac61141fe55099fcf8579db18857cd795e35b1dcbc9305b7e21ed0b2fa34b69",
+          "width": 1920,
+          "height": 1050,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-986675d27a60afa3e302f88ea982f9a2b3ebbcc11e724d8b28e103e98f707c6c",
+          "grantId": "case:six-dof-motion-platform:ob:gallery:986675d27a60afa3e302f88ea982f9a2b3ebbcc11e724d8b28e103e98f707c6c",
+          "width": 1920,
+          "height": 1050,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-8e9a78e7d87e4f334317c78464f9f915a6203578376160eaae08ca35c91a4a53",
+          "grantId": "case:six-dof-motion-platform:ob:gallery:8e9a78e7d87e4f334317c78464f9f915a6203578376160eaae08ca35c91a4a53",
+          "width": 1920,
+          "height": 1050,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-c68abee8d5b4ccaf7bfdb982b64e70293988072ec434faf90fdcb8a2879263d8",
+          "grantId": "case:six-dof-motion-platform:ob:gallery:c68abee8d5b4ccaf7bfdb982b64e70293988072ec434faf90fdcb8a2879263d8",
+          "width": 1920,
+          "height": 1050,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-b852655a7fcfe417faaa396cb87752b08f8048e3cde10b9be1194e14be522933",
+          "grantId": "case:six-dof-motion-platform:ob:gallery:b852655a7fcfe417faaa396cb87752b08f8048e3cde10b9be1194e14be522933",
+          "width": 1920,
+          "height": 1050,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-e2ed08be8c34bd16709d7ee6095fa4a45099427b3b4f9c1c2e5615cf2ba287b7",
+          "grantId": "case:six-dof-motion-platform:ob:gallery:e2ed08be8c34bd16709d7ee6095fa4a45099427b3b4f9c1c2e5615cf2ba287b7",
+          "width": 1920,
+          "height": 1050,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-d477d9a56330d25fc4499ac99c4448648ee0797d9dfa1883533b7f6e6035f242",
+          "grantId": "case:six-dof-motion-platform:ob:gallery:d477d9a56330d25fc4499ac99c4448648ee0797d9dfa1883533b7f6e6035f242",
+          "width": 1636,
+          "height": 650,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-ac591280efc10ad173835f1f0281c711e309b11ca20314cb3e7c818a8fd1eaac",
+          "grantId": "case:six-dof-motion-platform:ob:gallery:ac591280efc10ad173835f1f0281c711e309b11ca20314cb3e7c818a8fd1eaac",
+          "width": 1636,
+          "height": 650,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        }
+      ]
     }
   ]
 }

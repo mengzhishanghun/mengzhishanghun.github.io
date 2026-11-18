@@ -88,6 +88,94 @@
       "websiteUrl": "/media/imported/projects/4b7ede88b00f9492ac57b503535501caa31b968e263949dfc1a29a3e3fb7cf53.png",
       "sha256": "4b7ede88b00f9492ac57b503535501caa31b968e263949dfc1a29a3e3fb7cf53",
       "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:video:1",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "video",
+      "websiteUrl": "/media/imported/projects/099e528caecdf2156627558539fc9bbc609dbc59580a2e3b09cc739c3d6fc549.mp4",
+      "sha256": "099e528caecdf2156627558539fc9bbc609dbc59580a2e3b09cc739c3d6fc549",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:videoPoster:1",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/9811ea295208758e68a9b1fe4fb40dd477bfa3dd552e844cccd277d3de131d3f.png",
+      "sha256": "9811ea295208758e68a9b1fe4fb40dd477bfa3dd552e844cccd277d3de131d3f",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:gallery:9811ea295208758e68a9b1fe4fb40dd477bfa3dd552e844cccd277d3de131d3f",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/9811ea295208758e68a9b1fe4fb40dd477bfa3dd552e844cccd277d3de131d3f.png",
+      "sha256": "9811ea295208758e68a9b1fe4fb40dd477bfa3dd552e844cccd277d3de131d3f",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:gallery:6ac61141fe55099fcf8579db18857cd795e35b1dcbc9305b7e21ed0b2fa34b69",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/6ac61141fe55099fcf8579db18857cd795e35b1dcbc9305b7e21ed0b2fa34b69.png",
+      "sha256": "6ac61141fe55099fcf8579db18857cd795e35b1dcbc9305b7e21ed0b2fa34b69",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:gallery:986675d27a60afa3e302f88ea982f9a2b3ebbcc11e724d8b28e103e98f707c6c",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/986675d27a60afa3e302f88ea982f9a2b3ebbcc11e724d8b28e103e98f707c6c.png",
+      "sha256": "986675d27a60afa3e302f88ea982f9a2b3ebbcc11e724d8b28e103e98f707c6c",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:gallery:8e9a78e7d87e4f334317c78464f9f915a6203578376160eaae08ca35c91a4a53",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/8e9a78e7d87e4f334317c78464f9f915a6203578376160eaae08ca35c91a4a53.png",
+      "sha256": "8e9a78e7d87e4f334317c78464f9f915a6203578376160eaae08ca35c91a4a53",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:gallery:c68abee8d5b4ccaf7bfdb982b64e70293988072ec434faf90fdcb8a2879263d8",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/c68abee8d5b4ccaf7bfdb982b64e70293988072ec434faf90fdcb8a2879263d8.png",
+      "sha256": "c68abee8d5b4ccaf7bfdb982b64e70293988072ec434faf90fdcb8a2879263d8",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:gallery:b852655a7fcfe417faaa396cb87752b08f8048e3cde10b9be1194e14be522933",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/b852655a7fcfe417faaa396cb87752b08f8048e3cde10b9be1194e14be522933.png",
+      "sha256": "b852655a7fcfe417faaa396cb87752b08f8048e3cde10b9be1194e14be522933",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:gallery:e2ed08be8c34bd16709d7ee6095fa4a45099427b3b4f9c1c2e5615cf2ba287b7",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/e2ed08be8c34bd16709d7ee6095fa4a45099427b3b4f9c1c2e5615cf2ba287b7.png",
+      "sha256": "e2ed08be8c34bd16709d7ee6095fa4a45099427b3b4f9c1c2e5615cf2ba287b7",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:gallery:d477d9a56330d25fc4499ac99c4448648ee0797d9dfa1883533b7f6e6035f242",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/d477d9a56330d25fc4499ac99c4448648ee0797d9dfa1883533b7f6e6035f242.png",
+      "sha256": "d477d9a56330d25fc4499ac99c4448648ee0797d9dfa1883533b7f6e6035f242",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:six-dof-motion-platform:ob:gallery:ac591280efc10ad173835f1f0281c711e309b11ca20314cb3e7c818a8fd1eaac",
+      "entryId": "case:six-dof-motion-platform",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/ac591280efc10ad173835f1f0281c711e309b11ca20314cb3e7c818a8fd1eaac.png",
+      "sha256": "ac591280efc10ad173835f1f0281c711e309b11ca20314cb3e7c818a8fd1eaac",
+      "basis": "owner-explicit-publication"
     }
   ]
 }
