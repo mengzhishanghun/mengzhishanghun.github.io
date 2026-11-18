@@ -5161,6 +5161,54 @@
       ],
       "sha256": "ac591280efc10ad173835f1f0281c711e309b11ca20314cb3e7c818a8fd1eaac",
       "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/bcac81d740e7259651416e28fb8123a834a3b2960a7556e61897edc1dc442a03.mp4",
+      "outputs": [
+        "media/imported/projects/bcac81d740e7259651416e28fb8123a834a3b2960a7556e61897edc1dc442a03.mp4"
+      ],
+      "sha256": "bcac81d740e7259651416e28fb8123a834a3b2960a7556e61897edc1dc442a03",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/d1e0673500eaf99d957c5245f42c481cbf0625152431250b047f69e43025876e.jpg",
+      "outputs": [
+        "media/imported/projects/d1e0673500eaf99d957c5245f42c481cbf0625152431250b047f69e43025876e.jpg"
+      ],
+      "sha256": "d1e0673500eaf99d957c5245f42c481cbf0625152431250b047f69e43025876e",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/7f355a78245099a1befc0d75bb27eb1cb9ad695bafd8295afac5c8a050226b89.jpg",
+      "outputs": [
+        "media/imported/projects/7f355a78245099a1befc0d75bb27eb1cb9ad695bafd8295afac5c8a050226b89.jpg"
+      ],
+      "sha256": "7f355a78245099a1befc0d75bb27eb1cb9ad695bafd8295afac5c8a050226b89",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/8fa68a8eab28ad484ec316a999f223fa03b1bb59fe9dd8608195ff11a8dfbdb0.jpg",
+      "outputs": [
+        "media/imported/projects/8fa68a8eab28ad484ec316a999f223fa03b1bb59fe9dd8608195ff11a8dfbdb0.jpg"
+      ],
+      "sha256": "8fa68a8eab28ad484ec316a999f223fa03b1bb59fe9dd8608195ff11a8dfbdb0",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/5c3aba67f359af7a117ca7ed830299b184daf9a23b3b5901e294e2a9f4a6583d.jpg",
+      "outputs": [
+        "media/imported/projects/5c3aba67f359af7a117ca7ed830299b184daf9a23b3b5901e294e2a9f4a6583d.jpg"
+      ],
+      "sha256": "5c3aba67f359af7a117ca7ed830299b184daf9a23b3b5901e294e2a9f4a6583d",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/4968dd44578eeedff940542fdd9cd0e4e33b85731916c7c2c1e75a8c29a8cce5.jpg",
+      "outputs": [
+        "media/imported/projects/4968dd44578eeedff940542fdd9cd0e4e33b85731916c7c2c1e75a8c29a8cce5.jpg"
+      ],
+      "sha256": "4968dd44578eeedff940542fdd9cd0e4e33b85731916c7c2c1e75a8c29a8cce5",
+      "mode": "frozen"
     }
   ]
 }

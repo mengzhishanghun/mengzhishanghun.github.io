@@ -533,6 +533,78 @@
           }
         }
       ]
+    },
+    {
+      "entryId": "case:motion-capture-robot-control",
+      "items": [
+        {
+          "id": "ob-video",
+          "grantId": "case:motion-capture-robot-control:ob:video:1",
+          "alt": {
+            "zh": "项目视频",
+            "en": "Project video"
+          },
+          "poster": {
+            "grantId": "case:motion-capture-robot-control:ob:videoPoster:1",
+            "width": 1920,
+            "height": 1048,
+            "alt": {
+              "zh": "项目图片",
+              "en": "Project image"
+            }
+          }
+        },
+        {
+          "id": "ob-gallery-d1e0673500eaf99d957c5245f42c481cbf0625152431250b047f69e43025876e",
+          "grantId": "case:motion-capture-robot-control:ob:gallery:d1e0673500eaf99d957c5245f42c481cbf0625152431250b047f69e43025876e",
+          "width": 1920,
+          "height": 1048,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-7f355a78245099a1befc0d75bb27eb1cb9ad695bafd8295afac5c8a050226b89",
+          "grantId": "case:motion-capture-robot-control:ob:gallery:7f355a78245099a1befc0d75bb27eb1cb9ad695bafd8295afac5c8a050226b89",
+          "width": 1920,
+          "height": 1048,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-8fa68a8eab28ad484ec316a999f223fa03b1bb59fe9dd8608195ff11a8dfbdb0",
+          "grantId": "case:motion-capture-robot-control:ob:gallery:8fa68a8eab28ad484ec316a999f223fa03b1bb59fe9dd8608195ff11a8dfbdb0",
+          "width": 1920,
+          "height": 1048,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-5c3aba67f359af7a117ca7ed830299b184daf9a23b3b5901e294e2a9f4a6583d",
+          "grantId": "case:motion-capture-robot-control:ob:gallery:5c3aba67f359af7a117ca7ed830299b184daf9a23b3b5901e294e2a9f4a6583d",
+          "width": 1920,
+          "height": 1048,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-4968dd44578eeedff940542fdd9cd0e4e33b85731916c7c2c1e75a8c29a8cce5",
+          "grantId": "case:motion-capture-robot-control:ob:gallery:4968dd44578eeedff940542fdd9cd0e4e33b85731916c7c2c1e75a8c29a8cce5",
+          "width": 1920,
+          "height": 1048,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        }
+      ]
     }
   ]
 }
