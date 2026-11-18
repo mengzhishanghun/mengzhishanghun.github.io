@@ -5209,6 +5209,46 @@
       ],
       "sha256": "4968dd44578eeedff940542fdd9cd0e4e33b85731916c7c2c1e75a8c29a8cce5",
       "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/acb175730add5177618d749daea0c4b7aa2159cec132dfbe5e91eb7e53ff33ce.mp4",
+      "outputs": [
+        "media/imported/projects/acb175730add5177618d749daea0c4b7aa2159cec132dfbe5e91eb7e53ff33ce.mp4"
+      ],
+      "sha256": "acb175730add5177618d749daea0c4b7aa2159cec132dfbe5e91eb7e53ff33ce",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34.jpg",
+      "outputs": [
+        "media/imported/projects/5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34.jpg"
+      ],
+      "sha256": "5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/d52dde753c6e1cdff56d38a0837e8ffaa6ea981e81a9969509e5bac580f536f5.jpg",
+      "outputs": [
+        "media/imported/projects/d52dde753c6e1cdff56d38a0837e8ffaa6ea981e81a9969509e5bac580f536f5.jpg"
+      ],
+      "sha256": "d52dde753c6e1cdff56d38a0837e8ffaa6ea981e81a9969509e5bac580f536f5",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/e0999dbbd1e8b0315ab728569ff893d9bf6b544c680fa0f4f3d546209b046cd7.jpg",
+      "outputs": [
+        "media/imported/projects/e0999dbbd1e8b0315ab728569ff893d9bf6b544c680fa0f4f3d546209b046cd7.jpg"
+      ],
+      "sha256": "e0999dbbd1e8b0315ab728569ff893d9bf6b544c680fa0f4f3d546209b046cd7",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9.jpg",
+      "outputs": [
+        "media/imported/projects/748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9.jpg"
+      ],
+      "sha256": "748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9",
+      "mode": "frozen"
     }
   ]
 }

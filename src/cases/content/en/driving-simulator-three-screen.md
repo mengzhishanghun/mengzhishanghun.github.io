@@ -20,10 +20,12 @@ coverAlt: Six-axis triple-screen driving simulator cover
 websiteCoverUrl: /assets/cases/driving-simulation-cover.png
 translationKey: driving-simulator-three-screen
 lang: en
-sourceHash: "07818b480b12aeb4dd84fe42c8992ad2b1318ffaeb16a00f2a5cce7bdf3bce0c"
+sourceHash: "062eb4b6ea9a33959fef964f7df3c9e0604058e66497edc2862f1a3a3462c9de"
 translationStatus: translated
-generatedBodyHash: "cb044f74f89c1c2fe531693f962d5ae5ec11c60ea2fa877ac1db34de88c1e7a0"
+generatedBodyHash: "488fe7b5095c64ed666c591379df3da83e7093976a29b3a63bbc7fda880ba4a4"
 ---
+
+**About this demo:** The video and screenshots show early test scenes that differ substantially from the final release. They do not represent the final version.
 
 ## Project overview
 

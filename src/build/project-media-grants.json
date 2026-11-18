@@ -232,6 +232,54 @@
       "websiteUrl": "/media/imported/projects/4968dd44578eeedff940542fdd9cd0e4e33b85731916c7c2c1e75a8c29a8cce5.jpg",
       "sha256": "4968dd44578eeedff940542fdd9cd0e4e33b85731916c7c2c1e75a8c29a8cce5",
       "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:driving-simulator-three-screen:ob:video:1",
+      "entryId": "case:driving-simulator-three-screen",
+      "kind": "video",
+      "websiteUrl": "/media/imported/projects/acb175730add5177618d749daea0c4b7aa2159cec132dfbe5e91eb7e53ff33ce.mp4",
+      "sha256": "acb175730add5177618d749daea0c4b7aa2159cec132dfbe5e91eb7e53ff33ce",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:driving-simulator-three-screen:ob:videoPoster:1",
+      "entryId": "case:driving-simulator-three-screen",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34.jpg",
+      "sha256": "5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:driving-simulator-three-screen:ob:gallery:5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34",
+      "entryId": "case:driving-simulator-three-screen",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34.jpg",
+      "sha256": "5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:driving-simulator-three-screen:ob:gallery:d52dde753c6e1cdff56d38a0837e8ffaa6ea981e81a9969509e5bac580f536f5",
+      "entryId": "case:driving-simulator-three-screen",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/d52dde753c6e1cdff56d38a0837e8ffaa6ea981e81a9969509e5bac580f536f5.jpg",
+      "sha256": "d52dde753c6e1cdff56d38a0837e8ffaa6ea981e81a9969509e5bac580f536f5",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:driving-simulator-three-screen:ob:gallery:e0999dbbd1e8b0315ab728569ff893d9bf6b544c680fa0f4f3d546209b046cd7",
+      "entryId": "case:driving-simulator-three-screen",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/e0999dbbd1e8b0315ab728569ff893d9bf6b544c680fa0f4f3d546209b046cd7.jpg",
+      "sha256": "e0999dbbd1e8b0315ab728569ff893d9bf6b544c680fa0f4f3d546209b046cd7",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "case:driving-simulator-three-screen:ob:gallery:748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9",
+      "entryId": "case:driving-simulator-three-screen",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9.jpg",
+      "sha256": "748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9",
+      "basis": "owner-explicit-publication"
     }
   ]
 }

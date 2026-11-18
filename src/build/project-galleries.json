@@ -605,6 +605,68 @@
           }
         }
       ]
+    },
+    {
+      "entryId": "case:driving-simulator-three-screen",
+      "items": [
+        {
+          "id": "ob-video",
+          "grantId": "case:driving-simulator-three-screen:ob:video:1",
+          "alt": {
+            "zh": "项目视频",
+            "en": "Project video"
+          },
+          "poster": {
+            "grantId": "case:driving-simulator-three-screen:ob:videoPoster:1",
+            "width": 1920,
+            "height": 876,
+            "alt": {
+              "zh": "项目图片",
+              "en": "Project image"
+            }
+          }
+        },
+        {
+          "id": "ob-gallery-5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34",
+          "grantId": "case:driving-simulator-three-screen:ob:gallery:5d7df7bae6c5b4f7b06435991b88d33911854013a252f6c5e60f71bc9c170f34",
+          "width": 1920,
+          "height": 876,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-d52dde753c6e1cdff56d38a0837e8ffaa6ea981e81a9969509e5bac580f536f5",
+          "grantId": "case:driving-simulator-three-screen:ob:gallery:d52dde753c6e1cdff56d38a0837e8ffaa6ea981e81a9969509e5bac580f536f5",
+          "width": 1920,
+          "height": 876,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-e0999dbbd1e8b0315ab728569ff893d9bf6b544c680fa0f4f3d546209b046cd7",
+          "grantId": "case:driving-simulator-three-screen:ob:gallery:e0999dbbd1e8b0315ab728569ff893d9bf6b544c680fa0f4f3d546209b046cd7",
+          "width": 1920,
+          "height": 876,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9",
+          "grantId": "case:driving-simulator-three-screen:ob:gallery:748a12b46c82a160da03bd9a4a7e6f5a0b665e3d0a5aae086bbc11e6a95a2ed9",
+          "width": 1920,
+          "height": 876,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        }
+      ]
     }
   ]
 }
