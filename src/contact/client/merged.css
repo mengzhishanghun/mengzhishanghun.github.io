@@ -20,7 +20,7 @@
 }
 .contact-preview .site-chrome .local-page h2 {
   margin: 0 0 20px;
-  font-size: clamp(1.3rem, 1.6vw, 1.7rem);
+  font-size: 1.25rem;
   line-height: 1.4;
 }
 .contact-preview .local-page .contact-item-list {
@@ -49,13 +49,13 @@
 }
 .contact-preview .local-page .contact-item h3 {
   color: var(--blue);
-  font-size: 1.125rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0 0 8px;
 }
 .contact-preview .local-page .contact-item p {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: .9375rem;
   line-height: 1.75;
   margin: 0;
   overflow-wrap: anywhere;
@@ -97,7 +97,7 @@
 }
 .contact-preview .local-page .contact-card .email {
   margin-top: 20px;
-  font-size: clamp(1rem, 1.25vw, 1.125rem);
+  font-size: 1rem;
   user-select: text;
 }
 .contact-preview .local-page .wechat-card {
@@ -117,7 +117,7 @@
 }
 .contact-preview .wechat-card figcaption {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: .9375rem;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -131,7 +131,7 @@
 .contact-preview .support-heading p,
 .contact-preview .support-thanks {
   color: var(--muted);
-  font-size: 1rem;
+  font-size: .9375rem;
   line-height: 1.75;
   margin: 0;
 }
@@ -148,7 +148,7 @@
 .contact-preview .local-page .payment-card { padding: 20px 16px; }
 .contact-preview .site-chrome .local-page .payment-card h3 {
   color: var(--blue);
-  font-size: 1.0625rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0 0 20px;
 }
