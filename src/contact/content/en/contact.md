@@ -8,76 +8,109 @@ websiteRoute: /contact/
 template: contact/index.html
 lang: en
 translationKey: contact
-sourceHash: dbf58f7f3f2dce5f2182ca4b8c5735a252c09c78c22b89ce1fcc989de1a00547
+sourceHash: 1ed2a88868eb6ac5bed5dbe26faa273353a262263003b9ca54fb00a91986e28c
 translationStatus: translated
-generatedBodyHash: a2400c54db6549a714418a6a50ff35af19d2ef9c69944c56a49d4e915e0d4988
+generatedBodyHash: b6b838c33f5f8f6a7e9e4efb0eb241ba56936ddc20b84bc2942e682026b2e4b6
 ---
-
 
 ![](/media-occurrence/page%3Acontact%3Amedia%3A1)
 
 # Contact & support
 
-Contact me about development projects, or support my work.
+Have a project in mind? Get in touch.
 
-## Contact
+If my articles or tools have helped you, you can also support my work.
+
+## Project collaboration
+
+### UE projects and interactive applications
+
+Gameplay features and prototypes, 3D interaction, simulation, digital twins and VR projects.
+
+### Digital humans and AI integration
+
+Integrating speech recognition, AI conversations and related interactive features in UE, including integration testing.
+
+### Tools, plugins and automation
+
+Custom tools, plugins and automated workflows for projects and development teams.
+
+### Team collaboration and maintenance
+
+Owning individual modules or continuing existing projects, including features, interfaces and maintenance.
+
+### Ways to work together
+
+Available for outsourced projects, full-time and part-time work. Scope, duration and deliverables can be discussed.
+
+## Technical services
+
+### Troubleshooting and bug fixes
+
+Investigating errors, crashes and unexpected behavior using logs and reproducible cases.
+
+### Builds, packaging and setup
+
+Resolving build and packaging issues, including development environments, SDKs and dependencies.
+
+### UE upgrades and migration
+
+Upgrading projects, adapting plugins and resolving code and asset compatibility issues after migration.
+
+### Small features and custom tools
+
+Blueprint and C++ features, Python scripts and automation for repetitive tasks.
+
+### Plugin, API and code integration
+
+Adapting, debugging and integrating plugins, external interfaces and AI-generated code.
+
+## Contact details
 
 ### Email
 
 mzsh.me@icloud.com
 
-Copy email
+### Personal WeChat
 
 [![Xiao Mao's personal WeChat QR code](/media-occurrence/page%3Acontact%3Amedia%3A2)](/assets/contact/wechat-personal-qr.webp)
 
-### Personal WeChat
+## support my work
 
-Project collaboration: Share your requirements or reference examples so we can discuss how to build your project.
+If this work has helped you, voluntary contributions support continued updates and maintenance.
 
-Technical discussion: You are also welcome to chat about UE, plugins, tools, and automation.
+### What your support helps with
 
-Click to view full size
+#### Works and tools
 
-## Available for development
+Bug fixes, version compatibility, documentation and experiments with new tools.
 
-### Game development
+#### Games and creative projects
 
-Gameplay prototypes, feature development, and scene interactions.
+Gameplay prototypes, content creation and continued work on personal games.
 
-### Digital twins
+#### Articles and tutorials
 
-3D visualization, data presentation, and interactive features.
+Sharing project experience, maintaining articles and documenting reusable methods.
 
-### Tools & plugins
+#### Videos and translation
 
-Productivity tools, custom plugins, and automation workflows.
+Planned: AI-assisted translation of overseas tutorials for reposting on Bilibili.
 
-## Donations & support
+#### Website and maintenance
 
-### WeChat
+Domain, hosting and routine maintenance to keep the content accessible.
+
+### Ways to contribute
+
+#### WeChat
 
 [![Xiao Mao's WeChat Pay QR code](/media-occurrence/page%3Acontact%3Amedia%3A3)](/assets/support/wechat-pay-qr.webp)
 
-### Alipay
+#### Alipay
 
 [![Mengzhishanghun's Alipay payment QR code](/media-occurrence/page%3Acontact%3Amedia%3A4)](/assets/support/alipay-qr.webp)
 
 [GitHub Sponsors](https://github.com/sponsors/mengzhishanghun)
 
-## What your support helps with
-
-### Works and Tools
-
-Explore new ideas and refine useful tools.
-
-### Game Creation
-
-Explore gameplay and create my own games.
-
-### Articles and Tutorials
-
-Organize experience and share reusable methods.
-
-### Website and Maintenance
-
-Keep the website running reliably and continue improving the experience.
+Thank you for supporting the tools, articles and creative projects I continue to work on.

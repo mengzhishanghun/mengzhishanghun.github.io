@@ -4567,6 +4567,52 @@ shellSlots:
     migrated-blog:robot-realtime-ik-prototype:category: Unreal Engine
     migrated-blog:robot-realtime-ik-prototype:tag: Robotics
   page:contact:
+    contact.meta: "UE project collaboration, technical services and small custom jobs. Available for outsourced projects, full-time or part-time work. Contact me by email or WeChat, or support my work."
+    contact.intro: "Have a project in mind? Get in touch."
+    contact.introSupport: "If my articles or tools have helped you, you can also support my work."
+    contact.projectsTitle: "Project collaboration"
+    contact.servicesTitle: "Technical services"
+    contact.channelsTitle: "Contact details"
+    contact.emailTitle: "Email"
+    contact.email: "mzsh.me@icloud.com"
+    contact.wechat: "Personal WeChat"
+    contact.projects.1.title: "UE projects and interactive applications"
+    contact.projects.1.description: "Gameplay features and prototypes, 3D interaction, simulation, digital twins and VR projects."
+    contact.projects.2.title: "Digital humans and AI integration"
+    contact.projects.2.description: "Integrating speech recognition, AI conversations and related interactive features in UE, including integration testing."
+    contact.projects.3.title: "Tools, plugins and automation"
+    contact.projects.3.description: "Custom tools, plugins and automated workflows for projects and development teams."
+    contact.projects.4.title: "Team collaboration and maintenance"
+    contact.projects.4.description: "Owning individual modules or continuing existing projects, including features, interfaces and maintenance."
+    contact.projects.5.title: "Ways to work together"
+    contact.projects.5.description: "Available for outsourced projects, full-time and part-time work. Scope, duration and deliverables can be discussed."
+    contact.services.1.title: "Troubleshooting and bug fixes"
+    contact.services.1.description: "Investigating errors, crashes and unexpected behavior using logs and reproducible cases."
+    contact.services.2.title: "Builds, packaging and setup"
+    contact.services.2.description: "Resolving build and packaging issues, including development environments, SDKs and dependencies."
+    contact.services.3.title: "UE upgrades and migration"
+    contact.services.3.description: "Upgrading projects, adapting plugins and resolving code and asset compatibility issues after migration."
+    contact.services.4.title: "Small features and custom tools"
+    contact.services.4.description: "Blueprint and C++ features, Python scripts and automation for repetitive tasks."
+    contact.services.5.title: "Plugin, API and code integration"
+    contact.services.5.description: "Adapting, debugging and integrating plugins, external interfaces and AI-generated code."
+    contact.supportTitle: "support my work"
+    contact.supportIntro: "If this work has helped you, voluntary contributions support continued updates and maintenance."
+    contact.purposeTitle: "What your support helps with"
+    contact.methodsTitle: "Ways to contribute"
+    contact.wechatPay: "WeChat"
+    contact.alipay: "Alipay"
+    contact.thanks: "Thank you for supporting the tools, articles and creative projects I continue to work on."
+    contact.purposes.1.title: "Works and tools"
+    contact.purposes.1.description: "Bug fixes, version compatibility, documentation and experiments with new tools."
+    contact.purposes.2.title: "Games and creative projects"
+    contact.purposes.2.description: "Gameplay prototypes, content creation and continued work on personal games."
+    contact.purposes.3.title: "Articles and tutorials"
+    contact.purposes.3.description: "Sharing project experience, maintaining articles and documenting reusable methods."
+    contact.purposes.4.title: "Videos and translation"
+    contact.purposes.4.description: "Planned: AI-assisted translation of overseas tutorials for reposting on Bilibili."
+    contact.purposes.5.title: "Website and maintenance"
+    contact.purposes.5.description: "Domain, hosting and routine maintenance to keep the content accessible."
     root.html:1.head:0.meta:2@content: Available for game development, digital twins, and custom tools or plugins. Contact me by email or WeChat, or support my work.
     root.html:1.head:0.title:4.#text:0: Development Enquiries, Contact & Support · Xiao Mao
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
@@ -8575,9 +8621,9 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: "5b7824356aa0e088f86c91eb76ed5ccaba4bb706318e53cc78f42201e88c0187"
+sourceHash: cbf25426b5f41ac277bd809b0558dad62d1ca17b41f0cae96160f38e15586a05
 translationStatus: translated
-generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
+generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:
   sale: On sale
   open-source: Open source

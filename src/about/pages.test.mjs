@@ -48,14 +48,42 @@ test('home CTA links the cooperation invitation to contact and headers keep only
     assert.ok(all(tree,n=>n.tagName==='a'&&attrs(n).href==='/'+code+'/works/').length>=2);
   }
 });
-test('merged contact retains copy/QR/Sponsors and exact support aliases and anchors',()=>{
-  const ids=['support-title','purpose-title','methods-title','wechat-title','alipay-title','github-support-title'];
-  for(const code of ['zh','en']){const tree=load(code+'/contact/index.html'),nodes=all(tree,()=>true),channel=nodes.findIndex(n=>attrs(n).id==='channels-title'),support=nodes.findIndex(n=>attrs(n).id==='support-title');assert.ok(channel>=0&&support>channel);const content=nodes.find(n=>hasClass(n,'contact-content')),panels=content.childNodes.filter(n=>n.tagName);assert.equal(panels.length,4);assert.deepEqual(panels.map(n=>attrs(n)['aria-labelledby']),['channels-title','capabilities-title','support-title','purpose-title']);const headings=code==='zh'?['打赏支持','微信','支持用途']:['Donations & support','WeChat','What your support helps with'];for(const [i,id] of ['support-title','wechat-title','purpose-title'].entries())assert.equal(text(nodes.find(n=>attrs(n).id===id)),headings[i]);for(const qr of nodes.filter(n=>n.tagName==='a'&&attrs(n)['data-media-qr']!==undefined)){for(let parent=qr.parentNode;parent;parent=parent.parentNode)assert.notEqual(parent.tagName,'details','QR images must be visible without expansion');}assert.equal(all(panels[3],n=>n.tagName==='li').length,4);assert.equal(nodes.filter(n=>attrs(n).id==='copy-email').length,1);assert.equal(nodes.filter(n=>n.tagName==='a'&&attrs(n)['data-media-qr']!==undefined).length,3);assert.equal(nodes.filter(n=>n.tagName==='a'&&attrs(n).href==='https://github.com/sponsors/mengzhishanghun').length,1);for(const id of ids)assert.equal(nodes.filter(n=>attrs(n).id===id).length,1);const actions=nodes.find(n=>hasClass(n,'header-actions'));assert.deepEqual(all(actions,n=>attrs(n)['aria-current']==='page').map(n=>attrs(n).href),['/'+code+'/contact/']);}
-  for(const route of ['support/index.html','zh/support/index.html','en/support/index.html']){const tree=load(route),runtime=JSON.parse(text(all(tree,n=>attrs(n)['data-site-language']!==undefined)[0]));assert.equal(runtime.urls.zh,'/zh/contact/');assert.equal(runtime.urls.en,'/en/contact/');assert.equal(runtime.anchors.zh['page-title'],'support-title');assert.equal(runtime.anchors.zh['purpose-title'],'purpose-title');assert.equal(runtime.redirect.locale,route.startsWith('zh/')?'zh':route.startsWith('en/')?'en':null);assert.ok(all(tree,n=>n.tagName==='a'&&attrs(n).href===runtime.urls[runtime.redirect.locale||runtime.primary]).length);}
-});
-test('merged contact runs its existing email-copy success and failure feedback',async()=>{
-  for(const code of ['zh','en']){const tree=load(code+'/contact/index.html'),scripts=all(tree,n=>n.tagName==='script').map(text),copy=JSON.parse(scripts.find(s=>s.startsWith('window.SiteCopy=')).match(/^window\.SiteCopy=([\s\S]*?);window\.SiteLanguageCode=/)[1]),script=scripts.find(s=>s.includes("document.querySelector('#copy-email').addEventListener"));assert.ok(script);
-    for(const failure of [false,true]){let click,copied;const status={textContent:''},document={querySelector:selector=>selector==='#copy-email'?{addEventListener:(_,fn)=>{click=fn;}}:status};vm.runInNewContext(script,{document,window:{SiteCopy:copy},navigator:{clipboard:{writeText:async value=>{copied=value;if(failure)throw Error('denied');}}}});await click();assert.equal(copied,'mzsh.me@icloud.com');assert.ok(status.textContent.length>0);}
+test('merged contact presents project and service enquiries with direct QR access and support aliases',()=>{
+  const ids=['project-title','capabilities-title','channels-title','support-title','purpose-title','methods-title','wechat-title','alipay-title','github-support-title'];
+  for(const code of ['zh','en']){
+    const tree=load(code+'/contact/index.html'),nodes=all(tree,()=>true),content=nodes.find(n=>hasClass(n,'contact-content'));
+    const panels=content.childNodes.filter(n=>n.tagName);
+    assert.deepEqual(panels.map(n=>attrs(n)['aria-labelledby']),['project-title','capabilities-title','channels-title','support-title']);
+    for(const section of panels.slice(0,2))assert.equal(all(section,n=>n.tagName==='li').length,5);
+    const purpose=nodes.find(n=>attrs(n)['aria-labelledby']==='purpose-title');
+    assert.equal(all(purpose,n=>n.tagName==='li').length,5);
+    if(code==='zh'){
+      const headings=all(purpose,n=>n.tagName==='h3').map(text);
+      assert.deepEqual(headings,['作品与工具','游戏与创作','文章与教程','视频与翻译','网站与维护']);
+      assert.ok(headings.every(t=>[...t].length===5));
+      assert.match(text(purpose),/计划用 AI 翻译/);
+      assert.match(text(panels[0]),/外包、全职和兼职/);
+    }else assert.match(text(purpose),/Planned: AI-assisted translation/);
+    const main=nodes.find(n=>n.tagName==='main');
+    assert.doesNotMatch(text(main),/复制邮箱|点击查看大图|Click to enlarge|Copy email/);
+    assert.equal(nodes.filter(n=>attrs(n).id==='copy-email'||Object.hasOwn(attrs(n),'data-copy-email')).length,0);
+    for(const script of nodes.filter(n=>n.tagName==='script'))assert.doesNotMatch(text(script),/navigator\.clipboard|copyEmailBound|querySelector\('#copy-email'\)/);
+    const qr=nodes.filter(n=>n.tagName==='a'&&Object.hasOwn(attrs(n),'data-media-qr'));
+    assert.equal(qr.length,3);
+    for(const item of qr)for(let parent=item.parentNode;parent;parent=parent.parentNode)assert.notEqual(parent.tagName,'details');
+    const wechat=nodes.find(n=>hasClass(n,'wechat-card'));
+    assert.equal(wechat.childNodes.filter(n=>n.tagName).at(-1).tagName,'figcaption');
+    assert.equal(nodes.filter(n=>n.tagName==='a'&&attrs(n).href==='https://github.com/sponsors/mengzhishanghun').length,1);
+    for(const id of ids)assert.equal(nodes.filter(n=>attrs(n).id===id).length,1,id);
+    const actions=nodes.find(n=>hasClass(n,'header-actions'));
+    assert.deepEqual(all(actions,n=>attrs(n)['aria-current']==='page').map(n=>attrs(n).href),['/'+code+'/contact/']);
+  }
+  for(const route of ['support/index.html','zh/support/index.html','en/support/index.html']){
+    const tree=load(route),runtime=JSON.parse(text(all(tree,n=>Object.hasOwn(attrs(n),'data-site-language'))[0]));
+    assert.equal(runtime.urls.zh,'/zh/contact/');assert.equal(runtime.urls.en,'/en/contact/');
+    assert.equal(runtime.anchors.zh['page-title'],'support-title');assert.equal(runtime.anchors.zh['purpose-title'],'purpose-title');
+    assert.equal(runtime.redirect.locale,route.startsWith('zh/')?'zh':route.startsWith('en/')?'en':null);
+    assert.ok(all(tree,n=>n.tagName==='a'&&attrs(n).href===runtime.urls[runtime.redirect.locale||runtime.primary]).length);
   }
 });
 test('retired about pages are absent from actual Pagefind fragments',()=>{for(const code of ['zh','en']){const root=path.join(output,code,'blog-search');const files=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?files(path.join(dir,e.name)):[path.join(dir,e.name)]);const fragments=files(root).filter(p=>p.endsWith('.pf_fragment')).map(p=>JSON.parse(gunzipSync(fs.readFileSync(p)).toString().slice('pagefind_dcd'.length)));assert.ok(!fragments.some(f=>f.url==='/'+code+'/about/'),'retired profile must not appear in the published search index');}});
