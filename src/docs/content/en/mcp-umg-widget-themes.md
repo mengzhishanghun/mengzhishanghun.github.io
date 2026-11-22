@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/widget-themes/
 lang: en
 translationKey: doc:mcp-umg:widget-themes
-sourceHash: 6857f126d3a89e23a7588f05570808c286f1f7d92e371663ea4b238009319973
+sourceHash: 551eea1e02f8d8cb0411e9ff34cfe64c24f12f45518c7f20c55e8fbabbbf4f56
 translationStatus: translated
 generatedBodyHash: a1099766b8e6f964f043d53f0d32d9b104de725ecf6e7f1c496bda3f36270ebb
 docPage:
   work: mcp-umg
-  group: reuse-styling
+  group: styling-themes
   slug: widget-themes
-  order: 4
+  order: 2
 ---
 
 `ExportWidgetTheme` exports a portable version 1 theme from specified Image, Border, TextBlock or Button widgets. `ApplyWidgetTheme` applies it to another Widget Blueprint with the same widget names and classes. Export only reads the asset; applying a theme changes memory in one transaction without automatically saving.

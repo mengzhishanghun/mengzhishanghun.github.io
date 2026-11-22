@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/components-styles/
 lang: en
 translationKey: doc:mcp-umg:components-styles
-sourceHash: 6840cbe94cd6019be071627bc4363366752c0387eacbde0b194b93a36347ea2d
+sourceHash: 6d9fecf19e6d98182f5c82676f861c6c0b478dff127b068380991ba6f46e756f
 translationStatus: translated
 generatedBodyHash: 4a98e2d041708fc5523f0e3d59438c618f3acfa010fcf1913ec67f1b42875334
 docPage:
   work: mcp-umg
-  group: reuse-styling
+  group: component-reuse
   slug: components-styles
   order: 1
 ---

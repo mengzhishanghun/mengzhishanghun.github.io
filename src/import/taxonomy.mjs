@@ -4,7 +4,8 @@ import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
 import {attrs,walk} from '../build/extract-dom.mjs';
 import {regularPath,safeRelative} from '../build/resources.mjs';
-import {validateDocumentSource,validateDocumentSourcePath} from '../build/work-documents.mjs';
+import {validateDocumentSourcePath} from '../build/work-documents.mjs';
+import {normalizeDocumentSource} from './document-source.mjs';
 const roots={work:'001-作品',case:'002-案例',blog:'003-博客',doc:'004-文档'};
 const legacyBlogs=new Set(['19136345','19165484','19165541','19204715','19770930','19770934','20030737','20159718'].map(id=>'blog:cnblogs-'+id));
 const numbered=name=>{const match=/^(\d{3})-(.+)$/.exec(name);if(!match||Number(match[1])<1)throw Error('分类编号缺失或无效');return {order:Number(match[1]),name:match[2]};};
@@ -38,10 +39,14 @@ export function documentRecords({config,manifest}){
     const {docPage}=entry,id=entry.id,chapters=config.records.filter(record=>record.id===id),works=config.records.filter(record=>record.kind==='work'&&record.slug===docPage.work);
     const group=manifest.docGroups?.[docPage.work]?.find(item=>item.id===docPage.group);
     if(chapters.length!==1||works.length!==1||!group||chapters[0].kind!=='doc'||chapters[0].lang!==config.primary||chapters[0].slug!==entry.slug||chapters[0].translationKey!==entry.translationKey)throw Error('章节来源登记缺失、重复或身份不符: '+id);
-    const record=chapters[0],directory=validateDocumentSourcePath(record.source,{work:works[0].source,groupOrder:group.order,docPage});
-    const key=docPage.work+'/'+docPage.group,folder=docPage.work+'/'+directory;
+    const record=chapters[0];
+    validateDocumentSourcePath(record.source,{work:works[0].source,groupOrder:group.order,docPage});
+    const key=docPage.work+'/'+docPage.group,folder=path.posix.dirname(record.source);
     if(locations.has(record.source)||groups.has(key)&&groups.get(key)!==folder||folders.has(folder)&&folders.get(folder)!==key)throw Error('章节来源或分组目录重复: '+id);
     locations.set(record.source,entry);groups.set(key,folder);folders.set(folder,key);
+  }
+  for(const record of config.records){
+    if(record.kind==='doc'&&typeof record.source==='string'&&record.source.startsWith(`网站/${roots.work}/`)&&locations.get(record.source)?.id!==record.id)throw Error('章节来源登记缺失: '+record.id);
   }
   return locations;
 }
@@ -111,9 +116,7 @@ export function createTaxonomy({site,vault,config,manifest,parseSource,previous}
     const chapter=chapters.get(record.source);
     if(chapter){
       if(chapter.id!==record.id||outputs.has(record.output)||!mapped.delete(record.source)||seen.has(record.id))throw Error('章节同步身份或来源重复');
-      const {data}=parseSource(fs.readFileSync(regularPath(vault,record.source),'utf8'));
-      validateDocumentSource(data,chapter);
-      if(data.draft===true||data.sitePublish!==true||data.translationKey!==undefined&&data.translationKey!==chapter.translationKey)throw Error('章节同步发布权限或身份不符: '+record.id);
+      normalizeDocumentSource(parseSource(fs.readFileSync(regularPath(vault,record.source),'utf8')),record,chapter);
       outputs.add(record.output);seen.add(record.id);continue;
     }
     const type=record.kind==='supplement'?'doc':record.kind,section=sections[type];
@@ -140,8 +143,9 @@ export function createTaxonomy({site,vault,config,manifest,parseSource,previous}
   }
   for(const source of mapped){
     const parts=source.split('/');
-    if(parts.length!==7||parts[4]!=='文档'||!workRoots.has(parts.slice(0,4).join('/')))continue;
-    if(!/^\d{3}-.+$/.test(parts[5])||!/^\d{3}-.+\.md$/.test(parts[6])||parts[5].startsWith('000-')||parts[6].startsWith('000-'))continue;
+    if(!workRoots.has(parts.slice(0,4).join('/')))continue;
+    const [group,file,...extra]=parts.slice(parts[4]==='文档'?5:4);
+    if(extra.length||!/^\d{3}-.+$/.test(group??'')||!/^\d{3}-.+\.md$/.test(file??'')||group.startsWith('000-')||file.startsWith('000-'))continue;
     const {data}=parseSource(fs.readFileSync(regularPath(vault,source),'utf8'));
     if(data.draft===true&&data.sitePublish===false)mapped.delete(source);
   }

@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/animation/
 lang: en
 translationKey: doc:mcp-umg:animation
-sourceHash: 815502428e6417b0074723555c5c388dba5be41b6d0a1b9d724ac732078533f5
+sourceHash: 3f3a68b7c1025b97fff87b7bd959a87cda373637a065c76f1eebaa7deb58dede
 translationStatus: translated
 generatedBodyHash: 37f446c9b3e349a726d50adc3e1dc6011f8e99498829fe85e9ded18f94fb759b
 docPage:
   work: mcp-umg
-  group: interaction-frameworks
+  group: interaction
   slug: animation
   order: 3
 ---

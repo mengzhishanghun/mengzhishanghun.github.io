@@ -35,7 +35,6 @@ links:
 docIds:
   - simple-level-seq-smooth-setup
   - simple-level-seq-smooth-smooth-curves
-  - simple-level-seq-smooth-algorithms
 coverAlt: SimpleLevelSeqSmooth封面
 websiteCoverUrl: /media/covers/works/simple-level-seq-smooth-20261101.webp
 lang: zh

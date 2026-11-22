@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: reuse-styling
+  group: styling-themes
   slug: widget-themes
-  order: 4
+  order: 2
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/widget-themes/
 lang: zh

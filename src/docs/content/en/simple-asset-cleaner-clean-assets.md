@@ -1,5 +1,5 @@
 ---
-title: Clean Unreferenced Assets on Submission
+title: Clean Unreferenced Assets
 type: doc
 slug: simple-asset-cleaner-clean-assets
 draft: false
@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-asset-cleaner/docs/clean-assets/
 lang: en
 translationKey: doc:simple-asset-cleaner:clean-assets
-sourceHash: 7899444f18825a6e301c1ef03b300a7a60e7ef1595667f342b7d6d2155d7a313
+sourceHash: 0448ed9477c7fc06625c93d9a87c4564822475f29e200ac074d7a516abaa7c34
 translationStatus: translated
-generatedBodyHash: d71cc4df651bd24f0986378d9091743a06ae48cfdcfdd57f31cb4020d6bdb878
+generatedBodyHash: 0e69e7d1c576a4b45e6c9f3b1d10022285fc888c2301fba42820ad76bee14004
 docPage:
   work: simple-asset-cleaner
   group: cleanup
@@ -37,9 +37,19 @@ For example, if a scene references only two of ten test materials, the other eig
 
 In the Content Browser, select one or more assets or folders, then open **Simple Asset Cleaner** from the context menu and choose **Clean Unreferenced Assets**. Review the candidates in the dialog and select the files to clean.
 
-## Compare Automatic and Context Menu Cleanup
+## Scan the Whole Project
 
-| Asset status | Automatic cleanup on submission | Context-menu “Clean Unreferenced Assets” |
-|---------|--------------|-------------------|
-| Newly added | Revert, **retain local copy** | Revert, **retain local copy** |
-| Tracked | No action | **Delete (server + local)** |
+Full cleanup is useful for periodic maintenance, taking over a legacy project, or preparing a major release. It deletes committed files that are no longer referenced. Make sure you have a recoverable commit, try it on a test branch, and tell your team beforehand.
+
+1. Open `Editor > Project Settings > General > Simple Asset Cleaner`.
+2. Click `Clean All Source Control Assets` and wait for the progress bar to finish.
+3. Review the log to see which assets were cleaned up.
+
+## Cleanup Results by File Status
+
+| Asset status | Automatic cleanup on submission | Context menu cleanup of selected assets | Manual full cleanup |
+| --- | --- | --- | --- |
+| Newly added, unreferenced | Revert and keep the local copy | Revert and keep the local copy | Revert and keep the local copy |
+| Tracked, unreferenced | No action | Delete (server and local) | Delete submitted unreferenced assets (server and local) |
+| Referenced | Submit normally | Retain | Retain |
+| Plugin and engine assets | No action | No action | No action |

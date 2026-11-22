@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-dev-tools/docs/enhanced-input/
 lang: en
 translationKey: doc:mcp-dev-tools:enhanced-input
-sourceHash: 571e9687334e0a2592b1889b030cf7092ddeb5fe23f23335c4042b298297477c
+sourceHash: 33bdcff649d88faf9c9594dfa0b6eda0c09be079c3fc45ec6f5e43b3b241aca5
 translationStatus: translated
 generatedBodyHash: 30feeecbe46156b3dd1a8e4884cb33ae1fe396269de039c200546969916dd7f9
 docPage:
   work: mcp-dev-tools
-  group: data
+  group: input
   slug: enhanced-input
-  order: 7
+  order: 1
 ---
 
 ## Enable Enhanced Input

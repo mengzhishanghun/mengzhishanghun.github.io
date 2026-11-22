@@ -23,13 +23,12 @@ links:
 docIds:
   - simple-asset-cleaner-setup
   - simple-asset-cleaner-clean-assets
-  - simple-asset-cleaner-full-cleanup
   - simple-asset-cleaner-protect-assets
   - simple-asset-cleaner-add-dependencies
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: 844dcd92efa83ec76115966ff00516d32a82a7ca74410666016b2618b3bca218
+sourceHash: fc12ea16929096aa406a6e5d5248c0b1bc8b0173b1b0292978b61ce4f15ca33e
 translationStatus: translated
 generatedBodyHash: df66e77ccf04b257a310ce8d75fa0f4a7ec503952e8561536af2e60c23f62aa2
 workInfo:

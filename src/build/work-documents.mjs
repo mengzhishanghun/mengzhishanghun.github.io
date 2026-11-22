@@ -89,10 +89,10 @@ export function renderDocumentSlots(html,layout,source,slots,workCopy,chrome,{ou
 
 export function validateDocumentSourcePath(source,{work,groupOrder,docPage}){
   const root=/^网站\/001-作品\/\d{3}-[^/]+\/[^/]+\/README\.md$/;
-  if(typeof work!=='string'||typeof source!=='string'||/[\\:\0]/.test(work+source)||!root.test(work)||[...work.split('/'),...source.split('/')].some(part=>part==='.'||part==='..')||!source.startsWith(work.slice(0,-'README.md'.length)+'文档/'))throw Error('章节来源不在所属作品目录');
-  const [group,file,...extra]=source.slice(work.length-'README.md'.length+'文档/'.length).split('/');
+  if(typeof work!=='string'||typeof source!=='string'||/[\\:\0]/.test(work+source)||!root.test(work)||[...work.split('/'),...source.split('/')].some(part=>part==='.'||part==='..')||!source.startsWith(work.slice(0,-'README.md'.length)))throw Error('章节来源不在所属作品目录');
+  const [group,file,...extra]=source.slice(work.length-'README.md'.length).replace(/^文档\//,'').split('/');
   const groupMatch=/^(\d{3})-[^/]+$/.exec(group??''),fileMatch=/^(\d{3})-[^/]+\.md$/.exec(file??'');
-  if(extra.length||!groupMatch||!fileMatch||Number(groupMatch[1])!==groupOrder||Number(fileMatch[1])!==docPage.order)throw Error('章节来源目录层级或编号不符');
+  if(extra.length||!groupMatch||!fileMatch||!order(groupOrder)||!order(docPage.order)||Number(groupMatch[1])!==groupOrder||Number(fileMatch[1])!==docPage.order)throw Error('章节来源目录层级或编号不符');
   return group;
 }
 

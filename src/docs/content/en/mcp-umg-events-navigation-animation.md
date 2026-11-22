@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/events-navigation-animation/
 lang: en
 translationKey: doc:mcp-umg:events-navigation-animation
-sourceHash: e8a490a20e739041cfeeea7cea663fd6116344f5c6193a3462f036a9f986d619
+sourceHash: cb3a6ccb6489217dc5a3cbd4acc99b948d7a02f2d8a5f9e2bbcaadba4221dca4
 translationStatus: translated
 generatedBodyHash: db3c033efd6f8da2e961dc0580f558ba3e39fb42746b07fd1276866fffe8631e
 docPage:
   work: mcp-umg
-  group: interaction-frameworks
+  group: interaction
   slug: events-navigation-animation
   order: 1
 ---

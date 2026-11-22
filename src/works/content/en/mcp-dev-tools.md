@@ -27,7 +27,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-dev-tools
-sourceHash: 835cb26bf98b65132ab700955a97113da1f2210410405d26e9203b8ea4d8e0d5
+sourceHash: 1a23d50f568595de5216efc26ed8e7222d7f37cddf5aef312399aa92110abc90
 generatedBodyHash: 299c3b4bd8d30c194caaeca1f2969da4f89ed9104ff4a5b745031bd539140770
 translationStatus: translated
 coverAlt: MCPDevTools cover
@@ -36,12 +36,12 @@ docIds:
   - mcp-dev-tools-connect
   - mcp-dev-tools-inspect-editor
   - mcp-dev-tools-asset-registry
+  - mcp-dev-tools-primary-asset-labels
   - mcp-dev-tools-data-assets
   - mcp-dev-tools-data-tables
   - mcp-dev-tools-curves
   - mcp-dev-tools-curve-tables
   - mcp-dev-tools-string-tables
-  - mcp-dev-tools-primary-asset-labels
   - mcp-dev-tools-enhanced-input
 ---
 

@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: reuse-styling
+  group: styling-themes
   slug: widget-styles
-  order: 3
+  order: 1
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/widget-styles/
 lang: zh
@@ -44,7 +44,7 @@ RichTextBlock 使用 `Style.RichText`：`textStyleSet` 必须是已有 `/Game` D
 {"RichText":{"textStyleSet":"/Game/UI/Styles/DT_RichText","decoratorClasses":["/Game/UI/Decorators/BP_LinkDecorator.BP_LinkDecorator_C"]}}
 ```
 
-`ImportUIFont` 将一个本地 `.ttf`/`.otf` 导入为新的 `/Game` FontFace，并创建同名后缀 `_Font` 的 UFont；UFont 默认 typeface 持久引用该 FontFace，返回 `FontFacePath` 与可直接用于 `Text.font` 的 `FontPath`。`SourceFile`、`AssetPath` 为必填项，64 MiB 为源文件上限；两个目标包只要已存在、已加载为非空包或磁盘已存在即拒绝，避免覆盖或夹带保存。`bSave` 必须为布尔值，默认为 `false`；为真时精确保存这两个包。默认导入后可用 `SaveUIAsset` 分别按 FontFace/UFont 路径保存单包。工具使用 UE 5.2 至 5.8 实际提供的 `UFontFileImportFactory`（其基类 `FactoryCreateFile` 最终调用 FontFace 的原生二进制工厂）。
+如需使用本地字体文件，请先[导入 UI 字体](/zh/works/mcp-umg/docs/import-ui-fonts/)。
 
 ## 圆角、Brush 与按钮内边距
 

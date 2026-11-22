@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-case-sync/docs/build-and-environment/
 lang: en
 translationKey: doc:p4-case-sync:build-and-environment
-sourceHash: 8555607201f9c8fcb53ec34270ad98fa571deb6c3a7c07c1d7e2793d5d943b30
+sourceHash: 3c5bd803635a380f967cf6617e56e2966c1cade900ba4c8cb93c77209d741ff4
 translationStatus: translated
-generatedBodyHash: 2bd67e7ff3ebfaec6687be728f9aacad1072f1f4ecad9f8597844845aa7333ab
+generatedBodyHash: cfd9a48fc3ff70956464b165b7e6e21a64e6e409420a2872c3cacc6767efb029
 docPage:
   work: p4-case-sync
   group: distribution
@@ -58,12 +58,3 @@ pyinstaller -F -w P4CaseSync.spec  # 会报错
 # ✅ 正确用法
 pyinstaller P4CaseSync.spec
 ```
-
-## Build Troubleshooting
-
-- Color decision rules (final version):  
-  1) After == Before → Gray  
-  2) After != Before and After == Automatic value → Green  
-  3) After != Automatic value → Red  
-- Double-click the **entire row** to edit; colors refresh immediately afterward  
-- Consistency check failure → Automatically try a two-step move (temporary name → target name), then check again

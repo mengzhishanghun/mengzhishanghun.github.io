@@ -11,9 +11,9 @@ workIds:
   - mcp-dev-tools
 docPage:
   work: mcp-dev-tools
-  group: data
+  group: assets
   slug: primary-asset-labels
-  order: 6
+  order: 2
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-dev-tools/docs/primary-asset-labels/
 lang: zh

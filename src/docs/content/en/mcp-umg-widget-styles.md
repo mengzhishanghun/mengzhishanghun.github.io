@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/widget-styles/
 lang: en
 translationKey: doc:mcp-umg:widget-styles
-sourceHash: e5d0f44b8031413e15a43d92be725f9d31ee1a6b9dfc419bfe9940b8775b2417
+sourceHash: d0a4067791b2557ff2de96cd61cf4b4c85dde215f3ecb6e3d78f2d5fe070e18b
 translationStatus: translated
-generatedBodyHash: ded93bfd1d8bcc81d43294cc790f353d99577141723a6c9ba034114d1c10c445
+generatedBodyHash: c562b9b296253616d9a9fc41304f970526bb1e3d4e550a14429ce180cc50d9d0
 docPage:
   work: mcp-umg
-  group: reuse-styling
+  group: styling-themes
   slug: widget-styles
-  order: 3
+  order: 1
 ---
 
 ## Widgets supported by SetWidgetStyle
@@ -47,7 +47,7 @@ RichTextBlock uses `Style.RichText`: `textStyleSet` must reference an existing `
 {"RichText":{"textStyleSet":"/Game/UI/Styles/DT_RichText","decoratorClasses":["/Game/UI/Decorators/BP_LinkDecorator.BP_LinkDecorator_C"]}}
 ```
 
-`ImportUIFont` imports one local `.ttf`/`.otf` as a new `/Game` FontFace and creates a matching UFont with the `_Font` suffix. The UFont's default typeface persistently references that FontFace. The result includes `FontFacePath` and `FontPath`, which can be used directly as `Text.font`. `SourceFile` and `AssetPath` are required; the source file limit is 64 MiB. The request is rejected if either target package already exists, is loaded as a non-empty package, or exists on disk, preventing overwrites or unintended saves. `bSave` must be a boolean and defaults to `false`; when true, it saves exactly those two packages. After a default import, use `SaveUIAsset` separately with each FontFace/UFont path to save one package at a time. The tool uses `UFontFileImportFactory`, available in UE 5.2 through 5.8 (its base-class `FactoryCreateFile` ultimately invokes FontFace's native binary factory).
+To use a local font file, first [import it as a UI font](/en/works/mcp-umg/docs/import-ui-fonts/).
 
 ## Corners, Brushes, and Button padding
 

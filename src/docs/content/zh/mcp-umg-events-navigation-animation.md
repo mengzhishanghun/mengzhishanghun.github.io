@@ -11,7 +11,7 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: interaction-frameworks
+  group: interaction
   slug: events-navigation-animation
   order: 1
 documentKind: product-manual

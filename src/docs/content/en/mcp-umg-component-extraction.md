@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/component-extraction/
 lang: en
 translationKey: doc:mcp-umg:component-extraction
-sourceHash: 558ac544c3000900aef95e2139de73806d9c2ebc3d751c1d29c714836e93ae4c
+sourceHash: a829c210d320c65c6c6cf89c0440c2becda7620cc71283164c64e9f561e5069b
 translationStatus: translated
 generatedBodyHash: f0032613f82ca131eceb38e518b189308fc845102b08b178f56f06835f0e9a9c
 docPage:
   work: mcp-umg
-  group: reuse-styling
+  group: component-reuse
   slug: component-extraction
   order: 2
 ---

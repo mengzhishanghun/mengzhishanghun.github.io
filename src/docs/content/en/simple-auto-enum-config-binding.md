@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-auto-enum/docs/config-binding/
 lang: en
 translationKey: doc:simple-auto-enum:config-binding
-sourceHash: 0e607862310bd10d412b7fa567fc31126bce0723eb7455acf4dc53245b20ab71
+sourceHash: c5c8f93d7842177a422b1b1e721cfc765651a74bb5fbdd10913e0b56784d1476
 translationStatus: translated
 generatedBodyHash: 3f567f56a68589791716b11ef55baa1b3c1f50bbfbdc1135b60a748e92d78948
 docPage:
   work: simple-auto-enum
-  group: setup
+  group: enum-binding
   slug: config-binding
   order: 1
 ---

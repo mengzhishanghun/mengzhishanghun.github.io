@@ -1252,6 +1252,14 @@
     {
       "id": "doc:mcp-dev-tools:enhanced-input",
       "translationKey": "doc:mcp-dev-tools:enhanced-input"
+    },
+    {
+      "id": "doc:mcp-umg:import-ui-fonts",
+      "translationKey": "doc:mcp-umg:import-ui-fonts"
+    },
+    {
+      "id": "doc:mcp-umg:widget-performance",
+      "translationKey": "doc:mcp-umg:widget-performance"
     }
   ]
 }

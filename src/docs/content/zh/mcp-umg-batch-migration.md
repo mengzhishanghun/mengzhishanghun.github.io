@@ -1,5 +1,5 @@
 ---
-title: 批量迁移控件属性
+title: 批量修改控件属性
 type: doc
 slug: mcp-umg-batch-migration
 draft: false
@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: reuse-styling
+  group: widgets-layout
   slug: batch-migration
-  order: 5
+  order: 4
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/batch-migration/
 lang: zh

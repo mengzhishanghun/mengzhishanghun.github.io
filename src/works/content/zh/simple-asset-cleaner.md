@@ -36,7 +36,6 @@ links:
 docIds:
   - simple-asset-cleaner-setup
   - simple-asset-cleaner-clean-assets
-  - simple-asset-cleaner-full-cleanup
   - simple-asset-cleaner-protect-assets
   - simple-asset-cleaner-add-dependencies
 coverAlt: SimpleAssetCleaner封面

@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/commonui/
 lang: en
 translationKey: doc:mcp-umg:commonui
-sourceHash: d2bea3d4c920c9514c3e9b085504b4566646777c8f96ba8310a9a54e7c61d32c
+sourceHash: 02002941ac77911978e4501379c10d718200187d083eca94599d55a26915b1c9
 translationStatus: translated
 generatedBodyHash: 763e5b4bfe2b039aecc3d676e54f3def8964f49bbbbd154995f054427e4a7611
 docPage:
   work: mcp-umg
-  group: interaction-frameworks
+  group: framework-integration
   slug: commonui
-  order: 4
+  order: 1
 ---
 
 ## Check framework availability

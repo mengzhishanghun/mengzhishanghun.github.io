@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: interaction-frameworks
+  group: framework-integration
   slug: mvvm
-  order: 5
+  order: 2
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/mvvm/
 lang: zh

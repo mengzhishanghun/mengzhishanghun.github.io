@@ -115,7 +115,6 @@ languages:
       doc:simple-bp-inherit-fix:find-components: docs/content/zh/simple-bp-inherit-fix-find-components.md
       doc:simple-bp-inherit-fix:repair-components: docs/content/zh/simple-bp-inherit-fix-repair-components.md
       doc:simple-level-seq-smooth:smooth-curves: docs/content/zh/simple-level-seq-smooth-smooth-curves.md
-      doc:simple-level-seq-smooth:algorithms: docs/content/zh/simple-level-seq-smooth-algorithms.md
       doc:ai-data-asset:sync: docs/content/zh/ai-data-asset-sync.md
       doc:ai-data-asset:ai-edit: docs/content/zh/ai-data-asset-ai-edit.md
       doc:simple-input-simulator:key-input: docs/content/zh/simple-input-simulator-key-input.md
@@ -185,7 +184,6 @@ languages:
       doc:p4-stream-switcher:normal-switch: docs/content/zh/p4-stream-switcher-normal-switch.md
       doc:p4-stream-switcher:offline-switch: docs/content/zh/p4-stream-switcher-offline-switch.md
       doc:p4-stream-switcher:recycle-workspace: docs/content/zh/p4-stream-switcher-recycle-workspace.md
-      doc:simple-asset-cleaner:full-cleanup: docs/content/zh/simple-asset-cleaner-full-cleanup.md
       doc:simple-asset-namer:setup: docs/content/zh/simple-asset-namer-setup.md
       doc:simple-byte-conversion:setup: docs/content/zh/simple-byte-conversion-setup.md
       doc:simple-config-exclude:setup: docs/content/zh/simple-config-exclude-setup.md
@@ -275,6 +273,8 @@ languages:
       doc:mcp-dev-tools:string-tables: docs/content/zh/mcp-dev-tools-string-tables.md
       doc:mcp-dev-tools:primary-asset-labels: docs/content/zh/mcp-dev-tools-primary-asset-labels.md
       doc:mcp-dev-tools:enhanced-input: docs/content/zh/mcp-dev-tools-enhanced-input.md
+      doc:mcp-umg:import-ui-fonts: docs/content/zh/mcp-umg-import-ui-fonts.md
+      doc:mcp-umg:widget-performance: docs/content/zh/mcp-umg-widget-performance.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -387,7 +387,6 @@ languages:
       doc:simple-bp-inherit-fix:find-components: docs/content/en/simple-bp-inherit-fix-find-components.md
       doc:simple-bp-inherit-fix:repair-components: docs/content/en/simple-bp-inherit-fix-repair-components.md
       doc:simple-level-seq-smooth:smooth-curves: docs/content/en/simple-level-seq-smooth-smooth-curves.md
-      doc:simple-level-seq-smooth:algorithms: docs/content/en/simple-level-seq-smooth-algorithms.md
       doc:ai-data-asset:sync: docs/content/en/ai-data-asset-sync.md
       doc:ai-data-asset:ai-edit: docs/content/en/ai-data-asset-ai-edit.md
       doc:simple-input-simulator:key-input: docs/content/en/simple-input-simulator-key-input.md
@@ -457,7 +456,6 @@ languages:
       doc:p4-stream-switcher:normal-switch: docs/content/en/p4-stream-switcher-normal-switch.md
       doc:p4-stream-switcher:offline-switch: docs/content/en/p4-stream-switcher-offline-switch.md
       doc:p4-stream-switcher:recycle-workspace: docs/content/en/p4-stream-switcher-recycle-workspace.md
-      doc:simple-asset-cleaner:full-cleanup: docs/content/en/simple-asset-cleaner-full-cleanup.md
       doc:simple-asset-namer:setup: docs/content/en/simple-asset-namer-setup.md
       doc:simple-byte-conversion:setup: docs/content/en/simple-byte-conversion-setup.md
       doc:simple-config-exclude:setup: docs/content/en/simple-config-exclude-setup.md
@@ -547,4 +545,6 @@ languages:
       doc:mcp-dev-tools:string-tables: docs/content/en/mcp-dev-tools-string-tables.md
       doc:mcp-dev-tools:primary-asset-labels: docs/content/en/mcp-dev-tools-primary-asset-labels.md
       doc:mcp-dev-tools:enhanced-input: docs/content/en/mcp-dev-tools-enhanced-input.md
+      doc:mcp-umg:import-ui-fonts: docs/content/en/mcp-umg-import-ui-fonts.md
+      doc:mcp-umg:widget-performance: docs/content/en/mcp-umg-widget-performance.md
 ---

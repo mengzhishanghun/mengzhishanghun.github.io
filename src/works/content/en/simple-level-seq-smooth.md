@@ -21,7 +21,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: en
 translationKey: simple-level-seq-smooth
-sourceHash: bb1ac0519e412a6955968bf088cd1717de0085f8d7e7367fd26ff2b23db17557
+sourceHash: f839b52e510e549296639cf47015a47848a292933046a345f743eaba2ac854c1
 translationStatus: translated
 generatedBodyHash: 9abd240af57fa11e84007f80fcae9c35f98454a19322421706f69f1f1b6b2eb7
 workInfo:
@@ -42,7 +42,6 @@ coverAlt: SimpleLevelSeqSmooth cover
 docIds:
   - simple-level-seq-smooth-setup
   - simple-level-seq-smooth-smooth-curves
-  - simple-level-seq-smooth-algorithms
 ---
 
 ## Overview

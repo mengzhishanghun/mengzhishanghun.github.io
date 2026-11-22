@@ -29,11 +29,12 @@ docIds:
   - mcp-umg-layout
   - mcp-umg-image-to-umg
   - mcp-umg-layout-inspection
+  - mcp-umg-batch-migration
   - mcp-umg-components-styles
   - mcp-umg-component-extraction
   - mcp-umg-widget-styles
   - mcp-umg-widget-themes
-  - mcp-umg-batch-migration
+  - mcp-umg-import-ui-fonts
   - mcp-umg-events-navigation-animation
   - mcp-umg-navigation
   - mcp-umg-animation
@@ -41,6 +42,7 @@ docIds:
   - mcp-umg-mvvm
   - mcp-umg-preview-runtime
   - mcp-umg-runtime-diagnostics
+  - mcp-umg-widget-performance
 coverAlt: MCPUMG封面
 websiteCoverUrl: /media/covers/works/mcp-umg-20261101.webp
 lang: zh

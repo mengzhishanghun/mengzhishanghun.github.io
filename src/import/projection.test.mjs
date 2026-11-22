@@ -4,7 +4,7 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {createHash} from 'node:crypto';
-import {projectSource,importContent,canonicalTextHash} from './import.mjs';
+import {projectSource,importContent,canonicalTextHash,parseSource,sourceText} from './import.mjs';
 const sha=value=>createHash('sha256').update(value).digest('hex');
 test('projection removes hidden image source, alt, title and private frontmatter per occurrence',async()=>{
   const source={data:{title:'Title',draft:false,sourcePath:'private/source.md',migrationOrigin:'private'},body:'Before\n\n![private description](private-image.png "private title")\n\nAfter\n'};
@@ -28,6 +28,92 @@ test('public source hash is LF canonical without trimming code or normalizing Un
   assert.equal(canonicalTextHash(text),canonicalTextHash(text.replaceAll('\n','\r\n')));
   assert.notEqual(canonicalTextHash(text),canonicalTextHash(text.trim()));
 });
+function chapterFixture(t){
+  const root=fs.mkdtempSync(path.join(os.tmpdir(),'chapter-import-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+  const site=path.join(root,'site'),vault=path.join(root,'vault');
+  const put=(base,relative,raw)=>{const file=path.join(base,relative);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,raw);};
+  for(const dir of ['001-作品','002-案例','003-博客','004-文档'])fs.mkdirSync(path.join(vault,'网站',dir),{recursive:true});
+  const work={id:'work:tool',kind:'work',lang:'zh',slug:'tool',source:'网站/001-作品/001-Utility/01-Tool/README.md',output:'works/content/zh/tool.md'};
+  const docPage={work:'tool',group:'start',slug:'setup',order:1};
+  const entry={id:'doc:tool:setup',type:'doc',slug:'tool-setup',translationKey:'doc:tool:setup',docPage,legacyRoutes:[]};
+  const record={id:entry.id,kind:'doc',lang:'zh',slug:entry.slug,translationKey:entry.translationKey,source:work.source.replace('README.md','001-Start/001-Setup.md'),output:'docs/content/zh/tool-setup.md',sourceMetadata:{media:['private-image.png']}};
+  const manifest={entries:[{id:work.id,type:'work',slug:work.slug,legacyRoutes:['/works/tool/']},entry],docGroups:{tool:[{id:'start',order:1}]}};
+  const sync=()=>put(site,'src/import/000-sync.local',sourceText({version:1,primary:'zh',records:[work,record]},''));
+  sync();put(site,'src/build/manifest.json',JSON.stringify(manifest));
+  put(vault,work.source,sourceText({slug:work.slug},'Work\n'));
+  put(site,'src/'+work.output,sourceText({slug:work.slug},'Work\n'));
+  const metadata={slug:record.slug,sitePublish:true,tags:['Setup']};
+  const writeChapter=(data=metadata,body='Chapter\n')=>put(vault,record.source,sourceText(data,body));
+  writeChapter();
+  return {site,vault,record,entry,metadata,sync,writeChapter,run:options=>importContent({site,vault,...options}),read:()=>fs.readFileSync(path.join(site,'src',record.output),'utf8'),putDraft:data=>put(vault,record.source.replace('001-Setup.md','002-Private.md'),sourceText(data,'Private\n'))};
+}
+
+test('flat minimal chapter imports public metadata and remains outside standalone taxonomy',async t=>{
+  const fixture=chapterFixture(t);
+  await fixture.run({only:[fixture.record.id]});
+  const raw=fixture.read(),{data,body}=parseSource(raw);
+  assert.deepEqual(data,{title:'Setup',type:'doc',...fixture.metadata,draft:false,workIds:['tool'],docPage:fixture.entry.docPage,documentKind:'product-manual',websiteRoute:'/zh/works/tool/docs/setup/',lang:'zh',translationKey:fixture.record.id});
+  assert.equal(body,'Chapter\n');assert.doesNotMatch(raw,/sourceMetadata|private-image/);
+  const taxonomy=await fixture.run({taxonomyOnly:true,check:true});
+  assert.deepEqual(taxonomy.differences,['build/taxonomy.json']);
+  await fixture.run({taxonomyOnly:true});
+  const snapshot=JSON.parse(fs.readFileSync(path.join(fixture.site,'src/build/taxonomy.json'),'utf8'));
+  assert.equal(snapshot.sections.doc,undefined);
+  assert.deepEqual(snapshot.sections.work.categories[0].entities,['work:tool']);
+  fixture.writeChapter(data);
+  assert.deepEqual((await fixture.run({only:[fixture.record.id],check:true})).differences,['src/import/000-sync.local']);
+});
+
+test('chapter import and taxonomy refuse conflicting legacy fields and unpublished minimal sources',async t=>{
+  const fixture=chapterFixture(t);
+  for(const [key,value] of Object.entries({title:'Other',type:'blog',documentKind:'other',draft:true,workIds:['other'],websiteRoute:'/zh/docs/wrong/',docPage:{...fixture.entry.docPage,order:2},lang:'en',translationKey:'other',slug:'other',sitePublish:false})){
+    fixture.writeChapter({...fixture.metadata,[key]:value});
+    for(const options of [{only:[fixture.record.id],check:true},{taxonomyOnly:true,check:true}])await assert.rejects(()=>fixture.run(options),/章节同步发布权限或身份不符/,key);
+  }
+});
+
+test('work chapter cannot fall back to standalone import when its chapter registration disappears',async t=>{
+  const fixture=chapterFixture(t),only=[fixture.record.id];
+  await fixture.run({only});
+  const raw=fixture.read(),manifestFile=path.join(fixture.site,'src/build/manifest.json');
+  const manifest=JSON.parse(fs.readFileSync(manifestFile,'utf8'));
+  const entry=manifest.entries.find(entry=>entry.id===fixture.record.id);
+  delete entry.docPage;entry.legacyRoutes=['/docs/tool-setup/'];manifest.docGroups={};
+  fs.writeFileSync(manifestFile,JSON.stringify(manifest));
+  for(const options of [{only,check:true},{only},{taxonomyOnly:true,check:true}])await assert.rejects(()=>fixture.run(options),/章节来源登记缺失/);
+  assert.equal(fixture.read(),raw);
+
+  const original=path.join(fixture.vault,fixture.record.source);
+  fixture.record.source='网站/004-文档/001-Manuals/001-Setup.md';
+  fs.mkdirSync(path.dirname(path.join(fixture.vault,fixture.record.source)),{recursive:true});
+  fs.renameSync(original,path.join(fixture.vault,fixture.record.source));
+  fixture.sync();fixture.writeChapter({title:'Standalone',type:'doc',...fixture.metadata});
+  await fixture.run({only});
+  assert.equal(parseSource(fixture.read()).data.title,'Standalone');
+  await fixture.run({taxonomyOnly:true,check:true});
+});
+
+test('flat unregistered chapter requires both private draft flags',async t=>{
+  const fixture=chapterFixture(t);
+  fixture.putDraft({draft:true,sitePublish:false});
+  await fixture.run({taxonomyOnly:true,check:true});
+  for(const data of [{draft:true},{sitePublish:false},{draft:true,sitePublish:true}]){
+    fixture.putDraft(data);await assert.rejects(()=>fixture.run({taxonomyOnly:true,check:true}),/未登记分类来源/);
+  }
+});
+
+test('frozen chapter allows its original projection and rejects changed projection in check and import',async t=>{
+  const fixture=chapterFixture(t);
+  const data={title:'Setup',type:'doc',slug:fixture.record.slug,draft:false,sitePublish:true,tags:['Setup'],workIds:['tool'],docPage:fixture.entry.docPage,documentKind:'product-manual',websiteRoute:'/zh/works/tool/docs/setup/',lang:'zh',translationKey:fixture.record.id};
+  const frozen=sourceText(data,'Chapter\n');
+  fixture.record.frozenProjectionSha256=canonicalTextHash(frozen);fixture.sync();
+  await fixture.run({only:[fixture.record.id]});assert.equal(fixture.read(),frozen);
+  await fixture.run({taxonomyOnly:true,check:true});
+  fixture.writeChapter(fixture.metadata,'Changed\n');
+  for(const check of [true,false])await assert.rejects(()=>fixture.run({only:[fixture.record.id],check}),/冻结投影/);
+  assert.equal(fixture.read(),frozen);
+});
+
 test('import refuses full foreign frontmatter drift and unknown media before any writes',async t=>{
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'public-import-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
   const site=path.join(root,'site'),vault=path.join(root,'vault');fs.mkdirSync(path.join(site,'src/en'),{recursive:true});fs.mkdirSync(path.join(vault,'网站'),{recursive:true});

@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/mvvm/
 lang: en
 translationKey: doc:mcp-umg:mvvm
-sourceHash: efc22e49acc323e3099a17c2a7f1956d3281325e5c8d9daf291542286e927789
+sourceHash: d4b8cf9a6a724f90384e2dbe1b8d7469e1e2ed736afe71521bde795ed7ea1f85
 translationStatus: translated
 generatedBodyHash: 44da30ded1ce4e7f50e2d4ee62724c78e7763f96476f2697a12b4cf602c0b09a
 docPage:
   work: mcp-umg
-  group: interaction-frameworks
+  group: framework-integration
   slug: mvvm
-  order: 5
+  order: 2
 ---
 
 ## Check framework availability

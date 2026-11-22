@@ -8,7 +8,7 @@ import {publicFields,commonFields,assertPublicFields} from '../build/source-sche
 import {createLinkResolver} from './links.mjs';
 import {resourcePath} from '../build/resources.mjs';
 import {createTaxonomy,documentRecords,validatePendingSources} from './taxonomy.mjs';
-import {validateDocumentSource} from '../build/work-documents.mjs';
+import {normalizeDocumentSource} from './document-source.mjs';
 import {createMediaPlan} from './project-media.mjs';
 import {prepareReprints} from './reprints.mjs';
 
@@ -27,6 +27,9 @@ export function parseSource(raw){
 }
 export const sourceText=(data,body)=>'---\n'+YAML.stringify(data,{lineWidth:0})+'---\n\n'+canonicalText(body).replace(/^\n/,'');
 const binaryHash=bytes=>createHash('sha256').update(bytes).digest('hex');
+const validateFrozenProjection=(raw,record)=>{
+  if(Object.hasOwn(record,'frozenProjectionSha256')&&(raw===null||canonicalTextHash(raw)!==record.frozenProjectionSha256))throw Error('章节冻结投影不符: '+record.id);
+};
 export async function projectSource(source,record,site,resolveLink,preparedCover=false){
   if(source.data.draft===true)throw new Error('草稿不得同步');
   if(source.data.lang!==undefined && source.data.lang!==record.lang)throw new Error('同步语言身份不符');
@@ -72,7 +75,9 @@ export async function projectSource(source,record,site,resolveLink,preparedCover
   const processor=await createMarkdownProcessor({syntaxHighlight:false,remarkPlugins:[projector]});await processor.render(body);
   if(ordinal!==(record.images||[]).length)throw new Error('媒体occurrence数量不符');
   for(const [start,end,value]of edits.sort((a,b)=>b[0]-a[0]))body=body.slice(0,start)+value+body.slice(end);
-  return {data,body:canonicalText(body),raw:sourceText(data,body)};
+  const raw=sourceText(data,body);
+  validateFrozenProjection(raw,record);
+  return {data,body:canonicalText(body),raw};
 }
 export async function importContent({site,vault,sync,check=false,taxonomyOnly=false,only,approveMedia=false}){
   const configFile=sync?path.resolve(sync):safePath(site,'src/import/000-sync.local');
@@ -92,7 +97,14 @@ export async function importContent({site,vault,sync,check=false,taxonomyOnly=fa
   const manifest=JSON.parse(manifestRaw);
   const chapters=documentRecords({config,manifest});
   if(taxonomyOnly){
-    for(const record of config.records){const output=safePath(contentRoot,record.output);safePath(vault,record.source);if(record.publishedFingerprint&&(!fs.existsSync(output)||canonicalTextHash(fs.readFileSync(output,'utf8'))!==record.publishedFingerprint))throw Error('公开中文来源存在人工修改，保留并等待审核');}
+    for(const record of config.records){
+      const output=safePath(contentRoot,record.output);safePath(vault,record.source);
+      if(record.publishedFingerprint||Object.hasOwn(record,'frozenProjectionSha256')){
+        const raw=fs.existsSync(output)?fs.readFileSync(output,'utf8'):null;
+        if(record.publishedFingerprint&&(raw===null||canonicalTextHash(raw)!==record.publishedFingerprint))throw Error('公开中文来源存在人工修改，保留并等待审核');
+        validateFrozenProjection(raw,record);
+      }
+    }
     const target=safePath(site,'src/build/taxonomy.json'),previous=fs.existsSync(target)?JSON.parse(fs.readFileSync(target,'utf8')):undefined;
     const raw=JSON.stringify(createTaxonomy({site,vault,config,manifest,parseSource,previous}),null,2)+'\n';
     const differences=!fs.existsSync(target)||fs.readFileSync(target,'utf8')!==raw?['build/taxonomy.json']:[];
@@ -116,10 +128,7 @@ export async function importContent({site,vault,sync,check=false,taxonomyOnly=fa
     if(files.has(output))throw new Error('同步输出重复');
     initial.set(output,fs.existsSync(output)?fs.readFileSync(output):null);
     if(record.publishedFingerprint && (!fs.existsSync(output)||canonicalTextHash(fs.readFileSync(output,'utf8'))!==record.publishedFingerprint))throw new Error('公开中文来源存在人工修改，保留并等待审核');
-        const raw=fs.readFileSync(input,'utf8'),source=parseSource(raw);
-    const chapter=chapters.get(record.source);
-    validateDocumentSource(source.data,chapter??{});
-    if(chapter&&(record.id!==chapter.id||source.data.sitePublish!==true||source.data.translationKey!==undefined&&source.data.translationKey!==chapter.translationKey))throw Error('章节同步发布权限或身份不符: '+record.id);
+    const raw=fs.readFileSync(input,'utf8'),source=normalizeDocumentSource(parseSource(raw),record,chapters.get(record.source));
     if(['work','case'].includes(record.kind)&&approveMedia){media.approve(source,record);continue;}
     const managed=['work','case'].includes(record.kind)&&record.projectMedia?.some(item=>item.role==='cover')===true;
     if(['work','case'].includes(record.kind))media.project(source,record);

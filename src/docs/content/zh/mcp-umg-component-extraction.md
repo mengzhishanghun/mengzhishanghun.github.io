@@ -11,7 +11,7 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: reuse-styling
+  group: component-reuse
   slug: component-extraction
   order: 2
 documentKind: product-manual

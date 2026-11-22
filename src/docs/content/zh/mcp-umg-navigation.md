@@ -11,7 +11,7 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: interaction-frameworks
+  group: interaction
   slug: navigation
   order: 2
 documentKind: product-manual

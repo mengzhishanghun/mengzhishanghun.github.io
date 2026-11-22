@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: interaction-frameworks
+  group: framework-integration
   slug: commonui
-  order: 4
+  order: 1
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/commonui/
 lang: zh

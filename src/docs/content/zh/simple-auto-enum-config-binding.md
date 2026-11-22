@@ -11,7 +11,7 @@ workIds:
   - simple-auto-enum
 docPage:
   work: simple-auto-enum
-  group: setup
+  group: enum-binding
   slug: config-binding
   order: 1
 documentKind: product-manual

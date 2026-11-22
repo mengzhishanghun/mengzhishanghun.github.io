@@ -26,7 +26,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: f3d654458b49b764a55235f4d5723f8e704363424785357d28b2f32e5cefa80b
+sourceHash: 085b8e25f28524fef8e1484fdbe1dc7229277a62a49fea26550fbd0f8cf96696
 generatedBodyHash: 09595aafb2929da73f571f50023f875dc391380fbc5d731a0d47d021e391317e
 translationStatus: translated
 coverAlt: MCPUMG cover
@@ -36,11 +36,12 @@ docIds:
   - mcp-umg-layout
   - mcp-umg-image-to-umg
   - mcp-umg-layout-inspection
+  - mcp-umg-batch-migration
   - mcp-umg-components-styles
   - mcp-umg-component-extraction
   - mcp-umg-widget-styles
   - mcp-umg-widget-themes
-  - mcp-umg-batch-migration
+  - mcp-umg-import-ui-fonts
   - mcp-umg-events-navigation-animation
   - mcp-umg-navigation
   - mcp-umg-animation
@@ -48,6 +49,7 @@ docIds:
   - mcp-umg-mvvm
   - mcp-umg-preview-runtime
   - mcp-umg-runtime-diagnostics
+  - mcp-umg-widget-performance
 ---
 
 ## About this work

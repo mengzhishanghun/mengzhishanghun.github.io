@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/navigation/
 lang: en
 translationKey: doc:mcp-umg:navigation
-sourceHash: 041aa92f2746419f8738932ee88a21f568701cc97e9a28688d07b823ac586e76
+sourceHash: 109d36e1d3ef7c7121b9b4d0b688d3427614446bd74184a1786d1fa21932f885
 translationStatus: translated
 generatedBodyHash: 9861ce9e91b9badbe9c98057bb4c304a656be123ec5a15b39979f8a80ab91123
 docPage:
   work: mcp-umg
-  group: interaction-frameworks
+  group: interaction
   slug: navigation
   order: 2
 ---

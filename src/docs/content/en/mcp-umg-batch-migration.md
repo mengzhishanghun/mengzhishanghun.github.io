@@ -1,5 +1,5 @@
 ---
-title: Migrate Widget Properties in Batches
+title: Batch-edit Widget Properties
 type: doc
 slug: mcp-umg-batch-migration
 draft: false
@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/batch-migration/
 lang: en
 translationKey: doc:mcp-umg:batch-migration
-sourceHash: 653130cdff6379ec3b8d7db9fc49bacd087102be4f15c3408fa4aa9f9834b647
+sourceHash: cb25e6f123f8e12e8ce3073123ec9d249c39a5b4714b30fce151ded178211d86
 translationStatus: translated
 generatedBodyHash: d506ea113b61281d5b092fa093a60f02d2f6297190db502499362fcb7afb33ee
 docPage:
   work: mcp-umg
-  group: reuse-styling
+  group: widgets-layout
   slug: batch-migration
-  order: 5
+  order: 4
 ---
 
 ## Preflight, apply, and undo

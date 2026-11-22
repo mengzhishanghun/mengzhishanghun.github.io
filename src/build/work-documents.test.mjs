@@ -36,7 +36,8 @@ test('reject incomplete group translations, duplicate order, aliases, and mismat
   assert.throws(()=>documentCatalog([work,{...first,legacyRoutes:['/docs/setup/']},last],groups,codes),/章节/);
   const layout={work:'网站/001-作品/001-工具/Cleaner/README.md',groupOrder:1,docPage:first.docPage};
   assert.equal(validateDocumentSourcePath('网站/001-作品/001-工具/Cleaner/文档/001-入门/001-安装.md',layout),'001-入门');
-  for(const source of ['网站/001-作品/001-工具/Other/文档/001-入门/001-安装.md','网站/001-作品/001-工具/Cleaner/文档/001-入门/002-安装.md','网站/001-作品/001-工具/Cleaner/文档/001-入门/extra/001-安装.md'])assert.throws(()=>validateDocumentSourcePath(source,layout),/章节/);
+  assert.equal(validateDocumentSourcePath('网站/001-作品/001-工具/Cleaner/001-入门/001-安装.md',layout),'001-入门');
+  for(const source of ['网站/001-作品/001-工具/Other/001-入门/001-安装.md','网站/001-作品/001-工具/Cleaner/001-入门/002-安装.md','网站/001-作品/001-工具/Cleaner/002-入门/001-安装.md','网站/001-作品/001-工具/Cleaner/文档/001-入门/extra/001-安装.md'])assert.throws(()=>validateDocumentSourcePath(source,layout),/章节/);
 });
 
 test('split old links can target another page and require exactly one real anchor',()=>{

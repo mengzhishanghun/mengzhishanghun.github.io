@@ -11,9 +11,9 @@ workIds:
   - mcp-dev-tools
 docPage:
   work: mcp-dev-tools
-  group: data
+  group: input
   slug: enhanced-input
-  order: 7
+  order: 1
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-dev-tools/docs/enhanced-input/
 lang: zh
