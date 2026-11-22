@@ -12,26 +12,24 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-websocket/docs/native-module/
 lang: en
 translationKey: doc:simple-websocket:native-module
-sourceHash: 7a92f3fb506e5d0d99097fc7b4ed6a438d022d7d6fcb9468d3972130dd21fd6f
+sourceHash: e590b6ea4af80a50da056e8b0cab9cc60298013c19d2ab12f3392003d418b9dc
 translationStatus: translated
-generatedBodyHash: 5c42e3203a85e155b6060491b215ec68d1e1a7805f3b2c81f5503538b7b1ec15
+generatedBodyHash: c75c8c8de4cb7343d116c09ed8275ff39ec57a416a669a9b9e861c02a1aa2886
 docPage:
   work: simple-websocket
-  group: workflows
+  group: native
   slug: native-module
-  order: 2
+  order: 1
 ---
 
-## Native examples with the UE WebSockets module
-
-### 3.1 Use cases
+## Use cases
 
 - Web frontend control panels
 - Real-time push messages from cloud services
 - Communication with browsers or mobile clients
 - A shared protocol across languages and platforms
 
-### 3.2 UE's built-in WebSockets module
+## Add the built-in WebSockets module
 
 UE provides the `WebSockets` module. Add these dependencies to `.Build.cs`:
 
@@ -43,7 +41,7 @@ PublicDependencyModuleNames.AddRange(new string[] {
 });
 ```
 
-### 3.3 Basic implementation
+## Implementation example
 
 **Connect a WebSocket:**
 
@@ -97,7 +95,7 @@ void SendWebSocketMessage(TSharedPtr<IWebSocket> WebSocket, const FString& Messa
 - The SimpleWebSocket plugin in this guide supports only `ws://`. Check the engine, backend, and certificate configuration for native UE WebSockets module support for `wss://`.
 - Example connection URL: `ws://127.0.0.1:8080`.
 
-### Module capabilities and plugin support
+## Module capabilities and plugin support
 
 These three blocks show `.Build.cs` dependencies, connection creation, event binding, and text messages. They are not SimpleWebSocket node declarations. The project must retain the native `IWebSocket` object until the connection ends. The local `TSharedPtr` does not show where to keep it, and the example does not cover complete connection-error handling, delegate unbinding, or reconnection.
 
@@ -105,6 +103,6 @@ The original technical record described the `ws://` limitation as a general limi
 
 `127.0.0.1` is the local loopback address, suitable for a service on the same machine. Use the actual destination address for a service on another host. Avoiding `localhost` is a troubleshooting recommendation here; it does not mean remote services should use loopback.
 
-See the [TCP client and network communication guide](/en/works/simple-tcp-client/docs/connect/) for other protocols and shared architecture.
+See the [SimpleTCPClient overview](/en/works/simple-tcp-client/) for other protocols and its native TCP client guide for shared architecture.
 
 The native communication examples were published on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19165484) on 2025-10-25.

@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /zh/works/mcp-material/docs/edit-graph/
+      href: /zh/works/mcp-material/docs/connect/
   compatibility:
     - platforms: []
       requirements:
@@ -25,8 +25,12 @@ tags:
   - 材质图与材质实例
   - MCP 系列
 docIds:
+  - mcp-material-connect
+  - mcp-material-material-assets
+  - mcp-material-material-preview
   - mcp-material-edit-graph
   - mcp-material-instance-parameters
+  - mcp-material-material-compilation
 coverAlt: MCPMaterial封面
 websiteCoverUrl: /media/covers/works/mcp-material-20261101.webp
 lang: zh

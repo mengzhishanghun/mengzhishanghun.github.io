@@ -10,7 +10,7 @@ workIds:
   - simple-ssh-tunnel
 docPage:
   work: simple-ssh-tunnel
-  group: workflows
+  group: native
   slug: cpp-tunnels
   order: 1
 documentKind: product-manual
@@ -19,13 +19,15 @@ lang: zh
 translationKey: doc:simple-ssh-tunnel:cpp-tunnels
 ---
 
-## C++ 中建立 SSH 隧道的两种方式
+## 选择集成方式
 
-### 调用系统SSH客户端
+临时开发测试可调用系统 SSH 客户端，前提是目标机器已安装客户端。产品集成可使用 SSH 库直接管理连接状态和错误，但仍需处理目标平台依赖、跨平台适配和发布条件。
 
-最简单的方式是调用系统自带的SSH客户端：
+## 调用系统 SSH 客户端
 
-**Windows (使用OpenSSH客户端):**
+可启动操作系统上已安装的 SSH 客户端。
+
+**Windows（OpenSSH 客户端）**
 
 ```cpp
 #include "GenericPlatform/GenericPlatformProcess.h"
@@ -76,54 +78,21 @@ void CloseSSHTunnel(FProcHandle& ProcHandle)
 }
 ```
 
-**这种方式的优缺点:**
+这种方式实现简单，无需在项目中集成第三方库。
 
-✅ **优点:**
+Windows、Linux 和 macOS 的客户端路径不同。若无法控制用户环境，这种方式不适合作为打包发布的依赖。
 
--   实现简单,几行代码就能完成
--   无需集成第三方库
--   利用系统自带SSH客户端
+系统客户端示例保留了 `Password` 参数，但没有把它用于认证；它依赖密钥或外部交互。创建的进程句柄仍需由调用方保存，局部变量本身不能让后续关闭函数取到句柄。路径、引用转义、启动失败、结束时机和错误收集也需要补齐。
 
-❌ **缺点:**
+## 集成 libssh2 和 OpenSSL
 
--   依赖系统环境(需要预装SSH客户端)
--   无法在代码中输入密码(需要配置密钥或手动输入)
--   进程管理复杂,难以获取连接状态
--   跨平台兼容性差(Windows/Linux/Mac路径不同)
--   无法获取详细的错误信息
--   不适合打包发布(用户环境不可控)
+SSH 库允许项目直接管理 SSH 会话、通道、状态和错误。libssh2 负责连接、密码或密钥认证和端口转发；OpenSSL 提供加密、解密和密钥交换。
 
-* * *
+### 编译库、添加依赖并建立会话
 
-### 集成SSH库
+**编译库文件**
 
-集成 SSH 库可以由项目直接管理会话、通道、状态与错误。
-
-这里选用开源的libssh2+OpenSSL的组合，需要两个关键库:
-
-**libssh2** — SSH协议实现
-
--   负责SSH连接建立
--   用户认证(密码/密钥)
--   端口转发功能
--   🔗 开源地址: [https://github.com/libssh2/libssh2](https://github.com/libssh2/libssh2)
--   📄 许可证: BSD 3-Clause
-
-**OpenSSL** — 加密支持
-
--   提供底层加密算法
--   密钥交换
--   数据加密/解密
--   🔗 开源地址: [https://github.com/openssl/openssl](https://github.com/openssl/openssl)
--   📄 许可证: Apache 2.0
-
-### 如何使用这两个库
-
-集成libssh2到UE项目的基本步骤：
-
-**1\. 编译库文件**
-
-首先需要为目标平台编译libssh2和OpenSSL的静态库：
+为目标平台编译 libssh2 和 OpenSSL 的静态库。以下是 Windows 示例涉及的库文件和运行时文件：
 
 ```bash
 # Windows平台需要编译出
@@ -132,7 +101,7 @@ libcrypto.lib / libcrypto.dll
 libssl.lib / libssl.dll
 ```
 
-**2\. 在.Build.cs中添加依赖**
+**在 `.Build.cs` 中添加依赖**
 
 ```csharp
 // 添加头文件路径
@@ -148,7 +117,7 @@ PublicAdditionalLibraries.Add(Path.Combine(ThirdPartyPath, "openssl", "lib", "li
 RuntimeDependencies.Add("$(BinaryOutputDir)/libssh2.dll", Path.Combine(ThirdPartyPath, "libssh2", "bin", "libssh2.dll"));
 ```
 
-**3\. 基本的libssh2使用流程**
+**初始化、认证并打开转发通道**
 
 ```cpp
 #include "libssh2.h"
@@ -181,37 +150,10 @@ libssh2_session_free(session);
 libssh2_exit();
 ```
 
-**关键点：**
+libssh2 需要与 Socket 配合使用，在 UE 中可用 `FSocket`。通过本地监听 Socket 接受连接，并在独立线程循环转发数据，避免阻塞游戏主线程。每个 libssh2 操作都需要处理错误并释放资源。
 
--   libssh2需要配合Socket使用，UE中可以用`FSocket`
--   端口转发需要在本地开启监听Socket接受连接
--   数据转发需要在独立线程中循环处理，避免阻塞主线程
--   所有libssh2操作都需要正确的错误处理和资源释放
+### 监听、转发和主机身份核验
 
-### 两种方式对比
-
-| 特性 | 调用系统SSH | 集成SSH库 |
-| --- | --- | --- |
-| **实现难度** | 简单 | 复杂 |
-| **环境依赖** | 需要系统SSH客户端 | 无依赖 |
-| **密码认证** | 不支持(需手动输入) | 完全支持 |
-| **状态监控** | 困难 | 完整支持 |
-| **错误处理** | 无法获取详情 | 详细错误信息 |
-| **跨平台** | 路径不一致 | 统一接口 |
-| **打包发布** | 不可靠 | 可靠 |
-| **适用场景** | 开发测试 | 生产环境 |
-
-**结论:**
-
--   如果只是临时测试,调用系统SSH是最快的方式
--   产品集成需要选择可维护的连接与发布方案；集成 SSH 库是这里采用的方式，但不是所有产品的唯一选择。
-
-* * *
-
-### 示例中的进程与连接资源
-
-系统客户端示例保留了 `Password` 参数，但没有把它用于认证；它依赖密钥或外部交互。创建的进程句柄仍需由调用方保存，局部变量本身不能让后续关闭函数取到句柄。路径、引用转义、启动失败、结束时机和错误收集也需要补齐。
-
-libssh2 示例说明初始化、握手、认证、开通道和释放的顺序，没有包含完整的本地监听、双向转发、返回值检查或服务器主机密钥核验。`socket`、`username` 等来自项目上下文；发布时还应核对目标平台的库文件、运行时依赖和许可证。上面的对比表表达管理能力上的差异，不意味着集成库后自动没有依赖、自动具备跨平台支持或保证发布可靠。
+libssh2 示例说明初始化、握手、认证、开通道和释放的顺序，没有包含完整的本地监听、双向转发、返回值检查或服务器主机密钥核验。`socket`、`username` 等来自项目上下文；发布时还应核对目标平台的库文件、运行时依赖和许可证。
 
 当时的技术记录称该方案已在实际项目的开发/测试环境中验证；生产环境仍需按安全需求调整，不能把这条历史记录当成当前插件所有部署条件的保证。

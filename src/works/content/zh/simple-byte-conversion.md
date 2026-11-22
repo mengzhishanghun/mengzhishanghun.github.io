@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
     - kind: docs
-      href: /zh/works/simple-byte-conversion/docs/primitive-bytes/
+      href: /zh/works/simple-byte-conversion/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -36,6 +36,7 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19770934
 docIds:
+  - simple-byte-conversion-setup
   - simple-byte-conversion-primitive-bytes
   - simple-byte-conversion-struct-and-json
 coverAlt: SimpleByteConversion封面
@@ -90,3 +91,21 @@ JSON 更适合与 Python 等外部程序交换或查看字段；插件也处理�
 发送端与接收端仍需约定类型、字段、编码和版本，并用固定样例验证往返结果。结构体变更后应重新检查旧数据的兼容性，不能把能成功调用转换节点等同于数据已正确解释。
 
 操作步骤和参数说明见 [使用教程](/zh/works/simple-byte-conversion/docs/primitive-bytes/)。
+
+## 兼容性、语言和支持
+
+支持 Unreal Engine 5.2–5.8。
+
+打开 **编辑 → 项目设置**，进入 SimpleByteConversion 设置页，将 **Language** 设置为 **English** 或 **中文**。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。
+
+如有使用问题或合作需求，请前往联系页面。
+
+- **联系入口：** [联系与合作](https://mzsh.me/contact/)
+
+## 配套插件
+
+如果需要通过 TCP 或 UDP 收发结构化消息，可搭配 **SimpleTCPClient** 或 **SimpleUDP**。
+
+## 文档出处
+
+原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770934)。

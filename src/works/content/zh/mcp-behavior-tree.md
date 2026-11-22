@@ -27,6 +27,7 @@ tags:
 docIds:
   - mcp-behavior-tree-connect-and-inspect
   - mcp-behavior-tree-edit-tree
+  - mcp-behavior-tree-blackboard-keys
 coverAlt: MCPBehaviorTree封面
 websiteCoverUrl: /media/covers/works/mcp-behavior-tree-20261101.webp
 lang: zh

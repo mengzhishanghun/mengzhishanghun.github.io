@@ -13,48 +13,20 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-asset-cleaner/docs/add-dependencies/
 lang: en
 translationKey: doc:simple-asset-cleaner:add-dependencies
-sourceHash: 4f3c56bed38fe119112815d45e4fb322068dcb3761105b8150d928f32aa8cb94
+sourceHash: 654b504f1c6259448236745e959641fe3f97f2ed4c05a72669708bd0dff5b2c2
 translationStatus: translated
-generatedBodyHash: c347b07538d5f2eb03eab8cf17e17557c8093825dc44e0df813d2943fb6f993f
+generatedBodyHash: d305f81bcf94c4700aa3bbb24bb3d5caa8af90464e01251bd3629407ca174d60
 docPage:
   work: simple-asset-cleaner
-  group: workflows
+  group: dependencies
   slug: add-dependencies
-  order: 2
+  order: 1
 ---
 
-## Automatically Add Untracked Dependencies on Submission
+## Check Dependencies on Submission
 
-When submitting a changelist, the plugin automatically checks dependencies of assets being submitted. If dependent files are not yet under version control, a dialog lists them. Select the dependencies to add using checkboxes; confirming automatically adds them to version control.
+`Enable Auto Add Dependencies` is on by default. When submitting a changelist, the plugin checks dependencies of the assets being submitted. Tracked files need no action. Select and confirm which untracked files to add in the dialog. Teams can leave this on to avoid missing dependencies in other members’ builds.
 
-- **Trigger**: Automatically when submitting a changelist
-- **Detection**: Files depended on by pending assets that are not yet under version control
-- **Operation**: A dialog lists untracked dependencies; select and confirm to add them
-- **Toggle**: Enable or disable this through “Enable Auto Add Dependencies” in settings
+## Check Selected Assets from the Context Menu
 
----
-
-### Add Untracked Dependencies
-
-Checks dependencies of selected assets, finds files outside version control, and lists them for user confirmation before adding them.
-
-- Supports selecting one or multiple files or folders
-
-> The context menu acts precisely on the selection, making it suitable for everyday cleanup and dependency checks on particular directories or assets.
-
----
-
-#### Enable Auto Add Dependencies
-- **Default**: Enabled
-- **Function**: Automatically detect untracked dependency files during submission
-- **Behavior**: A dialog lists untracked dependencies; selected files are added after confirmation
-- **Recommendation**: Keep enabled to prevent missing dependencies from breaking other team members' builds
-
-### Automatic Dependency Addition
-
-| Dependency status | Action |
-|---------|---------|
-| Already under version control | No action required |
-| Not under version control | Listed in a confirmation dialog for the user to select files to add |
-
----
+Select one or more assets or folders in the Content Browser and choose **Add Untracked Dependencies** from the **Simple Asset Cleaner** context submenu. Review the untracked dependencies found in the selection and confirm the files to add.

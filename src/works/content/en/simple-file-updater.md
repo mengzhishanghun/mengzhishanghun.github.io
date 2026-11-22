@@ -19,15 +19,15 @@ links:
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
 lang: en
 translationKey: simple-file-updater
-sourceHash: e57846321928d9b3e85ea5d7ae89ab392c6b5144c02d18726b90d9a0ae2ae49d
+sourceHash: 148eb5648b065ba8f44bb45433724f79ec1d75e26e43d6cea33f8ac66c3fb18c
 translationStatus: translated
-generatedBodyHash: e39434d3e05bbe556b89fe2e14832d8c7a9c557b2e9eb9bb8fceac9d8de353f7
+generatedBodyHash: d62b9d49876f598427d01d12d71b29bc2247eec5ab440808a00514911af2a42d
 workInfo:
   channels:
     - kind: open-source
       href: https://github.com/MZSH-Tools/SimpleFileUpdater
     - kind: docs
-      href: /en/works/simple-file-updater/docs/update-files/
+      href: /en/works/simple-file-updater/docs/setup/
   compatibility:
     - platforms:
         - Windows (.exe packaged application)
@@ -35,6 +35,7 @@ workInfo:
 websiteCoverUrl: /media/covers/works/simple-file-updater-20261101.webp
 coverAlt: SimpleFileUpdater cover
 docIds:
+  - simple-file-updater-setup
   - simple-file-updater-update-files
 ---
 
@@ -75,3 +76,11 @@ Updates may overwrite files with the same name at target locations. Check URLs, 
 The tool downloads files according to configuration; it does not determine whether remote content is trustworthy or suitable for the current environment. Use publicly shareable addresses in public configurations and keep internal download sources out of examples.
 
 See the [usage guide](/en/works/simple-file-updater/docs/update-files/) for steps and parameters.
+
+## License
+
+The project includes the following license:
+
+```
+(The following content is read automatically from LICENSE. Please refer to the LICENSE file in the project root.)
+```

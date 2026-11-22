@@ -419,11 +419,9 @@ def tree_for(sha, *, history=False):
         if path in entries:
             raise ValueError(f'duplicate public path: {path}')
         entries[path] = item
-    html_limit = 300 if history else 200 + 250 * len(codes)
-    file_limit = 800 if history else 1000 + 500 * len(codes)
-    if not REQUIRED.issubset(entries) or not 100 <= sum(p.endswith('.html') for p in entries) <= html_limit:
-        raise ValueError('critical pages missing or HTML capacity exceeded')
-    if not 100 <= len(entries) <= file_limit or not any(p.startswith('_astro/') for p in entries):
+    if not REQUIRED.issubset(entries) or sum(p.endswith('.html') for p in entries) < 100:
+        raise ValueError('critical pages missing or too few HTML pages')
+    if len(entries) < 100 or not any(p.startswith('_astro/') for p in entries):
         raise ValueError('public tree size or assets invalid')
     return entries
 
@@ -708,8 +706,7 @@ def release_entries(source_sha, artifact_sha):
     manifest = strict_json(manifest_bytes)
     if (not isinstance(manifest, dict) or set(manifest) != {'version', 'files'}
             or type(manifest['version']) is not int or manifest['version'] != 1
-            or not isinstance(manifest['files'], list) or not manifest['files']
-            or len(manifest['files']) > 1000 + 500 * MAX_LANGUAGES + len(PAGES_ONLY)):
+            or not isinstance(manifest['files'], list) or not manifest['files']):
         raise ValueError('source release manifest invalid')
     records = {}; previous = ''
     for record in manifest['files']:

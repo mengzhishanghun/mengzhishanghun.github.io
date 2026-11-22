@@ -1,5 +1,5 @@
 ---
-title: Edit Blueprint Members, Functions, and Types
+title: Create and Modify Blueprint Functions
 type: doc
 slug: mcp-blueprint-members-and-types
 draft: false
@@ -13,48 +13,41 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/members-and-types/
 lang: en
 translationKey: doc:mcp-blueprint:members-and-types
-sourceHash: fc4e8b037a0bfe21c0bc25d66ad455b054d5a221b380caf397bc12c169c988ed
+sourceHash: 1e5d38a58408cfaa091687bb439675f743dec77e4f9cc0243f56efa3211fc8c2
 translationStatus: translated
-generatedBodyHash: 9f20523ab7be5dafaa3911a70adfcff9d82836641a4179dd1dd4971a2610f01b
+generatedBodyHash: 63358a1f0788dfb210493df938710cd0b42c3d118d21ff631c913ff7613c072a
 docPage:
   work: mcp-blueprint
-  group: workflows
+  group: members-types
   slug: members-and-types
   order: 2
 ---
 
-### 1. `ModifyVariable`: declaration defaults and node values
+## Create, rename, or remove functions
 
-Use `GetBlueprintOverview` to find a member variable declared by this Blueprint. Supply only the fields to change: `TypeName`, `DefaultValue`, `NewName`, `bInstanceEditable`, `Category`, or `Tooltip`. `DefaultValue` uses UE text; an empty `Category` restores Unreal's default category, and an empty `Tooltip` removes its metadata. Referenced variables cannot change type, and RepNotify variables cannot be renamed through this tool. Use `SaveAsset` when you want to keep the change.
+| Tool | Purpose | Notes |
+| --- | --- | --- |
+| `ListBlueprintMembers` | Lists functions, events, dispatchers, and local variables by page. | Use pagination for large Blueprints. |
+| `CreateFunction` | Creates a Blueprint function and its parameters. | Requires a Blueprint path, function name, and parameter definitions. |
+| `RenameFunction` | Renames a user function and updates references that can be updated safely. | Start with dry-run; reference updates require explicit approval. |
+| `RemoveFunction` | Removes a user function. | References or an inability to recover safely block removal. |
 
-### 2. `ModifyFunctionSignature`: function parameters and node pins
+Function renames and signature edits analyze impact first. The tool rejects the edit if it cannot safely update overrides, Delegate bindings, derived classes, or references.
 
-Use `GetGraphDetail` to find the function graph and required Entry/Result identifiers; do not substitute display names. Choose one operation: `AddInput`, `AddOutput`, `RenamePin`, `RemovePin`, or `ChangePinType`. The default is `bDryRun=true`; reference updates require `bApproveReferenceUpdates=true`. Parameter removal or type changes also require `bAllowPotentialDataLoss=true`. The tool updates call sites that can be handled safely and attempts rollback on failure. It does not save automatically.
+## Edit a function signature
 
-## Members, functions, Structs, and Enums
+Before calling `ModifyFunctionSignature`, use `GetGraphDetail` to find the function graph and its Entry/Result identifiers. Use these identifiers instead of display names. Choose one operation: `AddInput`, `AddOutput`, `RenamePin`, `RemovePin`, or `ChangePinType`. The default is `bDryRun=true`; reference updates require `bApproveReferenceUpdates=true`. Parameter removal or type changes also require `bAllowPotentialDataLoss=true`. The tool updates call sites that can be handled safely and attempts rollback on failure. It does not save automatically.
 
-- Variable tools manage types, defaults, Category, Tooltip, and safe removal.
-- Function tools create, rename, make supported signature changes, or safely remove user functions.
-- Local-variable operations require function-graph and variable-declaration identifiers.
-- Struct/Enum edits use field or entry identifiers and report reference impact.
-- Operations that may lose data or change the meaning of serialized Enum values require separate explicit approval.
+Parameters on function Entry and Result nodes belong to the signature. Use `SetPinDefaults` to change an input-pin literal on an ordinary graph node.
 
-Function renames and signature edits analyze impact first. Unsafe overrides, Delegate bindings, derived classes, or references cause rejection before the edit.
+![Function signature and connected implementation](/media-occurrence/doc%3Amcp-blueprint%3Amembers-and-types%3Amedia%3A1)
 
-### Function rename example
+## Example: the renamed function and its caller
 
 These two images show a function definition and its call site after renaming. Use dry-run before renaming and explicitly approve reference updates when required. Use `SaveAsset` to keep the change.
 
-![Renamed function](/media-occurrence/doc%3Amcp-blueprint%3Amembers-and-types%3Amedia%3A1)
+![Renamed function](/media-occurrence/doc%3Amcp-blueprint%3Amembers-and-types%3Amedia%3A2)
 
-![Updated function caller](/media-occurrence/doc%3Amcp-blueprint%3Amembers-and-types%3Amedia%3A2)
+![Updated function caller](/media-occurrence/doc%3Amcp-blueprint%3Amembers-and-types%3Amedia%3A3)
 
-### Functions, events, and bound events
-
-These examples show a function with input and output parameters, a component-event helper function graph, and common structures for Actor lifecycle events, component-bound events, and variable pin counts.
-
-![Function signature and connected implementation](/media-occurrence/doc%3Amcp-blueprint%3Amembers-and-types%3Amedia%3A3)
-
-![Component-event helper graph](/media-occurrence/doc%3Amcp-blueprint%3Amembers-and-types%3Amedia%3A4)
-
-![Actor lifecycle, bound component event, and variable-pin flow](/media-occurrence/doc%3Amcp-blueprint%3Amembers-and-types%3Amedia%3A5)
+MCPBlueprint does not provide a generic tool to invoke an arbitrary Blueprint function and return its runtime result.

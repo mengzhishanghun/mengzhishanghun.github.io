@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-niagara/docs/inspect/
 lang: en
 translationKey: doc:mcp-niagara:inspect
-sourceHash: 316cb9da7dc4b89d0a251f915c581a45b88003038c747d16179538d86e98e820
+sourceHash: 3281b21555dcf9d845a089840e091bebb4f11805827c754dfcdf43fe8a7592d3
 translationStatus: translated
-generatedBodyHash: 8e9b26fadb21fe8cac2d5018916d1b47513d9213c5824b7ea4c910ced54ce108
+generatedBodyHash: b2bcfb9ed534c591ecb040b4136195bef7e6bb3bc350457d6faec90f35782060
 docPage:
   work: mcp-niagara
-  group: workflows
+  group: systems
   slug: inspect
   order: 1
 ---
@@ -48,4 +48,6 @@ Module inputs are paged with `MaxResults` (1–256, default 100) and `Offset`. E
 
 The plugin includes compatibility paths for UE 5.2 and later. Asset editing, saving, reopening, and packaging behavior has not yet been validated in the target engine. Check these operations in a copy of your project first.
 
-For questions or feedback, email [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com). I will respond when I see your message.
+## Feedback
+
+Send feedback to [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com).

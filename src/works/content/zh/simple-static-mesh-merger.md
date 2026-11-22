@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
     - kind: docs
-      href: /zh/works/simple-static-mesh-merger/docs/merge-actors/
+      href: /zh/works/simple-static-mesh-merger/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -34,6 +34,7 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19204715
 docIds:
+  - simple-static-mesh-merger-setup
   - simple-static-mesh-merger-merge-actors
   - simple-static-mesh-merger-split-level-instance
 coverAlt: SimpleStaticMeshMerger封面
@@ -82,3 +83,18 @@ SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。�
 是否改善加载或运行表现取决于具体场景与目标设备，需要实测；工具的分组预览不能替代合并后的项目验收。
 
 场景分组、合并步骤与加载开销说明见 [使用教程](/zh/works/simple-static-mesh-merger/docs/merge-actors/)。
+
+## 兼容性、语言和使用支持
+
+- Unreal Engine 5.2–5.8
+- 版本 1.1.0（Version 2）
+
+打开 **编辑 → 项目设置**，进入 SimpleStaticMeshMerger 设置页，将 **Language** 设置为 **English** 或 **中文**。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。
+
+如有使用问题或合作需求，请前往联系页面。
+
+- **联系入口：** [联系与合作](https://mzsh.me/contact/)
+
+## 文档出处
+
+原文于 2025-11-09 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19204715)。

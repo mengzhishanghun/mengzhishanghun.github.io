@@ -1,5 +1,5 @@
 ---
-title: 拆分 Level Instance
+title: 拆分 LevelInstance
 type: doc
 slug: simple-static-mesh-merger-split-level-instance
 draft: false
@@ -11,7 +11,7 @@ workIds:
   - simple-static-mesh-merger
 docPage:
   work: simple-static-mesh-merger
-  group: workflows
+  group: workflow
   slug: split-level-instance
   order: 2
 documentKind: product-manual
@@ -20,9 +20,7 @@ lang: zh
 translationKey: doc:simple-static-mesh-merger:split-level-instance
 ---
 
-## 🏗️ 拆分 LevelInstance
-
-### 功能
+## 递归拆分与刷新预览
 
 点击 `Break Level Instances` 递归拆分场景中所有 LevelInstance：
 
@@ -31,12 +29,10 @@ translationKey: doc:simple-static-mesh-merger:split-level-instance
 - ✅ 实时进度通知（滚动显示当前项目）
 - ✅ 每轮迭代后 UI 自动刷新
 
-### 处理策略
+## 首次拆分和重复路径的处理
 
 | 场景 | 处理方式 | 结果 |
 |------|---------|------|
 | 首次遇到路径 | 加入缓存 → 拆分 | 内容移至主场景 |
 | 同级重复 | 检测 → 删除 | 避免重复内容 |
 | 嵌套重复 | 检测 → 删除 | 避免循环引用 |
-
----

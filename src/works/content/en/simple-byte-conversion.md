@@ -21,20 +21,21 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770934
 docIds:
+  - simple-byte-conversion-setup
   - simple-byte-conversion-primitive-bytes
   - simple-byte-conversion-struct-and-json
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: 9b87ffa4a25402f698dc1fa5aa51709cecb89ea67f03e14251c4e929aa3b8675
+sourceHash: b7b98a3aa0d9b18d824760ce72e2813ef196b71e3cb84dac20bd76003cd1082c
 translationStatus: translated
-generatedBodyHash: 79e126699907a678f29f2b26944b5eb217464fcc0b2ac87c8cc629f5fba90d3a
+generatedBodyHash: 15164b618df779f77f505667303379a64f936fc9f35e59e51f665d4c0832df6a
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
     - kind: docs
-      href: /en/works/simple-byte-conversion/docs/primitive-bytes/
+      href: /en/works/simple-byte-conversion/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -93,3 +94,21 @@ The conversion interfaces do not define a cross-language protocol. Structs conta
 Sender and receiver must agree on types, fields, encoding, and versions, and verify round trips using fixed examples. Check compatibility with old data after struct changes. Successfully calling a conversion node does not mean the data has been interpreted correctly.
 
 See the [usage guide](/en/works/simple-byte-conversion/docs/primitive-bytes/) for steps and parameters.
+
+## Compatibility, Language, and Support
+
+Supports Unreal Engine 5.2–5.8.
+
+Open **Edit → Project Settings**, go to SimpleByteConversion settings, and set **Language** to **English** or **Chinese**. English is the default. User-facing interfaces, prompts, notifications, and functional logs update immediately without restarting the editor; public API names and module startup/shutdown logs always remain in English.
+
+For usage questions or collaboration inquiries, visit the contact page.
+
+- **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
+
+## Companion Plugins
+
+For structured messages over TCP or UDP, use **SimpleTCPClient** or **SimpleUDP** alongside the conversion nodes.
+
+## Documentation Source
+
+The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19770934) on 2026-03-25.

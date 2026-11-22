@@ -1,5 +1,5 @@
 ---
-title: Run from Source and Build the Executable
+title: Run and Build from Source
 type: doc
 slug: ue-package-manager-build-executable
 draft: false
@@ -14,17 +14,17 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-package-manager/docs/build-executable/
 lang: en
 translationKey: doc:ue-package-manager:build-executable
-sourceHash: 468d9c814729c29848031d3e81184dd36ce8d4abf70a92c2b740b73d3ca0e8d9
+sourceHash: 0e25575e6009d8564c5ef5d8ec56695339332065df8020b576c2731a20bfdfd4
 translationStatus: translated
-generatedBodyHash: a1f91e74a980a47ac2930f8b484d12b863afe845029b2a1b304d2eb80ef42a66
+generatedBodyHash: 753afbcc6c30278d2eb76099a4581487dc81ae766f54d2d27d503253b177abe4
 docPage:
   work: ue-package-manager
-  group: workflows
+  group: source
   slug: build-executable
-  order: 2
+  order: 1
 ---
 
-## Running from Source
+## Run from source
 
 ```bat
 conda env create -f environment.yml
@@ -35,7 +35,7 @@ python E:\Tools\UEPackageManager\Main.py validate --project-root E:\Projects\MyG
 ```
 On Windows, you can also double-click `Run.bat` to launch the GUI or use `CLI.bat` to run commands.
 
-## Building a Single-File EXE
+## Build a single-file EXE
 
 ```bat
 Build.bat

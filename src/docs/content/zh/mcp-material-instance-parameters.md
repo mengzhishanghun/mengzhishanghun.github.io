@@ -1,5 +1,5 @@
 ---
-title: 修改材质实例参数
+title: 读取和修改材质实例参数
 type: doc
 slug: mcp-material-instance-parameters
 draft: false
@@ -11,7 +11,7 @@ workIds:
   - mcp-material
 docPage:
   work: mcp-material
-  group: workflows
+  group: editing
   slug: instance-parameters
   order: 2
 documentKind: product-manual
@@ -47,3 +47,15 @@ translationKey: doc:mcp-material:instance-parameters
 用 `ResetInstanceParameter` 的 `Parameter: {Type,Name,Association,Index}` 只移除指定本地覆盖，之后从父级继承，其他覆盖与层栈保留。`Parameter` 不得与旧 `ParameterName`、`ParameterType` 选择器混用。
 
 编辑成功后返回 `Applied`、dirty/保存字段、`RequiredSaveSet` 及 `CompileStatus: "NotCompiled"`，仍需显式编译和保存。编辑失败时会尽可能验证恢复结果；`RecoveryFailed/StateUnknown` 表示无法确认已恢复，应停止写入并且不要保存该资产。
+
+## 纹理与参数兼容性
+
+旧名称映射与旧重置选择器只接受可唯一定位的 Global 参数。Layer 与 Blend 参数使用完整结构化身份。
+
+`SetInstanceParameters` 会根据父材质当前编译资源校验普通纹理参数类型；2D、Cube、2D/Cube Array、Volume 与 Virtual Texture 不能互相代填。独立的 `SparseVolumeTextureParameters` 映射读取和写入 `USparseVolumeTexture`，`ResetInstanceParameter` 使用 `ParameterType: "SparseVolumeTexture"` 重置。父材质没有可用资源或参数不在当前静态开关排列中时会拒绝写入。
+
+`GetMaterialParameters` 按 Scalar、Vector、Texture、SparseVolumeTexture、StaticSwitch 顺序使用统一 `Offset`/`MaxResults` 游标。响应会返回总数、当前返回数和下一游标，单页上限均为 1000。
+
+高级参数类型须使用结构化接口，并遵循各类型的引擎版本要求。Runtime Virtual Texture 的消费者需要启用虚拟纹理；Sparse Volume Texture 资产需要已初始化的帧数据。
+
+写入前先关闭目标编辑器，修改后按[材质资产的关闭与保存规则](/zh/works/mcp-material/docs/material-assets/)保存。

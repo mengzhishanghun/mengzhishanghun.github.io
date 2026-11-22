@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /zh/works/mcp-dev-tools/docs/inspect-editor/
+      href: /zh/works/mcp-dev-tools/docs/connect/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -26,7 +26,16 @@ tags:
   - 资产工具与只读开发诊断
   - MCP 系列
 docIds:
+  - mcp-dev-tools-connect
   - mcp-dev-tools-inspect-editor
+  - mcp-dev-tools-asset-registry
+  - mcp-dev-tools-data-assets
+  - mcp-dev-tools-data-tables
+  - mcp-dev-tools-curves
+  - mcp-dev-tools-curve-tables
+  - mcp-dev-tools-string-tables
+  - mcp-dev-tools-primary-asset-labels
+  - mcp-dev-tools-enhanced-input
 coverAlt: MCPDevTools封面
 websiteCoverUrl: /media/covers/works/mcp-dev-tools-20261101.webp
 lang: zh

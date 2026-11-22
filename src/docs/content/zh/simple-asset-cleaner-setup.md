@@ -20,75 +20,7 @@ lang: zh
 translationKey: doc:simple-asset-cleaner:setup
 ---
 
-**SimpleAssetCleaner** 自动识别并移除 Unreal Engine 项目中未被引用的资产，保持仓库整洁。
-
-> **重要**：此插件可以从版本控制中删除资产。使用前请仔细阅读。
-
-**兼容性**：Unreal Engine 5.2–5.8
-
----
-
-## 配置
-
-**位置**：编辑器 > 项目设置 > General > Simple Asset Cleaner
-
-![](/media-occurrence/doc%3Asimple-asset-cleaner%3Asetup%3Amedia%3A1)
-
-### 版本控制提供者（重要！）
-
-插件会自动包装当前版本控制提供者，用来监控提交。
-
-![](/media-occurrence/doc%3Asimple-asset-cleaner%3Asetup%3Amedia%3A2)
-
-**不要手动选择代理提供者！**
-- 始终选择你实际的版本控制提供者（Perforce、Git、SVN 等）
-- 插件会在后台自动包装
-- 直接选择代理可能导致问题
-
-**正确设置**：
-- 使用：`Perforce`、`Git`、`Subversion` 等
-- 避免：`Perforce_Proxy`、`Git_Proxy` 或任何以 `_Proxy` 结尾的提供者
-
-### 通用设置
-
-#### Language / 语言
-- **默认**：English
-- **选项**：中文 / English
-- **功能**：切换所有 UI 文本和日志语言
-- **行为**：修改后实时生效，无需重启编辑器
-
-#### Enable Verbose Logging / 启用详细日志
-- **默认**：关闭
-- **功能**：用于调试的详细日志
-- **建议**：仅在排查问题时开启
-
-## 支持
-
-**报告问题时请提供**：
-- Unreal Engine 版本
-- 版本控制系统（Perforce/Git/SVN）
-- 插件设置截图
-- 日志输出（启用详细日志后）
-
----
-
-**兼容性**：Unreal Engine 5.2–5.8 | 已在 Windows 上测试，理论上支持所有平台
-
-**记住**：先保守处理。资产随时可以删除，但恢复需要版本控制历史！
-
-## 联系方式
-
-如有使用问题或合作需求，请前往联系页面。
-
-- **联系入口：** [联系与合作](https://mzsh.me/contact/)
-
-## SimpleAssetCleaner 使用指南
-
-依据根资源和引用关系识别候选未引用资产，并提供提交时处理与全量清理入口。
-
-## 安装与配置
-
-### 步骤1：安装插件
+## 安装并启用插件
 
 1.  将插件文件夹复制到项目的 `Plugins` 目录
     
@@ -102,72 +34,22 @@ translationKey: doc:simple-asset-cleaner:setup
     
 3.  勾选启用，重启编辑器
 
-### 步骤2：基础配置
+## 选择版本控制提供者
 
-打开项目设置：`Editor > Project Settings > General > Simple Asset Cleaner`
+在 `Editor > Preferences > Source Control` 中选择项目实际使用的提供者。插件通过 UE API 接入 Perforce、Git、Subversion、Plastic SCM 等 UE 支持的系统，并在后台自动包装提供者，以便在提交时检查资产。不要手动选择 `Perforce_Proxy`、`Git_Proxy` 或其他以 `_Proxy` 结尾的代理。
 
-**自动清理开关：**
+![](/media-occurrence/doc%3Asimple-asset-cleaner%3Asetup%3Amedia%3A1)
 
-配置需要保留的根资源和保护路径后，再勾选 `Enable Auto Clean`。
+## 打开项目设置
 
-默认配置下，插件会：
+打开 **编辑器 > 项目设置 > General > Simple Asset Cleaner**。`Language` 默认是 English，切换中文后界面和日志立即更新，无需重启。
 
--   以所有地图文件作为根资源
--   在提交时自动检查和清理
--   保护项目外的插件和引擎资源
+![](/media-occurrence/doc%3Asimple-asset-cleaner%3Asetup%3Amedia%3A2)
 
-**进阶配置（推荐团队项目）：**
+## 首次提交前检查
 
-**1\. 配置根资源类型**
+先确认要保留的根资产和目录。默认以地图为根，不清理项目外的插件和引擎资产。检查设置后再使用 `Enable Auto Clean`；首次可在测试分支打开提交窗口，检查候选的处理结果。使用 `Clean All Source Control Assets` 可扫描整个项目，这个入口可能删除本地及版本控制中的文件。
 
-在 `Root Asset Classes` 中添加：
+## 详细日志
 
--   `UWorld` - 地图（默认已包含）
--   `UBlueprint` - 蓝图类（如果蓝图是核心资产）
--   `UDataAsset` - 数据资产（如果有大量配置）
-
-**2\. 添加保护路径**
-
-在 `Additional Root Paths` 中添加：
-
--   `/Game/Core/` - 核心系统目录
--   `/Game/Config/` - 配置文件目录
--   `/Game/Managers/` - 管理器目录
-
-**3\. 可选启用详细日志**
-
-首次使用建议勾选 `Enable Verbose Logging`，观察插件的工作过程。熟悉后可以关闭以减少日志输出。
-
-## 功能与参数
-
-### 日志选项
-
-插件提供可选的详细日志，方便调试和监控。
-
-**启用方式：**  
-在项目设置中勾选 `Enable Verbose Logging`
-
-**日志内容包括：**
-
--   扫描了哪些文件
--   检测到哪些未引用资源
--   执行了哪些清理操作
--   引用链追踪过程（用于调试）
-
-在首次使用或遇到问题时，建议启用详细日志，方便了解插件的工作过程。
-
-### 5.2 源控制提供器说明
-
-SimpleAssetCleaner 支持所有 Unreal Engine 支持的版本控制系统：
-
--   ✅ Perforce
--   ✅ Git
--   ✅ SVN
--   ✅ Plastic SCM
--   ✅ 其他通过UE API集成的系统
-
-**配置要点：**
-
-在 `Editor > Preferences > Source Control` 中选择你实际使用的提供器（如 Perforce、Git、Subversion 等）。
-
-⚠️ **重要：** 不要选择带 `_Proxy` 后缀的选项（如 `Perforce_Proxy`），这是插件的内部实现，会自动处理。
+`Enable Verbose Logging` 默认关闭。首次试用或排查异常时，可在项目设置中打开，查看扫描文件、未引用候选、清理操作和引用链追踪。不再需要时关闭。

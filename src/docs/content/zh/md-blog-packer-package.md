@@ -1,5 +1,5 @@
 ---
-title: 打包 Markdown 文章和图片
+title: 打包 Markdown 和图片
 type: doc
 slug: md-blog-packer-package
 draft: false
@@ -11,7 +11,7 @@ workIds:
   - md-blog-packer
 docPage:
   work: md-blog-packer
-  group: workflows
+  group: export
   slug: package
   order: 1
 documentKind: product-manual
@@ -20,40 +20,17 @@ lang: zh
 translationKey: doc:md-blog-packer:package
 ---
 
-MDBlogPacker 是 MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出。MDImageEmbed 后续仅维护其 Python 版本 MDBlogPacker。
+## 转换范围
 
-> MDImageEmbed 后续仅维护其 Python 版本 MDBlogPacker；转换后可复制结果，或导出为包含内嵌图片的 Markdown 文件。
+MDBlogPacker 把 `![](</path>)` 或 Obsidian `![[image.png]]` 引用的本地图片转换为 `data:image/...;base64,...`。网络图片与已内嵌的 Base64 图片默认保持原样。输出可以复制、写入文件或交给管道。
 
-## 为什么需要这个工具
+## 图形界面
 
-发博客时，最烦的就是处理图片：本地图片没法直接发布，使用图床又要逐张上传、复制链接、替换路径。Base64 内嵌把所有图片写进 Markdown 文本里，复制就能发。
+1. 检查输入文章。打开界面时，工具会自动选中 EXE 所在目录的第一个 `.md` 文件。
+2. 如需附加版权声明或转载提示，填写前文与后文；工具会缓存这些内容。
+3. 点击 **转换并复制到剪贴板**，将结果粘贴到支持 Base64 图片的发布平台。
 
-## 功能
-
-- 扫描 Markdown 里所有本地图片（支持 `![](</path>)` 和 Obsidian `![[image.png]]` 两种语法）
-- 自动转换为 `data:image/...;base64,...` 内嵌格式
-- 结果直接复制到剪贴板，粘贴即发
-- 支持前文/后文（版权声明、防转载提示等，GUI 模式直接填写，CLI 模式指定模板文件）
-- 网络图片和已是 Base64 的保持不动
-
-## 安装
-
-```bash
-# 用 environment.yml 创建 conda 环境
-conda env create -f environment.yml
-```
-
-## 使用
-
-### GUI 模式（推荐）
-
-双击运行 `MDBlogPacker.exe`（或无参数运行 `Main.py`），打开图形界面：
-
-- 自动选中 exe 所在目录下的第一个 `.md` 文件
-- 填写前文/后文（可选，内容会缓存）
-- 点击「转换并复制到剪贴板」，粘贴到博客平台即可
-
-### CLI 模式
+## 命令行
 
 带参数运行时进入命令行模式：
 
@@ -71,7 +48,7 @@ conda run -n MDBlogPacker python Main.py 博客.md -o 博客-内嵌版.md
 conda run -n MDBlogPacker python Main.py 博客.md -c -v
 ```
 
-### CLI 参数
+## CLI 参数
 
 | 参数 | 说明 |
 |---|---|
@@ -100,12 +77,8 @@ conda run -n MDBlogPacker python Main.py 博客.md -c -v
 
 PNG、JPG、JPEG、GIF、WebP、SVG、BMP
 
-## 注意事项
+## 发布前检查
 
 - Base64 会让文件体积增加约 33%，图太多或太大时慎用
 - 网络图片（`http://` / `https://`）会保持原状不转换
 - 建议只在“导出发布”时用，日常写作仍保留独立图片文件便于维护
-
-## 许可证
-
-MIT License

@@ -14,17 +14,17 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-level-seq-smooth/docs/algorithms/
 lang: en
 translationKey: doc:simple-level-seq-smooth:algorithms
-sourceHash: 8f03328532e4ea53c4004c065af3f5774508624e6f6b20e3a230a21823a1a46e
+sourceHash: a9638a4ad906de91584e8607f65eeb5dacc2ec72e354fd515122ee4091388ccc
 translationStatus: translated
-generatedBodyHash: d10b419af8ec9b8d41a5107a5ee3f411d147abbcceba5c6e61db63623bdebb66
+generatedBodyHash: c51597ceef2bbf386c7bad0fef889ddd4782ece80d1a2d279558ebbe6c33ec5f
 docPage:
   work: simple-level-seq-smooth
-  group: workflows
+  group: curves
   slug: algorithms
   order: 2
 ---
 
-## Algorithm Overview
+## Choose an Algorithm by Goal
 
 | # | Algorithm | Category | Key Advantage | Best For |
 |---|-----------|----------|---------------|----------|
@@ -41,11 +41,9 @@ docPage:
 | 11 | Savitzky-Golay | Polynomial | Precisely preserves peaks and inflection points | Fine joints (fingers) |
 | 12 | Confidence-Weighted | AI-specific | Auto-detects outlier frames and reduces their weight | AI pose estimation |
 
-## Algorithm Parameters
-
 > The parameter names below match those shown in the editor dialog.
 
-### 1. Moving Average
+### Moving Average
 
 Arithmetic mean over a sliding window.
 
@@ -53,7 +51,7 @@ Arithmetic mean over a sliding window.
 |-----------|---------|-------|-------------|
 | Window Size | 51 | 3–501 (odd) | Number of frames to average, larger = smoother |
 
-### 2. Gaussian
+### Gaussian
 
 Gaussian distribution weighted average, center-weighted with symmetric falloff.
 
@@ -62,7 +60,7 @@ Gaussian distribution weighted average, center-weighted with symmetric falloff.
 | Window Size | 51 | 3–501 (odd) | Reference frame range |
 | Sigma | 12.0 | 0.1–100 | Gaussian width, recommended 1/6–1/3 of window size |
 
-### 3. Exponential
+### Exponential
 
 Exponentially weighted recursive filter, recent data weighted more.
 
@@ -70,7 +68,7 @@ Exponentially weighted recursive filter, recent data weighted more.
 |-----------|---------|-------|-------------|
 | Alpha | 0.15 | 0.01–1.0 | Smaller = smoother: 0.01 = strong, 0.15 = recommended, 0.5 = weak |
 
-### 4. Median
+### Median
 
 Selects the middle value in a sliding window, best for impulse noise and frame jumps.
 
@@ -78,7 +76,7 @@ Selects the middle value in a sliding window, best for impulse noise and frame j
 |-----------|---------|-------|-------------|
 | Window Size | 51 | 3–501 (odd) | Larger window removes more noise but loses detail |
 
-### 5. Bilateral
+### Bilateral
 
 Weights by both spatial distance and intensity difference, edge-preserving.
 
@@ -88,7 +86,7 @@ Weights by both spatial distance and intensity difference, edge-preserving.
 | Spatial Sigma | 12.0 | 0.1–100 | Controls spatial smoothing range, larger = smoother |
 | Range Sigma | 0.5 | 0.001–100 | Controls intensity tolerance, larger = ignores edges, smaller = preserves edges |
 
-### 6. Butterworth Low-pass
+### Butterworth Low-pass
 
 Second-order frequency-domain filter with zero-phase bidirectional processing.
 
@@ -97,7 +95,7 @@ Second-order frequency-domain filter with zero-phase bidirectional processing.
 | Cutoff Frequency (Hz) | 10.0 | 0.1–60 | Motion below this frequency is preserved. Human body < 6 Hz, fingers < 10 Hz |
 | Sample Rate (Hz) | Auto | 1–1000 | Auto-filled from sequence frame rate; can be changed manually if needed |
 
-### 7. Wavelet Denoising
+### Wavelet Denoising
 
 Haar wavelet transform + MAD noise estimation + soft thresholding.
 
@@ -106,7 +104,7 @@ Haar wavelet transform + MAD noise estimation + soft thresholding.
 | Decomposition Level | 4 | 1–10 | More levels = wider frequency range processed, typically 3–5 |
 | Threshold Coefficient | 0.5 | 0.01–5.0 | < 1 preserves more detail, 1 = standard, > 1 = stronger denoising |
 
-### 8. Kalman
+### Kalman
 
 Optimal state estimation based on constant-velocity motion model (position + velocity).
 
@@ -115,7 +113,7 @@ Optimal state estimation based on constant-velocity motion model (position + vel
 | Process Noise (Q) | 0.01 | 0.0001–10 | Motion model uncertainty, larger = trusts measurement more (tighter tracking) |
 | Measurement Noise (R) | 0.1 | 0.0001–100 | Sensor/mocap noise level, larger = stronger smoothing |
 
-### 9. One Euro
+### One Euro
 
 Adaptive cutoff frequency low-pass filter (CHI 2012), strong smoothing at rest, weak at fast motion.
 
@@ -126,7 +124,7 @@ Adaptive cutoff frequency low-pass filter (CHI 2012), strong smoothing at rest, 
 | Derivative Cutoff | 1.0 | 0.001–30 | Smoothing of the speed estimate itself, usually keep default |
 | Sample Rate (Hz) | Auto | 1–1000 | Auto-filled from sequence frame rate |
 
-### 10. Complementary
+### Complementary
 
 Forward-backward complementary filter, fuses integration path and direct measurement, zero-phase.
 
@@ -134,7 +132,7 @@ Forward-backward complementary filter, fuses integration path and direct measure
 |-----------|---------|-------|-------------|
 | Complementary Alpha | 0.98 | 0.5–0.999 | Larger = trusts integration (preserves detail), smaller = trusts measurement (suppresses drift). Recommended 0.95–0.99 |
 
-### 11. Savitzky-Golay
+### Savitzky-Golay
 
 Local polynomial fitting that preserves peaks and inflection points while smoothing.
 
@@ -143,7 +141,7 @@ Local polynomial fitting that preserves peaks and inflection points while smooth
 | Window Size | 21 | 5–501 (odd) | Local fitting range |
 | Polynomial Order | 3 | 2–6 | Fit degree: 2 = parabola, 3 = cubic (recommended), 4 = quartic |
 
-### 12. Confidence-Weighted
+### Confidence-Weighted
 
 Auto-detects outlier frames using MAD robust statistics and reduces their weight. Normal frames are smoothed lightly, while anomalous frames receive stronger corrections.
 

@@ -1,5 +1,5 @@
 ---
-title: 设置 UDP 通道
+title: 配置 UDP 接收与发送通道
 type: doc
 slug: simple-udp-channels
 draft: false
@@ -10,7 +10,7 @@ workIds:
   - simple-udp
 docPage:
   work: simple-udp
-  group: workflows
+  group: network
   slug: channels
   order: 1
 documentKind: product-manual
@@ -19,30 +19,11 @@ lang: zh
 translationKey: doc:simple-udp:channels
 ---
 
-**SimpleUDP** 是 Unreal Engine 的轻量级 UDP 通信插件。  
-支持**运行时动态配置收发通道**，所有功能均暴露给蓝图，方便集成。
+## 在项目设置中预定义通道
 
-## 兼容性
+进入 **项目设置 → SimpleUDP Settings**，添加接收或发送通道。也可在运行时按需新增或更新通道。
 
-- Unreal Engine 5.2–5.8
-- 版本 1.1.0（Version 2）
-
----
-
-## 🔧 插件初始化
-
-插件启用后立即生效。  
-内部注册为 `GameInstanceSubsystem`——无需手动编写启动或关闭代码。
-
----
-
-## ⚙️ 静态通道配置（可选）
-
-可通过 **项目设置 → SimpleUDP Settings** 预配置通道。
-
-注意：虽然支持运行时修改通道，但建议尽可能在此处配置，便于管理。
-
-### 🔹 接收通道
+### 接收通道与地址过滤
 
 | 字段             | 示例                | 说明                              |
 |-----------------|---------------------|-----------------------------------|
@@ -52,24 +33,20 @@ translationKey: doc:simple-udp:channels
 | Filter Mode     | None / Whitelist / Blacklist | IP 过滤模式              |
 | Whitelist / Blacklist | `["192.168.1.0/24"]` | 支持 CIDR 格式             |
 
-> **重要：** `Max Receive Bytes` 默认值为 `1024` 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，请务必在接收前调大对应接收通道的该参数，否则数据包可能无法被完整接收。
+`Max Receive Bytes` 默认值为 `1024` 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，在接收前调大对应接收通道的该参数，否则数据包可能无法被完整接收。
 
-### 🔹 发送通道
+### 发送通道与端口
 
 | 字段             | 示例                            | 说明                              |
 |-----------------|---------------------------------|-----------------------------------|
 | Channel Name    | `DefaultSend`                   | 通道名称                           |
 | Target Addresses | `["255.255.255.255:9000"]`     | 目标 IP:Port 列表                  |
-| Fixed Port 🔧   | `0`（默认）                      | 发送 Socket 的本地绑定端口（0 = 自动）|
+| Fixed Port   | `0`（默认）                      | 发送 Socket 的本地绑定端口（0 = 自动）|
 | Max Send Bytes  | `1024`                          | 每个包的最大大小                    |
 
-> **重要：** `Max Send Bytes` 默认值为 `1024` 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，请务必在发送前调大对应发送通道的该参数，否则只会发送配置上限以内的数据。
+`Max Send Bytes` 默认值为 `1024` 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，在发送前调大对应发送通道的该参数，否则只会发送配置上限以内的数据。
 
----
-
-## 🧠 蓝图节点接口
-
-### ⚙️ 运行时配置
+## 在蓝图中读取和更新通道
 
 | 节点                           | 说明                                          |
 |-------------------------------|-----------------------------------------------|
@@ -80,56 +57,35 @@ translationKey: doc:simple-udp:channels
 | `GetAllReceiveChannelConfig`  | 获取所有接收通道配置                            |
 | `GetAllSendChannelConfig`     | 获取所有发送通道配置                            |
 
-### 🛠️ 工具节点
+### 更新接收通道示例
+
+![](/media-occurrence/doc%3Asimple-udp%3Achannels%3Amedia%3A1)
+
+如需要 Socket 会自动重建。函数调用顺序无关紧要。  
+
+两个布尔值控制是覆盖现有通道还是添加新通道。
+
+### 更新发送通道示例
+
+![](/media-occurrence/doc%3Asimple-udp%3Achannels%3Amedia%3A2)
+
+发送 Socket 仅在 `FixedPort` 不同时重建。  
+
+两个布尔值的行为与接收配置相同。
+
+## 解析地址与检查 CIDR
 
 | 节点             | 说明                                |
 |-----------------|-------------------------------------|
 | `ParseEndpoint` | 解析 `"127.0.0.1:9000"` 为 IP 和端口 |
 | `IsIPInCIDR`    | 检查 IP 是否在 CIDR 块内             |
 
----
+## 地址与端口限制
 
-## 🔁 Socket 生命周期
+- 仅支持 IPv4（不支持 IPv6 或域名解析）
+- 有效端口范围：`0~65535`，其中 `0` 表示自动分配
+- 不要在不同通道中绑定相同端口，除非 Socket 已释放
 
-| 类型   | 创建时机                              | 销毁时机                             |
-|--------|--------------------------------------|--------------------------------------|
-| 接收端 | 首次调用 `BindUDPMessageHandler` 时    | 所有处理器移除 → 自动关闭 Socket      |
-| 发送端 | 首次调用 `SendUDPMessage` 或配置时     | 插件关闭或通道删除时                   |
+## 蓝图函数一览
 
----
-
-## 🧪 蓝图示例（图片）
-
-### 所有蓝图函数  
-![](/media-occurrence/doc%3Asimple-udp%3Achannels%3Amedia%3A1)
-
-### 解绑全部（强制关闭 Socket）  
-![](/media-occurrence/doc%3Asimple-udp%3Achannels%3Amedia%3A2)
-
-使用此节点解绑通道上的所有内容并手动关闭 Socket。
-
-### 动态更新接收通道  
 ![](/media-occurrence/doc%3Asimple-udp%3Achannels%3Amedia%3A3)
-
-如需要 Socket 会自动重建。函数调用顺序无关紧要。  
-
-两个布尔值控制是覆盖现有通道还是添加新通道。
-
-### 动态更新发送通道  
-![](/media-occurrence/doc%3Asimple-udp%3Achannels%3Amedia%3A4)
-
-发送 Socket 仅在 `FixedPort` 不同时重建。  
-
-两个布尔值的行为与接收配置相同。
-
-## 版本历史
-
-
-
-打开 **编辑 → 项目设置**，进入 SimpleUDP 设置页，将 **Language** 设置为 **English** 或 **中文**。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。
-
-## 支持
-
-如有使用问题或合作需求，请前往联系页面。
-
-- **联系入口：** [联系与合作](https://mzsh.me/contact/)

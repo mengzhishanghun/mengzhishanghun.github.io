@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 lang: en
 translationKey: ue-quick-start
-sourceHash: dd9b8308128d83d4c00dd027cdf86cac4ab89e74098fd1e487eac9d5613c207e
+sourceHash: 34a735c6c027b8b3d59a538fb6aced0cbb314c5f9d88fd07448958b2b9c084f4
 translationStatus: translated
 generatedBodyHash: 88ec4958887b398166f1649e886ad50b2c90b4be686ba217f668832b859f7642
 workInfo:
@@ -35,6 +35,8 @@ websiteCoverUrl: /media/covers/works/ue-quick-start-20261101.webp
 coverAlt: UEQuickStart cover
 docIds:
   - ue-quick-start-open-project
+  - ue-quick-start-build-configuration
+  - ue-quick-start-normalize-line-endings
 ---
 
 ## Overview

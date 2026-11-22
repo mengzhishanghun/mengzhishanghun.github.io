@@ -21,20 +21,21 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19204715
 docIds:
+  - simple-static-mesh-merger-setup
   - simple-static-mesh-merger-merge-actors
   - simple-static-mesh-merger-split-level-instance
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: d7154b1d1a3b01c87f5e7630e03b8d6dcdc1b38564e562b6b346d3ef5f48038a
+sourceHash: 020d14241ec78e51248eab43fbcc90214188d683943b840f2dc99da5270752cc
 translationStatus: translated
-generatedBodyHash: 5ca483012c2de579f7ce7c671903f461db879b69071362d7acb8c09824dbfd3c
+generatedBodyHash: 116803da1db0a90f89134b2a9cd8ed3104d319778771f00423a832fb22bfd845
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
     - kind: docs
-      href: /en/works/simple-static-mesh-merger/docs/merge-actors/
+      href: /en/works/simple-static-mesh-merger/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -85,3 +86,18 @@ Merging replaces original scene Actors. Keep a recoverable level version first a
 Loading or runtime improvements depend on the scene and target device and require measurement. Group previews do not replace project acceptance checks after merging.
 
 See the [user guide](/en/works/simple-static-mesh-merger/docs/merge-actors/) for scene grouping, merge steps, and loading overhead.
+
+## Compatibility, Language, and Support
+
+- Unreal Engine 5.2–5.8
+- Version 1.1.0 (Version 2)
+
+Open **Edit → Project Settings**, select the SimpleStaticMeshMerger settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
+
+For usage questions or collaboration, please visit the contact page.
+
+- **Contact:** [Contact and collaboration](https://mzsh.me/contact/)
+
+## Documentation Source
+
+The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19204715) on 2025-11-09.

@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /zh/works/mcp-animation/docs/find-assets/
+      href: /zh/works/mcp-animation/docs/connect/
   compatibility:
     - platforms: []
       requirements:
@@ -25,9 +25,12 @@ tags:
   - 动画蓝图、状态机与动画资产
   - MCP 系列
 docIds:
+  - mcp-animation-connect
   - mcp-animation-find-assets
   - mcp-animation-animation-blueprint
   - mcp-animation-montage-and-blendspace
+  - mcp-animation-animation-notifies
+  - mcp-animation-animation-blend-spaces
 coverAlt: MCPAnimation封面
 websiteCoverUrl: /media/covers/works/mcp-animation-20261101.webp
 lang: zh

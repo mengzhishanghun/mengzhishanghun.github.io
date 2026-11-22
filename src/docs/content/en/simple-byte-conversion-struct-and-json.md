@@ -1,5 +1,5 @@
 ---
-title: Convert Structs and JSON
+title: Convert Structs, Byte Arrays, and JSON
 type: doc
 slug: simple-byte-conversion-struct-and-json
 draft: false
@@ -13,17 +13,17 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-byte-conversion/docs/struct-and-json/
 lang: en
 translationKey: doc:simple-byte-conversion:struct-and-json
-sourceHash: 45efb03615ab36d65de48935d9a8cfb0ac89af6f160c993e3c010d39bbe7f7d4
+sourceHash: 5394a859f7db59e581f613c4e7650fdde1c52c0b2626acd7143601237f918a0e
 translationStatus: translated
-generatedBodyHash: 401a2b3ba58c57a029410f87e5afcf926999ee08808ae1581c5b91f130e5720c
+generatedBodyHash: f4d638dac5825a7eff94b58b0cbbeb3ac4e2744ef3d9daaaa0626916659e1b38
 docPage:
   work: simple-byte-conversion
-  group: workflows
+  group: conversion
   slug: struct-and-json
   order: 2
 ---
 
-## 🧱 Structs ↔ Byte Arrays / Json Strings
+## Choose a Struct Conversion Node
 
 The plugin supports any `USTRUCT` exposed to Blueprints:
 
@@ -34,7 +34,8 @@ Unreal's reflection system automatically serializes and deserializes fields whil
 
 > ⚠️ Unsupported: Structs containing object references such as `UObject*`, `TSoftObjectPtr`, or `TWeakObjectPtr`, or asset handles such as `FSoftObjectPath`.
 
-### JSON Conversion Advantages:
+- StructToBytes / BytesToStruct: Convert between structs and binary byte arrays.
+- StructToJsonString / JsonStringToStruct: Convert between structs and JSON strings.
 
 | Feature | SimpleByteConversion | Native UE FJsonObjectConverter |
 |------------------|-------------------------------------|-------------------------------|
@@ -42,21 +43,10 @@ Unreal's reflection system automatically serializes and deserializes fields whil
 | Float/Double precision | ✅ float (9 digits), double (17 digits) | ❌ Lower default precision |
 | Full Blueprint support | ✅ Yes | ⚠️ Partial support / C++ required |
 
----
-
-## ✅ Tips
-
 - `StringToBytes` and `BytesToString` use UTF-8 for safe cross-platform conversion
 - Combine `StructToBytes` and `StructToJsonString` for debugging and network messages
 
----
-
-## Struct Nodes
-
-- StructToBytes / BytesToStruct: Convert between structs and binary byte arrays.
-- StructToJsonString / JsonStringToStruct: Convert between structs and JSON strings.
-
-### Generic struct parameters with CustomThunk
+## Generic Struct Parameters and CustomThunk
 
 **CustomThunk**
 
@@ -76,7 +66,7 @@ A generic parameter can accept any custom struct at the pin. The implementation 
 
 `CustomStructureParam` marks the generic parameter. The `int32` in the declaration is a reflection placeholder. Callers pass a struct, without casting it to an integer. The thunk consumes VM arguments in declaration order and checks the `FStructProperty` and address before converting anything. Do not call `CastFieldChecked` expecting a null return on failure. Keep the declaration, VM read order and output direction consistent. Only the parsing steps are shown here; the full thunk was not compiled.
 
-### JSON field names and floating-point output
+## JSON Field Names and Floating-Point Precision
 
 The original example addresses two issues observed in UE's default JSON output:
 
@@ -109,7 +99,7 @@ Check the actual field types and serialization path before assuming the suffixes
 
 Despite the comment about retaining nine digits for `float`, `%.9f` writes nine digits after the decimal point. `%.17g` uses 17 significant digits. A fixed number of decimal places cannot preserve every `float` on a round trip. The example defines only the print policy. Check that the serializer actually calls it before relying on its output.
 
-### Parse JSON before writing to the struct
+## Parse JSON Before Writing to the Struct
 
 The example shows the main parsing and copy steps:
 
@@ -132,7 +122,7 @@ StructType->CopyScriptStruct(Destination, Temporary.GetStructMemory());
 
 Validate `StructType` and `Destination` first; the destination must be an initialized struct of the right type. Converting an empty `JsonObject` beforehand does not read `InputJson`. `{}` is valid JSON. Whether it is acceptable depends on which fields are required.
 
-### Step 3: Use in C++
+## Call from C++
 
 In C++, call the `ByteConverter` utility class directly:
 
@@ -152,7 +142,31 @@ FString JsonStr;
 ByteConverter::StructToJsonString(&Data, FMyStruct::StaticStruct(), JsonStr);
 ```
 
-### Scenario 3: Data Persistence
+## Example: Send Data over UDP or TCP
+
+A communication channel still needs a message format. Struct-to-byte conversion handles how the data is represented; the communication module handles connections, sending, receiving and the protocol.
+
+Before sending over the network, encode the structured data as a byte array:
+
+```
+1. Define a struct (e.g. FPlayerState: position, health, state)
+2. Use StructToBytes to convert the struct to TArray<uint8>
+3. Send the byte array over UDP/TCP
+4. Use BytesToStruct on the receiving end to restore the struct
+```
+
+## Example: Exchange JSON with Python
+
+Use JSON for cross-language data exchange:
+
+```
+1. UE: StructToJsonString converts game data to a JSON string
+2. Send it to the Python program over TCP/WebSocket
+3. Python: parse directly with json.loads()
+4. Reverse the process: Python json.dumps() → UE JsonStringToStruct
+```
+
+## Example: Persist Data
 
 Use this binary save flow only for data the conversion supports and whose format the reader and writer have agreed on. Do not use it to dump an arbitrary struct with dynamic storage:
 
@@ -165,18 +179,10 @@ Serialize game saves to binary files:
 4. Restore the save struct with BytesToStruct
 ```
 
-## Usage Boundaries
+## Format Requirements and Round-Trip Checks
 
 Both ends must agree on fields, encoding, and data format. For cross-language interaction, check conversion results using a fixed dataset first.
 
 `FString`, `TArray` and object references contain dynamic storage or addresses. A whole-struct `memcpy` cannot restore them in another process and can cause lifetime errors such as a double free. Primitive integers still depend on byte order, width and the protocol. For stored data, specify the schema version, fields, encoding and validation. Reflection-based JSON covers supported fields; references and version compatibility need separate handling.
 
-### Round-trip checks and example limits
-
-Round-trip a struct containing `FString` and `TArray` through JSON and compare the fields. Malformed JSON or a missing required field should leave the destination unchanged. Record the format version and test unknown fields and numeric limits. Compare the actual float output with your application's allowed error. None of the examples were compiled or run in UE, and cross-version data was not tested.
-
-Generic struct arguments expose the reflected type and its address. The declared `int32` is a placeholder; do not cast the struct to an integer. Any loss of floating-point precision depends on the engine version, the field and the output policy. The example does not establish that every `FJsonObjectConverter` conversion loses significant precision.
-
----
-
-Originally published on 2026-03-25 on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19770934).
+Round-trip a struct containing `FString` and `TArray` through JSON and compare its fields. Malformed JSON or missing required fields should leave the destination unchanged. Check unknown fields, numeric bounds, and your allowed floating-point error. The examples were not compiled or run in Unreal Engine, and cross-version data was not tested.

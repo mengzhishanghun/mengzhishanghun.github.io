@@ -22,15 +22,15 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: c94394155ef36379df8311f641107b8386b65650b5a1f4b90eb54576c12989e4
+sourceHash: 7150bac9b5c24c0e33bb6242524dad083ff2c172ff2e93ee84f0befcf2a2289a
 translationStatus: translated
-generatedBodyHash: 97a9900b690bb3ff2dca68e6811d996a096b6bd092b7fa17589c6d2e482bb7f3
+generatedBodyHash: b5d27b52fa5e9a3e09a26410ce1b234592c1dec73ca93cc6a7ea0367bb7f84d2
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/70e9040b-66c0-4793-a219-93203a117545
     - kind: docs
-      href: /en/works/simple-websocket/docs/connect-and-send/
+      href: /en/works/simple-websocket/docs/configure-connections/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -43,6 +43,7 @@ workInfo:
 websiteCoverUrl: /media/covers/works/simple-websocket-20261101.webp
 coverAlt: SimpleWebSocket cover
 docIds:
+  - simple-websocket-configure-connections
   - simple-websocket-connect-and-send
   - simple-websocket-native-module
 ---
@@ -79,4 +80,12 @@ It suits UE projects exchanging real-time messages with existing WebSocket servi
 
 Only `ws://` is supported; secure `wss://` connections are not supported. An accessible WebSocket service and agreed message format are required. Recovery after closure, authentication, and message reliability handling must be designed and verified for project needs.
 
-See the [user guide](/en/works/simple-websocket/docs/connect-and-send/) for named connections, message delegates, and module examples.
+To configure named connections, see the [user guide](/en/works/simple-websocket/docs/configure-connections/).
+
+## Support and feedback
+
+[Contact and collaboration](https://mzsh.me/contact/)
+
+## Packaged projects
+
+SimpleWebSocket can be used in packaged UE builds.

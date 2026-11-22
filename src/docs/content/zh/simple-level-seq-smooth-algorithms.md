@@ -12,7 +12,7 @@ workIds:
   - simple-level-seq-smooth
 docPage:
   work: simple-level-seq-smooth
-  group: workflows
+  group: curves
   slug: algorithms
   order: 2
 documentKind: product-manual
@@ -21,7 +21,7 @@ lang: zh
 translationKey: doc:simple-level-seq-smooth:algorithms
 ---
 
-## 算法总览
+## 按处理目标选择算法
 
 | # | 算法 | 类别 | 核心优势 | 最佳场景 |
 |---|------|------|----------|----------|
@@ -38,11 +38,9 @@ translationKey: doc:simple-level-seq-smooth:algorithms
 | 11 | Savitzky-Golay | 多项式 | 精确保留峰值和拐点 | 手指等精细关节 |
 | 12 | 置信度加权平滑 | AI 专用 | 自动检测离群帧并降权，正常帧几乎不变 | AI 姿态估计 |
 
-## 算法参数详解
-
 > 以下参数名称与编辑器中对话框显示一致。
 
-### 1. Moving Average（移动平均）
+### Moving Average（移动平均）
 
 对窗口范围内的关键帧取算术平均值。
 
@@ -50,7 +48,7 @@ translationKey: doc:simple-level-seq-smooth:algorithms
 |------|--------|------|------|
 | Window Size | 51 | 3~501（奇数） | 参考前后帧数，越大越平滑 |
 
-### 2. Gaussian（高斯平滑）
+### Gaussian（高斯平滑）
 
 高斯分布加权平均，中心权重大、两侧递减。
 
@@ -59,7 +57,7 @@ translationKey: doc:simple-level-seq-smooth:algorithms
 | Window Size | 51 | 3~501（奇数） | 参考前后帧数 |
 | Sigma | 12.0 | 0.1~100 | 高斯分布宽度，建议为窗口大小的 1/6~1/3 |
 
-### 3. Exponential（指数平滑）
+### Exponential（指数平滑）
 
 指数加权递推滤波，近期数据权重更大。
 
@@ -67,7 +65,7 @@ translationKey: doc:simple-level-seq-smooth:algorithms
 |------|--------|------|------|
 | Alpha | 0.15 | 0.01~1.0 | 越小越平滑：0.01=强平滑，0.15=推荐，0.5=弱平滑 |
 
-### 4. Median（中值滤波）
+### Median（中值滤波）
 
 取窗口内中间值，对脉冲噪声和跳帧效果最佳。
 
@@ -75,7 +73,7 @@ translationKey: doc:simple-level-seq-smooth:algorithms
 |------|--------|------|------|
 | Window Size | 51 | 3~501（奇数） | 窗口越大去噪越强但细节损失越多 |
 
-### 5. Bilateral（双边滤波）
+### Bilateral（双边滤波）
 
 同时考虑空间距离和数值差异的加权平均，保边平滑。
 
@@ -85,7 +83,7 @@ translationKey: doc:simple-level-seq-smooth:algorithms
 | Spatial Sigma | 12.0 | 0.1~100 | 控制空间维度的平滑范围，越大越平滑 |
 | Range Sigma | 0.5 | 0.001~100 | 控制数值差异的容忍度，越大越忽略边缘，越小越保边 |
 
-### 6. Butterworth Low-pass
+### Butterworth Low-pass
 
 频域二阶低通滤波，前后双向零相位无延迟。
 
@@ -94,7 +92,7 @@ translationKey: doc:simple-level-seq-smooth:algorithms
 | Cutoff Frequency (Hz) | 10.0 | 0.1~60 | 低于此频率的运动保留，高于的噪声去除。人体运动<6Hz，手指<10Hz |
 | Sample Rate (Hz) | 自动 | 1~1000 | 从序列帧率自动填入，如需可手动修改 |
 
-### 7. Wavelet Denoising（小波去噪）
+### Wavelet Denoising（小波去噪）
 
 Haar 小波变换 + MAD 噪声估计 + 软阈值去噪。
 
@@ -103,7 +101,7 @@ Haar 小波变换 + MAD 噪声估计 + 软阈值去噪。
 | Decomposition Level | 4 | 1~10 | 层数越多处理的频率范围越宽，通常 3~5 层 |
 | Threshold Coefficient | 0.5 | 0.01~5.0 | <1 保留更多细节，1=标准，>1 更强去噪 |
 
-### 8. Kalman（卡尔曼滤波）
+### Kalman（卡尔曼滤波）
 
 基于恒速运动模型的最优状态估计（位置+速度）。
 
@@ -112,7 +110,7 @@ Haar 小波变换 + MAD 噪声估计 + 软阈值去噪。
 | Process Noise (Q) | 0.01 | 0.0001~10 | 运动模型的不确定性，越大对测量越信任（跟踪越紧） |
 | Measurement Noise (R) | 0.1 | 0.0001~100 | 传感器/动捕的噪声大小，越大平滑越强 |
 
-### 9. One Euro
+### One Euro
 
 自适应截止频率低通滤波器（CHI 2012），慢动作时强平滑、快动作时弱平滑。
 
@@ -123,7 +121,7 @@ Haar 小波变换 + MAD 噪声估计 + 软阈值去噪。
 | Derivative Cutoff | 1.0 | 0.001~30 | 速度估计本身的平滑程度，通常保持默认 |
 | Sample Rate (Hz) | 自动 | 1~1000 | 从序列帧率自动填入 |
 
-### 10. Complementary（互补滤波）
+### Complementary（互补滤波）
 
 前后双向互补滤波，融合积分路径和直接测量，零相位无延迟。
 
@@ -131,7 +129,7 @@ Haar 小波变换 + MAD 噪声估计 + 软阈值去噪。
 |------|--------|------|------|
 | Complementary Alpha | 0.98 | 0.5~0.999 | 越大越信任积分路径（保留细节），越小越信任直接测量（抑制漂移）。推荐 0.95~0.99 |
 
-### 11. Savitzky-Golay
+### Savitzky-Golay
 
 局部多项式拟合，在平滑噪声的同时精确保留峰值和拐点。
 
@@ -140,7 +138,7 @@ Haar 小波变换 + MAD 噪声估计 + 软阈值去噪。
 | Window Size | 21 | 5~501（奇数） | 拟合的局部范围 |
 | Polynomial Order | 3 | 2~6 | 拟合曲线的阶数：2=抛物线，3=三次（推荐），4=四次 |
 
-### 12. Confidence-Weighted（置信度加权平滑）
+### Confidence-Weighted（置信度加权平滑）
 
 自动检测离群帧（基于 MAD 鲁棒统计）并降低其权重，对正常帧轻微平滑、对异常帧强力修正。
 

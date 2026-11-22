@@ -12,17 +12,17 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-server/docs/messages/
 lang: en
 translationKey: doc:simple-tcp-server:messages
-sourceHash: 459f0033b26aab7284e76e032dfd25e40f43724aaaca4e52aebd3bb086df87dc
+sourceHash: a95caf5ee79b0813b8b1b28e85099186bb0e096894e45e09d1273585311fc41b
 translationStatus: translated
-generatedBodyHash: 7f9350fd8f22dd2a9065670befd7641ba2e530acf1539bb17489e0a913d263dc
+generatedBodyHash: 0890bfb02084e8ca6341f1255900dc9312f0cef993aebf377b2fc738dea9913f
 docPage:
   work: simple-tcp-server
-  group: workflows
+  group: network
   slug: messages
   order: 2
 ---
 
-### 📥 Receiving
+## Receive client messages
 
 | Node Function             | Description                                |
 |---------------------------|--------------------------------------------|
@@ -30,28 +30,17 @@ docPage:
 | `UnbindMessageHandle`     | Unbind a specific delegate                 |
 | `UnbindAllMessageHandle`  | Unbind all delegates                       |
 
-### 📤 Sending
+## Send to one session or broadcast to a channel
 
 | Node Function        | Description                                      |
 |----------------------|--------------------------------------------------|
 | `SendMessage`        | Send byte array to a specific SessionChannel     |
 | `BroadcastMessage`   | Send byte array to all connections on a channel  |
 
-## ✅ Notes & Tips
+## Client plugin and byte conversion
 
-- Only IPv4 is supported — domain name, IPv6, and encryption are not supported  
-- All sockets are internally managed, no manual cleanup required  
-- Plugin persists across level transitions, bound to GameInstance lifecycle  
-- Each connected client is assigned a unique `SessionChannel` in format `"IP:Port"`
-
----
-
-## 🔧 Recommended Companion Plugins
-
-- 🔌 **SimpleTCPClient Plugin**  
+- **SimpleTCPClient Plugin**  
   Lightweight plugin designed for client-side usage, ideal for connecting to a SimpleTCPServer instance.
 
-- 🧩 **SimpleByteConversion Plugin**
+- **SimpleByteConversion Plugin**
   Enables conversion between native Unreal types (e.g., FString, float, int) and `TArray<uint8>`, ideal for building structured protocols.
-
----

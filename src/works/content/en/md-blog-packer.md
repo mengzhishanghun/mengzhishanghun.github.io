@@ -19,15 +19,15 @@ links:
     href: https://github.com/MZSH-Tools/MDBlogPacker
 lang: en
 translationKey: md-blog-packer
-sourceHash: db37e0e234f05df698a3398d5ad61af3dd73455a01c2d530a9c26a4e8b3c6c23
+sourceHash: 62e488ce828b741475950004789da9b3e88520de570cf104e07e84063f957ba7
 translationStatus: translated
-generatedBodyHash: ce06790537eee55a1383e6b525b34c807bb1a811852dd93e60d34c0ef737b1de
+generatedBodyHash: d04ca898d8b4f57f4e0d65e59f6731a66cef6fac5ed2fac0d0b01e99967b91ae
 workInfo:
   channels:
     - kind: open-source
       href: https://github.com/MZSH-Tools/MDBlogPacker
     - kind: docs
-      href: /en/works/md-blog-packer/docs/package/
+      href: /en/works/md-blog-packer/docs/setup/
   compatibility:
     - platforms:
         - Markdown tool (operating system to be verified)
@@ -35,6 +35,7 @@ workInfo:
 websiteCoverUrl: /media/covers/works/md-blog-packer-20261101.webp
 coverAlt: MDBlogPacker cover
 docIds:
+  - md-blog-packer-setup
   - md-blog-packer-package
 ---
 
@@ -81,3 +82,7 @@ Base64-encoded image data is usually about one-third larger than the original bi
 For sites where you control resources, the build process can publish the article and images together. Separate images are easier to replace, compress, cache, and maintain.
 
 See the [usage guide](/en/works/md-blog-packer/docs/package/) for steps and parameters.
+
+## License
+
+MIT License

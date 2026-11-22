@@ -1,5 +1,5 @@
 ---
-title: Start, Inspect, and Stop Processes
+title: Start and Manage Processes
 type: doc
 slug: simple-launcher-processes
 draft: false
@@ -12,17 +12,34 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-launcher/docs/processes/
 lang: en
 translationKey: doc:simple-launcher:processes
-sourceHash: b39deb881916e75ca8c88ae66ec5c436b05b313a43afdf202e1f0ca74b2fa042
+sourceHash: c82bdccebf22f58894e7e3de9b4b8c772bb593dfdc84a0fbd5a0137e30858d67
 translationStatus: translated
-generatedBodyHash: 7e88556c061c4dd9135c3ef7abca3209331bc61330256610d795d9284ae7ddb1
+generatedBodyHash: fb19c3a46d7577df074fa6aa4658e4ce330e9b884d1e8bb03ed5ae5f9b114457
 docPage:
   work: simple-launcher
-  group: workflows
+  group: process-control
   slug: processes
   order: 2
 ---
 
-### Process Control
+## Start from Blueprint or C++
+
+Call from Blueprint or C++:
+```cpp
+FProcessId Id = USimpleLauncherGameSubsystem::StartProcess(FName("MyServer"));
+```
+This example uses a non-detached preset, so the process stops when the game exits.
+
+All functions are in the `SimpleLauncher` category. The core workflow is:
+
+```
+1. StartProcess("预设名") → Obtain ProcessId
+2. IsProcessRunning(ProcessId) → Check status
+3. BindProcessExited(ProcessId, Callback) → Listen for exit
+4. StopProcess(ProcessId) → Stop manually
+```
+
+## Start and Stop
 
 | Function | Description |
 |----------|-------------|
@@ -39,7 +56,26 @@ FProcessId Id2 = USimpleLauncherGameSubsystem::StartProcess(FName("MyServer"));
 // Id1 和 Id2 是两个独立运行的进程
 ```
 
-### Status Queries
+**Start a process:**
+
+```cpp
+// 通过预设名称启动
+FProcessId Id = USimpleLauncherGameSubsystem::StartProcess("LocalServer");
+```
+**Stop processes:**
+
+```cpp
+// 停止单个进程
+StopProcess(ProcessId);
+
+// 停止某个预设的所有实例
+StopProcesses("LocalServer");
+
+// 停止所有进程
+StopAllProcesses();
+```
+
+## Query Process Status
 
 | Function | Description |
 |----------|-------------|
@@ -48,7 +84,31 @@ FProcessId Id2 = USimpleLauncherGameSubsystem::StartProcess(FName("MyServer"));
 | `GetProcessCount(Name)` | Get the number of running processes for a preset |
 | `GetProcesses(Name)` | Get all running ProcessIds for a preset |
 
-### Process Exit Callbacks
+## Start Multiple Instances from One Preset
+
+The same preset can launch **multiple instances**, each with an independent `FProcessId`:
+
+```cpp
+USTRUCT(BlueprintType)
+struct FProcessId
+{
+    FName Name;    // 预设名称
+    int32 Index;   // 实例索引（自动递增）
+};
+```
+```
+// 启动3个本地服务器实例
+FProcessId Server1 = StartProcess("LocalServer");  // Index = 0
+FProcessId Server2 = StartProcess("LocalServer");  // Index = 1
+FProcessId Server3 = StartProcess("LocalServer");  // Index = 2
+
+// 独立管理每个实例
+StopProcess(Server2);  // 只停止第二个
+IsProcessRunning(Server1);  // 检查第一个是否在运行
+GetProcessCount("LocalServer");  // 返回 2（还剩两个在运行）
+```
+
+## Process Exit Callbacks
 
 Get notified when a process exits and execute custom logic (e.g. restart, logging).
 
@@ -77,56 +137,6 @@ The callback receives two parameters:
 >
 > Callbacks are not triggered during game exit to avoid accessing destroyed objects, which would cause crashes.
 
-### 1.2 Process Lifecycle Management
-
-**Start a process:**
-
-```cpp
-// 通过预设名称启动
-FProcessId Id = USimpleLauncherGameSubsystem::StartProcess("LocalServer");
-```
-**Stop processes:**
-
-```cpp
-// 停止单个进程
-StopProcess(ProcessId);
-
-// 停止某个预设的所有实例
-StopProcesses("LocalServer");
-
-// 停止所有进程
-StopAllProcesses();
-```
-**Automatic cleanup:**
-
-When `bLaunchDetached = false` (the default), the plugin **automatically terminates** the process when the game exits, managing process cleanup at shutdown. Detached processes with this value set to `true` continue running after the game exits.
-
-### 1.3 Multiple Instances
-
-The same preset can launch **multiple instances**, each with an independent `FProcessId`:
-
-```cpp
-USTRUCT(BlueprintType)
-struct FProcessId
-{
-    FName Name;    // 预设名称
-    int32 Index;   // 实例索引（自动递增）
-};
-```
-```
-// 启动3个本地服务器实例
-FProcessId Server1 = StartProcess("LocalServer");  // Index = 0
-FProcessId Server2 = StartProcess("LocalServer");  // Index = 1
-FProcessId Server3 = StartProcess("LocalServer");  // Index = 2
-
-// 独立管理每个实例
-StopProcess(Server2);  // 只停止第二个
-IsProcessRunning(Server1);  // 检查第一个是否在运行
-GetProcessCount("LocalServer");  // 返回 2（还剩两个在运行）
-```
-
-### 1.4 Process Exit Callbacks
-
 The plugin polls process status through `Tick` and supports exit notifications at two levels:
 
 **Individual process callback:**
@@ -151,9 +161,11 @@ OnProcessExited(ProcessId, bNaturalExit):
     StartProcess(ProcessId.Name)
 ```
 
-## Call Examples
+## Processes After Game Exit
 
-### Scenario 1: Start a Local Server with the Game
+When bLaunchDetached is false, game shutdown cleans up processes launched by that configuration. When true, the processes can continue running. Choose the setting according to the external program's purpose to avoid closing programs that still need to run when testing stops.
+
+## Start a Local Server with the Game
 
 ```
 1. Configure the "LocalServer" preset in Project Settings
@@ -168,7 +180,7 @@ OnProcessExited(ProcessId, bNaturalExit):
    The plugin automatically terminates the server process
 ```
 
-### Scenario 2: Background Data Processing
+## Background Data Processing
 
 ```
 1. Configure a Python script preset
@@ -182,7 +194,7 @@ OnProcessExited(ProcessId, bNaturalExit):
 3. The callback is triggered automatically when the script finishes
 ```
 
-### Scenario 3: Multi-Server Cluster Testing
+## Test a Multi-Server Cluster
 
 ```
 // 启动多个服务器实例
@@ -195,23 +207,3 @@ GetProcessCount("TestServer")  // 5
 // 测试完成后一键停止
 StopProcesses("TestServer")
 ```
-* * *
-
-### Step 3: Use in Blueprints
-
-All functions are in the `SimpleLauncher` category. The core workflow is:
-
-```
-1. StartProcess("预设名") → Obtain ProcessId
-2. IsProcessRunning(ProcessId) → Check status
-3. BindProcessExited(ProcessId, Callback) → Listen for exit
-4. StopProcess(ProcessId) → Stop manually
-```
-
-## Lifecycle Notes
-
-When bLaunchDetached is false, game shutdown cleans up processes launched by that configuration. When true, the processes can continue running. Choose the setting according to the external program's purpose to avoid closing programs that still need to run when testing stops.
-
----
-
-Originally published on 2026-03-25 on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19770928).

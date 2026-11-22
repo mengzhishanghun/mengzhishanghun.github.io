@@ -32,9 +32,9 @@ sudo -n python3 /usr/local/libexec/mzsh-static-update.py --check
 
 公开目录与 `src/analytics/inject.mjs` 保持一致：`_astro`、`assets`、`blog-search`、`blog`、`cases`、`contact`、`docs`、`en`、`licenses`、`media`、`support`、`works`、`zh`，再加同提交语言清单中的启用 code。根文件仅允许 `.nojekyll`、`favicon.svg`、`index.html`、`site-router.js`、`sitemap.xml`、`robots.txt`、`site-languages.json`；另精确允许 `about/index.html` 通用入口，未开放整个 `about/`，其源码与其他子文件仍拒绝。`content/`、`tools/`、`src/`、Obsidian 来源与版本控制/本机元数据不进入发布树。
 
-启用语言数 `n` 必须在 1–32 之间。公开 HTML 上限为 `200 + 250*n`，公开文件上限为 `1000 + 500*n`，不设总字节数上限，单个公开文件不超过 100 MB（100,000,000 字节）。公开符号链接、可执行模式、越界路径、重复路径与未允许类型会被拒绝。语言清单中不得包含来源目录等私有字段。
+启用语言数必须在 1–32 之间。普通发布和历史模式都要求至少 100 个 HTML、100 个公开文件，并包含必需页面及 `_astro/` 资产。公开 HTML、公开文件和发布清单记录均不设数量上限；发布文件也不设总字节数上限，单个公开文件仍不得超过 100 MB（100,000,000 字节）。源码发布清单仍限 8 MiB，Git API 树响应仍限 2,000,000 字节。公开符号链接、可执行模式、越界路径、重复路径与未允许类型会被拒绝。语言清单中不得包含来源目录等私有字段。
 
-固定七项历史提交仅在历史资产初始化/补齐函数显式启用历史模式时，允许缺少语言清单；其旧上限仍为 300 个 HTML、800 个文件。已有清单解析、下载或 Git blob 校验失败时不会降级到历史例外。
+固定七项历史提交仅在历史资产初始化或补齐函数显式启用历史模式时，才允许缺少语言清单。已有清单的解析、下载或 Git blob 校验失败时，不会降级到历史例外。历史兼容资产索引仍限 500 条。
 
 ## 隔离测试
 

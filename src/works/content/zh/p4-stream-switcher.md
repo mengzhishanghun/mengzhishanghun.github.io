@@ -11,7 +11,7 @@ status: 源码公开
 workInfo:
   channels:
     - kind: docs
-      href: /zh/works/p4-stream-switcher/docs/normal-switch/
+      href: /zh/works/p4-stream-switcher/docs/install-and-connect/
   compatibility:
     - platforms:
         - Windows
@@ -29,8 +29,10 @@ links:
   - label: 公开源码仓库
     href: https://github.com/MZSH-Tools/P4StreamSwitcher
 docIds:
+  - p4-stream-switcher-install-and-connect
   - p4-stream-switcher-normal-switch
   - p4-stream-switcher-offline-switch
+  - p4-stream-switcher-workspace-settings
   - p4-stream-switcher-recycle-workspace
 coverAlt: P4StreamSwitcher封面
 websiteCoverUrl: /media/covers/works/p4-stream-switcher-20261101.webp
@@ -42,7 +44,7 @@ translationKey: p4-stream-switcher
 
 P4StreamSwitcher 是面向 Windows 的 Perforce 流工作区切换工具，使用 Python、Tkinter 和 P4Python。选择项目和分支后，工具按个人标识生成工作区名称，管理工作区数量，并打开对应的 P4V 客户端。
 
-适用于 `//depot/project/branch` 形式的两层流结构。源码已公开，仓库尚未声明许可证。
+适用于 `//depot/project/branch` 形式的两层流结构。源码已公开，仓库尚未声明许可证。公开可读不代表获得任意再分发或商用授权。
 
 ## 解决的问题
 
@@ -66,7 +68,7 @@ P4StreamSwitcher 是面向 Windows 的 Perforce 流工作区切换工具，使�
 
 ## 相关内容
 
-- [使用文档](</zh/works/p4-stream-switcher/docs/normal-switch/>)
+- [使用文档](</zh/works/p4-stream-switcher/docs/install-and-connect/>)
 - [工作区池开发案例](</zh/blog/perforce-workspace-pool/>)
 - [Python 切流工具博客](</zh/blog/python-perforce-stream-switch-safety/>)
 - [公开源码仓库](https://github.com/MZSH-Tools/P4StreamSwitcher)

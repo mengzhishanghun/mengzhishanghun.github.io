@@ -1,5 +1,5 @@
 ---
-title: 在图形界面和命令行打包工程
+title: 用图形界面和命令行打包
 type: doc
 slug: ue-package-manager-package-project
 draft: false
@@ -12,7 +12,7 @@ workIds:
   - ue-package-manager
 docPage:
   work: ue-package-manager
-  group: workflows
+  group: packaging
   slug: package-project
   order: 1
 documentKind: product-manual
@@ -21,44 +21,15 @@ lang: zh
 translationKey: doc:ue-package-manager:package-project
 ---
 
-通用 Unreal Engine 项目打包工具。提供图形界面与命令行双模式，调用 Unreal Automation Tool 完成 Build、Cook、Stage、Pak 和 Archive，并在成功后把指定文件或文件夹部署到包内。
-
-## 下载与运行
-
-从 [Releases](https://github.com/MZSH-Tools/UEPackageManager/releases/latest) 下载 `UEPackageManager.exe`。
-
-- 双击EXE且不带参数：隐藏控制台并打开图形界面。
-- 在终端中带子命令运行：保留控制台和CLI输出。
-- 将EXE放在包含 `.uproject` 的项目根目录并双击；项目与关联引擎会自动识别，GUI中不可选择或修改。
-- 从项目根目录的终端启动同样会自动识别；EXE放在其他目录时，GUI会拒绝打包并提示正确位置。
-- 当前EXE未进行商业代码签名；Windows首次运行可能显示SmartScreen提示，可使用Release附带的SHA-256文件核对下载完整性。
-
-## 图形界面
+## 图形界面打包
 
 ![](/media-occurrence/doc%3Aue-package-manager%3Apackage-project%3Amedia%3A1)
 
-| 功能 | 作用 | 说明 |
-|---|---|---|
-| 项目 | 自动读取EXE或当前工作目录中的 `.uproject` | GUI只读，避免切换到其他项目 |
-| UE目录 | 根据 `EngineAssociation` 自动检测 | GUI只读；源码引擎可通过CLI配置 |
-| 输出目录 | 选择Archive输出位置 | 不允许直接使用项目根目录 |
-| 打包类型 | `DebugGame`、`Development`、`Test` 或 `Shipping` | Shipping额外启用压缩 |
-| 清理旧包 | 打包前清理当前输出路径中识别到的旧包 | 勾选状态随项目配置保存；每次实际清理仍需确认 |
-| 附加文件 | 成功后复制文件或文件夹 | 可分别指定包内目标子目录和递归忽略项 |
+确认界面显示的是当前项目和引擎，选择 Archive 输出目录与构建类型，再启动打包。输出目录不能是项目根目录。构建类型为 `DebugGame`、`Development`、`Test` 或 `Shipping`；`Shipping` 额外启用压缩。打包过程和结果可在日志中查看。
 
-附加复制仅在UE打包成功后执行。目录复制会跳过 `.trash`、`.svn`、`.git`、`.codex`、`.agents`、`.vs`、`.idea`、`__pycache__` 和 `.pyc`，复制后检查文件完整性。每条规则还可使用分号分隔的名称模式递归忽略任意层级中的文件或文件夹，支持 `*`、`?`，例如 `README*.md; Cache`。目标位置必须是包根目录内的相对目录，禁止绝对路径、盘符和 `..`；递归忽略项只填写名称模式，不能包含路径。
+## 命令行打包与完整命令示例
 
-## 项目配置隔离
-
-每个 `.uproject` 的配置根据其规范化绝对路径生成独立项目ID：
-
-```text
-%LOCALAPPDATA%/UEPackageManager/Projects/<项目ID>/config.json
-```
-
-项目路径、引擎目录、输出目录、打包类型和附加复制规则不会跨项目复用。GUI不读取“最近项目”，只绑定当前EXE或工作目录对应的项目；CLI无法从当前目录确定项目时必须显式传入 `--project-root`。
-
-## CLI
+先运行 `validate` 检查配置，再运行 `package --dry-run` 查看 UAT 命令。去掉 `--dry-run` 才会开始打包。从项目根目录运行时可省略 `--project-root`。成功返回 `0`，参数、配置或执行出错时返回 `2`。
 
 ```bat
 UEPackageManager.exe --version
@@ -72,16 +43,8 @@ UEPackageManager.exe package --project-root E:\Projects\MyGame --dry-run
 UEPackageManager.exe package --project-root E:\Projects\MyGame
 ```
 
-在项目根目录执行时，`--project-root` 可以省略。`--dry-run` 只输出UAT命令，不启动打包；`--no-copy` 可跳过附加文件部署；`--clean-output` 仅在本次打包前清理当前输出路径中识别到的旧包。切换输出路径后不会清理原来的路径。命令成功返回 `0`，参数、配置或执行错误返回 `2`。
+## 支持的构建和操作范围
 
-## 当前范围
-
-- 支持Windows上的Win64项目打包。
-- 支持 `DebugGame`、`Development`、`Test` 与 `Shipping`；不提供通常需要源码引擎的完整 `Debug`。
-- 支持Epic Launcher引擎和手动指定的源码引擎。
-- 不负责插件独立打包；插件发布请使用对应插件打包工具。
-- 不自动关闭Unreal Editor，不删除项目或输出目录，不执行Git、SVN或Perforce操作。
-
-## 许可证
-
-[MIT License](<https://github.com/MZSH-Tools/UEPackageManager/blob/f15dfdb00e1d06919035ccd95bc752c2877a3f8c/LICENSE>)
+- 支持在 Windows 上打包 Win64 项目，可使用 Epic Launcher 引擎或手动指定的源码引擎。
+- 不提供完整 `Debug` 构建（通常需要源码引擎），也不单独打包插件。
+- 工具不会自动关闭 Unreal Editor、删除项目或输出目录，也不执行 Git、SVN 或 Perforce 操作。

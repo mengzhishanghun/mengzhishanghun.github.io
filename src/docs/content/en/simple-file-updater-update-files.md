@@ -1,5 +1,5 @@
 ---
-title: Update Local Files from Configuration
+title: Update Files from a Configuration
 type: doc
 slug: simple-file-updater-update-files
 draft: false
@@ -13,21 +13,17 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-file-updater/docs/update-files/
 lang: en
 translationKey: doc:simple-file-updater:update-files
-sourceHash: 9ffa24e2df8790cda51e4d82ace41341aca5f24e570e8216ff114606b5a40412
+sourceHash: fa703c86f3a212c07c3228580c92db65451442fae3907c1f7c879460a56afc64
 translationStatus: translated
-generatedBodyHash: b3a9acaa340c53ee845b47f359104d3f9c26d7a7acfb7ff28271193238dbfdb3
+generatedBodyHash: 9b250927f9cbb41d93549887d86db57d35a6710a01ab62e76443880fb9401fb1
 docPage:
   work: simple-file-updater
-  group: workflows
+  group: updates
   slug: update-files
   order: 1
 ---
 
-SimpleFileUpdater is a lightweight file synchronization tool for users who want to update local files in batches from remote addresses. It is packaged as `SimpleFileUpdater.exe` and supports a configuration file that defines target files and their download URLs.
-
----
-
-## 🧩 Configuration File
+## Write the Update List
 
 The default configuration file is **`.SimpleFileUpdater`**, with the following format:
 
@@ -40,9 +36,7 @@ Docs\Manual.pdf  = https://cdn.example.com/docs/Manual.pdf
 - Automatically creates the required folders
 - Supports comments beginning with `#`
 
----
-
-## 🚀 How to Run
+## Run the Update and Check the Results
 
 Place `SimpleFileUpdater.exe` and `.SimpleFileUpdater` in the same directory, then:
 
@@ -54,43 +48,6 @@ SimpleFileUpdater.exe MyConfig.txt
 ```
 After execution, the program remains in the console and waits for you to press Enter to view the results.
 
----
+## Before Overwriting Files
 
-## 🧪 Running from Source (For Developers or Unpackaged Use)
-
-The project provides two ways to set up the runtime environment in one step:
-
-### Method 1: Conda (Recommended)
-
-```bash
-conda env create -f environment.yml
-conda activate SimpleFileUpdater
-python Main.py
-```
-
-### Method 2: pip
-
-```bash
-pip install -r requirements.txt
-python Main.py
-```
----
-
-## 📄 License
-
-The project includes the following license:
-
-```
-(The following content is read automatically from LICENSE. Please refer to the LICENSE file in the project root.)
-```
-
----
-
-## ⚠️ Disclaimer
-
-This is a personal utility project. You assume the risks associated with using this tool.  
-Check the reliability and security of remote file URLs yourself. The program may overwrite local files with the same names, so back them up beforehand.
-
----
-
-Local file synchronization has never been this simple. Enjoy!
+This is a personal utility; you assume the risks of using it. Verify the remote URLs and local target paths before running an update. Back up any existing files that it might overwrite.

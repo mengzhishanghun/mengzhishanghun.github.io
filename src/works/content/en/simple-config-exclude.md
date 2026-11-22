@@ -21,20 +21,21 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770930
 docIds:
+  - simple-config-exclude-setup
   - simple-config-exclude-staging-rules
   - simple-config-exclude-copy-excluded
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: 0ae08634d523b9697650244f891f85a66c229018253241ecd54fd2ff0e81d11d
+sourceHash: 50680e5d2ae34bba77c8bed7a3a8609c22d3722a797a634e4f97cc27d740ea9e
 translationStatus: translated
-generatedBodyHash: 711e6bad9c08d16458ba5167dc20e73ecaf9e4fd938aa0a8c7c0c388c58d8ac1
+generatedBodyHash: 47caedd54f6793b1cf6bf36db10c9925d84357000add343255ee11eccf14861b
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/05c2cb8f-cabc-45ef-84e0-9eac988b5a35
     - kind: docs
-      href: /en/works/simple-config-exclude/docs/staging-rules/
+      href: /en/works/simple-config-exclude/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -87,3 +88,15 @@ The plugin manages packaging rules and copying for ini files under Config.
 Exclusion does not complete sensitive information protection: destination copies still need project access controls. State changes modify DefaultGame.ini. Before release, check actual package contents, copy destinations, and version control diffs.
 
 See the [usage guide](/en/works/simple-config-exclude/docs/staging-rules/) for steps and parameters.
+
+## Language and Support
+
+Open **Edit → Project Settings**, go to SimpleConfigExclude settings, and set **Language** to **English** or **Chinese**. English is the default. User-facing interfaces, prompts, notifications, and functional logs update immediately without restarting the editor; public API names and module startup/shutdown logs always remain in English.
+
+For usage questions or collaboration inquiries, visit the contact page.
+
+- **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
+
+## Documentation Source
+
+The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19770930) on 2026-03-25.

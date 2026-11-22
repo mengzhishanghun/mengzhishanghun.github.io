@@ -12,51 +12,22 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-client/docs/connect/
 lang: en
 translationKey: doc:simple-tcp-client:connect
-sourceHash: 512633e441d4977ccba5c386b2f9606479dd36cc6bf3eda69bb6c8db6cf56432
+sourceHash: 239252a15e8669d86f509def92e4ba65c20fd1369097a5de736bf88dfccbd6d4
 translationStatus: translated
-generatedBodyHash: f6fefb87e4dc261c70b3505babbcb339a64b1bd65fc6f4eb0dd687c8b4596bc5
+generatedBodyHash: 3252035f9e7b7a225066116ada42294e8ad50e7bc9163c15ef279a5fde1d6ba5
 docPage:
   work: simple-tcp-client
-  group: setup
+  group: network
   slug: connect
   order: 1
 ---
 
-**SimpleTCPClient** is a lightweight TCP client plugin designed for Unreal Engine.  
-It supports **runtime dynamic configuration of client channels**, and all functionality is exposed to Blueprint for easy integration.
-
-## Choosing a protocol and finding the right tutorial
-
-UDP is often used for frequent sensor, simulator, and LAN data. TCP provides an ordered byte stream between clients and servers. WebSocket suits existing web services, browser control panels, and real-time messages across languages. Choose based on tolerance for packet loss, latency, message format, and deployment conditions; a protocol name alone does not establish reliability or cost.
-
-- [SimpleUDP tutorial](/en/works/simple-udp/docs/channels/): UDP send/receive channels, address filtering, and native socket examples.
-- [TCP client and network communication guide](/en/works/simple-tcp-client/docs/connect/): outgoing TCP connections, reconnection, and shared architecture.
-- [SimpleTCPServer tutorial](/en/works/simple-tcp-server/docs/listen/): listening, accepting clients, and managing sessions.
-- [SimpleWebSocket tutorial](/en/works/simple-websocket/docs/connect-and-send/): named connections, message delegates, and WebSockets module examples.
-- [SimpleByteConversion tutorial](/en/works/simple-byte-conversion/docs/primitive-bytes/): conversion between application types and byte arrays.
-
-The original technical record also mentions the `Send Http Request` Blueprint node and third-party libraries for MQTT or gRPC where needed. Availability of a particular HTTP node depends on the modules or plugins enabled in the project; check your project. Those protocol implementations are outside this guide.
-
-## Compatibility
-
-- Unreal Engine 5.2–5.8
-- Version 1.1.0 (Version 2)
-
----
-
-## 🔧 Plugin Initialization
-
-The plugin is automatically activated after being enabled.  
-It registers internally as a `GameInstanceSubsystem`, requiring no manual startup or shutdown code.
-
----
-
-## ⚙️ Static Channel Configuration (Optional)
+## Predefine a channel in Project Settings
 
 You can predefine client channels via **Project Settings → SimpleTCPClient Settings**.  
 It is recommended to configure channels here for easier management.
 
-### 🔹 Client Channel Config Fields
+### Channel parameters
 
 | Field                 | Example             | Description                                |
 |----------------------|---------------------|--------------------------------------------|
@@ -66,11 +37,7 @@ It is recommended to configure channels here for easier management.
 | Auto Reconnect Interval | `1.0` (seconds)   | Interval between reconnection attempts     |
 | Max Receive Bytes     | `1024`              | Max size per receive                       |
 
----
-
-## 🧠 Blueprint Node Interface
-
-### ⚙️ Runtime Channel Management
+## Manage channels in Blueprint
 
 | Node Function              | Description                                         |
 |---------------------------|-----------------------------------------------------|
@@ -80,36 +47,26 @@ It is recommended to configure channels here for easier management.
 | `UpdateTCPClientConfig`   | Create or update channel config (auto reconnects)   |
 | `GetTCPClientConfig`      | Get the current configuration of a channel          |
 
----
+## Connection limits and socket lifecycle
 
-## 🔁 Socket Lifecycle
+Use an IPv4 address. The plugin does not support hostnames, IPv6, or encryption. The plugin manages each channel’s socket.
 
 | Type         | Created When                           | Destroyed When                          |
 |--------------|-----------------------------------------|------------------------------------------|
 | Client Socket| When calling `StartConnection` or auto  | When calling `StopConnection` or shutdown|
 
----
+## Connection node overview
 
-## 🧪 Blueprint Examples (Images)
-
-### All Blueprint Nodes  
 ![](/media-occurrence/doc%3Asimple-tcp-client%3Aconnect%3Amedia%3A1)
 
-### Manual Start/Stop Connection  
+## Start and stop a connection manually
+
 ![](/media-occurrence/doc%3Asimple-tcp-client%3Aconnect%3Amedia%3A2)  
 Note: If the channel is set to auto-connect and has a reconnect interval configured, manual startup is not required.
 
-### Dynamically Update Client Channel Config  
+## Update configuration and reconnect
+
 ![](/media-occurrence/doc%3Asimple-tcp-client%3Aconnect%3Amedia%3A3)  
 Note: The message delegate remains valid across socket reconnections. The update order does not matter — once config is updated, callbacks will still be triggered.
 
-## Version History
-
-
-Open **Edit → Project Settings**, select the SimpleTCPClient settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
-
-## Support
-
-For usage questions or collaboration, please visit the contact page.
-
-- **Contact:** [Contact and collaboration](https://mzsh.me/contact/)
+Use separate channels for different ports and application functions. The plugin handles communication asynchronously to avoid blocking the game thread and provides reconnection controls. The two ends must agree on whether to resend messages, log in again, or synchronize application state after reconnecting.

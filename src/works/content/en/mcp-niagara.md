@@ -26,14 +26,17 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-niagara
-sourceHash: c1c6fa2bfadb6f9bfb3568761e04636e3696d372e6ee041606ab63c95f4d0db2
+sourceHash: be4edc4e27bd2cc1ce80c5516742e29c552c48acdd9455405c7def407bae188f
 generatedBodyHash: 5bebcac372514b72e19fc066502ad6a330170fe1ce008580a211977538b5e1d1
 translationStatus: translated
 coverAlt: MCPNiagara cover
 websiteCoverUrl: /media/covers/works/mcp-niagara-20261101.webp
 docIds:
   - mcp-niagara-inspect
+  - mcp-niagara-niagara-system-assets
+  - mcp-niagara-niagara-preview
   - mcp-niagara-edit-emitter
+  - mcp-niagara-niagara-renderers
   - mcp-niagara-parameters-preview
 ---
 

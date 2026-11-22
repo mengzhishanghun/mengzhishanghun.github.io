@@ -10,25 +10,23 @@ workIds:
   - simple-websocket
 docPage:
   work: simple-websocket
-  group: workflows
+  group: native
   slug: native-module
-  order: 2
+  order: 1
 documentKind: product-manual
 websiteRoute: /zh/works/simple-websocket/docs/native-module/
 lang: zh
 translationKey: doc:simple-websocket:native-module
 ---
 
-## UE WebSockets 模块的原生示例
-
-### 3.1 适用场景
+## 适用场景
 
 -   Web前端控制面板
 -   云服务实时推送
 -   与浏览器/移动端通讯
 -   需要跨语言、跨平台的统一协议
 
-### 3.2 UE内置WebSocket模块
+## 添加内置 WebSockets 模块
 
 UE提供了`WebSockets`模块,需要在`.Build.cs`中添加:
 
@@ -40,7 +38,7 @@ PublicDependencyModuleNames.AddRange(new string[] {
 });
 ```
 
-### 3.3 基础实现
+## 实现示例
 
 **连接WebSocket:**
 
@@ -94,9 +92,7 @@ void SendWebSocketMessage(TSharedPtr<IWebSocket> WebSocket, const FString& Messa
 -   本教程中的 SimpleWebSocket 插件仅支持 `ws://`；原生 UE WebSockets 模块的 `wss://` 能力需按所用引擎、后端与证书配置核对。
 -   连接URL格式: `ws://127.0.0.1:8080`
 
-* * *
-
-### 区分模块能力与插件支持范围
+## 模块与插件的支持范围
 
 这三段代码演示 `.Build.cs` 模块依赖、创建连接、绑定事件和发送文本，不是 SimpleWebSocket 的节点声明。原生 `IWebSocket` 对象需要由项目持有到连接结束；示例里的局部 `TSharedPtr` 没有展示这个持有位置，也没有包含连接错误、解绑和重连的完整处理。
 
@@ -104,6 +100,6 @@ void SendWebSocketMessage(TSharedPtr<IWebSocket> WebSocket, const FString& Messa
 
 `127.0.0.1` 指本机回环地址，适合连接本机服务；部署到其他主机时应填实际目标地址。避免 `localhost` 是这里的连接排查建议，不表示远程服务都应使用回环地址。
 
-其他协议与共享架构说明见 [TCP 客户端与网络通信导览](/zh/works/simple-tcp-client/docs/connect/)。
+其他协议见 [SimpleTCPClient 作品页](/zh/works/simple-tcp-client/)，共享架构见该插件的原生 TCP 客户端文档。
 
 原生通信示例于 2025-10-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19165484)。

@@ -1,5 +1,5 @@
 ---
-title: 使用离线目录切换 Stream
+title: 使用离线目录切流
 type: doc
 slug: p4-stream-switcher-offline-switch
 draft: false
@@ -11,7 +11,7 @@ workIds:
   - p4-stream-switcher
 docPage:
   work: p4-stream-switcher
-  group: workflows
+  group: switching
   slug: offline-switch
   order: 2
 documentKind: product-manual
@@ -20,7 +20,7 @@ lang: zh
 translationKey: doc:p4-stream-switcher:offline-switch
 ---
 
-## 离线目录模式
+## 用本地文件切换并检查差异
 
 在需要接入已有本地目录时勾选“离线目录”，确认目录后切换。工具创建客户端或进入待同步流程后，先更新 have list，再以本地文件为准执行 reconcile，将新增、修改和删除放入默认 changelist。
 

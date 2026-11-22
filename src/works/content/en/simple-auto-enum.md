@@ -26,9 +26,9 @@ docIds:
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: c1531c3689135b7a6eea822c2c4b94a43d2d545ac45216457a90582571a7e780
+sourceHash: de6b892fa9331713aecfd973246976fddbd5b38133e3dea27e181f521558aacc
 translationStatus: translated
-generatedBodyHash: 501f6822f47cd1bd3d9026bf0ac2ac773d698848f091e58b13272397b1056f00
+generatedBodyHash: 6e65cdac4ecbe79e7d46f82244bcc03f34421db7d215612306cc762bbd41ef2a
 workInfo:
   channels:
     - kind: sale
@@ -85,3 +85,17 @@ Projects must correctly define configuration classes, target enums, and range bo
 Dynamically changing enum contents may affect existing Blueprint references and persisted data. Projects must validate compatibility; successful binding logs alone do not establish safety.
 
 See the [user guide](/en/works/simple-auto-enum/docs/config-binding/) for macro binding, configuration examples, and manual initialization.
+
+## Compatibility, Language, and Support
+
+Supports Unreal Engine 5.2–5.8.
+
+Open **Edit → Project Settings**, go to SimpleAutoEnum settings, and set **Language** to **English** or **Chinese**. English is the default. User-facing interfaces, prompts, notifications, and functional logs update immediately without restarting the editor; public API names and module startup/shutdown logs always remain in English.
+
+For usage questions or collaboration inquiries, visit the contact page.
+
+- **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
+
+## Documentation Source
+
+The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19136345) on 2025-10-12.

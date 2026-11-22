@@ -50,6 +50,26 @@
     try { window.localStorage.setItem(storageKey, locale); } catch (_) { /* 不阻止导航。 */ }
   }
 
+  function hashKey(current) {
+    try { return decodeURIComponent(current.hash.slice(1)); } catch (_) { return current.hash.slice(1); }
+  }
+
+  function splitUrl(mapped, locale, current) {
+    if (!mapped || typeof mapped.path !== 'string' || typeof mapped.anchor !== 'string') return null;
+    try {
+      const split = new URL(mapped.path, current);
+      if (split.origin !== current.origin || !split.pathname.startsWith('/' + locale + '/works/') || split.search || split.hash) return null;
+      split.search = current.search;
+      if (mapped.anchor) split.hash = encodeURIComponent(mapped.anchor);
+      return split.href;
+    } catch (_) { return null; }
+  }
+
+  function anchorTarget(maps, locale, anchor) {
+    const map = maps?.[locale];
+    return map && Object.hasOwn(map, anchor) ? map[anchor] : null;
+  }
+
   function targetUrl(data, locale, href) {
     if (!enabledLanguages(data, href).some((language) => language.code === locale)) return null;
     try {
@@ -58,21 +78,34 @@
       target.search = current.search;
       target.hash = current.hash;
       if (current.hash) {
-        let anchor;
-        try { anchor = decodeURIComponent(current.hash.slice(1)); } catch (_) { anchor = current.hash.slice(1); }
-        const anchors = data.anchors?.[locale];
-        const mapped = anchors && Object.hasOwn(anchors, anchor) ? anchors[anchor] : null;
+        const anchor = hashKey(current), mapped = anchorTarget(data.anchors, locale, anchor);
         if (typeof mapped === 'string') target.hash = mapped;
-        else if (data.redirect && mapped && typeof mapped.path === 'string' && typeof mapped.anchor === 'string') {
-          const split = new URL(mapped.path, current);
-          if (split.origin !== current.origin || !split.pathname.startsWith('/' + locale + '/works/') || split.search || split.hash) return null;
-          split.search = current.search;
-          if (mapped.anchor) split.hash = encodeURIComponent(mapped.anchor);
-          return split.href;
+        else if (data.redirect && mapped) return splitUrl(mapped, locale, current);
+        else {
+          const alias = anchorTarget(data.anchorAliases, locale, anchor);
+          if (alias) return splitUrl(alias, locale, current);
         }
       }
       return target.href;
     } catch (_) { return null; }
+  }
+
+  let pendingAnchorNavigation;
+  function restoreDocumentAnchor(data, locale) {
+    const current = new URL(window.location.href);
+    const alias = locale && data?.urls?.[locale] === current.pathname && current.hash
+      ? anchorTarget(data.anchorAliases, locale, hashKey(current)) : null;
+    const target = splitUrl(alias, locale, current);
+    if (!target || target === current.href) {
+      pendingAnchorNavigation = undefined;
+      return false;
+    }
+    if (pendingAnchorNavigation !== current.href) {
+      pendingAnchorNavigation = current.href;
+      // For a same-document fragment, native replacement keeps the current page and emits hashchange.
+      window.location.replace(target);
+    }
+    return true;
   }
 
   function pageData() {
@@ -118,6 +151,7 @@
     }
     const languages = enabledLanguages(data);
     const locale = explicit || (languages.some((language) => language.code === data.locale) ? data.locale : null);
+    if (restoreDocumentAnchor(data, locale)) return;
     for (const group of document.querySelectorAll('.site-header .site-language-switch')) {
       const select = group.querySelector('select[data-site-language-select]');
       if (!select) continue;
@@ -152,6 +186,10 @@
   });
   document.addEventListener('astro:after-swap', init);
   document.addEventListener('astro:page-load', init);
+  window.addEventListener?.('hashchange', () => {
+    const data = pageData();
+    restoreDocumentAnchor(data, currentLocale(window.location.pathname, data));
+  });
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
   else init();
 })();

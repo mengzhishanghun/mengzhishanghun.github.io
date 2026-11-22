@@ -111,7 +111,7 @@ test('builds both locale pages and check detects changes without modifying outpu
 
 for(const attribution of [false,true])test(`source attribution cleanup preserves exact source bytes (${attribution?'matching tail':'no matching tail'})`,()=>{
   const implementation=fs.readFileSync(new URL('./build.mjs',import.meta.url),'utf8');
-  const start=implementation.indexOf('function withoutSourceAttribution(source) {'),end=implementation.indexOf('\nasync function renderBody',start);
+  const start=implementation.indexOf('function withoutSourceAttribution(source) {'),end=implementation.search(/\n(?:export )?async function renderBody\(/);
   assert.ok(start>=0&&end>start);
   const cleanup=vm.runInNewContext('('+implementation.slice(start,end)+')');
   const code='first  \n\n\nthird\t \n',sourceUrl='https://example.com/original',date='2026-10-20';

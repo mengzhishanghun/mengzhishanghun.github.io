@@ -1,5 +1,5 @@
 ---
-title: Build and Launch UE Projects Automatically
+title: Detect, Build, and Open a UE Project
 type: doc
 slug: ue-quick-start-open-project
 draft: false
@@ -14,29 +14,27 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-quick-start/docs/open-project/
 lang: en
 translationKey: doc:ue-quick-start:open-project
-sourceHash: 3f8a8b9173fa931e93e2b76fdc354f1a1ec548ef31087fb23376a05a2f63aa53
+sourceHash: 800282d6c2ecb64ae4a68508cd4c6133b4dff58805153e560bb4babb51ffe4e1
 translationStatus: translated
-generatedBodyHash: 0a8946c1fec821e184a71e8a760462325e9fbe4b921a04a26e4b26590b8a0870
+generatedBodyHash: eb595a2b880e1073c5e8c6743a9131090fd1aac039354468535d4969f6682f62
 docPage:
   work: ue-quick-start
-  group: workflows
+  group: setup
   slug: open-project
   order: 1
 ---
 
-## Prerequisite
+## Requirements
 
-The project must have run successfully at least once on this machine, ensuring the build environment is configured.
+Run the tool on Windows. Set up the build environment and run the project successfully on this machine at least once before using the tool.
 
-## Quick Start
+## Build and open the project
 
-1. Place `UEBuildTool.exe` in the project root, alongside `.uproject`
-2. Double-click to run it
-3. Wait for compilation to finish; the project opens automatically
+1. Place `UEBuildTool.exe` in the project root, alongside `.uproject`.
+2. Double-click the executable and watch the build progress in the log window.
+3. After a successful build, the tool opens the project by default.
 
-## Configuration
-
-### Automatically Detected Values
+## How the tool detects projects and engines
 
 | Item | Source |
 |------|------|
@@ -44,86 +42,26 @@ The project must have run successfully at least once on this machine, ensuring t
 | Engine version | `EngineAssociation` in `.uproject` |
 | Engine path | Windows registry / Epic Games Launcher configuration |
 
-### Optional Configuration File
+### UE4 and UE5 editors
 
-Create `UEBuildConfig.json` in the project root to customize build behavior:
-
-```json
-{
-  "Build": {
-    "Platform": "Win64",
-    "Configuration": "Development",
-    "AdditionalArgs": []
-  },
-  "AutoOpenProject": true,
-  "AutoCloseOnSuccess": true,
-  "CloseDelayMs": 1500
-}
-```
-| Setting | Default | Description |
-|--------|--------|------|
-| Build.Platform | Win64 | Target platform |
-| Build.Configuration | Development | Build configuration (Development/Shipping, etc.) |
-| Build.AdditionalArgs | [] | Additional build arguments |
-| AutoOpenProject | true | Open the project automatically after a successful build |
-| AutoCloseOnSuccess | true | Close the tool automatically after opening the project |
-| CloseDelayMs | 1500 | Close delay in milliseconds |
-
-## Frequently Asked Questions
-
-### Q: “No .uproject file found”
-
-**Cause**: The tool is not in the UE project root.
-
-**Solution**: Copy `UEBuildTool.exe` or `Main.py` + `Source/` to the directory containing `.uproject`.
-
----
-
-### Q: “Cannot find the engine installation path”
-
-**Cause**: The engine was not installed through Epic Games Launcher, or its registry information is missing.
-
-**Solution**:
-1. Confirm the engine was installed through Launcher
-2. Try verifying the engine files in Launcher
-3. Reinstall the engine
-
----
-
-### Q: Compilation fails
-
-**Solution**: Check the specific error messages in the log window and ask a programmer to help diagnose the issue.
-
----
-
-### Q: Source line endings cause build failures during cross-platform collaboration (Mac/Linux)
-
-**Cause**: Mac/Linux use LF (`\n`) or CR (`\r`) line endings, which MSVC on Windows may not process correctly.
-
-**Solution**: Before building, the tool automatically scans source files and converts line endings to CRLF (`\r\n`). No manual action is required.
-
-**Scan scope**:
-- `Source/` and `ThirdParty/` directories
-- All `Source/` and `ThirdParty/` directories found recursively under `Plugins/`
-
-**Supported file types**: `.h`, `.c`, `.cpp`, `.cs`, `.inl`
-
----
-
-### Q: Is UE4 supported?
-
-**Yes**. The tool automatically detects the editor:
+The tool detects the editor for the engine version:
 - UE5: `UnrealEditor.exe`
 - UE4: `UE4Editor.exe`
 
----
+### Source-built engine detection
 
-### Q: Are source-built engines supported?
+The tool automatically recognizes GUID-format engine versions in `.uproject` and retrieves the corresponding engine path from the registry.
 
-**Yes**. The tool automatically recognizes GUID-format engine versions in `.uproject` and retrieves the corresponding engine path from the registry.
+## Startup and build troubleshooting
 
----
+### No .uproject file found
 
-### Q: Are macOS / Linux supported?
+Make sure the tool is in the UE project root. Copy `UEBuildTool.exe` or `Main.py` + `Source/` to the directory containing `.uproject`.
 
-**Not yet**. Currently only Windows is supported; cross-platform functionality remains to be developed.
+### Engine installation path not found
+
+Check whether the engine registration is missing. For a Launcher engine, confirm it was installed through Epic Games Launcher, verify the engine files there, and reinstall if needed. For a source-built engine, check that the GUID in `.uproject` matches its registry entry.
+
+### Build fails
+
+Read the specific error in the log window. If you need help, share the error with the teammate responsible for the build.

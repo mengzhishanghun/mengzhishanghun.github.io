@@ -13,105 +13,17 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-static-mesh-merger/docs/merge-actors/
 lang: en
 translationKey: doc:simple-static-mesh-merger:merge-actors
-sourceHash: 69132a8e03ef8a9709e0e5c1a6a6be4ab889cfaad9fe149b1556c0aa8cfb2b0d
+sourceHash: 0517a11d4ef846ca879e06bb7673a9ca256ecccc088dc3469345a49dcfb69319
 translationStatus: translated
-generatedBodyHash: 05463e1c0ec818a5d410d4a10bfde4d9ec12e15b5ad8522a97818247c03a0bd9
+generatedBodyHash: 571b24fe1b5d7c22a9ef0ba2d290606e78e437dabbc659f441a213b318f77270
 docPage:
   work: simple-static-mesh-merger
-  group: workflows
+  group: workflow
   slug: merge-actors
   order: 1
 ---
 
-This guide provides detailed instructions on how to use the SimpleStaticMeshMerger plugin to merge static mesh instances in Unreal Engine and optimize scene performance.
-
-## Compatibility
-
-- Unreal Engine 5.2–5.8
-- Version 1.1.0 (Version 2)
-
----
-
-## 🛠️ Opening the Tool Window
-
-After enabling the plugin, find the tool entry in the editor menu:
-
-### Steps:
-
-1. Open Unreal Engine Editor
-2. Click top menu `Window > Static Mesh Merger`
-3. The tool window will open as a dockable panel
-
----
-
-## 🎨 Interface Overview
-
-The tool window consists of three main areas:
-
-### 1. Toolbar (Top)
-
-- **Break Level Instances**: Recursively breaks all LevelInstances in the scene (including nested ones)
-- **Refresh**: Manually refresh the merge preview
-- **Type Dropdown**: Select merge type (HISM or ISM, default HISM)
-- **Merge Selected**: Execute merge operation on selected groups
-
-### 2. Configuration Options (Below Toolbar)
-
-#### Mobility Filter (Filter)
-- ☑ **Static**: Include static objects
-- ☑ **Stationary**: Include stationary objects
-- ☐ **Movable**: Include movable objects
-- Default: Static + Stationary checked
-
-#### Min Instance Count
-- Range: 0 - 1000
-- Default: 2 (only show groups with at least 2 instances, at least 2 checkable instances required for merge)
-- Purpose: Filter out groups with too few instances where optimization benefits are minimal
-
-### 3. Dual-Panel Layout
-
-#### Left Panel: Merge Groups Preview
-Displays all qualifying merge groups, each containing:
-- ☑ **Checkbox**: Select groups to participate in merge
-- **Group Name**: Uses the first non-excluded instance's name (dynamically updated)
-- **Instance Details**: Shows "Instance Count • Type • Mobility" (e.g., `5 Instances • HISM • Static`)
-
-Top features:
-- **Search Box**: Fuzzy search by instance name (tokenized + sequential matching)
-- **Select All**: Batch check/uncheck currently displayed groups
-
-#### Right Panel: Included Actors
-Displays all instances in the selected left panel group:
-- ☑ **Checkbox**: Check to include in merge, uncheck to exclude instance
-- **Actor Name**: Instance label in the scene
-- **[⊙] Locate Button**: Click to jump to the Actor in scene and select in Outliner
-
-Top features:
-- **Toggle All**: Batch check/uncheck all instances
-
----
-
-## 🔍 Search Functionality
-
-### Search Rules
-
-Supports **tokenized fuzzy search** where keywords must appear in order:
-
-**Example**: Search `SM 02`
-- ✅ Match: `SM_Rock_02` ("SM" before "02")
-- ✅ Match: `SM_000002` ("SM" before "02")
-- ❌ No match: `02_SM_Rock` (wrong order)
-- ❌ No match: `Rock_02` (missing "SM")
-
-### Search Behavior
-
-- **Display Only**: Doesn't modify data, clearing search box restores all groups
-- **Group-Level Filter**: If any instance in a group matches, the entire group is shown (with all instances)
-- **Merge Limitation**: Only merges currently displayed and checked groups
-
----
-
-## ⚙️ Grouping Rules
+## Merge Scope and Grouping Criteria
 
 The plugin automatically groups Actors with **identical properties** into the same group, including:
 
@@ -126,108 +38,103 @@ The plugin automatically groups Actors with **identical properties** into the sa
 
 **Only Actors with all identical properties will be merged into one group.**
 
----
+Merging is limited to actors in the `PersistentLevel`. To include actors inside a LevelInstance, follow the separate chapter on breaking LevelInstances first.
 
-## 🚀 Usage Workflow
+## Filter by Mobility and Instance Count
 
-### Basic Merge Workflow
+- ☑ **Static**: Include static objects
+- ☑ **Stationary**: Include stationary objects
+- ☐ **Movable**: Include movable objects
+- Default: Static + Stationary checked
 
-1. **Open Tool**: `Window > Static Mesh Merger`
-2. **(Optional) Break LevelInstances**: Click `Break Level Instances` button
-3. **Configure Filter**:
-   - Check desired mobility types
-   - Set min instance count threshold
-4. **View Preview**: Left panel displays all merge groups
-5. **(Optional) Filter with Search**: Enter keywords in search box
-6. **Check Groups**:
-   - Click `Select All` to batch check
-   - Or manually check groups to merge
-7. **(Optional) Exclude Instances**:
-   - Click group in left panel to view instance list on right
-   - Uncheck instances you don't want to merge
-8. **Execute Merge**: Click `Merge Selected` button
-9. **View Results**: After merge completes, automatically selects newly created ISM/HISM Actors
+Set `Min Instance Count` from 0 to 1000; the default is 2. The total count governs visibility, the eligible count governs selection, and the participating count governs execution. Whether a group whose count exactly equals the threshold can be merged depends on the preview and execution result in the current release.
 
-### Advanced Tips
+## Preview Groups, Search, and Locate Instances
 
-#### Precisely Control Merge Objects
-1. Use search box to narrow scope (e.g., search `Tree` to only show tree-related groups)
-2. Uncheck unwanted groups
-3. Enter right panel to exclude individual instances
-4. Click merge to only process currently displayed and checked groups
+Displays all qualifying merge groups, each containing:
 
-#### Locate Scene Objects
-- Click `[⊙]` button in right instance list
-- Editor viewport jumps to that Actor
-- Outliner synchronizes selection
+- ☑ **Checkbox**: Select groups to participate in merge
+- **Group Name**: Uses the first non-excluded instance's name (dynamically updated)
+- **Instance Details**: Shows "Instance Count • Type • Mobility" (e.g., `5 Instances • HISM • Static`)
 
-#### Auto Uncheck
-When excluding instances causes checkable count < min instance count, the group automatically unchecks
+Top features:
 
----
+- **Search Box**: Fuzzy search by instance name (tokenized + sequential matching)
+- **Select All**: Batch check/uncheck currently displayed groups
 
-## 📊 Instance Count Rules
+Displays all instances in the selected left panel group:
 
-### Display Rule
-- Total Actor count >= Min instance count
+- ☑ **Checkbox**: Check to include in merge, uncheck to exclude instance
+- **Actor Name**: Instance label in the scene
+- **[⊙] Locate Button**: Click to jump to the Actor in scene and select in Outliner
 
-### Checkable Rule
-- Checkable Actor count >= Min instance count
+- **Toggle All**: Batch check/uncheck all instances
 
-### Merge Execution
-- Actual participating Actor count >= Min instance count
+Supports **tokenized fuzzy search** where keywords must appear in order:
 
-**Example** (Min instance count = 2):
-- Group has 5 instances
-- Uncheck 3 instances
-- 2 checkable instances remain
-- **Can merge** (2 >= 2)
+**Example**: Search `SM 02`
 
----
+- ✅ Match: `SM_Rock_02` ("SM" before "02")
+- ✅ Match: `SM_000002` ("SM" before "02")
+- ❌ No match: `02_SM_Rock` (wrong order)
+- ❌ No match: `Rock_02` (missing "SM")
 
-## ✅ Notes
+- **Display Only**: Doesn't modify data, clearing search box restores all groups
+- **Group-Level Filter**: If any instance in a group matches, the entire group is shown (with all instances)
+- **Merge Limitation**: Only merges currently displayed and checked groups
 
-### Merge Rules
-- Only merges Actors in **main scene (PersistentLevel)**
-- Does not include Actors inside LevelInstances (must break first)
-- All properties must be identical to be grouped together
+If exclusions bring the eligible count below the threshold, the group is automatically unchecked.
 
-### Collision Preservation
-- Completely copies collision profiles
-- Accurately copies object type and all 32 channel responses
-- Collision behavior after merge is identical to original Actors
+## Refresh and Keep Exclusions
 
-### Min Instance Count
-- Default 2: At least 2 instances required to merge
-- Filters out groups with too few instances (minimal optimization benefit)
-- Can adjust as needed (range 0-1000)
-
-### Scene Monitoring
 - Auto-monitors Actor additions/deletions (refreshes after 500ms delay)
 - Map switches clear list (requires manual Refresh click)
 
-### State Caching Mechanism
 - **Excluded List Persistence**: Unchecked instances are recorded in the exclusion list
 - **State Maintained on Refresh**: Clicking Refresh button or auto-refresh on scene changes **preserves** exclusion state
 - **Window-Level Lifecycle**: All instances reset to default checked state only when closing and reopening the window
 - **Use Case**: Can gradually adjust excluded instances, refresh multiple times to verify results without repeating operations
 
-### After Merge
-- Automatically selects all newly created ISM/HISM Actors
-- Viewport jumps to first newly created Actor
-- Original Actors are destroyed
+## Merge Groups and Check the Result
 
----
+Save a recoverable scene version first, because merging replaces the original actors. Check the mesh, materials, mobility, and collision of each group. Filter and select the groups as shown below, then click **Merge Selected**. The plugin copies the collision configuration, including object type and all 32 channel responses. Afterward, check instance counts and scene behavior. The editor selects the new actors and jumps to the first one.
 
-## 🎯 Performance Optimization Tips
+```
+Workflow:
+1. Window → Static Mesh Merger (open the plugin window)
+2. Click Break Level Instances (if the scene contains LevelInstances)
+3. Configure filters:
+   ☑ Static  ☑ Stationary  ☐ Movable
+   Min Instance Count: 2
+4. Check the groups to merge on the left
+5. Exclude unwanted Actors on the right (optional)
+6. Click Merge Selected
+7. Done! Automatically navigate to the newly created HISM Actor
+```
 
-### Merge Strategy
+**Before merging:**
+
+```
+Scene Outliner
+├── TreeActor_1
+├── TreeActor_2
+├── TreeActor_3
+├── ...
+└── TreeActor_125  (125 separate Actors)
+```
+
+**After merging:**
+
+```
+Scene Outliner
+└── MergedActor_SM_Tree_01 (1 HISM Actor containing 125 instances)
+```
+
+## Choose ISM or HISM
 
 1. **Prioritize Large Duplicates**: More instances = better optimization
 2. **Batch Merge**: Use search to merge by category (e.g., merge trees first, then rocks)
 3. **Preserve Necessary Grouping**: Don't merge objects that need individual control
-
-### HISM vs ISM
 
 - **HISM** (Default Recommended):
   - Supports LOD
@@ -238,28 +145,9 @@ When excluding instances causes checkable count < min instance count, the group 
   - Simpler and lighter
   - Lower overhead for small-scale instances
 
----
-
-## Version History
-
-
-Open **Edit → Project Settings**, select the SimpleStaticMeshMerger settings page, and set **Language** to **English** or **Chinese**. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.
-
-## Support
-
-For usage questions or collaboration, please visit the contact page.
-
-- **Contact:** [Contact and collaboration](https://mzsh.me/contact/)
-
-## SimpleStaticMeshMerger User Guide
-
-Preview StaticMeshActor groups in the tool window, filter the objects to merge, then generate instanced meshes.
-
-## Loading cost of separate actors and instanced components
+## Loading Costs and What to Measure
 
 When a large scene loads, serializing many separate StaticMeshActors, initializing their components and registering them in the scene can take time. The tree example compares two ways to organize repeated meshes.
-
-### 1.1 Load separate actors
 
 Consider a scene with 500 identical trees stored as separate actors:
 
@@ -287,8 +175,6 @@ for (int i = 0; i < 500; i++)
 - Collision work repeats even for matching settings.
 - Scattered allocations can reduce cache locality.
 
-### 1.2 Load ISM or HISM instances
-
 The same example using HISM:
 
 ```cpp
@@ -301,8 +187,6 @@ for (int i = 0; i < 500; i++)
     HISM->AddInstance(FTransform(Locations[i])); // 只添加Transform数据
 }
 ```
-
-**Work during loading**
 
 1. Deserialize one AStaticMeshActor.
 2. Deserialize one HISM component and an array of 500 transforms.
@@ -320,43 +204,9 @@ for (int i = 0; i < 500; i++)
 
 The 500-tree example compares data organization. The code is illustrative and some calls depend on context. Count actors, components and instance transforms separately; these figures do not represent the exact number of UObjects in the whole scene. Collision, culling and memory improvements depend on the settings and engine version.
 
-## Features and Filters
+A reduction in actor count does not imply a proportional performance gain. Measure loading time, memory use, and frame rate in the target scene.
 
-**1\. Process LevelInstances**
-
-Click `Break Level Instances`:
-
-- Automatically breaks all nested LevelInstances recursively
-- Displays progress in real time (Breaking: \[name\])
-- Automatically refreshes the merge preview when complete
-
-**2\. Group Preview**
-
-The plugin automatically **groups** StaticMeshActors in the scene **strictly** by:
-
-- Mesh (same model)
-- Mobility (Static/Stationary/Movable)
-- Complete collision configuration (Profile + ObjectType + 32 channel responses)
-- Materials (materials in all slots)
-
-**3\. Live Filtering and Exclusion**
-
-- **Mobility filter**: Show only Static/Stationary/Movable Actors
-- **Minimum instance count**: Filter out groups with too few instances (default 2, meaning at least 3 are needed to merge)
-- **Actor exclusion**: Uncheck Actors you do not want to merge in the right-hand list
-
-**4\. Merge Selected Objects**
-
-Click `Merge Selected`:
-
-- Automatically creates an HISM/ISM Actor
-- Copies collision, material, and mobility settings
-- Deletes the original Actors
-- Automatically selects and navigates to the newly created Actor
-
-## Merge manually and preserve actor properties
-
-### Create the instances and transfer properties
+## Check Properties When Merging Manually
 
 An ISM or HISM setup can be created by hand:
 
@@ -390,49 +240,3 @@ Directly maintaining the instance array in code changes how artists edit the sce
 - Breaking one level can reveal more nested instances that need the same operation.
 
 These editing constraints apply to an instance array maintained directly in code. Other instanced objects can be edited in the editor. SimpleStaticMeshMerger previews groups based on their actual properties, lets you filter or exclude actors and then merges the selection. Check the result after merging.
-
-## Steps
-
-```
-Workflow:
-1. Window → Static Mesh Merger (open the plugin window)
-2. Click Break Level Instances (if the scene contains LevelInstances)
-3. Configure filters:
-   ☑ Static  ☑ Stationary  ☐ Movable
-   Min Instance Count: 2
-4. Check the groups to merge on the left
-5. Exclude unwanted Actors on the right (optional)
-6. Click Merge Selected
-7. Done! Automatically navigate to the newly created HISM Actor
-```
-
-**Before merging:**
-
-```
-Scene Outliner
-├── TreeActor_1
-├── TreeActor_2
-├── TreeActor_3
-├── ...
-└── TreeActor_125  (125 separate Actors)
-```
-
-**After merging:**
-
-```
-Scene Outliner
-└── MergedActor_SM_Tree_01 (1 HISM Actor containing 125 instances)
-```
-
-## Checks Before and After the Operation
-
-Instancing can reduce the number of separate actors and components. The reduction does not translate into the same percentage improvement in performance. Measure loading time, memory and frame rate in the target scene.
-
-- Keep a version of the scene you can restore, since the merge replaces the original actors.
-- Check the mesh, materials, mobility and collision settings for each group.
-- After merging, check the instance count and inspect the scene.
-- Measure loading time, memory use and frame rate in the target project.
-
----
-
-Originally published on 2025-11-09 on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19204715).

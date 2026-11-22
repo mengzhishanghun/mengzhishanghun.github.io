@@ -1,5 +1,5 @@
 ---
-title: Edit Material Instance Parameters
+title: Read and Edit Material Instance Parameters
 type: doc
 slug: mcp-material-instance-parameters
 draft: false
@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-material/docs/instance-parameters/
 lang: en
 translationKey: doc:mcp-material:instance-parameters
-sourceHash: efebc4442ddecee42b8986a00c9e6e35655dc160d83157b4e48268009b4a7180
+sourceHash: 550520838b3c93ed27cb536fb7ebb24f2b21619e2e00780a517b0d8867241e79
 translationStatus: translated
-generatedBodyHash: 15492f7d041deb1fdc5ffdb831cf1e8607e8d043f5e13da19078ff51bd59c221
+generatedBodyHash: 1b07219f929ab6b1f88007f3e7e7560c11718f9c68489ff652243b2c6562aa7c
 docPage:
   work: mcp-material
-  group: workflows
+  group: editing
   slug: instance-parameters
   order: 2
 ---
@@ -50,3 +50,15 @@ For `SetInstanceParameters`, pass 1–1000 full identities and values:
 Reset one local override with `ResetInstanceParameter` and `Parameter: {Type,Name,Association,Index}`. Do not combine `Parameter` with old `ParameterName` or `ParameterType` selectors. The value inherits from the parent while other local overrides and the layer stack remain in place.
 
 Successful edits report `Applied`, dirty/save fields, `RequiredSaveSet`, and `CompileStatus: "NotCompiled"`. Compile and save explicitly. A failed edit reports verified restoration when possible. `RecoveryFailed/StateUnknown` means restoration could not be verified: stop writes and do not save the asset.
+
+## Texture and parameter compatibility
+
+Legacy name maps and reset selectors accept only uniquely identified Global parameters. Use structured identities for Layer and Blend parameters.
+
+`SetInstanceParameters` validates ordinary texture parameters against the parent material's current compiled resource. 2D, Cube, 2D/Cube Array, Volume, and Virtual textures are not interchangeable. The dedicated `SparseVolumeTextureParameters` map reads and writes `USparseVolumeTexture` assets, and `ResetInstanceParameter` uses `ParameterType: "SparseVolumeTexture"`. The write is rejected when the parent has no usable resource or the parameter is absent from the active static-switch permutation.
+
+`GetMaterialParameters` uses one `Offset`/`MaxResults` cursor across Scalar, Vector, Texture, SparseVolumeTexture, and StaticSwitch in that order. Responses include totals, returned counts, and next cursors; every page is capped at 1000 entries.
+
+Use structured parameters for advanced types and check the engine version required by each type. Runtime Virtual Texture consumers require virtual texturing; Sparse Volume Texture assets need initialized frame data.
+
+Close the target editor before writing and follow the [material asset closing and saving rules](/en/works/mcp-material/docs/material-assets/) after editing.

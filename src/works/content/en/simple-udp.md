@@ -22,15 +22,15 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: f02bb910c3fb6f9f40f70654491cdc6673cd0c56a0eda44f3f47a005f5b01725
+sourceHash: 56f60742bd68103ec0d3431a93aa66eed59cdf4bf45b450ce9eb796789cbb08a
 translationStatus: translated
-generatedBodyHash: bbed5830646642e750b556ab10b565c8036c436704599a5d471110739ff6f4f9
+generatedBodyHash: f8b0d196f9590aeff452a0adad99987fe1feae8915c0e95386657c9c49ee753d
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/9e0d0c8c-ac79-4699-925c-abdfe9ac51eb
     - kind: docs
-      href: /en/works/simple-udp/docs/channels/
+      href: /en/works/simple-udp/docs/enable-plugin/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -41,6 +41,7 @@ workInfo:
 websiteCoverUrl: /media/covers/works/simple-udp-20261101.webp
 coverAlt: SimpleUDP cover
 docIds:
+  - simple-udp-enable-plugin
   - simple-udp-channels
   - simple-udp-messages
   - simple-udp-native-sockets
@@ -80,4 +81,8 @@ It suits UE projects exchanging UDP data with LAN devices or external programs, 
 
 Only IPv4 is supported; IPv6 and domain name resolution are not supported. UDP does not guarantee reliable delivery or arrival in send order. Projects implement message parsing, packet-loss handling, and business state maintenance. Verify channels, destination addresses, and filters against the actual network and protocol.
 
-See the [user guide](/en/works/simple-udp/docs/channels/) for channel configuration, send and receive examples, and protocol limitations.
+To enable the plugin, see the [user guide](/en/works/simple-udp/docs/enable-plugin/).
+
+## Support and feedback
+
+[Contact and collaboration](https://mzsh.me/contact/)

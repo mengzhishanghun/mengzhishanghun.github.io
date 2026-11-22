@@ -23,15 +23,15 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: ed27d7b3e44c80645c09f968c999989a5cbca0aa79a6f5b3a47be824d0955447
+sourceHash: cff1b4f264f6d7d78d9fa8d22ad6bbf92e433df05e96b7b2716da4e3064903c8
 translationStatus: translated
-generatedBodyHash: 6b6f21173ee1654bfa0dc7eb14de53dacadaa4d967221bf0dde36f6280e03b9e
+generatedBodyHash: f9e2c3b15b23b7799d773bc0fffb06c2e1f54aee9f87c41df661e8c6bfe30ef0
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/e6c92c8b-6e87-4f2f-9975-1c0d85621c60
     - kind: docs
-      href: /en/works/ai-data-asset/docs/sync/
+      href: /en/works/ai-data-asset/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -42,6 +42,7 @@ workInfo:
 websiteCoverUrl: /media/covers/works/ai-data-asset-20261101.webp
 coverAlt: AIDataAsset cover
 docIds:
+  - ai-data-asset-setup
   - ai-data-asset-sync
   - ai-data-asset-ai-edit
 ---
@@ -84,9 +85,23 @@ JSON modifies existing DataAssets in UE; adding a JSON file alone does not creat
 
 Startup synchronization chooses its direction by file modification times and does not merge fields edited independently on both sides. Assets must be writable; invalid JSON or changes to field structures may cause imports to fail. Successful synchronization does not mean the data follows game rules, so it still requires validation in the project.
 
-For configuration, startup synchronization rules, deletion behavior, and common questions, see the [AIDataAsset documentation](/en/works/ai-data-asset/docs/sync/).
+See [Install and Configure Synchronization](/en/works/ai-data-asset/docs/setup/) for installation and output settings, and [Synchronize DataAssets and JSON](/en/works/ai-data-asset/docs/sync/) for startup rules and deletion behavior.
 
 
 ## Technical Details
 
 See the [user manual](/en/works/ai-data-asset/docs/sync/) for JSON selection, conversion APIs, numeric formatting, and asynchronous synchronization.
+
+## Compatibility
+
+- Unreal Engine 5.2–5.8
+
+## Technical Source
+
+The two-way synchronization implementation notes were published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/20159718) on 2026-05-25.
+
+## Contact and Support
+
+For usage questions or collaboration inquiries, visit the contact page.
+
+- **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)

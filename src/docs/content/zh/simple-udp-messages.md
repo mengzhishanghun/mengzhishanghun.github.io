@@ -10,7 +10,7 @@ workIds:
   - simple-udp
 docPage:
   work: simple-udp
-  group: workflows
+  group: network
   slug: messages
   order: 2
 documentKind: product-manual
@@ -19,7 +19,7 @@ lang: zh
 translationKey: doc:simple-udp:messages
 ---
 
-### 📥 接收
+## 接收数据
 
 | 节点                           | 说明                             |
 |-------------------------------|----------------------------------|
@@ -27,33 +27,33 @@ translationKey: doc:simple-udp:messages
 | `UnBindUDPMessageHandler`     | 解绑指定处理器                     |
 | `UnBindAllUDPMessageHandler`  | 解绑所有处理器并关闭 Socket        |
 
-### 📤 发送
+### 绑定与解绑示例
+
+![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A1)
+
+### 解绑所有接收处理器
+
+![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A2)
+
+使用此节点解绑通道上的所有内容并手动关闭 Socket。
+
+## 发送数据
 
 | 节点              | 说明                             |
 |------------------|----------------------------------|
 | `SendUDPMessage` | 通过通道发送字节数组（Socket 自动创建）|
 
-### 绑定和解绑示例  
-![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A1)
+### 发送字符串示例
 
-首次绑定后 Socket 自动创建，无处理器时自动销毁。
+![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A3)
 
-### 发送字符串消息  
-![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A2)
+## 收发 Socket 生命周期
 
----
+| 类型   | 创建时机                              | 销毁时机                             |
+|--------|--------------------------------------|--------------------------------------|
+| 接收端 | 首次调用 `BindUDPMessageHandler` 时    | 所有处理器移除 → 自动关闭 Socket      |
+| 发送端 | 首次调用 `SendUDPMessage` 或配置时     | 插件关闭或通道删除时                   |
 
-## ✅ 提示与注意事项
-
-- 仅支持 IPv4（不支持 IPv6 或域名解析）
-- 有效端口范围：`0~65535`，其中 `0` 表示自动分配
-- 不要在不同通道中绑定相同端口，除非 Socket 已释放
-- IP 过滤支持 CIDR 格式（如 `192.168.1.0/24`）
-
----
-
-## 🔧 推荐配套
+## 转换字节数组
 
 配合 **SimpleByteConversion** 插件使用，可实现数据与 `TArray<uint8>` 之间的序列化/反序列化。
-
----

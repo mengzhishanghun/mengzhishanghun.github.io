@@ -1,5 +1,5 @@
 ---
-title: Install and Connect the UMG Tools
+title: Install and Connect MCPUMG
 type: doc
 slug: mcp-umg-connect
 draft: false
@@ -13,21 +13,25 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/connect/
 lang: en
 translationKey: doc:mcp-umg:connect
-sourceHash: 36cb7a4b69abbe154956705df030bad9ce9932aa03fecab0a63f41bd2b5f1f6a
+sourceHash: 4140c1199e28a7234a6687d6a7d0ef93225860e7b399ffb59be92bf6a16df10c
 translationStatus: translated
-generatedBodyHash: 6acd4c8004e49f16588e765e5cbd9fe9c23320ded54367f54b28ae378717e55a
+generatedBodyHash: 592925f5234957582ef44e2cd5d0c0b88dd5952bd80e639c289eba9b2df74c77
 docPage:
   work: mcp-umg
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 ---
 
-AI-driven UMG editing plugin for Unreal Engine, powered by MCP (Model Context Protocol).
+## Development status and requirements
 
-## Overview
+MCPUMG is an Unreal Engine Editor plugin in development. It lets MCP (Model Context Protocol) clients read, create, and edit widget trees, properties, slots, animations, and events. Support for UE 5.2–5.8 is still in development, and compatibility across those versions has yet to be confirmed.
 
-MCPUMG exposes Widget-specific visual editing capabilities to AI assistants via an HTTP server running inside the Unreal Editor. AI tools can discover, create, modify widget trees, properties, slots, animations, and events through a standardized protocol.
+- Unreal Engine 5.2+
+- Editor only
+- Optional: [MCPBlueprint](/en/works/mcp-blueprint/docs/connect/) for Blueprint graph editing (widget event logic calls MCPBlueprint tools for advanced graph operations)
+
+For questions or feedback, visit the [unified contact page](https://mzsh.me/contact/) and add me on WeChat.
 
 ## Installation and updates
 
@@ -37,34 +41,6 @@ MCPUMG exposes Widget-specific visual editing capabilities to AI assistants via 
 4. Restart the editor. The plugin starts automatically unless `bAutoStart` is disabled in Project Settings.
 
 To update MCPUMG, close the editor and replace the entire existing `MCPUMG` directory with the matching new package. Do not mix files from different engine versions.
-
-## Tools (71 base tools; 6 more with the opt-in MVVM module)
-
-### Discovery & Reading
-| Tool | Description |
-|------|-------------|
-| ListWidgetBlueprints | List Widget Blueprints (convenience entry point) |
-| GetWidgetTree | Get widget tree structure |
-| GetWidgetProperties | Get widget properties |
-| SearchWidgetClasses | Search available widget classes |
-| CaptureWidgetScreenshot | Capture Widget design view as PNG |
-| CaptureRuntimeWidgetScreenshot | Capture an existing PIE/Game Widget instance at its actual Slate window geometry as PNG; never creates a widget or injects preview state |
-| GetUIDesignCapabilities | Read the reference-image-to-UMG specification version, operations and safety limits |
-| ExportWidgetSpec | Export a stable Widget spec, revision, and fingerprint |
-| InspectWidgetLayout | Page through design metadata or actual PIE layout, clipping, text and resource status |
-| InspectWidgetHitTest | Read the cached hit path at a live widget's center or local coordinates; never inject input |
-| CompareUIImages | Compare two UI images without automatic resizing, cropping or alignment, and return a heatmap |
-| CaptureWidgetPreviewMatrix | Render named temporary states at named sizes as a PNG matrix |
-| InspectWidgetPerformance | Read bounded authored WidgetTree complexity indicators |
-| ListRuntimeWidgets | Issue short-lived tokens for exact-class live Widget instances |
-| InspectWidgetRuntime | Read a named live Widget or paged runtime WidgetTree |
-| GetRuntimeOperation | Read progress and results of a bounded runtime operation |
-| CancelRuntimeOperation | Request cancellation of a pending runtime operation |
-| MeasureWidgetPerformance | Sample bounded Slate CPU work for a live Widget subtree |
-| CaptureWidgetTrace | Capture a bounded native Slate trace for a live Widget |
-| GetUIFrameworkCapabilities | Read the available CommonUI and MVVM operations |
-| GetMVVMView | Read MVVM contexts and bindings on a Widget Blueprint |
-| ValidateMVVMBinding | Validate one direct OneTime MVVM property relationship without editing bindings |
 
 ## Configuration
 
@@ -85,14 +61,6 @@ The plugin runs an HTTP server inside the Unreal Editor. AI clients connect via 
 
 The server starts automatically when the editor opens (configurable via `bAutoStart`). The toolbar shows the actual URL (port auto-increments if 8765 is occupied).
 
-### Version and save troubleshooting
-
-Layout diagnostics include parent bounds, clipping ancestors to a bounded depth, and signs of vertical text overflow, including wrapped text. `Unverified*` does not mean a check passed. Property setters support `ResetToClassDefault`; styles support explicit RoundedBox/outline settings, clearing Brush resources, and Button normal/pressed padding. See [Layout, sessions and hit testing](/en/works/mcp-umg/docs/layout/#layoutandsession) and [Reference image to UMG](/en/works/mcp-umg/docs/layout/#imagetoumg).
-- Treat `tools/list` from the live editor as authoritative. Updating the source tree or installed package does not hot-swap the DLL in an already running editor; if the tool count differs, verify the deployment directory and restart the target editor.
-- When `SaveWidgetBlueprint` fails, inspect `LogSavePackage` in the project log. Windows `Error 32` usually means a stale `-game`, PIE, or second editor process for the same project still owns the asset handle. Close only the stale process whose command line identifies that project, then retry the precise save.
-- If the patch succeeded in memory but saving failed, do not use Save All, overwrite the file externally, or repeat the patch. Release the file lock and retry `SaveWidgetBlueprint` so the existing in-memory change is saved once.
-- `CaptureRuntimeWidgetScreenshot` requires the MCPUMG editor module and an existing runtime Widget instance. A standalone `-game` process is not guaranteed to expose the MCPUMG server.
-
 ### Claude Code
 
 Add to `~/.claude/.mcp.json` (global) or project root `.mcp.json`:
@@ -107,14 +75,28 @@ Add to `~/.claude/.mcp.json` (global) or project root `.mcp.json`:
 }
 ```
 
-### Other AI Clients
+### Other AI clients
 
 MCP client configuration varies by tool (Cursor, Windsurf, VS Code Copilot, etc.). The server URL is the same; consult your AI tool's documentation for how to add an MCP server.
 
-## Requirements
+## Confirm the target project
 
-- Unreal Engine 5.2+
-- Editor only
-- Optional: [MCPBlueprint](/en/works/mcp-blueprint/docs/connect/) for Blueprint graph editing (widget event logic calls MCPBlueprint tools for advanced graph operations)
+`initialize` returns `_meta.mcpumgContext`: ProjectFile, ProjectName, EngineVersion, PluginVersion, ProcessId, ActualPort and SessionId. Port conflicts may change the port; use the returned values to confirm the actual project. SessionId follows the server object's lifetime and changes when that object is recreated.
 
-For questions or feedback, visit the [unified contact page](https://mzsh.me/contact/) and add me on WeChat.
+Subsequent calls can pass the token in **params._meta**. Do not put it in the tool's business arguments.
+
+```json
+{"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"GetWidgetTree","arguments":{"BlueprintPath":"/Game/UI/WBP_Menu"},"_meta":{"MCPUMGExpectedSessionId":"从initialize读取"}}}
+```
+
+Tokens of the wrong type or expired tokens are rejected before tool execution. Omitting the token preserves compatibility with older clients. This check helps prevent accidental operations in another editor; it is not authentication.
+
+## Read your first widget tree
+
+After connecting, confirm that the client's `tools/list` includes MCPUMG tools. Find an asset with `ListWidgetBlueprints`, then read its structure with `GetWidgetTree`. See [Edit the Widget Tree](/en/works/mcp-umg/docs/layout/). The base version has 71 tools. The opt-in enhanced MVVM module adds six.
+
+## Troubleshoot tool versions and saving
+
+- Treat `tools/list` from the live editor as authoritative. Updating the source tree or installed package does not hot-swap the DLL in an already running editor; if the tool count differs, verify the deployment directory and restart the target editor.
+- When `SaveWidgetBlueprint` fails, inspect `LogSavePackage` in the project log. Windows `Error 32` usually means a stale `-game`, PIE, or second editor process for the same project still owns the asset handle. Close only the stale process whose command line identifies that project, then retry the precise save.
+- If the patch succeeded in memory but saving failed, do not use Save All, overwrite the file externally, or repeat the patch. Release the file lock and retry `SaveWidgetBlueprint` so the existing in-memory change is saved once.

@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/b8acac2b-913d-47ce-8596-b4e2d7d6753a
     - kind: docs
-      href: /zh/works/simple-level-seq-smooth/docs/smooth-curves/
+      href: /zh/works/simple-level-seq-smooth/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -33,6 +33,7 @@ links:
   - label: GitHub
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 docIds:
+  - simple-level-seq-smooth-setup
   - simple-level-seq-smooth-smooth-curves
   - simple-level-seq-smooth-algorithms
 coverAlt: SimpleLevelSeqSmooth封面
@@ -82,3 +83,14 @@ SimpleLevelSeqSmooth 为 Unreal Engine 的 Level Sequence 提供数据滤波与�
 滤波可能同时削弱真实的快速动作，跳帧也未必只由曲线噪声引起。算法、参数与是否覆盖原资产都应依据具体序列判断，不能把处理后的曲线直接视为已完成动作质量检查。
 
 操作步骤和参数说明见 [使用教程](/zh/works/simple-level-seq-smooth/docs/smooth-curves/)。
+
+## 兼容性
+
+- Unreal Engine 5.2–5.8
+- 版本 1.1.0（Version 2）
+
+## 联系与支持
+
+如有使用问题或合作需求，请前往联系页面。
+
+- **联系入口：** [联系与合作](https://mzsh.me/contact/)

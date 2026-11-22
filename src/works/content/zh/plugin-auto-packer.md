@@ -13,7 +13,7 @@ workInfo:
     - kind: open-source
       href: https://github.com/MZSH-Tools/UEPluginAutoPacker
     - kind: docs
-      href: /zh/works/plugin-auto-packer/docs/package/
+      href: /zh/works/plugin-auto-packer/docs/setup/
   compatibility:
     - platforms:
         - Windows
@@ -30,6 +30,7 @@ links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 docIds:
+  - plugin-auto-packer-setup
   - plugin-auto-packer-package
   - plugin-auto-packer-output
 coverAlt: UEPluginAutoPacker封面
@@ -79,3 +80,12 @@ UEPluginAutoPacker 主要用于 Fab 提交流程，将 UE 插件打包为可发�
 多版本任务的成功状态仍需结合日志和目标引擎实测判断；文件整理选项也应按本次发布要求审查。该工具处理插件包，不承担 UE 项目整体打包。
 
 操作步骤和参数说明见 [使用教程](/zh/works/plugin-auto-packer/docs/package/)。
+
+## 许可证
+
+本项目采用 [MIT License](<https://github.com/MZSH-Tools/UEPluginAutoPacker/blob/1a1e43b283fcb6deb561cba0636d1e28bc634f8a/LICENSE>) 协议开源，欢迎自由使用、修改和分发。
+
+## 联系与支持
+
+作者邮箱：**mengzhishanghun@outlook.com**  
+如有定制功能或合作需求，欢迎联系！

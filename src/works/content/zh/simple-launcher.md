@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
     - kind: docs
-      href: /zh/works/simple-launcher/docs/presets/
+      href: /zh/works/simple-launcher/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -33,6 +33,7 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19770928
 docIds:
+  - simple-launcher-setup
   - simple-launcher-presets
   - simple-launcher-processes
 coverAlt: SimpleLauncher封面
@@ -85,3 +86,22 @@ SimpleLauncher 在 UE 游戏中以命名预设管理外部程序。项目可以�
 分离进程不会随游戏结束自动关闭，配置时必须明确谁负责终止它。命令行和工作目录应指向实际存在且有权限访问的资源。
 
 操作步骤和参数说明见 [使用教程](/zh/works/simple-launcher/docs/presets/)。
+
+## 兼容性
+
+- Unreal Engine 5.2–5.8
+- 版本 1.1.0（Version 2）
+
+## 支持的平台
+
+插件支持 Windows、Linux 和 macOS。底层使用 UE 的 `FPlatformProcess::CreateProc`，因此操作系统能执行的任何程序都可以启动——没有文件类型限制。
+
+## 联系与支持
+
+如有使用问题或合作需求，请前往联系页面。
+
+- **联系入口：** [联系与合作](https://mzsh.me/contact/)
+
+## 原文来源
+
+原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770928)。

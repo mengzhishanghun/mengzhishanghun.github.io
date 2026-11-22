@@ -26,7 +26,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-behavior-tree
-sourceHash: e203ff6ed330a6d13ae90531a4a89940c80d718ef73d708d4e21ad66d62c60a4
+sourceHash: 68355fd22a3f83df5eeec3c30ddf4f3bc4a0342a7fd8d2877e1bab4c2a785aa1
 generatedBodyHash: 3434a73c538d8e0d5c338ebaf362507d852cb143028cd665864425514ba49c96
 translationStatus: translated
 coverAlt: MCPBehaviorTree cover
@@ -34,6 +34,7 @@ websiteCoverUrl: /media/covers/works/mcp-behavior-tree-20261101.webp
 docIds:
   - mcp-behavior-tree-connect-and-inspect
   - mcp-behavior-tree-edit-tree
+  - mcp-behavior-tree-blackboard-keys
 ---
 
 ## About this work

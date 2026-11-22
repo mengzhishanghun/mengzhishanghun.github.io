@@ -22,15 +22,15 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: 4b801b6ff441c5709a94f4571b461c3079d777418fd8f819ed8b8d42cd173e42
+sourceHash: c1ed917e3cdaa7f1d2d0d8db939efc089fe0a7a40872893b2ce0edd471c0da38
 translationStatus: translated
-generatedBodyHash: 4bcc1a94bfc0faae89de239a7548523b80f0603c1e1f0e210d2ffbafbd20cd23
+generatedBodyHash: 137a0264f58f8ad3b04a7c52cef31ebe452bdb25b5112eebb13903e9ad625090
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/6d6d46bf-eaed-4b66-8382-9d69eb56981e
     - kind: docs
-      href: /en/works/simple-tcp-client/docs/connect/
+      href: /en/works/simple-tcp-client/docs/enable-plugin/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -41,6 +41,7 @@ workInfo:
 websiteCoverUrl: /media/covers/works/simple-tcp-client-20261101.webp
 coverAlt: SimpleTCPClient cover
 docIds:
+  - simple-tcp-client-enable-plugin
   - simple-tcp-client-connect
   - simple-tcp-client-messages
   - simple-tcp-client-native-client
@@ -80,4 +81,23 @@ It suits applications where UE initiates TCP connections, maintains several comm
 
 Only IPv4 is supported; domain names, IPv6, and encrypted connections are not supported. TCP transports a byte stream. Connection management does not automatically define business message boundaries, serialization, or state recovery after reconnection. Verify disconnection, retry, and data processing against the actual server protocol and check each channel's configuration.
 
-See the [user guide](/en/works/simple-tcp-client/docs/connect/) for connection configuration, native examples, and a network communication overview.
+To enable the plugin and make your first connection, see the [user guide](/en/works/simple-tcp-client/docs/enable-plugin/).
+
+## Support and feedback
+
+[Contact and collaboration](https://mzsh.me/contact/)
+
+## Choosing a network protocol
+
+UDP is often used for frequent sensor, simulator, and LAN data. TCP provides an ordered byte stream between clients and servers. WebSocket suits existing web services, browser control panels, and real-time messages across languages. Choose based on tolerance for packet loss, latency, message format, and deployment conditions; a protocol name alone does not establish reliability or cost.
+
+- [SimpleUDP tutorial](/en/works/simple-udp/docs/channels/): send and receive channels and address filtering.
+- [SimpleTCPServer tutorial](/en/works/simple-tcp-server/docs/listen/): enabling the plugin and configuring the listener.
+- [SimpleWebSocket tutorial](/en/works/simple-websocket/docs/connect-and-send/): managing connections and exchanging messages in Blueprint.
+- [SimpleByteConversion tutorial](/en/works/simple-byte-conversion/docs/primitive-bytes/): conversion between application types and byte arrays.
+
+The original technical record also mentions the `Send Http Request` Blueprint node and third-party libraries for MQTT or gRPC where needed. Availability of a particular HTTP node depends on the modules or plugins enabled in the project; check your project. Those protocol implementations are outside this guide.
+
+## Source of native examples
+
+The native networking examples were published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19165484) on 2025-10-25.

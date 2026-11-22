@@ -10,25 +10,23 @@ workIds:
   - simple-udp
 docPage:
   work: simple-udp
-  group: workflows
+  group: native
   slug: native-sockets
-  order: 3
+  order: 1
 documentKind: product-manual
 websiteRoute: /zh/works/simple-udp/docs/native-sockets/
 lang: zh
 translationKey: doc:simple-udp:native-sockets
 ---
 
-## 原生 UDP Socket 实现与场景选择
-
-### 1.1 适用场景
+## 适用场景
 
 -   传感器数据采集(LiDAR、Camera、GPS)
 -   仿真器对接(CarSim、PreScan)
 -   局域网广播/组播
 -   实时控制指令
 
-### 1.2 基础实现
+## 实现示例
 
 **创建UDP Socket并绑定端口:**
 
@@ -111,14 +109,12 @@ void SendUDPData(const FString& TargetIP, int32 TargetPort, const TArray<uint8>&
 }
 ```
 
-* * *
-
-### 原生示例与插件通道的区别
+## 原生示例与插件通道
 
 这三段 `FSocket` 代码演示绑定、接收和发送，并非 SimpleUDP 的蓝图 API。`ProcessReceivedData` 是项目处理入口，需要自行实现。创建、绑定、收发和关闭的返回值及对象有效性仍需处理，接收端也要有明确的退出和释放路径；原生非阻塞 Socket 不等于已经提供后台接收线程。
 
 示例中的 `65507` 是普通 IPv4 UDP 数据报负载上限的示意值，不是建议每次发送这么大的包；实际可用大小还受路径 MTU、分片和插件通道缓冲区影响。广播或组播是协议层面的应用场景，不能据此推定插件已配置好对应路由、Socket 选项或订阅。UDP 本身不保证投递和顺序，业务应自行处理丢包与消息身份。
 
-多协议选型、线程和数据转换入口见 [TCP 客户端与网络通信导览](/zh/works/simple-tcp-client/docs/connect/)。
+多协议选型见 [SimpleTCPClient 作品页](/zh/works/simple-tcp-client/)。该插件的连接文档介绍线程，收发文档提供字节转换入口。
 
 原生通信示例于 2025-10-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19165484)。

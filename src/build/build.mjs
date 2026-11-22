@@ -17,7 +17,7 @@ import {projectContentTopics} from './content-topics.mjs';
 import {projectTaxonomy,categoryNavigation} from './taxonomy.mjs';
 import {loadProjectGalleries,projectGallery} from './project-gallery.mjs';
 import {projectPublication,filterPublicationHTML} from './publication.mjs';
-import {documentCatalog,documentChrome,documentLayout,renderDocumentSlots,resolveDocumentAlias,validateDocumentSource} from './work-documents.mjs';
+import {documentCatalog,documentChrome,documentLayout,projectDocumentAnchorAliases,renderDocumentSlots,resolveDocumentAlias,validateDocumentSource} from './work-documents.mjs';
 const require = createRequire(new URL('../../package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -152,7 +152,7 @@ function mapURL(url,locale,entries,documentRedirects) {
     if(!map||!Object.hasOwn(map,anchor))return localeRoute(entry,locale)+suffix;
     const target=map[anchor];
     if(typeof target==='string')return localeRoute(entry,locale)+reference.search+'#'+encodeURIComponent(target);
-    const resolved=resolveDocumentAlias(target,{entries,locale,route:localeRoute});
+    const resolved=resolveDocumentAlias(target,{entries,locale,route:localeRoute,work:entry.docPage.work});
     return resolved.path+reference.search+(resolved.anchor?'#'+encodeURIComponent(resolved.anchor):'');
   }
   for (const entry of entries) {
@@ -361,11 +361,11 @@ export function articleReturnTarget(entry,href,locale,entries){
   const compatibleCategories=members.length?[...new Set([members[0].id,...Object.entries(index.taxonomy.legacyQueries||{}).filter(([,query])=>query.entities.includes(entry.id)).map(([id])=>id)])]:[];
   return {href:path+(category?'?category='+encodeURIComponent(category):''),policy:{path,firstCategory,compatibleCategories,skipCache:!members.length}};
 }
-function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels) {
+function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels,anchorAliases) {
   const doc = parse(html,{sourceCodeLocationInfo:true}), edits=[], excluded=new Set();
   const contentType=indexContentTypes.get(entry.id);
   const urls=Object.fromEntries(config.languages.map(l=>[l.code,localeRoute(entry,l.code)]));
-  const runtime={...publicLanguages(config),locale,urls,anchors,labels};
+  const runtime={...publicLanguages(config),locale,urls,anchors,anchorAliases,labels};
   const nav='<label class="site-language-switch"><select data-site-language-select data-current="'+locale+'" aria-label="'+escapeHTML(labels.group)+'">'+config.languages.map(l=>'<option value="'+l.code+'" data-site-locale="'+l.code+'"'+(l.code===locale?' selected':'')+'>'+escapeHTML(l.label)+'</option>').join('')+'</select></label>';
   let actions = 0;
   let engagementBodies=0,engagementSlots=0;
@@ -497,6 +497,7 @@ export async function buildSite(options) {
   const validated=preflight(options),{config,copy,galleries}=validated,{primary,languages}=config,codes=languages.map(l=>l.code);
   const publication=projectPublication({...validated,site,redirects:manifest.redirects}),{entries,redirects}=publication;
   const documents=documentCatalog(validated.entries,manifest.docGroups,codes);
+  const documentAnchorAliases=new Map(entries.map(entry=>[entry.id,projectDocumentAnchorAliases(entry,{entries,codes,route:localeRoute})]));
   const documentRedirects=new Map(redirects.filter(alias=>entries.some(entry=>entry.docPage&&entry.id===alias.id)).map(alias=>[alias.route,alias]));
   let profile=null;
   if(entries.some(entry=>entry.id==='page:about')){
@@ -571,7 +572,7 @@ export async function buildSite(options) {
     html=html.replace('{{body}}',()=>result.code).replace('{{outline}}',()=>outline(result.headings));
     if (/\{\{(?:text|body|outline|profile)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
     const anchors = Object.fromEntries(pageCodes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
-    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,pageConfig,copy[locale].engagementLabels);
+    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,pageConfig,copy[locale].engagementLabels,documentAnchorAliases.get(entry.id));
     html=projectGallery(html,entry,locale,galleries);
     html=projectImageViewers(html,locale);
     html=filterPublicationHTML(html,publication);
@@ -591,6 +592,7 @@ export async function buildSite(options) {
     const ids=new Map();walk(parse(files.get(routeFile(localeRoute(entry,code))).toString()),node=>{const id=attrs(node).id;if(id)ids.set(id,(ids.get(id)||0)+1)});
     aliasPageIDs.set(entry.id+':'+code,ids);
   }
+  for(const entry of entries)if(documentAnchorAliases.get(entry.id)!==undefined)projectDocumentAnchorAliases(entry,{entries,codes,route:localeRoute,pageIds:aliasPageIDs});
   for(const [pathname,{entry,anchorOverrides}]of aliases) {
     const oldCode=pathname.match(/^\/docs\/([^/]+)\//)?.[1] || pathname.split('/')[1],explicitLocale=codes.includes(oldCode)?oldCode:null;
     const source=rendered.get(entry.id+':'+(explicitLocale || primary)).headings,anchors={};
@@ -607,7 +609,7 @@ export async function buildSite(options) {
         if(!codes.includes(code)||!object(map))throw new Error('旧链锚点覆盖语言或映射无效');
         for(const [oldId,newId]of Object.entries(map)){
           if(entry.docPage&&object(newId)&&oldId.trim()){
-            const split=resolveDocumentAlias(newId,{entries,locale:code,route:localeRoute,pageIds:aliasPageIDs});
+            const split=resolveDocumentAlias(newId,{entries,locale:code,route:localeRoute,pageIds:aliasPageIDs,work:entry.docPage.work});
             if(!files.has(routeFile(split.path))||split.path===pathname)throw Error('旧章节链接目标缺失或循环');
             anchors[code][oldId]=split;continue;
           }

@@ -12,26 +12,24 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-udp/docs/native-sockets/
 lang: en
 translationKey: doc:simple-udp:native-sockets
-sourceHash: 9143cd48e572584aeb3971782f83174eccb975f7daaa45c97a9b22e618acc1d4
+sourceHash: 7f7077b88e51026cb7a6c765a7379d875bf3027826eaf0aca626f019d3f92279
 translationStatus: translated
-generatedBodyHash: 54b10dffe14a582a04f8d13fbd7483bf1fdb8f2ab5c1f2ec11dd913b576a77fb
+generatedBodyHash: b33e02652a4994634874203eb1e6d6fcab4ee459268842f2593d6b948e2d4af8
 docPage:
   work: simple-udp
-  group: workflows
+  group: native
   slug: native-sockets
-  order: 3
+  order: 1
 ---
 
-## Native UDP sockets and use cases
-
-### 1.1 Use cases
+## Use cases
 
 - Collecting sensor data, such as LiDAR, camera, and GPS data
 - Connecting simulators such as CarSim and PreScan
 - LAN broadcast or multicast
 - Real-time control commands
 
-### 1.2 Basic implementation
+## Implementation example
 
 **Create a UDP socket and bind a port:**
 
@@ -114,12 +112,12 @@ void SendUDPData(const FString& TargetIP, int32 TargetPort, const TArray<uint8>&
 }
 ```
 
-### Native examples and plugin channels
+## Native example and plugin channels
 
 These three `FSocket` examples demonstrate binding, receiving, and sending. They are not SimpleUDP Blueprint APIs. Implement `ProcessReceivedData` in your project. Check object validity and the return values from creation, binding, data transfer, and closing. The receiver also needs an explicit exit and cleanup path. A nonblocking native socket does not by itself provide a background receive thread.
 
 The example's `65507` illustrates the usual IPv4 UDP datagram payload limit. It is not a recommended packet size. The usable size also depends on path MTU, fragmentation, and plugin channel buffers. Broadcast and multicast are protocol use cases; listing them does not mean the plugin has configured the routes, socket options, or subscriptions they require. UDP does not guarantee delivery or ordering, so application logic must handle packet loss and message identity.
 
-See the [TCP client and network communication guide](/en/works/simple-tcp-client/docs/connect/) for protocol choices, threading, and data conversion.
+See the [SimpleTCPClient overview](/en/works/simple-tcp-client/) for protocol choices. Its connection guide covers threading, and its messaging guide links to byte conversion.
 
 The native communication examples were published on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19165484) on 2025-10-25.

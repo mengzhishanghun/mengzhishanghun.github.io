@@ -12,19 +12,17 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-server/docs/native-server/
 lang: en
 translationKey: doc:simple-tcp-server:native-server
-sourceHash: 53d6162ba8127da1ce5772360aa9fa9ad1f400ea9488fe5cc84fc5f709b8bea2
+sourceHash: 52b2a3e09a4f016a4ded8dcc0153a77df53d8cda8c77e142a126d2e3e512734d
 translationStatus: translated
-generatedBodyHash: 0441f809525f1286043c95656b05dfcac85e91a56a2b77778a9927f5e343f535
+generatedBodyHash: 09c555dcc087697b6bd87fde26e2c4bd63c726da2cd3815394c265554f0f049b
 docPage:
   work: simple-tcp-server
-  group: workflows
+  group: native
   slug: native-server
-  order: 3
+  order: 1
 ---
 
-## Native TCP server implementation
-
-### 2.3 Basic TCP server implementation
+## Implementation example
 
 **Listen on a port:**
 
@@ -80,12 +78,12 @@ void AcceptClients(FSocket* ListenSocket)
 }
 ```
 
-### Listener and session lifetimes
+## Listener and session lifecycles
 
 These native examples demonstrate `Bind`, `Listen`, and `Accept`; they are not SimpleTCPServer Blueprint interfaces. Retain ownership of both listening and accepted sockets, and release them on failure, shutdown, or disconnection. The local pointers in these functions do not form a complete server lifecycle.
 
 `Listen(8)` sets the queue for connections waiting to be accepted. It is not the plugin's total client limit. `IP:Port` identifies a network endpoint, not a persistent user identity or authentication. Client data still needs stream framing, partial read/write handling, timeouts, and permission checks. Multiple-client handling should also avoid blocking the game thread.
 
-See the [TCP client and network communication guide](/en/works/simple-tcp-client/docs/connect/) for protocol choices and shared thread, reconnection, and byte-conversion guidance.
+See the [SimpleTCPClient overview](/en/works/simple-tcp-client/) for protocol choices. Its connection guide covers threading and reconnection, and its messaging guide links to byte conversion.
 
 The native communication examples were published on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19165484) on 2025-10-25.

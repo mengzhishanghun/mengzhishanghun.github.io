@@ -36,8 +36,9 @@ links:
 docIds:
   - simple-asset-cleaner-setup
   - simple-asset-cleaner-clean-assets
-  - simple-asset-cleaner-add-dependencies
+  - simple-asset-cleaner-full-cleanup
   - simple-asset-cleaner-protect-assets
+  - simple-asset-cleaner-add-dependencies
 coverAlt: SimpleAssetCleaner封面
 websiteCoverUrl: /media/covers/works/simple-asset-cleaner-20261101.webp
 sourceDate: 2025-11-01
@@ -88,3 +89,15 @@ SimpleAssetCleaner 为 Unreal Engine 项目提供基于引用关系的候选未�
 全量清理可能删除已提交文件，应在可恢复版本上核对日志与结果，再用于正式项目。
 
 操作步骤和参数说明见 [使用教程](/zh/works/simple-asset-cleaner/docs/setup/)。
+
+## 版本与使用支持
+
+支持 Unreal Engine 5.2–5.8。已在 Windows 上测试，其他平台为理论兼容。报告问题时请附上引擎版本、版本控制系统、设置截图和启用详细日志后的输出。
+
+如有使用问题或合作需求，请前往联系页面。
+
+- **联系入口：** [联系与合作](https://mzsh.me/contact/)
+
+## 文档出处
+
+原文于 2025-11-01 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19183435)。

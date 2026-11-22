@@ -1,0 +1,35 @@
+---
+title: 启用 SimpleUDP
+type: doc
+slug: simple-udp-enable-plugin
+draft: false
+sitePublish: true
+tags:
+  - UDP
+workIds:
+  - simple-udp
+docPage:
+  work: simple-udp
+  group: setup
+  slug: enable-plugin
+  order: 1
+documentKind: product-manual
+websiteRoute: /zh/works/simple-udp/docs/enable-plugin/
+lang: zh
+translationKey: doc:simple-udp:enable-plugin
+---
+
+## 兼容性
+
+- Unreal Engine 5.2–5.8
+- 版本 1.1.0（Version 2）
+
+## 界面语言
+
+打开 **编辑 → 项目设置**，进入 SimpleUDP 设置页，将 **Language** 设置为 **English** 或 **中文**。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。
+
+## 启用插件
+
+启用插件后，`GameInstanceSubsystem` 会自动运行，不需要编写启动或关闭代码。
+
+[在项目设置中配置收发通道](/zh/works/simple-udp/docs/channels/)

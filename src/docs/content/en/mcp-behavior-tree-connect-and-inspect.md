@@ -1,5 +1,5 @@
 ---
-title: Connect and Inspect Behavior Trees
+title: Connect to MCP Behavior Tree
 type: doc
 slug: mcp-behavior-tree-connect-and-inspect
 draft: false
@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-behavior-tree/docs/connect-and-inspect/
 lang: en
 translationKey: doc:mcp-behavior-tree:connect-and-inspect
-sourceHash: 977c2b4fc1a78ee3a791620f2648ea4912816a9192b92dbc3534a92e5686feef
+sourceHash: fd85341e0317557be4856352faeb9372ebd8f271112b0868e230ae9f10c3b509
 translationStatus: translated
-generatedBodyHash: 18e6df48bec84048f7a6d53ca3f8dc6daa58fe81a7dd16ef9aa86dbcdba27ce2
+generatedBodyHash: 887e7fa55ac3516aa932e2f0f1419d06db5c97654fb4996ce034aed15f0895fc
 docPage:
   work: mcp-behavior-tree
-  group: workflows
+  group: setup
   slug: connect-and-inspect
   order: 1
 ---
@@ -29,23 +29,7 @@ MCP Behavior Tree is a self-contained Unreal Editor plugin for creating, inspect
 
 The plugin starts an MCP HTTP server in the Unreal Editor. Its default port is `8767`; when that port is unavailable, use the actual port reported by the running plugin instead of assuming the default.
 
-Asset arguments use Unreal content paths such as `/Game/AI/BT_Enemy` and `/Game/AI/BB_Enemy`. Newly created or edited assets remain dirty until `SaveAsset` succeeds.
-
-`SaveAsset`, `OpenAsset`, and `CloseAsset` only accept Behavior Tree or Blackboard assets. Saving fails closed when the editor graph cannot be synchronized or Unreal cannot write the package; a successful MCP result therefore means the package save succeeded.
-
-## Tools
-
-| Area | Tools |
-|---|---|
-| Assets | `CreateBehaviorTree`, `CreateBlackboard`, `SetBehaviorTreeBlackboard`, `ListBehaviorTrees`, `GetBehaviorTreeDetail`, `SaveAsset`, `OpenAsset`, `CloseAsset` |
-| Blackboard | `AddBlackboardKey`, `RemoveBlackboardKey` |
-| Tree structure | `AddCompositeNode`, `AddTaskNode`, `ConnectNodes`, `RemoveNode` |
-| Nodes | `SetNodeProperties`, `AddDecorator`, `AddService` |
-| Verification | `ValidateBehaviorTree` |
-
-`GetBehaviorTreeDetail` returns stable `NodeId` values for editing calls, the linked Blackboard and its keys, nested tree structure, decorators, services, reflected editable properties, and floating nodes. Large results are bounded by depth, node, property, and text limits and report `bTruncated` when incomplete. `ListBehaviorTrees` supports deterministic sorting, filtering, and `Offset`/`MaxResults` paging.
-
-## Recommended workflow
+## First behavior tree edit
 
 1. Create a Blackboard with `CreateBlackboard`.
 2. Add keys with `AddBlackboardKey`.
@@ -55,18 +39,18 @@ Asset arguments use Unreal content paths such as `/Game/AI/BT_Enemy` and `/Game/
 6. Run `ValidateBehaviorTree`.
 7. Call `SaveAsset` for each dirty Behavior Tree or Blackboard asset.
 
-## Unreal Engine 5.8 comparison
+## Differences from the official UE 5.8 toolset
 
 Unreal Engine 5.8's Epic `AIModuleToolset` exposes seven read-only Behavior Tree helpers: get the Blackboard, root decorators, node list, one/all node depths, children, and a referenced subtree. MCP Behavior Tree covers the Blackboard, decorators, hierarchy, children, and depth through `GetBehaviorTreeDetail`, and also provides creation and editing operations.
 
 The Epic toolset is Experimental and tied to UE 5.8's Toolset/MCP infrastructure. This plugin cannot depend on it while remaining self-contained and compatible with UE 5.2+. Any official-only behavior not available through the plugin's documented tools must be queried in UE 5.8 with the Epic toolset rather than assumed to exist on earlier engines.
 
-## Limits
+## Scope and versions
 
 - The plugin is editor-only and does not provide runtime or packaged-game control.
-- Blueprint task, decorator, and service logic is not authored here. Create and compile those Blueprint classes with a Blueprint-capable tool, then pass the generated `_C` class path.
 - Private Behavior Tree editor graph APIs vary by engine version. The plugin contains compatibility paths for UE 5.2+, but projects should still validate assets in their target editor version.
-- A Behavior Tree that has runtime nodes but no editor graph is rejected instead of being rebuilt as an empty graph. Repair that asset in the Behavior Tree editor before using MCP editing or save tools.
 - Source changes do not imply that an existing packaged plugin has been rebuilt or published.
 
-For questions or feedback, email [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com). I will respond when I see your message.
+## Feedback
+
+Send feedback to [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com).

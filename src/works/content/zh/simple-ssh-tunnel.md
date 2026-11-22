@@ -32,6 +32,7 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19165541
 docIds:
   - simple-ssh-tunnel-connect
+  - simple-ssh-tunnel-manage-tunnels
   - simple-ssh-tunnel-cpp-tunnels
 coverAlt: SimpleSSHTunnel封面
 websiteCoverUrl: /media/covers/works/simple-ssh-tunnel-20261101.webp
@@ -78,4 +79,17 @@ SimpleSSHTunnel 将相关连接操作封装在插件内，项目可以直接通�
 
 默认子系统会在销毁时调用关闭全部隧道。接入实际项目时，仍需检查 SSH 凭据的保存与使用、连接线程和错误处理，以及关闭连接时会话与通道是否正确释放。
 
-连接配置、蓝图调用与底层实现说明见 [使用教程](/zh/works/simple-ssh-tunnel/docs/connect/)。
+连接设置见 [使用教程](/zh/works/simple-ssh-tunnel/docs/connect/)。
+
+## 依赖库与来源
+
+SimpleSSHTunnel 用 C++ 实现，提供蓝图接口。
+
+- [libssh2](https://github.com/libssh2/libssh2) 提供 SSH2 连接、用户认证与端口转发，采用 BSD 3-Clause License。
+- [OpenSSL](https://github.com/openssl/openssl) 提供 SSL/TLS 和加密算法，采用 Apache 2.0 License。
+
+使用这些库时请遵守相应的许可证，并注明来源。原技术记录于 2025-10-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19165541)。
+
+## 支持与反馈
+
+[联系与合作](https://mzsh.me/contact/)

@@ -20,15 +20,15 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: en
 translationKey: plugin-auto-packer
-sourceHash: d87458b68d80fcf1b0c8c13af32c697e1b9654e536e342249d1e0e452e32c493
+sourceHash: d0387e17d6db28f7b7e277028c07023b572ba42693ffd773ca356d8ff5f2bb4a
 translationStatus: translated
-generatedBodyHash: 6177a108322a0a952438ed1b32b14421d0a1a33d951a27cc8d2700358fa39824
+generatedBodyHash: 31fbe88fcfa609eb04bcfe7b63bf15262795b51eb5ff618d22c55d8300e8e58d
 workInfo:
   channels:
     - kind: open-source
       href: https://github.com/MZSH-Tools/UEPluginAutoPacker
     - kind: docs
-      href: /en/works/plugin-auto-packer/docs/package/
+      href: /en/works/plugin-auto-packer/docs/setup/
   compatibility:
     - platforms:
         - Windows
@@ -37,6 +37,7 @@ workInfo:
 websiteCoverUrl: /media/covers/works/plugin-auto-packer-20261101.webp
 coverAlt: UEPluginAutoPacker cover
 docIds:
+  - plugin-auto-packer-setup
   - plugin-auto-packer-package
   - plugin-auto-packer-output
 ---
@@ -82,3 +83,12 @@ The current build target is Windows / Win64, and plugin directories require vali
 Successful multi-version tasks still need assessment using logs and tests in target engines. Review preparation options against release requirements. The tool handles plugin packages, not whole UE project packaging.
 
 For operation steps and parameter details, see the [user guide](/en/works/plugin-auto-packer/docs/package/).
+
+## License
+
+This project is open source under the [MIT License](https://github.com/MZSH-Tools/UEPluginAutoPacker/blob/1a1e43b283fcb6deb561cba0636d1e28bc634f8a/LICENSE). You are welcome to use, modify, and distribute it.
+
+## Contact and Support
+
+Author email: **mengzhishanghun@outlook.com**  
+Contact me for custom functionality or collaboration!

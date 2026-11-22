@@ -1,5 +1,5 @@
 ---
-title: Package for Multiple Engine Versions
+title: Configure and Package Plugins
 type: doc
 slug: plugin-auto-packer-package
 draft: false
@@ -14,51 +14,39 @@ documentKind: product-manual
 websiteRoute: /en/works/plugin-auto-packer/docs/package/
 lang: en
 translationKey: doc:plugin-auto-packer:package
-sourceHash: 5f55b876bc098582b149857427c6292a40c0cd9dad8a2bc0a31640870fb12f50
+sourceHash: 95bd20f710ecb9e01896559721df8f5cdcef2862c7700c34d7872d9d5e9db32b
 translationStatus: translated
-generatedBodyHash: f7ac2af69f850dad3533389aaeb8c9c084be6239039e00fdae3c99adaf889f6f
+generatedBodyHash: 58843f7d411d3dc513789024671c9a51510b7d643120f38e15e499b9c59bd2ee
 docPage:
   work: plugin-auto-packer
-  group: workflows
+  group: packaging
   slug: package
   order: 1
 ---
 
-A graphical tool for **packaging plugins for multiple Unreal Engine versions in one click**, helping plugin developers quickly build installation packages for multiple engine versions.
-It supports packaging log viewing, Fab organization, and automated file filtering to improve packaging efficiency and consistency.
+## Supported Platform and Plugin Requirements
 
----
+- Only Windows plugin builds (Win64) are supported
+- Mac / Linux are currently unsupported
+- The plugin directory must follow the expected structure and contain a `.uplugin` file
 
-## 🚀 Highlights
+## Configure Engines and Post-processing
 
-- Add multiple Unreal Engine installation paths, including Launcher and source builds
-- Status icons for each engine: waiting, packaging, ✅ success, ❌ failure, ➖ canceled
-- Simple graphical interface with live logs; click to switch between engine logs
-- Optional Fab plugin organization: clean intermediate files, copy documentation, generate FilterPlugin.ini, and more
-- Reads author information from `.uplugin` and automatically adds copyright notices to each source file
+In the GUI, add engine paths from the Epic Games Launcher or a source build. Choose the plugin and target engines, then select any post-processing options you need.
 
----
+| Feature | Purpose |
+|-----------------------------|--------------------------------------------------------------------|
+| Add engine path | Register multiple UE engines for packaging |
+| Plugin selection | Automatically detect `.uplugin` files in the project |
+| Convert MarketplaceURL | Change the `.uplugin` field to `FabURL` |
+| Delete Binaries / Intermediate | Clean redundant intermediate artifacts |
+| Copy README / Docs | Copy project documentation into the plugin directory |
+| Generate FilterPlugin.ini | Scan files/folders in the plugin root and generate publication `.ini` filter configuration |
+| Add copyright notices | Insert notices using the author from `.uplugin`, replace old comments, and cover all `.h/.cpp/.Build.cs` files; automatically skip the `ThredParty` folder |
 
-## ⚙️ How to Use
+Each operation can be selected separately or combined. The log includes the generated copyright text and ini contents.
 
-### ✅ Method 1: `.exe` (Recommended)
-1. Download `UEPluginPacker.exe` from the Releases page
-2. Place it in your Unreal project root, containing the `.uproject` file
-3. Double-click to run; no command-line or environment configuration is required
-
-### 🧑‍💻 Method 2: Run from Source
-1. Clone this repository
-2. Install Python 3.8+ (Miniconda recommended)
-3. Install dependencies and run:
-
-```bash
-conda env create -f environment.yml
-conda activate UEPluginAutoPacker
-pip install -r requirements.txt
-python Main.py
-```
-
-### ⌨️ Method 3: Command Line (CLI)
+## Package from the Command Line
 
 Place `UEPluginPacker.exe` in the project root. Running without arguments opens the GUI; arguments activate CLI mode:
 
@@ -88,22 +76,3 @@ UEPluginPacker.exe build MyPlugin --engines 5.5 --output D:\temp\out
 Exit codes: `0` all successful; `1` partial failure; `2` invalid arguments or configuration; `130` user Ctrl+C.
 
 > ⚠️ The engine list is still maintained through the GUI. After adding engines there once, CLI can read the list; CLI does not add or remove engines.
-
----
-
-## 💡 What Each Feature Does
-
-| Feature | Purpose |
-|-----------------------------|--------------------------------------------------------------------|
-| Add engine path | Register multiple UE engines for packaging |
-| Plugin selection | Automatically detect `.uplugin` files in the project |
-| Convert MarketplaceURL | Change the `.uplugin` field to `FabURL` |
-| Delete Binaries / Intermediate | Clean redundant intermediate artifacts |
-| Copy README / Docs | Copy project documentation into the plugin directory |
-| Generate FilterPlugin.ini | Scan files/folders in the plugin root and generate publication `.ini` filter configuration |
-| Add copyright notices | Insert notices using the author from `.uplugin`, replace old comments, and cover all `.h/.cpp/.Build.cs` files; automatically skip the ThredParty folder |
-|
-
-Each operation can be selected separately or combined. Logs show detailed results, including generated copyright text and ini contents.
-
----

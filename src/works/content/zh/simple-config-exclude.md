@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/05c2cb8f-cabc-45ef-84e0-9eac988b5a35
     - kind: docs
-      href: /zh/works/simple-config-exclude/docs/staging-rules/
+      href: /zh/works/simple-config-exclude/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -34,6 +34,7 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19770930
 docIds:
+  - simple-config-exclude-setup
   - simple-config-exclude-staging-rules
   - simple-config-exclude-copy-excluded
 coverAlt: SimpleConfigExclude封面
@@ -84,3 +85,15 @@ SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在�
 排除配置不等于完成敏感信息保护，目标目录中的副本仍需按项目权限管理。状态调整会修改 DefaultGame.ini；发布前应检查实际包内容、复制目标及版本控制差异。
 
 操作步骤和参数说明见 [使用教程](/zh/works/simple-config-exclude/docs/staging-rules/)。
+
+## 语言与使用支持
+
+打开 **编辑 → 项目设置**，进入 SimpleConfigExclude 设置页，将 **Language** 设置为 **English** 或 **中文**。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。
+
+如有使用问题或合作需求，请前往联系页面。
+
+- **联系入口：** [联系与合作](https://mzsh.me/contact/)
+
+## 文档出处
+
+原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770930)。

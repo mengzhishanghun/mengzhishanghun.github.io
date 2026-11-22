@@ -96,10 +96,30 @@ export function validateDocumentSourcePath(source,{work,groupOrder,docPage}){
   return group;
 }
 
-export function resolveDocumentAlias(target,{entries,locale,route,pageIds}){
+function anchorKey(value){
+  if(!text(value)||/[\s#?\\\u007f-\u009f]/u.test(value)||['__proto__','prototype','constructor'].includes(value))return false;
+  try{encodeURIComponent(value);return true;}catch{return false;}
+}
+
+export function resolveDocumentAlias(target,{entries,locale,route,pageIds,work}){
   if(!object(target)||!Object.keys(target).every(key=>['id','anchor'].includes(key))||typeof target.id!=='string')throw Error('旧章节链接目标配置无效');
-  const entry=entries.find(item=>item.id===target.id&&item.docPage);
-  if(!entry)throw Error('旧章节链接目标缺失: '+target.id);
-  if(target.anchor!==undefined&&(!text(target.anchor)||pageIds&&pageIds.get(entry.id+':'+locale)?.get(target.anchor)!==1))throw Error('旧章节锚点目标缺失或歧义: '+target.id);
+  const entry=entries.find(item=>item.id===target.id&&(item.docPage||work&&item.type==='work'));
+  if(!entry||entry.languageCodes&&!entry.languageCodes.includes(locale))throw Error('旧章节链接目标缺失: '+target.id);
+  if(work&&(entry.docPage?.work??entry.slug)!==work)throw Error('旧章节链接目标不属于所属作品: '+target.id);
+  if(target.anchor!==undefined&&(!anchorKey(target.anchor)||pageIds&&pageIds.get(entry.id+':'+locale)?.get(target.anchor)!==1))throw Error('旧章节锚点目标缺失或歧义: '+target.id);
   return {path:route(entry,locale),anchor:target.anchor??''};
+}
+
+export function projectDocumentAnchorAliases(entry,{entries,codes,pageIds,route}){
+  const aliases=entry.anchorAliases;
+  if(aliases===undefined)return undefined;
+  if(!entry.docPage||!object(aliases))throw Error('正文锚点别名配置无效: '+entry.id);
+  return Object.fromEntries(Object.entries(aliases).map(([locale,targets])=>{
+    if(!codes.includes(locale)||!object(targets))throw Error('正文锚点别名语言或映射无效: '+entry.id);
+    return [locale,Object.fromEntries(Object.entries(targets).map(([oldId,target])=>{
+      if(!anchorKey(oldId)||!fields(target,['id','anchor'])||!anchorKey(target.anchor))throw Error('正文锚点别名配置无效: '+entry.id);
+      if(pageIds?.get(entry.id+':'+locale)?.has(oldId))throw Error('正文锚点别名与真实 ID 冲突: '+entry.id+' #'+oldId);
+      return [oldId,resolveDocumentAlias(target,{entries,locale,route,pageIds,work:entry.docPage.work})];
+    }))];
+  }));
 }

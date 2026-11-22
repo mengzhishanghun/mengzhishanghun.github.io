@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /en/works/mcp-animation/docs/find-assets/
+      href: /en/works/mcp-animation/docs/connect/
   compatibility:
     - platforms: []
       requirements:
@@ -26,15 +26,18 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-animation
-sourceHash: deb5813682dfa4dde0882c21266a75fc253e0814302d048e73f19c125e80b0cd
+sourceHash: 908035b32934da03660f7f77607c36539cfbe913146dc64b1f368b554bd204ec
 generatedBodyHash: 1ac26c1acf9c19aabdd016b317e30c2b28bea4a06f193e4f1ecfab803884a14e
 translationStatus: translated
 coverAlt: MCPAnimation cover
 websiteCoverUrl: /media/covers/works/mcp-animation-20261101.webp
 docIds:
+  - mcp-animation-connect
   - mcp-animation-find-assets
   - mcp-animation-animation-blueprint
   - mcp-animation-montage-and-blendspace
+  - mcp-animation-animation-notifies
+  - mcp-animation-animation-blend-spaces
 ---
 
 ## About this work

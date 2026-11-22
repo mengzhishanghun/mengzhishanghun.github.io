@@ -13,123 +13,38 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-case-sync/docs/check-and-fix/
 lang: en
 translationKey: doc:p4-case-sync:check-and-fix
-sourceHash: 6c0cc89f1d0ca1087c4eeb70e9c4d2ed597cee2614e0f9a00899b5085848a1b0
+sourceHash: e96c88dcf198bf2bb22cc48fdf15167622f52142e1e1876f8a6a8e385bcc4fde
 translationStatus: translated
-generatedBodyHash: b1f21bee36e0a3c7bf5f78fe03480c0268c2cb9d1b49a6f1feb99c0302a16ef4
+generatedBodyHash: 965994c823dd1e87d35e0cdbd1566807e1df89739c5df2310afbbf0fd10335f5
 docPage:
   work: p4-case-sync
-  group: workflows
+  group: case-fixes
   slug: check-and-fix
   order: 1
 ---
 
-**P4CaseSync** is a small tool that synchronizes and corrects **path and filename capitalization before Perforce submission**.  
-On Windows, P4 often weakens case distinctions, causing uploaded directories and files to become lowercase. This tool corrects the file paths listed by `p4 opened` using **actual capitalization on the local disk**, allows manual adjustments, and applies changes as `p4 move` operations in one click.
+## Path Checks and Color Indicators
 
-## ✨ Features
-- Scans opened files in a Changelist (or default)
-- Uses `p4 where` mapping and reads **actual local capitalization**, correcting each level of the entire path
-- Color-coded list for easy identification  
-  - **Gray**: Before and after are identical; no change needed  
-  - **Green**: Matches the automatically corrected value  
-  - **Red**: Manually edited by the user and differs from the automatic value  
-- Double-click the **entire row** to open a centered edit dialog
-- Performs a **consistency check** after applying changes; if inconsistent, automatically tries a two-step move fallback, and reports failure if inconsistency remains
-- Shows only `edit / add / move/add`, automatically hiding deletion actions
+The tool reads pending files from `p4 opened`, uses `p4 where` to locate them, and compares the case of each path component against the disk. It lists `edit / add / move/add` actions and filters out deletions.
 
-## 🖼 Interface Tips
+- **Gray**: The path is unchanged.
+- **Green**: The new path matches the automatic suggestion.
+- **Red**: The manually edited path differs from the automatic suggestion.
+
+## List Display
+
 - The top shows a **color legend** and an “Only show files needing changes” toggle  
 - Rows show “Before / After”; double-click a row to edit “After”
 
-## 🔧 Requirements
-- Windows (recommended)  
-- Python 3.8+  
-- Installed **Perforce CLI** `p4`, available from the command line  
-- Tkinter (included with Python)  
-- PyInstaller (optional for development/packaging)
+## Review and Apply Path Changes
 
----
+1. Open the tool and select a **Changelist**. The default is `default`.
+2. Check the paths in the before and after columns. To adjust a target path, double-click its row and edit it in the dialog.
+3. After reviewing the list, click **Apply Changes**. The tool runs `p4 move` for each change and verifies consistency. If verification fails, it tries the two-step move fallback and marks the item as failed if it still does not match.
+4. Review the resulting changelist, then submit it through the usual P4V or command-line workflow.
 
-## 🚀 Quick Start
+## Display and Path Issues
 
-### 1) Clone and Enter the Directory
-```bash
-git clone https://github.com/<your-org-or-user>/P4CaseSync.git
-cd P4CaseSync
-```
-
-### 2) Install Dependencies (Choose One)
-
-#### A. Miniconda / Anaconda (Recommended)
-```bash
-# 新建环境（示例用 python 3.11）
-conda create -n p4casesync python=3.11 -y
-conda activate p4casesync
-
-# 安装打包所需（运行本工具本身无需第三方包；打包需要 PyInstaller）
-pip install -r requirements.txt
-# 如果你没有 requirements.txt，可先： pip install pyinstaller
-```
-
-#### B. Built-In venv + pip
-```bash
-# Windows PowerShell
-python -m venv .venv
-.venv\Scripts\activate
-pip install -r requirements.txt
-
-# macOS/Linux
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-```
-
-> Note: Running the project requires only the standard library and `p4`; `requirements.txt` generally needs only `pyinstaller` for packaging.  
-> If the file is missing, create one containing only:  
-> ```
-> pyinstaller>=6
-> ```
-
-### 3) Run
-```bash
-# 在激活环境下
-python Main.py
-```
-
----
-
-## 🧭 Usage Steps
-1. Open the tool and select the **Changelist** to process (default: `default`).  
-2. The tool lists files automatically:  
-   - **Gray**: Before and after match; skipped  
-   - **Green**: Automatically corrected to actual local capitalization  
-   - **Red**: Manually edited and differs from the automatic value  
-3. To adjust a path, double-click its row and edit the “After” path in the dialog.  
-4. Click **Apply Changes**: the tool runs `p4 move` sequentially and checks consistency, using the two-step move fallback if necessary.  
-5. Submit normally in P4V or from the command line.
-
----
-
-## ❓ Frequently Asked Questions (FAQ)
-
-**Q1: Why do large gray bars or ghosting appear?**  
-A: This has been fixed. Refreshing the list destroys all child widgets, including separators, to prevent remnants.
-
-**Q2: Why is “X” sometimes shown instead of “✔”?**  
-A: This depends on the system theme. Windows `vista/xpnative` themes are preferred. Custom icons are another option if needed.
-
-**Q3: What if the local path does not exist?**  
-A: The tool corrects capitalization through the deepest accessible parent directory where possible. Unresolvable portions remain unchanged and can be edited manually.
-
-**Q4: What if submission includes deletion actions?**  
-A: Deletion actions (`delete/move/delete`) are **filtered** by default; only `edit/add/move/add` are shown.
-
----
-
-## 📄 License
-MIT License
-
----
-
-## 🙌 Acknowledgments
-Thanks to all developers using and providing feedback on **P4CaseSync**. Open an Issue for problems or contribute improvements through a PR.
+- **The local path does not exist:** The tool corrects case as far as the deepest accessible parent directory. Edit the remaining path manually if needed.
+- **An X appears instead of a check mark:** Icons depend on the system theme. The tool prefers Windows `vista/xpnative` themes; a custom icon is another option.
+- **Gray bars or remnants after refresh:** The earlier rendering issue was fixed. Refresh removes the old list controls, including separators.

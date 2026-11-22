@@ -1,5 +1,5 @@
 ---
-title: Package Projects from the GUI or CLI
+title: Package a Project from the GUI or CLI
 type: doc
 slug: ue-package-manager-package-project
 draft: false
@@ -14,54 +14,25 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-package-manager/docs/package-project/
 lang: en
 translationKey: doc:ue-package-manager:package-project
-sourceHash: c5d7473d78a2e00b7d8ae24c44befb409bb37d8686c98cc35a64555e8424a9ee
+sourceHash: e9a7e87081d5577664e18a7240ea7d9329364f5f60aae60aa5f2cd9edde893df
 translationStatus: translated
-generatedBodyHash: 8c1aedfb80ab3103fe7b871782e486d5e43d41cd797ebf9d5121f5a6b5e0c0dc
+generatedBodyHash: 428887068b7d6534761619ac792d40f7775d6e01319fd41adf0a3bb578bdb7bc
 docPage:
   work: ue-package-manager
-  group: workflows
+  group: packaging
   slug: package-project
   order: 1
 ---
 
-A general-purpose Unreal Engine project packaging tool. It provides GUI and command-line modes, invokes Unreal Automation Tool to perform Build, Cook, Stage, Pak, and Archive, and deploys specified files or folders into the package after packaging succeeds.
-
-## Download and Run
-
-Download `UEPackageManager.exe` from [Releases](https://github.com/MZSH-Tools/UEPackageManager/releases/latest).
-
-- Double-click the EXE without arguments to hide the console and open the GUI.
-- Run a subcommand in a terminal to retain the console and CLI output.
-- Place the EXE in the project root containing `.uproject` and double-click it. The project and associated engine are detected automatically and cannot be selected or changed in the GUI.
-- Launching from a terminal in the project root also detects them automatically. If the EXE is elsewhere, the GUI refuses to package and tells you the correct location.
-- The current EXE does not have commercial code signing. Windows may show a SmartScreen prompt on first launch. Use the SHA-256 file included with the Release to check download integrity.
-
-## Graphical Interface
+## Package from the GUI
 
 ![](/media-occurrence/doc%3Aue-package-manager%3Apackage-project%3Amedia%3A1)
 
-| Feature | Purpose | Notes |
-|---|---|---|
-| Project | Automatically reads `.uproject` beside the EXE or in the current working directory | Read-only in the GUI to prevent switching to another project |
-| UE directory | Automatically detected from `EngineAssociation` | Read-only in the GUI; source-built engines can be configured through the CLI |
-| Output directory | Select the Archive output location | The project root cannot be used directly |
-| Build configuration | `DebugGame`, `Development`, `Test`, or `Shipping` | Shipping additionally enables compression |
-| Clean old package | Remove recognized old packages from the current output path before packaging | The checkbox is saved with the project configuration; each actual cleanup still requires confirmation |
-| Additional files | Copy files or folders after success | Each rule can specify a destination subdirectory inside the package and recursive ignore patterns |
+Confirm the project and engine shown in the GUI, choose the Archive output directory and build configuration, then start packaging. The project root cannot be used as the output directory. Choose `DebugGame`, `Development`, `Test`, or `Shipping`. `Shipping` also enables compression. Check the log for progress and the result.
 
-Additional copying runs only after UE packaging succeeds. Directory copying skips `.trash`, `.svn`, `.git`, `.codex`, `.agents`, `.vs`, `.idea`, `__pycache__`, and `.pyc`, and checks file integrity afterward. Each rule also supports semicolon-separated name patterns to recursively ignore files or folders at any level, with `*` and `?` wildcards, for example `README*.md; Cache`. The destination must be a relative directory inside the package root; absolute paths, drive letters, and `..` are prohibited. Recursive ignore entries accept name patterns only and cannot contain paths.
+## Command-line packaging and examples
 
-## Isolated Project Configuration
-
-Each `.uproject` gets an independent project ID based on its normalized absolute path:
-
-```text
-%LOCALAPPDATA%/UEPackageManager/Projects/<ProjectID>/config.json
-```
-
-Project paths, engine directories, output directories, build configurations, and additional copy rules are not reused across projects. The GUI does not read a “recent project”; it binds only to the project associated with the current EXE or working directory. If the CLI cannot identify the project from the current directory, explicitly pass `--project-root`.
-
-## CLI
+Run `validate` to check the configuration, then run `package --dry-run` to see the UAT command. Remove `--dry-run` to start packaging. When running from the project root, you can omit `--project-root`. Commands return `0` on success and `2` for argument, configuration, or execution errors.
 
 ```bat
 UEPackageManager.exe --version
@@ -74,16 +45,9 @@ UEPackageManager.exe validate --project-root E:\Projects\MyGame
 UEPackageManager.exe package --project-root E:\Projects\MyGame --dry-run
 UEPackageManager.exe package --project-root E:\Projects\MyGame
 ```
-When running in the project root, `--project-root` can be omitted. `--dry-run` prints the UAT command without starting packaging; `--no-copy` skips additional file deployment; `--clean-output` cleans only recognized old packages in the current output path before this packaging run. Changing the output path does not clean the previous location. Commands return `0` on success and `2` for argument, configuration, or execution errors.
 
-## Current Scope
+## Supported builds and scope
 
-- Supports packaging Win64 projects on Windows.
-- Supports `DebugGame`, `Development`, `Test`, and `Shipping`; full `Debug`, which usually requires a source-built engine, is not provided.
-- Supports Epic Launcher engines and manually specified source-built engines.
-- Does not package standalone plugins; use the corresponding plugin packaging tool for plugin releases.
-- Does not automatically close Unreal Editor, delete projects or output directories, or perform Git, SVN, or Perforce operations.
-
-## License
-
-[MIT License](LICENSE)
+- Package Win64 projects on Windows using an Epic Launcher engine or a manually specified source-built engine.
+- Full `Debug` builds (which usually require a source-built engine) are unavailable. Use a separate tool to package a standalone plugin.
+- The tool does not automatically close Unreal Editor, delete projects or output directories, or perform Git, SVN, or Perforce operations.

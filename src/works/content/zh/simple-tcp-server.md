@@ -36,6 +36,7 @@ links:
     href: https://www.cnblogs.com/mengzhishanghun/p/19165484
 docIds:
   - simple-tcp-server-listen
+  - simple-tcp-server-sessions
   - simple-tcp-server-messages
   - simple-tcp-server-native-server
 coverAlt: SimpleTCPServer封面
@@ -77,4 +78,8 @@ SimpleTCPServer 为 Unreal Engine 提供 TCP 服务端的多客户端会话管�
 
 仅支持 IPv4，不支持域名、IPv6 或加密连接。连接数量、会话生命周期、超时和数据处理需要结合目标环境验证。TCP 字节流没有天然的业务消息边界，项目必须自行确定编码和拆包规则；IP:Port 也不应直接作为安全认证依据。
 
-监听配置、会话管理与原生示例见 [使用教程](/zh/works/simple-tcp-server/docs/listen/)。
+启用插件和监听配置见 [使用教程](/zh/works/simple-tcp-server/docs/listen/)。
+
+## 支持与反馈
+
+[联系与合作](https://mzsh.me/contact/)

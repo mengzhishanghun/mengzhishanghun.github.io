@@ -11,7 +11,7 @@ status: Public source
 workInfo:
   channels:
     - kind: docs
-      href: /en/works/p4-stream-switcher/docs/normal-switch/
+      href: /en/works/p4-stream-switcher/docs/install-and-connect/
   compatibility:
     - platforms:
         - Windows
@@ -30,14 +30,16 @@ links:
     href: https://github.com/MZSH-Tools/P4StreamSwitcher
 lang: en
 translationKey: p4-stream-switcher
-sourceHash: 9ce291011af78c52e8efa42c71528aa47f4614dbc4b218fdbc70cb8951e74514
+sourceHash: bc6d72642f3fcac03e59544ad3d9f1cdd047533c6201adb67de05e1f8e534db4
 translationStatus: translated
-generatedBodyHash: 42d99cbc2ed6a4aae732fce8394793eee7a6b5b3064b5a0ad4e38eb624fa9335
+generatedBodyHash: e187dc9a945f843157924be57409fdec6650e72487e5041dd3ada0df87cf6998
 coverAlt: P4StreamSwitcher cover
 websiteCoverUrl: /media/covers/works/p4-stream-switcher-20261101.webp
 docIds:
+  - p4-stream-switcher-install-and-connect
   - p4-stream-switcher-normal-switch
   - p4-stream-switcher-offline-switch
+  - p4-stream-switcher-workspace-settings
   - p4-stream-switcher-recycle-workspace
 ---
 
@@ -45,7 +47,7 @@ docIds:
 
 P4StreamSwitcher is a Windows tool for switching Perforce stream workspaces, built with Python, Tkinter, and P4Python. Select a project and branch to generate a workspace name from a personal tag, manage the workspace count, and open the corresponding P4V client.
 
-It supports the two-level stream layout `//depot/project/branch`. The source repository is public but does not declare a license.
+It supports the two-level stream layout `//depot/project/branch`. The source repository is public and does not declare a license. Public readability does not grant unrestricted redistribution or commercial use.
 
 ## The problem
 
@@ -69,7 +71,7 @@ The pool manages workspaces for the current host and user that match its naming 
 
 ## Related content
 
-- [Usage guide](/en/works/p4-stream-switcher/docs/normal-switch/)
+- [Usage guide](/en/works/p4-stream-switcher/docs/install-and-connect/)
 - [Workspace pool development case](/en/blog/perforce-workspace-pool/)
 - [Python stream switching blog](/en/blog/python-perforce-stream-switch-safety/)
 - [Public source repository](https://github.com/MZSH-Tools/P4StreamSwitcher)

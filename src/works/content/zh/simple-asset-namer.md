@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/f7c4474c-9a9d-455a-a948-d46d557b457d
     - kind: docs
-      href: /zh/works/simple-asset-namer/docs/naming-rules/
+      href: /zh/works/simple-asset-namer/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -34,6 +34,7 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19770922
 docIds:
+  - simple-asset-namer-setup
   - simple-asset-namer-naming-rules
   - simple-asset-namer-rename-assets
 coverAlt: SimpleAssetNamer封面
@@ -80,3 +81,15 @@ SimpleAssetNamer 为 UE 资产提供基于类型和路径的命名规则。它�
 工具报告的是命名执行结果，项目仍需检查引用、关卡和脚本是否按预期工作。没有匹配规则或目标名称冲突的资产不能假定会自动处理。
 
 操作步骤和参数说明见 [使用教程](/zh/works/simple-asset-namer/docs/naming-rules/)。
+
+## 兼容性与使用支持
+
+支持 Unreal Engine 5.2–5.8。
+
+如有使用问题或合作需求，请前往联系页面。
+
+- **联系入口：** [联系与合作](https://mzsh.me/contact/)
+
+## 文档出处
+
+原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770922)。

@@ -20,20 +20,21 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770928
 docIds:
+  - simple-launcher-setup
   - simple-launcher-presets
   - simple-launcher-processes
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: ab6beae6655aa6f571e94e36a28cdfbd789dfc56c5ccf038c0a181a7907f6d37
+sourceHash: 07b7d5db0e56dc3a0114a5e0c17f8e5b91d442ef05a6097326d669c26ea05a72
 translationStatus: translated
-generatedBodyHash: c8f7e1bb831a8fba9960d27cbb6e06d3cddae9fb6e80070078396fcfdc709d99
+generatedBodyHash: 4c1e304facb7786700c3424a2e0b6e41f51a32621644817744cb91e9e1778eb6
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
     - kind: docs
-      href: /en/works/simple-launcher/docs/presets/
+      href: /en/works/simple-launcher/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -88,3 +89,22 @@ The plugin launches and tracks processes it manages; it does not guarantee that 
 Detached processes do not close automatically with the game, so configuration must establish who terminates them. Command lines and working directories must reference existing, accessible resources.
 
 See the [usage guide](/en/works/simple-launcher/docs/presets/) for steps and parameters.
+
+## Compatibility
+
+- Unreal Engine 5.2–5.8
+- Version 1.1.0 (Version 2)
+
+## Supported Platforms
+
+The plugin supports Windows, Linux, and macOS. It uses UE's `FPlatformProcess::CreateProc` under the hood, so any program the OS can execute can be launched — there are no file type restrictions.
+
+## Contact and Support
+
+For usage questions or collaboration, please visit the contact page.
+
+- **Contact:** [Contact and collaboration](https://mzsh.me/contact/)
+
+## Original Article
+
+Originally published on 2026-03-25 on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19770928).

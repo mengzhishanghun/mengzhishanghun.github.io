@@ -21,20 +21,21 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770922
 docIds:
+  - simple-asset-namer-setup
   - simple-asset-namer-naming-rules
   - simple-asset-namer-rename-assets
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: c25c9087b7c0af8ca4ab173138a9721d2a37bdd23241b7ce17d325001be32189
+sourceHash: 4efb226d78e7a7b8d7214893f65bf3000a008bfa9beccbf55e84a082f4b453ae
 translationStatus: translated
-generatedBodyHash: 1d84f77ed91c36e855d144198a96f0851bbfce869b16bbe16484c80b7641cd2b
+generatedBodyHash: a66d7620894ea26dc66fe703e8980581d605ac92c2e9c2249039d21e0a2d440d
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/f7c4474c-9a9d-455a-a948-d46d557b457d
     - kind: docs
-      href: /en/works/simple-asset-namer/docs/naming-rules/
+      href: /en/works/simple-asset-namer/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -83,3 +84,15 @@ Renaming changes asset names and may affect references. Check paths, rules, and 
 The tool reports naming operation results. Projects must still check references, levels, and scripts. Assets without matching rules or with target name conflicts cannot be assumed to be handled automatically.
 
 See the [usage guide](/en/works/simple-asset-namer/docs/naming-rules/) for steps and parameters.
+
+## Compatibility and Support
+
+Supports Unreal Engine 5.2–5.8.
+
+For usage questions or collaboration inquiries, visit the contact page.
+
+- **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
+
+## Documentation Source
+
+The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19770922) on 2026-03-25.

@@ -30,16 +30,25 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-blueprint
-sourceHash: 0b4d9e505bb6fd923cc839f9850b99b52320b348a1146c9605a0b4cdfad44ed1
-generatedBodyHash: 24035beff33b2da433441c0d898e180946c923d7b81202eda6e129a22291526e
+sourceHash: 885d56715fe916be451b07bbfc9862c4ff4889f4526cd81b6334ef4eb545206f
+generatedBodyHash: 4bcc2623bb6a4590dbf2fe0b1221eb3544f940d41283b4985df42b7af69baf3d
 translationStatus: translated
 coverAlt: MCPBlueprint cover
 websiteCoverUrl: /media/covers/works/mcp-blueprint-20261101.webp
 docIds:
   - mcp-blueprint-connect
+  - mcp-blueprint-asset-lifecycle
   - mcp-blueprint-graphs
+  - mcp-blueprint-graph-screenshots
+  - mcp-blueprint-variables
   - mcp-blueprint-members-and-types
+  - mcp-blueprint-events-dispatchers
+  - mcp-blueprint-interfaces
+  - mcp-blueprint-user-defined-structs
+  - mcp-blueprint-user-defined-enums
   - mcp-blueprint-components-and-inheritance
+  - mcp-blueprint-class-defaults
+  - mcp-blueprint-class-inheritance
 ---
 
 ## About this work
@@ -48,8 +57,12 @@ MCPBlueprint is an Unreal Editor plugin available on Fab. It lets AI tools disco
 
 ## Main features
 
-Find Blueprints and graphs, edit nodes and connections, manage variables and functions, adjust components and class defaults, compile and save assets, and capture graph screenshots. See the user guide for tools, parameters and limitations.
+The Fab release has 55 tools. Use them to [find and edit graphs](/en/works/mcp-blueprint/docs/graphs/), [capture graph screenshots](/en/works/mcp-blueprint/docs/graph-screenshots/), manage [variables](/en/works/mcp-blueprint/docs/variables/), [functions](/en/works/mcp-blueprint/docs/members-and-types/), [components](/en/works/mcp-blueprint/docs/components-and-inheritance/), [class defaults](/en/works/mcp-blueprint/docs/class-defaults/), and user-defined [Structs](/en/works/mcp-blueprint/docs/user-defined-structs/) and [Enums](/en/works/mcp-blueprint/docs/user-defined-enums/), or [compile and save assets](/en/works/mcp-blueprint/docs/asset-lifecycle/). Check the editor session's `tools/list` for available tools and parameters.
 
 ## Purchase and documentation
 
 Buy the plugin on [Fab](https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713). See the [MCPBlueprint user guide](/en/works/mcp-blueprint/docs/connect/) for installation and usage. The website guide covers the published release.
+
+## Support
+
+For questions or feedback, use the [contact page](https://mzsh.me/contact/).

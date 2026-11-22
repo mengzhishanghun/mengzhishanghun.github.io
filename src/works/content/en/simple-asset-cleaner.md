@@ -23,14 +23,15 @@ links:
 docIds:
   - simple-asset-cleaner-setup
   - simple-asset-cleaner-clean-assets
-  - simple-asset-cleaner-add-dependencies
+  - simple-asset-cleaner-full-cleanup
   - simple-asset-cleaner-protect-assets
+  - simple-asset-cleaner-add-dependencies
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: c5ae07a6826cc74c45ad7fe15bf19907a60e23fff0efe522281a76c7e14c30ce
+sourceHash: 844dcd92efa83ec76115966ff00516d32a82a7ca74410666016b2618b3bca218
 translationStatus: translated
-generatedBodyHash: 98c199c46a31ae0a84fb046dcdd988a53882155db417edc72bfb9b302e7110d4
+generatedBodyHash: df66e77ccf04b257a310ce8d75fa0f4a7ec503952e8561536af2e60c23f62aa2
 workInfo:
   channels:
     - kind: sale
@@ -91,3 +92,15 @@ Reference analysis assumes configured roots. Assets outside roots or protected p
 Full cleanup may delete committed files. Review logs and results on a recoverable version before applying it to a production project.
 
 For operation steps and parameter details, see the [user guide](/en/works/simple-asset-cleaner/docs/setup/).
+
+## Compatibility and Support
+
+Supports Unreal Engine 5.2–5.8. The plugin has been tested on Windows; support for other platforms is theoretical. When reporting an issue, include the engine version, source control system, a screenshot of the settings, and output with verbose logging enabled.
+
+For usage questions or collaboration inquiries, visit the contact page.
+
+- **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
+
+## Documentation Source
+
+The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19183435) on 2025-11-01.

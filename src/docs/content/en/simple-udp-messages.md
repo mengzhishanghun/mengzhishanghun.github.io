@@ -1,5 +1,5 @@
 ---
-title: Send and Receive UDP Data
+title: Send and Receive UDP Datagrams
 type: doc
 slug: simple-udp-messages
 draft: false
@@ -12,17 +12,17 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-udp/docs/messages/
 lang: en
 translationKey: doc:simple-udp:messages
-sourceHash: 65d5878e8a14d129e3bf5f2e75554cc996278056f3f1b6f21ad0a60275da9ad6
+sourceHash: 2bcc8fb732da72d5f4800d0a0c152ce22d448f2231b12975ee4a319bd74a3fc4
 translationStatus: translated
-generatedBodyHash: 8b4ec133fd67dc8e0ec571c38b544f43c3c9e0fe676b4cfbe7241545905c578d
+generatedBodyHash: 20a381fe21fedb1c078aebf9b8492ee574917ef6f2fba33f061399065b3218ea
 docPage:
   work: simple-udp
-  group: workflows
+  group: network
   slug: messages
   order: 2
 ---
 
-### 📥 Receiving
+## Receive datagrams
 
 | Node                         | Description                             |
 |------------------------------|-----------------------------------------|
@@ -30,33 +30,33 @@ docPage:
 | `UnBindUDPMessageHandler`    | Unbind a specific handler               |
 | `UnBindAllUDPMessageHandler` | Unbind all handlers and close socket    |
 
-### 📤 Sending
+### Example: bind and unbind a handler
+
+![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A1)
+
+### Unbind all receive handlers
+
+![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A2)
+
+Use this node to unbind everything from a channel and close the socket manually.
+
+## Send datagrams
 
 | Node              | Description                             |
 |-------------------|-----------------------------------------|
 | `SendUDPMessage`  | Send a byte array through the channel (socket auto-created) |
 
-### Bind & Unbind Example  
-![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A1)
+### Example: send a string
 
-Socket is created automatically after the first bind, and destroyed when no more handlers remain.
+![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A3)
 
-### Send String Message  
-![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A2)
+## Receive and send socket lifecycles
 
----
+| Type     | Created When                              | Destroyed When                             |
+|----------|--------------------------------------------|--------------------------------------------|
+| Receiver | First call to `BindUDPMessageHandler`      | All handlers removed → auto close socket   |
+| Sender   | First call to `SendUDPMessage` or config   | Plugin shutdown or channel deleted         |
 
-## ✅ Tips & Notes
-
-- Only IPv4 is supported (no IPv6 or domain resolution)
-- Valid port range: `0~65535`, where `0` means auto-assign
-- Do not bind the same port in different channels unless the socket is released
-- IP filters support CIDR format (e.g. `192.168.1.0/24`)
-
----
-
-## 🔧 Recommended Companion
+## Convert byte arrays
 
 Use with **SimpleByteConversion** plugin to easily serialize/deserialize between data ↔ `TArray<uint8>`.
-
----

@@ -26,7 +26,10 @@ tags:
   - MCP 系列
 docIds:
   - mcp-niagara-inspect
+  - mcp-niagara-niagara-system-assets
+  - mcp-niagara-niagara-preview
   - mcp-niagara-edit-emitter
+  - mcp-niagara-niagara-renderers
   - mcp-niagara-parameters-preview
 coverAlt: MCPNiagara封面
 websiteCoverUrl: /media/covers/works/mcp-niagara-20261101.webp

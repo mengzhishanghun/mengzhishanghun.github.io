@@ -10,25 +10,23 @@ workIds:
   - simple-tcp-client
 docPage:
   work: simple-tcp-client
-  group: workflows
+  group: native
   slug: native-client
-  order: 2
+  order: 1
 documentKind: product-manual
 websiteRoute: /zh/works/simple-tcp-client/docs/native-client/
 lang: zh
 translationKey: doc:simple-tcp-client:native-client
 ---
 
-## 原生 TCP 客户端实现
-
-### 2.1 适用场景
+## 适用场景
 
 -   连接外部服务器(Python/C#工具链)
 -   可靠指令传输(不允许丢包)
 -   文件传输、资源下载
 -   需要双向通讯的场景
 
-### 2.2 TCP Client基础实现
+## 实现示例
 
 **连接服务器:**
 
@@ -95,8 +93,12 @@ bool ReceiveTCPData(FSocket* Socket, TArray<uint8>& OutData)
 }
 ```
 
-### 连接所有权与字节流处理
+## 连接所有权与字节流处理
 
 这些 `FSocket` 函数是原生实现示例，不是 SimpleTCPClient 节点。原连接函数只返回布尔值，尚未向调用方交出 Socket 的持有和释放方式；无效地址、连接失败与关闭路径都要释放资源。同步 `Connect` 还可能等待，不能直接把它放进要求持续响应的游戏主线程流程。
 
 `Send` 返回成功不代表一次调用就发完全部字节，应按实际发送数量继续处理；`Recv` 得到的是字节流的一段，不一定是一条完整业务消息。缓冲区上限、零字节读取、断开和错误都要处理。TCP 的可靠传输也不等于业务指令必定执行或断线后自动恢复，协议仍需定义分帧、确认及恢复规则。
+
+## 从示例到实际项目
+
+原生示例用于练习基本的 Socket 创建和收发。实际项目还需根据协议和业务处理异步、多通道、会话、地址过滤、数据序列化和蓝图接入。可按需使用服务端会话、UDP 地址过滤和命名 WebSocket 连接。

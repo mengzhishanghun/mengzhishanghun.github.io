@@ -27,10 +27,20 @@ tags:
 docIds:
   - mcp-umg-connect
   - mcp-umg-layout
+  - mcp-umg-image-to-umg
+  - mcp-umg-layout-inspection
   - mcp-umg-components-styles
-  - mcp-umg-events-navigation-animation
-  - mcp-umg-preview-runtime
+  - mcp-umg-component-extraction
+  - mcp-umg-widget-styles
+  - mcp-umg-widget-themes
   - mcp-umg-batch-migration
+  - mcp-umg-events-navigation-animation
+  - mcp-umg-navigation
+  - mcp-umg-animation
+  - mcp-umg-commonui
+  - mcp-umg-mvvm
+  - mcp-umg-preview-runtime
+  - mcp-umg-runtime-diagnostics
 coverAlt: MCPUMG封面
 websiteCoverUrl: /media/covers/works/mcp-umg-20261101.webp
 lang: zh

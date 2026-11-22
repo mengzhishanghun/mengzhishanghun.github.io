@@ -14,39 +14,20 @@ documentKind: product-manual
 websiteRoute: /en/works/plugin-manager/docs/find/
 lang: en
 translationKey: doc:plugin-manager:find
-sourceHash: ff732205fea5ba43288682d72314cbbef1566454c7356c781cef707de6103b1c
+sourceHash: ec634bc51b4de5f8be7460a1300a9126da7caf1ca5b09e5d7dff9553485b28ce
 translationStatus: translated
-generatedBodyHash: edbadb70436fccc7657be18b125844e48fc7f988c5605568d5eb668b7f306fb3
+generatedBodyHash: fb6c5817759f35028710d852889df03c35a76cd4f8275873e6f09bd3bd208a77
 docPage:
   work: plugin-manager
-  group: workflows
+  group: plugins
   slug: find
   order: 1
 ---
 
-A UE plugin management tool for managing all plugins in a UE project and its associated engine.
+## Filter by Source
 
-## Features
+The tabs separate **Project** plugins in the project’s `Plugins` directory, **Marketplace** plugins installed from Fab, and **Engine** plugins bundled with UE. Each tab shows its current count.
 
-### Plugin Browsing
-- **Automatic scanning** - Scan project, Marketplace, and engine plugins
-- **Source tabs** - Plugins are divided into three tabs:
-  - **Project** - Plugins under the project's Plugins directory
-  - **Marketplace** - Plugins downloaded and installed through Fab
-  - **Engine** - Plugins bundled with UE
-- **Category management** - Tabs display category counts in real time
-- **Engine identification** - Supports installed engines through the registry and source builds through GUIDs
-- **Search filtering** - Search by name/author/category/description/dependencies/dependents
-  - Case-insensitive
-  - Supports space-separated keywords that must all match
-- **Sorting** - Click column headers to sort; arrows show direction
-- **Dependency analysis** - View plugin dependencies and dependents
-- **Conflict detection** - Same-name plugin conflicts display a red “Conflict” status
+## Search, Sort, and Inspect Dependencies
 
-## Usage
-
-1. Download `UEPluginManager.exe` from Release and run it in the UE project directory
-2. The tool automatically scans project and engine plugins
-3. Locate plugins using the search field and tabs
-4. Click a plugin to view details and dependencies
-5. Manage plugin state using the buttons on the right
+Search by name, author, category, description, dependency, or dependent plugin. Search is case-insensitive and all space-separated terms must match. Click a column header to sort; the arrow shows the direction. Select a plugin to inspect its details and relationships. Plugins with the same name display a red **Conflict** status.

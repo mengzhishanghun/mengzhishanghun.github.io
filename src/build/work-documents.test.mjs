@@ -121,3 +121,38 @@ test('chapter reading follows the site scroll frame and selects the final headin
   state.scrollTop=380;events.get('scroll')();flush();assert.equal(links[2]['aria-current'],'location');assert.equal(links[1]['aria-current'],undefined);
   assert.ok(sidebar.scrollTop>0);assert.equal(state.scrollTop,380);
 });
+
+
+test('canonical chapter restores migrated hashes on load, Astro navigation and hash changes',()=>{
+  const pathname='/en/works/cleaner/docs/setup/',origin='https://example.com',navigations=[],events={};
+  const data={locale:'en',languages:[{code:'zh'},{code:'en'}],urls:{zh:localeRoute(first,'zh'),en:pathname},anchors:{zh:{current:'translated'},en:{current:'current'}},anchorAliases:{zh:{old:{path:localeRoute(last,'zh'),anchor:'运行'}},en:{old:{path:localeRoute(last,'en'),anchor:'run'},same:{path:pathname,anchor:'current'}}}};
+  const location={href:origin+pathname+'?view=full#old',pathname,replace:url=>navigations.push(url)};
+  const window={location,addEventListener:(name,fn)=>{events[name]=fn;}};
+  const document={readyState:'complete',querySelector:()=>({textContent:JSON.stringify(data)}),querySelectorAll:()=>[],addEventListener:(name,fn)=>{events[name]=fn;}};
+  vm.runInNewContext(fs.readFileSync(new URL('../shared/i18n/client/language-switch.js',import.meta.url),'utf8'),{window,document,navigator:{language:'en'},URL});
+  assert.deepEqual(navigations,[origin+localeRoute(last,'en')+'?view=full#run']);
+  events['astro:after-swap']();events['astro:page-load']();assert.equal(navigations.length,1);
+  assert.equal(window.SiteLanguage.targetUrl(data,'zh',location.href),origin+localeRoute(last,'zh')+'?view=full#%E8%BF%90%E8%A1%8C');
+  for(const hash of ['#current','#unknown']){location.href=origin+pathname+hash;events.hashchange();assert.equal(navigations.length,1);}
+  location.href=origin+pathname+'?view=full#same';events.hashchange();assert.equal(navigations.at(-1),origin+pathname+'?view=full#current');
+  location.href=origin+pathname+'#old';events['astro:after-swap']();assert.equal(navigations.at(-1),origin+localeRoute(last,'en')+'#run');
+});
+
+test('document anchor projection requires unique final targets on the same published work',()=>{
+  const pageIds=new Map([[first.id+':en',new Map([['real',1]])],[last.id+':en',new Map([['run',1]])],[work.id+':en',new Map([['main',1]])]]);
+  pageIds.set(work.id+':zh',new Map([['main',1]]));
+  const sharedAliases={old:{id:work.id,anchor:'main'},'旧章':{id:work.id,anchor:'main'}};
+  const aliasEntry={...first,anchorAliases:{zh:sharedAliases,en:{...sharedAliases,runOld:{id:last.id,anchor:'run'}}}};
+  const options={entries,codes,pageIds,route:localeRoute};
+  const projected=documents.projectDocumentAnchorAliases(aliasEntry,options);
+  for(const locale of codes)for(const id of ['old','旧章'])assert.deepEqual(projected[locale][id],{path:localeRoute(work,locale),anchor:'main'});
+  assert.deepEqual(projected.en.runOld,{path:localeRoute(last,'en'),anchor:'run'});
+  const validate=(anchorAliases,overrides)=>documents.projectDocumentAnchorAliases({...aliasEntry,anchorAliases},{...options,...overrides});
+  assert.throws(()=>validate({en:{real:{id:last.id,anchor:'run'}}}),/冲突/);
+  assert.throws(()=>validate({en:{old:{id:last.id,anchor:'old'}}}),/缺失或歧义/);
+  assert.throws(()=>validate({de:aliasEntry.anchorAliases.en}),/语言/);
+  assert.throws(()=>validate({en:{'#bad':{id:last.id,anchor:'run'}}}),/配置/);
+  assert.throws(()=>validate(aliasEntry.anchorAliases,{entries:entries.filter(item=>item!==work)}),/缺失/);
+  assert.throws(()=>validate({en:{old:{id:'work:outside',anchor:'main'}}},{entries:[...entries,{...work,id:'work:outside',slug:'outside'}]}),/所属作品/);
+  pageIds.get(last.id+':en').set('run',2);assert.throws(()=>validate(aliasEntry.anchorAliases),/缺失或歧义/);
+});

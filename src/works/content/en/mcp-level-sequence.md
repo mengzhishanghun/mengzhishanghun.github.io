@@ -26,14 +26,19 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-level-sequence
-sourceHash: 70885a5688eae53d79d9af523599e57f09f6ff9e19c1acc597974af99b3d2fd7
+sourceHash: 42ddc1ca806f5cd48f41a340d2581ef36c56841c1a2532fab6b1b1d6a69cb84f
 generatedBodyHash: fb4054b916db4cf559976075285edb719d4749a57f1af356ac1a22cf92c7c5d7
 translationStatus: translated
 coverAlt: MCPLevelSequence cover
 websiteCoverUrl: /media/covers/works/mcp-level-sequence-20261101.webp
 docIds:
   - mcp-level-sequence-connect
+  - mcp-level-sequence-sequence-assets
+  - mcp-level-sequence-sequence-preview
+  - mcp-level-sequence-sequence-bindings
   - mcp-level-sequence-edit-sequence
+  - mcp-level-sequence-sequence-keyframes
+  - mcp-level-sequence-sequence-timing
 ---
 
 ## About this work

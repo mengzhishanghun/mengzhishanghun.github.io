@@ -11,7 +11,7 @@ workIds:
   - simple-bp-inherit-fix
 docPage:
   work: simple-bp-inherit-fix
-  group: workflows
+  group: components
   slug: repair-components
   order: 2
 documentKind: product-manual
@@ -20,63 +20,14 @@ lang: zh
 translationKey: doc:simple-bp-inherit-fix:repair-components
 ---
 
-## 📝 使用方法
+## 运行修复
 
-1. 安装插件并编译成功
-2. 在内容浏览器中，**右键任何受影响的 Actor 蓝图**（祖先/自身/后代均可）
-3. 选择 **Component Repair → Fix Inheritance Pollution**
-4. 打开输出日志并过滤 `LogSBIF` 以监控执行
-5. 编辑器会弹出保存对话框——**保存标记为脏的蓝图**即可完成
+1. 安装插件并确认编译成功。
+2. 在内容浏览器中右键单击受影响的 Actor 蓝图，选择 **Component Repair → Fix Inheritance Pollution**。
+3. 在输出日志中筛选 `LogSBIF`，检查扫描范围、签出与修复结果。
+4. 在保存对话框中核对受影响的文件，再保存被标记为脏的蓝图。
 
----
-
-## ❓ 常见问题
-
-**扫描返回 0 个发现但明显存在损坏？**  
-你遇到的可能不是此插件覆盖的问题（罕见情况）。请粘贴完整的 `LogSBIF` 日志以供诊断。
-
-**CheckOut 失败怎么办？**  
-插件会继续在内存中修复，但你需要在保存前手动处理签出（`p4 edit` / `git lfs lock` / `svn lock`）。常见原因：文件被他人锁定、服务器不可达、或映射未包含该文件。
-
-**应该选择哪个蓝图作为锚点？**  
-随意选择——祖先、自身和后代都会被扫描，结果相同。
-
-**没有 Perforce 也能用吗？**  
-- Git：CheckOut 本质上是空操作，文件默认可写
-- Git LFS：发起 LFS lock 请求
-- SVN：运行 `svn lock`
-- 无版本控制：跳过 CheckOut 阶段
-
----
-
-## ⚠️ 限制
-
-- 仅处理此插件覆盖的特定组件污染问题；其他蓝图问题不在范围内
-- 不扫描在 Construction Script 中动态创建的组件
-
----
-
-## 版本历史
-
-
-
-打开 **编辑 → 项目设置**，进入 SimpleBPInheritFix 设置页，将 **Language** 设置为 **English** 或 **中文**。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。
-
-## 联系
-
-如有使用问题或合作需求，请前往联系页面。
-
-- **联系入口：** [联系与合作](https://mzsh.me/contact/)
-
-## 操作步骤
-
-1.  安装插件，编译通过
-2.  Content Browser 里右键任意受影响的 Actor 蓝图
-3.  选择 **Component Repair → Fix Inheritance Pollution**
-4.  打开 Output Log，过滤 `LogSBIF`，查看执行情况
-5.  编辑器弹出保存对话框，**保存被标脏的蓝图** 即完成
-
-## 修复阶段
+## 检查和保存修复结果
 
 修复前先收集继承链并确认受影响组件，再处理版本控制签出、字段修改和保存。
 
@@ -111,45 +62,29 @@ translationKey: doc:simple-bp-inherit-fix:repair-components
 [SBIF]   1 blueprints marked dirty, manual save required
 ```
 
-## 常见问题
+## 修复范围
 
-### 扫描结果 0 条但确有污染？
+工具只把异常模板的 `CreationMethod` 从 `Instance` 改回 `SimpleConstructionScript`。Construction Script 动态创建的组件和其他蓝图问题不在范围内。保存前检查受影响的组件和自动签出的文件。
 
-扫描结果为 0 时，需要结合 `LogSBIF` 日志判断是否属于此工具处理的组件状态异常。
+## 修复结果排查
 
-### CheckOut 失败怎么办？
+先看 `LogSBIF`，确认扫描结果和签出状态。
 
-插件仍会完成内存修复，但保存前需要手动处理签出。常见原因：
+## 扫描结果为零
 
--   文件被他人锁定
--   源控制服务器不通
--   Workspace mapping 不包含该文件
+结果为零时，问题可能超出工具覆盖范围。用完整的 `LogSBIF` 日志确认扫描到的蓝图和组件记录。
 
-先手动解决签出，再回 UE 保存。
+## 签出失败
 
-### 会不会把正常组件改坏？
+签出失败时，插件仍会在内存中完成修复。先检查文件是否被锁定、服务器是否可达、工作区是否包含该文件；如需手动签出，按版本控制环境使用 `p4 edit`、`git lfs lock` 或 `svn lock`，然后回 UE 保存。
 
-工具的修复范围是：**只翻转 `CreationMethod` 这一个字段**（`Instance → SimpleConstructionScript`），其他任何属性都不动。保存前仍需检查受影响蓝图的组件状态。
-
-### 锚点蓝图选错会有影响吗？
-
-入口蓝图用于定位继承链；扫描会覆盖祖先、当前蓝图与后代。
-
-### 非 Perforce 能用吗？
+## 不同版本控制的签出行为
 
 -   **Git**：签出基本是空操作，文件本就可写
 -   **Git LFS**：会自动请求 LFS lock
 -   **SVN**：执行 `svn lock`
 -   **无源码控制**：签出阶段整个跳过，直接进入修复
 
-## 使用范围
+## 界面语言
 
-这里讨论的是 Actor 蓝图组件模板的 CreationMethod 异常，不涵盖其他蓝图故障。Construction Script 中动态创建的组件需要单独判断，不能直接套用相同修复逻辑。
-
--   只处理本插件覆盖的那种组件异常（`CreationMethod=Instance` 污染），其他类型的蓝图问题不在范围内
--   Construction Script 里动态生成的组件不在扫描范围（那些本就不走 SCS/ICH）
--   仅支持 Actor 蓝图（非 Actor 的蓝图不存在此问题）
-
----
-
-原文于 2026-05-13 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/20030737)。
+打开 **编辑 → 项目设置**，进入 SimpleBPInheritFix 设置页，将 **Language** 设置为 **English** 或 **中文**。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。

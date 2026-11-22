@@ -1,5 +1,5 @@
 ---
-title: Package Markdown Posts and Images
+title: Package Markdown and Images
 type: doc
 slug: md-blog-packer-package
 draft: false
@@ -13,50 +13,27 @@ documentKind: product-manual
 websiteRoute: /en/works/md-blog-packer/docs/package/
 lang: en
 translationKey: doc:md-blog-packer:package
-sourceHash: a4e2d57c9cc722312e2b60783aa85b2148b246018c6660bc6ad25979a83ea14b
+sourceHash: c404d7750740d8ae76b9bfa07e47e28d08980ceaf9053e095bcf2c4c95fc520d
 translationStatus: translated
-generatedBodyHash: 699b86c975dd147d2373496ec856be1d34d9a2f2f30813fb2dfee3ca3ddcebff
+generatedBodyHash: c5460354c6acbbfe58009a743a129b3990d9eedb44d792bda57306f05d73f73b
 docPage:
   work: md-blog-packer
-  group: workflows
+  group: export
   slug: package
   order: 1
 ---
 
-MDBlogPacker is the Python version of MDImageEmbed. It exports Markdown with local images embedded as Base64. Future maintenance of MDImageEmbed will focus solely on its Python version, MDBlogPacker.
+## What Gets Converted
 
-> Future maintenance of MDImageEmbed will focus solely on its Python version, MDBlogPacker. Copy the converted result or export a Markdown file containing the embedded images.
+MDBlogPacker converts local images referenced as `![](</path>)` or Obsidian `![[image.png]]` into `data:image/...;base64,...` entries. By default it leaves remote and already embedded Base64 images unchanged. Copy the output, save it to a file, or pipe it to another command.
 
-## Why This Tool
+## GUI
 
-Images are the most tedious part of publishing a blog post: local images cannot be published directly, while image hosting requires individual uploads, copied links, and path replacement. Base64 embedding packs every image into the Markdown text, so you can simply copy and publish.
+1. Check the input article. On startup the GUI selects the first `.md` file in the EXE directory.
+2. Optionally add a prefix and suffix, such as a copyright notice or a reposting policy. The GUI remembers these fields.
+3. Click **Convert and Copy to Clipboard**, then paste the result into a platform that accepts Base64 images.
 
-## Features
-
-- Scans all local images in Markdown, supporting both `![](</path>)` and Obsidian `![[image.png]]` syntax
-- Automatically converts them to embedded `data:image/...;base64,...` format
-- Copies the result directly to the clipboard for immediate publication
-- Supports prefix/suffix content such as copyright notices and anti-reposting notices; enter it in GUI mode or specify template files in CLI mode
-- Leaves remote images and existing Base64 images unchanged
-
-## Installation
-
-```bash
-# 用 environment.yml 创建 conda 环境
-conda env create -f environment.yml
-```
-
-## Usage
-
-### GUI Mode (Recommended)
-
-Double-click `MDBlogPacker.exe` (or run `Main.py` without arguments) to open the graphical interface:
-
-- Automatically selects the first `.md` file in the executable's directory
-- Enter prefix/suffix content (optional; content is cached)
-- Click “Convert and Copy to Clipboard,” then paste into your blogging platform
-
-### CLI Mode
+## Command Line
 
 Running with arguments activates command-line mode:
 
@@ -74,7 +51,7 @@ conda run -n MDBlogPacker python Main.py 博客.md -o 博客-内嵌版.md
 conda run -n MDBlogPacker python Main.py 博客.md -c -v
 ```
 
-### CLI Arguments
+## CLI Arguments
 
 | Argument | Description |
 |---|---|
@@ -103,12 +80,8 @@ URL-encoded characters such as `%20` are automatically decoded.
 
 PNG、JPG、JPEG、GIF、WebP、SVG、BMP
 
-## Notes
+## Before Publishing
 
 - Base64 increases file size by about 33%; use with care when images are numerous or large
 - Remote images (`http://` / `https://`) are left unchanged
 - Use it for export and publication; keep separate image files for everyday writing and maintenance
-
-## License
-
-MIT License

@@ -21,20 +21,22 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770939
 docIds:
+  - simple-input-simulator-setup
   - simple-input-simulator-key-input
   - simple-input-simulator-axis-input
+  - simple-input-simulator-reset-input-state
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-input-simulator
-sourceHash: def7b80a8038010a8f03ae56bf8f09be6d883912ee09be8a34787772a5f97951
+sourceHash: b6f8715587d099fa2a13e1d5627cf306653a68a9ec08d94158e8e5f2e33a3351
 translationStatus: translated
-generatedBodyHash: 2c340b2dc6734e164713c1f4e25cd6b2596783bb3035d2a3ffdd964b400e93b4
+generatedBodyHash: d0ac8c72dc3eb2fd1a2fbb035d5e02fa40ddc0c8fd78ac1fe6c5adb4610d078d
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/dd1ee0a8-f450-4a3d-adc4-4a96f5dec3dd
     - kind: docs
-      href: /en/works/simple-input-simulator/docs/key-input/
+      href: /en/works/simple-input-simulator/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -89,3 +91,17 @@ The plugin simulates input events without guaranteeing that the intended action 
 Pair press and release events and clear state when tests finish. Input cannot be injected as intended without a valid PlayerController, so automation should check that prerequisite.
 
 See the [usage guide](/en/works/simple-input-simulator/docs/key-input/) for steps and parameters.
+
+## Contact and Support
+
+For usage questions or collaboration, please visit the contact page.
+
+- **Contact:** [Contact and collaboration](https://mzsh.me/contact/)
+
+## Original Article
+
+Originally published on 2026-03-25 on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19770939).
+
+## Compatibility
+
+Supports Unreal Engine 5.2–5.8.

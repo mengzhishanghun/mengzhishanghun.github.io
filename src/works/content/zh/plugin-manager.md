@@ -11,7 +11,7 @@ status: 正式文档
 workInfo:
   channels:
     - kind: docs
-      href: /zh/works/plugin-manager/docs/find/
+      href: /zh/works/plugin-manager/docs/setup/
   compatibility:
     - platforms:
         - UE 插件管理工具（操作系统待核实）
@@ -27,6 +27,7 @@ links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPluginManager
 docIds:
+  - plugin-manager-setup
   - plugin-manager-find
   - plugin-manager-enable-disable
   - plugin-manager-folder-actions

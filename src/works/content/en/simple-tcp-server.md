@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-server
-sourceHash: e75c4caff6e0e77f887567ae30a5840efd748891992ce2e4a652cc4361204a6c
+sourceHash: 385c73df96dcc65f78be45fbae02ba6369362b9210b528502e735ab42da257cd
 translationStatus: translated
-generatedBodyHash: 289b4e660ae04c3be262e437f04cb8f71d93f92f81a7e801cdf0f231fa85b615
+generatedBodyHash: ef192463528bf55210dd13cb948d21699a3ea2d8c2c005596b956d7bc23d2197
 workInfo:
   channels:
     - kind: sale
@@ -44,6 +44,7 @@ websiteCoverUrl: /media/covers/works/simple-tcp-server-20261101.webp
 coverAlt: SimpleTCPServer cover
 docIds:
   - simple-tcp-server-listen
+  - simple-tcp-server-sessions
   - simple-tcp-server-messages
   - simple-tcp-server-native-server
 ---
@@ -80,4 +81,8 @@ It suits UE programs acting as TCP servers for several external programs or devi
 
 Only IPv4 is supported; domain names, IPv6, and encrypted connections are not supported. Validate connection counts, session lifecycles, timeouts, and data handling in the target environment. TCP streams have no inherent business message boundaries, so projects define encoding and message splitting rules. IP:Port should not serve directly as security authentication.
 
-See the [user guide](/en/works/simple-tcp-server/docs/listen/) for listener configuration, session management, and native examples.
+To enable the plugin and configure listening, see the [user guide](/en/works/simple-tcp-server/docs/listen/).
+
+## Support and feedback
+
+[Contact and collaboration](https://mzsh.me/contact/)

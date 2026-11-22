@@ -1,5 +1,5 @@
 ---
-title: 转换结构体与 JSON
+title: 转换结构体、字节数组与 JSON
 type: doc
 slug: simple-byte-conversion-struct-and-json
 draft: false
@@ -11,7 +11,7 @@ workIds:
   - simple-byte-conversion
 docPage:
   work: simple-byte-conversion
-  group: workflows
+  group: conversion
   slug: struct-and-json
   order: 2
 documentKind: product-manual
@@ -20,7 +20,7 @@ lang: zh
 translationKey: doc:simple-byte-conversion:struct-and-json
 ---
 
-## 🧱 结构体 ↔ 字节数组 / Json 字符串
+## 选择结构体转换节点
 
 插件支持任何暴露给蓝图的 `USTRUCT`：
 
@@ -31,7 +31,8 @@ translationKey: doc:simple-byte-conversion:struct-and-json
 
 > ⚠️ 不支持：包含对象引用的结构体，如 `UObject*`、`TSoftObjectPtr`、`TWeakObjectPtr`，或资源句柄如 `FSoftObjectPath`。
 
-### JSON 转换优势：
+- StructToBytes / BytesToStruct：结构体与二进制字节数组之间转换。
+- StructToJsonString / JsonStringToStruct：结构体与 JSON 字符串之间转换。
 
 | 特性              | SimpleByteConversion                | UE 原生 FJsonObjectConverter |
 |------------------|-------------------------------------|-------------------------------|
@@ -39,21 +40,10 @@ translationKey: doc:simple-byte-conversion:struct-and-json
 | Float/Double 精度 | ✅ float(9位), double(17位)         | ❌ 默认精度较低               |
 | 完整蓝图支持      | ✅ 是                              | ⚠️ 部分支持 / 需要 C++        |
 
----
-
-## ✅ 提示
-
 - `StringToBytes` 和 `BytesToString` 使用 UTF-8 编码，确保跨平台安全转换
 - 结合使用 `StructToBytes` 和 `StructToJsonString` 可用于调试和网络消息
 
----
-
-## 结构体节点
-
-- StructToBytes / BytesToStruct：结构体与二进制字节数组之间转换。
-- StructToJsonString / JsonStringToStruct：结构体与 JSON 字符串之间转换。
-
-### 泛型结构体参数与 CustomThunk
+## 泛型结构体参数与 CustomThunk
 
 **关键技术：CustomThunk**
 
@@ -73,7 +63,7 @@ DECLARE_FUNCTION(execStructToBytes);
 
 通过 `CustomThunk` 与 `CustomStructureParam` 可以实现通用的结构体参数。`CustomStructureParam` 标注泛型结构体参数，声明中的 int32 是反射占位，不是让调用者把结构体强转为整数。Thunk 按声明顺序消费 VM 参数，检查 `FStructProperty` 和地址，完成参数读取后才执行转换。不要在未检查前用 `CastFieldChecked` 期待它“失败返回空”。声明、VM 读取顺序和输出方向必须一致；以下只展示解析核心，未编译完整 Thunk。
 
-### JSON 字段名与浮点数输出
+## JSON 的字段名和浮点精度
 
 UE 默认的 JSON 序列化存在两个问题：
 
@@ -106,7 +96,7 @@ struct FExactPrintPolicy : TCondensedJsonPrintPolicy<CharT>
 
 代码注释写的是“float 保留 9 位”，但 `%.9f` 实际输出小数点后 9 位，不等于 9 位有效数字；`%.17g` 使用 17 位有效数字。固定小数位也不能为所有量级的 float 保证无损往返。这个片段只定义打印策略，没有展示完整序列化调用路径，仍需确认实际写出时使用了该策略，不能只凭策略声明认定精度问题已经解决。
 
-### 解析 JSON 后再写入结构体
+## 先解析 JSON，再写入结构体
 
 以下片段展示解析与复制的核心步骤：
 
@@ -129,7 +119,7 @@ StructType->CopyScriptStruct(Destination, Temporary.GetStructMemory());
 
 StructType 和 Destination 需预先校验，目标必须是已初始化且类型匹配的结构。解析前写一个空 JsonObject 再转换，并没有读取 InputJson。`{}` 是合法 JSON 对象，但是否可接受取决于必填字段规则，不等于输入一定错误或全部字段有效。
 
-### 步骤3：C++ 中使用
+## 在 C++ 中调用
 
 在 C++ 中可以直接调用 `ByteConverter` 工具类：
 
@@ -149,7 +139,31 @@ FString JsonStr;
 ByteConverter::StructToJsonString(&Data, FMyStruct::StaticStruct(), JsonStr);
 ```
 
-### 场景3：数据持久化
+## 示例：通过 UDP/TCP 发送数据
+
+原生通信通道之外，实际项目还需要消息序列化，即结构体与字节数组的双向转换。转换解决数据表示问题，连接、收发与协议管理仍由通信模块负责。
+
+网络发送前，将需要传输的结构化数据编码为字节数组：
+
+```
+1. 定义一个结构体（如 FPlayerState：位置、血量、状态）
+2. 使用 StructToBytes 将结构体转为 TArray<uint8>
+3. 通过 UDP/TCP 发送字节数组
+4. 接收端使用 BytesToStruct 还原为结构体
+```
+
+## 示例：与 Python 交换 JSON
+
+使用 JSON 格式进行跨语言数据交换：
+
+```
+1. UE 端：StructToJsonString 将游戏数据转为 JSON 字符串
+2. 通过 TCP/WebSocket 发送给 Python 程序
+3. Python 端：json.loads() 直接解析
+4. 反向同理：Python json.dumps() → UE JsonStringToStruct
+```
+
+## 示例：持久化数据
 
 二进制保存流程只适用于双方已约定且受转换实现支持的数据，不是把任意带动态内存的结构体整块落盘：
 
@@ -162,18 +176,10 @@ ByteConverter::StructToJsonString(&Data, FMyStruct::StaticStruct(), JsonStr);
 4. BytesToStruct 还原为存档结构体
 ```
 
-## 使用边界
+## 格式约定与往返检查
 
 传输两端需要约定字段、编码与数据格式。跨语言交互时应先用一组固定数据检查转换结果。
 
 FString、TArray 和对象引用含有动态存储或地址信息。整块 memcpy 既不能跨进程恢复，也可能破坏生命周期，引发双重释放。基础整数的内存表示也受字节序、宽度和协议约定影响。持久化要选择明确格式，定义 schema 版本、字段、编码和校验；反射 JSON 只覆盖支持的字段类型，不自动解决所有对象引用与版本兼容。
 
-### 往返检查与示例限制
-
-用含 FString 和 TArray 的结构往返 JSON，比较字段；给坏 JSON 或缺必填字段应保持目标原值。记录序列化格式的版本，并测试未知字段和数值范围。浮点数是否满足需求要比较实际输出与允许误差，不能笼统声称所有转换都“精度丢失严重”。本文未在 UE 中编译、运行或测试跨版本数据。
-
-泛型结构体取参用于识别真实反射类型和地址；声明中的 int32 是反射占位，不应把结构体强转成整数。浮点数精度问题需结合具体引擎版本、字段类型和输出策略判断，不能笼统理解为所有 FJsonObjectConverter 转换都严重丢失精度。
-
----
-
-原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770934)。
+用包含 `FString` 和 `TArray` 的结构体做 JSON 往返测试并逐项比对。JSON 无法解析或缺少必填字段时，目标值应保持原样；同时检查未知字段、数值范围和可接受的浮点误差。示例未经 Unreal Engine 编译或运行验证，也未测试跨版本数据。

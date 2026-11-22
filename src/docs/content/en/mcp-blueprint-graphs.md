@@ -1,5 +1,5 @@
 ---
-title: Find, Edit, and Capture Blueprint Graphs
+title: Edit Blueprint Nodes, Connections, and Layout
 type: doc
 slug: mcp-blueprint-graphs
 draft: false
@@ -13,21 +13,69 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/graphs/
 lang: en
 translationKey: doc:mcp-blueprint:graphs
-sourceHash: 6a25aa460e22355f07f7aed1ac22d6f5e5b5d3db118385bc2720b439b8cc2d96
+sourceHash: 27e971627a75eedcfcfec1941e30805de1070489ef582a019311a3e14f9afc40
 translationStatus: translated
-generatedBodyHash: 332f3661673558b9f118dac44db7be44c87e8d41632274ede0bf5d37df3ec010
+generatedBodyHash: 831a7b7e6cd2e478773763236efd13c0d1ca73b2f59f9401fd062f79f2dd6751
 docPage:
   work: mcp-blueprint
-  group: workflows
+  group: assets-graphs
   slug: graphs
-  order: 1
+  order: 2
 ---
 
-### 3. `SetPinDefaults`: literals on unconnected input pins
+## Read the graph and find node actions
+
+| Tool | Purpose | Notes |
+| --- | --- | --- |
+| `GetGraphDetail` | Shows nodes, pins, links, and layout in the selected graph. | Use `GraphName` to select a graph. |
+| `SearchGraphNodes` | Finds creatable nodes by English action name. | Create nodes only with returned `SpawnerId` values. |
+
+Use the asset path returned by the plugin and page through large graphs. `GetGraphDetail` also returns pin defaults. Search for nodes by their English Unreal action names, such as `Branch`, `For Loop`, `For Each Loop`, `Switch on Int`, `Switch on Name`, `Switch on String`, `Add`, `Subtract`, `Multiply`, or `Divide`.
+
+## Preview, apply, and save a graph patch
+
+For writes that change structure or data:
+
+1. Locate the target asset, graph, pin, member, or component.
+2. Search with `SearchGraphNodes` to obtain a valid `SpawnerId`.
+3. Preview with `bDryRun=true` where supported. Check affected assets, normalized operations, restrictions, and blockers.
+4. Apply using returned identifiers. Do not invent a `SpawnerId`.
+5. Call `SaveAsset` only when you want to keep the changes.
+
+Dry-run cannot display every generated pin, type promotion, or final layout. This preview limitation does not mean the tool writes automatically. Use a `SpawnerId` from the current search results before writing.
+
+## What ApplyGraphPatch can change
+
+`ApplyGraphPatch` supports:
+
+- `Nodes` with temporary IDs and Action Registry `SpawnerId` values.
+- `Connections` and `Disconnections`.
+- `RemoveNodes` addressed by node identifiers.
+- `MoveNodes` addressed by node identifiers and graph coordinates.
+- Optional `PinDefaults`, `PromotedType`, layout scope, and layout style.
+
+The entire patch uses one transaction and attempts automatic rollback on failure. If the tool reports recovery failure, stop editing and reopen the asset to inspect its current state before proceeding.
+
+- **Write rejected:** read every blocker and approval-parameter requirement, then read the target again before retrying.
+- **Unexpected graph result:** compare `GetGraphDetail` before and after; use Undo where applicable.
+- Blueprint Actions that cannot be handled safely cause the operation to be rejected.
+
+## Set defaults for unconnected input pins
 
 Obtain the target node identifier from `GetGraphDetail` and provide a nonempty `PinDefaults` map, for example `{"Duration": "2.0", "InString": "Hello"}`. Object/Class pins require full object paths. This tool does not change nodes, connections, or graph structure. A connected input ignores its default at runtime. Use `ApplyGraphPatch` for structural changes.
 
-## Tutorial: create a calculation function
+## Edit variable pin counts and lay out the graph
+
+| Tool | Purpose | Notes |
+| --- | --- | --- |
+| `AddNodePin` | Adds a pin to a node that supports variable pin counts. | Obtain the target node identifier from graph details first. |
+| `RemoveNodePin` | Removes an editable user pin from a node. | Locate the exact target pin. |
+| `FormatGraph` | Organizes graph layout using `Balanced`, `Straight`, or `Compact`. | Select a graph or a layout scope. |
+| `AddCommentBox` | Adds a native Comment Box. | Specify text and bounds or target nodes. |
+
+`Balanced`, `Straight`, and `Compact` are deterministic layout styles. Local and full-graph layouts preserve native Comment Box containment. Use single-step Undo where Unreal supports it.
+
+## Example: create a calculation function
 
 This example creates:
 
@@ -45,80 +93,38 @@ FinalScore = (BaseScore + Bonus) × Multiplier
 
 The finished graph adds `BaseScore` and `Bonus`, then multiplies the result by `Multiplier` from left to right.
 
-## Editor screenshots and business-rule changes
+## Examples: edit order settlement rules
 
-These Blueprint Editor examples show a calculation function, a complete business graph, and visible changes before and after rule edits. They illustrate how nodes, links, and defaults change.
+These examples use the [`EvaluateOrderBatchV2` order settlement graph](/en/works/mcp-blueprint/docs/graph-screenshots/) to show how changes to nodes, links, and defaults affect the graph.
 
-### A standard graph example
-
-`CalculateScore` adds `BaseScore` and `Bonus`, then multiplies the result by `Multiplier`.
-
-![CalculateScore graph](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A1)
-
-### A complete business workflow
-
-`EvaluateOrderBatchV2` keeps order totals, discounts, shipping, tax, points, risk scoring, and the final result in one connected function graph.
-
-![Order settlement graph](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A2)
-
-### Change 1: free shipping for first orders in Region 1
+### Free shipping for first orders in Region 1
 
 Before the change, Region 1 always sets `ShippingCents = 1000`.
 
-![Region 1 before](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A3)
+![Region 1 before](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A1)
 
 After the change, a `FirstOrder` branch sets shipping to `0` for first orders and keeps `1000` for other orders.
 
-![Region 1 after](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A4)
+![Region 1 after](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A2)
 
-### Change 2: exclude shipping from points
+### Exclude shipping from points
 
 Before the change: `PointsEarned = TotalCents / 100`.
 
-![Points before](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A5)
+![Points before](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A3)
 
 After the change: `PointsEarned = (TotalCents - ShippingCents) / 100`. A new Subtract node excludes shipping.
 
-![Points after](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A6)
+![Points after](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A4)
 
-### Change 3: replace a fixed first-order discount with 5% of subtotal
+### Change the first-order discount to 5% of subtotal
 
 Before the change, the graph calculates `SubtotalCents × 0` and then adds `500`, always returning a fixed discount of `500`.
 
-![Discount before](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A7)
+![Discount before](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A5)
 
 After the change, `SubtotalCents / 20` produces a 5% discount.
 
-![Discount after](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A8)
+![Discount after](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A6)
 
 Before changing logic, use dry-run where supported to understand its impact. Explicitly approve reference updates or potential data loss when the tool requires it. Use `SaveAsset` to keep changes.
-
-## Find assets and graphs
-
-- Use `ListBlueprints` to find assets with pagination.
-- Use `GetBlueprintOverview` to inspect graphs, variables, functions, components, interfaces, and the parent class.
-- Use `ListBlueprintMembers` to inspect functions, Custom Events, Event Dispatchers, and local variables.
-- Use `GetGraphDetail` to inspect nodes, pins, defaults, links, and layout.
-- Use `GetCompileErrors` or `CompileBlueprint` to read editor diagnostics.
-
-Use asset paths returned by the plugin. Page through large graphs to avoid returning too much content at once.
-
-## Add graph logic safely
-
-Search with Unreal's English action names, such as `Branch`, `For Loop`, `For Each Loop`, `Switch on Int`, `Switch on Name`, `Switch on String`, `Add`, `Subtract`, `Multiply`, or `Divide`.
-
-`ApplyGraphPatch` supports:
-
-- `Nodes` with temporary IDs and Action Registry `SpawnerId` values.
-- `Connections` and `Disconnections`.
-- `RemoveNodes` addressed by node identifiers.
-- `MoveNodes` addressed by node identifiers and graph coordinates.
-- Optional `PinDefaults`, `PromotedType`, layout scope, and layout style.
-
-The entire patch uses one transaction and attempts automatic rollback on failure. If the tool reports recovery failure, stop editing and reopen the asset to inspect its current state before proceeding.
-
-## Capture graphs
-
-Call `OpenAsset` before `CaptureGraphScreenshot`. Capture the full graph, focus on a node, or reuse a specified viewport. Check that titles, pins, and links are readable before sharing.
-
-The screenshot tool requires an initialized Blueprint graph editor widget. It rejects requests when the graph editor is closed or its widget has zero size.

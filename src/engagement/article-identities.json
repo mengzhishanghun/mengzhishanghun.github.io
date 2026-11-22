@@ -892,6 +892,366 @@
     {
       "id": "doc:p4-stream-switcher:recycle-workspace",
       "translationKey": "doc:p4-stream-switcher:recycle-workspace"
+    },
+    {
+      "id": "doc:simple-asset-cleaner:full-cleanup",
+      "translationKey": "doc:simple-asset-cleaner:full-cleanup"
+    },
+    {
+      "id": "doc:simple-asset-namer:setup",
+      "translationKey": "doc:simple-asset-namer:setup"
+    },
+    {
+      "id": "doc:simple-byte-conversion:setup",
+      "translationKey": "doc:simple-byte-conversion:setup"
+    },
+    {
+      "id": "doc:simple-config-exclude:setup",
+      "translationKey": "doc:simple-config-exclude:setup"
+    },
+    {
+      "id": "doc:simple-static-mesh-merger:setup",
+      "translationKey": "doc:simple-static-mesh-merger:setup"
+    },
+    {
+      "id": "doc:ai-data-asset:setup",
+      "translationKey": "doc:ai-data-asset:setup"
+    },
+    {
+      "id": "doc:md-blog-packer:setup",
+      "translationKey": "doc:md-blog-packer:setup"
+    },
+    {
+      "id": "doc:p4-case-sync:setup",
+      "translationKey": "doc:p4-case-sync:setup"
+    },
+    {
+      "id": "doc:p4-case-sync:reuse-environment",
+      "translationKey": "doc:p4-case-sync:reuse-environment"
+    },
+    {
+      "id": "doc:plugin-auto-packer:setup",
+      "translationKey": "doc:plugin-auto-packer:setup"
+    },
+    {
+      "id": "doc:plugin-manager:setup",
+      "translationKey": "doc:plugin-manager:setup"
+    },
+    {
+      "id": "doc:simple-file-updater:setup",
+      "translationKey": "doc:simple-file-updater:setup"
+    },
+    {
+      "id": "doc:simple-input-simulator:setup",
+      "translationKey": "doc:simple-input-simulator:setup"
+    },
+    {
+      "id": "doc:simple-input-simulator:reset-input-state",
+      "translationKey": "doc:simple-input-simulator:reset-input-state"
+    },
+    {
+      "id": "doc:simple-launcher:setup",
+      "translationKey": "doc:simple-launcher:setup"
+    },
+    {
+      "id": "doc:simple-level-seq-smooth:setup",
+      "translationKey": "doc:simple-level-seq-smooth:setup"
+    },
+    {
+      "id": "doc:simple-ssh-tunnel:manage-tunnels",
+      "translationKey": "doc:simple-ssh-tunnel:manage-tunnels"
+    },
+    {
+      "id": "doc:simple-tcp-client:enable-plugin",
+      "translationKey": "doc:simple-tcp-client:enable-plugin"
+    },
+    {
+      "id": "doc:simple-tcp-server:sessions",
+      "translationKey": "doc:simple-tcp-server:sessions"
+    },
+    {
+      "id": "doc:simple-udp:enable-plugin",
+      "translationKey": "doc:simple-udp:enable-plugin"
+    },
+    {
+      "id": "doc:simple-websocket:configure-connections",
+      "translationKey": "doc:simple-websocket:configure-connections"
+    },
+    {
+      "id": "doc:ue-package-manager:install-and-detect",
+      "translationKey": "doc:ue-package-manager:install-and-detect"
+    },
+    {
+      "id": "doc:ue-package-manager:project-configuration",
+      "translationKey": "doc:ue-package-manager:project-configuration"
+    },
+    {
+      "id": "doc:ue-package-manager:deploy-additional-files",
+      "translationKey": "doc:ue-package-manager:deploy-additional-files"
+    },
+    {
+      "id": "doc:ue-package-manager:clean-old-packages",
+      "translationKey": "doc:ue-package-manager:clean-old-packages"
+    },
+    {
+      "id": "doc:ue-quick-start:build-configuration",
+      "translationKey": "doc:ue-quick-start:build-configuration"
+    },
+    {
+      "id": "doc:ue-quick-start:normalize-line-endings",
+      "translationKey": "doc:ue-quick-start:normalize-line-endings"
+    },
+    {
+      "id": "doc:p4-stream-switcher:install-and-connect",
+      "translationKey": "doc:p4-stream-switcher:install-and-connect"
+    },
+    {
+      "id": "doc:p4-stream-switcher:workspace-settings",
+      "translationKey": "doc:p4-stream-switcher:workspace-settings"
+    },
+    {
+      "id": "doc:mcp-umg:image-to-umg",
+      "translationKey": "doc:mcp-umg:image-to-umg"
+    },
+    {
+      "id": "doc:mcp-umg:layout-inspection",
+      "translationKey": "doc:mcp-umg:layout-inspection"
+    },
+    {
+      "id": "doc:mcp-umg:component-extraction",
+      "translationKey": "doc:mcp-umg:component-extraction"
+    },
+    {
+      "id": "doc:mcp-umg:widget-styles",
+      "translationKey": "doc:mcp-umg:widget-styles"
+    },
+    {
+      "id": "doc:mcp-umg:widget-themes",
+      "translationKey": "doc:mcp-umg:widget-themes"
+    },
+    {
+      "id": "doc:mcp-umg:navigation",
+      "translationKey": "doc:mcp-umg:navigation"
+    },
+    {
+      "id": "doc:mcp-umg:animation",
+      "translationKey": "doc:mcp-umg:animation"
+    },
+    {
+      "id": "doc:mcp-umg:commonui",
+      "translationKey": "doc:mcp-umg:commonui"
+    },
+    {
+      "id": "doc:mcp-umg:mvvm",
+      "translationKey": "doc:mcp-umg:mvvm"
+    },
+    {
+      "id": "doc:mcp-umg:runtime-diagnostics",
+      "translationKey": "doc:mcp-umg:runtime-diagnostics"
+    },
+    {
+      "id": "doc:mcp-blueprint:asset-lifecycle",
+      "translationKey": "doc:mcp-blueprint:asset-lifecycle"
+    },
+    {
+      "id": "doc:mcp-blueprint:graph-screenshots",
+      "translationKey": "doc:mcp-blueprint:graph-screenshots"
+    },
+    {
+      "id": "doc:mcp-blueprint:variables",
+      "translationKey": "doc:mcp-blueprint:variables"
+    },
+    {
+      "id": "doc:mcp-blueprint:events-dispatchers",
+      "translationKey": "doc:mcp-blueprint:events-dispatchers"
+    },
+    {
+      "id": "doc:mcp-blueprint:interfaces",
+      "translationKey": "doc:mcp-blueprint:interfaces"
+    },
+    {
+      "id": "doc:mcp-blueprint:user-defined-structs",
+      "translationKey": "doc:mcp-blueprint:user-defined-structs"
+    },
+    {
+      "id": "doc:mcp-blueprint:user-defined-enums",
+      "translationKey": "doc:mcp-blueprint:user-defined-enums"
+    },
+    {
+      "id": "doc:mcp-blueprint:class-defaults",
+      "translationKey": "doc:mcp-blueprint:class-defaults"
+    },
+    {
+      "id": "doc:mcp-blueprint:class-inheritance",
+      "translationKey": "doc:mcp-blueprint:class-inheritance"
+    },
+    {
+      "id": "doc:mcp-world-editor:save-level-packages",
+      "translationKey": "doc:mcp-world-editor:save-level-packages"
+    },
+    {
+      "id": "doc:mcp-world-editor:navigation",
+      "translationKey": "doc:mcp-world-editor:navigation"
+    },
+    {
+      "id": "doc:mcp-world-editor:lighting-build",
+      "translationKey": "doc:mcp-world-editor:lighting-build"
+    },
+    {
+      "id": "doc:mcp-world-editor:world-settings",
+      "translationKey": "doc:mcp-world-editor:world-settings"
+    },
+    {
+      "id": "doc:mcp-world-editor:foliage",
+      "translationKey": "doc:mcp-world-editor:foliage"
+    },
+    {
+      "id": "doc:mcp-world-editor:instanced-meshes",
+      "translationKey": "doc:mcp-world-editor:instanced-meshes"
+    },
+    {
+      "id": "doc:mcp-world-editor:actor-splines",
+      "translationKey": "doc:mcp-world-editor:actor-splines"
+    },
+    {
+      "id": "doc:mcp-world-editor:actor-hierarchy",
+      "translationKey": "doc:mcp-world-editor:actor-hierarchy"
+    },
+    {
+      "id": "doc:mcp-world-editor:actor-components",
+      "translationKey": "doc:mcp-world-editor:actor-components"
+    },
+    {
+      "id": "doc:mcp-world-editor:streaming-levels",
+      "translationKey": "doc:mcp-world-editor:streaming-levels"
+    },
+    {
+      "id": "doc:mcp-world-editor:world-partition-regions",
+      "translationKey": "doc:mcp-world-editor:world-partition-regions"
+    },
+    {
+      "id": "doc:mcp-world-editor:level-instances",
+      "translationKey": "doc:mcp-world-editor:level-instances"
+    },
+    {
+      "id": "doc:mcp-world-editor:landscape-paint-layers",
+      "translationKey": "doc:mcp-world-editor:landscape-paint-layers"
+    },
+    {
+      "id": "doc:mcp-world-editor:landscape-splines",
+      "translationKey": "doc:mcp-world-editor:landscape-splines"
+    },
+    {
+      "id": "doc:mcp-world-editor:editor-viewport",
+      "translationKey": "doc:mcp-world-editor:editor-viewport"
+    },
+    {
+      "id": "doc:mcp-world-editor:editor-pie",
+      "translationKey": "doc:mcp-world-editor:editor-pie"
+    },
+    {
+      "id": "doc:mcp-world-editor:viewport-statistics",
+      "translationKey": "doc:mcp-world-editor:viewport-statistics"
+    },
+    {
+      "id": "doc:mcp-level-sequence:sequence-assets",
+      "translationKey": "doc:mcp-level-sequence:sequence-assets"
+    },
+    {
+      "id": "doc:mcp-level-sequence:sequence-bindings",
+      "translationKey": "doc:mcp-level-sequence:sequence-bindings"
+    },
+    {
+      "id": "doc:mcp-level-sequence:sequence-keyframes",
+      "translationKey": "doc:mcp-level-sequence:sequence-keyframes"
+    },
+    {
+      "id": "doc:mcp-level-sequence:sequence-timing",
+      "translationKey": "doc:mcp-level-sequence:sequence-timing"
+    },
+    {
+      "id": "doc:mcp-level-sequence:sequence-preview",
+      "translationKey": "doc:mcp-level-sequence:sequence-preview"
+    },
+    {
+      "id": "doc:mcp-niagara:niagara-system-assets",
+      "translationKey": "doc:mcp-niagara:niagara-system-assets"
+    },
+    {
+      "id": "doc:mcp-niagara:niagara-preview",
+      "translationKey": "doc:mcp-niagara:niagara-preview"
+    },
+    {
+      "id": "doc:mcp-niagara:niagara-renderers",
+      "translationKey": "doc:mcp-niagara:niagara-renderers"
+    },
+    {
+      "id": "doc:mcp-animation:connect",
+      "translationKey": "doc:mcp-animation:connect"
+    },
+    {
+      "id": "doc:mcp-animation:animation-notifies",
+      "translationKey": "doc:mcp-animation:animation-notifies"
+    },
+    {
+      "id": "doc:mcp-animation:animation-blend-spaces",
+      "translationKey": "doc:mcp-animation:animation-blend-spaces"
+    },
+    {
+      "id": "doc:mcp-behavior-tree:blackboard-keys",
+      "translationKey": "doc:mcp-behavior-tree:blackboard-keys"
+    },
+    {
+      "id": "doc:mcp-material:connect",
+      "translationKey": "doc:mcp-material:connect"
+    },
+    {
+      "id": "doc:mcp-material:material-assets",
+      "translationKey": "doc:mcp-material:material-assets"
+    },
+    {
+      "id": "doc:mcp-material:material-preview",
+      "translationKey": "doc:mcp-material:material-preview"
+    },
+    {
+      "id": "doc:mcp-material:material-compilation",
+      "translationKey": "doc:mcp-material:material-compilation"
+    },
+    {
+      "id": "doc:mcp-dev-tools:connect",
+      "translationKey": "doc:mcp-dev-tools:connect"
+    },
+    {
+      "id": "doc:mcp-dev-tools:asset-registry",
+      "translationKey": "doc:mcp-dev-tools:asset-registry"
+    },
+    {
+      "id": "doc:mcp-dev-tools:data-assets",
+      "translationKey": "doc:mcp-dev-tools:data-assets"
+    },
+    {
+      "id": "doc:mcp-dev-tools:data-tables",
+      "translationKey": "doc:mcp-dev-tools:data-tables"
+    },
+    {
+      "id": "doc:mcp-dev-tools:curves",
+      "translationKey": "doc:mcp-dev-tools:curves"
+    },
+    {
+      "id": "doc:mcp-dev-tools:curve-tables",
+      "translationKey": "doc:mcp-dev-tools:curve-tables"
+    },
+    {
+      "id": "doc:mcp-dev-tools:string-tables",
+      "translationKey": "doc:mcp-dev-tools:string-tables"
+    },
+    {
+      "id": "doc:mcp-dev-tools:primary-asset-labels",
+      "translationKey": "doc:mcp-dev-tools:primary-asset-labels"
+    },
+    {
+      "id": "doc:mcp-dev-tools:enhanced-input",
+      "translationKey": "doc:mcp-dev-tools:enhanced-input"
     }
   ]
 }

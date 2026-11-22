@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/6d6d46bf-eaed-4b66-8382-9d69eb56981e
     - kind: docs
-      href: /zh/works/simple-tcp-client/docs/connect/
+      href: /zh/works/simple-tcp-client/docs/enable-plugin/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -33,6 +33,7 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165484
 docIds:
+  - simple-tcp-client-enable-plugin
   - simple-tcp-client-connect
   - simple-tcp-client-messages
   - simple-tcp-client-native-client
@@ -77,4 +78,22 @@ SimpleTCPClient 在 Unreal Engine 中封装 TCP 客户端连接，提供多通�
 
 仅支持 IPv4，不支持域名、IPv6 或加密连接。TCP 提供字节流传输，插件的连接管理不自动定义业务消息边界、序列化格式或重连后的状态恢复。应在实际服务端协议下验证断线、重试和数据处理行为，并核对各通道的配置。
 
-连接配置、原生示例与网络通信导览见 [使用教程](/zh/works/simple-tcp-client/docs/connect/)。
+启用插件和首次连接见 [使用教程](/zh/works/simple-tcp-client/docs/enable-plugin/)。
+
+## 支持与反馈
+
+[联系与合作](https://mzsh.me/contact/)
+
+## 选择网络协议
+
+UDP 常用于传感器、仿真器和局域网中的高频数据；TCP 用于需要有序字节流的客户端与服务端通信；WebSocket 适合已有 Web 服务、浏览器控制面板和跨语言的实时消息交互。协议选择仍应结合丢包容忍、延迟、消息格式与部署环境，不能仅凭名称判断可靠性或成本。
+- [SimpleUDP 使用教程](/zh/works/simple-udp/docs/channels/)：收发通道与地址过滤。
+- [SimpleTCPServer 使用教程](/zh/works/simple-tcp-server/docs/listen/)：启用插件及配置监听。
+- [SimpleWebSocket 使用教程](/zh/works/simple-websocket/docs/connect-and-send/)：通过蓝图管理连接并收发消息。
+- [SimpleByteConversion 字节转换教程](/zh/works/simple-byte-conversion/docs/primitive-bytes/)：业务类型与字节数组的双向转换。
+
+原技术记录还提到 HTTP 的 `Send Http Request` 蓝图节点，以及按需引入 MQTT、gRPC 等第三方库。具体 HTTP 节点是否可用取决于项目启用的模块或插件，应按所在项目核对；这里不扩展这些协议的实现。
+
+## 原生示例来源
+
+原生通信示例于 2025-10-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19165484)。

@@ -1,5 +1,5 @@
 ---
-title: 启动、查询与停止进程
+title: 启动和管理进程
 type: doc
 slug: simple-launcher-processes
 draft: false
@@ -10,7 +10,7 @@ workIds:
   - simple-launcher
 docPage:
   work: simple-launcher
-  group: workflows
+  group: process-control
   slug: processes
   order: 2
 documentKind: product-manual
@@ -19,7 +19,25 @@ lang: zh
 translationKey: doc:simple-launcher:processes
 ---
 
-### 进程控制
+## 从蓝图或 C++ 启动
+
+配置好预设后，从蓝图或 C++ 调用：
+```cpp
+FProcessId Id = USimpleLauncherGameSubsystem::StartProcess(FName("MyServer"));
+```
+
+此例使用未分离的预设，游戏退出时会关闭进程。
+
+所有函数都在 `SimpleLauncher` 分类下，核心流程：
+
+```
+1. StartProcess("预设名") → 获得 ProcessId
+2. IsProcessRunning(ProcessId) → 检查状态
+3. BindProcessExited(ProcessId, Callback) → 监听退出
+4. StopProcess(ProcessId) → 手动停止
+```
+
+## 启动与停止
 
 | 函数 | 说明 |
 |------|------|
@@ -36,7 +54,27 @@ FProcessId Id2 = USimpleLauncherGameSubsystem::StartProcess(FName("MyServer"));
 // Id1 和 Id2 是两个独立运行的进程
 ```
 
-### 状态查询
+**启动进程：**
+
+```cpp
+// 通过预设名称启动
+FProcessId Id = USimpleLauncherGameSubsystem::StartProcess("LocalServer");
+```
+
+**停止进程：**
+
+```cpp
+// 停止单个进程
+StopProcess(ProcessId);
+
+// 停止某个预设的所有实例
+StopProcesses("LocalServer");
+
+// 停止所有进程
+StopAllProcesses();
+```
+
+## 查询进程状态
 
 | 函数 | 说明 |
 |------|------|
@@ -45,7 +83,32 @@ FProcessId Id2 = USimpleLauncherGameSubsystem::StartProcess(FName("MyServer"));
 | `GetProcessCount(Name)` | 获取预设的运行进程数 |
 | `GetProcesses(Name)` | 获取预设所有运行中的 ProcessId |
 
-### 进程退出回调
+## 同一预设启动多个实例
+
+同一个预设可以启动**多个实例**，每个实例都有独立的 `FProcessId`：
+
+```cpp
+USTRUCT(BlueprintType)
+struct FProcessId
+{
+    FName Name;    // 预设名称
+    int32 Index;   // 实例索引（自动递增）
+};
+```
+
+```
+// 启动3个本地服务器实例
+FProcessId Server1 = StartProcess("LocalServer");  // Index = 0
+FProcessId Server2 = StartProcess("LocalServer");  // Index = 1
+FProcessId Server3 = StartProcess("LocalServer");  // Index = 2
+
+// 独立管理每个实例
+StopProcess(Server2);  // 只停止第二个
+IsProcessRunning(Server1);  // 检查第一个是否在运行
+GetProcessCount("LocalServer");  // 返回 2（还剩两个在运行）
+```
+
+## 进程退出回调
 
 进程退出时获得通知并执行自定义逻辑（如重启、日志记录）。
 
@@ -74,59 +137,6 @@ FProcessId Id2 = USimpleLauncherGameSubsystem::StartProcess(FName("MyServer"));
 >
 > 游戏退出时不触发回调，以避免访问已销毁的对象导致崩溃。
 
-### 1.2 进程生命周期管理
-
-**启动进程：**
-
-```cpp
-// 通过预设名称启动
-FProcessId Id = USimpleLauncherGameSubsystem::StartProcess("LocalServer");
-```
-
-**停止进程：**
-
-```cpp
-// 停止单个进程
-StopProcess(ProcessId);
-
-// 停止某个预设的所有实例
-StopProcesses("LocalServer");
-
-// 停止所有进程
-StopAllProcesses();
-```
-
-**自动清理：**
-
-当 `bLaunchDetached = false`（默认）时，插件会在游戏退出时**自动终止**该进程。设置为 `true` 的分离进程则会在游戏退出后继续运行。
-
-### 1.3 多实例支持
-
-同一个预设可以启动**多个实例**，每个实例都有独立的 `FProcessId`：
-
-```cpp
-USTRUCT(BlueprintType)
-struct FProcessId
-{
-    FName Name;    // 预设名称
-    int32 Index;   // 实例索引（自动递增）
-};
-```
-
-```
-// 启动3个本地服务器实例
-FProcessId Server1 = StartProcess("LocalServer");  // Index = 0
-FProcessId Server2 = StartProcess("LocalServer");  // Index = 1
-FProcessId Server3 = StartProcess("LocalServer");  // Index = 2
-
-// 独立管理每个实例
-StopProcess(Server2);  // 只停止第二个
-IsProcessRunning(Server1);  // 检查第一个是否在运行
-GetProcessCount("LocalServer");  // 返回 2（还剩两个在运行）
-```
-
-### 1.4 进程退出回调
-
 插件通过 `Tick` 轮询检测进程状态，支持两种粒度的退出通知：
 
 **单个进程回调：**
@@ -153,9 +163,11 @@ OnProcessExited(ProcessId, bNaturalExit):
     StartProcess(ProcessId.Name)
 ```
 
-## 调用示例
+## 游戏退出后的进程
 
-### 场景1：随游戏启动本地服务器
+`bLaunchDetached` 为 `false` 时，游戏退出会清理由该配置启动的进程；为 `true` 时进程可继续运行。根据外部程序的用途选择设置，避免在停止测试时关闭仍需运行的程序。
+
+## 随游戏启动本地服务器
 
 ```
 1. 项目设置中配置预设 "LocalServer"
@@ -170,7 +182,7 @@ OnProcessExited(ProcessId, bNaturalExit):
    插件自动终止服务器进程
 ```
 
-### 场景2：后台数据处理
+## 后台数据处理
 
 ```
 1. 配置 Python 脚本预设
@@ -184,7 +196,7 @@ OnProcessExited(ProcessId, bNaturalExit):
 3. 脚本完成后自动触发回调
 ```
 
-### 场景3：多服务器集群测试
+## 测试多服务器集群
 
 ```
 // 启动多个服务器实例
@@ -197,24 +209,3 @@ GetProcessCount("TestServer")  // 5
 // 测试完成后一键停止
 StopProcesses("TestServer")
 ```
-
-* * *
-
-### 步骤3：蓝图中使用
-
-所有函数都在 `SimpleLauncher` 分类下，核心流程：
-
-```
-1. StartProcess("预设名") → 获得 ProcessId
-2. IsProcessRunning(ProcessId) → 检查状态
-3. BindProcessExited(ProcessId, Callback) → 监听退出
-4. StopProcess(ProcessId) → 手动停止
-```
-
-## 生命周期注意事项
-
-bLaunchDetached 为 false 时，游戏退出会清理由该配置启动的进程；为 true 时进程可继续运行。根据外部程序的用途选择设置，避免在停止测试时关闭仍需运行的程序。
-
----
-
-原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770928)。

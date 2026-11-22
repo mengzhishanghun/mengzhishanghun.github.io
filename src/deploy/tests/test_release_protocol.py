@@ -10,8 +10,8 @@ import test_static_update as old_tests
 S = 'c' * 40
 P = '9' * 40
 
-def setup_protocol(m, manifest_change=None, provenance_change=None, preview=False, about=False):
-    entries, bodies = fixture(m)
+def setup_protocol(m, manifest_change=None, provenance_change=None, preview=False, about=False, files=895):
+    entries, bodies = fixture(m, files=files)
     if about:
         for path in ('about/index.html', 'zh/about/index.html', 'en/about/index.html'):
             bodies[path] = b'<html>about alias or page</html>'
@@ -56,6 +56,14 @@ def setup_protocol(m, manifest_change=None, provenance_change=None, preview=Fals
     return entries, bodies, manifest, provenance, api
 
 class ReleaseProtocol(unittest.TestCase):
+    def test_manifest_accepts_more_than_17002_records_with_byte_limit(self):
+        m = load()
+        _, _, manifest, _, api = setup_protocol(m, files=17003)
+        self.assertLess(len(json.dumps(manifest).encode()), m.MANIFEST_LIMIT)
+        with patch.object(m, 'api', side_effect=api):
+            result = m.release_entries(S, P)
+        self.assertEqual(sum(r['target'] == 'both' for r in result.values()), 17003)
+
     def test_manifest_accepts_100mb_files_without_aggregate_limit(self):
         m = load()
         def change(manifest):

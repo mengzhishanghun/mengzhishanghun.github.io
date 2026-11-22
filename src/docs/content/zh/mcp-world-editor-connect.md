@@ -1,5 +1,5 @@
 ---
-title: 连接世界编辑工具
+title: 启用与连接世界编辑工具
 type: doc
 slug: mcp-world-editor-connect
 draft: false
@@ -20,13 +20,14 @@ lang: zh
 translationKey: doc:mcp-world-editor:connect
 ---
 
-基于 MCP（Model Context Protocol）的 Unreal Engine AI 世界与关卡编辑插件。
-
-## 概述
+## 适用范围
 
 MCPWorldEditor 在 Unreal Editor 内运行 HTTP 服务，将 Actor 创建、变换与属性编辑、灯光、地形、关卡和视口操作暴露给 AI 助手。
 
 > **注意**：插件仍在开发中；服务器基础设施已经可用，工具能力会持续完善。
+
+- Unreal Engine 5.2+
+- 仅支持编辑器
 
 ## 配置
 
@@ -40,8 +41,6 @@ MCPWorldEditor 在 Unreal Editor 内运行 HTTP 服务，将 Actor 创建、变�
 | MaxRequestBodyBytes | int32 | 1048576 | UTF-8/JSON 解析前允许的最大 HTTP 请求体 |
 | MaxResponseBodyBytes | int32 | 8388608 | 允许返回的最大 UTF-8 JSON 响应；截图 Base64 也受此预算约束 |
 | MaxCapturePixels | int32 | 8294400 | `CaptureViewport` 允许读取的最大像素数（默认约为 4K） |
-
-`CaptureViewport` 在 PNG 编码前会将视口 Alpha 统一为完全不透明，确保保存文件和内嵌截图可在标准图片查看器及 Fab 工作流中正确显示。
 
 ## MCP 连接
 
@@ -65,19 +64,16 @@ MCPWorldEditor 在 Unreal Editor 内运行 HTTP 服务，将 Actor 创建、变�
 
 Cursor、Windsurf、VS Code Copilot 等客户端的配置位置不同，请按对应客户端文档添加同一 MCP 服务地址。
 
+## 请求校验与失败处理
+
+服务器会在请求进入 Game Thread 前统一按每个工具公布的 `inputSchema` 校验顶层必填字段、精确 JSON 类型、数组元素类型、数组 `maxItems` 和未知字段；所有工具 schema 默认 `additionalProperties=false`，现有批量数组统一公布 100 项上限。业务语义（资产路径、数值范围、对象存在性等）仍由具体工具执行第二层校验。
+
 工具请求在进入 Game Thread 前超时会被取消，可在安全确认后重试。若请求已被 Game Thread 领取，错误内容会返回 `code=timeout_execution_in_progress`、`retryable=false` 与 `stateMayHaveChanged=true`；此时操作仍可能完成，调用方必须先查询编辑器状态，不能盲目重试。
 
 响应大小在工具执行完成后核验。若 `tools/call` 的结果超出预算，JSON-RPC 错误数据会返回 `code=response_too_large`、`retryable=false` 与 `stateMayHaveChanged=true`；这不表示工具被回滚，调用方同样必须先核验编辑器状态。
 
-服务器会在请求进入 Game Thread 前统一按每个工具公布的 `inputSchema` 校验顶层必填字段、精确 JSON 类型、数组元素类型、数组 `maxItems` 和未知字段；所有工具 schema 默认 `additionalProperties=false`，现有批量数组统一公布 100 项上限。业务语义（资产路径、数值范围、对象存在性等）仍由具体工具执行第二层校验。
+请通过 MCP `tools/list` 查询当前工具及其输入 schema；可用工具会随插件版本变化。
 
-PIE 启动请求排队后即视为编辑器忙碌；`PIEControl/GetState` 与 `GetEditorState` 会区分 `Idle`、`StartQueued` 和 `Playing`，`Stop` 可取消尚未开始的排队请求。视口类型与渲染模式工具只使用已知的关卡编辑器视口，不会把资产编辑器预览视口强制下转；同时提供 ViewMode 与 ShowFlag 时会先完成两者校验再应用，错误不会留下部分渲染模式变更。
+## 反馈
 
-`ListActors` 与 `GetSelectedActors` 返回 `ActorPath`、`FName`、`Label` 和 `LevelPath`。所有通过 `ActorName/ActorNames` 寻址现有 Actor 的工具都优先接受完整 `ActorPath`；旧的 Label/FName 只有在当前 World 中唯一命中时才会执行，多命中会拒绝操作并返回排序后的候选路径，避免对错误 Actor 进行选择、移动、属性修改或删除。Actor 被重命名或移入其他关卡后路径会变化，调用方应重新查询。
-
-## 要求
-
-- Unreal Engine 5.2+
-- 仅支持编辑器
-
-## 工具与编辑器状态合同
+反馈请发送至 [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com)。

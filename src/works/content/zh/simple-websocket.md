@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/70e9040b-66c0-4793-a219-93203a117545
     - kind: docs
-      href: /zh/works/simple-websocket/docs/connect-and-send/
+      href: /zh/works/simple-websocket/docs/configure-connections/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -35,6 +35,7 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165484
 docIds:
+  - simple-websocket-configure-connections
   - simple-websocket-connect-and-send
   - simple-websocket-native-module
 coverAlt: SimpleWebSocket封面
@@ -76,4 +77,12 @@ SimpleWebSocket 在 Unreal Engine 中封装 WebSocket 连接管理。项目可�
 
 仅支持 `ws://`，不支持 `wss://` 安全连接。使用前需要可访问的 WebSocket 服务和双方约定的消息格式。连接关闭后的恢复、鉴权方式与消息可靠性处理需按项目需求设计并验证。
 
-命名连接、消息委托与模块示例见 [使用教程](/zh/works/simple-websocket/docs/connect-and-send/)。
+命名连接的配置见 [使用教程](/zh/works/simple-websocket/docs/configure-connections/)。
+
+## 支持与反馈
+
+[联系与合作](https://mzsh.me/contact/)
+
+## 打包项目
+
+SimpleWebSocket 可用于 UE 打包构建。

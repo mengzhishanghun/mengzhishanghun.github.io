@@ -1,5 +1,5 @@
 ---
-title: Organize Package Output
+title: Inspect Packaging Output
 type: doc
 slug: plugin-auto-packer-output
 draft: false
@@ -14,39 +14,22 @@ documentKind: product-manual
 websiteRoute: /en/works/plugin-auto-packer/docs/output/
 lang: en
 translationKey: doc:plugin-auto-packer:output
-sourceHash: 16a256f80e52b101854c280a064cfe5677d2fe941b3bfd43e29fc89d68677f1b
+sourceHash: b437473a002b3df80057657e63e6a7f156d5b5b65379afd5fc8769821929609c
 translationStatus: translated
-generatedBodyHash: 81265af59d9ed658ddc487238e1556726e2762a81dc0bf16802f70898fa61ee6
+generatedBodyHash: 98133d88d55f40754c16d5e8ef60a2b3211075c70b664313764e171308d12a91
 docPage:
   work: plugin-auto-packer
-  group: workflows
+  group: packaging
   slug: output
   order: 2
 ---
 
-## 📤 Packaging Output
+## Output Paths and Error Logs
 
 - Plugins are packaged under `PackagedPlugins/插件名/引擎名/`
 - With automatic organization enabled, the plugin includes cleaned files and generated configuration
 - Packaging failures produce `Failed.log` in the corresponding directory
 
----
+## Logs and Engine Status
 
-## ⚠️ Current Limitations
-
-- Only Windows plugin builds (Win64) are supported
-- Mac / Linux are currently unsupported
-- The plugin directory must follow the expected structure and contain a `.uplugin` file
-
----
-
-## 📄 License
-
-This project is open source under the [MIT License](./LICENSE). You are welcome to use, modify, and distribute it.
-
----
-
-## 📬 Contact
-
-Author email: **mengzhishanghun@outlook.com**  
-Contact me for custom functionality or collaboration!
+Each engine icon shows whether its build is waiting, running, successful, failed, or canceled. Logs update during the build; click an engine to view its log.

@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: 7a0240e1fee32c18b8e3cb3a361c8bddbea8a3ba5eeffabfb457c88d541e14c1
+sourceHash: 08fc74f8ed64ffdfa5e529471541c68cf0968916ca383dc20e7ee148edde75e2
 translationStatus: translated
-generatedBodyHash: 7cbd671906ed67817b2e86e3676cd6b15c3debbbe1e39dfd3f101495188b6260
+generatedBodyHash: 15e9d694c4835c6c447f6cf469b83ad8a9dd938e9ad55ae50fa8f27cdea87a1b
 workInfo:
   channels:
     - kind: sale
@@ -82,8 +82,18 @@ The plugin only handles component contamination where CreationMethod is marked I
 Repairs may involve several Blueprint assets. Review logs, checkout status, and final saved content. Other inheritance, compilation, or component problems require separate diagnosis.
 
 
-See the [usage guide](/en/works/simple-bp-inherit-fix/docs/find-components/) for steps and parameters.
+See [Repair Inherited Components](/en/works/simple-bp-inherit-fix/docs/repair-components/) for the procedure and checkout troubleshooting.
 
 ## Technical Details
 
 See the [user guide](/en/works/simple-bp-inherit-fix/docs/find-components/) for CreationMethod, inheritance chains, and SCS / ICH diagnosis and repair.
+
+## Contact and Support
+
+For usage questions or collaboration inquiries, visit the contact page.
+
+- **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
+
+## Compatibility
+
+Supports Unreal Engine 5.2–5.8.

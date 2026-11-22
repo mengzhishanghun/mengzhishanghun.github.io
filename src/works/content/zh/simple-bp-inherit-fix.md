@@ -78,8 +78,18 @@ SimpleBPInheritFix 是处理 Actor 蓝图继承链中组件状态异常的编辑
 
 修复可能涉及多份蓝图资产，使用者需要检查日志、签出状态和最终保存内容。其他类型的继承、编译或组件问题，仍需分别诊断。
 
-操作步骤和参数说明见 [使用教程](/zh/works/simple-bp-inherit-fix/docs/find-components/)。
+操作步骤和签出处理见[修复继承组件](/zh/works/simple-bp-inherit-fix/docs/repair-components/)。
 
 ## 技术说明
 
 CreationMethod、继承链与 SCS / ICH 的排查和修复原理见[使用文档](/zh/works/simple-bp-inherit-fix/docs/find-components/)。
+
+## 联系与支持
+
+如有使用问题或合作需求，请前往联系页面。
+
+- **联系入口：** [联系与合作](https://mzsh.me/contact/)
+
+## 兼容性
+
+支持 Unreal Engine 5.2–5.8。

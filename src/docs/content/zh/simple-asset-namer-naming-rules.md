@@ -11,7 +11,7 @@ workIds:
   - simple-asset-namer
 docPage:
   work: simple-asset-namer
-  group: workflows
+  group: naming
   slug: naming-rules
   order: 1
 documentKind: product-manual
@@ -20,45 +20,7 @@ lang: zh
 translationKey: doc:simple-asset-namer:naming-rules
 ---
 
-支持 Unreal Engine 5.2–5.8
-
-## 1. 设置
-
-打开 **编辑 → 项目设置 → Simple Asset Namer**
-
-### 1.1 通用
-
-| 选项 | 说明 |
-|------|------|
-| Auto Rename on Create | 创建或导入资产时自动重命名 |
-| Auto Rename on Rename | 手动重命名后自动修正资产名称 |
-| Language | UI 语言：中文 / 英文（默认英文），实时切换所有界面文本、提示信息和日志输出 |
-
-### 1.2 过滤器
-
-| 选项 | 说明 |
-|------|------|
-| Filter Type | 黑名单（排除指定路径）/ 白名单（仅处理指定路径） |
-| Exclude Paths | 黑名单模式下跳过这些路径下的资产 |
-| Include Paths | 白名单模式下仅处理这些路径下的资产 |
-
-**默认排除路径**：
-- `/Game/__ExternalActors__` - World Partition 自动生成
-- `/Game/__ExternalObjects__` - World Partition 自动生成
-- `/Game/Developers` - 开发者个人文件夹
-- `/Game/Collections` - 收藏夹
-
-### 1.3 分隔符
-
-| 选项 | 说明 | 默认值 |
-|------|------|--------|
-| Delimiter | 生成名称时使用的分隔符 | `_` |
-| Delimiter Detection List | 用于检测现有名称中的分隔符 | `_`、`-`、`.` |
-| Legacy Affixes | 用于检测旧命名模式的前缀/后缀列表 | - |
-
-**示例**：输入 `bp-MyActor` 或 `bp.MyActor` → 输出 `BP_MyActor`
-
-### 1.4 命名规则
+## 按资产类型指定词缀
 
 | 选项 | 说明 |
 |------|------|
@@ -139,33 +101,6 @@ translationKey: doc:simple-asset-namer:naming-rules
 | | PaperTileSet | TS | | `TS_Ground` |
 | | PaperTileMap | TM | | `TM_Level1` |
 
----
-
-## SimpleAssetNamer 使用指南
-
-使用资产类型规则、路径范围和词缀配置，处理新建资产及已有资产的命名。
-
-## 安装与设置
-
-### 步骤1：安装插件
-
-将插件文件夹复制到项目的 `Plugins` 目录，重启编辑器。
-
-### 步骤2：配置命名规则
-
-路径：`Edit > Project Settings > Simple Asset Namer`
-
-**基础配置：**
-
-1.  **General**：开启/关闭自动重命名
-2.  **Filter**：配置黑名单/白名单路径
-3.  **Delimiter**：配置分隔符和旧词缀
-4.  **Naming Rules**：为每种资产类型配置前缀和后缀
-
-使用前检查默认规则是否符合项目的命名约定。
-
-## 命名规则
-
 **命名规则配置：**
 
 每种资产类型可以配置独立的前缀和后缀：
@@ -203,11 +138,11 @@ TMap<TSoftClassPtr<UObject>, FAssetNamingRule> AssetTypeNamingRules;
 2.  旧词缀列表（`LegacyAffixes`）中的所有词缀
 3.  分隔符识别列表中的分隔符（`_`、`-`、`.`）
 
-## 路径筛选
+在 **Asset Type Naming Rules** 下点击 **+** 添加规则。
 
-**黑名单模式（默认）：**
+## 限制资产路径
 
-排除指定路径下的资产，默认排除 UE 内部目录：
+`Filter Type` 默认使用黑名单，跳过 `Exclude Paths` 下的资产。白名单只处理 `Include Paths` 下的资产，适合分批推行规则。下方是默认排除路径和一组白名单示例。
 
 ```
 ExcludePaths:
@@ -217,17 +152,21 @@ ExcludePaths:
   /Game/Collections           // 集合目录
 ```
 
-**白名单模式：**
-
-只处理指定路径下的资产，适合渐进式推行命名规范：
-
 ```
 IncludePaths:
   /Game/Characters/
   /Game/Items/
 ```
 
-## 分隔符与历史词缀
+## 配置分隔符并识别旧词缀
+
+| 选项 | 说明 | 默认值 |
+|------|------|--------|
+| Delimiter | 生成名称时使用的分隔符 | `_` |
+| Delimiter Detection List | 用于检测现有名称中的分隔符 | `_`、`-`、`.` |
+| Legacy Affixes | 用于检测旧命名模式的前缀/后缀列表 | - |
+
+**示例**：输入 `bp-MyActor` 或 `bp.MyActor` → 输出 `BP_MyActor`
 
 ```cpp
 // 生成命名时使用的连接符

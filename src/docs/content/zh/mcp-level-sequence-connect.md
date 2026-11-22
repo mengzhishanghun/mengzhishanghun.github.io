@@ -1,5 +1,5 @@
 ---
-title: 连接序列编辑工具
+title: 安装与连接序列编辑工具
 type: doc
 slug: mcp-level-sequence-connect
 draft: false
@@ -29,33 +29,20 @@ MCP Level Sequence 是一个自包含的 Unreal Editor 插件，通过 MCP 兼�
 3. 如端口被占用，服务最多向后尝试 10 个端口；以编辑器工具栏和日志显示的实际地址为准。
 4. 在 `Project Settings > Plugins > MCP Level Sequence` 中可配置端口、自动启动和请求超时。
 
+## HTTP 请求
+
 服务支持 `initialize`、`ping`、`tools/list` 和 `tools/call`。HTTP 请求体最大为 1 MiB，超限返回 HTTP 413。请求必须使用 `jsonrpc: "2.0"`，`params` 与 `arguments` 必须是对象，并按工具 Schema 严格校验未知字段、必填字段、类型、数组元素和数值边界。
 
-## 23 个工具
+## 快速上手
 
-| 分组 | 工具 | 用途 |
-|---|---|---|
-| 序列 | `ListSequences`、`GetSequenceDetail`、`CreateSequence` | 发现、分页读取和创建序列 |
-| 时间 | `SetPlaybackRange`、`SetSequenceRates` | 设置播放范围、显示帧率和 Tick Resolution |
-| Binding | `ListBindings`、`AddBinding`、`RemoveBinding` | 分页列出、添加和级联删除对象绑定 |
-| Track | `ListTrackTypes`、`AddTrack`、`RemoveTrack` | 查询、添加和级联删除轨道 |
-| Section | `AddSection`、`RemoveSection`、`SetSectionRange` | 创建、删除和调整 Section 范围 |
-| Key | `GetKeyframes`、`SetKeyframes`、`RemoveKeyframes` | 分页读取、写入和删除关键帧 |
-| Camera | `AddCameraCut`、`SetCameraCut` | 创建和修改 Camera Cut |
-| 生命周期 | `OpenAsset`、`SaveAsset`、`CloseAsset` | 打开、保存指定资产并核验关闭结果 |
-| 预览 | `CaptureSequencerView` | 截取活动关卡编辑器视口并返回 PNG |
+推荐流程是先调用 `ListSequences` 和 `GetSequenceDetail`，再用稳定 ID/名称执行修改，最后显式调用 `SaveAsset`。
 
-## 与 UE 5.8 官方实验 Toolset 的边界
+## 与 UE 5.8 实验工具集的区别
 
-UE 5.8 的实验性 Animation Assistant Toolset 是依赖 SequencerScripting 的广覆盖 Python 能力；本插件选择 UE 5.2+ 兼容、自包含的 C++ HTTP 边界。本轮已补齐可稳定跨版本实现的序列帧率设置、Skeletal Animation Track/Section 和 Audio 资产 Section。
-
-以下差异为有意保留，而不是文档遗漏：
-
-- Subsequence 创建/导航：需要循环依赖检查、层级所有权和跨序列时间语义设计，当前不提供写入工具。
-- Spawnable 创建：对象模板所有权、Undo 与 spawner 路径跨版本变化较大，需独立运行时验证后再开放。
-- Event payload：依赖 Director Blueprint endpoint/graph；当前只创建 Event Section，不承诺触发具体逻辑。
-- 任意 Track/Class、Folder、Tag、选择状态和骨骼级高级操作：官方实验 Toolset 覆盖更广，本插件只公开已审查并能维持严格 Schema 的能力。
+UE 5.8 的实验性 Animation Assistant Toolset 依赖 SequencerScripting，提供更广的 Python 功能。MCP Level Sequence 是兼容 UE 5.2+ 的自包含 C++ HTTP 插件，支持设置序列帧率、添加骨骼动画轨道和区段，以及引用 Audio 资产的区段。
 
 UE 5.2–5.8 的编译、编辑器运行、资产保存与关闭交互，以及完整 Undo 行为尚未完成验证。请先在目标引擎的项目副本中确认这些操作。
 
-如有问题或反馈，请发送邮件至 [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com)。我看到后会处理。
+## 反馈
+
+反馈请发送至 [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com)。

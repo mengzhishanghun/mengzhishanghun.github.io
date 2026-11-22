@@ -13,85 +13,31 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-asset-cleaner/docs/protect-assets/
 lang: en
 translationKey: doc:simple-asset-cleaner:protect-assets
-sourceHash: e4a3446c8bb960a1ded54d78dbcc67872ccec954b7dba45dfe1a1a0b5d2a6b04
+sourceHash: 3cb4fc542958f47ffed2b2b9b8c38bac14f8e7545db15a6b26926dbc68fb6fd0
 translationStatus: translated
-generatedBodyHash: 41d48c08cccfbef23cb72139fdf32403e938121cd9459630aa7a3b7dca3e5d17
+generatedBodyHash: a2b37f4ffb62f1c24016c8508fdf9fde94ffbeca826a1cea9a1e7d089376a52e
 docPage:
   work: simple-asset-cleaner
-  group: workflows
+  group: protection
   slug: protect-assets
-  order: 3
+  order: 1
 ---
 
-### Root Asset Configuration
+## Protect by Asset Class
 
-#### Root Asset Classes
-- **Default**: `UWorld` (map files)
-- **Function**: Assets of these types, including parent/derived classes, are treated as roots
-- **Example**:
-  - `UWorld` - Maps (.umap) and derived types
-  - `UDataAsset` - DataAssets and derived types
-- **Note**: Parent classes and all derived classes are automatically included
+Set root asset types in `Root Asset Classes`. The default is `UWorld` (`.umap` maps). Add `UBlueprint`, `UDataAsset`, or `UDataTable` as needed, for example when GameMode, PlayerController, or configuration data are central to the project. The setting also matches parent and derived classes.
 
-#### Custom Root Assets
-- **Function**: Manually designate individual assets as roots
-- **Example**: `/Game/Core/GameMode.GameMode`
-- **Purpose**: Critical assets not covered by Root Asset Classes
+## Protect Individual Assets
 
-#### Additional Root Paths
-- **Function**: All assets under these paths are treated as roots
-- **Example**: `/Game/Essential/`, `/Game/Core/`
-- **Purpose**: Protect entire system folders from cleanup
+List individual assets not covered by class rules in `Custom Root Assets`, such as `/Game/Core/GameMode.GameMode`, `/Game/Core/MainGameMode`, or `/Game/Config/GlobalSettings`.
 
----
+## Protect Assets by Path
 
-### Root Asset Configuration
+List directories to protect in `Additional Root Paths`, such as `/Game/Core/`, `/Game/Config/`, `/Game/Managers/`, or `/Game/Essential/`. The plugin keeps all assets in those directories and their references.
 
-SimpleAssetCleaner uses “root assets” to determine whether assets are in use.
+## Trace References from Roots
 
-**What is a root asset?**
-
-Root assets are the most central assets in your project, such as:
-
--   Map files (.umap)
--   Main Blueprint classes, such as GameMode and PlayerController
--   Configuration data tables
-
-Starting from these roots, the plugin tracks all directly or indirectly referenced assets. Assets on these reference chains are retained; others are considered unreferenced.
-
-**Three configuration methods:**
-
-**1\. Root Asset Classes**
-
-Specify which asset types are roots. `UWorld` (maps) is included by default.
-
-Common configurations:
-
--   `UWorld` - All maps (included by default)
--   `UBlueprint` - All Blueprint classes
--   `UDataAsset` - All DataAssets
--   `UDataTable` - All data tables
-
-**2\. Custom Root Assets**
-
-Manually designate particular assets as roots, useful for important assets of less common types.
-
-For example:
-
--   `/Game/Core/MainGameMode` - Main game mode
--   `/Game/Config/GlobalSettings` - Global configuration
-
-**3\. Additional Root Paths**
-
-Protect all assets in an entire directory. These assets and everything they reference are retained.
-
-For example:
-
--   `/Game/Core/` - Core systems directory
--   `/Game/Config/` - Configuration directory
--   `/Game/Essential/` - Essential assets directory
-
-**How it works:**
+Roots and any project assets they reference directly or indirectly are kept. In the example below, the map is a root, so the materials, texture, and Blueprint in its reference chain are kept. Plugin and engine assets, C++ files, and content outside the project’s `/Content/` are outside cleanup scope.
 
 ```
 Map A (root asset)
@@ -103,41 +49,6 @@ Map A (root asset)
 Material M3 ❌ Not referenced by any root → Clean up
 ```
 
-### 5.1 Configuration Recommendations
+## Team Settings and First Trial
 
-**✅ Recommended practices:**
-
--   **Automatic cleanup configuration** - Review settings periodically as project assets change
--   **Define roots and protection scope first** - Cover maps, Blueprints, configuration assets, and directories that must be retained
--   **Add asset types gradually** - Determine which types are core assets, such as Blueprints and data tables
--   **Protect critical directories** - Prevent accidental deletion of core systems
--   **Enable verbose logging on first use** - Observe how the plugin works
-
-**⚠️ Notes:**
-
--   **Try it on a test branch first** - Check that cleanup matches expectations
--   **Ensure version control recovery before full cleanup** - Keep at least one recoverable commit
--   **Use consistent team configuration** - Put configuration files under version control so all members use the same rules
--   **Review configuration periodically** - Core asset types may change as the project evolves
-
-### 5.4 Protected Assets
-
-SimpleAssetCleaner analyzes and cleans only assets in the **project Content directory** (`/Game/` path).
-
-**Assets outside cleanup scope:**
-
--   ❌ Plugin assets, such as `/YourPlugin/Content/`
--   ❌ Engine assets (`/Engine/` path)
--   ❌ C++ code files (.h, .cpp)
--   ❌ External references (files outside Content)
-
-**Assets retained through root configuration:**
-
--   ✅ Assets of configured root types
--   ✅ Assets listed as custom roots
--   ✅ All assets under root paths
--   ✅ Assets directly or indirectly referenced by any of the above
-
----
-
-Originally published on 2025-11-01 on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19183435).
+Protect key maps, Blueprints, configuration data, and directories first, then add asset types as needed. Put shared settings in source control and revisit them as the project evolves. Try them on a test branch with verbose logging first, and make sure there is a recoverable commit before a full cleanup.

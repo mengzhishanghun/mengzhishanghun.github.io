@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: fb0c966d077fba5e7ae87b617650588a0be1518c055fc911bf46f7d3a5626133
+sourceHash: c212a885d12fe9ab4292e5a36b7cd932081a3832851e5e2a8251b8d08baa6524
 translationStatus: translated
-generatedBodyHash: f93272e472783eae800cba2141848e24709ec67fee5e3e5632a685e447a70e5e
+generatedBodyHash: 3d50d0a0f1b6555a9559393591c0e07fc3ce83be97d8e0feacd2feb20013532f
 workInfo:
   channels:
     - kind: sale
@@ -40,6 +40,7 @@ websiteCoverUrl: /media/covers/works/simple-ssh-tunnel-20261101.webp
 coverAlt: SimpleSSHTunnel cover
 docIds:
   - simple-ssh-tunnel-connect
+  - simple-ssh-tunnel-manage-tunnels
   - simple-ssh-tunnel-cpp-tunnels
 ---
 
@@ -81,4 +82,17 @@ Windows is currently supported. Check library files and build support before por
 
 The default subsystem closes all tunnels when it is destroyed. In the target project, review SSH credential storage and usage, connection threads, error handling, and whether sessions and channels are released correctly when connections close.
 
-See the [user guide](/en/works/simple-ssh-tunnel/docs/connect/) for connection configuration, Blueprint calls, and implementation details.
+For connection configuration, see the [user guide](/en/works/simple-ssh-tunnel/docs/connect/).
+
+## Libraries and source
+
+SimpleSSHTunnel is implemented in C++ and exposes Blueprint interfaces.
+
+- [libssh2](https://github.com/libssh2/libssh2) provides SSH2 connections, user authentication, and port forwarding under the BSD 3-Clause License.
+- [OpenSSL](https://github.com/openssl/openssl) provides SSL/TLS and cryptographic algorithms under the Apache 2.0 License.
+
+Follow the respective licenses and credit the libraries if you use them. The original technical notes were published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19165541) on 2025-10-25.
+
+## Support and feedback
+
+[Contact and collaboration](https://mzsh.me/contact/)

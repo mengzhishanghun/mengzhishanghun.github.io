@@ -11,7 +11,7 @@ workIds:
   - mcp-niagara
 docPage:
   work: mcp-niagara
-  group: workflows
+  group: systems
   slug: inspect
   order: 1
 documentKind: product-manual
@@ -45,4 +45,6 @@ MCP Niagara 在 Unreal Editor 中提供面向 Niagara System、Emitter、模块�
 
 插件提供 UE 5.2 及以上版本的兼容路径。目标引擎中的资产编辑、保存、重新打开和打包行为尚未完成验证，请先在项目副本中确认。
 
-如有问题或反馈，请发送邮件至 [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com)。我看到后会处理。
+## 反馈
+
+反馈请发送至 [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com)。

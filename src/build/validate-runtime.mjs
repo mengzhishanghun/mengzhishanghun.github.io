@@ -2,10 +2,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
 import {fileURLToPath} from 'node:url';
+import {isDeepStrictEqual} from 'node:util';
 import {attrs,walk} from './extract-dom.mjs';
 import {localeRoute,preflight} from './build.mjs';
 import {projectPublication,isHiddenURL} from './publication.mjs';
-import {resolveDocumentAlias} from './work-documents.mjs';
+import {projectDocumentAnchorAliases,resolveDocumentAlias} from './work-documents.mjs';
 const require=createRequire(new URL('../../package.json',import.meta.url));
 const {parse}=require('parse5');
 export function validateRuntime({manifest,output,site,languageConfig,validateAliases=true,publication}) {
@@ -18,12 +19,12 @@ export function validateRuntime({manifest,output,site,languageConfig,validateAli
     }
     manifest={...manifest,entries:publication.entries,redirects:publication.redirects};
   }
-  const pageIDs=new Map();
+  const pageIDs=new Map(),entryIDs=new Map(),pages=new Map(),fragmentLinks=[];
   for(const entry of manifest.entries)for(const {code:locale} of config.languages) {
     const route=localeRoute(entry,locale),relative=route.slice(1)+(route.endsWith('.html')?'':'index.html');
-    const doc=parse(fs.readFileSync(path.join(output,relative),'utf8')),ids=new Set();
-    walk(doc,n=>{if(attrs(n).id)ids.add(attrs(n).id)});
-    pageIDs.set(route,ids);
+    const doc=parse(fs.readFileSync(path.join(output,relative),'utf8')),ids=new Map();
+    walk(doc,n=>{const id=attrs(n).id;if(id)ids.set(id,(ids.get(id)||0)+1)});
+    pageIDs.set(route,ids);entryIDs.set(entry.id+':'+locale,ids);
     let runtime,records;counts.pages++;
     const visit=(node,skip=false)=>{
       const a=attrs(node);skip ||= ['script','style','code','pre','svg'].includes(node.tagName);
@@ -41,7 +42,12 @@ export function validateRuntime({manifest,output,site,languageConfig,validateAli
         counts.codeFrames++;
         if(entry.type==='doc' && !(a.class || '').split(/\s+/).includes('not-content'))errors.push({route,kind:'codeFrameClass'});
       }
-      if(a.href?.startsWith('#') && a.href.length>1 && !ids.has(decodeURIComponent(a.href.slice(1))))errors.push({route,kind:'missingAnchor',target:a.href});
+      if(a.href?.includes('#')){
+        try{
+          const url=new URL(a.href,'https://mzsh.me'+route);
+          if(url.origin==='https://mzsh.me'&&url.hash)fragmentLinks.push({route,target:a.href,url});
+        }catch{ /* Local path validity is checked below. */ }
+      }
       for(const key of ['href','src']) {
         const value=a[key];if(!value || /^(?:[a-z]+:|\/\/|#)/i.test(value))continue;
         if(publication&&isHiddenURL(value,publication))errors.push({route,kind:'hiddenLink',target:value});
@@ -51,11 +57,27 @@ export function validateRuntime({manifest,output,site,languageConfig,validateAli
       }
       for(const child of node.childNodes || [])visit(child,skip);
     };visit(doc);
+    pages.set(route,{entry,locale,runtime});
     if(runtime?.locale!==locale || runtime?.urls?.[locale]!==route || config.languages.some(l=>!runtime?.urls?.[l.code]) || !runtime?.languages || runtime.primary!==config.primary || runtime.fallback!==config.fallback)errors.push({route,kind:'languageRuntime'});
     if(entry.id==='page:works-index' && records) {
       const categories=new Map();for(const record of records) {const list=categories.get(record.categoryId) || [];list.push(record.order);categories.set(record.categoryId,list);}
       for(const [category,orders] of categories)if(orders.some((n,i)=>i>0 && n<orders[i-1]))errors.push({route,kind:'workOrder',category,orders});
     }
+  }
+  const codes=config.languages.map(({code})=>code),projected=new Map();
+  for(const [route,{entry,runtime}]of pages){
+    try{
+      if(!projected.has(entry.id))projected.set(entry.id,projectDocumentAnchorAliases(entry,{entries:manifest.entries,codes,pageIds:entryIDs,route:localeRoute}));
+      if(!isDeepStrictEqual(runtime?.anchorAliases,projected.get(entry.id)))errors.push({route,kind:'documentAnchorAlias'});
+    }catch(error){errors.push({route,kind:'documentAnchorAlias',message:error.message});}
+  }
+  for(const {route,target,url}of fragmentLinks){
+    const page=pages.get(url.pathname);
+    if(!page||route!==url.pathname&&!page.entry.docPage)continue;
+    let id;
+    try{id=decodeURIComponent(url.hash.slice(1));}catch{id=url.hash.slice(1);}
+    const aliases=projected.get(page.entry.id)?.[page.locale];
+    if(!pageIDs.get(url.pathname).has(id)&&!(aliases&&Object.hasOwn(aliases,id)&&isDeepStrictEqual(page.runtime?.anchorAliases?.[page.locale]?.[id],aliases[id])))errors.push({route,kind:'missingAnchor',target});
   }
   if(validateAliases){
     counts.aliases=0;const aliases=new Map([['/',null]]);
@@ -71,12 +93,15 @@ export function validateRuntime({manifest,output,site,languageConfig,validateAli
         const target=entry?localeRoute(entry,code):'/'+code+'/';
         if(runtime?.urls?.[code]!==target || target===pathname || !pageIDs.has(target))errors.push({route:pathname,kind:'aliasTarget',code});
         for(const value of Object.values(runtime?.anchors?.[code] || {})){
-          const valid=typeof value==='string'?pageIDs.get(target)?.has(value):entry?.docPage&&value&&typeof value.path==='string'&&typeof value.anchor==='string'&&pageIDs.has(value.path)&&(!value.anchor||pageIDs.get(value.path).has(value.anchor));
+          const targetPage=pages.get(value?.path);
+          const valid=typeof value==='string'?pageIDs.get(target)?.get(value)===1:entry?.docPage&&targetPage?.locale===code&&(targetPage.entry.docPage?.work??(targetPage.entry.type==='work'?targetPage.entry.slug:null))===entry.docPage.work&&typeof value.anchor==='string'&&(!value.anchor||pageIDs.get(value.path).get(value.anchor)===1);
           if(!valid)errors.push({route:pathname,kind:'aliasAnchor',code,value});
         }
         for(const [oldId,newId]of Object.entries(manifest.redirects?.find(alias=>alias.route===pathname)?.anchorOverrides?.[code] || {})){
-          const expected=typeof newId==='string'?newId:resolveDocumentAlias(newId,{entries:manifest.entries,locale:code,route:localeRoute});
-          if(JSON.stringify(runtime?.anchors?.[code]?.[oldId])!==JSON.stringify(expected))errors.push({route:pathname,kind:'aliasAnchorOverride',code,oldId,newId});
+          try{
+            const expected=typeof newId==='string'?newId:resolveDocumentAlias(newId,{entries:manifest.entries,locale:code,route:localeRoute,work:entry?.docPage?.work,pageIds:entryIDs});
+            if(!isDeepStrictEqual(runtime?.anchors?.[code]?.[oldId],expected))errors.push({route:pathname,kind:'aliasAnchorOverride',code,oldId,newId});
+          }catch(error){errors.push({route:pathname,kind:'aliasAnchorOverride',code,oldId,newId,message:error.message});}
         }
       }
     }

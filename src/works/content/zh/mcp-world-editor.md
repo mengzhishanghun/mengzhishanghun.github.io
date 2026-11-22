@@ -27,9 +27,26 @@ tags:
 docIds:
   - mcp-world-editor-connect
   - mcp-world-editor-maps
+  - mcp-world-editor-save-level-packages
+  - mcp-world-editor-navigation
+  - mcp-world-editor-lighting-build
+  - mcp-world-editor-world-settings
   - mcp-world-editor-actors
+  - mcp-world-editor-foliage
+  - mcp-world-editor-instanced-meshes
+  - mcp-world-editor-actor-splines
+  - mcp-world-editor-actor-hierarchy
+  - mcp-world-editor-actor-components
+  - mcp-world-editor-streaming-levels
   - mcp-world-editor-streamed-world
+  - mcp-world-editor-world-partition-regions
+  - mcp-world-editor-level-instances
   - mcp-world-editor-landscape
+  - mcp-world-editor-landscape-paint-layers
+  - mcp-world-editor-landscape-splines
+  - mcp-world-editor-editor-viewport
+  - mcp-world-editor-editor-pie
+  - mcp-world-editor-viewport-statistics
   - mcp-world-editor-materials
 coverAlt: MCPWorldEditor封面
 websiteCoverUrl: /media/covers/works/mcp-world-editor-20261101.webp

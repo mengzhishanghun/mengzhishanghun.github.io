@@ -21,15 +21,15 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: en
 translationKey: simple-level-seq-smooth
-sourceHash: ebfde6a22568fac8b46c61ac93cdb09bcde92be3ac1212d8601ea10206d2561b
+sourceHash: bb1ac0519e412a6955968bf088cd1717de0085f8d7e7367fd26ff2b23db17557
 translationStatus: translated
-generatedBodyHash: a9d0980e7dd1215efd189b83a52d161f7fd1dd7d36e43a601b8e4ca6655886a5
+generatedBodyHash: 9abd240af57fa11e84007f80fcae9c35f98454a19322421706f69f1f1b6b2eb7
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/b8acac2b-913d-47ce-8596-b4e2d7d6753a
     - kind: docs
-      href: /en/works/simple-level-seq-smooth/docs/smooth-curves/
+      href: /en/works/simple-level-seq-smooth/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -40,6 +40,7 @@ workInfo:
 websiteCoverUrl: /media/covers/works/simple-level-seq-smooth-20261101.webp
 coverAlt: SimpleLevelSeqSmooth cover
 docIds:
+  - simple-level-seq-smooth-setup
   - simple-level-seq-smooth-smooth-curves
   - simple-level-seq-smooth-algorithms
 ---
@@ -85,3 +86,14 @@ The tool targets Level Sequence data and supported ControlRig parameter sections
 Filtering may also weaken genuine fast motion, and skipped frames may have causes beyond curve noise. Select algorithms, parameters, and overwrite behavior for each sequence; processed curves do not by themselves prove that motion quality has been reviewed.
 
 See the [usage guide](/en/works/simple-level-seq-smooth/docs/smooth-curves/) for steps and parameters.
+
+## Compatibility
+
+- Unreal Engine 5.2–5.8
+- Version 1.1.0 (Version 2)
+
+## Contact and Support
+
+For usage questions or collaboration, please visit the contact page.
+
+- **Contact:** [Contact and collaboration](https://mzsh.me/contact/)

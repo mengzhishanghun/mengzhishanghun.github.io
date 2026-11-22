@@ -28,6 +28,8 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 docIds:
   - ue-quick-start-open-project
+  - ue-quick-start-build-configuration
+  - ue-quick-start-normalize-line-endings
 coverAlt: UEQuickStart封面
 websiteCoverUrl: /media/covers/works/ue-quick-start-20261101.webp
 lang: zh

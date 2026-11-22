@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /en/works/mcp-dev-tools/docs/inspect-editor/
+      href: /en/works/mcp-dev-tools/docs/connect/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -27,13 +27,22 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-dev-tools
-sourceHash: 8360959e12f33953439495e11dd992cff2450d2b01ebc4c0d8d9ae838ee203a2
+sourceHash: 835cb26bf98b65132ab700955a97113da1f2210410405d26e9203b8ea4d8e0d5
 generatedBodyHash: 299c3b4bd8d30c194caaeca1f2969da4f89ed9104ff4a5b745031bd539140770
 translationStatus: translated
 coverAlt: MCPDevTools cover
 websiteCoverUrl: /media/covers/works/mcp-dev-tools-20261101.webp
 docIds:
+  - mcp-dev-tools-connect
   - mcp-dev-tools-inspect-editor
+  - mcp-dev-tools-asset-registry
+  - mcp-dev-tools-data-assets
+  - mcp-dev-tools-data-tables
+  - mcp-dev-tools-curves
+  - mcp-dev-tools-curve-tables
+  - mcp-dev-tools-string-tables
+  - mcp-dev-tools-primary-asset-labels
+  - mcp-dev-tools-enhanced-input
 ---
 
 ## About this work

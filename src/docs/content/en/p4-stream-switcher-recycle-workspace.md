@@ -1,5 +1,5 @@
 ---
-title: Recycle and Delete Workspaces
+title: Reclaim and Delete Workspaces
 type: doc
 slug: p4-stream-switcher-recycle-workspace
 draft: false
@@ -13,17 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-stream-switcher/docs/recycle-workspace/
 lang: en
 translationKey: doc:p4-stream-switcher:recycle-workspace
-sourceHash: 0426604a6be4b0eb6eab6558a0e4a9e6c4c178598f43413bb5a1d926810ed7ca
+sourceHash: 45045200bc450137cc8961ced2e083f7d9852f70931f1c8090ccd25b0b35def1
 translationStatus: translated
-generatedBodyHash: f256bc71d453c83e88b12375dfc5cf8b0c6096adf4b79df8e1e80f0915f60eb2
+generatedBodyHash: c069be4c6ddab4c675f14d524dfb23aac457a8c77f6091008bdcdcc45cb0a786
 docPage:
   work: p4-stream-switcher
-  group: workflows
+  group: workspaces
   slug: recycle-workspace
-  order: 3
+  order: 2
 ---
 
-## Workspace reclamation and deletion
+## Automatic reclamation and manual deletion
+
+The workspace pool limit is at least 1 and defaults to 5.
 
 A full pool selects the oldest client using locally stored usage timestamps. Automatic reclamation stops if the candidate has opened files or P4V is detected running. Review and handle changes first, and close P4V when necessary. Do not blindly revert work to bypass a check.
 

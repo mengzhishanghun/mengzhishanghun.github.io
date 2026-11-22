@@ -29,3 +29,28 @@ test('runtime gate rejects broken anchors and source order overridden by old lis
   for(const locale of ['zh','en'])fs.writeFileSync(path.join(root,locale,'works/index.html'),render(locale,[0,2],'#valid'));
   assert.deepEqual(validateRuntime({manifest,output:root,site:root,validateAliases:false}).errors,[]);
 });
+
+
+test('runtime recognizes published chapter aliases in same-page and cross-page links',t=>{
+ const root=fs.mkdtempSync(path.join(os.tmpdir(),'site-anchor-test-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+ const config={primary:'en',fallback:'en',languages:[{code:'en'}]};
+ const source='/en/works/cleaner/docs/setup/',destination='/en/works/cleaner/docs/usage/';
+ const chapter=slug=>({docPage:{work:'cleaner',slug},id:'doc:cleaner:'+slug,legacyRoutes:[]});
+ const aliases={en:{old:{path:destination,anchor:'run'}}};
+ const manifest={entries:[{...chapter('setup'),anchorAliases:{en:{old:{id:'doc:cleaner:usage',anchor:'run'}}}},chapter('usage')]};
+ function page(route,body,anchorAliases){
+   const folder=path.join(root,route.slice(1));fs.mkdirSync(folder,{recursive:true});
+   fs.writeFileSync(path.join(folder,'index.html'),`<html><body>${body}<script type="application/json" data-site-language>${JSON.stringify({...config,locale:'en',urls:{en:route},anchorAliases})}</script></body></html>`);
+ }
+ const check=()=>validateRuntime({manifest,output:root,languageConfig:config,validateAliases:false}).errors;
+ page(source,'<a href="#old">Former step</a>',aliases);
+ page(destination,`<h2 id="run">Run</h2><a href="${source}?view=full#old">Former step</a>`);
+ assert.deepEqual(check(),[]);
+ page(source,'<a href="#unknown">Broken</a>',aliases);
+ assert.equal(check().filter(error=>error.kind==='missingAnchor').length,1);
+ page(source,'<a href="#old">Former step</a>');
+ assert.ok(check().some(error=>error.kind==='documentAnchorAlias'));
+ page(source,'<a href="#old">Former step</a>',aliases);
+ page(destination,'<h2 id="run">Run</h2><p id="run">Duplicate</p>');
+ assert.ok(check().some(error=>error.kind==='documentAnchorAlias'));
+});

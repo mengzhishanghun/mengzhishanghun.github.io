@@ -20,15 +20,15 @@ links:
     href: https://github.com/MZSH-Tools/UEPackageManager
 lang: en
 translationKey: ue-package-manager
-sourceHash: e77b10436f75b45ca4feb46433858ed17d84c820f683d5adddb17034b3c79dae
+sourceHash: 26189c96092075917945126ec015c426de2794caa6c26efaf3e07b59f7e0b12b
 translationStatus: translated
-generatedBodyHash: f1ebfcfa4f4d244a4b065289c51de7953544575b9beb34a45626aac36c19ceab
+generatedBodyHash: 6963d970ab003b937e1883dd5c8dc259df67bce45780e8d2c66e6879d3587dd3
 workInfo:
   channels:
     - kind: open-source
       href: https://github.com/MZSH-Tools/UEPackageManager
     - kind: docs
-      href: /en/works/ue-package-manager/docs/package-project/
+      href: /en/works/ue-package-manager/docs/install-and-detect/
   compatibility:
     - platforms:
         - Windows
@@ -37,7 +37,11 @@ workInfo:
 websiteCoverUrl: /media/imported/works/ue-package-manager-cover-v2.png
 coverAlt: UEPackageManager cover
 docIds:
+  - ue-package-manager-install-and-detect
   - ue-package-manager-package-project
+  - ue-package-manager-project-configuration
+  - ue-package-manager-deploy-additional-files
+  - ue-package-manager-clean-old-packages
   - ue-package-manager-build-executable
 ---
 
@@ -92,3 +96,7 @@ Full Debug builds, standalone plugin packaging, automatic editor closure, and pr
 *UEPackageManager graphical interface: configuring the project, packaging parameters, and additional file copy rules.*
 
 For operation steps and parameter details, see the [user guide](/en/works/ue-package-manager/docs/package-project/).
+
+## License
+
+[MIT License](https://github.com/MZSH-Tools/UEPackageManager/blob/f15dfdb00e1d06919035ccd95bc752c2877a3f8c/LICENSE)

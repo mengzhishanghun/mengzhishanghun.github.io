@@ -1,5 +1,5 @@
 ---
-title: Install and Configure Source Control
+title: Install and Set Up Source Control
 type: doc
 slug: simple-asset-cleaner-setup
 draft: false
@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-asset-cleaner/docs/setup/
 lang: en
 translationKey: doc:simple-asset-cleaner:setup
-sourceHash: 17e50fabc08288d410e0b33f2dc376ef8e90e44498c0d8e5d975bdcf3c474f9b
+sourceHash: 4f534305e469b5be819fb7ef7a63356b67ca9100ed6bd6c9b16b420f2f8bf954
 translationStatus: translated
-generatedBodyHash: f54e934831b4b01215cdd43a6d429445e133cda9e26ac02ff6676346445e0ce8
+generatedBodyHash: b73e624fed668d639abffd19045ab7689b2e4abcf97e51c0b110e5823bccf442
 docPage:
   work: simple-asset-cleaner
   group: setup
@@ -23,75 +23,7 @@ docPage:
   order: 1
 ---
 
-**SimpleAssetCleaner** automatically identifies and removes unreferenced assets in Unreal Engine projects to keep repositories tidy.
-
-> **Important**: This plugin can delete assets from version control. Read carefully before use.
-
-**Compatibility**: Unreal Engine 5.2–5.8
-
----
-
-## Configuration
-
-**Location**: Editor > Project Settings > General > Simple Asset Cleaner
-
-![](/media-occurrence/doc%3Asimple-asset-cleaner%3Asetup%3Amedia%3A1)
-
-### Version Control Provider (Important!)
-
-The plugin automatically wraps your version control provider in a proxy to monitor submissions.
-
-![](/media-occurrence/doc%3Asimple-asset-cleaner%3Asetup%3Amedia%3A2)
-
-**Do not select a proxy provider manually!**
-- Always select your actual version control provider, such as Perforce, Git, or SVN
-- The plugin wraps it automatically in the background
-- Selecting a proxy directly may cause problems
-
-**Correct settings**:
-- Use: `Perforce`, `Git`, `Subversion`, etc.
-- Avoid: `Perforce_Proxy`, `Git_Proxy`, or any provider ending in `_Proxy`
-
-### General Settings
-
-#### Language
-- **Default**: English
-- **Options**: Chinese / English
-- **Function**: Switch the language of all UI text and logs
-- **Behavior**: Takes effect immediately without restarting the editor
-
-#### Enable Verbose Logging
-- **Default**: Disabled
-- **Function**: Detailed logs for debugging
-- **Recommendation**: Enable only when troubleshooting
-
-## Support
-
-**When reporting issues, provide**:
-- Unreal Engine version
-- Version control system (Perforce/Git/SVN)
-- Plugin settings screenshot
-- Log output with verbose logging enabled
-
----
-
-**Compatibility**: Unreal Engine 5.2–5.8 | Tested on Windows; theoretically supports all platforms
-
-**Remember**: Start conservatively. Assets can always be deleted, but restoration requires version control history!
-
-## Contact
-
-For usage questions or collaboration inquiries, visit the contact page.
-
-- **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
-
-## SimpleAssetCleaner User Guide
-
-Identifies candidate unreferenced assets using roots and reference relationships, with entry points for submission handling and full cleanup.
-
-## Installation and Configuration
-
-### Step 1: Install the Plugin
+## Install and Enable the Plugin
 
 1.  Copy the plugin folder into your project's `Plugins` directory
     
@@ -105,72 +37,22 @@ Identifies candidate unreferenced assets using roots and reference relationships
     
 3.  Enable it and restart the editor
 
-### Step 2: Basic Configuration
+## Choose a Source Control Provider
 
-Open project settings: `Editor > Project Settings > General > Simple Asset Cleaner`
+In `Editor > Preferences > Source Control`, select the provider your project uses. The plugin integrates through the UE API with providers such as Perforce, Git, Subversion, and Plastic SCM. It wraps the provider automatically to check assets on submission. Do not select `Perforce_Proxy`, `Git_Proxy`, or another provider ending in `_Proxy`.
 
-**Automatic cleanup toggle:**
+![](/media-occurrence/doc%3Asimple-asset-cleaner%3Asetup%3Amedia%3A1)
 
-Configure the root assets and protected paths to retain before checking `Enable Auto Clean`.
+## Open Project Settings
 
-With default configuration, the plugin:
+Open **Editor > Project Settings > General > Simple Asset Cleaner**. `Language` defaults to English. Switching to Chinese updates the UI and logs immediately, without a restart.
 
--   Uses all maps as root assets
--   Automatically checks and cleans on submission
--   Protects plugin and engine assets outside the project
+![](/media-occurrence/doc%3Asimple-asset-cleaner%3Asetup%3Amedia%3A2)
 
-**Advanced configuration (recommended for teams):**
+## Checks Before Your First Submission
 
-**1\. Configure root asset types**
+Review the root assets and directories to keep. Maps are roots by default, and plugin and engine assets outside the project are excluded. Review the settings before using `Enable Auto Clean`; on first use, open the submission window on a test branch and review the candidates. `Clean All Source Control Assets` scans the whole project and can delete files locally and from source control.
 
-Add to `Root Asset Classes`:
+## Verbose Logging
 
--   `UWorld` - Maps (included by default)
--   `UBlueprint` - Blueprint classes, if Blueprints are core assets
--   `UDataAsset` - DataAssets, if the project has substantial configuration data
-
-**2\. Add protected paths**
-
-Add to `Additional Root Paths`:
-
--   `/Game/Core/` - Core systems directory
--   `/Game/Config/` - Configuration directory
--   `/Game/Managers/` - Manager directory
-
-**3\. Optionally enable verbose logging**
-
-On first use, enable `Enable Verbose Logging` to observe the plugin. Once familiar, disable it to reduce log output.
-
-## Features and Parameters
-
-### Logging Options
-
-The plugin provides optional verbose logging for debugging and monitoring.
-
-**Enable it:**  
-Check `Enable Verbose Logging` in project settings
-
-**Logs include:**
-
--   Files scanned
--   Unreferenced assets detected
--   Cleanup operations performed
--   Reference-chain tracing for debugging
-
-Enable verbose logging on first use or when problems arise to understand the plugin's operation.
-
-### 5.2 Source Control Providers
-
-SimpleAssetCleaner supports all version control systems supported by Unreal Engine:
-
--   ✅ Perforce
--   ✅ Git
--   ✅ SVN
--   ✅ Plastic SCM
--   ✅ Other systems integrated through the UE API
-
-**Configuration points:**
-
-Choose your actual provider, such as Perforce, Git, or Subversion, under `Editor > Preferences > Source Control`.
-
-⚠️ **Important:** Do not choose options ending in `_Proxy`, such as `Perforce_Proxy`. These are internal plugin implementations and are handled automatically.
+`Enable Verbose Logging` is off by default. Turn it on in Project Settings during your first trial or when troubleshooting. It lists scanned files, unreferenced candidates, cleanup actions, and reference traces. Turn it off when you no longer need the detail.

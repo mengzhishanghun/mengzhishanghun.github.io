@@ -26,7 +26,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-world-editor
-sourceHash: dfc27c0c90a1e210cfa2a9beb9de9361ffd6694f1db1fb9ba9bef6a38a862ae1
+sourceHash: 8a4c753ec0fed84b1bfb8ee49afa65414137ede6cf1c3e63b5e8bcb61f72570d
 generatedBodyHash: b4fddab90d44baaaa2acf6b9bfa464ad36bfa96c1f2f5b09a9ac3bbcf0916205
 translationStatus: translated
 coverAlt: MCPWorldEditor cover
@@ -34,9 +34,26 @@ websiteCoverUrl: /media/covers/works/mcp-world-editor-20261101.webp
 docIds:
   - mcp-world-editor-connect
   - mcp-world-editor-maps
+  - mcp-world-editor-save-level-packages
+  - mcp-world-editor-navigation
+  - mcp-world-editor-lighting-build
+  - mcp-world-editor-world-settings
   - mcp-world-editor-actors
+  - mcp-world-editor-foliage
+  - mcp-world-editor-instanced-meshes
+  - mcp-world-editor-actor-splines
+  - mcp-world-editor-actor-hierarchy
+  - mcp-world-editor-actor-components
+  - mcp-world-editor-streaming-levels
   - mcp-world-editor-streamed-world
+  - mcp-world-editor-world-partition-regions
+  - mcp-world-editor-level-instances
   - mcp-world-editor-landscape
+  - mcp-world-editor-landscape-paint-layers
+  - mcp-world-editor-landscape-splines
+  - mcp-world-editor-editor-viewport
+  - mcp-world-editor-editor-pie
+  - mcp-world-editor-viewport-statistics
   - mcp-world-editor-materials
 ---
 

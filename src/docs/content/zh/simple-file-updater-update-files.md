@@ -1,5 +1,5 @@
 ---
-title: 按配置更新本地文件
+title: 按配置更新文件
 type: doc
 slug: simple-file-updater-update-files
 draft: false
@@ -11,7 +11,7 @@ workIds:
   - simple-file-updater
 docPage:
   work: simple-file-updater
-  group: workflows
+  group: updates
   slug: update-files
   order: 1
 documentKind: product-manual
@@ -20,11 +20,7 @@ lang: zh
 translationKey: doc:simple-file-updater:update-files
 ---
 
-SimpleFileUpdater 是一个轻量级文件同步工具，可从远程地址批量更新本地文件。程序已打包为 `SimpleFileUpdater.exe`，支持通过配置文件定义目标文件及其下载地址。
-
----
-
-## 🧩 配置文件说明
+## 编写更新清单
 
 默认配置文件为 **`.SimpleFileUpdater`**，内容格式如下：
 
@@ -38,9 +34,7 @@ Docs\Manual.pdf  = https://cdn.example.com/docs/Manual.pdf
 - 自动创建所需文件夹
 - 支持注释（以 `#` 开头）
 
----
-
-## 🚀 如何运行
+## 运行更新并查看结果
 
 将 `SimpleFileUpdater.exe` 与 `.SimpleFileUpdater` 放在同一目录，然后：
 
@@ -53,42 +47,6 @@ SimpleFileUpdater.exe MyConfig.txt
 
 执行完成后程序会停留在命令行，等待用户按回车查看结果。
 
----
+## 覆盖同名文件前核对
 
-## 🧪 如何从源码运行（开发者或未打包场景）
-
-本项目提供两种一键搭建运行环境的方式：
-
-### 方式 1：使用 Conda（推荐）
-
-```bash
-conda env create -f environment.yml
-conda activate SimpleFileUpdater
-python Main.py
-```
-
-### 方式 2：使用 pip
-
-```bash
-pip install -r requirements.txt
-python Main.py
-```
-
----
-
-## 📄 许可证 License
-
-本项目已包含如下许可证：
-
-```
-（以下内容自动读取 LICENSE 文件中内容，请查看项目根目录中的 LICENSE 文件）
-```
-
----
-
-## ⚠️ 免责声明
-
-本项目为个人工具项目，使用者需自行承担使用本工具所带来的风险。  
-请自行确认远程文件地址的可靠性与安全性，程序可能会覆盖本地同名文件，请提前备份。
-
----
+这是个人工具，使用风险由使用者承担。运行前核对远程 URL 是否可信、目标路径是否正确。更新可能覆盖同名文件，请提前备份。

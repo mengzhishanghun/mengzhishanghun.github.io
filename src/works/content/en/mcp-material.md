@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /en/works/mcp-material/docs/edit-graph/
+      href: /en/works/mcp-material/docs/connect/
   compatibility:
     - platforms: []
       requirements:
@@ -26,14 +26,18 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-material
-sourceHash: ce6a9e9118fa67d02eb961fed5cbd1ec7731916190dfb169bf9c2c670d27af75
+sourceHash: 4b116c5f140275ff5944808c62f75caec2e3e40dd2885320ca6e6ae1b87d4c65
 generatedBodyHash: 769d2575e1b748d23cb5e2d15ef08453af25d0b78e8b53756c5a56326b394e43
 translationStatus: translated
 coverAlt: MCPMaterial cover
 websiteCoverUrl: /media/covers/works/mcp-material-20261101.webp
 docIds:
+  - mcp-material-connect
+  - mcp-material-material-assets
+  - mcp-material-material-preview
   - mcp-material-edit-graph
   - mcp-material-instance-parameters
+  - mcp-material-material-compilation
 ---
 
 ## About this work

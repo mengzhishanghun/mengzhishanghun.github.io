@@ -97,12 +97,15 @@ class PublicTreeTests(unittest.TestCase):
         result = self.tree(entries, bodies)
         self.assertEqual(sum(path.endswith('.html') for path in result), 424)
 
-    def test_current_bilingual_html_capacity_boundary(self):
-        entries, bodies = fixture(self.m, html=700)
+    def test_current_release_accepts_more_than_former_bilingual_limits(self):
+        entries, bodies = fixture(self.m, files=2067, html=820)
         result = self.tree(entries, bodies)
-        self.assertEqual(sum(path.endswith('.html') for path in result), 700)
-        entries, bodies = fixture(self.m, html=701)
-        with self.assertRaisesRegex(ValueError, 'HTML capacity exceeded'):
+        self.assertEqual(len(result), 2067)
+        self.assertEqual(sum(path.endswith('.html') for path in result), 820)
+
+    def test_fewer_than_100_html_pages_still_rejected(self):
+        entries, bodies = fixture(self.m, html=99)
+        with self.assertRaisesRegex(ValueError, 'too few HTML pages'):
             self.tree(entries, bodies)
 
     def test_current_required_pages_remain_mandatory(self):
@@ -111,13 +114,17 @@ class PublicTreeTests(unittest.TestCase):
             with self.subTest(required=required), self.assertRaisesRegex(ValueError, 'critical pages missing'):
                 self.tree([entry for entry in entries if entry['path'] != required], bodies)
 
-    def test_historical_html_capacity_remains_300(self):
-        entries, bodies = fixture(self.m, files=700, html=300)
+    def test_historical_release_accepts_more_than_former_history_limits(self):
+        entries, bodies = fixture(self.m, files=801, html=301)
         result = self.tree(entries, bodies, sha=self.m.HISTORIC_RELEASES[0], history=True)
-        self.assertEqual(sum(path.endswith('.html') for path in result), 300)
-        entries, bodies = fixture(self.m, files=700, html=301)
-        with self.assertRaisesRegex(ValueError, 'HTML capacity exceeded'):
-            self.tree(entries, bodies, sha=self.m.HISTORIC_RELEASES[0], history=True)
+        self.assertEqual(len(result), 801)
+        self.assertEqual(sum(path.endswith('.html') for path in result), 301)
+
+    def test_missing_astro_assets_still_rejected(self):
+        entries, bodies = fixture(self.m, html=100)
+        without_assets = [item for item in entries if not item['path'].startswith('_astro/')]
+        with self.assertRaisesRegex(ValueError, 'public tree size or assets invalid'):
+            self.tree(without_assets, bodies)
 
     def test_source_and_private_metadata_do_not_enter_public_validation(self):
         entries = self.entries + [

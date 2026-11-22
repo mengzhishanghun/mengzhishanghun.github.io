@@ -13,7 +13,7 @@ workInfo:
     - kind: open-source
       href: https://github.com/MZSH-Tools/UEPackageManager
     - kind: docs
-      href: /zh/works/ue-package-manager/docs/package-project/
+      href: /zh/works/ue-package-manager/docs/install-and-detect/
   compatibility:
     - platforms:
         - Windows
@@ -30,7 +30,11 @@ links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPackageManager
 docIds:
+  - ue-package-manager-install-and-detect
   - ue-package-manager-package-project
+  - ue-package-manager-project-configuration
+  - ue-package-manager-deploy-additional-files
+  - ue-package-manager-clean-old-packages
   - ue-package-manager-build-executable
 coverAlt: UEPackageManager封面
 websiteCoverUrl: /media/imported/works/ue-package-manager-cover-v2.png
@@ -89,3 +93,7 @@ UE 项目交付时，打包命令和附加文件整理常分散在不同操作�
 *UEPackageManager 图形界面：配置项目、打包参数和附加文件复制规则。*
 
 操作步骤和参数说明见 [使用教程](/zh/works/ue-package-manager/docs/package-project/)。
+
+## 许可证
+
+[MIT License](<https://github.com/MZSH-Tools/UEPackageManager/blob/f15dfdb00e1d06919035ccd95bc752c2877a3f8c/LICENSE>)

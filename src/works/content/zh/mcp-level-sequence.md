@@ -26,7 +26,12 @@ tags:
   - MCP 系列
 docIds:
   - mcp-level-sequence-connect
+  - mcp-level-sequence-sequence-assets
+  - mcp-level-sequence-sequence-preview
+  - mcp-level-sequence-sequence-bindings
   - mcp-level-sequence-edit-sequence
+  - mcp-level-sequence-sequence-keyframes
+  - mcp-level-sequence-sequence-timing
 coverAlt: MCPLevelSequence封面
 websiteCoverUrl: /media/covers/works/mcp-level-sequence-20261101.webp
 lang: zh
