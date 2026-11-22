@@ -12,6 +12,6 @@
   font-weight: 400;
   line-height: 1.7;
 }
-.site-chrome .hero-greeting { font-size: 1.125rem; font-weight: 550; }
+.site-chrome .hero-greeting { color: color-mix(in srgb, var(--text) 50%, var(--muted)); font-size: 1.125rem; font-weight: 400; }
 .site-chrome .hero-directions { color: var(--muted); font-size: 1rem; line-height: 1.7; }
 .site-chrome .hero-directions p { margin: 16px 0 0; }
