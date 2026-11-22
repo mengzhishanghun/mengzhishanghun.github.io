@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>编辑材质图并检查编译结果 · MZSH</title>
+  <title>编辑材质图与节点 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/mcp-material/docs/edit-graph/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,57 +24,23 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>功能指南</span><ul><li><a href="/zh/works/mcp-material/docs/edit-graph/" aria-current="page">编辑材质图并检查编译结果</a></li><li><a href="/zh/works/mcp-material/docs/instance-parameters/">修改材质实例参数</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-material/docs/connect/">连接材质编辑工具</a></li></ul></li><li><span>材质资产</span><ul><li><a href="/zh/works/mcp-material/docs/material-assets/">创建、打开与保存材质资产</a></li><li><a href="/zh/works/mcp-material/docs/material-preview/">截取材质预览</a></li></ul></li><li><span>材质编辑</span><ul><li><a href="/zh/works/mcp-material/docs/edit-graph/" aria-current="page">编辑材质图与节点</a></li><li><a href="/zh/works/mcp-material/docs/instance-parameters/">读取和修改材质实例参数</a></li><li><a href="/zh/works/mcp-material/docs/material-compilation/">编译材质并检查诊断</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%83%BD%E5%8A%9B" class="outline-link outline-root-link">能力</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%AE%89%E5%85%A8%E5%B7%A5%E4%BD%9C%E6%B5%81" class="outline-link outline-root-link">安全工作流</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%BC%96%E8%AF%91%E7%BB%93%E6%9E%9C" class="outline-link outline-root-link">编译结果</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%BC%96%E8%BE%91%E6%97%A2%E6%9C%89%E8%8A%82%E7%82%B9" class="outline-link outline-root-link">编辑既有节点</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%87%8D%E8%A6%81%E8%BE%B9%E7%95%8C" class="outline-link outline-root-link">重要边界</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%A3%80%E6%9F%A5%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%8A%82%E7%82%B9%E4%B8%8E%E8%BF%9E%E6%8E%A5" class="outline-link outline-root-link">检查表达式、节点与连接</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BF%AE%E6%94%B9%E6%9D%90%E8%B4%A8%E5%9B%BE" class="outline-link outline-root-link">修改材质图</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%BC%96%E8%BE%91%E6%97%A2%E6%9C%89%E8%8A%82%E7%82%B9" class="outline-link outline-root-link">编辑既有节点</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/">作品</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-material/docs/edit-graph/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-material:edit-graph","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-material/docs/edit-graph/","title":"编辑材质图并检查编译结果","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-material/docs/edit-graph/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/">作品</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-material/docs/edit-graph/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-material:edit-graph","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-material/docs/edit-graph/","title":"编辑材质图与节点","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-material/docs/edit-graph/"></label></noscript></section></div>
           <article>
-            <h1>编辑材质图并检查编译结果</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p>MCPMaterial 为 Unreal Editor 提供面向 AI 客户端的材质与材质实例 MCP 工具。插件支持 UE 5.2 及以上版本，默认端点为 <code>http://127.0.0.1:8763/mcp</code>；端口被占用时会在有限范围内递增。</p>
-<h2 id="能力">能力</h2>
-<ul>
-<li>发现材质、材质实例与可用表达式类。</li>
-<li>读取材质图、连接、属性和 Scalar、Vector、Texture、Sparse Volume Texture、Static Switch 参数。</li>
-<li>创建材质与材质实例，批量编辑属性、参数、表达式节点和连线。</li>
-<li>编译材质与材质实例、保存资产、打开或关闭资产编辑器，以及捕获材质预览。</li>
-<li>写入工具使用事务并标记包 Dirty；调用 <code>SaveAsset</code> 前可先调用 <code>CompileMaterial</code> 验证材质。</li>
-</ul>
-<h2 id="安全工作流">安全工作流</h2>
-<ol>
-<li>使用 <code>ListMaterials</code>、<code>GetMaterialDetail</code>、<code>GetMaterialParameters</code> 和 <code>SearchMaterialExpressions</code> 获取真实路径、Guid、引脚与参数信息。</li>
-<li>如果目标材质或材质实例已在资产编辑器中打开，先保存或处理编辑器中的更改，再调用 <code>CloseAsset</code>。</li>
-<li>调用 <code>ApplyMaterialPatch</code>、<code>SetMaterialProperties</code>、<code>SetInstanceParameters</code>、<code>ResetInstanceParameter</code>、<code>RemoveConnection</code> 或 <code>FormatGraph</code>。</li>
-<li>调用 <code>CompileMaterial</code>，检查终态编译结果。</li>
-<li>调用 <code>SaveAsset</code> 持久化更改；需要人工检查时再调用 <code>OpenAsset</code>。</li>
-</ol>
-<p>写入、编译和保存工具会拒绝操作仍在资产编辑器中打开的目标。这可避免 Material Editor 的 transient preview 与 backing asset 形成双状态，并防止编辑器稍后 Apply 时覆盖 MCP 已完成的修改。</p>
-<h2 id="编译结果">编译结果</h2>
-<p><code>CompileMaterial</code> 的 <code>AssetPath</code> 接受 Material 或 MaterialInstanceConstant。保存前检查 <code>CompileStatus</code>（<code>Success</code> 或 <code>Error</code>）和 <code>Errors</code> 数组。</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>返回字段</th><th>含义</th></tr></thead><tbody><tr><td><code>AssetPath</code></td><td>保留请求中传入的路径。</td></tr><tr><td><code>AssetType</code></td><td>请求资产的类型，值为 <code>Material</code> 或 <code>MaterialInstanceConstant</code>。</td></tr><tr><td><code>ResourceOwnerPath</code></td><td>实际编译资源所属资产的完整对象路径，例如 <code>/Game/Materials/MI_Example.MI_Example</code>。</td></tr></tbody></table>
-<p>有静态置换的实例编译自身资源；没有静态置换的实例使用父链中的有效资源，其所属资产可能是父材质，也可能是祖先实例。<code>ResourceOwnerPath</code> 返回实际所属资产。编译前，请关闭请求资产和资源所属资产的编辑器。资源缺失时，返回 <code>CompileStatus: "Error"</code>、非空 <code>Errors</code> 和空字符串 <code>ResourceOwnerPath</code>；实例没有完整 shader map 时也返回编译错误。</p>
+            <h1>编辑材质图与节点</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="检查表达式节点与连接">检查表达式、节点与连接</h2>
+<p><code>SearchMaterialExpressions</code> 返回稳定的 <code>ClassPath</code>、<code>Creatable</code>、不可创建原因以及输入/输出索引。短类名发生碰撞时，<code>ApplyMaterialPatch</code> 会拒绝猜测并要求精确 <code>ClassPath</code>；同名 Pin 必须使用 <code>[index]</code> 寻址。</p>
+<p><code>GetMaterialDetail</code> 对节点使用 <code>NodeOffset</code>/<code>MaxNodes</code>、对连接使用 <code>ConnectionOffset</code>/<code>MaxConnections</code>； 响应返回总数、当前返回数和下一游标；每页最多 1000 项。</p>
+<h2 id="修改材质图">修改材质图</h2>
+<p>使用 <code>ApplyMaterialPatch</code> 批量编辑节点和连线，用 <code>SetMaterialProperties</code> 修改材质属性。<code>RemoveConnection</code> 移除连接，<code>FormatGraph</code> 调整布局。</p>
+<p><code>ApplyMaterialPatch</code> 不创建或删除需要专用编辑器结构管理的 Composite、PinBase、Function Input/Output、Named Reroute 等节点。</p>
+<p><code>ApplyMaterialPatch</code> 的 Nodes、Connections、RemoveNodes、UpdateNodes 各最多 1000 项，四者合计最多 2000 次操作。分页、预览尺寸、图布局间距、连接索引和参数类型等已知边界会在执行前校验。</p>
+<p><code>SetMaterialProperties</code> 与 <code>ApplyMaterialPatch.Defaults</code> 会按最终属性组合拒绝当前被条件禁用的属性。</p>
+<p>写入前先关闭目标编辑器，修改后按<a href="/zh/works/mcp-material/docs/material-assets/">材质资产的关闭与保存规则</a>保存。</p>
 <h2 id="编辑既有节点">编辑既有节点</h2>
 <p>调用 <code>GetMaterialDetail</code> 并设置 <code>IncludeEditableProperties: true</code>，可读取当前节点页的 <code>EditableProperties</code>（<code>Name</code>、<code>Type</code>、<code>ValueText</code>、<code>Editable</code>）和实际 <code>Inputs</code>/<code>Outputs</code>（<code>Index</code>、<code>Name</code>、数值形式的材质值 <code>Type</code>）。根响应还会包含材质的 <code>EditableMaterialProperties</code>。属性描述中的 <code>Type</code> 是 UE C++ 类型，<code>ValueText</code> 使用 UE 文本格式；<code>Editable</code> 同时反映服务端支持范围和当前属性组合。省略该开关时，响应保持原有结构。</p>
 <p>使用查询得到的节点 GUID 原位修改属性：</p>
@@ -82,24 +48,9 @@
 `);try{await navigator.clipboard.writeText(r),n=!0}catch{n=l(r)}if(!n||e.parentNode?.querySelector(".feedback"))return;let c=e.parentNode?.querySelector("[aria-live]"),t=document.createElement("div");t.classList.add("feedback"),t.append(a.copied),c.append(t),t.offsetWidth,requestAnimationFrame(()=>t?.classList.add("show"));let s=()=>!t||t.classList.remove("show"),d=()=>{!t||parseFloat(getComputedStyle(t).opacity)>0||(t.remove(),t=void 0)};setTimeout(s,1500),setTimeout(d,2500),e.addEventListener("blur",s),t.addEventListener("transitioncancel",d),t.addEventListener("transitionend",d)}function i(o){o.querySelectorAll?.(".expressive-code .copy button").forEach(e=>e.addEventListener("click",u))}i(document);var m=new MutationObserver(o=>o.forEach(e=>e.addedNodes.forEach(a=>{i(a)})));m.observe(document.body,{childList:!0,subtree:!0});document.addEventListener("astro:page-load",()=>{i(document)});})();}catch(e){console.error("[EC] copy-js-module failed:",e)}</script><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="json"><code><div class="ec-line"><div class="code"><span style="--0:#E1E4E8;--1:#24292E">{</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#79B8FF;--1:#005CC5">"AssetPath"</span><span style="--0:#E1E4E8;--1:#24292E">: </span><span style="--0:#9ECBFF;--1:#032F62">"/Game/Materials/M_Example"</span><span style="--0:#E1E4E8;--1:#24292E">,</span></div></div><div class="ec-line"><div class="code"><span class="indent">  </span><span style="--0:#79B8FF;--1:#005CC5">"Patch"</span><span style="--0:#E1E4E8;--1:#24292E">: {</span></div></div><div class="ec-line"><div class="code"><span class="indent">    </span><span style="--0:#79B8FF;--1:#005CC5">"UpdateNodes"</span><span style="--0:#E1E4E8;--1:#24292E">: [</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#E1E4E8;--1:#24292E">      </span></span><span style="--0:#E1E4E8;--1:#24292E">{</span><span style="--0:#79B8FF;--1:#005CC5">"NodeGuid"</span><span style="--0:#E1E4E8;--1:#24292E">: </span><span style="--0:#9ECBFF;--1:#032F62">"&lt;GetMaterialDetail 返回的 GUID&gt;"</span><span style="--0:#E1E4E8;--1:#24292E">, </span><span style="--0:#79B8FF;--1:#005CC5">"Properties"</span><span style="--0:#E1E4E8;--1:#24292E">: {</span><span style="--0:#79B8FF;--1:#005CC5">"DefaultValue"</span><span style="--0:#E1E4E8;--1:#24292E">: </span><span style="--0:#79B8FF;--1:#005CC5">0.75</span><span style="--0:#E1E4E8;--1:#24292E">}}</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#E1E4E8;--1:#24292E">    </span></span><span style="--0:#E1E4E8;--1:#24292E">]</span></div></div><div class="ec-line"><div class="code"><span class="indent"><span style="--0:#E1E4E8;--1:#24292E">  </span></span><span style="--0:#E1E4E8;--1:#24292E">}</span></div></div><div class="ec-line"><div class="code"><span style="--0:#E1E4E8;--1:#24292E">}</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="复制到剪贴板" data-copied="复制成功！" data-code="{  &quot;AssetPath&quot;: &quot;/Game/Materials/M_Example&quot;,  &quot;Patch&quot;: {    &quot;UpdateNodes&quot;: [      {&quot;NodeGuid&quot;: &quot;<GetMaterialDetail 返回的 GUID>&quot;, &quot;Properties&quot;: {&quot;DefaultValue&quot;: 0.75}}    ]  }}"><div></div></button></div></figure></div>
 <p>响应的 <code>UpdatedNodeGuids</code> 列出已更新节点。属性更新会保留节点 GUID、参数 GUID 和既有连线；同一 Patch 显式编辑连线时，按请求执行。修改 Constant3Vector 时，将 <code>Constant</code> 设为 UE 颜色字符串，例如 <code>"(R=1,G=0,B=0,A=1)"</code>。</p>
 <p><code>UpdateNodes</code> 接受 1–1000 项，与 <code>Nodes</code>、<code>Connections</code>、<code>RemoveNodes</code> 共用总计 2000 次操作的上限。GUID 必须指向请求材质内的既有节点；重复 GUID，以及同一节点同时更新和删除的请求都会被拒绝。该更新模式不开放身份修改、参数改名、动态引脚变更、容器及需要专用适配器的外部引用。原有 <code>Nodes.Defaults</code> 创建请求保留既有支持范围。</p>
-<p>TextureSample 支持更新 <code>Texture</code> 引用。未指定 <code>SamplerType</code> 时，采样类型随最终纹理自动调整；显式指定的 <code>SamplerType</code> 始终优先，不受属性顺序或名称大小写影响。后续连接失败时，整个 Patch 会回滚。若返回 <code>StateUnknown</code>，表示恢复结果无法核实，应停止写入并检查资产。编辑后请编译材质，再显式保存。</p>
-<h2 id="重要边界">重要边界</h2>
-<ul>
-<li>旧名称映射与旧重置选择器只接受可唯一定位的 Global 参数。Layer 与 Blend 参数使用完整结构化身份。</li>
-<li><code>SetInstanceParameters</code> 会根据父材质当前编译资源校验普通纹理参数类型；2D、Cube、2D/Cube Array、Volume 与 Virtual Texture 不能互相代填。独立的 <code>SparseVolumeTextureParameters</code> 映射读取和写入 <code>USparseVolumeTexture</code>，<code>ResetInstanceParameter</code> 使用 <code>ParameterType: "SparseVolumeTexture"</code> 重置。父材质没有可用资源或参数不在当前静态开关排列中时会拒绝写入。</li>
-<li><code>SearchMaterialExpressions</code> 返回稳定的 <code>ClassPath</code>、<code>Creatable</code>、不可创建原因以及输入/输出索引。短类名发生碰撞时，<code>ApplyMaterialPatch</code> 会拒绝猜测并要求精确 <code>ClassPath</code>；同名 Pin 必须使用 <code>[index]</code> 寻址。</li>
-<li><code>ApplyMaterialPatch</code> 不创建或删除需要专用编辑器结构管理的 Composite、PinBase、Function Input/Output、Named Reroute 等节点。</li>
-<li>服务端会按工具输入 Schema 递归拒绝未知字段、缺失必填字段、错误类型和值域；原始 <code>tools/call</code> 也不能绕过该校验。<code>ApplyMaterialPatch</code> 的 Nodes、Connections、RemoveNodes、UpdateNodes 各最多 1000 项，四者合计最多 2000 次操作。分页、预览尺寸、图布局间距、连接索引和参数类型等已知边界会在执行前校验。</li>
-<li>默认 HTTP 请求体上限为 1 MiB，JSON-RPC 响应体上限为 8 MiB，可在 Project Settings 的 MCP Material 设置中调整。<code>CapturePreview</code> 最大为 1024×1024，且压缩 PNG 不得超过 4 MiB。工具结果超限时会保留真实成功/失败终态并省略过大的内容；成功写工具不得仅因结果被省略而盲目重试。</li>
-<li><code>GetMaterialDetail</code> 对节点使用 <code>NodeOffset</code>/<code>MaxNodes</code>、对连接使用 <code>ConnectionOffset</code>/<code>MaxConnections</code>；<code>GetMaterialParameters</code> 按 Scalar、Vector、Texture、SparseVolumeTexture、StaticSwitch 顺序使用统一 <code>Offset</code>/<code>MaxResults</code> 游标。响应会返回总数、当前返回数和下一游标，单页上限均为 1000。</li>
-<li>高级参数类型使用结构化接口，并受上述引擎版本能力限制。Runtime Virtual Texture 的消费者需要启用虚拟纹理；Sparse Volume Texture 资产需要已初始化的帧数据。</li>
-<li><code>SetMaterialProperties</code> 与 <code>ApplyMaterialPatch.Defaults</code> 会按最终属性组合拒绝当前被条件禁用的属性。创建的资产先处于内存 Dirty 状态，必须显式调用 <code>SaveAsset</code> 才会写入磁盘；底层保存失败会返回 MCP 错误终态，而不是成功响应中的警告。</li>
-<li>JSON-RPC 仅把缺少 <code>id</code> 字段的消息视为通知；显式 <code>id:null</code> 仍会收到带空 id 的响应。</li>
-<li>超时不能强制终止已被 GameThread 认领的编辑器操作；收到超时错误后应先核对编辑器状态，再决定是否重试。</li>
-</ul>
-<p>如有问题或反馈，请发送邮件至 <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>。我看到后会处理。</p></div>
+<p>TextureSample 支持更新 <code>Texture</code> 引用。未指定 <code>SamplerType</code> 时，采样类型随最终纹理自动调整；显式指定的 <code>SamplerType</code> 始终优先，不受属性顺序或名称大小写影响。后续连接失败时，整个 Patch 会回滚。若返回 <code>StateUnknown</code>，表示恢复结果无法核实，应停止写入并检查资产。编辑后请编译材质，再显式保存。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-material/docs/instance-parameters/" rel="next"><span>下一篇</span>修改材质实例参数</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-material/docs/material-preview/" rel="prev"><span>上一篇</span>截取材质预览</a><a href="/zh/works/mcp-material/docs/instance-parameters/" rel="next"><span>下一篇</span>读取和修改材质实例参数</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -166,5 +117,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-material/docs/edit-graph/","en":"/en/works/mcp-material/docs/edit-graph/"},"anchors":{"zh":{"能力":"能力","安全工作流":"安全工作流","编译结果":"编译结果","编辑既有节点":"编辑既有节点","重要边界":"重要边界"},"en":{"能力":"capabilities","安全工作流":"safe-workflow","编译结果":"compilation-results","编辑既有节点":"editing-existing-nodes","重要边界":"important-boundaries"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-material/docs/edit-graph/","en":"/en/works/mcp-material/docs/edit-graph/"},"anchors":{"zh":{"检查表达式节点与连接":"检查表达式节点与连接","修改材质图":"修改材质图","编辑既有节点":"编辑既有节点"},"en":{"检查表达式节点与连接":"inspect-expressions-nodes-and-connections","修改材质图":"edit-the-graph","编辑既有节点":"editing-existing-nodes"}},"anchorAliases":{"zh":{"能力":{"path":"/zh/works/mcp-material/docs/edit-graph/","anchor":"检查表达式节点与连接"},"安全工作流":{"path":"/zh/works/mcp-material/docs/material-assets/","anchor":"处理编辑器中的更改并保存"},"编译结果":{"path":"/zh/works/mcp-material/docs/material-compilation/","anchor":"编译结果"},"重要边界":{"path":"/zh/works/mcp-material/docs/edit-graph/","anchor":"修改材质图"},"capabilities":{"path":"/zh/works/mcp-material/docs/edit-graph/","anchor":"检查表达式节点与连接"},"safe-workflow":{"path":"/zh/works/mcp-material/docs/material-assets/","anchor":"处理编辑器中的更改并保存"},"compilation-results":{"path":"/zh/works/mcp-material/docs/material-compilation/","anchor":"编译结果"},"editing-existing-nodes":{"path":"/zh/works/mcp-material/docs/edit-graph/","anchor":"编辑既有节点"},"important-boundaries":{"path":"/zh/works/mcp-material/docs/edit-graph/","anchor":"修改材质图"}},"en":{"能力":{"path":"/en/works/mcp-material/docs/edit-graph/","anchor":"inspect-expressions-nodes-and-connections"},"安全工作流":{"path":"/en/works/mcp-material/docs/material-assets/","anchor":"resolve-editor-changes-and-save"},"编译结果":{"path":"/en/works/mcp-material/docs/material-compilation/","anchor":"compilation-results"},"编辑既有节点":{"path":"/en/works/mcp-material/docs/edit-graph/","anchor":"editing-existing-nodes"},"重要边界":{"path":"/en/works/mcp-material/docs/edit-graph/","anchor":"edit-the-graph"},"capabilities":{"path":"/en/works/mcp-material/docs/edit-graph/","anchor":"inspect-expressions-nodes-and-connections"},"safe-workflow":{"path":"/en/works/mcp-material/docs/material-assets/","anchor":"resolve-editor-changes-and-save"},"compilation-results":{"path":"/en/works/mcp-material/docs/material-compilation/","anchor":"compilation-results"},"important-boundaries":{"path":"/en/works/mcp-material/docs/edit-graph/","anchor":"edit-the-graph"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

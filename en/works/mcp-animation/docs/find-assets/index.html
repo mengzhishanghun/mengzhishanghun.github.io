@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>Connect and Inspect Animation Assets · MZSH</title>
+  <title>Find, Inspect, and Save Animation Assets · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/en/works/mcp-animation/docs/find-assets/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,19 +24,15 @@
           <p class="work-doc-name">Works</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Feature Guides</span><ul><li><a href="/en/works/mcp-animation/docs/find-assets/" aria-current="page">Connect and Inspect Animation Assets</a></li><li><a href="/en/works/mcp-animation/docs/animation-blueprint/">Edit Animation Blueprints and State Machines</a></li><li><a href="/en/works/mcp-animation/docs/montage-and-blendspace/">Edit Montages, Notifies, and Blend Spaces</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-animation/docs/connect/">Connect to MCP Animation</a></li></ul></li><li><span>Animation Assets</span><ul><li><a href="/en/works/mcp-animation/docs/find-assets/" aria-current="page">Find, Inspect, and Save Animation Assets</a></li></ul></li><li><span>Animation Editing</span><ul><li><a href="/en/works/mcp-animation/docs/animation-blueprint/">Edit Animation Blueprints and State Machines</a></li><li><a href="/en/works/mcp-animation/docs/montage-and-blendspace/">Create Montages and Edit Sections</a></li><li><a href="/en/works/mcp-animation/docs/animation-notifies/">Find and Edit Animation Notifies</a></li><li><a href="/en/works/mcp-animation/docs/animation-blend-spaces/">Create Blend Spaces and Edit Samples</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#connection" class="outline-link outline-root-link">Connection</a></li><li class="outline-node" data-heading-depth="2"><a href="#tools-29" class="outline-link outline-root-link">Tools (29)</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#discovery-and-read-only-details" class="outline-link">Discovery and read-only details</a></li><li class="outline-node" data-heading-depth="3"><a href="#asset-lifecycle" class="outline-link">Asset lifecycle</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#paths-transactions-and-saving" class="outline-link outline-root-link">Paths, transactions, and saving</a></li><li class="outline-node" data-heading-depth="2"><a href="#schema-pagination-and-bounded-output" class="outline-link outline-root-link">Schema, pagination, and bounded output</a></li><li class="outline-node" data-heading-depth="2"><a href="#boundary-with-the-official-ue-58-animation-mcp" class="outline-link outline-root-link">Boundary with the official UE 5.8 animation MCP</a></li><li class="outline-node" data-heading-depth="2"><a href="#limitations" class="outline-link outline-root-link">Limitations</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#skeletons-and-animsequences" class="outline-link outline-root-link">Skeletons and AnimSequences</a></li><li class="outline-node" data-heading-depth="2"><a href="#list-and-detail-limits" class="outline-link outline-root-link">List and detail limits</a></li><li class="outline-node" data-heading-depth="2"><a href="#open-and-save-animation-assets" class="outline-link outline-root-link">Open and save animation assets</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/">Works</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/mcp-animation/docs/find-assets/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-animation:find-assets","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/mcp-animation/docs/find-assets/","title":"Connect and Inspect Animation Assets","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/mcp-animation/docs/find-assets/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/">Works</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/mcp-animation/docs/find-assets/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-animation:find-assets","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/mcp-animation/docs/find-assets/","title":"Find, Inspect, and Save Animation Assets","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/mcp-animation/docs/find-assets/"></label></noscript></section></div>
           <article>
-            <h1>Connect and Inspect Animation Assets</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p>MCPAnimation is a self-contained Unreal Editor plugin that exposes Animation Blueprint, state machine, Skeleton, AnimSequence, Montage, AnimNotify, and BlendSpace discovery, inspection, and editing through HTTP MCP. It supports Unreal Engine 5.2 and later and has no dependency on other user-created plugins.</p>
-<h2 id="connection">Connection</h2>
-<p>The default endpoint is <code>http://127.0.0.1:8760/mcp</code>. If that port is occupied, the server tries subsequent ports; use the actual endpoint shown in the editor. The server implements <code>initialize</code>, <code>tools/list</code>, <code>tools/call</code>, and <code>ping</code>.</p>
-<h2 id="tools-29">Tools (29)</h2>
-<h3 id="discovery-and-read-only-details">Discovery and read-only details</h3>
+            <h1>Find, Inspect, and Save Animation Assets</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="skeletons-and-animsequences">Skeletons and AnimSequences</h2>
 
 
 
@@ -54,32 +50,15 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Tool</th><th>Purpose</th></tr></thead><tbody><tr><td><code>ListAnimBlueprints</code></td><td>List Animation Blueprints with stable pagination.</td></tr><tr><td><code>GetAnimBPOverview</code></td><td>Read Animation Blueprint, AnimGraph, and state machine summaries.</td></tr><tr><td><code>GetStateMachineDetail</code></td><td>Read bounded state, transition, and conduit summaries.</td></tr><tr><td><code>ListSkeletons</code> / <code>GetSkeletonDetail</code></td><td>Discover Skeletons and read bones, virtual bones, compatible skeletons, blend profiles, and slot groups.</td></tr><tr><td><code>ListAnimSequences</code> / <code>GetAnimSequenceDetail</code></td><td>Discover AnimSequences and read duration, sampling rate, notifies, float curves, and compression status.</td></tr><tr><td><code>ListMontages</code> / <code>GetMontageDetail</code></td><td>Discover Montages and read sections, slots, segments, notifies, and blend settings.</td></tr><tr><td><code>ListNotifyClasses</code></td><td>Discover native and Blueprint AnimNotify/AnimNotifyState classes.</td></tr><tr><td><code>ListBlendSpaces</code> / <code>GetBlendSpaceDetail</code></td><td>Discover BlendSpaces and read axes and samples.</td></tr></tbody></table>
-<h3 id="asset-lifecycle">Asset lifecycle</h3>
+<table><thead><tr><th>Tool</th><th>Purpose</th></tr></thead><tbody><tr><td><code>ListSkeletons</code> / <code>GetSkeletonDetail</code></td><td>Discover Skeletons and read bones, virtual bones, compatible skeletons, blend profiles, and slot groups.</td></tr><tr><td><code>ListAnimSequences</code> / <code>GetAnimSequenceDetail</code></td><td>Discover AnimSequences and read duration, sampling rate, notifies, float curves, and compression status.</td></tr></tbody></table>
+<p><code>GetAnimSequenceDetail</code> exposes read-only float-curve summaries, bone and curve compression settings, compression validity, and approximate sizes. Curve and compression writes are intentionally unavailable: those operations can rebuild the animation data model, trigger expensive recompression, and use editing APIs that evolved across UE 5.2–5.8. Automated writes would carry unacceptable asset-corruption risk until transactional rollback, version compatibility, and bounded execution can all be guaranteed.</p>
+<p>Detail tools provide structured summaries rather than every curve key or per-bone animation track.</p>
+<h2 id="list-and-detail-limits">List and detail limits</h2>
+<ul>
+<li>List tools use <code>Offset</code> and <code>MaxResults</code>, return at most 256 entries per page, and report <code>TotalCount</code>, <code>Returned</code>, <code>HasMore</code>, and <code>NextOffset</code> when available.</li>
+<li>Detail tools cap collections such as bones, states, notifies, and curves at 256 entries and report true totals plus <code>*Truncated</code> flags. Detail collections cannot be paged. If a collection exceeds the limit, inspect it in Unreal Editor.</li>
+</ul>
+<h2 id="open-and-save-animation-assets">Open and save animation assets</h2>
 
 
 
@@ -98,32 +77,14 @@
 
 
 <table><thead><tr><th>Tool</th><th>Purpose</th></tr></thead><tbody><tr><td><code>SaveAsset</code></td><td>Explicitly save a modified asset.</td></tr><tr><td><code>OpenAsset</code></td><td>Open an asset in Unreal Editor.</td></tr></tbody></table>
-<h2 id="paths-transactions-and-saving">Paths, transactions, and saving</h2>
 <ul>
 <li>Call the matching <code>List*</code> tool first to obtain canonical asset paths. Asset writes are restricted to valid project content under <code>/Game</code>.</li>
 <li>Write tools run on the editor game thread and use Undo transactions where applicable. Successful changes mark assets dirty.</li>
 <li>Changes are not saved implicitly. Call <code>SaveAsset</code> after verifying the result; Unreal Editor Undo remains available where supported.</li>
 <li>Write tools reject execution with a reason while the editor is busy with PIE, saving, or garbage collection.</li>
-</ul>
-<h2 id="schema-pagination-and-bounded-output">Schema, pagination, and bounded output</h2>
-<ul>
-<li>Inputs use strict JSON Schema. Unknown properties are rejected, and array items are validated recursively.</li>
-<li>List tools use <code>Offset</code> and <code>MaxResults</code>, return at most 256 entries per page, and report <code>TotalCount</code>, <code>Returned</code>, <code>HasMore</code>, and <code>NextOffset</code> when available.</li>
-<li>Detail tools cap collections such as bones, states, notifies, and curves at 256 entries and report true totals plus <code>*Truncated</code> flags. Detail collections are not pageable yet; inspect the complete data in Unreal Editor when the limit is exceeded, or wait for a future pagination capability.</li>
-</ul>
-<h2 id="boundary-with-the-official-ue-58-animation-mcp">Boundary with the official UE 5.8 animation MCP</h2>
-<p>The official UE 5.8 <code>AnimationAssistantToolset</code> focuses on Level Sequence, Control Rig, Sequencer channels, and Sequencer curves. MCPAnimation does not duplicate those cross-domain tools; it focuses on Animation Blueprints, Skeletons, AnimSequences, Montages, Notifies, and BlendSpaces. Use the corresponding Level Sequence MCP capability for Sequencer or Control Rig workflows.</p>
-<p><code>GetAnimSequenceDetail</code> exposes read-only float-curve summaries, bone and curve compression settings, compression validity, and approximate sizes. Curve and compression writes are intentionally unavailable: those operations can rebuild the animation data model, trigger expensive recompression, and use editing APIs that evolved across UE 5.2–5.8. Automated writes would carry unacceptable asset-corruption risk until transactional rollback, version compatibility, and bounded execution can all be guaranteed.</p>
-<h2 id="limitations">Limitations</h2>
-<ul>
-<li>This is an Editor-only plugin; it does not provide runtime or network-game replication features.</li>
-<li>Detail tools provide structured summaries rather than every curve key or per-bone animation track.</li>
-<li>Complex or ambiguous state result graphs are not modified by guesswork. Simplify them to one direct driver or edit them manually in Unreal Editor.</li>
-<li>The tools do not compile C++, build Unreal projects, or package plugins.</li>
-</ul>
-<p>For questions or feedback, email <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>. I will respond when I see your message.</p></div>
+</ul></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/mcp-animation/docs/animation-blueprint/" rel="next"><span>Next</span>Edit Animation Blueprints and State Machines</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/mcp-animation/docs/connect/" rel="prev"><span>Previous</span>Connect to MCP Animation</a><a href="/en/works/mcp-animation/docs/animation-blueprint/" rel="next"><span>Next</span>Edit Animation Blueprints and State Machines</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -190,5 +151,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/mcp-animation/docs/find-assets/","en":"/en/works/mcp-animation/docs/find-assets/"},"anchors":{"zh":{"connection":"连接方式","tools-29":"工具29-个","discovery-and-read-only-details":"发现与只读详情","asset-lifecycle":"资产生命周期","paths-transactions-and-saving":"路径事务与保存","schema-pagination-and-bounded-output":"schema分页与有界输出","boundary-with-the-official-ue-58-animation-mcp":"与-ue-58-官方动画-mcp-的能力边界","limitations":"限制"},"en":{"connection":"connection","tools-29":"tools-29","discovery-and-read-only-details":"discovery-and-read-only-details","asset-lifecycle":"asset-lifecycle","paths-transactions-and-saving":"paths-transactions-and-saving","schema-pagination-and-bounded-output":"schema-pagination-and-bounded-output","boundary-with-the-official-ue-58-animation-mcp":"boundary-with-the-official-ue-58-animation-mcp","limitations":"limitations"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/mcp-animation/docs/find-assets/","en":"/en/works/mcp-animation/docs/find-assets/"},"anchors":{"zh":{"skeletons-and-animsequences":"skeleton-与-animsequence","list-and-detail-limits":"列表与详情上限","open-and-save-animation-assets":"打开与保存动画资产"},"en":{"skeletons-and-animsequences":"skeletons-and-animsequences","list-and-detail-limits":"list-and-detail-limits","open-and-save-animation-assets":"open-and-save-animation-assets"}},"anchorAliases":{"zh":{"连接方式":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"连接方式"},"工具29-个":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"skeleton-与-animsequence"},"发现与只读详情":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"skeleton-与-animsequence"},"资产生命周期":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"打开与保存动画资产"},"路径事务与保存":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"打开与保存动画资产"},"schema分页与有界输出":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"列表与详情上限"},"与-ue-58-官方动画-mcp-的能力边界":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"与-ue-58-官方工具的区别"},"限制":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"输入校验与适用范围"},"connection":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"连接方式"},"tools-29":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"skeleton-与-animsequence"},"discovery-and-read-only-details":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"skeleton-与-animsequence"},"asset-lifecycle":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"打开与保存动画资产"},"paths-transactions-and-saving":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"打开与保存动画资产"},"schema-pagination-and-bounded-output":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"列表与详情上限"},"boundary-with-the-official-ue-58-animation-mcp":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"与-ue-58-官方工具的区别"},"limitations":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"输入校验与适用范围"}},"en":{"连接方式":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"connection"},"工具29-个":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"skeletons-and-animsequences"},"发现与只读详情":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"skeletons-and-animsequences"},"资产生命周期":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"open-and-save-animation-assets"},"路径事务与保存":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"open-and-save-animation-assets"},"schema分页与有界输出":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"list-and-detail-limits"},"与-ue-58-官方动画-mcp-的能力边界":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"differences-from-the-official-ue-58-toolset"},"限制":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"input-validation-and-scope"},"connection":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"connection"},"tools-29":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"skeletons-and-animsequences"},"discovery-and-read-only-details":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"skeletons-and-animsequences"},"asset-lifecycle":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"open-and-save-animation-assets"},"paths-transactions-and-saving":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"open-and-save-animation-assets"},"schema-pagination-and-bounded-output":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"list-and-detail-limits"},"boundary-with-the-official-ue-58-animation-mcp":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"differences-from-the-official-ue-58-toolset"},"limitations":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"input-validation-and-scope"}}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

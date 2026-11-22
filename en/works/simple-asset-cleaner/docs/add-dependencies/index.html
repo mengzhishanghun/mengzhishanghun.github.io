@@ -24,61 +24,20 @@
           <p class="work-doc-name">SimpleAssetCleaner</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Setup</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/setup/">Install and Configure Source Control</a></li></ul></li><li><span>Feature Guides</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/clean-assets/">Clean Unreferenced Assets</a></li><li><a href="/en/works/simple-asset-cleaner/docs/add-dependencies/" aria-current="page">Add Untracked Dependencies</a></li><li><a href="/en/works/simple-asset-cleaner/docs/protect-assets/">Configure Root Assets and Protection</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/setup/">Install and Set Up Source Control</a></li></ul></li><li><span>Asset Cleanup</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/clean-assets/">Clean Unreferenced Assets on Submission</a></li><li><a href="/en/works/simple-asset-cleaner/docs/full-cleanup/">Run a Full Cleanup</a></li></ul></li><li><span>Asset Protection</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/protect-assets/">Configure Root Assets and Protection</a></li></ul></li><li><span>Dependency Management</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/add-dependencies/" aria-current="page">Add Untracked Dependencies</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#automatically-add-untracked-dependencies-on-submission" class="outline-link outline-root-link">Automatically Add Untracked Dependencies on Submission</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#add-untracked-dependencies" class="outline-link">Add Untracked Dependencies</a></li><li class="outline-node" data-heading-depth="3"><a href="#automatic-dependency-addition" class="outline-link">Automatic Dependency Addition</a></li></ol></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#check-dependencies-on-submission" class="outline-link outline-root-link">Check Dependencies on Submission</a></li><li class="outline-node" data-heading-depth="2"><a href="#check-selected-assets-from-the-context-menu" class="outline-link outline-root-link">Check Selected Assets from the Context Menu</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
           <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/">SimpleAssetCleaner</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/add-dependencies/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-asset-cleaner:add-dependencies","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/simple-asset-cleaner/docs/add-dependencies/","title":"Add Untracked Dependencies","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/add-dependencies/"></label></noscript></section></div>
           <article>
             <h1>Add Untracked Dependencies</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="automatically-add-untracked-dependencies-on-submission">Automatically Add Untracked Dependencies on Submission</h2>
-<p>When submitting a changelist, the plugin automatically checks dependencies of assets being submitted. If dependent files are not yet under version control, a dialog lists them. Select the dependencies to add using checkboxes; confirming automatically adds them to version control.</p>
-<ul>
-<li><strong>Trigger</strong>: Automatically when submitting a changelist</li>
-<li><strong>Detection</strong>: Files depended on by pending assets that are not yet under version control</li>
-<li><strong>Operation</strong>: A dialog lists untracked dependencies; select and confirm to add them</li>
-<li><strong>Toggle</strong>: Enable or disable this through “Enable Auto Add Dependencies” in settings</li>
-</ul>
-<hr>
-<h3 id="add-untracked-dependencies">Add Untracked Dependencies</h3>
-<p>Checks dependencies of selected assets, finds files outside version control, and lists them for user confirmation before adding them.</p>
-<ul>
-<li>Supports selecting one or multiple files or folders</li>
-</ul>
-<blockquote>
-<p>The context menu acts precisely on the selection, making it suitable for everyday cleanup and dependency checks on particular directories or assets.</p>
-</blockquote>
-<hr>
-<h4 id="enable-auto-add-dependencies">Enable Auto Add Dependencies</h4>
-<ul>
-<li><strong>Default</strong>: Enabled</li>
-<li><strong>Function</strong>: Automatically detect untracked dependency files during submission</li>
-<li><strong>Behavior</strong>: A dialog lists untracked dependencies; selected files are added after confirmation</li>
-<li><strong>Recommendation</strong>: Keep enabled to prevent missing dependencies from breaking other team members’ builds</li>
-</ul>
-<h3 id="automatic-dependency-addition">Automatic Dependency Addition</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Dependency status</th><th>Action</th></tr></thead><tbody><tr><td>Already under version control</td><td>No action required</td></tr><tr><td>Not under version control</td><td>Listed in a confirmation dialog for the user to select files to add</td></tr></tbody></table>
-<hr></div>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="check-dependencies-on-submission">Check Dependencies on Submission</h2>
+<p><code>Enable Auto Add Dependencies</code> is on by default. When submitting a changelist, the plugin checks dependencies of the assets being submitted. Tracked files need no action. Select and confirm which untracked files to add in the dialog. Teams can leave this on to avoid missing dependencies in other members’ builds.</p>
+<h2 id="check-selected-assets-from-the-context-menu">Check Selected Assets from the Context Menu</h2>
+<p>Select one or more assets or folders in the Content Browser and choose <strong>Add Untracked Dependencies</strong> from the <strong>Simple Asset Cleaner</strong> context submenu. Review the untracked dependencies found in the selection and confirm the files to add.</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/docs/clean-assets/" rel="prev"><span>Previous</span>Clean Unreferenced Assets</a><a href="/en/works/simple-asset-cleaner/docs/protect-assets/" rel="next"><span>Next</span>Configure Root Assets and Protection</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/docs/protect-assets/" rel="prev"><span>Previous</span>Configure Root Assets and Protection</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -145,5 +104,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","en":"/en/works/simple-asset-cleaner/docs/add-dependencies/"},"anchors":{"zh":{"automatically-add-untracked-dependencies-on-submission":"提交时自动添加未控制依赖","add-untracked-dependencies":"添加未控制依赖","enable-auto-add-dependencies":"enable-auto-add-dependencies--启用自动添加依赖","automatic-dependency-addition":"自动添加依赖"},"en":{"automatically-add-untracked-dependencies-on-submission":"automatically-add-untracked-dependencies-on-submission","add-untracked-dependencies":"add-untracked-dependencies","enable-auto-add-dependencies":"enable-auto-add-dependencies","automatic-dependency-addition":"automatic-dependency-addition"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","en":"/en/works/simple-asset-cleaner/docs/add-dependencies/"},"anchors":{"zh":{"check-dependencies-on-submission":"提交时检查依赖","check-selected-assets-from-the-context-menu":"右键检查选定资产"},"en":{"check-dependencies-on-submission":"check-dependencies-on-submission","check-selected-assets-from-the-context-menu":"check-selected-assets-from-the-context-menu"}},"anchorAliases":{"zh":{"提交时自动添加未控制依赖":{"path":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"提交时检查依赖"},"添加未控制依赖":{"path":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"右键检查选定资产"},"enable-auto-add-dependencies--启用自动添加依赖":{"path":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"提交时检查依赖"},"自动添加依赖":{"path":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"提交时检查依赖"},"automatically-add-untracked-dependencies-on-submission":{"path":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"提交时检查依赖"},"add-untracked-dependencies":{"path":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"右键检查选定资产"},"enable-auto-add-dependencies":{"path":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"提交时检查依赖"},"automatic-dependency-addition":{"path":"/zh/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"提交时检查依赖"}},"en":{"提交时自动添加未控制依赖":{"path":"/en/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"check-dependencies-on-submission"},"添加未控制依赖":{"path":"/en/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"check-selected-assets-from-the-context-menu"},"enable-auto-add-dependencies--启用自动添加依赖":{"path":"/en/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"check-dependencies-on-submission"},"自动添加依赖":{"path":"/en/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"check-dependencies-on-submission"},"automatically-add-untracked-dependencies-on-submission":{"path":"/en/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"check-dependencies-on-submission"},"add-untracked-dependencies":{"path":"/en/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"check-selected-assets-from-the-context-menu"},"enable-auto-add-dependencies":{"path":"/en/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"check-dependencies-on-submission"},"automatic-dependency-addition":{"path":"/en/works/simple-asset-cleaner/docs/add-dependencies/","anchor":"check-dependencies-on-submission"}}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

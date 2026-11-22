@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>整理打包产物 · MZSH</title>
+  <title>检查打包产物 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/plugin-auto-packer/docs/output/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,36 +24,24 @@
           <p class="work-doc-name">UEPluginAutoPacker</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>功能指南</span><ul><li><a href="/zh/works/plugin-auto-packer/docs/package/">为多个引擎版本打包插件</a></li><li><a href="/zh/works/plugin-auto-packer/docs/output/" aria-current="page">整理打包产物</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/plugin-auto-packer/docs/setup/">安装与启动</a></li></ul></li><li><span>插件打包</span><ul><li><a href="/zh/works/plugin-auto-packer/docs/package/">配置并打包插件</a></li><li><a href="/zh/works/plugin-auto-packer/docs/output/" aria-current="page">检查打包产物</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#-%E6%89%93%E5%8C%85%E8%BE%93%E5%87%BA%E8%AF%B4%E6%98%8E" class="outline-link outline-root-link">📤 打包输出说明</a></li><li class="outline-node" data-heading-depth="2"><a href="#%EF%B8%8F-%E5%BD%93%E5%89%8D%E9%99%90%E5%88%B6" class="outline-link outline-root-link">⚠️ 当前限制</a></li><li class="outline-node" data-heading-depth="2"><a href="#-%E8%AE%B8%E5%8F%AF%E8%AF%81" class="outline-link outline-root-link">📄 许可证</a></li><li class="outline-node" data-heading-depth="2"><a href="#-%E8%81%94%E7%B3%BB%E6%96%B9%E5%BC%8F" class="outline-link outline-root-link">📬 联系方式</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%BE%93%E5%87%BA%E7%9B%AE%E5%BD%95%E5%92%8C%E9%94%99%E8%AF%AF%E6%97%A5%E5%BF%97" class="outline-link outline-root-link">输出目录和错误日志</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%97%A5%E5%BF%97%E5%92%8C%E5%BC%95%E6%93%8E%E7%8A%B6%E6%80%81" class="outline-link outline-root-link">日志和引擎状态</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/plugin-auto-packer/">UEPluginAutoPacker</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/plugin-auto-packer/docs/output/"></label><script type="application/json" data-engagement-config>{"id":"doc:plugin-auto-packer:output","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/plugin-auto-packer/docs/output/","title":"整理打包产物","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/plugin-auto-packer/docs/output/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/plugin-auto-packer/">UEPluginAutoPacker</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/plugin-auto-packer/docs/output/"></label><script type="application/json" data-engagement-config>{"id":"doc:plugin-auto-packer:output","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/plugin-auto-packer/docs/output/","title":"检查打包产物","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/plugin-auto-packer/docs/output/"></label></noscript></section></div>
           <article>
-            <h1>整理打包产物</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="-打包输出说明">📤 打包输出说明</h2>
+            <h1>检查打包产物</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="输出目录和错误日志">输出目录和错误日志</h2>
 <ul>
 <li>插件将被打包到 <code>PackagedPlugins/插件名/引擎名/</code> 中</li>
 <li>如启用自动整理，插件中会包含清理后的文件与自动生成的配置</li>
 <li>如果打包失败，会在对应目录生成 <code>Failed.log</code></li>
 </ul>
-<hr>
-<h2 id="️-当前限制">⚠️ 当前限制</h2>
-<ul>
-<li>仅支持构建 Windows 平台插件（Win64）</li>
-<li>暂不支持 Mac / Linux</li>
-<li>插件目录需规范，必须包含 <code>.uplugin</code> 文件</li>
-</ul>
-<hr>
-<h2 id="-许可证">📄 许可证</h2>
-<p>本项目采用 <a href="https://github.com/MZSH-Tools/UEPluginAutoPacker/blob/1a1e43b283fcb6deb561cba0636d1e28bc634f8a/LICENSE">MIT License</a> 协议开源，欢迎自由使用、修改和分发。</p>
-<hr>
-<h2 id="-联系方式">📬 联系方式</h2>
-<p>作者邮箱：<strong><a href="mailto:mengzhishanghun@outlook.com">mengzhishanghun@outlook.com</a></strong><br>
-如有定制功能或合作需求，欢迎联系！</p></div>
+<h2 id="日志和引擎状态">日志和引擎状态</h2>
+<p>每个引擎的状态图标会显示等待中、打包中、成功、失败或已取消。打包时可以实时查看日志，点击相应引擎可切换日志。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/plugin-auto-packer/docs/package/" rel="prev"><span>上一篇</span>为多个引擎版本打包插件</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/plugin-auto-packer/docs/package/" rel="prev"><span>上一篇</span>配置并打包插件</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -120,5 +108,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/plugin-auto-packer/docs/output/","en":"/en/works/plugin-auto-packer/docs/output/"},"anchors":{"zh":{"-打包输出说明":"-打包输出说明","️-当前限制":"️-当前限制","-许可证":"-许可证","-联系方式":"-联系方式"},"en":{"-打包输出说明":"-packaging-output","️-当前限制":"️-current-limitations","-许可证":"-license","-联系方式":"-contact"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/plugin-auto-packer/docs/output/","en":"/en/works/plugin-auto-packer/docs/output/"},"anchors":{"zh":{"输出目录和错误日志":"输出目录和错误日志","日志和引擎状态":"日志和引擎状态"},"en":{"输出目录和错误日志":"output-paths-and-error-logs","日志和引擎状态":"logs-and-engine-status"}},"anchorAliases":{"zh":{"-打包输出说明":{"path":"/zh/works/plugin-auto-packer/docs/output/","anchor":"输出目录和错误日志"},"️-当前限制":{"path":"/zh/works/plugin-auto-packer/docs/package/","anchor":"支持的平台与插件要求"},"-许可证":{"path":"/zh/works/plugin-auto-packer/","anchor":"许可证"},"-联系方式":{"path":"/zh/works/plugin-auto-packer/","anchor":"联系与支持"},"-packaging-output":{"path":"/zh/works/plugin-auto-packer/docs/output/","anchor":"输出目录和错误日志"},"️-current-limitations":{"path":"/zh/works/plugin-auto-packer/docs/package/","anchor":"支持的平台与插件要求"},"-license":{"path":"/zh/works/plugin-auto-packer/","anchor":"许可证"},"-contact":{"path":"/zh/works/plugin-auto-packer/","anchor":"联系与支持"}},"en":{"-打包输出说明":{"path":"/en/works/plugin-auto-packer/docs/output/","anchor":"output-paths-and-error-logs"},"️-当前限制":{"path":"/en/works/plugin-auto-packer/docs/package/","anchor":"supported-platform-and-plugin-requirements"},"-许可证":{"path":"/en/works/plugin-auto-packer/","anchor":"license"},"-联系方式":{"path":"/en/works/plugin-auto-packer/","anchor":"contact-and-support"},"-packaging-output":{"path":"/en/works/plugin-auto-packer/docs/output/","anchor":"output-paths-and-error-logs"},"️-current-limitations":{"path":"/en/works/plugin-auto-packer/docs/package/","anchor":"supported-platform-and-plugin-requirements"},"-license":{"path":"/en/works/plugin-auto-packer/","anchor":"license"},"-contact":{"path":"/en/works/plugin-auto-packer/","anchor":"contact-and-support"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

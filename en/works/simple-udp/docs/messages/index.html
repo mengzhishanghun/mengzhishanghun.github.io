@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>Send and Receive UDP Data · MZSH</title>
+  <title>Send and Receive UDP Datagrams · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/en/works/simple-udp/docs/messages/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,15 +24,15 @@
           <p class="work-doc-name">SimpleUDP</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Feature Guides</span><ul><li><a href="/en/works/simple-udp/docs/channels/">Set Up UDP Channels</a></li><li><a href="/en/works/simple-udp/docs/messages/" aria-current="page">Send and Receive UDP Data</a></li><li><a href="/en/works/simple-udp/docs/native-sockets/">Use UDP Sockets in C++</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-udp/docs/enable-plugin/">Enable SimpleUDP</a></li></ul></li><li><span>Networking</span><ul><li><a href="/en/works/simple-udp/docs/channels/">Configure UDP Receive and Send Channels</a></li><li><a href="/en/works/simple-udp/docs/messages/" aria-current="page">Send and Receive UDP Datagrams</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-udp/docs/native-sockets/">Use UDP Sockets in C++</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#-receiving" class="outline-link outline-root-link">📥 Receiving</a></li><li class="outline-node" data-heading-depth="3"><a href="#-sending" class="outline-link outline-root-link">📤 Sending</a></li><li class="outline-node" data-heading-depth="3"><a href="#bind--unbind-example" class="outline-link outline-root-link">Bind &amp; Unbind Example</a></li><li class="outline-node" data-heading-depth="3"><a href="#send-string-message" class="outline-link outline-root-link">Send String Message</a></li><li class="outline-node" data-heading-depth="2"><a href="#-tips--notes" class="outline-link outline-root-link">✅ Tips &amp; Notes</a></li><li class="outline-node" data-heading-depth="2"><a href="#-recommended-companion" class="outline-link outline-root-link">🔧 Recommended Companion</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#receive-datagrams" class="outline-link outline-root-link">Receive datagrams</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#example-bind-and-unbind-a-handler" class="outline-link">Example: bind and unbind a handler</a></li><li class="outline-node" data-heading-depth="3"><a href="#unbind-all-receive-handlers" class="outline-link">Unbind all receive handlers</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#send-datagrams" class="outline-link outline-root-link">Send datagrams</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#example-send-a-string" class="outline-link">Example: send a string</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#receive-and-send-socket-lifecycles" class="outline-link outline-root-link">Receive and send socket lifecycles</a></li><li class="outline-node" data-heading-depth="2"><a href="#convert-byte-arrays" class="outline-link outline-root-link">Convert byte arrays</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/simple-udp/">SimpleUDP</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/simple-udp/docs/messages/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-udp:messages","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/simple-udp/docs/messages/","title":"Send and Receive UDP Data","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/simple-udp/docs/messages/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/simple-udp/">SimpleUDP</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/simple-udp/docs/messages/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-udp:messages","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/simple-udp/docs/messages/","title":"Send and Receive UDP Datagrams","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/simple-udp/docs/messages/"></label></noscript></section></div>
           <article>
-            <h1>Send and Receive UDP Data</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><h3 id="-receiving">📥 Receiving</h3>
+            <h1>Send and Receive UDP Datagrams</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="receive-datagrams">Receive datagrams</h2>
 
 
 
@@ -55,7 +55,12 @@
 
 
 <table><thead><tr><th>Node</th><th>Description</th></tr></thead><tbody><tr><td><code>BindUDPMessageHandler</code></td><td>Bind a message receive callback</td></tr><tr><td><code>UnBindUDPMessageHandler</code></td><td>Unbind a specific handler</td></tr><tr><td><code>UnBindAllUDPMessageHandler</code></td><td>Unbind all handlers and close socket</td></tr></tbody></table>
-<h3 id="-sending">📤 Sending</h3>
+<h3 id="example-bind-and-unbind-a-handler">Example: bind and unbind a handler</h3>
+<p><a href="/media/manuals/f6d246d6dd2934e4c5a1.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/f6d246d6dd2934e4c5a1.png" data-media-alt="StartReceiveMessage" class="media-image-trigger" aria-label="View a larger image: StartReceiveMessage"><img src="/media/manuals/f6d246d6dd2934e4c5a1.png" alt="StartReceiveMessage" loading="lazy" decoding="async"></a></p>
+<h3 id="unbind-all-receive-handlers">Unbind all receive handlers</h3>
+<p><a href="/media/manuals/70c9fd752abed00b6b4c.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/70c9fd752abed00b6b4c.png" data-media-alt="StopReceiveMessage" class="media-image-trigger" aria-label="View a larger image: StopReceiveMessage"><img src="/media/manuals/70c9fd752abed00b6b4c.png" alt="StopReceiveMessage" loading="lazy" decoding="async"></a></p>
+<p>Use this node to unbind everything from a channel and close the socket manually.</p>
+<h2 id="send-datagrams">Send datagrams</h2>
 
 
 
@@ -70,25 +75,34 @@
 
 
 <table><thead><tr><th>Node</th><th>Description</th></tr></thead><tbody><tr><td><code>SendUDPMessage</code></td><td>Send a byte array through the channel (socket auto-created)</td></tr></tbody></table>
-<h3 id="bind--unbind-example">Bind &amp; Unbind Example</h3>
-<p><a href="/media/manuals/f6d246d6dd2934e4c5a1.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/f6d246d6dd2934e4c5a1.png" data-media-alt="StartReceiveMessage" class="media-image-trigger" aria-label="View a larger image: StartReceiveMessage"><img src="/media/manuals/f6d246d6dd2934e4c5a1.png" alt="StartReceiveMessage" loading="lazy" decoding="async"></a></p>
-<p>Socket is created automatically after the first bind, and destroyed when no more handlers remain.</p>
-<h3 id="send-string-message">Send String Message</h3>
+<h3 id="example-send-a-string">Example: send a string</h3>
 <p><a href="/media/manuals/01700bbe6fb9b6ce8da4.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/01700bbe6fb9b6ce8da4.png" data-media-alt="SendMessage" class="media-image-trigger" aria-label="View a larger image: SendMessage"><img src="/media/manuals/01700bbe6fb9b6ce8da4.png" alt="SendMessage" loading="lazy" decoding="async"></a></p>
-<hr>
-<h2 id="-tips--notes">✅ Tips &amp; Notes</h2>
-<ul>
-<li>Only IPv4 is supported (no IPv6 or domain resolution)</li>
-<li>Valid port range: <code>0~65535</code>, where <code>0</code> means auto-assign</li>
-<li>Do not bind the same port in different channels unless the socket is released</li>
-<li>IP filters support CIDR format (e.g. <code>192.168.1.0/24</code>)</li>
-</ul>
-<hr>
-<h2 id="-recommended-companion">🔧 Recommended Companion</h2>
-<p>Use with <strong>SimpleByteConversion</strong> plugin to easily serialize/deserialize between data ↔ <code>TArray&lt;uint8&gt;</code>.</p>
-<hr></div>
+<h2 id="receive-and-send-socket-lifecycles">Receive and send socket lifecycles</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Type</th><th>Created When</th><th>Destroyed When</th></tr></thead><tbody><tr><td>Receiver</td><td>First call to <code>BindUDPMessageHandler</code></td><td>All handlers removed → auto close socket</td></tr><tr><td>Sender</td><td>First call to <code>SendUDPMessage</code> or config</td><td>Plugin shutdown or channel deleted</td></tr></tbody></table>
+<h2 id="convert-byte-arrays">Convert byte arrays</h2>
+<p>Use with <strong>SimpleByteConversion</strong> plugin to easily serialize/deserialize between data ↔ <code>TArray&lt;uint8&gt;</code>.</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-udp/docs/channels/" rel="prev"><span>Previous</span>Set Up UDP Channels</a><a href="/en/works/simple-udp/docs/native-sockets/" rel="next"><span>Next</span>Use UDP Sockets in C++</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-udp/docs/channels/" rel="prev"><span>Previous</span>Configure UDP Receive and Send Channels</a><a href="/en/works/simple-udp/docs/native-sockets/" rel="next"><span>Next</span>Use UDP Sockets in C++</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -155,5 +169,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-udp/docs/messages/","en":"/en/works/simple-udp/docs/messages/"},"anchors":{"zh":{"-receiving":"-接收","-sending":"-发送","bind--unbind-example":"绑定和解绑示例","send-string-message":"发送字符串消息","-tips--notes":"-提示与注意事项","-recommended-companion":"-推荐配套"},"en":{"-receiving":"-receiving","-sending":"-sending","bind--unbind-example":"bind--unbind-example","send-string-message":"send-string-message","-tips--notes":"-tips--notes","-recommended-companion":"-recommended-companion"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-udp/docs/messages/","en":"/en/works/simple-udp/docs/messages/"},"anchors":{"zh":{"receive-datagrams":"接收数据","example-bind-and-unbind-a-handler":"绑定与解绑示例","unbind-all-receive-handlers":"解绑所有接收处理器","send-datagrams":"发送数据","example-send-a-string":"发送字符串示例","receive-and-send-socket-lifecycles":"收发-socket-生命周期","convert-byte-arrays":"转换字节数组"},"en":{"receive-datagrams":"receive-datagrams","example-bind-and-unbind-a-handler":"example-bind-and-unbind-a-handler","unbind-all-receive-handlers":"unbind-all-receive-handlers","send-datagrams":"send-datagrams","example-send-a-string":"example-send-a-string","receive-and-send-socket-lifecycles":"receive-and-send-socket-lifecycles","convert-byte-arrays":"convert-byte-arrays"}},"anchorAliases":{"zh":{"-接收":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"接收数据"},"-发送":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"发送数据"},"绑定和解绑示例":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"绑定与解绑示例"},"发送字符串消息":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"发送字符串示例"},"-提示与注意事项":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"地址与端口限制"},"-推荐配套":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"转换字节数组"},"-receiving":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"接收数据"},"-sending":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"发送数据"},"bind--unbind-example":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"绑定与解绑示例"},"send-string-message":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"发送字符串示例"},"-tips--notes":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"地址与端口限制"},"-recommended-companion":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"转换字节数组"}},"en":{"-接收":{"path":"/en/works/simple-udp/docs/messages/","anchor":"receive-datagrams"},"-发送":{"path":"/en/works/simple-udp/docs/messages/","anchor":"send-datagrams"},"绑定和解绑示例":{"path":"/en/works/simple-udp/docs/messages/","anchor":"example-bind-and-unbind-a-handler"},"发送字符串消息":{"path":"/en/works/simple-udp/docs/messages/","anchor":"example-send-a-string"},"-提示与注意事项":{"path":"/en/works/simple-udp/docs/channels/","anchor":"address-and-port-limits"},"-推荐配套":{"path":"/en/works/simple-udp/docs/messages/","anchor":"convert-byte-arrays"},"-receiving":{"path":"/en/works/simple-udp/docs/messages/","anchor":"receive-datagrams"},"-sending":{"path":"/en/works/simple-udp/docs/messages/","anchor":"send-datagrams"},"bind--unbind-example":{"path":"/en/works/simple-udp/docs/messages/","anchor":"example-bind-and-unbind-a-handler"},"send-string-message":{"path":"/en/works/simple-udp/docs/messages/","anchor":"example-send-a-string"},"-tips--notes":{"path":"/en/works/simple-udp/docs/channels/","anchor":"address-and-port-limits"},"-recommended-companion":{"path":"/en/works/simple-udp/docs/messages/","anchor":"convert-byte-arrays"}}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

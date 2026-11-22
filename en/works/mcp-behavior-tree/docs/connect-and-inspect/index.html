@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>Connect and Inspect Behavior Trees · MZSH</title>
+  <title>Connect to MCP Behavior Tree · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/en/works/mcp-behavior-tree/docs/connect-and-inspect/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,52 +24,18 @@
           <p class="work-doc-name">Works</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Feature Guides</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/connect-and-inspect/" aria-current="page">Connect and Inspect Behavior Trees</a></li><li><a href="/en/works/mcp-behavior-tree/docs/edit-tree/">Edit Behavior Trees and Set Blackboard Keys</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/connect-and-inspect/" aria-current="page">Connect to MCP Behavior Tree</a></li></ul></li><li><span>Behavior Trees and Blackboards</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/edit-tree/">Inspect, Edit, and Validate Behavior Trees</a></li><li><a href="/en/works/mcp-behavior-tree/docs/blackboard-keys/">Create Blackboards and Manage Keys</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#connection" class="outline-link outline-root-link">Connection</a></li><li class="outline-node" data-heading-depth="2"><a href="#tools" class="outline-link outline-root-link">Tools</a></li><li class="outline-node" data-heading-depth="2"><a href="#recommended-workflow" class="outline-link outline-root-link">Recommended workflow</a></li><li class="outline-node" data-heading-depth="2"><a href="#unreal-engine-58-comparison" class="outline-link outline-root-link">Unreal Engine 5.8 comparison</a></li><li class="outline-node" data-heading-depth="2"><a href="#limits" class="outline-link outline-root-link">Limits</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#connection" class="outline-link outline-root-link">Connection</a></li><li class="outline-node" data-heading-depth="2"><a href="#first-behavior-tree-edit" class="outline-link outline-root-link">First behavior tree edit</a></li><li class="outline-node" data-heading-depth="2"><a href="#differences-from-the-official-ue-58-toolset" class="outline-link outline-root-link">Differences from the official UE 5.8 toolset</a></li><li class="outline-node" data-heading-depth="2"><a href="#scope-and-versions" class="outline-link outline-root-link">Scope and versions</a></li><li class="outline-node" data-heading-depth="2"><a href="#feedback" class="outline-link outline-root-link">Feedback</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/">Works</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/mcp-behavior-tree/docs/connect-and-inspect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-behavior-tree:connect-and-inspect","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/mcp-behavior-tree/docs/connect-and-inspect/","title":"Connect and Inspect Behavior Trees","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/mcp-behavior-tree/docs/connect-and-inspect/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/">Works</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/mcp-behavior-tree/docs/connect-and-inspect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-behavior-tree:connect-and-inspect","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/mcp-behavior-tree/docs/connect-and-inspect/","title":"Connect to MCP Behavior Tree","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/mcp-behavior-tree/docs/connect-and-inspect/"></label></noscript></section></div>
           <article>
-            <h1>Connect and Inspect Behavior Trees</h1>
+            <h1>Connect to MCP Behavior Tree</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><p>MCP Behavior Tree is a self-contained Unreal Editor plugin for creating, inspecting, editing, validating, and saving Behavior Tree and Blackboard assets through the Model Context Protocol. It supports Unreal Engine 5.2 and later and does not depend on another user plugin.</p>
 <h2 id="connection">Connection</h2>
 <p>The plugin starts an MCP HTTP server in the Unreal Editor. Its default port is <code>8767</code>; when that port is unavailable, use the actual port reported by the running plugin instead of assuming the default.</p>
-<p>Asset arguments use Unreal content paths such as <code>/Game/AI/BT_Enemy</code> and <code>/Game/AI/BB_Enemy</code>. Newly created or edited assets remain dirty until <code>SaveAsset</code> succeeds.</p>
-<p><code>SaveAsset</code>, <code>OpenAsset</code>, and <code>CloseAsset</code> only accept Behavior Tree or Blackboard assets. Saving fails closed when the editor graph cannot be synchronized or Unreal cannot write the package; a successful MCP result therefore means the package save succeeded.</p>
-<h2 id="tools">Tools</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Area</th><th>Tools</th></tr></thead><tbody><tr><td>Assets</td><td><code>CreateBehaviorTree</code>, <code>CreateBlackboard</code>, <code>SetBehaviorTreeBlackboard</code>, <code>ListBehaviorTrees</code>, <code>GetBehaviorTreeDetail</code>, <code>SaveAsset</code>, <code>OpenAsset</code>, <code>CloseAsset</code></td></tr><tr><td>Blackboard</td><td><code>AddBlackboardKey</code>, <code>RemoveBlackboardKey</code></td></tr><tr><td>Tree structure</td><td><code>AddCompositeNode</code>, <code>AddTaskNode</code>, <code>ConnectNodes</code>, <code>RemoveNode</code></td></tr><tr><td>Nodes</td><td><code>SetNodeProperties</code>, <code>AddDecorator</code>, <code>AddService</code></td></tr><tr><td>Verification</td><td><code>ValidateBehaviorTree</code></td></tr></tbody></table>
-<p><code>GetBehaviorTreeDetail</code> returns stable <code>NodeId</code> values for editing calls, the linked Blackboard and its keys, nested tree structure, decorators, services, reflected editable properties, and floating nodes. Large results are bounded by depth, node, property, and text limits and report <code>bTruncated</code> when incomplete. <code>ListBehaviorTrees</code> supports deterministic sorting, filtering, and <code>Offset</code>/<code>MaxResults</code> paging.</p>
-<h2 id="recommended-workflow">Recommended workflow</h2>
+<h2 id="first-behavior-tree-edit">First behavior tree edit</h2>
 <ol>
 <li>Create a Blackboard with <code>CreateBlackboard</code>.</li>
 <li>Add keys with <code>AddBlackboardKey</code>.</li>
@@ -79,20 +45,19 @@
 <li>Run <code>ValidateBehaviorTree</code>.</li>
 <li>Call <code>SaveAsset</code> for each dirty Behavior Tree or Blackboard asset.</li>
 </ol>
-<h2 id="unreal-engine-58-comparison">Unreal Engine 5.8 comparison</h2>
+<h2 id="differences-from-the-official-ue-58-toolset">Differences from the official UE 5.8 toolset</h2>
 <p>Unreal Engine 5.8’s Epic <code>AIModuleToolset</code> exposes seven read-only Behavior Tree helpers: get the Blackboard, root decorators, node list, one/all node depths, children, and a referenced subtree. MCP Behavior Tree covers the Blackboard, decorators, hierarchy, children, and depth through <code>GetBehaviorTreeDetail</code>, and also provides creation and editing operations.</p>
 <p>The Epic toolset is Experimental and tied to UE 5.8’s Toolset/MCP infrastructure. This plugin cannot depend on it while remaining self-contained and compatible with UE 5.2+. Any official-only behavior not available through the plugin’s documented tools must be queried in UE 5.8 with the Epic toolset rather than assumed to exist on earlier engines.</p>
-<h2 id="limits">Limits</h2>
+<h2 id="scope-and-versions">Scope and versions</h2>
 <ul>
 <li>The plugin is editor-only and does not provide runtime or packaged-game control.</li>
-<li>Blueprint task, decorator, and service logic is not authored here. Create and compile those Blueprint classes with a Blueprint-capable tool, then pass the generated <code>_C</code> class path.</li>
 <li>Private Behavior Tree editor graph APIs vary by engine version. The plugin contains compatibility paths for UE 5.2+, but projects should still validate assets in their target editor version.</li>
-<li>A Behavior Tree that has runtime nodes but no editor graph is rejected instead of being rebuilt as an empty graph. Repair that asset in the Behavior Tree editor before using MCP editing or save tools.</li>
 <li>Source changes do not imply that an existing packaged plugin has been rebuilt or published.</li>
 </ul>
-<p>For questions or feedback, email <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>. I will respond when I see your message.</p></div>
+<h2 id="feedback">Feedback</h2>
+<p>Send feedback to <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>.</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/mcp-behavior-tree/docs/edit-tree/" rel="next"><span>Next</span>Edit Behavior Trees and Set Blackboard Keys</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/mcp-behavior-tree/docs/edit-tree/" rel="next"><span>Next</span>Inspect, Edit, and Validate Behavior Trees</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -159,5 +124,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","en":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/"},"anchors":{"zh":{"connection":"连接","tools":"工具","recommended-workflow":"推荐流程","unreal-engine-58-comparison":"与-unreal-engine-58-官方能力比较","limits":"限制"},"en":{"connection":"connection","tools":"tools","recommended-workflow":"recommended-workflow","unreal-engine-58-comparison":"unreal-engine-58-comparison","limits":"limits"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","en":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/"},"anchors":{"zh":{"connection":"连接","first-behavior-tree-edit":"第一次编辑行为树","differences-from-the-official-ue-58-toolset":"与-ue-58-官方工具集的区别","scope-and-versions":"使用范围与版本","feedback":"反馈"},"en":{"connection":"connection","first-behavior-tree-edit":"first-behavior-tree-edit","differences-from-the-official-ue-58-toolset":"differences-from-the-official-ue-58-toolset","scope-and-versions":"scope-and-versions","feedback":"feedback"}},"anchorAliases":{"zh":{"工具":{"path":"/zh/works/mcp-behavior-tree/docs/edit-tree/","anchor":"创建并检查行为树"},"推荐流程":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"第一次编辑行为树"},"与-unreal-engine-58-官方能力比较":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"与-ue-58-官方工具集的区别"},"限制":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"使用范围与版本"},"connection":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"连接"},"tools":{"path":"/zh/works/mcp-behavior-tree/docs/edit-tree/","anchor":"创建并检查行为树"},"recommended-workflow":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"第一次编辑行为树"},"unreal-engine-58-comparison":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"与-ue-58-官方工具集的区别"},"limits":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"使用范围与版本"}},"en":{"连接":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"connection"},"工具":{"path":"/en/works/mcp-behavior-tree/docs/edit-tree/","anchor":"create-and-inspect-a-behavior-tree"},"推荐流程":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"first-behavior-tree-edit"},"与-unreal-engine-58-官方能力比较":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"differences-from-the-official-ue-58-toolset"},"限制":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"scope-and-versions"},"tools":{"path":"/en/works/mcp-behavior-tree/docs/edit-tree/","anchor":"create-and-inspect-a-behavior-tree"},"recommended-workflow":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"first-behavior-tree-edit"},"unreal-engine-58-comparison":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"differences-from-the-official-ue-58-toolset"},"limits":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"scope-and-versions"}}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

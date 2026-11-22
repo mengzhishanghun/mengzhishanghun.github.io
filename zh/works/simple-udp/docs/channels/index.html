@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>设置 UDP 通道 · MZSH</title>
+  <title>配置 UDP 接收与发送通道 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/simple-udp/docs/channels/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,30 +24,17 @@
           <p class="work-doc-name">SimpleUDP</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>功能指南</span><ul><li><a href="/zh/works/simple-udp/docs/channels/" aria-current="page">设置 UDP 通道</a></li><li><a href="/zh/works/simple-udp/docs/messages/">发送和接收 UDP 数据</a></li><li><a href="/zh/works/simple-udp/docs/native-sockets/">在 C++ 中使用 UDP Socket</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-udp/docs/enable-plugin/">启用 SimpleUDP</a></li></ul></li><li><span>网络通信</span><ul><li><a href="/zh/works/simple-udp/docs/channels/" aria-current="page">配置 UDP 接收与发送通道</a></li><li><a href="/zh/works/simple-udp/docs/messages/">发送和接收 UDP 数据</a></li></ul></li><li><span>原生实现</span><ul><li><a href="/zh/works/simple-udp/docs/native-sockets/">在 C++ 中使用 UDP Socket</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%85%BC%E5%AE%B9%E6%80%A7" class="outline-link outline-root-link">兼容性</a></li><li class="outline-node" data-heading-depth="2"><a href="#-%E6%8F%92%E4%BB%B6%E5%88%9D%E5%A7%8B%E5%8C%96" class="outline-link outline-root-link">🔧 插件初始化</a></li><li class="outline-node" data-heading-depth="2"><a href="#%EF%B8%8F-%E9%9D%99%E6%80%81%E9%80%9A%E9%81%93%E9%85%8D%E7%BD%AE%E5%8F%AF%E9%80%89" class="outline-link outline-root-link">⚙️ 静态通道配置（可选）</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#-%E6%8E%A5%E6%94%B6%E9%80%9A%E9%81%93" class="outline-link">🔹 接收通道</a></li><li class="outline-node" data-heading-depth="3"><a href="#-%E5%8F%91%E9%80%81%E9%80%9A%E9%81%93" class="outline-link">🔹 发送通道</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#-%E8%93%9D%E5%9B%BE%E8%8A%82%E7%82%B9%E6%8E%A5%E5%8F%A3" class="outline-link outline-root-link">🧠 蓝图节点接口</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%EF%B8%8F-%E8%BF%90%E8%A1%8C%E6%97%B6%E9%85%8D%E7%BD%AE" class="outline-link">⚙️ 运行时配置</a></li><li class="outline-node" data-heading-depth="3"><a href="#%EF%B8%8F-%E5%B7%A5%E5%85%B7%E8%8A%82%E7%82%B9" class="outline-link">🛠️ 工具节点</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#-socket-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" class="outline-link outline-root-link">🔁 Socket 生命周期</a></li><li class="outline-node" data-heading-depth="2"><a href="#-%E8%93%9D%E5%9B%BE%E7%A4%BA%E4%BE%8B%E5%9B%BE%E7%89%87" class="outline-link outline-root-link">🧪 蓝图示例（图片）</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E6%89%80%E6%9C%89%E8%93%9D%E5%9B%BE%E5%87%BD%E6%95%B0" class="outline-link">所有蓝图函数</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E8%A7%A3%E7%BB%91%E5%85%A8%E9%83%A8%E5%BC%BA%E5%88%B6%E5%85%B3%E9%97%AD-socket" class="outline-link">解绑全部（强制关闭 Socket）</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%8A%A8%E6%80%81%E6%9B%B4%E6%96%B0%E6%8E%A5%E6%94%B6%E9%80%9A%E9%81%93" class="outline-link">动态更新接收通道</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%8A%A8%E6%80%81%E6%9B%B4%E6%96%B0%E5%8F%91%E9%80%81%E9%80%9A%E9%81%93" class="outline-link">动态更新发送通道</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2" class="outline-link outline-root-link">版本历史</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%94%AF%E6%8C%81" class="outline-link outline-root-link">支持</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%9C%A8%E9%A1%B9%E7%9B%AE%E8%AE%BE%E7%BD%AE%E4%B8%AD%E9%A2%84%E5%AE%9A%E4%B9%89%E9%80%9A%E9%81%93" class="outline-link outline-root-link">在项目设置中预定义通道</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E6%8E%A5%E6%94%B6%E9%80%9A%E9%81%93%E4%B8%8E%E5%9C%B0%E5%9D%80%E8%BF%87%E6%BB%A4" class="outline-link">接收通道与地址过滤</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%8F%91%E9%80%81%E9%80%9A%E9%81%93%E4%B8%8E%E7%AB%AF%E5%8F%A3" class="outline-link">发送通道与端口</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%9C%A8%E8%93%9D%E5%9B%BE%E4%B8%AD%E8%AF%BB%E5%8F%96%E5%92%8C%E6%9B%B4%E6%96%B0%E9%80%9A%E9%81%93" class="outline-link outline-root-link">在蓝图中读取和更新通道</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E6%9B%B4%E6%96%B0%E6%8E%A5%E6%94%B6%E9%80%9A%E9%81%93%E7%A4%BA%E4%BE%8B" class="outline-link">更新接收通道示例</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E6%9B%B4%E6%96%B0%E5%8F%91%E9%80%81%E9%80%9A%E9%81%93%E7%A4%BA%E4%BE%8B" class="outline-link">更新发送通道示例</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%A7%A3%E6%9E%90%E5%9C%B0%E5%9D%80%E4%B8%8E%E6%A3%80%E6%9F%A5-cidr" class="outline-link outline-root-link">解析地址与检查 CIDR</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%9C%B0%E5%9D%80%E4%B8%8E%E7%AB%AF%E5%8F%A3%E9%99%90%E5%88%B6" class="outline-link outline-root-link">地址与端口限制</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%93%9D%E5%9B%BE%E5%87%BD%E6%95%B0%E4%B8%80%E8%A7%88" class="outline-link outline-root-link">蓝图函数一览</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/simple-udp/">SimpleUDP</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/simple-udp/docs/channels/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-udp:channels","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/simple-udp/docs/channels/","title":"设置 UDP 通道","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/simple-udp/docs/channels/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/simple-udp/">SimpleUDP</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/simple-udp/docs/channels/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-udp:channels","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/simple-udp/docs/channels/","title":"配置 UDP 接收与发送通道","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/simple-udp/docs/channels/"></label></noscript></section></div>
           <article>
-            <h1>设置 UDP 通道</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p><strong>SimpleUDP</strong> 是 Unreal Engine 的轻量级 UDP 通信插件。<br>
-支持<strong>运行时动态配置收发通道</strong>，所有功能均暴露给蓝图，方便集成。</p>
-<h2 id="兼容性">兼容性</h2>
-<ul>
-<li>Unreal Engine 5.2–5.8</li>
-<li>版本 1.1.0（Version 2）</li>
-</ul>
-<hr>
-<h2 id="-插件初始化">🔧 插件初始化</h2>
-<p>插件启用后立即生效。<br>
-内部注册为 <code>GameInstanceSubsystem</code>——无需手动编写启动或关闭代码。</p>
-<hr>
-<h2 id="️-静态通道配置可选">⚙️ 静态通道配置（可选）</h2>
-<p>可通过 <strong>项目设置 → SimpleUDP Settings</strong> 预配置通道。</p>
-<p>注意：虽然支持运行时修改通道，但建议尽可能在此处配置，便于管理。</p>
-<h3 id="-接收通道">🔹 接收通道</h3>
+            <h1>配置 UDP 接收与发送通道</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="在项目设置中预定义通道">在项目设置中预定义通道</h2>
+<p>进入 <strong>项目设置 → SimpleUDP Settings</strong>，添加接收或发送通道。也可在运行时按需新增或更新通道。</p>
+<h3 id="接收通道与地址过滤">接收通道与地址过滤</h3>
 
 
 
@@ -84,10 +71,8 @@
 
 
 <table><thead><tr><th>字段</th><th>示例</th><th>说明</th></tr></thead><tbody><tr><td>Channel Name</td><td><code>DefaultRecv</code></td><td>蓝图中使用的通道名称</td></tr><tr><td>Bind Address</td><td><code>0.0.0.0:9000</code></td><td>要监听的本地 IP 和端口</td></tr><tr><td>Max Receive Bytes</td><td><code>1024</code></td><td>每次接收的最大包大小</td></tr><tr><td>Filter Mode</td><td>None / Whitelist / Blacklist</td><td>IP 过滤模式</td></tr><tr><td>Whitelist / Blacklist</td><td><code>["192.168.1.0/24"]</code></td><td>支持 CIDR 格式</td></tr></tbody></table>
-<blockquote>
-<p><strong>重要：</strong> <code>Max Receive Bytes</code> 默认值为 <code>1024</code> 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，请务必在接收前调大对应接收通道的该参数，否则数据包可能无法被完整接收。</p>
-</blockquote>
-<h3 id="-发送通道">🔹 发送通道</h3>
+<p><code>Max Receive Bytes</code> 默认值为 <code>1024</code> 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，在接收前调大对应接收通道的该参数，否则数据包可能无法被完整接收。</p>
+<h3 id="发送通道与端口">发送通道与端口</h3>
 
 
 
@@ -118,13 +103,9 @@
 
 
 
-<table><thead><tr><th>字段</th><th>示例</th><th>说明</th></tr></thead><tbody><tr><td>Channel Name</td><td><code>DefaultSend</code></td><td>通道名称</td></tr><tr><td>Target Addresses</td><td><code>["255.255.255.255:9000"]</code></td><td>目标 IP:Port 列表</td></tr><tr><td>Fixed Port 🔧</td><td><code>0</code>（默认）</td><td>发送 Socket 的本地绑定端口（0 = 自动）</td></tr><tr><td>Max Send Bytes</td><td><code>1024</code></td><td>每个包的最大大小</td></tr></tbody></table>
-<blockquote>
-<p><strong>重要：</strong> <code>Max Send Bytes</code> 默认值为 <code>1024</code> 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，请务必在发送前调大对应发送通道的该参数，否则只会发送配置上限以内的数据。</p>
-</blockquote>
-<hr>
-<h2 id="-蓝图节点接口">🧠 蓝图节点接口</h2>
-<h3 id="️-运行时配置">⚙️ 运行时配置</h3>
+<table><thead><tr><th>字段</th><th>示例</th><th>说明</th></tr></thead><tbody><tr><td>Channel Name</td><td><code>DefaultSend</code></td><td>通道名称</td></tr><tr><td>Target Addresses</td><td><code>["255.255.255.255:9000"]</code></td><td>目标 IP:Port 列表</td></tr><tr><td>Fixed Port</td><td><code>0</code>（默认）</td><td>发送 Socket 的本地绑定端口（0 = 自动）</td></tr><tr><td>Max Send Bytes</td><td><code>1024</code></td><td>每个包的最大大小</td></tr></tbody></table>
+<p><code>Max Send Bytes</code> 默认值为 <code>1024</code> 字节。如果协议中的单个 UDP 数据包可能超过 1024 字节，在发送前调大对应发送通道的该参数，否则只会发送配置上限以内的数据。</p>
+<h2 id="在蓝图中读取和更新通道">在蓝图中读取和更新通道</h2>
 
 
 
@@ -159,7 +140,15 @@
 
 
 <table><thead><tr><th>节点</th><th>说明</th></tr></thead><tbody><tr><td><code>UpdateReceiveChannelConfig</code></td><td>创建/更新接收通道（如需要会重新绑定）</td></tr><tr><td><code>UpdateSendChannelConfig</code></td><td>创建/更新发送通道，支持 <code>FixedPort</code> ✅</td></tr><tr><td><code>GetReceiveChannelConfig</code></td><td>获取单个接收通道配置</td></tr><tr><td><code>GetSendChannelConfig</code></td><td>获取单个发送通道配置</td></tr><tr><td><code>GetAllReceiveChannelConfig</code></td><td>获取所有接收通道配置</td></tr><tr><td><code>GetAllSendChannelConfig</code></td><td>获取所有发送通道配置</td></tr></tbody></table>
-<h3 id="️-工具节点">🛠️ 工具节点</h3>
+<h3 id="更新接收通道示例">更新接收通道示例</h3>
+<p><a href="/media/manuals/5f056cc625a73554efc2.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/5f056cc625a73554efc2.png" data-media-alt="DynamicAddOrUpdateReceiveChannelConfig" class="media-image-trigger" aria-label="放大查看图片：DynamicAddOrUpdateReceiveChannelConfig"><img src="/media/manuals/5f056cc625a73554efc2.png" alt="DynamicAddOrUpdateReceiveChannelConfig" loading="lazy" decoding="async"></a></p>
+<p>如需要 Socket 会自动重建。函数调用顺序无关紧要。</p>
+<p>两个布尔值控制是覆盖现有通道还是添加新通道。</p>
+<h3 id="更新发送通道示例">更新发送通道示例</h3>
+<p><a href="/media/manuals/9aebf9a15bce612e4b1c.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/9aebf9a15bce612e4b1c.png" data-media-alt="DynamicUpdateSendChnnelConfig" class="media-image-trigger" aria-label="放大查看图片：DynamicUpdateSendChnnelConfig"><img src="/media/manuals/9aebf9a15bce612e4b1c.png" alt="DynamicUpdateSendChnnelConfig" loading="lazy" decoding="async"></a></p>
+<p>发送 Socket 仅在 <code>FixedPort</code> 不同时重建。</p>
+<p>两个布尔值的行为与接收配置相同。</p>
+<h2 id="解析地址与检查-cidr">解析地址与检查 CIDR</h2>
 
 
 
@@ -178,53 +167,16 @@
 
 
 <table><thead><tr><th>节点</th><th>说明</th></tr></thead><tbody><tr><td><code>ParseEndpoint</code></td><td>解析 <code>"127.0.0.1:9000"</code> 为 IP 和端口</td></tr><tr><td><code>IsIPInCIDR</code></td><td>检查 IP 是否在 CIDR 块内</td></tr></tbody></table>
-<hr>
-<h2 id="-socket-生命周期">🔁 Socket 生命周期</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>类型</th><th>创建时机</th><th>销毁时机</th></tr></thead><tbody><tr><td>接收端</td><td>首次调用 <code>BindUDPMessageHandler</code> 时</td><td>所有处理器移除 → 自动关闭 Socket</td></tr><tr><td>发送端</td><td>首次调用 <code>SendUDPMessage</code> 或配置时</td><td>插件关闭或通道删除时</td></tr></tbody></table>
-<hr>
-<h2 id="-蓝图示例图片">🧪 蓝图示例（图片）</h2>
-<h3 id="所有蓝图函数">所有蓝图函数</h3>
-<p><a href="/media/manuals/fd1d93f02ef279e71e2e.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/fd1d93f02ef279e71e2e.png" data-media-alt="ShowAllFuntion" class="media-image-trigger" aria-label="放大查看图片：ShowAllFuntion"><img src="/media/manuals/fd1d93f02ef279e71e2e.png" alt="ShowAllFuntion" loading="lazy" decoding="async"></a></p>
-<h3 id="解绑全部强制关闭-socket">解绑全部（强制关闭 Socket）</h3>
-<p><a href="/media/manuals/70c9fd752abed00b6b4c.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/70c9fd752abed00b6b4c.png" data-media-alt="StopReceiveMessage" class="media-image-trigger" aria-label="放大查看图片：StopReceiveMessage"><img src="/media/manuals/70c9fd752abed00b6b4c.png" alt="StopReceiveMessage" loading="lazy" decoding="async"></a></p>
-<p>使用此节点解绑通道上的所有内容并手动关闭 Socket。</p>
-<h3 id="动态更新接收通道">动态更新接收通道</h3>
-<p><a href="/media/manuals/5f056cc625a73554efc2.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/5f056cc625a73554efc2.png" data-media-alt="DynamicAddOrUpdateReceiveChannelConfig" class="media-image-trigger" aria-label="放大查看图片：DynamicAddOrUpdateReceiveChannelConfig"><img src="/media/manuals/5f056cc625a73554efc2.png" alt="DynamicAddOrUpdateReceiveChannelConfig" loading="lazy" decoding="async"></a></p>
-<p>如需要 Socket 会自动重建。函数调用顺序无关紧要。</p>
-<p>两个布尔值控制是覆盖现有通道还是添加新通道。</p>
-<h3 id="动态更新发送通道">动态更新发送通道</h3>
-<p><a href="/media/manuals/9aebf9a15bce612e4b1c.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/9aebf9a15bce612e4b1c.png" data-media-alt="DynamicUpdateSendChnnelConfig" class="media-image-trigger" aria-label="放大查看图片：DynamicUpdateSendChnnelConfig"><img src="/media/manuals/9aebf9a15bce612e4b1c.png" alt="DynamicUpdateSendChnnelConfig" loading="lazy" decoding="async"></a></p>
-<p>发送 Socket 仅在 <code>FixedPort</code> 不同时重建。</p>
-<p>两个布尔值的行为与接收配置相同。</p>
-<h2 id="版本历史">版本历史</h2>
-<p>打开 <strong>编辑 → 项目设置</strong>，进入 SimpleUDP 设置页，将 <strong>Language</strong> 设置为 <strong>English</strong> 或 <strong>中文</strong>。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。</p>
-<h2 id="支持">支持</h2>
-<p>如有使用问题或合作需求，请前往联系页面。</p>
+<h2 id="地址与端口限制">地址与端口限制</h2>
 <ul>
-<li><strong>联系入口：</strong> <a href="/zh/contact/">联系与合作</a></li>
-</ul></div>
+<li>仅支持 IPv4（不支持 IPv6 或域名解析）</li>
+<li>有效端口范围：<code>0~65535</code>，其中 <code>0</code> 表示自动分配</li>
+<li>不要在不同通道中绑定相同端口，除非 Socket 已释放</li>
+</ul>
+<h2 id="蓝图函数一览">蓝图函数一览</h2>
+<p><a href="/media/manuals/fd1d93f02ef279e71e2e.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/fd1d93f02ef279e71e2e.png" data-media-alt="ShowAllFuntion" class="media-image-trigger" aria-label="放大查看图片：ShowAllFuntion"><img src="/media/manuals/fd1d93f02ef279e71e2e.png" alt="ShowAllFuntion" loading="lazy" decoding="async"></a></p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-udp/docs/messages/" rel="next"><span>下一篇</span>发送和接收 UDP 数据</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-udp/docs/enable-plugin/" rel="prev"><span>上一篇</span>启用 SimpleUDP</a><a href="/zh/works/simple-udp/docs/messages/" rel="next"><span>下一篇</span>发送和接收 UDP 数据</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -291,5 +243,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/simple-udp/docs/channels/","en":"/en/works/simple-udp/docs/channels/"},"anchors":{"zh":{"兼容性":"兼容性","-插件初始化":"-插件初始化","️-静态通道配置可选":"️-静态通道配置可选","-接收通道":"-接收通道","-发送通道":"-发送通道","-蓝图节点接口":"-蓝图节点接口","️-运行时配置":"️-运行时配置","️-工具节点":"️-工具节点","-socket-生命周期":"-socket-生命周期","-蓝图示例图片":"-蓝图示例图片","所有蓝图函数":"所有蓝图函数","解绑全部强制关闭-socket":"解绑全部强制关闭-socket","动态更新接收通道":"动态更新接收通道","动态更新发送通道":"动态更新发送通道","版本历史":"版本历史","支持":"支持"},"en":{"兼容性":"compatibility","-插件初始化":"-plugin-initialization","️-静态通道配置可选":"️-static-channel-configuration-optional","-接收通道":"-receive-channels","-发送通道":"-send-channels","-蓝图节点接口":"-blueprint-node-interface","️-运行时配置":"️-runtime-configuration","️-工具节点":"️-utility-nodes","-socket-生命周期":"-socket-lifecycle","-蓝图示例图片":"-blueprint-examples-images","所有蓝图函数":"all-blueprint-functions","解绑全部强制关闭-socket":"unbind-all-force-close-socket","动态更新接收通道":"dynamically-update-receive-channel","动态更新发送通道":"dynamically-update-send-channel","版本历史":"version-history","支持":"support"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/simple-udp/docs/channels/","en":"/en/works/simple-udp/docs/channels/"},"anchors":{"zh":{"在项目设置中预定义通道":"在项目设置中预定义通道","接收通道与地址过滤":"接收通道与地址过滤","发送通道与端口":"发送通道与端口","在蓝图中读取和更新通道":"在蓝图中读取和更新通道","更新接收通道示例":"更新接收通道示例","更新发送通道示例":"更新发送通道示例","解析地址与检查-cidr":"解析地址与检查-cidr","地址与端口限制":"地址与端口限制","蓝图函数一览":"蓝图函数一览"},"en":{"在项目设置中预定义通道":"predefine-channels-in-project-settings","接收通道与地址过滤":"receive-channels-and-address-filters","发送通道与端口":"send-channels-and-ports","在蓝图中读取和更新通道":"read-and-update-channels-in-blueprint","更新接收通道示例":"example-update-a-receive-channel","更新发送通道示例":"example-update-a-send-channel","解析地址与检查-cidr":"parse-endpoints-and-check-cidr-ranges","地址与端口限制":"address-and-port-limits","蓝图函数一览":"blueprint-function-overview"}},"anchorAliases":{"zh":{"兼容性":{"path":"/zh/works/simple-udp/docs/enable-plugin/","anchor":"兼容性"},"-插件初始化":{"path":"/zh/works/simple-udp/docs/enable-plugin/","anchor":"启用插件"},"️-静态通道配置可选":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"在项目设置中预定义通道"},"-接收通道":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"接收通道与地址过滤"},"-发送通道":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"发送通道与端口"},"-蓝图节点接口":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"在蓝图中读取和更新通道"},"️-运行时配置":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"在蓝图中读取和更新通道"},"️-工具节点":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"解析地址与检查-cidr"},"-socket-生命周期":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"收发-socket-生命周期"},"-蓝图示例图片":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"蓝图函数一览"},"所有蓝图函数":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"蓝图函数一览"},"解绑全部强制关闭-socket":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"解绑所有接收处理器"},"动态更新接收通道":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"更新接收通道示例"},"动态更新发送通道":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"更新发送通道示例"},"版本历史":{"path":"/zh/works/simple-udp/docs/enable-plugin/","anchor":"界面语言"},"支持":{"path":"/zh/works/simple-udp/","anchor":"支持与反馈"},"compatibility":{"path":"/zh/works/simple-udp/docs/enable-plugin/","anchor":"兼容性"},"-plugin-initialization":{"path":"/zh/works/simple-udp/docs/enable-plugin/","anchor":"启用插件"},"️-static-channel-configuration-optional":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"在项目设置中预定义通道"},"-receive-channels":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"接收通道与地址过滤"},"-send-channels":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"发送通道与端口"},"-blueprint-node-interface":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"在蓝图中读取和更新通道"},"️-runtime-configuration":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"在蓝图中读取和更新通道"},"️-utility-nodes":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"解析地址与检查-cidr"},"-socket-lifecycle":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"收发-socket-生命周期"},"-blueprint-examples-images":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"蓝图函数一览"},"all-blueprint-functions":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"蓝图函数一览"},"unbind-all-force-close-socket":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"解绑所有接收处理器"},"dynamically-update-receive-channel":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"更新接收通道示例"},"dynamically-update-send-channel":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"更新发送通道示例"},"version-history":{"path":"/zh/works/simple-udp/docs/enable-plugin/","anchor":"界面语言"},"support":{"path":"/zh/works/simple-udp/","anchor":"支持与反馈"}},"en":{"兼容性":{"path":"/en/works/simple-udp/docs/enable-plugin/","anchor":"compatibility"},"-插件初始化":{"path":"/en/works/simple-udp/docs/enable-plugin/","anchor":"enable-the-plugin"},"️-静态通道配置可选":{"path":"/en/works/simple-udp/docs/channels/","anchor":"predefine-channels-in-project-settings"},"-接收通道":{"path":"/en/works/simple-udp/docs/channels/","anchor":"receive-channels-and-address-filters"},"-发送通道":{"path":"/en/works/simple-udp/docs/channels/","anchor":"send-channels-and-ports"},"-蓝图节点接口":{"path":"/en/works/simple-udp/docs/channels/","anchor":"read-and-update-channels-in-blueprint"},"️-运行时配置":{"path":"/en/works/simple-udp/docs/channels/","anchor":"read-and-update-channels-in-blueprint"},"️-工具节点":{"path":"/en/works/simple-udp/docs/channels/","anchor":"parse-endpoints-and-check-cidr-ranges"},"-socket-生命周期":{"path":"/en/works/simple-udp/docs/messages/","anchor":"receive-and-send-socket-lifecycles"},"-蓝图示例图片":{"path":"/en/works/simple-udp/docs/channels/","anchor":"blueprint-function-overview"},"所有蓝图函数":{"path":"/en/works/simple-udp/docs/channels/","anchor":"blueprint-function-overview"},"解绑全部强制关闭-socket":{"path":"/en/works/simple-udp/docs/messages/","anchor":"unbind-all-receive-handlers"},"动态更新接收通道":{"path":"/en/works/simple-udp/docs/channels/","anchor":"example-update-a-receive-channel"},"动态更新发送通道":{"path":"/en/works/simple-udp/docs/channels/","anchor":"example-update-a-send-channel"},"版本历史":{"path":"/en/works/simple-udp/docs/enable-plugin/","anchor":"interface-language"},"支持":{"path":"/en/works/simple-udp/","anchor":"support-and-feedback"},"compatibility":{"path":"/en/works/simple-udp/docs/enable-plugin/","anchor":"compatibility"},"-plugin-initialization":{"path":"/en/works/simple-udp/docs/enable-plugin/","anchor":"enable-the-plugin"},"️-static-channel-configuration-optional":{"path":"/en/works/simple-udp/docs/channels/","anchor":"predefine-channels-in-project-settings"},"-receive-channels":{"path":"/en/works/simple-udp/docs/channels/","anchor":"receive-channels-and-address-filters"},"-send-channels":{"path":"/en/works/simple-udp/docs/channels/","anchor":"send-channels-and-ports"},"-blueprint-node-interface":{"path":"/en/works/simple-udp/docs/channels/","anchor":"read-and-update-channels-in-blueprint"},"️-runtime-configuration":{"path":"/en/works/simple-udp/docs/channels/","anchor":"read-and-update-channels-in-blueprint"},"️-utility-nodes":{"path":"/en/works/simple-udp/docs/channels/","anchor":"parse-endpoints-and-check-cidr-ranges"},"-socket-lifecycle":{"path":"/en/works/simple-udp/docs/messages/","anchor":"receive-and-send-socket-lifecycles"},"-blueprint-examples-images":{"path":"/en/works/simple-udp/docs/channels/","anchor":"blueprint-function-overview"},"all-blueprint-functions":{"path":"/en/works/simple-udp/docs/channels/","anchor":"blueprint-function-overview"},"unbind-all-force-close-socket":{"path":"/en/works/simple-udp/docs/messages/","anchor":"unbind-all-receive-handlers"},"dynamically-update-receive-channel":{"path":"/en/works/simple-udp/docs/channels/","anchor":"example-update-a-receive-channel"},"dynamically-update-send-channel":{"path":"/en/works/simple-udp/docs/channels/","anchor":"example-update-a-send-channel"},"version-history":{"path":"/en/works/simple-udp/docs/enable-plugin/","anchor":"interface-language"},"support":{"path":"/en/works/simple-udp/","anchor":"support-and-feedback"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

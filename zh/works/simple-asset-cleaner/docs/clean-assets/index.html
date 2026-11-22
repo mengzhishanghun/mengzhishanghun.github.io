@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>清理未引用资产 · MZSH</title>
+  <title>提交时清理未引用资产 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/simple-asset-cleaner/docs/clean-assets/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,60 +24,22 @@
           <p class="work-doc-name">SimpleAssetCleaner</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>安装与配置</span><ul><li><a href="/zh/works/simple-asset-cleaner/docs/setup/">安装并配置版本控制</a></li></ul></li><li><span>功能指南</span><ul><li><a href="/zh/works/simple-asset-cleaner/docs/clean-assets/" aria-current="page">清理未引用资产</a></li><li><a href="/zh/works/simple-asset-cleaner/docs/add-dependencies/">添加未纳入版本控制的依赖</a></li><li><a href="/zh/works/simple-asset-cleaner/docs/protect-assets/">配置根资产与保护范围</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-asset-cleaner/docs/setup/">安装并配置版本控制</a></li></ul></li><li><span>资产清理</span><ul><li><a href="/zh/works/simple-asset-cleaner/docs/clean-assets/" aria-current="page">提交时清理未引用资产</a></li><li><a href="/zh/works/simple-asset-cleaner/docs/full-cleanup/">手动全量清理</a></li></ul></li><li><span>资产保护</span><ul><li><a href="/zh/works/simple-asset-cleaner/docs/protect-assets/">配置根资产与保护范围</a></li></ul></li><li><span>依赖管理</span><ul><li><a href="/zh/works/simple-asset-cleaner/docs/add-dependencies/">添加未纳入版本控制的依赖</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%B8%85%E7%90%86%E8%8C%83%E5%9B%B4" class="outline-link outline-root-link">清理范围</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E4%BB%85%E9%A1%B9%E7%9B%AE%E5%86%85%E5%AE%B9" class="outline-link">仅项目内容</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E4%B8%8D%E4%BC%9A%E8%A7%A6%E5%8F%8A" class="outline-link">不会触及</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%B7%A5%E4%BD%9C%E5%8E%9F%E7%90%86" class="outline-link outline-root-link">工作原理</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E6%8F%90%E4%BA%A4%E6%97%B6%E8%87%AA%E5%8A%A8%E6%B8%85%E7%90%86%E6%8E%A8%E8%8D%90" class="outline-link">提交时自动清理（推荐）</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95" class="outline-link outline-root-link">右键菜单</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E6%B8%85%E7%90%86%E6%9C%AA%E5%BC%95%E7%94%A8%E8%B5%84%E4%BA%A7" class="outline-link">清理未引用资产</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%87%8D%E8%A6%81%E8%AF%B4%E6%98%8E" class="outline-link outline-root-link">重要说明</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E6%93%8D%E4%BD%9C%E8%A1%8C%E4%B8%BA%E5%AF%B9%E6%AF%94" class="outline-link">操作行为对比</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E6%AD%A5%E9%AA%A43%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8" class="outline-link">步骤3：开始使用</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E6%8F%90%E4%BA%A4%E6%97%B6%E5%A4%84%E7%90%86" class="outline-link">提交时处理</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%85%A8%E9%87%8F%E6%B8%85%E7%90%86" class="outline-link">全量清理</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BD%BF%E7%94%A8%E8%8C%83%E5%9B%B4%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" class="outline-link outline-root-link">使用范围与注意事项</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#53-%E6%B8%85%E7%90%86%E7%BB%93%E6%9E%9C%E5%AF%B9%E7%85%A7%E8%A1%A8" class="outline-link">5.3 清理结果对照表</a></li></ol></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%AF%86%E5%88%AB%E6%9C%AA%E5%BC%95%E7%94%A8%E8%B5%84%E4%BA%A7" class="outline-link outline-root-link">识别未引用资产</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%8F%90%E4%BA%A4%E6%97%B6%E8%87%AA%E5%8A%A8%E6%B8%85%E7%90%86" class="outline-link outline-root-link">提交时自动清理</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%B3%E9%94%AE%E6%B8%85%E7%90%86%E9%80%89%E5%AE%9A%E8%B5%84%E4%BA%A7" class="outline-link outline-root-link">右键清理选定资产</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%87%AA%E5%8A%A8%E5%92%8C%E5%8F%B3%E9%94%AE%E6%B8%85%E7%90%86%E7%9A%84%E5%B7%AE%E5%88%AB" class="outline-link outline-root-link">自动和右键清理的差别</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/simple-asset-cleaner/">SimpleAssetCleaner</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/simple-asset-cleaner/docs/clean-assets/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-asset-cleaner:clean-assets","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/simple-asset-cleaner/docs/clean-assets/","title":"清理未引用资产","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/simple-asset-cleaner/docs/clean-assets/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/simple-asset-cleaner/">SimpleAssetCleaner</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/simple-asset-cleaner/docs/clean-assets/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-asset-cleaner:clean-assets","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/simple-asset-cleaner/docs/clean-assets/","title":"提交时清理未引用资产","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/simple-asset-cleaner/docs/clean-assets/"></label></noscript></section></div>
           <article>
-            <h1>清理未引用资产</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="清理范围">清理范围</h2>
-<h3 id="仅项目内容">仅项目内容</h3>
-<ul>
-<li><strong>仅限</strong>项目 <code>/Content/</code> 文件夹中的资产（<code>/Game/</code> 路径）</li>
-</ul>
-<h3 id="不会触及">不会触及</h3>
-<ul>
-<li>插件资产（如 <code>/PluginName/Content/</code>）</li>
-<li>引擎资产</li>
-<li>代码文件（C++ 头文件/源文件）</li>
-<li><code>/Content/</code> 外部的引用</li>
-</ul>
-<hr>
-<h2 id="工作原理">工作原理</h2>
-<p>插件使用<strong>引用链分析</strong>：</p>
-<ol>
-<li><strong>根资产</strong> - 始终视为”使用中”（地图、蓝图、数据资产等）</li>
-<li><strong>引用链</strong> - 被根资产直接或间接引用的资产视为”使用中”</li>
-<li><strong>未引用资产</strong> - 无法从任何根资产到达的资产将被清理</li>
-</ol>
-<h3 id="提交时自动清理推荐">提交时自动清理（推荐）</h3>
-<ul>
-<li>打开版本控制提交对话框时触发</li>
-<li>仅检查新添加的文件</li>
-<li>将未引用的文件从版本控制中还原</li>
-<li><strong>本地副本安全</strong> - 不会从磁盘删除</li>
-</ul>
-<hr>
-<h2 id="右键菜单">右键菜单</h2>
-<p>在 Content Browser 中右键文件夹或资产，选择 <strong>Simple Asset Cleaner</strong> 子菜单，可使用以下功能：</p>
-<h3 id="清理未引用资产">清理未引用资产</h3>
-<p>插件扫描选中范围内的资产，在弹窗中列出未引用资产。勾选要处理的资产后确认清理。</p>
-<ul>
-<li>支持选中单个/多个文件或文件夹</li>
-<li>新添加的文件：还原（本地保留）</li>
-<li>已跟踪的文件：<strong>从服务器和本地删除</strong></li>
-</ul>
-<h4 id="enable-auto-clean--启用自动清理">Enable Auto Clean / 启用自动清理</h4>
-<ul>
-<li><strong>默认</strong>：开启</li>
-<li><strong>功能</strong>：提交前检查引用</li>
-<li><strong>行为</strong>：还原未引用的新添加文件（本地文件安全）</li>
-<li><strong>建议</strong>：日常使用保持开启</li>
-</ul>
-<h2 id="重要说明">重要说明</h2>
-<h3 id="操作行为对比">操作行为对比</h3>
+            <h1>提交时清理未引用资产</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="识别未引用资产">识别未引用资产</h2>
+<p>插件只分析项目 <code>/Content/</code>（<code>/Game/</code>）下的资产，不处理插件资产（如 <code>/PluginName/Content/</code>）、引擎资产、C++ 源文件或头文件，也不处理 <code>/Content/</code> 之外的引用。地图、蓝图、数据资产等可作为根。根及其直接或间接引用会保留；无法从任一根到达的资产才是清理候选。</p>
+<h2 id="提交时自动清理">提交时自动清理</h2>
+<p><code>Enable Auto Clean</code> 默认开启。创建资产并执行 <strong>Add to Source Control</strong> 后打开提交窗口。插件会检查新添加的文件，还原未引用的文件并保留本地副本；已跟踪的文件不受影响。</p>
+<p>例如，10 个试作材质中只有 2 个被场景引用，另外 8 个会从待提交列表还原，仍可在本地使用。</p>
+<h2 id="右键清理选定资产">右键清理选定资产</h2>
+<p>在 Content Browser 选中一个或多个资产或文件夹，右键打开 <strong>Simple Asset Cleaner</strong>，选择 <strong>清理未引用资产</strong>。检查弹窗候选并勾选要处理的文件。</p>
+<h2 id="自动和右键清理的差别">自动和右键清理的差别</h2>
 
 
 
@@ -98,101 +60,9 @@
 
 
 
-<table><thead><tr><th>资产状态</th><th>提交时自动清理</th><th>右键”清理未引用资产”</th></tr></thead><tbody><tr><td>新添加</td><td>还原，<strong>本地保留</strong></td><td>还原，<strong>本地保留</strong></td></tr><tr><td>已跟踪</td><td>不处理</td><td><strong>删除（服务器 + 本地）</strong></td></tr></tbody></table>
-<h3 id="步骤3开始使用">步骤3：开始使用</h3>
-<p><strong>日常工作：</strong><br>
-提交时按配置检查候选未引用资源，并查看处理结果。</p>
-<p><strong>深度清理：</strong><br>
-当需要清理整个项目时，点击设置中的 <code>Clean All Source Control Assets</code> 按钮。</p>
-<h3 id="提交时处理">提交时处理</h3>
-<p>开启自动清理后，工具会在提交时按引用分析结果处理文件。</p>
-<p><strong>工作流程：</strong></p>
-<ol>
-<li>你正常工作，创建或修改资源</li>
-<li>添加资源到版本控制（Add to Source Control）</li>
-<li>打开提交窗口准备提交代码</li>
-<li><strong>插件自动在后台检测</strong>哪些资源没有被引用</li>
-<li>未引用的资源自动从提交列表中移除（回滚）</li>
-<li>提交窗口只显示真正需要提交的文件</li>
-</ol>
-<p><strong>典型场景：</strong></p>
-<p>美术同学测试了10个材质球，最终只有2个用在了场景中。提交时插件自动识别并回滚未被场景引用的8个材质，提交窗口中只保留需要提交的材质。</p>
-<h3 id="全量清理">全量清理</h3>
-<p>除了日常的自动清理，SimpleAssetCleaner 还提供了全量清理功能，适合定期维护或重大版本迭代。</p>
-<p><strong>使用场景：</strong></p>
-<ul>
-<li>项目重大版本迭代前的大扫除</li>
-<li>接手遗留项目，需要清理历史包袱</li>
-<li>定期维护，保持仓库健康</li>
-</ul>
-<p><strong>操作方式：</strong></p>
-<ol>
-<li>打开 <code>Editor &gt; Project Settings &gt; General &gt; Simple Asset Cleaner</code></li>
-<li>点击 <code>Clean All Source Control Assets</code> 按钮</li>
-<li>等待扫描完成（会显示进度条）</li>
-<li>查看日志了解清理了哪些资源</li>
-</ol>
-<p><strong>安全保障：</strong></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>资源状态</th><th>处理方式</th></tr></thead><tbody><tr><td>新增但未提交的未引用资源</td><td>从版本控制回滚，但本地文件保留</td></tr><tr><td>已提交的未引用资源</td><td>从版本控制删除并删除本地文件</td></tr></tbody></table>
-<p><strong>重要提醒：</strong></p>
-<p>全量清理会删除已提交的未引用文件，使用前务必：</p>
-<ul>
-<li>确保有完整的版本控制历史可回溯</li>
-<li>在测试分支先试运行</li>
-<li>团队成员提前沟通</li>
-</ul>
-<h2 id="使用范围与注意事项">使用范围与注意事项</h2>
-<h3 id="53-清理结果对照表">5.3 清理结果对照表</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>资源状态</th><th>自动清理（提交时）</th><th>手动全量清理</th></tr></thead><tbody><tr><td>新添加的未引用资源</td><td>回滚（本地保留）</td><td>回滚（本地保留）</td></tr><tr><td>已提交的未引用资源</td><td>不处理</td><td>删除（服务器+本地）</td></tr><tr><td>被引用的资源</td><td>正常提交</td><td>保留</td></tr><tr><td>插件和引擎资源</td><td>不处理</td><td>不处理</td></tr></tbody></table></div>
+<table><thead><tr><th>资产状态</th><th>提交时自动清理</th><th>右键”清理未引用资产”</th></tr></thead><tbody><tr><td>新添加</td><td>还原，<strong>本地保留</strong></td><td>还原，<strong>本地保留</strong></td></tr><tr><td>已跟踪</td><td>不处理</td><td><strong>删除（服务器 + 本地）</strong></td></tr></tbody></table></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-asset-cleaner/docs/setup/" rel="prev"><span>上一篇</span>安装并配置版本控制</a><a href="/zh/works/simple-asset-cleaner/docs/add-dependencies/" rel="next"><span>下一篇</span>添加未纳入版本控制的依赖</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-asset-cleaner/docs/setup/" rel="prev"><span>上一篇</span>安装并配置版本控制</a><a href="/zh/works/simple-asset-cleaner/docs/full-cleanup/" rel="next"><span>下一篇</span>手动全量清理</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -259,5 +129,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/simple-asset-cleaner/docs/clean-assets/","en":"/en/works/simple-asset-cleaner/docs/clean-assets/"},"anchors":{"zh":{"清理范围":"清理范围","仅项目内容":"仅项目内容","不会触及":"不会触及","工作原理":"工作原理","提交时自动清理推荐":"提交时自动清理推荐","右键菜单":"右键菜单","清理未引用资产":"清理未引用资产","enable-auto-clean--启用自动清理":"enable-auto-clean--启用自动清理","重要说明":"重要说明","操作行为对比":"操作行为对比","步骤3开始使用":"步骤3开始使用","提交时处理":"提交时处理","全量清理":"全量清理","使用范围与注意事项":"使用范围与注意事项","53-清理结果对照表":"53-清理结果对照表"},"en":{"清理范围":"cleanup-scope","仅项目内容":"project-content-only","不会触及":"untouched-content","工作原理":"how-it-works","提交时自动清理推荐":"automatic-cleanup-on-submission-recommended","右键菜单":"context-menu","清理未引用资产":"clean-unreferenced-assets","enable-auto-clean--启用自动清理":"enable-auto-clean","重要说明":"important-notes","操作行为对比":"operation-comparison","步骤3开始使用":"step-3-start-using-it","提交时处理":"submission-handling","全量清理":"full-cleanup","使用范围与注意事项":"scope-and-notes","53-清理结果对照表":"53-cleanup-results"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/simple-asset-cleaner/docs/clean-assets/","en":"/en/works/simple-asset-cleaner/docs/clean-assets/"},"anchors":{"zh":{"识别未引用资产":"识别未引用资产","提交时自动清理":"提交时自动清理","右键清理选定资产":"右键清理选定资产","自动和右键清理的差别":"自动和右键清理的差别"},"en":{"识别未引用资产":"identify-unreferenced-assets","提交时自动清理":"automatic-cleanup-on-submission","右键清理选定资产":"clean-selected-assets-from-the-context-menu","自动和右键清理的差别":"compare-automatic-and-context-menu-cleanup"}},"anchorAliases":{"zh":{"清理范围":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"仅项目内容":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"不会触及":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"工作原理":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"提交时自动清理推荐":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"右键菜单":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"右键清理选定资产"},"清理未引用资产":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"右键清理选定资产"},"enable-auto-clean--启用自动清理":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"重要说明":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"自动和右键清理的差别"},"操作行为对比":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"自动和右键清理的差别"},"步骤3开始使用":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"首次提交前检查"},"提交时处理":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"全量清理":{"path":"/zh/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"扫描整个项目"},"使用范围与注意事项":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"53-清理结果对照表":{"path":"/zh/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"清理结果"},"cleanup-scope":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"project-content-only":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"untouched-content":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"how-it-works":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"automatic-cleanup-on-submission-recommended":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"context-menu":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"右键清理选定资产"},"clean-unreferenced-assets":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"右键清理选定资产"},"enable-auto-clean":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"important-notes":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"自动和右键清理的差别"},"operation-comparison":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"自动和右键清理的差别"},"step-3-start-using-it":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"首次提交前检查"},"submission-handling":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"full-cleanup":{"path":"/zh/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"扫描整个项目"},"scope-and-notes":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"53-cleanup-results":{"path":"/zh/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"清理结果"}},"en":{"清理范围":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"仅项目内容":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"不会触及":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"工作原理":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"提交时自动清理推荐":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"右键菜单":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"clean-selected-assets-from-the-context-menu"},"清理未引用资产":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"clean-selected-assets-from-the-context-menu"},"enable-auto-clean--启用自动清理":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"重要说明":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"compare-automatic-and-context-menu-cleanup"},"操作行为对比":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"compare-automatic-and-context-menu-cleanup"},"步骤3开始使用":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"checks-before-your-first-submission"},"提交时处理":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"全量清理":{"path":"/en/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"scan-the-whole-project"},"使用范围与注意事项":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"53-清理结果对照表":{"path":"/en/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"cleanup-results-by-file-status"},"cleanup-scope":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"project-content-only":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"untouched-content":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"how-it-works":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"automatic-cleanup-on-submission-recommended":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"context-menu":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"clean-selected-assets-from-the-context-menu"},"clean-unreferenced-assets":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"clean-selected-assets-from-the-context-menu"},"enable-auto-clean":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"important-notes":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"compare-automatic-and-context-menu-cleanup"},"operation-comparison":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"compare-automatic-and-context-menu-cleanup"},"step-3-start-using-it":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"checks-before-your-first-submission"},"submission-handling":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"full-cleanup":{"path":"/en/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"scan-the-whole-project"},"scope-and-notes":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"53-cleanup-results":{"path":"/en/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"cleanup-results-by-file-status"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

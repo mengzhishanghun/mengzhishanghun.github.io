@@ -24,48 +24,20 @@
           <p class="work-doc-name">UEPluginManager</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>功能指南</span><ul><li><a href="/zh/works/plugin-manager/docs/find/" aria-current="page">查找插件与依赖</a></li><li><a href="/zh/works/plugin-manager/docs/enable-disable/">启用和禁用插件</a></li><li><a href="/zh/works/plugin-manager/docs/folder-actions/">定位插件文件</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/plugin-manager/docs/setup/">启动并扫描项目</a></li></ul></li><li><span>插件查找与管理</span><ul><li><a href="/zh/works/plugin-manager/docs/find/" aria-current="page">查找插件与依赖</a></li><li><a href="/zh/works/plugin-manager/docs/enable-disable/">启用与禁用插件</a></li><li><a href="/zh/works/plugin-manager/docs/folder-actions/">管理插件目录</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%8A%9F%E8%83%BD" class="outline-link outline-root-link">功能</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E6%8F%92%E4%BB%B6%E6%B5%8F%E8%A7%88" class="outline-link">插件浏览</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BD%BF%E7%94%A8" class="outline-link outline-root-link">使用</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%8C%89%E6%9D%A5%E6%BA%90%E7%AD%9B%E9%80%89" class="outline-link outline-root-link">按来源筛选</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%90%9C%E7%B4%A2%E6%8E%92%E5%BA%8F%E4%B8%8E%E4%BE%9D%E8%B5%96" class="outline-link outline-root-link">搜索、排序与依赖</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
           <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/plugin-manager/">UEPluginManager</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/plugin-manager/docs/find/"></label><script type="application/json" data-engagement-config>{"id":"doc:plugin-manager:find","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/plugin-manager/docs/find/","title":"查找插件与依赖","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/plugin-manager/docs/find/"></label></noscript></section></div>
           <article>
             <h1>查找插件与依赖</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p>UE 插件管理工具，统一管理 UE 项目及其关联引擎中的所有插件。</p>
-<h2 id="功能">功能</h2>
-<h3 id="插件浏览">插件浏览</h3>
-<ul>
-<li><strong>自动扫描</strong> - 扫描项目、商城（Marketplace）、引擎插件</li>
-<li><strong>标签分类</strong> - 插件按来源分为三个标签页：
-<ul>
-<li><strong>项目</strong> - 项目 Plugins 目录下的插件</li>
-<li><strong>商城</strong> - 通过 Fab 下载安装的插件</li>
-<li><strong>引擎</strong> - UE 引擎自带的插件</li>
-</ul>
-</li>
-<li><strong>分类管理</strong> - 标签页实时显示各分类数量</li>
-<li><strong>引擎识别</strong> - 支持安装版（注册表）和源码版（GUID）引擎</li>
-<li><strong>搜索过滤</strong> - 按名称/作者/分类/描述/依赖/被依赖搜索
-<ul>
-<li>不区分大小写</li>
-<li>支持空格分隔多关键词（同时匹配）</li>
-</ul>
-</li>
-<li><strong>排序</strong> - 点击列标题排序，箭头指示排序方向</li>
-<li><strong>依赖分析</strong> - 查看插件依赖和被依赖关系</li>
-<li><strong>冲突检测</strong> - 同名插件冲突时显示红色”冲突”状态</li>
-</ul>
-<h2 id="使用">使用</h2>
-<ol>
-<li>下载 Release 中的 <code>UEPluginManager.exe</code>，放入 UE 项目目录下运行</li>
-<li>工具自动扫描项目和引擎插件</li>
-<li>使用搜索框和标签页定位插件</li>
-<li>点击插件查看详情和依赖关系</li>
-<li>使用右侧按钮管理插件状态</li>
-</ol></div>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="按来源筛选">按来源筛选</h2>
+<p>插件按来源分为 <strong>项目</strong>（项目 <code>Plugins</code> 目录）、<strong>商城</strong>（通过 Fab 安装）和 <strong>引擎</strong>（UE 自带）三个标签页，各页会显示实时数量。</p>
+<h2 id="搜索排序与依赖">搜索、排序与依赖</h2>
+<p>在搜索框中输入名称、作者、分类、描述、依赖或被依赖关键词。检索不区分大小写；多个词用空格分隔，必须同时匹配。点击列标题排序，箭头指示方向。选中插件可查看详情、依赖项以及哪些插件依赖它。同名插件显示红色的 <strong>冲突</strong> 状态。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/plugin-manager/docs/enable-disable/" rel="next"><span>下一篇</span>启用和禁用插件</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/plugin-manager/docs/setup/" rel="prev"><span>上一篇</span>启动并扫描项目</a><a href="/zh/works/plugin-manager/docs/enable-disable/" rel="next"><span>下一篇</span>启用与禁用插件</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -132,5 +104,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/plugin-manager/docs/find/","en":"/en/works/plugin-manager/docs/find/"},"anchors":{"zh":{"功能":"功能","插件浏览":"插件浏览","使用":"使用"},"en":{"功能":"features","插件浏览":"plugin-browsing","使用":"usage"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/plugin-manager/docs/find/","en":"/en/works/plugin-manager/docs/find/"},"anchors":{"zh":{"按来源筛选":"按来源筛选","搜索排序与依赖":"搜索排序与依赖"},"en":{"按来源筛选":"filter-by-source","搜索排序与依赖":"search-sort-and-inspect-dependencies"}},"anchorAliases":{"zh":{"功能":{"path":"/zh/works/plugin-manager/docs/find/","anchor":"按来源筛选"},"插件浏览":{"path":"/zh/works/plugin-manager/docs/find/","anchor":"按来源筛选"},"使用":{"path":"/zh/works/plugin-manager/docs/setup/","anchor":"启动并识别引擎"},"features":{"path":"/zh/works/plugin-manager/docs/find/","anchor":"按来源筛选"},"plugin-browsing":{"path":"/zh/works/plugin-manager/docs/find/","anchor":"按来源筛选"},"usage":{"path":"/zh/works/plugin-manager/docs/setup/","anchor":"启动并识别引擎"}},"en":{"功能":{"path":"/en/works/plugin-manager/docs/find/","anchor":"filter-by-source"},"插件浏览":{"path":"/en/works/plugin-manager/docs/find/","anchor":"filter-by-source"},"使用":{"path":"/en/works/plugin-manager/docs/setup/","anchor":"start-and-detect-the-engine"},"features":{"path":"/en/works/plugin-manager/docs/find/","anchor":"filter-by-source"},"plugin-browsing":{"path":"/en/works/plugin-manager/docs/find/","anchor":"filter-by-source"},"usage":{"path":"/en/works/plugin-manager/docs/setup/","anchor":"start-and-detect-the-engine"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

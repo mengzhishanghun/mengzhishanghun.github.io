@@ -24,60 +24,26 @@
           <p class="work-doc-name">SimpleLevelSeqSmooth</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Feature Guides</span><ul><li><a href="/en/works/simple-level-seq-smooth/docs/smooth-curves/" aria-current="page">Smooth Sequencer Curves</a></li><li><a href="/en/works/simple-level-seq-smooth/docs/algorithms/">Choose Smoothing Algorithms and Parameters</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-level-seq-smooth/docs/setup/">Installation and Interface Settings</a></li></ul></li><li><span>Curve Smoothing</span><ul><li><a href="/en/works/simple-level-seq-smooth/docs/smooth-curves/" aria-current="page">Smooth Sequencer Curves</a></li><li><a href="/en/works/simple-level-seq-smooth/docs/algorithms/">Choose Smoothing Algorithms and Parameters</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#compatibility" class="outline-link outline-root-link">Compatibility</a></li><li class="outline-node" data-heading-depth="2"><a href="#features" class="outline-link outline-root-link">Features</a></li><li class="outline-node" data-heading-depth="2"><a href="#installation" class="outline-link outline-root-link">Installation</a></li><li class="outline-node" data-heading-depth="2"><a href="#usage" class="outline-link outline-root-link">Usage</a></li><li class="outline-node" data-heading-depth="2"><a href="#dependencies" class="outline-link outline-root-link">Dependencies</a></li><li class="outline-node" data-heading-depth="2"><a href="#supported-engine-versions" class="outline-link outline-root-link">Supported Engine Versions</a></li><li class="outline-node" data-heading-depth="2"><a href="#version-history" class="outline-link outline-root-link">Version History</a></li><li class="outline-node" data-heading-depth="2"><a href="#contact" class="outline-link outline-root-link">Contact</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#supported-sequences-and-output" class="outline-link outline-root-link">Supported Sequences and Output</a></li><li class="outline-node" data-heading-depth="2"><a href="#apply-smoothing-from-the-content-browser" class="outline-link outline-root-link">Apply Smoothing from the Content Browser</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
           <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/simple-level-seq-smooth/">SimpleLevelSeqSmooth</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/simple-level-seq-smooth/docs/smooth-curves/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-level-seq-smooth:smooth-curves","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/simple-level-seq-smooth/docs/smooth-curves/","title":"Smooth Sequencer Curves","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/simple-level-seq-smooth/docs/smooth-curves/"></label></noscript></section></div>
           <article>
             <h1>Smooth Sequencer Curves</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p>Level sequence data filtering plugin with 12 smoothing algorithms covering mocap, post-processing, and AI scenarios.</p>
-<h2 id="compatibility">Compatibility</h2>
-<ul>
-<li>Unreal Engine 5.2–5.8</li>
-<li>Version 1.1.0 (Version 2)</li>
-</ul>
-<h2 id="features">Features</h2>
-<ul>
-<li><strong>12 Smoothing Algorithms</strong> covering time-domain, frequency-domain, state estimation, adaptive, and AI-specific approaches</li>
-<li><strong>Content Browser Integration</strong>: Right-click on LevelSequence assets to access smoothing</li>
-<li><strong>ControlRig Support</strong>: Directly processes ControlRig parameter sections (Transform and Scalar)</li>
-<li><strong>Flexible Output</strong>: Choose to overwrite the original sequence or create a new one</li>
-<li><strong>Batch Processing</strong>: Process multiple sequences at once with consistent suffix naming</li>
-<li><strong>Auto Frame Rate Detection</strong>: Automatically reads the sequence frame rate</li>
-</ul>
-<h2 id="installation">Installation</h2>
-<ol>
-<li>Copy the <code>SimpleLevelSeqSmooth</code> folder to your project’s <code>Plugins/</code> directory</li>
-<li>Restart the Unreal Editor</li>
-<li>Enable the plugin in Edit &gt; Plugins if not already enabled</li>
-</ol>
-<h2 id="usage">Usage</h2>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="supported-sequences-and-output">Supported Sequences and Output</h2>
+<p><strong>Smooth</strong> handles one or more LevelSequence assets, including Transform and Scalar channels in ControlRig parameter sections. It reads the sequence frame rate automatically and uses a consistent suffix when creating new sequences in a batch. Choose whether to overwrite the originals or create new sequences.</p>
+<h2 id="apply-smoothing-from-the-content-browser">Apply Smoothing from the Content Browser</h2>
 <ol>
 <li>In the Content Browser, right-click on one or more LevelSequence assets</li>
 <li>Select <strong>Smooth</strong> from the context menu</li>
 <li>Choose a smoothing algorithm and adjust parameters</li>
 <li>Select output mode (overwrite or create new)</li>
 <li>Click <strong>OK</strong> to apply</li>
-</ol>
-<h2 id="dependencies">Dependencies</h2>
-<ul>
-<li>ControlRig plugin (enabled by default)</li>
-</ul>
-<h2 id="supported-engine-versions">Supported Engine Versions</h2>
-<ul>
-<li>Unreal Engine 5.2–5.8</li>
-</ul>
-<h2 id="version-history">Version History</h2>
-<p>Open <strong>Edit → Project Settings</strong>, select the Simple Level Sequence Smooth settings page, and set <strong>Language</strong> to <strong>English</strong> or <strong>Chinese</strong>. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.</p>
-<h2 id="contact">Contact</h2>
-<p>For usage questions or collaboration, please visit the contact page.</p>
-<ul>
-<li><strong>Contact:</strong> <a href="/en/contact/">Contact and collaboration</a></li>
-</ul></div>
+</ol></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-level-seq-smooth/docs/algorithms/" rel="next"><span>Next</span>Choose Smoothing Algorithms and Parameters</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-level-seq-smooth/docs/setup/" rel="prev"><span>Previous</span>Installation and Interface Settings</a><a href="/en/works/simple-level-seq-smooth/docs/algorithms/" rel="next"><span>Next</span>Choose Smoothing Algorithms and Parameters</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -144,5 +110,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-level-seq-smooth/docs/smooth-curves/","en":"/en/works/simple-level-seq-smooth/docs/smooth-curves/"},"anchors":{"zh":{"compatibility":"兼容性","features":"功能特性","installation":"安装","usage":"使用方法","dependencies":"依赖","supported-engine-versions":"支持的引擎版本","version-history":"版本历史","contact":"联系方式"},"en":{"compatibility":"compatibility","features":"features","installation":"installation","usage":"usage","dependencies":"dependencies","supported-engine-versions":"supported-engine-versions","version-history":"version-history","contact":"contact"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-level-seq-smooth/docs/smooth-curves/","en":"/en/works/simple-level-seq-smooth/docs/smooth-curves/"},"anchors":{"zh":{"supported-sequences-and-output":"支持的序列和输出","apply-smoothing-from-the-content-browser":"从内容浏览器应用平滑"},"en":{"supported-sequences-and-output":"supported-sequences-and-output","apply-smoothing-from-the-content-browser":"apply-smoothing-from-the-content-browser"}},"anchorAliases":{"zh":{"兼容性":{"path":"/zh/works/simple-level-seq-smooth/","anchor":"兼容性"},"功能特性":{"path":"/zh/works/simple-level-seq-smooth/docs/smooth-curves/","anchor":"支持的序列和输出"},"安装":{"path":"/zh/works/simple-level-seq-smooth/docs/setup/","anchor":"安装插件"},"使用方法":{"path":"/zh/works/simple-level-seq-smooth/docs/smooth-curves/","anchor":"从内容浏览器应用平滑"},"依赖":{"path":"/zh/works/simple-level-seq-smooth/docs/setup/","anchor":"controlrig-依赖"},"支持的引擎版本":{"path":"/zh/works/simple-level-seq-smooth/","anchor":"兼容性"},"版本历史":{"path":"/zh/works/simple-level-seq-smooth/docs/setup/","anchor":"界面语言"},"联系方式":{"path":"/zh/works/simple-level-seq-smooth/","anchor":"联系与支持"},"compatibility":{"path":"/zh/works/simple-level-seq-smooth/","anchor":"兼容性"},"features":{"path":"/zh/works/simple-level-seq-smooth/docs/smooth-curves/","anchor":"支持的序列和输出"},"installation":{"path":"/zh/works/simple-level-seq-smooth/docs/setup/","anchor":"安装插件"},"usage":{"path":"/zh/works/simple-level-seq-smooth/docs/smooth-curves/","anchor":"从内容浏览器应用平滑"},"dependencies":{"path":"/zh/works/simple-level-seq-smooth/docs/setup/","anchor":"controlrig-依赖"},"supported-engine-versions":{"path":"/zh/works/simple-level-seq-smooth/","anchor":"兼容性"},"version-history":{"path":"/zh/works/simple-level-seq-smooth/docs/setup/","anchor":"界面语言"},"contact":{"path":"/zh/works/simple-level-seq-smooth/","anchor":"联系与支持"}},"en":{"兼容性":{"path":"/en/works/simple-level-seq-smooth/","anchor":"compatibility"},"功能特性":{"path":"/en/works/simple-level-seq-smooth/docs/smooth-curves/","anchor":"supported-sequences-and-output"},"安装":{"path":"/en/works/simple-level-seq-smooth/docs/setup/","anchor":"install-the-plugin"},"使用方法":{"path":"/en/works/simple-level-seq-smooth/docs/smooth-curves/","anchor":"apply-smoothing-from-the-content-browser"},"依赖":{"path":"/en/works/simple-level-seq-smooth/docs/setup/","anchor":"controlrig-dependency"},"支持的引擎版本":{"path":"/en/works/simple-level-seq-smooth/","anchor":"compatibility"},"版本历史":{"path":"/en/works/simple-level-seq-smooth/docs/setup/","anchor":"interface-language"},"联系方式":{"path":"/en/works/simple-level-seq-smooth/","anchor":"contact-and-support"},"compatibility":{"path":"/en/works/simple-level-seq-smooth/","anchor":"compatibility"},"features":{"path":"/en/works/simple-level-seq-smooth/docs/smooth-curves/","anchor":"supported-sequences-and-output"},"installation":{"path":"/en/works/simple-level-seq-smooth/docs/setup/","anchor":"install-the-plugin"},"usage":{"path":"/en/works/simple-level-seq-smooth/docs/smooth-curves/","anchor":"apply-smoothing-from-the-content-browser"},"dependencies":{"path":"/en/works/simple-level-seq-smooth/docs/setup/","anchor":"controlrig-dependency"},"supported-engine-versions":{"path":"/en/works/simple-level-seq-smooth/","anchor":"compatibility"},"version-history":{"path":"/en/works/simple-level-seq-smooth/docs/setup/","anchor":"interface-language"},"contact":{"path":"/en/works/simple-level-seq-smooth/","anchor":"contact-and-support"}}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

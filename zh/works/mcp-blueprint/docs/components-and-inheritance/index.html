@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>修改组件、继承与类默认值 · MZSH</title>
+  <title>管理蓝图组件与附着层级 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/mcp-blueprint/docs/components-and-inheritance/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,25 +24,73 @@
           <p class="work-doc-name">MCPBlueprint</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>安装与配置</span><ul><li><a href="/zh/works/mcp-blueprint/docs/connect/">安装并连接蓝图编辑工具</a></li></ul></li><li><span>功能指南</span><ul><li><a href="/zh/works/mcp-blueprint/docs/graphs/">查找、编辑和截取蓝图图表</a></li><li><a href="/zh/works/mcp-blueprint/docs/members-and-types/">修改蓝图成员、函数与类型</a></li><li><a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/" aria-current="page">修改组件、继承与类默认值</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-blueprint/docs/connect/">安装并连接 MCPBlueprint</a></li></ul></li><li><span>资产与图表</span><ul><li><a href="/zh/works/mcp-blueprint/docs/asset-lifecycle/">创建、编译与管理蓝图资产</a></li><li><a href="/zh/works/mcp-blueprint/docs/graphs/">编辑蓝图节点、连线与布局</a></li><li><a href="/zh/works/mcp-blueprint/docs/graph-screenshots/">截取蓝图图表</a></li></ul></li><li><span>成员与类型</span><ul><li><a href="/zh/works/mcp-blueprint/docs/variables/">管理成员变量与局部变量</a></li><li><a href="/zh/works/mcp-blueprint/docs/members-and-types/">创建与修改蓝图函数</a></li><li><a href="/zh/works/mcp-blueprint/docs/events-dispatchers/">添加事件与管理事件分发器</a></li><li><a href="/zh/works/mcp-blueprint/docs/interfaces/">为蓝图添加接口</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-structs/">创建与修改用户定义 Struct</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-enums/">创建与修改用户定义 Enum</a></li></ul></li><li><span>类结构</span><ul><li><a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/" aria-current="page">管理蓝图组件与附着层级</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-defaults/">读取与修改蓝图类默认值</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-inheritance/">更改蓝图父类</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#4-setcomponentproperties%E6%94%B9-scs-%E6%A8%A1%E6%9D%BF%E4%B8%8D%E6%94%B9%E5%AE%9E%E4%BE%8B" class="outline-link outline-root-link">4. SetComponentProperties：改 SCS 模板，不改实例</a></li><li class="outline-node" data-heading-depth="3"><a href="#5-setclassdefaults%E6%94%B9-cdo%E5%8F%AF%E8%A6%86%E7%9B%96%E7%BB%A7%E6%89%BF%E5%B1%9E%E6%80%A7" class="outline-link outline-root-link">5. SetClassDefaults：改 CDO，可覆盖继承属性</a></li><li class="outline-node" data-heading-depth="3"><a href="#6-reparentblueprint-%E4%B8%8E-reparentcomponent%E4%B8%A4%E4%B8%AA%E7%88%B6%E7%BA%A7%E5%AE%8C%E5%85%A8%E4%B8%8D%E5%90%8C" class="outline-link outline-root-link">6. ReparentBlueprint 与 ReparentComponent：两个“父级”完全不同</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%BB%84%E4%BB%B6%E4%B8%8E%E7%B1%BB%E9%BB%98%E8%AE%A4%E5%80%BC" class="outline-link outline-root-link">组件与类默认值</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%AF%BB%E5%8F%96%E4%B8%8E%E7%BC%96%E8%BE%91%E6%9C%AC%E5%9C%B0%E7%BB%84%E4%BB%B6%E6%A0%91" class="outline-link outline-root-link">读取与编辑本地组件树</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BF%AE%E6%94%B9-scs-%E7%BB%84%E4%BB%B6%E6%A8%A1%E6%9D%BF%E5%B1%9E%E6%80%A7" class="outline-link outline-root-link">修改 SCS 组件模板属性</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%B0%83%E6%95%B4%E9%99%84%E7%9D%80%E5%85%B3%E7%B3%BB" class="outline-link outline-root-link">调整附着关系</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/mcp-blueprint/">MCPBlueprint</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/components-and-inheritance/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-blueprint:components-and-inheritance","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-blueprint/docs/components-and-inheritance/","title":"修改组件、继承与类默认值","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/components-and-inheritance/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/mcp-blueprint/">MCPBlueprint</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/components-and-inheritance/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-blueprint:components-and-inheritance","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-blueprint/docs/components-and-inheritance/","title":"管理蓝图组件与附着层级","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/components-and-inheritance/"></label></noscript></section></div>
           <article>
-            <h1>修改组件、继承与类默认值</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><h3 id="4-setcomponentproperties改-scs-模板不改实例">4. <code>SetComponentProperties</code>：改 SCS 模板，不改实例</h3>
-<p>先用 <code>GetComponents</code> 找到本地 SCS <code>ComponentName</code>。把 <code>Properties</code> 作为“属性名 → UE 文本值”映射，例如 <code>RelativeLocation: "(X=0,Y=0,Z=50)"</code>、<code>bHiddenInGame: "True"</code>。工具只改此 Blueprint 添加的组件模板；任一属性不合法，整次调用会回滚并给出属性名与格式提示。按需使用 <code>SaveAsset</code> 保存。</p>
-<h3 id="5-setclassdefaults改-cdo可覆盖继承属性">5. <code>SetClassDefaults</code>：改 CDO，可覆盖继承属性</h3>
-<p>使用 <code>GetClassDefaults</code> 找到可编辑且<strong>大小写敏感</strong>的反射属性名。传入 <code>Properties</code> 的 UE 文本映射，如 <code>bReplicates: "True"</code> 或 <code>JumpMaxCount: "2"</code>。它改的是该 Blueprint CDO，作用于以后放置/生成且未覆写的实例；不会追溯改变已存在实例。工具还能访问父 C++/父 Blueprint 的属性，这是 <code>ModifyVariable</code> 做不到的。按需使用 <code>SaveAsset</code> 保存。</p>
-<h3 id="6-reparentblueprint-与-reparentcomponent两个父级完全不同">6. <code>ReparentBlueprint</code> 与 <code>ReparentComponent</code>：两个“父级”完全不同</h3>
-<p><code>ReparentBlueprint</code> 改的是类继承：传 <code>NewParentClassPath</code>（原生完整路径、唯一已加载短名或 Blueprint 生成类）。先使用 <code>bDryRun=true</code> 查看风险；新父类不是旧父类的子类、旧父类缺失或接口冲突时，必须明确 <code>bAllowPotentialDataLoss=true</code>。它会刷新图；若操作失败会尝试 Undo 回滚。</p>
-<p><code>ReparentComponent</code> 改的是同一 Actor Blueprint 内本地 <strong>SceneComponent</strong> 的附着树：传组件名与新的 <code>NewParentName</code>。不能把节点挂到自身或子孙节点下；非 SceneComponent 不可改；实际本地根组件必须用 <code>SetRootComponent</code>。</p>
-<h2 id="组件与类默认值">组件与类默认值</h2>
-<p>添加、重命名、复制、重设父级、设置根组件、修改模板属性或删除组件前，先读取当前组件层级。类默认值工具读取或修改支持的 Blueprint 默认值，不会把实例值冒充为类默认值。</p></div>
+            <h1>管理蓝图组件与附着层级</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="读取与编辑本地组件树">读取与编辑本地组件树</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>工具</th><th>用途</th><th>注意事项</th></tr></thead><tbody><tr><td><code>GetComponents</code></td><td>查看 Actor Blueprint 的组件树、父级和模板信息。</td><td>仅适用于 Actor Blueprint。</td></tr><tr><td><code>AddComponent</code></td><td>添加本地 SCS 组件。</td><td>指定组件类、名称和可选父组件。</td></tr><tr><td><code>RenameComponent</code></td><td>重命名本地 SCS 组件并更新成员引用。</td><td>新名称必须唯一。</td></tr><tr><td><code>RemoveComponent</code></td><td>删除组件。</td><td>有引用或无法安全恢复时会被阻止。</td></tr><tr><td><code>DuplicateComponent</code></td><td>复制本地 SCS 组件及模板属性。</td><td>实际本地根组件不能复制。</td></tr><tr><td><code>ReparentComponent</code></td><td>修改本地 SceneComponent 的附着父级。</td><td>不能形成循环；根组件请用 <code>SetRootComponent</code>。</td></tr><tr><td><code>SetRootComponent</code></td><td>将本地 SceneComponent 设为根组件。</td><td>目标必须是本地 SceneComponent。</td></tr><tr><td><code>GetComponentProperties</code></td><td>分页查看可编辑的组件模板属性。</td><td>需要蓝图路径、组件名和分页参数。</td></tr></tbody></table>
+<h2 id="修改-scs-组件模板属性">修改 SCS 组件模板属性</h2>
+<p>先用 <code>GetComponents</code> 找到本地 SCS <code>ComponentName</code>。调用 <code>SetComponentProperties</code> 时，在 <code>Properties</code> 中提供“属性名 → UE 文本值”映射，例如 <code>RelativeLocation: "(X=0,Y=0,Z=50)"</code>、<code>bHiddenInGame: "True"</code>。工具只改此 Blueprint 添加的组件模板；任一属性不合法，整次调用会回滚并给出属性名与格式提示。按需使用 <code>SaveAsset</code> 保存。</p>
+<p>此操作编辑本蓝图添加的 SCS 组件模板，例如 <code>StaticMesh</code> 或 <code>RelativeLocation</code>。已有场景 Actor 的组件覆盖值保留；生成类上的 Class Defaults 由 <code>SetClassDefaults</code> 修改。</p>
+<h2 id="调整附着关系">调整附着关系</h2>
+<p><code>ReparentComponent</code> 改的是同一 Actor Blueprint 内本地 <strong>SceneComponent</strong> 的附着树：传组件名与新的 <code>NewParentName</code>。不能把节点挂到自身或子孙节点下；非 SceneComponent 不可改；实际本地根组件必须用 <code>SetRootComponent</code>。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-blueprint/docs/members-and-types/" rel="prev"><span>上一篇</span>修改蓝图成员、函数与类型</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-blueprint/docs/user-defined-enums/" rel="prev"><span>上一篇</span>创建与修改用户定义 Enum</a><a href="/zh/works/mcp-blueprint/docs/class-defaults/" rel="next"><span>下一篇</span>读取与修改蓝图类默认值</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -109,5 +157,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-blueprint/docs/components-and-inheritance/","en":"/en/works/mcp-blueprint/docs/components-and-inheritance/"},"anchors":{"zh":{"4-setcomponentproperties改-scs-模板不改实例":"4-setcomponentproperties改-scs-模板不改实例","5-setclassdefaults改-cdo可覆盖继承属性":"5-setclassdefaults改-cdo可覆盖继承属性","6-reparentblueprint-与-reparentcomponent两个父级完全不同":"6-reparentblueprint-与-reparentcomponent两个父级完全不同","组件与类默认值":"组件与类默认值"},"en":{"4-setcomponentproperties改-scs-模板不改实例":"4-setcomponentproperties-scs-template-properties","5-setclassdefaults改-cdo可覆盖继承属性":"5-setclassdefaults-cdo-defaults-and-inherited-properties","6-reparentblueprint-与-reparentcomponent两个父级完全不同":"6-reparentblueprint-and-reparentcomponent-class-and-component-parents","组件与类默认值":"components-and-class-defaults"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-blueprint/docs/components-and-inheritance/","en":"/en/works/mcp-blueprint/docs/components-and-inheritance/"},"anchors":{"zh":{"读取与编辑本地组件树":"读取与编辑本地组件树","修改-scs-组件模板属性":"修改-scs-组件模板属性","调整附着关系":"调整附着关系"},"en":{"读取与编辑本地组件树":"read-and-edit-the-local-component-tree","修改-scs-组件模板属性":"edit-scs-component-template-properties","调整附着关系":"change-component-attachments"}},"anchorAliases":{"zh":{"4-setcomponentproperties改-scs-模板不改实例":{"path":"/zh/works/mcp-blueprint/docs/components-and-inheritance/","anchor":"修改-scs-组件模板属性"},"5-setclassdefaults改-cdo可覆盖继承属性":{"path":"/zh/works/mcp-blueprint/docs/class-defaults/","anchor":"编辑类默认对象与继承属性"},"6-reparentblueprint-与-reparentcomponent两个父级完全不同":{"path":"/zh/works/mcp-blueprint/docs/class-inheritance/","anchor":"预检并更改继承关系"},"组件与类默认值":{"path":"/zh/works/mcp-blueprint/docs/components-and-inheritance/","anchor":"读取与编辑本地组件树"},"4-setcomponentproperties-scs-template-properties":{"path":"/zh/works/mcp-blueprint/docs/components-and-inheritance/","anchor":"修改-scs-组件模板属性"},"5-setclassdefaults-cdo-defaults-and-inherited-properties":{"path":"/zh/works/mcp-blueprint/docs/class-defaults/","anchor":"编辑类默认对象与继承属性"},"6-reparentblueprint-and-reparentcomponent-class-and-component-parents":{"path":"/zh/works/mcp-blueprint/docs/class-inheritance/","anchor":"预检并更改继承关系"},"components-and-class-defaults":{"path":"/zh/works/mcp-blueprint/docs/components-and-inheritance/","anchor":"读取与编辑本地组件树"}},"en":{"4-setcomponentproperties改-scs-模板不改实例":{"path":"/en/works/mcp-blueprint/docs/components-and-inheritance/","anchor":"edit-scs-component-template-properties"},"5-setclassdefaults改-cdo可覆盖继承属性":{"path":"/en/works/mcp-blueprint/docs/class-defaults/","anchor":"edit-the-class-default-object-and-inherited-properties"},"6-reparentblueprint-与-reparentcomponent两个父级完全不同":{"path":"/en/works/mcp-blueprint/docs/class-inheritance/","anchor":"check-and-change-class-inheritance"},"组件与类默认值":{"path":"/en/works/mcp-blueprint/docs/components-and-inheritance/","anchor":"read-and-edit-the-local-component-tree"},"4-setcomponentproperties-scs-template-properties":{"path":"/en/works/mcp-blueprint/docs/components-and-inheritance/","anchor":"edit-scs-component-template-properties"},"5-setclassdefaults-cdo-defaults-and-inherited-properties":{"path":"/en/works/mcp-blueprint/docs/class-defaults/","anchor":"edit-the-class-default-object-and-inherited-properties"},"6-reparentblueprint-and-reparentcomponent-class-and-component-parents":{"path":"/en/works/mcp-blueprint/docs/class-inheritance/","anchor":"check-and-change-class-inheritance"},"components-and-class-defaults":{"path":"/en/works/mcp-blueprint/docs/components-and-inheritance/","anchor":"read-and-edit-the-local-component-tree"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>通过蓝图连接 WebSocket 并收发消息 · MZSH</title>
+  <title>在蓝图中管理连接和收发消息 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/simple-websocket/docs/connect-and-send/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,68 +24,33 @@
           <p class="work-doc-name">SimpleWebSocket</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>功能指南</span><ul><li><a href="/zh/works/simple-websocket/docs/connect-and-send/" aria-current="page">通过蓝图连接 WebSocket 并收发消息</a></li><li><a href="/zh/works/simple-websocket/docs/native-module/">使用 UE WebSockets 模块</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-websocket/docs/configure-connections/">配置命名 WebSocket 连接</a></li></ul></li><li><span>网络通信</span><ul><li><a href="/zh/works/simple-websocket/docs/connect-and-send/" aria-current="page">在蓝图中管理连接和收发消息</a></li></ul></li><li><span>原生实现</span><ul><li><a href="/zh/works/simple-websocket/docs/native-module/">使用 UE WebSockets 模块</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%85%BC%E5%AE%B9%E6%80%A7" class="outline-link outline-root-link">兼容性</a></li><li class="outline-node" data-heading-depth="2"><a href="#%EF%B8%8F-%E6%8F%92%E4%BB%B6%E8%AE%BE%E7%BD%AE" class="outline-link outline-root-link">🛠️ 插件设置</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E6%AD%A5%E9%AA%A4" class="outline-link">步骤：</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#-%E8%93%9D%E5%9B%BE%E4%BD%BF%E7%94%A8%E7%A4%BA%E4%BE%8B" class="outline-link outline-root-link">🎮 蓝图使用示例</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E5%8F%AF%E7%94%A8%E8%8A%82%E7%82%B9" class="outline-link">可用节点：</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#-%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" class="outline-link outline-root-link">✅ 注意事项</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%89%88%E6%9C%AC%E5%8E%86%E5%8F%B2" class="outline-link outline-root-link">版本历史</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%94%AF%E6%8C%81" class="outline-link outline-root-link">支持</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%BF%9E%E6%8E%A5%E6%9F%A5%E8%AF%A2%E5%92%8C%E5%85%B3%E9%97%AD" class="outline-link outline-root-link">连接、查询和关闭</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%91%E9%80%81%E6%96%87%E6%9C%AC%E4%B8%8E%E7%BB%91%E5%AE%9A%E5%9B%9E%E8%B0%83" class="outline-link outline-root-link">发送文本与绑定回调</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%93%9D%E5%9B%BE%E7%A4%BA%E4%BE%8B" class="outline-link outline-root-link">蓝图示例</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/simple-websocket/">SimpleWebSocket</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/simple-websocket/docs/connect-and-send/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-websocket:connect-and-send","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/simple-websocket/docs/connect-and-send/","title":"通过蓝图连接 WebSocket 并收发消息","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/simple-websocket/docs/connect-and-send/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/simple-websocket/">SimpleWebSocket</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/simple-websocket/docs/connect-and-send/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-websocket:connect-and-send","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/simple-websocket/docs/connect-and-send/","title":"在蓝图中管理连接和收发消息","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/simple-websocket/docs/connect-and-send/"></label></noscript></section></div>
           <article>
-            <h1>通过蓝图连接 WebSocket 并收发消息</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p>本指南介绍如何配置和使用 SimpleWebSocket 插件在 Unreal Engine 项目中实现 WebSocket 通信。</p>
-<h2 id="兼容性">兼容性</h2>
-<ul>
-<li>Unreal Engine 5.2–5.8</li>
-<li>版本 1.1.0（Version 2）</li>
-</ul>
-<hr>
-<h2 id="️-插件设置">🛠️ 插件设置</h2>
-<p>启用插件后，前往项目设置面板的 <code>Simple WebSocket Settings</code>。</p>
-<h3 id="步骤">步骤：</h3>
-<ol>
-<li>打开 Unreal Engine 编辑器</li>
-<li>前往 <code>编辑 &gt; 项目设置</code></li>
-<li>向下滚动找到 <code>Simple WebSocket Settings</code></li>
-<li>添加新的 WebSocket 连接条目（如命名为 <code>Test</code>）</li>
-<li>输入 WebSocket 地址（推荐格式：<code>ws://127.0.0.1:xxxx</code>，<strong>不要使用 localhost</strong>）</li>
-<li>启用 <strong>Auto Connect</strong>（可选；启用后运行时自动建立连接）</li>
-</ol>
-<p>📷 示例截图：</p>
-<p><a href="/media/manuals/f401abc666a871474666.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/f401abc666a871474666.png" data-media-alt="WebSocket 设置" class="media-image-trigger" aria-label="放大查看图片：WebSocket 设置"><img src="/media/manuals/f401abc666a871474666.png" alt="WebSocket 设置" loading="lazy" decoding="async"></a></p>
-<hr>
-<h2 id="-蓝图使用示例">🎮 蓝图使用示例</h2>
-<p>可使用 GameInstance 级别的蓝图函数来连接、发送、接收和关闭 WebSocket 连接。所有函数都是静态的，可从任何蓝图调用。</p>
-<h3 id="可用节点">可用节点：</h3>
+            <h1>在蓝图中管理连接和收发消息</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><p>这些静态函数属于 GameInstance，可从任意蓝图按配置名称调用。</p>
+<h2 id="连接查询和关闭">连接、查询和关闭</h2>
 <ul>
 <li><code>Connect Web Socket</code>：按名称连接 WebSocket</li>
-<li><code>Send WebSocket Message</code>：发送文本消息</li>
-<li><code>Bind Web Socket Message</code>：绑定蓝图事件接收消息（支持多个回调）</li>
 <li><code>Close Web Socket</code>：关闭指定连接</li>
 <li><code>Close All Web Socket</code>：关闭所有连接</li>
 <li><code>Check Web Socket Connect</code>：检查连接是否已建立</li>
 <li><code>Get Web Socket Config</code>：获取指定连接的配置</li>
+</ul>
+<h2 id="发送文本与绑定回调">发送文本与绑定回调</h2>
+<ul>
+<li><code>Send WebSocket Message</code>：发送文本消息</li>
+<li><code>Bind Web Socket Message</code>：绑定蓝图事件接收消息（支持多个回调）</li>
 <li><code>Unbind Web Socket Message</code>：解绑消息事件</li>
 </ul>
-<p>📷 蓝图示例：</p>
-<p><a href="/media/manuals/7b84c6f39e82bcac8366.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/7b84c6f39e82bcac8366.png" data-media-alt="蓝图示例" class="media-image-trigger" aria-label="放大查看图片：蓝图示例"><img src="/media/manuals/7b84c6f39e82bcac8366.png" alt="蓝图示例" loading="lazy" decoding="async"></a></p>
-<hr>
-<h2 id="-注意事项">✅ 注意事项</h2>
-<ul>
-<li>插件仅支持 <code>ws://</code> 协议。不支持安全连接 <code>wss://</code>。</li>
-<li>已在<strong>打包构建</strong>中完全测试——在生产环境中正常工作。</li>
-<li>WebSocket URL 中避免使用 <code>localhost</code>。始终使用 <code>127.0.0.1</code> 以防止连接问题。</li>
-<li>每个连接名称可以绑定多个回调，支持模块化事件处理。</li>
-</ul>
-<hr>
-<h2 id="版本历史">版本历史</h2>
-<p>打开 <strong>编辑 → 项目设置</strong>，进入 SimpleWebSocket 设置页，将 <strong>Language</strong> 设置为 <strong>English</strong> 或 <strong>中文</strong>。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。</p>
-<h2 id="支持">支持</h2>
-<p>如有使用问题或合作需求，请前往联系页面。</p>
-<ul>
-<li><strong>联系入口：</strong> <a href="/zh/contact/">联系与合作</a></li>
-</ul></div>
+<h2 id="蓝图示例">蓝图示例</h2>
+<p><a href="/media/manuals/7b84c6f39e82bcac8366.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/7b84c6f39e82bcac8366.png" data-media-alt="蓝图示例" class="media-image-trigger" aria-label="放大查看图片：蓝图示例"><img src="/media/manuals/7b84c6f39e82bcac8366.png" alt="蓝图示例" loading="lazy" decoding="async"></a></p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-websocket/docs/native-module/" rel="next"><span>下一篇</span>使用 UE WebSockets 模块</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-websocket/docs/configure-connections/" rel="prev"><span>上一篇</span>配置命名 WebSocket 连接</a><a href="/zh/works/simple-websocket/docs/native-module/" rel="next"><span>下一篇</span>使用 UE WebSockets 模块</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -152,5 +117,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/simple-websocket/docs/connect-and-send/","en":"/en/works/simple-websocket/docs/connect-and-send/"},"anchors":{"zh":{"兼容性":"兼容性","️-插件设置":"️-插件设置","步骤":"步骤","-蓝图使用示例":"-蓝图使用示例","可用节点":"可用节点","-注意事项":"-注意事项","版本历史":"版本历史","支持":"支持"},"en":{"兼容性":"compatibility","️-插件设置":"️-plugin-settings","步骤":"steps","-蓝图使用示例":"-blueprint-usage-example","可用节点":"available-nodes","-注意事项":"-notes","版本历史":"version-history","支持":"support"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/simple-websocket/docs/connect-and-send/","en":"/en/works/simple-websocket/docs/connect-and-send/"},"anchors":{"zh":{"连接查询和关闭":"连接查询和关闭","发送文本与绑定回调":"发送文本与绑定回调","蓝图示例":"蓝图示例"},"en":{"连接查询和关闭":"connect-inspect-and-close","发送文本与绑定回调":"send-text-and-bind-callbacks","蓝图示例":"blueprint-example"}},"anchorAliases":{"zh":{"兼容性":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"兼容性"},"️-插件设置":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"添加命名连接"},"步骤":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"添加命名连接"},"-蓝图使用示例":{"path":"/zh/works/simple-websocket/docs/connect-and-send/","anchor":"蓝图示例"},"可用节点":{"path":"/zh/works/simple-websocket/docs/connect-and-send/","anchor":"连接查询和关闭"},"-注意事项":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"地址与协议限制"},"版本历史":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"界面语言"},"支持":{"path":"/zh/works/simple-websocket/","anchor":"支持与反馈"},"compatibility":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"兼容性"},"️-plugin-settings":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"添加命名连接"},"steps":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"添加命名连接"},"-blueprint-usage-example":{"path":"/zh/works/simple-websocket/docs/connect-and-send/","anchor":"蓝图示例"},"available-nodes":{"path":"/zh/works/simple-websocket/docs/connect-and-send/","anchor":"连接查询和关闭"},"-notes":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"地址与协议限制"},"version-history":{"path":"/zh/works/simple-websocket/docs/configure-connections/","anchor":"界面语言"},"support":{"path":"/zh/works/simple-websocket/","anchor":"支持与反馈"}},"en":{"兼容性":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"compatibility"},"️-插件设置":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"add-a-named-connection"},"步骤":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"add-a-named-connection"},"-蓝图使用示例":{"path":"/en/works/simple-websocket/docs/connect-and-send/","anchor":"blueprint-example"},"可用节点":{"path":"/en/works/simple-websocket/docs/connect-and-send/","anchor":"connect-inspect-and-close"},"-注意事项":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"address-and-protocol-limits"},"版本历史":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"interface-language"},"支持":{"path":"/en/works/simple-websocket/","anchor":"support-and-feedback"},"compatibility":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"compatibility"},"️-plugin-settings":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"add-a-named-connection"},"steps":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"add-a-named-connection"},"-blueprint-usage-example":{"path":"/en/works/simple-websocket/docs/connect-and-send/","anchor":"blueprint-example"},"available-nodes":{"path":"/en/works/simple-websocket/docs/connect-and-send/","anchor":"connect-inspect-and-close"},"-notes":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"address-and-protocol-limits"},"version-history":{"path":"/en/works/simple-websocket/docs/configure-connections/","anchor":"interface-language"},"support":{"path":"/en/works/simple-websocket/","anchor":"support-and-feedback"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

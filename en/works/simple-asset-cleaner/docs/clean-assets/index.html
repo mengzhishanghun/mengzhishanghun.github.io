@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>Clean Unreferenced Assets · MZSH</title>
+  <title>Clean Unreferenced Assets on Submission · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/en/works/simple-asset-cleaner/docs/clean-assets/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,60 +24,22 @@
           <p class="work-doc-name">SimpleAssetCleaner</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Setup</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/setup/">Install and Configure Source Control</a></li></ul></li><li><span>Feature Guides</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/clean-assets/" aria-current="page">Clean Unreferenced Assets</a></li><li><a href="/en/works/simple-asset-cleaner/docs/add-dependencies/">Add Untracked Dependencies</a></li><li><a href="/en/works/simple-asset-cleaner/docs/protect-assets/">Configure Root Assets and Protection</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/setup/">Install and Set Up Source Control</a></li></ul></li><li><span>Asset Cleanup</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/clean-assets/" aria-current="page">Clean Unreferenced Assets on Submission</a></li><li><a href="/en/works/simple-asset-cleaner/docs/full-cleanup/">Run a Full Cleanup</a></li></ul></li><li><span>Asset Protection</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/protect-assets/">Configure Root Assets and Protection</a></li></ul></li><li><span>Dependency Management</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/add-dependencies/">Add Untracked Dependencies</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#cleanup-scope" class="outline-link outline-root-link">Cleanup Scope</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#project-content-only" class="outline-link">Project Content Only</a></li><li class="outline-node" data-heading-depth="3"><a href="#untouched-content" class="outline-link">Untouched Content</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#how-it-works" class="outline-link outline-root-link">How It Works</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#automatic-cleanup-on-submission-recommended" class="outline-link">Automatic Cleanup on Submission (Recommended)</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#context-menu" class="outline-link outline-root-link">Context Menu</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#clean-unreferenced-assets" class="outline-link">Clean Unreferenced Assets</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#important-notes" class="outline-link outline-root-link">Important Notes</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#operation-comparison" class="outline-link">Operation Comparison</a></li><li class="outline-node" data-heading-depth="3"><a href="#step-3-start-using-it" class="outline-link">Step 3: Start Using It</a></li><li class="outline-node" data-heading-depth="3"><a href="#submission-handling" class="outline-link">Submission Handling</a></li><li class="outline-node" data-heading-depth="3"><a href="#full-cleanup" class="outline-link">Full Cleanup</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#scope-and-notes" class="outline-link outline-root-link">Scope and Notes</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#53-cleanup-results" class="outline-link">5.3 Cleanup Results</a></li></ol></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#identify-unreferenced-assets" class="outline-link outline-root-link">Identify Unreferenced Assets</a></li><li class="outline-node" data-heading-depth="2"><a href="#automatic-cleanup-on-submission" class="outline-link outline-root-link">Automatic Cleanup on Submission</a></li><li class="outline-node" data-heading-depth="2"><a href="#clean-selected-assets-from-the-context-menu" class="outline-link outline-root-link">Clean Selected Assets from the Context Menu</a></li><li class="outline-node" data-heading-depth="2"><a href="#compare-automatic-and-context-menu-cleanup" class="outline-link outline-root-link">Compare Automatic and Context Menu Cleanup</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/">SimpleAssetCleaner</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/clean-assets/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-asset-cleaner:clean-assets","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/simple-asset-cleaner/docs/clean-assets/","title":"Clean Unreferenced Assets","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/clean-assets/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/">SimpleAssetCleaner</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/clean-assets/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-asset-cleaner:clean-assets","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/simple-asset-cleaner/docs/clean-assets/","title":"Clean Unreferenced Assets on Submission","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/clean-assets/"></label></noscript></section></div>
           <article>
-            <h1>Clean Unreferenced Assets</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="cleanup-scope">Cleanup Scope</h2>
-<h3 id="project-content-only">Project Content Only</h3>
-<ul>
-<li><strong>Only</strong> assets in the project’s <code>/Content/</code> folder (<code>/Game/</code> path)</li>
-</ul>
-<h3 id="untouched-content">Untouched Content</h3>
-<ul>
-<li>Plugin assets such as <code>/PluginName/Content/</code></li>
-<li>Engine assets</li>
-<li>Code files (C++ headers/source files)</li>
-<li>References outside <code>/Content/</code></li>
-</ul>
-<hr>
-<h2 id="how-it-works">How It Works</h2>
-<p>The plugin uses <strong>reference-chain analysis</strong>:</p>
-<ol>
-<li><strong>Root assets</strong> - Always considered “in use,” such as maps, Blueprints, and DataAssets</li>
-<li><strong>Reference chains</strong> - Assets directly or indirectly referenced by roots are considered “in use”</li>
-<li><strong>Unreferenced assets</strong> - Assets unreachable from every root are cleaned up</li>
-</ol>
-<h3 id="automatic-cleanup-on-submission-recommended">Automatic Cleanup on Submission (Recommended)</h3>
-<ul>
-<li>Triggered when opening the version control submission dialog</li>
-<li>Checks only newly added files</li>
-<li>Reverts unreferenced files from version control</li>
-<li><strong>Local copies are safe</strong> - Files are not deleted from disk</li>
-</ul>
-<hr>
-<h2 id="context-menu">Context Menu</h2>
-<p>Right-click folders or assets in the Content Browser and choose the <strong>Simple Asset Cleaner</strong> submenu for these features:</p>
-<h3 id="clean-unreferenced-assets">Clean Unreferenced Assets</h3>
-<p>Scans assets in the selection and displays unreferenced assets with checkboxes. Cleanup runs after the user selects and confirms them.</p>
-<ul>
-<li>Supports selecting one or multiple files or folders</li>
-<li>Newly added files: reverted, with local copies retained</li>
-<li>Tracked files: <strong>deleted from both server and local disk</strong></li>
-</ul>
-<h4 id="enable-auto-clean">Enable Auto Clean</h4>
-<ul>
-<li><strong>Default</strong>: Enabled</li>
-<li><strong>Function</strong>: Check references before submission</li>
-<li><strong>Behavior</strong>: Revert unreferenced newly added files, preserving local files</li>
-<li><strong>Recommendation</strong>: Keep enabled for everyday use</li>
-</ul>
-<h2 id="important-notes">Important Notes</h2>
-<h3 id="operation-comparison">Operation Comparison</h3>
+            <h1>Clean Unreferenced Assets on Submission</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="identify-unreferenced-assets">Identify Unreferenced Assets</h2>
+<p>The plugin analyzes only the project’s <code>/Content/</code> (<code>/Game/</code>). It does not process plugin assets such as <code>/PluginName/Content/</code>, engine assets, C++ source or header files, or references outside <code>/Content/</code>. Maps, Blueprints, and data assets can act as roots. Roots and their direct and indirect references are kept. Only assets unreachable from every root are cleanup candidates.</p>
+<h2 id="automatic-cleanup-on-submission">Automatic Cleanup on Submission</h2>
+<p><code>Enable Auto Clean</code> is on by default. After creating assets and choosing <strong>Add to Source Control</strong>, open the submission dialog. The plugin checks newly added files and reverts unreferenced ones, leaving local copies intact. Tracked files are unaffected.</p>
+<p>For example, if a scene references only two of ten test materials, the other eight are reverted from the pending submission and remain available locally.</p>
+<h2 id="clean-selected-assets-from-the-context-menu">Clean Selected Assets from the Context Menu</h2>
+<p>In the Content Browser, select one or more assets or folders, then open <strong>Simple Asset Cleaner</strong> from the context menu and choose <strong>Clean Unreferenced Assets</strong>. Review the candidates in the dialog and select the files to clean.</p>
+<h2 id="compare-automatic-and-context-menu-cleanup">Compare Automatic and Context Menu Cleanup</h2>
 
 
 
@@ -98,101 +60,9 @@
 
 
 
-<table><thead><tr><th>Asset status</th><th>Automatic cleanup on submission</th><th>Context-menu “Clean Unreferenced Assets”</th></tr></thead><tbody><tr><td>Newly added</td><td>Revert, <strong>retain local copy</strong></td><td>Revert, <strong>retain local copy</strong></td></tr><tr><td>Tracked</td><td>No action</td><td><strong>Delete (server + local)</strong></td></tr></tbody></table>
-<h3 id="step-3-start-using-it">Step 3: Start Using It</h3>
-<p><strong>Daily work:</strong><br>
-Check candidate unreferenced assets according to configuration during submission and review the results.</p>
-<p><strong>Deep cleanup:</strong><br>
-To clean the entire project, click <code>Clean All Source Control Assets</code> in settings.</p>
-<h3 id="submission-handling">Submission Handling</h3>
-<p>With automatic cleanup enabled, the tool processes files during submission using reference-analysis results.</p>
-<p><strong>Workflow:</strong></p>
-<ol>
-<li>Work normally, creating or modifying assets</li>
-<li>Add assets to version control (Add to Source Control)</li>
-<li>Open the submission dialog to prepare a submission</li>
-<li><strong>The plugin automatically detects in the background</strong> which assets are unreferenced</li>
-<li>Unreferenced assets are automatically removed from the submission list (reverted)</li>
-<li>The submission dialog shows only files that actually need to be submitted</li>
-</ol>
-<p><strong>Typical scenario:</strong></p>
-<p>An artist tests 10 materials, but only 2 are ultimately used in the scene. During submission, the plugin identifies and reverts the 8 unreferenced materials, leaving a clean submission list.</p>
-<h3 id="full-cleanup">Full Cleanup</h3>
-<p>Besides daily automatic cleanup, SimpleAssetCleaner offers full cleanup for periodic maintenance or major version changes.</p>
-<p><strong>Use cases:</strong></p>
-<ul>
-<li>Cleanup before a major project version change</li>
-<li>Taking over a legacy project and removing accumulated unused content</li>
-<li>Regular maintenance to keep the repository healthy</li>
-</ul>
-<p><strong>Procedure:</strong></p>
-<ol>
-<li>Open <code>Editor &gt; Project Settings &gt; General &gt; Simple Asset Cleaner</code></li>
-<li>Click <code>Clean All Source Control Assets</code></li>
-<li>Wait for scanning to finish; a progress bar is shown</li>
-<li>Review logs to see which assets were cleaned</li>
-</ol>
-<p><strong>Safety measures:</strong></p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Asset status</th><th>Action</th></tr></thead><tbody><tr><td>Newly added, unsubmitted, unreferenced asset</td><td>Revert from version control, retaining the local file</td></tr><tr><td>Submitted, unreferenced asset</td><td>Delete from version control and local disk</td></tr></tbody></table>
-<p><strong>Important reminder:</strong></p>
-<p>Full cleanup deletes submitted unreferenced files. Before using it:</p>
-<ul>
-<li>Ensure complete version control history is available for recovery</li>
-<li>Try it on a test branch first</li>
-<li>Communicate with team members in advance</li>
-</ul>
-<h2 id="scope-and-notes">Scope and Notes</h2>
-<h3 id="53-cleanup-results">5.3 Cleanup Results</h3>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Asset status</th><th>Automatic cleanup (submission)</th><th>Manual full cleanup</th></tr></thead><tbody><tr><td>Newly added unreferenced asset</td><td>Revert (retain local copy)</td><td>Revert (retain local copy)</td></tr><tr><td>Submitted unreferenced asset</td><td>No action</td><td>Delete (server + local)</td></tr><tr><td>Referenced asset</td><td>Submit normally</td><td>Retain</td></tr><tr><td>Plugin and engine assets</td><td>No action</td><td>No action</td></tr></tbody></table></div>
+<table><thead><tr><th>Asset status</th><th>Automatic cleanup on submission</th><th>Context-menu “Clean Unreferenced Assets”</th></tr></thead><tbody><tr><td>Newly added</td><td>Revert, <strong>retain local copy</strong></td><td>Revert, <strong>retain local copy</strong></td></tr><tr><td>Tracked</td><td>No action</td><td><strong>Delete (server + local)</strong></td></tr></tbody></table></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/docs/setup/" rel="prev"><span>Previous</span>Install and Configure Source Control</a><a href="/en/works/simple-asset-cleaner/docs/add-dependencies/" rel="next"><span>Next</span>Add Untracked Dependencies</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/docs/setup/" rel="prev"><span>Previous</span>Install and Set Up Source Control</a><a href="/en/works/simple-asset-cleaner/docs/full-cleanup/" rel="next"><span>Next</span>Run a Full Cleanup</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -259,5 +129,5 @@ To clean the entire project, click <code>Clean All Source Control Assets</code> 
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-asset-cleaner/docs/clean-assets/","en":"/en/works/simple-asset-cleaner/docs/clean-assets/"},"anchors":{"zh":{"cleanup-scope":"清理范围","project-content-only":"仅项目内容","untouched-content":"不会触及","how-it-works":"工作原理","automatic-cleanup-on-submission-recommended":"提交时自动清理推荐","context-menu":"右键菜单","clean-unreferenced-assets":"清理未引用资产","enable-auto-clean":"enable-auto-clean--启用自动清理","important-notes":"重要说明","operation-comparison":"操作行为对比","step-3-start-using-it":"步骤3开始使用","submission-handling":"提交时处理","full-cleanup":"全量清理","scope-and-notes":"使用范围与注意事项","53-cleanup-results":"53-清理结果对照表"},"en":{"cleanup-scope":"cleanup-scope","project-content-only":"project-content-only","untouched-content":"untouched-content","how-it-works":"how-it-works","automatic-cleanup-on-submission-recommended":"automatic-cleanup-on-submission-recommended","context-menu":"context-menu","clean-unreferenced-assets":"clean-unreferenced-assets","enable-auto-clean":"enable-auto-clean","important-notes":"important-notes","operation-comparison":"operation-comparison","step-3-start-using-it":"step-3-start-using-it","submission-handling":"submission-handling","full-cleanup":"full-cleanup","scope-and-notes":"scope-and-notes","53-cleanup-results":"53-cleanup-results"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-asset-cleaner/docs/clean-assets/","en":"/en/works/simple-asset-cleaner/docs/clean-assets/"},"anchors":{"zh":{"identify-unreferenced-assets":"识别未引用资产","automatic-cleanup-on-submission":"提交时自动清理","clean-selected-assets-from-the-context-menu":"右键清理选定资产","compare-automatic-and-context-menu-cleanup":"自动和右键清理的差别"},"en":{"identify-unreferenced-assets":"identify-unreferenced-assets","automatic-cleanup-on-submission":"automatic-cleanup-on-submission","clean-selected-assets-from-the-context-menu":"clean-selected-assets-from-the-context-menu","compare-automatic-and-context-menu-cleanup":"compare-automatic-and-context-menu-cleanup"}},"anchorAliases":{"zh":{"清理范围":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"仅项目内容":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"不会触及":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"工作原理":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"提交时自动清理推荐":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"右键菜单":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"右键清理选定资产"},"清理未引用资产":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"右键清理选定资产"},"enable-auto-clean--启用自动清理":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"重要说明":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"自动和右键清理的差别"},"操作行为对比":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"自动和右键清理的差别"},"步骤3开始使用":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"首次提交前检查"},"提交时处理":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"全量清理":{"path":"/zh/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"扫描整个项目"},"使用范围与注意事项":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"53-清理结果对照表":{"path":"/zh/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"清理结果"},"cleanup-scope":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"project-content-only":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"untouched-content":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"how-it-works":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"automatic-cleanup-on-submission-recommended":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"context-menu":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"右键清理选定资产"},"clean-unreferenced-assets":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"右键清理选定资产"},"enable-auto-clean":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"important-notes":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"自动和右键清理的差别"},"operation-comparison":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"自动和右键清理的差别"},"step-3-start-using-it":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"首次提交前检查"},"submission-handling":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"提交时自动清理"},"full-cleanup":{"path":"/zh/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"扫描整个项目"},"scope-and-notes":{"path":"/zh/works/simple-asset-cleaner/docs/clean-assets/","anchor":"识别未引用资产"},"53-cleanup-results":{"path":"/zh/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"清理结果"}},"en":{"清理范围":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"仅项目内容":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"不会触及":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"工作原理":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"提交时自动清理推荐":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"右键菜单":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"clean-selected-assets-from-the-context-menu"},"清理未引用资产":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"clean-selected-assets-from-the-context-menu"},"enable-auto-clean--启用自动清理":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"重要说明":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"compare-automatic-and-context-menu-cleanup"},"操作行为对比":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"compare-automatic-and-context-menu-cleanup"},"步骤3开始使用":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"checks-before-your-first-submission"},"提交时处理":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"全量清理":{"path":"/en/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"scan-the-whole-project"},"使用范围与注意事项":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"53-清理结果对照表":{"path":"/en/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"cleanup-results-by-file-status"},"cleanup-scope":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"project-content-only":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"untouched-content":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"how-it-works":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"automatic-cleanup-on-submission-recommended":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"context-menu":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"clean-selected-assets-from-the-context-menu"},"clean-unreferenced-assets":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"clean-selected-assets-from-the-context-menu"},"enable-auto-clean":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"important-notes":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"compare-automatic-and-context-menu-cleanup"},"operation-comparison":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"compare-automatic-and-context-menu-cleanup"},"step-3-start-using-it":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"checks-before-your-first-submission"},"submission-handling":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"automatic-cleanup-on-submission"},"full-cleanup":{"path":"/en/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"scan-the-whole-project"},"scope-and-notes":{"path":"/en/works/simple-asset-cleaner/docs/clean-assets/","anchor":"identify-unreferenced-assets"},"53-cleanup-results":{"path":"/en/works/simple-asset-cleaner/docs/full-cleanup/","anchor":"cleanup-results-by-file-status"}}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

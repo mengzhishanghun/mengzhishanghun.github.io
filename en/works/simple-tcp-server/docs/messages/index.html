@@ -24,15 +24,15 @@
           <p class="work-doc-name">SimpleTCPServer</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Feature Guides</span><ul><li><a href="/en/works/simple-tcp-server/docs/listen/">Configure Listening and Session Lifecycle</a></li><li><a href="/en/works/simple-tcp-server/docs/messages/" aria-current="page">Send and Receive TCP Server Messages</a></li><li><a href="/en/works/simple-tcp-server/docs/native-server/">Implement a TCP Server in C++</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-tcp-server/docs/listen/">Enable the Plugin and Configure TCP Listening</a></li></ul></li><li><span>Networking</span><ul><li><a href="/en/works/simple-tcp-server/docs/sessions/">Manage Client Sessions</a></li><li><a href="/en/works/simple-tcp-server/docs/messages/" aria-current="page">Send and Receive TCP Server Messages</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-tcp-server/docs/native-server/">Implement a TCP Server in C++</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#-receiving" class="outline-link outline-root-link">📥 Receiving</a></li><li class="outline-node" data-heading-depth="3"><a href="#-sending" class="outline-link outline-root-link">📤 Sending</a></li><li class="outline-node" data-heading-depth="2"><a href="#-notes--tips" class="outline-link outline-root-link">✅ Notes &amp; Tips</a></li><li class="outline-node" data-heading-depth="2"><a href="#-recommended-companion-plugins" class="outline-link outline-root-link">🔧 Recommended Companion Plugins</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#receive-client-messages" class="outline-link outline-root-link">Receive client messages</a></li><li class="outline-node" data-heading-depth="2"><a href="#send-to-one-session-or-broadcast-to-a-channel" class="outline-link outline-root-link">Send to one session or broadcast to a channel</a></li><li class="outline-node" data-heading-depth="2"><a href="#client-plugin-and-byte-conversion" class="outline-link outline-root-link">Client plugin and byte conversion</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
           <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/simple-tcp-server/">SimpleTCPServer</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/simple-tcp-server/docs/messages/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-tcp-server:messages","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/simple-tcp-server/docs/messages/","title":"Send and Receive TCP Server Messages","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/simple-tcp-server/docs/messages/"></label></noscript></section></div>
           <article>
             <h1>Send and Receive TCP Server Messages</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><h3 id="-receiving">📥 Receiving</h3>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="receive-client-messages">Receive client messages</h2>
 
 
 
@@ -55,7 +55,7 @@
 
 
 <table><thead><tr><th>Node Function</th><th>Description</th></tr></thead><tbody><tr><td><code>BindMessageHandle</code></td><td>Bind message receive delegate</td></tr><tr><td><code>UnbindMessageHandle</code></td><td>Unbind a specific delegate</td></tr><tr><td><code>UnbindAllMessageHandle</code></td><td>Unbind all delegates</td></tr></tbody></table>
-<h3 id="-sending">📤 Sending</h3>
+<h2 id="send-to-one-session-or-broadcast-to-a-channel">Send to one session or broadcast to a channel</h2>
 
 
 
@@ -74,28 +74,19 @@
 
 
 <table><thead><tr><th>Node Function</th><th>Description</th></tr></thead><tbody><tr><td><code>SendMessage</code></td><td>Send byte array to a specific SessionChannel</td></tr><tr><td><code>BroadcastMessage</code></td><td>Send byte array to all connections on a channel</td></tr></tbody></table>
-<h2 id="-notes--tips">✅ Notes &amp; Tips</h2>
-<ul>
-<li>Only IPv4 is supported — domain name, IPv6, and encryption are not supported</li>
-<li>All sockets are internally managed, no manual cleanup required</li>
-<li>Plugin persists across level transitions, bound to GameInstance lifecycle</li>
-<li>Each connected client is assigned a unique <code>SessionChannel</code> in format <code>"IP:Port"</code></li>
-</ul>
-<hr>
-<h2 id="-recommended-companion-plugins">🔧 Recommended Companion Plugins</h2>
+<h2 id="client-plugin-and-byte-conversion">Client plugin and byte conversion</h2>
 <ul>
 <li>
-<p>🔌 <strong>SimpleTCPClient Plugin</strong><br>
+<p><strong>SimpleTCPClient Plugin</strong><br>
 Lightweight plugin designed for client-side usage, ideal for connecting to a SimpleTCPServer instance.</p>
 </li>
 <li>
-<p>🧩 <strong>SimpleByteConversion Plugin</strong>
+<p><strong>SimpleByteConversion Plugin</strong>
 Enables conversion between native Unreal types (e.g., FString, float, int) and <code>TArray&lt;uint8&gt;</code>, ideal for building structured protocols.</p>
 </li>
-</ul>
-<hr></div>
+</ul></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-tcp-server/docs/listen/" rel="prev"><span>Previous</span>Configure Listening and Session Lifecycle</a><a href="/en/works/simple-tcp-server/docs/native-server/" rel="next"><span>Next</span>Implement a TCP Server in C++</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-tcp-server/docs/sessions/" rel="prev"><span>Previous</span>Manage Client Sessions</a><a href="/en/works/simple-tcp-server/docs/native-server/" rel="next"><span>Next</span>Implement a TCP Server in C++</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -162,5 +153,5 @@ Enables conversion between native Unreal types (e.g., FString, float, int) and <
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-tcp-server/docs/messages/","en":"/en/works/simple-tcp-server/docs/messages/"},"anchors":{"zh":{"-receiving":"-接收","-sending":"-发送","-notes--tips":"-注意事项与提示","-recommended-companion-plugins":"-推荐配套插件"},"en":{"-receiving":"-receiving","-sending":"-sending","-notes--tips":"-notes--tips","-recommended-companion-plugins":"-recommended-companion-plugins"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-tcp-server/docs/messages/","en":"/en/works/simple-tcp-server/docs/messages/"},"anchors":{"zh":{"receive-client-messages":"接收客户端消息","send-to-one-session-or-broadcast-to-a-channel":"向单个会话发送或向通道广播","client-plugin-and-byte-conversion":"客户端与字节转换"},"en":{"receive-client-messages":"receive-client-messages","send-to-one-session-or-broadcast-to-a-channel":"send-to-one-session-or-broadcast-to-a-channel","client-plugin-and-byte-conversion":"client-plugin-and-byte-conversion"}},"anchorAliases":{"zh":{"-接收":{"path":"/zh/works/simple-tcp-server/docs/messages/","anchor":"接收客户端消息"},"-发送":{"path":"/zh/works/simple-tcp-server/docs/messages/","anchor":"向单个会话发送或向通道广播"},"-注意事项与提示":{"path":"/zh/works/simple-tcp-server/docs/sessions/","anchor":"会话-socket-的创建和销毁"},"-推荐配套插件":{"path":"/zh/works/simple-tcp-server/docs/messages/","anchor":"客户端与字节转换"},"-receiving":{"path":"/zh/works/simple-tcp-server/docs/messages/","anchor":"接收客户端消息"},"-sending":{"path":"/zh/works/simple-tcp-server/docs/messages/","anchor":"向单个会话发送或向通道广播"},"-notes--tips":{"path":"/zh/works/simple-tcp-server/docs/sessions/","anchor":"会话-socket-的创建和销毁"},"-recommended-companion-plugins":{"path":"/zh/works/simple-tcp-server/docs/messages/","anchor":"客户端与字节转换"}},"en":{"-接收":{"path":"/en/works/simple-tcp-server/docs/messages/","anchor":"receive-client-messages"},"-发送":{"path":"/en/works/simple-tcp-server/docs/messages/","anchor":"send-to-one-session-or-broadcast-to-a-channel"},"-注意事项与提示":{"path":"/en/works/simple-tcp-server/docs/sessions/","anchor":"when-session-sockets-are-created-and-destroyed"},"-推荐配套插件":{"path":"/en/works/simple-tcp-server/docs/messages/","anchor":"client-plugin-and-byte-conversion"},"-receiving":{"path":"/en/works/simple-tcp-server/docs/messages/","anchor":"receive-client-messages"},"-sending":{"path":"/en/works/simple-tcp-server/docs/messages/","anchor":"send-to-one-session-or-broadcast-to-a-channel"},"-notes--tips":{"path":"/en/works/simple-tcp-server/docs/sessions/","anchor":"when-session-sockets-are-created-and-destroyed"},"-recommended-companion-plugins":{"path":"/en/works/simple-tcp-server/docs/messages/","anchor":"client-plugin-and-byte-conversion"}}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

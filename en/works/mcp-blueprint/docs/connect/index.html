@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>Install and Connect the Blueprint Editing Tools · MZSH</title>
+  <title>Install and Connect MCPBlueprint · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/en/works/mcp-blueprint/docs/connect/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,16 +24,15 @@
           <p class="work-doc-name">MCPBlueprint</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Setup</span><ul><li><a href="/en/works/mcp-blueprint/docs/connect/" aria-current="page">Install and Connect the Blueprint Editing Tools</a></li></ul></li><li><span>Feature Guides</span><ul><li><a href="/en/works/mcp-blueprint/docs/graphs/">Find, Edit, and Capture Blueprint Graphs</a></li><li><a href="/en/works/mcp-blueprint/docs/members-and-types/">Edit Blueprint Members, Functions, and Types</a></li><li><a href="/en/works/mcp-blueprint/docs/components-and-inheritance/">Edit Components, Inheritance, and Class Defaults</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-blueprint/docs/connect/" aria-current="page">Install and Connect MCPBlueprint</a></li></ul></li><li><span>Assets and Graphs</span><ul><li><a href="/en/works/mcp-blueprint/docs/asset-lifecycle/">Create, Compile, and Manage Blueprint Assets</a></li><li><a href="/en/works/mcp-blueprint/docs/graphs/">Edit Blueprint Nodes, Connections, and Layout</a></li><li><a href="/en/works/mcp-blueprint/docs/graph-screenshots/">Capture Blueprint Graph Screenshots</a></li></ul></li><li><span>Members and Types</span><ul><li><a href="/en/works/mcp-blueprint/docs/variables/">Manage Member and Local Variables</a></li><li><a href="/en/works/mcp-blueprint/docs/members-and-types/">Create and Modify Blueprint Functions</a></li><li><a href="/en/works/mcp-blueprint/docs/events-dispatchers/">Add Events and Manage Event Dispatchers</a></li><li><a href="/en/works/mcp-blueprint/docs/interfaces/">Add an Interface to a Blueprint</a></li><li><a href="/en/works/mcp-blueprint/docs/user-defined-structs/">Create and Modify User-Defined Structs</a></li><li><a href="/en/works/mcp-blueprint/docs/user-defined-enums/">Create and Modify User-Defined Enums</a></li></ul></li><li><span>Class Structure</span><ul><li><a href="/en/works/mcp-blueprint/docs/components-and-inheritance/">Manage Blueprint Components and Attachments</a></li><li><a href="/en/works/mcp-blueprint/docs/class-defaults/">Read and Edit Blueprint Class Defaults</a></li><li><a href="/en/works/mcp-blueprint/docs/class-inheritance/">Change a Blueprint Parent Class</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#requirements-and-installation" class="outline-link outline-root-link">Requirements and installation</a></li><li class="outline-node" data-heading-depth="2"><a href="#connect-an-ai-client" class="outline-link outline-root-link">Connect an AI client</a></li><li class="outline-node" data-heading-depth="2"><a href="#feature-overview" class="outline-link outline-root-link">Feature overview</a></li><li class="outline-node" data-heading-depth="2"><a href="#concepts-choose-the-right-editing-target" class="outline-link outline-root-link">Concepts: choose the right editing target</a></li><li class="outline-node" data-heading-depth="2"><a href="#complete-tool-reference-55-tools" class="outline-link outline-root-link">Complete tool reference (55 tools)</a></li><li class="outline-node" data-heading-depth="2"><a href="#focused-guides-defaults-signatures-components-and-inheritance" class="outline-link outline-root-link">Focused guides: defaults, signatures, components, and inheritance</a></li><li class="outline-node" data-heading-depth="2"><a href="#recommended-workflow" class="outline-link outline-root-link">Recommended workflow</a></li><li class="outline-node" data-heading-depth="2"><a href="#asset-lifecycle" class="outline-link outline-root-link">Asset lifecycle</a></li><li class="outline-node" data-heading-depth="2"><a href="#settings" class="outline-link outline-root-link">Settings</a></li><li class="outline-node" data-heading-depth="2"><a href="#current-limits" class="outline-link outline-root-link">Current limits</a></li><li class="outline-node" data-heading-depth="2"><a href="#troubleshooting" class="outline-link outline-root-link">Troubleshooting</a></li><li class="outline-node" data-heading-depth="2"><a href="#support" class="outline-link outline-root-link">Support</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#requirements-and-installation" class="outline-link outline-root-link">Requirements and installation</a></li><li class="outline-node" data-heading-depth="2"><a href="#connect-an-ai-client" class="outline-link outline-root-link">Connect an AI client</a></li><li class="outline-node" data-heading-depth="2"><a href="#settings" class="outline-link outline-root-link">Settings</a></li><li class="outline-node" data-heading-depth="2"><a href="#read-and-edit-your-first-blueprint" class="outline-link outline-root-link">Read and edit your first Blueprint</a></li><li class="outline-node" data-heading-depth="2"><a href="#choose-the-tool-for-the-object-you-want-to-edit" class="outline-link outline-root-link">Choose the tool for the object you want to edit</a></li><li class="outline-node" data-heading-depth="2"><a href="#troubleshoot-connections-and-plugin-loading" class="outline-link outline-root-link">Troubleshoot connections and plugin loading</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/mcp-blueprint/">MCPBlueprint</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/mcp-blueprint/docs/connect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-blueprint:connect","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/mcp-blueprint/docs/connect/","title":"Install and Connect the Blueprint Editing Tools","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/mcp-blueprint/docs/connect/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/mcp-blueprint/">MCPBlueprint</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/mcp-blueprint/docs/connect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-blueprint:connect","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/mcp-blueprint/docs/connect/","title":"Install and Connect MCPBlueprint","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/mcp-blueprint/docs/connect/"></label></noscript></section></div>
           <article>
-            <h1>Install and Connect the Blueprint Editing Tools</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p>MCPBlueprint provides Blueprint discovery, graph editing, member and component tools, asset lifecycle operations, compilation feedback, and graph screenshots to AI clients over MCP. This guide covers the 55 tools in the published Fab release. Use the <code>tools/list</code> response from your editor session for available tool names and parameters.</p>
-<h2 id="requirements-and-installation">Requirements and installation</h2>
+            <h1>Install and Connect MCPBlueprint</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="requirements-and-installation">Requirements and installation</h2>
 <ul>
 <li>Unreal Engine 5.2+ Editor on Windows, macOS, or Linux.</li>
 <li>An MCP client that supports a local HTTP server.</li>
@@ -48,409 +47,6 @@
 <p>Follow your AI client’s MCP setup process and give it the endpoint shown in the plugin toolbar. The default endpoint is <code>http://127.0.0.1:8766/mcp</code>. If the configured port is occupied, MCPBlueprint tries up to nine subsequent ports. Client configuration formats differ, so this guide does not prescribe a client-specific JSON file or manual port-configuration procedure.</p>
 <p>The MCP client normally handles <code>initialize</code> and <code>tools/list</code> automatically. <code>ping</code> is for troubleshooting and does not need to be run manually for every session.</p>
 <p>The server binds only to the local machine. Browser-style <code>Origin</code> values are limited to <code>localhost</code>, <code>127.0.0.1</code>, and <code>[::1]</code>; ordinary non-browser MCP clients can omit <code>Origin</code>.</p>
-<h2 id="feature-overview">Feature overview</h2>
-<p>The current version registers 55 tools:</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Capability</th><th align="right">Count</th><th>Tools</th></tr></thead><tbody><tr><td>Discovery and reading</td><td align="right">6</td><td><code>ListBlueprints</code>, <code>GetBlueprintOverview</code>, <code>ListBlueprintMembers</code>, <code>GetGraphDetail</code>, <code>SearchGraphNodes</code>, <code>GetCompileErrors</code></td></tr><tr><td>User Defined Structs and Enums</td><td align="right">6</td><td><code>CreateUserDefinedStruct</code>, <code>GetUserDefinedStruct</code>, <code>ModifyUserDefinedStruct</code>, <code>CreateUserDefinedEnum</code>, <code>GetUserDefinedEnum</code>, <code>ModifyUserDefinedEnum</code></td></tr><tr><td>Variables, functions, events, and pins</td><td align="right">17</td><td><code>AddVariable</code>, <code>ModifyVariable</code>, <code>RemoveVariable</code>, <code>CreateFunction</code>, <code>RenameFunction</code>, <code>ModifyFunctionSignature</code>, <code>RemoveFunction</code>, <code>CreateCustomEvent</code>, <code>AddEventNode</code>, <code>AddBoundEvent</code>, <code>AddLocalVariable</code>, <code>RemoveLocalVariable</code>, <code>AddNodePin</code>, <code>RemoveNodePin</code>, <code>AddInterface</code>, <code>AddEventDispatcher</code>, <code>RemoveEventDispatcher</code></td></tr><tr><td>Graph editing and layout</td><td align="right">4</td><td><code>ApplyGraphPatch</code>, <code>SetPinDefaults</code>, <code>FormatGraph</code>, <code>AddCommentBox</code></td></tr><tr><td>Components and defaults</td><td align="right">11</td><td><code>GetComponents</code>, <code>AddComponent</code>, <code>SetComponentProperties</code>, <code>RenameComponent</code>, <code>RemoveComponent</code>, <code>ReparentComponent</code>, <code>SetRootComponent</code>, <code>DuplicateComponent</code>, <code>GetComponentProperties</code>, <code>GetClassDefaults</code>, <code>SetClassDefaults</code></td></tr><tr><td>Asset lifecycle and screenshots</td><td align="right">11</td><td><code>CreateBlueprint</code>, <code>ReparentBlueprint</code>, <code>CompileBlueprint</code>, <code>SaveAsset</code>, <code>OpenAsset</code>, <code>CloseAsset</code>, <code>ReloadBlueprintFromDisk</code>, <code>DeleteAsset</code>, <code>RenameAsset</code>, <code>DuplicateAsset</code>, <code>CaptureGraphScreenshot</code></td></tr></tbody></table>
-<p>Capabilities include:</p>
-<ul>
-<li>Stable, bounded pagination for large asset, member, graph, and pin queries.</li>
-<li>Node IDs returned by the Action Registry, with no invented node types.</li>
-<li>Single-transaction graph patches for creation, connection, disconnection, removal, movement, defaults, and layout. Failures trigger an automatic rollback attempt; the response explicitly reports rollback failure.</li>
-<li>Three deterministic layout styles: <code>Balanced</code>, <code>Straight</code>, and <code>Compact</code>.</li>
-<li>Protection of native Comment Box containment in local and whole-graph layouts.</li>
-<li>Dry-run impact analysis and explicit approval requirements for high-risk edits.</li>
-<li>Transaction rollback and single-step Undo within Unreal’s supported scope.</li>
-<li>Explicit persistence: ordinary edits only mark assets dirty. <code>SaveAsset</code> writes to disk; <code>DeleteAsset</code> explicitly deletes disk assets after stricter checks.</li>
-<li>Automatic discovery and loading from the engine directory without a project declaration.</li>
-</ul>
-<h2 id="concepts-choose-the-right-editing-target">Concepts: choose the right editing target</h2>
-<p>These objects often appear next to each other in Unreal Editor, but they represent different state. Choosing the wrong tool may produce a successful call whose effect appears somewhere other than you expected.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Editing target</th><th>Meaning and tool</th><th>Distinct from</th></tr></thead><tbody><tr><td>Variable default</td><td>The declaration default of a member variable declared by this Blueprint. Use <code>ModifyVariable</code> with <code>DefaultValue</code>.</td><td>Node-pin literals and overrides on existing level instances.</td></tr><tr><td>Function parameter / pin</td><td>Parameters on function Entry/Result nodes form the function signature; use <code>ModifyFunctionSignature</code>. Use <code>SetPinDefaults</code> for an input literal on an existing graph node.</td><td>Member-variable defaults. Connected input-pin defaults have no runtime effect.</td></tr><tr><td>Component-template property</td><td>A component template added to this Blueprint’s SCS, such as <code>RelativeLocation</code> or <code>StaticMesh</code>. Use <code>SetComponentProperties</code>.</td><td>Class Defaults and component overrides on Actor instances in a scene.</td></tr><tr><td>Class Defaults</td><td>CDO defaults of the Blueprint-generated class, including editable inherited properties. Use <code>SetClassDefaults</code>.</td><td>Variable-declaration metadata edited by <code>ModifyVariable</code>, and current values on placed or spawned instances.</td></tr><tr><td>Blueprint parent class</td><td>The class inherited by the Blueprint class. Use <code>ReparentBlueprint</code>.</td><td>Parent-component relationships in the component tree.</td></tr><tr><td>Component hierarchy</td><td>SceneComponent attachment hierarchy within one Actor Blueprint. Use <code>ReparentComponent</code>, or <code>SetRootComponent</code> for the local root.</td><td>Blueprint class inheritance.</td></tr></tbody></table>
-<h2 id="complete-tool-reference-55-tools">Complete tool reference (55 tools)</h2>
-<p>Ordinary editing tools only mark assets dirty; they do not silently save. Use <code>SaveAsset</code> to keep changes. The table describes each tool’s purpose and the limits that affect its use.</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>Tool</th><th>What it does</th><th>Important notes</th></tr></thead><tbody><tr><td><code>ListBlueprints</code></td><td>Finds project Blueprint assets with pagination.</td><td>Use <code>PathFilter</code> and pagination to narrow large projects.</td></tr><tr><td><code>GetBlueprintOverview</code></td><td>Shows the Blueprint parent, graphs, variables, components, and interfaces.</td><td>Provide an exact <code>BlueprintPath</code>.</td></tr><tr><td><code>ListBlueprintMembers</code></td><td>Lists functions, events, dispatchers, and local variables by page.</td><td>Use pagination for large Blueprints.</td></tr><tr><td><code>GetGraphDetail</code></td><td>Shows nodes, pins, links, and layout in the selected graph.</td><td>Use <code>GraphName</code> to select a graph.</td></tr><tr><td><code>SearchGraphNodes</code></td><td>Finds creatable nodes by English action name.</td><td>Create nodes only with returned <code>SpawnerId</code> values.</td></tr><tr><td><code>GetCompileErrors</code></td><td>Retrieves current Blueprint compilation diagnostics.</td><td>Use it to handle errors or warnings reported by the editor.</td></tr><tr><td><code>CreateUserDefinedStruct</code></td><td>Creates a User Defined Struct under <code>/Game</code>.</td><td>Does not save automatically.</td></tr><tr><td><code>GetUserDefinedStruct</code></td><td>Shows Struct field definitions.</td><td>Read large Structs with pagination.</td></tr><tr><td><code>ModifyUserDefinedStruct</code></td><td>Adds, edits, or removes Struct fields.</td><td>Start with <code>bDryRun</code>; potential data loss requires explicit approval.</td></tr><tr><td><code>CreateUserDefinedEnum</code></td><td>Creates a User Defined Enum under <code>/Game</code>.</td><td>Does not save automatically.</td></tr><tr><td><code>GetUserDefinedEnum</code></td><td>Shows Enum entries, values, and display names.</td><td>Read large Enums with pagination.</td></tr><tr><td><code>ModifyUserDefinedEnum</code></td><td>Adds, edits, or removes Enum entries.</td><td>Start with <code>bDryRun</code>; changing serialized meaning requires explicit approval.</td></tr><tr><td><code>AddVariable</code></td><td>Adds a Blueprint member variable.</td><td>Requires a Blueprint path, variable name, and <code>TypeName</code>.</td></tr><tr><td><code>ModifyVariable</code></td><td>Changes member-variable type, default, name, editability, category, or tooltip.</td><td>Referenced variables cannot change type; RepNotify variables cannot be renamed here.</td></tr><tr><td><code>RemoveVariable</code></td><td>Removes a member variable.</td><td>References or an inability to recover safely block removal.</td></tr><tr><td><code>CreateFunction</code></td><td>Creates a Blueprint function and its parameters.</td><td>Requires a Blueprint path, function name, and parameter definitions.</td></tr><tr><td><code>RenameFunction</code></td><td>Renames a user function and updates references that can be updated safely.</td><td>Start with dry-run; reference updates require explicit approval.</td></tr><tr><td><code>ModifyFunctionSignature</code></td><td>Adds, renames, removes, or changes the type of a function parameter.</td><td>Defaults to dry-run; removal or type changes may lose data and require explicit approval.</td></tr><tr><td><code>RemoveFunction</code></td><td>Removes a user function.</td><td>References or an inability to recover safely block removal.</td></tr><tr><td><code>CreateCustomEvent</code></td><td>Creates a Custom Event in an Event Graph.</td><td>The target must be an actual Event Graph.</td></tr><tr><td><code>AddEventNode</code></td><td>Adds a supported event node.</td><td>Specify the Blueprint and event type.</td></tr><tr><td><code>AddBoundEvent</code></td><td>Adds a bound event for a component or delegate.</td><td>The component and delegate must be resolvable.</td></tr><tr><td><code>AddLocalVariable</code></td><td>Adds a local variable to a function graph.</td><td>Requires a function name, variable name, and type.</td></tr><tr><td><code>RemoveLocalVariable</code></td><td>Removes a function-local variable.</td><td>References or an inability to recover safely block removal.</td></tr><tr><td><code>AddNodePin</code></td><td>Adds a pin to a node that supports variable pin counts.</td><td>Obtain the target node identifier from graph details first.</td></tr><tr><td><code>RemoveNodePin</code></td><td>Removes an editable user pin from a node.</td><td>Locate the exact target pin.</td></tr><tr><td><code>AddInterface</code></td><td>Adds an interface to a Blueprint.</td><td>Use the interface class path.</td></tr><tr><td><code>AddEventDispatcher</code></td><td>Adds an Event Dispatcher.</td><td>Specify its name and signature.</td></tr><tr><td><code>RemoveEventDispatcher</code></td><td>Removes an Event Dispatcher.</td><td>References or an inability to recover safely block removal.</td></tr><tr><td><code>ApplyGraphPatch</code></td><td>Creates, connects, disconnects, removes, and moves nodes, sets defaults, and lays out the graph in one operation.</td><td>Search for nodes first. Supports dry-run and attempts rollback on failure.</td></tr><tr><td><code>SetPinDefaults</code></td><td>Changes input-pin literals on existing nodes.</td><td>Connected input pins ignore their literals at runtime.</td></tr><tr><td><code>FormatGraph</code></td><td>Organizes graph layout using <code>Balanced</code>, <code>Straight</code>, or <code>Compact</code>.</td><td>Select a graph or a layout scope.</td></tr><tr><td><code>AddCommentBox</code></td><td>Adds a native Comment Box.</td><td>Specify text and bounds or target nodes.</td></tr><tr><td><code>GetComponents</code></td><td>Shows an Actor Blueprint’s component tree, parents, and template information.</td><td>Applies only to Actor Blueprints.</td></tr><tr><td><code>AddComponent</code></td><td>Adds a local SCS component.</td><td>Specify the component class, name, and optional parent component.</td></tr><tr><td><code>SetComponentProperties</code></td><td>Changes local SCS component-template properties.</td><td>Use UE-text values; an invalid property rolls back the whole edit.</td></tr><tr><td><code>RenameComponent</code></td><td>Renames a local SCS component and updates member references.</td><td>The new name must be unique.</td></tr><tr><td><code>RemoveComponent</code></td><td>Removes a component.</td><td>References or an inability to recover safely block removal.</td></tr><tr><td><code>ReparentComponent</code></td><td>Moves a local SceneComponent below another SceneComponent.</td><td>Cannot create cycles; use SetRootComponent for an actual local root.</td></tr><tr><td><code>SetRootComponent</code></td><td>Makes a local SceneComponent the root.</td><td>The target must be a local SceneComponent.</td></tr><tr><td><code>DuplicateComponent</code></td><td>Duplicates a local component and its template properties.</td><td>The actual local scene root cannot be duplicated.</td></tr><tr><td><code>GetComponentProperties</code></td><td>Reads editable component-template properties by page.</td><td>Supply the Blueprint path, component name, and pagination parameters.</td></tr><tr><td><code>GetClassDefaults</code></td><td>Reads editable CDO defaults by page.</td><td>Page through large property sets.</td></tr><tr><td><code>SetClassDefaults</code></td><td>Changes Blueprint CDO defaults, including inherited properties.</td><td>Property names are case-sensitive; values use UE text.</td></tr><tr><td><code>CreateBlueprint</code></td><td>Creates a supported Blueprint asset.</td><td>Supply the asset path and parent class; creation does not save automatically.</td></tr><tr><td><code>ReparentBlueprint</code></td><td>Changes a Blueprint’s parent class.</td><td>Start with <code>bDryRun</code>; hierarchy or interface conflicts may require <code>bAllowPotentialDataLoss</code>.</td></tr><tr><td><code>CompileBlueprint</code></td><td>Compiles the selected Blueprint and returns diagnostics.</td><td>Use it to handle errors or warnings reported by the editor.</td></tr><tr><td><code>SaveAsset</code></td><td>Explicitly saves the asset’s current changes to disk.</td><td>Ordinary edits do not save automatically.</td></tr><tr><td><code>OpenAsset</code></td><td>Opens a Blueprint in the editor.</td><td>Required before capturing its graph.</td></tr><tr><td><code>CloseAsset</code></td><td>Closes the asset editor.</td><td>Save changes you want to keep before closing.</td></tr><tr><td><code>ReloadBlueprintFromDisk</code></td><td>Replaces the in-memory Blueprint with its disk version.</td><td>Defaults to dry-run; discarding unsaved changes requires explicit approval.</td></tr><tr><td><code>DeleteAsset</code></td><td>Deletes an asset.</td><td>Deletion has stricter reference and recovery-safety checks.</td></tr><tr><td><code>RenameAsset</code></td><td>Renames or moves an asset.</td><td>Specify source and destination paths.</td></tr><tr><td><code>DuplicateAsset</code></td><td>Duplicates an asset.</td><td>Specify source and destination paths.</td></tr><tr><td><code>CaptureGraphScreenshot</code></td><td>Captures an open Blueprint graph.</td><td>Call <code>OpenAsset</code> first; the graph widget must be initialized.</td></tr></tbody></table>
-<h2 id="focused-guides-defaults-signatures-components-and-inheritance">Focused guides: defaults, signatures, components, and inheritance</h2>
-<h2 id="recommended-workflow">Recommended workflow</h2>
-<p>For writes that change structure or data:</p>
-<ol>
-<li>Locate the target asset, graph, pin, member, or component.</li>
-<li>Search with <code>SearchGraphNodes</code> to obtain a valid <code>SpawnerId</code>.</li>
-<li>Preview with <code>bDryRun=true</code> where supported. Check affected assets, normalized operations, restrictions, and blockers.</li>
-<li>Apply using returned identifiers. Do not invent a <code>SpawnerId</code>.</li>
-<li>Call <code>SaveAsset</code> only when you want to keep the changes.</li>
-</ol>
-<p>Dry-run cannot display every generated pin, type promotion, or final layout. This preview limitation does not mean the tool writes automatically. Use a <code>SpawnerId</code> from the current search results before writing.</p>
-<h2 id="asset-lifecycle">Asset lifecycle</h2>
-<p>Asset tools create, duplicate, rename, reparent, compile, open, close, reload, delete, and save supported Blueprint assets.</p>
-<ul>
-<li>Reloading from disk defaults to dry-run and requires explicit approval before discarding in-memory state.</li>
-<li>Destructive deletion has stricter Undo/Redo and Package safety requirements than ordinary graph edits.</li>
-</ul>
 <h2 id="settings">Settings</h2>
 <p>Open <strong>Project Settings → Plugins → MCP Blueprint</strong>:</p>
 <ul>
@@ -460,29 +56,36 @@
 <li><strong>Request Timeout Seconds</strong>: timeout for ordinary tools.</li>
 <li><strong>Compile Timeout Seconds</strong>: separate timeout for compilation tools.</li>
 </ul>
-<h2 id="current-limits">Current limits</h2>
+<h2 id="read-and-edit-your-first-blueprint">Read and edit your first Blueprint</h2>
+<p>After connecting, find an asset with <code>ListBlueprints</code> and pass its exact <code>BlueprintPath</code> to <code>GetBlueprintOverview</code>. To change logic, identify the target graph and follow the <a href="/en/works/mcp-blueprint/docs/graphs/">graph editing workflow</a> to preview the edit. Ordinary edits mark an asset dirty. Call <code>SaveAsset</code> when you want to keep the changes.</p>
+<h2 id="choose-the-tool-for-the-object-you-want-to-edit">Choose the tool for the object you want to edit</h2>
 <ul>
-<li>Supports Windows, macOS, and Linux Editor; no Runtime/Shipping module is provided.</li>
-<li>There is currently no generic tool to invoke an arbitrary Blueprint function and return its runtime result.</li>
-<li>Custom Event and Event Dispatcher signature editing is less complete than ordinary function signature editing.</li>
-<li>Blueprint Actions that cannot be handled safely cause the operation to be rejected.</li>
-<li>Screenshots require an initialized Blueprint Graph Editor widget.</li>
+<li>For declaration defaults, see <a href="/en/works/mcp-blueprint/docs/variables/">variables</a>. For literals on node input pins, see <a href="/en/works/mcp-blueprint/docs/graphs/">graph editing</a>. For Entry and Result parameters, see <a href="/en/works/mcp-blueprint/docs/members-and-types/">function signatures</a>.</li>
+<li>For Actor Blueprint component templates or attachments, see <a href="/en/works/mcp-blueprint/docs/components-and-inheritance/">components</a>. For generated-class defaults, see <a href="/en/works/mcp-blueprint/docs/class-defaults/">class defaults</a>. To change the Blueprint parent class, see <a href="/en/works/mcp-blueprint/docs/class-inheritance/">class inheritance</a>.</li>
 </ul>
-<h2 id="troubleshooting">Troubleshooting</h2>
+<h2 id="troubleshoot-connections-and-plugin-loading">Troubleshoot connections and plugin loading</h2>
 <ul>
-<li><strong>Cannot connect:</strong> use the actual endpoint in the toolbar; the configured port may be occupied.</li>
-<li><strong>Missing tool:</strong> refresh <code>tools/list</code> instead of relying on an old cache.</li>
-<li><strong>Write rejected:</strong> read every blocker and approval-parameter requirement, then read the target again before retrying.</li>
-<li><strong>Compilation failed:</strong> obtain compiler diagnostics and fix the reported Blueprint errors before saving.</li>
-<li><strong>Unexpected graph result:</strong> compare <code>GetGraphDetail</code> before and after; use Undo where applicable.</li>
-<li><strong>Plugin requests a rebuild:</strong> install a package matching the exact engine minor version.</li>
-<li><strong>Plugin missing from the project:</strong> check that it is installed under that engine’s <code>Engine/Plugins/Marketplace</code>. Do not work around this by adding a project dependency.</li>
-<li><strong>UE 5.5 reports an outdated project file because the installed MCPBlueprint is absent from the project descriptor:</strong> choose <strong>Not Now</strong>. The engine plugin still loads automatically. <strong>Update</strong> adds MCPBlueprint to the project’s <code>.uproject</code>, creating the project-side dependency this installation model explicitly avoids.</li>
-</ul>
-<h2 id="support">Support</h2>
-<p>For questions or feedback, use the <a href="/en/contact/">contact page</a>.</p></div>
+<li>
+<p><strong>Cannot connect:</strong> use the actual endpoint in the toolbar; the configured port may be occupied.</p>
+</li>
+<li>
+<p><strong>Missing tool:</strong> refresh <code>tools/list</code> instead of relying on an old cache.</p>
+</li>
+<li>
+<p><strong>Plugin requests a rebuild:</strong> install a package matching the exact engine minor version.</p>
+</li>
+<li>
+<p><strong>Plugin missing from the project:</strong> check that it is installed under that engine’s <code>Engine/Plugins/Marketplace</code>. Do not work around this by adding a project dependency.</p>
+</li>
+<li>
+<p><strong>UE 5.5 reports an outdated project file because the installed MCPBlueprint is absent from the project descriptor:</strong> choose <strong>Not Now</strong>. The engine plugin still loads automatically. <strong>Update</strong> adds MCPBlueprint to the project’s <code>.uproject</code>, creating the project-side dependency this installation model explicitly avoids.</p>
+</li>
+<li>
+<p>Supports Windows, macOS, and Linux Editor; no Runtime/Shipping module is provided.</p>
+</li>
+</ul></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/mcp-blueprint/docs/graphs/" rel="next"><span>Next</span>Find, Edit, and Capture Blueprint Graphs</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/mcp-blueprint/docs/asset-lifecycle/" rel="next"><span>Next</span>Create, Compile, and Manage Blueprint Assets</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -549,5 +152,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/mcp-blueprint/docs/connect/","en":"/en/works/mcp-blueprint/docs/connect/"},"anchors":{"zh":{"requirements-and-installation":"要求与安装","connect-an-ai-client":"连接-ai-客户端","feature-overview":"功能概览","concepts-choose-the-right-editing-target":"概念区分先选对编辑对象","complete-tool-reference-55-tools":"55-个工具逐项功能总表","focused-guides-defaults-signatures-components-and-inheritance":"重点教程默认值签名组件与继承","recommended-workflow":"推荐操作流程","asset-lifecycle":"资产生命周期","settings":"设置","current-limits":"当前限制","troubleshooting":"故障排查","support":"支持"},"en":{"requirements-and-installation":"requirements-and-installation","connect-an-ai-client":"connect-an-ai-client","feature-overview":"feature-overview","concepts-choose-the-right-editing-target":"concepts-choose-the-right-editing-target","complete-tool-reference-55-tools":"complete-tool-reference-55-tools","focused-guides-defaults-signatures-components-and-inheritance":"focused-guides-defaults-signatures-components-and-inheritance","recommended-workflow":"recommended-workflow","asset-lifecycle":"asset-lifecycle","settings":"settings","current-limits":"current-limits","troubleshooting":"troubleshooting","support":"support"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/mcp-blueprint/docs/connect/","en":"/en/works/mcp-blueprint/docs/connect/"},"anchors":{"zh":{"requirements-and-installation":"要求与安装","connect-an-ai-client":"连接-ai-客户端","settings":"设置","read-and-edit-your-first-blueprint":"首次读取和修改蓝图","choose-the-tool-for-the-object-you-want-to-edit":"按编辑对象选择工具","troubleshoot-connections-and-plugin-loading":"排查连接和插件加载"},"en":{"requirements-and-installation":"requirements-and-installation","connect-an-ai-client":"connect-an-ai-client","settings":"settings","read-and-edit-your-first-blueprint":"read-and-edit-your-first-blueprint","choose-the-tool-for-the-object-you-want-to-edit":"choose-the-tool-for-the-object-you-want-to-edit","troubleshoot-connections-and-plugin-loading":"troubleshoot-connections-and-plugin-loading"}},"anchorAliases":{"zh":{"功能概览":{"path":"/zh/works/mcp-blueprint/","anchor":"主要功能"},"概念区分先选对编辑对象":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"按编辑对象选择工具"},"55-个工具逐项功能总表":{"path":"/zh/works/mcp-blueprint/","anchor":"主要功能"},"重点教程默认值签名组件与继承":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"按编辑对象选择工具"},"推荐操作流程":{"path":"/zh/works/mcp-blueprint/docs/graphs/","anchor":"预检应用和保存图表补丁"},"资产生命周期":{"path":"/zh/works/mcp-blueprint/docs/asset-lifecycle/","anchor":"资产的创建复制与保存"},"当前限制":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"排查连接和插件加载"},"故障排查":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"排查连接和插件加载"},"支持":{"path":"/zh/works/mcp-blueprint/","anchor":"支持"},"requirements-and-installation":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"要求与安装"},"connect-an-ai-client":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"连接-ai-客户端"},"feature-overview":{"path":"/zh/works/mcp-blueprint/","anchor":"主要功能"},"concepts-choose-the-right-editing-target":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"按编辑对象选择工具"},"complete-tool-reference-55-tools":{"path":"/zh/works/mcp-blueprint/","anchor":"主要功能"},"focused-guides-defaults-signatures-components-and-inheritance":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"按编辑对象选择工具"},"recommended-workflow":{"path":"/zh/works/mcp-blueprint/docs/graphs/","anchor":"预检应用和保存图表补丁"},"asset-lifecycle":{"path":"/zh/works/mcp-blueprint/docs/asset-lifecycle/","anchor":"资产的创建复制与保存"},"settings":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"设置"},"current-limits":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"排查连接和插件加载"},"troubleshooting":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"排查连接和插件加载"},"support":{"path":"/zh/works/mcp-blueprint/","anchor":"支持"}},"en":{"要求与安装":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"requirements-and-installation"},"连接-ai-客户端":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"connect-an-ai-client"},"功能概览":{"path":"/en/works/mcp-blueprint/","anchor":"main-features"},"概念区分先选对编辑对象":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"choose-the-tool-for-the-object-you-want-to-edit"},"55-个工具逐项功能总表":{"path":"/en/works/mcp-blueprint/","anchor":"main-features"},"重点教程默认值签名组件与继承":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"choose-the-tool-for-the-object-you-want-to-edit"},"推荐操作流程":{"path":"/en/works/mcp-blueprint/docs/graphs/","anchor":"preview-apply-and-save-a-graph-patch"},"资产生命周期":{"path":"/en/works/mcp-blueprint/docs/asset-lifecycle/","anchor":"create-duplicate-and-save-assets"},"设置":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"settings"},"当前限制":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"troubleshoot-connections-and-plugin-loading"},"故障排查":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"troubleshoot-connections-and-plugin-loading"},"支持":{"path":"/en/works/mcp-blueprint/","anchor":"support"},"feature-overview":{"path":"/en/works/mcp-blueprint/","anchor":"main-features"},"concepts-choose-the-right-editing-target":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"choose-the-tool-for-the-object-you-want-to-edit"},"complete-tool-reference-55-tools":{"path":"/en/works/mcp-blueprint/","anchor":"main-features"},"focused-guides-defaults-signatures-components-and-inheritance":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"choose-the-tool-for-the-object-you-want-to-edit"},"recommended-workflow":{"path":"/en/works/mcp-blueprint/docs/graphs/","anchor":"preview-apply-and-save-a-graph-patch"},"asset-lifecycle":{"path":"/en/works/mcp-blueprint/docs/asset-lifecycle/","anchor":"create-duplicate-and-save-assets"},"current-limits":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"troubleshoot-connections-and-plugin-loading"},"troubleshooting":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"troubleshoot-connections-and-plugin-loading"},"support":{"path":"/en/works/mcp-blueprint/","anchor":"support"}}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

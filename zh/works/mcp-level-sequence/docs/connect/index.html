@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>连接序列编辑工具 · MZSH</title>
+  <title>安装与连接序列编辑工具 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/mcp-level-sequence/docs/connect/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,14 +24,14 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>安装与配置</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/" aria-current="page">连接序列编辑工具</a></li></ul></li><li><span>功能指南</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/">编辑轨道、区段与通道</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/" aria-current="page">安装与连接序列编辑工具</a></li></ul></li><li><span>序列资产</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/">查找、创建与保存 Level Sequence</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/">截取序列预览</a></li></ul></li><li><span>编辑序列</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/">编辑对象绑定与 Camera Cut</a></li><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/">编辑序列轨道与区段</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/">读取和编辑关键帧</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">设置播放范围与帧率</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E8%BF%9E%E6%8E%A5" class="outline-link outline-root-link">安装与连接</a></li><li class="outline-node" data-heading-depth="2"><a href="#23-%E4%B8%AA%E5%B7%A5%E5%85%B7" class="outline-link outline-root-link">23 个工具</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%B8%8E-ue-58-%E5%AE%98%E6%96%B9%E5%AE%9E%E9%AA%8C-toolset-%E7%9A%84%E8%BE%B9%E7%95%8C" class="outline-link outline-root-link">与 UE 5.8 官方实验 Toolset 的边界</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E8%BF%9E%E6%8E%A5" class="outline-link outline-root-link">安装与连接</a></li><li class="outline-node" data-heading-depth="2"><a href="#http-%E8%AF%B7%E6%B1%82" class="outline-link outline-root-link">HTTP 请求</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B" class="outline-link outline-root-link">快速上手</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%B8%8E-ue-58-%E5%AE%9E%E9%AA%8C%E5%B7%A5%E5%85%B7%E9%9B%86%E7%9A%84%E5%8C%BA%E5%88%AB" class="outline-link outline-root-link">与 UE 5.8 实验工具集的区别</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%8D%E9%A6%88" class="outline-link outline-root-link">反馈</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/">作品</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-level-sequence/docs/connect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-level-sequence:connect","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-level-sequence/docs/connect/","title":"连接序列编辑工具","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-level-sequence/docs/connect/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/">作品</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-level-sequence/docs/connect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-level-sequence:connect","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-level-sequence/docs/connect/","title":"安装与连接序列编辑工具","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-level-sequence/docs/connect/"></label></noscript></section></div>
           <article>
-            <h1>连接序列编辑工具</h1>
+            <h1>安装与连接序列编辑工具</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><p>MCP Level Sequence 是一个自包含的 Unreal Editor 插件，通过 MCP 兼容的 JSON-RPC 2.0 HTTP 服务，让 AI 客户端发现和编辑 Level Sequence。插件支持 Unreal Engine 5.2 及以上版本，不依赖其他用户插件或跨插件共享模块。</p>
 <h2 id="安装与连接">安装与连接</h2>
 <ol>
@@ -40,77 +40,17 @@
 <li>如端口被占用，服务最多向后尝试 10 个端口；以编辑器工具栏和日志显示的实际地址为准。</li>
 <li>在 <code>Project Settings &gt; Plugins &gt; MCP Level Sequence</code> 中可配置端口、自动启动和请求超时。</li>
 </ol>
+<h2 id="http-请求">HTTP 请求</h2>
 <p>服务支持 <code>initialize</code>、<code>ping</code>、<code>tools/list</code> 和 <code>tools/call</code>。HTTP 请求体最大为 1 MiB，超限返回 HTTP 413。请求必须使用 <code>jsonrpc: "2.0"</code>，<code>params</code> 与 <code>arguments</code> 必须是对象，并按工具 Schema 严格校验未知字段、必填字段、类型、数组元素和数值边界。</p>
-<h2 id="23-个工具">23 个工具</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>分组</th><th>工具</th><th>用途</th></tr></thead><tbody><tr><td>序列</td><td><code>ListSequences</code>、<code>GetSequenceDetail</code>、<code>CreateSequence</code></td><td>发现、分页读取和创建序列</td></tr><tr><td>时间</td><td><code>SetPlaybackRange</code>、<code>SetSequenceRates</code></td><td>设置播放范围、显示帧率和 Tick Resolution</td></tr><tr><td>Binding</td><td><code>ListBindings</code>、<code>AddBinding</code>、<code>RemoveBinding</code></td><td>分页列出、添加和级联删除对象绑定</td></tr><tr><td>Track</td><td><code>ListTrackTypes</code>、<code>AddTrack</code>、<code>RemoveTrack</code></td><td>查询、添加和级联删除轨道</td></tr><tr><td>Section</td><td><code>AddSection</code>、<code>RemoveSection</code>、<code>SetSectionRange</code></td><td>创建、删除和调整 Section 范围</td></tr><tr><td>Key</td><td><code>GetKeyframes</code>、<code>SetKeyframes</code>、<code>RemoveKeyframes</code></td><td>分页读取、写入和删除关键帧</td></tr><tr><td>Camera</td><td><code>AddCameraCut</code>、<code>SetCameraCut</code></td><td>创建和修改 Camera Cut</td></tr><tr><td>生命周期</td><td><code>OpenAsset</code>、<code>SaveAsset</code>、<code>CloseAsset</code></td><td>打开、保存指定资产并核验关闭结果</td></tr><tr><td>预览</td><td><code>CaptureSequencerView</code></td><td>截取活动关卡编辑器视口并返回 PNG</td></tr></tbody></table>
-<h2 id="与-ue-58-官方实验-toolset-的边界">与 UE 5.8 官方实验 Toolset 的边界</h2>
-<p>UE 5.8 的实验性 Animation Assistant Toolset 是依赖 SequencerScripting 的广覆盖 Python 能力；本插件选择 UE 5.2+ 兼容、自包含的 C++ HTTP 边界。本轮已补齐可稳定跨版本实现的序列帧率设置、Skeletal Animation Track/Section 和 Audio 资产 Section。</p>
-<p>以下差异为有意保留，而不是文档遗漏：</p>
-<ul>
-<li>Subsequence 创建/导航：需要循环依赖检查、层级所有权和跨序列时间语义设计，当前不提供写入工具。</li>
-<li>Spawnable 创建：对象模板所有权、Undo 与 spawner 路径跨版本变化较大，需独立运行时验证后再开放。</li>
-<li>Event payload：依赖 Director Blueprint endpoint/graph；当前只创建 Event Section，不承诺触发具体逻辑。</li>
-<li>任意 Track/Class、Folder、Tag、选择状态和骨骼级高级操作：官方实验 Toolset 覆盖更广，本插件只公开已审查并能维持严格 Schema 的能力。</li>
-</ul>
+<h2 id="快速上手">快速上手</h2>
+<p>推荐流程是先调用 <code>ListSequences</code> 和 <code>GetSequenceDetail</code>，再用稳定 ID/名称执行修改，最后显式调用 <code>SaveAsset</code>。</p>
+<h2 id="与-ue-58-实验工具集的区别">与 UE 5.8 实验工具集的区别</h2>
+<p>UE 5.8 的实验性 Animation Assistant Toolset 依赖 SequencerScripting，提供更广的 Python 功能。MCP Level Sequence 是兼容 UE 5.2+ 的自包含 C++ HTTP 插件，支持设置序列帧率、添加骨骼动画轨道和区段，以及引用 Audio 资产的区段。</p>
 <p>UE 5.2–5.8 的编译、编辑器运行、资产保存与关闭交互，以及完整 Undo 行为尚未完成验证。请先在目标引擎的项目副本中确认这些操作。</p>
-<p>如有问题或反馈，请发送邮件至 <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>。我看到后会处理。</p></div>
+<h2 id="反馈">反馈</h2>
+<p>反馈请发送至 <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/" rel="next"><span>下一篇</span>编辑轨道、区段与通道</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/" rel="next"><span>下一篇</span>查找、创建与保存 Level Sequence</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -177,5 +117,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-level-sequence/docs/connect/","en":"/en/works/mcp-level-sequence/docs/connect/"},"anchors":{"zh":{"安装与连接":"安装与连接","23-个工具":"23-个工具","与-ue-58-官方实验-toolset-的边界":"与-ue-58-官方实验-toolset-的边界"},"en":{"安装与连接":"installation-and-connection","23-个工具":"23-tools","与-ue-58-官方实验-toolset-的边界":"boundary-versus-unreal-engine-58s-experimental-toolset"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-level-sequence/docs/connect/","en":"/en/works/mcp-level-sequence/docs/connect/"},"anchors":{"zh":{"安装与连接":"安装与连接","http-请求":"http-请求","快速上手":"快速上手","与-ue-58-实验工具集的区别":"与-ue-58-实验工具集的区别","反馈":"反馈"},"en":{"安装与连接":"installation-and-connection","http-请求":"http-requests","快速上手":"first-sequence-edit","与-ue-58-实验工具集的区别":"differences-from-the-ue-58-experimental-toolset","反馈":"feedback"}},"anchorAliases":{"zh":{"23-个工具":{"path":"/zh/works/mcp-level-sequence/docs/connect/","anchor":"快速上手"},"与-ue-58-官方实验-toolset-的边界":{"path":"/zh/works/mcp-level-sequence/docs/connect/","anchor":"与-ue-58-实验工具集的区别"},"installation-and-connection":{"path":"/zh/works/mcp-level-sequence/docs/connect/","anchor":"安装与连接"},"23-tools":{"path":"/zh/works/mcp-level-sequence/docs/connect/","anchor":"快速上手"},"boundary-versus-unreal-engine-58s-experimental-toolset":{"path":"/zh/works/mcp-level-sequence/docs/connect/","anchor":"与-ue-58-实验工具集的区别"}},"en":{"安装与连接":{"path":"/en/works/mcp-level-sequence/docs/connect/","anchor":"installation-and-connection"},"23-个工具":{"path":"/en/works/mcp-level-sequence/docs/connect/","anchor":"first-sequence-edit"},"与-ue-58-官方实验-toolset-的边界":{"path":"/en/works/mcp-level-sequence/docs/connect/","anchor":"differences-from-the-ue-58-experimental-toolset"},"23-tools":{"path":"/en/works/mcp-level-sequence/docs/connect/","anchor":"first-sequence-edit"},"boundary-versus-unreal-engine-58s-experimental-toolset":{"path":"/en/works/mcp-level-sequence/docs/connect/","anchor":"differences-from-the-ue-58-experimental-toolset"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

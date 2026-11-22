@@ -24,15 +24,15 @@
           <p class="work-doc-name">SimpleUDP</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>功能指南</span><ul><li><a href="/zh/works/simple-udp/docs/channels/">设置 UDP 通道</a></li><li><a href="/zh/works/simple-udp/docs/messages/" aria-current="page">发送和接收 UDP 数据</a></li><li><a href="/zh/works/simple-udp/docs/native-sockets/">在 C++ 中使用 UDP Socket</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-udp/docs/enable-plugin/">启用 SimpleUDP</a></li></ul></li><li><span>网络通信</span><ul><li><a href="/zh/works/simple-udp/docs/channels/">配置 UDP 接收与发送通道</a></li><li><a href="/zh/works/simple-udp/docs/messages/" aria-current="page">发送和接收 UDP 数据</a></li></ul></li><li><span>原生实现</span><ul><li><a href="/zh/works/simple-udp/docs/native-sockets/">在 C++ 中使用 UDP Socket</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#-%E6%8E%A5%E6%94%B6" class="outline-link outline-root-link">📥 接收</a></li><li class="outline-node" data-heading-depth="3"><a href="#-%E5%8F%91%E9%80%81" class="outline-link outline-root-link">📤 发送</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E7%BB%91%E5%AE%9A%E5%92%8C%E8%A7%A3%E7%BB%91%E7%A4%BA%E4%BE%8B" class="outline-link outline-root-link">绑定和解绑示例</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%8F%91%E9%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%B6%88%E6%81%AF" class="outline-link outline-root-link">发送字符串消息</a></li><li class="outline-node" data-heading-depth="2"><a href="#-%E6%8F%90%E7%A4%BA%E4%B8%8E%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9" class="outline-link outline-root-link">✅ 提示与注意事项</a></li><li class="outline-node" data-heading-depth="2"><a href="#-%E6%8E%A8%E8%8D%90%E9%85%8D%E5%A5%97" class="outline-link outline-root-link">🔧 推荐配套</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE" class="outline-link outline-root-link">接收数据</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E7%BB%91%E5%AE%9A%E4%B8%8E%E8%A7%A3%E7%BB%91%E7%A4%BA%E4%BE%8B" class="outline-link">绑定与解绑示例</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E8%A7%A3%E7%BB%91%E6%89%80%E6%9C%89%E6%8E%A5%E6%94%B6%E5%A4%84%E7%90%86%E5%99%A8" class="outline-link">解绑所有接收处理器</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE" class="outline-link outline-root-link">发送数据</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E5%8F%91%E9%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%A4%BA%E4%BE%8B" class="outline-link">发送字符串示例</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%94%B6%E5%8F%91-socket-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" class="outline-link outline-root-link">收发 Socket 生命周期</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%BD%AC%E6%8D%A2%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84" class="outline-link outline-root-link">转换字节数组</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
           <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/simple-udp/">SimpleUDP</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/simple-udp/docs/messages/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-udp:messages","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/simple-udp/docs/messages/","title":"发送和接收 UDP 数据","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/simple-udp/docs/messages/"></label></noscript></section></div>
           <article>
             <h1>发送和接收 UDP 数据</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><h3 id="-接收">📥 接收</h3>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="接收数据">接收数据</h2>
 
 
 
@@ -55,7 +55,12 @@
 
 
 <table><thead><tr><th>节点</th><th>说明</th></tr></thead><tbody><tr><td><code>BindUDPMessageHandler</code></td><td>绑定消息接收回调</td></tr><tr><td><code>UnBindUDPMessageHandler</code></td><td>解绑指定处理器</td></tr><tr><td><code>UnBindAllUDPMessageHandler</code></td><td>解绑所有处理器并关闭 Socket</td></tr></tbody></table>
-<h3 id="-发送">📤 发送</h3>
+<h3 id="绑定与解绑示例">绑定与解绑示例</h3>
+<p><a href="/media/manuals/f6d246d6dd2934e4c5a1.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/f6d246d6dd2934e4c5a1.png" data-media-alt="StartReceiveMessage" class="media-image-trigger" aria-label="放大查看图片：StartReceiveMessage"><img src="/media/manuals/f6d246d6dd2934e4c5a1.png" alt="StartReceiveMessage" loading="lazy" decoding="async"></a></p>
+<h3 id="解绑所有接收处理器">解绑所有接收处理器</h3>
+<p><a href="/media/manuals/70c9fd752abed00b6b4c.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/70c9fd752abed00b6b4c.png" data-media-alt="StopReceiveMessage" class="media-image-trigger" aria-label="放大查看图片：StopReceiveMessage"><img src="/media/manuals/70c9fd752abed00b6b4c.png" alt="StopReceiveMessage" loading="lazy" decoding="async"></a></p>
+<p>使用此节点解绑通道上的所有内容并手动关闭 Socket。</p>
+<h2 id="发送数据">发送数据</h2>
 
 
 
@@ -70,25 +75,34 @@
 
 
 <table><thead><tr><th>节点</th><th>说明</th></tr></thead><tbody><tr><td><code>SendUDPMessage</code></td><td>通过通道发送字节数组（Socket 自动创建）</td></tr></tbody></table>
-<h3 id="绑定和解绑示例">绑定和解绑示例</h3>
-<p><a href="/media/manuals/f6d246d6dd2934e4c5a1.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/f6d246d6dd2934e4c5a1.png" data-media-alt="StartReceiveMessage" class="media-image-trigger" aria-label="放大查看图片：StartReceiveMessage"><img src="/media/manuals/f6d246d6dd2934e4c5a1.png" alt="StartReceiveMessage" loading="lazy" decoding="async"></a></p>
-<p>首次绑定后 Socket 自动创建，无处理器时自动销毁。</p>
-<h3 id="发送字符串消息">发送字符串消息</h3>
+<h3 id="发送字符串示例">发送字符串示例</h3>
 <p><a href="/media/manuals/01700bbe6fb9b6ce8da4.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/01700bbe6fb9b6ce8da4.png" data-media-alt="SendMessage" class="media-image-trigger" aria-label="放大查看图片：SendMessage"><img src="/media/manuals/01700bbe6fb9b6ce8da4.png" alt="SendMessage" loading="lazy" decoding="async"></a></p>
-<hr>
-<h2 id="-提示与注意事项">✅ 提示与注意事项</h2>
-<ul>
-<li>仅支持 IPv4（不支持 IPv6 或域名解析）</li>
-<li>有效端口范围：<code>0~65535</code>，其中 <code>0</code> 表示自动分配</li>
-<li>不要在不同通道中绑定相同端口，除非 Socket 已释放</li>
-<li>IP 过滤支持 CIDR 格式（如 <code>192.168.1.0/24</code>）</li>
-</ul>
-<hr>
-<h2 id="-推荐配套">🔧 推荐配套</h2>
-<p>配合 <strong>SimpleByteConversion</strong> 插件使用，可实现数据与 <code>TArray&lt;uint8&gt;</code> 之间的序列化/反序列化。</p>
-<hr></div>
+<h2 id="收发-socket-生命周期">收发 Socket 生命周期</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>类型</th><th>创建时机</th><th>销毁时机</th></tr></thead><tbody><tr><td>接收端</td><td>首次调用 <code>BindUDPMessageHandler</code> 时</td><td>所有处理器移除 → 自动关闭 Socket</td></tr><tr><td>发送端</td><td>首次调用 <code>SendUDPMessage</code> 或配置时</td><td>插件关闭或通道删除时</td></tr></tbody></table>
+<h2 id="转换字节数组">转换字节数组</h2>
+<p>配合 <strong>SimpleByteConversion</strong> 插件使用，可实现数据与 <code>TArray&lt;uint8&gt;</code> 之间的序列化/反序列化。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-udp/docs/channels/" rel="prev"><span>上一篇</span>设置 UDP 通道</a><a href="/zh/works/simple-udp/docs/native-sockets/" rel="next"><span>下一篇</span>在 C++ 中使用 UDP Socket</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-udp/docs/channels/" rel="prev"><span>上一篇</span>配置 UDP 接收与发送通道</a><a href="/zh/works/simple-udp/docs/native-sockets/" rel="next"><span>下一篇</span>在 C++ 中使用 UDP Socket</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -155,5 +169,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/simple-udp/docs/messages/","en":"/en/works/simple-udp/docs/messages/"},"anchors":{"zh":{"-接收":"-接收","-发送":"-发送","绑定和解绑示例":"绑定和解绑示例","发送字符串消息":"发送字符串消息","-提示与注意事项":"-提示与注意事项","-推荐配套":"-推荐配套"},"en":{"-接收":"-receiving","-发送":"-sending","绑定和解绑示例":"bind--unbind-example","发送字符串消息":"send-string-message","-提示与注意事项":"-tips--notes","-推荐配套":"-recommended-companion"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/simple-udp/docs/messages/","en":"/en/works/simple-udp/docs/messages/"},"anchors":{"zh":{"接收数据":"接收数据","绑定与解绑示例":"绑定与解绑示例","解绑所有接收处理器":"解绑所有接收处理器","发送数据":"发送数据","发送字符串示例":"发送字符串示例","收发-socket-生命周期":"收发-socket-生命周期","转换字节数组":"转换字节数组"},"en":{"接收数据":"receive-datagrams","绑定与解绑示例":"example-bind-and-unbind-a-handler","解绑所有接收处理器":"unbind-all-receive-handlers","发送数据":"send-datagrams","发送字符串示例":"example-send-a-string","收发-socket-生命周期":"receive-and-send-socket-lifecycles","转换字节数组":"convert-byte-arrays"}},"anchorAliases":{"zh":{"-接收":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"接收数据"},"-发送":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"发送数据"},"绑定和解绑示例":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"绑定与解绑示例"},"发送字符串消息":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"发送字符串示例"},"-提示与注意事项":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"地址与端口限制"},"-推荐配套":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"转换字节数组"},"-receiving":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"接收数据"},"-sending":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"发送数据"},"bind--unbind-example":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"绑定与解绑示例"},"send-string-message":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"发送字符串示例"},"-tips--notes":{"path":"/zh/works/simple-udp/docs/channels/","anchor":"地址与端口限制"},"-recommended-companion":{"path":"/zh/works/simple-udp/docs/messages/","anchor":"转换字节数组"}},"en":{"-接收":{"path":"/en/works/simple-udp/docs/messages/","anchor":"receive-datagrams"},"-发送":{"path":"/en/works/simple-udp/docs/messages/","anchor":"send-datagrams"},"绑定和解绑示例":{"path":"/en/works/simple-udp/docs/messages/","anchor":"example-bind-and-unbind-a-handler"},"发送字符串消息":{"path":"/en/works/simple-udp/docs/messages/","anchor":"example-send-a-string"},"-提示与注意事项":{"path":"/en/works/simple-udp/docs/channels/","anchor":"address-and-port-limits"},"-推荐配套":{"path":"/en/works/simple-udp/docs/messages/","anchor":"convert-byte-arrays"},"-receiving":{"path":"/en/works/simple-udp/docs/messages/","anchor":"receive-datagrams"},"-sending":{"path":"/en/works/simple-udp/docs/messages/","anchor":"send-datagrams"},"bind--unbind-example":{"path":"/en/works/simple-udp/docs/messages/","anchor":"example-bind-and-unbind-a-handler"},"send-string-message":{"path":"/en/works/simple-udp/docs/messages/","anchor":"example-send-a-string"},"-tips--notes":{"path":"/en/works/simple-udp/docs/channels/","anchor":"address-and-port-limits"},"-recommended-companion":{"path":"/en/works/simple-udp/docs/messages/","anchor":"convert-byte-arrays"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

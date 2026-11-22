@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>修改蓝图成员、函数与类型 · MZSH</title>
+  <title>创建与修改蓝图函数 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/mcp-blueprint/docs/members-and-types/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,38 +24,58 @@
           <p class="work-doc-name">MCPBlueprint</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>安装与配置</span><ul><li><a href="/zh/works/mcp-blueprint/docs/connect/">安装并连接蓝图编辑工具</a></li></ul></li><li><span>功能指南</span><ul><li><a href="/zh/works/mcp-blueprint/docs/graphs/">查找、编辑和截取蓝图图表</a></li><li><a href="/zh/works/mcp-blueprint/docs/members-and-types/" aria-current="page">修改蓝图成员、函数与类型</a></li><li><a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/">修改组件、继承与类默认值</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-blueprint/docs/connect/">安装并连接 MCPBlueprint</a></li></ul></li><li><span>资产与图表</span><ul><li><a href="/zh/works/mcp-blueprint/docs/asset-lifecycle/">创建、编译与管理蓝图资产</a></li><li><a href="/zh/works/mcp-blueprint/docs/graphs/">编辑蓝图节点、连线与布局</a></li><li><a href="/zh/works/mcp-blueprint/docs/graph-screenshots/">截取蓝图图表</a></li></ul></li><li><span>成员与类型</span><ul><li><a href="/zh/works/mcp-blueprint/docs/variables/">管理成员变量与局部变量</a></li><li><a href="/zh/works/mcp-blueprint/docs/members-and-types/" aria-current="page">创建与修改蓝图函数</a></li><li><a href="/zh/works/mcp-blueprint/docs/events-dispatchers/">添加事件与管理事件分发器</a></li><li><a href="/zh/works/mcp-blueprint/docs/interfaces/">为蓝图添加接口</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-structs/">创建与修改用户定义 Struct</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-enums/">创建与修改用户定义 Enum</a></li></ul></li><li><span>类结构</span><ul><li><a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/">管理蓝图组件与附着层级</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-defaults/">读取与修改蓝图类默认值</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-inheritance/">更改蓝图父类</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#1-modifyvariable%E5%A3%B0%E6%98%8E%E9%BB%98%E8%AE%A4%E5%80%BC%E4%B8%8D%E6%98%AF%E8%8A%82%E7%82%B9%E5%80%BC" class="outline-link outline-root-link">1. ModifyVariable：声明默认值，不是节点值</a></li><li class="outline-node" data-heading-depth="3"><a href="#2-modifyfunctionsignature%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0%E4%B8%8D%E6%98%AF%E6%99%AE%E9%80%9A%E8%8A%82%E7%82%B9-pin" class="outline-link outline-root-link">2. ModifyFunctionSignature：函数参数不是普通节点 Pin</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0struct-%E4%B8%8E-enum" class="outline-link outline-root-link">成员、函数、Struct 与 Enum</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E5%87%BD%E6%95%B0%E9%87%8D%E5%91%BD%E5%90%8D%E7%A4%BA%E4%BE%8B" class="outline-link">函数重命名示例</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E5%87%BD%E6%95%B0%E4%BA%8B%E4%BB%B6%E4%B8%8E%E7%BB%91%E5%AE%9A%E4%BA%8B%E4%BB%B6%E7%A4%BA%E4%BE%8B" class="outline-link">函数、事件与绑定事件示例</a></li></ol></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%88%9B%E5%BB%BA%E9%87%8D%E5%91%BD%E5%90%8D%E6%88%96%E5%88%A0%E9%99%A4%E5%87%BD%E6%95%B0" class="outline-link outline-root-link">创建、重命名或删除函数</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BF%AE%E6%94%B9%E5%87%BD%E6%95%B0%E7%AD%BE%E5%90%8D" class="outline-link outline-root-link">修改函数签名</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%A4%BA%E4%BE%8B%E9%87%8D%E5%91%BD%E5%90%8D%E5%90%8E%E7%9A%84%E5%87%BD%E6%95%B0%E4%B8%8E%E8%B0%83%E7%94%A8%E7%82%B9" class="outline-link outline-root-link">示例：重命名后的函数与调用点</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/mcp-blueprint/">MCPBlueprint</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/members-and-types/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-blueprint:members-and-types","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-blueprint/docs/members-and-types/","title":"修改蓝图成员、函数与类型","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/members-and-types/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/mcp-blueprint/">MCPBlueprint</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/members-and-types/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-blueprint:members-and-types","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-blueprint/docs/members-and-types/","title":"创建与修改蓝图函数","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/members-and-types/"></label></noscript></section></div>
           <article>
-            <h1>修改蓝图成员、函数与类型</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><h3 id="1-modifyvariable声明默认值不是节点值">1. <code>ModifyVariable</code>：声明默认值，不是节点值</h3>
-<p>先用 <code>GetBlueprintOverview</code> 找到本蓝图声明的目标变量。只传入需要变化的字段：<code>TypeName</code>、<code>DefaultValue</code>、<code>NewName</code>、<code>bInstanceEditable</code>、<code>Category</code> 或 <code>Tooltip</code>。<code>DefaultValue</code> 使用 UE 文本格式；空 <code>Category</code> 恢复 UE 默认分类，空 <code>Tooltip</code> 删除提示。变量被引用时不能改类型；带 RepNotify 的变量不能通过此工具非交互改名。需要保留改动时再使用 <code>SaveAsset</code>。</p>
-<h3 id="2-modifyfunctionsignature函数参数不是普通节点-pin">2. <code>ModifyFunctionSignature</code>：函数参数不是普通节点 Pin</h3>
-<p>使用 <code>GetGraphDetail</code> 找到函数图及 Entry/Result 的所需标识；不要用显示名称代替这些标识。选择一个操作：<code>AddInput</code>、<code>AddOutput</code>、<code>RenamePin</code>、<code>RemovePin</code> 或 <code>ChangePinType</code>。默认 <code>bDryRun=true</code>；更新引用时必须设置 <code>bApproveReferenceUpdates=true</code>。删除参数或改参数类型还须设置 <code>bAllowPotentialDataLoss=true</code>。工具会处理可安全更新的调用点，失败时尝试回滚；不会自动保存。</p>
-<h2 id="成员函数struct-与-enum">成员、函数、Struct 与 Enum</h2>
-<ul>
-<li>变量工具管理类型、默认值、Category、Tooltip 和安全删除。</li>
-<li>函数工具创建、重命名、执行受支持的签名修改，或安全删除用户函数。</li>
-<li>局部变量操作需要函数图和变量声明标识。</li>
-<li>Struct/Enum 修改使用字段或条目标识，并会报告引用影响。</li>
-<li>可能丢失数据或改变 Enum 序列化值语义的操作需要独立显式批准。</li>
-</ul>
-<p>函数重命名和签名修改会先分析影响。遇到无法安全处理的 Override、Delegate 绑定、派生类或引用时，工具会拒绝操作，不会勉强修改。</p>
-<h3 id="函数重命名示例">函数重命名示例</h3>
+            <h1>创建与修改蓝图函数</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="创建重命名或删除函数">创建、重命名或删除函数</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>工具</th><th>用途</th><th>注意事项</th></tr></thead><tbody><tr><td><code>ListBlueprintMembers</code></td><td>分页查看函数、事件、分发器和局部变量。</td><td>大型蓝图请使用分页。</td></tr><tr><td><code>CreateFunction</code></td><td>创建蓝图函数及其参数。</td><td>需要蓝图路径、函数名和参数定义。</td></tr><tr><td><code>RenameFunction</code></td><td>重命名用户函数，并更新可安全更新的引用。</td><td>先使用 dry-run；更新引用必须显式批准。</td></tr><tr><td><code>RemoveFunction</code></td><td>删除用户函数。</td><td>有引用或无法安全恢复时会被阻止。</td></tr></tbody></table>
+<p>函数重命名和签名修改会先分析影响。遇到无法安全处理的 Override、Delegate 绑定、派生类或引用时，工具会在改动前拒绝请求。</p>
+<h2 id="修改函数签名">修改函数签名</h2>
+<p>运行 <code>ModifyFunctionSignature</code> 前，用 <code>GetGraphDetail</code> 查找函数图和 Entry/Result 标识。用这些标识定位，不要传显示名称。选择一项操作：<code>AddInput</code>、<code>AddOutput</code>、<code>RenamePin</code>、<code>RemovePin</code> 或 <code>ChangePinType</code>。默认 <code>bDryRun=true</code>；更新引用时必须设置 <code>bApproveReferenceUpdates=true</code>。删除参数或改参数类型还须设置 <code>bAllowPotentialDataLoss=true</code>。工具会处理可安全更新的调用点，失败时尝试回滚；不会自动保存。</p>
+<p>函数 Entry/Result 上的参数属于签名。要修改普通节点的输入 Pin 字面量，请用 <code>SetPinDefaults</code>。</p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/manuals/c95dbbdd74a1e85308fa.png" data-media-alt="包含丰富输入输出参数的函数签名与实现" aria-label="放大查看图片：包含丰富输入输出参数的函数签名与实现" href="/media/manuals/c95dbbdd74a1e85308fa.png"><img src="/media/manuals/c95dbbdd74a1e85308fa.png" alt="包含丰富输入输出参数的函数签名与实现"></a></p>
+<h2 id="示例重命名后的函数与调用点">示例：重命名后的函数与调用点</h2>
 <p>下面两张图展示函数改名后的定义与调用点。改名前先使用 dry-run；工具要求更新引用时，必须显式批准。需要保留改动时使用 <code>SaveAsset</code>。</p>
 <p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/manuals/bf009f8369aff97bcab3.png" data-media-alt="RenameFunction 后的函数定义" aria-label="放大查看图片：RenameFunction 后的函数定义" href="/media/manuals/bf009f8369aff97bcab3.png"><img src="/media/manuals/bf009f8369aff97bcab3.png" alt="RenameFunction 后的函数定义"></a></p>
 <p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/manuals/1b8fc70569fcd085606f.png" data-media-alt="RenameFunction 后的调用者" aria-label="放大查看图片：RenameFunction 后的调用者" href="/media/manuals/1b8fc70569fcd085606f.png"><img src="/media/manuals/1b8fc70569fcd085606f.png" alt="RenameFunction 后的调用者"></a></p>
-<h3 id="函数事件与绑定事件示例">函数、事件与绑定事件示例</h3>
-<p>以下示例展示带输入输出参数的函数、组件事件辅助函数图，以及 Actor 生命周期、组件绑定事件和可变 Pin 的常见结构。</p>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/manuals/c95dbbdd74a1e85308fa.png" data-media-alt="包含丰富输入输出参数的函数签名与实现" aria-label="放大查看图片：包含丰富输入输出参数的函数签名与实现" href="/media/manuals/c95dbbdd74a1e85308fa.png"><img src="/media/manuals/c95dbbdd74a1e85308fa.png" alt="包含丰富输入输出参数的函数签名与实现"></a></p>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/manuals/047b7290d5dde5478ce6.png" data-media-alt="组件事件辅助函数图" aria-label="放大查看图片：组件事件辅助函数图" href="/media/manuals/047b7290d5dde5478ce6.png"><img src="/media/manuals/047b7290d5dde5478ce6.png" alt="组件事件辅助函数图"></a></p>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/manuals/76c2960fc16d6af47ec7.png" data-media-alt="Actor 生命周期、组件绑定事件与可变 Pin 流程" aria-label="放大查看图片：Actor 生命周期、组件绑定事件与可变 Pin 流程" href="/media/manuals/76c2960fc16d6af47ec7.png"><img src="/media/manuals/76c2960fc16d6af47ec7.png" alt="Actor 生命周期、组件绑定事件与可变 Pin 流程"></a></p></div>
+<p>MCPBlueprint 暂无通用工具来调用任意 Blueprint 函数并返回运行结果。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-blueprint/docs/graphs/" rel="prev"><span>上一篇</span>查找、编辑和截取蓝图图表</a><a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/" rel="next"><span>下一篇</span>修改组件、继承与类默认值</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-blueprint/docs/variables/" rel="prev"><span>上一篇</span>管理成员变量与局部变量</a><a href="/zh/works/mcp-blueprint/docs/events-dispatchers/" rel="next"><span>下一篇</span>添加事件与管理事件分发器</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -122,5 +142,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-blueprint/docs/members-and-types/","en":"/en/works/mcp-blueprint/docs/members-and-types/"},"anchors":{"zh":{"1-modifyvariable声明默认值不是节点值":"1-modifyvariable声明默认值不是节点值","2-modifyfunctionsignature函数参数不是普通节点-pin":"2-modifyfunctionsignature函数参数不是普通节点-pin","成员函数struct-与-enum":"成员函数struct-与-enum","函数重命名示例":"函数重命名示例","函数事件与绑定事件示例":"函数事件与绑定事件示例"},"en":{"1-modifyvariable声明默认值不是节点值":"1-modifyvariable-declaration-defaults-and-node-values","2-modifyfunctionsignature函数参数不是普通节点-pin":"2-modifyfunctionsignature-function-parameters-and-node-pins","成员函数struct-与-enum":"members-functions-structs-and-enums","函数重命名示例":"function-rename-example","函数事件与绑定事件示例":"functions-events-and-bound-events"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-blueprint/docs/members-and-types/","en":"/en/works/mcp-blueprint/docs/members-and-types/"},"anchors":{"zh":{"创建重命名或删除函数":"创建重命名或删除函数","修改函数签名":"修改函数签名","示例重命名后的函数与调用点":"示例重命名后的函数与调用点"},"en":{"创建重命名或删除函数":"create-rename-or-remove-functions","修改函数签名":"edit-a-function-signature","示例重命名后的函数与调用点":"example-the-renamed-function-and-its-caller"}},"anchorAliases":{"zh":{"1-modifyvariable声明默认值不是节点值":{"path":"/zh/works/mcp-blueprint/docs/variables/","anchor":"修改成员变量的声明与默认值"},"2-modifyfunctionsignature函数参数不是普通节点-pin":{"path":"/zh/works/mcp-blueprint/docs/members-and-types/","anchor":"修改函数签名"},"成员函数struct-与-enum":{"path":"/zh/works/mcp-blueprint/docs/members-and-types/","anchor":"创建重命名或删除函数"},"函数重命名示例":{"path":"/zh/works/mcp-blueprint/docs/members-and-types/","anchor":"示例重命名后的函数与调用点"},"函数事件与绑定事件示例":{"path":"/zh/works/mcp-blueprint/docs/events-dispatchers/","anchor":"示例actor-生命周期与组件绑定"},"1-modifyvariable-declaration-defaults-and-node-values":{"path":"/zh/works/mcp-blueprint/docs/variables/","anchor":"修改成员变量的声明与默认值"},"2-modifyfunctionsignature-function-parameters-and-node-pins":{"path":"/zh/works/mcp-blueprint/docs/members-and-types/","anchor":"修改函数签名"},"members-functions-structs-and-enums":{"path":"/zh/works/mcp-blueprint/docs/members-and-types/","anchor":"创建重命名或删除函数"},"function-rename-example":{"path":"/zh/works/mcp-blueprint/docs/members-and-types/","anchor":"示例重命名后的函数与调用点"},"functions-events-and-bound-events":{"path":"/zh/works/mcp-blueprint/docs/events-dispatchers/","anchor":"示例actor-生命周期与组件绑定"}},"en":{"1-modifyvariable声明默认值不是节点值":{"path":"/en/works/mcp-blueprint/docs/variables/","anchor":"edit-a-member-variable-and-its-declaration-default"},"2-modifyfunctionsignature函数参数不是普通节点-pin":{"path":"/en/works/mcp-blueprint/docs/members-and-types/","anchor":"edit-a-function-signature"},"成员函数struct-与-enum":{"path":"/en/works/mcp-blueprint/docs/members-and-types/","anchor":"create-rename-or-remove-functions"},"函数重命名示例":{"path":"/en/works/mcp-blueprint/docs/members-and-types/","anchor":"example-the-renamed-function-and-its-caller"},"函数事件与绑定事件示例":{"path":"/en/works/mcp-blueprint/docs/events-dispatchers/","anchor":"examples-actor-lifecycle-and-component-bindings"},"1-modifyvariable-declaration-defaults-and-node-values":{"path":"/en/works/mcp-blueprint/docs/variables/","anchor":"edit-a-member-variable-and-its-declaration-default"},"2-modifyfunctionsignature-function-parameters-and-node-pins":{"path":"/en/works/mcp-blueprint/docs/members-and-types/","anchor":"edit-a-function-signature"},"members-functions-structs-and-enums":{"path":"/en/works/mcp-blueprint/docs/members-and-types/","anchor":"create-rename-or-remove-functions"},"function-rename-example":{"path":"/en/works/mcp-blueprint/docs/members-and-types/","anchor":"example-the-renamed-function-and-its-caller"},"functions-events-and-bound-events":{"path":"/en/works/mcp-blueprint/docs/events-dispatchers/","anchor":"examples-actor-lifecycle-and-component-bindings"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

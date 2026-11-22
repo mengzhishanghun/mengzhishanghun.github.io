@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>连接并检查动画资产 · MZSH</title>
+  <title>查找、检查与保存动画资产 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/mcp-animation/docs/find-assets/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,19 +24,15 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>功能指南</span><ul><li><a href="/zh/works/mcp-animation/docs/find-assets/" aria-current="page">连接并检查动画资产</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blueprint/">编辑动画蓝图与状态机</a></li><li><a href="/zh/works/mcp-animation/docs/montage-and-blendspace/">编辑 Montage、Notify 与 BlendSpace</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-animation/docs/connect/">连接动画编辑工具</a></li></ul></li><li><span>动画资产</span><ul><li><a href="/zh/works/mcp-animation/docs/find-assets/" aria-current="page">查找、检查与保存动画资产</a></li></ul></li><li><span>动画编辑</span><ul><li><a href="/zh/works/mcp-animation/docs/animation-blueprint/">编辑动画蓝图与状态机</a></li><li><a href="/zh/works/mcp-animation/docs/montage-and-blendspace/">创建 Montage 并编辑区段</a></li><li><a href="/zh/works/mcp-animation/docs/animation-notifies/">查找并编辑动画 Notify</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blend-spaces/">创建 BlendSpace 并编辑采样点</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%BF%9E%E6%8E%A5%E6%96%B9%E5%BC%8F" class="outline-link outline-root-link">连接方式</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%B7%A5%E5%85%B729-%E4%B8%AA" class="outline-link outline-root-link">工具（29 个）</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E5%8F%91%E7%8E%B0%E4%B8%8E%E5%8F%AA%E8%AF%BB%E8%AF%A6%E6%83%85" class="outline-link">发现与只读详情</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E8%B5%84%E4%BA%A7%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" class="outline-link">资产生命周期</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%B7%AF%E5%BE%84%E4%BA%8B%E5%8A%A1%E4%B8%8E%E4%BF%9D%E5%AD%98" class="outline-link outline-root-link">路径、事务与保存</a></li><li class="outline-node" data-heading-depth="2"><a href="#schema%E5%88%86%E9%A1%B5%E4%B8%8E%E6%9C%89%E7%95%8C%E8%BE%93%E5%87%BA" class="outline-link outline-root-link">Schema、分页与有界输出</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%B8%8E-ue-58-%E5%AE%98%E6%96%B9%E5%8A%A8%E7%94%BB-mcp-%E7%9A%84%E8%83%BD%E5%8A%9B%E8%BE%B9%E7%95%8C" class="outline-link outline-root-link">与 UE 5.8 官方动画 MCP 的能力边界</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%99%90%E5%88%B6" class="outline-link outline-root-link">限制</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#skeleton-%E4%B8%8E-animsequence" class="outline-link outline-root-link">Skeleton 与 AnimSequence</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%88%97%E8%A1%A8%E4%B8%8E%E8%AF%A6%E6%83%85%E4%B8%8A%E9%99%90" class="outline-link outline-root-link">列表与详情上限</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%89%93%E5%BC%80%E4%B8%8E%E4%BF%9D%E5%AD%98%E5%8A%A8%E7%94%BB%E8%B5%84%E4%BA%A7" class="outline-link outline-root-link">打开与保存动画资产</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/">作品</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-animation/docs/find-assets/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-animation:find-assets","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-animation/docs/find-assets/","title":"连接并检查动画资产","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-animation/docs/find-assets/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/">作品</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-animation/docs/find-assets/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-animation:find-assets","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-animation/docs/find-assets/","title":"查找、检查与保存动画资产","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-animation/docs/find-assets/"></label></noscript></section></div>
           <article>
-            <h1>连接并检查动画资产</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p>MCPAnimation 是一个自包含的 Unreal Editor 插件，通过 HTTP MCP 向 AI 客户端提供动画蓝图、状态机、Skeleton、AnimSequence、Montage、AnimNotify 与 BlendSpace 的发现、读取和编辑能力。插件支持 Unreal Engine 5.2 及以上版本，不依赖其他用户制作的插件。</p>
-<h2 id="连接方式">连接方式</h2>
-<p>默认端点为 <code>http://127.0.0.1:8760/mcp</code>。若端口被占用，服务器会继续尝试后续端口；请以编辑器中显示的实际端点为准。服务器实现 <code>initialize</code>、<code>tools/list</code>、<code>tools/call</code> 和 <code>ping</code>。</p>
-<h2 id="工具29-个">工具（29 个）</h2>
-<h3 id="发现与只读详情">发现与只读详情</h3>
+            <h1>查找、检查与保存动画资产</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="skeleton-与-animsequence">Skeleton 与 AnimSequence</h2>
 
 
 
@@ -54,32 +50,15 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>工具</th><th>用途</th></tr></thead><tbody><tr><td><code>ListAnimBlueprints</code></td><td>稳定分页列出 Animation Blueprint。</td></tr><tr><td><code>GetAnimBPOverview</code></td><td>读取 Animation Blueprint、AnimGraph 和状态机概览。</td></tr><tr><td><code>GetStateMachineDetail</code></td><td>有界读取状态、过渡与 Conduit 摘要。</td></tr><tr><td><code>ListSkeletons</code> / <code>GetSkeletonDetail</code></td><td>发现 Skeleton，并读取骨骼、虚拟骨骼、兼容骨骼、Blend Profile 与 Slot Group。</td></tr><tr><td><code>ListAnimSequences</code> / <code>GetAnimSequenceDetail</code></td><td>发现 AnimSequence，并读取时长、采样率、Notify、float curve 和压缩状态。</td></tr><tr><td><code>ListMontages</code> / <code>GetMontageDetail</code></td><td>发现 Montage，并读取 Section、Slot、片段、Notify 与混合设置。</td></tr><tr><td><code>ListNotifyClasses</code></td><td>发现原生及 Blueprint AnimNotify/AnimNotifyState 类。</td></tr><tr><td><code>ListBlendSpaces</code> / <code>GetBlendSpaceDetail</code></td><td>发现 BlendSpace，并读取轴与采样点。</td></tr></tbody></table>
-<h3 id="资产生命周期">资产生命周期</h3>
+<table><thead><tr><th>工具</th><th>用途</th></tr></thead><tbody><tr><td><code>ListSkeletons</code> / <code>GetSkeletonDetail</code></td><td>发现 Skeleton，并读取骨骼、虚拟骨骼、兼容骨骼、Blend Profile 与 Slot Group。</td></tr><tr><td><code>ListAnimSequences</code> / <code>GetAnimSequenceDetail</code></td><td>发现 AnimSequence，并读取时长、采样率、Notify、float curve 和压缩状态。</td></tr></tbody></table>
+<p><code>GetAnimSequenceDetail</code> 只读返回 float curve 摘要、骨骼/曲线压缩设置、压缩有效性和近似大小。当前不提供曲线或压缩写入：这些操作可能重建动画数据模型、触发耗时重压缩，并且 UE 5.2–5.8 的编辑 API 存在演进；在无法同时保证事务回滚、版本兼容和有界执行前，自动写入的资产损坏风险高于收益。</p>
+<p>详情接口提供结构化摘要，不导出所有曲线键值或逐骨骼动画轨道。</p>
+<h2 id="列表与详情上限">列表与详情上限</h2>
+<ul>
+<li>列表工具使用 <code>Offset</code> 和 <code>MaxResults</code>，每页最多 256 项，并返回 <code>TotalCount</code>、<code>Returned</code>、<code>HasMore</code> 和可用时的 <code>NextOffset</code>。</li>
+<li>详情工具对骨骼、状态、Notify、曲线等集合设置 256 项上限，并返回真实总数与 <code>*Truncated</code> 标记。详情集合不支持翻页。超过上限时，请在 Unreal Editor 中查看完整数据。</li>
+</ul>
+<h2 id="打开与保存动画资产">打开与保存动画资产</h2>
 
 
 
@@ -98,32 +77,14 @@
 
 
 <table><thead><tr><th>工具</th><th>用途</th></tr></thead><tbody><tr><td><code>SaveAsset</code></td><td>显式保存已修改资产。</td></tr><tr><td><code>OpenAsset</code></td><td>在 Unreal Editor 中打开资产。</td></tr></tbody></table>
-<h2 id="路径事务与保存">路径、事务与保存</h2>
 <ul>
 <li>先调用对应的 <code>List*</code> 工具取得规范资产路径。资产写操作仅允许有效的 <code>/Game</code> 项目内容路径。</li>
 <li>写操作在编辑器游戏线程执行，并在适用时使用 Undo 事务；成功后把资产标记为 Dirty。</li>
 <li>修改不会隐式保存到磁盘。确认结果后调用 <code>SaveAsset</code>；如需撤销，可使用 Unreal Editor 的 Undo。</li>
 <li>编辑器处于 PIE、保存或垃圾回收等忙碌状态时，写工具会拒绝执行并返回原因。</li>
-</ul>
-<h2 id="schema分页与有界输出">Schema、分页与有界输出</h2>
-<ul>
-<li>输入使用严格 JSON Schema；未知字段会被拒绝，数组元素也会递归校验。</li>
-<li>列表工具使用 <code>Offset</code> 和 <code>MaxResults</code>，每页最多 256 项，并返回 <code>TotalCount</code>、<code>Returned</code>、<code>HasMore</code> 和可用时的 <code>NextOffset</code>。</li>
-<li>详情工具对骨骼、状态、Notify、曲线等集合设置 256 项上限，并返回真实总数与 <code>*Truncated</code> 标记。详情集合当前不支持翻页；超过上限时，请在 Unreal Editor 中检查完整数据，或等待后续分页能力。</li>
-</ul>
-<h2 id="与-ue-58-官方动画-mcp-的能力边界">与 UE 5.8 官方动画 MCP 的能力边界</h2>
-<p>UE 5.8 官方 <code>AnimationAssistantToolset</code> 的重点是 Level Sequence、Control Rig、Sequencer 通道和 Sequencer 曲线。MCPAnimation 不复制这些跨域工具；本插件聚焦 Animation Blueprint、Skeleton、AnimSequence、Montage、Notify 和 BlendSpace。需要 Sequencer 或 Control Rig 工作流时，应使用对应的 Level Sequence MCP 能力。</p>
-<p><code>GetAnimSequenceDetail</code> 只读返回 float curve 摘要、骨骼/曲线压缩设置、压缩有效性和近似大小。当前不提供曲线或压缩写入：这些操作可能重建动画数据模型、触发耗时重压缩，并且 UE 5.2–5.8 的编辑 API 存在演进；在无法同时保证事务回滚、版本兼容和有界执行前，自动写入的资产损坏风险高于收益。</p>
-<h2 id="限制">限制</h2>
-<ul>
-<li>本插件是 Editor-only，不提供运行时或网络游戏复制能力。</li>
-<li>详情接口提供结构化摘要，不导出所有曲线键值或逐骨骼动画轨道。</li>
-<li>复杂或歧义的状态结果图不会被猜测修改；请先调整为单一直接驱动结构或使用 Unreal Editor 手工编辑。</li>
-<li>工具不会执行 C++ 编译、Unreal 项目构建或插件打包。</li>
-</ul>
-<p>如有问题或反馈，请发送邮件至 <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>。我看到后会处理。</p></div>
+</ul></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-animation/docs/animation-blueprint/" rel="next"><span>下一篇</span>编辑动画蓝图与状态机</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-animation/docs/connect/" rel="prev"><span>上一篇</span>连接动画编辑工具</a><a href="/zh/works/mcp-animation/docs/animation-blueprint/" rel="next"><span>下一篇</span>编辑动画蓝图与状态机</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -190,5 +151,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-animation/docs/find-assets/","en":"/en/works/mcp-animation/docs/find-assets/"},"anchors":{"zh":{"连接方式":"连接方式","工具29-个":"工具29-个","发现与只读详情":"发现与只读详情","资产生命周期":"资产生命周期","路径事务与保存":"路径事务与保存","schema分页与有界输出":"schema分页与有界输出","与-ue-58-官方动画-mcp-的能力边界":"与-ue-58-官方动画-mcp-的能力边界","限制":"限制"},"en":{"连接方式":"connection","工具29-个":"tools-29","发现与只读详情":"discovery-and-read-only-details","资产生命周期":"asset-lifecycle","路径事务与保存":"paths-transactions-and-saving","schema分页与有界输出":"schema-pagination-and-bounded-output","与-ue-58-官方动画-mcp-的能力边界":"boundary-with-the-official-ue-58-animation-mcp","限制":"limitations"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-animation/docs/find-assets/","en":"/en/works/mcp-animation/docs/find-assets/"},"anchors":{"zh":{"skeleton-与-animsequence":"skeleton-与-animsequence","列表与详情上限":"列表与详情上限","打开与保存动画资产":"打开与保存动画资产"},"en":{"skeleton-与-animsequence":"skeletons-and-animsequences","列表与详情上限":"list-and-detail-limits","打开与保存动画资产":"open-and-save-animation-assets"}},"anchorAliases":{"zh":{"连接方式":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"连接方式"},"工具29-个":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"skeleton-与-animsequence"},"发现与只读详情":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"skeleton-与-animsequence"},"资产生命周期":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"打开与保存动画资产"},"路径事务与保存":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"打开与保存动画资产"},"schema分页与有界输出":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"列表与详情上限"},"与-ue-58-官方动画-mcp-的能力边界":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"与-ue-58-官方工具的区别"},"限制":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"输入校验与适用范围"},"connection":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"连接方式"},"tools-29":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"skeleton-与-animsequence"},"discovery-and-read-only-details":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"skeleton-与-animsequence"},"asset-lifecycle":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"打开与保存动画资产"},"paths-transactions-and-saving":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"打开与保存动画资产"},"schema-pagination-and-bounded-output":{"path":"/zh/works/mcp-animation/docs/find-assets/","anchor":"列表与详情上限"},"boundary-with-the-official-ue-58-animation-mcp":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"与-ue-58-官方工具的区别"},"limitations":{"path":"/zh/works/mcp-animation/docs/connect/","anchor":"输入校验与适用范围"}},"en":{"连接方式":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"connection"},"工具29-个":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"skeletons-and-animsequences"},"发现与只读详情":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"skeletons-and-animsequences"},"资产生命周期":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"open-and-save-animation-assets"},"路径事务与保存":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"open-and-save-animation-assets"},"schema分页与有界输出":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"list-and-detail-limits"},"与-ue-58-官方动画-mcp-的能力边界":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"differences-from-the-official-ue-58-toolset"},"限制":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"input-validation-and-scope"},"connection":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"connection"},"tools-29":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"skeletons-and-animsequences"},"discovery-and-read-only-details":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"skeletons-and-animsequences"},"asset-lifecycle":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"open-and-save-animation-assets"},"paths-transactions-and-saving":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"open-and-save-animation-assets"},"schema-pagination-and-bounded-output":{"path":"/en/works/mcp-animation/docs/find-assets/","anchor":"list-and-detail-limits"},"boundary-with-the-official-ue-58-animation-mcp":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"differences-from-the-official-ue-58-toolset"},"limitations":{"path":"/en/works/mcp-animation/docs/connect/","anchor":"input-validation-and-scope"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

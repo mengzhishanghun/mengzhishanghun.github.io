@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>安装并连接蓝图编辑工具 · MZSH</title>
+  <title>安装并连接 MCPBlueprint · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/mcp-blueprint/docs/connect/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,16 +24,15 @@
           <p class="work-doc-name">MCPBlueprint</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>安装与配置</span><ul><li><a href="/zh/works/mcp-blueprint/docs/connect/" aria-current="page">安装并连接蓝图编辑工具</a></li></ul></li><li><span>功能指南</span><ul><li><a href="/zh/works/mcp-blueprint/docs/graphs/">查找、编辑和截取蓝图图表</a></li><li><a href="/zh/works/mcp-blueprint/docs/members-and-types/">修改蓝图成员、函数与类型</a></li><li><a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/">修改组件、继承与类默认值</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-blueprint/docs/connect/" aria-current="page">安装并连接 MCPBlueprint</a></li></ul></li><li><span>资产与图表</span><ul><li><a href="/zh/works/mcp-blueprint/docs/asset-lifecycle/">创建、编译与管理蓝图资产</a></li><li><a href="/zh/works/mcp-blueprint/docs/graphs/">编辑蓝图节点、连线与布局</a></li><li><a href="/zh/works/mcp-blueprint/docs/graph-screenshots/">截取蓝图图表</a></li></ul></li><li><span>成员与类型</span><ul><li><a href="/zh/works/mcp-blueprint/docs/variables/">管理成员变量与局部变量</a></li><li><a href="/zh/works/mcp-blueprint/docs/members-and-types/">创建与修改蓝图函数</a></li><li><a href="/zh/works/mcp-blueprint/docs/events-dispatchers/">添加事件与管理事件分发器</a></li><li><a href="/zh/works/mcp-blueprint/docs/interfaces/">为蓝图添加接口</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-structs/">创建与修改用户定义 Struct</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-enums/">创建与修改用户定义 Enum</a></li></ul></li><li><span>类结构</span><ul><li><a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/">管理蓝图组件与附着层级</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-defaults/">读取与修改蓝图类默认值</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-inheritance/">更改蓝图父类</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%A6%81%E6%B1%82%E4%B8%8E%E5%AE%89%E8%A3%85" class="outline-link outline-root-link">要求与安装</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%BF%9E%E6%8E%A5-ai-%E5%AE%A2%E6%88%B7%E7%AB%AF" class="outline-link outline-root-link">连接 AI 客户端</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8A%9F%E8%83%BD%E6%A6%82%E8%A7%88" class="outline-link outline-root-link">功能概览</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%A6%82%E5%BF%B5%E5%8C%BA%E5%88%86%E5%85%88%E9%80%89%E5%AF%B9%E7%BC%96%E8%BE%91%E5%AF%B9%E8%B1%A1" class="outline-link outline-root-link">概念区分：先选对编辑对象</a></li><li class="outline-node" data-heading-depth="2"><a href="#55-%E4%B8%AA%E5%B7%A5%E5%85%B7%E9%80%90%E9%A1%B9%E5%8A%9F%E8%83%BD%E6%80%BB%E8%A1%A8" class="outline-link outline-root-link">55 个工具逐项功能总表</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%87%8D%E7%82%B9%E6%95%99%E7%A8%8B%E9%BB%98%E8%AE%A4%E5%80%BC%E7%AD%BE%E5%90%8D%E7%BB%84%E4%BB%B6%E4%B8%8E%E7%BB%A7%E6%89%BF" class="outline-link outline-root-link">重点教程：默认值、签名、组件与继承</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%8E%A8%E8%8D%90%E6%93%8D%E4%BD%9C%E6%B5%81%E7%A8%8B" class="outline-link outline-root-link">推荐操作流程</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%B5%84%E4%BA%A7%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" class="outline-link outline-root-link">资产生命周期</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%AE%BE%E7%BD%AE" class="outline-link outline-root-link">设置</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%BD%93%E5%89%8D%E9%99%90%E5%88%B6" class="outline-link outline-root-link">当前限制</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%95%85%E9%9A%9C%E6%8E%92%E6%9F%A5" class="outline-link outline-root-link">故障排查</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%94%AF%E6%8C%81" class="outline-link outline-root-link">支持</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%A6%81%E6%B1%82%E4%B8%8E%E5%AE%89%E8%A3%85" class="outline-link outline-root-link">要求与安装</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%BF%9E%E6%8E%A5-ai-%E5%AE%A2%E6%88%B7%E7%AB%AF" class="outline-link outline-root-link">连接 AI 客户端</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%AE%BE%E7%BD%AE" class="outline-link outline-root-link">设置</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%A6%96%E6%AC%A1%E8%AF%BB%E5%8F%96%E5%92%8C%E4%BF%AE%E6%94%B9%E8%93%9D%E5%9B%BE" class="outline-link outline-root-link">首次读取和修改蓝图</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%8C%89%E7%BC%96%E8%BE%91%E5%AF%B9%E8%B1%A1%E9%80%89%E6%8B%A9%E5%B7%A5%E5%85%B7" class="outline-link outline-root-link">按编辑对象选择工具</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%8E%92%E6%9F%A5%E8%BF%9E%E6%8E%A5%E5%92%8C%E6%8F%92%E4%BB%B6%E5%8A%A0%E8%BD%BD" class="outline-link outline-root-link">排查连接和插件加载</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/mcp-blueprint/">MCPBlueprint</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/connect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-blueprint:connect","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-blueprint/docs/connect/","title":"安装并连接蓝图编辑工具","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/connect/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/mcp-blueprint/">MCPBlueprint</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/connect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-blueprint:connect","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-blueprint/docs/connect/","title":"安装并连接 MCPBlueprint","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-blueprint/docs/connect/"></label></noscript></section></div>
           <article>
-            <h1>安装并连接蓝图编辑工具</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p>MCPBlueprint 通过 MCP 向 AI 客户端提供蓝图发现、图表编辑、成员、组件、资产生命周期、编译反馈和图表截图能力。本文对应 Fab 已发布版本的 55 个工具。当前编辑器会话中可用的工具名和参数以 <code>tools/list</code> 返回结果为准。</p>
-<h2 id="要求与安装">要求与安装</h2>
+            <h1>安装并连接 MCPBlueprint</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="要求与安装">要求与安装</h2>
 <ul>
 <li>Unreal Engine 5.2+ Editor，支持 Windows、macOS 和 Linux。</li>
 <li>支持本机 HTTP 服务的 MCP 客户端。</li>
@@ -48,409 +47,6 @@
 <p>让你使用的 AI 客户端按照自身的 MCP 配置流程接入 MCPBlueprint，并把插件工具栏显示的端点交给它即可。默认端点为 <code>http://127.0.0.1:8766/mcp</code>；配置端口被占用时，MCPBlueprint 最多尝试后续九个端口。不同 AI 客户端的配置格式不同，因此本文不规定某个客户端专用的 JSON 文件或手动端口配置步骤。</p>
 <p><code>initialize</code> 和 <code>tools/list</code> 通常由 MCP 客户端自动完成；<code>ping</code> 只用于排障，不是普通用户每次都要手动执行的步骤。</p>
 <p>服务器只绑定本机。浏览器风格的 <code>Origin</code> 只允许 <code>localhost</code>、<code>127.0.0.1</code> 和 <code>[::1]</code>；普通非浏览器 MCP 客户端可以省略 <code>Origin</code>。</p>
-<h2 id="功能概览">功能概览</h2>
-<p>当前版本注册 55 个工具：</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>能力</th><th align="right">数量</th><th>工具</th></tr></thead><tbody><tr><td>发现与读取</td><td align="right">6</td><td><code>ListBlueprints</code>、<code>GetBlueprintOverview</code>、<code>ListBlueprintMembers</code>、<code>GetGraphDetail</code>、<code>SearchGraphNodes</code>、<code>GetCompileErrors</code></td></tr><tr><td>User Defined Struct 与 Enum</td><td align="right">6</td><td><code>CreateUserDefinedStruct</code>、<code>GetUserDefinedStruct</code>、<code>ModifyUserDefinedStruct</code>、<code>CreateUserDefinedEnum</code>、<code>GetUserDefinedEnum</code>、<code>ModifyUserDefinedEnum</code></td></tr><tr><td>变量、函数、事件与 Pin</td><td align="right">17</td><td><code>AddVariable</code>、<code>ModifyVariable</code>、<code>RemoveVariable</code>、<code>CreateFunction</code>、<code>RenameFunction</code>、<code>ModifyFunctionSignature</code>、<code>RemoveFunction</code>、<code>CreateCustomEvent</code>、<code>AddEventNode</code>、<code>AddBoundEvent</code>、<code>AddLocalVariable</code>、<code>RemoveLocalVariable</code>、<code>AddNodePin</code>、<code>RemoveNodePin</code>、<code>AddInterface</code>、<code>AddEventDispatcher</code>、<code>RemoveEventDispatcher</code></td></tr><tr><td>图表编辑与布局</td><td align="right">4</td><td><code>ApplyGraphPatch</code>、<code>SetPinDefaults</code>、<code>FormatGraph</code>、<code>AddCommentBox</code></td></tr><tr><td>组件与默认值</td><td align="right">11</td><td><code>GetComponents</code>、<code>AddComponent</code>、<code>SetComponentProperties</code>、<code>RenameComponent</code>、<code>RemoveComponent</code>、<code>ReparentComponent</code>、<code>SetRootComponent</code>、<code>DuplicateComponent</code>、<code>GetComponentProperties</code>、<code>GetClassDefaults</code>、<code>SetClassDefaults</code></td></tr><tr><td>资产生命周期与截图</td><td align="right">11</td><td><code>CreateBlueprint</code>、<code>ReparentBlueprint</code>、<code>CompileBlueprint</code>、<code>SaveAsset</code>、<code>OpenAsset</code>、<code>CloseAsset</code>、<code>ReloadBlueprintFromDisk</code>、<code>DeleteAsset</code>、<code>RenameAsset</code>、<code>DuplicateAsset</code>、<code>CaptureGraphScreenshot</code></td></tr></tbody></table>
-<p>主要能力包括：</p>
-<ul>
-<li>大型资产、成员、图表和 Pin 读取的稳定有界分页。</li>
-<li>使用 Action Registry 返回的节点 ID，而不是编造节点类型。</li>
-<li>单事务图表 Patch：创建、连接、断开、删除、移动、默认值和布局；失败时尝试自动回滚，回滚失败会明确提示。</li>
-<li><code>Balanced</code>、<code>Straight</code>、<code>Compact</code> 三种确定性布局风格。</li>
-<li>局部和全图布局中的原生 Comment Box 包围关系保护。</li>
-<li>高风险修改的 dry-run 影响分析和显式批准门禁。</li>
-<li>事务回滚，以及 Unreal 支持范围内的单步 Undo。</li>
-<li>显式持久化：普通编辑工具只把资产标脏；<code>SaveAsset</code> 明确写盘，<code>DeleteAsset</code> 在更严格门禁后明确删除磁盘资产。</li>
-<li>无需项目声明即可从引擎目录自动发现并加载。</li>
-</ul>
-<h2 id="概念区分先选对编辑对象">概念区分：先选对编辑对象</h2>
-<p>下列对象在 UE 编辑器里常常相邻显示，但它们不是同一件事；选错工具可能得到“调用成功但效果不在预期位置”的结果。</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>要改的对象</th><th>含义与适用工具</th><th>不要混同为</th></tr></thead><tbody><tr><td>变量默认值</td><td>本蓝图<strong>声明的成员变量</strong>的声明默认值；用 <code>ModifyVariable</code> 的 <code>DefaultValue</code>。</td><td>节点 Pin 的字面量，也不是关卡中已有实例的覆盖值。</td></tr><tr><td>函数参数 / Pin</td><td>函数 Entry/Result 的参数是函数签名，须用 <code>ModifyFunctionSignature</code>；图中某个现有节点的输入 Pin 字面量用 <code>SetPinDefaults</code>。</td><td>成员变量默认值；已连接输入 Pin 的默认值不会参与运行。</td></tr><tr><td>组件模板属性</td><td>此蓝图 SCS 中添加的组件模板，例如 <code>RelativeLocation</code>、<code>StaticMesh</code>；用 <code>SetComponentProperties</code>。</td><td>Class Defaults；也不是场景内 Actor 实例的组件覆盖值。</td></tr><tr><td>Class Defaults</td><td>该蓝图生成类的 CDO 默认属性，包含可编辑的继承属性；用 <code>SetClassDefaults</code>。</td><td><code>ModifyVariable</code> 的变量声明元数据，或已摆放/已生成实例的当前值。</td></tr><tr><td>蓝图父类</td><td>Blueprint 类继承的父类；用 <code>ReparentBlueprint</code>。</td><td>组件树中的父组件关系。</td></tr><tr><td>组件父子级</td><td>同一个 Actor Blueprint 的 SceneComponent 附着层级；用 <code>ReparentComponent</code>，本地根组件改用 <code>SetRootComponent</code>。</td><td>Blueprint 的类继承关系。</td></tr></tbody></table>
-<h2 id="55-个工具逐项功能总表">55 个工具逐项功能总表</h2>
-<p>普通编辑工具只标脏，不会静默保存；需要保留改动时使用 <code>SaveAsset</code>。下表说明每个工具的用途和用户需要注意的边界。</p>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>工具</th><th>具体功能</th><th>必要注意事项</th></tr></thead><tbody><tr><td><code>ListBlueprints</code></td><td>分页查找项目中的 Blueprint 资产。</td><td>大型项目请用 <code>PathFilter</code> 和分页缩小范围。</td></tr><tr><td><code>GetBlueprintOverview</code></td><td>查看蓝图的父类、图、变量、组件和接口概览。</td><td>需要提供准确的 <code>BlueprintPath</code>。</td></tr><tr><td><code>ListBlueprintMembers</code></td><td>分页查看函数、事件、分发器和局部变量。</td><td>大型蓝图请使用分页。</td></tr><tr><td><code>GetGraphDetail</code></td><td>查看指定图的节点、Pin、连线和布局信息。</td><td>可用 <code>GraphName</code> 限定目标图。</td></tr><tr><td><code>SearchGraphNodes</code></td><td>按英文动作名查找可创建的节点。</td><td>后续创建节点时只能使用返回的 <code>SpawnerId</code>。</td></tr><tr><td><code>GetCompileErrors</code></td><td>获取蓝图当前的编译诊断。</td><td>用于处理编辑器报告的错误或警告。</td></tr><tr><td><code>CreateUserDefinedStruct</code></td><td>在 <code>/Game</code> 下创建用户定义 Struct。</td><td>创建后不会自动保存。</td></tr><tr><td><code>GetUserDefinedStruct</code></td><td>查看 Struct 的字段定义。</td><td>大型 Struct 可分页读取。</td></tr><tr><td><code>ModifyUserDefinedStruct</code></td><td>添加、调整或删除 Struct 字段。</td><td>先使用 <code>bDryRun</code>；可能造成数据丢失时必须显式批准。</td></tr><tr><td><code>CreateUserDefinedEnum</code></td><td>在 <code>/Game</code> 下创建用户定义 Enum。</td><td>创建后不会自动保存。</td></tr><tr><td><code>GetUserDefinedEnum</code></td><td>查看 Enum 的条目、数值和显示名。</td><td>大型 Enum 可分页读取。</td></tr><tr><td><code>ModifyUserDefinedEnum</code></td><td>添加、调整或删除 Enum 条目。</td><td>先使用 <code>bDryRun</code>；改变序列化含义时必须显式批准。</td></tr><tr><td><code>AddVariable</code></td><td>为蓝图添加成员变量。</td><td>需要蓝图路径、变量名和 <code>TypeName</code>。</td></tr><tr><td><code>ModifyVariable</code></td><td>修改成员变量的类型、默认值、名称、可编辑性、分类或提示。</td><td>被引用的变量不能改类型；带 RepNotify 的变量不能通过此工具改名。</td></tr><tr><td><code>RemoveVariable</code></td><td>删除成员变量。</td><td>有引用或无法安全恢复时会被阻止。</td></tr><tr><td><code>CreateFunction</code></td><td>创建蓝图函数及其参数。</td><td>需要蓝图路径、函数名和参数定义。</td></tr><tr><td><code>RenameFunction</code></td><td>重命名用户函数，并更新可安全更新的引用。</td><td>先使用 dry-run；更新引用必须显式批准。</td></tr><tr><td><code>ModifyFunctionSignature</code></td><td>添加、重命名、删除或改类型函数参数。</td><td>默认 dry-run；删除参数或改类型可能造成数据丢失，须显式批准。</td></tr><tr><td><code>RemoveFunction</code></td><td>删除用户函数。</td><td>有引用或无法安全恢复时会被阻止。</td></tr><tr><td><code>CreateCustomEvent</code></td><td>在 Event Graph 中创建自定义事件。</td><td>目标必须是实际的 Event Graph。</td></tr><tr><td><code>AddEventNode</code></td><td>添加受支持的事件节点。</td><td>需指定蓝图和事件类型。</td></tr><tr><td><code>AddBoundEvent</code></td><td>为组件或委托添加绑定事件。</td><td>组件和委托必须能被解析。</td></tr><tr><td><code>AddLocalVariable</code></td><td>在函数图中添加局部变量。</td><td>需要函数名、变量名和类型。</td></tr><tr><td><code>RemoveLocalVariable</code></td><td>删除函数局部变量。</td><td>有引用或无法安全恢复时会被阻止。</td></tr><tr><td><code>AddNodePin</code></td><td>为支持可变 Pin 的节点增加 Pin。</td><td>先从图表详情取得目标节点标识。</td></tr><tr><td><code>RemoveNodePin</code></td><td>删除节点上可编辑的用户 Pin。</td><td>需要准确定位目标 Pin。</td></tr><tr><td><code>AddInterface</code></td><td>为蓝图添加接口。</td><td>使用接口类路径。</td></tr><tr><td><code>AddEventDispatcher</code></td><td>添加事件分发器。</td><td>指定名称和签名。</td></tr><tr><td><code>RemoveEventDispatcher</code></td><td>删除事件分发器。</td><td>有引用或无法安全恢复时会被阻止。</td></tr><tr><td><code>ApplyGraphPatch</code></td><td>在一次操作中创建、连线、断线、删除、移动节点，设置默认值并布局。</td><td>先搜索节点；支持 dry-run；失败时会尝试回滚。</td></tr><tr><td><code>SetPinDefaults</code></td><td>修改现有节点输入 Pin 的字面量。</td><td>已连线的输入 Pin 在运行时会忽略字面量。</td></tr><tr><td><code>FormatGraph</code></td><td>用 <code>Balanced</code>、<code>Straight</code> 或 <code>Compact</code> 整理图表布局。</td><td>可按图或范围指定布局。</td></tr><tr><td><code>AddCommentBox</code></td><td>添加原生 Comment Box。</td><td>指定文字和范围或目标节点。</td></tr><tr><td><code>GetComponents</code></td><td>查看 Actor Blueprint 的组件树、父级和模板信息。</td><td>仅适用于 Actor Blueprint。</td></tr><tr><td><code>AddComponent</code></td><td>添加本地 SCS 组件。</td><td>指定组件类、名称和可选父组件。</td></tr><tr><td><code>SetComponentProperties</code></td><td>修改本蓝图 SCS 组件模板属性。</td><td>属性使用 UE 文本格式；任一属性无效时整次修改回滚。</td></tr><tr><td><code>RenameComponent</code></td><td>重命名本地 SCS 组件并更新成员引用。</td><td>新名称必须唯一。</td></tr><tr><td><code>RemoveComponent</code></td><td>删除组件。</td><td>有引用或无法安全恢复时会被阻止。</td></tr><tr><td><code>ReparentComponent</code></td><td>修改本地 SceneComponent 的附着父级。</td><td>不能形成循环；根组件请用 <code>SetRootComponent</code>。</td></tr><tr><td><code>SetRootComponent</code></td><td>将本地 SceneComponent 设为根组件。</td><td>目标必须是本地 SceneComponent。</td></tr><tr><td><code>DuplicateComponent</code></td><td>复制本地 SCS 组件及模板属性。</td><td>实际本地根组件不能复制。</td></tr><tr><td><code>GetComponentProperties</code></td><td>分页查看可编辑的组件模板属性。</td><td>需要蓝图路径、组件名和分页参数。</td></tr><tr><td><code>GetClassDefaults</code></td><td>分页查看可编辑的 CDO 默认值。</td><td>大型属性集请使用分页。</td></tr><tr><td><code>SetClassDefaults</code></td><td>修改蓝图 CDO（含继承属性）的默认值。</td><td>属性名区分大小写，值使用 UE 文本格式。</td></tr><tr><td><code>CreateBlueprint</code></td><td>创建受支持类型的 Blueprint 资产。</td><td>指定资产路径和父类等定义；创建后不会自动保存。</td></tr><tr><td><code>ReparentBlueprint</code></td><td>更改 Blueprint 类的父类。</td><td>先使用 <code>bDryRun</code>；层级或接口冲突可能需要 <code>bAllowPotentialDataLoss</code>。</td></tr><tr><td><code>CompileBlueprint</code></td><td>编译指定蓝图并返回诊断。</td><td>用于处理编辑器报告的错误或警告。</td></tr><tr><td><code>SaveAsset</code></td><td>将资产的当前改动明确保存到磁盘。</td><td>普通编辑不会自动保存。</td></tr><tr><td><code>OpenAsset</code></td><td>打开资产编辑器。</td><td>截图前必须先打开资产。</td></tr><tr><td><code>CloseAsset</code></td><td>关闭资产编辑器。</td><td>关闭前请先保存需要保留的改动。</td></tr><tr><td><code>ReloadBlueprintFromDisk</code></td><td>用磁盘版本替换当前内存中的 Blueprint。</td><td>默认 dry-run；丢弃未保存改动必须显式批准。</td></tr><tr><td><code>DeleteAsset</code></td><td>删除资产。</td><td>删除具有更严格的引用和恢复安全检查。</td></tr><tr><td><code>RenameAsset</code></td><td>重命名或移动资产。</td><td>指定源路径和目标路径。</td></tr><tr><td><code>DuplicateAsset</code></td><td>复制资产。</td><td>指定源路径和目标路径。</td></tr><tr><td><code>CaptureGraphScreenshot</code></td><td>截取已打开蓝图图表的画面。</td><td>先 <code>OpenAsset</code>；图表控件必须已初始化。</td></tr></tbody></table>
-<h2 id="重点教程默认值签名组件与继承">重点教程：默认值、签名、组件与继承</h2>
-<h2 id="推荐操作流程">推荐操作流程</h2>
-<p>涉及结构或数据变化的写操作可按以下顺序进行：</p>
-<ol>
-<li><strong>定位</strong>： 确定目标资产、图、Pin、成员或组件。</li>
-<li><strong>搜索</strong>： 通过 <code>SearchGraphNodes</code> 获取合法 <code>SpawnerId</code>。</li>
-<li><strong>预览</strong>： 工具支持时使用 <code>bDryRun=true</code>，检查受影响资产、规范化操作、限制和 blocker。</li>
-<li><strong>应用</strong>： 使用工具返回的标识，不编造 <code>SpawnerId</code>。</li>
-<li><strong>保存</strong>： 只有需要保留改动时才调用 <code>SaveAsset</code>。</li>
-</ol>
-<p>Dry-run 不能展示所有生成 Pin、类型提升或最终布局。这是预览能力的限制，不代表工具会自动写入；写入前仍应使用当前搜索结果中的 <code>SpawnerId</code>。</p>
-<h2 id="资产生命周期">资产生命周期</h2>
-<p>资产工具可以创建、复制、重命名、重设父类、编译、打开、关闭、重载、删除和保存支持的蓝图资产。</p>
-<ul>
-<li>磁盘重载默认 dry-run，丢弃内存状态前必须显式批准。</li>
-<li>破坏性删除比普通图修改具有更严格的 Undo/Redo 和 Package 安全要求。</li>
-</ul>
 <h2 id="设置">设置</h2>
 <p>打开 <strong>项目设置 → 插件 → MCP Blueprint</strong>：</p>
 <ul>
@@ -460,29 +56,36 @@
 <li><strong>Request Timeout Seconds</strong> — 普通工具超时。</li>
 <li><strong>Compile Timeout Seconds</strong> — 编译类工具独立超时。</li>
 </ul>
-<h2 id="当前限制">当前限制</h2>
+<h2 id="首次读取和修改蓝图">首次读取和修改蓝图</h2>
+<p>连接后，用 <code>ListBlueprints</code> 找到资产，再把确切的 <code>BlueprintPath</code> 交给 <code>GetBlueprintOverview</code>。如果要修改逻辑，先确认要编辑的图，再按<a href="/zh/works/mcp-blueprint/docs/graphs/">图表编辑流程</a>预检操作。普通工具只标记资产有改动；需要保留时明确调用 <code>SaveAsset</code>。</p>
+<h2 id="按编辑对象选择工具">按编辑对象选择工具</h2>
 <ul>
-<li>支持 Windows、macOS 和 Linux Editor；不提供 Runtime/Shipping 模块。</li>
-<li>暂无“调用任意 Blueprint 函数并返回运行结果”的通用工具。</li>
-<li>Custom Event 和 Event Dispatcher 的签名修改能力尚未达到普通函数签名修改的完整程度。</li>
-<li>某些 Blueprint Action 无法安全处理时，工具会直接拒绝操作。</li>
-<li>截图需要真实初始化的 Blueprint Graph Editor 控件。</li>
+<li>要改声明默认值，查看<a href="/zh/works/mcp-blueprint/docs/variables/">蓝图变量</a>；要改节点输入 Pin 的字面量，查看<a href="/zh/works/mcp-blueprint/docs/graphs/">图表编辑</a>；要改 Entry/Result 参数，查看<a href="/zh/works/mcp-blueprint/docs/members-and-types/">函数签名</a>。</li>
+<li>要改 Actor 蓝图的组件模板或附着树，查看<a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/">蓝图组件</a>；要改生成类的默认属性，查看<a href="/zh/works/mcp-blueprint/docs/class-defaults/">类默认值</a>；要改 Blueprint 父类，查看<a href="/zh/works/mcp-blueprint/docs/class-inheritance/">类继承</a>。</li>
 </ul>
-<h2 id="故障排查">故障排查</h2>
+<h2 id="排查连接和插件加载">排查连接和插件加载</h2>
 <ul>
-<li><strong>无法连接：</strong> 使用工具栏显示的实际端点，配置端口可能已被占用。</li>
-<li><strong>找不到工具：</strong> 刷新 <code>tools/list</code>，不要依赖旧缓存。</li>
-<li><strong>写入被拒绝：</strong> 阅读所有 blocker 和批准参数要求，重试前重新读取目标。</li>
-<li><strong>编译失败：</strong> 获取编译诊断，根据真实蓝图错误修复后再保存。</li>
-<li><strong>图表结果异常：</strong> 对比前后的 <code>GetGraphDetail</code>，适用时执行 Undo。</li>
-<li><strong>插件提示重建：</strong> 安装与引擎小版本完全匹配的包。</li>
-<li><strong>项目中找不到插件：</strong> 核对插件是否安装在该引擎的 <code>Engine/Plugins/Marketplace</code>；不要用添加项目依赖的方式绕过。</li>
-<li><strong>UE 5.5 提示项目文件过期，原因是已安装的 MCPBlueprint 不在项目描述符中：</strong> 选择 <strong>Not Now（暂不）</strong>。引擎插件仍会自动加载；选择 <strong>Update（更新）</strong> 会把 MCPBlueprint 写入项目 <code>.uproject</code>，形成当前安装模式明确要避免的项目侧依赖。</li>
-</ul>
-<h2 id="支持">支持</h2>
-<p>如有问题或反馈，请使用<a href="/zh/contact/">统一联系页面</a>。</p></div>
+<li>
+<p><strong>无法连接：</strong> 使用工具栏显示的实际端点，配置端口可能已被占用。</p>
+</li>
+<li>
+<p><strong>找不到工具：</strong> 刷新 <code>tools/list</code>，不要依赖旧缓存。</p>
+</li>
+<li>
+<p><strong>插件提示重建：</strong> 安装与引擎小版本完全匹配的包。</p>
+</li>
+<li>
+<p><strong>项目中找不到插件：</strong> 核对插件是否安装在该引擎的 <code>Engine/Plugins/Marketplace</code>；不要用添加项目依赖的方式绕过。</p>
+</li>
+<li>
+<p><strong>UE 5.5 提示项目文件过期，原因是已安装的 MCPBlueprint 不在项目描述符中：</strong> 选择 <strong>Not Now（暂不）</strong>。引擎插件仍会自动加载；选择 <strong>Update（更新）</strong> 会把 MCPBlueprint 写入项目 <code>.uproject</code>，形成当前安装模式明确要避免的项目侧依赖。</p>
+</li>
+<li>
+<p>支持 Windows、macOS 和 Linux Editor；不提供 Runtime/Shipping 模块。</p>
+</li>
+</ul></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-blueprint/docs/graphs/" rel="next"><span>下一篇</span>查找、编辑和截取蓝图图表</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-blueprint/docs/asset-lifecycle/" rel="next"><span>下一篇</span>创建、编译与管理蓝图资产</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -549,5 +152,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-blueprint/docs/connect/","en":"/en/works/mcp-blueprint/docs/connect/"},"anchors":{"zh":{"要求与安装":"要求与安装","连接-ai-客户端":"连接-ai-客户端","功能概览":"功能概览","概念区分先选对编辑对象":"概念区分先选对编辑对象","55-个工具逐项功能总表":"55-个工具逐项功能总表","重点教程默认值签名组件与继承":"重点教程默认值签名组件与继承","推荐操作流程":"推荐操作流程","资产生命周期":"资产生命周期","设置":"设置","当前限制":"当前限制","故障排查":"故障排查","支持":"支持"},"en":{"要求与安装":"requirements-and-installation","连接-ai-客户端":"connect-an-ai-client","功能概览":"feature-overview","概念区分先选对编辑对象":"concepts-choose-the-right-editing-target","55-个工具逐项功能总表":"complete-tool-reference-55-tools","重点教程默认值签名组件与继承":"focused-guides-defaults-signatures-components-and-inheritance","推荐操作流程":"recommended-workflow","资产生命周期":"asset-lifecycle","设置":"settings","当前限制":"current-limits","故障排查":"troubleshooting","支持":"support"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-blueprint/docs/connect/","en":"/en/works/mcp-blueprint/docs/connect/"},"anchors":{"zh":{"要求与安装":"要求与安装","连接-ai-客户端":"连接-ai-客户端","设置":"设置","首次读取和修改蓝图":"首次读取和修改蓝图","按编辑对象选择工具":"按编辑对象选择工具","排查连接和插件加载":"排查连接和插件加载"},"en":{"要求与安装":"requirements-and-installation","连接-ai-客户端":"connect-an-ai-client","设置":"settings","首次读取和修改蓝图":"read-and-edit-your-first-blueprint","按编辑对象选择工具":"choose-the-tool-for-the-object-you-want-to-edit","排查连接和插件加载":"troubleshoot-connections-and-plugin-loading"}},"anchorAliases":{"zh":{"功能概览":{"path":"/zh/works/mcp-blueprint/","anchor":"主要功能"},"概念区分先选对编辑对象":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"按编辑对象选择工具"},"55-个工具逐项功能总表":{"path":"/zh/works/mcp-blueprint/","anchor":"主要功能"},"重点教程默认值签名组件与继承":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"按编辑对象选择工具"},"推荐操作流程":{"path":"/zh/works/mcp-blueprint/docs/graphs/","anchor":"预检应用和保存图表补丁"},"资产生命周期":{"path":"/zh/works/mcp-blueprint/docs/asset-lifecycle/","anchor":"资产的创建复制与保存"},"当前限制":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"排查连接和插件加载"},"故障排查":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"排查连接和插件加载"},"支持":{"path":"/zh/works/mcp-blueprint/","anchor":"支持"},"requirements-and-installation":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"要求与安装"},"connect-an-ai-client":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"连接-ai-客户端"},"feature-overview":{"path":"/zh/works/mcp-blueprint/","anchor":"主要功能"},"concepts-choose-the-right-editing-target":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"按编辑对象选择工具"},"complete-tool-reference-55-tools":{"path":"/zh/works/mcp-blueprint/","anchor":"主要功能"},"focused-guides-defaults-signatures-components-and-inheritance":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"按编辑对象选择工具"},"recommended-workflow":{"path":"/zh/works/mcp-blueprint/docs/graphs/","anchor":"预检应用和保存图表补丁"},"asset-lifecycle":{"path":"/zh/works/mcp-blueprint/docs/asset-lifecycle/","anchor":"资产的创建复制与保存"},"settings":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"设置"},"current-limits":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"排查连接和插件加载"},"troubleshooting":{"path":"/zh/works/mcp-blueprint/docs/connect/","anchor":"排查连接和插件加载"},"support":{"path":"/zh/works/mcp-blueprint/","anchor":"支持"}},"en":{"要求与安装":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"requirements-and-installation"},"连接-ai-客户端":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"connect-an-ai-client"},"功能概览":{"path":"/en/works/mcp-blueprint/","anchor":"main-features"},"概念区分先选对编辑对象":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"choose-the-tool-for-the-object-you-want-to-edit"},"55-个工具逐项功能总表":{"path":"/en/works/mcp-blueprint/","anchor":"main-features"},"重点教程默认值签名组件与继承":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"choose-the-tool-for-the-object-you-want-to-edit"},"推荐操作流程":{"path":"/en/works/mcp-blueprint/docs/graphs/","anchor":"preview-apply-and-save-a-graph-patch"},"资产生命周期":{"path":"/en/works/mcp-blueprint/docs/asset-lifecycle/","anchor":"create-duplicate-and-save-assets"},"设置":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"settings"},"当前限制":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"troubleshoot-connections-and-plugin-loading"},"故障排查":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"troubleshoot-connections-and-plugin-loading"},"支持":{"path":"/en/works/mcp-blueprint/","anchor":"support"},"feature-overview":{"path":"/en/works/mcp-blueprint/","anchor":"main-features"},"concepts-choose-the-right-editing-target":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"choose-the-tool-for-the-object-you-want-to-edit"},"complete-tool-reference-55-tools":{"path":"/en/works/mcp-blueprint/","anchor":"main-features"},"focused-guides-defaults-signatures-components-and-inheritance":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"choose-the-tool-for-the-object-you-want-to-edit"},"recommended-workflow":{"path":"/en/works/mcp-blueprint/docs/graphs/","anchor":"preview-apply-and-save-a-graph-patch"},"asset-lifecycle":{"path":"/en/works/mcp-blueprint/docs/asset-lifecycle/","anchor":"create-duplicate-and-save-assets"},"current-limits":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"troubleshoot-connections-and-plugin-loading"},"troubleshooting":{"path":"/en/works/mcp-blueprint/docs/connect/","anchor":"troubleshoot-connections-and-plugin-loading"},"support":{"path":"/en/works/mcp-blueprint/","anchor":"support"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

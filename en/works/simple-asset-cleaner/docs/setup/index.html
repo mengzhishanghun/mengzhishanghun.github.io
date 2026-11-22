@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>Install and Configure Source Control · MZSH</title>
+  <title>Install and Set Up Source Control · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/en/works/simple-asset-cleaner/docs/setup/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,71 +24,15 @@
           <p class="work-doc-name">SimpleAssetCleaner</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Setup</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/setup/" aria-current="page">Install and Configure Source Control</a></li></ul></li><li><span>Feature Guides</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/clean-assets/">Clean Unreferenced Assets</a></li><li><a href="/en/works/simple-asset-cleaner/docs/add-dependencies/">Add Untracked Dependencies</a></li><li><a href="/en/works/simple-asset-cleaner/docs/protect-assets/">Configure Root Assets and Protection</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/setup/" aria-current="page">Install and Set Up Source Control</a></li></ul></li><li><span>Asset Cleanup</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/clean-assets/">Clean Unreferenced Assets on Submission</a></li><li><a href="/en/works/simple-asset-cleaner/docs/full-cleanup/">Run a Full Cleanup</a></li></ul></li><li><span>Asset Protection</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/protect-assets/">Configure Root Assets and Protection</a></li></ul></li><li><span>Dependency Management</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/add-dependencies/">Add Untracked Dependencies</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#configuration" class="outline-link outline-root-link">Configuration</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#version-control-provider-important" class="outline-link">Version Control Provider (Important!)</a></li><li class="outline-node" data-heading-depth="3"><a href="#general-settings" class="outline-link">General Settings</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#support" class="outline-link outline-root-link">Support</a></li><li class="outline-node" data-heading-depth="2"><a href="#contact" class="outline-link outline-root-link">Contact</a></li><li class="outline-node" data-heading-depth="2"><a href="#simpleassetcleaner-user-guide" class="outline-link outline-root-link">SimpleAssetCleaner User Guide</a></li><li class="outline-node" data-heading-depth="2"><a href="#installation-and-configuration" class="outline-link outline-root-link">Installation and Configuration</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#step-1-install-the-plugin" class="outline-link">Step 1: Install the Plugin</a></li><li class="outline-node" data-heading-depth="3"><a href="#step-2-basic-configuration" class="outline-link">Step 2: Basic Configuration</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#features-and-parameters" class="outline-link outline-root-link">Features and Parameters</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#logging-options" class="outline-link">Logging Options</a></li><li class="outline-node" data-heading-depth="3"><a href="#52-source-control-providers" class="outline-link">5.2 Source Control Providers</a></li></ol></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#install-and-enable-the-plugin" class="outline-link outline-root-link">Install and Enable the Plugin</a></li><li class="outline-node" data-heading-depth="2"><a href="#choose-a-source-control-provider" class="outline-link outline-root-link">Choose a Source Control Provider</a></li><li class="outline-node" data-heading-depth="2"><a href="#open-project-settings" class="outline-link outline-root-link">Open Project Settings</a></li><li class="outline-node" data-heading-depth="2"><a href="#checks-before-your-first-submission" class="outline-link outline-root-link">Checks Before Your First Submission</a></li><li class="outline-node" data-heading-depth="2"><a href="#verbose-logging" class="outline-link outline-root-link">Verbose Logging</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/">SimpleAssetCleaner</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/setup/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-asset-cleaner:setup","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/simple-asset-cleaner/docs/setup/","title":"Install and Configure Source Control","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/setup/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/">SimpleAssetCleaner</a><span aria-hidden="true">/</span>Documentation</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="Article actions"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>Like</span> <span data-engagement-count aria-label="Total likes">—</span></button><button type="button" data-engagement-share aria-label="Share" title="Share"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">Share</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>Share link (select and copy)<input type="url" data-engagement-url readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/setup/"></label><script type="application/json" data-engagement-config>{"id":"doc:simple-asset-cleaner:setup","origin":"https://mzsh.me","url":"https://mzsh.me/en/works/simple-asset-cleaner/docs/setup/","title":"Install and Set Up Source Control","labels":{"group":"Article actions","like":"Like","liked":"Liked on this device","count":"Total likes","share":"Share","ready":"","pending":"The like result is unknown. Please do not submit again.","storage":"This browser cannot save the like state. Likes are unavailable.","rejected":"Likes are temporarily unavailable. Please try later.","shared":"Shared","copied":"Link copied","manual":"Select and copy the link below.","manualLabel":"Share link (select and copy)"}}</script><noscript><label class="article-engagement-manual">Share link (select and copy)<input type="url" readonly value="https://mzsh.me/en/works/simple-asset-cleaner/docs/setup/"></label></noscript></section></div>
           <article>
-            <h1>Install and Configure Source Control</h1>
-            <div class="prose sl-markdown-content" data-pagefind-body><p><strong>SimpleAssetCleaner</strong> automatically identifies and removes unreferenced assets in Unreal Engine projects to keep repositories tidy.</p>
-<blockquote>
-<p><strong>Important</strong>: This plugin can delete assets from version control. Read carefully before use.</p>
-</blockquote>
-<p><strong>Compatibility</strong>: Unreal Engine 5.2–5.8</p>
-<hr>
-<h2 id="configuration">Configuration</h2>
-<p><strong>Location</strong>: Editor &gt; Project Settings &gt; General &gt; Simple Asset Cleaner</p>
-<p><a href="/media/manuals/2935892db54825e4d3a0.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/2935892db54825e4d3a0.png" data-media-alt="设置截图" class="media-image-trigger" aria-label="View a larger image: Settings Screenshot"><img src="/media/manuals/2935892db54825e4d3a0.png" alt="Settings Screenshot" loading="lazy" decoding="async"></a></p>
-<h3 id="version-control-provider-important">Version Control Provider (Important!)</h3>
-<p>The plugin automatically wraps your version control provider in a proxy to monitor submissions.</p>
-<p><a href="/media/manuals/371175e265a8cadb391f.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/371175e265a8cadb391f.png" data-media-alt="代理提供者" class="media-image-trigger" aria-label="View a larger image: Proxy Provider"><img src="/media/manuals/371175e265a8cadb391f.png" alt="Proxy Provider" loading="lazy" decoding="async"></a></p>
-<p><strong>Do not select a proxy provider manually!</strong></p>
-<ul>
-<li>Always select your actual version control provider, such as Perforce, Git, or SVN</li>
-<li>The plugin wraps it automatically in the background</li>
-<li>Selecting a proxy directly may cause problems</li>
-</ul>
-<p><strong>Correct settings</strong>:</p>
-<ul>
-<li>Use: <code>Perforce</code>, <code>Git</code>, <code>Subversion</code>, etc.</li>
-<li>Avoid: <code>Perforce_Proxy</code>, <code>Git_Proxy</code>, or any provider ending in <code>_Proxy</code></li>
-</ul>
-<h3 id="general-settings">General Settings</h3>
-<h4 id="language">Language</h4>
-<ul>
-<li><strong>Default</strong>: English</li>
-<li><strong>Options</strong>: Chinese / English</li>
-<li><strong>Function</strong>: Switch the language of all UI text and logs</li>
-<li><strong>Behavior</strong>: Takes effect immediately without restarting the editor</li>
-</ul>
-<h4 id="enable-verbose-logging">Enable Verbose Logging</h4>
-<ul>
-<li><strong>Default</strong>: Disabled</li>
-<li><strong>Function</strong>: Detailed logs for debugging</li>
-<li><strong>Recommendation</strong>: Enable only when troubleshooting</li>
-</ul>
-<h2 id="support">Support</h2>
-<p><strong>When reporting issues, provide</strong>:</p>
-<ul>
-<li>Unreal Engine version</li>
-<li>Version control system (Perforce/Git/SVN)</li>
-<li>Plugin settings screenshot</li>
-<li>Log output with verbose logging enabled</li>
-</ul>
-<hr>
-<p><strong>Compatibility</strong>: Unreal Engine 5.2–5.8 | Tested on Windows; theoretically supports all platforms</p>
-<p><strong>Remember</strong>: Start conservatively. Assets can always be deleted, but restoration requires version control history!</p>
-<h2 id="contact">Contact</h2>
-<p>For usage questions or collaboration inquiries, visit the contact page.</p>
-<ul>
-<li><strong>Contact:</strong> <a href="/en/contact/">Contact and Collaboration</a></li>
-</ul>
-<h2 id="simpleassetcleaner-user-guide">SimpleAssetCleaner User Guide</h2>
-<p>Identifies candidate unreferenced assets using roots and reference relationships, with entry points for submission handling and full cleanup.</p>
-<h2 id="installation-and-configuration">Installation and Configuration</h2>
-<h3 id="step-1-install-the-plugin">Step 1: Install the Plugin</h3>
+            <h1>Install and Set Up Source Control</h1>
+            <div class="prose sl-markdown-content" data-pagefind-body><h2 id="install-and-enable-the-plugin">Install and Enable the Plugin</h2>
 <ol>
 <li>
 <p>Copy the plugin folder into your project’s <code>Plugins</code> directory</p>
@@ -102,60 +46,18 @@
 <p>Enable it and restart the editor</p>
 </li>
 </ol>
-<h3 id="step-2-basic-configuration">Step 2: Basic Configuration</h3>
-<p>Open project settings: <code>Editor &gt; Project Settings &gt; General &gt; Simple Asset Cleaner</code></p>
-<p><strong>Automatic cleanup toggle:</strong></p>
-<p>Configure the root assets and protected paths to retain before checking <code>Enable Auto Clean</code>.</p>
-<p>With default configuration, the plugin:</p>
-<ul>
-<li>Uses all maps as root assets</li>
-<li>Automatically checks and cleans on submission</li>
-<li>Protects plugin and engine assets outside the project</li>
-</ul>
-<p><strong>Advanced configuration (recommended for teams):</strong></p>
-<p><strong>1. Configure root asset types</strong></p>
-<p>Add to <code>Root Asset Classes</code>:</p>
-<ul>
-<li><code>UWorld</code> - Maps (included by default)</li>
-<li><code>UBlueprint</code> - Blueprint classes, if Blueprints are core assets</li>
-<li><code>UDataAsset</code> - DataAssets, if the project has substantial configuration data</li>
-</ul>
-<p><strong>2. Add protected paths</strong></p>
-<p>Add to <code>Additional Root Paths</code>:</p>
-<ul>
-<li><code>/Game/Core/</code> - Core systems directory</li>
-<li><code>/Game/Config/</code> - Configuration directory</li>
-<li><code>/Game/Managers/</code> - Manager directory</li>
-</ul>
-<p><strong>3. Optionally enable verbose logging</strong></p>
-<p>On first use, enable <code>Enable Verbose Logging</code> to observe the plugin. Once familiar, disable it to reduce log output.</p>
-<h2 id="features-and-parameters">Features and Parameters</h2>
-<h3 id="logging-options">Logging Options</h3>
-<p>The plugin provides optional verbose logging for debugging and monitoring.</p>
-<p><strong>Enable it:</strong><br>
-Check <code>Enable Verbose Logging</code> in project settings</p>
-<p><strong>Logs include:</strong></p>
-<ul>
-<li>Files scanned</li>
-<li>Unreferenced assets detected</li>
-<li>Cleanup operations performed</li>
-<li>Reference-chain tracing for debugging</li>
-</ul>
-<p>Enable verbose logging on first use or when problems arise to understand the plugin’s operation.</p>
-<h3 id="52-source-control-providers">5.2 Source Control Providers</h3>
-<p>SimpleAssetCleaner supports all version control systems supported by Unreal Engine:</p>
-<ul>
-<li>✅ Perforce</li>
-<li>✅ Git</li>
-<li>✅ SVN</li>
-<li>✅ Plastic SCM</li>
-<li>✅ Other systems integrated through the UE API</li>
-</ul>
-<p><strong>Configuration points:</strong></p>
-<p>Choose your actual provider, such as Perforce, Git, or Subversion, under <code>Editor &gt; Preferences &gt; Source Control</code>.</p>
-<p>⚠️ <strong>Important:</strong> Do not choose options ending in <code>_Proxy</code>, such as <code>Perforce_Proxy</code>. These are internal plugin implementations and are handled automatically.</p></div>
+<h2 id="choose-a-source-control-provider">Choose a Source Control Provider</h2>
+<p>In <code>Editor &gt; Preferences &gt; Source Control</code>, select the provider your project uses. The plugin integrates through the UE API with providers such as Perforce, Git, Subversion, and Plastic SCM. It wraps the provider automatically to check assets on submission. Do not select <code>Perforce_Proxy</code>, <code>Git_Proxy</code>, or another provider ending in <code>_Proxy</code>.</p>
+<p><a href="/media/manuals/371175e265a8cadb391f.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/371175e265a8cadb391f.png" data-media-alt="代理提供者" class="media-image-trigger" aria-label="View a larger image: Proxy Provider"><img src="/media/manuals/371175e265a8cadb391f.png" alt="Proxy Provider" loading="lazy" decoding="async"></a></p>
+<h2 id="open-project-settings">Open Project Settings</h2>
+<p>Open <strong>Editor &gt; Project Settings &gt; General &gt; Simple Asset Cleaner</strong>. <code>Language</code> defaults to English. Switching to Chinese updates the UI and logs immediately, without a restart.</p>
+<p><a href="/media/manuals/2935892db54825e4d3a0.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/2935892db54825e4d3a0.png" data-media-alt="设置截图" class="media-image-trigger" aria-label="View a larger image: Settings Screenshot"><img src="/media/manuals/2935892db54825e4d3a0.png" alt="Settings Screenshot" loading="lazy" decoding="async"></a></p>
+<h2 id="checks-before-your-first-submission">Checks Before Your First Submission</h2>
+<p>Review the root assets and directories to keep. Maps are roots by default, and plugin and engine assets outside the project are excluded. Review the settings before using <code>Enable Auto Clean</code>; on first use, open the submission window on a test branch and review the candidates. <code>Clean All Source Control Assets</code> scans the whole project and can delete files locally and from source control.</p>
+<h2 id="verbose-logging">Verbose Logging</h2>
+<p><code>Enable Verbose Logging</code> is off by default. Turn it on in Project Settings during your first trial or when troubleshooting. It lists scanned files, unreferenced candidates, cleanup actions, and reference traces. Turn it off when you no longer need the detail.</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/docs/clean-assets/" rel="next"><span>Next</span>Clean Unreferenced Assets</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/docs/clean-assets/" rel="next"><span>Next</span>Clean Unreferenced Assets on Submission</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -222,5 +124,5 @@ Check <code>Enable Verbose Logging</code> in project settings</p>
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-asset-cleaner/docs/setup/","en":"/en/works/simple-asset-cleaner/docs/setup/"},"anchors":{"zh":{"configuration":"配置","version-control-provider-important":"版本控制提供者重要","general-settings":"通用设置","language":"language--语言","enable-verbose-logging":"enable-verbose-logging--启用详细日志","support":"支持","contact":"联系方式","simpleassetcleaner-user-guide":"simpleassetcleaner-使用指南","installation-and-configuration":"安装与配置","step-1-install-the-plugin":"步骤1安装插件","step-2-basic-configuration":"步骤2基础配置","features-and-parameters":"功能与参数","logging-options":"日志选项","52-source-control-providers":"52-源控制提供器说明"},"en":{"configuration":"configuration","version-control-provider-important":"version-control-provider-important","general-settings":"general-settings","language":"language","enable-verbose-logging":"enable-verbose-logging","support":"support","contact":"contact","simpleassetcleaner-user-guide":"simpleassetcleaner-user-guide","installation-and-configuration":"installation-and-configuration","step-1-install-the-plugin":"step-1-install-the-plugin","step-2-basic-configuration":"step-2-basic-configuration","features-and-parameters":"features-and-parameters","logging-options":"logging-options","52-source-control-providers":"52-source-control-providers"}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"en","urls":{"zh":"/zh/works/simple-asset-cleaner/docs/setup/","en":"/en/works/simple-asset-cleaner/docs/setup/"},"anchors":{"zh":{"install-and-enable-the-plugin":"安装并启用插件","choose-a-source-control-provider":"选择版本控制提供者","open-project-settings":"打开项目设置","checks-before-your-first-submission":"首次提交前检查","verbose-logging":"详细日志"},"en":{"install-and-enable-the-plugin":"install-and-enable-the-plugin","choose-a-source-control-provider":"choose-a-source-control-provider","open-project-settings":"open-project-settings","checks-before-your-first-submission":"checks-before-your-first-submission","verbose-logging":"verbose-logging"}},"anchorAliases":{"zh":{"配置":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"打开项目设置"},"版本控制提供者重要":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"选择版本控制提供者"},"通用设置":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"打开项目设置"},"language--语言":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"打开项目设置"},"enable-verbose-logging--启用详细日志":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"详细日志"},"支持":{"path":"/zh/works/simple-asset-cleaner/","anchor":"版本与使用支持"},"联系方式":{"path":"/zh/works/simple-asset-cleaner/","anchor":"版本与使用支持"},"simpleassetcleaner-使用指南":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"安装并启用插件"},"安装与配置":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"安装并启用插件"},"步骤1安装插件":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"安装并启用插件"},"步骤2基础配置":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"首次提交前检查"},"功能与参数":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"详细日志"},"日志选项":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"详细日志"},"52-源控制提供器说明":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"选择版本控制提供者"},"configuration":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"打开项目设置"},"version-control-provider-important":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"选择版本控制提供者"},"general-settings":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"打开项目设置"},"language":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"打开项目设置"},"enable-verbose-logging":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"详细日志"},"support":{"path":"/zh/works/simple-asset-cleaner/","anchor":"版本与使用支持"},"contact":{"path":"/zh/works/simple-asset-cleaner/","anchor":"版本与使用支持"},"simpleassetcleaner-user-guide":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"安装并启用插件"},"installation-and-configuration":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"安装并启用插件"},"step-1-install-the-plugin":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"安装并启用插件"},"step-2-basic-configuration":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"首次提交前检查"},"features-and-parameters":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"详细日志"},"logging-options":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"详细日志"},"52-source-control-providers":{"path":"/zh/works/simple-asset-cleaner/docs/setup/","anchor":"选择版本控制提供者"}},"en":{"配置":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"open-project-settings"},"版本控制提供者重要":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"choose-a-source-control-provider"},"通用设置":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"open-project-settings"},"language--语言":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"open-project-settings"},"enable-verbose-logging--启用详细日志":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"verbose-logging"},"支持":{"path":"/en/works/simple-asset-cleaner/","anchor":"compatibility-and-support"},"联系方式":{"path":"/en/works/simple-asset-cleaner/","anchor":"compatibility-and-support"},"simpleassetcleaner-使用指南":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"install-and-enable-the-plugin"},"安装与配置":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"install-and-enable-the-plugin"},"步骤1安装插件":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"install-and-enable-the-plugin"},"步骤2基础配置":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"checks-before-your-first-submission"},"功能与参数":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"verbose-logging"},"日志选项":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"verbose-logging"},"52-源控制提供器说明":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"choose-a-source-control-provider"},"configuration":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"open-project-settings"},"version-control-provider-important":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"choose-a-source-control-provider"},"general-settings":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"open-project-settings"},"language":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"open-project-settings"},"enable-verbose-logging":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"verbose-logging"},"support":{"path":"/en/works/simple-asset-cleaner/","anchor":"compatibility-and-support"},"contact":{"path":"/en/works/simple-asset-cleaner/","anchor":"compatibility-and-support"},"simpleassetcleaner-user-guide":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"install-and-enable-the-plugin"},"installation-and-configuration":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"install-and-enable-the-plugin"},"step-1-install-the-plugin":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"install-and-enable-the-plugin"},"step-2-basic-configuration":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"checks-before-your-first-submission"},"features-and-parameters":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"verbose-logging"},"logging-options":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"verbose-logging"},"52-source-control-providers":{"path":"/en/works/simple-asset-cleaner/docs/setup/","anchor":"choose-a-source-control-provider"}}},"labels":{"group":"Switch language","switchAria":"Switch to {language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>

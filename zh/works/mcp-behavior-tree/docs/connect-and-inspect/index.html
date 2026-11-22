@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="">
-  <title>连接并检查行为树 · MZSH</title>
+  <title>连接行为树编辑工具 · MZSH</title>
   <link rel="canonical" href="https://mzsh.me/zh/works/mcp-behavior-tree/docs/connect-and-inspect/">
   <link rel="stylesheet" href="/_astro/photoswipe.Cc_ZZLyy.css">
   <link rel="stylesheet" href="/_astro/Base.2d1c2dc5.css">
@@ -24,52 +24,18 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>功能指南</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/connect-and-inspect/" aria-current="page">连接并检查行为树</a></li><li><a href="/zh/works/mcp-behavior-tree/docs/edit-tree/">编辑行为树并设置黑板键</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/connect-and-inspect/" aria-current="page">连接行为树编辑工具</a></li></ul></li><li><span>行为树与黑板</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/edit-tree/">检查、编辑与验证行为树</a></li><li><a href="/zh/works/mcp-behavior-tree/docs/blackboard-keys/">创建黑板并管理黑板键</a></li></ul></li></ul></nav>
           </div>
         </aside>
-        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%BF%9E%E6%8E%A5" class="outline-link outline-root-link">连接</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%B7%A5%E5%85%B7" class="outline-link outline-root-link">工具</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%8E%A8%E8%8D%90%E6%B5%81%E7%A8%8B" class="outline-link outline-root-link">推荐流程</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%B8%8E-unreal-engine-58-%E5%AE%98%E6%96%B9%E8%83%BD%E5%8A%9B%E6%AF%94%E8%BE%83" class="outline-link outline-root-link">与 Unreal Engine 5.8 官方能力比较</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%99%90%E5%88%B6" class="outline-link outline-root-link">限制</a></li></ol></nav></details></aside>
+        <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%BF%9E%E6%8E%A5" class="outline-link outline-root-link">连接</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E7%BC%96%E8%BE%91%E8%A1%8C%E4%B8%BA%E6%A0%91" class="outline-link outline-root-link">第一次编辑行为树</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%B8%8E-ue-58-%E5%AE%98%E6%96%B9%E5%B7%A5%E5%85%B7%E9%9B%86%E7%9A%84%E5%8C%BA%E5%88%AB" class="outline-link outline-root-link">与 UE 5.8 官方工具集的区别</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BD%BF%E7%94%A8%E8%8C%83%E5%9B%B4%E4%B8%8E%E7%89%88%E6%9C%AC" class="outline-link outline-root-link">使用范围与版本</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%8D%E9%A6%88" class="outline-link outline-root-link">反馈</a></li></ol></nav></details></aside>
         <div class="work-doc-content">
-          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/">作品</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-behavior-tree/docs/connect-and-inspect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-behavior-tree:connect-and-inspect","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","title":"连接并检查行为树","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-behavior-tree/docs/connect-and-inspect/"></label></noscript></section></div>
+          <div class="article-detail-controls"><p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="/zh/works/">作品</a><span aria-hidden="true">/</span>使用文档</p><section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="文章互动"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>点赞</span> <span data-engagement-count aria-label="总点赞数">—</span></button><button type="button" data-engagement-share aria-label="分享" title="分享"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">分享</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>分享链接（选择后复制）<input type="url" data-engagement-url readonly value="https://mzsh.me/zh/works/mcp-behavior-tree/docs/connect-and-inspect/"></label><script type="application/json" data-engagement-config>{"id":"doc:mcp-behavior-tree:connect-and-inspect","origin":"https://mzsh.me","url":"https://mzsh.me/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","title":"连接行为树编辑工具","labels":{"group":"文章互动","like":"点赞","liked":"本机已点赞","count":"总点赞数","share":"分享","ready":"","pending":"点赞结果暂时无法确认，请勿重复提交。","storage":"浏览器无法保存点赞状态，暂时不能点赞。","rejected":"暂时不能点赞，请稍后再试。","shared":"已分享","copied":"链接已复制","manual":"请选择并复制下方链接。","manualLabel":"分享链接（选择后复制）"}}</script><noscript><label class="article-engagement-manual">分享链接（选择后复制）<input type="url" readonly value="https://mzsh.me/zh/works/mcp-behavior-tree/docs/connect-and-inspect/"></label></noscript></section></div>
           <article>
-            <h1>连接并检查行为树</h1>
+            <h1>连接行为树编辑工具</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><p>MCP Behavior Tree 是一个自包含的 Unreal Editor 插件，可通过 Model Context Protocol 创建、查看、编辑、验证并保存行为树与黑板资产。插件支持 Unreal Engine 5.2 及更高版本，不依赖其他用户插件。</p>
 <h2 id="连接">连接</h2>
 <p>插件会在 Unreal Editor 中启动 MCP HTTP 服务。默认端口为 <code>8767</code>；若端口被占用，应以插件运行时报告的实际端口为准，不要假定始终使用默认端口。</p>
-<p>资产参数使用 <code>/Game/AI/BT_Enemy</code>、<code>/Game/AI/BB_Enemy</code> 这类 Unreal 内容路径。新建或编辑后的资产保持脏状态，直到 <code>SaveAsset</code> 成功。</p>
-<p><code>SaveAsset</code>、<code>OpenAsset</code> 和 <code>CloseAsset</code> 只接受行为树或黑板资产。编辑器图无法同步或 Unreal 无法写入包时，保存会直接失败；因此 MCP 返回成功即表示包保存成功。</p>
-<h2 id="工具">工具</h2>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<table><thead><tr><th>领域</th><th>工具</th></tr></thead><tbody><tr><td>资产</td><td><code>CreateBehaviorTree</code>、<code>CreateBlackboard</code>、<code>SetBehaviorTreeBlackboard</code>、<code>ListBehaviorTrees</code>、<code>GetBehaviorTreeDetail</code>、<code>SaveAsset</code>、<code>OpenAsset</code>、<code>CloseAsset</code></td></tr><tr><td>黑板</td><td><code>AddBlackboardKey</code>、<code>RemoveBlackboardKey</code></td></tr><tr><td>树结构</td><td><code>AddCompositeNode</code>、<code>AddTaskNode</code>、<code>ConnectNodes</code>、<code>RemoveNode</code></td></tr><tr><td>节点</td><td><code>SetNodeProperties</code>、<code>AddDecorator</code>、<code>AddService</code></td></tr><tr><td>验证</td><td><code>ValidateBehaviorTree</code></td></tr></tbody></table>
-<p><code>GetBehaviorTreeDetail</code> 会返回编辑工具可复用的稳定 <code>NodeId</code>、关联黑板及键、嵌套树结构、装饰器、服务、反射导出的可编辑属性和游离节点。大结果受深度、节点数、属性数和文本上限保护，未完整返回时会设置 <code>bTruncated</code>。<code>ListBehaviorTrees</code> 支持确定性排序、过滤以及 <code>Offset</code>/<code>MaxResults</code> 分页。</p>
-<h2 id="推荐流程">推荐流程</h2>
+<h2 id="第一次编辑行为树">第一次编辑行为树</h2>
 <ol>
 <li>使用 <code>CreateBlackboard</code> 创建黑板。</li>
 <li>使用 <code>AddBlackboardKey</code> 添加键。</li>
@@ -79,20 +45,19 @@
 <li>运行 <code>ValidateBehaviorTree</code>。</li>
 <li>对每个脏的行为树或黑板资产调用 <code>SaveAsset</code>。</li>
 </ol>
-<h2 id="与-unreal-engine-58-官方能力比较">与 Unreal Engine 5.8 官方能力比较</h2>
+<h2 id="与-ue-58-官方工具集的区别">与 UE 5.8 官方工具集的区别</h2>
 <p>Unreal Engine 5.8 的 Epic <code>AIModuleToolset</code> 提供 7 个只读行为树辅助能力：获取黑板、根级装饰器、节点列表、单个/全部节点深度、子节点和引用的子树。MCP Behavior Tree 通过 <code>GetBehaviorTreeDetail</code> 覆盖黑板、装饰器、层级、子节点和深度语义，并额外提供创建与编辑能力。</p>
 <p>Epic 工具集属于 Experimental，并绑定 UE 5.8 的 Toolset/MCP 基础设施。为了保持 UE 5.2+ 兼容和插件自包含，本插件不能依赖它。若某项官方专属行为未被本文档列出的插件工具覆盖，应在 UE 5.8 中调用 Epic 工具集，而不能假定早期引擎也具备该能力。</p>
-<h2 id="限制">限制</h2>
+<h2 id="使用范围与版本">使用范围与版本</h2>
 <ul>
 <li>插件仅用于编辑器，不控制运行时或打包后的游戏。</li>
-<li>本插件不编写 Blueprint 任务、装饰器和服务的内部逻辑。请先通过具备 Blueprint 能力的工具创建并编译这些类，再传入生成的 <code>_C</code> 类路径。</li>
 <li>Behavior Tree 编辑器的私有图 API 会随引擎版本变化。插件包含 UE 5.2+ 兼容路径，但仍应在目标引擎版本中验证资产。</li>
-<li>若行为树已有运行时节点却缺失编辑器图，插件会拒绝把它重建为空图。请先在 Behavior Tree 编辑器中修复资产，再使用 MCP 编辑或保存工具。</li>
 <li>源码发生变化不代表既有插件包已经重新打包或发布。</li>
 </ul>
-<p>如有问题或反馈，请发送邮件至 <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>。我看到后会处理。</p></div>
+<h2 id="反馈">反馈</h2>
+<p>反馈请发送至 <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-behavior-tree/docs/edit-tree/" rel="next"><span>下一篇</span>编辑行为树并设置黑板键</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-behavior-tree/docs/edit-tree/" rel="next"><span>下一篇</span>检查、编辑与验证行为树</a></div>
         </div>
       </mzsh-reading>
     </main>
@@ -159,5 +124,5 @@
   <script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ReadingEnhancements.astro_astro_type_script_index_0_lang.jfxlepAz.d44a6a0add68.js"></script>
   <script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script>
-<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","en":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/"},"anchors":{"zh":{"连接":"连接","工具":"工具","推荐流程":"推荐流程","与-unreal-engine-58-官方能力比较":"与-unreal-engine-58-官方能力比较","限制":"限制"},"en":{"连接":"connection","工具":"tools","推荐流程":"recommended-workflow","与-unreal-engine-58-官方能力比较":"unreal-engine-58-comparison","限制":"limits"}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
+<script type="application/json" data-site-language>{"version":1,"primary":"zh","fallback":"en","languages":[{"code":"zh","label":"中文","htmlLang":"zh-CN","searchLanguage":"zh-cn","browserTags":["zh","zh-*"]},{"code":"en","label":"English","htmlLang":"en","searchLanguage":"en","browserTags":["en","en-*"]}],"locale":"zh","urls":{"zh":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","en":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/"},"anchors":{"zh":{"连接":"连接","第一次编辑行为树":"第一次编辑行为树","与-ue-58-官方工具集的区别":"与-ue-58-官方工具集的区别","使用范围与版本":"使用范围与版本","反馈":"反馈"},"en":{"连接":"connection","第一次编辑行为树":"first-behavior-tree-edit","与-ue-58-官方工具集的区别":"differences-from-the-official-ue-58-toolset","使用范围与版本":"scope-and-versions","反馈":"feedback"}},"anchorAliases":{"zh":{"工具":{"path":"/zh/works/mcp-behavior-tree/docs/edit-tree/","anchor":"创建并检查行为树"},"推荐流程":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"第一次编辑行为树"},"与-unreal-engine-58-官方能力比较":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"与-ue-58-官方工具集的区别"},"限制":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"使用范围与版本"},"connection":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"连接"},"tools":{"path":"/zh/works/mcp-behavior-tree/docs/edit-tree/","anchor":"创建并检查行为树"},"recommended-workflow":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"第一次编辑行为树"},"unreal-engine-58-comparison":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"与-ue-58-官方工具集的区别"},"limits":{"path":"/zh/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"使用范围与版本"}},"en":{"连接":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"connection"},"工具":{"path":"/en/works/mcp-behavior-tree/docs/edit-tree/","anchor":"create-and-inspect-a-behavior-tree"},"推荐流程":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"first-behavior-tree-edit"},"与-unreal-engine-58-官方能力比较":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"differences-from-the-official-ue-58-toolset"},"限制":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"scope-and-versions"},"tools":{"path":"/en/works/mcp-behavior-tree/docs/edit-tree/","anchor":"create-and-inspect-a-behavior-tree"},"recommended-workflow":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"first-behavior-tree-edit"},"unreal-engine-58-comparison":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"differences-from-the-official-ue-58-toolset"},"limits":{"path":"/en/works/mcp-behavior-tree/docs/connect-and-inspect/","anchor":"scope-and-versions"}}},"labels":{"group":"切换语言","switchAria":"切换为{language}"}}</script><script defer src="/assets/site-ui/language-switch.js"></script></body>
 </html>
