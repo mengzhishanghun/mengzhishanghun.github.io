@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-animation-guide/
+      href: /zh/works/mcp-animation/docs/find-assets/
   compatibility:
     - platforms: []
       requirements:
@@ -24,9 +24,13 @@ sitePublish: true
 tags:
   - 动画蓝图、状态机与动画资产
   - MCP 系列
-coverAlt: "MCPAnimation封面"
-websiteCoverUrl: "/media/covers/works/mcp-animation-20261101.webp"
-lang: "zh"
+docIds:
+  - mcp-animation-find-assets
+  - mcp-animation-animation-blueprint
+  - mcp-animation-montage-and-blendspace
+coverAlt: MCPAnimation封面
+websiteCoverUrl: /media/covers/works/mcp-animation-20261101.webp
+lang: zh
 translationKey: mcp-animation
 ---
 
@@ -40,4 +44,4 @@ MCPAnimation 是开发中的 UE 编辑器 MCP 插件，围绕动画蓝图、状�
 
 ## 开发状态
 
-项目处于开发阶段，使用说明见[MCPAnimation 教程](/zh/docs/guides/ue-tools/mcp-animation-guide/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。
+项目处于开发阶段，使用说明见[MCPAnimation 教程](/zh/works/mcp-animation/docs/find-assets/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。

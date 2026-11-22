@@ -20,22 +20,25 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: en
 translationKey: plugin-auto-packer
-sourceHash: "102126f7ebfbd290ee15653595432c979479cb425680012b8ed336453771ba4d"
+sourceHash: d87458b68d80fcf1b0c8c13af32c697e1b9654e536e342249d1e0e452e32c493
 translationStatus: translated
-generatedBodyHash: 2775ee494b392227d00cf5c5566bbfa98dd81f6d399ef6002f41cf2665c105b7
+generatedBodyHash: 6177a108322a0a952438ed1b32b14421d0a1a33d951a27cc8d2700358fa39824
 workInfo:
   channels:
     - kind: open-source
       href: https://github.com/MZSH-Tools/UEPluginAutoPacker
     - kind: docs
-      href: /docs/zh/tools/plugin-auto-packer/
+      href: /en/works/plugin-auto-packer/docs/package/
   compatibility:
     - platforms:
         - Windows
       requirements:
         - Win64 plugin builds only
-websiteCoverUrl: "/media/covers/works/plugin-auto-packer-20261101.webp"
-coverAlt: "UEPluginAutoPacker cover"
+websiteCoverUrl: /media/covers/works/plugin-auto-packer-20261101.webp
+coverAlt: UEPluginAutoPacker cover
+docIds:
+  - plugin-auto-packer-package
+  - plugin-auto-packer-output
 ---
 
 ## Overview
@@ -78,4 +81,4 @@ The current build target is Windows / Win64, and plugin directories require vali
 
 Successful multi-version tasks still need assessment using logs and tests in target engines. Review preparation options against release requirements. The tool handles plugin packages, not whole UE project packaging.
 
-For operation steps and parameter details, see the [user guide](/en/docs/tools/plugin-auto-packer/).
+For operation steps and parameter details, see the [user guide](/en/works/plugin-auto-packer/docs/package/).

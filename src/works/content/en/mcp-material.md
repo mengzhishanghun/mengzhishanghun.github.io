@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-material-guide/
+      href: /en/works/mcp-material/docs/edit-graph/
   compatibility:
     - platforms: []
       requirements:
@@ -26,11 +26,14 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-material
-sourceHash: "3338ec971fd0e2a61ccdeb82dbd9f78ab2f81ed93b8a3518ee6fd5c703e15199"
-generatedBodyHash: d4f053274ae36004e495bddfd198536e511404ffb37aae6d1d1a7a6061f9104e
+sourceHash: ce6a9e9118fa67d02eb961fed5cbd1ec7731916190dfb169bf9c2c670d27af75
+generatedBodyHash: 769d2575e1b748d23cb5e2d15ef08453af25d0b78e8b53756c5a56326b394e43
 translationStatus: translated
-coverAlt: "MCPMaterial cover"
-websiteCoverUrl: "/media/covers/works/mcp-material-20261101.webp"
+coverAlt: MCPMaterial cover
+websiteCoverUrl: /media/covers/works/mcp-material-20261101.webp
+docIds:
+  - mcp-material-edit-graph
+  - mcp-material-instance-parameters
 ---
 
 ## About this work
@@ -43,4 +46,4 @@ The project focuses on material graphs and material instances, connecting extern
 
 ## Development status
 
-The project is in development. See the [MCPMaterial user guide](/docs/guides/ue-tools/mcp-material-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPMaterial user guide](/en/works/mcp-material/docs/edit-graph/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

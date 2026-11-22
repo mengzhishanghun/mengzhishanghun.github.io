@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/b0cf0a4d-c1a2-45f6-8bfb-7a92313379c2
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-asset-cleaner-guide/
+      href: /zh/works/simple-asset-cleaner/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -34,12 +34,15 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19183435
 docIds:
-  - simple-asset-cleaner-guide
-websiteCoverUrl: "/media/covers/works/simple-asset-cleaner-20261101.webp"
+  - simple-asset-cleaner-setup
+  - simple-asset-cleaner-clean-assets
+  - simple-asset-cleaner-add-dependencies
+  - simple-asset-cleaner-protect-assets
+coverAlt: SimpleAssetCleaner封面
+websiteCoverUrl: /media/covers/works/simple-asset-cleaner-20261101.webp
 sourceDate: 2025-11-01
-lang: "zh"
+lang: zh
 translationKey: simple-asset-cleaner
-coverAlt: "SimpleAssetCleaner封面"
 ---
 
 ## 作品简介
@@ -84,4 +87,4 @@ SimpleAssetCleaner 为 Unreal Engine 项目提供基于引用关系的候选未�
 
 全量清理可能删除已提交文件，应在可恢复版本上核对日志与结果，再用于正式项目。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-asset-cleaner-guide/)。
+操作步骤和参数说明见 [使用教程](/zh/works/simple-asset-cleaner/docs/setup/)。

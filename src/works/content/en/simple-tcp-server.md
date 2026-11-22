@@ -22,15 +22,15 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-server
-sourceHash: "3416fdcf282fc987f88f7ab51afefb92c7b5a6a317cfa8b928f6c39c6c1a7821"
+sourceHash: e75c4caff6e0e77f887567ae30a5840efd748891992ce2e4a652cc4361204a6c
 translationStatus: translated
-generatedBodyHash: 53f075104460eb73de9233102da77248d7a0fb9aa00b1f2567b8fc3e13bdc80b
+generatedBodyHash: 289b4e660ae04c3be262e437f04cb8f71d93f92f81a7e801cdf0f231fa85b615
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/cc276a4a-389b-43e3-8a04-a6d628534108
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-tcp-server-guide/
+      href: /en/works/simple-tcp-server/docs/listen/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -40,8 +40,12 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-tcp-server-20261101.webp"
-coverAlt: "SimpleTCPServer cover"
+websiteCoverUrl: /media/covers/works/simple-tcp-server-20261101.webp
+coverAlt: SimpleTCPServer cover
+docIds:
+  - simple-tcp-server-listen
+  - simple-tcp-server-messages
+  - simple-tcp-server-native-server
 ---
 
 ## Overview
@@ -76,4 +80,4 @@ It suits UE programs acting as TCP servers for several external programs or devi
 
 Only IPv4 is supported; domain names, IPv6, and encrypted connections are not supported. Validate connection counts, session lifecycles, timeouts, and data handling in the target environment. TCP streams have no inherent business message boundaries, so projects define encoding and message splitting rules. IP:Port should not serve directly as security authentication.
 
-See the [user guide](/en/docs/guides/ue-tools/simple-tcp-server-guide/) for listener configuration, session management, and native examples.
+See the [user guide](/en/works/simple-tcp-server/docs/listen/) for listener configuration, session management, and native examples.

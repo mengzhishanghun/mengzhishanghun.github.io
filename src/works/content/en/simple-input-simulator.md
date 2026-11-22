@@ -21,19 +21,20 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770939
 docIds:
-  - simple-input-simulator-guide
+  - simple-input-simulator-key-input
+  - simple-input-simulator-axis-input
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-input-simulator
-sourceHash: "9ef0f7fb07fd95f4ff3fd997eb18289522c095334243afb2ad5096472747834c"
+sourceHash: def7b80a8038010a8f03ae56bf8f09be6d883912ee09be8a34787772a5f97951
 translationStatus: translated
-generatedBodyHash: 61d277ca5f1212dc7184307fca9ccfe1b79d778006043767daeb7be4b42926cd
+generatedBodyHash: 2c340b2dc6734e164713c1f4e25cd6b2596783bb3035d2a3ffdd964b400e93b4
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/dd1ee0a8-f450-4a3d-adc4-4a96f5dec3dd
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-input-simulator-guide/
+      href: /en/works/simple-input-simulator/docs/key-input/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -43,8 +44,8 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-input-simulator-20261101.webp"
-coverAlt: "SimpleInputSimulator cover"
+websiteCoverUrl: /media/covers/works/simple-input-simulator-20261101.webp
+coverAlt: SimpleInputSimulator cover
 ---
 
 ## Overview
@@ -87,4 +88,4 @@ The plugin simulates input events without guaranteeing that the intended action 
 
 Pair press and release events and clear state when tests finish. Input cannot be injected as intended without a valid PlayerController, so automation should check that prerequisite.
 
-See the [usage guide](/en/docs/guides/ue-tools/simple-input-simulator-guide/) for steps and parameters.
+See the [usage guide](/en/works/simple-input-simulator/docs/key-input/) for steps and parameters.

@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-niagara-guide/
+      href: /en/works/mcp-niagara/docs/inspect/
   compatibility:
     - platforms: []
       requirements:
@@ -26,11 +26,15 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-niagara
-sourceHash: "27f997f06f7162f3fbb3e5153f30ad555de78c34649b5db232b8ec910368b1fa"
-generatedBodyHash: 843ae91c9c691c43591cf567b349097788e7e80d80fcbea944bd53a98127db0d
+sourceHash: c1c6fa2bfadb6f9bfb3568761e04636e3696d372e6ee041606ab63c95f4d0db2
+generatedBodyHash: 5bebcac372514b72e19fc066502ad6a330170fe1ce008580a211977538b5e1d1
 translationStatus: translated
-coverAlt: "MCPNiagara cover"
-websiteCoverUrl: "/media/covers/works/mcp-niagara-20261101.webp"
+coverAlt: MCPNiagara cover
+websiteCoverUrl: /media/covers/works/mcp-niagara-20261101.webp
+docIds:
+  - mcp-niagara-inspect
+  - mcp-niagara-edit-emitter
+  - mcp-niagara-parameters-preview
 ---
 
 ## About this work
@@ -43,4 +47,4 @@ The project focuses on Niagara systems, emitters and modules, connecting externa
 
 ## Development status
 
-The project is in development. See the [MCPNiagara user guide](/docs/guides/ue-tools/mcp-niagara-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPNiagara user guide](/en/works/mcp-niagara/docs/inspect/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

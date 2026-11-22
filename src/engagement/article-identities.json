@@ -568,6 +568,330 @@
     {
       "id": "doc:mcp-dev-tools-guide",
       "translationKey": "mcp-dev-tools-guide"
+    },
+    {
+      "id": "doc:simple-asset-cleaner:setup",
+      "translationKey": "doc:simple-asset-cleaner:setup"
+    },
+    {
+      "id": "doc:simple-asset-cleaner:clean-assets",
+      "translationKey": "doc:simple-asset-cleaner:clean-assets"
+    },
+    {
+      "id": "doc:simple-asset-cleaner:add-dependencies",
+      "translationKey": "doc:simple-asset-cleaner:add-dependencies"
+    },
+    {
+      "id": "doc:simple-asset-cleaner:protect-assets",
+      "translationKey": "doc:simple-asset-cleaner:protect-assets"
+    },
+    {
+      "id": "doc:simple-file-updater:update-files",
+      "translationKey": "doc:simple-file-updater:update-files"
+    },
+    {
+      "id": "doc:p4-case-sync:check-and-fix",
+      "translationKey": "doc:p4-case-sync:check-and-fix"
+    },
+    {
+      "id": "doc:p4-case-sync:build-and-environment",
+      "translationKey": "doc:p4-case-sync:build-and-environment"
+    },
+    {
+      "id": "doc:md-blog-packer:package",
+      "translationKey": "doc:md-blog-packer:package"
+    },
+    {
+      "id": "doc:simple-bp-inherit-fix:find-components",
+      "translationKey": "doc:simple-bp-inherit-fix:find-components"
+    },
+    {
+      "id": "doc:simple-bp-inherit-fix:repair-components",
+      "translationKey": "doc:simple-bp-inherit-fix:repair-components"
+    },
+    {
+      "id": "doc:simple-level-seq-smooth:smooth-curves",
+      "translationKey": "doc:simple-level-seq-smooth:smooth-curves"
+    },
+    {
+      "id": "doc:simple-level-seq-smooth:algorithms",
+      "translationKey": "doc:simple-level-seq-smooth:algorithms"
+    },
+    {
+      "id": "doc:ai-data-asset:sync",
+      "translationKey": "doc:ai-data-asset:sync"
+    },
+    {
+      "id": "doc:ai-data-asset:ai-edit",
+      "translationKey": "doc:ai-data-asset:ai-edit"
+    },
+    {
+      "id": "doc:simple-input-simulator:key-input",
+      "translationKey": "doc:simple-input-simulator:key-input"
+    },
+    {
+      "id": "doc:simple-input-simulator:axis-input",
+      "translationKey": "doc:simple-input-simulator:axis-input"
+    },
+    {
+      "id": "doc:simple-byte-conversion:primitive-bytes",
+      "translationKey": "doc:simple-byte-conversion:primitive-bytes"
+    },
+    {
+      "id": "doc:simple-byte-conversion:struct-and-json",
+      "translationKey": "doc:simple-byte-conversion:struct-and-json"
+    },
+    {
+      "id": "doc:simple-config-exclude:staging-rules",
+      "translationKey": "doc:simple-config-exclude:staging-rules"
+    },
+    {
+      "id": "doc:simple-config-exclude:copy-excluded",
+      "translationKey": "doc:simple-config-exclude:copy-excluded"
+    },
+    {
+      "id": "doc:simple-launcher:presets",
+      "translationKey": "doc:simple-launcher:presets"
+    },
+    {
+      "id": "doc:simple-launcher:processes",
+      "translationKey": "doc:simple-launcher:processes"
+    },
+    {
+      "id": "doc:simple-asset-namer:naming-rules",
+      "translationKey": "doc:simple-asset-namer:naming-rules"
+    },
+    {
+      "id": "doc:simple-asset-namer:rename-assets",
+      "translationKey": "doc:simple-asset-namer:rename-assets"
+    },
+    {
+      "id": "doc:simple-static-mesh-merger:merge-actors",
+      "translationKey": "doc:simple-static-mesh-merger:merge-actors"
+    },
+    {
+      "id": "doc:simple-static-mesh-merger:split-level-instance",
+      "translationKey": "doc:simple-static-mesh-merger:split-level-instance"
+    },
+    {
+      "id": "doc:simple-ssh-tunnel:connect",
+      "translationKey": "doc:simple-ssh-tunnel:connect"
+    },
+    {
+      "id": "doc:simple-ssh-tunnel:cpp-tunnels",
+      "translationKey": "doc:simple-ssh-tunnel:cpp-tunnels"
+    },
+    {
+      "id": "doc:simple-udp:channels",
+      "translationKey": "doc:simple-udp:channels"
+    },
+    {
+      "id": "doc:simple-udp:messages",
+      "translationKey": "doc:simple-udp:messages"
+    },
+    {
+      "id": "doc:simple-udp:native-sockets",
+      "translationKey": "doc:simple-udp:native-sockets"
+    },
+    {
+      "id": "doc:simple-tcp-client:connect",
+      "translationKey": "doc:simple-tcp-client:connect"
+    },
+    {
+      "id": "doc:simple-tcp-client:messages",
+      "translationKey": "doc:simple-tcp-client:messages"
+    },
+    {
+      "id": "doc:simple-tcp-client:native-client",
+      "translationKey": "doc:simple-tcp-client:native-client"
+    },
+    {
+      "id": "doc:simple-tcp-server:listen",
+      "translationKey": "doc:simple-tcp-server:listen"
+    },
+    {
+      "id": "doc:simple-tcp-server:messages",
+      "translationKey": "doc:simple-tcp-server:messages"
+    },
+    {
+      "id": "doc:simple-tcp-server:native-server",
+      "translationKey": "doc:simple-tcp-server:native-server"
+    },
+    {
+      "id": "doc:simple-websocket:connect-and-send",
+      "translationKey": "doc:simple-websocket:connect-and-send"
+    },
+    {
+      "id": "doc:simple-websocket:native-module",
+      "translationKey": "doc:simple-websocket:native-module"
+    },
+    {
+      "id": "doc:simple-auto-enum:config-binding",
+      "translationKey": "doc:simple-auto-enum:config-binding"
+    },
+    {
+      "id": "doc:simple-auto-enum:blueprints-and-assets",
+      "translationKey": "doc:simple-auto-enum:blueprints-and-assets"
+    },
+    {
+      "id": "doc:ue-package-manager:package-project",
+      "translationKey": "doc:ue-package-manager:package-project"
+    },
+    {
+      "id": "doc:ue-package-manager:build-executable",
+      "translationKey": "doc:ue-package-manager:build-executable"
+    },
+    {
+      "id": "doc:plugin-auto-packer:package",
+      "translationKey": "doc:plugin-auto-packer:package"
+    },
+    {
+      "id": "doc:plugin-auto-packer:output",
+      "translationKey": "doc:plugin-auto-packer:output"
+    },
+    {
+      "id": "doc:plugin-manager:find",
+      "translationKey": "doc:plugin-manager:find"
+    },
+    {
+      "id": "doc:plugin-manager:enable-disable",
+      "translationKey": "doc:plugin-manager:enable-disable"
+    },
+    {
+      "id": "doc:plugin-manager:folder-actions",
+      "translationKey": "doc:plugin-manager:folder-actions"
+    },
+    {
+      "id": "doc:ue-quick-start:open-project",
+      "translationKey": "doc:ue-quick-start:open-project"
+    },
+    {
+      "id": "doc:mcp-animation:find-assets",
+      "translationKey": "doc:mcp-animation:find-assets"
+    },
+    {
+      "id": "doc:mcp-animation:animation-blueprint",
+      "translationKey": "doc:mcp-animation:animation-blueprint"
+    },
+    {
+      "id": "doc:mcp-animation:montage-and-blendspace",
+      "translationKey": "doc:mcp-animation:montage-and-blendspace"
+    },
+    {
+      "id": "doc:mcp-behavior-tree:connect-and-inspect",
+      "translationKey": "doc:mcp-behavior-tree:connect-and-inspect"
+    },
+    {
+      "id": "doc:mcp-behavior-tree:edit-tree",
+      "translationKey": "doc:mcp-behavior-tree:edit-tree"
+    },
+    {
+      "id": "doc:mcp-blueprint:connect",
+      "translationKey": "doc:mcp-blueprint:connect"
+    },
+    {
+      "id": "doc:mcp-blueprint:graphs",
+      "translationKey": "doc:mcp-blueprint:graphs"
+    },
+    {
+      "id": "doc:mcp-blueprint:members-and-types",
+      "translationKey": "doc:mcp-blueprint:members-and-types"
+    },
+    {
+      "id": "doc:mcp-blueprint:components-and-inheritance",
+      "translationKey": "doc:mcp-blueprint:components-and-inheritance"
+    },
+    {
+      "id": "doc:mcp-dev-tools:inspect-editor",
+      "translationKey": "doc:mcp-dev-tools:inspect-editor"
+    },
+    {
+      "id": "doc:mcp-level-sequence:connect",
+      "translationKey": "doc:mcp-level-sequence:connect"
+    },
+    {
+      "id": "doc:mcp-level-sequence:edit-sequence",
+      "translationKey": "doc:mcp-level-sequence:edit-sequence"
+    },
+    {
+      "id": "doc:mcp-material:edit-graph",
+      "translationKey": "doc:mcp-material:edit-graph"
+    },
+    {
+      "id": "doc:mcp-material:instance-parameters",
+      "translationKey": "doc:mcp-material:instance-parameters"
+    },
+    {
+      "id": "doc:mcp-niagara:inspect",
+      "translationKey": "doc:mcp-niagara:inspect"
+    },
+    {
+      "id": "doc:mcp-niagara:edit-emitter",
+      "translationKey": "doc:mcp-niagara:edit-emitter"
+    },
+    {
+      "id": "doc:mcp-niagara:parameters-preview",
+      "translationKey": "doc:mcp-niagara:parameters-preview"
+    },
+    {
+      "id": "doc:mcp-umg:connect",
+      "translationKey": "doc:mcp-umg:connect"
+    },
+    {
+      "id": "doc:mcp-umg:layout",
+      "translationKey": "doc:mcp-umg:layout"
+    },
+    {
+      "id": "doc:mcp-umg:components-styles",
+      "translationKey": "doc:mcp-umg:components-styles"
+    },
+    {
+      "id": "doc:mcp-umg:events-navigation-animation",
+      "translationKey": "doc:mcp-umg:events-navigation-animation"
+    },
+    {
+      "id": "doc:mcp-umg:preview-runtime",
+      "translationKey": "doc:mcp-umg:preview-runtime"
+    },
+    {
+      "id": "doc:mcp-umg:batch-migration",
+      "translationKey": "doc:mcp-umg:batch-migration"
+    },
+    {
+      "id": "doc:mcp-world-editor:connect",
+      "translationKey": "doc:mcp-world-editor:connect"
+    },
+    {
+      "id": "doc:mcp-world-editor:maps",
+      "translationKey": "doc:mcp-world-editor:maps"
+    },
+    {
+      "id": "doc:mcp-world-editor:actors",
+      "translationKey": "doc:mcp-world-editor:actors"
+    },
+    {
+      "id": "doc:mcp-world-editor:streamed-world",
+      "translationKey": "doc:mcp-world-editor:streamed-world"
+    },
+    {
+      "id": "doc:mcp-world-editor:landscape",
+      "translationKey": "doc:mcp-world-editor:landscape"
+    },
+    {
+      "id": "doc:mcp-world-editor:materials",
+      "translationKey": "doc:mcp-world-editor:materials"
+    },
+    {
+      "id": "doc:p4-stream-switcher:normal-switch",
+      "translationKey": "doc:p4-stream-switcher:normal-switch"
+    },
+    {
+      "id": "doc:p4-stream-switcher:offline-switch",
+      "translationKey": "doc:p4-stream-switcher:offline-switch"
+    },
+    {
+      "id": "doc:p4-stream-switcher:recycle-workspace",
+      "translationKey": "doc:p4-stream-switcher:recycle-workspace"
     }
   ]
 }

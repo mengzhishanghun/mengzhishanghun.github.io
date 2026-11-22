@@ -13,7 +13,7 @@ workInfo:
     - kind: open-source
       href: https://github.com/MZSH-Tools/SimpleFileUpdater
     - kind: docs
-      href: /docs/zh/tools/simple-file-updater/
+      href: /zh/works/simple-file-updater/docs/update-files/
   compatibility:
     - platforms:
         - Windows（.exe 打包程序）
@@ -27,9 +27,11 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
-coverAlt: "SimpleFileUpdater封面"
-websiteCoverUrl: "/media/covers/works/simple-file-updater-20261101.webp"
-lang: "zh"
+docIds:
+  - simple-file-updater-update-files
+coverAlt: SimpleFileUpdater封面
+websiteCoverUrl: /media/covers/works/simple-file-updater-20261101.webp
+lang: zh
 translationKey: simple-file-updater
 ---
 
@@ -69,4 +71,4 @@ SimpleFileUpdater 根据配置文件中的“本地目标路径—远程下载�
 
 工具根据配置下载文件，不负责判断远端内容是否可信或是否适配当前环境。公开展示配置时应使用可公开的地址，避免把内部下载源写进示例。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/tools/simple-file-updater/)。
+操作步骤和参数说明见 [使用教程](/zh/works/simple-file-updater/docs/update-files/)。

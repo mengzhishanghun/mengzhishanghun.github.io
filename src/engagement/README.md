@@ -12,9 +12,9 @@
 
 ## 身份及构建
 
-`src/build/manifest.json` 的 `entries[].id` 是永久身份；`article-identities.json` 登记每个 ID 与既有 `translationKey` 的关联。标题、slug、URL、语言及展示分类变动时保留原 ID，不能以新 ID 代替原文章。作品介绍与文档可以共用既有 translationKey，仍是独立 ID 和计数。新增文章显式追加登记；删文时永久登记不删除、不复用，活动 registry 会停止允许该 ID。
+`src/build/manifest.json` 的 `entries[].id` 是永久身份；`article-identities.json` 登记每个 ID 与既有 `translationKey` 的关联。标题、slug、URL、语言及展示分类变动时保留原 ID，不能以新 ID 代替原文章。作品介绍与文档可以共用既有 translationKey，仍是独立 ID 和计数。新增文章须追加登记。ID 含两段或更多非空段，用冒号分隔，例如 `work:simple-asset-cleaner` 和 `doc:simple-asset-cleaner:setup`。首段以小写字母开头，后续字符可用小写字母、数字、下划线和连字符；其余段也可用大写字母。文章退役后保留永久登记和历史计数，活动注册表不再接受该 ID。
 
-执行 `node src/build/build.mjs` 生成仅含公开 ID 的 `dist/services/engagement/articles.json`，部署服务时同步它。正文四类输出互动区，中英共享 ID；分享地址由语言路由去语言段形成，文档的无语言入口必须登记在 manifest redirects，旧文档地址保留。通用分享地址无查询参数或锚点，分享标题取英文。备用 GitHub 域名只分享，不访问 API。作品、案例和博客列表在主站默认按点赞数降序，同赞（包括全为 0）保持原始顺序；可切回原有顺序，搜索时沿用原有相关性规则。批量读取失败、超时或缺项时整批回退并提示，不将未知值当作 0。一次浏览使用固定快照，返回时复用，最多缓存六个路由和 ID 集合的快照，六小时后过期。备用域名保持原有顺序，隐藏点赞排序控件。
+执行 `node src/build/build.mjs` 生成仅含公开 ID 的 `dist/services/engagement/articles.json`，部署服务时同步它。正文四类输出互动区，中英共享 ID；作品的新文档章节使用当前语言的规范网址分享，如 `/en/works/simple-asset-cleaner/docs/setup/`。已有文章保留登记的分享入口。分享地址不带查询参数或锚点。新章节使用当前语言的标题，已有文章沿用默认分享标题。备用 GitHub 域名只分享，不访问 API。作品、案例和博客列表在主站默认按点赞数降序，同赞（包括全为 0）保持原始顺序；可切回原有顺序，搜索时沿用原有相关性规则。批量读取失败、超时或缺项时整批回退并提示，不将未知值当作 0。一次浏览使用固定快照，返回时复用，最多缓存六个路由和 ID 集合的快照，六小时后过期。备用域名保持原有顺序，隐藏点赞排序控件。
 
 ## 启动与备份
 
@@ -24,6 +24,6 @@
 
 正式部署在 VPS：`linux/install.sh` 安装独立账户 `mzsh-engagement` 的 systemd 服务，原生 Node `26.11.0`，监听 `127.0.0.1:3010`。运行目录 `/srv/mzsh-engagement` 不进 Git；应用/registry 在 `app/`，mode 600 配置在 `config/service.json`，SQLite 在 `data/`，备份在 `backups/`。Node 官方 Linux x64 包 SHA-256 为 `db6342d36ebdb3cbd72103d0ce5ccc528620f6c9df72a11f4ccb384bf1bef678`。安装入口需要 root、已创建专属账户，以及已校验并安装到 `/opt/mzsh-node/node-v26.11.0-linux-x64/` 的 Node。日志仅服务状态，使用 systemd journal。
 
-`linux/backup.mjs` 使用 SQLite online backup，不复制运行中的 WAL/SHM。新时间戳备份经过 `quick_check`，再以独立只读数据库打开做 `integrity_check` 和计数摘要，不覆盖、不自动删除。`mzsh-engagement-backup.timer` 每日新加坡时间 03:40 执行；手动入口 `sudo systemctl start mzsh-engagement-backup`，用 `sudo journalctl -u mzsh-engagement-backup --no-pager -n 10` 检查结果。恢复先停服务，将备份复制到隔离目录，启动隔离端口验证 ID、计数及完整性后决定切换；不能覆盖运行中的数据库。更新 registry 时同步构建产物并重启，保留历史计数。
+`linux/backup.mjs` 使用 SQLite online backup，不复制运行中的 WAL/SHM。新时间戳备份经过 `quick_check`，再以独立只读数据库打开做 `integrity_check` 和计数摘要，不覆盖、不自动删除。`mzsh-engagement-backup.timer` 每日新加坡时间 03:40 执行；手动入口 `sudo systemctl start mzsh-engagement-backup`，用 `sudo journalctl -u mzsh-engagement-backup --no-pager -n 10` 检查结果。恢复先停服务，将备份复制到隔离目录，启动隔离端口验证 ID、计数及完整性后决定切换；不能覆盖运行中的数据库。更新活动注册表时，替换 `app/articles.json` 后重启服务；更新服务代码时须同时安装 `app/service.mjs` 和 `app/article-identities.mjs`，备份入口 `app/backup.mjs` 使用同一服务模块。
 
 定向检查：`node --test src/engagement/service.test.mjs src/build/engagement.test.mjs src/build/build.test.mjs`；`node src/build/build.mjs --check`。浏览器存储失败不发赞，发送前持久化 pending，结果未知保留 pending，刷新也不重发；这里只提示本机已点赞，不承诺跨设备去重。

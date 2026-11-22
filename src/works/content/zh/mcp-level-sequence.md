@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-level-sequence-guide/
+      href: /zh/works/mcp-level-sequence/docs/connect/
   compatibility:
     - platforms: []
       requirements:
@@ -24,9 +24,12 @@ sitePublish: true
 tags:
   - Level Sequence 序列资产编辑
   - MCP 系列
-coverAlt: "MCPLevelSequence封面"
-websiteCoverUrl: "/media/covers/works/mcp-level-sequence-20261101.webp"
-lang: "zh"
+docIds:
+  - mcp-level-sequence-connect
+  - mcp-level-sequence-edit-sequence
+coverAlt: MCPLevelSequence封面
+websiteCoverUrl: /media/covers/works/mcp-level-sequence-20261101.webp
+lang: zh
 translationKey: mcp-level-sequence
 ---
 
@@ -40,4 +43,4 @@ MCPLevelSequence 是开发中的 UE 编辑器 MCP 插件，围绕Level Sequence 
 
 ## 开发状态
 
-项目处于开发阶段，使用说明见[MCPLevelSequence 教程](/zh/docs/guides/ue-tools/mcp-level-sequence-guide/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。
+项目处于开发阶段，使用说明见[MCPLevelSequence 教程](/zh/works/mcp-level-sequence/docs/connect/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。

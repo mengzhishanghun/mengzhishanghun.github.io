@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/f7c4474c-9a9d-455a-a948-d46d557b457d
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-asset-namer-guide/
+      href: /zh/works/simple-asset-namer/docs/naming-rules/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -34,12 +34,13 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19770922
 docIds:
-  - simple-asset-namer-guide
-websiteCoverUrl: "/media/covers/works/simple-asset-namer-20261101.webp"
+  - simple-asset-namer-naming-rules
+  - simple-asset-namer-rename-assets
+coverAlt: SimpleAssetNamer封面
+websiteCoverUrl: /media/covers/works/simple-asset-namer-20261101.webp
 sourceDate: 2026-03-25
-lang: "zh"
+lang: zh
 translationKey: simple-asset-namer
-coverAlt: "SimpleAssetNamer封面"
 ---
 
 ## 作品简介
@@ -78,4 +79,4 @@ SimpleAssetNamer 为 UE 资产提供基于类型和路径的命名规则。它�
 
 工具报告的是命名执行结果，项目仍需检查引用、关卡和脚本是否按预期工作。没有匹配规则或目标名称冲突的资产不能假定会自动处理。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-asset-namer-guide/)。
+操作步骤和参数说明见 [使用教程](/zh/works/simple-asset-namer/docs/naming-rules/)。

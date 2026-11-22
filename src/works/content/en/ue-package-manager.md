@@ -20,15 +20,15 @@ links:
     href: https://github.com/MZSH-Tools/UEPackageManager
 lang: en
 translationKey: ue-package-manager
-sourceHash: 9a7e0625c9ec368155b5a418092d3c17552e5a8ec4d09a0fe21ecefe85c70ab1
+sourceHash: e77b10436f75b45ca4feb46433858ed17d84c820f683d5adddb17034b3c79dae
 translationStatus: translated
-generatedBodyHash: 97839545369ba78792d1e7e73e38746686a230b472c10b23364a971c573b57e6
+generatedBodyHash: f1ebfcfa4f4d244a4b065289c51de7953544575b9beb34a45626aac36c19ceab
 workInfo:
   channels:
     - kind: open-source
       href: https://github.com/MZSH-Tools/UEPackageManager
     - kind: docs
-      href: /docs/zh/tools/ue-package-manager/
+      href: /en/works/ue-package-manager/docs/package-project/
   compatibility:
     - platforms:
         - Windows
@@ -36,6 +36,9 @@ workInfo:
         - Win64 project packaging; Launcher or source-built engine
 websiteCoverUrl: /media/imported/works/ue-package-manager-cover-v2.png
 coverAlt: UEPackageManager cover
+docIds:
+  - ue-package-manager-package-project
+  - ue-package-manager-build-executable
 ---
 
 ## Overview
@@ -88,4 +91,4 @@ Full Debug builds, standalone plugin packaging, automatic editor closure, and pr
 
 *UEPackageManager graphical interface: configuring the project, packaging parameters, and additional file copy rules.*
 
-For operation steps and parameter details, see the [user guide](/en/docs/tools/ue-package-manager/).
+For operation steps and parameter details, see the [user guide](/en/works/ue-package-manager/docs/package-project/).

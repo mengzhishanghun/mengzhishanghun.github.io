@@ -22,22 +22,25 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: "754dabb6f5676543a87ab7b0960016c5fbe009acd09956d1c0a4ab58d4d89718"
+sourceHash: fb0c966d077fba5e7ae87b617650588a0be1518c055fc911bf46f7d3a5626133
 translationStatus: translated
-generatedBodyHash: 6d9d4e01195b39ada53556e3bb4331f17a1dffb0c069253bc402a02a2482d200
+generatedBodyHash: f93272e472783eae800cba2141848e24709ec67fee5e3e5632a685e447a70e5e
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/
+      href: /en/works/simple-ssh-tunnel/docs/connect/
   compatibility:
     - platforms:
         - Windows (Win64)
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-ssh-tunnel-20261101.webp"
-coverAlt: "SimpleSSHTunnel cover"
+websiteCoverUrl: /media/covers/works/simple-ssh-tunnel-20261101.webp
+coverAlt: SimpleSSHTunnel cover
+docIds:
+  - simple-ssh-tunnel-connect
+  - simple-ssh-tunnel-cpp-tunnels
 ---
 
 ## Overview
@@ -78,4 +81,4 @@ Windows is currently supported. Check library files and build support before por
 
 The default subsystem closes all tunnels when it is destroyed. In the target project, review SSH credential storage and usage, connection threads, error handling, and whether sessions and channels are released correctly when connections close.
 
-See the [user guide](/en/docs/guides/ue-tools/simple-ssh-tunnel-guide/) for connection configuration, Blueprint calls, and implementation details.
+See the [user guide](/en/works/simple-ssh-tunnel/docs/connect/) for connection configuration, Blueprint calls, and implementation details.

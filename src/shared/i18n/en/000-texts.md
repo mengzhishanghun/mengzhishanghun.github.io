@@ -6745,6 +6745,13 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:chapter:
+    toc: On this page
+    previous: Previous
+    next: Next
+    works: Works
+    documents: Documentation
+    backToWork: Back to work
 scriptSlots:
   content-index:sort-likes: Most liked
   content-index:likes-loading: Loading like counts…
@@ -8627,7 +8634,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: "584c250a2118903d8dac225439f74cc3d91c56669ca0a5a5ddb6ec7f1df2c4cc"
+sourceHash: "6bcbcb35a9fc5cf0c6ee1bd17fc187526bbc36010f0eea4ad2bf54cf40a59de6"
 translationStatus: translated
 generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
 workLabels:

@@ -11,7 +11,7 @@ status: 正式文档
 workInfo:
   channels:
     - kind: docs
-      href: /docs/zh/tools/ue-quick-start/
+      href: /zh/works/ue-quick-start/docs/open-project/
   compatibility:
     - platforms:
         - UE 项目工具（操作系统待核实）
@@ -26,9 +26,11 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEQuickStart
-coverAlt: "UEQuickStart封面"
-websiteCoverUrl: "/media/covers/works/ue-quick-start-20261101.webp"
-lang: "zh"
+docIds:
+  - ue-quick-start-open-project
+coverAlt: UEQuickStart封面
+websiteCoverUrl: /media/covers/works/ue-quick-start-20261101.webp
+lang: zh
 translationKey: ue-quick-start
 ---
 
@@ -66,4 +68,4 @@ UEQuickStart 面向 UE 美术、测试、策划等非程序人员，在本机一
 
 当前仅支持 Windows。使用前提是本机已配置编译环境，并曾成功运行过该项目。工具不安装 UE、编译器或项目依赖，也不保证新的源码一定能通过构建。遇到实际代码、模块或环境错误时，仍需按日志定位并修复。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/tools/ue-quick-start/)。
+操作步骤和参数说明见 [使用教程](/zh/works/ue-quick-start/docs/open-project/)。

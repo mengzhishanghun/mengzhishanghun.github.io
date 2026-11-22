@@ -11,7 +11,7 @@ status: 源码公开
 workInfo:
   channels:
     - kind: docs
-      href: /docs/zh/tools/p4-stream-switcher/
+      href: /zh/works/p4-stream-switcher/docs/normal-switch/
   compatibility:
     - platforms:
         - Windows
@@ -28,6 +28,10 @@ tags:
 links:
   - label: 公开源码仓库
     href: https://github.com/MZSH-Tools/P4StreamSwitcher
+docIds:
+  - p4-stream-switcher-normal-switch
+  - p4-stream-switcher-offline-switch
+  - p4-stream-switcher-recycle-workspace
 coverAlt: P4StreamSwitcher封面
 websiteCoverUrl: /media/covers/works/p4-stream-switcher-20261101.webp
 lang: zh
@@ -62,7 +66,7 @@ P4StreamSwitcher 是面向 Windows 的 Perforce 流工作区切换工具，使�
 
 ## 相关内容
 
-- [使用文档](</zh/docs/tools/p4-stream-switcher/>)
+- [使用文档](</zh/works/p4-stream-switcher/docs/normal-switch/>)
 - [工作区池开发案例](</zh/blog/perforce-workspace-pool/>)
 - [Python 切流工具博客](</zh/blog/python-perforce-stream-switch-safety/>)
 - [公开源码仓库](https://github.com/MZSH-Tools/P4StreamSwitcher)

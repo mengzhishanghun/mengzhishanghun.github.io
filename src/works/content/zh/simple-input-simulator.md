@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/dd1ee0a8-f450-4a3d-adc4-4a96f5dec3dd
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-input-simulator-guide/
+      href: /zh/works/simple-input-simulator/docs/key-input/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -36,12 +36,13 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19770939
 docIds:
-  - simple-input-simulator-guide
-websiteCoverUrl: "/media/covers/works/simple-input-simulator-20261101.webp"
+  - simple-input-simulator-key-input
+  - simple-input-simulator-axis-input
+coverAlt: SimpleInputSimulator封面
+websiteCoverUrl: /media/covers/works/simple-input-simulator-20261101.webp
 sourceDate: 2026-03-25
-lang: "zh"
+lang: zh
 translationKey: simple-input-simulator
-coverAlt: "SimpleInputSimulator封面"
 ---
 
 ## 作品简介
@@ -84,4 +85,4 @@ SimpleInputSimulator 为 UE 蓝图提供按键和轴输入模拟节点，让游�
 
 按下与抬起要配对，测试结束要清理状态。没有有效 PlayerController 时无法按预期注入输入，自动化流程应检查这一前提。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-input-simulator-guide/)。
+操作步骤和参数说明见 [使用教程](/zh/works/simple-input-simulator/docs/key-input/)。

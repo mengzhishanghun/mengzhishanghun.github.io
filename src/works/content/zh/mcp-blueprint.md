@@ -14,7 +14,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-blueprint-guide/
+      href: /zh/works/mcp-blueprint/docs/connect/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -28,6 +28,11 @@ sitePublish: true
 tags:
   - 蓝图发现、编辑与编译反馈
   - MCP 系列
+docIds:
+  - mcp-blueprint-connect
+  - mcp-blueprint-graphs
+  - mcp-blueprint-members-and-types
+  - mcp-blueprint-components-and-inheritance
 coverAlt: MCPBlueprint封面
 websiteCoverUrl: /media/covers/works/mcp-blueprint-20261101.webp
 lang: zh
@@ -44,4 +49,4 @@ MCPBlueprint 是已在 Fab 发售的 UE 编辑器插件，让 AI 工具通过 MC
 
 ## 购买与文档
 
-在 [Fab 商品页](https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713)购买插件，安装与使用说明见 [MCPBlueprint 教程](/docs/guides/ue-tools/mcp-blueprint-guide/)。网站教程对应已发布版本。
+在 [Fab 商品页](https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713)购买插件，安装与使用说明见 [MCPBlueprint 教程](/zh/works/mcp-blueprint/docs/connect/)。网站教程对应已发布版本。

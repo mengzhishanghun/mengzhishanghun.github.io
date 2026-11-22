@@ -13,7 +13,7 @@ workInfo:
     - kind: open-source
       href: https://github.com/MZSH-Tools/P4CaseSync
     - kind: docs
-      href: /docs/zh/tools/p4-case-sync/
+      href: /zh/works/p4-case-sync/docs/check-and-fix/
   compatibility:
     - platforms:
         - Windows（推荐）
@@ -29,6 +29,9 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/P4CaseSync
+docIds:
+  - p4-case-sync-check-and-fix
+  - p4-case-sync-build-and-environment
 coverAlt: P4CaseSync封面
 websiteCoverUrl: /media/imported/works/p4-case-sync-cover-v2.png
 lang: zh
@@ -77,4 +80,4 @@ P4CaseSync 在 Perforce 提交前检查已打开文件的路径大小写。它�
 
 路径修正属于版本控制操作，可能改变已打开文件的记录；应在应用前核对目标列表，并在应用后复查 changelist。它只处理路径一致性，不替代内容评审或提交权限检查。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/tools/p4-case-sync/)。
+操作步骤和参数说明见 [使用教程](/zh/works/p4-case-sync/docs/check-and-fix/)。

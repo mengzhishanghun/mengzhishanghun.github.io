@@ -64,29 +64,6 @@ languages:
       work:plugin-auto-packer: works/content/zh/plugin-auto-packer.md
       work:plugin-manager: works/content/zh/plugin-manager.md
       work:ue-quick-start: works/content/zh/ue-quick-start.md
-      doc:ai-data-asset-guide: docs/content/zh/ai-data-asset-guide.md
-      doc:md-blog-packer: docs/content/zh/md-blog-packer.md
-      doc:p4-case-sync: docs/content/zh/p4-case-sync.md
-      doc:plugin-auto-packer: docs/content/zh/plugin-auto-packer.md
-      doc:plugin-manager: docs/content/zh/plugin-manager.md
-      doc:simple-asset-cleaner-guide: docs/content/zh/simple-asset-cleaner-guide.md
-      doc:simple-asset-namer-guide: docs/content/zh/simple-asset-namer-guide.md
-      doc:simple-auto-enum-guide: docs/content/zh/simple-auto-enum-guide.md
-      doc:simple-bp-inherit-fix-guide: docs/content/zh/simple-bp-inherit-fix-guide.md
-      doc:simple-byte-conversion-guide: docs/content/zh/simple-byte-conversion-guide.md
-      doc:simple-config-exclude-guide: docs/content/zh/simple-config-exclude-guide.md
-      doc:simple-file-updater: docs/content/zh/simple-file-updater.md
-      doc:simple-input-simulator-guide: docs/content/zh/simple-input-simulator-guide.md
-      doc:simple-launcher-guide: docs/content/zh/simple-launcher-guide.md
-      doc:simple-level-seq-smooth-guide: docs/content/zh/simple-level-seq-smooth-guide.md
-      doc:simple-ssh-tunnel-guide: docs/content/zh/simple-ssh-tunnel-guide.md
-      doc:simple-static-mesh-merger-guide: docs/content/zh/simple-static-mesh-merger-guide.md
-      doc:simple-tcp-client-guide: docs/content/zh/simple-tcp-client-guide.md
-      doc:simple-tcp-server-guide: docs/content/zh/simple-tcp-server-guide.md
-      doc:simple-udp-guide: docs/content/zh/simple-udp-guide.md
-      doc:simple-websocket-guide: docs/content/zh/simple-websocket-guide.md
-      doc:ue-package-manager: docs/content/zh/ue-package-manager.md
-      doc:ue-quick-start: docs/content/zh/ue-quick-start.md
       page:home: home/content/zh/home.md
       page:works-index: works/content/zh/works-index.md
       page:cases-index: cases/content/zh/cases-index.md
@@ -116,7 +93,6 @@ languages:
       work:mcp-world-editor: works/content/zh/mcp-world-editor.md
       work:shaniu: works/content/zh/shaniu.md
       work:p4-stream-switcher: works/content/zh/p4-stream-switcher.md
-      doc:p4-stream-switcher: docs/content/zh/p4-stream-switcher.md
       blog:ai-digital-human-integration: blog/content/zh/ai-digital-human-integration.md
       blog:flying-car-simulator: blog/content/zh/flying-car-simulator.md
       blog:motion-capture-robot-control: blog/content/zh/motion-capture-robot-control.md
@@ -128,15 +104,87 @@ languages:
       blog:ue-multiwindow-interface: blog/content/zh/ue-multiwindow-interface.md
       blog:robot-realtime-ik-prototype: blog/content/zh/robot-realtime-ik-prototype.md
       case:herbal-exhibition: cases/content/zh/herbal-exhibition.md
-      doc:mcp-world-editor-guide: docs/content/zh/mcp-world-editor-guide.md
-      doc:mcp-level-sequence-guide: docs/content/zh/mcp-level-sequence-guide.md
-      doc:mcp-niagara-guide: docs/content/zh/mcp-niagara-guide.md
-      doc:mcp-animation-guide: docs/content/zh/mcp-animation-guide.md
-      doc:mcp-umg-guide: docs/content/zh/mcp-umg-guide.md
-      doc:mcp-material-guide: docs/content/zh/mcp-material-guide.md
-      doc:mcp-blueprint-guide: docs/content/zh/mcp-blueprint-guide.md
-      doc:mcp-behavior-tree-guide: docs/content/zh/mcp-behavior-tree-guide.md
-      doc:mcp-dev-tools-guide: docs/content/zh/mcp-dev-tools-guide.md
+      doc:simple-asset-cleaner:setup: docs/content/zh/simple-asset-cleaner-setup.md
+      doc:simple-asset-cleaner:clean-assets: docs/content/zh/simple-asset-cleaner-clean-assets.md
+      doc:simple-asset-cleaner:add-dependencies: docs/content/zh/simple-asset-cleaner-add-dependencies.md
+      doc:simple-asset-cleaner:protect-assets: docs/content/zh/simple-asset-cleaner-protect-assets.md
+      doc:simple-file-updater:update-files: docs/content/zh/simple-file-updater-update-files.md
+      doc:p4-case-sync:check-and-fix: docs/content/zh/p4-case-sync-check-and-fix.md
+      doc:p4-case-sync:build-and-environment: docs/content/zh/p4-case-sync-build-and-environment.md
+      doc:md-blog-packer:package: docs/content/zh/md-blog-packer-package.md
+      doc:simple-bp-inherit-fix:find-components: docs/content/zh/simple-bp-inherit-fix-find-components.md
+      doc:simple-bp-inherit-fix:repair-components: docs/content/zh/simple-bp-inherit-fix-repair-components.md
+      doc:simple-level-seq-smooth:smooth-curves: docs/content/zh/simple-level-seq-smooth-smooth-curves.md
+      doc:simple-level-seq-smooth:algorithms: docs/content/zh/simple-level-seq-smooth-algorithms.md
+      doc:ai-data-asset:sync: docs/content/zh/ai-data-asset-sync.md
+      doc:ai-data-asset:ai-edit: docs/content/zh/ai-data-asset-ai-edit.md
+      doc:simple-input-simulator:key-input: docs/content/zh/simple-input-simulator-key-input.md
+      doc:simple-input-simulator:axis-input: docs/content/zh/simple-input-simulator-axis-input.md
+      doc:simple-byte-conversion:primitive-bytes: docs/content/zh/simple-byte-conversion-primitive-bytes.md
+      doc:simple-byte-conversion:struct-and-json: docs/content/zh/simple-byte-conversion-struct-and-json.md
+      doc:simple-config-exclude:staging-rules: docs/content/zh/simple-config-exclude-staging-rules.md
+      doc:simple-config-exclude:copy-excluded: docs/content/zh/simple-config-exclude-copy-excluded.md
+      doc:simple-launcher:presets: docs/content/zh/simple-launcher-presets.md
+      doc:simple-launcher:processes: docs/content/zh/simple-launcher-processes.md
+      doc:simple-asset-namer:naming-rules: docs/content/zh/simple-asset-namer-naming-rules.md
+      doc:simple-asset-namer:rename-assets: docs/content/zh/simple-asset-namer-rename-assets.md
+      doc:simple-static-mesh-merger:merge-actors: docs/content/zh/simple-static-mesh-merger-merge-actors.md
+      doc:simple-static-mesh-merger:split-level-instance: docs/content/zh/simple-static-mesh-merger-split-level-instance.md
+      doc:simple-ssh-tunnel:connect: docs/content/zh/simple-ssh-tunnel-connect.md
+      doc:simple-ssh-tunnel:cpp-tunnels: docs/content/zh/simple-ssh-tunnel-cpp-tunnels.md
+      doc:simple-udp:channels: docs/content/zh/simple-udp-channels.md
+      doc:simple-udp:messages: docs/content/zh/simple-udp-messages.md
+      doc:simple-udp:native-sockets: docs/content/zh/simple-udp-native-sockets.md
+      doc:simple-tcp-client:connect: docs/content/zh/simple-tcp-client-connect.md
+      doc:simple-tcp-client:messages: docs/content/zh/simple-tcp-client-messages.md
+      doc:simple-tcp-client:native-client: docs/content/zh/simple-tcp-client-native-client.md
+      doc:simple-tcp-server:listen: docs/content/zh/simple-tcp-server-listen.md
+      doc:simple-tcp-server:messages: docs/content/zh/simple-tcp-server-messages.md
+      doc:simple-tcp-server:native-server: docs/content/zh/simple-tcp-server-native-server.md
+      doc:simple-websocket:connect-and-send: docs/content/zh/simple-websocket-connect-and-send.md
+      doc:simple-websocket:native-module: docs/content/zh/simple-websocket-native-module.md
+      doc:simple-auto-enum:config-binding: docs/content/zh/simple-auto-enum-config-binding.md
+      doc:simple-auto-enum:blueprints-and-assets: docs/content/zh/simple-auto-enum-blueprints-and-assets.md
+      doc:ue-package-manager:package-project: docs/content/zh/ue-package-manager-package-project.md
+      doc:ue-package-manager:build-executable: docs/content/zh/ue-package-manager-build-executable.md
+      doc:plugin-auto-packer:package: docs/content/zh/plugin-auto-packer-package.md
+      doc:plugin-auto-packer:output: docs/content/zh/plugin-auto-packer-output.md
+      doc:plugin-manager:find: docs/content/zh/plugin-manager-find.md
+      doc:plugin-manager:enable-disable: docs/content/zh/plugin-manager-enable-disable.md
+      doc:plugin-manager:folder-actions: docs/content/zh/plugin-manager-folder-actions.md
+      doc:ue-quick-start:open-project: docs/content/zh/ue-quick-start-open-project.md
+      doc:mcp-animation:find-assets: docs/content/zh/mcp-animation-find-assets.md
+      doc:mcp-animation:animation-blueprint: docs/content/zh/mcp-animation-animation-blueprint.md
+      doc:mcp-animation:montage-and-blendspace: docs/content/zh/mcp-animation-montage-and-blendspace.md
+      doc:mcp-behavior-tree:connect-and-inspect: docs/content/zh/mcp-behavior-tree-connect-and-inspect.md
+      doc:mcp-behavior-tree:edit-tree: docs/content/zh/mcp-behavior-tree-edit-tree.md
+      doc:mcp-blueprint:connect: docs/content/zh/mcp-blueprint-connect.md
+      doc:mcp-blueprint:graphs: docs/content/zh/mcp-blueprint-graphs.md
+      doc:mcp-blueprint:members-and-types: docs/content/zh/mcp-blueprint-members-and-types.md
+      doc:mcp-blueprint:components-and-inheritance: docs/content/zh/mcp-blueprint-components-and-inheritance.md
+      doc:mcp-dev-tools:inspect-editor: docs/content/zh/mcp-dev-tools-inspect-editor.md
+      doc:mcp-level-sequence:connect: docs/content/zh/mcp-level-sequence-connect.md
+      doc:mcp-level-sequence:edit-sequence: docs/content/zh/mcp-level-sequence-edit-sequence.md
+      doc:mcp-material:edit-graph: docs/content/zh/mcp-material-edit-graph.md
+      doc:mcp-material:instance-parameters: docs/content/zh/mcp-material-instance-parameters.md
+      doc:mcp-niagara:inspect: docs/content/zh/mcp-niagara-inspect.md
+      doc:mcp-niagara:edit-emitter: docs/content/zh/mcp-niagara-edit-emitter.md
+      doc:mcp-niagara:parameters-preview: docs/content/zh/mcp-niagara-parameters-preview.md
+      doc:mcp-umg:connect: docs/content/zh/mcp-umg-connect.md
+      doc:mcp-umg:layout: docs/content/zh/mcp-umg-layout.md
+      doc:mcp-umg:components-styles: docs/content/zh/mcp-umg-components-styles.md
+      doc:mcp-umg:events-navigation-animation: docs/content/zh/mcp-umg-events-navigation-animation.md
+      doc:mcp-umg:preview-runtime: docs/content/zh/mcp-umg-preview-runtime.md
+      doc:mcp-umg:batch-migration: docs/content/zh/mcp-umg-batch-migration.md
+      doc:mcp-world-editor:connect: docs/content/zh/mcp-world-editor-connect.md
+      doc:mcp-world-editor:maps: docs/content/zh/mcp-world-editor-maps.md
+      doc:mcp-world-editor:actors: docs/content/zh/mcp-world-editor-actors.md
+      doc:mcp-world-editor:streamed-world: docs/content/zh/mcp-world-editor-streamed-world.md
+      doc:mcp-world-editor:landscape: docs/content/zh/mcp-world-editor-landscape.md
+      doc:mcp-world-editor:materials: docs/content/zh/mcp-world-editor-materials.md
+      doc:p4-stream-switcher:normal-switch: docs/content/zh/p4-stream-switcher-normal-switch.md
+      doc:p4-stream-switcher:offline-switch: docs/content/zh/p4-stream-switcher-offline-switch.md
+      doc:p4-stream-switcher:recycle-workspace: docs/content/zh/p4-stream-switcher-recycle-workspace.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -198,29 +246,6 @@ languages:
       work:plugin-auto-packer: works/content/en/plugin-auto-packer.md
       work:plugin-manager: works/content/en/plugin-manager.md
       work:ue-quick-start: works/content/en/ue-quick-start.md
-      doc:ai-data-asset-guide: docs/content/en/ai-data-asset-guide.md
-      doc:md-blog-packer: docs/content/en/md-blog-packer.md
-      doc:p4-case-sync: docs/content/en/p4-case-sync.md
-      doc:plugin-auto-packer: docs/content/en/plugin-auto-packer.md
-      doc:plugin-manager: docs/content/en/plugin-manager.md
-      doc:simple-asset-cleaner-guide: docs/content/en/simple-asset-cleaner-guide.md
-      doc:simple-asset-namer-guide: docs/content/en/simple-asset-namer-guide.md
-      doc:simple-auto-enum-guide: docs/content/en/simple-auto-enum-guide.md
-      doc:simple-bp-inherit-fix-guide: docs/content/en/simple-bp-inherit-fix-guide.md
-      doc:simple-byte-conversion-guide: docs/content/en/simple-byte-conversion-guide.md
-      doc:simple-config-exclude-guide: docs/content/en/simple-config-exclude-guide.md
-      doc:simple-file-updater: docs/content/en/simple-file-updater.md
-      doc:simple-input-simulator-guide: docs/content/en/simple-input-simulator-guide.md
-      doc:simple-launcher-guide: docs/content/en/simple-launcher-guide.md
-      doc:simple-level-seq-smooth-guide: docs/content/en/simple-level-seq-smooth-guide.md
-      doc:simple-ssh-tunnel-guide: docs/content/en/simple-ssh-tunnel-guide.md
-      doc:simple-static-mesh-merger-guide: docs/content/en/simple-static-mesh-merger-guide.md
-      doc:simple-tcp-client-guide: docs/content/en/simple-tcp-client-guide.md
-      doc:simple-tcp-server-guide: docs/content/en/simple-tcp-server-guide.md
-      doc:simple-udp-guide: docs/content/en/simple-udp-guide.md
-      doc:simple-websocket-guide: docs/content/en/simple-websocket-guide.md
-      doc:ue-package-manager: docs/content/en/ue-package-manager.md
-      doc:ue-quick-start: docs/content/en/ue-quick-start.md
       page:home: home/content/en/home.md
       page:works-index: works/content/en/works-index.md
       page:cases-index: cases/content/en/cases-index.md
@@ -250,7 +275,6 @@ languages:
       work:mcp-world-editor: works/content/en/mcp-world-editor.md
       work:shaniu: works/content/en/shaniu.md
       work:p4-stream-switcher: works/content/en/p4-stream-switcher.md
-      doc:p4-stream-switcher: docs/content/en/p4-stream-switcher.md
       blog:ai-digital-human-integration: blog/content/en/ai-digital-human-integration.md
       blog:flying-car-simulator: blog/content/en/flying-car-simulator.md
       blog:motion-capture-robot-control: blog/content/en/motion-capture-robot-control.md
@@ -262,13 +286,85 @@ languages:
       blog:ue-multiwindow-interface: blog/content/en/ue-multiwindow-interface.md
       blog:robot-realtime-ik-prototype: blog/content/en/robot-realtime-ik-prototype.md
       case:herbal-exhibition: cases/content/en/herbal-exhibition.md
-      doc:mcp-world-editor-guide: docs/content/en/mcp-world-editor-guide.md
-      doc:mcp-level-sequence-guide: docs/content/en/mcp-level-sequence-guide.md
-      doc:mcp-niagara-guide: docs/content/en/mcp-niagara-guide.md
-      doc:mcp-animation-guide: docs/content/en/mcp-animation-guide.md
-      doc:mcp-umg-guide: docs/content/en/mcp-umg-guide.md
-      doc:mcp-material-guide: docs/content/en/mcp-material-guide.md
-      doc:mcp-blueprint-guide: docs/content/en/mcp-blueprint-guide.md
-      doc:mcp-behavior-tree-guide: docs/content/en/mcp-behavior-tree-guide.md
-      doc:mcp-dev-tools-guide: docs/content/en/mcp-dev-tools-guide.md
+      doc:simple-asset-cleaner:setup: docs/content/en/simple-asset-cleaner-setup.md
+      doc:simple-asset-cleaner:clean-assets: docs/content/en/simple-asset-cleaner-clean-assets.md
+      doc:simple-asset-cleaner:add-dependencies: docs/content/en/simple-asset-cleaner-add-dependencies.md
+      doc:simple-asset-cleaner:protect-assets: docs/content/en/simple-asset-cleaner-protect-assets.md
+      doc:simple-file-updater:update-files: docs/content/en/simple-file-updater-update-files.md
+      doc:p4-case-sync:check-and-fix: docs/content/en/p4-case-sync-check-and-fix.md
+      doc:p4-case-sync:build-and-environment: docs/content/en/p4-case-sync-build-and-environment.md
+      doc:md-blog-packer:package: docs/content/en/md-blog-packer-package.md
+      doc:simple-bp-inherit-fix:find-components: docs/content/en/simple-bp-inherit-fix-find-components.md
+      doc:simple-bp-inherit-fix:repair-components: docs/content/en/simple-bp-inherit-fix-repair-components.md
+      doc:simple-level-seq-smooth:smooth-curves: docs/content/en/simple-level-seq-smooth-smooth-curves.md
+      doc:simple-level-seq-smooth:algorithms: docs/content/en/simple-level-seq-smooth-algorithms.md
+      doc:ai-data-asset:sync: docs/content/en/ai-data-asset-sync.md
+      doc:ai-data-asset:ai-edit: docs/content/en/ai-data-asset-ai-edit.md
+      doc:simple-input-simulator:key-input: docs/content/en/simple-input-simulator-key-input.md
+      doc:simple-input-simulator:axis-input: docs/content/en/simple-input-simulator-axis-input.md
+      doc:simple-byte-conversion:primitive-bytes: docs/content/en/simple-byte-conversion-primitive-bytes.md
+      doc:simple-byte-conversion:struct-and-json: docs/content/en/simple-byte-conversion-struct-and-json.md
+      doc:simple-config-exclude:staging-rules: docs/content/en/simple-config-exclude-staging-rules.md
+      doc:simple-config-exclude:copy-excluded: docs/content/en/simple-config-exclude-copy-excluded.md
+      doc:simple-launcher:presets: docs/content/en/simple-launcher-presets.md
+      doc:simple-launcher:processes: docs/content/en/simple-launcher-processes.md
+      doc:simple-asset-namer:naming-rules: docs/content/en/simple-asset-namer-naming-rules.md
+      doc:simple-asset-namer:rename-assets: docs/content/en/simple-asset-namer-rename-assets.md
+      doc:simple-static-mesh-merger:merge-actors: docs/content/en/simple-static-mesh-merger-merge-actors.md
+      doc:simple-static-mesh-merger:split-level-instance: docs/content/en/simple-static-mesh-merger-split-level-instance.md
+      doc:simple-ssh-tunnel:connect: docs/content/en/simple-ssh-tunnel-connect.md
+      doc:simple-ssh-tunnel:cpp-tunnels: docs/content/en/simple-ssh-tunnel-cpp-tunnels.md
+      doc:simple-udp:channels: docs/content/en/simple-udp-channels.md
+      doc:simple-udp:messages: docs/content/en/simple-udp-messages.md
+      doc:simple-udp:native-sockets: docs/content/en/simple-udp-native-sockets.md
+      doc:simple-tcp-client:connect: docs/content/en/simple-tcp-client-connect.md
+      doc:simple-tcp-client:messages: docs/content/en/simple-tcp-client-messages.md
+      doc:simple-tcp-client:native-client: docs/content/en/simple-tcp-client-native-client.md
+      doc:simple-tcp-server:listen: docs/content/en/simple-tcp-server-listen.md
+      doc:simple-tcp-server:messages: docs/content/en/simple-tcp-server-messages.md
+      doc:simple-tcp-server:native-server: docs/content/en/simple-tcp-server-native-server.md
+      doc:simple-websocket:connect-and-send: docs/content/en/simple-websocket-connect-and-send.md
+      doc:simple-websocket:native-module: docs/content/en/simple-websocket-native-module.md
+      doc:simple-auto-enum:config-binding: docs/content/en/simple-auto-enum-config-binding.md
+      doc:simple-auto-enum:blueprints-and-assets: docs/content/en/simple-auto-enum-blueprints-and-assets.md
+      doc:ue-package-manager:package-project: docs/content/en/ue-package-manager-package-project.md
+      doc:ue-package-manager:build-executable: docs/content/en/ue-package-manager-build-executable.md
+      doc:plugin-auto-packer:package: docs/content/en/plugin-auto-packer-package.md
+      doc:plugin-auto-packer:output: docs/content/en/plugin-auto-packer-output.md
+      doc:plugin-manager:find: docs/content/en/plugin-manager-find.md
+      doc:plugin-manager:enable-disable: docs/content/en/plugin-manager-enable-disable.md
+      doc:plugin-manager:folder-actions: docs/content/en/plugin-manager-folder-actions.md
+      doc:ue-quick-start:open-project: docs/content/en/ue-quick-start-open-project.md
+      doc:mcp-animation:find-assets: docs/content/en/mcp-animation-find-assets.md
+      doc:mcp-animation:animation-blueprint: docs/content/en/mcp-animation-animation-blueprint.md
+      doc:mcp-animation:montage-and-blendspace: docs/content/en/mcp-animation-montage-and-blendspace.md
+      doc:mcp-behavior-tree:connect-and-inspect: docs/content/en/mcp-behavior-tree-connect-and-inspect.md
+      doc:mcp-behavior-tree:edit-tree: docs/content/en/mcp-behavior-tree-edit-tree.md
+      doc:mcp-blueprint:connect: docs/content/en/mcp-blueprint-connect.md
+      doc:mcp-blueprint:graphs: docs/content/en/mcp-blueprint-graphs.md
+      doc:mcp-blueprint:members-and-types: docs/content/en/mcp-blueprint-members-and-types.md
+      doc:mcp-blueprint:components-and-inheritance: docs/content/en/mcp-blueprint-components-and-inheritance.md
+      doc:mcp-dev-tools:inspect-editor: docs/content/en/mcp-dev-tools-inspect-editor.md
+      doc:mcp-level-sequence:connect: docs/content/en/mcp-level-sequence-connect.md
+      doc:mcp-level-sequence:edit-sequence: docs/content/en/mcp-level-sequence-edit-sequence.md
+      doc:mcp-material:edit-graph: docs/content/en/mcp-material-edit-graph.md
+      doc:mcp-material:instance-parameters: docs/content/en/mcp-material-instance-parameters.md
+      doc:mcp-niagara:inspect: docs/content/en/mcp-niagara-inspect.md
+      doc:mcp-niagara:edit-emitter: docs/content/en/mcp-niagara-edit-emitter.md
+      doc:mcp-niagara:parameters-preview: docs/content/en/mcp-niagara-parameters-preview.md
+      doc:mcp-umg:connect: docs/content/en/mcp-umg-connect.md
+      doc:mcp-umg:layout: docs/content/en/mcp-umg-layout.md
+      doc:mcp-umg:components-styles: docs/content/en/mcp-umg-components-styles.md
+      doc:mcp-umg:events-navigation-animation: docs/content/en/mcp-umg-events-navigation-animation.md
+      doc:mcp-umg:preview-runtime: docs/content/en/mcp-umg-preview-runtime.md
+      doc:mcp-umg:batch-migration: docs/content/en/mcp-umg-batch-migration.md
+      doc:mcp-world-editor:connect: docs/content/en/mcp-world-editor-connect.md
+      doc:mcp-world-editor:maps: docs/content/en/mcp-world-editor-maps.md
+      doc:mcp-world-editor:actors: docs/content/en/mcp-world-editor-actors.md
+      doc:mcp-world-editor:streamed-world: docs/content/en/mcp-world-editor-streamed-world.md
+      doc:mcp-world-editor:landscape: docs/content/en/mcp-world-editor-landscape.md
+      doc:mcp-world-editor:materials: docs/content/en/mcp-world-editor-materials.md
+      doc:p4-stream-switcher:normal-switch: docs/content/en/p4-stream-switcher-normal-switch.md
+      doc:p4-stream-switcher:offline-switch: docs/content/en/p4-stream-switcher-offline-switch.md
+      doc:p4-stream-switcher:recycle-workspace: docs/content/en/p4-stream-switcher-recycle-workspace.md
 ---

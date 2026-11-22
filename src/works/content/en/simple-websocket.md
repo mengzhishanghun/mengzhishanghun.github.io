@@ -22,15 +22,15 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: "146115ca9f55fa716d8f19eaf2cfd01d24b3d74d9c2caf7e252a4f1ff0d15887"
+sourceHash: c94394155ef36379df8311f641107b8386b65650b5a1f4b90eb54576c12989e4
 translationStatus: translated
-generatedBodyHash: f3031ebb67d1831f79d49bdb31a6ad49b2842c09d1dc68c82e9c8eb5f1d93090
+generatedBodyHash: 97a9900b690bb3ff2dca68e6811d996a096b6bd092b7fa17589c6d2e482bb7f3
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/70e9040b-66c0-4793-a219-93203a117545
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-websocket-guide/
+      href: /en/works/simple-websocket/docs/connect-and-send/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -40,8 +40,11 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-websocket-20261101.webp"
-coverAlt: "SimpleWebSocket cover"
+websiteCoverUrl: /media/covers/works/simple-websocket-20261101.webp
+coverAlt: SimpleWebSocket cover
+docIds:
+  - simple-websocket-connect-and-send
+  - simple-websocket-native-module
 ---
 
 ## Overview
@@ -76,4 +79,4 @@ It suits UE projects exchanging real-time messages with existing WebSocket servi
 
 Only `ws://` is supported; secure `wss://` connections are not supported. An accessible WebSocket service and agreed message format are required. Recovery after closure, authentication, and message reliability handling must be designed and verified for project needs.
 
-See the [user guide](/en/docs/guides/ue-tools/simple-websocket-guide/) for named connections, message delegates, and module examples.
+See the [user guide](/en/works/simple-websocket/docs/connect-and-send/) for named connections, message delegates, and module examples.

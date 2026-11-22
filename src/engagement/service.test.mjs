@@ -64,3 +64,40 @@ test('batch counts are complete read-only active-ID snapshots with bounded reque
 });
 
 test('batch requests obey global request budgets and invalid stored counts fail safely',async t=>{const {createEngagementService}=await import('./service.mjs'),root=fs.mkdtempSync(path.join(os.tmpdir(),'batch-safe-'));const app=createEngagementService({host:'127.0.0.1',port:0,db:path.join(root,'data/counts.sqlite'),articleIds:['blog:one'],origin:'https://mzsh.me',requestLimit:3});await app.listen();t.after(async()=>{await app.close();fs.rmSync(root,{recursive:true,force:true});});const url='http://127.0.0.1:'+app.server.address().port+'/api/engagement/counts?ids=blog%3Aone';app.db.prepare('INSERT INTO article_counts VALUES (?,?)').run('blog:one',9007199254740992n);assert.equal((await fetch(url)).status,503);app.db.prepare('DELETE FROM article_counts').run();assert.deepEqual(await (await fetch(url)).json(),{counts:{'blog:one':0}});assert.equal((await fetch(url)).status,200);assert.equal((await fetch(url)).status,429);});
+
+const chapterId='doc:simple-asset-cleaner:setup',retiredId='doc:simple-asset-cleaner-guide',existingId='work:simple-asset-cleaner';
+const malformedIds=['doc::setup','doc:simple-asset-cleaner:','doc:simple-asset-cleaner:bad/name','doc:simple-asset-cleaner:bad name','doc:simple-asset-cleaner:setup\n'];
+
+test('the build validates stable IDs and emits only the active articles',async()=>{
+  const {validateArticleIdentities}=await import('./article-identities.mjs');
+  const articles=[{id:chapterId,translationKey:chapterId,type:'doc'},{id:retiredId,translationKey:'guide-source',type:'doc'},{id:existingId,translationKey:'existing-source',type:'work'}];
+  const entries=[articles[0],articles[2]];
+  assert.deepEqual(validateArticleIdentities(entries,{version:1,articles}),[chapterId,existingId]);
+  for(const id of malformedIds)assert.throws(()=>validateArticleIdentities(entries,{version:1,articles:[...articles,{id,translationKey:id}]}),/ID|身份/);
+});
+
+test('read APIs serve chapter IDs and preserve the active and retired article boundary',async t=>{
+  const {createEngagementService}=await import('./service.mjs');
+  const root=fs.mkdtempSync(path.join(fs.realpathSync(os.tmpdir()),'engagement-chapter-'));
+  t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
+  const config={host:'127.0.0.1',port:0,db:path.join(root,'data/counts.sqlite'),articleIds:[chapterId,existingId],origin:'https://mzsh.me'};
+  for(const id of malformedIds)assert.throws(()=>createEngagementService({...config,articleIds:[id]}),/Invalid active article registry/);
+  const app=createEngagementService(config);await app.listen();
+  try {
+    const base='http://127.0.0.1:'+app.server.address().port+'/api/engagement';
+    const article=id=>fetch(base+'/articles/'+encodeURIComponent(id));
+    const counts=ids=>fetch(base+'/counts?ids='+encodeURIComponent(ids.join(',')));
+    app.db.prepare('INSERT INTO article_counts VALUES (?,?)').run(existingId,7);
+    app.db.prepare('INSERT INTO article_counts VALUES (?,?)').run(retiredId,11);
+    for(const [id,count]of [[chapterId,0],[existingId,7]]){
+      const result=await article(id);assert.equal(result.status,200);assert.deepEqual(await result.json(),{count});
+    }
+    const result=await counts([chapterId,existingId]);assert.equal(result.status,200);assert.deepEqual(await result.json(),{counts:{[chapterId]:0,[existingId]:7}});
+    assert.equal((await article(retiredId)).status,404);
+    assert.equal((await counts([chapterId,retiredId])).status,404);
+    for(const id of malformedIds)assert.equal((await counts([id])).status,400);
+    const retiredWrite=await fetch(base+'/articles/'+encodeURIComponent(retiredId)+'/like',{method:'POST',headers:{Origin:config.origin,'Content-Type':'application/json'},body:'{}'});
+    assert.equal(retiredWrite.status,404);assert.deepEqual(await retiredWrite.json(),{error:'not_found',write:'rejected'});
+    assert.deepEqual(app.db.prepare('SELECT article_id, count FROM article_counts ORDER BY count').all().map(row=>({...row})),[{article_id:existingId,count:7},{article_id:retiredId,count:11}]);
+  } finally {await app.close();}
+});

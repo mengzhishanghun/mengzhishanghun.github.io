@@ -7,7 +7,8 @@ import {createMarkdownProcessor} from '@astrojs/markdown-remark';
 import {publicFields,commonFields,assertPublicFields} from '../build/source-schema.mjs';
 import {createLinkResolver} from './links.mjs';
 import {resourcePath} from '../build/resources.mjs';
-import {createTaxonomy} from './taxonomy.mjs';
+import {createTaxonomy,documentRecords,validatePendingSources} from './taxonomy.mjs';
+import {validateDocumentSource} from '../build/work-documents.mjs';
 import {createMediaPlan} from './project-media.mjs';
 import {prepareReprints} from './reprints.mjs';
 
@@ -89,6 +90,7 @@ export async function importContent({site,vault,sync,check=false,taxonomyOnly=fa
   }
   const manifestFile=safePath(site,'src/build/manifest.json'),manifestRaw=fs.readFileSync(manifestFile);initial.set(manifestFile,manifestRaw);
   const manifest=JSON.parse(manifestRaw);
+  const chapters=documentRecords({config,manifest});
   if(taxonomyOnly){
     for(const record of config.records){const output=safePath(contentRoot,record.output);safePath(vault,record.source);if(record.publishedFingerprint&&(!fs.existsSync(output)||canonicalTextHash(fs.readFileSync(output,'utf8'))!==record.publishedFingerprint))throw Error('公开中文来源存在人工修改，保留并等待审核');}
     const target=safePath(site,'src/build/taxonomy.json'),previous=fs.existsSync(target)?JSON.parse(fs.readFileSync(target,'utf8')):undefined;
@@ -96,7 +98,8 @@ export async function importContent({site,vault,sync,check=false,taxonomyOnly=fa
     const differences=!fs.existsSync(target)||fs.readFileSync(target,'utf8')!==raw?['build/taxonomy.json']:[];
     if(!check)fs.writeFileSync(target,raw);return {files:1,differences};
   }
-    const ids=only===undefined?undefined:new Set(Array.isArray(only)?only:String(only).split(','));
+  validatePendingSources({vault,config});
+  const ids=only===undefined?undefined:new Set(Array.isArray(only)?only:String(only).split(','));
   const reprintRecords=config.reprints??[];
   if(!Array.isArray(reprintRecords)||reprintRecords.some(record=>typeof record?.id!=='string'||!/^reprint:[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.id))||new Set(reprintRecords.map(record=>record.id)).size!==reprintRecords.length)throw Error('转载同步配置无效');
   if(ids&&(!ids.size||[...ids].some(id=>!id||![...config.records,...reprintRecords].some(r=>r.id===id))))throw Error('--only包含未知记录');
@@ -114,6 +117,9 @@ export async function importContent({site,vault,sync,check=false,taxonomyOnly=fa
     initial.set(output,fs.existsSync(output)?fs.readFileSync(output):null);
     if(record.publishedFingerprint && (!fs.existsSync(output)||canonicalTextHash(fs.readFileSync(output,'utf8'))!==record.publishedFingerprint))throw new Error('公开中文来源存在人工修改，保留并等待审核');
         const raw=fs.readFileSync(input,'utf8'),source=parseSource(raw);
+    const chapter=chapters.get(record.source);
+    validateDocumentSource(source.data,chapter??{});
+    if(chapter&&(record.id!==chapter.id||source.data.sitePublish!==true||source.data.translationKey!==undefined&&source.data.translationKey!==chapter.translationKey))throw Error('章节同步发布权限或身份不符: '+record.id);
     if(['work','case'].includes(record.kind)&&approveMedia){media.approve(source,record);continue;}
     const managed=['work','case'].includes(record.kind)&&record.projectMedia?.some(item=>item.role==='cover')===true;
     if(['work','case'].includes(record.kind))media.project(source,record);

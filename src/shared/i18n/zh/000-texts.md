@@ -6745,6 +6745,13 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.span:0.#text:0: © MZSH
     root.html:1.body:1.div:1.footer:7.div:0.a:1.#text:0: 晋ICP备2026011728号-2
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
+  doc:chapter:
+    toc: 本页目录
+    previous: 上一篇
+    next: 下一篇
+    works: 作品
+    documents: 使用文档
+    backToWork: 返回作品主页
 scriptSlots:
   content-index:sort-likes: 点赞最多
   content-index:likes-loading: 正在读取点赞排序…

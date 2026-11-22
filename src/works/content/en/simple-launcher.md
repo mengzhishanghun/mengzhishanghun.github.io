@@ -20,19 +20,20 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770928
 docIds:
-  - simple-launcher-guide
+  - simple-launcher-presets
+  - simple-launcher-processes
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: "1ecef1cc65f93fa352eb4f8dda2fca44a46f3725e36ee018e37df8b2e0bc3bbb"
+sourceHash: ab6beae6655aa6f571e94e36a28cdfbd789dfc56c5ccf038c0a181a7907f6d37
 translationStatus: translated
-generatedBodyHash: 094f329c6aeb91aa538a1983f244c41303087f3043901d68c71914bf28d61058
+generatedBodyHash: c8f7e1bb831a8fba9960d27cbb6e06d3cddae9fb6e80070078396fcfdc709d99
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-launcher-guide/
+      href: /en/works/simple-launcher/docs/presets/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -40,8 +41,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-launcher-20261101.webp"
-coverAlt: "SimpleLauncher cover"
+websiteCoverUrl: /media/covers/works/simple-launcher-20261101.webp
+coverAlt: SimpleLauncher cover
 ---
 
 ## Overview
@@ -86,4 +87,4 @@ The plugin launches and tracks processes it manages; it does not guarantee that 
 
 Detached processes do not close automatically with the game, so configuration must establish who terminates them. Command lines and working directories must reference existing, accessible resources.
 
-See the [usage guide](/en/docs/guides/ue-tools/simple-launcher-guide/) for steps and parameters.
+See the [usage guide](/en/works/simple-launcher/docs/presets/) for steps and parameters.

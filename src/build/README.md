@@ -22,7 +22,7 @@ node src/import/test-cases.mjs
 
 ## 语言和翻译
 
-`src/shared/languages.md` 设置 `version: 2`、`primary`、`fallback` 与按显示顺序排列的 `languages`。每项包含 `enabled`、`commonSource`、`sources`；来源映射使用固定内容 ID 和相对 `src/` 的功能路径，移除语言根目录字段。当前 101 个实体各有两种语言，另有补充稿及各语言公共文案。公开 `site-languages.json` 仍是 v1。
+`src/shared/languages.md` 设置 `version: 2`、`primary`、`fallback` 与按显示顺序排列的 `languages`。每项包含 `enabled`、`commonSource`、`sources`；来源映射使用固定内容 ID 和相对 `src/` 的功能路径，移除语言根目录字段。每个已登记实体都需要各启用语言的来源，公共文案也按语言维护。公开 `site-languages.json` 仍是 v1。
 
 `src/shared/i18n/{语言}/000-texts.md` 是该语言元数据与公共文案的唯一来源。`language` 包含 `code`、`label`、`htmlLang`、`searchLanguage`、`browserTags`；`languageLabels` 包含 `group` 和带 `{language}` 的 `switchAria`。浏览器规则使用完整标签或末尾 `-*`，例如 `[en, en-*]`；不同语言不能重叠。新增语言需要全部真实译文、来源映射及公共槽，无需改网站代码，隔离测试的第三语言不进入正式内容。
 
@@ -37,6 +37,12 @@ node src/import/test-cases.mjs
 各列表把已启用语言的主题名按稳定主题 ID 转为当前语言的主题名，支持带标签切换语言。别名仅用于当前类型的新主题；旧细词仍按兼容快照过滤。跨语别名指向多个主题，或与任一语言的旧标签同名但内容集合不同，也会阻止构建。
 
 三类列表的标签筛选均直接显示当前分类的全部主题，窄屏自然换行，不生成“更多／收起”按钮。已选的旧标签或未知词保留取消入口，搜索、筛选和加载更多沿用共用列表交互。
+
+## 作品文档章节
+
+在构建清单登记 `docPage: {work, group, slug, order}` 和 `docGroups[work]`。`work` 使用作品 slug，`group` 使用稳定的分组 ID，`order` 使用正整数。各分组须提供所有启用语言的标题。章节的 `id` 和 `translationKey` 都使用 `doc:<work>:<chapter>`，全局 `slug` 使用 `<work>-<chapter>`。清单中的章节使用共享模板 `docs/templates/document.html`，`legacyRoutes` 留空；各语言公共文案在 `shellSlots['doc:chapter']` 中提供 `toc`、`previous`、`next`、`works`。
+
+章节网址为 `/<locale>/works/<work>/docs/<chapter>/`。调整分组或顺序时，请保留已有章节的 ID 和 slug。旧手册在 `redirect.anchorOverrides[locale]` 中可将旧锚点映射到 `{id, anchor?}`，指向同一语言的章节。指定 `anchor` 时，页内目标必须存在且唯一。
 
 ## 媒体与入口
 

@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-behavior-tree-guide/
+      href: /zh/works/mcp-behavior-tree/docs/connect-and-inspect/
   compatibility:
     - platforms: []
       requirements:
@@ -24,9 +24,12 @@ sitePublish: true
 tags:
   - 行为树与黑板资产
   - MCP 系列
-coverAlt: "MCPBehaviorTree封面"
-websiteCoverUrl: "/media/covers/works/mcp-behavior-tree-20261101.webp"
-lang: "zh"
+docIds:
+  - mcp-behavior-tree-connect-and-inspect
+  - mcp-behavior-tree-edit-tree
+coverAlt: MCPBehaviorTree封面
+websiteCoverUrl: /media/covers/works/mcp-behavior-tree-20261101.webp
+lang: zh
 translationKey: mcp-behavior-tree
 ---
 
@@ -40,4 +43,4 @@ MCPBehaviorTree 是开发中的 UE 编辑器 MCP 插件，围绕行为树与黑�
 
 ## 开发状态
 
-项目处于开发阶段，使用说明见[MCPBehaviorTree 教程](/zh/docs/guides/ue-tools/mcp-behavior-tree-guide/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。
+项目处于开发阶段，使用说明见[MCPBehaviorTree 教程](/zh/works/mcp-behavior-tree/docs/connect-and-inspect/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。

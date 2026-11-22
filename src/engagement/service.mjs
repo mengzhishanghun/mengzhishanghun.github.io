@@ -3,6 +3,7 @@ import path from 'node:path';
 import http from 'node:http';
 import {DatabaseSync,backup} from 'node:sqlite';
 import {fileURLToPath} from 'node:url';
+import {isArticleId} from './article-identities.mjs';
 
 function regular(file,directory=false){
   if(!fs.existsSync(file))return;
@@ -35,7 +36,7 @@ export function readConfig(file){
 export function createEngagementService(config){
   const {host,port,origin}=config,rateLimit=config.rateLimit ?? 120,requestLimit=config.requestLimit ?? 600,concurrency=config.concurrency ?? 16;
   if(typeof host!=='string' || !host || !Number.isInteger(port) || port<0 || port>65535 || new URL(origin).origin!==origin || !origin.startsWith('https://') || ![rateLimit,requestLimit,concurrency].every(v=>Number.isInteger(v)&&v>0))throw new Error('Invalid service configuration');
-  if(!Array.isArray(config.articleIds) || config.articleIds.some(id=>typeof id!=='string'||!/^[a-z][a-z0-9_-]*:[a-zA-Z0-9_-]+$/.test(id)) || new Set(config.articleIds).size!==config.articleIds.length)throw new Error('Invalid active article registry');
+  if(!Array.isArray(config.articleIds) || config.articleIds.some(id=>!isArticleId(id)) || new Set(config.articleIds).size!==config.articleIds.length)throw new Error('Invalid active article registry');
   const ids=new Set(config.articleIds),db=database(config.db),get=db.prepare('SELECT count FROM article_counts WHERE article_id=?'),like=db.prepare('INSERT INTO article_counts(article_id,count) VALUES(?,1) ON CONFLICT(article_id) DO UPDATE SET count=count+1 RETURNING count');
   let active=0,windowStart=Date.now(),writes=0,requests=0;
   const reply=(res,status,value)=>{res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff'});res.end(JSON.stringify(value));};
@@ -51,7 +52,7 @@ export function createEngagementService(config){
         const url=new URL(req.url,'http://localhost'),values=url.searchParams.getAll('ids');
         if(values.length!==1 || [...url.searchParams.keys()].some(key=>key!=='ids'))return reject(res,400,'ids');
         const requested=[...new Set(values[0].split(','))];
-        if(!requested.length || requested.length>128 || requested.some(id=>!/^[a-z][a-z0-9_-]*:[a-zA-Z0-9_-]+$/.test(id)))return reject(res,400,'ids');
+        if(!requested.length || requested.length>128 || requested.some(id=>!isArticleId(id)))return reject(res,400,'ids');
         if(requested.some(id=>!ids.has(id)))return reject(res,404,'not_found');
         const counts=Object.fromEntries(requested.map(id=>[id,get.get(id)?.count ?? 0]));
         if(Object.values(counts).some(count=>!Number.isSafeInteger(count)||count<0) || Buffer.byteLength(JSON.stringify({counts}))>65536)return reply(res,503,{error:'unavailable'});

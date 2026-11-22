@@ -21,19 +21,20 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770930
 docIds:
-  - simple-config-exclude-guide
+  - simple-config-exclude-staging-rules
+  - simple-config-exclude-copy-excluded
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: "922439716cded800a7651180d3f9d79ded80da0ad9b8a92150e10ec834e52b0b"
+sourceHash: 0ae08634d523b9697650244f891f85a66c229018253241ecd54fd2ff0e81d11d
 translationStatus: translated
-generatedBodyHash: 47b87ddd144c43e1435b9f62c5ba32e02e75b342a62aec74ab710cf72810db56
+generatedBodyHash: 711e6bad9c08d16458ba5167dc20e73ecaf9e4fd938aa0a8c7c0c388c58d8ac1
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/05c2cb8f-cabc-45ef-84e0-9eac988b5a35
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-config-exclude-guide/
+      href: /en/works/simple-config-exclude/docs/staging-rules/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -41,8 +42,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-config-exclude-20261101.webp"
-coverAlt: "SimpleConfigExclude cover"
+websiteCoverUrl: /media/covers/works/simple-config-exclude-20261101.webp
+coverAlt: SimpleConfigExclude cover
 ---
 
 ## Overview
@@ -85,4 +86,4 @@ The plugin manages packaging rules and copying for ini files under Config.
 
 Exclusion does not complete sensitive information protection: destination copies still need project access controls. State changes modify DefaultGame.ini. Before release, check actual package contents, copy destinations, and version control diffs.
 
-See the [usage guide](/en/docs/guides/ue-tools/simple-config-exclude-guide/) for steps and parameters.
+See the [usage guide](/en/works/simple-config-exclude/docs/staging-rules/) for steps and parameters.

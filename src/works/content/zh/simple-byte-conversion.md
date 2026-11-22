@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-byte-conversion-guide/
+      href: /zh/works/simple-byte-conversion/docs/primitive-bytes/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -36,12 +36,13 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19770934
 docIds:
-  - simple-byte-conversion-guide
-websiteCoverUrl: "/media/covers/works/simple-byte-conversion-20261101.webp"
+  - simple-byte-conversion-primitive-bytes
+  - simple-byte-conversion-struct-and-json
+coverAlt: SimpleByteConversion封面
+websiteCoverUrl: /media/covers/works/simple-byte-conversion-20261101.webp
 sourceDate: 2026-03-25
-lang: "zh"
+lang: zh
 translationKey: simple-byte-conversion
-coverAlt: "SimpleByteConversion封面"
 ---
 
 ## 作品简介
@@ -88,4 +89,4 @@ JSON 更适合与 Python 等外部程序交换或查看字段；插件也处理�
 
 发送端与接收端仍需约定类型、字段、编码和版本，并用固定样例验证往返结果。结构体变更后应重新检查旧数据的兼容性，不能把能成功调用转换节点等同于数据已正确解释。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-byte-conversion-guide/)。
+操作步骤和参数说明见 [使用教程](/zh/works/simple-byte-conversion/docs/primitive-bytes/)。

@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/320c7471-92b8-4a3e-a88a-2a5fcb98d620
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-bp-inherit-fix-guide/
+      href: /zh/works/simple-bp-inherit-fix/docs/find-components/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -31,9 +31,12 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
-coverAlt: "SimpleBPInheritFix封面"
-websiteCoverUrl: "/media/covers/works/simple-bp-inherit-fix-20261101.webp"
-lang: "zh"
+docIds:
+  - simple-bp-inherit-fix-find-components
+  - simple-bp-inherit-fix-repair-components
+coverAlt: SimpleBPInheritFix封面
+websiteCoverUrl: /media/covers/works/simple-bp-inherit-fix-20261101.webp
+lang: zh
 translationKey: simple-bp-inherit-fix
 ---
 
@@ -75,8 +78,8 @@ SimpleBPInheritFix 是处理 Actor 蓝图继承链中组件状态异常的编辑
 
 修复可能涉及多份蓝图资产，使用者需要检查日志、签出状态和最终保存内容。其他类型的继承、编译或组件问题，仍需分别诊断。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-bp-inherit-fix-guide/)。
+操作步骤和参数说明见 [使用教程](/zh/works/simple-bp-inherit-fix/docs/find-components/)。
 
 ## 技术说明
 
-CreationMethod、继承链与 SCS / ICH 的排查和修复原理见[使用文档](/zh/docs/guides/ue-tools/simple-bp-inherit-fix-guide/)。
+CreationMethod、继承链与 SCS / ICH 的排查和修复原理见[使用文档](/zh/works/simple-bp-inherit-fix/docs/find-components/)。

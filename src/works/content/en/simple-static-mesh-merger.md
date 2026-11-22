@@ -21,19 +21,20 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19204715
 docIds:
-  - simple-static-mesh-merger-guide
+  - simple-static-mesh-merger-merge-actors
+  - simple-static-mesh-merger-split-level-instance
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: "d01c8a8c757b479129081481c69eb03fe45bf1717f2cd6fa31f40a4e1d1fbaee"
+sourceHash: d7154b1d1a3b01c87f5e7630e03b8d6dcdc1b38564e562b6b346d3ef5f48038a
 translationStatus: translated
-generatedBodyHash: 8a5fb1c38b176766221de9e2cf285c3c3232da5e3df100e08f29ec401483ae1c
+generatedBodyHash: 5ca483012c2de579f7ce7c671903f461db879b69071362d7acb8c09824dbfd3c
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/
+      href: /en/works/simple-static-mesh-merger/docs/merge-actors/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -41,8 +42,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-static-mesh-merger-20261101.webp"
-coverAlt: "SimpleStaticMeshMerger cover"
+websiteCoverUrl: /media/covers/works/simple-static-mesh-merger-20261101.webp
+coverAlt: SimpleStaticMeshMerger cover
 ---
 
 ## Overview
@@ -83,4 +84,4 @@ Merging replaces original scene Actors. Keep a recoverable level version first a
 
 Loading or runtime improvements depend on the scene and target device and require measurement. Group previews do not replace project acceptance checks after merging.
 
-See the [user guide](/en/docs/guides/ue-tools/simple-static-mesh-merger-guide/) for scene grouping, merge steps, and loading overhead.
+See the [user guide](/en/works/simple-static-mesh-merger/docs/merge-actors/) for scene grouping, merge steps, and loading overhead.

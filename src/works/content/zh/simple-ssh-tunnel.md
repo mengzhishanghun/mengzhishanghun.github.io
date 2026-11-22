@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-ssh-tunnel-guide/
+      href: /zh/works/simple-ssh-tunnel/docs/connect/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -30,11 +30,14 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165541
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165541
-websiteCoverUrl: "/media/covers/works/simple-ssh-tunnel-20261101.webp"
+docIds:
+  - simple-ssh-tunnel-connect
+  - simple-ssh-tunnel-cpp-tunnels
+coverAlt: SimpleSSHTunnel封面
+websiteCoverUrl: /media/covers/works/simple-ssh-tunnel-20261101.webp
 sourceDate: 2025-10-25
-lang: "zh"
+lang: zh
 translationKey: simple-ssh-tunnel
-coverAlt: "SimpleSSHTunnel封面"
 ---
 
 ## 作品简介
@@ -75,4 +78,4 @@ SimpleSSHTunnel 将相关连接操作封装在插件内，项目可以直接通�
 
 默认子系统会在销毁时调用关闭全部隧道。接入实际项目时，仍需检查 SSH 凭据的保存与使用、连接线程和错误处理，以及关闭连接时会话与通道是否正确释放。
 
-连接配置、蓝图调用与底层实现说明见 [使用教程](/zh/docs/guides/ue-tools/simple-ssh-tunnel-guide/)。
+连接配置、蓝图调用与底层实现说明见 [使用教程](/zh/works/simple-ssh-tunnel/docs/connect/)。

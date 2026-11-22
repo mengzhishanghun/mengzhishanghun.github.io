@@ -11,7 +11,7 @@ status: 正式文档
 workInfo:
   channels:
     - kind: docs
-      href: /docs/zh/tools/plugin-manager/
+      href: /zh/works/plugin-manager/docs/find/
   compatibility:
     - platforms:
         - UE 插件管理工具（操作系统待核实）
@@ -26,9 +26,13 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPluginManager
-coverAlt: "UEPluginManager封面"
-websiteCoverUrl: "/media/covers/works/plugin-manager-20261101.webp"
-lang: "zh"
+docIds:
+  - plugin-manager-find
+  - plugin-manager-enable-disable
+  - plugin-manager-folder-actions
+coverAlt: UEPluginManager封面
+websiteCoverUrl: /media/covers/works/plugin-manager-20261101.webp
+lang: zh
 translationKey: plugin-manager
 ---
 
@@ -72,4 +76,4 @@ UEPluginManager 是浏览和管理本地 UE 插件的桌面工具。它统一展
 
 启用状态修改、只读属性处理和目录操作都会影响本地项目，完成后仍需检查 .uproject、插件目录和项目启动结果。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/tools/plugin-manager/)。
+操作步骤和参数说明见 [使用教程](/zh/works/plugin-manager/docs/find/)。

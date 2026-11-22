@@ -20,19 +20,21 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 lang: en
 translationKey: ue-quick-start
-sourceHash: "581bb9c9a981d042ce2e9b2b34ce459f9992122a2ab2c3917efb819c85baa50a"
+sourceHash: dd9b8308128d83d4c00dd027cdf86cac4ab89e74098fd1e487eac9d5613c207e
 translationStatus: translated
-generatedBodyHash: f7432fdfe35e7ee45c630b7ccc676348781d7a543a71602062799b5ec3e7440c
+generatedBodyHash: 88ec4958887b398166f1649e886ad50b2c90b4be686ba217f668832b859f7642
 workInfo:
   channels:
     - kind: docs
-      href: /docs/zh/tools/ue-quick-start/
+      href: /en/works/ue-quick-start/docs/open-project/
   compatibility:
     - platforms:
         - UE project tool (operating system to be verified)
       requirements: []
-websiteCoverUrl: "/media/covers/works/ue-quick-start-20261101.webp"
-coverAlt: "UEQuickStart cover"
+websiteCoverUrl: /media/covers/works/ue-quick-start-20261101.webp
+coverAlt: UEQuickStart cover
+docIds:
+  - ue-quick-start-open-project
 ---
 
 ## Overview
@@ -69,4 +71,4 @@ It suits project members with configured environments who need to compile locall
 
 Only Windows is currently supported. The machine must already have a configured build environment and have successfully run the project before. The tool does not install UE, compilers, or dependencies, and does not guarantee new source will build. Diagnose and fix code, module, or environment errors using the logs.
 
-For operation steps and parameter details, see the [user guide](/en/docs/tools/ue-quick-start/).
+For operation steps and parameter details, see the [user guide](/en/works/ue-quick-start/docs/open-project/).

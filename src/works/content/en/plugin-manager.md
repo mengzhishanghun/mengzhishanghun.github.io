@@ -20,19 +20,23 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginManager
 lang: en
 translationKey: plugin-manager
-sourceHash: "e171dbab8651bd2cd2c940692f291624d37fb0ade353c35353d40ffd0e277c29"
+sourceHash: 0d6af371bc0c5e66e9345d93f45eb4f5628a9fb9e11b743b4e81a5afadf81cf2
 translationStatus: translated
-generatedBodyHash: 192913ba4c8e8052b6752cadcd0e5481e55c2f95335ff31fddfa58a6842a7c47
+generatedBodyHash: 7c7f6f55c415b3c0a7c7b7e67a9d5cea9a500fe6e883f93bfa60f7c982d9a167
 workInfo:
   channels:
     - kind: docs
-      href: /docs/zh/tools/plugin-manager/
+      href: /en/works/plugin-manager/docs/find/
   compatibility:
     - platforms:
         - UE plugin management tool (operating system to be verified)
       requirements: []
-websiteCoverUrl: "/media/covers/works/plugin-manager-20261101.webp"
-coverAlt: "UEPluginManager cover"
+websiteCoverUrl: /media/covers/works/plugin-manager-20261101.webp
+coverAlt: UEPluginManager cover
+docIds:
+  - plugin-manager-find
+  - plugin-manager-enable-disable
+  - plugin-manager-folder-actions
 ---
 
 ## Overview
@@ -75,4 +79,4 @@ Run the tool in the target UE project directory. Close the editor before moving,
 
 Enabled-state changes, read-only attribute handling, and directory operations affect the local project. Inspect .uproject, plugin directories, and project startup afterward.
 
-For operation steps and parameter details, see the [user guide](/en/docs/tools/plugin-manager/).
+For operation steps and parameter details, see the [user guide](/en/works/plugin-manager/docs/find/).

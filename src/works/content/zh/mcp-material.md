@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-material-guide/
+      href: /zh/works/mcp-material/docs/edit-graph/
   compatibility:
     - platforms: []
       requirements:
@@ -24,9 +24,12 @@ sitePublish: true
 tags:
   - 材质图与材质实例
   - MCP 系列
-coverAlt: "MCPMaterial封面"
-websiteCoverUrl: "/media/covers/works/mcp-material-20261101.webp"
-lang: "zh"
+docIds:
+  - mcp-material-edit-graph
+  - mcp-material-instance-parameters
+coverAlt: MCPMaterial封面
+websiteCoverUrl: /media/covers/works/mcp-material-20261101.webp
+lang: zh
 translationKey: mcp-material
 ---
 
@@ -40,4 +43,4 @@ MCPMaterial 是开发中的 UE 编辑器 MCP 插件，围绕材质图与材质�
 
 ## 开发状态
 
-项目处于开发阶段，使用说明见[MCPMaterial 教程](/zh/docs/guides/ue-tools/mcp-material-guide/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。
+项目处于开发阶段，使用说明见[MCPMaterial 教程](/zh/works/mcp-material/docs/edit-graph/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。

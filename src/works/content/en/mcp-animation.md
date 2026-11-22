@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-animation-guide/
+      href: /en/works/mcp-animation/docs/find-assets/
   compatibility:
     - platforms: []
       requirements:
@@ -26,11 +26,15 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-animation
-sourceHash: "ab9a28aaab610890290f9d03a85366cc6234a9af2bb9ac70d0228a74adc061da"
-generatedBodyHash: c19a248e1d9bdb012d7b779bed354325b82a711a1976b5b69b57e3c8f97e16dc
+sourceHash: deb5813682dfa4dde0882c21266a75fc253e0814302d048e73f19c125e80b0cd
+generatedBodyHash: 1ac26c1acf9c19aabdd016b317e30c2b28bea4a06f193e4f1ecfab803884a14e
 translationStatus: translated
-coverAlt: "MCPAnimation cover"
-websiteCoverUrl: "/media/covers/works/mcp-animation-20261101.webp"
+coverAlt: MCPAnimation cover
+websiteCoverUrl: /media/covers/works/mcp-animation-20261101.webp
+docIds:
+  - mcp-animation-find-assets
+  - mcp-animation-animation-blueprint
+  - mcp-animation-montage-and-blendspace
 ---
 
 ## About this work
@@ -43,4 +47,4 @@ The project focuses on Animation Blueprints, state machines and animation assets
 
 ## Development status
 
-The project is in development. See the [MCPAnimation user guide](/docs/guides/ue-tools/mcp-animation-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPAnimation user guide](/en/works/mcp-animation/docs/find-assets/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

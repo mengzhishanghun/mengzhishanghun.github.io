@@ -23,15 +23,15 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: "ec3434e312d95b0edb583cc69b2ee5a7af4e8bf5d7685cac3fd9ca338b3bb63e"
+sourceHash: ed27d7b3e44c80645c09f968c999989a5cbca0aa79a6f5b3a47be824d0955447
 translationStatus: translated
-generatedBodyHash: a893f3dd017dc0cb0e1eff3722677d44af39772f325b17503aa17fe328db4785
+generatedBodyHash: 6b6f21173ee1654bfa0dc7eb14de53dacadaa4d967221bf0dde36f6280e03b9e
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/e6c92c8b-6e87-4f2f-9975-1c0d85621c60
     - kind: docs
-      href: /docs/zh/guides/ue-tools/ai-data-asset-guide/
+      href: /en/works/ai-data-asset/docs/sync/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -39,8 +39,11 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/ai-data-asset-20261101.webp"
-coverAlt: "AIDataAsset cover"
+websiteCoverUrl: /media/covers/works/ai-data-asset-20261101.webp
+coverAlt: AIDataAsset cover
+docIds:
+  - ai-data-asset-sync
+  - ai-data-asset-ai-edit
 ---
 
 ## Overview
@@ -81,9 +84,9 @@ JSON modifies existing DataAssets in UE; adding a JSON file alone does not creat
 
 Startup synchronization chooses its direction by file modification times and does not merge fields edited independently on both sides. Assets must be writable; invalid JSON or changes to field structures may cause imports to fail. Successful synchronization does not mean the data follows game rules, so it still requires validation in the project.
 
-For configuration, startup synchronization rules, deletion behavior, and common questions, see the [AIDataAsset documentation](/en/docs/guides/ue-tools/ai-data-asset-guide/).
+For configuration, startup synchronization rules, deletion behavior, and common questions, see the [AIDataAsset documentation](/en/works/ai-data-asset/docs/sync/).
 
 
 ## Technical Details
 
-See the [user manual](/en/docs/guides/ue-tools/ai-data-asset-guide/) for JSON selection, conversion APIs, numeric formatting, and asynchronous synchronization.
+See the [user manual](/en/works/ai-data-asset/docs/sync/) for JSON selection, conversion APIs, numeric formatting, and asynchronous synchronization.

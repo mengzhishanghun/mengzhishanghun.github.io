@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-niagara-guide/
+      href: /zh/works/mcp-niagara/docs/inspect/
   compatibility:
     - platforms: []
       requirements:
@@ -24,9 +24,13 @@ sitePublish: true
 tags:
   - Niagara 系统、发射器与模块
   - MCP 系列
-coverAlt: "MCPNiagara封面"
-websiteCoverUrl: "/media/covers/works/mcp-niagara-20261101.webp"
-lang: "zh"
+docIds:
+  - mcp-niagara-inspect
+  - mcp-niagara-edit-emitter
+  - mcp-niagara-parameters-preview
+coverAlt: MCPNiagara封面
+websiteCoverUrl: /media/covers/works/mcp-niagara-20261101.webp
+lang: zh
 translationKey: mcp-niagara
 ---
 
@@ -40,4 +44,4 @@ MCPNiagara 是开发中的 UE 编辑器 MCP 插件，围绕Niagara 系统、发�
 
 ## 开发状态
 
-项目处于开发阶段，使用说明见[MCPNiagara 教程](/zh/docs/guides/ue-tools/mcp-niagara-guide/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。
+项目处于开发阶段，使用说明见[MCPNiagara 教程](/zh/works/mcp-niagara/docs/inspect/)。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，不能视为已经完成各版本测试。

@@ -20,15 +20,15 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: "5299ff70047ecdf02b5c56f466d71e073d162bf106e9dfd5c2cf03110db51747"
+sourceHash: 7a0240e1fee32c18b8e3cb3a361c8bddbea8a3ba5eeffabfb457c88d541e14c1
 translationStatus: translated
-generatedBodyHash: ee69deb47a4520b5b520ca5741c23559eb664e4c535b6b23424e84e3de609bfb
+generatedBodyHash: 7cbd671906ed67817b2e86e3676cd6b15c3debbbe1e39dfd3f101495188b6260
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/320c7471-92b8-4a3e-a88a-2a5fcb98d620
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-bp-inherit-fix-guide/
+      href: /en/works/simple-bp-inherit-fix/docs/find-components/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -36,8 +36,11 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-bp-inherit-fix-20261101.webp"
-coverAlt: "SimpleBPInheritFix cover"
+websiteCoverUrl: /media/covers/works/simple-bp-inherit-fix-20261101.webp
+coverAlt: SimpleBPInheritFix cover
+docIds:
+  - simple-bp-inherit-fix-find-components
+  - simple-bp-inherit-fix-repair-components
 ---
 
 ## Overview
@@ -79,8 +82,8 @@ The plugin only handles component contamination where CreationMethod is marked I
 Repairs may involve several Blueprint assets. Review logs, checkout status, and final saved content. Other inheritance, compilation, or component problems require separate diagnosis.
 
 
-See the [usage guide](/en/docs/guides/ue-tools/simple-bp-inherit-fix-guide/) for steps and parameters.
+See the [usage guide](/en/works/simple-bp-inherit-fix/docs/find-components/) for steps and parameters.
 
 ## Technical Details
 
-See the [user guide](/en/docs/guides/ue-tools/simple-bp-inherit-fix-guide/) for CreationMethod, inheritance chains, and SCS / ICH diagnosis and repair.
+See the [user guide](/en/works/simple-bp-inherit-fix/docs/find-components/) for CreationMethod, inheritance chains, and SCS / ICH diagnosis and repair.

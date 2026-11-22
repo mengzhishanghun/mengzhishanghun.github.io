@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/e6c92c8b-6e87-4f2f-9975-1c0d85621c60
     - kind: docs
-      href: /docs/zh/guides/ue-tools/ai-data-asset-guide/
+      href: /zh/works/ai-data-asset/docs/sync/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -33,11 +33,14 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/20159718
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/20159718
-websiteCoverUrl: "/media/covers/works/ai-data-asset-20261101.webp"
+docIds:
+  - ai-data-asset-sync
+  - ai-data-asset-ai-edit
+coverAlt: AIDataAsset封面
+websiteCoverUrl: /media/covers/works/ai-data-asset-20261101.webp
 sourceDate: 2026-05-25
-lang: "zh"
+lang: zh
 translationKey: ai-data-asset
-coverAlt: "AIDataAsset封面"
 ---
 
 ## 作品简介
@@ -78,9 +81,9 @@ JSON 用来修改 UE 中已有的 DataAsset，单独添加 JSON 不会创建新�
 
 启动同步按文件修改时间选择方向，不会合并两端各自修改的字段。资产需要可写；无效 JSON 或字段结构变化可能导致导入失败。同步完成也不代表数据符合游戏规则，仍需在项目中验证。
 
-配置、启动同步规则、删除行为和常见问题见 [AIDataAsset 使用文档](/zh/docs/guides/ue-tools/ai-data-asset-guide/)。
+配置、启动同步规则、删除行为和常见问题见 [AIDataAsset 使用文档](/zh/works/ai-data-asset/docs/sync/)。
 
 
 ## 技术说明
 
-JSON 选型、转换 API、数值格式与异步同步的处理见[使用文档](/zh/docs/guides/ue-tools/ai-data-asset-guide/)。
+JSON 选型、转换 API、数值格式与异步同步的处理见[使用文档](/zh/works/ai-data-asset/docs/sync/)。

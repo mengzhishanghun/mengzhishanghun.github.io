@@ -21,19 +21,22 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19183435
 docIds:
-  - simple-asset-cleaner-guide
+  - simple-asset-cleaner-setup
+  - simple-asset-cleaner-clean-assets
+  - simple-asset-cleaner-add-dependencies
+  - simple-asset-cleaner-protect-assets
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: "6d37e0274ae907a1534aa7cf1531f79dfbe79cd2553599b2dc1367a1f86e8382"
+sourceHash: c5ae07a6826cc74c45ad7fe15bf19907a60e23fff0efe522281a76c7e14c30ce
 translationStatus: translated
-generatedBodyHash: 172ad9c7cfd988d7c9e4da413c771e960cd15a471d4e309bf5f51e5b779f5a9c
+generatedBodyHash: 98c199c46a31ae0a84fb046dcdd988a53882155db417edc72bfb9b302e7110d4
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/b0cf0a4d-c1a2-45f6-8bfb-7a92313379c2
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-asset-cleaner-guide/
+      href: /en/works/simple-asset-cleaner/docs/setup/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -41,8 +44,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-asset-cleaner-20261101.webp"
-coverAlt: "SimpleAssetCleaner cover"
+websiteCoverUrl: /media/covers/works/simple-asset-cleaner-20261101.webp
+coverAlt: SimpleAssetCleaner cover
 ---
 
 ## Overview
@@ -87,4 +90,4 @@ Reference analysis assumes configured roots. Assets outside roots or protected p
 
 Full cleanup may delete committed files. Review logs and results on a recoverable version before applying it to a production project.
 
-For operation steps and parameter details, see the [user guide](/en/docs/guides/ue-tools/simple-asset-cleaner-guide/).
+For operation steps and parameter details, see the [user guide](/en/works/simple-asset-cleaner/docs/setup/).

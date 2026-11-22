@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/05c2cb8f-cabc-45ef-84e0-9eac988b5a35
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-config-exclude-guide/
+      href: /zh/works/simple-config-exclude/docs/staging-rules/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -34,12 +34,13 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19770930
 docIds:
-  - simple-config-exclude-guide
-websiteCoverUrl: "/media/covers/works/simple-config-exclude-20261101.webp"
+  - simple-config-exclude-staging-rules
+  - simple-config-exclude-copy-excluded
+coverAlt: SimpleConfigExclude封面
+websiteCoverUrl: /media/covers/works/simple-config-exclude-20261101.webp
 sourceDate: 2026-03-25
-lang: "zh"
+lang: zh
 translationKey: simple-config-exclude
-coverAlt: "SimpleConfigExclude封面"
 ---
 
 ## 作品简介
@@ -82,4 +83,4 @@ SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在�
 
 排除配置不等于完成敏感信息保护，目标目录中的副本仍需按项目权限管理。状态调整会修改 DefaultGame.ini；发布前应检查实际包内容、复制目标及版本控制差异。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-config-exclude-guide/)。
+操作步骤和参数说明见 [使用教程](/zh/works/simple-config-exclude/docs/staging-rules/)。

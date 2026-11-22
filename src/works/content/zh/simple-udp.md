@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/9e0d0c8c-ac79-4699-925c-abdfe9ac51eb
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-udp-guide/
+      href: /zh/works/simple-udp/docs/channels/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -32,11 +32,15 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165484
-websiteCoverUrl: "/media/covers/works/simple-udp-20261101.webp"
+docIds:
+  - simple-udp-channels
+  - simple-udp-messages
+  - simple-udp-native-sockets
+coverAlt: SimpleUDP封面
+websiteCoverUrl: /media/covers/works/simple-udp-20261101.webp
 sourceDate: 2025-10-25
-lang: "zh"
+lang: zh
 translationKey: simple-udp
-coverAlt: "SimpleUDP封面"
 ---
 
 ## 作品简介
@@ -73,4 +77,4 @@ SimpleUDP 将这些通信管理操作封装为蓝图接口。
 
 仅支持 IPv4，不支持 IPv6 或域名解析。UDP 不保证数据报可靠投递或按发送顺序到达。消息格式解析、丢包后的处理和业务状态维护由项目实现；使用时还需按实际网络与通信协议核对通道、目标地址和过滤规则。
 
-通道配置、收发示例与协议限制见 [使用教程](/zh/docs/guides/ue-tools/simple-udp-guide/)。
+通道配置、收发示例与协议限制见 [使用教程](/zh/works/simple-udp/docs/channels/)。

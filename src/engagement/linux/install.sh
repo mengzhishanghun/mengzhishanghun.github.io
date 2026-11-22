@@ -7,7 +7,7 @@ account=mzsh-engagement
 install -d -m700 -o "$account" -g "$account" "$base/app" "$base/config" "$base/data" "$base/backups"
 registry=${1:-"$src/../../../dist/services/engagement/articles.json"}
 [[ -f "$registry" && ! -L "$registry" ]] || exit 1
-install -m644 "$src/../service.mjs" "$base/app/"
+install -m644 "$src/../service.mjs" "$src/../article-identities.mjs" "$base/app/"
 install -m644 "$registry" "$base/app/articles.json"
 install -m644 "$src/backup.mjs" "$base/app/backup.mjs"
 node=/opt/mzsh-node/node-v26.11.0-linux-x64/bin/node

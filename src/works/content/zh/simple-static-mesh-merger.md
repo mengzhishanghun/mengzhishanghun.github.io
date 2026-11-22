@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-static-mesh-merger-guide/
+      href: /zh/works/simple-static-mesh-merger/docs/merge-actors/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -34,12 +34,13 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19204715
 docIds:
-  - simple-static-mesh-merger-guide
-websiteCoverUrl: "/media/covers/works/simple-static-mesh-merger-20261101.webp"
+  - simple-static-mesh-merger-merge-actors
+  - simple-static-mesh-merger-split-level-instance
+coverAlt: SimpleStaticMeshMerger封面
+websiteCoverUrl: /media/covers/works/simple-static-mesh-merger-20261101.webp
 sourceDate: 2025-11-09
-lang: "zh"
+lang: zh
 translationKey: simple-static-mesh-merger
-coverAlt: "SimpleStaticMeshMerger封面"
 ---
 
 ## 作品简介
@@ -80,4 +81,4 @@ SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。�
 
 是否改善加载或运行表现取决于具体场景与目标设备，需要实测；工具的分组预览不能替代合并后的项目验收。
 
-场景分组、合并步骤与加载开销说明见 [使用教程](/zh/docs/guides/ue-tools/simple-static-mesh-merger-guide/)。
+场景分组、合并步骤与加载开销说明见 [使用教程](/zh/works/simple-static-mesh-merger/docs/merge-actors/)。

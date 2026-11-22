@@ -13,7 +13,7 @@ workInfo:
     - kind: open-source
       href: https://github.com/MZSH-Tools/UEPackageManager
     - kind: docs
-      href: /docs/zh/tools/ue-package-manager/
+      href: /zh/works/ue-package-manager/docs/package-project/
   compatibility:
     - platforms:
         - Windows
@@ -29,6 +29,9 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/UEPackageManager
+docIds:
+  - ue-package-manager-package-project
+  - ue-package-manager-build-executable
 coverAlt: UEPackageManager封面
 websiteCoverUrl: /media/imported/works/ue-package-manager-cover-v2.png
 lang: zh
@@ -85,4 +88,4 @@ UE 项目交付时，打包命令和附加文件整理常分散在不同操作�
 
 *UEPackageManager 图形界面：配置项目、打包参数和附加文件复制规则。*
 
-操作步骤和参数说明见 [使用教程](/zh/docs/tools/ue-package-manager/)。
+操作步骤和参数说明见 [使用教程](/zh/works/ue-package-manager/docs/package-project/)。

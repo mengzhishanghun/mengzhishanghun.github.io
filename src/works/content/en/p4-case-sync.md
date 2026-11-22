@@ -19,15 +19,15 @@ links:
     href: https://github.com/MZSH-Tools/P4CaseSync
 lang: en
 translationKey: p4-case-sync
-sourceHash: be7a38d7866ff7fedb9df469a733fc89cfb95f2beec0edd28ded372979efebcf
+sourceHash: 54779e645260a2865aed30611ca3593d21fe5f4af217af927d136b786b95d723
 translationStatus: translated
-generatedBodyHash: a10993ab36c49d25abfa6884da333bafe3045694bf73957da7d5e2b88510add0
+generatedBodyHash: 970c532759e2466cf1dddcf6b7e7ec16a84b685447ac0b2b122acfd3329339f9
 workInfo:
   channels:
     - kind: open-source
       href: https://github.com/MZSH-Tools/P4CaseSync
     - kind: docs
-      href: /docs/zh/tools/p4-case-sync/
+      href: /en/works/p4-case-sync/docs/check-and-fix/
   compatibility:
     - platforms:
         - Windows (recommended)
@@ -36,6 +36,9 @@ workInfo:
         - Perforce p4 command-line environment
 websiteCoverUrl: /media/imported/works/p4-case-sync-cover-v2.png
 coverAlt: P4CaseSync cover
+docIds:
+  - p4-case-sync-check-and-fix
+  - p4-case-sync-build-and-environment
 ---
 
 ## Overview
@@ -80,4 +83,4 @@ The tool requires an available Perforce CLI, correct workspace mappings, and a v
 
 Path corrections are version control operations and may change opened file records. Check the target list before applying them and review the changelist afterward. The tool handles path consistency; it does not replace content review or submission permission checks.
 
-See the [usage guide](/en/docs/tools/p4-case-sync/) for steps and parameters.
+See the [usage guide](/en/works/p4-case-sync/docs/check-and-fix/) for steps and parameters.

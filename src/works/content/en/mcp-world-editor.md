@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-world-editor-guide/
+      href: /en/works/mcp-world-editor/docs/connect/
   compatibility:
     - platforms: []
       requirements:
@@ -26,11 +26,18 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-world-editor
-sourceHash: "0789b03d516f4e9dec09e37ab5f8a581fa632eb357ce8a4ad4bf6b52b896192b"
-generatedBodyHash: a4af96eaff9850c243434648296de015fa6fd76bfd682a0ea550be90202d69b1
+sourceHash: dfc27c0c90a1e210cfa2a9beb9de9361ffd6694f1db1fb9ba9bef6a38a862ae1
+generatedBodyHash: b4fddab90d44baaaa2acf6b9bfa464ad36bfa96c1f2f5b09a9ac3bbcf0916205
 translationStatus: translated
-coverAlt: "MCPWorldEditor cover"
-websiteCoverUrl: "/media/covers/works/mcp-world-editor-20261101.webp"
+coverAlt: MCPWorldEditor cover
+websiteCoverUrl: /media/covers/works/mcp-world-editor-20261101.webp
+docIds:
+  - mcp-world-editor-connect
+  - mcp-world-editor-maps
+  - mcp-world-editor-actors
+  - mcp-world-editor-streamed-world
+  - mcp-world-editor-landscape
+  - mcp-world-editor-materials
 ---
 
 ## About this work
@@ -43,4 +50,4 @@ The project focuses on Actors, levels, terrain and viewports, connecting externa
 
 ## Development status
 
-The project is in development. See the [MCPWorldEditor user guide](/docs/guides/ue-tools/mcp-world-editor-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPWorldEditor user guide](/en/works/mcp-world-editor/docs/connect/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

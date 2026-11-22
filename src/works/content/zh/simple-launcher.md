@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-launcher-guide/
+      href: /zh/works/simple-launcher/docs/presets/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -33,12 +33,13 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19770928
 docIds:
-  - simple-launcher-guide
-websiteCoverUrl: "/media/covers/works/simple-launcher-20261101.webp"
+  - simple-launcher-presets
+  - simple-launcher-processes
+coverAlt: SimpleLauncher封面
+websiteCoverUrl: /media/covers/works/simple-launcher-20261101.webp
 sourceDate: 2026-03-25
-lang: "zh"
+lang: zh
 translationKey: simple-launcher
-coverAlt: "SimpleLauncher封面"
 ---
 
 ## 作品简介
@@ -83,4 +84,4 @@ SimpleLauncher 在 UE 游戏中以命名预设管理外部程序。项目可以�
 
 分离进程不会随游戏结束自动关闭，配置时必须明确谁负责终止它。命令行和工作目录应指向实际存在且有权限访问的资源。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/guides/ue-tools/simple-launcher-guide/)。
+操作步骤和参数说明见 [使用教程](/zh/works/simple-launcher/docs/presets/)。

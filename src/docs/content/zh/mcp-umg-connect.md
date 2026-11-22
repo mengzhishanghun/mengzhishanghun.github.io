@@ -1,0 +1,119 @@
+---
+title: 安装并连接 UMG 工具
+type: doc
+slug: mcp-umg-connect
+draft: false
+sitePublish: true
+tags:
+  - Unreal Engine
+  - MCP
+workIds:
+  - mcp-umg
+docPage:
+  work: mcp-umg
+  group: setup
+  slug: connect
+  order: 1
+documentKind: product-manual
+websiteRoute: /zh/works/mcp-umg/docs/connect/
+lang: zh
+translationKey: doc:mcp-umg:connect
+---
+
+MCPUMG 是一款由 MCP（Model Context Protocol，模型上下文协议）驱动的 Unreal Engine UMG AI 编辑插件。
+
+## 概述
+
+MCPUMG 通过运行在 Unreal Editor 内的 HTTP 服务器，向 AI 助手提供 Widget 专用的可视化编辑能力。AI 工具可以通过标准协议发现、创建和修改 Widget 树、属性、插槽、动画与事件。
+
+## 安装与更新
+
+1. 关闭所有正在使用目标引擎版本的 Unreal Editor 实例。
+2. 选择与引擎版本匹配的 MCPUMG 安装包，将其内容复制到该引擎安装目录下的 `Engine/Plugins/Marketplace/MCPUMG`。
+3. 打开复制后的 `MCPUMG.uplugin`，保留 `"Installed": true`，并添加或设置 `"EnabledByDefault": true`；打包后处理可能会移除此字段。
+4. 重启编辑器。除非在项目设置中关闭 `bAutoStart`，插件会自动启动。
+
+更新 MCPUMG 时，请先关闭编辑器，再使用匹配版本的新安装包完整替换现有 `MCPUMG` 目录。不要混用不同引擎版本的文件。
+
+## 工具（基础版 71 个；主动启用 MVVM 增强模块后另增 6 个）
+
+### 发现与读取
+
+| 工具 | 说明 |
+|------|------|
+| ListWidgetBlueprints | 列出 Widget Blueprint（便捷入口） |
+| GetWidgetTree | 获取 Widget 树结构 |
+| GetWidgetProperties | 获取 Widget 属性 |
+| SearchWidgetClasses | 搜索可用的 Widget 类 |
+| CaptureWidgetScreenshot | 将 Widget 设计视图截取为 PNG |
+| CaptureRuntimeWidgetScreenshot | 按实际 Slate 窗口几何截取 PIE/Game 中已存在的 Widget 实例为 PNG；不会创建 Widget 或注入预览状态 |
+| GetUIDesignCapabilities | 获取图片到 UMG 规格版本、操作和安全限制 |
+| ExportWidgetSpec | 导出稳定的 Widget 结构规格、revision 与 fingerprint |
+| InspectWidgetLayout | 分页检查设计元数据或 PIE 实际布局、裁剪、文本与资源状态 |
+| InspectWidgetHitTest | 只读检查目标中心或局部坐标的实际缓存命中路径；不注入输入 |
+| CompareUIImages | 在不自动缩放、裁剪或对齐的前提下比较两张 UI 图片并返回热图 |
+| CaptureWidgetPreviewMatrix | 按命名状态和尺寸渲染临时预览矩阵 |
+| InspectWidgetPerformance | 读取有界的设计态 WidgetTree 复杂度信号 |
+| ListRuntimeWidgets | 为同类运行中 Widget 实例签发短期令牌 |
+| InspectWidgetRuntime | 读取命名的运行中 Widget 或分页 WidgetTree |
+| GetRuntimeOperation | 查询有界运行时操作的进度与结果 |
+| CancelRuntimeOperation | 请求取消尚未完成的运行时操作 |
+| MeasureWidgetPerformance | 对运行中 Widget 子树采样 Slate CPU 工作 |
+| CaptureWidgetTrace | 捕获有界的原生 Slate Trace |
+| GetUIFrameworkCapabilities | 读取可用的 CommonUI 与 MVVM 操作 |
+| GetMVVMView | 读取 Widget Blueprint 的 MVVM Context 与 Binding |
+| ValidateMVVMBinding | 只读验证一个直接的 OneTime MVVM 属性关系 |
+
+## 配置
+
+项目设置 > 插件 > MCPUMG：
+
+| 设置 | 类型 | 默认值 | 说明 |
+|------|------|--------|------|
+| Port | int32 | 8765 | HTTP 端口（被占用时自动递增，最多重试 10 次） |
+| bAutoStart | bool | true | 编辑器启动时自动启动服务器 |
+| RequestTimeoutSeconds | int32 | 30 | 工具执行超时时间 |
+| CompileTimeoutSeconds | int32 | 120 | 编译超时时间 |
+
+## MCP 连接
+
+插件会在 Unreal Editor 内运行 HTTP 服务器，AI 客户端通过 MCP 协议连接。
+
+**MCP URL**：`http://127.0.0.1:8765/mcp`
+
+编辑器打开时服务器会自动启动（可通过 `bAutoStart` 配置）。如果 8765 端口被占用，插件会自动递增端口，工具栏将显示实际 URL。
+
+### 版本与保存排障
+
+布局诊断新增父节点边界、有限深度裁切祖先与换行文字高度溢出线索；`Unverified*` 不是通过。属性 Set 工具新增 `ResetToClassDefault`，样式支持显式 RoundedBox/outline、清除 Brush 资源和按钮 normal/pressed padding。结构化布局、会话令牌及命中检查见 [布局、会话与命中检查](https://mzsh.me/zh/works/mcp-umg/docs/layout/#layoutandsession)；图片工作流见 [参考图到 UMG 工作流](https://mzsh.me/zh/works/mcp-umg/docs/layout/#imagetoumg)。
+
+- 运行时能力以当前编辑器返回的 `tools/list` 为准。更新源码或安装包后，已经运行的编辑器不会自动换用新 DLL；工具数量不符时先核对部署目录并重启目标编辑器。
+- `SaveWidgetBlueprint` 保存失败时检查项目日志的 `LogSavePackage`。Windows `Error 32` 通常表示同一项目仍有旧 `-game`、PIE 或第二编辑器进程占用资产；只关闭命令行明确指向该项目的遗留进程，再重试精确保存。
+- Patch 已成功而保存失败时，不要改用 Save All、外部覆盖或重复 Patch。解除文件锁后直接重试 `SaveWidgetBlueprint`，避免重复执行已生效的内存修改。
+- `CaptureRuntimeWidgetScreenshot` 需要加载 MCPUMG 编辑器模块并存在目标运行态 Widget；单独的 `-game` 进程不保证提供 MCPUMG 服务。
+
+### Claude Code
+
+添加到 `~/.claude/.mcp.json`（全局）或项目根目录的 `.mcp.json`：
+
+```json
+{
+  "mcpServers": {
+    "ue-umg": {
+      "url": "http://127.0.0.1:8765/mcp"
+    }
+  }
+}
+```
+
+### 其他 AI 客户端
+
+Cursor、Windsurf、VS Code Copilot 等 MCP 客户端的配置方式各不相同。服务器 URL 保持一致，具体添加 MCP 服务器的方法请查阅所用 AI 工具的文档。
+
+## 要求
+
+- Unreal Engine 5.2+
+- 仅限编辑器
+- 可选：[MCPBlueprint](/zh/works/mcp-blueprint/docs/connect/)，用于 Blueprint 图表编辑（Widget 事件逻辑的高级图表操作会调用 MCPBlueprint 工具）
+
+如有问题或反馈，请访问[统一联系页面](https://mzsh.me/contact/)，添加我的微信。

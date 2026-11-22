@@ -21,19 +21,20 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19136345
 docIds:
-  - simple-auto-enum-guide
+  - simple-auto-enum-config-binding
+  - simple-auto-enum-blueprints-and-assets
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: "85d56cfc542a1e49bc39015d6967146add2b5f0a637b4807ef20deab4d2db77f"
+sourceHash: c1531c3689135b7a6eea822c2c4b94a43d2d545ac45216457a90582571a7e780
 translationStatus: translated
-generatedBodyHash: 95a5586ceb55ba055b206689c480cabc6192d66d222334f344c62814cdc3ac69
+generatedBodyHash: 501f6822f47cd1bd3d9026bf0ac2ac773d698848f091e58b13272397b1056f00
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/2d104382-60b1-4da6-86c6-ed93997f9c0a
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-auto-enum-guide/
+      href: /en/works/simple-auto-enum/docs/config-binding/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -43,8 +44,8 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-auto-enum-20261101.webp"
-coverAlt: "SimpleAutoEnum cover"
+websiteCoverUrl: /media/covers/works/simple-auto-enum-20261101.webp
+coverAlt: SimpleAutoEnum cover
 ---
 
 ## Overview
@@ -83,4 +84,4 @@ Projects must correctly define configuration classes, target enums, and range bo
 
 Dynamically changing enum contents may affect existing Blueprint references and persisted data. Projects must validate compatibility; successful binding logs alone do not establish safety.
 
-See the [user guide](/en/docs/guides/ue-tools/simple-auto-enum-guide/) for macro binding, configuration examples, and manual initialization.
+See the [user guide](/en/works/simple-auto-enum/docs/config-binding/) for macro binding, configuration examples, and manual initialization.

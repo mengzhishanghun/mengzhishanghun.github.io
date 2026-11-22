@@ -13,7 +13,7 @@ workInfo:
     - kind: open-source
       href: https://github.com/MZSH-Tools/MDBlogPacker
     - kind: docs
-      href: /docs/zh/tools/md-blog-packer/
+      href: /zh/works/md-blog-packer/docs/package/
   compatibility:
     - platforms:
         - Markdown 工具（操作系统待核实）
@@ -27,9 +27,11 @@ tags:
 links:
   - label: GitHub
     href: https://github.com/MZSH-Tools/MDBlogPacker
-coverAlt: "MDBlogPacker封面"
-websiteCoverUrl: "/media/covers/works/md-blog-packer-20261101.webp"
-lang: "zh"
+docIds:
+  - md-blog-packer-package
+coverAlt: MDBlogPacker封面
+websiteCoverUrl: /media/covers/works/md-blog-packer-20261101.webp
+lang: zh
 translationKey: md-blog-packer
 ---
 
@@ -75,4 +77,4 @@ Base64 编码后的图片数据通常比原始二进制大约增加三分之一�
 
 若文章发布在自己可管理资源的站点，可让构建过程把文章和图片一起发布。独立图片更便于替换、压缩、缓存与后续维护。
 
-操作步骤和参数说明见 [使用教程](/zh/docs/tools/md-blog-packer/)。
+操作步骤和参数说明见 [使用教程](/zh/works/md-blog-packer/docs/package/)。

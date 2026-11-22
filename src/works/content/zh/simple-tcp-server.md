@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/cc276a4a-389b-43e3-8a04-a6d628534108
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-tcp-server-guide/
+      href: /zh/works/simple-tcp-server/docs/listen/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -34,11 +34,15 @@ sourceUrl: https://www.cnblogs.com/mengzhishanghun/p/19165484
 links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19165484
-websiteCoverUrl: "/media/covers/works/simple-tcp-server-20261101.webp"
+docIds:
+  - simple-tcp-server-listen
+  - simple-tcp-server-messages
+  - simple-tcp-server-native-server
+coverAlt: SimpleTCPServer封面
+websiteCoverUrl: /media/covers/works/simple-tcp-server-20261101.webp
 sourceDate: 2025-10-25
-lang: "zh"
+lang: zh
 translationKey: simple-tcp-server
-coverAlt: "SimpleTCPServer封面"
 ---
 
 ## 作品简介
@@ -73,4 +77,4 @@ SimpleTCPServer 为 Unreal Engine 提供 TCP 服务端的多客户端会话管�
 
 仅支持 IPv4，不支持域名、IPv6 或加密连接。连接数量、会话生命周期、超时和数据处理需要结合目标环境验证。TCP 字节流没有天然的业务消息边界，项目必须自行确定编码和拆包规则；IP:Port 也不应直接作为安全认证依据。
 
-监听配置、会话管理与原生示例见 [使用教程](/zh/docs/guides/ue-tools/simple-tcp-server-guide/)。
+监听配置、会话管理与原生示例见 [使用教程](/zh/works/simple-tcp-server/docs/listen/)。

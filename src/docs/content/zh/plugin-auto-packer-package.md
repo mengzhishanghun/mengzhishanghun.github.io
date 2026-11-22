@@ -1,0 +1,106 @@
+---
+title: 为多个引擎版本打包插件
+type: doc
+slug: plugin-auto-packer-package
+draft: false
+sitePublish: true
+tags:
+  - UnrealEngine
+  - 插件
+  - 打包
+workIds:
+  - plugin-auto-packer
+docPage:
+  work: plugin-auto-packer
+  group: workflows
+  slug: package
+  order: 1
+documentKind: product-manual
+websiteRoute: /zh/works/plugin-auto-packer/docs/package/
+lang: zh
+translationKey: doc:plugin-auto-packer:package
+---
+
+一个用于 **一键打包多个 Unreal Engine 插件版本** 的图形化工具，帮助插件开发者快速构建多个引擎版本的插件安装包。
+支持查看打包日志、按 Fab 规范整理插件和自动过滤文件等功能，提高打包效率与一致性。
+
+---
+
+## 🚀 功能亮点
+
+- 支持添加多个 Unreal Engine 安装路径（Launcher 或源码版）
+- 每个引擎状态图标显示：等待中、打包中、✅ 成功、❌ 失败、➖ 已取消
+- 图形界面简洁直观，支持日志实时查看，点击切换引擎日志
+- 可选的 Fab 插件整理操作：清理中间文件、拷贝文档、生成 FilterPlugin.ini 等
+- 支持读取 `.uplugin` 中的作者信息，自动为每个源文件添加版权声明
+
+---
+
+## ⚙️ 使用方法
+
+### ✅ 方式一：使用 `.exe`（推荐）
+1. 前往 Releases 页面下载 `UEPluginPacker.exe`
+2. 放置到你的 Unreal 项目根目录（即包含 `.uproject` 的目录）
+3. 双击运行即可，无需命令行和环境配置
+
+### 🧑‍💻 方式二：源码运行
+1. 克隆本仓库
+2. 安装 Python 3.8+（建议使用 Miniconda）
+3. 安装依赖并运行：
+
+```bash
+conda env create -f environment.yml
+conda activate UEPluginAutoPacker
+pip install -r requirements.txt
+python Main.py
+```
+
+### ⌨️ 方式三：命令行（CLI）
+
+将 `UEPluginPacker.exe` 放到项目根目录后，不加参数是 GUI，加参数进入 CLI：
+
+```bat
+:: 列出已在 GUI 中配置的引擎
+UEPluginPacker.exe engines
+
+:: 列出项目下的插件
+UEPluginPacker.exe plugins
+
+:: 对勾选的引擎打包（等同于 GUI 点击“打包”）
+UEPluginPacker.exe build MyPlugin
+
+:: 只打指定引擎
+UEPluginPacker.exe build MyPlugin --engines 5.2,5.5,5.7
+
+:: 打所有已配置的引擎
+UEPluginPacker.exe build MyPlugin --all
+
+:: 只看是否能编译，跳过 Fab 后处理
+UEPluginPacker.exe build MyPlugin --all --no-post
+
+:: 自定义输出目录
+UEPluginPacker.exe build MyPlugin --engines 5.5 --output D:\temp\out
+```
+
+退出码：`0` 全成功；`1` 部分失败；`2` 参数或配置错；`130` 用户 Ctrl+C。
+
+> ⚠️ 引擎列表仍由 GUI 维护（首次在 GUI 添加后 CLI 就能读取），CLI 不负责增删引擎。
+
+---
+
+## 💡 每个功能的作用
+
+| 功能项                      | 用途说明                                                               |
+|-----------------------------|--------------------------------------------------------------------|
+| 添加引擎路径               | 注册多个 UE 引擎用于打包                                                     |
+| 插件选择                   | 自动检测项目中的 `.uplugin`                                                |
+| 转换 MarketplaceURL        | 修改 `.uplugin` 字段为 `FabURL`                                         |
+| 删除 Binaries / Intermediate | 清理冗余中间产物                                                           |
+| 拷贝 README / Docs         | 将工程文档复制到插件目录                                                       |
+| 自动生成 FilterPlugin.ini  | 自动扫描插件根目录下的文件/文件夹，生成用于发布的 `.ini` 过滤配置                              |
+| 自动添加版权声明           | 插入版权声明（从 `.uplugin` 中读取作者），替换旧注释，覆盖所有 `.h/.cpp/.Build.cs` 文件, 自动跳过ThredParty文件夹
+|
+
+每项操作均可单独勾选与组合使用，结果将在日志中详细显示，包括生成的版权文本与 ini 内容。
+
+---

@@ -19,21 +19,23 @@ links:
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
 lang: en
 translationKey: simple-file-updater
-sourceHash: "c449af5bb130c18ec9ec1c3b84487543d93f8d88177476322df6a90e5309e938"
+sourceHash: e57846321928d9b3e85ea5d7ae89ab392c6b5144c02d18726b90d9a0ae2ae49d
 translationStatus: translated
-generatedBodyHash: 7bb9b7140c9654646855d0689646d29774dcbb54a562981955e2c7fe5d6310f4
+generatedBodyHash: e39434d3e05bbe556b89fe2e14832d8c7a9c557b2e9eb9bb8fceac9d8de353f7
 workInfo:
   channels:
     - kind: open-source
       href: https://github.com/MZSH-Tools/SimpleFileUpdater
     - kind: docs
-      href: /docs/zh/tools/simple-file-updater/
+      href: /en/works/simple-file-updater/docs/update-files/
   compatibility:
     - platforms:
         - Windows (.exe packaged application)
       requirements: []
-websiteCoverUrl: "/media/covers/works/simple-file-updater-20261101.webp"
-coverAlt: "SimpleFileUpdater cover"
+websiteCoverUrl: /media/covers/works/simple-file-updater-20261101.webp
+coverAlt: SimpleFileUpdater cover
+docIds:
+  - simple-file-updater-update-files
 ---
 
 ## Overview
@@ -72,4 +74,4 @@ Updates may overwrite files with the same name at target locations. Check URLs, 
 
 The tool downloads files according to configuration; it does not determine whether remote content is trustworthy or suitable for the current environment. Use publicly shareable addresses in public configurations and keep internal download sources out of examples.
 
-See the [usage guide](/en/docs/tools/simple-file-updater/) for steps and parameters.
+See the [usage guide](/en/works/simple-file-updater/docs/update-files/) for steps and parameters.

@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-dev-tools-guide/
+      href: /en/works/mcp-dev-tools/docs/inspect-editor/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -27,11 +27,13 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-dev-tools
-sourceHash: "457e6a9612f2adf35d83842762fcb2aee586e0b6bdc39136e65efcef25752ad4"
-generatedBodyHash: 6897f18c4a581179c315af0642d81c1f2907a64388a34215e288bafc44ad3d49
+sourceHash: 8360959e12f33953439495e11dd992cff2450d2b01ebc4c0d8d9ae838ee203a2
+generatedBodyHash: 299c3b4bd8d30c194caaeca1f2969da4f89ed9104ff4a5b745031bd539140770
 translationStatus: translated
-coverAlt: "MCPDevTools cover"
-websiteCoverUrl: "/media/covers/works/mcp-dev-tools-20261101.webp"
+coverAlt: MCPDevTools cover
+websiteCoverUrl: /media/covers/works/mcp-dev-tools-20261101.webp
+docIds:
+  - mcp-dev-tools-inspect-editor
 ---
 
 ## About this work
@@ -44,4 +46,4 @@ The project focuses on asset tools and read-only development diagnostics, connec
 
 ## Development status
 
-The project is in development. See the [MCPDevTools user guide](/docs/guides/ue-tools/mcp-dev-tools-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPDevTools user guide](/en/works/mcp-dev-tools/docs/inspect-editor/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

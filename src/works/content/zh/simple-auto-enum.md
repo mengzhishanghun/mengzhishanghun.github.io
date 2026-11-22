@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/2d104382-60b1-4da6-86c6-ed93997f9c0a
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-auto-enum-guide/
+      href: /zh/works/simple-auto-enum/docs/config-binding/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -36,12 +36,13 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19136345
 docIds:
-  - simple-auto-enum-guide
-websiteCoverUrl: "/media/covers/works/simple-auto-enum-20261101.webp"
+  - simple-auto-enum-config-binding
+  - simple-auto-enum-blueprints-and-assets
+coverAlt: SimpleAutoEnum封面
+websiteCoverUrl: /media/covers/works/simple-auto-enum-20261101.webp
 sourceDate: 2025-10-12
-lang: "zh"
+lang: zh
 translationKey: simple-auto-enum
-coverAlt: "SimpleAutoEnum封面"
 ---
 
 ## 作品简介
@@ -80,4 +81,4 @@ SimpleAutoEnum 用宏声明配置数组与 UE 枚举之间的绑定，减少为�
 
 动态改变枚举内容可能影响已有蓝图引用和持久化数据；具体兼容性必须由项目验证，不能仅凭绑定成功日志判断安全。
 
-宏绑定、配置示例与手动初始化原理见 [使用教程](/zh/docs/guides/ue-tools/simple-auto-enum-guide/)。
+宏绑定、配置示例与手动初始化原理见 [使用教程](/zh/works/simple-auto-enum/docs/config-binding/)。

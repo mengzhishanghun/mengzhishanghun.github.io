@@ -17,6 +17,7 @@ import {projectContentTopics} from './content-topics.mjs';
 import {projectTaxonomy,categoryNavigation} from './taxonomy.mjs';
 import {loadProjectGalleries,projectGallery} from './project-gallery.mjs';
 import {projectPublication,filterPublicationHTML} from './publication.mjs';
+import {documentCatalog,documentChrome,documentLayout,renderDocumentSlots,resolveDocumentAlias,validateDocumentSource} from './work-documents.mjs';
 const require = createRequire(new URL('../../package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -37,6 +38,7 @@ export function boundedPath(root,relative,label='路径') {
 }
 export function localeRoute(entry,locale) {
   if(entry.original)return entry.route;
+  if(entry.docPage)return `/${locale}/works/${entry.docPage.work}/docs/${entry.docPage.slug}/`;
   const original = entry.legacyRoutes[0];
   if (original === '/') return `/${locale}/`;
   if (original === '/docs/404.html') return `/${locale}/docs/404.html`;
@@ -63,6 +65,7 @@ export function preflight({sourceRoot,site,manifest}) {
   sourceRoot ||= path.join(site,'src');
   const config=readLanguages(sourceRoot,manifest.entries.map(e=>e.id)),{primary,languages}=config;
   const codes=languages.map(l=>l.code),routes=new Map(),entries=[],ids=new Set();
+  documentCatalog(manifest.entries,manifest.docGroups,codes);
   const verifyTranslation=(source,original,key,label)=>{
     if(source.data.translationKey!==key)throw new Error(label+'身份不符');
     if(source.data.sourceHash!==textHash(original.raw) || source.data.translationStatus!=='translated')throw new Error(label+'过期');
@@ -83,6 +86,8 @@ export function preflight({sourceRoot,site,manifest}) {
     const sources=Object.fromEntries(languages.map(lang=>[lang.code,readSource(sourceRoot,languageSource(lang,lang.sources[entry.id]),lang.code===primary?'来源':'译文')]));
     for(const lang of languages) {
       assertPublicFields(sources[lang.code].data);
+      validateDocumentSource(sources[lang.code].data,entry);
+      if(entry.docPage&&sources[lang.code].data.sitePublish!==true)throw Error('章节来源未获公开授权: '+entry.id);
       if(sources[lang.code].data.translationKey!==(entry.translationKey || entry.id))throw new Error('来源身份不符: '+entry.id);
       if(sources[lang.code].data.draft===true)throw new Error('草稿不得发布: '+entry.id);
       if((lang.code!==primary || sources[lang.code].data.lang!==undefined) && sources[lang.code].data.lang!==lang.code)throw new Error('来源语言不符: '+entry.id);
@@ -134,16 +139,27 @@ export function preflight({sourceRoot,site,manifest}) {
   return {routes,entries,config,copy,galleries,reprints};
 }
 function routeFile(route) { return route.slice(1) + (route.endsWith('.html') ? '' : 'index.html'); }
-function mapURL(url,locale,entries) {
+const legacyDocsIndex=/^\/(?:(?:[a-z][a-z0-9-]*\/)?docs|docs\/[a-z][a-z0-9-]*)\/$/;
+function mapURL(url,locale,entries,documentRedirects) {
   if (!url || /^(?:mailto:|tel:|data:|#)/i.test(url)) return url;
   const local = url.replace(/^https:\/\/mzsh\.me(?=\/)/,'');
   if (!local.startsWith('/') || local.startsWith('//')) return url;
   const match = local.match(/^([^?#]+)(.*)$/), pathname = match[1], suffix = match[2];
+  const alias=documentRedirects?.get(pathname);
+  if(alias){
+    const reference=new URL(local,'https://mzsh.me'),anchor=decodeURIComponent(reference.hash.slice(1));
+    const map=alias.anchorOverrides?.[locale],entry=entries.find(item=>item.id===alias.id);
+    if(!map||!Object.hasOwn(map,anchor))return localeRoute(entry,locale)+suffix;
+    const target=map[anchor];
+    if(typeof target==='string')return localeRoute(entry,locale)+reference.search+'#'+encodeURIComponent(target);
+    const resolved=resolveDocumentAlias(target,{entries,locale,route:localeRoute});
+    return resolved.path+reference.search+(resolved.anchor?'#'+encodeURIComponent(resolved.anchor):'');
+  }
   for (const entry of entries) {
     if ([...entry.legacyRoutes,...(entry.languageCodes || []).map(l => localeRoute(entry,l))].includes(pathname)) return localeRoute(entry,locale)+suffix;
     if (pathname.startsWith('/docs/en/') && entry.legacyRoutes.includes(pathname.replace('/docs/en/','/docs/zh/'))) return localeRoute(entry,locale)+suffix;
   }
-  if (pathname === '/docs/' || pathname === '/docs/zh/' || pathname === '/docs/en/') {
+  if (legacyDocsIndex.test(pathname)) {
     const first = entries.find(e => e.id === 'page:works-index');
     if (first) return localeRoute(first,locale)+suffix;
   }
@@ -156,7 +172,7 @@ function withoutSourceAttribution(source) {
   if(source.data.sourceUrl && source.data.date && last?.includes(source.data.sourceUrl) && last.includes(String(source.data.date)))return body.slice(0,body.lastIndexOf(last));
   return body;
 }
-async function renderBody(entry,locale,processor,site) {
+export async function renderBody(entry,locale,processor,site) {
   const source = entry.sources[locale];
   let mediaOrdinal=0;
   const tokens=[];
@@ -188,7 +204,7 @@ async function renderBody(entry,locale,processor,site) {
           if(typeof note!=='string')throw new Error('缺失公共文件提示来源: '+entry.id);
           const label=(node.children || []).map(n=>n.value || '').join('');
           node.type='text';node.value=label+note;delete node.url;delete node.children;
-        } else {if(/^(?:javascript|data|file|obsidian):/i.test(node.url))throw new Error('不安全链接');node.url = mapURL(node.url,locale,processor.entries);}
+        } else {if(/^(?:javascript|data|file|obsidian):/i.test(node.url))throw new Error('不安全链接');node.url = mapURL(node.url,locale,processor.entries,processor.documentRedirects);}
       }
       if (node.type === 'heading' && entry.type==='blog' && !entry.original) node.depth=Math.min(6,node.depth+1);
       if (node.type === 'code' && node.lang==='blueprint')node.lang='text';
@@ -197,7 +213,8 @@ async function renderBody(entry,locale,processor,site) {
     }; visit(tree);
   };
   const markdown = await createMarkdownProcessor({syntaxHighlight:entry.type==='blog'?'shiki':false,shikiConfig:{theme:'github-dark'},remarkPlugins:[mediaPlugin],rehypePlugins:entry.type==='blog'?[]:[rehypeExpressiveCode]});
-  let body = entry.original?source.body:withoutSourceAttribution(source).replace(/^\s*# [^\n]+\n/,'');
+  let body = entry.original?source.body:withoutSourceAttribution(source);
+  if(!entry.original&&!entry.docPage)body=body.replace(/^\s*# [^\n]+\n/,'');
   if(entry.type==='page' && entry.slug==='not-found')body=source.body.trim().split(/\n\s*\n/).at(-1);
   if(entry.type==='blog')body=body.replace(/^(`{3,})C\+\+\s*$/gm,'$1plaintext');
   if(entry.type==='blog'&&!entry.original)body=body.replace(/\n原文于 \d{4}-\d{2}-\d{2} 发表于\[[^\]]+\]\([^\n]+\)\。?\s*$/,'');
@@ -267,7 +284,7 @@ async function renderBody(entry,locale,processor,site) {
   }
   if(entry.mediaOccurrences && mediaOrdinal!==entry.mediaOccurrences.length)throw new Error('媒体occurrence数量漂移: '+entry.id);
   const headings=result.metadata.headings;
-  if(['doc','blog'].includes(entry.type) && !entry.original) {
+  if(!entry.docPage && ['doc','blog'].includes(entry.type) && !entry.original) {
     const records=JSON.parse(fs.readFileSync(path.join(here,'heading-scaffolds.json'),'utf8'))[entry.id];
     if(records?.length!==headings.length)throw new Error('heading结构不能唯一配对: '+entry.id+' source='+headings.length+' DOM='+records?.length);
     const fragment=parseFragment(code,{sourceCodeLocationInfo:true}),nodes=[];
@@ -290,9 +307,10 @@ async function renderBody(entry,locale,processor,site) {
   }
   return {code,headings};
 }
-function outline(headings) {
+export function outline(headings,depths) {
   const roots=[], stack=[];
   for (const h of headings) {
+    if(depths&&!depths.includes(h.depth))continue;
     const node = {...h,children:[]};
     while (stack.length && stack.at(-1).depth >= h.depth) stack.pop();
     (stack.length ? stack.at(-1).children : roots).push(node); stack.push(node);
@@ -354,12 +372,15 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   const article=articleTypes.has(entry.type);
   const contentIndex=['page:blog-index','page:works-index','page:cases-index'].includes(entry.id);
   const cardOrder=new Map();if(contentType)walk(doc,node=>{const a=attrs(node);if(a['data-content-card']!==undefined)cardOrder.set(a['data-slug'],Number(a.style?.match(/order:\s*(\d+)/)?.[1]||0));});
-  const neutral=article?(entry.original?entry.route:shareRoute(entry,locale,localeRoute(entry,locale))):null;
-  if(article && !entry.original && ![...entry.legacyRoutes,...(config.shareAliases || [])].includes(neutral))throw new Error('通用分享入口未登记: '+neutral);
+  const neutral=article?(entry.original?entry.route:entry.docPage?urls[locale]:shareRoute(entry,locale,urls[locale])):null;
+  if(article && !entry.original && !entry.docPage && ![...entry.legacyRoutes,...(config.shareAliases || [])].includes(neutral))throw new Error('通用分享入口未登记: '+neutral);
   walk(doc,node => {
     if(excluded.has(node))return;
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
+    if(node.tagName==='a'&&legacyDocsIndex.test((a.href||'').replace(/^https:\/\/mzsh\.me/,''))&&(attrs(node.parentNode).class||'').split(/\s+/).includes('main-nav')){
+      edits.push([loc.startOffset,loc.endOffset,'']);walk(node,child=>excluded.add(child));return;
+    }
     if(contentType && a['data-content-index']!==undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-tags-display="all" data-content-topic-aliases="'+escapeHTML(safeJSON(entry.topicAliases?.[locale] || {}))+'" data-content-category-queries="'+escapeHTML(safeJSON(Object.fromEntries(Object.entries(entry.taxonomy?.legacyQueries||{}).map(([id,q])=>[id,{name:dict.get(q.name)||q.name,slugs:q.slugs}]))))+'"']);
     if(contentType&&entry.taxonomy&&(a.class||'').split(/\s+/).includes('content-category-nav'))edits.push([loc.startTag.endOffset,loc.endTag.startOffset,categoryNavigation(entry,locale)]);
     if(contentIndex && a['data-content-card']!==undefined && loc.attrs?.hidden)edits.push([loc.attrs.hidden.startOffset,loc.attrs.hidden.endOffset,'']);
@@ -373,10 +394,10 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(article && ['prose','sl-markdown-content'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && (node.parentNode?.tagName==='article' || (a.class || '').includes('sl-markdown-content'))) {
       engagementBodies++;
     }
-    if(article && (a.class || '').split(/\s+/).includes('article-back') && (attrs(node.parentNode).class || '').split(/\s+/).includes('article-sidebar')) {
+    if(article && (entry.docPage?a['data-work-doc-engagement']!==undefined:(a.class || '').split(/\s+/).includes('article-back') && (attrs(node.parentNode).class || '').split(/\s+/).includes('article-sidebar'))) {
       engagementSlots++;
       if(!engagementLabels || Object.values(engagementLabels).some(v=>typeof v!=='string'))throw new Error('互动文案缺失');
-      const data={id:entry.id,origin:'https://mzsh.me',url:'https://mzsh.me'+neutral,title:entry.sources[config.fallback].data.title,labels:engagementLabels,...(entry.original?{likesEnabled:false}:{})};
+      const data={id:entry.id,origin:'https://mzsh.me',url:'https://mzsh.me'+neutral,title:entry.sources[entry.docPage?locale:config.fallback].data.title,labels:engagementLabels,...(entry.original?{likesEnabled:false}:{})};
       const markup='<section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="'+escapeHTML(engagementLabels.group)+'"><div class="article-engagement-actions"><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>'+escapeHTML(engagementLabels.like)+'</span> <span data-engagement-count aria-label="'+escapeHTML(engagementLabels.count)+'">—</span></button><button type="button" data-engagement-share aria-label="'+escapeHTML(engagementLabels.share)+'" title="'+escapeHTML(engagementLabels.share)+'"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">'+escapeHTML(engagementLabels.share)+'</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" data-engagement-url readonly value="'+escapeHTML(data.url)+'"></label><script type="application/json" data-engagement-config>'+safeJSON(data)+'</script><noscript><label class="article-engagement-manual">'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" readonly value="'+escapeHTML(data.url)+'"></label></noscript></section>';
       edits.push([loc.startTag.startOffset,loc.startTag.startOffset,'<div class="article-detail-controls">']);
       edits.push([loc.endTag.endOffset,loc.endTag.endOffset,markup+'</div>']);
@@ -432,7 +453,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     }
     for (const name of ['href','action']) {
       if (!a[name] || !loc.attrs?.[name]) continue;
-      let value = mapURL(a[name],locale,entries);
+      let value = mapURL(a[name],locale,entries,config.documentRedirects);
       if(article&&name==='href'&&node.tagName==='a'&&['article-back','outline-mobile-back'].some(cls=>(a.class||'').split(/\s+/).includes(cls))){
         const result=articleReturnTarget(entry,value,locale,entries);value=result.href;
         if(result.policy)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-return-policy="'+escapeHTML(safeJSON(result.policy))+'"']);
@@ -475,13 +496,23 @@ export async function buildSite(options) {
   const {site,manifest,output,check=false}=options;
   const validated=preflight(options),{config,copy,galleries}=validated,{primary,languages}=config,codes=languages.map(l=>l.code);
   const publication=projectPublication({...validated,site,redirects:manifest.redirects}),{entries,redirects}=publication;
+  const documents=documentCatalog(validated.entries,manifest.docGroups,codes);
+  const documentRedirects=new Map(redirects.filter(alias=>entries.some(entry=>entry.docPage&&entry.id===alias.id)).map(alias=>[alias.route,alias]));
   let profile=null;
   if(entries.some(entry=>entry.id==='page:about')){
     profile=JSON.parse(fs.readFileSync(regularPath(options.sourceRoot || path.join(site,'src'),'about/profile.json'),'utf8'));
     if(Object.keys(profile).length!==1||!Number.isInteger(profile.birthYear)||profile.birthYear<1||profile.birthYear>9999)throw new Error('关于我出生年配置无效');
   }
   config.shareAliases=redirects.map(alias=>alias.route);
+  config.documentRedirects=documentRedirects;
   const resources = !options.templateRoot?loadResources({site}):new Map(), files=new Map(), rendered = new Map();
+  let chapterChrome;
+  if(documents.size){
+    files.set('assets/site-ui/work-documents.css',fs.readFileSync(regularPath(path.join(site,'src'),'docs/client/work-documents.css')));
+    const chromeTemplate=validated.entries.find(entry=>entry.id==='page:works-index')?.template;
+    if(!chromeTemplate)throw Error('缺少作品索引模板');
+    chapterChrome=documentChrome(fs.readFileSync(regularPath(options.templateRoot||options.sourceRoot||path.join(site,'src'),chromeTemplate),'utf8'));
+  }
   const scriptURLs=new Map(),scriptManifest=path.join(here,'scripts.json');
   if(!options.templateRoot && fs.existsSync(scriptManifest)) {
     const scripts=normalizeScriptEntries(JSON.parse(fs.readFileSync(scriptManifest,'utf8'))),byURL=new Map(scripts.flatMap(script=>script.urls.map(url=>[url,script]))),visiting=new Set();
@@ -507,7 +538,7 @@ export async function buildSite(options) {
     scripts.forEach(emit);
   }
   const pageEntries=[...entries,...validated.reprints];
-  for (const entry of pageEntries) for (const locale of entry.languageCodes) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy,primary,publication},site));
+  for (const entry of pageEntries) for (const locale of entry.languageCodes) rendered.set(entry.id+':'+locale,await renderBody(entry,locale,{entries,copy,primary,publication,documentRedirects},site));
   const orderedWorks=entries.filter(e=>e.type==='work').sort((a,b)=>(a.sources[primary].data.categoryOrder ?? 0)-(b.sources[primary].data.categoryOrder ?? 0)||(a.sources[primary].data.order ?? 0)-(b.sources[primary].data.order ?? 0));
   orderedWorks.forEach((e,i)=>e.cardOrder=i);
   for(const entry of entries) {
@@ -528,12 +559,16 @@ export async function buildSite(options) {
     const file=regularPath(options.templateRoot || options.sourceRoot || path.join(site,'src'),entry.template);
     let html=fs.readFileSync(file,'utf8').replaceAll('/blog-search/',`/${locale}/blog-search/`);
     if(entry.original)html=reprintTemplate(html,entry,escapeHTML);
+    if(entry.docPage){
+      for(const key of ['toc','previous','next','works'])if(typeof slots[key]!=='string'||!slots[key].trim())throw Error('章节模板文案缺失: '+locale+' '+key);
+      html=renderDocumentSlots(html,documentLayout(entry,locale,entries,documents,localeRoute),entry.sources[locale].data,slots,copy[locale].shellSlots['page:works-index'],chapterChrome,{outline:outline(result.headings,[2,3]),bodyHasTitle:result.headings.some(heading=>heading.depth===1)});
+    }
     html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.shellId || entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
     html=filterPublicationHTML(html,publication);
     if(entry.id==='page:works-index')html=renderWorkCardStatuses(html,entries,locale,copy[locale].workLabels);
     if(entry.type==='work')html=renderWorkMetadata(html,entry.sources[locale].data,copy[locale].workLabels);
     if(entry.id==='page:about')html=html.replaceAll('{{profile:birthYear}}',String(profile.birthYear));
-    html=html.replace('{{body}}',result.code).replace('{{outline}}',outline(result.headings));
+    html=html.replace('{{body}}',()=>result.code).replace('{{outline}}',()=>outline(result.headings));
     if (/\{\{(?:text|body|outline|profile)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
     const anchors = Object.fromEntries(pageCodes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
     html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,pageConfig,copy[locale].engagementLabels);
@@ -559,7 +594,7 @@ export async function buildSite(options) {
   for(const [pathname,{entry,anchorOverrides}]of aliases) {
     const oldCode=pathname.match(/^\/docs\/([^/]+)\//)?.[1] || pathname.split('/')[1],explicitLocale=codes.includes(oldCode)?oldCode:null;
     const source=rendered.get(entry.id+':'+(explicitLocale || primary)).headings,anchors={};
-    for(const code of codes){const target=rendered.get(entry.id+':'+code).headings,map={};
+    for(const code of codes){const target=rendered.get(entry.id+':'+code).headings,map=Object.create(null);
       if(source.length!==target.length)throw new Error('旧链章节映射歧义');
       const sourceIDs=aliasPageIDs.get(entry.id+':'+(explicitLocale || primary)),targetIDs=aliasPageIDs.get(entry.id+':'+code);
       source.forEach((h,i)=>{if(!sourceIDs.has(h.slug))return;if(sourceIDs.get(h.slug)!==1 || targetIDs.get(target[i].slug)!==1 || (map[h.slug] && map[h.slug]!==target[i].slug))throw new Error('旧链章节映射缺失或歧义');map[h.slug]=target[i].slug});anchors[code]=map;
@@ -571,6 +606,11 @@ export async function buildSite(options) {
       for(const [code,map]of Object.entries(anchorOverrides)){
         if(!codes.includes(code)||!object(map))throw new Error('旧链锚点覆盖语言或映射无效');
         for(const [oldId,newId]of Object.entries(map)){
+          if(entry.docPage&&object(newId)&&oldId.trim()){
+            const split=resolveDocumentAlias(newId,{entries,locale:code,route:localeRoute,pageIds:aliasPageIDs});
+            if(!files.has(routeFile(split.path))||split.path===pathname)throw Error('旧章节链接目标缺失或循环');
+            anchors[code][oldId]=split;continue;
+          }
           if(!oldId.trim()||typeof newId!=='string'||!newId.trim()||aliasPageIDs.get(entry.id+':'+code).get(newId)!==1)throw new Error('旧链锚点覆盖目标缺失或歧义');
           anchors[code][oldId]=newId;
         }

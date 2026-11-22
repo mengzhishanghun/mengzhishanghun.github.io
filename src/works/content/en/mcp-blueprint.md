@@ -14,7 +14,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-blueprint-guide/
+      href: /en/works/mcp-blueprint/docs/connect/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -30,11 +30,16 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-blueprint
-sourceHash: 1926f46c7bd6259a47dcbdde991020354743a7860387c3d394dc45669e4faf08
-generatedBodyHash: 3f87959894bb695bbf9fc2c1192d46ba8f01739b5d656c7c3b4180dd4d35a700
+sourceHash: 0b4d9e505bb6fd923cc839f9850b99b52320b348a1146c9605a0b4cdfad44ed1
+generatedBodyHash: 24035beff33b2da433441c0d898e180946c923d7b81202eda6e129a22291526e
 translationStatus: translated
 coverAlt: MCPBlueprint cover
 websiteCoverUrl: /media/covers/works/mcp-blueprint-20261101.webp
+docIds:
+  - mcp-blueprint-connect
+  - mcp-blueprint-graphs
+  - mcp-blueprint-members-and-types
+  - mcp-blueprint-components-and-inheritance
 ---
 
 ## About this work
@@ -47,4 +52,4 @@ Find Blueprints and graphs, edit nodes and connections, manage variables and fun
 
 ## Purchase and documentation
 
-Buy the plugin on [Fab](https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713). See the [MCPBlueprint user guide](/docs/guides/ue-tools/mcp-blueprint-guide/) for installation and usage. The website guide covers the published release.
+Buy the plugin on [Fab](https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713). See the [MCPBlueprint user guide](/en/works/mcp-blueprint/docs/connect/) for installation and usage. The website guide covers the published release.

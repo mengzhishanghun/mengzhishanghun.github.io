@@ -5,6 +5,7 @@ import {fileURLToPath} from 'node:url';
 import {attrs,walk} from './extract-dom.mjs';
 import {localeRoute,preflight} from './build.mjs';
 import {projectPublication,isHiddenURL} from './publication.mjs';
+import {resolveDocumentAlias} from './work-documents.mjs';
 const require=createRequire(new URL('../../package.json',import.meta.url));
 const {parse}=require('parse5');
 export function validateRuntime({manifest,output,site,languageConfig,validateAliases=true,publication}) {
@@ -69,8 +70,14 @@ export function validateRuntime({manifest,output,site,languageConfig,validateAli
       for(const {code}of config.languages){
         const target=entry?localeRoute(entry,code):'/'+code+'/';
         if(runtime?.urls?.[code]!==target || target===pathname || !pageIDs.has(target))errors.push({route:pathname,kind:'aliasTarget',code});
-        for(const id of Object.values(runtime?.anchors?.[code] || {}))if(!pageIDs.get(target)?.has(id))errors.push({route:pathname,kind:'aliasAnchor',code,id});
-        for(const [oldId,newId]of Object.entries(manifest.redirects?.find(alias=>alias.route===pathname)?.anchorOverrides?.[code] || {}))if(runtime?.anchors?.[code]?.[oldId]!==newId)errors.push({route:pathname,kind:'aliasAnchorOverride',code,oldId,newId});
+        for(const value of Object.values(runtime?.anchors?.[code] || {})){
+          const valid=typeof value==='string'?pageIDs.get(target)?.has(value):entry?.docPage&&value&&typeof value.path==='string'&&typeof value.anchor==='string'&&pageIDs.has(value.path)&&(!value.anchor||pageIDs.get(value.path).has(value.anchor));
+          if(!valid)errors.push({route:pathname,kind:'aliasAnchor',code,value});
+        }
+        for(const [oldId,newId]of Object.entries(manifest.redirects?.find(alias=>alias.route===pathname)?.anchorOverrides?.[code] || {})){
+          const expected=typeof newId==='string'?newId:resolveDocumentAlias(newId,{entries:manifest.entries,locale:code,route:localeRoute});
+          if(JSON.stringify(runtime?.anchors?.[code]?.[oldId])!==JSON.stringify(expected))errors.push({route:pathname,kind:'aliasAnchorOverride',code,oldId,newId});
+        }
       }
     }
   }

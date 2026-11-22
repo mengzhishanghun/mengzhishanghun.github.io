@@ -13,7 +13,7 @@ workInfo:
   supportHref: /contact/#support-title
   channels:
     - kind: docs
-      href: /docs/guides/ue-tools/mcp-umg-guide/
+      href: /en/works/mcp-umg/docs/connect/
   compatibility:
     - platforms: []
       requirements:
@@ -26,11 +26,18 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: "cdd497a73d5eab6bce786d50f40752e58b42dd16c9597a847d424d19d31a24e4"
-generatedBodyHash: 69f1f4af1bd1fb51be61da48e0be9cd83a7f8990fc17ea17583e06759ae89d31
+sourceHash: 46553b02319f6a0252eb7bd810ddbe46554ea6e201cfad8729a2fa7fdcd6bea8
+generatedBodyHash: 09595aafb2929da73f571f50023f875dc391380fbc5d731a0d47d021e391317e
 translationStatus: translated
-coverAlt: "MCPUMG cover"
-websiteCoverUrl: "/media/covers/works/mcp-umg-20261101.webp"
+coverAlt: MCPUMG cover
+websiteCoverUrl: /media/covers/works/mcp-umg-20261101.webp
+docIds:
+  - mcp-umg-connect
+  - mcp-umg-layout
+  - mcp-umg-components-styles
+  - mcp-umg-events-navigation-animation
+  - mcp-umg-preview-runtime
+  - mcp-umg-batch-migration
 ---
 
 ## About this work
@@ -43,4 +50,4 @@ The project focuses on Widget trees, properties and animations, connecting exter
 
 ## Development status
 
-The project is in development. See the [MCPUMG user guide](/docs/guides/ue-tools/mcp-umg-guide/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+The project is in development. See the [MCPUMG user guide](/en/works/mcp-umg/docs/connect/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.

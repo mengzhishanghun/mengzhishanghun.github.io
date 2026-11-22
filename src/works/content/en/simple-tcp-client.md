@@ -22,15 +22,15 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: "e9bffdeeaee47f3c64416557fe35e37e925ae509d335a28041f7b84387086600"
+sourceHash: 4b801b6ff441c5709a94f4571b461c3079d777418fd8f819ed8b8d42cd173e42
 translationStatus: translated
-generatedBodyHash: f286cf7a1e66d326713aadf0b5371e62b01fadfbb548772f42755c603cc1ca7d
+generatedBodyHash: 4bcc1a94bfc0faae89de239a7548523b80f0603c1e1f0e210d2ffbafbd20cd23
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/6d6d46bf-eaed-4b66-8382-9d69eb56981e
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-tcp-client-guide/
+      href: /en/works/simple-tcp-client/docs/connect/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -38,8 +38,12 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-tcp-client-20261101.webp"
-coverAlt: "SimpleTCPClient cover"
+websiteCoverUrl: /media/covers/works/simple-tcp-client-20261101.webp
+coverAlt: SimpleTCPClient cover
+docIds:
+  - simple-tcp-client-connect
+  - simple-tcp-client-messages
+  - simple-tcp-client-native-client
 ---
 
 ## Overview
@@ -76,4 +80,4 @@ It suits applications where UE initiates TCP connections, maintains several comm
 
 Only IPv4 is supported; domain names, IPv6, and encrypted connections are not supported. TCP transports a byte stream. Connection management does not automatically define business message boundaries, serialization, or state recovery after reconnection. Verify disconnection, retry, and data processing against the actual server protocol and check each channel's configuration.
 
-See the [user guide](/en/docs/guides/ue-tools/simple-tcp-client-guide/) for connection configuration, native examples, and a network communication overview.
+See the [user guide](/en/works/simple-tcp-client/docs/connect/) for connection configuration, native examples, and a network communication overview.

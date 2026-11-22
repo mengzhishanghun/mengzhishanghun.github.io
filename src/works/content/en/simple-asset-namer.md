@@ -21,19 +21,20 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770922
 docIds:
-  - simple-asset-namer-guide
+  - simple-asset-namer-naming-rules
+  - simple-asset-namer-rename-assets
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: "7460f0ba7f64b90ef24dd7d5ebde28c9e284e9a983419bb5d59cd3e6f92b7be5"
+sourceHash: c25c9087b7c0af8ca4ab173138a9721d2a37bdd23241b7ce17d325001be32189
 translationStatus: translated
-generatedBodyHash: 31585fcd4c20fa383ef8a1810ef15d6a0ac6d2ba2db3b0be50050702abe09348
+generatedBodyHash: 1d84f77ed91c36e855d144198a96f0851bbfce869b16bbe16484c80b7641cd2b
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/f7c4474c-9a9d-455a-a948-d46d557b457d
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-asset-namer-guide/
+      href: /en/works/simple-asset-namer/docs/naming-rules/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -41,8 +42,8 @@ workInfo:
         - Linux
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-asset-namer-20261101.webp"
-coverAlt: "SimpleAssetNamer cover"
+websiteCoverUrl: /media/covers/works/simple-asset-namer-20261101.webp
+coverAlt: SimpleAssetNamer cover
 ---
 
 ## Overview
@@ -81,4 +82,4 @@ Renaming changes asset names and may affect references. Check paths, rules, and 
 
 The tool reports naming operation results. Projects must still check references, levels, and scripts. Assets without matching rules or with target name conflicts cannot be assumed to be handled automatically.
 
-See the [usage guide](/en/docs/guides/ue-tools/simple-asset-namer-guide/) for steps and parameters.
+See the [usage guide](/en/works/simple-asset-namer/docs/naming-rules/) for steps and parameters.

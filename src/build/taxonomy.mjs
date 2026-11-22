@@ -4,14 +4,15 @@ const indexes={work:'page:works-index',case:'page:cases-index',blog:'page:blog-i
 export function projectTaxonomy({site,entries,config,copy,taxonomy}) {
   if(!taxonomy){const file=path.join(site,'src/build/taxonomy.json');if(!fs.existsSync(file))throw Error('分类快照缺失');taxonomy=JSON.parse(fs.readFileSync(file,'utf8'));}
   if(taxonomy.version!==1||!taxonomy.sections||typeof taxonomy.sections!=='object'||Array.isArray(taxonomy.sections)||!Array.isArray(taxonomy.legacyOnly))throw Error('分类快照无效');
-  for(const type of ['work','case','blog','doc'])if(!Object.hasOwn(taxonomy.sections,type))throw Error('分类分区缺失: '+type);
+  const nestedOnly=entries.some(entry=>entry.docPage)&&!entries.some(entry=>entry.type==='doc'&&!entry.docPage);
+  for(const type of nestedOnly?['work','case','blog']:['work','case','blog','doc'])if(!Object.hasOwn(taxonomy.sections,type))throw Error('分类分区缺失: '+type);
   const label=(category,code)=>{
     const value=code===config.primary?category.name:copy[code].scriptSlots['category:'+category.name];
     if(typeof value!=='string'||!value.trim())throw Error('分类译名缺失: '+code+' '+category.name);return value;
   };
   for(const [type,section]of Object.entries(taxonomy.sections)){
     if(!['work','case','blog','doc'].includes(type)||!Array.isArray(section.categories)||!section.legacyQueries)throw Error('分类分区无效');
-    const items=entries.filter(e=>e.type===type),seen=new Set(),categoryIDs=new Set();let last=0;
+    const items=entries.filter(e=>e.type===type&&!e.docPage),seen=new Set(),categoryIDs=new Set();let last=0;
     for(const category of section.categories){
       if(typeof category.name!=='string'||!category.name.trim()||!/^\w[\w-]*$/.test(category.id)||categoryIDs.has(category.id)||!Number.isInteger(category.order)||category.order<=last||!Array.isArray(category.entities)||!Array.isArray(category.supplements))throw Error('分类编号或身份重复无效');
       last=category.order;categoryIDs.add(category.id);

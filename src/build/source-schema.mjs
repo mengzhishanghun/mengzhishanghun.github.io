@@ -1,4 +1,5 @@
-export const publicFields=['title','description','type','slug','categoryId','categoryName','categoryOrder','order','status','workInfo','featured','date','publishedAt','draft','sitePublish','tags','searchTags','sourcePlatform','sourceUrl','links','productIds','workIds','docIds','coverAlt','websiteCoverUrl','sourceDate','documentKind','websiteRoute','template'];
+import {assertDocPage} from './work-documents.mjs';
+export const publicFields=['title','description','type','slug','categoryId','categoryName','categoryOrder','order','status','workInfo','featured','date','publishedAt','draft','sitePublish','tags','searchTags','sourcePlatform','sourceUrl','links','productIds','workIds','docIds','docPage','coverAlt','websiteCoverUrl','sourceDate','documentKind','websiteRoute','template'];
 export const commonFields=['title','type','language','languageLabels','shellSlots','scriptSlots','bodyUtilitySlots','missingPublicFileNote','codeLabels','engagementLabels','workLabels'];
 const translationFields=['lang','translationKey','sourceHash','generatedBodyHash','translationStatus','supplementSources'];
 const objectWithKeys=(value,keys)=>value && typeof value==='object' && !Array.isArray(value) && Object.keys(value).every(key=>keys.includes(key));
@@ -22,6 +23,7 @@ export function assertWorkInfo(info){
 }
 export function assertPublicFields(data,common=false){
   if(data?.workInfo!==undefined)assertWorkInfo(data.workInfo);
+  if(data?.docPage!==undefined)assertDocPage(data.docPage);
   const allowed=new Set([...(common?commonFields:publicFields),...translationFields]);
   if(!data||Object.keys(data).some(key=>!allowed.has(key)))throw new Error('公开来源含未授权字段');
 }

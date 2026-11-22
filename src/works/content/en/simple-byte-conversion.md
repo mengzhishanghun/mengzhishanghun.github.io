@@ -21,19 +21,20 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19770934
 docIds:
-  - simple-byte-conversion-guide
+  - simple-byte-conversion-primitive-bytes
+  - simple-byte-conversion-struct-and-json
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: "2f9534b92283e840419c41d49729a32da4a2eabe68ad4c29a55fc5d0123ae8a5"
+sourceHash: 9b87ffa4a25402f698dc1fa5aa51709cecb89ea67f03e14251c4e929aa3b8675
 translationStatus: translated
-generatedBodyHash: 8509a63db5fc74d660d00f1f8ccd5b8ce745e4b6e3b2a3c0f63d483640cbcacf
+generatedBodyHash: 79e126699907a678f29f2b26944b5eb217464fcc0b2ac87c8cc629f5fba90d3a
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
     - kind: docs
-      href: /docs/zh/guides/ue-tools/simple-byte-conversion-guide/
+      href: /en/works/simple-byte-conversion/docs/primitive-bytes/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -43,8 +44,8 @@ workInfo:
         - iOS
       requirements:
         - UE 5.2–5.8
-websiteCoverUrl: "/media/covers/works/simple-byte-conversion-20261101.webp"
-coverAlt: "SimpleByteConversion cover"
+websiteCoverUrl: /media/covers/works/simple-byte-conversion-20261101.webp
+coverAlt: SimpleByteConversion cover
 ---
 
 ## Overview
@@ -91,4 +92,4 @@ The conversion interfaces do not define a cross-language protocol. Structs conta
 
 Sender and receiver must agree on types, fields, encoding, and versions, and verify round trips using fixed examples. Check compatibility with old data after struct changes. Successfully calling a conversion node does not mean the data has been interpreted correctly.
 
-See the [usage guide](/en/docs/guides/ue-tools/simple-byte-conversion-guide/) for steps and parameters.
+See the [usage guide](/en/works/simple-byte-conversion/docs/primitive-bytes/) for steps and parameters.
