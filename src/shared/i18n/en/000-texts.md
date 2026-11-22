@@ -6751,7 +6751,7 @@ shellSlots:
     next: Next
     works: Works
     documents: Documentation
-    backToWork: Back to work
+    backToWork: Back
 scriptSlots:
   content-index:sort-likes: Most liked
   content-index:likes-loading: Loading like counts…
@@ -8634,7 +8634,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: "6bcbcb35a9fc5cf0c6ee1bd17fc187526bbc36010f0eea4ad2bf54cf40a59de6"
+sourceHash: "786e72016664068c81874199af548f76009243bd67786f459abd3c5c6bc71426"
 translationStatus: translated
 generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
 workLabels:

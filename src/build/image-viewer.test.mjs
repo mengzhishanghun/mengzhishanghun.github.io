@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import {generatedPage} from './interaction-fixtures.mjs';
 import {projectImageViewers} from './media.mjs';
+import {localeRoute} from './build.mjs';
 
 function viewer(relative,mediaURL) {
   const fixture=generatedPage(relative,html=>projectImageViewers(html,relative?.startsWith('en/')?'en':'zh'));
@@ -40,7 +41,7 @@ test('pagehide destroys an active viewer without restoring stale page focus or s
 
 test('scrolling during image dependency loading restores the latest position on close',async()=>{const x=viewer();const pending=x.click();x.frame.scrollTop=400;x.finish();await pending;x.frame.scrollTop=700;x.opened[0].destroy();assert.equal(x.frame.scrollTop,400);assert.equal(x.anchor.focused,true);});
 
-test('English docs use the shared viewer copy slots',async()=>{const x=viewer('en/docs/guides/ue-tools/simple-tcp-client-guide/index.html');const pending=x.click();x.finish();await pending;assert.equal(x.opened[0].options.closeTitle,'Close image');assert.equal(x.opened[0].options.zoomTitle,'Zoom image');});
+test('English docs use the shared viewer copy slots',async()=>{const x=viewer('en/works/simple-asset-cleaner/docs/setup/index.html');const pending=x.click();x.finish();await pending;assert.equal(x.opened[0].options.closeTitle,'Close image');assert.equal(x.opened[0].options.zoomTitle,'Zoom image');});
 test('missing image dimensions fall back to the current image URL',async()=>{const x=viewer();x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:'Image'});const pending=x.click();x.finish();await pending;assert.deepEqual(x.fallback,[x.anchor.href]);});
 test('keyboard activation opens image anchors and modified clicks retain native link behavior',async()=>{
   for(const options of [{ctrlKey:true},{metaKey:true},{shiftKey:true},{altKey:true},{button:1},{defaultPrevented:true}]){const x=viewer();await x.click(x.anchor,options);assert.equal(x.opened.length,0);assert.equal(x.fallback.length,0);}
@@ -66,7 +67,19 @@ test('published homepage and list cards retain detail navigation without image-v
 test('all three contact/support QR triggers still open the existing shared viewer',async()=>{for(const locale of ['zh','en'])for(const url of ['/assets/contact/wechat-personal-qr.webp','/assets/support/wechat-pay-qr.webp','/assets/support/alipay-qr.webp']){const x=viewer(locale+'/contact/index.html',url);const pending=x.click();x.finish();await pending;assert.equal(x.opened.length,1);assert.equal(x.fallback.length,0);assert.ok(x.opened[0].options.closeTitle);}});
 test('all newly approved images open before natural dimensions load and preserve zoom and close restoration',async()=>{
   const frozenURL=new URL('../shared/compat/_astro/media-dimensions.BM-KTszl.js',import.meta.url),code=fs.readFileSync(new URL('../shared/i18n/client/media-dimensions.js',import.meta.url),'utf8').replace("from '/_astro/media-dimensions.BM-KTszl.js'",'from '+JSON.stringify(frozenURL.href)),dimensions=await import('data:text/javascript,'+encodeURIComponent(code)),manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url),'utf8'));assert.equal(Object.keys(dimensions.additionalDimensions).length,45);
-  for(const [url,size]of Object.entries(dimensions.additionalDimensions)){const entry=manifest.entries.find(e=>e.mediaOccurrences?.some(o=>o.websiteUrl===url)),route=entry.legacyRoutes[0].replace(/^\/docs\/(?:zh|en)\//,'/docs/');for(const locale of ['zh','en']){const x=viewer(locale+route+'index.html',url);x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:x.anchor.dataset.mediaAlt});const pending=x.click();x.finish(dimensions.default);await pending;assert.equal(x.opened.length,1);assert.equal(x.fallback.length,0);const options=x.opened[0].options;assert.equal(options.dataSource[0].width,size.width);assert.equal(options.dataSource[0].height,size.height);assert.equal(options.initialZoomLevel,'fit');assert.equal(options.maxZoomLevel,2);assert.equal(options.wheelToZoom,true);assert.equal(options.trapFocus,true);x.frame.scrollTop=700;x.opened[0].destroy();assert.equal(x.frame.scrollTop,125);assert.equal(x.anchor.focused,true);}}
+  for(const [url,size]of Object.entries(dimensions.additionalDimensions)){
+    const entry=manifest.entries.find(e=>e.mediaOccurrences?.some(o=>o.websiteUrl===url));
+    for(const locale of ['zh','en']){
+      const x=viewer(localeRoute(entry,locale).slice(1)+'index.html',url);
+      x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:x.anchor.dataset.mediaAlt});
+      const pending=x.click();x.finish(dimensions.default);await pending;
+      assert.equal(x.opened.length,1);assert.equal(x.fallback.length,0);
+      const options=x.opened[0].options;
+      assert.equal(options.dataSource[0].width,size.width);assert.equal(options.dataSource[0].height,size.height);
+      assert.equal(options.initialZoomLevel,'fit');assert.equal(options.maxZoomLevel,2);assert.equal(options.wheelToZoom,true);assert.equal(options.trapFocus,true);
+      x.frame.scrollTop=700;x.opened[0].destroy();assert.equal(x.frame.scrollTop,125);assert.equal(x.anchor.focused,true);
+    }
+  }
 });
 test('restored published blog images open from the dimension registry before lazy loading',async()=>{
   const frozenURL=new URL('../shared/compat/_astro/media-dimensions.BM-KTszl.js',import.meta.url);

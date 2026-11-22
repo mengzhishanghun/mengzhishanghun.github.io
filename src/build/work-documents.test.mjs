@@ -81,14 +81,22 @@ test('chapter chrome reuses the existing works header, menu, skip and footer',()
   for(const locale of codes){
     const copy=readSource(fileURLToPath(root),`shared/i18n/${locale}/000-texts.md`,'copy').data;
     const chapterTemplate=fs.readFileSync(new URL('docs/templates/document.html',root),'utf8');
-    const slots={toc:'Contents',previous:'Previous',next:'Next',works:'Works',documents:'Documentation',backToWork:'Return to work'};
+    const slots={toc:'Contents',previous:'Previous',next:'Next',works:'Works',documents:'Documentation',backToWork:'Back'};
     const layout=documentLayout(first,locale,entries,documentCatalog(entries,groups,codes),localeRoute);
     const rendered=documents.renderDocumentSlots(chapterTemplate,layout,first.sources[locale].data,slots,copy.shellSlots['page:works-index'],files,{outline:'<li id="outline-sample">Sample</li>',bodyHasTitle:false});
     const tags={};walk(parse(rendered),node=>{const a=attrs(node);if(node.tagName==='header'&&a.class==='site-header')tags.header=node;if(node.tagName==='footer'&&a.class==='site-footer')tags.footer=node;if(a['data-menu-toggle']!==undefined)tags.menu=node;if(node.tagName==='main')tags.main=node;if(a.id==='outline-sample')tags.outline=node;if(a.rel==='next')tags.next=node;});
     assert.doesNotMatch(rendered,/\{\{doc:/);assert.ok(tags.header&&tags.footer&&tags.menu&&tags.outline&&tags.next);
     assert.equal(attrs(tags.header)['data-astro-transition-persist'],'site-header');
     assert.equal(attrs(tags.main).class,'site-chrome-main');assert.equal(tags.footer.parentNode,tags.header.parentNode);
-    assert.match(rendered,/Return to work/);assert.match(rendered,/Documentation/);assert.doesNotMatch(rendered,/rel="prev"/);
+    assert.match(rendered,/>Back<\/a>/);assert.match(rendered,/Documentation/);assert.doesNotMatch(rendered,/rel="prev"/);
+    const nodes=[];walk(parse(rendered),node=>nodes.push(node));
+    const hasClass=(node,name)=>(attrs(node).class||'').split(/\s+/).includes(name);
+    const sidebar=nodes.find(node=>hasClass(node,'work-doc-sidebar'));
+    const content=nodes.find(node=>hasClass(node,'work-doc-content'));
+    const sidebarNodes=[];walk(sidebar,node=>sidebarNodes.push(node));
+    assert.ok(!sidebarNodes.some(node=>node.tagName==='details'||node.tagName==='summary'),'chapter navigation must always be expanded');
+    const interaction=nodes.find(node=>attrs(node)['data-work-doc-engagement']!==undefined);
+    assert.equal(interaction.parentNode,content,'interaction toolbar belongs to the article, not the chapter sidebar');
   }
 });
 

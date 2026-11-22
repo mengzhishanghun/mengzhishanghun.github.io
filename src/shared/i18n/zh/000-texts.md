@@ -6751,7 +6751,7 @@ shellSlots:
     next: 下一篇
     works: 作品
     documents: 使用文档
-    backToWork: 返回作品主页
+    backToWork: 返回
 scriptSlots:
   content-index:sort-likes: 点赞最多
   content-index:likes-loading: 正在读取点赞排序…

@@ -20,16 +20,16 @@
     <main id="main" tabindex="-1" class="site-chrome-main">
       <mzsh-reading class="work-doc-layout">
         <aside class="work-doc-sidebar" data-pagefind-ignore>
-          <a class="work-doc-back" data-work-doc-engagement href="{{doc:backHref}}">{{doc:backLabel}}</a>
+          <a class="work-doc-back" href="{{doc:backHref}}">{{doc:backLabel}}</a>
           <p class="work-doc-name">{{doc:workTitle}}</p>
-          <details class="work-doc-tree" open>
-            <summary>{{doc:documents}}</summary>
+          <div class="work-doc-tree">
+            <p class="work-doc-tree-heading">{{doc:documents}}</p>
             <nav aria-label="{{doc:documents}}"><ul>{{doc:tree}}</ul></nav>
-          </details>
+          </div>
         </aside>
         {{doc:outline}}
         <div class="work-doc-content">
-          <p class="work-doc-breadcrumb" data-pagefind-ignore><a href="{{doc:backHref}}">{{doc:workTitle}}</a><span aria-hidden="true">/</span>{{doc:documents}}</p>
+          <p class="work-doc-breadcrumb" data-work-doc-engagement data-pagefind-ignore><a href="{{doc:backHref}}">{{doc:workTitle}}</a><span aria-hidden="true">/</span>{{doc:documents}}</p>
           <article>
             {{doc:heading}}
             <div class="prose sl-markdown-content" data-pagefind-body>{{body}}</div>
