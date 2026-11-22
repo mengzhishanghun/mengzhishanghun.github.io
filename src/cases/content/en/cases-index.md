@@ -8,16 +8,17 @@ websiteRoute: /cases/
 template: cases/index.html
 lang: en
 translationKey: cases-index
-sourceHash: "3ac64b26c6db4d90e1af95f1f7df9ec9e64c7734522a60d34f26a5bc601a4c0f"
+sourceHash: "f1e40ba21cbd38ad6845eb2c32ba8fd9c2772f9ed7b96b20c1ad08ba66a14263"
 translationStatus: translated
-generatedBodyHash: "e2138347e2525642aa79df4690b408002643ab44d7e818d341ab557b5a33fea3"
+generatedBodyHash: "ec9006517fcacf1479bcd8ad1e022905a27765413d603c6c4a72777530c21884"
 ---
 
 ![](/media-occurrence/page%3Acases-index%3Amedia%3A1)
 
 # Cases
 
-Projects and my contributions
+Projects I have worked on and my contributions to them.
+Explore the cases to learn about my development work and project experience.
 
 ![](/media-occurrence/page%3Acases-index%3Amedia%3A2)
 

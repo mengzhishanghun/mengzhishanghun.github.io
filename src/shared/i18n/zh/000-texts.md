@@ -3796,10 +3796,10 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
     home.experience.format: 有 {years} 年 UE 开发经验，使用 C++、Python 等语言。
-    home.support.prefix: 如果我的文章或工具对你有帮助，也欢迎
+    home.support.prefix: "这个网站主要用于分享我开发的插件、工具和游戏作品，展示参与过的项目案例，记录开发中的实践与思考。如果我的作品、文章或工具对你有帮助，也可以"
     home.support.link: 支持我继续创作
     home.support.end: 。
-    home.cooperation.prefix: 承接工具、插件、自动化流程及游戏开发，欢迎
+    home.cooperation.prefix: "自 2018 年起从事 UE 开发，做过游戏、驾驶模拟、飞行模拟、数字人、AI 交互、数字孪生和 VR 项目，也开发工具、插件与自动化流程。如果你有合作或开发需求，欢迎"
     home.cooperation.link: 联系我聊聊
     home.cooperation.end: 。
     root.html:1.head:0.meta:2@content: 小毛的 UE 开发作品与技术记录，涵盖插件工具、多屏仿真、数字人和自动化流程，可查看项目案例并联系开发合作。
@@ -3896,6 +3896,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:0@aria-label: 显示：插件开发到发布的工具链
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:2@aria-label: 显示：在 UE 中创建独立多窗口界面
   page:works-index:
+    page.details: "可以查看功能介绍、使用方式和相关资料。"
+    page.intro: "这里整理了我开发的插件、工具和游戏作品。"
     content-sort:label: 排序
     content-sort:likes: 点赞最多
     content-sort:original: 原有顺序
@@ -4154,6 +4156,8 @@ shellSlots:
     p4-stream-switcher:card:5: Perforce
     p4-stream-switcher:card:6: 版本控制
   page:cases-index:
+    page.details: "通过具体案例，了解我的开发方向与项目经验。"
+    page.intro: "这里记录我参与过的项目，以及在其中负责的工作。"
     content-sort:label: 排序
     content-sort:likes: 点赞最多
     content-sort:original: 原有顺序
@@ -4227,6 +4231,8 @@ shellSlots:
     project-card:herbal-exhibition:category: UE项目
     project-card:herbal-exhibition:tag: 交互展示
   page:blog-index:
+    page.details: "留下实践经验，方便自己回顾，也供有需要的人参考。"
+    page.intro: "记录开发中的技术思考，整理遇到的问题和解决过程。"
     content-sort:label: 排序
     content-sort:likes: 点赞最多
     content-sort:original: 原有顺序

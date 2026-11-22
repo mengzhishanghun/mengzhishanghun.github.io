@@ -14,7 +14,8 @@ translationKey: cases-index
 
 # 案例
 
-做过的项目与负责的工作
+这里记录我参与过的项目，以及在其中负责的工作。
+通过具体案例，了解我的开发方向与项目经验。
 
 ![](/media-occurrence/page%3Acases-index%3Amedia%3A2)
 

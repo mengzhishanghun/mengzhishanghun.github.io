@@ -26,23 +26,25 @@ test('home CTA links the cooperation invitation to contact and headers keep only
     else assert.match(greeting,/a freelance developer\.$/);
     const introduction=all(hero,n=>attrs(n).id==='about')[0];
     const lines=introduction.childNodes.filter(n=>n.tagName==='p');
-    assert.equal(lines.length,4);
+    assert.equal(lines.length,2);
     for(const line of lines)assert.ok(text(line).trim().endsWith(code==='zh'?'。':'.'));
-    const experience=all(lines[0],n=>attrs(n)['data-year-difference']!==undefined);
-    assert.equal(experience.length,1);
-    assert.equal(attrs(experience[0])['data-base-year'],'2018');
-    assert.match(attrs(experience[0])['data-year-format'],/\{years\}/);
-    assert.match(text(experience[0]),/2018/);
-    if(code==='zh')assert.equal(text(lines[2]),'承接工具、插件、自动化流程及游戏开发，欢迎联系我聊聊。');
-    else assert.equal(text(lines[2]),'For tool, plugin, workflow automation, or game development projects, get in touch.');
+    assert.match(text(lines[0]),/2018/);
+    const experienceTopics=code==='zh'?['游戏','驾驶模拟','飞行模拟','数字人','AI 交互','数字孪生','VR','工具','插件','自动化']:['games','driving simulation','flight simulation','digital humans','AI interaction','digital twins','VR','tools','plugins','automation'];
+    for(const topic of experienceTopics)assert.ok(text(lines[0]).includes(topic),topic);
+    assert.doesNotMatch(text(lines[0]),/C\+\+|Python/);
     const links=all(hero,n=>n.tagName==='a');
     assert.equal(links.length,2);
     assert.equal(attrs(links[0]).href,'/'+code+'/contact/');
     assert.equal(text(links[0]),code==='zh'?'联系我聊聊':'get in touch');
     assert.equal(attrs(links[1]).href,'/'+code+'/contact/#support-title');
     assert.equal(text(links[1]),code==='zh'?'支持我继续创作':'support my work');
-    if(code==='zh')assert.equal(text(lines[3]),'如果我的文章或工具对你有帮助，也欢迎支持我继续创作。');
-    else assert.equal(text(lines[3]),'If my articles or tools help you, you can also support my work.');
+    if(code==='zh'){
+      assert.match(text(lines[0]),/如果你有合作或开发需求，欢迎联系我聊聊。$/);
+      assert.equal(text(lines[1]),'这个网站主要用于分享我开发的插件、工具和游戏作品，展示参与过的项目案例，记录开发中的实践与思考。如果我的作品、文章或工具对你有帮助，也可以支持我继续创作。');
+    }else{
+      assert.match(text(lines[0]),/For project collaboration or development work, get in touch\.$/);
+      assert.match(text(lines[1]),/If my work, articles, or tools help you, you can also support my work\.$/);
+    }
     const actions=all(tree,n=>hasClass(n,'header-actions'))[0];
     assert.deepEqual(all(actions,n=>n.tagName==='a').map(n=>attrs(n).href),['/'+code+'/contact/']);
     assert.ok(all(tree,n=>n.tagName==='a'&&attrs(n).href==='/'+code+'/works/').length>=2);

@@ -5,3 +5,13 @@
   .site-chrome .main-nav > a::after,
   .site-chrome .main-nav > a[aria-current="page"]::after { content: none; display: none; }
 }
+
+.site-chrome .page-hero-content .list-page-description {
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
+}
+.site-chrome .hero-greeting { font-size: 1.125rem; font-weight: 550; }
+.site-chrome .hero-directions { color: var(--muted); font-size: 1rem; line-height: 1.7; }
+.site-chrome .hero-directions p { margin: 16px 0 0; }

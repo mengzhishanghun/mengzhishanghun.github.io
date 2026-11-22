@@ -8,16 +8,17 @@ websiteRoute: /blog/
 template: blog/index.html
 lang: en
 translationKey: blog-index
-sourceHash: "4bc4d610f7023b0cffa8a9102deeed4bf4e65af36310742bba8f8ae9eb15f02f"
+sourceHash: "e6229e8d572c1631815c60318701d8ab7bc79235c88fca0516173589df8fe63e"
 translationStatus: translated
-generatedBodyHash: "830377d90930155bceb24933540cd3f84d84190dd88d62fbc490baf5fbeab85f"
+generatedBodyHash: "55a43876d2334250800032dd134a3f4a28afafee741a535aeec63c74c5cbe485"
 ---
 
 ![](/media-occurrence/page%3Ablog-index%3Amedia%3A1)
 
 # Blog
 
-Technical notes, debugging and development practice.
+Technical ideas, problems encountered during development, and how I worked through them.
+Notes I can revisit and others can use as a reference.
 
 - [A Practical Guide to Streams](/blog/cnblogs-19143267/)
 - [UE Source Control Operations Guide](/blog/cnblogs-19143251/)

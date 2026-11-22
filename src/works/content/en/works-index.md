@@ -8,16 +8,17 @@ websiteRoute: /works/
 template: works/index.html
 lang: en
 translationKey: works-index
-sourceHash: 3b1d57ebd743e0899726cf64af7cd902383701458517aff1a53f6d4f5fcfdf74
+sourceHash: "1d5f72228195f04d698a2d4256636aac236c0a4c8a8dee528305ad47f083126c"
 translationStatus: translated
-generatedBodyHash: 31054db034adecf617339bad1185036b0394c40be4841961cd2aa269ec17ea71
+generatedBodyHash: "fb0a069ae40a24cfef8f112b55c9d4490e285fa9343e0d7b5014d47e4f052c1f"
 ---
 
 ![](/media-occurrence/page%3Aworks-index%3Amedia%3A1)
 
 # Works
 
-Plugins, tools, and games
+Plugins, tools, and games I have developed.
+Read about their features, how to use them, and related resources.
 
 UE Plugins 25 · Open-source Tools 7 · AI Tools 1 · Obsidian Plugins 1 · UE Games 0 · Godot Games 0
 

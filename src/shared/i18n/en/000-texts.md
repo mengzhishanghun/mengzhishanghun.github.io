@@ -3796,10 +3796,10 @@ shellSlots:
     root.html:1.body:1.div:1.footer:7.div:0.a:2.#text:1: 晋公网安备14082502000144号
   page:home:
     home.experience.format: I have {years} years of UE development experience, using C++, Python, and other languages.
-    home.support.prefix: "If my articles or tools help you, you can also "
+    home.support.prefix: "This website is where I share my plugins, tools, and games, present projects I have contributed to, and write about development practice and ideas. If my work, articles, or tools help you, you can also "
     home.support.link: support my work
     home.support.end: .
-    home.cooperation.prefix: "For tool, plugin, workflow automation, or game development projects, "
+    home.cooperation.prefix: "I have worked in UE development since 2018, on games, driving simulation, flight simulation, digital humans, AI interaction, digital twins, and VR projects. I also develop tools, plugins, and automation workflows. For project collaboration or development work, "
     home.cooperation.link: get in touch
     home.cooperation.end: .
     root.html:1.head:0.meta:2@content: Explore Xiao Mao's Unreal Engine plugins, tools and project work, including multi-screen simulation, digital humans and automation. Get in touch about development.
@@ -3896,6 +3896,8 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:0@aria-label: "Show: A Toolchain from Plugin Development to Release"
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:2@aria-label: "Show: Creating Independent Multiwindow Interfaces in UE"
   page:works-index:
+    page.details: "Read about their features, how to use them, and related resources."
+    page.intro: "Plugins, tools, and games I have developed."
     content-sort:label: Sort by
     content-sort:likes: Most liked
     content-sort:original: Original order
@@ -4154,6 +4156,8 @@ shellSlots:
     p4-stream-switcher:card:5: Perforce
     p4-stream-switcher:card:6: Version control
   page:cases-index:
+    page.details: "Explore the cases to learn about my development work and project experience."
+    page.intro: "Projects I have worked on and my contributions to them."
     content-sort:label: Sort by
     content-sort:likes: Most liked
     content-sort:original: Original order
@@ -4227,6 +4231,8 @@ shellSlots:
     project-card:herbal-exhibition:category: Unreal Engine Projects
     project-card:herbal-exhibition:tag: Interactive exhibition
   page:blog-index:
+    page.details: "Notes I can revisit and others can use as a reference."
+    page.intro: "Technical ideas, problems encountered during development, and how I worked through them."
     content-sort:label: Sort by
     content-sort:likes: Most liked
     content-sort:original: Original order
@@ -8621,9 +8627,9 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: cbf25426b5f41ac277bd809b0558dad62d1ca17b41f0cae96160f38e15586a05
+sourceHash: "584c250a2118903d8dac225439f74cc3d91c56669ca0a5a5ddb6ec7f1df2c4cc"
 translationStatus: translated
-generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
+generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
 workLabels:
   sale: On sale
   open-source: Open source
