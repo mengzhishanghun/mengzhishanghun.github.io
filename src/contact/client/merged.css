@@ -1,9 +1,8 @@
-.contact-preview .local-page .page-hero {
-  min-height: clamp(220px, 18vw, 280px);
-}
 .contact-preview .local-page .page-hero-content .list-page-description {
-  max-width: 58%;
-  line-height: 1.75;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.7;
 }
 .contact-preview .local-page .contact-content {
   display: grid;
@@ -181,8 +180,6 @@
   .contact-preview .contact-card-list { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto; align-items: stretch; }
 }
 @media (width <= 720px) {
-  .contact-preview .local-page .page-hero { min-height: 210px; }
-  .contact-preview .local-page .page-hero-content .list-page-description { max-width: 100%; }
   .contact-preview .local-page .contact-content,
   .contact-preview .support-content { grid-template-columns: 1fr; gap: 28px; }
   .contact-preview .contact-card-list { grid-template-columns: 1fr; }
