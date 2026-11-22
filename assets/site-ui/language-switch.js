@@ -7,6 +7,7 @@
   }
 
   const storageKey = 'site-language';
+  const legacyDocsIndex = /^\/(?:(?:[a-z][a-z0-9-]*\/)?docs|docs\/[a-z][a-z0-9-]*)\/$/;
 
   function enabledLanguages(data, href = window.location.href) {
     if (!Array.isArray(data?.languages)) return [];
@@ -59,8 +60,16 @@
       if (current.hash) {
         let anchor;
         try { anchor = decodeURIComponent(current.hash.slice(1)); } catch (_) { anchor = current.hash.slice(1); }
-        const mapped = data.anchors?.[locale]?.[anchor];
+        const anchors = data.anchors?.[locale];
+        const mapped = anchors && Object.hasOwn(anchors, anchor) ? anchors[anchor] : null;
         if (typeof mapped === 'string') target.hash = mapped;
+        else if (data.redirect && mapped && typeof mapped.path === 'string' && typeof mapped.anchor === 'string') {
+          const split = new URL(mapped.path, current);
+          if (split.origin !== current.origin || !split.pathname.startsWith('/' + locale + '/works/') || split.search || split.hash) return null;
+          split.search = current.search;
+          if (mapped.anchor) split.hash = encodeURIComponent(mapped.anchor);
+          return split.href;
+        }
       }
       return target.href;
     } catch (_) { return null; }
@@ -82,6 +91,7 @@
       let target;
       try { target = new URL(href, current); } catch (_) { continue; }
       if (target.origin !== current.origin) continue;
+      if (link.closest?.('.main-nav') && legacyDocsIndex.test(target.pathname)) { link.remove(); continue; }
       const home = target.pathname === '/' || languages.some((language) => {
         const root = '/' + language.code;
         return target.pathname === root || target.pathname === root + '/';
