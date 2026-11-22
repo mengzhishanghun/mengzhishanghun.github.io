@@ -1172,9 +1172,9 @@
     },
     {
       "path": "assets/site-ui/work-documents.css",
-      "size": 5486,
-      "gitBlob": "d51d93496fd46f4c4889a4d3bf18beb7a1221a69",
-      "sha256": "15a117e1bf831a3f9d50efab93639fa998090e58d2472a4f3699688692970da1",
+      "size": 5554,
+      "gitBlob": "ff1c6cd2878a8ea3ca4aa18f0aeaecbd3fc1d1ab",
+      "sha256": "1dd44b169fdd997c200afef1e8b4086e06cae55e7b89e2b18bff2446a9b021ac",
       "target": "both"
     },
     {
