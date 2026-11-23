@@ -40,3 +40,9 @@
 [data-content-sort-status] { grid-column:1/-1; flex-basis:100%; margin:0; font-size:.875rem; }
 [data-content-sort-status]:empty { display:none; }
 .content-blog .content-sort-label { display:none; }
+
+.content-blog .content-card-meta { position: static; flex-wrap: wrap; margin-bottom: 6px; }
+.content-blog .content-card h2 { padding-right: 0; }
+.content-blog .content-card-copy > p { max-width: 78ch; overflow-wrap: anywhere; }
+.content-blog .content-card-side { flex-wrap: wrap; gap: 6px 20px; }
+.content-blog .content-card-link { margin-top: 0; }
