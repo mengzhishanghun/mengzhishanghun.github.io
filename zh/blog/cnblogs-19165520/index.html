@@ -17,7 +17,7 @@
 <span class="line"><span style="color:#E1E4E8">}</span></span>
 </code></pre>
 <p>这里通过递归，将这个Actor内需要记录的结构体设置为了CPF_Interp，这个属性代表这个值能被LevelSequence记录，这个函数会遍历结构体内的所有属性，同样也设置为CPF_Interp</p>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/c4daea8a2c18c2be9048.png" data-media-alt="UE：遍历Actor所有属性进入Sequence记录" aria-label="放大查看图片：UE：遍历Actor所有属性进入Sequence记录" href="/media/imported/blog/c4daea8a2c18c2be9048.png"><img src="/media/imported/blog/c4daea8a2c18c2be9048.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/c4daea8a2c18c2be9048.png" data-media-alt="UE：遍历Actor所有属性进入Sequence记录" aria-label="放大查看图片：UE：遍历Actor所有属性进入Sequence记录" href="/media/imported/blog/c4daea8a2c18c2be9048.png" data-media-width="1774" data-media-height="1408"><img src="/media/imported/blog/c4daea8a2c18c2be9048.png" alt=""></a></p>
 <p>同时因为是在BeginPlay中才调用，他不会影响正常状态下得属性，只会在游戏开始时改变这部分属性</p>
 <hr>
 <blockquote>
@@ -80,7 +80,7 @@
     document.addEventListener('astro:after-swap', update);
     update();
   }
-</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.9a4d5746cb10.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
 if (!document.documentElement.dataset.mediaViewerBound) {
   document.documentElement.dataset.mediaViewerBound = 'true';
   let opener = null;

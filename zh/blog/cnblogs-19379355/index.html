@@ -6,18 +6,18 @@
 <p>这个我都记不清是什么之后记录的了，整理笔记的时候翻到了，是通过材质来制作圆角矩形，因为目标是在一个三合一屏幕的项目中使用，所以数值大小按照三块屏幕设置的，如要使用，请注意修改。</p>
 <h2 id="圆角矩形">圆角矩形</h2>
 <h3 id="材质展示">材质展示</h3>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/ca08f854420e60f141a3.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/ca08f854420e60f141a3.png"><img src="/media/imported/blog/ca08f854420e60f141a3.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/ca08f854420e60f141a3.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/ca08f854420e60f141a3.png" data-media-width="2557" data-media-height="1212"><img src="/media/imported/blog/ca08f854420e60f141a3.png" alt=""></a></p>
 <h3 id="效果展示">效果展示</h3>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/6c1e68ea3f8112ecb9d4.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/6c1e68ea3f8112ecb9d4.png"><img src="/media/imported/blog/6c1e68ea3f8112ecb9d4.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/6c1e68ea3f8112ecb9d4.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/6c1e68ea3f8112ecb9d4.png" data-media-width="1273" data-media-height="382"><img src="/media/imported/blog/6c1e68ea3f8112ecb9d4.png" alt=""></a></p>
 <h3 id="解决思路">解决思路</h3>
 <p>通过UE自带函数GeneratedRoundRect制作圆角矩形，再做个小的相减，实现圆角矩形边框<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/70813e7215d19e7f9e1f.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/70813e7215d19e7f9e1f.png"><img src="/media/imported/blog/70813e7215d19e7f9e1f.png" alt=""></a><br>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/70813e7215d19e7f9e1f.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/70813e7215d19e7f9e1f.png" data-media-width="501" data-media-height="412"><img src="/media/imported/blog/70813e7215d19e7f9e1f.png" alt=""></a><br>
 分别传入UV，矩形大小，圆角半径，默认值，中心点<br>
 因为要做可以缩放的圆角矩形，所以要考虑屏幕比例<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/65580f62a1764a4d8a3f.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/65580f62a1764a4d8a3f.png"><img src="/media/imported/blog/65580f62a1764a4d8a3f.png" alt=""></a><br>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/65580f62a1764a4d8a3f.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/65580f62a1764a4d8a3f.png" data-media-width="414" data-media-height="336"><img src="/media/imported/blog/65580f62a1764a4d8a3f.png" alt=""></a><br>
 正常屏幕是16：9,这个项目做的是三屏，所以是48：9<br>
 需要注意的是<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/dfe4b4995a462bda9ed4.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/dfe4b4995a462bda9ed4.png"><img src="/media/imported/blog/dfe4b4995a462bda9ed4.png" alt=""></a><br>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/dfe4b4995a462bda9ed4.png" data-media-alt="UE：如何用材质制作圆角矩形" aria-label="放大查看图片：UE：如何用材质制作圆角矩形" href="/media/imported/blog/dfe4b4995a462bda9ed4.png" data-media-width="2221" data-media-height="859"><img src="/media/imported/blog/dfe4b4995a462bda9ed4.png" alt=""></a><br>
 小的矩形大小是大矩形大小-边框大小<br>
 小的圆角是大圆角减边框大小</p>
 <hr>
@@ -81,7 +81,7 @@
     document.addEventListener('astro:after-swap', update);
     update();
   }
-</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.9a4d5746cb10.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
 if (!document.documentElement.dataset.mediaViewerBound) {
   document.documentElement.dataset.mediaViewerBound = 'true';
   let opener = null;

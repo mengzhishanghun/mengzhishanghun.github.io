@@ -6,20 +6,20 @@
 <h2 id="前言">前言</h2>
 <p>这是最近做MetaHuman项目发现的问题，当头部和身体同时播放不同动画的时候，脖子附近会出现穿模现象，这个问题在LevelSequence中暂时没有发现。</p>
 <h2 id="解决方案">解决方案</h2>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/13f84838873e3a436b91.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/13f84838873e3a436b91.png"><img src="/media/imported/blog/13f84838873e3a436b91.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/13f84838873e3a436b91.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/13f84838873e3a436b91.png" data-media-width="2472" data-media-height="1578"><img src="/media/imported/blog/13f84838873e3a436b91.png" alt=""></a></p>
 <p>如图，你只需要找到那个头部动作，在详情页面中将AdditiveSettings设置成这样就可以了。</p>
 <p>该办法来自youtube，链接是<a href="https://www.youtube.com/watch?v=ddQKMTKGpTE">Combine Face and Body Animations - Metahumans in Unreal Engine 5.2</a></p>
 <p>虽然视频时5.2版本但是5.6版本亲测可用。</p>
 <h2 id="批量解决方案">批量解决方案</h2>
 <p>然后再说一下如何批量解决，否则如果一个一个修改不仅耗时，而且容易失误，所以一个办法批量修改所有动画。</p>
 <h3 id="创建一个脚本蓝图">创建一个脚本蓝图</h3>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/a9291513810fa5af13c3.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/a9291513810fa5af13c3.png"><img src="/media/imported/blog/a9291513810fa5af13c3.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/a9291513810fa5af13c3.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/a9291513810fa5af13c3.png" data-media-width="930" data-media-height="804"><img src="/media/imported/blog/a9291513810fa5af13c3.png" alt=""></a></p>
 <h3 id="修改蓝图设置">修改蓝图设置</h3>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/77f301f8e9fe8aa9d105.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/77f301f8e9fe8aa9d105.png"><img src="/media/imported/blog/77f301f8e9fe8aa9d105.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/77f301f8e9fe8aa9d105.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/77f301f8e9fe8aa9d105.png" data-media-width="2877" data-media-height="660"><img src="/media/imported/blog/77f301f8e9fe8aa9d105.png" alt=""></a></p>
 <h3 id="创建运行函数">创建运行函数</h3>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/90f8c9f91205551cae60.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/90f8c9f91205551cae60.png"><img src="/media/imported/blog/90f8c9f91205551cae60.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/90f8c9f91205551cae60.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/90f8c9f91205551cae60.png" data-media-width="3840" data-media-height="2111"><img src="/media/imported/blog/90f8c9f91205551cae60.png" alt=""></a></p>
 <h3 id="最终效果">最终效果</h3>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/82a6a063b55a629fea1f.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/82a6a063b55a629fea1f.png"><img src="/media/imported/blog/82a6a063b55a629fea1f.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/82a6a063b55a629fea1f.png" data-media-alt="UE：一键解决MetaHuman播放动画时头部穿模问题" aria-label="放大查看图片：UE：一键解决MetaHuman播放动画时头部穿模问题" href="/media/imported/blog/82a6a063b55a629fea1f.png" data-media-width="3432" data-media-height="1839"><img src="/media/imported/blog/82a6a063b55a629fea1f.png" alt=""></a></p>
 <hr>
 <blockquote>
 <p>感谢阅读，欢迎点赞、关注、收藏，有问题可在评论区交流。<br>
@@ -81,7 +81,7 @@
     document.addEventListener('astro:after-swap', update);
     update();
   }
-</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.9a4d5746cb10.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
 if (!document.documentElement.dataset.mediaViewerBound) {
   document.documentElement.dataset.mediaViewerBound = 'true';
   let opener = null;

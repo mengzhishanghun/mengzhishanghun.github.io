@@ -19,7 +19,7 @@
 <li>Open P4Admin.</li>
 <li>File → New → Depot, and select <code>Stream</code> as the type.</li>
 <li>Set <code>Stream Depth</code> (the depot’s hierarchy depth; 2 is recommended so the depot can contain multiple Streams).<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/34711f7bcbbf708ea8c6.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/34711f7bcbbf708ea8c6.png"><img src="/media/imported/blog/34711f7bcbbf708ea8c6.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/34711f7bcbbf708ea8c6.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/34711f7bcbbf708ea8c6.png" data-media-width="516" data-media-height="627"><img src="/media/imported/blog/34711f7bcbbf708ea8c6.png" alt=""></a></li>
 </ol>
 <h4 id="create-the-mainline">Create the Mainline</h4>
 <ol>
@@ -27,27 +27,27 @@
 <li>File → New → Stream.</li>
 <li>Set <code>Stream Name</code>.</li>
 <li>For <code>Type</code>, select <code>mainline</code>.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4a7214181737f122c371.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/4a7214181737f122c371.png"><img src="/media/imported/blog/4a7214181737f122c371.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4a7214181737f122c371.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/4a7214181737f122c371.png" data-media-width="533" data-media-height="765"><img src="/media/imported/blog/4a7214181737f122c371.png" alt=""></a></li>
 </ol>
 <p>Note: pay attention to the save location (Depot/path).</p>
 <h4 id="create-a-branch">Create a Branch</h4>
 <p>Method 1: File → New → Stream.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/dbacaf2afe3757ee4823.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/dbacaf2afe3757ee4823.png"><img src="/media/imported/blog/dbacaf2afe3757ee4823.png" alt=""></a></p>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/dbacaf2afe3757ee4823.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/dbacaf2afe3757ee4823.png" data-media-width="461" data-media-height="294"><img src="/media/imported/blog/dbacaf2afe3757ee4823.png" alt=""></a></p>
 <p>Method 2: in StreamGraph/the Stream list, right-click the parent node (such as the mainline) to create one.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/6e2305eadb179698fc73.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/6e2305eadb179698fc73.png"><img src="/media/imported/blog/6e2305eadb179698fc73.png" alt=""></a></p>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/6e2305eadb179698fc73.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/6e2305eadb179698fc73.png" data-media-width="630" data-media-height="716"><img src="/media/imported/blog/6e2305eadb179698fc73.png" alt=""></a></p>
 <h5 id="branch-types">Branch Types</h5>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d3b6ae38d877873ae8ae.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/d3b6ae38d877873ae8ae.png"><img src="/media/imported/blog/d3b6ae38d877873ae8ae.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d3b6ae38d877873ae8ae.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/d3b6ae38d877873ae8ae.png" data-media-width="450" data-media-height="102"><img src="/media/imported/blog/d3b6ae38d877873ae8ae.png" alt=""></a></p>
 <ul>
 <li>Development: for long-term projects and major new feature development. Suitable for versions that evolve over a long period.</li>
 <li>Release: for bug fixes, testing, and release distribution.
 <ul>
 <li>Note: when creating a Release branch, it is recommended to uncheck automatic propagation “From parent” to prevent mainline updates from automatically synchronizing to the release version; retain the ability to merge fixes from Release back to the mainline.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/0be6a2bdd3c50f6f0ee8.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/0be6a2bdd3c50f6f0ee8.png"><img src="/media/imported/blog/0be6a2bdd3c50f6f0ee8.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/0be6a2bdd3c50f6f0ee8.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/0be6a2bdd3c50f6f0ee8.png" data-media-width="533" data-media-height="765"><img src="/media/imported/blog/0be6a2bdd3c50f6f0ee8.png" alt=""></a></li>
 </ul>
 </li>
 <li>Virtual: narrows the scope and submits directly to the parent, often used as a filter for a specific subset.</li>
 <li>Task: a lightweight branch for short-term bug fixes/small feature development. It can reside in another Depot, and its parent can be empty or in another depot (including a standard depot).<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/f73e4202a359fe828ea8.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/f73e4202a359fe828ea8.png"><img src="/media/imported/blog/f73e4202a359fe828ea8.png" alt=""></a>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/f73e4202a359fe828ea8.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/f73e4202a359fe828ea8.png" data-media-width="533" data-media-height="765"><img src="/media/imported/blog/f73e4202a359fe828ea8.png" alt=""></a>
 <ul>
 <li>It is recommended to put them all in the <code>Task</code> Depot for centralized management later; check whether Location points to the Task path, and adjust it manually if necessary.</li>
 <li>Note: after creation, a Task cannot be deleted or share a name with another; it is invisible when not in use.</li>
@@ -55,7 +55,7 @@
 </li>
 </ul>
 <p>Things to note when creating a branch:<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/df6aad24b92f82e26857.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/df6aad24b92f82e26857.png"><img src="/media/imported/blog/df6aad24b92f82e26857.png" alt=""></a></p>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/df6aad24b92f82e26857.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/df6aad24b92f82e26857.png" data-media-width="533" data-media-height="765"><img src="/media/imported/blog/df6aad24b92f82e26857.png" alt=""></a></p>
 <ul>
 <li>“Create a workspace automatically” can be left unchecked (as needed).</li>
 <li>“Populate the branch with files from the parent” is checked by default (usually leave it checked).</li>
@@ -68,29 +68,29 @@
 <li>Set the Workspace name.</li>
 <li>Set the Workspace root.</li>
 <li>Select the corresponding Stream.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/1189671df1dd392ad1de.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/1189671df1dd392ad1de.png"><img src="/media/imported/blog/1189671df1dd392ad1de.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/1189671df1dd392ad1de.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/1189671df1dd392ad1de.png" data-media-width="653" data-media-height="759"><img src="/media/imported/blog/1189671df1dd392ad1de.png" alt=""></a></li>
 </ol>
 <h4 id="switching-workspaces-streamgraph">Switching Workspaces (StreamGraph)</h4>
 <ul>
 <li>Open StreamGraph from View in P4V.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/02772b1ec7fa7d7cd361.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/02772b1ec7fa7d7cd361.png"><img src="/media/imported/blog/02772b1ec7fa7d7cd361.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/02772b1ec7fa7d7cd361.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/02772b1ec7fa7d7cd361.png" data-media-width="436" data-media-height="353"><img src="/media/imported/blog/02772b1ec7fa7d7cd361.png" alt=""></a></li>
 <li>Within the same Depot: drag the “computer” icon onto the target Stream for a quick switch; Perforce automatically downloads/cleans up differing files, while the workspace root stays the same.</li>
 <li>Between different Depots: the standard approach is to switch workspaces; if limited by the maximum number of workspaces (such as ≤10), you can switch by editing an existing workspace:<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/ab326c6a2b1efc3e5c68.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/ab326c6a2b1efc3e5c68.png"><img src="/media/imported/blog/ab326c6a2b1efc3e5c68.png" alt=""></a>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/ab326c6a2b1efc3e5c68.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/ab326c6a2b1efc3e5c68.png" data-media-width="732" data-media-height="547"><img src="/media/imported/blog/ab326c6a2b1efc3e5c68.png" alt=""></a>
 <ol>
 <li>Right-click the workspace in the Workspaces view → Edit.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d8df78b0b43f2507187b.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/d8df78b0b43f2507187b.png"><img src="/media/imported/blog/d8df78b0b43f2507187b.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d8df78b0b43f2507187b.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/d8df78b0b43f2507187b.png" data-media-width="653" data-media-height="759"><img src="/media/imported/blog/d8df78b0b43f2507187b.png" alt=""></a></li>
 <li>Change <code>Workspace root</code> to the target project directory.</li>
 <li>Change <code>Stream</code> to the Stream for the target project (it does not have to be the mainline; matching the local directory is recommended to make subsequent linking easier).</li>
 <li>Choose whether to “copy” files: do not copy if they already exist locally; otherwise, choose to copy.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/66cb751e684e5c88c5c9.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/66cb751e684e5c88c5c9.png"><img src="/media/imported/blog/66cb751e684e5c88c5c9.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/66cb751e684e5c88c5c9.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/66cb751e684e5c88c5c9.png" data-media-width="516" data-media-height="149"><img src="/media/imported/blog/66cb751e684e5c88c5c9.png" alt=""></a></li>
 <li>If you choose not to copy, run the synchronization command (see “Perforce Commands” below).</li>
 </ol>
 </li>
 </ul>
 <hr>
 <h3 id="merging-and-updating">Merging and Updating</h3>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/02772b1ec7fa7d7cd361.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/02772b1ec7fa7d7cd361.png"><img src="/media/imported/blog/02772b1ec7fa7d7cd361.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/02772b1ec7fa7d7cd361.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/02772b1ec7fa7d7cd361.png" data-media-width="436" data-media-height="353"><img src="/media/imported/blog/02772b1ec7fa7d7cd361.png" alt=""></a></p>
 <ul>
 <li>An upward arrow between two Streams indicates “can update” (copy to child/parent), while a downward arrow indicates “can merge”.</li>
 <li>No arrow: that direction is currently unsupported; gray arrow: already in sync; green arrow: updates or differences exist.</li>
@@ -98,12 +98,12 @@
 <p>Suggested workflow:</p>
 <ol>
 <li>First switch the workspace to the “target Stream”. For example, to update the mainline with changes from a personal Stream, switch to the “mainline” rather than the personal Stream.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d28c7d263687978f39bf.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/d28c7d263687978f39bf.png"><img src="/media/imported/blog/d28c7d263687978f39bf.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d28c7d263687978f39bf.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/d28c7d263687978f39bf.png" data-media-width="560" data-media-height="495"><img src="/media/imported/blog/d28c7d263687978f39bf.png" alt=""></a></li>
 <li>Right-click the target Stream: <code>Merge to</code> performs a merge, and <code>Copy to</code> performs a copy update.</li>
 <li>Select <code>Source Stream</code> (meaning “from where to here”).<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/00186b463b98d473d4c6.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/00186b463b98d473d4c6.png"><img src="/media/imported/blog/00186b463b98d473d4c6.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/00186b463b98d473d4c6.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/00186b463b98d473d4c6.png" data-media-width="553" data-media-height="390"><img src="/media/imported/blog/00186b463b98d473d4c6.png" alt=""></a></li>
 <li>Check automatic merge and submit; if conflicts occur, handle them manually before submitting.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/130361495f1228a2e123.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/130361495f1228a2e123.png"><img src="/media/imported/blog/130361495f1228a2e123.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/130361495f1228a2e123.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/130361495f1228a2e123.png" data-media-width="1280" data-media-height="908"><img src="/media/imported/blog/130361495f1228a2e123.png" alt=""></a></li>
 </ol>
 <hr>
 <h3 id="linking-external-files-similar-to-svn-externals">Linking External Files (Similar to SVN Externals)</h3>
@@ -111,23 +111,23 @@
 <p>Example: using the Prefixed plugin</p>
 <ul>
 <li>The plugin’s location in the shared depot: <code>.../Save/UnrealPlugins/Prefixed/5.2/...</code><br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/0a460215fa1e6dfa1d22.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/0a460215fa1e6dfa1d22.png"><img src="/media/imported/blog/0a460215fa1e6dfa1d22.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/0a460215fa1e6dfa1d22.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/0a460215fa1e6dfa1d22.png" data-media-width="686" data-media-height="450"><img src="/media/imported/blog/0a460215fa1e6dfa1d22.png" alt=""></a></li>
 <li>Right-click the mainline to edit it, and add mappings under “Advanced”.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4855b020fb563b0f7fcc.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/4855b020fb563b0f7fcc.png"><img src="/media/imported/blog/4855b020fb563b0f7fcc.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4855b020fb563b0f7fcc.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/4855b020fb563b0f7fcc.png" data-media-width="533" data-media-height="765"><img src="/media/imported/blog/4855b020fb563b0f7fcc.png" alt=""></a></li>
 <li>Click Apply.</li>
 </ul>
 <p>Note: branches automatically inherit the mainline’s settings; if the files are only needed in a particular branch, modify that branch alone.</p>
 <hr>
 <h3 id="perforce-commands">Perforce Commands</h3>
 <h4 id="viewingusing-the-command-line-in-p4v">Viewing/Using the Command Line in P4V</h4>
-<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/e9d05f4716231d219345.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/e9d05f4716231d219345.png"><img src="/media/imported/blog/e9d05f4716231d219345.png" alt=""></a></p>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/e9d05f4716231d219345.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/e9d05f4716231d219345.png" data-media-width="599" data-media-height="773"><img src="/media/imported/blog/e9d05f4716231d219345.png" alt=""></a></p>
 <h4 id="synchronization-command-without-downloading-existing-files-again">Synchronization Command (Without Downloading Existing Files Again)</h4>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">p4</span><span style="color:#9ECBFF"> sync</span><span style="color:#79B8FF"> -k</span></span>
 </code></pre>
 <ul>
 <li>Purpose: associate local files with the repository’s records as “synced”, avoiding duplicate downloads.</li>
 <li>Recommendation: after it succeeds, run “clean” to verify and clean up.<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/21835b26061feadb4e8d.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/21835b26061feadb4e8d.png"><img src="/media/imported/blog/21835b26061feadb4e8d.png" alt=""></a></li>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/21835b26061feadb4e8d.png" data-media-alt="Perforce: A Practical Guide to Streams" aria-label="View image: Perforce: A Practical Guide to Streams" href="/media/imported/blog/21835b26061feadb4e8d.png" data-media-width="715" data-media-height="736"><img src="/media/imported/blog/21835b26061feadb4e8d.png" alt=""></a></li>
 </ul>
 <hr>
 <blockquote>
@@ -190,7 +190,7 @@ If this article helped you, click here to <a href="https://raw.githubusercontent
     document.addEventListener('astro:after-swap', update);
     update();
   }
-</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script><dialog class="media-viewer" data-media-viewer aria-label="Media preview"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="Show video in fullscreen">Fullscreen</button><button type="button" data-media-close aria-label="Close media preview">Close</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.9a4d5746cb10.js"></script><dialog class="media-viewer" data-media-viewer aria-label="Media preview"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="Show video in fullscreen">Fullscreen</button><button type="button" data-media-close aria-label="Close media preview">Close</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
 if (!document.documentElement.dataset.mediaViewerBound) {
   document.documentElement.dataset.mediaViewerBound = 'true';
   let opener = null;

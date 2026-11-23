@@ -8,11 +8,11 @@
 而无缝地图切换，是在切换地图的时候，先切换到一个简单的地图中，在后台加载地图，加载完成后再切换到那个地图中</p>
 <h2 id="设置">设置</h2>
 <p>无缝地图的中间加载地图可以在项目设置的地图-&gt;高级-&gt;TransitionMap处配置，如果没有配置则会创建一个默认的空场景地图<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4f90011b215b0f6ea1c4.png" data-media-alt="UE：无缝地图切换" aria-label="放大查看图片：UE：无缝地图切换" href="/media/imported/blog/4f90011b215b0f6ea1c4.png"><img src="/media/imported/blog/4f90011b215b0f6ea1c4.png" alt=""></a><br>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/4f90011b215b0f6ea1c4.png" data-media-alt="UE：无缝地图切换" aria-label="放大查看图片：UE：无缝地图切换" href="/media/imported/blog/4f90011b215b0f6ea1c4.png" data-media-width="3850" data-media-height="2110"><img src="/media/imported/blog/4f90011b215b0f6ea1c4.png" alt=""></a><br>
 同时，需要在GameMode中开启UseSeamlessTravel<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d36e637af13d5fcc4893.png" data-media-alt="UE：无缝地图切换" aria-label="放大查看图片：UE：无缝地图切换" href="/media/imported/blog/d36e637af13d5fcc4893.png"><img src="/media/imported/blog/d36e637af13d5fcc4893.png" alt=""></a><br>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/d36e637af13d5fcc4893.png" data-media-alt="UE：无缝地图切换" aria-label="放大查看图片：UE：无缝地图切换" href="/media/imported/blog/d36e637af13d5fcc4893.png" data-media-width="778" data-media-height="1839"><img src="/media/imported/blog/d36e637af13d5fcc4893.png" alt=""></a><br>
 需要注意的是PIE编辑器模式下可能会出现无法流送的问题，会有警告提示，这时候就需要根据警告开启PIE流送功能<br>
-<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/832d95a430c06cd70f2d.png" data-media-alt="UE：无缝地图切换" aria-label="放大查看图片：UE：无缝地图切换" href="/media/imported/blog/832d95a430c06cd70f2d.png"><img src="/media/imported/blog/832d95a430c06cd70f2d.png" alt=""></a></p>
+<a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/imported/blog/832d95a430c06cd70f2d.png" data-media-alt="UE：无缝地图切换" aria-label="放大查看图片：UE：无缝地图切换" href="/media/imported/blog/832d95a430c06cd70f2d.png" data-media-width="393" data-media-height="64"><img src="/media/imported/blog/832d95a430c06cd70f2d.png" alt=""></a></p>
 <h2 id="代码实现">代码实现</h2>
 <p>因为这个函数没有开放给蓝图使用，所有需要自己添加调用函数</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="cpp"><code><span class="line"><span style="color:#B392F0">UFUNCTION</span><span style="color:#E1E4E8">(BlueprintCallable, meta</span><span style="color:#F97583">=</span><span style="color:#E1E4E8">(WorldContext</span><span style="color:#F97583">=</span><span style="color:#9ECBFF">"WorldContextObject"</span><span style="color:#E1E4E8">, CallableWithoutWorldContext))  </span></span>
@@ -92,7 +92,7 @@
     document.addEventListener('astro:after-swap', update);
     update();
   }
-</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.4cc008fe0b89.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
+</script><script type="module" src="/assets/site-ui/i18n/viewport.9ceb0d3b7cf6.js"></script><script type="module" src="/assets/site-ui/i18n/ImageViewer.astro_astro_type_script_index_0_lang.CcVinRbp.9a4d5746cb10.js"></script><dialog class="media-viewer" data-media-viewer aria-label="媒体预览"><div class="media-viewer-toolbar"><button type="button" data-media-fullscreen aria-label="视频全屏">全屏</button><button type="button" data-media-close aria-label="关闭媒体预览">关闭</button></div><div class="media-viewer-stage" data-media-stage></div></dialog><script>
 if (!document.documentElement.dataset.mediaViewerBound) {
   document.documentElement.dataset.mediaViewerBound = 'true';
   let opener = null;
