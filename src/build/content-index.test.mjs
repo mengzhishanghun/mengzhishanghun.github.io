@@ -3,6 +3,18 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import {generatedPage} from './interaction-fixtures.mjs';
+
+for (const locale of ['zh', 'en']) test(`${locale} blog index renders linked text entries without covers`, () => {
+  const page = generatedPage(`${locale}/blog/index.html`);
+  const cards = page.nodes.filter(node => page.matches(node, '[data-content-card]'));
+  assert.ok(cards.length > 0);
+  assert.ok(!page.select('[data-content-card] img, [data-content-card] .content-cover, [data-content-card] .content-cover-link'), 'blog entries must not contain cover markup');
+  for (const card of cards) {
+    assert.equal(card.tagName, 'a');
+    assert.ok(page.attrs(card).href.startsWith(`/${locale}/blog/`));
+    assert.equal(Object.hasOwn(page.attrs(card), 'data-has-cover'), false);
+  }
+});
 const contentSource=fs.readFileSync(new URL('../shared/i18n/scripts/_astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js',import.meta.url),'utf8');
 const helperSource=fs.readFileSync(new URL('../shared/i18n/scripts/return-state.js',import.meta.url),'utf8').replace(/^export /gm,'');
 const source=helperSource+contentSource.replace(/^import[^;]+;\s*/,'');
