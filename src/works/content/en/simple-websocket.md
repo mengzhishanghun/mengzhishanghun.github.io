@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: 7150bac9b5c24c0e33bb6242524dad083ff2c172ff2e93ee84f0befcf2a2289a
+sourceHash: 27ca3a6446edbd3b2a23c59bd997b5dee3b6932cb885b5f87000e16ea8485555
 translationStatus: translated
-generatedBodyHash: b5d27b52fa5e9a3e09a26410ce1b234592c1dec73ca93cc6a7ea0367bb7f84d2
+generatedBodyHash: bc32a19bf7240b9d2939837c0b75c69404358ecc599fc2d087be8062b9e36ff1
 workInfo:
   channels:
     - kind: sale
@@ -56,7 +56,7 @@ It suits UE applications exchanging messages continuously with WebSocket service
 
 ## Background and goals
 
-With several WebSocket entry points, a project needs to identify the service for each connection, when it is established, and who handles incoming messages. SimpleWebSocket organizes these entry points with named connections and event delegates.
+When a project connects to several WebSocket services, give each connection a name, decide when to establish it, and bind a handler for incoming messages.
 
 ## Core capabilities
 
@@ -68,6 +68,8 @@ Connections can be managed by name, associating services or purposes with explic
 
 Incoming messages can be passed to callers through delegates. Blueprints subscribe to events and interpret content using the business protocol. Delegates provide dispatch after arrival; they do not define message structure.
 
+Use `Bind Web Socket Message` to attach multiple receive callbacks to the same connection. Send text with `Send WebSocket Message`, and unbind callbacks when you no longer need to handle messages on that connection.
+
 ### Blueprint interfaces
 
 Connection and messaging capabilities are exposed through Blueprint interfaces for project logic. Network addresses, reachability, and server behavior depend on deployment. Connection names do not automatically discover servers.
@@ -76,11 +78,23 @@ Connection and messaging capabilities are exposed through Blueprint interfaces f
 
 It suits UE projects exchanging real-time messages with existing WebSocket services, distinguishing connections by purpose, and responding in Blueprints. Connections may target external control systems or messaging services, with interaction determined by the peer's protocol.
 
+## Workflow
+
+1. Add a named connection, such as `Test`, in **Project Settings → Simple WebSocket Settings** and fill in the service address. Turn on **Auto Connect** to connect when the app starts.
+2. To connect manually, pass the name to `Connect Web Socket` and check the result with `Check Web Socket Connect`. Once connected, bind callbacks and send text. For example, you can pass incoming messages to a control panel inside UE.
+3. Use `Close Web Socket` to close one connection or `Close All Web Socket` to close all of them.
+
+![](/media-occurrence/work%3Asimple-websocket%3Amedia%3A1)
+
+[See the Blueprint connection and messaging nodes](/en/works/simple-websocket/docs/connect-and-send/)
+
 ## Scope and limitations
 
 Only `ws://` is supported; secure `wss://` connections are not supported. An accessible WebSocket service and agreed message format are required. Recovery after closure, authentication, and message reliability handling must be designed and verified for project needs.
 
 To configure named connections, see the [user guide](/en/works/simple-websocket/docs/configure-connections/).
+
+For a local service, the guide recommends using `127.0.0.1` as the host address instead of `localhost`.
 
 ## Support and feedback
 

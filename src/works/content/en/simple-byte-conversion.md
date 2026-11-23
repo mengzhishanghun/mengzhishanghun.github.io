@@ -27,9 +27,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: b7b98a3aa0d9b18d824760ce72e2813ef196b71e3cb84dac20bd76003cd1082c
+sourceHash: 833f8a95d96b8bf0e5fa06a9a615709188216cd6284e95602139644fc019f56d
 translationStatus: translated
-generatedBodyHash: 15164b618df779f77f505667303379a64f936fc9f35e59e51f665d4c0832df6a
+generatedBodyHash: 8f72244264bba8c975b75ea6b216496326069fb32e02061b022ec7d431dd5986
 workInfo:
   channels:
     - kind: sale
@@ -67,7 +67,7 @@ The work organizes these basic conversions into callable nodes, reducing repeate
 
 Paired ToBytes / FromBytes interfaces are provided for int32, int64, float, double, bool, and FString. Basic numeric values are written using their memory representation; strings use UTF-8.
 
-These interfaces can encode data before sending or restore data received in the same format.
+Encode each value before sending it, then use the matching node on the receiving side to restore the same type.
 
 ### Binary struct conversion
 
@@ -79,13 +79,19 @@ The struct type and field layout form a shared contract between both ends. A rec
 
 StructToJsonString and JsonStringToStruct convert between structs and readable text.
 
-JSON is better suited to field inspection or exchange with external programs such as Python. The work also handles conversion issues in field names and floating-point output so results are easier to identify and review.
+Choose JSON when an external program such as Python needs to read the fields, or when you want to inspect the data as text. The plugin formats field names and floating-point values; check the resulting fields and values against your data.
 
 ## Use cases
 
 It can prepare data for UDP/TCP communication in UE or convert structured state to bytes before file storage.
 
 For external program integration, JSON can help verify fields. Network connections and file I/O in these examples must be supplied by other modules.
+
+## How to use it
+
+Suppose a Blueprint needs to hand an `int32` score to a networking module. On the sending side, use the matching ToBytes node to produce a byte array. On the receiving side, extract those bytes according to the agreed format and use the matching FromBytes node to restore the `int32` value.
+
+To exchange multiple fields, you can use the [struct and JSON nodes](/en/works/simple-byte-conversion/docs/struct-and-json/). Export a sample with `Struct To JsonString` and check its fields and values. To read it back, pass the JSON to `JsonString To Struct` with the matching struct type. The nodes are in the [`SimpleByteConversion` Blueprint category](/en/works/simple-byte-conversion/docs/setup/).
 
 ## Scope and limitations
 

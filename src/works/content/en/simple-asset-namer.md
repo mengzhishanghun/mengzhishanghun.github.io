@@ -27,9 +27,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: 4efb226d78e7a7b8d7214893f65bf3000a008bfa9beccbf55e84a082f4b453ae
+sourceHash: f1581cbaa9da38fb92b3c9a55be3d9cb5b3f2bfb81a5070f5fb1917a335289de
 translationStatus: translated
-generatedBodyHash: a66d7620894ea26dc66fe703e8980581d605ac92c2e9c2249039d21e0a2d440d
+generatedBodyHash: 741b1664c9169031031c3c96d38d2266d75f2b6ce559efa42ad017b3569dcc07
 workInfo:
   channels:
     - kind: sale
@@ -51,7 +51,7 @@ coverAlt: SimpleAssetNamer cover
 
 SimpleAssetNamer provides type- and path-based naming rules for UE assets. It checks new names on creation, import, or manual rename, and supports batch renaming of assets in existing directories.
 
-Rules include prefixes, suffixes, separators, and historical affixes. Results distinguish success, skipped items, and errors.
+Set prefixes and suffixes, choose separators, and tell the plugin which old affixes to recognize. Rename results list successes, skipped assets, and errors separately.
 
 ## Background and goals
 
@@ -67,7 +67,7 @@ Apply prefix, suffix, and separator rules by asset type. Historical affixes can 
 
 ### Automatic and batch processing
 
-Automatic processing checks asset creation, import, and manual rename, while the batch action targets existing folders. Both generate names from current rules, supporting new and existing assets separately without requiring the whole vault of assets to be renamed at once.
+You can enable automatic renaming on creation or import separately from the check after a manual rename. Apply the same rules in batches to selected assets or a folder in the Content Browser.
 
 ### Path and result controls
 
@@ -76,6 +76,14 @@ Path filters limit the scope, and successful, skipped, and failed results are re
 ## Use cases
 
 It suits consistent naming in multi-person projects and migration from old affixes to new rules. Projects introducing conventions gradually can first verify selected content directories before expanding coverage.
+
+## How to use it
+
+1. [Install the plugin and open its settings](/en/works/simple-asset-namer/docs/setup/). Check the asset types, affixes, and paths. For example, with the default Blueprint prefix `BP`, you can try renaming `MyCharacter` to `BP_MyCharacter`.
+2. Start with a small batch of existing assets. Right-click your selection and choose **Simple Asset Namer → Auto Rename**. To process a whole folder, use **Auto Rename All Assets**.
+3. Compare the old and new names in the results window, then look at why any assets were skipped or failed. Check asset references after batch renames.
+
+See [automatic and batch renaming](/en/works/simple-asset-namer/docs/rename-assets/) for details.
 
 ## Scope and limitations
 

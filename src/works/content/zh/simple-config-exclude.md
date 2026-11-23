@@ -62,11 +62,11 @@ SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在�
 
 每个配置文件可设为 Default、Allowed 或 Disallowed。Default 跟随 UE 原有行为，Allowed 和 Disallowed 则分别对应明确的包含、排除意图。
 
-项目设置中的列表来自 Config 目录扫描，便于对照实际文件检查遗漏项。
+插件扫描 `Config` 目录生成列表。新增或删除 INI 文件后，可用 **Refresh Config List** 更新列表。
 
 ### Staging 规则同步
 
-将配置选择保存为 UE 打包使用的包含或排除规则，并同步设置状态。
+切换状态会更新 `DefaultGame.ini` 中的 `[Staging]` 规则，打包时由 UE 读取这些规则。
 
 这些修改会写入项目配置文件，仍需经过正常的版本审查。
 
@@ -77,6 +77,12 @@ SimpleConfigExclude 是面向 UE 项目打包配置的编辑器插件。它在�
 ## 适用场景
 
 调试开关、性能分析参数、测试服务器地址和开发密钥等开发环境配置，可以按文件从正式包中排除；不需要随包发布的插件内部配置也可以单独管理。测试与生产环境需要不同配置集时，可以先生成不含这些文件的基础包，再按环境处理被排除项，分别核查打包规则和部署步骤。
+
+## 使用流程
+
+1. [安装并打开设置面板](/zh/works/simple-config-exclude/docs/setup/)，找到 `Config/DefaultDebugSettings.ini`，将它设为 **Disallowed**。
+2. 打包后检查输出目录，确认调试配置没有随包发布。
+3. 如果测试环境仍需该文件，设置目标目录并[复制被排除的配置](/zh/works/simple-config-exclude/docs/copy-excluded/)。**Clean Config Before Copy** 默认开启，会先删除目标下的 `ProjectName/Config/` 目录，再复制标为 **Disallowed** 的配置。目标目录有要保留的文件时，先关闭清理选项。
 
 ## 适用范围与边界
 

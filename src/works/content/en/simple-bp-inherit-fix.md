@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: 08fc74f8ed64ffdfa5e529471541c68cf0968916ca383dc20e7ee148edde75e2
+sourceHash: 9ac46cf7619a77827e6302858dd033bde28115a16350965c10e3aa60ab571b9a
 translationStatus: translated
-generatedBodyHash: 15e9d694c4835c6c447f6cf469b83ad8a9dd938e9ad55ae50fa8f27cdea87a1b
+generatedBodyHash: 974dec6056db37d5159f2674049ffe0882868a5e58bfa73bae46f547fa6b6672
 workInfo:
   channels:
     - kind: sale
@@ -47,7 +47,7 @@ docIds:
 
 SimpleBPInheritFix is an editor plugin for abnormal component states in Actor Blueprint inheritance chains.
 
-When a component's creation method is incorrectly marked Instance, parent components may lose their normal cut and delete actions, and changes in a child may affect its parent. Starting from an affected Blueprint, the plugin examines its inheritance chain, locates this kind of contamination, and corrects the component creation method.
+When a component's creation method is incorrectly marked Instance, the cut and delete actions in the parent Blueprint may be disabled, or a change in a child Blueprint may be written back to its parent. Starting from an affected Blueprint, the plugin examines its inheritance chain, locates this kind of contamination, and corrects the component creation method.
 
 ## Background and goals
 
@@ -61,7 +61,7 @@ The tool organizes scanning, checkout, and repair around the complete inheritanc
 
 Starting from an affected Actor Blueprint in the chain, it checks component states in ancestors, the current Blueprint, and descendants. Logs list inspection stages, abnormal components found, and their owning Blueprints so users can assess the actual scope.
 
-If the target state is not found, other component failures should not be described as repaired.
+If the scan finds no incorrect flags, continue looking for the cause of the component issue.
 
 ### Targeted repair and asset saving
 
@@ -74,6 +74,14 @@ If checkout fails, an in-memory repair does not mean disk assets have been updat
 It helps investigate components that become difficult to edit after Actor Blueprint inheritance, or child operations that affect parents.
 
 In projects with several inheritance levels, chain scanning helps locate affected assets. Logs and the pending-save list provide clues for version control checks before and after changes.
+
+## How to use it
+
+Suppose you edit a mesh component in a child Blueprint and the parent's component changes as well. Run the repair from the child, then check the log to see whether it found an issue in the parent's component template.
+
+1. Install the plugin and make sure it compiles. In the Content Browser, right-click the affected Actor Blueprint and choose **Component Repair → Fix Inheritance Pollution**.
+2. Filter the Output Log for `LogSBIF` to see what the scan found, which Blueprints were affected, and whether checkout and repair succeeded.
+3. Review the Blueprints marked for saving and save them manually. If checkout failed, resolve write access first.
 
 ## Scope and limitations
 

@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: c1ed917e3cdaa7f1d2d0d8db939efc089fe0a7a40872893b2ce0edd471c0da38
+sourceHash: 52dc99d37c9237d5be6a76db84d57a37186fff22f3def02ba1ef8a5341c5d5a6
 translationStatus: translated
-generatedBodyHash: 137a0264f58f8ad3b04a7c52cef31ebe452bdb25b5112eebb13903e9ad625090
+generatedBodyHash: 86c732fbbc49d624017d879bf3ddfea66eaac5bb62a44675383d86b4410b6e7d
 workInfo:
   channels:
     - kind: sale
@@ -57,7 +57,7 @@ It helps centralize establishing and maintaining connections to external service
 
 A UE application may connect to several external programs or services at once. A single Socket example explains TCP transfer but does not cover distinguishing multiple connection states or handling disconnections.
 
-This work manages client connections by channel so callers can observe state in Blueprints and configure retry behavior for their projects.
+The plugin manages each connection by channel. Check the status of each channel in Blueprint and configure retry behavior for your project.
 
 ## Core capabilities
 
@@ -65,9 +65,13 @@ This work manages client connections by channel so callers can observe state in 
 
 Several TCP client channels maintain their connections independently, preventing different service states from being mixed in one entry point. Projects distinguish peers by channel and establish their own data handling rules.
 
+Each channel has its own name, remote address, and receive limit. A `GameInstanceSubsystem` manages the connections, so changing levels does not interrupt them.
+
 ### Asynchronous processing and reconnection
 
 Connection work is asynchronous, with configurable automatic reconnection intervals after disconnection. Reconnection restores the transport channel. Resending messages, restoring login, and synchronizing business state remain decisions for the service protocol and caller.
+
+Enable **Auto Connect** in Project Settings or start the channel manually in Blueprint. Use `UpdateTCPClientConfig` to add or update a channel. Existing message delegates still work after the socket reconnects.
 
 ### State delegates and Blueprint calls
 
@@ -76,6 +80,16 @@ Connection state is exposed through delegates so Blueprints can respond to chang
 ## Use cases
 
 It suits applications where UE initiates TCP connections, maintains several communication targets, or retries at a chosen interval after a service disconnects. Projects can configure channels separately and process each service's business data according to connection state.
+
+## Workflow
+
+1. Add a channel in **Project Settings → SimpleTCPClient Settings**. For a local test, name it `DefaultClient` and point it at `127.0.0.1:8888`.
+2. If automatic connection is off, start the channel with `StartConnection`. Check its state with `IsConnected`.
+3. Register a callback with `BindMessageHandle` to receive data and pass a byte array to `SendMessage` to send it. Call `StopConnection` to close the socket when you no longer need the channel.
+
+![](/media-occurrence/work%3Asimple-tcp-client%3Amedia%3A1)
+
+[See messaging examples](/en/works/simple-tcp-client/docs/messages/)
 
 ## Scope and limitations
 

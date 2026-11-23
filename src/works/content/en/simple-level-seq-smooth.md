@@ -21,9 +21,9 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: en
 translationKey: simple-level-seq-smooth
-sourceHash: f839b52e510e549296639cf47015a47848a292933046a345f743eaba2ac854c1
+sourceHash: 9781f51b8bb619017083a4aad3e0c56415401b4f8360d1b93dffd0a6a131d3fd
 translationStatus: translated
-generatedBodyHash: 9abd240af57fa11e84007f80fcae9c35f98454a19322421706f69f1f1b6b2eb7
+generatedBodyHash: fbe477c43637fd7c03dc84dcc65cf83e96a1236df3e1dd39132aae8873546492
 workInfo:
   channels:
     - kind: sale
@@ -62,7 +62,7 @@ The plugin brings algorithm selection, parameter adjustment, and batch processin
 
 Twelve algorithms are provided, including moving average, Gaussian, median, Butterworth, Kalman, and One Euro filters.
 
-They differ in how they handle spikes, continuous noise, and responsiveness. Choose based on the original curves and intended motion; a large algorithm selection does not mean any parameter set will fit every asset.
+Check whether the curve has isolated spikes or persistent jitter, then choose a filter and settings based on the movement you need to preserve. Tune the settings for each asset.
 
 ### Sequence and parameter section processing
 
@@ -70,13 +70,19 @@ The tool supports batch processing of ControlRig Transform and Scalar parameter 
 
 ### Output options
 
-Results can be written to the original sequence or saved as a new one. New sequences suit before-and-after comparisons; overwriting requires confirming that original data can be recovered. Outputs remain sequence assets for UE projects, and their effect should be checked in the target shot.
+Results can be written to the original sequence or saved as a new one. Save a new sequence to compare the motion before and after filtering. Before overwriting, make sure you can recover the original. Outputs remain sequence assets for UE projects, and their effect should be checked in the target shot.
 
 ## Use cases
 
 It suits motion capture curve cleanup, post-processing of pose estimation results, and workflows applying consistent filtering to several Level Sequences.
 
 For assets that need less jitter while retaining rapid motion, compare algorithms and parameter settings before choosing the final output.
+
+## How to use it
+
+1. [Install the plugin and check that ControlRig is enabled](/en/works/simple-level-seq-smooth/docs/setup/). In the Content Browser, select one or more Level Sequence assets, right-click, and choose **Smooth**.
+2. Choose a filter and adjust its settings. For example, start with a median filter if the motion capture curve has occasional spikes.
+3. Save a new sequence first. In the target shot, compare the results to see whether the spikes are reduced and fast movements are still intact. Sequences generated in a batch use the same naming suffix.
 
 ## Scope and limitations
 

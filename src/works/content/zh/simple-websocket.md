@@ -53,7 +53,7 @@ SimpleWebSocket 在 Unreal Engine 中封装 WebSocket 连接管理。项目可�
 
 ## 背景与目标
 
-项目中若有多个 WebSocket 通信入口，需要辨别每条连接属于哪个服务、何时建立，以及收到消息后交给谁处理。SimpleWebSocket 以命名连接和事件委托整理这些入口。
+项目要连接多个 WebSocket 服务时，可以为每个服务指定连接名，决定何时建立连接，再为收到的消息绑定处理逻辑。
 
 ## 核心能力
 
@@ -65,6 +65,8 @@ SimpleWebSocket 在 Unreal Engine 中封装 WebSocket 连接管理。项目可�
 
 收到的消息可通过委托交给使用方处理。蓝图侧可以订阅相应事件，再按业务协议解释内容。委托负责消息到达后的分发，消息结构仍需双方约定。
 
+同一连接可以用 `Bind Web Socket Message` 绑定多个接收回调。发送文本用 `Send WebSocket Message`；不再处理某条连接的消息时，可以解绑回调。
+
 ### 蓝图接口
 
 连接和消息操作通过蓝图接口提供，供使用方在项目逻辑中调用。网络地址、服务可达性和服务端行为仍由实际部署决定，工具不会凭连接名称自动发现服务器。
@@ -73,11 +75,23 @@ SimpleWebSocket 在 Unreal Engine 中封装 WebSocket 连接管理。项目可�
 
 适用于 UE 与已有 WebSocket 服务交换实时消息、需要按用途区分连接并在蓝图中响应消息的项目。可以用于连接外部控制端或消息服务，具体交互取决于对方提供的协议。
 
+## 使用流程
+
+1. 在 **项目设置 → Simple WebSocket Settings** 添加命名连接（如 `Test`），填入服务地址。需要随应用启动时，勾选 **Auto Connect**。
+2. 手动连接时，按名称调用 `Connect Web Socket`，再用 `Check Web Socket Connect` 查询状态。连接后可绑定回调并发送文本。例如，可以把收到的消息交给 UE 中的控制面板处理。
+3. 用 `Close Web Socket` 关闭指定连接，或用 `Close All Web Socket` 关闭全部。
+
+![](/media-occurrence/work%3Asimple-websocket%3Amedia%3A1)
+
+[查看蓝图连接和收发节点](/zh/works/simple-websocket/docs/connect-and-send/)
+
 ## 适用范围与边界
 
 仅支持 `ws://`，不支持 `wss://` 安全连接。使用前需要可访问的 WebSocket 服务和双方约定的消息格式。连接关闭后的恢复、鉴权方式与消息可靠性处理需按项目需求设计并验证。
 
 命名连接的配置见 [使用教程](/zh/works/simple-websocket/docs/configure-connections/)。
+
+连接本机服务时，教程建议用 `127.0.0.1` 作为主机地址，避免使用 `localhost`。
 
 ## 支持与反馈
 

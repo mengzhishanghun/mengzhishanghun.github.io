@@ -48,7 +48,7 @@ translationKey: ai-data-asset
 
 AIDataAsset 让 AI 通过 JSON 读取和修改复杂的 DataAsset 数据，并在 UE 编辑器运行时自动同步回资产。开启自动同步后，插件会处理导出、文件监听和回写，无需每次手动导入导出。
 
-它支持常见基础类型和大多数结构体，适合让 AI 批量调整字段、处理嵌套配置，减少在编辑器中逐项展开和填写数据的工作。
+它支持常见基础类型和大多数结构体。把批量字段修改和嵌套配置交给 AI，可以少在编辑器里逐项展开和填写字段。
 
 ## 背景与目标
 
@@ -60,7 +60,7 @@ AIDataAsset 用 JSON 连接外部工具和 UE 资产，让数据修改可以交�
 
 ### DataAsset 与 JSON 往返
 
-将已有 DataAsset 的属性导出为 JSON，再把外部修改同步回资产。字段名与编辑器中的名称保持对应，浮点数输出考虑往返转换的精度。
+将已有 DataAsset 的属性导出为 JSON，再把外部修改同步回资产。字段名与编辑器中的名称保持对应，浮点数按字段类型格式化，往返后仍需按允许误差核对。
 
 ### 变化监听与同步控制
 
@@ -75,6 +75,20 @@ AIDataAsset 用 JSON 连接外部工具和 UE 资产，让数据修改可以交�
 需要生成关卡配置、批量调整角色数值或修改嵌套结构体时，可以让 AI 读取并修改 JSON，再回到 UE 中检查和测试。LLM、强化学习系统或 Python 等外部工具都可以参与这条数据处理流程。
 
 策划也可以借助 Excel 等工具集中处理数据。需要团队审查时，可将 JSON 输出到适合版本管理的目录，用文本差异查看字段变化；默认的 Saved 输出目录通常只作为同步中间目录。
+
+## 使用流程
+
+以角色数据 `DA_Demo` 为例，可以把 `MaxHealth` 从 100 调到 120，并把 `CritRate` 改为 0.1。
+
+1. 在 UE 中创建 DataAsset，开启自动同步，让插件生成对应的 JSON。默认输出目录为 `Saved/AIDataAsset/`。
+2. 把文件路径和要改的字段告诉 AI。保留原有 JSON 结构，包括 `NativeClass`，只修改本次需要调整的值。
+3. 保持编辑器运行，保存 JSON 后查看已有资产里的数值。若日志提示保存失败，处理签出或写入权限后再保存资产。
+
+![](/media-occurrence/work%3Aai-data-asset%3Amedia%3A1)
+
+![](/media-occurrence/work%3Aai-data-asset%3Amedia%3A2)
+
+完整示例见[用 AI 编辑资产数据](/zh/works/ai-data-asset/docs/ai-edit/)。
 
 ## 适用范围与边界
 

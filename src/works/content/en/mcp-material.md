@@ -25,8 +25,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-material
-sourceHash: a64911c8fa3f37d4e0131342d24ec6f88df3d54b38ccf622d9f1dc51ff49aa1a
-generatedBodyHash: 769d2575e1b748d23cb5e2d15ef08453af25d0b78e8b53756c5a56326b394e43
+sourceHash: f26b5b7f6122f40cf2f7a35fef30217de1e0542caa52ea79993c32872c9be8a1
+generatedBodyHash: 0ee3b4376e9246f91f4dc2934c23d0a7c074791b0095d74c80d632ed26d33383
 translationStatus: translated
 coverAlt: MCPMaterial cover
 websiteCoverUrl: /media/covers/works/mcp-material-20261101.webp
@@ -41,12 +41,26 @@ docIds:
 
 ## About this work
 
-MCPMaterial is an Unreal Editor MCP plugin in development, providing tool interfaces for material graphs and material instances. Features and compatibility are still being verified.
+MCPMaterial is an Unreal Editor MCP plugin in development. External AI tools can use it to find and create material assets, edit material graphs, and adjust material instance parameters. Tool coverage and compilation feedback may change during development.
 
 ## Development direction
 
-The project focuses on material graphs and material instances, connecting external AI tools to related Unreal Editor workflows through MCP. The scope of operations and feedback capabilities may change as development continues.
+### Edit material graphs and nodes
+
+Inspect nodes, connections, and editable properties, then use node GUIDs to change parameter defaults or texture references in place. You can also add nodes in batches, adjust connections, and arrange the graph. The general-purpose tools do not add or remove nodes that need dedicated structure management, including Composite, Function Input/Output, and Named Reroute nodes. [Material graphs](/en/works/mcp-material/docs/edit-graph/)
+
+### Adjust material instance parameters
+
+Inspect resolved values and local overrides. Use type, name, Association, and Index to identify a global, layer, or blend parameter, then update or clear that override. Textures must match the resource type required by the parent material's current compiled resources. Advanced parameters have their own engine version requirements. [Instance parameters](/en/works/mcp-material/docs/instance-parameters/)
+
+## Workflow
+
+To change a material expression's default value, follow the [connection guide](/en/works/mcp-material/docs/connect/), find the target asset, and read the node GUID. Deal with any unsaved changes, close the target asset’s editor, and update the node with `ApplyMaterialPatch`. Run `CompileMaterial` and check the status and errors. After checking the result, call `SaveAsset` explicitly. You can also [capture a material preview](/en/works/mcp-material/docs/material-preview/). If the tool returns `StateUnknown`, stop writing and inspect the asset. After a timeout, check the actual editor state before deciding whether to retry. [Closing and saving material assets](/en/works/mcp-material/docs/material-assets/) · [Compilation diagnostics](/en/works/mcp-material/docs/material-compilation/)
 
 ## Development status
 
-The project is in development. See the [MCPMaterial user guide](/en/works/mcp-material/docs/edit-graph/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+Work on UE 5.2–5.8 is ongoing. Compatibility remains unconfirmed, and testing across those versions is incomplete. [MCPMaterial user guide](/en/works/mcp-material/docs/edit-graph/)
+
+## Support
+
+Send feedback to [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com).

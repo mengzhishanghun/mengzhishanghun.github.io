@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-server
-sourceHash: 385c73df96dcc65f78be45fbae02ba6369362b9210b528502e735ab42da257cd
+sourceHash: 5d889c4c9915bc01873e44ae44f0f0c7d201e79f3e43da756ab665677166fb08
 translationStatus: translated
-generatedBodyHash: ef192463528bf55210dd13cb948d21699a3ea2d8c2c005596b956d7bc23d2197
+generatedBodyHash: e6680192b53159142fad9c176e7a6a310d7954bd72385f414853ba1dbe580534
 workInfo:
   channels:
     - kind: sale
@@ -57,13 +57,15 @@ It exposes client connection and disconnection events, sessions distinguished by
 
 ## Background and goals
 
-Server applications must continually distinguish clients and update state when clients leave. SimpleTCPServer wraps this work around sessions and connection events, giving business logic clear client identifiers and event entry points.
+Servers often need to track each client separately. SimpleTCPServer provides session identifiers and connection events so the application can update its records when clients join or leave.
 
 ## Core capabilities
 
 ### Multi-client sessions
 
 The server identifies connected clients by IP:Port so connections can be handled separately. Callers can associate business data with session identifiers. These identify network endpoints; persistent user identities still require a business protocol.
+
+When the server accepts a client, the plugin assigns it a `SessionChannel`. Use `GetAllSessions` to list the active sessions for a listening channel, or `IsSessionConnected` to check a specific session.
 
 ### Connection events
 
@@ -73,9 +75,21 @@ Notifications are available when clients connect and disconnect. Blueprints can 
 
 The tool supplies runtime channel configuration and Blueprint calls to integrate server communication into UE projects. Message formats, client permissions, and sending policies must be designed around the project protocol.
 
+Set the bind address, maximum concurrent connections, and receive buffer size on each listening channel. Update the channel at runtime with `UpdateTCPServerConfig`. Use `SendMessage` to reply to one client or `BroadcastMessage` to send the same byte array to every client on the channel.
+
 ## Use cases
 
 It suits UE programs acting as TCP servers for several external programs or devices, with later processing distinguished by connection. It focuses on server connections and sessions rather than replacing higher-level business systems.
+
+## Workflow
+
+1. Add a named channel such as `MainServer` in **Project Settings → SimpleTCPServer Settings**. Set the listen address and connection limit, then start listening with `StartServer`.
+2. Use `BindConnectHandle` to track when clients connect or disconnect and `BindMessageHandle` to receive data. If several devices are connected, for example, use the session ID to reply to the one that made the request.
+3. Call `StopServer` to stop listening. The plugin closes the listening socket and disconnects the clients on that channel.
+
+![](/media-occurrence/work%3Asimple-tcp-server%3Amedia%3A1)
+
+[See session management](/en/works/simple-tcp-server/docs/sessions/) · [See messaging](/en/works/simple-tcp-server/docs/messages/)
 
 ## Scope and limitations
 

@@ -48,7 +48,7 @@ translationKey: simple-static-mesh-merger
 
 SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。它先把可合并对象按网格、材质、移动性和碰撞配置分组，供开发者预览与筛选，再将选中的对象组织为 ISM/HISM 实例。
 
-工具针对关卡中的实际 Actor 分组，方便在修改场景前核对结果，避免只按网格名称批量替换。
+预览按关卡中各个 Actor 的实际属性分组。改动关卡前，你可以逐组核对会被替换的对象。
 
 ## 背景与目标
 
@@ -60,11 +60,13 @@ SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。�
 
 ### 处理嵌套场景并刷新预览
 
-支持递归拆分嵌套 LevelInstance，并刷新场景对象的合并预览。
+合并预览只扫描主关卡 `PersistentLevel`。要处理 LevelInstance 内的对象，先用 **Break Level Instances** 递归展开；拆分遇到重复路径时会删除重复的 LevelInstance。
 
 ### 严格分组与人工筛选
 
 按网格、材质、移动性和完整碰撞设置分组。可通过预览筛选分组，并排除不应合并的个别 Actor。
+
+碰撞比较覆盖全部 32 个通道的响应。搜索 Actor 名称时，只要组内有一个名称匹配，整组就会显示；实际合并只处理屏幕上可见且已勾选的组。刷新会保留逐个排除的记录，关闭并重新打开窗口则会重置。
 
 ### 生成实例化对象
 
@@ -75,6 +77,16 @@ SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。�
 ## 适用场景
 
 适用于同一关卡中大量重复放置静态网格、希望先按实际属性筛选再进行实例化整理的场景。对混有不同材质或碰撞设置的对象，预览分组与逐项排除比直接按模型名称处理更容易核对范围。
+
+## 使用流程
+
+1. 从 **Window → Static Mesh Merger** 打开面板。如需处理嵌套关卡，先确认拆分范围，再刷新预览。
+2. 按移动性和 **Min Instance Count** 筛选，勾选目标组，再取消勾选需要保留为独立 Actor 的对象。
+3. 选择 **ISM** 或 **HISM**（默认），点击 **Merge Selected**。编辑器会选中新建的 Actor，供你检查实例数、材质和碰撞。
+
+例如，教程把 125 个属性一致的树木 Actor 合并成一个 HISM Actor，内含 125 个实例。
+
+[查看 LevelInstance 拆分规则](/zh/works/simple-static-mesh-merger/docs/split-level-instance/)
 
 ## 适用范围与边界
 

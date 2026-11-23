@@ -27,9 +27,9 @@ docIds:
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: 020d14241ec78e51248eab43fbcc90214188d683943b840f2dc99da5270752cc
+sourceHash: c902d2bd74de3e1a0223e46a2a15643ba2fa3c0aedfbbcf6bf00d729f815dcfb
 translationStatus: translated
-generatedBodyHash: 116803da1db0a90f89134b2a9cd8ed3104d319778771f00423a832fb22bfd845
+generatedBodyHash: 46ca0ed30df456d2d5deab735673737b847388446f67ebc8090dd46ec9ac5c78
 workInfo:
   channels:
     - kind: sale
@@ -51,7 +51,7 @@ coverAlt: SimpleStaticMeshMerger cover
 
 SimpleStaticMeshMerger organizes repeated StaticMeshActors in levels. It first groups merge candidates by mesh, materials, mobility, and collision settings for preview and filtering, then organizes selected objects as ISM/HISM instances.
 
-The process operates on actual level Actors, allowing grouping to be reviewed before scene modifications rather than replacing objects in bulk based only on mesh names.
+The preview groups level Actors by their actual properties. Review each group to see what will be replaced before changing the level.
 
 ## Background and goals
 
@@ -63,11 +63,13 @@ Assess instancing through loading and frame-rate measurements in the target proj
 
 ### Handling nested scenes and refreshing previews
 
-The tool supports recursively breaking apart nested LevelInstances and refreshing the merge preview of scene objects.
+The merge preview scans only the main level (`PersistentLevel`). To include Actors inside LevelInstances, run **Break Level Instances** first. It expands nested instances and removes duplicate LevelInstances that share a path.
 
 ### Strict grouping and manual filtering
 
 Objects are grouped by mesh, materials, mobility, and complete collision settings. Users can filter groups in the preview and exclude individual Actors that should not be merged.
+
+Collision matching includes responses on all 32 channels. A name search shows the whole group if any Actor in it matches. Merging acts only on checked groups currently visible. A refresh keeps individual exclusions; closing and reopening the panel resets them.
 
 ### Creating instanced objects
 
@@ -78,6 +80,16 @@ Check the scene hierarchy and instance counts, then verify visuals and collision
 ## Use cases
 
 It suits levels with many repeated static meshes where users want to filter by actual properties before instancing. For objects with mixed materials or collision settings, preview grouping and individual exclusions make scope easier to inspect than processing solely by model name.
+
+## Workflow
+
+1. Open **Window → Static Mesh Merger**. If you need to include nested levels, confirm what will be broken apart and refresh the preview afterward.
+2. Filter by mobility and **Min Instance Count**. Check the groups to merge and uncheck any Actor that needs to stay independent.
+3. Choose **ISM** or **HISM** (the default), then click **Merge Selected**. The editor selects the new Actors so you can review instance counts, materials, and collision.
+
+The guide shows 125 tree Actors with matching properties merged into one HISM Actor with 125 instances.
+
+[See the LevelInstance splitting rules](/en/works/simple-static-mesh-merger/docs/split-level-instance/)
 
 ## Scope and limitations
 

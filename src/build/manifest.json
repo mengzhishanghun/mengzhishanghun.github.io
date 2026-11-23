@@ -1508,7 +1508,24 @@
       "githubCreatedAt": "2026-05-13T07:12:59Z",
       "order": 14,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "work:ai-data-asset:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/f27ad5909baa60892e0a.png",
+          "publicSha256": "f27ad5909baa60892e0a14d213847578c053d40c09e85ca2e6bcc7da324692e0",
+          "utilityId": "doc:ai-data-asset-guide:body-utility:8"
+        },
+        {
+          "id": "work:ai-data-asset:media:2",
+          "ordinal": 2,
+          "state": "public",
+          "websiteUrl": "/media/manuals/4b0067443f8e2e35eecd.png",
+          "publicSha256": "4b0067443f8e2e35eecd0b750037789e07903a75a6ae7eee0cabd7d5e487832f",
+          "utilityId": "doc:ai-data-asset-guide:body-utility:9"
+        }
+      ],
       "cover": {
         "websiteUrl": "/media/covers/works/ai-data-asset-20261101.webp",
         "sha256": "2852dabbb6b0cac9d0a7425157126928729d79d6b5069f81a627df0089a1d495"
@@ -1528,7 +1545,16 @@
       "githubCreatedAt": "2025-08-25",
       "order": 6,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "work:simple-input-simulator:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/a21b56b12c7d808fb6a1.png",
+          "publicSha256": "a21b56b12c7d808fb6a1e95c9617a6492d3d1b44e44266cffd477ef0fee5a5cc",
+          "utilityId": "doc:simple-input-simulator-guide:body-utility:5"
+        }
+      ],
       "cover": {
         "websiteUrl": "/media/covers/works/simple-input-simulator-20261101.webp",
         "sha256": "0f151b2f5f54c936afe4962d833469692cdb83f0d1673194ecb0f8ef1ef0d6b6"
@@ -1648,7 +1674,16 @@
       "githubCreatedAt": "2025-09-20",
       "order": 7,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "work:simple-asset-cleaner:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/2935892db54825e4d3a0.png",
+          "publicSha256": "2935892db54825e4d3a0aa060d6a6f51ea35288ec27c7dd4f1a24bf7e48aacf2",
+          "utilityId": "doc:simple-asset-cleaner-guide:body-utility:11"
+        }
+      ],
       "cover": {
         "websiteUrl": "/media/covers/works/simple-asset-cleaner-20261101.webp",
         "sha256": "3cc31d5502d75f8a29d78d66e03aa980c33c1cd7cfa92a9677c0a7a4b9249676"
@@ -1688,7 +1723,16 @@
       "githubCreatedAt": "2025-05-26",
       "order": 3,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "work:simple-udp:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/f6d246d6dd2934e4c5a1.png",
+          "publicSha256": "f6d246d6dd2934e4c5a1e287fb09c262c37834a6212cf5f2253944d0c607a01b",
+          "utilityId": "doc:simple-udp-guide:body-utility:16"
+        }
+      ],
       "cover": {
         "websiteUrl": "/media/covers/works/simple-udp-20261101.webp",
         "sha256": "257e57f94c775974532f67a821fa033ca73df0671914c04bd5c70201b87995e0"
@@ -1708,7 +1752,16 @@
       "githubCreatedAt": "2025-07-05",
       "order": 4,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "work:simple-tcp-client:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/1e59fed236ce1e5311be.jpg",
+          "publicSha256": "1e59fed236ce1e5311be8fe42aeb1c73fad42e3e43e6bf1c898ac945f37a7c56",
+          "utilityId": "doc:simple-tcp-client-guide:body-utility:14"
+        }
+      ],
       "cover": {
         "websiteUrl": "/media/covers/works/simple-tcp-client-20261101.webp",
         "sha256": "4a07c5a2e595660fce5254757122ff0573fa4fb9630ee57d8467f82809c70869"
@@ -1728,7 +1781,16 @@
       "githubCreatedAt": "2025-07-19",
       "order": 5,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "work:simple-tcp-server:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/e7cdf97f5f530a684eee.png",
+          "publicSha256": "e7cdf97f5f530a684eee9f23deaa22a4b192ef225feaf19a602eafe88309b77e",
+          "utilityId": "doc:simple-tcp-server-guide:body-utility:13"
+        }
+      ],
       "cover": {
         "websiteUrl": "/media/covers/works/simple-tcp-server-20261101.webp",
         "sha256": "0e89d9f879c7dd866c6a8973b605a008b678af8c01cfdbf5fad0c249fafc14b7"
@@ -1748,7 +1810,16 @@
       "githubCreatedAt": "2025-05-19",
       "order": 2,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "work:simple-websocket:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/f401abc666a871474666.png",
+          "publicSha256": "f401abc666a8714746661032ea5b092659608edcf7d0a1841a50d1d7978caed0",
+          "utilityId": "doc:simple-websocket-guide:body-utility:4"
+        }
+      ],
       "cover": {
         "websiteUrl": "/media/covers/works/simple-websocket-20261101.webp",
         "sha256": "5ece119b48818a30745259d74f0e4f491777ef8a7eb9e47d7c22ad39e6b974d7"
@@ -1768,7 +1839,24 @@
       "githubCreatedAt": "2025-09-25",
       "order": 8,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "work:simple-auto-enum:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/3d090d75a9e55abf44ac.png",
+          "publicSha256": "3d090d75a9e55abf44acfff94521023fbd0ee3f6182ef019bb51271efe8c4bce",
+          "utilityId": "doc:simple-auto-enum-guide:body-utility:12"
+        },
+        {
+          "id": "work:simple-auto-enum:media:2",
+          "ordinal": 2,
+          "state": "public",
+          "websiteUrl": "/media/manuals/5fcf5aea851c7ef15880.png",
+          "publicSha256": "5fcf5aea851c7ef1588025a7bc971785a59fe3d5ac9117e400a263d665bcffb9",
+          "utilityId": "doc:simple-auto-enum-guide:body-utility:13"
+        }
+      ],
       "cover": {
         "websiteUrl": "/media/covers/works/simple-auto-enum-20261101.webp",
         "sha256": "3216e5a0ed617c90acfa2b4f75db7454cfd95d1e848eb3b6cd42d575ef201094"

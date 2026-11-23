@@ -51,7 +51,7 @@ translationKey: simple-input-simulator
 
 SimpleInputSimulator 为 UE 蓝图提供按键和轴输入模拟节点，让游戏逻辑沿已有输入链路接收指定操作。
 
-它可以模拟键盘、鼠标和手柄按键的按下与抬起，也能模拟鼠标移动、摇杆等轴值，并提供清理按下状态的入口。
+它可以模拟键盘、鼠标和手柄按键的按下与释放，也能模拟鼠标移动和摇杆轴值。测试结束后可以清除按下状态。
 
 ## 背景与目标
 
@@ -63,7 +63,7 @@ SimpleInputSimulator 为 UE 蓝图提供按键和轴输入模拟节点，让游�
 
 ### 按键事件模拟
 
-支持键盘、鼠标和手柄的按下与抬起事件，可用于组织重复操作。按下后仍需配对释放，避免留下按住状态。
+支持键盘、鼠标和手柄的按下与释放事件，可用于组织重复操作。按下后仍需配对释放，避免留下按住状态。
 
 ### 轴输入与玩家选择
 
@@ -73,7 +73,7 @@ SimpleInputSimulator 为 UE 蓝图提供按键和轴输入模拟节点，让游�
 
 ### 状态清理
 
-提供清空按下状态的入口，方便在测试、演示或回放结束后恢复输入环境。
+测试、演示或回放结束后，可用 `Flush Pressed Keys` 清除按下状态。
 
 ## 适用场景
 
@@ -81,11 +81,19 @@ SimpleInputSimulator 为 UE 蓝图提供按键和轴输入模拟节点，让游�
 
 录制、时间调度和完整测试断言需要由上层逻辑提供。
 
+## 使用流程
+
+1. [安装插件](/zh/works/simple-input-simulator/docs/setup/)后，在蓝图的 **Simple Input Simulator** 分类下找到节点。先确认目标玩家有可用的 `PlayerController`；`PlayerIndex` 为 `0` 时指向第一个本地玩家。
+2. 以测试前进为例：项目先把 `W` 绑定到前进，再用 `Simulate Key Input` 模拟按下 `W`。将 `Pressed` 设为 `true`，延迟一秒后用 `false` 释放。
+3. 如需模拟摇杆或鼠标移动，改用 [Simulate Axis Input](/zh/works/simple-input-simulator/docs/axis-input/)。测试结束后[清理按下状态](/zh/works/simple-input-simulator/docs/reset-input-state/)。
+
+![](/media-occurrence/work%3Asimple-input-simulator%3Amedia%3A1)
+
 ## 适用范围与边界
 
 插件模拟输入事件，不保证目标动作一定发生；角色状态、输入映射和游戏阶段仍会影响结果。
 
-按下与抬起要配对，测试结束要清理状态。没有有效 PlayerController 时无法按预期注入输入，自动化流程应检查这一前提。
+按下与释放要配对，测试结束要清理状态。没有有效 PlayerController 时无法按预期注入输入，自动化流程应检查这一前提。
 
 操作步骤和参数说明见 [使用教程](/zh/works/simple-input-simulator/docs/key-input/)。
 

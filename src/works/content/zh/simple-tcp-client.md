@@ -54,7 +54,7 @@ SimpleTCPClient 在 Unreal Engine 中封装 TCP 客户端连接，提供多通�
 
 一个 UE 应用可能同时连接多个外部程序或服务。单次 Socket 连接示例能说明 TCP 收发原理，却没有覆盖多个连接的状态区分和断线后的处理。
 
-插件按通道管理客户端连接，供使用方在蓝图中观察连接状态，并按项目需要配置重试行为。
+插件按通道管理连接。你可以在蓝图中查看各通道的状态，再按项目需要设置重试。
 
 ## 核心能力
 
@@ -62,9 +62,13 @@ SimpleTCPClient 在 Unreal Engine 中封装 TCP 客户端连接，提供多通�
 
 多个 TCP 客户端通道可分别维护连接，避免不同服务的连接状态混在同一入口。项目可以据通道区分通信对象，并为各自的数据处理建立业务规则。
 
+每条通道有自己的名称、远程地址和接收上限。插件由 `GameInstanceSubsystem` 管理，切换关卡时连接不会因换图而中断。
+
 ### 异步处理与重连
 
 连接相关工作采用异步处理，并可配置断线后的自动重连间隔。重连能力用于重新建立传输通道；是否重发消息、恢复登录或同步业务状态，需要由服务协议和使用方决定。
+
+可以在项目设置中启用 **Auto Connect**，也可以从蓝图手动启动通道。`UpdateTCPClientConfig` 可新增或更新通道，Socket 重连后原有消息委托仍有效。
 
 ### 状态委托与蓝图调用
 
@@ -73,6 +77,16 @@ SimpleTCPClient 在 Unreal Engine 中封装 TCP 客户端连接，提供多通�
 ## 适用场景
 
 适用于 UE 主动连接外部 TCP 服务、同时维护多个通信目标，或需要在服务断开后按设定间隔重试的应用。项目可分别配置连接通道，并按连接状态处理各服务的业务数据。
+
+## 使用流程
+
+1. 在 **项目设置 → SimpleTCPClient Settings** 添加通道，例如 `DefaultClient`，指向本机测试服务 `127.0.0.1:8888`。
+2. 如果未启用自动连接，用 `StartConnection` 启动通道，再用 `IsConnected` 检查状态。
+3. 用 `BindMessageHandle` 接收数据，用 `SendMessage` 发送字节数组。不再使用该通道时，调用 `StopConnection` 关闭 Socket。
+
+![](/media-occurrence/work%3Asimple-tcp-client%3Amedia%3A1)
+
+[查看消息收发示例](/zh/works/simple-tcp-client/docs/messages/)
 
 ## 适用范围与边界
 

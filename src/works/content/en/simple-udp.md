@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: 56f60742bd68103ec0d3431a93aa66eed59cdf4bf45b450ce9eb796789cbb08a
+sourceHash: 05690028e0466f00e46d77a81d0e1fb2dcb289e7c5f97cc600bda3cf3239a3d6
 translationStatus: translated
-generatedBodyHash: f8b0d196f9590aeff452a0adad99987fe1feae8915c0e95386657c9c49ee753d
+generatedBodyHash: 0af7cdd6e2f9d3e63cc00245c1b3a00223cc609c3215d2f6d5e2123fec542b56
 workInfo:
   channels:
     - kind: sale
@@ -49,7 +49,7 @@ docIds:
 
 ## Overview
 
-SimpleUDP provides Blueprint-callable UDP communication for Unreal Engine projects, combining multi-channel sending and receiving, asynchronous reception, address filtering, and runtime configuration in one plugin.
+SimpleUDP lets Unreal Engine projects manage several UDP send and receive channels in Blueprint. Receive data asynchronously, filter it by source address, and update channel settings at runtime.
 
 It targets projects that maintain UDP channels for different purposes and restrict source addresses at the receiver.
 
@@ -65,6 +65,8 @@ SimpleUDP wraps those communication management requirements in Blueprint interfa
 
 Several UDP channels can be configured and managed separately, with data sent and received per channel. Reception is asynchronous, keeping data waits out of the caller's main Blueprint flow. Projects name and organize channels to match devices or business purposes.
 
+A receive channel sets the local bind address, receive size limit, and source filters. A send channel sets the destination list and send size limit, and can bind its socket to a specific local port.
+
 ### Address filtering and broadcast
 
 Receivers can filter sources through IP allowlists, blocklists, and CIDR ranges, with broadcast address support. Filtering limits network sources accepted for processing; it does not replace message identity validation or content checks.
@@ -73,9 +75,21 @@ Receivers can filter sources through IP allowlists, blocklists, and CIDR ranges,
 
 Channel parameters can change at runtime, and Blueprints call the wrapped communication operations. Projects can integrate data into their own workflows, while both ends must still agree on byte formats, field meanings, and exception handling.
 
+At runtime, use `UpdateReceiveChannelConfig` or `UpdateSendChannelConfig` to update the corresponding channel. Release the original socket before assigning its local port to another channel.
+
 ## Use cases
 
 It suits UE projects exchanging UDP data with LAN devices or external programs, requiring several independent ports or address-based filtering. Broadcast discovery and reception from multiple sources can also use channel and filter configuration to organize communication entry points.
+
+## Workflow
+
+1. Enable the plugin and add channels in **Project Settings → SimpleUDP Settings**. For example, a LAN receive channel can bind to `0.0.0.0:9000` and allow only `192.168.1.0/24`.
+2. Subscribe with `BindUDPMessageHandler`. The first binding creates the receive socket. Removing the last handler closes it.
+3. Pass a byte array to `SendUDPMessage` on a send channel. The peers agree on how to encode and parse the bytes.
+
+![](/media-occurrence/work%3Asimple-udp%3Amedia%3A1)
+
+[Configure send and receive channels](/en/works/simple-udp/docs/channels/) · [See messaging examples](/en/works/simple-udp/docs/messages/)
 
 ## Scope and limitations
 

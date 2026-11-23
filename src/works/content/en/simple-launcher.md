@@ -26,9 +26,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: 07b7d5db0e56dc3a0114a5e0c17f8e5b91d442ef05a6097326d669c26ea05a72
+sourceHash: 44d39c1ad2c48ef79c174a3bed09a1975c5c54a5d9c86b1da324809d4223999b
 translationStatus: translated
-generatedBodyHash: 4c1e304facb7786700c3424a2e0b6e41f51a32621644817744cb91e9e1778eb6
+generatedBodyHash: 6b9194a8bc85fd3eaee3f8f229f34654ab2a4b1a357ffa075c0798b2ce44569c
 workInfo:
   channels:
     - kind: sale
@@ -50,7 +50,7 @@ coverAlt: SimpleLauncher cover
 
 SimpleLauncher manages external programs through named presets in UE games. Projects configure launch commands, working directories, and execution modes for services or tools, then start, query, or stop processes by preset.
 
-Each preset supports multiple instances. Instance identifiers and exit notifications let game logic distinguish their lifecycles.
+A preset can launch several instances. Each has its own ID, so game logic can track which process exited.
 
 ## Background and goals
 
@@ -74,13 +74,23 @@ Instance-level or preset-level exit notifications can update interfaces, clean u
 
 ### Cleanup on exit
 
-Default non-detached execution cleans up managed processes when the game exits. Detached execution allows external processes to remain alive. This distinction supports different lifecycle policies for temporary helpers and independently running services.
+Default non-detached execution cleans up managed processes when the game exits. Detached execution allows external processes to remain alive. Let temporary tools close with the game, or detach a service that needs to run independently.
 
 ## Use cases
 
 It suits starting local services with a game, invoking background processors during a workflow, or launching several similar instances in parallel for tests.
 
 Exit notifications help determine whether an external task has ended. Failure retries or automatic restarts still need conditions and policies defined by project logic.
+
+## How to use it
+
+To start a local service with the game, create a `LocalServer` preset in Project Settings and enter its launch command and working directory. Leave detached mode off if the service should close with the game.
+
+1. Call `StartProcess` from Blueprint or C++ with the preset name and keep the returned process ID.
+2. Use `IsProcessRunning` to check that instance or `BindProcessExited` to listen for it exiting while the game is running.
+3. To end that instance early, call `StopProcess` with the same ID. Cleanup when the game exits does not fire exit callbacks.
+
+See [starting and managing processes](/en/works/simple-launcher/docs/processes/) for the full API walkthrough.
 
 ## Scope and limitations
 

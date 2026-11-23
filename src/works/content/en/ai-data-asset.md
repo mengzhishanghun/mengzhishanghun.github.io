@@ -23,9 +23,9 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: cff1b4f264f6d7d78d9fa8d22ad6bbf92e433df05e96b7b2716da4e3064903c8
+sourceHash: 276e532d28856d3aa64c5c619f4ee936d5a677c75a8b275281d4ebc3854a5abf
 translationStatus: translated
-generatedBodyHash: f9e2c3b15b23b7799d773bc0fffb06c2e1f54aee9f87c41df661e8c6bfe30ef0
+generatedBodyHash: 52e7a38daad696e0afb07c3a9d640e16634f7b7747cf2f2d6cb8a7e5f947122f
 workInfo:
   channels:
     - kind: sale
@@ -51,7 +51,7 @@ docIds:
 
 AIDataAsset lets AI read and modify complex DataAsset data through JSON and automatically synchronizes changes back to assets while the UE editor is running. With automatic synchronization enabled, the plugin handles export, file monitoring, and writing changes back, without requiring manual import and export each time.
 
-It supports common basic types and most structs, making it suitable for AI-assisted batch field adjustments and nested configuration changes, reducing the need to expand and fill in fields individually in the editor.
+The plugin supports common primitive types and most structs. Letting AI edit fields in batches or update nested settings saves you from opening and filling in each field in the editor.
 
 ## Background and goals
 
@@ -63,7 +63,7 @@ AIDataAsset uses JSON to connect external tools with UE assets, allowing AI to h
 
 ### DataAsset and JSON round trips
 
-Export properties from existing DataAssets to JSON, then synchronize external edits back to the assets. Field names correspond to those shown in the editor, and floating-point output accounts for round-trip precision.
+Export properties from existing DataAssets to JSON, then synchronize external edits back to the assets. Field names correspond to those shown in the editor, and floating-point output is formatted by field type. Check round-trip values against your acceptable tolerance.
 
 ### Change monitoring and synchronization control
 
@@ -78,6 +78,20 @@ Imports support undo and redo, with version control checkout and asset saving us
 When generating level configurations, adjusting character values in batches, or modifying nested structs, AI can read and edit JSON before the results are inspected and tested in UE. LLMs, reinforcement learning systems, and external tools such as Python can all participate in this data workflow.
 
 Designers can also process data centrally with tools such as Excel. For team review, JSON can be output to a directory suitable for version control so field changes can be reviewed as text diffs. The default Saved output directory usually serves only as an intermediate synchronization directory.
+
+## How to use it
+
+For a character DataAsset called `DA_Demo`, you can raise `MaxHealth` from 100 to 120 and set `CritRate` to 0.1.
+
+1. Create the DataAsset in UE and enable automatic synchronization so the plugin generates the matching JSON. The default output directory is `Saved/AIDataAsset/`.
+2. Give the AI the file path and the fields to change. Keep the existing JSON structure, including `NativeClass`, and edit only the values you need to adjust.
+3. Keep the editor running. After saving the JSON, check the values in the existing asset. If the log reports a save failure, resolve checkout or write access and then save the asset.
+
+![](/media-occurrence/work%3Aai-data-asset%3Amedia%3A1)
+
+![](/media-occurrence/work%3Aai-data-asset%3Amedia%3A2)
+
+See [editing asset data with AI](/en/works/ai-data-asset/docs/ai-edit/) for the full example.
 
 ## Scope and limitations
 

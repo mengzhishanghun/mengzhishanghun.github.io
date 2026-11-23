@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: c212a885d12fe9ab4292e5a36b7cd932081a3832851e5e2a8251b8d08baa6524
+sourceHash: b2b7b9a9b590738642fac010fb61ec36bf5686d6bd6720a46207875c9c1bdee5
 translationStatus: translated
-generatedBodyHash: 3d50d0a0f1b6555a9559393591c0e07fc3ce83be97d8e0feacd2feb20013532f
+generatedBodyHash: aeeac046f5b0bd0396581f926b853a3b24848e3462254d51ed6238504855e3bc
 workInfo:
   channels:
     - kind: sale
@@ -54,7 +54,7 @@ The plugin uses libssh2 for SSH and OpenSSL for encryption, with Blueprint nodes
 
 Launching a system SSH client from UE requires additional handling for executable paths, process management, and platform differences.
 
-SimpleSSHTunnel wraps these connection operations in the plugin so projects can call them from Blueprints.
+SimpleSSHTunnel lets you manage tunnels from Blueprint without launching an external SSH process.
 
 ## Core capabilities
 
@@ -66,6 +66,8 @@ The plugin establishes SSH tunnels without requiring projects to write libssh2 s
 
 The SSH tunnel forwards connections received on a local port to a remote service port. Forwarding targets, authentication information, and network reachability depend on the deployment environment.
 
+For example, a UE app can connect to a local listening port and let the SSH tunnel forward that connection to a remote API port. The app still exchanges data using the API’s protocol.
+
 ### Blueprint calls
 
 After configuring connection parameters in Project Settings, Blueprints can create tunnels, query their status, close a specific tunnel, or close all tunnels.
@@ -76,6 +78,14 @@ The remote service protocol and the sending, receiving, and processing of data r
 
 UE applications that access remote services in restricted networks through SSH can use this plugin to manage connections in Blueprints, then handle returned data in the project.
 
+## Workflow
+
+1. Open **Project Settings → Engine → Simple SSH Tunnel**. Set the local listen address and port, the remote target, and the SSH server details. The plugin saves the settings in `DefaultSimpleSSHTunnel.ini`.
+2. Create a named tunnel with **Create SSHTunnel**, then check its status with **Check SSHTunnel Is Running**.
+3. When you are done, use **Close SSHTunnel** to close that tunnel or **Close All SSHTunnel** to close all tunnels.
+
+[See the Blueprint node reference](/en/works/simple-ssh-tunnel/docs/manage-tunnels/)
+
 ## Scope and limitations
 
 Windows is currently supported. Check library files and build support before porting to other platforms.
@@ -83,6 +93,8 @@ Windows is currently supported. Check library files and build support before por
 The default subsystem closes all tunnels when it is destroyed. In the target project, review SSH credential storage and usage, connection threads, error handling, and whether sessions and channels are released correctly when connections close.
 
 For connection configuration, see the [user guide](/en/works/simple-ssh-tunnel/docs/connect/).
+
+When using SSH, verify the server’s identity, authentication, and local listen scope. If you replace the default **Subsystem Class**, check when the custom subsystem closes its tunnels.
 
 ## Libraries and source
 

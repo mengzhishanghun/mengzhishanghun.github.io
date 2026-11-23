@@ -27,9 +27,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: 50680e5d2ae34bba77c8bed7a3a8609c22d3722a797a634e4f97cc27d740ea9e
+sourceHash: 9388e8a7c0bd3d4de413cad5d947fc801be3a886cf644193084081c2a9d482e6
 translationStatus: translated
-generatedBodyHash: 47caedd54f6793b1cf6bf36db10c9925d84357000add343255ee11eccf14861b
+generatedBodyHash: e4493829bcd1af13f75d6eea6f5fd4794c75b5578914c517e5f9759dc4df0646
 workInfo:
   channels:
     - kind: sale
@@ -65,11 +65,11 @@ Users can choose, file by file, which configurations ship with a package, then d
 
 Each file can be Default, Allowed, or Disallowed. Default follows UE's existing behavior; Allowed and Disallowed explicitly request inclusion and exclusion respectively.
 
-The Project Settings list comes from scanning Config, making it easier to compare with actual files and check for omissions.
+The plugin builds the list by scanning `Config`. After adding or deleting INI files, click **Refresh Config List** to update it.
 
 ### Synchronizing Staging rules
 
-Configuration choices are saved as inclusion or exclusion rules used by UE packaging, with the settings state synchronized accordingly.
+Changing a file’s state updates the `[Staging]` rules in `DefaultGame.ini`. UE reads those rules when it packages the project.
 
 These changes to project configuration should still receive normal version review.
 
@@ -80,6 +80,12 @@ For ini files omitted from the base package but needed by some deployment enviro
 ## Use cases
 
 Development configuration, such as debug switches, profiling parameters, test server addresses, and development keys, can be excluded from production packages by file. Internal plugin configuration that does not need to ship can also be managed separately. When testing and production need different configuration sets, projects can first generate a base package without those files, then handle excluded items by environment and review packaging rules and deployment steps separately.
+
+## How to use it
+
+1. [Install the plugin and open its settings](/en/works/simple-config-exclude/docs/setup/). Find `Config/DefaultDebugSettings.ini` and set it to **Disallowed**.
+2. Package the project and check the output directory to confirm the debug configuration was left out.
+3. If the test environment still needs the file, set the destination and [copy the excluded files](/en/works/simple-config-exclude/docs/copy-excluded/). **Clean Config Before Copy** is on by default. It deletes the destination’s `ProjectName/Config/` directory before copying the files marked **Disallowed**. Turn off cleaning first if the destination contains files you want to keep.
 
 ## Scope and limitations
 

@@ -28,9 +28,9 @@ docIds:
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: fc12ea16929096aa406a6e5d5248c0b1bc8b0173b1b0292978b61ce4f15ca33e
+sourceHash: 6b25ee1e1b040573d08cbdf7f625c93dca74d1371771c349e105c8d5995b1d01
 translationStatus: translated
-generatedBodyHash: df66e77ccf04b257a310ce8d75fa0f4a7ec503952e8561536af2e60c23f62aa2
+generatedBodyHash: f580cea95346d6ba4a4bb47cf7104fbae151ac7aa5b5479a61f4f55677ec932d
 workInfo:
   channels:
     - kind: sale
@@ -50,7 +50,7 @@ coverAlt: SimpleAssetCleaner cover
 
 ## Overview
 
-SimpleAssetCleaner checks candidate unreferenced assets in Unreal Engine projects through reference relationships. It traces direct and indirect references from configured root assets, handles candidate files during submission, and provides cleanup for the whole version-controlled project.
+SimpleAssetCleaner follows direct and indirect references from selected root assets to find potentially unused assets in an Unreal Engine project. You can handle newly added candidates at submission time or scan the entire version-controlled project.
 
 Results depend on root and protected path settings, so it should be used alongside project asset management rules.
 
@@ -66,6 +66,8 @@ The tool starts from resources the project considers important to form an inspec
 
 The tool traces reference chains from project-defined root assets and protected directories, then lists assets outside that coverage as candidates. Configure the retention scope to match actual project usage.
 
+Maps (`UWorld`) are the default roots. Add asset types in `Root Asset Classes`, name individual assets in `Custom Root Assets`, or protect whole folders in `Additional Root Paths`. The cleaner preserves project assets reachable through direct or indirect references from the roots.
+
 ### Handling candidates during submission
 
 With automatic cleanup enabled, the plugin checks newly added version-controlled assets during submission. New files considered unreferenced are reverted from the submission list while local files remain, allowing developers to inspect them before deciding what to keep.
@@ -78,11 +80,23 @@ Full cleanup scans version-controlled assets, with results available in logs. Un
 
 Detailed logs help review processing and candidate scope during initial configuration.
 
+To check a smaller set, right-click selected assets or folders in the Content Browser and review the candidates in the dialog. Like full cleanup, this action can delete tracked unreferenced assets. It reverts newly added assets and keeps their local copies.
+
 ## Use cases
 
 It suits teams managing UE asset accumulation, checking test resources during routine submissions, or reviewing historical resources during maintenance.
 
 With many asset directories or indirect references, defining roots and protected paths first helps avoid decisions based only on directory names.
+
+## Workflow
+
+1. Enable the plugin and restart the editor. In source control settings, select the provider your project uses. The plugin wraps it automatically; leave entries ending in `_Proxy` unselected.
+2. Check the root assets and protected folders. For example, if a map references a material and the material references a texture, the cleaner keeps both. Cleanup is limited to assets in the project’s `/Content/` (`/Game/`). Plugin assets, engine assets, and C++ files are outside its scope.
+3. Try it on a test branch first and turn on `Enable Verbose Logging` to inspect candidates and reference chains. During submission, you can also review untracked dependencies and confirm which files to add. This is separate from cleaning up unreferenced assets.
+
+![](/media-occurrence/work%3Asimple-asset-cleaner%3Amedia%3A1)
+
+[See how to check dependencies](/en/works/simple-asset-cleaner/docs/add-dependencies/)
 
 ## Scope and limitations
 

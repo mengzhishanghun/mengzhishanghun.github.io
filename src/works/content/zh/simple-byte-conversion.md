@@ -64,7 +64,7 @@ SimpleByteConversion 为 UE 蓝图提供常用数据到字节数组、结构体�
 
 提供 int32、int64、float、double、bool 和 FString 的 ToBytes / FromBytes 成对接口。基础数值按其内存表示写入字节数组，字符串使用 UTF-8。
 
-可用于发送前编码，或在收到同格式数据后还原。
+发送前将值转成字节，接收端用对应的节点还原同一类型。
 
 ### 结构体二进制转换
 
@@ -76,13 +76,19 @@ StructToBytes 与 BytesToStruct 面向自定义结构体。蓝图接口通过泛
 
 StructToJsonString 与 JsonStringToStruct 在结构体和可读文本之间转换。
 
-JSON 更适合与 Python 等外部程序交换或查看字段；插件也处理字段名和浮点数输出中的转换问题，方便识别和核查文本结果。
+要让 Python 等外部程序读取字段，或需要直接查看内容，可以选 JSON。插件会处理字段名和浮点数的输出格式，实际字段与数值仍需核对。
 
 ## 适用场景
 
 可用于 UE 项目在 UDP/TCP 通信前整理待发送数据，或在文件存储前把结构化状态转换为字节。
 
 与外部程序交互时，可选 JSON 来核对字段；这些示例中的网络连接和文件读写应由其他模块完成。
+
+## 使用流程
+
+假设蓝图要交给网络模块一个 `int32` 的分数。在发送端，用对应的 ToBytes 节点生成字节数组；接收端按双方约定的数据格式取出这部分字节，再用对应的 FromBytes 节点还原 `int32`。
+
+如果要交换多个字段，可改用[结构体与 JSON 节点](/zh/works/simple-byte-conversion/docs/struct-and-json/)。先用 `Struct To JsonString` 导出一份样例，核对字段和值；需要读回时，将 JSON 交给 `JsonString To Struct`，并使用匹配的结构体类型。节点位于蓝图中的 [`SimpleByteConversion` 分类](/zh/works/simple-byte-conversion/docs/setup/)。
 
 ## 适用范围与边界
 

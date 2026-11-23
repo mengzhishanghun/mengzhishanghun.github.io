@@ -25,8 +25,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-behavior-tree
-sourceHash: 8c6da0f14643d901c5cbd229221f370400211f6f8b827137ab17fc9001193194
-generatedBodyHash: 3434a73c538d8e0d5c338ebaf362507d852cb143028cd665864425514ba49c96
+sourceHash: dea2e86c5c7ebf7eb677edd7e1b13b03ece0dea1fd320fbdc34e94334d048e91
+generatedBodyHash: 7faf0ca6a1c56d06946d2f036f8ff470aba8db70216b7cda0d258965f5900c5f
 translationStatus: translated
 coverAlt: MCPBehaviorTree cover
 websiteCoverUrl: /media/covers/works/mcp-behavior-tree-20261101.webp
@@ -38,12 +38,26 @@ docIds:
 
 ## About this work
 
-MCPBehaviorTree is an Unreal Editor MCP plugin in development, providing tool interfaces for Behavior Tree and Blackboard assets. Features and compatibility are still being verified.
+MCPBehaviorTree is an Unreal Editor MCP plugin in development. External AI tools can use it to create and inspect Behavior Trees and Blackboards, edit tree structures and manage keys, and validate Behavior Trees before saving. The available operations and diagnostics may change.
 
 ## Development direction
 
-The project focuses on Behavior Tree and Blackboard assets, connecting external AI tools to related Unreal Editor workflows through MCP. The scope of operations and feedback capabilities may change as development continues.
+### Tree structure and nodes
+
+Inspect the node hierarchy, root-level decorators, Blackboard, and subtree references. Use node IDs to locate and edit composites, tasks, decorators, and services. When editing the background subtree of a `SimpleParallel` node, specify its `Background` output pin. [Editing Behavior Trees](/en/works/mcp-behavior-tree/docs/edit-tree/)
+
+### Blackboards and key bindings
+
+Create a Blackboard, associate it with a Behavior Tree, and add or remove keys. Before removing a key, the tool scans the project’s Behavior Trees. If it finds references or cannot finish the scan, it rejects the removal by default. Set `bForce=true` only if you accept that risk. Validation reports invalid key bindings, structural errors, missing classes, invalid decorator abort modes, and disconnected nodes. [Blackboard keys](/en/works/mcp-behavior-tree/docs/blackboard-keys/)
+
+## Workflow
+
+To set up an enemy AI Behavior Tree, follow the [connection guide](/en/works/mcp-behavior-tree/docs/connect-and-inspect/) to connect to the editor, then create a Blackboard with the keys you need. Create a Behavior Tree that references it, put a composite under `Root`, and add tasks, decorators, and services. Check the nodes and properties with `GetBehaviorTreeDetail`. Run `ValidateBehaviorTree`, address reported issues, and call `SaveAsset` separately for each changed Behavior Tree or Blackboard. Changes stay in memory until you explicitly save them.
 
 ## Development status
 
-The project is in development. See the [MCPBehaviorTree user guide](/en/works/mcp-behavior-tree/docs/connect-and-inspect/) for usage instructions. Work on UE 5.2–5.8 versions is ongoing; compatibility is to be confirmed and does not imply that all versions have been tested.
+Work on UE 5.2–5.8 is ongoing. Compatibility remains unconfirmed, and testing across those versions is incomplete. [MCPBehaviorTree user guide](/en/works/mcp-behavior-tree/docs/connect-and-inspect/)
+
+## Support
+
+Send feedback to [mzsh.me@icloud.com](mailto:mzsh.me@icloud.com).
