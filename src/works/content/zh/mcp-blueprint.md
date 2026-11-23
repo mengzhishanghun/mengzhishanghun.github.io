@@ -9,7 +9,6 @@ categoryOrder: 0
 order: 18
 status: 在售
 workInfo:
-  supportHref: /contact/#support-title
   channels:
     - kind: sale
       href: https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713

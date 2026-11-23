@@ -6149,9 +6149,9 @@
     },
     {
       "path": "en/works/mcp-blueprint/index.html",
-      "size": 45349,
-      "gitBlob": "8fa558237d7d36455950331125cceb9fa2d708c2",
-      "sha256": "5b6fad9ca8734e76a2139cf6f6be9fb1ae246b73d36a25da5daf960949838693",
+      "size": 45271,
+      "gitBlob": "fb1a10a4c88ae705da9aef26b45a68f99ab9d7da",
+      "sha256": "7de93494ccf676e88368c576a36129ee3422992e1e65e4bca021cf16e7e648f4",
       "target": "both"
     },
     {
@@ -13303,9 +13303,9 @@
     },
     {
       "path": "zh/works/mcp-blueprint/index.html",
-      "size": 44800,
-      "gitBlob": "01340cf83963b63cce8b774488457d50c44f895d",
-      "sha256": "ab2d92f0d6ee7cb1ad28e789f8c9520ebfef4b8ee8654dbba2cb0fdf8e6358e8",
+      "size": 44730,
+      "gitBlob": "2b4d785b2f5308cb00af8c96be996c637416cc13",
+      "sha256": "2ec1bb2e55445e8063d0ecc9b5a4135c737d21b11030f488c5ae0432eb6e7f56",
       "target": "both"
     },
     {

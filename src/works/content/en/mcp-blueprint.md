@@ -9,7 +9,6 @@ categoryOrder: 0
 order: 18
 status: On sale
 workInfo:
-  supportHref: /contact/#support-title
   channels:
     - kind: sale
       href: https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713
@@ -30,7 +29,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-blueprint
-sourceHash: 885d56715fe916be451b07bbfc9862c4ff4889f4526cd81b6334ef4eb545206f
+sourceHash: fa96328b8f839123f7e23b042054a0f73db799ca4a2931dc78242dca4582ec14
 generatedBodyHash: 4bcc2623bb6a4590dbf2fe0b1221eb3544f940d41283b4985df42b7af69baf3d
 translationStatus: translated
 coverAlt: MCPBlueprint cover
