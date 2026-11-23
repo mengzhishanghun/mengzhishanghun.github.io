@@ -10,7 +10,6 @@ order: 16
 status: In development
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels:
     - kind: docs
       href: /en/works/mcp-animation/docs/connect/
@@ -26,7 +25,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-animation
-sourceHash: 908035b32934da03660f7f77607c36539cfbe913146dc64b1f368b554bd204ec
+sourceHash: ba1846e903192617e73c34beeac37290e2a3343163c81affb726be6e1bb2019b
 generatedBodyHash: 1ac26c1acf9c19aabdd016b317e30c2b28bea4a06f193e4f1ecfab803884a14e
 translationStatus: translated
 coverAlt: MCPAnimation cover

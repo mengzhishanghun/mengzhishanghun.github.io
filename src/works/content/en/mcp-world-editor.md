@@ -10,7 +10,6 @@ order: 24
 status: In development
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels:
     - kind: docs
       href: /en/works/mcp-world-editor/docs/connect/
@@ -26,7 +25,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-world-editor
-sourceHash: 8a4c753ec0fed84b1bfb8ee49afa65414137ede6cf1c3e63b5e8bcb61f72570d
+sourceHash: 8cad997f660ce312e4cae0178e2aebbce7e76890c96c13af7c0c3ec704abb5a4
 generatedBodyHash: b4fddab90d44baaaa2acf6b9bfa464ad36bfa96c1f2f5b09a9ac3bbcf0916205
 translationStatus: translated
 coverAlt: MCPWorldEditor cover

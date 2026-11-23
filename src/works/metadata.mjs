@@ -28,14 +28,18 @@ export function renderWorkMetadata(html,data,labels){
   const doc=parseFragment(html,{sourceCodeLocationInfo:true}),edits=[];let title,actions;
   walk(doc,node=>{const classes=(attrs(node).class||'').split(/\s+/);if(classes.includes('project-title-group'))title=node;if(classes.includes('work-actions'))actions=node;});
   if(!title||!actions)throw new Error('作品信息插槽缺失');
+  if(typeof data.description==='string')walk(doc,node=>{
+    const a=attrs(node),loc=node.sourceCodeLocation;if(!loc)return;
+    if((a.class||'').split(/\s+/).includes('project-description')&&loc.endTag)edits.push([loc.startTag.endOffset,loc.endTag.startOffset,escapeHTML(data.description)]);
+    if(node.tagName==='meta'&&['description','og:description','twitter:description'].includes(a.name||a.property)&&loc.attrs?.content)edits.push([loc.attrs.content.startOffset,loc.attrs.content.endOffset,'content="'+escapeHTML(data.description)+'"']);
+  });
   let heading;walk(title,node=>{if(node.tagName==='h1')heading=node;});
   if(!heading)throw new Error('作品标题缺失');
   const badges=renderWorkBadges(data,labels);
   const h=heading.sourceCodeLocation;
   edits.push([h.startOffset,h.endOffset,'<div class="work-title-line">'+html.slice(h.startOffset,h.endOffset)+badges+'</div>']);
-  const support=info.supportHref?'<a class="work-action work-action-primary" href="'+escapeHTML(info.supportHref)+'">'+escapeHTML(labels.supportAction)+'</a>':'';
   const missing=!info.channels.some(c=>c.kind==='docs')?'<button type="button" class="work-action work-action-unavailable" disabled>'+escapeHTML(labels.noDocs)+'</button>':'';
-  const buttons=support+info.channels.map((c,index)=>'<a class="work-action'+(index===0&&!support?' work-action-primary':'')+'" href="'+escapeHTML(c.href)+'"'+(c.href.startsWith('https:')?' target="_blank" rel="noopener noreferrer"':'')+'>'+escapeHTML(labels[c.kind==='sale'?'saleAction':c.kind==='open-source'?'sourceAction':'docsAction'])+'</a>').join('')+missing;
+  const buttons=info.channels.map((c,index)=>'<a class="work-action'+(index===0?' work-action-primary':'')+'" href="'+escapeHTML(c.href)+'"'+(c.href.startsWith('https:')?' target="_blank" rel="noopener noreferrer"':'')+'>'+escapeHTML(labels[c.kind==='sale'?'saleAction':c.kind==='open-source'?'sourceAction':'docsAction'])+'</a>').join('')+missing;
   // Keep unclassified source links as neutral legacy entries, never as open-source claims.
   const neutral=[];walk(actions,node=>{if(node.tagName==='a' && /^https:\/\/github\.com\//.test(attrs(node).href||'') && !info.channels.some(c=>c.href===attrs(node).href)){const loc=node.sourceCodeLocation;neutral.push(html.slice(loc.startOffset,loc.endOffset));}});
   const rows=(info.compatibility.length?info.compatibility:[{platforms:[],requirements:[]}]).map(group=>'<div class="work-compatibility-group"><p><span class="work-compatibility-label">'+escapeHTML(labels.platforms)+'：</span>'+escapeHTML(group.platforms.join(' / ')||labels.pending)+'</p><p><span class="work-compatibility-label">'+escapeHTML(labels.requirements)+'：</span>'+escapeHTML(group.requirements.join(' / ')||labels.pending)+'</p></div>').join('');

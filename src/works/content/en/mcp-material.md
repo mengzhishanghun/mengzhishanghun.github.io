@@ -10,7 +10,6 @@ order: 21
 status: In development
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels:
     - kind: docs
       href: /en/works/mcp-material/docs/connect/
@@ -26,7 +25,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-material
-sourceHash: 4b116c5f140275ff5944808c62f75caec2e3e40dd2885320ca6e6ae1b87d4c65
+sourceHash: a64911c8fa3f37d4e0131342d24ec6f88df3d54b38ccf622d9f1dc51ff49aa1a
 generatedBodyHash: 769d2575e1b748d23cb5e2d15ef08453af25d0b78e8b53756c5a56326b394e43
 translationStatus: translated
 coverAlt: MCPMaterial cover

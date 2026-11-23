@@ -499,11 +499,6 @@ export async function buildSite(options) {
   const documents=documentCatalog(validated.entries,manifest.docGroups,codes);
   const documentAnchorAliases=new Map(entries.map(entry=>[entry.id,projectDocumentAnchorAliases(entry,{entries,codes,route:localeRoute})]));
   const documentRedirects=new Map(redirects.filter(alias=>entries.some(entry=>entry.docPage&&entry.id===alias.id)).map(alias=>[alias.route,alias]));
-  let profile=null;
-  if(entries.some(entry=>entry.id==='page:about')){
-    profile=JSON.parse(fs.readFileSync(regularPath(options.sourceRoot || path.join(site,'src'),'about/profile.json'),'utf8'));
-    if(Object.keys(profile).length!==1||!Number.isInteger(profile.birthYear)||profile.birthYear<1||profile.birthYear>9999)throw new Error('关于我出生年配置无效');
-  }
   config.shareAliases=redirects.map(alias=>alias.route);
   config.documentRedirects=documentRedirects;
   const resources = !options.templateRoot?loadResources({site}):new Map(), files=new Map(), rendered = new Map();
@@ -568,7 +563,6 @@ export async function buildSite(options) {
     html=filterPublicationHTML(html,publication);
     if(entry.id==='page:works-index')html=renderWorkCardStatuses(html,entries,locale,copy[locale].workLabels);
     if(entry.type==='work')html=renderWorkMetadata(html,entry.sources[locale].data,copy[locale].workLabels);
-    if(entry.id==='page:about')html=html.replaceAll('{{profile:birthYear}}',String(profile.birthYear));
     html=html.replace('{{body}}',()=>result.code).replace('{{outline}}',()=>outline(result.headings));
     if (/\{\{(?:text|body|outline|profile)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
     const anchors = Object.fromEntries(pageCodes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));

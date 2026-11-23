@@ -10,7 +10,6 @@ order: 0
 status: In development
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels: []
   compatibility:
     - platforms:
@@ -24,7 +23,7 @@ tags:
   - Background tasks
 lang: en
 translationKey: shaniu
-sourceHash: 2ebc01d7561eedcb89bd3f2c2b6dc00f10a95b393f6c6b2ca36dc6364c6dcacd
+sourceHash: e108200f55f87e9c7d74f165911e460eb5c2f16d57a11ffe513130c7be6d5b84
 generatedBodyHash: af5786d5fbe44966d76e2729296e7700dbc62e03da87a0ce470b2d548c3a31eb
 translationStatus: translated
 coverAlt: ShaNiu cover

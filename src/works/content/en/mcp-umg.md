@@ -10,7 +10,6 @@ order: 23
 status: In development
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels:
     - kind: docs
       href: /en/works/mcp-umg/docs/connect/
@@ -26,7 +25,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: 085b8e25f28524fef8e1484fdbe1dc7229277a62a49fea26550fbd0f8cf96696
+sourceHash: 6538ad99b8da3ea273490cdfc9807800acd06a1a14350584931c9529194b1f01
 generatedBodyHash: 09595aafb2929da73f571f50023f875dc391380fbc5d731a0d47d021e391317e
 translationStatus: translated
 coverAlt: MCPUMG cover

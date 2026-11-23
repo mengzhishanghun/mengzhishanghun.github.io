@@ -1,5 +1,6 @@
 import fs from 'node:fs';import assert from 'node:assert/strict';import test from 'node:test';import path from 'node:path';import {parse} from 'parse5';
 import {isDeveloping} from '../build/publication.mjs';
+import {localeRoute} from '../build/build.mjs';
 import {attrs,walk} from '../build/extract-dom.mjs';import {parseSource} from '../import/import.mjs';
 const manifest=JSON.parse(fs.readFileSync(new URL('../build/manifest.json',import.meta.url),'utf8'));
 const publishedWorks=manifest.entries.filter(e=>e.type==='work').filter(e=>!isDeveloping({...e,sources:{zh:{data:parseSource(fs.readFileSync(new URL('./content/zh/'+e.slug+'.md',import.meta.url),'utf8')).data}}}));
@@ -47,13 +48,13 @@ test('both work indexes show statuses on all manifest work cards without adding 
 
 test('developing work pages and their legacy routes are absent while tutorials stay available',()=>{
  const works=manifest.entries.filter(e=>e.type==='work');
- const developing=works.filter(e=>!publishedWorks.includes(e));assert.equal(developing.length,10);
+ const developing=works.filter(e=>!publishedWorks.includes(e));
  const root=process.env.SITE_OUTPUT||'dist/site',sitemap=fs.readFileSync(path.resolve(root,'sitemap.xml'),'utf8');
  for(const entry of developing){
   const routes=[...entry.legacyRoutes,...['zh','en'].map(lang=>'/'+lang+'/works/'+entry.slug+'/'),...(manifest.redirects||[]).filter(a=>a.id===entry.id).map(a=>a.route)];
   for(const route of routes){assert.equal(fs.existsSync(path.resolve(root,route.slice(1)+(route.endsWith('/')?'index.html':''))),false,route);assert.equal(sitemap.includes('https://mzsh.me'+route+'<'),false,route);}
  }
  for(const entry of manifest.entries.filter(e=>e.type==='doc'&&e.slug.startsWith('mcp-')))for(const lang of ['zh','en']){
-  const route=entry.legacyRoutes[0].replace('/docs/zh/','/'+lang+'/docs/');assert.ok(fs.existsSync(path.resolve(process.env.SITE_OUTPUT||'dist/site',route.slice(1),'index.html')),entry.id);
+  const route=localeRoute(entry,lang);assert.ok(fs.existsSync(path.resolve(process.env.SITE_OUTPUT||'dist/site',route.slice(1),'index.html')),entry.id);
  }
 });

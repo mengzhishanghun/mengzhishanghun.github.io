@@ -10,7 +10,6 @@ order: 20
 status: In development
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels:
     - kind: docs
       href: /en/works/mcp-level-sequence/docs/connect/
@@ -26,7 +25,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-level-sequence
-sourceHash: 42ddc1ca806f5cd48f41a340d2581ef36c56841c1a2532fab6b1b1d6a69cb84f
+sourceHash: c15d74dc5b96638fc91df644a66004820fa2fb78028d528bf707aa0faf870907
 generatedBodyHash: fb4054b916db4cf559976075285edb719d4749a57f1af356ac1a22cf92c7c5d7
 translationStatus: translated
 coverAlt: MCPLevelSequence cover

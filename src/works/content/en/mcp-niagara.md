@@ -10,7 +10,6 @@ order: 22
 status: In development
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels:
     - kind: docs
       href: /en/works/mcp-niagara/docs/inspect/
@@ -26,7 +25,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-niagara
-sourceHash: be4edc4e27bd2cc1ce80c5516742e29c552c48acdd9455405c7def407bae188f
+sourceHash: 5ab6b4794a55572077ce0c5be493449965f78ce1b9acf724b77c0802f5f7915f
 generatedBodyHash: 5bebcac372514b72e19fc066502ad6a330170fe1ce008580a211977538b5e1d1
 translationStatus: translated
 coverAlt: MCPNiagara cover

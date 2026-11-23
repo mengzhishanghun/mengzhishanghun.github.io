@@ -27,6 +27,19 @@ test('metadata renderer supports sale, source, both, grouped compatibility and l
  }
 });
 
+test('work introduction and sharing descriptions follow the source while retaining the display title',async()=>{
+ const {renderWorkMetadata}=await import('./metadata.mjs');
+ const {parseFragment}=await import('parse5');const {walk,attrs}=await import('../build/extract-dom.mjs');
+ const labels={saleAction:'Buy',sourceAction:'Source',docsAction:'Documentation',platforms:'Platforms',requirements:'Requirements',pending:'Pending'};
+ const html='<meta name="description" content="Old development description"><meta property="og:description" content="Old development description"><meta name="twitter:description" content="Old development description"><div class="project-title-group"><h1>Display title</h1></div><p class="project-description">Old development description</p><nav class="work-actions"></nav>';
+ const description='Released tool <with> "current" features & documentation';
+ const result=renderWorkMetadata(html,{description,workInfo:info},labels),doc=parseFragment(result),descriptions=[];
+ walk(doc,node=>{const a=attrs(node);if(node.tagName==='meta')descriptions.push(a.content);if(a.class==='project-description')descriptions.push(node.childNodes.map(c=>c.value||'').join(''));});
+ assert.deepEqual(descriptions,[description,description,description,description]);
+ assert.match(result,/<h1>Display title<\/h1>/);
+ assert.match(renderWorkMetadata(html,{workInfo:info},labels),/Old development description/);
+});
+
 test('work cards show only verified sale and source badges beside their titles',async()=>{
  const {renderWorkCardStatuses}=await import('./metadata.mjs');
  const {parseFragment}=await import('parse5');const {walk,attrs}=await import('../build/extract-dom.mjs');
@@ -41,16 +54,16 @@ test('work cards show only verified sale and source badges beside their titles',
  assert.equal(renderWorkCardStatuses(html,[{type:'work',slug:'example',sources:{zh:{data:{}}}}],'zh',labels),html);
 });
 
-test('developing works retain lifecycle, safe support and noninteractive missing documentation',async()=>{
+test('developing works retain lifecycle and missing documentation without retired support metadata',async()=>{
  const {renderWorkMetadata,renderWorkBadges}=await import('./metadata.mjs');
- const workInfo={stage:'developing',supportHref:'/contact/#support-title',channels:[],compatibility:[]};
+ const workInfo={stage:'developing',channels:[],compatibility:[]};
  assert.doesNotThrow(()=>assertPublicFields({workInfo}));
- for(const supportHref of ['javascript:alert(1)','//evil.test','/../secret','https://user:password@example.com'])assert.throws(()=>assertPublicFields({workInfo:{...workInfo,supportHref}}),/workInfo/);
+ assert.throws(()=>assertPublicFields({workInfo:{...workInfo,supportHref:'/contact/#support-title'}}),/workInfo/);
  assert.throws(()=>assertPublicFields({workInfo:{...workInfo,stage:'released'}}),/workInfo/);
- const labels={developing:'开发中',supportAction:'去支持',noDocs:'暂无相关文档',pending:'待核实',platforms:'适用平台',requirements:'环境要求'};
+ const labels={developing:'开发中',noDocs:'暂无相关文档',pending:'待核实',platforms:'适用平台',requirements:'环境要求'};
  const result=renderWorkMetadata('<div class="project-title-group"><h1>Example</h1></div><nav class="work-actions"></nav>',{workInfo},labels);
  assert.match(renderWorkBadges({workInfo},labels),/开发中/);
- assert.match(result,/<a class="work-action work-action-primary" href="\/contact\/#support-title">去支持<\/a>/);
+ assert.doesNotMatch(result,/contact|support/);
  assert.match(result,/<button type="button" class="work-action work-action-unavailable" disabled>暂无相关文档<\/button>/);
  assert.doesNotMatch(result,/href="[^"]*docs|work-status-open-source|work-status-sale/);
 });

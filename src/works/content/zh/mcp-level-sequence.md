@@ -10,7 +10,6 @@ order: 20
 status: 开发中
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels:
     - kind: docs
       href: /zh/works/mcp-level-sequence/docs/connect/

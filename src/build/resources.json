@@ -446,7 +446,7 @@
       "outputs": [
         "assets/docs-theme.js"
       ],
-      "sha256": "905c37e703e33727b65f53eee2691873928e0df4c26922d06d5b0dd78260492a",
+      "sha256": "63760e3c06760dd95887e8e40e36a18320e708de6dbd33081a3713a8c22282e7",
       "mode": "authored"
     },
     {
@@ -974,7 +974,7 @@
       "outputs": [
         "assets/reading-area.css"
       ],
-      "sha256": "6aea61c9b9490c1e0dadd3454f969117813475518fd813a49fe087210c3e0d8f",
+      "sha256": "c74678174573b71dff4b62e423b83e1bc2a54ba6f4ad960b99e93965adf39785",
       "mode": "authored"
     },
     {
@@ -992,6 +992,14 @@
       ],
       "sha256": "69f5e6d793d536a6db8a5740f5d3f559dab3cc7c738b417a36a896f757799d8a",
       "mode": "authored"
+    },
+    {
+      "source": "src/shared/compat/assets/site-ui/i18n/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.17c442c3800a.js",
+      "outputs": [
+        "assets/site-ui/i18n/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.17c442c3800a.js"
+      ],
+      "sha256": "17c442c3800afbe048ea453e46362fde3f2c893551a26c9771864db965262926",
+      "mode": "frozen"
     },
     {
       "source": "src/shared/compat/assets/site-ui/i18n/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.808367167b06.js",

@@ -10,7 +10,6 @@ order: 0
 status: 开发中
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels: []
   compatibility:
     - platforms:

@@ -10,7 +10,6 @@ order: 19
 status: In development
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels:
     - kind: docs
       href: /en/works/mcp-dev-tools/docs/connect/
@@ -27,7 +26,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-dev-tools
-sourceHash: 1a23d50f568595de5216efc26ed8e7222d7f37cddf5aef312399aa92110abc90
+sourceHash: 87c5e36ea05f2570b83d5f76bc232be3d9924540e66b63969e60869db7b1b7e7
 generatedBodyHash: 299c3b4bd8d30c194caaeca1f2969da4f89ed9104ff4a5b745031bd539140770
 translationStatus: translated
 coverAlt: MCPDevTools cover

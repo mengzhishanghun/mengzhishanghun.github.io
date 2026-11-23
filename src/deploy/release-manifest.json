@@ -549,9 +549,9 @@
     },
     {
       "path": "assets/docs-theme.js",
-      "size": 828,
-      "gitBlob": "cef066b5f96fb3c67c2f41b74078898cdc52a22d",
-      "sha256": "905c37e703e33727b65f53eee2691873928e0df4c26922d06d5b0dd78260492a",
+      "size": 236,
+      "gitBlob": "8292732a9432e6b902d5da659831414c9b5c96ff",
+      "sha256": "63760e3c06760dd95887e8e40e36a18320e708de6dbd33081a3713a8c22282e7",
       "target": "both"
     },
     {
@@ -1011,9 +1011,9 @@
     },
     {
       "path": "assets/reading-area.css",
-      "size": 6652,
-      "gitBlob": "fb4142adf2e561b1aa7b3aec2ffb3f4143dcfa7c",
-      "sha256": "c71e725e5a5a078b4ce719a889018adaf6a5fbd526351b1f0a0b02fb7123bed0",
+      "size": 6569,
+      "gitBlob": "b3d858c14f59d97251537066cba6d770a95564a9",
+      "sha256": "c74678174573b71dff4b62e423b83e1bc2a54ba6f4ad960b99e93965adf39785",
       "target": "both"
     },
     {
@@ -1056,6 +1056,13 @@
       "size": 16782,
       "gitBlob": "22cfa525ce702bd6f75ea27415f247be9c6f479c",
       "sha256": "17c442c3800afbe048ea453e46362fde3f2c893551a26c9771864db965262926",
+      "target": "both"
+    },
+    {
+      "path": "assets/site-ui/i18n/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.79a2113e0b69.js",
+      "size": 15334,
+      "gitBlob": "6f8491ebb491625164302b65563b4a54fcc0494a",
+      "sha256": "79a2113e0b69af1d0750fd8f47c4e0bfb7ef03ecad596f42a423fb5adf45141c",
       "target": "both"
     },
     {
@@ -5408,8 +5415,8 @@
     {
       "path": "en/blog/index.html",
       "size": 324948,
-      "gitBlob": "68306e91faf5e68b8b3031716d117654d5694512",
-      "sha256": "3a060adbb0f911d5c04e122579664137821b6701604eb76368d70eedd1779ef2",
+      "gitBlob": "402cd7e63e9fb5b7b41b44b3dc3bc271dcf91882",
+      "sha256": "b7900859a4a67452d9bf19c92b28286d60575400965afeaaadbb779d896b21f3",
       "target": "both"
     },
     {
@@ -5618,8 +5625,8 @@
     {
       "path": "en/cases/index.html",
       "size": 116568,
-      "gitBlob": "74e73f7d0a847f7aea61e1cca1cb55c7e946afda",
-      "sha256": "1ec39cce760933aa36999e27bc30d8ce1a9f29ac3a4eb531913557b3458ddd4e",
+      "gitBlob": "babe05aa30523b95dccf66c2311635db7d0d14af",
+      "sha256": "012511d8d3c65b200b4ae2e84548f0fd311a0684981b4d4a993f446600749f3e",
       "target": "both"
     },
     {
@@ -5989,8 +5996,8 @@
     {
       "path": "en/works/index.html",
       "size": 158462,
-      "gitBlob": "3e70e18173748875ddb78b187662ca19fc1e4610",
-      "sha256": "6bb7826b1a9499609617c41ba85fd56eb96c46872c151db1bee1d12faafae265",
+      "gitBlob": "c6c1cbccb624863e6bb37f10404c67f339adab60",
+      "sha256": "d6f8a557065fd8c25cb16f6bdd5470a5e4b2f867c8da1ef347f52eb069052201",
       "target": "both"
     },
     {
@@ -6149,9 +6156,9 @@
     },
     {
       "path": "en/works/mcp-blueprint/index.html",
-      "size": 45271,
-      "gitBlob": "fb1a10a4c88ae705da9aef26b45a68f99ab9d7da",
-      "sha256": "7de93494ccf676e88368c576a36129ee3422992e1e65e4bca021cf16e7e648f4",
+      "size": 45106,
+      "gitBlob": "a6327ce8b8246ccd8d3b2e42574783cff2563035",
+      "sha256": "0555316a2d242bb31ecb9007795e5c9ce3452a267911dfda5a9a8e65445b66c5",
       "target": "both"
     },
     {
@@ -6660,9 +6667,9 @@
     },
     {
       "path": "en/works/md-blog-packer/index.html",
-      "size": 48473,
-      "gitBlob": "4c7954aedb58cec4af9a16c9c9e3165c3c045432",
-      "sha256": "5f73f6b08cb03fcc666f29758792b751920624b4151a00623fcb9bf8e09bdfb7",
+      "size": 48513,
+      "gitBlob": "1fcd177af2c8273d86c96104f97595ee52579d6f",
+      "sha256": "4b3b9c7d6b880dddaaaab732f458495a2fb85c253dde0e14e75a5d4be046e9ba",
       "target": "both"
     },
     {
@@ -6772,9 +6779,9 @@
     },
     {
       "path": "en/works/plugin-auto-packer/index.html",
-      "size": 48092,
-      "gitBlob": "c3a20626b8fac541ab723f2526286a23629ba978",
-      "sha256": "82346f5cca4a01337b229567aa929012b41b60470560d2f26fef20f797fb3238",
+      "size": 48109,
+      "gitBlob": "65e4e9c0a85424f4de1f6bed5baba1847d239d41",
+      "sha256": "da4e31758e3f873de5577f659eab4e9366aa3c5831a839f294e576a24804b800",
       "target": "both"
     },
     {
@@ -6807,9 +6814,9 @@
     },
     {
       "path": "en/works/plugin-manager/index.html",
-      "size": 47722,
-      "gitBlob": "38a0ac56e9001da578ec024c77efb36be32e5a4a",
-      "sha256": "00334002f05d63cc535f9529191d17bdf74fd1cfcc4e955d152f4c4e99544fe3",
+      "size": 47765,
+      "gitBlob": "33c9f5242cf3cd02d3dbc89cec09b3c07eae0e0e",
+      "sha256": "a5642a64da34797668f3824bb3f4b0d9d35a35347ffd0b0c42483a8619576d87",
       "target": "both"
     },
     {
@@ -7115,9 +7122,9 @@
     },
     {
       "path": "en/works/simple-ssh-tunnel/index.html",
-      "size": 47924,
-      "gitBlob": "640e30d1f25c02d42489137debdb5ac3df3e6fd7",
-      "sha256": "146e3b13bbbf870e7187bcc4826bcf85843deca97f8cb337f595648dc81f90bf",
+      "size": 47846,
+      "gitBlob": "70e0ae870d9de72c70b06b69ea8a41ca8358e37a",
+      "sha256": "ee382e0fa2957a55bc2a832149cff8e94ea0b6c770027c1e8ed2dec587a66606",
       "target": "both"
     },
     {
@@ -7325,9 +7332,9 @@
     },
     {
       "path": "en/works/ue-package-manager/index.html",
-      "size": 49243,
-      "gitBlob": "4cd1d16650fae3b1aba605ef5622edbde3b2bd9c",
-      "sha256": "21c93134bee08e1a8a4cb96d9c043b300f5a69fac12ce0d6ca4c3da1a182c1b0",
+      "size": 49265,
+      "gitBlob": "5fa2caaf7477a7adccd97e6dbed1c3d0fe8ba7f7",
+      "sha256": "d2d8b23c4b249ced5286b3810e07756d563cead4b978631c1b9cda8de938abcb",
       "target": "both"
     },
     {
@@ -7353,9 +7360,9 @@
     },
     {
       "path": "en/works/ue-quick-start/index.html",
-      "size": 47247,
-      "gitBlob": "75da76c53f5ca414df430b75d528bfb96bd15b43",
-      "sha256": "ce609efb112dc36471a93594670eabfb9f7dc7689c5ac5654cb2a78615734455",
+      "size": 47330,
+      "gitBlob": "419ec572617a9639317f8baaf7f8f0c99584f3d7",
+      "sha256": "88e977a412b6d9a49f20778b29026d6c96db9bbdcf61083a49277bea8ed2b85b",
       "target": "both"
     },
     {
@@ -12548,8 +12555,8 @@
     {
       "path": "zh/blog/index.html",
       "size": 303940,
-      "gitBlob": "c54ff9054a622eeffcfc4957179f4c701637bf3a",
-      "sha256": "43558a4d99bef3d4d4f91c77cfe6a1329bd9591e2b416cf5aebfd220f33ba074",
+      "gitBlob": "16a5860d6e5f87739559ca8c8809b660e47c0c75",
+      "sha256": "f32a2ea8941d55b175ea0b82d24588fa29ec11a8476d6e578ab907246aee5a86",
       "target": "both"
     },
     {
@@ -12772,8 +12779,8 @@
     {
       "path": "zh/cases/index.html",
       "size": 107373,
-      "gitBlob": "c3441560b24a36811d6d5f7821d70d9eb0773b36",
-      "sha256": "b7bcdfa808873a33fe828ef5546dd75e437bbd13e9bed45282c98019506d05fa",
+      "gitBlob": "498f48deac973d382cce071a83ac6279d11fc491",
+      "sha256": "64119bb9cc03e12deee0f23a9c4ae2b4cae69c017d871d48045b52c9fde9915f",
       "target": "both"
     },
     {
@@ -13143,8 +13150,8 @@
     {
       "path": "zh/works/index.html",
       "size": 146066,
-      "gitBlob": "221aaf4df58297644b9f9fa88f1cbf1981f12472",
-      "sha256": "3c97650da0d8e4dc6ca546bbb6a347113dce7dad38c40b4ddcb60b15cd524d46",
+      "gitBlob": "a0dc448bbb1a7feb81915df03978d0b8404cd9a3",
+      "sha256": "8c9b31ff5d8d30c8a6d3efbc39f90b22ec1f44e34c5215fadbd692e854436342",
       "target": "both"
     },
     {
@@ -13303,9 +13310,9 @@
     },
     {
       "path": "zh/works/mcp-blueprint/index.html",
-      "size": 44730,
-      "gitBlob": "2b4d785b2f5308cb00af8c96be996c637416cc13",
-      "sha256": "2ec1bb2e55445e8063d0ecc9b5a4135c737d21b11030f488c5ae0432eb6e7f56",
+      "size": 44613,
+      "gitBlob": "3e006b17faa52bedd8b9cfec3c39b638ef3c6910",
+      "sha256": "5e2c496a99452779ca9de4665fd396d72269fe0ac2cbe1a1bc49785711ca57ba",
       "target": "both"
     },
     {
@@ -13814,9 +13821,9 @@
     },
     {
       "path": "zh/works/md-blog-packer/index.html",
-      "size": 47762,
-      "gitBlob": "77f5b79c65936917915ebf7f1309954692c29299",
-      "sha256": "8baf82217f1536b652909adf0f5c8fb02b79fab3bec6ca353d3f654a1a0b7e7f",
+      "size": 47790,
+      "gitBlob": "cffc9135d0c90c0123938a96e0fee10566c9f92b",
+      "sha256": "8d41c0c7d576e075250d3725d85c756e8562926d98c2c19e110f4aca103df1b5",
       "target": "both"
     },
     {
@@ -13926,9 +13933,9 @@
     },
     {
       "path": "zh/works/plugin-auto-packer/index.html",
-      "size": 47619,
-      "gitBlob": "23614a9eb459216c1fb19e9b5ef032f9a77db34f",
-      "sha256": "6c1da3080604a5c72c9a996cbe228f0792d9bc722c08d60460439da9f2597a20",
+      "size": 47629,
+      "gitBlob": "e0101e80124548c44b3b676a147853e38eacb45f",
+      "sha256": "76e2ef7c66804550832c7da07ba47c7203a63df67826ddfba938a492bc9a9b32",
       "target": "both"
     },
     {
@@ -13961,9 +13968,9 @@
     },
     {
       "path": "zh/works/plugin-manager/index.html",
-      "size": 46817,
-      "gitBlob": "1812008bd9fe8d3a19e51af33e5f8dfc01e1d101",
-      "sha256": "54f1005b953f44f147566896b605c518d846d20a176572b1b2c71bb1262276be",
+      "size": 46860,
+      "gitBlob": "9c7732dd6123b20fe41c1d2f11e804e1fd8837e3",
+      "sha256": "9c2533966026d61a19b7b38ca493a7b3b32a3ea3e51602a7992ddb868524f572",
       "target": "both"
     },
     {
@@ -14269,9 +14276,9 @@
     },
     {
       "path": "zh/works/simple-ssh-tunnel/index.html",
-      "size": 47331,
-      "gitBlob": "32b9dc64eb8ddf2895aed42bddea51d9cbbc9732",
-      "sha256": "4e574c1dc1fe0496a926c608fa70a47a01b509b5c36d861c8624e59c7aed7d3f",
+      "size": 47282,
+      "gitBlob": "118a38facc933c48d11bd074fa363e2250e0a50b",
+      "sha256": "4e17a4f57095242b51c4d1bacc323b00188142c47110acb99f14e6d452e9c338",
       "target": "both"
     },
     {
@@ -14479,9 +14486,9 @@
     },
     {
       "path": "zh/works/ue-package-manager/index.html",
-      "size": 48452,
-      "gitBlob": "e5709cd8e48fa26c74d5add1cfabaaea5f67258e",
-      "sha256": "347d3d924d72e5f08bb2ca868f309b97edd2245f731fa34a7f64145537291c88",
+      "size": 48458,
+      "gitBlob": "051793dbdc541ca8e92a1a7f7da30191b8182d69",
+      "sha256": "b1f9af64bc5ebbb9dcd7eb855ec568c920eca5040092d501c7c42966092535b9",
       "target": "both"
     },
     {
@@ -14507,9 +14514,9 @@
     },
     {
       "path": "zh/works/ue-quick-start/index.html",
-      "size": 46662,
-      "gitBlob": "d81f6a70dfd3b7e549b8dc798930a432ccb0d6db",
-      "sha256": "9d9eb6e7733f820d2a6289c4a64682b6d66617c7992b02faeac223f1a8c8620b",
+      "size": 46730,
+      "gitBlob": "0d6dcb6e007d5fa13151ba18d62b497847c2f6b2",
+      "sha256": "4063c2f039cc6deb2027220978a9731d771e3de7c43f5c020bad9721f1a8b9a0",
       "target": "both"
     }
   ]

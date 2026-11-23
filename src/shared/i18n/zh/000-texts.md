@@ -8629,7 +8629,6 @@ workLabels:
   requirements: 环境要求
   pending: 待核实
   developing: 开发中
-  supportAction: 去支持
   noDocs: 暂无相关文档
 ---
 

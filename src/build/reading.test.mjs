@@ -3,14 +3,14 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import vm from 'node:vm';
 import {generatedPage,toolbarGeometry} from './interaction-fixtures.mjs';
-function reading(mobile=false,restored=false,{height=800,docs=false}={}) {
-  const fixture=generatedPage(docs?'zh/docs/tools/ue-quick-start/index.html':undefined);
+function reading(mobile=false,restored=false,{height=800}={}) {
+  const fixture=generatedPage();
   const actualToolbar=fixture.select('mobile-outline');
   const readerNode=fixture.select('mzsh-reading');
   const actualFrame=fixture.closest(readerNode,'.main-frame, .site-chrome-main');
   assert.ok(actualFrame);assert.ok(fixture.select('.article-outline a'));
   assert.ok(actualToolbar);
-  const toolbarHeight=toolbarGeometry(docs);
+  const toolbarHeight=toolbarGeometry();
   const queue=new Map();let next=0,Reading;
   class Element extends EventTarget { attrs={};style={setProperty(){}};isConnected=true;setAttribute(k,v){this.attrs[k]=v;}removeAttribute(k){delete this.attrs[k];}focus(){this.focused=true;} }
   const frame=new Element();frame.scrollTop=restored?180:0;frame.clientHeight=height;frame.getBoundingClientRect=()=>({top:100,height});frame.scrollTo=({top})=>{frame.scrollTop=top;};
@@ -41,6 +41,6 @@ test('hash traversal preserves the matching restored viewport instead of jumping
 
 for(const [name,options,mobile,want] of [
   ['phone with visible toolbar',{height:800},true,334],
-  ['half-height docs with visible toolbar',{height:400,docs:true},true,334],
-  ['tall docs with hidden toolbar',{height:1200,docs:true},false,376]
+  ['half-height reader with visible toolbar',{height:400},true,334],
+  ['tall reader with hidden toolbar',{height:1200},false,376]
 ])test(name+' positions the heading using generated toolbar geometry',()=>{const x=reading(mobile,false,options);x.click(0);x.flush();assert.equal(x.frame.scrollTop,want);});

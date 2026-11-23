@@ -10,7 +10,6 @@ order: 17
 status: In development
 workInfo:
   stage: developing
-  supportHref: /contact/#support-title
   channels:
     - kind: docs
       href: /en/works/mcp-behavior-tree/docs/connect-and-inspect/
@@ -26,7 +25,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-behavior-tree
-sourceHash: 68355fd22a3f83df5eeec3c30ddf4f3bc4a0342a7fd8d2877e1bab4c2a785aa1
+sourceHash: 8c6da0f14643d901c5cbd229221f370400211f6f8b827137ab17fc9001193194
 generatedBodyHash: 3434a73c538d8e0d5c338ebaf362507d852cb143028cd665864425514ba49c96
 translationStatus: translated
 coverAlt: MCPBehaviorTree cover

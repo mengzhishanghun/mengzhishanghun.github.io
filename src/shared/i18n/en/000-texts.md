@@ -8634,7 +8634,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: "786e72016664068c81874199af548f76009243bd67786f459abd3c5c6bc71426"
+sourceHash: "c6c53dc942d93afebaca4dc49dd0fb6f6fc14652650db7620fa91dd802703fdc"
 translationStatus: translated
 generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
 workLabels:
@@ -8647,7 +8647,6 @@ workLabels:
   requirements: Requirements
   pending: To be verified
   developing: In development
-  supportAction: Support this work
   noDocs: No documentation available
 ---
 
