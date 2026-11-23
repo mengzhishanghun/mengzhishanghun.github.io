@@ -10,7 +10,8 @@
 }
 
 .site-chrome .header-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   align-items: center;
   gap: 24px;
 }
@@ -18,11 +19,39 @@
   display: flex;
   align-items: center;
   gap: clamp(12px, 1.8vw, 28px);
-  margin-left: auto;
+  justify-self: center;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
 }
-.site-chrome .main-nav > a { white-space: nowrap; }
+.site-chrome .main-nav > a {
+  white-space: nowrap;
+  color: var(--muted);
+  font-weight: 400;
+}
+.site-chrome .main-nav > a:hover,
+.site-chrome .main-nav > a[aria-current="page"] {
+  color: var(--blue);
+}
+.site-chrome .main-nav > a[aria-current="page"]::after {
+  width: 26px;
+  left: calc(50% - 13px);
+  right: auto;
+  bottom: 0;
+}
 .site-chrome .header-actions { flex: 0 0 auto; min-width: 0; }
-@media (width <= 720px) {
+.site-chrome .site-header .site-language-switch {
+  border: 0;
+  padding-left: 0;
+}
+.site-chrome .site-header .site-language-switch select[data-site-language-select] {
+  border: 0;
+  color: var(--muted);
+  background-color: transparent;
+}
+@media (width <= 960px) {
+  .site-chrome { --site-chrome-header-height: 60px; }
   .site-chrome .header-inner {
     display: grid;
     grid-template-columns: minmax(0, 1fr) auto auto;
@@ -45,6 +74,7 @@
     width: 100%;
     box-sizing: border-box;
     margin: 0;
+    justify-self: stretch;
     padding: 12px 16px;
     border-bottom: 1px solid var(--line);
     background: var(--bg);
@@ -54,6 +84,7 @@
   .site-chrome .main-nav.is-open { display: grid; grid-template-columns: 1fr; gap: 0; }
   .site-chrome .main-nav > a,
   .site-chrome .main-nav > a[aria-current="page"] { justify-self: stretch; align-self: stretch; width: 100%; box-sizing: border-box; justify-content: flex-start; align-items: center; min-height: 44px; padding: 10px 12px; border: 0; }
+  .site-chrome .main-nav > a[aria-current="page"] { background: color-mix(in srgb, var(--blue) 10%, transparent); }
   .site-chrome .main-nav > a::after,
   .site-chrome .main-nav > a[aria-current="page"]::after { content: none; display: none; }
 }
