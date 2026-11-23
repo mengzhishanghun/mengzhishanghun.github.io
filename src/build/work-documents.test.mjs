@@ -112,7 +112,8 @@ test('chapter chrome reuses the existing works header, menu, skip and footer',()
     const chapterTemplate=fs.readFileSync(new URL('docs/templates/document.html',root),'utf8');
     const slots={toc:'Contents',previous:'Previous',next:'Next',works:'Works',documents:'Documentation',backToWork:'Back'};
     const layout=documentLayout(first,locale,entries,documentCatalog(entries,groups,codes),localeRoute);
-    const rendered=documents.renderDocumentSlots(chapterTemplate,layout,first.sources[locale].data,slots,copy.shellSlots['page:works-index'],files,{outline:'<li id="outline-sample">Sample</li>',bodyHasTitle:false});
+    const rendered=documents.renderDocumentSlots(chapterTemplate,layout,first.sources[locale].data,slots,copy.shellSlots['page:works-index'],files,{outline:'<li id="outline-sample">Sample</li>',bodyHasTitle:false,body:'<h2>Heading</h2><p><img src="/image.png" alt="Image"></p><p>Plain <code>command</code> <strong>&amp; clear.</strong></p>'});
+    assert.match(rendered,/<meta name="description" content="Plain command &amp; clear\.">/);
     const tags={};walk(parse(rendered),node=>{const a=attrs(node);if(node.tagName==='header'&&a.class==='site-header')tags.header=node;if(node.tagName==='footer'&&a.class==='site-footer')tags.footer=node;if(a['data-menu-toggle']!==undefined)tags.menu=node;if(node.tagName==='main')tags.main=node;if(a.id==='outline-sample')tags.outline=node;if(a.rel==='next')tags.next=node;});
     assert.doesNotMatch(rendered,/\{\{doc:/);assert.ok(tags.header&&tags.footer&&tags.menu&&tags.outline&&tags.next);
     assert.equal(attrs(tags.header)['data-astro-transition-persist'],'site-header');

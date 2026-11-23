@@ -1,6 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
 import {preflight} from './build.mjs';import {generatedPage} from './interaction-fixtures.mjs';
 import {projectBlogTopics} from '../blog/topics.mjs';
+import {projectPublication} from './publication.mjs';
 const site=new URL('../../',import.meta.url).pathname.replace(/^\/([A-Z]:)/,'$1'),manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url)));
 const checked=()=>preflight({site,manifest});
 test('verified blog projection supplies reviewed topics and retains source search vocabulary',()=>{
@@ -11,7 +12,7 @@ test('verified blog projection supplies reviewed topics and retains source searc
 test('blog JSON and card labels share the projected topic labels',()=>{
   for(const locale of ['zh','en']){
     const index=generatedPage(`${locale}/blog/index.html`),node=index.select('[data-content-index-data]'),records=JSON.parse(node.childNodes.map(n=>n.value||'').join(''));
-    assert.equal(records.length,48);for(const record of records){assert.ok(record.tags.length>=1&&record.tags.length<=2);const card=index.select(`[data-slug="${record.slug}"]`),legacy=index.attrs(card)['data-content-legacy-tags'];assert.ok(legacy);assert.ok(Array.isArray(JSON.parse(legacy)));const container=index.nodes.find(n=>index.matches(n,'.content-card-tags')&&index.closest(n,'[data-content-card]')===card),text=n=>n.nodeName==='#text'?n.value:(n.childNodes || []).map(text).join('');assert.deepEqual(container.childNodes.filter(n=>n.tagName).map(text),record.tags);}
+    assert.deepEqual(records.map(r=>r.id).sort(),projectPublication({...checked(),site,redirects:manifest.redirects}).entries.filter(e=>e.type==='blog').map(e=>e.id).sort());for(const record of records){assert.ok(record.tags.length>=1&&record.tags.length<=2);const card=index.select(`[data-slug="${record.slug}"]`),legacy=index.attrs(card)['data-content-legacy-tags'];assert.ok(legacy);assert.ok(Array.isArray(JSON.parse(legacy)));const container=index.nodes.find(n=>index.matches(n,'.content-card-tags')&&index.closest(n,'[data-content-card]')===card),text=n=>n.nodeName==='#text'?n.value:(n.childNodes || []).map(text).join('');assert.deepEqual(container.childNodes.filter(n=>n.tagName).map(text),record.tags);}
     assert.equal(new Set(records.flatMap(r=>r.tags)).size,12);
     assert.equal(index.attrs(index.select('[data-content-index]'))['data-content-tags-display'],'all');
     for(const route of ['works','cases']){const other=generatedPage(`${locale}/${route}/index.html`);assert.equal(other.attrs(other.select('[data-content-index]'))['data-content-tags-display'],'all');}

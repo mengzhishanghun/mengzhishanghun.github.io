@@ -1,17 +1,20 @@
 import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import vm from 'node:vm';
 import {generatedPage} from './interaction-fixtures.mjs';
-function runtime(docs=false,list=false,options={}) {
-  const fixture=generatedPage((options.locale || 'zh')+'/'+(docs?'docs/tools/ue-quick-start/index.html':'blog/cnblogs-19136316/index.html'));
+import {localeRoute,preflight} from './build.mjs';
+import {projectPublication} from './publication.mjs';
+import {fileURLToPath} from 'node:url';
+function runtime(hardDocument=false,list=false,options={}) {
+  const fixture=generatedPage((options.locale || 'zh')+'/blog/cnblogs-19136316/index.html');
   // The real generated DOM decides which of the production container selectors matches.
-  assert.ok(fixture.select(docs?'.site-chrome-docs .main-frame':'.site-chrome-main'));
+  assert.ok(fixture.select('.site-chrome-main'));
   const queue=new Map(),writes=[],microtasks=[],states=new Map(),replacements=[];let next=0,identity=0;let location=new URL(options.url || 'https://mzsh.me/a/?keep=yes#start');
   const setURL=url=>{location=new URL(url,location);location.replace=url=>replacements.push(new URL(url,location).href);};setURL(location.href);
   const stateKey=()=>JSON.stringify([history.state?.index,location.pathname+location.search+location.hash]);
   const remember=()=>states.set(stateKey(),structuredClone(history.state));
   class Target extends EventTarget { counts=new Map();addEventListener(name,fn,opts){super.addEventListener(name,fn,opts);this.counts.set(name,(this.counts.get(name)||0)+1);opts?.signal?.addEventListener('abort',()=>this.counts.set(name,this.counts.get(name)-1),{once:true});} }
   const makeFrame=(domURL=location.href)=>{const frame=new Target();let top=0;const index={dataset:{ready:'false'},isConnected:true},hasList=options.listPath?new URL(domURL,location).pathname===options.listPath:list;frame.index=index;frame.querySelector=()=>hasList?index:null;Object.defineProperty(frame,'scrollTop',{get:()=>top,set:value=>{top=hasList&&index.dataset.ready!=='true'?Math.min(value,100):value;}});frame.scrollTop=0;frame.isConnected=true;return frame;};let current=makeFrame();
-  const makeLinks=()=>['a.article-back','a.outline-mobile-back'].map(selector=>{const node=fixture.select(selector),owner=current,attributes={...fixture.attrs(node)},link=new Target();link.isConnected=true;link.childNodes=(node.childNodes||[]).map(n=>({nodeType:n.nodeName==='#text'?3:1,nodeValue:n.value||'',tagName:n.tagName?.toUpperCase()}));link.getAttribute=name=>attributes[name]??null;link.setAttribute=(name,value)=>attributes[name]=value;link.removeAttribute=name=>delete attributes[name];link.hasAttribute=name=>Object.hasOwn(attributes,name);link.closest=s=>s.split(',').some(s=>fixture.matches(node,s.trim()))?link:null;Object.defineProperty(link,'href',{get:()=>new URL(attributes.href,location).href});Object.defineProperty(link,'textContent',{get:()=>link.childNodes.map(n=>n.nodeValue||'').join('')});link.owner=owner;return link;});let links=makeLinks();
-  const document=new Target();document.querySelector=selector=>selector==='meta[name="astro-view-transitions-enabled"]'?(docs?null:{}):fixture.select(selector)?current:null;document.querySelectorAll=()=>links;
+  const makeLinks=()=>['a.article-back','a.outline-mobile-back'].map(selector=>{const node=fixture.select(selector),owner=current,attributes={...fixture.attrs(node)},link=new Target();if(hardDocument)attributes.href='/zh/works/ue-quick-start/';link.isConnected=true;link.childNodes=(node.childNodes||[]).map(n=>({nodeType:n.nodeName==='#text'?3:1,nodeValue:n.value||'',tagName:n.tagName?.toUpperCase()}));link.getAttribute=name=>attributes[name]??null;link.setAttribute=(name,value)=>attributes[name]=value;link.removeAttribute=name=>delete attributes[name];link.hasAttribute=name=>Object.hasOwn(attributes,name);link.closest=s=>s.split(',').some(s=>fixture.matches(node,s.trim()))?link:null;Object.defineProperty(link,'href',{get:()=>new URL(attributes.href,location).href});Object.defineProperty(link,'textContent',{get:()=>link.childNodes.map(n=>n.nodeValue||'').join('')});link.owner=owner;return link;});let links=makeLinks();
+  const document=new Target();document.querySelector=selector=>selector==='meta[name="astro-view-transitions-enabled"]'?(hardDocument?null:{}):fixture.select(selector)?current:null;document.querySelectorAll=()=>links;
   const storage=options.storage||new Map();
   const window=new Target();Object.defineProperty(window,'sessionStorage',{get(){if(options.storageDisabled)throw Error('disabled');return {getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value),removeItem:key=>storage.delete(key)};}});window.SiteCopy={...fixture.copy,'viewport:return-previous':fixture.copy['viewport:return-previous'] || (options.locale==='en'?'Back':'返回')};window.crypto={randomUUID:()=>`entry-${++identity}`};if(options.navigation)window.navigation=options.navigation;
   const history={state:{index:0,keep:'preserved',...options.state},backCalls:0,back(){this.backCalls++;},pushState(state,_title,url){if(this.failPush)throw Error('native push failure');remember();if(Number.isFinite(state?.index))for(const [key,value]of states)if(value.index>=state.index)states.delete(key);this.state=structuredClone(state);if(url)setURL(url);remember();},replaceState(state,_title,url){this.state=structuredClone(state);writes.push({url:location.pathname+location.search+location.hash,state:structuredClone(state)});if(url)setURL(url);remember();}};
@@ -80,10 +83,10 @@ test('fallback cancellation clears restoration intent and restores the default h
  const storage=new Map(),list=runtime(false,false,{storage,url:'https://mzsh.me/zh/blog/?page=3'});list.scroll(900);list.flush();const detail=runtime(false,false,{storage,url:'https://mzsh.me/zh/work/'});detail.links[0].setAttribute('href','/zh/blog/');detail.click();assert.match(detail.links[0].href,/page=3/);const pending=detail.prepare();pending.abort();assert.equal(detail.links[0].getAttribute('href'),'/zh/blog/');assert.equal([...storage.keys()].some(key=>key.includes('intent')),false);detail.click();assert.match(detail.links[0].href,/page=3/);
 });
 test('static desktop, mobile and document return controls use the same bilingual label and aria',()=>{
- const entries=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url),'utf8')).entries.filter(entry=>['blog','work','case','doc'].includes(entry.type));
+ const manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url),'utf8')),site=fileURLToPath(new URL('../../',import.meta.url));
+ const entries=projectPublication({...preflight({manifest,site}),site,redirects:manifest.redirects}).entries.filter(entry=>['blog','work','case','doc'].includes(entry.type));
  for(const locale of ['zh','en'])for(const entry of entries){
-  const route=entry.legacyRoutes[0].replace(/^\/docs\/(?:zh|en)\//,'/docs/').replace(/^\//,'').replace(/\/$/,'');
-  const f=generatedPage(locale+'/'+route+'/index.html'),label=locale==='zh'?'返回':'Back';for(const selector of ['a.article-back','a.outline-mobile-back']){const node=f.select(selector);assert.ok(node);assert.equal(node.childNodes.filter(n=>n.nodeName==='#text').map(n=>n.value).join('').trim(),label);assert.equal(f.attrs(node)['aria-label'],label);}
+  const f=generatedPage(localeRoute(entry,locale).slice(1)+'index.html'),label=locale==='zh'?'返回':'Back';for(const selector of entry.docPage?['a.work-doc-back']:['a.article-back','a.outline-mobile-back']){const node=f.select(selector);assert.ok(node,entry.id);assert.equal(node.childNodes.filter(n=>n.nodeName==='#text').map(n=>n.value).join('').trim(),label);if(!entry.docPage)assert.equal(f.attrs(node)['aria-label'],label);else assert.ok(f.attrs(node).href.startsWith('/'+locale+'/works/'));}
  }
 });
 

@@ -4,18 +4,34 @@ import {createRequire} from 'node:module';
 import {attrs,walk,extractTemplate,applyEdits} from './extract-dom.mjs';
 import {hash,boundedPath} from './build.mjs';
 import {resourcePath} from './resources.mjs';
+import {mediaInfo} from '../import/project-media.mjs';
 const require=createRequire(new URL('../../package.json',import.meta.url));
 const {parse}=require('parse5');
+export function mediaDimensions(entries,resources){
+  const dimensions=new Map();
+  for(const url of new Set(entries.flatMap(entry=>(entry.mediaOccurrences||[]).filter(item=>item.state==='public').map(item=>item.websiteUrl)))){
+    const bytes=resources.get(url.slice(1));if(!bytes)continue;
+    try{
+      // 早期少数 .png 网址实际承载 JPEG；读取签名，保留原网址。
+      const info=mediaInfo(bytes,bytes[0]===255&&bytes[1]===216?'.jpg':path.posix.extname(url));
+      if(info.kind==='image')dimensions.set(url,info);
+    }catch{ /* 尺寸是可选增强；原有权限和哈希校验仍由 mapMedia 执行。 */ }
+  }
+  return dimensions;
+}
 // 在翻译、卡片排序和正文投影完成后统一补足图片入口。
-export function projectImageViewers(html,locale) {
-  const doc=parse(html,{sourceCodeLocationInfo:true}),edits=[];
+export function projectImageViewers(html,locale,dimensions=new Map()) {
+  const doc=parse(html,{sourceCodeLocationInfo:true}),edits=[],processed=new Set();
   const classes=node=>(attrs(node).class || '').split(/\s+/);
   const closest=(node,test)=>{for(let p=node;p;p=p.parentNode)if(test(p))return p;};
   const text=node=>node.nodeName==='#text'?node.value:(node.childNodes||[]).map(text).join('');
   const heading=node=>{let title;walk(node,n=>{if(!title&&/^h[1-6]$/.test(n.tagName||''))title=n;});return title;};
   const escape=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const label=alt=>(locale==='en'?'View image: ':'放大查看图片：')+alt;
-  const trigger=(src,alt)=>` data-astro-reload data-media-image data-media-src="${escape(src)}" data-media-alt="${escape(alt)}" aria-label="${escape(label(alt))}" href="${escape(src)}"`;
+  const trigger=(src,alt)=>{
+    const size=dimensions.get(src);
+    return ` data-astro-reload data-media-image data-media-src="${escape(src)}" data-media-alt="${escape(alt)}" aria-label="${escape(label(alt))}" href="${escape(src)}"`+(size?` data-media-width="${size.width}" data-media-height="${size.height}"`:'');
+  };
   const replaceTag=(node,tag,omit=[],extra='')=>{
     const loc=node.sourceCodeLocation;
     const attributes=(node.attrs||[]).filter(a=>!omit.includes(a.name)).map(a=>` ${a.name}="${escape(a.value)}"`).join('');
@@ -30,9 +46,13 @@ export function projectImageViewers(html,locale) {
     // 导航卡片的封面沿用整卡跳转，不与正文配图共用放大入口。
     if(closest(image,n=>classes(n).includes('content-card')||Object.hasOwn(attrs(n),'data-feature-panel')))return;
     const existing=closest(image,n=>n.tagName==='a'&&attrs(n)['data-media-image']!==undefined);
-    if(existing)return;
     const scope=closest(image,n=>['article','section'].includes(n.tagName));
-    const title=scope&&heading(scope),alt=a.alt?.trim()||(title&&text(title).trim())||(locale==='en'?'Image':'图片');
+    const title=scope&&heading(scope),alt=a.alt?.trim()||(existing&&attrs(existing)['data-media-alt']?.trim())||(title&&text(title).trim())||(locale==='en'?'Image':'图片');
+    if(existing){
+      if(processed.has(existing))return;processed.add(existing);
+      const target=attrs(existing)['data-media-src']||attrs(existing).href||a.src;
+      replaceTag(existing,'a',['href','aria-label','data-astro-reload','data-media-image','data-media-src','data-media-alt','data-media-width','data-media-height'],trigger(target,alt));return;
+    }
     const link=closest(image,n=>n.tagName==='a');
     if(link) {
       if(attrs(link).href===a.src&&!Object.hasOwn(attrs(link),'download'))replaceTag(link,'a',['href','aria-label'],trigger(a.src,alt));

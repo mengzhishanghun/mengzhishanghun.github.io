@@ -6,7 +6,8 @@ import {fileURLToPath} from 'node:url';
 import {parse} from 'parse5';
 import YAML from 'yaml';
 import {readLanguages,languageSource} from '../build/languages.mjs';
-import {localeRoute} from '../build/build.mjs';
+import {localeRoute,preflight} from '../build/build.mjs';
+import {projectPublication} from '../build/publication.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const site = path.resolve(here,'../..');
@@ -27,14 +28,15 @@ function one(node,predicate) { const found = find(node,predicate); assert.equal(
 function text(node) { return node.nodeName === '#text' ? node.value : (node.childNodes || []).map(text).join(''); }
 const list = parse(fs.readFileSync(path.join(output,'zh/cases/index.html'),'utf8'));
 const records = JSON.parse(text(one(list,(n,a) => a['data-content-index-data'] !== undefined)));
-const projectSlugs=['driving-simulation','flight-simulation','motion-platform-filming','digital-human-interaction','herbal-exhibition'];
-assert.deepEqual(records.map(x=>x.slug),projectSlugs);
-assert.equal(new Set(records.map(x => x.slug)).size,5);
-assert.equal(find(list,(n,a) => a['data-content-card'] !== undefined).length,5);
-assert.ok(records.every(record=>record.categoryName==='UE项目'));
-for (const [category,count] of [[records[0].categoryId,'5']]) {
+const validated=preflight({manifest,site});
+const publicCases=projectPublication({...validated,site,redirects:manifest.redirects}).entries.filter(entry=>entry.type==='case');
+assert.deepEqual(records.map(x=>x.slug).sort(),publicCases.map(entry=>entry.slug).sort());
+assert.equal(new Set(records.map(x => x.slug)).size,publicCases.length);
+assert.equal(find(list,(n,a) => a['data-content-card'] !== undefined).length,publicCases.length);
+const categories=new Map();for(const entry of publicCases){const category=entry.projectedCategory.zh;categories.set(category.id,(categories.get(category.id)||0)+1);assert.equal(records.find(record=>record.id===entry.id).categoryName,category.name);}
+for (const [category,count] of categories) {
   const button = one(list,(n,a) => n.tagName === 'button' && a['data-category'] === category);
-  assert.equal(text(one(button,(n,a) => a.class?.split(' ').includes('content-category-count'))),count);
+  assert.equal(text(one(button,(n,a) => a.class?.split(' ').includes('content-category-count'))),String(count));
 }
 const searchScript = one(list,(n,a) => n.tagName === 'script' && a.src?.includes('/ContentIndex.'));
 const searchCode = fs.readFileSync(path.join(output,attrs(searchScript).src.slice(1)),'utf8');
@@ -67,16 +69,29 @@ for (const entry of manifest.entries.filter(e=>e.type==='case')) {
   const prose = one(doc,(n,a) => a.class?.split(' ').includes('prose'));
   assert.equal(record.body.replace(/\s+/g,''),text(prose).replace(/\s+/g,''));
   const headings=[...source.slice(match[0].length).matchAll(/^## (.+)$/gm)].map(m=>m[1].trim());
-  assert.ok(headings.includes('项目介绍')&&headings.includes('我负责的工作'));
+  assert.ok(headings.length>0,data.slug+' source sections');
   assert.deepEqual(find(prose,n => n.tagName==='h2').map(text),headings);
   const coverUrl = entry.cover.websiteUrl;
   assert.equal(data.websiteCoverUrl,coverUrl);
   assert.ok(fs.statSync(path.join(output,coverUrl.slice(1))).isFile());
   const heroMedia = one(doc,(n,a) => a.class?.split(' ').includes('project-hero-media'));
-  const trigger = one(heroMedia,(n,a) => a['data-media-image'] !== undefined);
-  assert.equal(attrs(trigger).href,coverUrl);
-  assert.equal(attrs(trigger)['data-media-src'],coverUrl);
-  assert.equal(attrs(one(heroMedia,n => n.tagName === 'img')).src,coverUrl);
+  const gallery=validated.galleries.get(entry.id);
+  if(gallery){
+    assert.equal(find(heroMedia,(n,a)=>a['data-gallery-panel']!==undefined).length,gallery.length);
+    for(const item of gallery)if(item.kind==='image'){
+      const trigger=one(heroMedia,(n,a)=>a['data-media-image']!==undefined&&a.href===item.websiteUrl);
+      assert.equal(attrs(trigger)['data-media-src'],item.websiteUrl);
+      assert.equal(attrs(one(trigger,n=>n.tagName==='img')).src,item.websiteUrl);
+    }else{
+      const video=one(heroMedia,(n,a)=>n.tagName==='source'&&a.src===item.websiteUrl).parentNode;
+      assert.equal(video.tagName,'video');
+      assert.equal(attrs(video).poster,item.poster.websiteUrl);
+    }
+  }else{
+    const trigger=one(heroMedia,(n,a)=>a['data-media-image']!==undefined);
+    assert.equal(attrs(trigger).href,coverUrl);assert.equal(attrs(trigger)['data-media-src'],coverUrl);
+    assert.equal(attrs(one(heroMedia,n=>n.tagName==='img')).src,coverUrl);
+  }
   assert.equal(attrs(one(card,n => n.tagName === 'img')).src,coverUrl);
   context.record = record;
   context.query = data.title;

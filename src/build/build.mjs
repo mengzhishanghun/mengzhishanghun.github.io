@@ -6,7 +6,7 @@ import {fileURLToPath} from 'node:url';
 import {pathToFileURL} from 'node:url';
 import {attrs,walk,applyEdits,templateName} from './extract-dom.mjs';
 import {readLanguages,languageSource,publicLanguages} from './languages.mjs';
-import {mapMedia,projectImageViewers} from './media.mjs';
+import {mapMedia,projectImageViewers,mediaDimensions} from './media.mjs';
 import {assertPublicFields} from './source-schema.mjs';
 import {articleTypes,validateArticleIdentities,shareRoute} from '../engagement/article-identities.mjs';
 import {loadResources,regularPath,resourcePath,safeRelative} from './resources.mjs';
@@ -499,6 +499,7 @@ export async function buildSite(options) {
   config.shareAliases=redirects.map(alias=>alias.route);
   config.documentRedirects=documentRedirects;
   const resources = !options.templateRoot?loadResources({site}):new Map(), files=new Map(), rendered = new Map();
+  const imageDimensions=mediaDimensions(entries,resources);
   let chapterChrome;
   if(documents.size){
     files.set('assets/site-ui/work-documents.css',fs.readFileSync(regularPath(path.join(site,'src'),'docs/client/work-documents.css')));
@@ -554,7 +555,7 @@ export async function buildSite(options) {
     if(entry.original)html=reprintTemplate(html,entry,escapeHTML);
     if(entry.docPage){
       for(const key of ['toc','previous','next','works'])if(typeof slots[key]!=='string'||!slots[key].trim())throw Error('章节模板文案缺失: '+locale+' '+key);
-      html=renderDocumentSlots(html,documentLayout(entry,locale,entries,documents,localeRoute),entry.sources[locale].data,slots,copy[locale].shellSlots['page:works-index'],chapterChrome,{outline:outline(result.headings,[2,3]),bodyHasTitle:result.headings.some(heading=>heading.depth===1)});
+      html=renderDocumentSlots(html,documentLayout(entry,locale,entries,documents,localeRoute),entry.sources[locale].data,slots,copy[locale].shellSlots['page:works-index'],chapterChrome,{outline:outline(result.headings,[2,3]),bodyHasTitle:result.headings.some(heading=>heading.depth===1),body:result.code});
     }
     html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.shellId || entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
     html=filterPublicationHTML(html,publication);
@@ -565,7 +566,7 @@ export async function buildSite(options) {
     const anchors = Object.fromEntries(pageCodes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
     html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,pageConfig,copy[locale].engagementLabels,documentAnchorAliases.get(entry.id));
     html=projectGallery(html,entry,locale,galleries);
-    html=projectImageViewers(html,locale);
+    html=projectImageViewers(html,locale,imageDimensions);
     html=filterPublicationHTML(html,publication);
     files.set(routeFile(localeRoute(entry,locale)),Buffer.from(html));
   }

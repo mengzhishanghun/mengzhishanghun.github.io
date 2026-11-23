@@ -1,4 +1,4 @@
-import {parse} from 'parse5';
+import {parse,parseFragment} from 'parse5';
 import {attrs,walk} from './extract-dom.mjs';
 
 const slugPattern=/^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -75,7 +75,7 @@ export function documentChrome(html){
   return fragments;
 }
 
-export function renderDocumentSlots(html,layout,source,slots,workCopy,chrome,{outline,bodyHasTitle}){
+export function renderDocumentSlots(html,layout,source,slots,workCopy,chrome,{outline,bodyHasTitle,body=''}){
   const link=item=>`<a href="${escape(item.href)}"${item.current?' aria-current="page"':''}>${escape(item.title)}</a>`;
   const adjacent=(item,label,rel)=>item?`<a href="${escape(item.href)}" rel="${rel}"><span>${escape(label)}</span>${escape(item.title)}</a>`:'';
   const localize=fragment=>fragment.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{
@@ -83,7 +83,13 @@ export function renderDocumentSlots(html,layout,source,slots,workCopy,chrome,{ou
     return escape(workCopy[key]);
   });
   const name=escape(layout.back.title??slots.works),label=escape(slots.documents??slots.toc),toc=escape(slots.toc);
-  const values={...Object.fromEntries(Object.entries(chrome).map(([slot,fragment])=>[slot,localize(fragment)])),title:escape(source.title),description:escape(source.description??''),heading:bodyHasTitle?'':`<h1>${escape(source.title)}</h1>`,backHref:escape(layout.back.href),backLabel:escape(slots.backToWork??slots.works),workTitle:name,documents:label,tree:layout.groups.map(group=>`<li><span>${escape(group.title)}</span><ul>${group.chapters.map(chapter=>`<li>${link(chapter)}</li>`).join('')}</ul></li>`).join(''),adjacent:adjacent(layout.previous,slots.previous,'prev')+adjacent(layout.next,slots.next,'next'),outline:outline?`<aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>${toc}</summary><nav class="article-outline" aria-label="${toc}"><ol class="outline-tree">${outline}</ol></nav></details></aside>`:''};
+  let description=source.description?.trim();
+  if(!description){
+    const content=node=>node.nodeName==='#text'?node.value:['script','style','pre'].includes(node.tagName)?'':(node.childNodes||[]).map(content).join('');
+    walk(parseFragment(body),node=>{if(!description&&node.tagName==='p')description=content(node).replace(/\s+/gu,' ').trim();});
+    description=[...(description||source.title)].slice(0,160).join('');
+  }
+  const values={...Object.fromEntries(Object.entries(chrome).map(([slot,fragment])=>[slot,localize(fragment)])),title:escape(source.title),description:escape(description),heading:bodyHasTitle?'':`<h1>${escape(source.title)}</h1>`,backHref:escape(layout.back.href),backLabel:escape(slots.backToWork??slots.works),workTitle:name,documents:label,tree:layout.groups.map(group=>`<li><span>${escape(group.title)}</span><ul>${group.chapters.map(chapter=>`<li>${link(chapter)}</li>`).join('')}</ul></li>`).join(''),adjacent:adjacent(layout.previous,slots.previous,'prev')+adjacent(layout.next,slots.next,'next'),outline:outline?`<aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>${toc}</summary><nav class="article-outline" aria-label="${toc}"><ol class="outline-tree">${outline}</ol></nav></details></aside>`:''};
   return html.replace(/\{\{doc:(\w+)\}\}/g,(_,key)=>{if(!Object.hasOwn(values,key))throw Error('章节模板槽无效: '+key);return values[key];});
 }
 

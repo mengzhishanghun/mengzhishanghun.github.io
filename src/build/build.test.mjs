@@ -14,7 +14,7 @@ const hash = value => createHash('sha256').update(value).digest('hex');
 test('generated shared image viewer imports resolve to published files',()=>{
   const page=generatedPage('zh/contact/index.html'),viewer=page.nodes.find(node=>node.tagName==='script' && page.attrs(node).src?.includes('/ImageViewer.'));
   assert.ok(viewer,'the generated contact page must load the shared image viewer');
-  const root=new URL('../../dist/site/',import.meta.url),url=new URL(page.attrs(viewer).src,'https://mzsh.me');
+  const root=new URL('../../'+(process.env.SITE_OUTPUT||'dist/site')+'/',import.meta.url),url=new URL(page.attrs(viewer).src,'https://mzsh.me');
   const acorn=createRequire(import.meta.url)('acorn'),code=fs.readFileSync(new URL(url.pathname.slice(1),root),'utf8'),imports=[];
   const visit=node=>{
     if(node.type==='ImportExpression'){

@@ -43,6 +43,12 @@ test('scrolling during image dependency loading restores the latest position on 
 
 test('English docs use the shared viewer copy slots',async()=>{const x=viewer('en/works/simple-asset-cleaner/docs/setup/index.html');const pending=x.click();x.finish();await pending;assert.equal(x.opened[0].options.closeTitle,'Close image');assert.equal(x.opened[0].options.zoomTitle,'Zoom image');});
 test('missing image dimensions fall back to the current image URL',async()=>{const x=viewer();x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:'Image'});const pending=x.click();x.finish();await pending;assert.deepEqual(x.fallback,[x.anchor.href]);});
+
+test('byte-derived link dimensions open a new lazy image before it has loaded',async()=>{
+  const x=viewer();x.anchor.dataset.mediaWidth='1120';x.anchor.dataset.mediaHeight='720';x.anchor.querySelector=()=>({naturalWidth:0,naturalHeight:0,alt:'Image'});
+  const pending=x.click();x.finish();await pending;
+  assert.equal(x.opened.length,1);assert.equal(x.opened[0].options.dataSource[0].width,1120);assert.equal(x.opened[0].options.dataSource[0].height,720);assert.deepEqual(x.fallback,[]);
+});
 test('keyboard activation opens image anchors and modified clicks retain native link behavior',async()=>{
   for(const options of [{ctrlKey:true},{metaKey:true},{shiftKey:true},{altKey:true},{button:1},{defaultPrevented:true}]){const x=viewer();await x.click(x.anchor,options);assert.equal(x.opened.length,0);assert.equal(x.fallback.length,0);}
   const x=viewer();const pending=x.click(x.anchor,{detail:0});x.finish();await pending;assert.equal(x.opened.length,1);assert.equal(x.opened[0].options.escKey,true);assert.equal(x.opened[0].options.doubleTapAction,'zoom');
