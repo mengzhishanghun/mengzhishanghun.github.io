@@ -8,16 +8,18 @@ websiteRoute: /contact/
 template: contact/index.html
 lang: en
 translationKey: contact
-sourceHash: 383911ef63bf2f0464d58352e45e7344757a72911bda6fada117a8794b8268d9
+sourceHash: b00456ceb12afad047c7697ee3ed6aeb53359ed7dd686715bdb74f8af1a023b5
 translationStatus: translated
-generatedBodyHash: 4cd6c5d4f6eddf56cd59d1eeda11835e1bdfc5409be4a34fe0631720848afa77
+generatedBodyHash: 3f905c670ebba4f820adabe764c3f74c18eaf21be1987b97e6b10bfc333f0184
 ---
 
 ![](/media-occurrence/page%3Acontact%3Amedia%3A1)
 
 # Contact
 
-Have a project in mind? Get in touch.
+Get in touch about project collaboration, technical services or custom tools.
+
+Available for outsourced projects, full-time and part-time work. Scope and working arrangements can be discussed.
 
 ## Project collaboration
 

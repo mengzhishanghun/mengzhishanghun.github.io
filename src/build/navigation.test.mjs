@@ -10,6 +10,17 @@ function page(route){return parse(fs.readFileSync(path.join(output,route,'index.
 function find(doc,predicate){const found=[];walk(doc,node=>{if(predicate(node))found.push(node)});return found;}
 function text(node){return node.nodeName==='#text'?node.value:(node.childNodes || []).map(text).join('');}
 
+test('case hero actions include contact and support without cover notes',()=>{
+  const manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url),'utf8'));
+  for(const entry of manifest.entries.filter(entry=>entry.type==='case')) {
+    const doc=parse(fs.readFileSync(new URL('../'+entry.template,import.meta.url),'utf8'));
+    const hero=find(doc,n=>(attrs(n).class || '').split(/\s+/).includes('project-hero-copy'))[0];
+    assert.ok(hero,entry.id);
+    assert.deepEqual(find(hero,n=>n.tagName==='a' && (attrs(n).class || '').split(/\s+/).includes('a-button')).map(n=>attrs(n).href),['/contact/','/support/'],entry.id);
+    assert.equal(find(hero,n=>(attrs(n).class || '').split(/\s+/).includes('project-media-note')).length,0,entry.id);
+  }
+});
+
 test('shared navigation reaches distinct contact and support pages in both languages',()=>{
   for(const locale of ['zh','en']) {
     for(const route of ['', 'works/','cases/','blog/','contact/','support/']) {

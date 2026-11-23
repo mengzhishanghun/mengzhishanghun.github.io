@@ -18,6 +18,7 @@ import {projectTaxonomy,categoryNavigation} from './taxonomy.mjs';
 import {loadProjectGalleries,projectGallery} from './project-gallery.mjs';
 import {projectPublication,filterPublicationHTML} from './publication.mjs';
 import {documentCatalog,documentChrome,documentLayout,projectDocumentAnchorAliases,renderDocumentSlots,resolveDocumentAlias,validateDocumentSource} from './work-documents.mjs';
+import {renderFeaturedCategories} from '../home/featured.mjs';
 const require = createRequire(new URL('../../package.json',import.meta.url));
 const YAML = require('yaml');
 const {parse,parseFragment,serialize} = require('parse5');
@@ -570,6 +571,7 @@ export async function buildSite(options) {
       html=renderDocumentSlots(html,documentLayout(entry,locale,entries,documents,localeRoute),entry.sources[locale].data,slots,copy[locale].shellSlots['page:works-index'],chapterChrome,{outline:outline(result.headings,[2,3]),bodyHasTitle:result.headings.some(heading=>heading.depth===1),body:result.code});
     }
     html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.shellId || entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
+    if(entry.id==='page:home')html=renderFeaturedCategories(html,entries,locale);
     html=filterPublicationHTML(html,publication);
     if(entry.id==='page:works-index')html=renderWorkCardStatuses(html,entries,locale,copy[locale].workLabels);
     if(entry.type==='work')html=renderWorkMetadata(html,entry.sources[locale].data,copy[locale].workLabels);

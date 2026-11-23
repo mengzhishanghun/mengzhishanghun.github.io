@@ -1514,7 +1514,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: Cover
+    project.contact: "Contact"
+    project.support: "Support my work"
   case:ai-digital-human-integration:
     root.html:1.head:0.meta:2@content: A UE digital human project supporting local and cloud language model switching, voice conversation, gaze following, phrase effects and responses to human behaviour.
     root.html:1.head:0.title:4.#text:0: AI digital human interaction · Xiaomao
@@ -1566,7 +1567,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: Cover
+    project.contact: "Contact"
+    project.support: "Support my work"
   case:flying-car-simulator:
     root.html:1.head:0.meta:2@content: A UE and AirSim VR flight simulation project with flight stick integration, flight control adaptation, camera configuration and six-axis platform integration.
     root.html:1.head:0.title:4.#text:0: Flight simulation · Xiaomao
@@ -1618,7 +1620,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: Cover
+    project.contact: "Contact"
+    project.support: "Support my work"
   case:motion-capture-robot-control:
     root.html:1.head:0.meta:2@content: A shared robot motion-following system using a dedicated capture model, live or recorded input, URDF adaptation and IK.
     root.html:1.head:0.title:4.#text:0: Motion capture and robot control · Xiaomao
@@ -1670,7 +1673,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: Cover
+    project.contact: "Contact"
+    project.support: "Support my work"
   case:six-dof-motion-platform:
     root.html:1.head:0.meta:2@content: A UE virtual filming project for ocean scenes, with automatic ship assembly, multi-device controls, weather management, full-scene recording and six-axis platform integration.
     root.html:1.head:0.title:4.#text:0: Motion platform and virtual filming · Xiaomao
@@ -1722,7 +1726,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: Cover
+    project.contact: "Contact"
+    project.support: "Support my work"
   work:simple-file-updater:
     root.html:1.head:0.meta:2@content: Batch-update specified files by configuring local target paths and remote download URLs.
     root.html:1.head:0.title:4.#text:0: "SimpleFileUpdater: File Updates from Config · Xiao Mao"
@@ -3755,45 +3760,21 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: Featured works
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: Featured works
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0@aria-label: UE project packaging
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: Open-source Tools
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: Package UE projects directly
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: UEPackageManager
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Package UE projects directly without opening the editor, using a graphical interface or the command line.
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1@aria-label: Multi-channel UDP Communication
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE Plugins
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: Multi-channel UDP Communication
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: SimpleUDP
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: Expose UDP sending, receiving, channel configuration, and address filtering through Blueprint interfaces.
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2@aria-label: Publishing Images with an Article
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: Open-source Tools
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Publishing Images with an Article
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: The Python version of MDImageEmbed exports Markdown with local images embedded as Base64. Future maintenance will focus on MDBlogPacker.
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1@aria-label: Switch featured works
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:0@aria-label: "Show: UE project packaging"
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:1@aria-label: "Show: Multi-channel UDP Communication"
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:2@aria-label: "Show: Publishing Images with an Article"
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.h2:0.#text:0: Featured cases
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.a:1.#text:0: View all
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1@aria-label: Featured cases
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0@aria-label: Six-axis triple-screen driving simulator
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE Projects
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: Six-axis triple-screen driving simulator
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: An Unreal Engine simulator for scene exploration and driving-school practice, with three screens, six-axis motion, an AI coaching backend and vehicle recording and replay.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: AI digital human interaction
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE Projects
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: AI digital human interaction
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: A UE digital human project supporting local and cloud language model switching, voice conversation, gaze following, phrase effects and responses to human behaviour.
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: Traditional Chinese medicine visualization
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: Unreal Engine Projects
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Traditional Chinese medicine visualization
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: ""
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: A UE application for exploring herbal 3D models, microscope slides, medicinal properties and meridians, with search and content maintenance tools.
@@ -3813,19 +3794,40 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1@aria-label: Featured blog posts
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0@aria-label: "UE: A Toolchain from Plugin Development to Release"
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: A Toolchain from Plugin Development to Release
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: View content
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2@aria-label: "UE: Creating Independent Multiwindow Interfaces in UE"
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: Creating Independent Multiwindow Interfaces in UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: View content
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1@aria-label: Switch featured blog posts
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:0@aria-label: "Show: A Toolchain from Plugin Development to Release"
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:2@aria-label: "Show: Creating Independent Multiwindow Interfaces in UE"
+    home.featured.works.1.title: "MCPBlueprint"
+    home.featured.works.1.subtitle: "AI blueprint editing and compile feedback"
+    home.featured.works.1.description: "Let AI inspect and edit blueprint graphs, variables, functions and components, with reference checks, compile diagnostics and explicit saving."
+    home.featured.works.1.label: "MCPBlueprint"
+    home.featured.works.1.select: "Show: MCPBlueprint"
+    home.featured.works.1.action: "View details"
+    home.featured.works.2.title: "AIDataAsset"
+    home.featured.works.2.subtitle: "Two-way asset data synchronization"
+    home.featured.works.2.description: "Connect external AI tools to UE DataAssets through JSON, with nested data, two-way synchronization, file watching and undo/redo."
+    home.featured.works.2.label: "AIDataAsset"
+    home.featured.works.2.select: "Show: AIDataAsset"
+    home.featured.works.2.action: "View details"
+    home.featured.works.3.title: "UEQuickStart"
+    home.featured.works.3.subtitle: "Build and launch UE projects"
+    home.featured.works.3.description: "Detect the project and its associated engine, build locally and launch the editor with live logs, reducing the need to distribute Binaries repeatedly."
+    home.featured.works.3.label: "UEQuickStart"
+    home.featured.works.3.select: "Show: UEQuickStart"
+    home.featured.works.3.action: "View details"
+    home.featured.blog.1.title: "Retargeting Motion Capture to Robot Models in UE"
+    home.featured.blog.1.description: "Turn Kinect skeleton data into robot joint targets using angle unwrapping, segment proportions, DLS IK, smoothing and per-frame angular-speed limits."
+    home.featured.blog.1.label: "Retargeting Motion Capture to Robot Models in UE"
+    home.featured.blog.1.select: "Show: Retargeting Motion Capture to Robot Models in UE"
+    home.featured.blog.1.action: "View details"
+    home.featured.blog.2.title: "Six-Axis Platform Kinematics and Ocean Recording Integration"
+    home.featured.blog.2.description: "Stewart platform kinematics, an analytical Jacobian and Newton iteration, followed by filtering, motion limits, Take Recorder integration and LiveLink output."
+    home.featured.blog.2.label: "Six-Axis Platform Kinematics and Ocean Recording Integration"
+    home.featured.blog.2.select: "Show: Six-Axis Platform Kinematics and Ocean Recording Integration"
+    home.featured.blog.2.action: "View details"
+    home.featured.blog.3.title: "Synchronizing Exposure Across Multiple Screens"
+    home.featured.blog.3.description: "Customize LocalPlayer in UE 5.3.2 and adjust StereoPass for secondary players so multiple screens share exposure calculation data."
+    home.featured.blog.3.label: "Synchronizing Exposure Across Multiple Screens"
+    home.featured.blog.3.select: "Show: Synchronizing Exposure Across Multiple Screens"
+    home.featured.blog.3.action: "View details"
   page:works-index:
     page.details: "Read about their features, how to use them, and related resources."
     page.intro: "Plugins, tools, and games I have developed."
@@ -4508,7 +4510,8 @@ shellSlots:
     contact.supportPageBrowserTitle: "Support my work · Xiao Mao"
     contact.supportPageMeta: "If my articles, tools or projects have helped you, voluntary contributions support continued updates and maintenance."
     contact.meta: "UE project collaboration, technical services and small custom jobs. Available for outsourced projects, full-time or part-time work. Contact me by email or WeChat."
-    contact.intro: "Have a project in mind? Get in touch."
+    contact.intro: "Get in touch about project collaboration, technical services or custom tools."
+    contact.introDetails: "Available for outsourced projects, full-time and part-time work. Scope and working arrangements can be discussed."
     contact.introSupport: "If my articles or tools have helped you, you can also support my work."
     contact.projectsTitle: "Project collaboration"
     contact.servicesTitle: "Technical services"
@@ -4537,7 +4540,8 @@ shellSlots:
     contact.services.5.title: "Plugin, API and code integration"
     contact.services.5.description: "Adapting, debugging and integrating plugins, external interfaces and AI-generated code."
     contact.supportTitle: "support my work"
-    contact.supportIntro: "If this work has helped you, voluntary contributions support continued updates and maintenance."
+    contact.supportIntro: "If my articles, tools or projects have helped you, you can make a voluntary contribution."
+    contact.supportDetails: "Your support helps with content updates, project development and website maintenance."
     contact.purposeTitle: "What your support helps with"
     contact.methodsTitle: "Ways to contribute"
     contact.wechatPay: "WeChat"
@@ -6342,7 +6346,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: Fullscreen
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: Close media preview
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: Close
-    project-cover-note: Cover
+    project.contact: "Contact"
+    project.support: "Support my work"
   doc:mcp-world-editor-guide:
     root.html:1.head:0.title:2.#text:0: MCPWorldEditor User Guide | MZSH Docs
     root.html:1.head:0.meta:8@content: MCPWorldEditor User Guide | MZSH Docs
@@ -8571,7 +8576,7 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 786a16be346d80007fd9f8e0eb26dc5028534e8ea91c07a2b844fcaadb237ea5
+sourceHash: a11d845769be5437bc6cc1b1052fc798dd6dbe5bf1128e1740f312e5c32adadb
 translationStatus: translated
 generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:

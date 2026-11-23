@@ -25,47 +25,39 @@ translationKey: home
 
 [查看全部](/works/)
 
-开源工具
+### [MCPBlueprint](/works/mcp-blueprint/)
 
-### [项目快速打包](/works/ue-package-manager/)
+AI 蓝图编辑与编译反馈
 
-UEPackageManager
+让 AI 读取和编辑蓝图图表、变量、函数与组件，支持引用影响预检、编译诊断和显式保存。
 
-无需打开 UE 编辑器，直接快速打包项目，支持图形界面与命令行操作。
-
-[查看内容](/works/ue-package-manager/)
+[查看内容](/works/mcp-blueprint/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A2)
 
-UE插件
+### [AIDataAsset](/works/ai-data-asset/)
 
-### [UDP 多通道通信](/works/simple-udp/)
+资产数据双向同步
 
-SimpleUDP
+以 JSON 连接外部 AI 与 UE DataAsset，处理嵌套数据、双向同步、文件监听与撤销重做。
 
-将 UDP 收发、多通道配置和地址过滤封装为蓝图接口。
-
-[查看内容](/works/simple-udp/)
+[查看内容](/works/ai-data-asset/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A3)
 
-开源工具
+### [UEQuickStart](/works/ue-quick-start/)
 
-### [让图片随文章发布](/works/md-blog-packer/)
+UE 项目编译与启动
 
-MDBlogPacker
+识别 UE 项目与关联引擎，在本机编译并启动编辑器，提供实时日志，减少团队反复同步 Binaries 的需要。
 
-将 Markdown 中的本地图片转成 Base64 内嵌格式，便于导出和复制到支持的平台。
-
-[查看内容](/works/md-blog-packer/)
+[查看内容](/works/ue-quick-start/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A4)
 
 ## 精选案例
 
 [查看全部](/cases/)
-
-UE项目
 
 ### [六轴三屏驾驶模拟器](/cases/driving-simulation/)
 
@@ -77,8 +69,6 @@ Six-axis triple-screen driving simulator
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A5)
 
-UE项目
-
 ### [AI 数字人交互](/cases/digital-human-interaction/)
 
 Local Integration of an AI Digital Human Interaction Workflow
@@ -88,8 +78,6 @@ Local Integration of an AI Digital Human Interaction Workflow
 [查看内容](/cases/digital-human-interaction/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A6)
-
-桌面与自动化
 
 ### [中药展示](/cases/herbal-exhibition/)
 
@@ -105,22 +93,26 @@ Plugin Development and Release Workflow
 
 [查看全部](/blog/)
 
-UE
+### [将动捕骨骼重定向到 UE 机器人模型](/blog/motion-capture-robot-control/)
 
-### [插件开发到发布的工具链](/blog/plugin-release-workflow/)
+把 Kinect 骨骼转换为机器人关节目标，处理角度展开、骨段比例、DLS IK、平滑与每帧角速度限制。
 
-围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
-
-[查看内容](/blog/plugin-release-workflow/)
+[查看内容](/blog/motion-capture-robot-control/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A8)
 
-UE
+### [六轴平台运动解算与海洋虚拍录制适配](/blog/six-dof-motion-platform/)
 
-### [在 UE 中创建独立多窗口界面](/blog/ue-multiwindow-interface/)
+从 Stewart 平台正逆运动学、解析雅可比与 Newton 迭代，到滤波限速、Take Recorder 录制和 LiveLink 发送。
 
-用 Slate 原生窗口承载 UMG，提供窗口生命周期、位置尺寸、显隐与 DPI 控制。
-
-[查看内容](/blog/ue-multiwindow-interface/)
+[查看内容](/blog/six-dof-motion-platform/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A9)
+
+### [多屏幕如何设置曝光同步](/blog/cnblogs-19165561/)
+
+在 UE 5.3.2 中自定义 LocalPlayer，调整非主玩家的 StereoPass，让多屏画面共享曝光计算数据。
+
+[查看内容](/blog/cnblogs-19165561/)
+
+![](/media-occurrence/page%3Ahome%3Amedia%3A10)

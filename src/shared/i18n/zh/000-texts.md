@@ -1514,7 +1514,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: 封面
+    project.contact: "联系合作"
+    project.support: "支持创作"
   case:ai-digital-human-integration:
     root.html:1.head:0.meta:2@content: 面向多类交互需求的 UE 数字人项目，支持本地与云端大模型切换，结合语音对话、视线跟随、提示词效果与人物行为触发。
     root.html:1.head:0.title:4.#text:0: AI 数字人交互 · 小毛
@@ -1566,7 +1567,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: 封面
+    project.contact: "联系合作"
+    project.support: "支持创作"
   case:flying-car-simulator:
     root.html:1.head:0.meta:2@content: 基于 UE 与 AirSim 的 VR 飞行仿真项目，包含飞行手柄接入、飞控适配、相机配置与六轴平台联动。
     root.html:1.head:0.title:4.#text:0: 飞行仿真 · 小毛
@@ -1618,7 +1620,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: 封面
+    project.contact: "联系合作"
+    project.support: "支持创作"
   case:motion-capture-robot-control:
     root.html:1.head:0.meta:2@content: 以动捕专用模型统一承接实时采集与录制动作，通过 URDF 结构适配和 IK 算法驱动机器人跟随。
     root.html:1.head:0.title:4.#text:0: 动捕与机器人控制 · 小毛
@@ -1670,7 +1673,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: 封面
+    project.contact: "联系合作"
+    project.support: "支持创作"
   case:six-dof-motion-platform:
     root.html:1.head:0.meta:2@content: 面向海洋场景的 UE 虚拟拍摄项目，涵盖船只自动装配、多设备操控、天气管理、全场景录制回放与六轴平台联动。
     root.html:1.head:0.title:4.#text:0: 六轴平台与虚拟拍摄 · 小毛
@@ -1722,7 +1726,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: 封面
+    project.contact: "联系合作"
+    project.support: "支持创作"
   work:simple-file-updater:
     root.html:1.head:0.meta:2@content: 将本地目标路径与远程下载地址写入配置，批量更新指定文件。
     root.html:1.head:0.title:4.#text:0: SimpleFileUpdater：配置驱动的文件更新工具 · 小毛
@@ -3755,45 +3760,21 @@ shellSlots:
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.h2:0.#text:0: 精选作品
     root.html:1.body:1.div:0.main:3.div:1.section:1.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1@aria-label: 精选作品
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0@aria-label: 项目快速打包
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: 开源工具
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 项目快速打包
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: UEPackageManager
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 无需打开 UE 编辑器，直接快速打包项目，支持图形界面与命令行操作。
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1@aria-label: UDP 多通道通信
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE插件
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: UDP 多通道通信
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: SimpleUDP
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 将 UDP 收发、多通道配置和地址过滤封装为蓝图接口。
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: 查看内容
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2@aria-label: 让图片随文章发布
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: 开源工具
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 让图片随文章发布
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: MDBlogPacker
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出，后续仅维护 MDBlogPacker。
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1@aria-label: 精选作品切换
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:0@aria-label: 显示：项目快速打包
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:1@aria-label: 显示：UDP 多通道通信
-    root.html:1.body:1.div:0.main:3.div:1.section:1.featured-carousel:1.div:1.button:2@aria-label: 显示：让图片随文章发布
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.h2:0.#text:0: 精选案例
     root.html:1.body:1.div:0.main:3.div:1.section:2.div:0.a:1.#text:0: 查看全部
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1@aria-label: 精选案例
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0@aria-label: 六轴三屏驾驶模拟器
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE项目
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 六轴三屏驾驶模拟器
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.div:1.p:1.#text:0: Six-axis triple-screen driving simulator
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 面向场景漫游、驾驶模拟与模拟驾校训练的 UE 项目，结合三屏显示、六轴运动反馈、AI 教练后台与车辆录制回放。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1@aria-label: AI 数字人交互
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:0.#text:0: UE项目
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.h3:0.a:0.#text:0: AI 数字人交互
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.div:1.p:1.#text:0: AI digital human interaction
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.p:2.#text:0: 面向多类交互需求的 UE 数字人项目，支持本地与云端大模型切换，结合语音对话、视线跟随、提示词效果与人物行为触发。
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:1.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2@aria-label: 中医药可视化展示
-    root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE项目
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 中医药可视化展示
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.div:1.p:1.#text:0: Traditional Chinese medicine visualization
     root.html:1.body:1.div:0.main:3.div:1.section:2.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 基于 UE 展示药材三维模型、显微切片、药材功效与经脉走向，并提供资料检索和内容维护功能。
@@ -3813,19 +3794,40 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1@aria-label: 精选博客
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0@aria-label: UE：插件开发到发布的工具链
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.div:1.h3:0.a:0.#text:0: 插件开发到发布的工具链
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.p:2.#text:0: 围绕插件管理与多版本打包，把开发中分散的操作整理成专用工具。
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:0.div:0.a:3.#text:0: 查看内容
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2@aria-label: UE：在 UE 中创建独立多窗口界面
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:0.#text:0: UE
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.div:1.h3:0.a:0.#text:0: 在 UE 中创建独立多窗口界面
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.p:2.#text:0: 用 Slate 原生窗口承载 UMG，提供窗口生命周期、位置尺寸、显隐与 DPI 控制。
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:0.article:2.div:0.a:3.#text:0: 查看内容
     root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1@aria-label: 精选博客切换
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:0@aria-label: 显示：插件开发到发布的工具链
-    root.html:1.body:1.div:0.main:3.div:1.section:3.featured-carousel:1.div:1.button:2@aria-label: 显示：在 UE 中创建独立多窗口界面
+    home.featured.works.1.title: "MCPBlueprint"
+    home.featured.works.1.subtitle: "AI 蓝图编辑与编译反馈"
+    home.featured.works.1.description: "让 AI 读取和编辑蓝图图表、变量、函数与组件，支持引用影响预检、编译诊断和显式保存。"
+    home.featured.works.1.label: "MCPBlueprint"
+    home.featured.works.1.select: "显示：MCPBlueprint"
+    home.featured.works.1.action: "查看内容"
+    home.featured.works.2.title: "AIDataAsset"
+    home.featured.works.2.subtitle: "资产数据双向同步"
+    home.featured.works.2.description: "以 JSON 连接外部 AI 与 UE DataAsset，处理嵌套数据、双向同步、文件监听与撤销重做。"
+    home.featured.works.2.label: "AIDataAsset"
+    home.featured.works.2.select: "显示：AIDataAsset"
+    home.featured.works.2.action: "查看内容"
+    home.featured.works.3.title: "UEQuickStart"
+    home.featured.works.3.subtitle: "UE 项目编译与启动"
+    home.featured.works.3.description: "识别 UE 项目与关联引擎，在本机编译并启动编辑器，提供实时日志，减少团队反复同步 Binaries 的需要。"
+    home.featured.works.3.label: "UEQuickStart"
+    home.featured.works.3.select: "显示：UEQuickStart"
+    home.featured.works.3.action: "查看内容"
+    home.featured.blog.1.title: "将动捕骨骼重定向到 UE 机器人模型"
+    home.featured.blog.1.description: "把 Kinect 骨骼转换为机器人关节目标，处理角度展开、骨段比例、DLS IK、平滑与每帧角速度限制。"
+    home.featured.blog.1.label: "将动捕骨骼重定向到 UE 机器人模型"
+    home.featured.blog.1.select: "显示：将动捕骨骼重定向到 UE 机器人模型"
+    home.featured.blog.1.action: "查看内容"
+    home.featured.blog.2.title: "六轴平台运动解算与海洋虚拍录制适配"
+    home.featured.blog.2.description: "从 Stewart 平台正逆运动学、解析雅可比与 Newton 迭代，到滤波限速、Take Recorder 录制和 LiveLink 发送。"
+    home.featured.blog.2.label: "六轴平台运动解算与海洋虚拍录制适配"
+    home.featured.blog.2.select: "显示：六轴平台运动解算与海洋虚拍录制适配"
+    home.featured.blog.2.action: "查看内容"
+    home.featured.blog.3.title: "多屏幕如何设置曝光同步"
+    home.featured.blog.3.description: "在 UE 5.3.2 中自定义 LocalPlayer，调整非主玩家的 StereoPass，让多屏画面共享曝光计算数据。"
+    home.featured.blog.3.label: "多屏幕如何设置曝光同步"
+    home.featured.blog.3.select: "显示：多屏幕如何设置曝光同步"
+    home.featured.blog.3.action: "查看内容"
   page:works-index:
     page.details: "可以查看功能介绍、使用方式和相关资料。"
     page.intro: "这里整理了我开发的插件、工具和游戏作品。"
@@ -4508,7 +4510,8 @@ shellSlots:
     contact.supportPageBrowserTitle: "支持创作 · 小毛"
     contact.supportPageMeta: "如果文章、工具或作品对你有帮助，欢迎自愿赞赏，支持后续更新与维护。"
     contact.meta: "UE 项目合作、技术服务与小型定制，支持外包、全职和兼职合作，通过邮箱或微信联系。"
-    contact.intro: "有项目需求，欢迎联系我聊聊。"
+    contact.intro: "有项目合作、技术服务或工具定制需求，欢迎联系我聊聊。"
+    contact.introDetails: "支持外包、全职和兼职合作，具体范围与参与方式可沟通。"
     contact.introSupport: "如果文章或工具帮到了你，也欢迎支持我继续创作。"
     contact.projectsTitle: "项目合作"
     contact.servicesTitle: "技术服务"
@@ -4537,7 +4540,8 @@ shellSlots:
     contact.services.5.title: "插件、接口与代码接入"
     contact.services.5.description: "插件、外部接口及 AI 生成代码的适配、排错与工程接入。"
     contact.supportTitle: "支持我继续创作"
-    contact.supportIntro: "如果这些内容对你有帮助，欢迎自愿赞赏，支持后续更新与维护。"
+    contact.supportIntro: "如果这里的文章、工具或作品对你有帮助，欢迎自愿赞赏。"
+    contact.supportDetails: "支持后续内容更新、作品开发，以及网站的日常维护。"
     contact.purposeTitle: "支持用途"
     contact.methodsTitle: "赞赏方式"
     contact.wechatPay: "微信"
@@ -6342,7 +6346,8 @@ shellSlots:
     root.html:1.body:1.dialog:4.div:0.button:0.#text:0: 全屏
     root.html:1.body:1.dialog:4.div:0.button:1@aria-label: 关闭媒体预览
     root.html:1.body:1.dialog:4.div:0.button:1.#text:0: 关闭
-    project-cover-note: 封面
+    project.contact: "联系合作"
+    project.support: "支持创作"
   doc:mcp-world-editor-guide:
     root.html:1.head:0.title:2.#text:0: MCPWorldEditor 使用文档 | MZSH Docs
     root.html:1.head:0.meta:8@content: MCPWorldEditor 使用文档 | MZSH Docs

@@ -69,5 +69,6 @@ test('gallery projection retains surrounding content and never makes thumbnail b
   assert.equal(typeof api.projectGallery,'function');const x=fixture(t),galleries=api.loadProjectGalleries({...x,entries:[x.entry],codes:['zh']});
   const html=api.projectGallery('<html><head></head><body><div>left</div><figure class="project-hero-media"><img src="/media/hero.png"></figure><article>body</article></body></html>',x.entry,'zh',galleries);
   assert.match(html,/<div>left<\/div>/);assert.match(html,/<article>body<\/article>/);assert.equal((html.match(/data-gallery-select=/g)||[]).length,2);assert.match(html,/data-media-image/);assert.doesNotMatch(html,/<button[^>]*>\s*<a/);
+  assert.doesNotMatch(html,/<span class="project-gallery-kind">[^<]*封面/);
   const final=projectImageViewers(html,'zh');let thumbnails=0;walk(parse(final),node=>{if(attrs(node)['data-gallery-select']!==undefined){thumbnails++;walk(node,child=>assert.notEqual(child.tagName,'a'));}});assert.equal(thumbnails,2);
 });

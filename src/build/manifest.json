@@ -11436,22 +11436,22 @@
           "id": "page:home:media:2",
           "ordinal": 2,
           "state": "public",
-          "websiteUrl": "/media/imported/works/ue-package-manager-cover-v2.png",
-          "publicSha256": "bd25dc68d55e2aeff090ef182d620320e18ec8340153358914b29f713bbde894"
+          "websiteUrl": "/media/covers/works/mcp-blueprint-20261101.webp",
+          "publicSha256": "acd79853c6a8974853a5e41565ff4cff8aab6a7c4bf9522ed49e939aceb77013"
         },
         {
           "id": "page:home:media:3",
           "ordinal": 3,
           "state": "public",
-          "websiteUrl": "/media/covers/works/simple-udp-20261101.webp",
-          "publicSha256": "257e57f94c775974532f67a821fa033ca73df0671914c04bd5c70201b87995e0"
+          "websiteUrl": "/media/covers/works/ai-data-asset-20261101.webp",
+          "publicSha256": "2852dabbb6b0cac9d0a7425157126928729d79d6b5069f81a627df0089a1d495"
         },
         {
           "id": "page:home:media:4",
           "ordinal": 4,
           "state": "public",
-          "websiteUrl": "/media/covers/works/md-blog-packer-20261101.webp",
-          "publicSha256": "4454b1ecdcd4b9b72ac65a83e10dc50310a59a953e67b1e8797c23e965d348ee"
+          "websiteUrl": "/media/covers/works/ue-quick-start-20261101.webp",
+          "publicSha256": "87a894d70ce2811860b767013b88dea2cbaba38b07629c2f03e83cfc7ff80b47"
         },
         {
           "id": "page:home:media:5",
@@ -11478,15 +11478,22 @@
           "id": "page:home:media:8",
           "ordinal": 8,
           "state": "public",
-          "websiteUrl": "/media/covers/blog/plugin-release-workflow-20261101.webp",
-          "publicSha256": "9ddfb46dc90c88640d51eadc60371f29b2116110c13e5d54a3b7ed34ad4cbd00"
+          "websiteUrl": "/media/covers/blog/motion-capture-robot-control-20261101.webp",
+          "publicSha256": "ba8a642af11b5d7ebff9cea33b549ee26e37ea2c5297e17e071a7ba8a98e08e3"
         },
         {
           "id": "page:home:media:9",
           "ordinal": 9,
           "state": "public",
-          "websiteUrl": "/assets/cases/ue-multiwindow-interface-v2.png",
-          "publicSha256": "5e4061c371e47bc966e2a921e4a213c3f3f9f7a47152ff40af667e02f2b34521"
+          "websiteUrl": "/media/covers/blog/six-dof-motion-platform-20261101.webp",
+          "publicSha256": "8ca68822917a3d6358e779be0fc60f311633fa88849236a45a4ccf71f119328c"
+        },
+        {
+          "id": "page:home:media:10",
+          "ordinal": 10,
+          "state": "public",
+          "websiteUrl": "/media/covers/blog/cnblogs-19165561-20261101.webp",
+          "publicSha256": "78916ca2b66f526b37ca6ec35635cfa45b10ace2b2b4343a22d138dcfc300bbc"
         }
       ]
     },

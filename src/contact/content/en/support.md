@@ -8,16 +8,18 @@ websiteRoute: /support/
 template: support/index.html
 lang: en
 translationKey: support
-sourceHash: 113024997a8df20f7b905f710fce536343a6ddef7349e565c8ce27f1c0e0fb33
+sourceHash: cb31b9cb50f022d81eb0200bf5647bd7c9aad80a48fe629e03c87cc08aee303c
 translationStatus: translated
-generatedBodyHash: d67cccf19f44d8be0922c9a02523a2a4e702e875785e283125859fee196ef0a1
+generatedBodyHash: 8fe36ab383aeb6c270cbc75d2500044339d83da83dafdcd9973647c6811f084a
 ---
 
 ![](/media-occurrence/page%3Asupport%3Amedia%3A1)
 
 # Support my work
 
-If this work has helped you, voluntary contributions support continued updates and maintenance.
+If my articles, tools or projects have helped you, you can make a voluntary contribution.
+
+Your support helps with content updates, project development and website maintenance.
 
 ### What your support helps with
 

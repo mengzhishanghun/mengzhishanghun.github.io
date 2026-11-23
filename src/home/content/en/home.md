@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: 34a7fa9b13e360c636e082ccef0277408e418639dfb4137119b8d33eccf0aeb0
+sourceHash: eeef856f40a6701a7fdc0b96414e2ac14f58e7e28e22866691927fe61c5984da
 translationStatus: translated
-generatedBodyHash: 791c0d9a094815da523376980460d1153a5ed4fd523d5f1b00edfa742abcff67
+generatedBodyHash: 2e14b59b06e4369cc58aaae844b4ffbf7ac29c6263f97e1c5672ba6351eae829
 ---
 
 # Complexity can be encapsulated;
@@ -28,47 +28,39 @@ This website is where I share my plugins, tools, and games, present projects I h
 
 [View All](/works/)
 
-Open-source Tools
+### [MCPBlueprint](/works/mcp-blueprint/)
 
-### [Package UE projects directly](/works/ue-package-manager/)
+AI blueprint editing and compile feedback
 
-UEPackageManager
+Let AI inspect and edit blueprint graphs, variables, functions and components, with reference checks, compile diagnostics and explicit saving.
 
-Package UE projects directly without opening the editor, using a graphical interface or the command line.
-
-[View Details](/works/ue-package-manager/)
+[View Details](/works/mcp-blueprint/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A2)
 
-UE Plugins
+### [AIDataAsset](/works/ai-data-asset/)
 
-### [Multi-channel UDP Communication](/works/simple-udp/)
+Two-way asset data synchronization
 
-SimpleUDP
+Connect external AI tools to UE DataAssets through JSON, with nested data, two-way synchronization, file watching and undo/redo.
 
-Blueprint interfaces for sending and receiving UDP data, configuring multiple channels, and filtering addresses.
-
-[View Details](/works/simple-udp/)
+[View Details](/works/ai-data-asset/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A3)
 
-Open-source Tools
+### [UEQuickStart](/works/ue-quick-start/)
 
-### [Publish Images with Your Article](/works/md-blog-packer/)
+Build and launch UE projects
 
-MDBlogPacker
+Detect the project and its associated engine, build locally and launch the editor with live logs, reducing the need to distribute Binaries repeatedly.
 
-Convert local Markdown images to Base64 embedded format for export and copying to supported platforms.
-
-[View Details](/works/md-blog-packer/)
+[View Details](/works/ue-quick-start/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A4)
 
 ## Featured Cases
 
 [View All](/cases/)
-
-UE Projects
 
 ### [Six-axis triple-screen driving simulator](/cases/driving-simulation/)
 
@@ -80,8 +72,6 @@ An Unreal Engine simulator for scene exploration and driving-school practice, wi
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A5)
 
-UE Projects
-
 ### [AI digital human interaction](/cases/digital-human-interaction/)
 
 AI digital human interaction
@@ -91,8 +81,6 @@ Connecting a digital human, speech recognition, conversation, speech synthesis, 
 [View Details](/cases/digital-human-interaction/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A6)
-
-Desktop & Automation
 
 ### [Herbal exhibition](/cases/herbal-exhibition/)
 
@@ -108,22 +96,26 @@ An interactive UE herbal exhibition combining search, illustrated and audio cont
 
 [View All](/blog/)
 
-UE
+### [Retargeting Motion Capture to Robot Models in UE](/blog/motion-capture-robot-control/)
 
-### [A Toolchain from Plugin Development to Release](/blog/plugin-release-workflow/)
+Turn Kinect skeleton data into robot joint targets using angle unwrapping, segment proportions, DLS IK, smoothing and per-frame angular-speed limits.
 
-Turning scattered development operations into dedicated tools for plugin management and multi-version packaging.
-
-[View Details](/blog/plugin-release-workflow/)
+[View Details](/blog/motion-capture-robot-control/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A8)
 
-UE
+### [Six-Axis Platform Kinematics and Ocean Recording Integration](/blog/six-dof-motion-platform/)
 
-### [Creating Independent Multiwindow Interfaces in UE](/blog/ue-multiwindow-interface/)
+Stewart platform kinematics, an analytical Jacobian and Newton iteration, followed by filtering, motion limits, Take Recorder integration and LiveLink output.
 
-Host UMG in native Slate windows with lifecycle, position, size, visibility, and DPI controls.
-
-[View Details](/blog/ue-multiwindow-interface/)
+[View Details](/blog/six-dof-motion-platform/)
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A9)
+
+### [Synchronizing Exposure Across Multiple Screens](/blog/cnblogs-19165561/)
+
+Customize LocalPlayer in UE 5.3.2 and adjust StereoPass for secondary players so multiple screens share exposure calculation data.
+
+[View Details](/blog/cnblogs-19165561/)
+
+![](/media-occurrence/page%3Ahome%3Amedia%3A10)
