@@ -26,9 +26,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: 9161e147e4acfcf1de4ca90dc93817ac01388c09543c2847634f3bbd4bce738b
+sourceHash: ed39a4ee9de7f8e5349c78f15777294027a4628efeb0b6f20f285fba2f27cf08
 translationStatus: translated
-generatedBodyHash: 6b9194a8bc85fd3eaee3f8f229f34654ab2a4b1a357ffa075c0798b2ce44569c
+generatedBodyHash: e2e9789ac982468bf3384de22fda18dc8d19a7ffd0447cf41bb2063953e78d85
 workInfo:
   channels:
     - kind: sale
@@ -107,7 +107,3 @@ The plugin supports Windows, Linux, and macOS. It uses UE's `FPlatformProcess::C
 For usage questions or collaboration, please visit the contact page.
 
 - **Contact:** [Contact and collaboration](https://mzsh.me/contact/)
-
-## Original Article
-
-Originally published on 2026-03-25 on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19770928).

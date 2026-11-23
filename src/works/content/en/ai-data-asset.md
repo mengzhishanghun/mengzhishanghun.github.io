@@ -23,9 +23,9 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: 608a73b5ad59fa0fc38de6cab09d1321dd1dcfb292555c103d7c6be29da3c6fc
+sourceHash: 0022bb205c5f93364b301db0bae9093ed57479bd77e1ab811fa91af75e6372f7
 translationStatus: translated
-generatedBodyHash: 52e7a38daad696e0afb07c3a9d640e16634f7b7747cf2f2d6cb8a7e5f947122f
+generatedBodyHash: e12315e0f900afbf193dde632d2bb2f1f5070e8e8c9220c5ec66c4e596b121a9
 workInfo:
   channels:
     - kind: sale
@@ -102,10 +102,6 @@ See the [user manual](/en/works/ai-data-asset/docs/sync/) for JSON selection, co
 ## Compatibility
 
 - Unreal Engine 5.2–5.8
-
-## Technical Source
-
-The two-way synchronization implementation notes were published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/20159718) on 2026-05-25.
 
 ## Contact and Support
 

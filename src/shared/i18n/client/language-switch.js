@@ -7,7 +7,6 @@
   }
 
   const storageKey = 'site-language';
-  const legacyDocsIndex = /^\/(?:(?:[a-z][a-z0-9-]*\/)?docs|docs\/[a-z][a-z0-9-]*)\/$/;
 
   function enabledLanguages(data, href = window.location.href) {
     if (!Array.isArray(data?.languages)) return [];
@@ -124,7 +123,6 @@
       let target;
       try { target = new URL(href, current); } catch (_) { continue; }
       if (target.origin !== current.origin) continue;
-      if (link.closest?.('.main-nav') && legacyDocsIndex.test(target.pathname)) { link.remove(); continue; }
       const home = target.pathname === '/' || languages.some((language) => {
         const root = '/' + language.code;
         return target.pathname === root || target.pathname === root + '/';

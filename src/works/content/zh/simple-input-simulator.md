@@ -94,10 +94,6 @@ SimpleInputSimulator 为 UE 蓝图提供按键和轴输入模拟节点，让游�
 
 - **联系入口：** [联系与合作](https://mzsh.me/contact/)
 
-## 原文来源
-
-原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770939)。
-
 ## 兼容性
 
 支持 Unreal Engine 5.2–5.8。

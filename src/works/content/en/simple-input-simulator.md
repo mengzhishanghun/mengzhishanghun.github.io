@@ -28,9 +28,9 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-input-simulator
-sourceHash: ee4e2f99056c7a240b7a49d1b64098551675da3b411035992e425bba7231b665
+sourceHash: 92cab1f17e6017990fc4c96cf8b2330f82d97fa896fc6b8008762edd8fa1ee17
 translationStatus: translated
-generatedBodyHash: 981cb3218ae498d853ee74242c9404252ca47746ab6611f1cfef2c1ea9ebd1d4
+generatedBodyHash: 9b73c01c52cfc77fdd320235676ccda2a5f0201462e38a877cc144c164768c13
 workInfo:
   channels:
     - kind: sale
@@ -96,10 +96,6 @@ See the [usage guide](/en/works/simple-input-simulator/docs/key-input/) for step
 For usage questions or collaboration, please visit the contact page.
 
 - **Contact:** [Contact and collaboration](https://mzsh.me/contact/)
-
-## Original Article
-
-Originally published on 2026-03-25 on [Cnblogs](https://www.cnblogs.com/mengzhishanghun/p/19770939).
 
 ## Compatibility
 

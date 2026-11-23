@@ -378,9 +378,6 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(excluded.has(node))return;
     const a=attrs(node),loc=node.sourceCodeLocation;
     if (!loc) return;
-    if(node.tagName==='a'&&legacyDocsIndex.test((a.href||'').replace(/^https:\/\/mzsh\.me/,''))&&(attrs(node.parentNode).class||'').split(/\s+/).includes('main-nav')){
-      edits.push([loc.startOffset,loc.endOffset,'']);walk(node,child=>excluded.add(child));return;
-    }
     if(contentType && a['data-content-index']!==undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' data-content-tags-display="all" data-content-topic-aliases="'+escapeHTML(safeJSON(entry.topicAliases?.[locale] || {}))+'" data-content-category-queries="'+escapeHTML(safeJSON(Object.fromEntries(Object.entries(entry.taxonomy?.legacyQueries||{}).map(([id,q])=>[id,{name:dict.get(q.name)||q.name,slugs:q.slugs}]))))+'"']);
     if(contentType&&entry.taxonomy&&(a.class||'').split(/\s+/).includes('content-category-nav'))edits.push([loc.startTag.endOffset,loc.endTag.startOffset,categoryNavigation(entry,locale)]);
     if(contentIndex && a['data-content-card']!==undefined && loc.attrs?.hidden)edits.push([loc.attrs.hidden.startOffset,loc.attrs.hidden.endOffset,'']);

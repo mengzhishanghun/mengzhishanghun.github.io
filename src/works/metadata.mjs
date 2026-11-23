@@ -40,9 +40,7 @@ export function renderWorkMetadata(html,data,labels){
   edits.push([h.startOffset,h.endOffset,'<div class="work-title-line">'+html.slice(h.startOffset,h.endOffset)+badges+'</div>']);
   const missing=!info.channels.some(c=>c.kind==='docs')?'<button type="button" class="work-action work-action-unavailable" disabled>'+escapeHTML(labels.noDocs)+'</button>':'';
   const buttons=info.channels.map((c,index)=>'<a class="work-action'+(index===0?' work-action-primary':'')+'" href="'+escapeHTML(c.href)+'"'+(c.href.startsWith('https:')?' target="_blank" rel="noopener noreferrer"':'')+'>'+escapeHTML(labels[c.kind==='sale'?'saleAction':c.kind==='open-source'?'sourceAction':'docsAction'])+'</a>').join('')+missing;
-  // Keep unclassified source links as neutral legacy entries, never as open-source claims.
-  const neutral=[];walk(actions,node=>{if(node.tagName==='a' && /^https:\/\/github\.com\//.test(attrs(node).href||'') && !info.channels.some(c=>c.href===attrs(node).href)){const loc=node.sourceCodeLocation;neutral.push(html.slice(loc.startOffset,loc.endOffset));}});
   const a=actions.sourceCodeLocation;
-  edits.push([a.startTag.endOffset,a.endTag.startOffset,buttons+neutral.join('')]);
+  edits.push([a.startTag.endOffset,a.endTag.startOffset,buttons]);
   return applyEdits(html,edits);
 }

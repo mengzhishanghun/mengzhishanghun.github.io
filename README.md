@@ -28,9 +28,9 @@ node src/import/import.mjs --vault "中文笔记库路径"
 
 作品来源可选填 `workInfo`。`channels` 中每项使用 `kind: sale | open-source | docs` 和 `href`；开发中的作品可填 `stage: developing`。平台、版本及安装要求在简介或教程正文中按需说明。
 
-只有核实销售页面或开源许可证后才添加对应渠道。已有 `status` 保留；未填 `workInfo` 的旧来源沿用原有按钮。元数据通过公开字段白名单同步，额外嵌套字段与不安全 URL 会被拒绝。
+只有核实销售页面或开源许可证后才添加对应渠道。已有 `status` 保留；未填 `workInfo` 时保留模板原样，不生成作品按钮。元数据通过公开字段白名单同步，额外嵌套字段与不安全 URL 会被拒绝。
 
-修改后构建网站，再验证作品元数据与生成的 48 个双语页面：
+修改后构建网站，再验证作品元数据与生成的双语作品页面：
 
 ```powershell
 node --test src/works/metadata.test.mjs src/import/projection.test.mjs

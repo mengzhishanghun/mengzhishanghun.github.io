@@ -22,9 +22,9 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: f769c9c548092c5292a555200370e5a5fa3aa4210a5550281e5e7d57f639923e
+sourceHash: 6b8e79a24b00ec9be860819d657c1417902a1c57b6e46f6a3a8bd51f5167ffca
 translationStatus: translated
-generatedBodyHash: 86c732fbbc49d624017d879bf3ddfea66eaac5bb62a44675383d86b4410b6e7d
+generatedBodyHash: cd606e4222ca5ec8e60bf0b986608125e3ca15991034b96d04b1255136ecc057
 workInfo:
   channels:
     - kind: sale
@@ -104,7 +104,3 @@ UDP is often used for frequent sensor, simulator, and LAN data. TCP provides an 
 - [SimpleByteConversion tutorial](/en/works/simple-byte-conversion/docs/primitive-bytes/): conversion between application types and byte arrays.
 
 The original technical record also mentions the `Send Http Request` Blueprint node and third-party libraries for MQTT or gRPC where needed. Availability of a particular HTTP node depends on the modules or plugins enabled in the project; check your project. Those protocol implementations are outside this guide.
-
-## Source of native examples
-
-The native networking examples were published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19165484) on 2025-10-25.

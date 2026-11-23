@@ -100,7 +100,3 @@ UDP 常用于传感器、仿真器和局域网中的高频数据；TCP 用于需
 - [SimpleByteConversion 字节转换教程](/zh/works/simple-byte-conversion/docs/primitive-bytes/)：业务类型与字节数组的双向转换。
 
 原技术记录还提到 HTTP 的 `Send Http Request` 蓝图节点，以及按需引入 MQTT、gRPC 等第三方库。具体 HTTP 节点是否可用取决于项目启用的模块或插件，应按所在项目核对；这里不扩展这些协议的实现。
-
-## 原生示例来源
-
-原生通信示例于 2025-10-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19165484)。

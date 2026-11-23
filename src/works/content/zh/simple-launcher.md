@@ -104,7 +104,3 @@ SimpleLauncher 在 UE 游戏中以命名预设管理外部程序。项目可以�
 如有使用问题或合作需求，请前往联系页面。
 
 - **联系入口：** [联系与合作](https://mzsh.me/contact/)
-
-## 原文来源
-
-原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770928)。
