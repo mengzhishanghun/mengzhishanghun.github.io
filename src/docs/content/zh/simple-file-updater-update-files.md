@@ -47,6 +47,14 @@ SimpleFileUpdater.exe MyConfig.txt
 
 执行完成后程序会停留在命令行，等待用户按回车查看结果。
 
+![SimpleFileUpdater 更新文件的运行输出](/media-occurrence/doc%3Asimple-file-updater%3Aupdate-files%3Amedia%3A1)
+
+图中将 settings.json 更新为下载到的内容，完成后显示“已更新”。下载地址使用本机演示服务；实际使用时请填写自己的下载 URL。
+
+![SimpleFileUpdater 文件已是最新的运行输出](/media-occurrence/doc%3Asimple-file-updater%3Aupdate-files%3Amedia%3A2)
+
+再次运行同一份清单，下载内容与本地文件一致时，程序显示“已是最新”，并保留现有文件。
+
 ## 覆盖同名文件前核对
 
 这是个人工具，使用风险由使用者承担。运行前先确认远程 URL 可信、目标路径正确；目标位置已有同名文件时，请先备份，更新可能覆盖它。

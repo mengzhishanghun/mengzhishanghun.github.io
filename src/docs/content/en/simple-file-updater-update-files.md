@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-file-updater/docs/update-files/
 lang: en
 translationKey: doc:simple-file-updater:update-files
-sourceHash: 773ef6b79c316b7dbd68910e2c22e26afd1ce3be1d99cc11687c29d3a575a6f6
+sourceHash: 9e2aca1fc06b7a61ec1dc2b04636b236ece097309293842ce295fb0efb68aa71
 translationStatus: translated
-generatedBodyHash: 1ddfedb802d92b97c1c87da65bac557a88ec11662a99c8ca998985f265fb392f
+generatedBodyHash: a58bf335db09da39ad064ed1b6507911588506d885df86d6cc029cd8d042d929
 docPage:
   work: simple-file-updater
   group: features
@@ -47,6 +47,14 @@ Place `SimpleFileUpdater.exe` and `.SimpleFileUpdater` in the same directory, th
 SimpleFileUpdater.exe MyConfig.txt
 ```
 After execution, the program remains in the console and waits for you to press Enter to view the results.
+
+![SimpleFileUpdater output after updating a file](/media-occurrence/doc%3Asimple-file-updater%3Aupdate-files%3Amedia%3A1)
+
+This run updates settings.json with the downloaded content and reports `已更新` (updated). The download address points to a local demonstration service; use your own download URL in your configuration.
+
+![SimpleFileUpdater output when a file is already current](/media-occurrence/doc%3Asimple-file-updater%3Aupdate-files%3Amedia%3A2)
+
+Run the same list again. When the downloaded content matches the local file, the program reports `已是最新` (already up to date) and keeps the existing file.
 
 ## Before Overwriting Files
 

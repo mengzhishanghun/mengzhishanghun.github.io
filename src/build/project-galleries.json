@@ -784,6 +784,31 @@
           }
         }
       ]
+    },
+    {
+      "entryId": "work:simple-file-updater",
+      "items": [
+        {
+          "id": "ob-gallery-00790f3a555e9cef68edc644916780fc6bc209b0c5497b0e2a1a14a55bc91eca",
+          "grantId": "work:simple-file-updater:ob:gallery:00790f3a555e9cef68edc644916780fc6bc209b0c5497b0e2a1a14a55bc91eca",
+          "width": 1050,
+          "height": 460,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4",
+          "grantId": "work:simple-file-updater:ob:gallery:ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4",
+          "width": 1050,
+          "height": 460,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        }
+      ]
     }
   ]
 }

@@ -5337,6 +5337,22 @@
       ],
       "sha256": "eb7aaa0786a21c4c77b09864a872e3ed5621206252f700339f9a58f87b6a1c91",
       "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/00790f3a555e9cef68edc644916780fc6bc209b0c5497b0e2a1a14a55bc91eca.png",
+      "outputs": [
+        "media/imported/projects/00790f3a555e9cef68edc644916780fc6bc209b0c5497b0e2a1a14a55bc91eca.png"
+      ],
+      "sha256": "00790f3a555e9cef68edc644916780fc6bc209b0c5497b0e2a1a14a55bc91eca",
+      "mode": "frozen"
+    },
+    {
+      "source": "src/shared/project-media/ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4.png",
+      "outputs": [
+        "media/imported/projects/ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4.png"
+      ],
+      "sha256": "ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4",
+      "mode": "frozen"
     }
   ]
 }

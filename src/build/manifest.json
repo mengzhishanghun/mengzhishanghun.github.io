@@ -6850,7 +6850,22 @@
       "template": "docs/templates/document.html",
       "shellId": "doc:chapter",
       "legacyRoutes": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "doc:simple-file-updater:update-files:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/imported/projects/00790f3a555e9cef68edc644916780fc6bc209b0c5497b0e2a1a14a55bc91eca.png",
+          "publicSha256": "00790f3a555e9cef68edc644916780fc6bc209b0c5497b0e2a1a14a55bc91eca"
+        },
+        {
+          "id": "doc:simple-file-updater:update-files:media:2",
+          "ordinal": 2,
+          "state": "public",
+          "websiteUrl": "/media/imported/projects/ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4.png",
+          "publicSha256": "ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4"
+        }
+      ],
       "docPage": {
         "work": "simple-file-updater",
         "group": "features",
