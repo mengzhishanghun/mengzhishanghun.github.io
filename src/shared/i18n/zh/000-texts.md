@@ -3846,7 +3846,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: 作品
+    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: 作品展示
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: 插件、工具与游戏作品
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: 作品分类
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE插件
@@ -4106,7 +4106,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: 案例
+    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: 项目案例
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: 做过的项目与负责的工作
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: 案例分类
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE项目
@@ -4188,7 +4188,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: 博客
+    root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.h1:0.#text:0: 个人博客
     root.html:1.body:1.div:0.main:3.div:0.div:0.section:0.div:1.p:1.#text:0: 技术思考、排障与开发记录
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0@aria-label: 博客分类
     root.html:1.body:1.div:0.main:3.div:0.section:1.div:0.nav:0.button:0.span:0.#text:0: UE

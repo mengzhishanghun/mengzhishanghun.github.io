@@ -1,5 +1,5 @@
 ---
-title: 博客列表
+title: 个人博客
 type: page
 slug: blog-index
 draft: false
@@ -12,7 +12,7 @@ translationKey: blog-index
 
 ![](/media-occurrence/page%3Ablog-index%3Amedia%3A1)
 
-# 博客
+# 个人博客
 
 记录开发中的技术思考，整理遇到的问题和解决过程。
 留下实践经验，方便自己回顾，也供有需要的人参考。

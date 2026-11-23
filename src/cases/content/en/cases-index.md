@@ -8,7 +8,7 @@ websiteRoute: /cases/
 template: cases/index.html
 lang: en
 translationKey: cases-index
-sourceHash: "f1e40ba21cbd38ad6845eb2c32ba8fd9c2772f9ed7b96b20c1ad08ba66a14263"
+sourceHash: 088e79b4012ceafa829711bd383d985639c8ece5d7273fffcb7717a61821322e
 translationStatus: translated
 generatedBodyHash: "ec9006517fcacf1479bcd8ad1e022905a27765413d603c6c4a72777530c21884"
 ---

@@ -1,3 +1,14 @@
+.site-chrome .brand::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-left: 4px;
+  border-radius: 50%;
+  background: var(--blue);
+  vertical-align: baseline;
+}
+
 .site-chrome .header-inner {
   display: flex;
   align-items: center;

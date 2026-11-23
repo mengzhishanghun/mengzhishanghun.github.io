@@ -1,5 +1,5 @@
 ---
-title: 案例列表
+title: 项目案例
 type: page
 slug: cases-index
 draft: false
@@ -12,7 +12,7 @@ translationKey: cases-index
 
 ![](/media-occurrence/page%3Acases-index%3Amedia%3A1)
 
-# 案例
+# 项目案例
 
 这里记录我参与过的项目，以及在其中负责的工作。
 通过具体案例，了解我的开发方向与项目经验。

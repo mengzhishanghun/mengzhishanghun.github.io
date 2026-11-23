@@ -1,5 +1,5 @@
 ---
-title: 作品列表
+title: 作品展示
 type: page
 slug: works-index
 draft: false
@@ -12,7 +12,7 @@ translationKey: works-index
 
 ![](/media-occurrence/page%3Aworks-index%3Amedia%3A1)
 
-# 作品
+# 作品展示
 
 这里整理了我开发的插件、工具和游戏作品。
 可以查看功能介绍、使用方式和相关资料。
