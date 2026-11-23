@@ -11,7 +11,7 @@ workIds:
   - p4-stream-switcher
 docPage:
   work: p4-stream-switcher
-  group: switching
+  group: features
   slug: normal-switch
   order: 1
 documentKind: product-manual
@@ -24,7 +24,7 @@ translationKey: doc:p4-stream-switcher:normal-switch
 
 1. 输入并保存唯一的工作区标识。标识已被其他主机使用时，先换一个标识或与使用者协调。
 2. 选择项目和分支，核对工作区名称。预览中的黑色表示已有工作区，灰色表示将创建。
-3. 选择本地目录。使用已有目录前，先备份要保留的本地内容。若要以该目录里的文件为准，改用[离线目录模式](/zh/works/p4-stream-switcher/docs/offline-switch/)。
+3. 选择本地目录。若选已有目录，先备份要保留的文件：普通同步会清理部分本地文件，也可能覆盖与目标版本不同的文件。若要以该目录里的文件为准，改用[离线目录模式](/zh/works/p4-stream-switcher/docs/offline-switch/)。
 4. 检查池上限、.p4config、rmdir 和换行符设置。
 5. 点击“切换并打开 P4V”，按提示确认默认目录或新建目录。
 6. 在 P4V 中检查当前客户端与变更列表。

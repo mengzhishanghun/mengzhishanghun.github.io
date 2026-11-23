@@ -40,6 +40,34 @@ test('reject incomplete group translations, duplicate order, aliases, and mismat
   for(const source of ['网站/001-作品/001-工具/Other/001-入门/001-安装.md','网站/001-作品/001-工具/Cleaner/001-入门/002-安装.md','网站/001-作品/001-工具/Cleaner/002-入门/001-安装.md','网站/001-作品/001-工具/Cleaner/文档/001-入门/extra/001-安装.md'])assert.throws(()=>validateDocumentSourcePath(source,layout),/章节/);
 });
 
+test('date filenames provide chapter titles and sort newest first',()=>{
+  const older=documents.parseDocumentFilename('2024-02-29.md');
+  const newer=documents.parseDocumentFilename('2026-11-23.md');
+  assert.deepEqual(older,{title:'2024-02-29',order:79759771});
+  assert.deepEqual(newer,{title:'2026-11-23',order:79738877});
+  const dated=[chapter(older.title,'start',older.order),chapter(newer.title,'start',newer.order)];
+  const catalog=documentCatalog([work,...dated,last],groups,codes);
+  assert.deepEqual(catalog.get('cleaner')[0].chapters.map(item=>item.sources.zh.data.title),['2026-11-23','2024-02-29']);
+});
+
+test('chapter filenames reject invalid dates and preserve numbered titles',()=>{
+  assert.deepEqual(documents.parseDocumentFilename('001-Setup guide.md'),{title:'Setup guide',order:1});
+  assert.equal(documents.parseDocumentFilename('0001-01-01.md').title,'0001-01-01');
+  assert.equal(documents.parseDocumentFilename('2000-02-29.md').title,'2000-02-29');
+  assert.equal(documents.parseDocumentFilename('9999-12-31.md').title,'9999-12-31');
+  for(const name of ['0000-01-01.md','1900-02-29.md','2023-02-29.md','2026-04-31.md','2026-01-00.md','2026-13-01.md','000-Setup.md','001-Sub/Setup.md','001-Sub\\Setup.md','001-Bad:Title.md','001-Bad\u007fTitle.md','2026-11-23.md\n'])assert.throws(()=>documents.parseDocumentFilename(name),/章节/);
+});
+
+test('dated chapters still require the registered order and work directory',()=>{
+  const root='网站/001-作品/001-工具/Cleaner';
+  const layout={work:`${root}/README.md`,groupOrder:1,docPage:{...first.docPage,order:79738877}};
+  const source=`${root}/001-Updates/2026-11-23.md`;
+  assert.equal(validateDocumentSourcePath(source,layout),'001-Updates');
+  assert.equal(validateDocumentSourcePath(`${root}/文档/001-Updates/2026-11-23.md`,layout),'001-Updates');
+  assert.throws(()=>validateDocumentSourcePath(source,{...layout,docPage:{...layout.docPage,order:79738878}}),/章节/);
+  for(const outside of [source.replace('/Cleaner/','/Other/'),source.replace('/001-Updates/','/../001-Updates/'),source.replace('/001-Updates/','//001-Updates/'),source.replace('/001-Updates/','\\001-Updates/'),source.replace('/001-Updates/','/001-Updates:/')])assert.throws(()=>validateDocumentSourcePath(outside,layout),/章节/);
+});
+
 test('split old links can target another page and require exactly one real anchor',()=>{
   const options={entries,locale:'en',route:localeRoute,pageIds:new Map([[last.id+':en',new Map([['run',1]])]])};
   assert.deepEqual(resolveDocumentAlias({id:last.id,anchor:'run'},options),{path:'/en/works/cleaner/docs/cleanup/',anchor:'run'});

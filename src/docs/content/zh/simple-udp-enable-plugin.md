@@ -10,7 +10,7 @@ workIds:
   - simple-udp
 docPage:
   work: simple-udp
-  group: setup
+  group: getting-started
   slug: enable-plugin
   order: 1
 documentKind: product-manual
@@ -30,6 +30,8 @@ translationKey: doc:simple-udp:enable-plugin
 
 ## 启用插件
 
-启用插件后，`GameInstanceSubsystem` 会自动运行，不需要编写启动或关闭代码。
+启用后先配置通道。接收通道要填本地监听端点；发送通道要填目标端点。之后在蓝图中用相应的通道名称绑定接收或发送数据。
+
+启用后，插件由 `GameInstanceSubsystem` 自动运行，无需另写启动或关闭代码。
 
 [在项目设置中配置收发通道](/zh/works/simple-udp/docs/channels/)

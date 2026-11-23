@@ -275,6 +275,36 @@ languages:
       doc:mcp-dev-tools:enhanced-input: docs/content/zh/mcp-dev-tools-enhanced-input.md
       doc:mcp-umg:import-ui-fonts: docs/content/zh/mcp-umg-import-ui-fonts.md
       doc:mcp-umg:widget-performance: docs/content/zh/mcp-umg-widget-performance.md
+      doc:simple-file-updater:updates-2025-05-03: docs/content/zh/simple-file-updater-updates-2025-05-03.md
+      doc:simple-file-updater:updates-2026-04-18: docs/content/zh/simple-file-updater-updates-2026-04-18.md
+      doc:p4-case-sync:updates-2025-10-16: docs/content/zh/p4-case-sync-updates-2025-10-16.md
+      doc:md-blog-packer:updates-2026-04-18: docs/content/zh/md-blog-packer-updates-2026-04-18.md
+      doc:md-blog-packer:updates-2026-05-13: docs/content/zh/md-blog-packer-updates-2026-05-13.md
+      doc:simple-bp-inherit-fix:quickstart: docs/content/zh/simple-bp-inherit-fix-quickstart.md
+      doc:simple-auto-enum:quickstart: docs/content/zh/simple-auto-enum-quickstart.md
+      doc:ue-package-manager:updates-2026-09-15: docs/content/zh/ue-package-manager-updates-2026-09-15.md
+      doc:plugin-auto-packer:updates-2025-04-21: docs/content/zh/plugin-auto-packer-updates-2025-04-21.md
+      doc:plugin-auto-packer:updates-2025-06-10: docs/content/zh/plugin-auto-packer-updates-2025-06-10.md
+      doc:plugin-auto-packer:updates-2025-06-18: docs/content/zh/plugin-auto-packer-updates-2025-06-18.md
+      doc:plugin-auto-packer:updates-2025-06-22: docs/content/zh/plugin-auto-packer-updates-2025-06-22.md
+      doc:plugin-auto-packer:updates-2026-02-26: docs/content/zh/plugin-auto-packer-updates-2026-02-26.md
+      doc:plugin-auto-packer:updates-2026-04-17: docs/content/zh/plugin-auto-packer-updates-2026-04-17.md
+      doc:plugin-auto-packer:updates-2026-06-19: docs/content/zh/plugin-auto-packer-updates-2026-06-19.md
+      doc:plugin-auto-packer:updates-2026-08-08: docs/content/zh/plugin-auto-packer-updates-2026-08-08.md
+      doc:plugin-manager:updates-2026-01-10: docs/content/zh/plugin-manager-updates-2026-01-10.md
+      doc:ue-quick-start:updates-2026-01-22: docs/content/zh/ue-quick-start-updates-2026-01-22.md
+      doc:ue-quick-start:updates-2026-01-30: docs/content/zh/ue-quick-start-updates-2026-01-30.md
+      doc:ue-quick-start:updates-2026-01-31: docs/content/zh/ue-quick-start-updates-2026-01-31.md
+      doc:ue-quick-start:updates-2026-03-18: docs/content/zh/ue-quick-start-updates-2026-03-18.md
+      doc:ue-quick-start:updates-2026-06-13: docs/content/zh/ue-quick-start-updates-2026-06-13.md
+      doc:mcp-niagara:quickstart: docs/content/zh/mcp-niagara-quickstart.md
+      doc:p4-stream-switcher:updates-2026-01-09: docs/content/zh/p4-stream-switcher-updates-2026-01-09.md
+      doc:p4-stream-switcher:updates-2026-01-13: docs/content/zh/p4-stream-switcher-updates-2026-01-13.md
+      doc:p4-stream-switcher:updates-2026-01-16: docs/content/zh/p4-stream-switcher-updates-2026-01-16.md
+      doc:p4-stream-switcher:updates-2026-01-30: docs/content/zh/p4-stream-switcher-updates-2026-01-30.md
+      doc:p4-stream-switcher:updates-2026-01-31: docs/content/zh/p4-stream-switcher-updates-2026-01-31.md
+      doc:p4-stream-switcher:updates-2026-02-10: docs/content/zh/p4-stream-switcher-updates-2026-02-10.md
+      doc:p4-stream-switcher:updates-2026-03-23: docs/content/zh/p4-stream-switcher-updates-2026-03-23.md
   - enabled: true
     commonSource: shared/i18n/en/000-texts.md
     sources:
@@ -547,4 +577,34 @@ languages:
       doc:mcp-dev-tools:enhanced-input: docs/content/en/mcp-dev-tools-enhanced-input.md
       doc:mcp-umg:import-ui-fonts: docs/content/en/mcp-umg-import-ui-fonts.md
       doc:mcp-umg:widget-performance: docs/content/en/mcp-umg-widget-performance.md
+      doc:simple-file-updater:updates-2025-05-03: docs/content/en/simple-file-updater-updates-2025-05-03.md
+      doc:simple-file-updater:updates-2026-04-18: docs/content/en/simple-file-updater-updates-2026-04-18.md
+      doc:p4-case-sync:updates-2025-10-16: docs/content/en/p4-case-sync-updates-2025-10-16.md
+      doc:md-blog-packer:updates-2026-04-18: docs/content/en/md-blog-packer-updates-2026-04-18.md
+      doc:md-blog-packer:updates-2026-05-13: docs/content/en/md-blog-packer-updates-2026-05-13.md
+      doc:simple-bp-inherit-fix:quickstart: docs/content/en/simple-bp-inherit-fix-quickstart.md
+      doc:simple-auto-enum:quickstart: docs/content/en/simple-auto-enum-quickstart.md
+      doc:ue-package-manager:updates-2026-09-15: docs/content/en/ue-package-manager-updates-2026-09-15.md
+      doc:plugin-auto-packer:updates-2025-04-21: docs/content/en/plugin-auto-packer-updates-2025-04-21.md
+      doc:plugin-auto-packer:updates-2025-06-10: docs/content/en/plugin-auto-packer-updates-2025-06-10.md
+      doc:plugin-auto-packer:updates-2025-06-18: docs/content/en/plugin-auto-packer-updates-2025-06-18.md
+      doc:plugin-auto-packer:updates-2025-06-22: docs/content/en/plugin-auto-packer-updates-2025-06-22.md
+      doc:plugin-auto-packer:updates-2026-02-26: docs/content/en/plugin-auto-packer-updates-2026-02-26.md
+      doc:plugin-auto-packer:updates-2026-04-17: docs/content/en/plugin-auto-packer-updates-2026-04-17.md
+      doc:plugin-auto-packer:updates-2026-06-19: docs/content/en/plugin-auto-packer-updates-2026-06-19.md
+      doc:plugin-auto-packer:updates-2026-08-08: docs/content/en/plugin-auto-packer-updates-2026-08-08.md
+      doc:plugin-manager:updates-2026-01-10: docs/content/en/plugin-manager-updates-2026-01-10.md
+      doc:ue-quick-start:updates-2026-01-22: docs/content/en/ue-quick-start-updates-2026-01-22.md
+      doc:ue-quick-start:updates-2026-01-30: docs/content/en/ue-quick-start-updates-2026-01-30.md
+      doc:ue-quick-start:updates-2026-01-31: docs/content/en/ue-quick-start-updates-2026-01-31.md
+      doc:ue-quick-start:updates-2026-03-18: docs/content/en/ue-quick-start-updates-2026-03-18.md
+      doc:ue-quick-start:updates-2026-06-13: docs/content/en/ue-quick-start-updates-2026-06-13.md
+      doc:mcp-niagara:quickstart: docs/content/en/mcp-niagara-quickstart.md
+      doc:p4-stream-switcher:updates-2026-01-09: docs/content/en/p4-stream-switcher-updates-2026-01-09.md
+      doc:p4-stream-switcher:updates-2026-01-13: docs/content/en/p4-stream-switcher-updates-2026-01-13.md
+      doc:p4-stream-switcher:updates-2026-01-16: docs/content/en/p4-stream-switcher-updates-2026-01-16.md
+      doc:p4-stream-switcher:updates-2026-01-30: docs/content/en/p4-stream-switcher-updates-2026-01-30.md
+      doc:p4-stream-switcher:updates-2026-01-31: docs/content/en/p4-stream-switcher-updates-2026-01-31.md
+      doc:p4-stream-switcher:updates-2026-02-10: docs/content/en/p4-stream-switcher-updates-2026-02-10.md
+      doc:p4-stream-switcher:updates-2026-03-23: docs/content/en/p4-stream-switcher-updates-2026-03-23.md
 ---

@@ -13,25 +13,27 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/commonui/
 lang: en
 translationKey: doc:mcp-umg:commonui
-sourceHash: 02002941ac77911978e4501379c10d718200187d083eca94599d55a26915b1c9
+sourceHash: 5aebd7b9ea83292bf7408a966b49d458cb6277c1c999cd13188879fe8c8a9b69
 translationStatus: translated
-generatedBodyHash: 763e5b4bfe2b039aecc3d676e54f3def8964f49bbbbd154995f054427e4a7611
+generatedBodyHash: d9881e1bfe712b6dd5d33a69809b9f314fc937b87653c7db31b8946561b2ac76
 docPage:
   work: mcp-umg
-  group: framework-integration
+  group: features
   slug: commonui
-  order: 1
+  order: 13
 ---
 
 ## Check framework availability
 
 Call `GetUIFrameworkCapabilities` to check whether CommonUI is available in this project. The possible states are `NotInstalled`, `InstalledDisabled`, `EnabledNotLoaded` or `Available`. This query does not change project, module or asset state.
 
-To use an optional framework, have the project owner manually enable its plugin as needed and restart the editor. MCPUMG does not enable plugins or load disabled modules on your behalf.
+If the project needs CommonUI, have the project owner enable the plugin manually and restart the editor. MCPUMG does not enable plugins or load disabled modules on your behalf.
 
 For data binding, see [MVVM contexts and bindings](/en/works/mcp-umg/docs/mvvm/).
 
 ## Configure existing widgets, input, and live instances
+
+To change the lock behavior of an existing button, identify its blueprint and widget name, then use the example below to preflight the property. To check whether input actually reaches the widget, test on the running page. Asset configuration can only validate the fields and references.
 
 `ConfigureCommonUIWidget` modifies only an existing instance in the specified Widget Blueprint tree. Parameters are `BlueprintPath`, `WidgetName`, `Properties` and optional `dryRun`, which checks the complete request without changing assets.
 

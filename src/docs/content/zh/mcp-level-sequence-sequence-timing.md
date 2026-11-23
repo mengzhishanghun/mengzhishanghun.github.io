@@ -11,9 +11,9 @@ workIds:
   - mcp-level-sequence
 docPage:
   work: mcp-level-sequence
-  group: sequence-editing
+  group: features
   slug: sequence-timing
-  order: 4
+  order: 6
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-level-sequence/docs/sequence-timing/
 lang: zh
@@ -34,7 +34,7 @@ translationKey: doc:mcp-level-sequence:sequence-timing
 
 ## 调用示例
 
-下面的请求将 Display Rate 设为 24 fps，并把 Tick Resolution 迁移为 24000 fps：
+下面的请求将 Display Rate 设为 24 fps，并把 Tick Resolution 迁移为 24000 fps。此时一秒在界面上对应 24 个显示帧，在工具的帧参数中对应 24000。若从 0 开始设置一秒的播放范围，排他的结束边界应填 24000。
 
 ```json
 {

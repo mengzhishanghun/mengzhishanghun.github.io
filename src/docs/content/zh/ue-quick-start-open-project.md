@@ -12,7 +12,7 @@ workIds:
   - ue-quick-start
 docPage:
   work: ue-quick-start
-  group: setup
+  group: getting-started
   slug: open-project
   order: 1
 documentKind: product-manual
@@ -28,8 +28,8 @@ translationKey: doc:ue-quick-start:open-project
 ## 编译并打开工程
 
 1. 将 `UEBuildTool.exe` 放到项目根目录，与 `.uproject` 同级。
-2. 双击运行，在日志窗口查看编译进度。
-3. 编译成功后，工具默认自动打开工程。
+2. 双击运行。日志窗口会显示编译进度和报错。
+3. 编译成功后，工具默认自动打开工程。如果编译失败，先按下文查看具体错误。
 
 ## 工程与引擎识别
 

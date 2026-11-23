@@ -1955,7 +1955,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "ai-data-asset",
-        "group": "data",
+        "group": "features",
         "slug": "sync",
         "order": 1
       },
@@ -2211,7 +2211,7 @@
       ],
       "docPage": {
         "work": "ai-data-asset",
-        "group": "data",
+        "group": "features",
         "slug": "ai-edit",
         "order": 2
       },
@@ -2298,7 +2298,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "md-blog-packer",
-        "group": "export",
+        "group": "features",
         "slug": "package",
         "order": 1
       },
@@ -2473,7 +2473,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "p4-case-sync",
-        "group": "case-fixes",
+        "group": "features",
         "slug": "check-and-fix",
         "order": 1
       },
@@ -2736,9 +2736,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "p4-case-sync",
-        "group": "distribution",
+        "group": "features",
         "slug": "build-and-environment",
-        "order": 1
+        "order": 2
       },
       "anchorAliases": {
         "zh": {
@@ -2943,7 +2943,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "plugin-auto-packer",
-        "group": "packaging",
+        "group": "features",
         "slug": "package",
         "order": 1
       },
@@ -3062,7 +3062,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "plugin-auto-packer",
-        "group": "packaging",
+        "group": "features",
         "slug": "output",
         "order": 2
       },
@@ -3149,7 +3149,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "plugin-manager",
-        "group": "plugins",
+        "group": "features",
         "slug": "find",
         "order": 1
       },
@@ -3220,7 +3220,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "plugin-manager",
-        "group": "plugins",
+        "group": "features",
         "slug": "enable-disable",
         "order": 2
       },
@@ -3275,7 +3275,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "plugin-manager",
-        "group": "plugins",
+        "group": "features",
         "slug": "folder-actions",
         "order": 3
       },
@@ -3331,7 +3331,7 @@
       ],
       "docPage": {
         "work": "simple-asset-cleaner",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -3618,7 +3618,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-asset-cleaner",
-        "group": "cleanup",
+        "group": "features",
         "slug": "clean-assets",
         "order": 1
       },
@@ -3921,9 +3921,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-asset-cleaner",
-        "group": "dependencies",
+        "group": "features",
         "slug": "add-dependencies",
-        "order": 1
+        "order": 3
       },
       "anchorAliases": {
         "zh": {
@@ -4024,9 +4024,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-asset-cleaner",
-        "group": "protection",
+        "group": "features",
         "slug": "protect-assets",
-        "order": 1
+        "order": 2
       },
       "anchorAliases": {
         "zh": {
@@ -4175,7 +4175,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-asset-namer",
-        "group": "naming",
+        "group": "features",
         "slug": "naming-rules",
         "order": 1
       },
@@ -4390,7 +4390,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-asset-namer",
-        "group": "naming",
+        "group": "features",
         "slug": "rename-assets",
         "order": 2
       },
@@ -4630,7 +4630,7 @@
       ],
       "docPage": {
         "work": "simple-auto-enum",
-        "group": "enum-binding",
+        "group": "features",
         "slug": "config-binding",
         "order": 1
       },
@@ -5045,9 +5045,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-auto-enum",
-        "group": "usage",
+        "group": "features",
         "slug": "blueprints-and-assets",
-        "order": 1
+        "order": 2
       },
       "anchorAliases": {
         "zh": {
@@ -5132,7 +5132,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-bp-inherit-fix",
-        "group": "components",
+        "group": "features",
         "slug": "find-components",
         "order": 1
       },
@@ -5291,7 +5291,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-bp-inherit-fix",
-        "group": "components",
+        "group": "features",
         "slug": "repair-components",
         "order": 2
       },
@@ -5563,7 +5563,7 @@
       ],
       "docPage": {
         "work": "simple-byte-conversion",
-        "group": "conversion",
+        "group": "features",
         "slug": "primitive-bytes",
         "order": 1
       },
@@ -5874,7 +5874,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-byte-conversion",
-        "group": "conversion",
+        "group": "features",
         "slug": "struct-and-json",
         "order": 2
       },
@@ -6065,7 +6065,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-config-exclude",
-        "group": "packaging",
+        "group": "features",
         "slug": "staging-rules",
         "order": 1
       },
@@ -6696,7 +6696,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-config-exclude",
-        "group": "packaging",
+        "group": "features",
         "slug": "copy-excluded",
         "order": 2
       },
@@ -6807,7 +6807,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-file-updater",
-        "group": "updates",
+        "group": "features",
         "slug": "update-files",
         "order": 1
       },
@@ -6959,7 +6959,7 @@
       ],
       "docPage": {
         "work": "simple-input-simulator",
-        "group": "input",
+        "group": "features",
         "slug": "key-input",
         "order": 1
       },
@@ -7335,7 +7335,7 @@
       ],
       "docPage": {
         "work": "simple-input-simulator",
-        "group": "input",
+        "group": "features",
         "slug": "axis-input",
         "order": 2
       },
@@ -7438,7 +7438,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-launcher",
-        "group": "process-control",
+        "group": "features",
         "slug": "presets",
         "order": 1
       },
@@ -7741,7 +7741,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-launcher",
-        "group": "process-control",
+        "group": "features",
         "slug": "processes",
         "order": 2
       },
@@ -7948,7 +7948,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-level-seq-smooth",
-        "group": "curves",
+        "group": "features",
         "slug": "smooth-curves",
         "order": 1
       },
@@ -8115,7 +8115,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-ssh-tunnel",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "connect",
         "order": 1
       },
@@ -8346,9 +8346,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-ssh-tunnel",
-        "group": "native",
+        "group": "features",
         "slug": "cpp-tunnels",
-        "order": 1
+        "order": 2
       },
       "anchorAliases": {
         "zh": {
@@ -8461,7 +8461,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-static-mesh-merger",
-        "group": "workflow",
+        "group": "features",
         "slug": "merge-actors",
         "order": 1
       },
@@ -9204,7 +9204,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-static-mesh-merger",
-        "group": "workflow",
+        "group": "features",
         "slug": "split-level-instance",
         "order": 2
       },
@@ -9300,7 +9300,7 @@
       ],
       "docPage": {
         "work": "simple-tcp-client",
-        "group": "network",
+        "group": "features",
         "slug": "connect",
         "order": 1
       },
@@ -9564,7 +9564,7 @@
       ],
       "docPage": {
         "work": "simple-tcp-client",
-        "group": "network",
+        "group": "features",
         "slug": "messages",
         "order": 2
       },
@@ -9699,9 +9699,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-tcp-client",
-        "group": "native",
+        "group": "features",
         "slug": "native-client",
-        "order": 1
+        "order": 3
       },
       "anchorAliases": {
         "zh": {
@@ -9778,7 +9778,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-tcp-server",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "listen",
         "order": 1
       },
@@ -9985,7 +9985,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-tcp-server",
-        "group": "network",
+        "group": "features",
         "slug": "messages",
         "order": 2
       },
@@ -10072,9 +10072,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-tcp-server",
-        "group": "native",
+        "group": "features",
         "slug": "native-server",
-        "order": 1
+        "order": 3
       },
       "anchorAliases": {
         "zh": {
@@ -10164,7 +10164,7 @@
       ],
       "docPage": {
         "work": "simple-udp",
-        "group": "network",
+        "group": "features",
         "slug": "channels",
         "order": 1
       },
@@ -10468,7 +10468,7 @@
       ],
       "docPage": {
         "work": "simple-udp",
-        "group": "network",
+        "group": "features",
         "slug": "messages",
         "order": 2
       },
@@ -10587,9 +10587,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-udp",
-        "group": "native",
+        "group": "features",
         "slug": "native-sockets",
-        "order": 1
+        "order": 3
       },
       "anchorAliases": {
         "zh": {
@@ -10683,7 +10683,7 @@
       ],
       "docPage": {
         "work": "simple-websocket",
-        "group": "network",
+        "group": "features",
         "slug": "connect-and-send",
         "order": 1
       },
@@ -10834,9 +10834,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "simple-websocket",
-        "group": "native",
+        "group": "features",
         "slug": "native-module",
-        "order": 1
+        "order": 2
       },
       "anchorAliases": {
         "zh": {
@@ -10942,7 +10942,7 @@
       ],
       "docPage": {
         "work": "ue-package-manager",
-        "group": "packaging",
+        "group": "features",
         "slug": "package-project",
         "order": 1
       },
@@ -11053,9 +11053,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "ue-package-manager",
-        "group": "source",
+        "group": "features",
         "slug": "build-executable",
-        "order": 1
+        "order": 5
       },
       "anchorAliases": {
         "zh": {
@@ -11108,7 +11108,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "ue-quick-start",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "open-project",
         "order": 1
       },
@@ -12335,7 +12335,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "p4-stream-switcher",
-        "group": "switching",
+        "group": "features",
         "slug": "normal-switch",
         "order": 1
       },
@@ -12470,7 +12470,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "p4-stream-switcher",
-        "group": "switching",
+        "group": "features",
         "slug": "offline-switch",
         "order": 2
       },
@@ -12509,9 +12509,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "p4-stream-switcher",
-        "group": "workspaces",
+        "group": "features",
         "slug": "recycle-workspace",
-        "order": 2
+        "order": 4
       },
       "anchorAliases": {
         "zh": {
@@ -12735,7 +12735,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "connect",
         "order": 1
       },
@@ -12830,7 +12830,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "levels",
+        "group": "features",
         "slug": "maps",
         "order": 1
       },
@@ -12901,9 +12901,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "actors",
+        "group": "features",
         "slug": "actors",
-        "order": 1
+        "order": 6
       },
       "anchorAliases": {
         "zh": {
@@ -13004,9 +13004,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "world-partition",
+        "group": "features",
         "slug": "streamed-world",
-        "order": 2
+        "order": 13
       },
       "anchorAliases": {
         "zh": {
@@ -13075,9 +13075,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "landscape",
+        "group": "features",
         "slug": "landscape",
-        "order": 1
+        "order": 16
       },
       "anchorAliases": {
         "zh": {
@@ -13130,9 +13130,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "materials",
+        "group": "features",
         "slug": "materials",
-        "order": 1
+        "order": 22
       },
       "anchorAliases": {
         "zh": {
@@ -13185,7 +13185,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-level-sequence",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "connect",
         "order": 1
       },
@@ -13248,9 +13248,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-level-sequence",
-        "group": "sequence-editing",
+        "group": "features",
         "slug": "edit-sequence",
-        "order": 2
+        "order": 4
       },
       "anchorAliases": {
         "zh": {
@@ -13351,7 +13351,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-niagara",
-        "group": "systems",
+        "group": "features",
         "slug": "inspect",
         "order": 1
       },
@@ -13398,9 +13398,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-niagara",
-        "group": "effects",
+        "group": "features",
         "slug": "edit-emitter",
-        "order": 1
+        "order": 4
       },
       "anchorAliases": {
         "zh": {
@@ -13453,9 +13453,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-niagara",
-        "group": "effects",
+        "group": "features",
         "slug": "parameters-preview",
-        "order": 3
+        "order": 6
       },
       "anchorAliases": {
         "zh": {
@@ -13500,7 +13500,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-animation",
-        "group": "assets",
+        "group": "features",
         "slug": "find-assets",
         "order": 1
       },
@@ -13651,9 +13651,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-animation",
-        "group": "editing",
+        "group": "features",
         "slug": "animation-blueprint",
-        "order": 1
+        "order": 2
       },
       "anchorAliases": {
         "zh": {
@@ -13690,9 +13690,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-animation",
-        "group": "editing",
+        "group": "features",
         "slug": "montage-and-blendspace",
-        "order": 2
+        "order": 3
       },
       "anchorAliases": {
         "zh": {
@@ -13896,7 +13896,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "widgets-layout",
+        "group": "features",
         "slug": "layout",
         "order": 1
       },
@@ -14199,9 +14199,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "component-reuse",
+        "group": "features",
         "slug": "components-styles",
-        "order": 1
+        "order": 5
       },
       "anchorAliases": {
         "zh": {
@@ -14478,9 +14478,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "interaction",
+        "group": "features",
         "slug": "events-navigation-animation",
-        "order": 1
+        "order": 10
       },
       "anchorAliases": {
         "zh": {
@@ -14621,9 +14621,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "preview-diagnostics",
+        "group": "features",
         "slug": "preview-runtime",
-        "order": 1
+        "order": 15
       },
       "anchorAliases": {
         "zh": {
@@ -14820,7 +14820,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "widgets-layout",
+        "group": "features",
         "slug": "batch-migration",
         "order": 4
       },
@@ -14875,9 +14875,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-material",
-        "group": "editing",
+        "group": "features",
         "slug": "edit-graph",
-        "order": 1
+        "order": 3
       },
       "anchorAliases": {
         "zh": {
@@ -14970,9 +14970,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-material",
-        "group": "editing",
+        "group": "features",
         "slug": "instance-parameters",
-        "order": 2
+        "order": 4
       },
       "anchorAliases": {
         "zh": {
@@ -15235,7 +15235,7 @@
       ],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "assets-graphs",
+        "group": "features",
         "slug": "graphs",
         "order": 2
       },
@@ -15456,9 +15456,9 @@
       ],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "members-types",
+        "group": "features",
         "slug": "members-and-types",
-        "order": 2
+        "order": 5
       },
       "anchorAliases": {
         "zh": {
@@ -15559,9 +15559,9 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "class-structure",
+        "group": "features",
         "slug": "components-and-inheritance",
-        "order": 1
+        "order": 10
       },
       "anchorAliases": {
         "zh": {
@@ -15646,7 +15646,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-behavior-tree",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "connect-and-inspect",
         "order": 1
       },
@@ -15741,7 +15741,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-behavior-tree",
-        "group": "editing",
+        "group": "features",
         "slug": "edit-tree",
         "order": 1
       },
@@ -15796,7 +15796,7 @@
       "mediaOccurrences": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "diagnostics",
+        "group": "features",
         "slug": "inspect-editor",
         "order": 1
       },
@@ -15946,7 +15946,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-asset-namer",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -15963,7 +15963,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-byte-conversion",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -15989,7 +15989,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-config-exclude",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16006,7 +16006,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-static-mesh-merger",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16023,7 +16023,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "ai-data-asset",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16040,7 +16040,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "md-blog-packer",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16057,7 +16057,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "p4-case-sync",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16128,9 +16128,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "p4-case-sync",
-        "group": "distribution",
+        "group": "features",
         "slug": "reuse-environment",
-        "order": 2
+        "order": 3
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -16167,7 +16167,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "plugin-auto-packer",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16184,7 +16184,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "plugin-manager",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16201,7 +16201,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-file-updater",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16218,7 +16218,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-input-simulator",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16244,7 +16244,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-input-simulator",
-        "group": "input",
+        "group": "features",
         "slug": "reset-input-state",
         "order": 3
       },
@@ -16261,7 +16261,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-launcher",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16278,7 +16278,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-level-seq-smooth",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "setup",
         "order": 1
       },
@@ -16325,7 +16325,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-ssh-tunnel",
-        "group": "tunnels",
+        "group": "features",
         "slug": "manage-tunnels",
         "order": 1
       },
@@ -16342,7 +16342,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-tcp-client",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "enable-plugin",
         "order": 1
       },
@@ -16359,7 +16359,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-tcp-server",
-        "group": "network",
+        "group": "features",
         "slug": "sessions",
         "order": 1
       },
@@ -16385,7 +16385,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-udp",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "enable-plugin",
         "order": 1
       },
@@ -16402,7 +16402,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "simple-websocket",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "configure-connections",
         "order": 1
       },
@@ -16428,7 +16428,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "ue-package-manager",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "install-and-detect",
         "order": 1
       },
@@ -16445,7 +16445,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "ue-package-manager",
-        "group": "packaging",
+        "group": "features",
         "slug": "project-configuration",
         "order": 2
       },
@@ -16462,9 +16462,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "ue-package-manager",
-        "group": "output",
+        "group": "features",
         "slug": "deploy-additional-files",
-        "order": 1
+        "order": 3
       },
       "mediaOccurrences": []
     },
@@ -16479,9 +16479,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "ue-package-manager",
-        "group": "output",
+        "group": "features",
         "slug": "clean-old-packages",
-        "order": 2
+        "order": 4
       },
       "mediaOccurrences": []
     },
@@ -16496,7 +16496,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "ue-quick-start",
-        "group": "build",
+        "group": "features",
         "slug": "build-configuration",
         "order": 1
       },
@@ -16513,7 +16513,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "ue-quick-start",
-        "group": "build",
+        "group": "features",
         "slug": "normalize-line-endings",
         "order": 2
       },
@@ -16530,7 +16530,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "p4-stream-switcher",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "install-and-connect",
         "order": 1
       },
@@ -16547,9 +16547,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "p4-stream-switcher",
-        "group": "workspaces",
+        "group": "features",
         "slug": "workspace-settings",
-        "order": 1
+        "order": 3
       },
       "mediaOccurrences": []
     },
@@ -16564,7 +16564,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "widgets-layout",
+        "group": "features",
         "slug": "image-to-umg",
         "order": 2
       },
@@ -16619,7 +16619,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "widgets-layout",
+        "group": "features",
         "slug": "layout-inspection",
         "order": 3
       },
@@ -16666,9 +16666,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "component-reuse",
+        "group": "features",
         "slug": "component-extraction",
-        "order": 2
+        "order": 6
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -16697,9 +16697,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "styling-themes",
+        "group": "features",
         "slug": "widget-styles",
-        "order": 1
+        "order": 7
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -16752,9 +16752,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "styling-themes",
+        "group": "features",
         "slug": "widget-themes",
-        "order": 2
+        "order": 8
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -16791,9 +16791,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "interaction",
+        "group": "features",
         "slug": "navigation",
-        "order": 2
+        "order": 11
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -16830,9 +16830,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "interaction",
+        "group": "features",
         "slug": "animation",
-        "order": 3
+        "order": 12
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -16869,9 +16869,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "framework-integration",
+        "group": "features",
         "slug": "commonui",
-        "order": 1
+        "order": 13
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -16908,9 +16908,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "framework-integration",
+        "group": "features",
         "slug": "mvvm",
-        "order": 2
+        "order": 14
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -16955,9 +16955,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "preview-diagnostics",
+        "group": "features",
         "slug": "runtime-diagnostics",
-        "order": 2
+        "order": 16
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -17042,7 +17042,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "assets-graphs",
+        "group": "features",
         "slug": "asset-lifecycle",
         "order": 1
       },
@@ -17059,7 +17059,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "assets-graphs",
+        "group": "features",
         "slug": "graph-screenshots",
         "order": 3
       },
@@ -17091,9 +17091,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "members-types",
+        "group": "features",
         "slug": "variables",
-        "order": 1
+        "order": 4
       },
       "mediaOccurrences": []
     },
@@ -17108,9 +17108,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "members-types",
+        "group": "features",
         "slug": "events-dispatchers",
-        "order": 3
+        "order": 6
       },
       "mediaOccurrences": [
         {
@@ -17140,9 +17140,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "members-types",
+        "group": "features",
         "slug": "interfaces",
-        "order": 4
+        "order": 7
       },
       "mediaOccurrences": []
     },
@@ -17157,9 +17157,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "members-types",
+        "group": "features",
         "slug": "user-defined-structs",
-        "order": 5
+        "order": 8
       },
       "mediaOccurrences": []
     },
@@ -17174,9 +17174,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "members-types",
+        "group": "features",
         "slug": "user-defined-enums",
-        "order": 6
+        "order": 9
       },
       "mediaOccurrences": []
     },
@@ -17191,9 +17191,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "class-structure",
+        "group": "features",
         "slug": "class-defaults",
-        "order": 2
+        "order": 11
       },
       "mediaOccurrences": []
     },
@@ -17208,9 +17208,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-blueprint",
-        "group": "class-structure",
+        "group": "features",
         "slug": "class-inheritance",
-        "order": 3
+        "order": 12
       },
       "mediaOccurrences": []
     },
@@ -17225,7 +17225,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "levels",
+        "group": "features",
         "slug": "save-level-packages",
         "order": 2
       },
@@ -17242,7 +17242,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "levels",
+        "group": "features",
         "slug": "navigation",
         "order": 3
       },
@@ -17259,7 +17259,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "levels",
+        "group": "features",
         "slug": "lighting-build",
         "order": 4
       },
@@ -17276,7 +17276,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "levels",
+        "group": "features",
         "slug": "world-settings",
         "order": 5
       },
@@ -17293,9 +17293,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "actors",
+        "group": "features",
         "slug": "foliage",
-        "order": 2
+        "order": 7
       },
       "mediaOccurrences": []
     },
@@ -17310,9 +17310,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "actors",
+        "group": "features",
         "slug": "instanced-meshes",
-        "order": 3
+        "order": 8
       },
       "mediaOccurrences": []
     },
@@ -17327,9 +17327,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "actors",
+        "group": "features",
         "slug": "actor-splines",
-        "order": 4
+        "order": 9
       },
       "mediaOccurrences": []
     },
@@ -17344,9 +17344,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "actors",
+        "group": "features",
         "slug": "actor-hierarchy",
-        "order": 5
+        "order": 10
       },
       "mediaOccurrences": []
     },
@@ -17361,9 +17361,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "actors",
+        "group": "features",
         "slug": "actor-components",
-        "order": 6
+        "order": 11
       },
       "mediaOccurrences": []
     },
@@ -17378,9 +17378,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "world-partition",
+        "group": "features",
         "slug": "streaming-levels",
-        "order": 1
+        "order": 12
       },
       "mediaOccurrences": []
     },
@@ -17395,9 +17395,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "world-partition",
+        "group": "features",
         "slug": "world-partition-regions",
-        "order": 3
+        "order": 14
       },
       "mediaOccurrences": []
     },
@@ -17412,9 +17412,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "world-partition",
+        "group": "features",
         "slug": "level-instances",
-        "order": 4
+        "order": 15
       },
       "mediaOccurrences": []
     },
@@ -17429,9 +17429,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "landscape",
+        "group": "features",
         "slug": "landscape-paint-layers",
-        "order": 2
+        "order": 17
       },
       "mediaOccurrences": []
     },
@@ -17446,9 +17446,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "landscape",
+        "group": "features",
         "slug": "landscape-splines",
-        "order": 3
+        "order": 18
       },
       "mediaOccurrences": []
     },
@@ -17463,9 +17463,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "editor",
+        "group": "features",
         "slug": "editor-viewport",
-        "order": 1
+        "order": 19
       },
       "mediaOccurrences": []
     },
@@ -17480,9 +17480,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "editor",
+        "group": "features",
         "slug": "editor-pie",
-        "order": 2
+        "order": 20
       },
       "mediaOccurrences": []
     },
@@ -17497,9 +17497,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-world-editor",
-        "group": "editor",
+        "group": "features",
         "slug": "viewport-statistics",
-        "order": 3
+        "order": 21
       },
       "mediaOccurrences": []
     },
@@ -17514,7 +17514,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-level-sequence",
-        "group": "assets",
+        "group": "features",
         "slug": "sequence-assets",
         "order": 1
       },
@@ -17531,9 +17531,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-level-sequence",
-        "group": "sequence-editing",
+        "group": "features",
         "slug": "sequence-bindings",
-        "order": 1
+        "order": 3
       },
       "mediaOccurrences": []
     },
@@ -17548,9 +17548,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-level-sequence",
-        "group": "sequence-editing",
+        "group": "features",
         "slug": "sequence-keyframes",
-        "order": 3
+        "order": 5
       },
       "mediaOccurrences": []
     },
@@ -17565,9 +17565,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-level-sequence",
-        "group": "sequence-editing",
+        "group": "features",
         "slug": "sequence-timing",
-        "order": 4
+        "order": 6
       },
       "mediaOccurrences": []
     },
@@ -17582,7 +17582,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-level-sequence",
-        "group": "assets",
+        "group": "features",
         "slug": "sequence-preview",
         "order": 2
       },
@@ -17599,7 +17599,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-niagara",
-        "group": "systems",
+        "group": "features",
         "slug": "niagara-system-assets",
         "order": 2
       },
@@ -17616,7 +17616,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-niagara",
-        "group": "systems",
+        "group": "features",
         "slug": "niagara-preview",
         "order": 3
       },
@@ -17633,9 +17633,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-niagara",
-        "group": "effects",
+        "group": "features",
         "slug": "niagara-renderers",
-        "order": 2
+        "order": 5
       },
       "mediaOccurrences": []
     },
@@ -17650,7 +17650,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-animation",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "connect",
         "order": 1
       },
@@ -17667,9 +17667,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-animation",
-        "group": "editing",
+        "group": "features",
         "slug": "animation-notifies",
-        "order": 3
+        "order": 4
       },
       "mediaOccurrences": []
     },
@@ -17684,9 +17684,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-animation",
-        "group": "editing",
+        "group": "features",
         "slug": "animation-blend-spaces",
-        "order": 4
+        "order": 5
       },
       "mediaOccurrences": []
     },
@@ -17701,7 +17701,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-behavior-tree",
-        "group": "editing",
+        "group": "features",
         "slug": "blackboard-keys",
         "order": 2
       },
@@ -17718,7 +17718,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-material",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "connect",
         "order": 1
       },
@@ -17735,7 +17735,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-material",
-        "group": "assets",
+        "group": "features",
         "slug": "material-assets",
         "order": 1
       },
@@ -17752,7 +17752,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-material",
-        "group": "assets",
+        "group": "features",
         "slug": "material-preview",
         "order": 2
       },
@@ -17769,9 +17769,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-material",
-        "group": "editing",
+        "group": "features",
         "slug": "material-compilation",
-        "order": 3
+        "order": 5
       },
       "mediaOccurrences": []
     },
@@ -17786,7 +17786,7 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "setup",
+        "group": "getting-started",
         "slug": "connect",
         "order": 1
       },
@@ -17833,9 +17833,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "assets",
+        "group": "features",
         "slug": "asset-registry",
-        "order": 1
+        "order": 2
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -17864,9 +17864,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "data",
+        "group": "features",
         "slug": "data-assets",
-        "order": 1
+        "order": 4
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -17911,9 +17911,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "data",
+        "group": "features",
         "slug": "data-tables",
-        "order": 2
+        "order": 5
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -17942,9 +17942,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "data",
+        "group": "features",
         "slug": "curves",
-        "order": 3
+        "order": 6
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -17973,9 +17973,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "data",
+        "group": "features",
         "slug": "curve-tables",
-        "order": 4
+        "order": 7
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -18004,9 +18004,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "data",
+        "group": "features",
         "slug": "string-tables",
-        "order": 5
+        "order": 8
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -18035,9 +18035,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "assets",
+        "group": "features",
         "slug": "primary-asset-labels",
-        "order": 2
+        "order": 3
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -18066,9 +18066,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-dev-tools",
-        "group": "input",
+        "group": "features",
         "slug": "enhanced-input",
-        "order": 1
+        "order": 9
       },
       "mediaOccurrences": [],
       "anchorAliases": {
@@ -18113,9 +18113,9 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "styling-themes",
+        "group": "features",
         "slug": "import-ui-fonts",
-        "order": 3
+        "order": 9
       },
       "mediaOccurrences": []
     },
@@ -18130,9 +18130,519 @@
       "legacyRoutes": [],
       "docPage": {
         "work": "mcp-umg",
-        "group": "preview-diagnostics",
+        "group": "features",
         "slug": "widget-performance",
-        "order": 3
+        "order": 17
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:simple-file-updater:updates-2025-05-03",
+      "type": "doc",
+      "slug": "simple-file-updater-updates-2025-05-03",
+      "translationKey": "doc:simple-file-updater:updates-2025-05-03",
+      "title": "2025-05-03",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "simple-file-updater",
+        "group": "changelog",
+        "slug": "updates-2025-05-03",
+        "order": 79749497
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:simple-file-updater:updates-2026-04-18",
+      "type": "doc",
+      "slug": "simple-file-updater-updates-2026-04-18",
+      "translationKey": "doc:simple-file-updater:updates-2026-04-18",
+      "title": "2026-04-18",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "simple-file-updater",
+        "group": "changelog",
+        "slug": "updates-2026-04-18",
+        "order": 79739582
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:p4-case-sync:updates-2025-10-16",
+      "type": "doc",
+      "slug": "p4-case-sync-updates-2025-10-16",
+      "translationKey": "doc:p4-case-sync:updates-2025-10-16",
+      "title": "2025-10-16",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "p4-case-sync",
+        "group": "changelog",
+        "slug": "updates-2025-10-16",
+        "order": 79748984
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:md-blog-packer:updates-2026-04-18",
+      "type": "doc",
+      "slug": "md-blog-packer-updates-2026-04-18",
+      "translationKey": "doc:md-blog-packer:updates-2026-04-18",
+      "title": "2026-04-18",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "md-blog-packer",
+        "group": "changelog",
+        "slug": "updates-2026-04-18",
+        "order": 79739582
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:md-blog-packer:updates-2026-05-13",
+      "type": "doc",
+      "slug": "md-blog-packer-updates-2026-05-13",
+      "translationKey": "doc:md-blog-packer:updates-2026-05-13",
+      "title": "2026-05-13",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "md-blog-packer",
+        "group": "changelog",
+        "slug": "updates-2026-05-13",
+        "order": 79739487
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:simple-bp-inherit-fix:quickstart",
+      "type": "doc",
+      "slug": "simple-bp-inherit-fix-quickstart",
+      "translationKey": "doc:simple-bp-inherit-fix:quickstart",
+      "title": "安装与首次修复",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "simple-bp-inherit-fix",
+        "group": "getting-started",
+        "slug": "quickstart",
+        "order": 1
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:simple-auto-enum:quickstart",
+      "type": "doc",
+      "slug": "simple-auto-enum-quickstart",
+      "translationKey": "doc:simple-auto-enum:quickstart",
+      "title": "安装与首次绑定",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "simple-auto-enum",
+        "group": "getting-started",
+        "slug": "quickstart",
+        "order": 1
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:ue-package-manager:updates-2026-09-15",
+      "type": "doc",
+      "slug": "ue-package-manager-updates-2026-09-15",
+      "translationKey": "doc:ue-package-manager:updates-2026-09-15",
+      "title": "2026-09-15",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "ue-package-manager",
+        "group": "changelog",
+        "slug": "updates-2026-09-15",
+        "order": 79739085
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:plugin-auto-packer:updates-2025-04-21",
+      "type": "doc",
+      "slug": "plugin-auto-packer-updates-2025-04-21",
+      "translationKey": "doc:plugin-auto-packer:updates-2025-04-21",
+      "title": "2025-04-21",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "plugin-auto-packer",
+        "group": "changelog",
+        "slug": "updates-2025-04-21",
+        "order": 79749579
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:plugin-auto-packer:updates-2025-06-10",
+      "type": "doc",
+      "slug": "plugin-auto-packer-updates-2025-06-10",
+      "translationKey": "doc:plugin-auto-packer:updates-2025-06-10",
+      "title": "2025-06-10",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "plugin-auto-packer",
+        "group": "changelog",
+        "slug": "updates-2025-06-10",
+        "order": 79749390
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:plugin-auto-packer:updates-2025-06-18",
+      "type": "doc",
+      "slug": "plugin-auto-packer-updates-2025-06-18",
+      "translationKey": "doc:plugin-auto-packer:updates-2025-06-18",
+      "title": "2025-06-18",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "plugin-auto-packer",
+        "group": "changelog",
+        "slug": "updates-2025-06-18",
+        "order": 79749382
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:plugin-auto-packer:updates-2025-06-22",
+      "type": "doc",
+      "slug": "plugin-auto-packer-updates-2025-06-22",
+      "translationKey": "doc:plugin-auto-packer:updates-2025-06-22",
+      "title": "2025-06-22",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "plugin-auto-packer",
+        "group": "changelog",
+        "slug": "updates-2025-06-22",
+        "order": 79749378
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:plugin-auto-packer:updates-2026-02-26",
+      "type": "doc",
+      "slug": "plugin-auto-packer-updates-2026-02-26",
+      "translationKey": "doc:plugin-auto-packer:updates-2026-02-26",
+      "title": "2026-02-26",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "plugin-auto-packer",
+        "group": "changelog",
+        "slug": "updates-2026-02-26",
+        "order": 79739774
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:plugin-auto-packer:updates-2026-04-17",
+      "type": "doc",
+      "slug": "plugin-auto-packer-updates-2026-04-17",
+      "translationKey": "doc:plugin-auto-packer:updates-2026-04-17",
+      "title": "2026-04-17",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "plugin-auto-packer",
+        "group": "changelog",
+        "slug": "updates-2026-04-17",
+        "order": 79739583
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:plugin-auto-packer:updates-2026-06-19",
+      "type": "doc",
+      "slug": "plugin-auto-packer-updates-2026-06-19",
+      "translationKey": "doc:plugin-auto-packer:updates-2026-06-19",
+      "title": "2026-06-19",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "plugin-auto-packer",
+        "group": "changelog",
+        "slug": "updates-2026-06-19",
+        "order": 79739381
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:plugin-auto-packer:updates-2026-08-08",
+      "type": "doc",
+      "slug": "plugin-auto-packer-updates-2026-08-08",
+      "translationKey": "doc:plugin-auto-packer:updates-2026-08-08",
+      "title": "2026-08-08",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "plugin-auto-packer",
+        "group": "changelog",
+        "slug": "updates-2026-08-08",
+        "order": 79739192
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:plugin-manager:updates-2026-01-10",
+      "type": "doc",
+      "slug": "plugin-manager-updates-2026-01-10",
+      "translationKey": "doc:plugin-manager:updates-2026-01-10",
+      "title": "2026-01-10",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "plugin-manager",
+        "group": "changelog",
+        "slug": "updates-2026-01-10",
+        "order": 79739890
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:ue-quick-start:updates-2026-01-22",
+      "type": "doc",
+      "slug": "ue-quick-start-updates-2026-01-22",
+      "translationKey": "doc:ue-quick-start:updates-2026-01-22",
+      "title": "2026-01-22",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "ue-quick-start",
+        "group": "changelog",
+        "slug": "updates-2026-01-22",
+        "order": 79739878
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:ue-quick-start:updates-2026-01-30",
+      "type": "doc",
+      "slug": "ue-quick-start-updates-2026-01-30",
+      "translationKey": "doc:ue-quick-start:updates-2026-01-30",
+      "title": "2026-01-30",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "ue-quick-start",
+        "group": "changelog",
+        "slug": "updates-2026-01-30",
+        "order": 79739870
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:ue-quick-start:updates-2026-01-31",
+      "type": "doc",
+      "slug": "ue-quick-start-updates-2026-01-31",
+      "translationKey": "doc:ue-quick-start:updates-2026-01-31",
+      "title": "2026-01-31",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "ue-quick-start",
+        "group": "changelog",
+        "slug": "updates-2026-01-31",
+        "order": 79739869
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:ue-quick-start:updates-2026-03-18",
+      "type": "doc",
+      "slug": "ue-quick-start-updates-2026-03-18",
+      "translationKey": "doc:ue-quick-start:updates-2026-03-18",
+      "title": "2026-03-18",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "ue-quick-start",
+        "group": "changelog",
+        "slug": "updates-2026-03-18",
+        "order": 79739682
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:ue-quick-start:updates-2026-06-13",
+      "type": "doc",
+      "slug": "ue-quick-start-updates-2026-06-13",
+      "translationKey": "doc:ue-quick-start:updates-2026-06-13",
+      "title": "2026-06-13",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "ue-quick-start",
+        "group": "changelog",
+        "slug": "updates-2026-06-13",
+        "order": 79739387
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:mcp-niagara:quickstart",
+      "type": "doc",
+      "slug": "mcp-niagara-quickstart",
+      "translationKey": "doc:mcp-niagara:quickstart",
+      "title": "准备并首次查询 Niagara",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "mcp-niagara",
+        "group": "getting-started",
+        "slug": "quickstart",
+        "order": 1
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:p4-stream-switcher:updates-2026-01-09",
+      "type": "doc",
+      "slug": "p4-stream-switcher-updates-2026-01-09",
+      "translationKey": "doc:p4-stream-switcher:updates-2026-01-09",
+      "title": "2026-01-09",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "p4-stream-switcher",
+        "group": "changelog",
+        "slug": "updates-2026-01-09",
+        "order": 79739891
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:p4-stream-switcher:updates-2026-01-13",
+      "type": "doc",
+      "slug": "p4-stream-switcher-updates-2026-01-13",
+      "translationKey": "doc:p4-stream-switcher:updates-2026-01-13",
+      "title": "2026-01-13",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "p4-stream-switcher",
+        "group": "changelog",
+        "slug": "updates-2026-01-13",
+        "order": 79739887
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:p4-stream-switcher:updates-2026-01-16",
+      "type": "doc",
+      "slug": "p4-stream-switcher-updates-2026-01-16",
+      "translationKey": "doc:p4-stream-switcher:updates-2026-01-16",
+      "title": "2026-01-16",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "p4-stream-switcher",
+        "group": "changelog",
+        "slug": "updates-2026-01-16",
+        "order": 79739884
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:p4-stream-switcher:updates-2026-01-30",
+      "type": "doc",
+      "slug": "p4-stream-switcher-updates-2026-01-30",
+      "translationKey": "doc:p4-stream-switcher:updates-2026-01-30",
+      "title": "2026-01-30",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "p4-stream-switcher",
+        "group": "changelog",
+        "slug": "updates-2026-01-30",
+        "order": 79739870
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:p4-stream-switcher:updates-2026-01-31",
+      "type": "doc",
+      "slug": "p4-stream-switcher-updates-2026-01-31",
+      "translationKey": "doc:p4-stream-switcher:updates-2026-01-31",
+      "title": "2026-01-31",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "p4-stream-switcher",
+        "group": "changelog",
+        "slug": "updates-2026-01-31",
+        "order": 79739869
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:p4-stream-switcher:updates-2026-02-10",
+      "type": "doc",
+      "slug": "p4-stream-switcher-updates-2026-02-10",
+      "translationKey": "doc:p4-stream-switcher:updates-2026-02-10",
+      "title": "2026-02-10",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "p4-stream-switcher",
+        "group": "changelog",
+        "slug": "updates-2026-02-10",
+        "order": 79739790
+      },
+      "mediaOccurrences": []
+    },
+    {
+      "id": "doc:p4-stream-switcher:updates-2026-03-23",
+      "type": "doc",
+      "slug": "p4-stream-switcher-updates-2026-03-23",
+      "translationKey": "doc:p4-stream-switcher:updates-2026-03-23",
+      "title": "2026-03-23",
+      "template": "docs/templates/document.html",
+      "shellId": "doc:chapter",
+      "legacyRoutes": [],
+      "docPage": {
+        "work": "p4-stream-switcher",
+        "group": "changelog",
+        "slug": "updates-2026-03-23",
+        "order": 79739677
       },
       "mediaOccurrences": []
     }
@@ -73698,41 +74208,7 @@
   "docGroups": {
     "simple-asset-cleaner": [
       {
-        "id": "setup",
-        "titles": {
-          "zh": "开始",
-          "en": "Getting Started"
-        },
-        "order": 1
-      },
-      {
-        "id": "cleanup",
-        "titles": {
-          "zh": "资产清理",
-          "en": "Asset Cleanup"
-        },
-        "order": 2
-      },
-      {
-        "id": "protection",
-        "titles": {
-          "zh": "资产保护",
-          "en": "Asset Protection"
-        },
-        "order": 3
-      },
-      {
-        "id": "dependencies",
-        "titles": {
-          "zh": "依赖管理",
-          "en": "Dependency Management"
-        },
-        "order": 4
-      }
-    ],
-    "simple-file-updater": [
-      {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -73740,17 +74216,43 @@
         }
       },
       {
-        "id": "updates",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "更新文件",
-          "en": "File Updates"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      }
+    ],
+    "simple-file-updater": [
+      {
+        "id": "getting-started",
+        "order": 1,
+        "titles": {
+          "zh": "开始",
+          "en": "Getting Started"
+        }
+      },
+      {
+        "id": "features",
+        "order": 2,
+        "titles": {
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      },
+      {
+        "id": "changelog",
+        "order": 99,
+        "titles": {
+          "zh": "更新日志",
+          "en": "Changelog"
         }
       }
     ],
     "p4-case-sync": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -73758,25 +74260,25 @@
         }
       },
       {
-        "id": "case-fixes",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "路径大小写",
-          "en": "Path Case"
+          "zh": "功能说明",
+          "en": "Features"
         }
       },
       {
-        "id": "distribution",
-        "order": 3,
+        "id": "changelog",
+        "order": 99,
         "titles": {
-          "zh": "打包与环境复用",
-          "en": "Packaging and Environment Reuse"
+          "zh": "更新日志",
+          "en": "Changelog"
         }
       }
     ],
     "md-blog-packer": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -73784,27 +74286,43 @@
         }
       },
       {
-        "id": "export",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "导出文章",
-          "en": "Article Export"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      },
+      {
+        "id": "changelog",
+        "order": 99,
+        "titles": {
+          "zh": "更新日志",
+          "en": "Changelog"
         }
       }
     ],
     "simple-bp-inherit-fix": [
       {
-        "id": "components",
+        "id": "getting-started",
         "order": 1,
         "titles": {
-          "zh": "继承组件",
-          "en": "Inherited Components"
+          "zh": "开始",
+          "en": "Getting Started"
+        }
+      },
+      {
+        "id": "features",
+        "order": 2,
+        "titles": {
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "simple-level-seq-smooth": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -73812,17 +74330,17 @@
         }
       },
       {
-        "id": "curves",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "曲线平滑",
-          "en": "Curve Smoothing"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "ai-data-asset": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -73830,17 +74348,17 @@
         }
       },
       {
-        "id": "data",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "数据同步与编辑",
-          "en": "Data Synchronization and Editing"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "simple-input-simulator": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -73848,53 +74366,17 @@
         }
       },
       {
-        "id": "input",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "模拟输入",
-          "en": "Input Simulation"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "simple-byte-conversion": [
       {
-        "id": "setup",
-        "titles": {
-          "zh": "开始",
-          "en": "Getting Started"
-        },
-        "order": 1
-      },
-      {
-        "id": "conversion",
-        "titles": {
-          "zh": "数据转换",
-          "en": "Data Conversion"
-        },
-        "order": 2
-      }
-    ],
-    "simple-config-exclude": [
-      {
-        "id": "setup",
-        "titles": {
-          "zh": "开始",
-          "en": "Getting Started"
-        },
-        "order": 1
-      },
-      {
-        "id": "packaging",
-        "titles": {
-          "zh": "打包规则与部署",
-          "en": "Packaging and Deployment"
-        },
-        "order": 2
-      }
-    ],
-    "simple-launcher": [
-      {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -73902,53 +74384,53 @@
         }
       },
       {
-        "id": "process-control",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "预设与进程",
-          "en": "Presets and Processes"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      }
+    ],
+    "simple-config-exclude": [
+      {
+        "id": "getting-started",
+        "order": 1,
+        "titles": {
+          "zh": "开始",
+          "en": "Getting Started"
+        }
+      },
+      {
+        "id": "features",
+        "order": 2,
+        "titles": {
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      }
+    ],
+    "simple-launcher": [
+      {
+        "id": "getting-started",
+        "order": 1,
+        "titles": {
+          "zh": "开始",
+          "en": "Getting Started"
+        }
+      },
+      {
+        "id": "features",
+        "order": 2,
+        "titles": {
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "simple-asset-namer": [
       {
-        "id": "setup",
-        "titles": {
-          "zh": "开始",
-          "en": "Getting Started"
-        },
-        "order": 1
-      },
-      {
-        "id": "naming",
-        "titles": {
-          "zh": "资产命名",
-          "en": "Asset Naming"
-        },
-        "order": 2
-      }
-    ],
-    "simple-static-mesh-merger": [
-      {
-        "id": "setup",
-        "titles": {
-          "zh": "开始",
-          "en": "Getting Started"
-        },
-        "order": 1
-      },
-      {
-        "id": "workflow",
-        "titles": {
-          "zh": "场景处理",
-          "en": "Scene Workflows"
-        },
-        "order": 2
-      }
-    ],
-    "simple-ssh-tunnel": [
-      {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -73956,25 +74438,53 @@
         }
       },
       {
-        "id": "tunnels",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "隧道管理",
-          "en": "Tunnel Management"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      }
+    ],
+    "simple-static-mesh-merger": [
+      {
+        "id": "getting-started",
+        "order": 1,
+        "titles": {
+          "zh": "开始",
+          "en": "Getting Started"
         }
       },
       {
-        "id": "native",
-        "order": 3,
+        "id": "features",
+        "order": 2,
         "titles": {
-          "zh": "原生实现",
-          "en": "Native Implementations"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      }
+    ],
+    "simple-ssh-tunnel": [
+      {
+        "id": "getting-started",
+        "order": 1,
+        "titles": {
+          "zh": "开始",
+          "en": "Getting Started"
+        }
+      },
+      {
+        "id": "features",
+        "order": 2,
+        "titles": {
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "simple-udp": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -73982,25 +74492,17 @@
         }
       },
       {
-        "id": "network",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "网络通信",
-          "en": "Networking"
-        }
-      },
-      {
-        "id": "native",
-        "order": 3,
-        "titles": {
-          "zh": "原生实现",
-          "en": "Native Implementations"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "simple-tcp-client": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -74008,25 +74510,17 @@
         }
       },
       {
-        "id": "network",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "网络通信",
-          "en": "Networking"
-        }
-      },
-      {
-        "id": "native",
-        "order": 3,
-        "titles": {
-          "zh": "原生实现",
-          "en": "Native Implementations"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "simple-tcp-server": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -74034,25 +74528,17 @@
         }
       },
       {
-        "id": "network",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "网络通信",
-          "en": "Networking"
-        }
-      },
-      {
-        "id": "native",
-        "order": 3,
-        "titles": {
-          "zh": "原生实现",
-          "en": "Native Implementations"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "simple-websocket": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -74060,43 +74546,17 @@
         }
       },
       {
-        "id": "network",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "网络通信",
-          "en": "Networking"
-        }
-      },
-      {
-        "id": "native",
-        "order": 3,
-        "titles": {
-          "zh": "原生实现",
-          "en": "Native Implementations"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "simple-auto-enum": [
       {
-        "id": "enum-binding",
-        "order": 1,
-        "titles": {
-          "zh": "枚举绑定",
-          "en": "Enum Binding"
-        }
-      },
-      {
-        "id": "usage",
-        "titles": {
-          "zh": "枚举使用",
-          "en": "Using Enums"
-        },
-        "order": 2
-      }
-    ],
-    "ue-package-manager": [
-      {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -74104,33 +74564,43 @@
         }
       },
       {
-        "id": "packaging",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "项目打包",
-          "en": "Project Packaging"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      }
+    ],
+    "ue-package-manager": [
+      {
+        "id": "getting-started",
+        "order": 1,
+        "titles": {
+          "zh": "开始",
+          "en": "Getting Started"
         }
       },
       {
-        "id": "output",
-        "order": 3,
+        "id": "features",
+        "order": 2,
         "titles": {
-          "zh": "包输出管理",
-          "en": "Package Output"
+          "zh": "功能说明",
+          "en": "Features"
         }
       },
       {
-        "id": "source",
-        "order": 4,
+        "id": "changelog",
+        "order": 99,
         "titles": {
-          "zh": "源码运行与构建",
-          "en": "Source and Build"
+          "zh": "更新日志",
+          "en": "Changelog"
         }
       }
     ],
     "plugin-auto-packer": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -74138,17 +74608,25 @@
         }
       },
       {
-        "id": "packaging",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "插件打包",
-          "en": "Plugin Packaging"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      },
+      {
+        "id": "changelog",
+        "order": 99,
+        "titles": {
+          "zh": "更新日志",
+          "en": "Changelog"
         }
       }
     ],
     "plugin-manager": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -74156,17 +74634,25 @@
         }
       },
       {
-        "id": "plugins",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "插件查找与管理",
-          "en": "Finding and Managing Plugins"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      },
+      {
+        "id": "changelog",
+        "order": 99,
+        "titles": {
+          "zh": "更新日志",
+          "en": "Changelog"
         }
       }
     ],
     "ue-quick-start": [
       {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -74174,56 +74660,56 @@
         }
       },
       {
-        "id": "build",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "编译与启动",
-          "en": "Build and Launch"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      },
+      {
+        "id": "changelog",
+        "order": 99,
+        "titles": {
+          "zh": "更新日志",
+          "en": "Changelog"
         }
       }
     ],
     "mcp-animation": [
       {
-        "id": "setup",
+        "id": "getting-started",
+        "order": 1,
         "titles": {
           "zh": "开始",
           "en": "Getting Started"
-        },
-        "order": 1
+        }
       },
       {
-        "id": "assets",
+        "id": "features",
+        "order": 2,
         "titles": {
-          "zh": "动画资产",
-          "en": "Animation Assets"
-        },
-        "order": 2
-      },
-      {
-        "id": "editing",
-        "titles": {
-          "zh": "动画编辑",
-          "en": "Animation Editing"
-        },
-        "order": 3
+          "zh": "功能说明",
+          "en": "Features"
+        }
       }
     ],
     "mcp-behavior-tree": [
       {
-        "id": "setup",
+        "id": "getting-started",
+        "order": 1,
         "titles": {
           "zh": "开始",
           "en": "Getting Started"
-        },
-        "order": 1
+        }
       },
       {
-        "id": "editing",
+        "id": "features",
+        "order": 2,
         "titles": {
-          "zh": "行为树与黑板",
-          "en": "Behavior Trees and Blackboards"
-        },
-        "order": 2
+          "zh": "功能说明",
+          "en": "Features"
+        }
       }
     ],
     "mcp-blueprint": [
@@ -74236,140 +74722,84 @@
         }
       },
       {
-        "id": "assets-graphs",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "资产与图表",
-          "en": "Assets and Graphs"
-        }
-      },
-      {
-        "id": "members-types",
-        "order": 3,
-        "titles": {
-          "zh": "成员与类型",
-          "en": "Members and Types"
-        }
-      },
-      {
-        "id": "class-structure",
-        "order": 4,
-        "titles": {
-          "zh": "类结构",
-          "en": "Class Structure"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "mcp-dev-tools": [
       {
-        "id": "setup",
+        "id": "getting-started",
+        "order": 1,
         "titles": {
           "zh": "开始",
           "en": "Getting Started"
-        },
-        "order": 1
-      },
-      {
-        "id": "diagnostics",
-        "titles": {
-          "zh": "编辑器诊断",
-          "en": "Editor Diagnostics"
-        },
-        "order": 2
-      },
-      {
-        "id": "assets",
-        "order": 3,
-        "titles": {
-          "zh": "资产管理",
-          "en": "Asset Management"
         }
       },
       {
-        "id": "data",
-        "order": 4,
+        "id": "features",
+        "order": 2,
         "titles": {
-          "zh": "数据资产",
-          "en": "Data Assets"
-        }
-      },
-      {
-        "id": "input",
-        "order": 5,
-        "titles": {
-          "zh": "输入配置",
-          "en": "Input Configuration"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "mcp-level-sequence": [
       {
-        "id": "setup",
+        "id": "getting-started",
+        "order": 1,
         "titles": {
           "zh": "开始",
           "en": "Getting Started"
-        },
-        "order": 1
+        }
       },
       {
-        "id": "assets",
+        "id": "features",
+        "order": 2,
         "titles": {
-          "zh": "序列资产",
-          "en": "Sequence Assets"
-        },
-        "order": 2
-      },
-      {
-        "id": "sequence-editing",
-        "titles": {
-          "zh": "编辑序列",
-          "en": "Sequence Editing"
-        },
-        "order": 3
+          "zh": "功能说明",
+          "en": "Features"
+        }
       }
     ],
     "mcp-material": [
       {
-        "id": "setup",
+        "id": "getting-started",
+        "order": 1,
         "titles": {
           "zh": "开始",
           "en": "Getting Started"
-        },
-        "order": 1
+        }
       },
       {
-        "id": "assets",
+        "id": "features",
+        "order": 2,
         "titles": {
-          "zh": "材质资产",
-          "en": "Material Assets"
-        },
-        "order": 2
-      },
-      {
-        "id": "editing",
-        "titles": {
-          "zh": "材质编辑",
-          "en": "Material Editing"
-        },
-        "order": 3
+          "zh": "功能说明",
+          "en": "Features"
+        }
       }
     ],
     "mcp-niagara": [
       {
-        "id": "systems",
+        "id": "getting-started",
+        "order": 1,
         "titles": {
-          "zh": "系统资产与预览",
-          "en": "Systems and Previews"
-        },
-        "order": 1
+          "zh": "开始",
+          "en": "Getting Started"
+        }
       },
       {
-        "id": "effects",
+        "id": "features",
+        "order": 2,
         "titles": {
-          "zh": "效果编辑",
-          "en": "Effect Editing"
-        },
-        "order": 2
+          "zh": "功能说明",
+          "en": "Features"
+        }
       }
     ],
     "mcp-umg": [
@@ -74382,115 +74812,17 @@
         }
       },
       {
-        "id": "widgets-layout",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "控件与布局",
-          "en": "Widgets and Layout"
-        }
-      },
-      {
-        "id": "component-reuse",
-        "order": 3,
-        "titles": {
-          "zh": "组件复用",
-          "en": "Component Reuse"
-        }
-      },
-      {
-        "id": "styling-themes",
-        "order": 4,
-        "titles": {
-          "zh": "样式与主题",
-          "en": "Styles and Themes"
-        }
-      },
-      {
-        "id": "interaction",
-        "order": 5,
-        "titles": {
-          "zh": "交互与动画",
-          "en": "Interaction and Animation"
-        }
-      },
-      {
-        "id": "framework-integration",
-        "order": 6,
-        "titles": {
-          "zh": "框架集成",
-          "en": "Framework Integration"
-        }
-      },
-      {
-        "id": "preview-diagnostics",
-        "order": 7,
-        "titles": {
-          "zh": "预览与诊断",
-          "en": "Preview and Diagnostics"
+          "zh": "功能说明",
+          "en": "Features"
         }
       }
     ],
     "mcp-world-editor": [
       {
-        "id": "setup",
-        "titles": {
-          "zh": "开始",
-          "en": "Getting Started"
-        },
-        "order": 1
-      },
-      {
-        "id": "levels",
-        "titles": {
-          "zh": "关卡",
-          "en": "Levels"
-        },
-        "order": 2
-      },
-      {
-        "id": "actors",
-        "titles": {
-          "zh": "Actor 编辑",
-          "en": "Actor Editing"
-        },
-        "order": 3
-      },
-      {
-        "id": "world-partition",
-        "titles": {
-          "zh": "流式世界",
-          "en": "Streamed Worlds"
-        },
-        "order": 4
-      },
-      {
-        "id": "landscape",
-        "titles": {
-          "zh": "地形",
-          "en": "Landscape"
-        },
-        "order": 5
-      },
-      {
-        "id": "editor",
-        "titles": {
-          "zh": "编辑器",
-          "en": "Editor"
-        },
-        "order": 6
-      },
-      {
-        "id": "materials",
-        "titles": {
-          "zh": "材质",
-          "en": "Materials"
-        },
-        "order": 7
-      }
-    ],
-    "p4-stream-switcher": [
-      {
-        "id": "setup",
+        "id": "getting-started",
         "order": 1,
         "titles": {
           "zh": "开始",
@@ -74498,19 +74830,37 @@
         }
       },
       {
-        "id": "switching",
+        "id": "features",
         "order": 2,
         "titles": {
-          "zh": "切流与同步",
-          "en": "Stream Switching and Sync"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      }
+    ],
+    "p4-stream-switcher": [
+      {
+        "id": "getting-started",
+        "order": 1,
+        "titles": {
+          "zh": "开始",
+          "en": "Getting Started"
         }
       },
       {
-        "id": "workspaces",
-        "order": 3,
+        "id": "features",
+        "order": 2,
         "titles": {
-          "zh": "工作区管理",
-          "en": "Workspace Management"
+          "zh": "功能说明",
+          "en": "Features"
+        }
+      },
+      {
+        "id": "changelog",
+        "order": 99,
+        "titles": {
+          "zh": "更新日志",
+          "en": "Changelog"
         }
       }
     ]

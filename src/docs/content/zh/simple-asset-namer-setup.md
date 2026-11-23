@@ -11,7 +11,7 @@ workIds:
   - simple-asset-namer
 docPage:
   work: simple-asset-namer
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -26,4 +26,6 @@ translationKey: doc:simple-asset-namer:setup
 
 ## 试用命名规则
 
-先用一个新建蓝图试用，例如确认 `MyCharacter` 能按规则改成 `BP_MyCharacter`。要处理已有资产，可以先试一个小文件夹。
+先确认创建时自动重命名已打开，且测试目录在规则范围内。使用默认蓝图规则时，再对照预期前缀检查新名称。
+
+新建一个测试蓝图。例如，检查 `MyCharacter` 是否改为 `BP_MyCharacter`。整理已有资产时，先试一个小文件夹。

@@ -13,16 +13,16 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/interfaces/
 lang: en
 translationKey: doc:mcp-blueprint:interfaces
-sourceHash: 7988153b2eaaf4057a485267174c9b8c17960dde2b0d1dd78270f9fc36a7888b
+sourceHash: 19d83bd26c79989bb484c789a19d9f7e080f1d693ff5791dc5ea530442273888
 translationStatus: translated
-generatedBodyHash: f7f3daa653b1b013ca9d2eedfe759e9d3e4f07eda22b9be083ffc6616b7244e1
+generatedBodyHash: 22a020b6fc4c401afbd692d023340ac7f91d83f377f827d748437fc7059c57c3
 docPage:
   work: mcp-blueprint
-  group: members-types
+  group: features
   slug: interfaces
-  order: 4
+  order: 7
 ---
 
 ## Read the current interfaces and specify the new one
 
-Use `GetBlueprintOverview` to confirm the target `BlueprintPath` and its implemented interfaces. Pass the interface class path to `AddInterface`, then call `SaveAsset` if you want to keep the change.
+Use `GetBlueprintOverview` to confirm the target `BlueprintPath` and see whether the interface is already listed. If it needs to be added, pass its class path to `AddInterface`. Check the same Blueprint’s interface list after adding it, then call `SaveAsset` if you want to keep the change.

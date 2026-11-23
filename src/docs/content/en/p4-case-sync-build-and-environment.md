@@ -13,19 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-case-sync/docs/build-and-environment/
 lang: en
 translationKey: doc:p4-case-sync:build-and-environment
-sourceHash: 3c5bd803635a380f967cf6617e56e2966c1cade900ba4c8cb93c77209d741ff4
+sourceHash: 148a81ecea4e46c66409c32fdf4e3b3eb4d1010253c0325ebad6dbf98f096fba
 translationStatus: translated
-generatedBodyHash: cfd9a48fc3ff70956464b165b7e6e21a64e6e409420a2872c3cacc6767efb029
+generatedBodyHash: c41fe6dc1314c4383101c3897fd9cf4e26fbc1b9afb5f6f61bd9a78e7823cce8
 docPage:
   work: p4-case-sync
-  group: distribution
+  group: features
   slug: build-and-environment
-  order: 1
+  order: 2
 ---
 
 ## Package with the spec File
 
-This project uses dynamic path imports, so hidden imports must be specified through a **spec file**.
+Run this command from the project directory that contains `P4CaseSync.spec`. The project imports modules dynamically, so the build needs the hidden imports declared in the spec file.
 
 ```bash
 pyinstaller P4CaseSync.spec

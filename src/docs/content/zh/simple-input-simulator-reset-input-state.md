@@ -11,7 +11,7 @@ workIds:
   - simple-input-simulator
 docPage:
   work: simple-input-simulator
-  group: input
+  group: features
   slug: reset-input-state
   order: 3
 documentKind: product-manual
@@ -31,4 +31,4 @@ translationKey: doc:simple-input-simulator:reset-input-state
 
 ## 测试和回放后的清理
 
-按下和释放应成对发送。测试、演示或回放结束后，调用 `FlushPressedKeys` 清除目标控制器上的残留状态，避免按键持续处于按下状态。
+用同一个玩家索引成对发送按下和释放事件。测试、演示或回放结束或中断时，调用 `FlushPressedKeys` 清除该玩家控制器上的残留状态，避免按键一直处于按下状态。本地多人测试时，先核对要清理的是哪位玩家。

@@ -11,7 +11,7 @@ workIds:
   - simple-input-simulator
 docPage:
   work: simple-input-simulator
-  group: input
+  group: features
   slug: key-input
   order: 1
 documentKind: product-manual
@@ -35,9 +35,11 @@ translationKey: doc:simple-input-simulator:key-input
 
 ## 空格键示例
 
+图中按住 W 一秒后释放，两个节点都发给第一个本地玩家。要试空格键，把两处 Key 都改为空格键，保留前一个节点的按下和后一个节点的释放。
+
 ![](/media-occurrence/doc%3Asimple-input-simulator%3Akey-input%3Amedia%3A2)
 
-为 Player 0 模拟按下空格键。
+如果该玩家的空格键已经绑定游戏动作，运行后再检查动作是否触发。
 
 ## 自动化游戏测试
 

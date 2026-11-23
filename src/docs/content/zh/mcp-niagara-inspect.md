@@ -11,7 +11,7 @@ workIds:
   - mcp-niagara
 docPage:
   work: mcp-niagara
-  group: systems
+  group: features
   slug: inspect
   order: 1
 documentKind: product-manual
@@ -39,7 +39,7 @@ MCP Niagara 在 Unreal Editor 中提供面向 Niagara System、Emitter、模块�
 
 `GetModuleDetail` 只检查所选 Spawn、Update 或 Event 阶段参数映射主链上的模块，`ModuleIndex` 与实际执行顺序一致。重名模块必须使用索引；同时传入名称与索引时，两者必须指向同一模块。`GetModuleDetail`、`AddModule`、`RemoveModule` 和 `ReorderModule` 在存在多个 Event 阶段时都必须提供 `UsageId`；成功响应会返回实际选中的输出 GUID。
 
-模块输入按 `MaxResults`（1–256，默认 100）和 `Offset` 分页，并返回真实 Niagara 类型及 `ValueSource`。图覆盖、链接/动态覆盖和 Rapid Iteration 值会被明确区分；`Value` 最多返回 4096 字符，并由 `bValueTruncated` 明示是否截断。未形成覆盖的输入统一标记为 `ModuleDefaultOrBinding`；为了保持 UE 5.2+ 自包含兼容，工具不依赖仅供 NiagaraEditor 内部使用的默认值拓扑 API，因此不会进一步猜测模块默认值与内部绑定。
+先确定要查的执行阶段。读某个模块时以该阶段的执行顺序为准；如果有多个 Event 阶段，记下目标阶段的标识，再发请求。模块输入按 `MaxResults`（1–256，默认 100）和 `Offset` 分页，并返回真实 Niagara 类型及 `ValueSource`。图覆盖、链接/动态覆盖和 Rapid Iteration 值会被明确区分；`Value` 最多返回 4096 字符，并由 `bValueTruncated` 明示是否截断。未形成覆盖的输入统一标记为 `ModuleDefaultOrBinding`；为了保持 UE 5.2+ 自包含兼容，工具不依赖仅供 NiagaraEditor 内部使用的默认值拓扑 API，因此不会进一步猜测模块默认值与内部绑定。
 
 ## 版本与使用限制
 

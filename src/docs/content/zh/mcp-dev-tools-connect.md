@@ -11,7 +11,7 @@ workIds:
   - mcp-dev-tools
 docPage:
   work: mcp-dev-tools
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 documentKind: product-manual
@@ -22,7 +22,7 @@ translationKey: doc:mcp-dev-tools:connect
 
 ## 启用与配置
 
-MCPDevTools 在 Unreal Editor 中通过 HTTP MCP 提供资产查询、编辑和只读开发诊断。可用工具以目标编辑器的 `tools/list` 和工具结果为准。
+MCPDevTools 在 Unreal Editor 中通过 HTTP MCP 提供资产查询、编辑和只读开发诊断。在 MCP 客户端填入编辑器日志中的实际地址，连接后用 `tools/list` 确认当前实例提供哪些工具。
 
 将 `Plugins/MCPDevTools` 放入项目的 `Plugins` 目录，在 `.uproject` 的 `Plugins` 数组启用 `MCPDevTools`。打开编辑器后，可在 **Project Settings → Plugins → MCPDevTools** 设置端口和自动启动。默认地址为 `http://127.0.0.1:8768/mcp`；端口被占用时会尝试后续端口，以编辑器日志中的实际地址为准。
 

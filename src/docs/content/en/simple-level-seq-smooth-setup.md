@@ -14,12 +14,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-level-seq-smooth/docs/setup/
 lang: en
 translationKey: doc:simple-level-seq-smooth:setup
-sourceHash: 1e1c6b2e4346b20945d19a999d131dd1a13854002c262082ed6530d64855a308
+sourceHash: c38c535bac289c74b9735128b113909b852423b6342cedc63e5eda2cac6a929a
 translationStatus: translated
-generatedBodyHash: b3102c8686aa696d7bfc5811c4da723f559075a65f238b3936e617c395944ea2
+generatedBodyHash: 2cf23733de630f7ad9e5cc43500f7d4d97266ecbdb5c392ec3c9851b79969e91
 docPage:
   work: simple-level-seq-smooth
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 ---
@@ -28,9 +28,11 @@ docPage:
 
 1. Copy the `SimpleLevelSeqSmooth` folder to your project's `Plugins/` directory
 2. Restart the Unreal Editor
-3. Enable the plugin in Edit > Plugins if not already enabled
+3. If the plugin is disabled, find and enable it under **Edit → Plugins**.
 
 ## ControlRig Dependency
+
+After restarting, check that ControlRig is enabled. Use a LevelSequence with a ControlRig parameter section, then open **Smooth** from its Content Browser context menu.
 
 - ControlRig plugin (enabled by default)
 

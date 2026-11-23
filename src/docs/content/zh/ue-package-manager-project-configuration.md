@@ -12,7 +12,7 @@ workIds:
   - ue-package-manager
 docPage:
   work: ue-package-manager
-  group: packaging
+  group: features
   slug: project-configuration
   order: 2
 documentKind: product-manual
@@ -33,4 +33,4 @@ translationKey: doc:ue-package-manager:project-configuration
 
 ## 查看和更改设置
 
-项目和 UE 目录在 GUI 中只读：工具根据当前目录的 `.uproject` 及其 `EngineAssociation` 识别。可从 GUI 选择输出目录和打包类型。用 CLI 的 `config-show` 查看设置，用 `configure` 修改；手动指定源码引擎也使用 CLI。
+在 GUI 中，项目与 UE 目录只读。工具根据当前目录中的 `.uproject` 及其 `EngineAssociation` 识别这两项。可以在 GUI 中设定输出目录和打包类型；在 CLI 中用 `config-show` 查看设置，用 `configure` 修改。要手动指定源码引擎，请使用 CLI。

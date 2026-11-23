@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-dev-tools/docs/data-tables/
 lang: en
 translationKey: doc:mcp-dev-tools:data-tables
-sourceHash: d4da4f01798ee9579a03530d995dcfedb80884f3e043823e4b90cd425e3e5849
+sourceHash: 8491a90ef56d3e38995362fe0d7bf6d9c6efaf8116ac19606e4e7e307303d719
 translationStatus: translated
-generatedBodyHash: b4718137820424be7f072232c6b9c2fa15db042fe50410fe301c718b2ae9e053
+generatedBodyHash: 311b86c80df439f2c1cf6f4fccacae9d8b288834794ef96992c1219d84c4889f
 docPage:
   work: mcp-dev-tools
-  group: data
+  group: features
   slug: data-tables
-  order: 2
+  order: 5
 ---
 
 ## Read and write
@@ -29,6 +29,6 @@ docPage:
 |---|---|---|
 | DataTable | `GetDataTable`, `CreateDataTable`, `PatchDataTableRows` | Read complete rows by page; specify an existing `RowStructPath` when creating; edit with the current `RowStructPath`, `Changes`, and complete old rows in `ExpectedValues`. Supports Add, Update, and Remove. Does not generate or convert row structures. |
 
-Standard lists and paged reads return 20 items by default, with at most 100 per page. Continue using `bHasMore` and `NextOffset`.
+To change one column in an existing row, read the target row first. Put the entire old row in `ExpectedValues` and specify an Update in `Changes`. Keep the full old row even when changing a single column. If the row is not on the current page, check `bHasMore` and continue at `NextOffset`. Lists and paged reads return 20 items by default, up to 100 per page.
 
 Preview changes before applying them, then save separately. See the [preview and save workflow](/en/works/mcp-dev-tools/docs/connect/).

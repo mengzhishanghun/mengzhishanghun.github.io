@@ -11,9 +11,9 @@ workIds:
   - mcp-blueprint
 docPage:
   work: mcp-blueprint
-  group: class-structure
+  group: features
   slug: components-and-inheritance
-  order: 1
+  order: 10
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-blueprint/docs/components-and-inheritance/
 lang: zh
@@ -35,10 +35,10 @@ translationKey: doc:mcp-blueprint:components-and-inheritance
 
 ## 修改 SCS 组件模板属性
 
-先用 `GetComponents` 找到本地 SCS `ComponentName`。调用 `SetComponentProperties` 时，在 `Properties` 中提供“属性名 → UE 文本值”映射，例如 `RelativeLocation: "(X=0,Y=0,Z=50)"`、`bHiddenInGame: "True"`。工具只改此 Blueprint 添加的组件模板；任一属性不合法，整次调用会回滚并给出属性名与格式提示。按需使用 `SaveAsset` 保存。
+先用 `GetComponents` 找到本地 SCS `ComponentName`，再用 `GetComponentProperties` 查看可编辑的模板属性。调用 `SetComponentProperties` 时，在 `Properties` 中提供“属性名 → UE 文本值”映射，例如 `RelativeLocation: "(X=0,Y=0,Z=50)"`、`bHiddenInGame: "True"`。工具只改此 Blueprint 添加的组件模板；任一属性不合法，整次调用会回滚并给出属性名与格式提示。按需使用 `SaveAsset` 保存。
 
 此操作编辑本蓝图添加的 SCS 组件模板，例如 `StaticMesh` 或 `RelativeLocation`。已有场景 Actor 的组件覆盖值保留；生成类上的 Class Defaults 由 `SetClassDefaults` 修改。
 
 ## 调整附着关系
 
-`ReparentComponent` 改的是同一 Actor Blueprint 内本地 **SceneComponent** 的附着树：传组件名与新的 `NewParentName`。不能把节点挂到自身或子孙节点下；非 SceneComponent 不可改；实际本地根组件必须用 `SetRootComponent`。
+`ReparentComponent` 改的是同一 Actor Blueprint 内本地 **SceneComponent** 的附着树：传组件名与新的 `NewParentName`。不能把节点挂到自身或子孙节点下；非 SceneComponent 不可改；实际本地根组件必须用 `SetRootComponent`。改完后重新查看组件树，核对目标父组件或根组件，再保存要保留的改动。

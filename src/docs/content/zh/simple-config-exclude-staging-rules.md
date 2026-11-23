@@ -11,7 +11,7 @@ workIds:
   - simple-config-exclude
 docPage:
   work: simple-config-exclude
-  group: packaging
+  group: features
   slug: staging-rules
   order: 1
 documentKind: product-manual
@@ -37,7 +37,7 @@ translationKey: doc:simple-config-exclude:staging-rules
 1.  找到你要排除的配置文件
 2.  点击 `Disallowed` 即可排除
 3.  需要强制包含的点击 `Allowed`
-4.  修改即时生效，无需额外保存
+4.  修改会写入配置，无需另点保存；若遇到写入问题，按下文检查签出和文件差异。
 
 适用场景见 [SimpleConfigExclude 作品页](/zh/works/simple-config-exclude/)。
 
@@ -118,6 +118,8 @@ DefaultDebug.ini → Disallowed
 ```
 
 ## 验证产物与管理敏感配置
+
+如果准备验证排除规则，先检查本次打包的产物，再执行任何手动复制。用示例中的两份文件检查时，应分别确认排除项不在、包含项存在。
 
 正常打包项目，检查打包目录中的 `Config` 文件夹，确认排除的文件不存在。
 

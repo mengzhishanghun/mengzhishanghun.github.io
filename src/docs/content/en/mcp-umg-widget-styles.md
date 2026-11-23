@@ -13,19 +13,21 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/widget-styles/
 lang: en
 translationKey: doc:mcp-umg:widget-styles
-sourceHash: d0a4067791b2557ff2de96cd61cf4b4c85dde215f3ecb6e3d78f2d5fe070e18b
+sourceHash: 6a2c0bdfb78ef108bf11135b1897112600b22ca275e7a63da4d00be0ff76c0d1
 translationStatus: translated
-generatedBodyHash: c562b9b296253616d9a9fc41304f970526bb1e3d4e550a14429ce180cc50d9d0
+generatedBodyHash: df04df63bc4931593f403119242ef8cc4f0011a81bd7a34c1fd4287f74385590
 docPage:
   work: mcp-umg
-  group: styling-themes
+  group: features
   slug: widget-styles
-  order: 1
+  order: 7
 ---
 
 ## Widgets supported by SetWidgetStyle
 
-The `Brush`, `Text` and `Button` interfaces of `SetWidgetStyle` are unchanged. All objects are fully parsed before opening a transaction. Unknown fields, incorrect JSON types, missing resources or resource-type mismatches fail without modifying the target widget.
+Start with the widget type and the visual change you want. Look at Brush for an image or border, Text for lettering, and the relevant state for a button background. For spacing, first decide whether you need to change style padding or the layout of the parent slot.
+
+`SetWidgetStyle` accepts `Brush`, `Text`, and `Button` style objects. The tool checks the full request before making changes. It rejects unknown fields, incorrect JSON types, missing resources, and resources of the wrong type; the widget stays unchanged.
 
 ## Extended widgets
 

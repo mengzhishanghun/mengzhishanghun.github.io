@@ -13,21 +13,23 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/image-to-umg/
 lang: en
 translationKey: doc:mcp-umg:image-to-umg
-sourceHash: 917a4a130235a8834491b318eb9927d3b16ada2db0619b3e80bb66104d91ce63
+sourceHash: c02659fbad0d4332531a4d11e591d61e7800326d51c40af8c7b6f93addd7955c
 translationStatus: translated
-generatedBodyHash: b9bf82eca1e360913f0bf4b700a45dc26a09ee20b7f91b58ec4f33683cd5fdf8
+generatedBodyHash: 913a2c300c69690bb122a3b27194e5442d5317da07270c37cb0a03be4740ff45
 docPage:
   work: mcp-umg
-  group: widgets-layout
+  group: features
   slug: image-to-umg
   order: 2
 ---
 
-MCPUMG does not connect to image models or store model keys inside the plugin. The AI client interprets the reference image, checks its text, identifies reusable components and generates a structured specification. MCPUMG validates, builds, measures and saves Unreal Engine assets deterministically.
+MCPUMG does not connect to image models or store model keys inside the plugin. The AI client interprets the reference image, checks its text, identifies reusable components and generates a structured specification. MCPUMG follows that specification to validate, build, measure, and save Unreal Engine assets. It does not interpret the reference image itself.
 
 `ApplyWidgetTreePatch` supports complete-tree and incremental patches. To change only an existing widget’s properties or layout, use the dedicated property or layout tools.
 
 ## From specification to preview and save
+
+Before you start, gather the reference image, the target Widget Blueprint path, and the image files you plan to import. If the target already has widgets, read its tree first and identify which widgets to keep and which to change. Use that distinction to choose between a complete tree specification and an incremental patch.
 
 1. Call `GetUIDesignCapabilities` to read the current schema, limits, and supported Widget and style capabilities.
 2. Have the AI generate a Widget specification with `schemaVersion=1`, stating the design dimensions, layout assumptions and asset sources.

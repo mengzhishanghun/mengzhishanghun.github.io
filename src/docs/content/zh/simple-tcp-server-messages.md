@@ -10,7 +10,7 @@ workIds:
   - simple-tcp-server
 docPage:
   work: simple-tcp-server
-  group: network
+  group: features
   slug: messages
   order: 2
 documentKind: product-manual
@@ -29,6 +29,8 @@ translationKey: doc:simple-tcp-server:messages
 
 ## 向单个会话发送或向通道广播
 
+只回复一个客户端时，先按当前会话列表确认它的会话标识；确认要发给通道上的所有客户端时，再选广播。收发两端需使用同一种编码和分帧约定。
+
 | 节点函数           | 说明                                      |
 |-------------------|-------------------------------------------|
 | `SendMessage`     | 向指定 SessionChannel 发送字节数组          |
@@ -37,7 +39,7 @@ translationKey: doc:simple-tcp-server:messages
 ## 客户端与字节转换
 
 - **SimpleTCPClient 插件**  
-  为客户端设计的轻量级插件，适合连接到 SimpleTCPServer 实例。
+  轻量客户端插件，可用于连接 SimpleTCPServer 实例。
 
 - **SimpleByteConversion 插件**
   支持原生 Unreal 类型（如 FString、float、int）与 `TArray<uint8>` 之间的转换，适合构建结构化协议。

@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-material/docs/connect/
 lang: en
 translationKey: doc:mcp-material:connect
-sourceHash: b40e33767b96c978ff10a80f0c8aeca30f0a16312745d5ba1edd0c02787a5148
+sourceHash: 48eb77276ecb9d6b5ca24f06d883420029cc6ba76e0b725859ba2401af108682
 translationStatus: translated
-generatedBodyHash: 9b0f53cf76aef99f147a948ba211d8a165d1804a22c76313c17131daba2846e6
+generatedBodyHash: 450edd514f3993a447248c18df7094e8cfa5e5025523722b3ddebb480d494c56
 docPage:
   work: mcp-material
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 ---
@@ -37,7 +37,7 @@ Oversized tool results preserve the real success/error terminal state while omit
 
 JSON-RPC treats only messages without an `id` member as notifications; an explicit `id:null` still receives a response with a null id.
 
-A timeout cannot forcibly stop an editor operation after the GameThread has claimed it. After a timeout error, inspect editor state before retrying.
+If the GameThread has picked up the operation, it may keep running after the client reports a timeout. Read the target asset back to see whether the request took effect before deciding whether to retry.
 
 ## Feedback
 

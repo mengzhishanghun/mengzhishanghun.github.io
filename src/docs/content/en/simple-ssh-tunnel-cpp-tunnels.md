@@ -12,14 +12,14 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-ssh-tunnel/docs/cpp-tunnels/
 lang: en
 translationKey: doc:simple-ssh-tunnel:cpp-tunnels
-sourceHash: e667fccf56d22ec3fd07130e31f1eb7fcde54e551d63f055f10c1defc71e5dec
+sourceHash: c8df8b600f3ca547f17c914dee9697bca254f9ff626c8fdb53e805bb9cd4b14a
 translationStatus: translated
-generatedBodyHash: 726b98d819b9c9e5da183c7ed913372c5b7f44a4035c720098e9cb698a058c1e
+generatedBodyHash: 614f7623f9ac3999358392e8cba169d60c1a3a5f0671e2c0531a56b719de8342
 docPage:
   work: simple-ssh-tunnel
-  group: native
+  group: features
   slug: cpp-tunnels
-  order: 1
+  order: 2
 ---
 
 ## Choosing an approach
@@ -81,7 +81,7 @@ void CloseSSHTunnel(FProcHandle& ProcHandle)
 }
 ```
 
-This approach needs little code and no third-party library integration. The executable paths differ on Windows, Linux, and macOS. Packaging is difficult when you cannot control the user's environment.
+The system client needs little integration code and no third-party library in the project. The executable paths differ on Windows, Linux, and macOS. Packaging is difficult when you cannot control the user's environment.
 
 The system-client example keeps a `Password` parameter but does not use it for authentication. It relies on keys or external interaction. The caller must retain the process handle: the local variable does not make that handle available to the separate close function. Executable paths, argument escaping, startup failures, termination timing, and error collection also need handling.
 
@@ -152,6 +152,8 @@ libssh2_exit();
 libssh2 works with a socket; in UE, you can use `FSocket`. Port forwarding also needs a local listening socket to accept connections. Run the forwarding loop on a separate thread to avoid blocking the game thread, and handle errors and resource cleanup for every libssh2 operation.
 
 ### Listening, forwarding, and host identity checks
+
+In a test environment, check that the process or session starts, that the service is reachable through the local port, and that resources are released on shutdown. Process startup and a successful SSH handshake each confirm only their own stage.
 
 The libssh2 example shows initialization, handshake, authentication, channel creation, and cleanup. It does not include a complete local listener, bidirectional forwarding, return-value checks, or server host-key verification. Values such as `socket` and `username` come from the surrounding project. Before distributing a build, check the target platform's libraries, runtime dependencies, and licenses. The comparison describes differences in management capabilities; integrating a library does not automatically remove dependencies, provide platform support, or guarantee reliable distribution.
 

@@ -11,7 +11,7 @@ workIds:
   - simple-asset-cleaner
 docPage:
   work: simple-asset-cleaner
-  group: cleanup
+  group: features
   slug: clean-assets
   order: 1
 documentKind: product-manual
@@ -32,11 +32,13 @@ translationKey: doc:simple-asset-cleaner:clean-assets
 
 ## 右键清理选定资产
 
+如果只想整理这次待提交的新资产，用提交时的自动清理。右键清理的范围虽由选区决定，处理已跟踪文件时仍会删除文件；确认选择前，先区分候选中哪些是新添加项、哪些已经受版本控制。
+
 在 Content Browser 选中一个或多个资产或文件夹，右键打开 **Simple Asset Cleaner**，选择 **清理未引用资产**。检查弹窗候选并勾选要处理的文件。
 
 ## 扫描整个项目
 
-全量清理适合定期维护、接手旧项目或重大版本迭代前整理。它会删除已提交的未引用文件。先确认版本控制中有可恢复的提交，在测试分支试运行，并提前告知团队。
+全量清理适合定期维护、接手旧项目或重大版本迭代前整理。全量清理会删除已提交的未引用文件。先通知团队，确认有可恢复的版本，再在测试分支试运行。
 
 1. 打开 `Editor > Project Settings > General > Simple Asset Cleaner`。
 2. 点击 `Clean All Source Control Assets`，等待进度条完成。

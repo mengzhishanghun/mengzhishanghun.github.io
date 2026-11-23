@@ -11,7 +11,7 @@ workIds:
   - simple-byte-conversion
 docPage:
   work: simple-byte-conversion
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -24,9 +24,11 @@ translationKey: doc:simple-byte-conversion:setup
 
 将插件文件夹复制到项目的 `Plugins` 目录，重启编辑器。
 
-插件启用后自动生效，无需手动管理子系统或插件生命周期。
+启用插件后即可使用蓝图节点，无需手动管理子系统或插件的生命周期。
 
 ## 蓝图节点分类
+
+图中按输入和输出列出了成对的转换节点。选好数据类型后，先将 `Bytes` 输出接到同一类型的还原节点，检查还原值，再接入通信或存储。
 
 所有节点都在 `SimpleByteConversion` 分类下：
 

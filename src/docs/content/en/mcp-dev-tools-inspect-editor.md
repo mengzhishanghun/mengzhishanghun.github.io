@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-dev-tools/docs/inspect-editor/
 lang: en
 translationKey: doc:mcp-dev-tools:inspect-editor
-sourceHash: 8737be830b190d922bdfcbb75ed120561856b18c6de09b0eddb1572447c36e44
+sourceHash: 94b89f79ba9cf7ded86924c44de1824c8f57b0c6a1566037be033f2d9d6cfb50
 translationStatus: translated
-generatedBodyHash: aa085f3cf9f28edba9d5543f67a10404e3fe2bcb92f9b8a3441cfc5f323b7fd1
+generatedBodyHash: 29350b506b10b183b3a973d110abe13b17da87de63dbdb0ee83e53895fadccde
 docPage:
   work: mcp-dev-tools
-  group: diagnostics
+  group: features
   slug: inspect-editor
   order: 1
 ---
@@ -31,7 +31,7 @@ docPage:
 | Project plugins | `ListProjectPlugins` | Read allowlisted fields from loaded plugin-manager information. `Scope` defaults to `enabled` and also accepts `discovered`. Results use stable sorting and pagination. |
 | Plugin logs | `ReadDevLog` | Read only `LogMCPDevTools` entries captured after module registration completes. Page using `Cursor`, `Limit`, and optional `VerbosityFilter`. |
 
-The three diagnostic tools do not start processes or test jobs, load assets, save packages, or change configuration. Their inputs reject extra fields. Missing context returns a specific reason for unavailability.
+If several editors are open, compare the project, instance identifier, and port in the response to confirm you reached the right editor. Then check its plugins or logs. The three diagnostic tools do not start processes or test jobs, load assets, save packages, or change configuration. Their inputs reject extra fields. Missing context returns a specific reason for unavailability.
 
 ## Plugin and log pagination
 

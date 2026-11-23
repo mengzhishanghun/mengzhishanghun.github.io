@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/user-defined-structs/
 lang: en
 translationKey: doc:mcp-blueprint:user-defined-structs
-sourceHash: ce3742cbb5816c8e51ad47f5e5c0b59bda929e006915dc31edc50c597e6ddad8
+sourceHash: f29a2453a1bf304c9ae0903f7b9d45110a9a099cd6fbad8d2c5947d8f152f83c
 translationStatus: translated
-generatedBodyHash: b4cf9d4ab51849bf9a18d5f8d6abc4dfb65b65cd25bb984e612d18f6e49fef43
+generatedBodyHash: b8ba3197a4d362b4ae5e882d036d8329b533405a768bde0655b83e21a70f840b
 docPage:
   work: mcp-blueprint
-  group: members-types
+  group: features
   slug: user-defined-structs
-  order: 5
+  order: 8
 ---
 
 ## Create, read, and edit fields
@@ -31,4 +31,4 @@ docPage:
 | `GetUserDefinedStruct` | Shows Struct field definitions. | Read large Structs with pagination. |
 | `ModifyUserDefinedStruct` | Adds, edits, or removes Struct fields. | Start with `bDryRun`; potential data loss requires explicit approval. |
 
-Use field identifiers to select targets and check the reference impact with `bDryRun`. Give separate explicit approval for edits that may lose data.
+For an existing Struct, read its fields first. Select the target by its field identifier, then use `bDryRun` to see which references may be affected. Give separate explicit approval for any edit that may lose data, then apply it. After creating or editing the Struct, save any changes you want to keep separately.

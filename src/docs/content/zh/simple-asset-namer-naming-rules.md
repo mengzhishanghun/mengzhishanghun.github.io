@@ -11,7 +11,7 @@ workIds:
   - simple-asset-namer
 docPage:
   work: simple-asset-namer
-  group: naming
+  group: features
   slug: naming-rules
   order: 1
 documentKind: product-manual
@@ -103,7 +103,7 @@ translationKey: doc:simple-asset-namer:naming-rules
 
 **命名规则配置：**
 
-每种资产类型可以配置独立的前缀和后缀：
+按资产类型填写各自的前缀与后缀：
 
 ```cpp
 USTRUCT(BlueprintType)
@@ -141,6 +141,8 @@ TMap<TSoftClassPtr<UObject>, FAssetNamingRule> AssetTypeNamingRules;
 在 **Asset Type Naming Rules** 下点击 **+** 添加规则。
 
 ## 限制资产路径
+
+分批启用时，先用白名单选一个测试目录，检查该目录内的资产类型能否匹配规则，再扩大范围。路径不在筛选范围内时，先检查路径设置，再调整词缀。
 
 `Filter Type` 默认使用黑名单，跳过 `Exclude Paths` 下的资产。白名单只处理 `Include Paths` 下的资产，适合分批推行规则。下方是默认排除路径和一组白名单示例。
 

@@ -30,6 +30,8 @@ links:
 docIds:
   - md-blog-packer-setup
   - md-blog-packer-package
+  - md-blog-packer-updates-2026-05-13
+  - md-blog-packer-updates-2026-04-18
 coverAlt: MDBlogPacker封面
 websiteCoverUrl: /media/covers/works/md-blog-packer-20261101.webp
 lang: zh
@@ -38,7 +40,7 @@ translationKey: md-blog-packer
 
 ## 作品简介
 
-MDBlogPacker 是 MDImageEmbed 的 Python 版本，将 Markdown 和本地图片合并为 Base64 内嵌文本导出。MDImageEmbed 后续仅维护其 Python 版本 MDBlogPacker。
+MDBlogPacker 把 Markdown 文章和它引用的本地图片打包成一份文本，图片以 Base64 内嵌。它是 MDImageEmbed 的 Python 版本；MDImageEmbed 今后只维护这一版本。
 
 它识别普通 Markdown 图片语法和 Obsidian Wiki 图片引用，把本地图片转换为 Base64 内嵌内容，同时保留网络图片与已经内嵌的图片。使用者可以通过图形界面或命令行处理文章，再复制结果或导出文件。
 

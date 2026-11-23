@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/mvvm/
 lang: en
 translationKey: doc:mcp-umg:mvvm
-sourceHash: d4b8cf9a6a724f90384e2dbe1b8d7469e1e2ed736afe71521bde795ed7ea1f85
+sourceHash: 4fe77a62245f29864b5f5fc2d2623f4ea7056f21309c0af7b370692c6c66b846
 translationStatus: translated
-generatedBodyHash: 44da30ded1ce4e7f50e2d4ee62724c78e7763f96476f2697a12b4cf602c0b09a
+generatedBodyHash: fbbbe4371445d60bb45cf492994363b2fda421f4e5efe9ac36f3ac8b8dd95427
 docPage:
   work: mcp-umg
-  group: framework-integration
+  group: features
   slug: mvvm
-  order: 2
+  order: 14
 ---
 
 ## Check framework availability
@@ -33,7 +33,9 @@ To use an optional framework, have the project owner manually enable its plugin 
 
 ## Read views, add contexts, and validate bindings
 
-`GetMVVMView` reads existing Contexts and Bindings on one Widget Blueprint. It does not create or modify MVVM data.
+Check whether the Widget Blueprint already has the ViewModel Context you need. Read its configuration if it exists. To create or update a full binding, check for the enhanced module as described below.
+
+Use `GetMVVMView` to see the contexts and bindings already in a Widget Blueprint. This query does not create or change MVVM data.
 
 `AddMVVMViewModelContext` adds a real ViewModel Context to an existing Widget Blueprint. `BlueprintPath`, `ViewModelClass` and `CreationType` are all required; `CreationType` accepts only `Manual` or `CreateInstance`.
 

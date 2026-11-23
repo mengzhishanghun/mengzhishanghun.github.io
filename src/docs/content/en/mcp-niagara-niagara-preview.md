@@ -13,16 +13,16 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-niagara/docs/niagara-preview/
 lang: en
 translationKey: doc:mcp-niagara:niagara-preview
-sourceHash: 8f3c1818b0de4bf354f2888df67f09f40d037bd3ea423f7e9f7e49396175da0b
+sourceHash: a60cd3e1b25eb9934a553e725576bd0f0fc2fccfb1b1aa933293f20e17b3d540
 translationStatus: translated
-generatedBodyHash: 8c4814f573c89384fe70169238d83b0d3c3d4a778fd2ad642f2c8549563829ab
+generatedBodyHash: 271df1de1ac6f781e8797d5198a73433e00744a7cdf3d385540afa23606da996
 docPage:
   work: mcp-niagara
-  group: systems
+  group: features
   slug: niagara-preview
   order: 3
 ---
 
 ## Thumbnail source and output limits
 
-`CapturePreview` reads only a thumbnail already cached in memory or stored in a saved package; it does not render or replace the thumbnail cache. Exactly one PNG is returned, bounded to 1024×1024 pixels, 16 MiB raw data, and 8 MiB compressed data.
+`CapturePreview` reads only a thumbnail already cached in memory or stored in a saved package; it neither renders a new view nor changes the thumbnail cache. The tool returns one PNG, limited to 1024×1024 pixels, 16 MiB of raw data, and 8 MiB of compressed data. Open the target system to inspect a recent edit, since the cached image cannot confirm that the edit is visible.

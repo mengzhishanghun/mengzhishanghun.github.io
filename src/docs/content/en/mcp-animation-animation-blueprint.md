@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-animation/docs/animation-blueprint/
 lang: en
 translationKey: doc:mcp-animation:animation-blueprint
-sourceHash: 74cda1cdb4fdba391085470f2ffb64882a56138fe930582f9ec7473e9e966b74
+sourceHash: 7fa42b3cb1c281b748b09f123c35599080113edc10cc329c47d372ef2a0b2bbb
 translationStatus: translated
-generatedBodyHash: 416ed38f3a917b82a707b09aa2bc1084031ca3a0ad39f034ba8b9971fa8bac6e
+generatedBodyHash: 7386320e5bed2f56e7894b0d1b6c47dc1b0d806f3934b18ff930004625ab05b4
 docPage:
   work: mcp-animation
-  group: editing
+  group: features
   slug: animation-blueprint
-  order: 1
+  order: 2
 ---
 
 ## Find and inspect state machines
@@ -42,6 +42,6 @@ docPage:
 | `SetTransitionRule` | Set a supported transition rule. |
 | `CompileAnimBlueprint` | Compile and return diagnostics from AnimGraphs, state graphs, and transition graphs. |
 
-Complex or ambiguous state result graphs are not modified by guesswork. Simplify them to one direct driver or edit them manually in Unreal Editor.
+To replace the animation in an existing state, find the Animation Blueprint, identify the state machine in the overview, and locate the state in the machine details. Use `SetStateAnimation` only if one Sequence Player directly drives the state result. If the graph is ambiguous, edit it in Unreal Editor or simplify it to a single direct driver first. Run `CompileAnimBlueprint` after editing, address any graph diagnostics, and call `SaveAsset` to keep the change.
 
 For paths, transactions, and saving, see how to [open and save animation assets](/en/works/mcp-animation/docs/find-assets/).

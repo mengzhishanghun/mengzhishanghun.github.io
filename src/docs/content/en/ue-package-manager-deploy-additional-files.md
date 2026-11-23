@@ -14,19 +14,21 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-package-manager/docs/deploy-additional-files/
 lang: en
 translationKey: doc:ue-package-manager:deploy-additional-files
-sourceHash: 33c1567375f0b73ab81d946133d6154494caa0ae8661d9ca71aa7122f906ff6c
+sourceHash: 073d16940ca765470e3699d6de5440de4cab9a1817e2eb03b74749c1328e9086
 translationStatus: translated
-generatedBodyHash: 15d24f9b41e7c711a3fdfa5f7383c4fc815e67645a5c9845fc2eec3dfecb4dfe
+generatedBodyHash: d2a40f1431b30f7a39392b54eea31684381b9d85f3faf99ac132bf9f899df8d2
 docPage:
   work: ue-package-manager
-  group: output
+  group: features
   slug: deploy-additional-files
-  order: 1
+  order: 3
 ---
 
 ## Set copy rules
 
-In the GUI, use Additional files to select files or folders and set a destination subdirectory and recursive ignore patterns for each rule. In the CLI, use `copy-list` to inspect rules, `copy-add` to add a rule, and `copy-remove --index 0` to remove the first rule in the example. Use `--no-copy` to skip deployment for this run.
+In the GUI, choose the files or folders to ship under Additional files, then set a destination subdirectory inside the package for each rule. When copying folders, you can also set recursive ignore patterns.
+
+In the CLI, use `copy-list` to view rules, `copy-add` to add a rule, and `copy-remove --index 0` to remove the first rule in the example. Use `--no-copy` to skip additional file copying for the current build.
 
 ## Copy timing and path limits
 

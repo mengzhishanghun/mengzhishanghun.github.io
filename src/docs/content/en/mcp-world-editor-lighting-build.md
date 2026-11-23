@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-world-editor/docs/lighting-build/
 lang: en
 translationKey: doc:mcp-world-editor:lighting-build
-sourceHash: f1726984f86933eabb289632bf7f3d8c67f3a9e6fd5c8ab709ffc3811f993b4a
+sourceHash: fe874788c8e5f5a2b1fee9e49fda9b2b3f810ffc3aebd7a7076a725bdff63c7a
 translationStatus: translated
-generatedBodyHash: 9cc1509683592e13cdf34ae1e75a79e7c133933e406969e3aa9cb029e76d3a47
+generatedBodyHash: 7865b6661bf0e2cdab1d921091747ab7765abb8607d34fb27a110eb97165c8a8
 docPage:
   work: mcp-world-editor
-  group: levels
+  group: features
   slug: lighting-build
   order: 4
 ---
@@ -27,4 +27,4 @@ docPage:
 
 `BuildLighting` previews the build by default. To run it, return the preview’s `PlanHash` and set `DryRun=false`.
 
-Lighting uses Preview quality and returns an `OperationId`; query `GetBuildStatus` for its terminal state. A lighting build succeeds only after all active lighting scenarios have applied their results. The tool does not report a progress percentage or save the map. Switching or unloading the map invalidates running operation IDs.
+Lighting builds use Preview quality. Keep the returned `OperationId` and use `GetBuildStatus` until it reports a final state. Receiving an ID gives you a build to track. A lighting build succeeds only after all active lighting scenarios have applied their results. The tool does not report a progress percentage or save the map. Switching or unloading the map invalidates running operation IDs.

@@ -13,17 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/widget-performance/
 lang: en
 translationKey: doc:mcp-umg:widget-performance
-sourceHash: ae44f248235dc46007021e98bc60cfbf0a5ef4a368948aae5174ad5f5773d03c
+sourceHash: 97590740dbb486f8791f8663c1351b23a1c95876fe1f3ba4df7ef4dcdcdf9b94
 translationStatus: translated
-generatedBodyHash: 92400c5a9073c6a216384a16c3222e511bfb7b90f3bf9976fad9d90e24ce6a86
+generatedBodyHash: 7b476ca442d635c34d9f67cb311cb3c0f67029af9e9e8939cb8e62e775e69505
 docPage:
   work: mcp-umg
-  group: preview-diagnostics
+  group: features
   slug: widget-performance
-  order: 3
+  order: 17
 ---
 
 ## Sample Slate CPU work and capture a Trace
+
+If you are unsure where to look, start with the design-time tree depth and binding counts. If you can reproduce a slowdown in PIE, sample when it occurs. Keep the page state and actions consistent when comparing two measurements.
 
 `InspectWidgetPerformance` reads design-time structural complexity and cannot replace runtime measurement. `MeasureWidgetPerformance` requires `RuntimeInstanceToken` and `RequestId`. Optional parameters are `Frames` (default 30, maximum 120) and `MaxNodes` (default 100, maximum 500). It aggregates per-Widget **inclusive GameThread CPU** time from actual Slate paint, invalidation and update events. This is neither exclusive time nor GPU time. Query the results with the returned `OperationId`.
 
@@ -40,7 +42,7 @@ docPage:
 }
 ```
 
-`BlueprintPath` is the required Widget Blueprint asset path. Optional `MaxWidgets` defaults to `500` and must be a JSON integer from `1` to `1000`. Fractions, strings and booleans are rejected. Reaching the limit returns `bTruncated: true`, meaning the statistics cover only the traversed prefix, not the entire tree.
+`BlueprintPath` is the required Widget Blueprint asset path. Optional `MaxWidgets` defaults to `500` and must be a JSON integer from `1` to `1000`. Fractions, strings and booleans are rejected. If you see `bTruncated: true`, the totals cover only the nodes visited before the limit, not the entire tree.
 
 ### Structure inspection results
 

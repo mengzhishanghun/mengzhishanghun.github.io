@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: styling-themes
+  group: features
   slug: widget-styles
-  order: 1
+  order: 7
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/widget-styles/
 lang: zh
@@ -22,7 +22,9 @@ translationKey: doc:mcp-umg:widget-styles
 
 ## SetWidgetStyle 支持的控件
 
-`SetWidgetStyle` 接受 `Brush`、`Text` 和 `Button` 样式对象。所有对象会在开启事务前完整解析；未知字段、JSON 类型不符、资源不存在或资源类型不匹配都会失败，且不修改目标控件。
+从控件类型和要改的视觉效果入手：图片和边框先看 Brush，文字先看 Text，按钮背景先确定要改哪个状态。如果目标是调整控件与父容器的间距，先分清那是样式内边距还是 Slot 布局。
+
+`SetWidgetStyle` 接受 `Brush`、`Text` 和 `Button` 样式对象。工具会先检查完整请求。遇到未知字段、错误的 JSON 类型、找不到资源或资源类型不符时，工具会拒绝请求，目标控件保持原样。
 
 ## 扩展控件
 

@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: framework-integration
+  group: features
   slug: mvvm
-  order: 2
+  order: 14
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/mvvm/
 lang: zh
@@ -30,7 +30,9 @@ translationKey: doc:mcp-umg:mvvm
 
 ## 读取视图、添加上下文和验证绑定
 
-`GetMVVMView` 读取一个 Widget Blueprint 已有的 Context 和 Binding。它只读取，不会创建或修改 MVVM 数据。
+先查目标 Widget Blueprint 是否已有所需的 ViewModel Context。有现成的 Context 时，先读取它的配置；需要新建或修改完整 Binding 时，再按下文检查增强模块。
+
+用 `GetMVVMView` 查看 Widget Blueprint 现有的 Context 和 Binding。这个查询不会创建或修改 MVVM 数据。
 
 `AddMVVMViewModelContext` 为现有 Widget Blueprint 添加一个真实 ViewModel Context。`BlueprintPath`、`ViewModelClass` 和 `CreationType` 均为必填项；`CreationType` 只能是 `Manual` 或 `CreateInstance`。
 

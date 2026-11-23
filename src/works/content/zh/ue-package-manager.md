@@ -36,6 +36,7 @@ docIds:
   - ue-package-manager-deploy-additional-files
   - ue-package-manager-clean-old-packages
   - ue-package-manager-build-executable
+  - ue-package-manager-updates-2026-09-15
 coverAlt: UEPackageManager封面
 websiteCoverUrl: /media/imported/works/ue-package-manager-cover-v2.png
 lang: zh
@@ -44,7 +45,7 @@ translationKey: ue-package-manager
 
 ## 作品简介
 
-UEPackageManager 是 Windows 上的 Unreal Engine 项目打包工具，无需打开 UE 编辑器即可快速打包项目，支持图形界面与命令行操作。
+UEPackageManager 用于在 Windows 上打包 Unreal Engine 项目。可以从图形界面或命令行发起打包，不需要先打开 UE 编辑器。
 
 它调用 Unreal Automation Tool 完成 Build、Cook、Stage、Pak、Archive 等步骤，并在打包成功后按规则把附加文件部署到输出包内。项目识别、配置隔离和输出清理用于控制重复打包的过程。
 
@@ -62,7 +63,7 @@ UE 项目交付时，打包命令和附加文件整理常分散在不同操作�
 
 ### UE 打包与结果查看
 
-通过 UAT 组织项目打包，支持多种构建类型，并提供过程日志。图形界面和命令行都可作为打包入口，实际构建结果仍来自 UAT。
+先在图形界面或命令行选择构建类型，再启动打包。工具调用 UAT 执行打包，过程和结果可在日志中查看。
 
 ### 成功后的附加部署
 
@@ -90,7 +91,7 @@ UE 项目交付时，打包命令和附加文件整理常分散在不同操作�
 
 ![](/media-occurrence/work%3Aue-package-manager%3Amedia%3A1)
 
-*UEPackageManager 图形界面：配置项目、打包参数和附加文件复制规则。*
+*UEPackageManager 图形界面。顶部显示识别到的项目与引擎，下方可设置输出目录、打包类型和附加文件规则。*
 
 操作步骤和参数说明见 [使用教程](/zh/works/ue-package-manager/docs/package-project/)。
 

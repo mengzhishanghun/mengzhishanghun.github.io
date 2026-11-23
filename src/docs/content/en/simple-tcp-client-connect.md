@@ -12,20 +12,19 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-client/docs/connect/
 lang: en
 translationKey: doc:simple-tcp-client:connect
-sourceHash: 239252a15e8669d86f509def92e4ba65c20fd1369097a5de736bf88dfccbd6d4
+sourceHash: 492b829c6ba24d93310a3df756d22832374c89ced3f7e364bcb264fec2cb02b9
 translationStatus: translated
-generatedBodyHash: 3252035f9e7b7a225066116ada42294e8ad50e7bc9163c15ef279a5fde1d6ba5
+generatedBodyHash: 6d1d357cb152917dee5a3cd68ad42daebacc23d8726140d35e7f768919413bd9
 docPage:
   work: simple-tcp-client
-  group: network
+  group: features
   slug: connect
   order: 1
 ---
 
 ## Predefine a channel in Project Settings
 
-You can predefine client channels via **Project Settings → SimpleTCPClient Settings**.  
-It is recommended to configure channels here for easier management.
+Add client channels under **Project Settings → SimpleTCPClient Settings**. Give each target its own channel name, then use that name to refer to the connection in Blueprint.
 
 ### Channel parameters
 
@@ -56,6 +55,8 @@ Use an IPv4 address. The plugin does not support hostnames, IPv6, or encryption.
 | Client Socket| When calling `StartConnection` or auto  | When calling `StopConnection` or shutdown|
 
 ## Connection node overview
+
+For a manual connection, make sure the target service is listening and pass the channel name from the table to `StartConnection`. Check the same channel with `IsConnected`. Test message exchange once the connection is up.
 
 ![](/media-occurrence/doc%3Asimple-tcp-client%3Aconnect%3Amedia%3A1)
 

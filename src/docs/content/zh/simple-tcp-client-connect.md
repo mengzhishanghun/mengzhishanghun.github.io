@@ -10,7 +10,7 @@ workIds:
   - simple-tcp-client
 docPage:
   work: simple-tcp-client
-  group: network
+  group: features
   slug: connect
   order: 1
 documentKind: product-manual
@@ -21,8 +21,7 @@ translationKey: doc:simple-tcp-client:connect
 
 ## 在项目设置中预定义通道
 
-可通过 **项目设置 → SimpleTCPClient Settings** 预定义客户端通道。  
-建议在此处配置通道，便于集中管理。
+在 **项目设置 → SimpleTCPClient Settings** 添加客户端通道。为每个目标填写独立的通道名称，再在蓝图里用该名称引用对应连接。
 
 ### 通道参数
 
@@ -53,6 +52,8 @@ translationKey: doc:simple-tcp-client:connect
 | Client Socket| 调用 `StartConnection` 或自动连接时 | 调用 `StopConnection` 或关闭时       |
 
 ## 连接节点示例
+
+手动连接前，让目标服务开始监听，并把字段表中的通道名称传给 `StartConnection`。用 `IsConnected` 核对同一通道的状态；只有确认连接已建立，再测试收发。
 
 ![](/media-occurrence/doc%3Asimple-tcp-client%3Aconnect%3Amedia%3A1)
 

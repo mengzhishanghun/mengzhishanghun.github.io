@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-material/docs/material-compilation/
 lang: en
 translationKey: doc:mcp-material:material-compilation
-sourceHash: 5e26ff73b9e35d2ba44bf618237f1e15ecf523d801c442370ec1d041c2562ec3
+sourceHash: 40ff5cd7ad42993acce3d479f84973cfb5c37e2065b2e29efa6c0ee793a4e5de
 translationStatus: translated
-generatedBodyHash: f91a1913583f5d00848fe649acf5dc3c59187576ab4a9f2174446b64bc64edf6
+generatedBodyHash: ced1decfa18f89f3686369ce7c0b519c7a30586fa61d54a4361b44193497702f
 docPage:
   work: mcp-material
-  group: editing
+  group: features
   slug: material-compilation
-  order: 3
+  order: 5
 ---
 
 ## Compilation results
@@ -35,4 +35,4 @@ docPage:
 
 An instance with a static permutation compiles its own resource. An instance without one uses its effective parent resource, which can belong to a parent material or an ancestor instance; `ResourceOwnerPath` reports that owner. Close both the requested asset's editor and its resource owner's editor before compiling. A missing resource returns `CompileStatus: "Error"`, a nonempty `Errors` array, and an empty `ResourceOwnerPath`. An instance without a complete shader map also reports an error.
 
-After checking the compile result, see the [material asset saving guide](/en/works/mcp-material/docs/material-assets/).
+If compilation fails, start with the error array. When compiling an instance, also check whether the resource owner path points to a parent asset. Address the errors and compile again before following the [material asset saving guide](/en/works/mcp-material/docs/material-assets/).

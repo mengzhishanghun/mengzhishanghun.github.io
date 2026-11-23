@@ -11,7 +11,7 @@ workIds:
   - ai-data-asset
 docPage:
   work: ai-data-asset
-  group: data
+  group: features
   slug: ai-edit
   order: 2
 documentKind: product-manual
@@ -33,11 +33,11 @@ JSON 文件存储在项目的 `Saved/AIDataAsset/` 目录下（可配置）。�
 
 ## JSON 格式
 
-以编辑器中的 `CharacterStatsData` DataAsset 为例：
+以下 `CharacterStatsData` 是角色属性资产；详情面板显示了生命上限与暴击率。
 
 ![](/media-occurrence/doc%3Aai-data-asset%3Aai-edit%3Amedia%3A1)
 
-插件自动导出如下 JSON：
+插件会自动导出同一资产的角色属性和类型信息：
 
 ![](/media-occurrence/doc%3Aai-data-asset%3Aai-edit%3Amedia%3A2)
 
@@ -55,6 +55,8 @@ JSON 文件存储在项目的 `Saved/AIDataAsset/` 目录下（可配置）。�
 > **注意**：字段名与 UE 编辑器显示一致（如 `MaxHealth` 而非 `maxHealth`）。float 的 `%.9f` 固定小数位不能保证全部数值范围精确往返；double 使用 `%.17g`。修改后仍需按实际字段和允许误差核对。
 
 ## 用 AI 修改角色属性
+
+发出修改请求前，先在内容浏览器中核对资产路径，再确认 AI 将要编辑的是该资产已导出的 JSON。下例只改生命上限与暴击率，其他字段保持原样。
 
 1. **告诉 AI 数据文件的位置**：
 

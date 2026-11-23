@@ -13,21 +13,23 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/components-styles/
 lang: en
 translationKey: doc:mcp-umg:components-styles
-sourceHash: 6d9fecf19e6d98182f5c82676f861c6c0b478dff127b068380991ba6f46e756f
+sourceHash: 0da2ee69ca1febe2a7efed559315754c39b7485a510773429ffcf7c5e572b791
 translationStatus: translated
-generatedBodyHash: 4a98e2d041708fc5523f0e3d59438c618f3acfa010fcf1913ec67f1b42875334
+generatedBodyHash: df94c9f8aa865cb1f7b6b23a9b20ee4b252ebf02e8ca0696d698816e61da0cba
 docPage:
   work: mcp-umg
-  group: component-reuse
+  group: features
   slug: components-styles
-  order: 1
+  order: 5
 ---
 
 ## Component instances and Named Slots
 
-Use `ExtractWidgetComponent` to turn an existing subtree into a reusable component first. The steps here apply to component instances already in the tree.
+These steps apply to component instances already in the tree. If you do not have a component yet, use `ExtractWidgetComponent` to turn an existing subtree into one.
 
 ### Create or replace Named Slot content
+
+Check the host instance and what is currently in the slot. The request below is for an empty `Header` slot. If it already contains a widget, check that widget’s name before choosing to replace it or clear the slot.
 
 `SetNamedSlotContent` finds `HostWidgetName` in the specified Widget Blueprint tree and performs `Create` (default), `Replace`, `Clear` or `Move` on its `SlotName`. The host may be a native widget implementing `INamedSlotInterface` or a successfully compiled nested UserWidget that exposes Named Slots.
 
@@ -66,4 +68,4 @@ Fields must be editable on the instance, and values use UE text format. Variable
 
 Read back the instance properties after execution, then call `SaveWidgetBlueprint`. Instance parameters and Named Slot content should persist after saving, closing and reopening the asset.
 
-Use `ExtractWidgetComponent` to turn an existing subtree into a reusable component first. The steps here apply to component instances already in the tree.
+To turn another part of the tree into its own component, use `ExtractWidgetComponent` separately.

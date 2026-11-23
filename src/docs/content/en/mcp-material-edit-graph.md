@@ -13,21 +13,21 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-material/docs/edit-graph/
 lang: en
 translationKey: doc:mcp-material:edit-graph
-sourceHash: e19298b6d7162b8752855881954f9b223718eacd29cb6b0281af1aa9dddb3031
+sourceHash: 08e1ebc8ba09296f8d73338f43490824ec76b2f30a0c34f9fd8c27ea261c9426
 translationStatus: translated
-generatedBodyHash: 7308f2bf157377d8082c7d31fec7bade4eb3b333324eaf3364cd17c5f8ed9102
+generatedBodyHash: f6c06d7342efe27d4eaefe602cbb923b20b080180d4bc0b39ed69c047261a34e
 docPage:
   work: mcp-material
-  group: editing
+  group: features
   slug: edit-graph
-  order: 1
+  order: 3
 ---
 
 ## Inspect expressions, nodes, and connections
 
 `SearchMaterialExpressions` returns a stable `ClassPath`, `Creatable`, an uncreatable reason, and input/output indices. When short class names collide, `ApplyMaterialPatch` rejects guessing and requires an exact `ClassPath`; duplicate pin names must be addressed as `[index]`.
 
-`GetMaterialDetail` uses `NodeOffset`/`MaxNodes` for nodes and `ConnectionOffset`/`MaxConnections` for connections. Responses include totals, returned counts, and the next cursors, with up to 1000 entries per page.
+`GetMaterialDetail` uses `NodeOffset`/`MaxNodes` for nodes and `ConnectionOffset`/`MaxConnections` for connections. Each response gives the total, the number returned, and the next cursor, with up to 1000 entries per page. Page through nodes and connections separately. Once you find the node, check that you have read the relevant connections too.
 
 ## Edit the graph
 
@@ -45,7 +45,7 @@ Close the target editor before writing and follow the [material asset closing an
 
 Call `GetMaterialDetail` with `IncludeEditableProperties: true` to read the current node page's `EditableProperties` (`Name`, `Type`, `ValueText`, `Editable`) and actual `Inputs`/`Outputs` (`Index`, `Name`, numeric material-value `Type`). The response also includes `EditableMaterialProperties` for the material. `Type` in a property description is its UE C++ type; `ValueText` uses UE text format. `Editable` reflects both server support and the current property combination. Omitting the flag preserves the previous response shape.
 
-Use a discovered node GUID to edit the same node:
+Find the node in the readback and confirm that the property is editable. Use that node’s GUID in the request. The example below edits one node’s default value in place:
 
 ```json
 {

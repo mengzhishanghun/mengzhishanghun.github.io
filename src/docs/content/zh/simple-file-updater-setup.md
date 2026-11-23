@@ -11,7 +11,7 @@ workIds:
   - simple-file-updater
 docPage:
   work: simple-file-updater
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -26,7 +26,7 @@ translationKey: doc:simple-file-updater:setup
 
 ## 从源码运行
 
-未使用发布的 EXE 时，可选择 Conda 或 pip 安装依赖，然后运行 `Main.py`。
+从源码启动时，在 `Main.py` 所在的项目目录打开终端。按下面任一方式安装依赖，再运行 `Main.py`。
 
 ## 用 Conda
 

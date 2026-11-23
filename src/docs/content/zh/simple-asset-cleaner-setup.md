@@ -11,7 +11,7 @@ workIds:
   - simple-asset-cleaner
 docPage:
   work: simple-asset-cleaner
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -48,8 +48,10 @@ translationKey: doc:simple-asset-cleaner:setup
 
 ## 首次提交前检查
 
+第一次检查时，选一项明确引用的资产和一项写明要保留的根资产作为对照；如果其中任何一项出现在清理候选里，先确认根配置和引用链，再继续提交。
+
 先确认要保留的根资产和目录。默认以地图为根，不清理项目外的插件和引擎资产。检查设置后再使用 `Enable Auto Clean`；首次可在测试分支打开提交窗口，检查候选的处理结果。使用 `Clean All Source Control Assets` 可扫描整个项目，这个入口可能删除本地及版本控制中的文件。
 
 ## 详细日志
 
-`Enable Verbose Logging` 默认关闭。首次试用或排查异常时，可在项目设置中打开，查看扫描文件、未引用候选、清理操作和引用链追踪。不再需要时关闭。
+`Enable Verbose Logging` 默认关闭。首次试用或排查异常时，在项目设置中打开它，即可查看扫描文件、未引用候选、清理操作和引用链。不再需要时关闭。

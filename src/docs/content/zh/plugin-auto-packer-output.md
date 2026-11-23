@@ -12,7 +12,7 @@ workIds:
   - plugin-auto-packer
 docPage:
   work: plugin-auto-packer
-  group: packaging
+  group: features
   slug: output
   order: 2
 documentKind: product-manual
@@ -23,9 +23,9 @@ translationKey: doc:plugin-auto-packer:output
 
 ## 输出目录和错误日志
 
-- 插件将被打包到 `PackagedPlugins/插件名/引擎名/` 中
-- 如启用自动整理，插件中会包含清理后的文件与自动生成的配置
-- 如果打包失败，会在对应目录生成 `Failed.log`
+- 按插件名和引擎名在 `PackagedPlugins/插件名/引擎名/` 中找对应的包。
+- 启用自动整理后，检查包内的文件和生成的配置是否符合本次发布要求。
+- 某个引擎版本打包失败时，打开其输出目录中的 `Failed.log` 查看报错。
 
 ## 日志和引擎状态
 

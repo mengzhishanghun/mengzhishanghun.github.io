@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: framework-integration
+  group: features
   slug: commonui
-  order: 1
+  order: 13
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/commonui/
 lang: zh
@@ -24,11 +24,13 @@ translationKey: doc:mcp-umg:commonui
 
 先调用 `GetUIFrameworkCapabilities` 确认项目能否使用 CommonUI。可能的状态是：`NotInstalled`、`InstalledDisabled`、`EnabledNotLoaded` 或 `Available`。该查询不会改变项目、模块或资产状态。
 
-若要使用可选框架，请由项目负责人按项目需要手动启用插件并重启编辑器；MCPUMG 不会代为启用插件或加载已禁用模块。
+如果项目需要 CommonUI，由项目负责人手动启用插件并重启编辑器。MCPUMG 不会代为启用插件或加载已禁用模块。
 
 如果要配置数据绑定，请查看 [MVVM 上下文与绑定](/zh/works/mcp-umg/docs/mvvm/)。
 
 ## 配置已有控件、输入与运行时实例
+
+如果只是调整一个现有按钮的锁定行为，先选定目标蓝图和按钮，再用下面的示例预检属性。要检查输入是否确实到达该控件，则在运行中的页面验证；资产配置只能确认字段和引用。
 
 `ConfigureCommonUIWidget` 只修改指定 Widget Blueprint 树里的现有实例。参数为 `BlueprintPath`、`WidgetName`、`Properties`，可选 `dryRun` 可在不修改资产前检查完整请求。
 

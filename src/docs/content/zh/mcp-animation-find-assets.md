@@ -11,7 +11,7 @@ workIds:
   - mcp-animation
 docPage:
   work: mcp-animation
-  group: assets
+  group: features
   slug: find-assets
   order: 1
 documentKind: product-manual
@@ -27,13 +27,13 @@ translationKey: doc:mcp-animation:find-assets
 | `ListSkeletons` / `GetSkeletonDetail` | 发现 Skeleton，并读取骨骼、虚拟骨骼、兼容骨骼、Blend Profile 与 Slot Group。 |
 | `ListAnimSequences` / `GetAnimSequenceDetail` | 发现 AnimSequence，并读取时长、采样率、Notify、float curve 和压缩状态。 |
 
-`GetAnimSequenceDetail` 只读返回 float curve 摘要、骨骼/曲线压缩设置、压缩有效性和近似大小。当前不提供曲线或压缩写入：这些操作可能重建动画数据模型、触发耗时重压缩，并且 UE 5.2–5.8 的编辑 API 存在演进；在无法同时保证事务回滚、版本兼容和有界执行前，自动写入的资产损坏风险高于收益。
+先用列表工具找到目标资产，再把返回的路径交给对应的详情工具。`GetAnimSequenceDetail` 可查看 float curve 摘要、骨骼和曲线压缩设置、压缩有效性与近似大小。曲线和压缩设置只读；需要修改时，请在 Unreal Editor 中处理。
 
 详情接口提供结构化摘要，不导出所有曲线键值或逐骨骼动画轨道。
 
 ## 列表与详情上限
 
-- 列表工具使用 `Offset` 和 `MaxResults`，每页最多 256 项，并返回 `TotalCount`、`Returned`、`HasMore` 和可用时的 `NextOffset`。
+- 列表工具使用 `Offset` 和 `MaxResults`，每页最多 256 项，并返回 `TotalCount`、`Returned`、`HasMore` 和可用时的 `NextOffset`。若还有结果，用返回的下一页偏移继续读取。
 - 详情工具对骨骼、状态、Notify、曲线等集合设置 256 项上限，并返回真实总数与 `*Truncated` 标记。详情集合不支持翻页。超过上限时，请在 Unreal Editor 中查看完整数据。
 
 ## 打开与保存动画资产

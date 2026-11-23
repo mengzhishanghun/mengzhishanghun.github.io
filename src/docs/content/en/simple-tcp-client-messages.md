@@ -12,12 +12,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-client/docs/messages/
 lang: en
 translationKey: doc:simple-tcp-client:messages
-sourceHash: c29f5440658ce6e9e90b72a1c67606b17375f3bf315b3f92b09bb91852467351
+sourceHash: 9f2d415c3f1d5cda165a834b37e5669b3b3cbe74fdff74aa0d1e6ef2c1b27dbf
 translationStatus: translated
-generatedBodyHash: 18cb5d70b94390d712821262f21ded487e527a62b8985dbdb5180376d4b82d36
+generatedBodyHash: c08ce36fbbc31477a13cc40c5ec54700e0e5501449ef6fede230f27d1cf5827b
 docPage:
   work: simple-tcp-client
-  group: network
+  group: features
   slug: messages
   order: 2
 ---
@@ -42,10 +42,12 @@ docPage:
 
 ### Send a string or structured data
 
+Send data using the channel name you connected with. Agree on encoding and message framing at both ends. A receive callback gets a chunk of the TCP stream, which may hold part of a message or several messages.
+
 ![](/media-occurrence/doc%3Asimple-tcp-client%3Amessages%3Amedia%3A2)
 
 ## Convert between byte arrays and application data
 
-Use with **SimpleByteConversion** to easily convert common Unreal types (FString, float, int, etc.) to/from `TArray<uint8>` and build structured protocols.
+Use **SimpleByteConversion** to convert between common Unreal types (FString, float, int, and others) and `TArray<uint8>` when reading or writing structured data.
 
 [SimpleByteConversion tutorial](/en/works/simple-byte-conversion/docs/primitive-bytes/)

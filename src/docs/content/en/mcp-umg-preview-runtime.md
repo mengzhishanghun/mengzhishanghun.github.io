@@ -13,17 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/preview-runtime/
 lang: en
 translationKey: doc:mcp-umg:preview-runtime
-sourceHash: 0ea9d29c971a0683490a24d441bd3f323573794cba7d3a1930cd5886ed755901
+sourceHash: 05108766126dc2bfde69018792384eced7bc408f96d4f0fc24e0fb08aed395ec
 translationStatus: translated
-generatedBodyHash: 0390516e834f81441b5bbad580181965079027cebca68687cb1fa7fdb51e3a5e
+generatedBodyHash: d9a10fa4daeea5201c905bb93be31d67f4f14c8d85c6a392031facbf2a21fb65
 docPage:
   work: mcp-umg
-  group: preview-diagnostics
+  group: features
   slug: preview-runtime
-  order: 1
+  order: 15
 ---
 
 ## Off-screen previews
+
+Decide which view you need. Use an off-screen preview to check the compiled widget’s initial appearance or sample data. To see what PIE or Game is displaying, capture the existing instance. To compare an empty list with a populated one, preview both states at the same sizes.
 
 List samples use temporary asset copies, without passing the original assets directly to list entries. External resources referenced by those copies may still be shared. Widget lifecycles and list callbacks can run project code; this is not a script sandbox. Business logic used for previews should have no side effects.
 
@@ -94,7 +96,7 @@ This isolation is not recursive. The tool cannot prevent effects through externa
 }
 ```
 
-This remains a `TemporaryNewInstance` design preview and does not represent PIE/Game runtime state. Animation time parameters are not currently accepted, to avoid reporting unevaluated animation frames as screenshot results across UE versions.
+Batch previews still use a temporary design-time instance with the `TemporaryNewInstance` state. They do not show what PIE or Game is rendering. You cannot currently set an animation time to capture a particular frame.
 
 ## Capture a design view or a running widget
 

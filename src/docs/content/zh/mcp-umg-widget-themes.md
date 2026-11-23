@@ -11,16 +11,16 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: styling-themes
+  group: features
   slug: widget-themes
-  order: 2
+  order: 8
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/widget-themes/
 lang: zh
 translationKey: doc:mcp-umg:widget-themes
 ---
 
-`ExportWidgetTheme` 从指定的 Image、Border、TextBlock 或 Button 导出可移植的版本 1 主题；`ApplyWidgetTheme` 将该主题应用到另一份具有相同控件名称和类的 Widget Blueprint。导出只读取资产；应用在一个事务中修改内存，不会自动保存。
+`ExportWidgetTheme` 从指定的 Image、Border、TextBlock 或 Button 导出可移植的版本 1 主题；`ApplyWidgetTheme` 将该主题应用到另一份具有相同控件名称和类的 Widget Blueprint。导出只读取资产。应用主题时，所有改动留在内存中，记在同一个编辑器事务里，需另行保存。
 
 ## 导出主题
 
@@ -36,6 +36,8 @@ translationKey: doc:mcp-umg:widget-themes
 `uv` 使用 `{"minX","minY","maxX","maxY"}` 形式；没有有效 UV 覆盖时输出 `uv: null`，重新应用时会清除目标已有的 UV 覆盖。
 
 ## 应用主题
+
+把导出的主题交给目标蓝图前，先对照两边的控件树核对名称和类。下面的示例先做预检；发现名称、类或资源不匹配时，先修正对应项，再发起正式应用。
 
 `ApplyWidgetTheme` 需要 `BlueprintPath` 和 `Theme`。主题根对象只能是 `{"version":1,"rules":[...]}`，规则数为 0 至 64；每条规则以精确的 `name` 和 UObject `class` 定位目标。可选 `dryRun: true` 使用相同的完整预检但不修改资产。
 

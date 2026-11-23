@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/ai-data-asset/docs/sync/
 lang: en
 translationKey: doc:ai-data-asset:sync
-sourceHash: 4cb7af920812023b4c271c888abccb8a15d92d4394c2388722ee50e3ebf4ea2b
+sourceHash: 7f8a91455c9054e2a37a41ecd2c7f0ec97efee0e4e62a7d75d254cd9dec9b225
 translationStatus: translated
-generatedBodyHash: f7402d36251ed181be80275ad79afb72e84ff966fb5b259f142e969efa891b9c
+generatedBodyHash: d9112dfe8a55017c69075e09ee54723f01ffadc1c7f4a5f5af0008b5d6cd7b22
 docPage:
   work: ai-data-asset
-  group: data
+  group: features
   slug: sync
   order: 1
 ---
@@ -31,7 +31,9 @@ See the [AIDataAsset work page](/en/works/ai-data-asset/) for its purpose and us
 
 ## When Synchronization Runs
 
-Synchronization follows editor and file state. At startup the plugin checks both files; while the editor is running it monitors asset and JSON changes.
+If you just edited the JSON externally, compare the files’ modification times before restarting the editor. If both sides contain edits you need, keep copies before synchronization starts.
+
+At startup, the plugin checks the asset and JSON on disk. Once startup synchronization finishes, it monitors changes on both sides.
 
 **Choosing data at startup.** With automatic synchronization enabled, the plugin scans DataAssets after project asset scanning completes, performs initial synchronization with a progress display, and then monitors subsequent changes. The scan excludes assets under `/Engine/`, finishes initial synchronization, and then registers asset and directory monitoring for the running editor. It uses modification times of the asset and JSON files on disk:
 

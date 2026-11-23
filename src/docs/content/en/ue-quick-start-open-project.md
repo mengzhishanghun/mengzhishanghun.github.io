@@ -14,12 +14,12 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-quick-start/docs/open-project/
 lang: en
 translationKey: doc:ue-quick-start:open-project
-sourceHash: 800282d6c2ecb64ae4a68508cd4c6133b4dff58805153e560bb4babb51ffe4e1
+sourceHash: a8dab528c939f7efc90fcd1ebac89f2c05a69e81d7bd378a5cde6a1e0c19090f
 translationStatus: translated
-generatedBodyHash: eb595a2b880e1073c5e8c6743a9131090fd1aac039354468535d4969f6682f62
+generatedBodyHash: d1a7fd9b6292d0c87693e54230837f1e1c1c27b45517192009d45fc33c3826ab
 docPage:
   work: ue-quick-start
-  group: setup
+  group: getting-started
   slug: open-project
   order: 1
 ---
@@ -31,8 +31,8 @@ Run the tool on Windows. Set up the build environment and run the project succes
 ## Build and open the project
 
 1. Place `UEBuildTool.exe` in the project root, alongside `.uproject`.
-2. Double-click the executable and watch the build progress in the log window.
-3. After a successful build, the tool opens the project by default.
+2. Double-click the executable. The log window shows build progress and errors.
+3. The tool opens the project by default after a successful build. If the build fails, use the troubleshooting steps below to find the error.
 
 ## How the tool detects projects and engines
 

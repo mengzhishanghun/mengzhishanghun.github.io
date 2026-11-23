@@ -13,19 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/runtime-diagnostics/
 lang: en
 translationKey: doc:mcp-umg:runtime-diagnostics
-sourceHash: f9afd5e270b0f771ab07415f51e124dac0bd459f98c5dd833ca4d7fbc70d3e86
+sourceHash: 7a972aefb34a0978dcb97e07abb6254ae0a8a5e10779a3c712841dc3d9975ace
 translationStatus: translated
-generatedBodyHash: 7c25a630d19da589004bb23f29dd50d7305398b0b1badcdd8cc01b3fadeaa66e
+generatedBodyHash: fdb7b29d8d7af5895a3fd62683f6171d18598ca8e259e7e9a0732986416d2f9b
 docPage:
   work: mcp-umg
-  group: preview-diagnostics
+  group: features
   slug: runtime-diagnostics
-  order: 2
+  order: 16
 ---
 
 ## Find the target runtime instance
 
-These tools operate on existing PIE/Game `UUserWidget` instances. Run the target page first, then find its instances with `BlueprintPath` in `ListRuntimeWidgets`. The returned `Instances[].RuntimeInstanceToken` binds to the current Widget, World, session and local player. Obtain a new token after restarting PIE or recreating the Widget. `InstanceIndex` remains available for older read-only inspections, but cannot replace a token in tools that require one. These are target identifiers. They do not authenticate the caller.
+These tools operate on existing PIE/Game `UUserWidget` instances. Run the target page first, then find its instances with `BlueprintPath` in `ListRuntimeWidgets`. The returned `Instances[].RuntimeInstanceToken` binds to the current Widget, World, session and local player. Obtain a new token after restarting PIE or recreating the Widget. `InstanceIndex` remains available for older read-only inspections, but cannot replace a token in tools that require one. The token identifies the target instance. It does not authenticate the caller.
 
 ```json
 {"BlueprintPath":"/Game/UI/WBP_Inventory","Offset":0,"MaxItems":32}
@@ -34,6 +34,8 @@ These tools operate on existing PIE/Game `UUserWidget` instances. Run the target
 `InspectWidgetRuntime` uses `RuntimeInstanceToken` to read a named child widget (`WidgetName`) or page through the running WidgetTree using `Offset` and `MaxItems`. `MaxItems` defaults to 100 and has a maximum of 200. Inspect the target widget and window state before sending input.
 
 ## Input, lists, and operation status
+
+To test a button, for example, read its state on the live page, send the action to that same instance, and watch for the expected change. If the request times out or the screen stays the same, check the existing operation and current instance before sending another action.
 
 `InteractWithWidget` requires `RuntimeInstanceToken`, an exact `WidgetName`, `Action` and a caller-generated `RequestId`. `Action` is `Click`, `Wheel`, `Text`, `Drag`, `DragDrop` or `Navigate`. Depending on the action, supply `WheelDelta`, `Text`, normalized endpoint `EndX`/`EndY`, `DropWidgetName`, or `Direction` and optional `Device`. Text is limited to 1 to 128 printable BMP characters. IME, control characters and clipboard input are not supported. Input goes to the target runtime window; confirm that it is the intended page before execution.
 

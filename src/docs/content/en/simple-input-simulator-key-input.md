@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-input-simulator/docs/key-input/
 lang: en
 translationKey: doc:simple-input-simulator:key-input
-sourceHash: 994dc1c1a32b5e38cea04dbe65273ea87638bfa2d8706733b00caddcad677968
+sourceHash: 4e0b17450932ab25816baadea34cb3c90caec3e491d4bc02ed69bed472b58baa
 translationStatus: translated
-generatedBodyHash: 4bc90f5de827eac46cea4e963c242da9fef666160da00f4a712bbae19fe46ba8
+generatedBodyHash: f185c8444408f9c551e9558e5f5aaf3ee8255711c8d8e5bcdf27c0119e30cab2
 docPage:
   work: simple-input-simulator
-  group: input
+  group: features
   slug: key-input
   order: 1
 ---
@@ -38,9 +38,11 @@ docPage:
 
 ## Space Bar Example
 
+The graph holds W for one second, then releases it. Both nodes target the first local player. To try Space Bar, change Key on both nodes and keep the first call as a press and the second as a release.
+
 ![](/media-occurrence/doc%3Asimple-input-simulator%3Akey-input%3Amedia%3A2)
 
-Simulate pressing Space Bar for Player 0.
+If Space Bar is bound to an action for that player, run the example and check whether the action fires.
 
 ## Automated Game Testing
 

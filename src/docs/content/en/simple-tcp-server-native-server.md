@@ -12,17 +12,19 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-server/docs/native-server/
 lang: en
 translationKey: doc:simple-tcp-server:native-server
-sourceHash: 52b2a3e09a4f016a4ded8dcc0153a77df53d8cda8c77e142a126d2e3e512734d
+sourceHash: 12e1e7f1bdccc7a079d8bd51f574432d6ba7987531462666d45f8b0c2b4284b7
 translationStatus: translated
-generatedBodyHash: 09c555dcc087697b6bd87fde26e2c4bd63c726da2cd3815394c265554f0f049b
+generatedBodyHash: 27500a5d56682585d19d5d074abe2d97b75db475a44fae7cfe24fc542f08476b
 docPage:
   work: simple-tcp-server
-  group: native
+  group: features
   slug: native-server
-  order: 1
+  order: 3
 ---
 
 ## Implementation example
+
+Create and start the listener, then connect a test client and check that accepting it yields a valid session socket. After the test, verify cleanup for the listening socket and the accepted connection separately.
 
 **Listen on a port:**
 
@@ -80,7 +82,7 @@ void AcceptClients(FSocket* ListenSocket)
 
 ## Listener and session lifecycles
 
-These native examples demonstrate `Bind`, `Listen`, and `Accept`; they are not SimpleTCPServer Blueprint interfaces. Retain ownership of both listening and accepted sockets, and release them on failure, shutdown, or disconnection. The local pointers in these functions do not form a complete server lifecycle.
+These native examples demonstrate `Bind`, `Listen`, and `Accept`; they are not SimpleTCPServer Blueprint interfaces. Keep ownership of both the listening and accepted sockets, and release them on failure, shutdown, or disconnection. The examples use local pointers and do not show how to retain and release them throughout the server’s lifetime.
 
 `Listen(8)` sets the queue for connections waiting to be accepted. It is not the plugin's total client limit. `IP:Port` identifies a network endpoint, not a persistent user identity or authentication. Client data still needs stream framing, partial read/write handling, timeouts, and permission checks. Multiple-client handling should also avoid blocking the game thread.
 

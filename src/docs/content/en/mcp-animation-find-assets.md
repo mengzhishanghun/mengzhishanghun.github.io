@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-animation/docs/find-assets/
 lang: en
 translationKey: doc:mcp-animation:find-assets
-sourceHash: 5d31b9ed5f358044739f39850a04af2ab3ed216fc732fa92a658a3075d82592d
+sourceHash: 77d6543de3b3f83c2efe6ebfb5f194aa1b5ca5711b0f465d4c9adcebd5eec4ca
 translationStatus: translated
-generatedBodyHash: 6c182d81361ca00fd2818f13e2d7a23c7f44e0aa2528914bcb26277f26b3a65e
+generatedBodyHash: de862eb61879bac468bc6d43957f7e649cad1b69a338276691c0d16c4cad9896
 docPage:
   work: mcp-animation
-  group: assets
+  group: features
   slug: find-assets
   order: 1
 ---
@@ -30,13 +30,13 @@ docPage:
 | `ListSkeletons` / `GetSkeletonDetail` | Discover Skeletons and read bones, virtual bones, compatible skeletons, blend profiles, and slot groups. |
 | `ListAnimSequences` / `GetAnimSequenceDetail` | Discover AnimSequences and read duration, sampling rate, notifies, float curves, and compression status. |
 
-`GetAnimSequenceDetail` exposes read-only float-curve summaries, bone and curve compression settings, compression validity, and approximate sizes. Curve and compression writes are intentionally unavailable: those operations can rebuild the animation data model, trigger expensive recompression, and use editing APIs that evolved across UE 5.2–5.8. Automated writes would carry unacceptable asset-corruption risk until transactional rollback, version compatibility, and bounded execution can all be guaranteed.
+Find the asset with the list tool, then pass its returned path to the matching detail tool. `GetAnimSequenceDetail` shows float-curve summaries, bone and curve compression settings, compression validity, and approximate sizes. Curves and compression settings are read-only through MCP; edit them in Unreal Editor.
 
 Detail tools provide structured summaries rather than every curve key or per-bone animation track.
 
 ## List and detail limits
 
-- List tools use `Offset` and `MaxResults`, return at most 256 entries per page, and report `TotalCount`, `Returned`, `HasMore`, and `NextOffset` when available.
+- List tools use `Offset` and `MaxResults`, return at most 256 entries per page, and report `TotalCount`, `Returned`, `HasMore`, and `NextOffset` when available. If there are more results, use the returned offset for the next page.
 - Detail tools cap collections such as bones, states, notifies, and curves at 256 entries and report true totals plus `*Truncated` flags. Detail collections cannot be paged. If a collection exceeds the limit, inspect it in Unreal Editor.
 
 ## Open and save animation assets

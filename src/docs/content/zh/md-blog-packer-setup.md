@@ -11,7 +11,7 @@ workIds:
   - md-blog-packer
 docPage:
   work: md-blog-packer
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -22,6 +22,8 @@ translationKey: doc:md-blog-packer:setup
 
 ## 创建 Conda 环境
 
+如果要从源码运行，在 `environment.yml` 所在目录打开终端，用下面的命令创建 Conda 环境。
+
 ```bash
 # 用 environment.yml 创建 conda 环境
 conda env create -f environment.yml
@@ -29,4 +31,4 @@ conda env create -f environment.yml
 
 ## 启动工具
 
-双击 `MDBlogPacker.exe` 打开图形界面。从源码启动时，无参数运行 `Main.py` 进入图形界面；传入参数进入命令行模式。
+使用 EXE 时，双击 `MDBlogPacker.exe` 打开图形界面。从源码运行时，无参数启动 `Main.py` 会打开图形界面；传入参数则进入命令行模式。

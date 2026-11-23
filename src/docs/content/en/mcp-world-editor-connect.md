@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-world-editor/docs/connect/
 lang: en
 translationKey: doc:mcp-world-editor:connect
-sourceHash: 776094a0db1ad16ba402d42cbdb25fdd2da3f1773298dd9d178ca430e79ace9d
+sourceHash: ab92a1dcc12c36718a5c11fb2c42c64217cc9b11732f3561051f37562c0315cc
 translationStatus: translated
-generatedBodyHash: 4151da81f64ab8d0e4f138e56ad62388375ea4732eb35df53b16c402a06790df
+generatedBodyHash: 6c4b02ca7298e3003df2907e6c63d8a2ca63d4bf4630f0652e1571729f3b2f1b
 docPage:
   work: mcp-world-editor
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 ---
@@ -27,7 +27,7 @@ docPage:
 
 MCPWorldEditor runs an HTTP server inside Unreal Editor to expose actor creation, transform and property editing, lighting, landscape, level, and viewport operations to AI assistants.
 
-> **Note**: This plugin is currently under development. The server infrastructure is ready, and tool capabilities continue to improve.
+> **Note**: The plugin is still in development. The server is available, and tool support and compatibility are still being verified across engine versions.
 
 - Unreal Engine 5.2+
 - Editor only
@@ -47,18 +47,17 @@ Configure the plugin under `Project Settings > Plugins > MCP World Editor`:
 
 ## MCP connection
 
-**MCP URL**: `http://127.0.0.1:8764/mcp`
-
-The server starts automatically when the editor opens (configurable via `bAutoStart`). The toolbar shows the actual URL (port auto-increments if 8764 is occupied).
+Open the Unreal Editor instance you want to connect to. With `bAutoStart` enabled by default, the server starts with the editor. Use `http://127.0.0.1:8764/mcp` when the default port is available. If it is occupied, copy the actual URL from the editor toolbar.
 
 ### Claude Code
 
-Add to `~/.claude/.mcp.json` (global) or project root `.mcp.json`:
+Merge the `ue-world-editor` entry below into `mcpServers` in the project root’s `.mcp.json`, keeping the existing entries. If the toolbar shows a different port, substitute the actual URL. To use the server across projects, add it through Claude Code at user scope. Claude Code stores that configuration in `~/.claude.json`.
 
 ```json
 {
   "mcpServers": {
     "ue-world-editor": {
+      "type": "http",
       "url": "http://127.0.0.1:8764/mcp"
     }
   }
@@ -77,7 +76,7 @@ A tool request that times out before the Game Thread claims it is cancelled and 
 
 The response-size check runs after tool execution. If a `tools/call` result exceeds the budget, JSON-RPC error data reports `code=response_too_large`, `retryable=false`, and `stateMayHaveChanged=true`; this does not mean the tool was rolled back, so clients must inspect editor state before any retry.
 
-Use MCP `tools/list` to discover the tools and their current input schemas; the available set can change with the plugin version.
+After connecting, call MCP `tools/list`. Once it returns a tool list, look up the tool you need and check its input schema. The available tools can change with the plugin version.
 
 ## Feedback
 

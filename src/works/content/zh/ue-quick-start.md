@@ -30,6 +30,11 @@ docIds:
   - ue-quick-start-open-project
   - ue-quick-start-build-configuration
   - ue-quick-start-normalize-line-endings
+  - ue-quick-start-updates-2026-06-13
+  - ue-quick-start-updates-2026-03-18
+  - ue-quick-start-updates-2026-01-31
+  - ue-quick-start-updates-2026-01-30
+  - ue-quick-start-updates-2026-01-22
 coverAlt: UEQuickStart封面
 websiteCoverUrl: /media/covers/works/ue-quick-start-20261101.webp
 lang: zh
@@ -38,9 +43,7 @@ translationKey: ue-quick-start
 
 ## 作品简介
 
-UEQuickStart 面向 UE 美术、测试、策划等非程序人员，在本机一键编译并打开已有项目，避免团队反复同步项目的 Binaries 文件夹。工具自动识别项目及其关联引擎，显示实时编译日志，并在编译成功后自动启动项目。
-
-它面向需要更新本地工程但不熟悉命令行构建流程的项目成员。
+UEQuickStart 供美术、测试、策划等 UE 项目成员在本机编译并打开已有工程，减少反复同步项目 Binaries 文件夹的需要。更新工程后，从项目根目录运行工具；它会识别工程与关联引擎，显示实时编译日志，并在编译成功后默认打开工程。
 
 ## 背景与目标
 
@@ -60,7 +63,7 @@ UEQuickStart 面向 UE 美术、测试、策划等非程序人员，在本机一
 
 ### 日志与启动
 
-编译过程中实时显示日志，使用者可据此判断当前进度并查找失败原因。成功后可从工具启动项目，把编译与打开工程衔接起来；编译失败时仍需根据日志修复实际问题，不能直接视为可运行状态。
+编译时可在日志窗口查看进度。编译成功后可以启动项目；如果失败，先在日志里找出具体报错，再处理对应问题。
 
 ## 适用场景
 

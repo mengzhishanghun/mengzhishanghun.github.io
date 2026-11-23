@@ -11,7 +11,7 @@ workIds:
   - simple-input-simulator
 docPage:
   work: simple-input-simulator
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -30,6 +30,8 @@ translationKey: doc:simple-input-simulator:setup
 
 ## 可用节点
 
+图中列出了三个节点的输入和返回值：从左上到右上分别是按键与轴输入，左下是清理按下状态。
+
 ![](/media-occurrence/doc%3Asimple-input-simulator%3Asetup%3Amedia%3A1)
 
 | 节点 | 功能 |
@@ -45,7 +47,7 @@ translationKey: doc:simple-input-simulator:setup
 | Legacy Input | ✅ 完全支持                             |
 | Enhanced Input | ✅ 完全支持 - 自动触发 Input Actions     |
 
-插件在原始输入层工作，因此两种输入系统都会自动接收模拟事件。
+插件在原始输入层工作，两种输入系统都能接收模拟事件。若节点返回成功但游戏动作没有触发，检查目标玩家的输入绑定。
 
 模拟事件通过 `PlayerController::InputKey` 注入。
 

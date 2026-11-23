@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-material/docs/material-assets/
 lang: en
 translationKey: doc:mcp-material:material-assets
-sourceHash: ecdfb6a52e542d8505059de391fe34d5825fe48e14ca8bcfc3dcf764635e8805
+sourceHash: 276d11d38a006f7b0fa1c915b90757ad96a7f73234aa4f41152151a52091314a
 translationStatus: translated
-generatedBodyHash: 5e1de518a3423a8d78813f4303ff32934d176c7495457ae02d5b399f97233639
+generatedBodyHash: 242bdba7bfb56fb2326adc3bc34bc389ebd53761477f0a693d4cbc585b6b6447
 docPage:
   work: mcp-material
-  group: assets
+  group: features
   slug: material-assets
   order: 1
 ---
@@ -35,4 +35,4 @@ Write, compile, and save tools reject targets that are still open in an asset ed
 
 Newly created assets remain dirty in memory until `SaveAsset` is called explicitly; an underlying save failure returns an MCP error terminal state instead of a warning inside a successful result.
 
-Write tools use transactions and mark the package dirty. You can validate with `CompileMaterial` before saving and use `OpenAsset` for manual inspection.
+Writes use transactions and mark the package dirty. Use `CompileMaterial` to check compilation before saving. You can save first and then use `OpenAsset` to inspect the result. If you open it before saving, close the asset editor again before you save.

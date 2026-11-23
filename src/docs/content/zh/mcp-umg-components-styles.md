@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: component-reuse
+  group: features
   slug: components-styles
-  order: 1
+  order: 5
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/components-styles/
 lang: zh
@@ -22,9 +22,11 @@ translationKey: doc:mcp-umg:components-styles
 
 ## 组件实例与 Named Slot
 
-如果需要先把已有子树变成独立组件，请使用 `ExtractWidgetComponent`；本页适用于已有组件实例。
+这些步骤适用于已有组件实例。如果还没有组件，可先用 `ExtractWidgetComponent` 把现有子树提取成独立组件。
 
 ### 创建或替换 Named Slot 内容
+
+先查宿主实例和槽里当前放的控件。下面的请求适用于空的 `Header` 槽；如果槽里已有内容，先核对当前控件名，再选择替换或清空。
 
 `SetNamedSlotContent` 在指定 Widget Blueprint 的控件树中查找 `HostWidgetName`，对其 `SlotName` 执行 `Create`（默认）、`Replace`、`Clear` 或 `Move`。宿主可以是原生实现 `INamedSlotInterface` 的控件，也可以是已经成功编译、公开 Named Slot 的嵌套 UserWidget。
 
@@ -63,4 +65,4 @@ translationKey: doc:mcp-umg:components-styles
 
 执行后读回目标实例属性，再调用 `SaveWidgetBlueprint`。保存后关闭并重新打开资产，实例参数与 Named Slot 内容应保持不变。
 
-如果需要先把已有子树变成独立组件，请使用 `ExtractWidgetComponent`；本页适用于已有组件实例。
+若要把另一段子树也做成独立组件，另用 `ExtractWidgetComponent` 处理。

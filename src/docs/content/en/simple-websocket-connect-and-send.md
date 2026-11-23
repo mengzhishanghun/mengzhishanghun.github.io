@@ -12,17 +12,17 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-websocket/docs/connect-and-send/
 lang: en
 translationKey: doc:simple-websocket:connect-and-send
-sourceHash: 703fdc8656972b1a625115eeb759dc4a54831c7cda6ff18d34ecb1dff2a44652
+sourceHash: 720505d493a2bb5c6d62298cb9c2d8827c247168e8376e8b28bca607ef3c84d5
 translationStatus: translated
-generatedBodyHash: 4c9535f96ad8c01ecd0b1446782899ada76d213e1db9706c9aba35dab5fbc0f6
+generatedBodyHash: 6e3744edd6a6bf77dce44d04e94772ac1afa22b492661d44f90eba0e3822d8d3
 docPage:
   work: simple-websocket
-  group: network
+  group: features
   slug: connect-and-send
   order: 1
 ---
 
-These static functions are scoped to the GameInstance. Call them from any Blueprint using the configured connection name.
+The GameInstance manages these static functions. Use the configured connection name when calling them from a Blueprint.
 
 ## Connect, inspect, and close
 
@@ -39,5 +39,7 @@ These static functions are scoped to the GameInstance. Call them from any Bluepr
 - `Unbind Web Socket Message`: Unbind a message event  
 
 ## Blueprint example
+
+Connect using the configuration name, or skip that step if the connection opened automatically. Check its state, bind a receive event, and send a test message. When you finish, use the same name to close only that connection.
 
 ![](/media-occurrence/doc%3Asimple-websocket%3Aconnect-and-send%3Amedia%3A1)

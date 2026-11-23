@@ -14,20 +14,20 @@ documentKind: product-manual
 websiteRoute: /en/works/plugin-manager/docs/enable-disable/
 lang: en
 translationKey: doc:plugin-manager:enable-disable
-sourceHash: 843bcef181fadbd7f7e890969cd1cfb089224d81ed526f7be794d4528e81a842
+sourceHash: 859b25caf7b08177a688fff1e31709fa490dc7b792f5decf73e1c9f139daa5d0
 translationStatus: translated
-generatedBodyHash: 1bad82615d692bbabff20f390063d23198b43099e33effe2d0a1f76769e3dd8f
+generatedBodyHash: d44b64133fbc697908379af0cc652a581702d51cee6d46f7b819511911322bf4
 docPage:
   work: plugin-manager
-  group: plugins
+  group: features
   slug: enable-disable
   order: 2
 ---
 
 ## Change the Enabled State
 
-Use the buttons on the right to enable, disable, or restore defaults for the selected plugin. Enabling or disabling writes to `.uproject`; the tool asks for confirmation when the dependency chain is affected. Restore Defaults removes the plugin’s override from `.uproject`.
+Select a plugin in the list, then use the buttons on the right to enable it, disable it, or restore its defaults. Enabling or disabling records your choice in `.uproject`. If the tool prompts you about dependency changes, review the affected plugins before confirming. Restoring defaults removes the plugin’s explicit setting from `.uproject` so its default state applies.
 
 ## Resolve Same-Name Conflicts
 
-If two plugins have the same name, remove one before enabling the other.
+If two plugins in the project have the same name, check where each one comes from. Remove one before enabling the other.

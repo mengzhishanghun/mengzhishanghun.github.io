@@ -13,19 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/md-blog-packer/docs/package/
 lang: en
 translationKey: doc:md-blog-packer:package
-sourceHash: c404d7750740d8ae76b9bfa07e47e28d08980ceaf9053e095bcf2c4c95fc520d
+sourceHash: 61f23c7bab1fa524b570538b0e8146a03fbee67abc2876408d1da69533c3e355
 translationStatus: translated
-generatedBodyHash: c5460354c6acbbfe58009a743a129b3990d9eedb44d792bda57306f05d73f73b
+generatedBodyHash: 8518e2c3b98dee0e901c0f26704f3f8e8ccb862db499466065a40470bdafd0bc
 docPage:
   work: md-blog-packer
-  group: export
+  group: features
   slug: package
   order: 1
 ---
 
 ## What Gets Converted
 
-MDBlogPacker converts local images referenced as `![](</path>)` or Obsidian `![[image.png]]` into `data:image/...;base64,...` entries. By default it leaves remote and already embedded Base64 images unchanged. Copy the output, save it to a file, or pipe it to another command.
+MDBlogPacker converts local images referenced with `![](</path>)` or Obsidian `![[image.png]]` to `data:image/...;base64,...`. By default, it leaves remote images and existing Base64 images unchanged. You can copy the result, save it to a file, or pipe it to another command.
 
 ## GUI
 
@@ -35,7 +35,7 @@ MDBlogPacker converts local images referenced as `![](</path>)` or Obsidian `![[
 
 ## Command Line
 
-Running with arguments activates command-line mode:
+Pass arguments to use command-line mode. Replace `博客.md` with the path to your article. Use `-c` to copy the result to the clipboard or `-o` to write it to a file:
 
 ```bash
 # 最常用：转换 + 复制到剪贴板
@@ -58,8 +58,8 @@ conda run -n MDBlogPacker python Main.py 博客.md -c -v
 | `input` | Input Markdown file path (required) |
 | `-c / --clipboard` | Copy to clipboard (primary usage) |
 | `-o / --output` | Write to a file |
-| `-p / --prefix` | Prefix template file, appended before the body |
-| `-s / --suffix` | Suffix template file, appended after the body |
+| `-p / --prefix` | Template file inserted before the article body |
+| `-s / --suffix` | Template file inserted after the article body |
 | `--no-wiki-links` | Do not convert Obsidian `![[]]` Wiki links |
 | `--no-skip-base64` | Do not skip existing Base64 images |
 | `-v / --verbose` | Detailed logs showing the processing status of each image |

@@ -12,7 +12,7 @@ workIds:
   - plugin-manager
 docPage:
   work: plugin-manager
-  group: plugins
+  group: features
   slug: find
   order: 1
 documentKind: product-manual
@@ -27,4 +27,6 @@ translationKey: doc:plugin-manager:find
 
 ## 搜索、排序与依赖
 
-在搜索框中输入名称、作者、分类、描述、依赖或被依赖关键词。检索不区分大小写；多个词用空格分隔，必须同时匹配。点击列标题排序，箭头指示方向。选中插件可查看详情、依赖项以及哪些插件依赖它。同名插件显示红色的 **冲突** 状态。
+打开相应标签页，在搜索框中输入名称、作者、分类、描述、依赖项或依赖它的插件的关键词。搜索不区分大小写；用空格分隔多个词时，结果必须匹配所有词。
+
+点击列标题排序，箭头显示当前排序方向。选中插件可查看详情、它依赖的插件和依赖它的插件。同名项会显示红色的 **冲突** 状态。

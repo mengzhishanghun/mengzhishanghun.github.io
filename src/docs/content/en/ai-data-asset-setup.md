@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/ai-data-asset/docs/setup/
 lang: en
 translationKey: doc:ai-data-asset:setup
-sourceHash: 99f4940051eb1629f6274e995cda629927b371a3fc3be92a9808c532bc8e0975
+sourceHash: 2b5888f9f34c905ee82c041f1e30af4a409493b08a4921655e8a3a0690d9b6a2
 translationStatus: translated
-generatedBodyHash: 5adfd9c86653e27c0ce73fcd8da0f0ae7b604f3148ffeaaeef67e6158839586c
+generatedBodyHash: 102042bb98655125ddcefa736e815a04032a2c6b48310dcf87b857635d3e4867
 docPage:
   work: ai-data-asset
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 ---
@@ -30,6 +30,8 @@ docPage:
 3. If it is not enabled automatically, enable it under Edit > Plugins
 
 ## Synchronization Settings
+
+To check the setup, enable automatic synchronization and save a test DataAsset. Then look for its JSON in the configured output directory.
 
 Open **Project Settings > Plugins > AIDataAsset**:
 

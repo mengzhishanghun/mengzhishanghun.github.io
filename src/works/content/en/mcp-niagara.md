@@ -12,7 +12,7 @@ workInfo:
   stage: developing
   channels:
     - kind: docs
-      href: /en/works/mcp-niagara/docs/inspect/
+      href: /en/works/mcp-niagara/docs/quickstart/
   compatibility:
     - platforms: []
       requirements:
@@ -25,12 +25,13 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-niagara
-sourceHash: 99d1f244087d680a4f3e9a63ff512e30081cd8a0f290863de0f5f09ff8924fe2
+sourceHash: 743a4eb39cf580c2c8f17b8b8a35198ccc4f41d75638299c3053a06e80ea566f
 generatedBodyHash: 931ad45d5acc12c8b3ac306d500ab03076da13dfe6f1523bca2d96750ef35585
 translationStatus: translated
 coverAlt: MCPNiagara cover
 websiteCoverUrl: /media/covers/works/mcp-niagara-20261101.webp
 docIds:
+  - mcp-niagara-quickstart
   - mcp-niagara-inspect
   - mcp-niagara-niagara-system-assets
   - mcp-niagara-niagara-preview

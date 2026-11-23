@@ -11,9 +11,9 @@ workIds:
   - simple-asset-cleaner
 docPage:
   work: simple-asset-cleaner
-  group: protection
+  group: features
   slug: protect-assets
-  order: 1
+  order: 2
 documentKind: product-manual
 websiteRoute: /zh/works/simple-asset-cleaner/docs/protect-assets/
 lang: zh
@@ -25,6 +25,8 @@ translationKey: doc:simple-asset-cleaner:protect-assets
 在 `Root Asset Classes` 中指定根资产类型，默认是 `UWorld`（`.umap` 地图）。按项目需要可加 `UBlueprint`、`UDataAsset` 或 `UDataTable`，例如保留作为核心资产的 GameMode、PlayerController 或配置数据。这里也会匹配父类和派生类。
 
 ## 单独指定根资产
+
+只有少数资产需要额外保留时，用这一项逐个指定。整类资产都要保留时用类型规则；整棵目录都要保留时用目录规则。检查清理候选时，既核对根资产本身，也核对它引用的关键项目资产。
 
 在 `Custom Root Assets` 中列出类型规则未覆盖的关键资产，如 `/Game/Core/GameMode.GameMode`、`/Game/Core/MainGameMode` 或 `/Game/Config/GlobalSettings`。
 
@@ -48,4 +50,4 @@ translationKey: doc:simple-asset-cleaner:protect-assets
 
 ## 团队配置与首次试用
 
-先保护关键地图、蓝图、配置数据和目录，再逐步增补类型。把团队共用设置纳入版本控制，并随项目迭代复查。首次可在测试分支试用并打开详细日志；全量清理前要有可回滚的提交。
+先保护关键地图、蓝图、配置数据和目录，再逐步增补类型。把团队共用设置纳入版本控制；项目更新后，复查这些设置是否仍覆盖关键资产。首次可在测试分支试用并打开详细日志；全量清理前要有可回滚的提交。

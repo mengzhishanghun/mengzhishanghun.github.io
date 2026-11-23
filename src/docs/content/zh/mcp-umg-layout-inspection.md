@@ -11,7 +11,7 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: widgets-layout
+  group: features
   slug: layout-inspection
   order: 3
 documentKind: product-manual
@@ -22,11 +22,13 @@ translationKey: doc:mcp-umg:layout-inspection
 
 ## 设计态与 PIE 的诊断范围
 
-`dryRun` 只校验树和属性合法性，不执行 Slate 排版。`InspectWidgetLayout` 的 Design 模式只提供元数据；PIE 模式增加直接 Slate 父节点边界、最多 64 层裁切祖先（每页最多输出 256 条），以及包括自动换行文字在内的纵向溢出线索。`PossibleAncestorClipping` 和 `PossibleVerticalOverflow` 需要结合实际截图定位；`Unverified*` 表示工具没有足够的证据判定结果。
+`dryRun` 只校验树和属性合法性，不执行 Slate 排版。`InspectWidgetLayout` 的 Design 模式只提供元数据；PIE 模式增加直接 Slate 父节点边界、最多 64 层裁切祖先（每页最多输出 256 条），以及包括自动换行文字在内的纵向溢出线索。看到 `PossibleAncestorClipping` 或 `PossibleVerticalOverflow` 时，请对照截图定位。`Unverified*` 表示工具还无法判定。
 
 祖先矩形采用屏幕空间轴对齐包围盒，并非最终绘制裁切区。旋转、OnDemand、ClipToBoundsWithoutIntersecting、自定义绘制和缓存几何时效均可能影响判断。工具不为诊断创建实例、强制预览数据或改变运行状态。先让真实页面完成布局，再检查目标实例。
 
 ## 解读裁切与缩放
+
+先在截图里找到被截断的控件，再把它的实际边界与直接父节点和裁切祖先逐一比较。例如，按钮文字放不下时，先看按钮内部留给文字的宽度，再检查更外层是否也发生了裁切。
 
 使用 InspectWidgetLayout 的 PIE 模式读取实际尺寸、布局缩放、父节点边界、裁切祖先和文本溢出线索。Design 模式不能给出真实排版结论。Unverified 不表示通过；旋转包围盒、条件裁切、缓存过期等仍需结合截图。
 

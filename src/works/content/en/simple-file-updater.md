@@ -19,9 +19,9 @@ links:
     href: https://github.com/MZSH-Tools/SimpleFileUpdater
 lang: en
 translationKey: simple-file-updater
-sourceHash: 148eb5648b065ba8f44bb45433724f79ec1d75e26e43d6cea33f8ac66c3fb18c
+sourceHash: 987b303df866fce59cf834d34e736fad289bd845f3525f7884896d3bbc628a81
 translationStatus: translated
-generatedBodyHash: d62b9d49876f598427d01d12d71b29bc2247eec5ab440808a00514911af2a42d
+generatedBodyHash: 38911eeaa79319f231e84496a0b075c1d67ed8b4c22283bf1000a2465edbd0d3
 workInfo:
   channels:
     - kind: open-source
@@ -37,11 +37,13 @@ coverAlt: SimpleFileUpdater cover
 docIds:
   - simple-file-updater-setup
   - simple-file-updater-update-files
+  - simple-file-updater-updates-2026-04-18
+  - simple-file-updater-updates-2025-05-03
 ---
 
 ## Overview
 
-SimpleFileUpdater downloads and updates specified files in batches using the mappings between local target paths and remote download URLs in a configuration file.
+SimpleFileUpdater downloads and updates files in batches from a configuration list. Each entry pairs a remote download URL with a local destination.
 
 It suits tools or materials with fixed sources that need to be refreshed repeatedly at local locations. Paths and URLs live in the configuration, and updates follow this list.
 
@@ -67,7 +69,7 @@ EXE and source execution options are available, and existing update lists can be
 
 ## Use cases
 
-It suits personal maintenance workflows that regularly fetch several tools, templates, or public resources from fixed addresses and need a stable record of their local destinations. The same configuration can be reused for subsequent updates, reducing repeated searches for URLs and manual directory organization.
+If you regularly update a set of tools, templates, or public resources, put their fixed download URLs and local destinations in the configuration list. Reuse it the next time instead of looking up links or organizing folders again.
 
 ## Scope and limitations
 

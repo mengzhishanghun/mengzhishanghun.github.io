@@ -13,17 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/component-extraction/
 lang: en
 translationKey: doc:mcp-umg:component-extraction
-sourceHash: a829c210d320c65c6c6cf89c0440c2becda7620cc71283164c64e9f561e5069b
+sourceHash: 8ed01f4fd2e789cdd8ac7a8ebefa123b1caf12054018e07d800396b7c90fb844
 translationStatus: translated
-generatedBodyHash: f0032613f82ca131eceb38e518b189308fc845102b08b178f56f06835f0e9a9c
+generatedBodyHash: c820f29dcb6c1e0455b54f57e9501f49d8f70993487530fa8cec5f6a35bd91d2
 docPage:
   work: mcp-umg
-  group: component-reuse
+  group: features
   slug: component-extraction
-  order: 2
+  order: 6
 ---
 
 ## Copy a subtree or replace it with an instance
+
+Choose the root widget of the subtree you want to reuse and an unused asset path for the component. To try out the reusable component, start with a copy. Choose replacement when you also want the current page to use the component.
 
 `ExtractWidgetComponent` extracts a specified WidgetTree subtree into a new `/Game` Widget Blueprint. The default `ReplaceSource:false` copies only and leaves the source unchanged. With `true`, one editor transaction replaces the original location with a new component instance. `InstanceName` can set the instance name, defaulting to the original widget name. The destination must be a new asset path; existing disk packages and non-empty in-memory packages are rejected.
 
@@ -38,6 +40,6 @@ Copying preserves native widget properties, ordinary `bIsVariable` flags, intern
 }
 ```
 
-Start with `dryRun:true` to inspect `WouldChange`, `Dependencies` and any `PreflightError`; after checking, set it to `false` to create the component. The new Blueprint compiles in memory but is not automatically saved. If the source location was replaced, save the source Blueprint too. Call `SaveWidgetBlueprint` for each path separately.
+Start with `dryRun:true` to inspect `WouldChange`, `Dependencies` and any `PreflightError`; then set it to `false` to create the component. The new blueprint compiles in memory. Save it with `SaveWidgetBlueprint`. If you replaced the source widget, save the source blueprint separately using its own path.
 
 The tool does not transfer the source page's business graphs into the component.

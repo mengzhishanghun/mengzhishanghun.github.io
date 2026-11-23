@@ -13,17 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/animation/
 lang: en
 translationKey: doc:mcp-umg:animation
-sourceHash: 3f3a68b7c1025b97fff87b7bd959a87cda373637a065c76f1eebaa7deb58dede
+sourceHash: 047530e29ef7c8efe53e1354097e8d4a34da2e62bf6abd0f35a413b41bafbe91
 translationStatus: translated
-generatedBodyHash: 37f446c9b3e349a726d50adc3e1dc6011f8e99498829fe85e9ded18f94fb759b
+generatedBodyHash: 049e5fa8136674ec64836a5a57ee6fe5581c1d0903a976b11b6211ee1e934177
 docPage:
   work: mcp-umg
-  group: interaction
+  group: features
   slug: animation
-  order: 3
+  order: 12
 ---
 
 ## Animation tools
+
+Before editing an animation, confirm its name with `ListAnimations`, then use `GetAnimationDetail` to find the track and channel. If you want to keep the original, duplicate it and edit the copy.
 
 | Tool | Description |
 |------|-------------|
@@ -41,7 +43,7 @@ docPage:
 
 ## Duplicate animations, set ranges, and edit keys
 
-`DuplicateAnimation` deep-copies the source animation's MovieScene, tracks and Widget bindings while leaving the source unchanged. The new name must be unique. `SetAnimationPlaybackRange` sets `[StartSeconds, EndSeconds)` in seconds, validating all parameters before writing in a single transaction. Both tools only mark assets dirty and do not save.
+`DuplicateAnimation` deep-copies the source animation's MovieScene, tracks and Widget bindings while leaving the source unchanged. The new name must be unique. `SetAnimationPlaybackRange` sets `[StartSeconds, EndSeconds)` in seconds, validating all parameters before writing in a single transaction. Both tools leave the edits in memory. Save the asset separately.
 
 Cubic keys in `SetAnimationKeys` can use `TangentMode` (`Auto`, `User`, `Break`) and finite numeric `ArriveTangent` and `LeaveTangent`. Tangents on Linear or Constant keys are rejected without modifying the asset.
 

@@ -10,7 +10,7 @@ workIds:
   - simple-websocket
 docPage:
   work: simple-websocket
-  group: network
+  group: features
   slug: connect-and-send
   order: 1
 documentKind: product-manual
@@ -19,7 +19,7 @@ lang: zh
 translationKey: doc:simple-websocket:connect-and-send
 ---
 
-这些静态函数属于 GameInstance，可从任意蓝图按配置名称调用。
+这些静态函数由 GameInstance 管理，在任意蓝图中都可按配置名称调用。
 
 ## 连接、查询和关闭
 
@@ -36,5 +36,7 @@ translationKey: doc:simple-websocket:connect-and-send
 - `Unbind Web Socket Message`：解绑消息事件  
 
 ## 蓝图示例
+
+先按配置名称发起连接（已经自动连接时可跳过这一步），检查连接状态，再绑定接收事件并发送一条测试文本。完成后，如果只想结束这条连接，按同一名称关闭即可。
 
 ![](/media-occurrence/doc%3Asimple-websocket%3Aconnect-and-send%3Amedia%3A1)

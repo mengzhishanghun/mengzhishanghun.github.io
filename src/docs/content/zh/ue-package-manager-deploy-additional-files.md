@@ -12,9 +12,9 @@ workIds:
   - ue-package-manager
 docPage:
   work: ue-package-manager
-  group: output
+  group: features
   slug: deploy-additional-files
-  order: 1
+  order: 3
 documentKind: product-manual
 websiteRoute: /zh/works/ue-package-manager/docs/deploy-additional-files/
 lang: zh
@@ -23,7 +23,9 @@ translationKey: doc:ue-package-manager:deploy-additional-files
 
 ## 设置复制规则
 
-在图形界面的“附加文件”中选择文件或文件夹，并按规则设置包内目标子目录和递归忽略项。命令行可用 `copy-list` 查看规则、`copy-add` 添加规则、`copy-remove --index 0` 删除示例中的第一条规则。`--no-copy` 跳过本次部署。
+在图形界面的“附加文件”中选择要随包交付的文件或文件夹，再为每条规则指定包内目标子目录。复制文件夹时，可填写递归忽略项。
+
+命令行可用 `copy-list` 查看规则、`copy-add` 添加规则、`copy-remove --index 0` 删除示例中的第一条规则。若本次打包不需要复制附加文件，使用 `--no-copy`。
 
 ## 复制时机与路径限制
 

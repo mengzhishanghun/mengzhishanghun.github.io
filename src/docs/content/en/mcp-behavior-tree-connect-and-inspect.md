@@ -13,21 +13,21 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-behavior-tree/docs/connect-and-inspect/
 lang: en
 translationKey: doc:mcp-behavior-tree:connect-and-inspect
-sourceHash: fd85341e0317557be4856352faeb9372ebd8f271112b0868e230ae9f10c3b509
+sourceHash: f06833c1cc62c2beaa0f3ac728cb73c4cb7a10f9bab3a96362ac1e0412d049aa
 translationStatus: translated
-generatedBodyHash: 887e7fa55ac3516aa932e2f0f1419d06db5c97654fb4996ce034aed15f0895fc
+generatedBodyHash: 2d6d6af96e8a2d4504a643bfef9b3aa14dbee65b15a342381c63c2b215dba24e
 docPage:
   work: mcp-behavior-tree
-  group: setup
+  group: getting-started
   slug: connect-and-inspect
   order: 1
 ---
 
-MCP Behavior Tree is a self-contained Unreal Editor plugin for creating, inspecting, editing, validating, and saving Behavior Tree and Blackboard assets through the Model Context Protocol. It supports Unreal Engine 5.2 and later and does not depend on another user plugin.
+MCP Behavior Tree is a self-contained Unreal Editor plugin for creating, inspecting, editing, validating, and saving Behavior Tree and Blackboard assets through the Model Context Protocol. It does not depend on other user plugins. Development and compatibility checks are ongoing for UE 5.2–5.8.
 
 ## Connection
 
-The plugin starts an MCP HTTP server in the Unreal Editor. Its default port is `8767`; when that port is unavailable, use the actual port reported by the running plugin instead of assuming the default.
+Enable the plugin in Unreal Editor. Once the MCP HTTP server starts, enter the address reported by the plugin in your client. The default port is `8767`; if it’s occupied, use the reported address.
 
 ## First behavior tree edit
 
@@ -36,8 +36,8 @@ The plugin starts an MCP HTTP server in the Unreal Editor. Its default port is `
 3. Create a tree with `CreateBehaviorTree`, passing the Blackboard path.
 4. Add a composite under `Root`, then add tasks, decorators, and services.
 5. Use `GetBehaviorTreeDetail` to discover node IDs and editable properties.
-6. Run `ValidateBehaviorTree`.
-7. Call `SaveAsset` for each dirty Behavior Tree or Blackboard asset.
+6. Run `ValidateBehaviorTree` and fix any reported problems.
+7. Call `SaveAsset` separately for each Behavior Tree or Blackboard asset you changed.
 
 ## Differences from the official UE 5.8 toolset
 

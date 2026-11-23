@@ -10,7 +10,7 @@ workIds:
   - simple-ssh-tunnel
 docPage:
   work: simple-ssh-tunnel
-  group: tunnels
+  group: features
   slug: manage-tunnels
   order: 1
 documentKind: product-manual
@@ -20,6 +20,8 @@ translationKey: doc:simple-ssh-tunnel:manage-tunnels
 ---
 
 ## 从配置到启停隧道
+
+创建时记住所用名称，查询或关闭单条隧道时沿用同一个名称。节点报告隧道正在运行后，再从应用访问本地转发端点，确认目标服务可达。只需停用其中一个连接时，选择关闭指定隧道的节点。
 
 1. 在 **项目设置** 中配置 SSH 隧道。
 2. 在蓝图中调用 **Create SSHTunnel** 创建隧道。
@@ -36,7 +38,7 @@ translationKey: doc:simple-ssh-tunnel:manage-tunnels
 Create SSHTunnel (Tunnel Name: String) → Return Value: Bool
 ```
 
-使用指定名称创建新的 SSH 隧道。
+给这条 SSH 隧道指定名称，再创建。
 
 ### 检查 SSH 隧道状态
 

@@ -13,18 +13,18 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-world-editor/docs/maps/
 lang: en
 translationKey: doc:mcp-world-editor:maps
-sourceHash: 302207fb3a37e5fcd110c88478b30eb2bbfb392173dd4118c5ab96b760704d82
+sourceHash: 9c242e9622b18ca656e8e0bb5c57b113cb5bb24be596ef966ec48559af6d89c1
 translationStatus: translated
-generatedBodyHash: 7ef626db0b1dd2d03abeb3e65c4899a03ed32ae0a1f85a63cc57ce43a9f74661
+generatedBodyHash: ba38b2c3eac62598320ee35fc4f04302cb568d10ccb09a5fd0d6b2f599dc3dfa
 docPage:
   work: mcp-world-editor
-  group: levels
+  group: features
   slug: maps
   order: 1
 ---
 
 ## Run a map check
 
-`MapCheck` runs the engine map check and returns error and warning counts, visible messages with tokens, and `Complete`. If the Message Log UI filter hides messages or `MaxMessages` truncates them, `Complete=false`, so the result cannot be reported as passing. The check creates a new page for the current map while retaining older pages and the user's UI filter.
+Open the map you want to check and run `MapCheck`. Read `Complete` before reviewing the error and warning counts and the visible messages with tokens. If the Message Log filter hides messages or `MaxMessages` cuts the list short, `Complete=false`. Check the filter or message limit before running the check again. An incomplete result cannot establish that the map passed. Each run adds a log page for the current map and leaves older pages and the UI filter in place.
 
 To save or build a map, see [Save Level Packages](/en/works/mcp-world-editor/docs/save-level-packages/), [Build Navigation and Find Paths](/en/works/mcp-world-editor/docs/navigation/), or [Build Level Lighting](/en/works/mcp-world-editor/docs/lighting-build/).

@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: interaction
+  group: features
   slug: events-navigation-animation
-  order: 1
+  order: 10
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/events-navigation-animation/
 lang: zh
@@ -22,7 +22,9 @@ translationKey: doc:mcp-umg:events-navigation-animation
 
 ## 事件节点与交互逻辑
 
-找到目标 Widget Blueprint 和控件后，用 `BindWidgetEvent` 添加绑定，并用 `AddEventActions` 添加动作。删除绑定时用 `UnbindWidgetEvent`。如需高级图表操作，请先[连接 MCPBlueprint](/zh/works/mcp-blueprint/docs/connect/)。
+先确认要处理的是哪一个事件，以及触发后希望看到什么变化。例如，给现有按钮加点击动作时，提供 Widget Blueprint 路径、按钮名称和所需动作；属性绑定可单独用 `SetPropertyBinding` 设置。
+
+选定目标 Widget Blueprint 和控件后，先用 `BindWidgetEvent` 绑定事件，再用 `AddEventActions` 设置触发后的动作。要移除绑定时，用 `UnbindWidgetEvent`。如需高级图表操作，请先[连接 MCPBlueprint](/zh/works/mcp-blueprint/docs/connect/)。
 
 | 工具 | 用途 |
 | --- | --- |

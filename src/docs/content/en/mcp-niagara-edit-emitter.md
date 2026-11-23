@@ -13,19 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-niagara/docs/edit-emitter/
 lang: en
 translationKey: doc:mcp-niagara:edit-emitter
-sourceHash: 2f0d12c2af20b5e1d19dc8fc6dc4d276c6f9cfe8665d9a17536f589a9e191f1e
+sourceHash: a2f7d85feecd9971dd1c737f64d0383de72ddb62802e8e56416a1ad857407cce
 translationStatus: translated
-generatedBodyHash: 3a62e3025eddcb50c087cbba8d5666405c54c3700bc548dcd836dc79f500749e
+generatedBodyHash: 14c658ac3408580bc83f2a8ec1591a51e981991629ef49917bb730269558e367
 docPage:
   work: mcp-niagara
-  group: effects
+  group: features
   slug: edit-emitter
-  order: 1
+  order: 4
 ---
 
 ## Copy and edit emitters
 
-`AddEmitter` uses NiagaraEditor's supported copy path to assign a unique name, rebuild emitter nodes, and synchronize the overview graph. `RemoveEmitter` and `RenameEmitter` require an unambiguous name. Add, remove, and rename operations are transactional and broadcast the system edit notification.
+Read the target system’s emitter list first to identify the emitter you want to edit. To add an emitter, use `AddEmitter`; it uses NiagaraEditor’s supported copy path to assign a unique name, rebuild emitter nodes, and synchronize the overview graph. `RemoveEmitter` and `RenameEmitter` require an unambiguous name. Add, remove, and rename operations are transactional and broadcast the system edit notification.
 
 `SetEmitterProperties` atomically writes 1–64 properties on `FVersionedNiagaraEmitterData`: every property and value is validated before any change is committed, and each changed property receives a version-aware post-edit notification. Editable scalar, enum, string, name, and safe struct properties are supported. Top-level properties must be editable and neither transient nor deprecated; nested struct members recursively reject object references, containers, delegates, transient fields, and deprecated fields. The dynamic-object schemas for `SetEmitterProperties` and `SetModuleParameters` accept only strings, numbers, or booleans and match the runtime count bounds. String inputs and dynamic property names have schema and runtime limits of at most 4096 characters, with stricter limits for some asset paths; input JSON is also limited to 8 levels and 2048 values. Every tool that loads an existing system returns its canonical object `SystemPath` on success. Final error text is limited to 4096 characters, and available-name candidates have both count and text bounds.
 

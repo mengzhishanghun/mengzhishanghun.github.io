@@ -10,7 +10,7 @@ workIds:
   - simple-udp
 docPage:
   work: simple-udp
-  group: network
+  group: features
   slug: messages
   order: 2
 documentKind: product-manual
@@ -20,6 +20,8 @@ translationKey: doc:simple-udp:messages
 ---
 
 ## 接收数据
+
+先在项目设置中确认接收通道的名称、监听地址和过滤规则。把同一个通道名称传给绑定与解绑节点；绑定处理器后，从符合过滤规则的发送端发一个测试数据报，检查回调是否收到预期字节。
 
 | 节点                           | 说明                             |
 |-------------------------------|----------------------------------|
@@ -35,7 +37,7 @@ translationKey: doc:simple-udp:messages
 
 ![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A2)
 
-使用此节点解绑通道上的所有内容并手动关闭 Socket。
+需要结束整个通道的接收时，用这个节点解绑所有处理器并关闭 Socket。
 
 ## 发送数据
 

@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-asset-cleaner/docs/clean-assets/
 lang: en
 translationKey: doc:simple-asset-cleaner:clean-assets
-sourceHash: 0448ed9477c7fc06625c93d9a87c4564822475f29e200ac074d7a516abaa7c34
+sourceHash: fcc10e433ba903930da4895ffee9f25b453dc7411ddd486d170e0139f320414e
 translationStatus: translated
-generatedBodyHash: 0e69e7d1c576a4b45e6c9f3b1d10022285fc888c2301fba42820ad76bee14004
+generatedBodyHash: 0b7a443a0821e6596eeab3ddbf26f66d18395be4ef970ec5f75865b9123e6571
 docPage:
   work: simple-asset-cleaner
-  group: cleanup
+  group: features
   slug: clean-assets
   order: 1
 ---
@@ -35,11 +35,13 @@ For example, if a scene references only two of ten test materials, the other eig
 
 ## Clean Selected Assets from the Context Menu
 
+Use automatic cleanup on submission if you only want to tidy up newly added files in the pending submission. The context menu limits the scan to the selection, but it can still delete tracked files. Check which candidates are newly added and which are already tracked before confirming.
+
 In the Content Browser, select one or more assets or folders, then open **Simple Asset Cleaner** from the context menu and choose **Clean Unreferenced Assets**. Review the candidates in the dialog and select the files to clean.
 
 ## Scan the Whole Project
 
-Full cleanup is useful for periodic maintenance, taking over a legacy project, or preparing a major release. It deletes committed files that are no longer referenced. Make sure you have a recoverable commit, try it on a test branch, and tell your team beforehand.
+Full cleanup is useful for periodic maintenance, taking over a legacy project, or preparing a major release. Full cleanup deletes committed files that are no longer referenced. Tell your team, make sure you have a recoverable commit, and try the cleanup on a test branch first.
 
 1. Open `Editor > Project Settings > General > Simple Asset Cleaner`.
 2. Click `Clean All Source Control Assets` and wait for the progress bar to finish.

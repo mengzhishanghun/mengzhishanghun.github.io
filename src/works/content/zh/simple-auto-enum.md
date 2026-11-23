@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/2d104382-60b1-4da6-86c6-ed93997f9c0a
     - kind: docs
-      href: /zh/works/simple-auto-enum/docs/config-binding/
+      href: /zh/works/simple-auto-enum/docs/quickstart/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -36,6 +36,7 @@ links:
   - label: 博客园原文
     href: https://www.cnblogs.com/mengzhishanghun/p/19136345
 docIds:
+  - simple-auto-enum-quickstart
   - simple-auto-enum-config-binding
   - simple-auto-enum-blueprints-and-assets
 coverAlt: SimpleAutoEnum封面

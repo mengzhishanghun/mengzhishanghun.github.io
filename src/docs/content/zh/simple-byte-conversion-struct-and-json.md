@@ -11,7 +11,7 @@ workIds:
   - simple-byte-conversion
 docPage:
   work: simple-byte-conversion
-  group: conversion
+  group: features
   slug: struct-and-json
   order: 2
 documentKind: product-manual
@@ -22,12 +22,14 @@ translationKey: doc:simple-byte-conversion:struct-and-json
 
 ## 选择结构体转换节点
 
+先按接收端能处理的格式选节点：需要核对字段或与外部程序交换数据时，优先考虑 JSON；使用二进制时，先确认双方对结构体和字节格式的约定。
+
 插件支持任何暴露给蓝图的 `USTRUCT`：
 
 - 与字节数组互转：`Struct To Bytes` / `Bytes To Struct`
 - 与 JSON 字符串互转：`Struct To JsonString` / `JsonString To Struct`
 
-此功能使用 Unreal 的反射系统自动序列化和反序列化字段，同时保留原始命名和浮点精度。
+转换使用 Unreal 反射读写字段。JSON 的字段名和浮点数格式仍需按实际数据核对。
 
 > ⚠️ 不支持：包含对象引用的结构体，如 `UObject*`、`TSoftObjectPtr`、`TWeakObjectPtr`，或资源句柄如 `FSoftObjectPath`。
 
@@ -37,7 +39,7 @@ translationKey: doc:simple-byte-conversion:struct-and-json
 | 特性              | SimpleByteConversion                | UE 原生 FJsonObjectConverter |
 |------------------|-------------------------------------|-------------------------------|
 | 字段名保留        | ✅ 是                              | ❌ 转为 camelCase             |
-| Float/Double 精度 | ✅ float(9位), double(17位)         | ❌ 默认精度较低               |
+| Float/Double 精度 | float 输出 9 位小数，double 输出 17 位有效数字 | 取决于字段类型与序列化路径               |
 | 完整蓝图支持      | ✅ 是                              | ⚠️ 部分支持 / 需要 C++        |
 
 - `StringToBytes` 和 `BytesToString` 使用 UTF-8 编码，确保跨平台安全转换
@@ -70,7 +72,7 @@ UE 默认的 JSON 序列化存在两个问题：
 1.  **字段名带有引擎内部后缀**（如 `MyField_5_A3B2C1D4`）
 2.  **浮点数精度丢失**（float 只保留6位有效数字）
 
-原文采用自定义 `FExactPrintPolicy` 和字段名清洗解决了这两个问题：
+下面用自定义 `FExactPrintPolicy` 说明浮点数打印策略；字段名清洗需要单独处理。
 
 ```cpp
 // 高精度输出：float 保留9位，double 保留17位
@@ -90,7 +92,7 @@ struct FExactPrintPolicy : TCondensedJsonPrintPolicy<CharT>
 };
 ```
 
-输出的 JSON 字段名干净、数值精度完整，可以直接被 Python、C# 等外部程序解析。
+Python、C# 等程序可以解析 JSON；解析成功后，仍要核对键名与数值是否符合双方约定。
 
 字段名后缀和数值输出同样需要核对实际类型与序列化路径；不能将上面的“字段名带后缀”或“float 只保留 6 位有效数字”视为所有 UE JSON 输出的统一规则。清洗字段名还需要保留与真实反射属性的对应关系，避免重名或导入时无法还原。
 

@@ -14,12 +14,12 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-package-manager/docs/project-configuration/
 lang: en
 translationKey: doc:ue-package-manager:project-configuration
-sourceHash: 24def0b8214473f91a7b72dca1d6877c39c44a1847cfaaa090fe86391eb1fe49
+sourceHash: 31a3048d24961ccea841aa154d86b6b8be51f8365d22da213b05f15e0859caa5
 translationStatus: translated
-generatedBodyHash: 0f30b916449eebf3e35ba8226672423c798c8f23db3f8a1420cef04536c1616a
+generatedBodyHash: cdac05fa937627be2dd4eb12b0dab6dd88ae7bdd18886da23c84de1d655c0164
 docPage:
   work: ue-package-manager
-  group: packaging
+  group: features
   slug: project-configuration
   order: 2
 ---
@@ -36,4 +36,4 @@ Project paths, engine directories, output directories, build configurations, and
 
 ## Inspect and change settings
 
-The project and UE directory are read-only in the GUI. The tool identifies them from the current project’s `.uproject` and its `EngineAssociation`. Set the output directory and build configuration in the GUI. In the CLI, use `config-show` to inspect settings and `configure` to change them. Use the CLI to configure a source-built engine.
+The project and UE directories are read-only in the GUI. The tool identifies them from the `.uproject` in the current directory and its `EngineAssociation`. Set the output directory and build configuration in the GUI. In the CLI, use `config-show` to view settings and `configure` to change them. Use the CLI to specify a source-built engine manually.

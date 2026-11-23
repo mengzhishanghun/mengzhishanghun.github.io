@@ -12,7 +12,7 @@ workIds:
   - plugin-manager
 docPage:
   work: plugin-manager
-  group: plugins
+  group: features
   slug: folder-actions
   order: 3
 documentKind: product-manual
@@ -23,7 +23,13 @@ translationKey: doc:plugin-manager:folder-actions
 
 ## 移动、删除与修正目录名
 
-操作前先关闭 UE 编辑器。项目插件与商城插件可互相移动；引擎插件不能移动或删除。删除会将插件送到回收站；目录修正会将乱码文件夹改为插件同名。工具会自动移除只读属性，兼容 Perforce 等版本控制环境。同名插件需先移除其中一个才能移动另一个。
+操作前先关闭 UE 编辑器，并从项目或商城标签页选中插件。
+
+- 移动：在项目目录与商城目录之间移动插件。如果有同名项，先移除其中一个。
+- 删除：将插件移至回收站。
+- 修正目录名：将乱码文件夹改为与插件同名。
+
+引擎插件不能移动或删除。工具会自动移除只读属性，以便处理 Perforce 等版本控制环境下的文件。
 
 ## 目录与列表快捷操作
 

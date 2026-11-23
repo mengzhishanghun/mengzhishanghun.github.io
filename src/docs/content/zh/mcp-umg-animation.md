@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: interaction
+  group: features
   slug: animation
-  order: 3
+  order: 12
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/animation/
 lang: zh
@@ -21,6 +21,8 @@ translationKey: doc:mcp-umg:animation
 ---
 
 ## 动画工具
+
+修改已有动画前，先用 `ListAnimations` 确认动画名，再用 `GetAnimationDetail` 找到要编辑的轨道和通道。需要保留原动画时，先复制，再编辑副本。
 
 | 工具 | 说明 |
 |------|------|
@@ -38,7 +40,7 @@ translationKey: doc:mcp-umg:animation
 
 ## 复制动画、调整区间和设置关键帧
 
-`DuplicateAnimation` 深拷贝源动画的 MovieScene、轨道和 Widget 绑定，源动画不变；新名称必须唯一。`SetAnimationPlaybackRange` 以秒设置 `[StartSeconds, EndSeconds)`，所有参数先验证后在一个事务中写入。两者均只标脏，不保存。
+`DuplicateAnimation` 深拷贝源动画的 MovieScene、轨道和 Widget 绑定，源动画不变；新名称必须唯一。`SetAnimationPlaybackRange` 以秒设置 `[StartSeconds, EndSeconds)`，所有参数先验证后在一个事务中写入。复制动画和调整区间都只改动内存中的资产，需要另行保存。
 
 `SetAnimationKeys` 的 Cubic 键可使用 `TangentMode`（`Auto`、`User`、`Break`）和有限数值 `ArriveTangent`、`LeaveTangent`；Linear 或 Constant 携带切线会被拒绝，且不修改资产。
 

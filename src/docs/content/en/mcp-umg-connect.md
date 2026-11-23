@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/connect/
 lang: en
 translationKey: doc:mcp-umg:connect
-sourceHash: 4140c1199e28a7234a6687d6a7d0ef93225860e7b399ffb59be92bf6a16df10c
+sourceHash: 040442f66fc39cdf98cd90d12fe02090de29d43b3a62b4ccf23dee043477d8ef
 translationStatus: translated
-generatedBodyHash: 592925f5234957582ef44e2cd5d0c0b88dd5952bd80e639c289eba9b2df74c77
+generatedBodyHash: 5189dd788bbc45d3952ccd0bc8ebc4f4da7f62f790208cfdf3f4d86bd24748cd
 docPage:
   work: mcp-umg
   group: getting-started
@@ -25,7 +25,7 @@ docPage:
 
 ## Development status and requirements
 
-MCPUMG is an Unreal Engine Editor plugin in development. It lets MCP (Model Context Protocol) clients read, create, and edit widget trees, properties, slots, animations, and events. Support for UE 5.2–5.8 is still in development, and compatibility across those versions has yet to be confirmed.
+MCPUMG is an Unreal Engine Editor plugin in development. It lets MCP (Model Context Protocol) clients read, create, and edit widget trees, properties, slots, animations, and events. Support for UE 5.2–5.8 is still in development. Testing across these versions is incomplete, and compatibility has yet to be confirmed.
 
 - Unreal Engine 5.2+
 - Editor only
@@ -55,6 +55,8 @@ Project Settings > Plugins > MCPUMG:
 
 ## MCP Connection
 
+Open the Unreal project you want to work on, then check the actual MCP URL in the editor toolbar. After the client connects, confirm the session details below before reading a widget tree.
+
 The plugin runs an HTTP server inside the Unreal Editor. AI clients connect via MCP protocol.
 
 **MCP URL**: `http://127.0.0.1:8765/mcp`
@@ -63,12 +65,13 @@ The server starts automatically when the editor opens (configurable via `bAutoSt
 
 ### Claude Code
 
-Add to `~/.claude/.mcp.json` (global) or project root `.mcp.json`:
+Claude Code stores user-scoped server configuration in `~/.claude.json`. Use the project root’s `.mcp.json` for a project-scoped server. Add the HTTP server entry below in the chosen scope and replace the example URL with the address shown in the editor toolbar:
 
 ```json
 {
   "mcpServers": {
     "ue-umg": {
+      "type": "http",
       "url": "http://127.0.0.1:8765/mcp"
     }
   }

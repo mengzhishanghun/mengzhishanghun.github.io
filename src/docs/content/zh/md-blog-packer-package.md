@@ -11,7 +11,7 @@ workIds:
   - md-blog-packer
 docPage:
   work: md-blog-packer
-  group: export
+  group: features
   slug: package
   order: 1
 documentKind: product-manual
@@ -22,7 +22,7 @@ translationKey: doc:md-blog-packer:package
 
 ## 转换范围
 
-MDBlogPacker 把 `![](</path>)` 或 Obsidian `![[image.png]]` 引用的本地图片转换为 `data:image/...;base64,...`。网络图片与已内嵌的 Base64 图片默认保持原样。输出可以复制、写入文件或交给管道。
+MDBlogPacker 将 `![](</path>)` 或 Obsidian `![[image.png]]` 引用的本地图片转为 `data:image/...;base64,...`。网络图片和已内嵌的 Base64 图片默认保留原样。结果可以复制、写入文件，也可以通过管道交给其他命令。
 
 ## 图形界面
 
@@ -32,7 +32,7 @@ MDBlogPacker 把 `![](</path>)` 或 Obsidian `![[image.png]]` 引用的本地图
 
 ## 命令行
 
-带参数运行时进入命令行模式：
+向程序传入参数即可使用命令行。把示例中的 `博客.md` 换成要转换的文章路径；用 `-c` 把结果复制到剪贴板，或用 `-o` 写入文件：
 
 ```bash
 # 最常用：转换 + 复制到剪贴板

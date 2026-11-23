@@ -11,7 +11,7 @@ workIds:
   - ai-data-asset
 docPage:
   work: ai-data-asset
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -28,6 +28,8 @@ translationKey: doc:ai-data-asset:setup
 
 ## 同步设置
 
+首次确认配置时，打开自动同步，保存一份用于试验的 DataAsset，然后到配置的目录中确认对应的 JSON 已生成。
+
 打开 **项目设置 > 插件 > AIDataAsset**：
 
 | 设置项 | 默认值 | 说明 |
@@ -35,7 +37,7 @@ translationKey: doc:ai-data-asset:setup
 | JSON Output Directory | `Saved/AIDataAsset` | JSON 文件存储目录（相对于项目根目录） |
 | Enable Auto Sync | `true` | 开启/关闭自动同步 |
 
-**输出目录与版本管理。** 默认的 `Saved/AIDataAsset/` 是自动同步的中间目录，通常不应加入版本管理。实际运行使用的数据仍保存在 UE 资产中。需要跟踪 JSON 时，可在这里修改 `JSON Output Directory`，设为项目内需要纳入版本管理的目录，再将生成的 JSON 加入版本管理。也可以让 AI 工具协助修改这项配置；修改后应确认实际输出位置。
+**输出目录与版本管理。** 默认的 `Saved/AIDataAsset/` 是自动同步的中间目录，通常不应加入版本管理。实际运行使用的数据仍保存在 UE 资产中。需要跟踪 JSON 时，可在这里修改 `JSON Output Directory`，设为项目内需要纳入版本管理的目录，再将生成的 JSON 加入版本管理。也可以让 AI 工具协助修改这项配置；修改目录后，用生成的文件确认实际输出位置。
 
 ## 界面语言
 

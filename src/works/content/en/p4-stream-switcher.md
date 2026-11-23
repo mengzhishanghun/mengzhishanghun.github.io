@@ -30,9 +30,9 @@ links:
     href: https://github.com/MZSH-Tools/P4StreamSwitcher
 lang: en
 translationKey: p4-stream-switcher
-sourceHash: bc6d72642f3fcac03e59544ad3d9f1cdd047533c6201adb67de05e1f8e534db4
+sourceHash: 83c65cb0cac5bfd98264bd2cca970b00be01df5b175ded98647f363576f3ca68
 translationStatus: translated
-generatedBodyHash: e187dc9a945f843157924be57409fdec6650e72487e5041dd3ada0df87cf6998
+generatedBodyHash: 1217de984ba9231114356141c2b5d5ec7432a531cea87ef815a7e49021c1caac
 coverAlt: P4StreamSwitcher cover
 websiteCoverUrl: /media/covers/works/p4-stream-switcher-20261101.webp
 docIds:
@@ -41,11 +41,18 @@ docIds:
   - p4-stream-switcher-offline-switch
   - p4-stream-switcher-workspace-settings
   - p4-stream-switcher-recycle-workspace
+  - p4-stream-switcher-updates-2026-03-23
+  - p4-stream-switcher-updates-2026-02-10
+  - p4-stream-switcher-updates-2026-01-31
+  - p4-stream-switcher-updates-2026-01-30
+  - p4-stream-switcher-updates-2026-01-16
+  - p4-stream-switcher-updates-2026-01-13
+  - p4-stream-switcher-updates-2026-01-09
 ---
 
 ## Overview
 
-P4StreamSwitcher is a Windows tool for switching Perforce stream workspaces, built with Python, Tkinter, and P4Python. Select a project and branch to generate a workspace name from a personal tag, manage the workspace count, and open the corresponding P4V client.
+P4StreamSwitcher is a Windows tool for switching Perforce stream workspaces, built with Python, Tkinter, and P4Python. Save your personal tag, then select a project, branch, and local directory. The tool uses the tag to name the workspace, manages the workspace pool, and opens the corresponding P4V client after the switch.
 
 It supports the two-level stream layout `//depot/project/branch`. The source repository is public and does not declare a license. Public readability does not grant unrestricted redistribution or commercial use.
 

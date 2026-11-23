@@ -10,7 +10,7 @@ workIds:
   - simple-launcher
 docPage:
   work: simple-launcher
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -21,7 +21,7 @@ translationKey: doc:simple-launcher:setup
 
 ## 安装插件
 
-将插件文件夹复制到项目的 `Plugins` 目录，重启编辑器。
+将插件文件夹复制到项目的 `Plugins` 目录，重启编辑器。然后打开 **项目设置 → Plugins → Simple Launcher**，确认能在 **Launchers** 中添加预设，再填写程序路径和启动参数。
 
 ## 界面语言
 

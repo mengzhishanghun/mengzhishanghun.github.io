@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-config-exclude/docs/copy-excluded/
 lang: en
 translationKey: doc:simple-config-exclude:copy-excluded
-sourceHash: d1af4ed85f9ed50fd241f8a9dff0a9adc22b8cbdc1d3ae19aa6ebab43d79bc2c
+sourceHash: eaddaf5b5a39e2377fe96b2a471f2622ef0a4a66f887b0af11f9dece9e9df1e9
 translationStatus: translated
-generatedBodyHash: 81e5b87ff83c9de5ae93a28e62bf802cd4d2e3a9fadb4c949ab75408a1890e8e
+generatedBodyHash: a989de6ef4f8b0d87c28a5b2f963d01a072a5c7325f7a9e4bf6384cb915a5939
 docPage:
   work: simple-config-exclude
-  group: packaging
+  group: features
   slug: copy-excluded
   order: 2
 ---
@@ -32,7 +32,7 @@ docPage:
 - **Directory structure**: Preserves the original structure (`TargetDir/ProjectName/Config/xxx.ini`)
 - **Copy button**: Copies all Disallowed configuration files to the target directory
 
-After packaging, you may want to add excluded configuration manually:
+To add excluded configuration after packaging, follow this order:
 
 1. Set “Copy Target Directory” to the packaging output path, such as `/Windows`
 2. Set the configuration to exclude to “Disallowed”
@@ -41,6 +41,8 @@ After packaging, you may want to add excluded configuration manually:
 5. Files are copied to `Windows/YourProject/Config/xxx.ini`
 
 ## Clean the Destination Before Copying
+
+If the folder already contains configuration you need for deployment, back it up or turn off cleanup before copying. Open the destination afterward and check that the required files are present.
 
 **Clean Config Before Copy** is on by default. Before clicking **Copy**, check `TargetDir/ProjectName/Config/` for anything you need to keep. The plugin deletes that folder and then copies only the files currently marked `Disallowed`.
 

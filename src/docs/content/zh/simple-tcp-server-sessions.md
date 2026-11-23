@@ -10,7 +10,7 @@ workIds:
   - simple-tcp-server
 docPage:
   work: simple-tcp-server
-  group: network
+  group: features
   slug: sessions
   order: 1
 documentKind: product-manual
@@ -31,6 +31,8 @@ translationKey: doc:simple-tcp-server:sessions
 
 ## 列出会话并检查连接状态
 
+监听启动后，先确认客户端确实连到了正确的通道，再用 `GetAllSessions` 查看当前会话。向某个客户端发消息前，用 `IsSessionConnected` 核对选中的会话；客户端重连时，重新读取会话列表。
+
 | 节点函数                    | 说明                                               |
 |----------------------------|----------------------------------------------------|
 | `GetAllSessions`           | 获取监听通道上所有当前 SessionChannel                |
@@ -38,7 +40,7 @@ translationKey: doc:simple-tcp-server:sessions
 
 ## 会话 Socket 的创建和销毁
 
-接受客户端连接时会创建会话 Socket；客户端断开或 Socket 销毁时，会话 Socket 随之结束。插件负责管理 Socket，无需手动清理。
+插件接受连接时创建会话 Socket。客户端断开或 Socket 被销毁后，会话结束。Socket 由插件清理。
 
 ## 蓝图节点一览
 

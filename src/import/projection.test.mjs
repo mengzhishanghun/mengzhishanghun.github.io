@@ -28,15 +28,15 @@ test('public source hash is LF canonical without trimming code or normalizing Un
   assert.equal(canonicalTextHash(text),canonicalTextHash(text.replaceAll('\n','\r\n')));
   assert.notEqual(canonicalTextHash(text),canonicalTextHash(text.trim()));
 });
-function chapterFixture(t){
+function chapterFixture(t,{filename='001-Setup.md',order=1}={}){
   const root=fs.mkdtempSync(path.join(os.tmpdir(),'chapter-import-'));t.after(()=>fs.rmSync(root,{recursive:true,force:true}));
   const site=path.join(root,'site'),vault=path.join(root,'vault');
   const put=(base,relative,raw)=>{const file=path.join(base,relative);fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,raw);};
   for(const dir of ['001-作品','002-案例','003-博客','004-文档'])fs.mkdirSync(path.join(vault,'网站',dir),{recursive:true});
   const work={id:'work:tool',kind:'work',lang:'zh',slug:'tool',source:'网站/001-作品/001-Utility/01-Tool/README.md',output:'works/content/zh/tool.md'};
-  const docPage={work:'tool',group:'start',slug:'setup',order:1};
+  const docPage={work:'tool',group:'start',slug:'setup',order};
   const entry={id:'doc:tool:setup',type:'doc',slug:'tool-setup',translationKey:'doc:tool:setup',docPage,legacyRoutes:[]};
-  const record={id:entry.id,kind:'doc',lang:'zh',slug:entry.slug,translationKey:entry.translationKey,source:work.source.replace('README.md','001-Start/001-Setup.md'),output:'docs/content/zh/tool-setup.md',sourceMetadata:{media:['private-image.png']}};
+  const record={id:entry.id,kind:'doc',lang:'zh',slug:entry.slug,translationKey:entry.translationKey,source:work.source.replace('README.md',`001-Start/${filename}`),output:'docs/content/zh/tool-setup.md',sourceMetadata:{media:['private-image.png']}};
   const manifest={entries:[{id:work.id,type:'work',slug:work.slug,legacyRoutes:['/works/tool/']},entry],docGroups:{tool:[{id:'start',order:1}]}};
   const sync=()=>put(site,'src/import/000-sync.local',sourceText({version:1,primary:'zh',records:[work,record]},''));
   sync();put(site,'src/build/manifest.json',JSON.stringify(manifest));
@@ -62,6 +62,15 @@ test('flat minimal chapter imports public metadata and remains outside standalon
   assert.deepEqual(snapshot.sections.work.categories[0].entities,['work:tool']);
   fixture.writeChapter(data);
   assert.deepEqual((await fixture.run({only:[fixture.record.id],check:true})).differences,['src/import/000-sync.local']);
+});
+
+test('dated chapter imports its full date as the public title and keeps its route',async t=>{
+  const fixture=chapterFixture(t,{filename:'2024-02-29.md',order:79759771});
+  await fixture.run({only:[fixture.record.id]});
+  const {data}=parseSource(fixture.read());
+  assert.equal(data.title,'2024-02-29');
+  assert.equal(data.docPage.order,79759771);
+  assert.equal(data.websiteRoute,'/zh/works/tool/docs/setup/');
 });
 
 test('chapter import and taxonomy refuse conflicting legacy fields and unpublished minimal sources',async t=>{

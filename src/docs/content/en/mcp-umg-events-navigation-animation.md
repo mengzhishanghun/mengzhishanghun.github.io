@@ -13,19 +13,21 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/events-navigation-animation/
 lang: en
 translationKey: doc:mcp-umg:events-navigation-animation
-sourceHash: cb3a6ccb6489217dc5a3cbd4acc99b948d7a02f2d8a5f9e2bbcaadba4221dca4
+sourceHash: de6652f546ab6235b483621da551be08f0f0a3dfd1cdc24eb607bff76274c69b
 translationStatus: translated
-generatedBodyHash: db3c033efd6f8da2e961dc0580f558ba3e39fb42746b07fd1276866fffe8631e
+generatedBodyHash: 7e821650495e358aba1004d4ebdc802debbef6ecbd3d6bb210c843e9fda04816
 docPage:
   work: mcp-umg
-  group: interaction
+  group: features
   slug: events-navigation-animation
-  order: 1
+  order: 10
 ---
 
 ## Event nodes and interaction logic
 
-After identifying the Widget Blueprint and widget, use `BindWidgetEvent` to add the binding and `AddEventActions` to add actions. Use `UnbindWidgetEvent` to remove the binding. For advanced graph operations, [connect MCPBlueprint](/en/works/mcp-blueprint/docs/connect/) first.
+First identify the event and the change you expect when it fires. For example, to add a click action to an existing button, provide the Widget Blueprint path, the button name, and the action you want. Configure a property binding separately with `SetPropertyBinding`.
+
+Once you have the Widget Blueprint and widget, bind the event with `BindWidgetEvent`, then use `AddEventActions` to set what it does when it fires. To remove the binding, use `UnbindWidgetEvent`. For advanced graph operations, [connect MCPBlueprint](/en/works/mcp-blueprint/docs/connect/) first.
 
 | Tool | Purpose |
 | --- | --- |

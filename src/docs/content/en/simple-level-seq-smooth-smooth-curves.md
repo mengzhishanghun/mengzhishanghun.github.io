@@ -14,12 +14,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-level-seq-smooth/docs/smooth-curves/
 lang: en
 translationKey: doc:simple-level-seq-smooth:smooth-curves
-sourceHash: 63970199257ba91f8b110f3edb4a9475d037d2512edd6e826c64598f2631c171
+sourceHash: 0a6d2fab7edcd6c73ae43d76c4442c6c6108041925fb9e812a99d1a1e4cbd37c
 translationStatus: translated
-generatedBodyHash: 37c9595f1a0304a23fb3b7c5f9f5085df814980cf581d901c9eca6080cd065d2
+generatedBodyHash: 8dd93b221a7671e38f70506f66edeac0c35cf90d2f00c299783a5a3a9a9d4849
 docPage:
   work: simple-level-seq-smooth
-  group: curves
+  group: features
   slug: smooth-curves
   order: 1
 ---
@@ -29,6 +29,8 @@ docPage:
 **Smooth** handles one or more LevelSequence assets, including Transform and Scalar channels in ControlRig parameter sections. It reads the sequence frame rate automatically and uses a consistent suffix when creating new sequences in a batch. Choose whether to overwrite the originals or create new sequences.
 
 ## Apply Smoothing from the Content Browser
+
+For a first pass, choose to create a new sequence. Play the original and the result, and compare the same jitter, abrupt stops, and peaks. Check that the motion still looks right before overwriting an original asset.
 
 1. In the Content Browser, right-click on one or more LevelSequence assets
 2. Select **Smooth** from the context menu
@@ -43,7 +45,7 @@ docPage:
 | 1 | Moving Average | Time-domain | Simplest, zero configuration | Quick preview |
 | 2 | Gaussian | Time-domain | Velocity/acceleration curves also smooth, no abrupt changes | Large joints (arms, legs) |
 | 3 | Exponential | Time-domain | Recent data weighted more, fast response | Real-time preprocessing |
-| 4 | Median | Time-domain | Only filter that cleanly removes impulse noise / frame jumps | Mocap data first pass |
+| 4 | Median | Time-domain | Helps remove isolated spikes and frame jumps | Mocap data first pass |
 | 5 | Bilateral | Time-domain | Smooths noise while preserving sudden stops / motion edges | Actions with clear start/end |
 | 6 | Butterworth Low-pass | Frequency-domain | Precise cutoff frequency, zero-phase no delay | Joint data (recommended) |
 | 7 | Wavelet Denoising | Frequency-domain | Multi-scale separation, automatic noise level estimation | Fine joints / compound noise |

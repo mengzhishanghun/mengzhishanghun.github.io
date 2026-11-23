@@ -11,9 +11,9 @@ workIds:
   - mcp-material
 docPage:
   work: mcp-material
-  group: editing
+  group: features
   slug: edit-graph
-  order: 1
+  order: 3
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-material/docs/edit-graph/
 lang: zh
@@ -24,7 +24,7 @@ translationKey: doc:mcp-material:edit-graph
 
 `SearchMaterialExpressions` 返回稳定的 `ClassPath`、`Creatable`、不可创建原因以及输入/输出索引。短类名发生碰撞时，`ApplyMaterialPatch` 会拒绝猜测并要求精确 `ClassPath`；同名 Pin 必须使用 `[index]` 寻址。
 
-`GetMaterialDetail` 对节点使用 `NodeOffset`/`MaxNodes`、对连接使用 `ConnectionOffset`/`MaxConnections`； 响应返回总数、当前返回数和下一游标；每页最多 1000 项。
+`GetMaterialDetail` 对节点使用 `NodeOffset`/`MaxNodes`、对连接使用 `ConnectionOffset`/`MaxConnections`。响应会给出总数、当前返回数和下一游标，每页最多 1000 项。节点和连线分别翻页，找到目标节点后也要确认相关连接都已读到。
 
 ## 修改材质图
 
@@ -42,7 +42,7 @@ translationKey: doc:mcp-material:edit-graph
 
 调用 `GetMaterialDetail` 并设置 `IncludeEditableProperties: true`，可读取当前节点页的 `EditableProperties`（`Name`、`Type`、`ValueText`、`Editable`）和实际 `Inputs`/`Outputs`（`Index`、`Name`、数值形式的材质值 `Type`）。根响应还会包含材质的 `EditableMaterialProperties`。属性描述中的 `Type` 是 UE C++ 类型，`ValueText` 使用 UE 文本格式；`Editable` 同时反映服务端支持范围和当前属性组合。省略该开关时，响应保持原有结构。
 
-使用查询得到的节点 GUID 原位修改属性：
+找到要改的节点后，先在读回结果中确认目标属性可编辑，再把该节点的 GUID 填入请求。下面的示例原位修改一个节点的默认值：
 
 ```json
 {

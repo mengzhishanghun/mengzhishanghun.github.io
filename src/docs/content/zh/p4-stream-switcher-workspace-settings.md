@@ -11,9 +11,9 @@ workIds:
   - p4-stream-switcher
 docPage:
   work: p4-stream-switcher
-  group: workspaces
+  group: features
   slug: workspace-settings
-  order: 1
+  order: 3
 documentKind: product-manual
 websiteRoute: /zh/works/p4-stream-switcher/docs/workspace-settings/
 lang: zh
@@ -29,7 +29,7 @@ translationKey: doc:p4-stream-switcher:workspace-settings
 | 工作区目录 | 点击选择目录；按流缓存路径，界面区分路径来源，自动生成的默认路径需要确认。 |
 | 创建 P4CONFIG | 默认启用，切换时创建或更新根目录 .p4config，写入服务器、用户、客户端。其他命令要读取它，仍需相应的 P4CONFIG 环境配置。 |
 | 自动删除空文件夹 | 默认启用；修改时会更新当前标识下本地工作区的 rmdir 选项，同步时清理空目录。 |
-| 换行符 | 选择 local、unix、mac、win 或 share，默认 win，按团队客户端规范选择；设置会保存并用于新建工作区；启动时还会按保存值检查并修正当前标识下已有本地工作区的换行符。 |
+| 换行符 | 按团队客户端规范选择 local、unix、mac、win 或 share，默认 win。新建工作区使用已保存的设置。工具启动时也会按该设置检查并修正当前标识下已有本地工作区的换行符设置。 |
 | 状态与日志 | 查看服务器、用户、已用/最大工作区数、进度及信息、警告、错误日志。 |
 
 ## 本机配置保存与标识排查

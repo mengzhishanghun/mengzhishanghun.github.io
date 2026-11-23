@@ -11,9 +11,9 @@ workIds:
   - mcp-world-editor
 docPage:
   work: mcp-world-editor
-  group: world-partition
+  group: features
   slug: level-instances
-  order: 4
+  order: 15
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-world-editor/docs/level-instances/
 lang: zh
@@ -25,6 +25,8 @@ translationKey: doc:mcp-world-editor:level-instances
 `ManageLevelInstance` 的 `Action=Query` 可列出实例。`Create` 需要 `ActorNames` 与新的 `/Game/...` `LevelPackagePath`；先预览，再用 `ExpectedHash` 执行。创建时先保存新目标关卡，但源关卡仍为 dirty：结果的 `SourceSaved=false` 与 `PendingSavePackages` 指明待保存包。移除源 Actor 前会检查已知已加载硬引用；未加载引用与软引用不扫描。阅读 `SoftReferenceRisk`，在预览与正式执行中设置 `bAcknowledgeUnscannedSoftReferences=true`，使用包含该确认的预览哈希，并另行保存报告的源包。创建失败可能留下目标地图或部分源变更，重试前先检查返回状态。
 
 对精确 `InstanceActor` 使用 `EnterEdit`；返回的 `OperationId` 代表编辑会话，`MoveActors`、`Commit`、`Discard` 均须传入。`MoveActors` 先预览 Actor 批次，以新的 `ExpectedHash` 执行。`Break` 将实例展开为 Actor。`PackBlueprint` 在精确的 `/Game/...` `BlueprintPath` 创建或更新 Packed Level Actor Blueprint；`bPendingSave=true` 表示仍需保存 Blueprint。这些操作不代表源关卡或全部结果资产已保存。
+
+创建前先确认 Actor 批次和新关卡路径。目标关卡已保存时，仍要按返回的待保存清单检查源关卡。进入实例编辑后，保留当前会话的操作 ID，直到用它选择提交或放弃。
 
 ## Packed Blueprint 的保存与撤销
 

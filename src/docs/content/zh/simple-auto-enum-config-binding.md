@@ -11,7 +11,7 @@ workIds:
   - simple-auto-enum
 docPage:
   work: simple-auto-enum
-  group: enum-binding
+  group: features
   slug: config-binding
   order: 1
 documentKind: product-manual
@@ -99,7 +99,7 @@ enum class EDemo_StandardWeapons : uint8
 SIMPLE_BIND_ENUM_TO_CONFIG(EDemo_StandardWeapons, None, Max, USimpleAutoEnumTestSettings, Demo_PrimaryWeaponsArray);
 ```
 
-最常见的模式,一个枚举绑定一个配置数组。
+这个示例用一个配置数组填充一个枚举的指定范围。
 
 ```cpp
 // 1. 定义枚举框架
@@ -270,6 +270,8 @@ Begin, 普通, 优秀, 稀有, 史诗, 传说, End
 插件支持以下三种常见使用模式。
 
 ## 设置并核对枚举边界
+
+比较配置与运行值时，逐段核对：边界项应保留，配置项出现在预期的范围内。如果某个值未出现，先查空字符串、重复项和边界，再看日志。
 
 ```cpp
 // 标准模式

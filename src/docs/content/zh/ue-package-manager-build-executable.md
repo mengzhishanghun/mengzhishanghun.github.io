@@ -12,9 +12,9 @@ workIds:
   - ue-package-manager
 docPage:
   work: ue-package-manager
-  group: source
+  group: features
   slug: build-executable
-  order: 1
+  order: 5
 documentKind: product-manual
 websiteRoute: /zh/works/ue-package-manager/docs/build-executable/
 lang: zh
@@ -22,6 +22,8 @@ translationKey: doc:ue-package-manager:build-executable
 ---
 
 ## 从源码运行
+
+先在工具源码目录按 `environment.yml` 创建并激活 Conda 环境，再进入要处理的 UE 项目目录。示例中的两个绝对路径分别指向 UE 项目和工具源码，运行时换成你的实际路径。
 
 ```bat
 conda env create -f environment.yml
@@ -34,6 +36,8 @@ python E:\Tools\UEPackageManager\Main.py validate --project-root E:\Projects\MyG
 Windows也可双击 `Run.bat` 启动GUI，或使用 `CLI.bat` 运行命令。
 
 ## 构建单文件 EXE
+
+在工具源码目录运行构建命令：
 
 ```bat
 Build.bat

@@ -21,12 +21,13 @@ links:
   - label: Original article on CNBlogs
     href: https://www.cnblogs.com/mengzhishanghun/p/19136345
 docIds:
+  - simple-auto-enum-quickstart
   - simple-auto-enum-config-binding
   - simple-auto-enum-blueprints-and-assets
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: 109555eb2e93cbfd23ff7ba7e5a1de9435514d4cbf35a2b803d334253a4e51e5
+sourceHash: edd0f56136bed23fafabb99a7df5452fc691e5a3d0d850a658eac4fcccab7ea6
 translationStatus: translated
 generatedBodyHash: f830144ffe263c8fd3cb96623beb986abd75817118ea102665f8dfbb5b2d7be6
 workInfo:
@@ -34,7 +35,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/2d104382-60b1-4da6-86c6-ed93997f9c0a
     - kind: docs
-      href: /en/works/simple-auto-enum/docs/config-binding/
+      href: /en/works/simple-auto-enum/docs/quickstart/
   compatibility:
     - platforms:
         - Windows (Win64)

@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/class-defaults/
 lang: en
 translationKey: doc:mcp-blueprint:class-defaults
-sourceHash: ccb76d653cf431401d3c88f7a61d4cac7329b263503314d3641454e7f72bda96
+sourceHash: 09ef9f0e746d0e9d3c6ea5c3fac57979c650a20845a524097069cae941ecf760
 translationStatus: translated
-generatedBodyHash: 422b71fb9dc479e6ff4d2bd045006f7085334c55c0ca80ca3c6a3714979fc36d
+generatedBodyHash: 1ac5f49f0344b29ec12129296c6eabf393f0605fe054ba94c7a58cbd7d53b9e2
 docPage:
   work: mcp-blueprint
-  group: class-structure
+  group: features
   slug: class-defaults
-  order: 2
+  order: 11
 ---
 
 ## Find editable class properties
@@ -32,6 +32,6 @@ docPage:
 
 ## Edit the class default object and inherited properties
 
-Use `GetClassDefaults` to find editable, case-sensitive reflected property names. Supply a UE-text `Properties` map, such as `bReplicates: "True"` or `JumpMaxCount: "2"`. This changes the Blueprint CDO defaults used by future placed or spawned instances without overrides; it does not retroactively replace existing instance values. It can also access properties inherited from a C++ or Blueprint parent, which `ModifyVariable` cannot edit as declarations. Use `SaveAsset` when you want to keep the change.
+Look up the property with `GetClassDefaults` and use the name as returned. Names are case-sensitive. Supply a UE-text `Properties` map, such as `bReplicates: "True"` or `JumpMaxCount: "2"`. This changes the Blueprint CDO defaults used by future placed or spawned instances without overrides; it does not retroactively replace existing instance values. It can also access properties inherited from a C++ or Blueprint parent, which `ModifyVariable` cannot edit as declarations. Use `SaveAsset` when you want to keep the change.
 
-Blueprint CDO defaults are separate from the variable-declaration metadata that `ModifyVariable` edits.
+Use the class-default tools for values on the generated class. Use `ModifyVariable` for variable declaration metadata, or `SetComponentProperties` for an SCS component template added by this Blueprint.

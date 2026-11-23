@@ -13,30 +13,30 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/graph-screenshots/
 lang: en
 translationKey: doc:mcp-blueprint:graph-screenshots
-sourceHash: dc6d18d2873374bf6469edacc0c451871295404b3780f1e4268bbd5ca57ee716
+sourceHash: ce63cd4089ded018df06e73227e8be2507dbc1291b10bec091ec50d0c678ff9b
 translationStatus: translated
-generatedBodyHash: 8fb60086e13edc87f192ff0d4538c3923f7a78d38272bc3856605a845f8e4878
+generatedBodyHash: 23cf06eded0f6e88222276c9d0f6f56c5469127f8af43af79d1f019ad7c3915c
 docPage:
   work: mcp-blueprint
-  group: assets-graphs
+  group: features
   slug: graph-screenshots
   order: 3
 ---
 
 ## Open and capture the graph
 
-Call `OpenAsset` before `CaptureGraphScreenshot`. Capture the full graph, focus on a node, or reuse a specified viewport. Check that titles, pins, and links are readable before sharing.
+Open the Blueprint with `OpenAsset`. Open the graph you want, then call `CaptureGraphScreenshot`. Capture the full graph to show its structure, focus on a node to show its connections, or reuse a specified viewport. Check that titles, pins, and links are readable before sharing.
 
 The screenshot tool requires an initialized Blueprint graph editor widget. It rejects requests when the graph editor is closed or its widget has zero size.
 
 ## Calculation function screenshot
 
-`CalculateScore` adds `BaseScore` and `Bonus`, then multiplies the result by `Multiplier`.
+Read `CalculateScore` from left to right: Add combines `BaseScore` and `Bonus`, Multiply scales the sum by `Multiplier`, and the return node is at the far right.
 
 ![CalculateScore graph](/media-occurrence/doc%3Amcp-blueprint%3Agraph-screenshots%3Amedia%3A1)
 
 ## Complete order settlement graph screenshot
 
-`EvaluateOrderBatchV2` keeps order totals, discounts, shipping, tax, points, risk scoring, and the final result in one connected function graph.
+`EvaluateOrderBatchV2` keeps order totals, discounts, shipping, tax, points, risk scoring, and the final result in one graph. Use the colored comment boxes to find each part of the calculation before zooming in on nodes and connections.
 
 ![Order settlement graph](/media-occurrence/doc%3Amcp-blueprint%3Agraph-screenshots%3Amedia%3A2)

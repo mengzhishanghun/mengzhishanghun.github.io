@@ -12,7 +12,7 @@ workIds:
   - ue-package-manager
 docPage:
   work: ue-package-manager
-  group: setup
+  group: getting-started
   slug: install-and-detect
   order: 1
 documentKind: product-manual
@@ -23,7 +23,7 @@ translationKey: doc:ue-package-manager:install-and-detect
 
 ## 下载并运行 UEPackageManager
 
-从 [Releases](https://github.com/MZSH-Tools/UEPackageManager/releases/latest) 下载 `UEPackageManager.exe`。
+从 [Releases](https://github.com/MZSH-Tools/UEPackageManager/releases/latest) 下载 `UEPackageManager.exe`。如果准备双击启动，先把它放到包含 `.uproject` 的项目根目录。
 
 - 不带参数双击 EXE：隐藏控制台并打开图形界面。
 - 在终端中带子命令运行：保留控制台和命令行输出。

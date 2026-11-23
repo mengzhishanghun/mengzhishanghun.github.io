@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: 9ac46cf7619a77827e6302858dd033bde28115a16350965c10e3aa60ab571b9a
+sourceHash: 25c0ac79e67d9f2e0dc74c1d79c2aeec9b2bd11be0e4f4322aee2b9291e7a739
 translationStatus: translated
 generatedBodyHash: 974dec6056db37d5159f2674049ffe0882868a5e58bfa73bae46f547fa6b6672
 workInfo:
@@ -28,7 +28,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/320c7471-92b8-4a3e-a88a-2a5fcb98d620
     - kind: docs
-      href: /en/works/simple-bp-inherit-fix/docs/find-components/
+      href: /en/works/simple-bp-inherit-fix/docs/quickstart/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -39,6 +39,7 @@ workInfo:
 websiteCoverUrl: /media/covers/works/simple-bp-inherit-fix-20261101.webp
 coverAlt: SimpleBPInheritFix cover
 docIds:
+  - simple-bp-inherit-fix-quickstart
   - simple-bp-inherit-fix-find-components
   - simple-bp-inherit-fix-repair-components
 ---

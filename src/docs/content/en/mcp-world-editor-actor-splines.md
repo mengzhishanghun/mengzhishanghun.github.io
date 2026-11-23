@@ -13,18 +13,20 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-world-editor/docs/actor-splines/
 lang: en
 translationKey: doc:mcp-world-editor:actor-splines
-sourceHash: ae34220eb80d97b33b874fe20d6ced06fc572eaf5d61b2102c6caf719368b135
+sourceHash: 1a5d41c950c0667954b9c2d370a8869bbb8a9a91cce6c25029c34a41afc2aae3
 translationStatus: translated
-generatedBodyHash: af8d740e35adbd52bbbe70fc1bd1ad0eedb5fd43a774b9c2eaf2877c5e78f31c
+generatedBodyHash: c9bd91f3fb430ab7b44f83cfdd1c9cffdca423d77808be015192bcfc0ac685b0
 docPage:
   work: mcp-world-editor
-  group: actors
+  group: features
   slug: actor-splines
-  order: 4
+  order: 9
 ---
 
 ## Read and edit spline points
 
-For an ordinary spline component, call `GetSplineData` with `ActorName`, exact `ComponentName`, and optional `CoordinateSpace=Local|World`. Pass its `SnapshotHash` to `ApplySplinePatch` with an ordered `Operations` array (`Add`, `Remove`, `SetLocation`, `SetTangents`, `SetRotation`, `SetScale`, `SetType`, or `SetClosedLoop`). Preview first; execution needs `bDryRun=false` and the preview `PlanHash`. Insertion and deletion shift later indices in the same patch. `SetSplineMesh` edits one spline-mesh component with local `Start`, `StartTangent`, `End`, and `EndTangent`; optional scales, roll, forward axis, and static mesh can be supplied. Landscape splines use the separate tools below.
+For an ordinary spline component, call `GetSplineData` with `ActorName`, exact `ComponentName`, and optional `CoordinateSpace=Local|World`. Pass its `SnapshotHash` to `ApplySplinePatch` with an ordered `Operations` array (`Add`, `Remove`, `SetLocation`, `SetTangents`, `SetRotation`, `SetScale`, `SetType`, or `SetClosedLoop`). Preview first; execution needs `bDryRun=false` and the preview `PlanHash`. Insertion and deletion shift later indices in the same patch. `SetSplineMesh` edits one spline-mesh component with local `Start`, `StartTangent`, `End`, and `EndTangent`; optional scales, roll, forward axis, and static mesh can be supplied. For Landscape splines, use the tools in “Edit Landscape Splines.”
 
 `ApplySplinePatch` supports Blueprint SCS spline components and verifies the current component again after construction reruns. It rejects splines already modified by a construction script or configured to pass their points to that script. A reconstruction or readback failure may retain changes in the Undo transaction; inspect the reported state before retrying.
+
+For example, if you remove a point and then edit a later point, use its index after the removal. Read the spline back afterward and check the points, their order, and whether the loop is closed.

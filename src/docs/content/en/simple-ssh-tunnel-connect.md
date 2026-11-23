@@ -12,12 +12,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-ssh-tunnel/docs/connect/
 lang: en
 translationKey: doc:simple-ssh-tunnel:connect
-sourceHash: 9d32c37528fcd5fc5d77215928fc69366d5f6b7aae94c310d81d15733fbdd9fe
+sourceHash: 0cfefbd71056bbd7c34012e522566962545c2150c7abd07d867e55404fcf68cf
 translationStatus: translated
-generatedBodyHash: 1c590e15aebca3f8761093a76234583cc8697e5a60ad6d9616d7f8d6259dcc01
+generatedBodyHash: a6d4774c1fb9782f4240fa878052ffc76b19090bceddbf64d5d98c7cd4221ee5
 docPage:
   work: simple-ssh-tunnel
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 ---
@@ -35,6 +35,8 @@ Set the connection parameters in Project Settings and manage tunnels in Blueprin
 
 ## Connection parameters
 
+Distinguish the three endpoints. The local settings tell the UE app where to connect, the remote settings identify the service it needs, and the SSH settings identify the server and account used to open the tunnel. Once the tunnel is running, connect the app to the local endpoint and check that it can reach the service.
+
 1. Open **Project Settings** in Unreal Engine editor.
 2. Navigate to **Engine → Simple SSH Tunnel** in the left panel.
 3. Configure the following parameters:
@@ -50,7 +52,7 @@ Set the connection parameters in Project Settings and manage tunnels in Blueprin
 
 Set **Subsystem Class** if you need to replace the default subsystem.
 
-All settings are saved in `DefaultSimpleSSHTunnel.ini` and automatically applied at engine startup.
+The plugin saves these settings in `DefaultSimpleSSHTunnel.ini`. The engine applies them at startup.
 
 ## Interface language
 

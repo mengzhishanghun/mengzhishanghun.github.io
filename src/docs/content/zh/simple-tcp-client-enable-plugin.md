@@ -10,7 +10,7 @@ workIds:
   - simple-tcp-client
 docPage:
   work: simple-tcp-client
-  group: setup
+  group: getting-started
   slug: enable-plugin
   order: 1
 documentKind: product-manual
@@ -34,4 +34,6 @@ translationKey: doc:simple-tcp-client:enable-plugin
 
 ## 首次连接
 
-启用插件后，前往 **项目设置 → SimpleTCPClient Settings**，按[连接设置](/zh/works/simple-tcp-client/docs/connect/)创建通道。
+先让目标 TCP 服务开始监听。通道建好后可由自动连接启动，也可以从蓝图手动启动；继续测试收发前，先查看该通道是否已连接。
+
+打开 **项目设置 → SimpleTCPClient Settings**，按[连接设置](/zh/works/simple-tcp-client/docs/connect/)创建通道。

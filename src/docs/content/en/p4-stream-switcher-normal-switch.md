@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-stream-switcher/docs/normal-switch/
 lang: en
 translationKey: doc:p4-stream-switcher:normal-switch
-sourceHash: 85133f38590bb82bdbb49286615de05243bbf204a8899c3a4f68a5d7fb1fed81
+sourceHash: e46799a1efbb4e55f29323aff93f3a1f68d8b59aeb8c451cff880edab0d0da7b
 translationStatus: translated
-generatedBodyHash: b6827799a53d2b05831fc992ee5b7dc94074461f5783a13938521da413f6ac58
+generatedBodyHash: d011a659fdec9f3d5daccaa334e3f9ba8390a85475b986373babb9644bf4159c
 docPage:
   work: p4-stream-switcher
-  group: switching
+  group: features
   slug: normal-switch
   order: 1
 ---
@@ -27,9 +27,9 @@ docPage:
 
 1. Enter and save a unique workspace tag. If another host uses it, choose a different tag or coordinate with its user first.
 2. Select the project and branch and check the workspace name. Black indicates an existing workspace; gray indicates one the tool will create.
-3. Choose a local directory. Before using an existing directory, back up the files you need. To use the local files as the source of truth, use [offline directory mode](/en/works/p4-stream-switcher/docs/offline-switch/).
+3. Choose a local directory. If you reuse a directory, back up the files you need first. Normal sync removes some local files and may overwrite files that differ from the target revision. To keep the local files as the starting point for reconciliation, use [offline directory mode](/en/works/p4-stream-switcher/docs/offline-switch/).
 4. Check the pool limit, .p4config, rmdir, and line ending settings.
-5. Click the switch and open P4V action, then confirm the default or newly created directory when prompted.
+5. Click `切换并打开 P4V` (Switch and open P4V), then confirm the default or newly created directory when prompted.
 6. In P4V, check the active client and changelist.
 
 ## Open an existing workspace and resynchronize

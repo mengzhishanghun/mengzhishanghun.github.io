@@ -23,8 +23,8 @@ tags:
   - Background tasks
 lang: en
 translationKey: shaniu
-sourceHash: e108200f55f87e9c7d74f165911e460eb5c2f16d57a11ffe513130c7be6d5b84
-generatedBodyHash: af5786d5fbe44966d76e2729296e7700dbc62e03da87a0ce470b2d548c3a31eb
+sourceHash: 6dee20070076bf73284965bb99015db0647ab9684a452a06710c5e6658ab5b11
+generatedBodyHash: 55066d53e29025c5aa678aa4386ed14725b85c8bf33aefbe13bf826ebdf22b42
 translationStatus: translated
 coverAlt: ShaNiu cover
 websiteCoverUrl: /media/covers/works/shaniu-20261101.webp
@@ -32,11 +32,11 @@ websiteCoverUrl: /media/covers/works/shaniu-20261101.webp
 
 ## About this work
 
-A locally running AI butler bringing continuous conversations, background tasks, execution review and result previews into one interface. It is currently in development and testing.
+ShaNiu is an AI assistant that runs on your machine. Its local web interface lets you continue conversations, follow background tasks, review actions, and preview results.
 
 ## Current direction
 
-ShaNiu runs in the background on the local machine, with a local web interface for conversations and tasks. Conversations, background execution, authorization and review records, and result previews share one workflow so tasks can be followed over time.
+Background tasks run locally. You can follow the conversation, check authorization and review records, and preview the results in the same task workflow.
 
 ## Development status
 

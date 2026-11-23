@@ -11,7 +11,7 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: widgets-layout
+  group: features
   slug: layout
   order: 1
 documentKind: product-manual
@@ -21,6 +21,8 @@ translationKey: doc:mcp-umg:layout
 ---
 
 ## 查找控件与编辑结构
+
+先用 `ListWidgetBlueprints` 找到资产，再用 `GetWidgetTree` 确认控件的准确名称和直接父级。改控件自身的值时，先用 `GetWidgetProperties` 看当前属性；改它在父容器里的位置或对齐时，先确认父容器对应的 Slot 类型。
 
 | 工具 | 用途 |
 | --- | --- |
@@ -74,7 +76,7 @@ hAlign 为 Left/Center/Right/Fill，vAlign 为 Top/Center/Bottom/Fill。padding 
 
 Canvas 未拉伸的轴：right/bottom 是宽高；拉伸轴：right/bottom 是原生 UMG 的右/下边距。坐标相对于直接父容器，不是整个屏幕。sizeBox null 清除覆盖并不等于宽高0；省略字段保留当前值。
 
-dryRun 验证参数、类型和适用目标，不执行实际排版；成功不证明无重叠。正式执行把 dryRun 改为 false，读回 GetWidgetProperties，验证后 SaveWidgetBlueprint 精确保存。
+dryRun 只检查参数、类型和目标是否适用，不执行排版。通过预检后，还要看实际布局中控件会不会重叠。正式执行把 dryRun 改为 false，读回 GetWidgetProperties，验证后 SaveWidgetBlueprint 精确保存。
 
 ## 创建、配置和保存 Widget Blueprint
 

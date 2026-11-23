@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-case-sync/docs/setup/
 lang: en
 translationKey: doc:p4-case-sync:setup
-sourceHash: 5576811874d11eabcce5e522b29b650c99d42316a6baf0b7a2360345353c0fcd
+sourceHash: 97b5557004853443e532c2e2623c0b9be7e3902e68ebe4f95c5951f706233ce7
 translationStatus: translated
-generatedBodyHash: ed5bdc84ab901a5e95351af496508567f07e6a3c0ded1cfb01ec8a4b008264fb
+generatedBodyHash: 3ae83f71d4ec14fdaaa924fc9f597daa62e5213e1aaf5eb8649d380dca1d47af
 docPage:
   work: p4-case-sync
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 ---
@@ -33,7 +33,7 @@ docPage:
 
 ## Get the Source
 
-Replace the `<your-org-or-user>` placeholder with the repository owner before running the example.
+Replace `<your-org-or-user>` with the actual repository owner, then run these commands to clone the source and enter the project directory.
 
 ```bash
 git clone https://github.com/<your-org-or-user>/P4CaseSync.git
@@ -42,7 +42,7 @@ cd P4CaseSync
 
 ## Install Dependencies
 
-Choose either environment below. Running the tool only requires Python’s standard library and the `p4` CLI. PyInstaller is for building the EXE.
+Prepare an environment with either method below. The tool needs the Python standard library and a working `p4` command. You only need PyInstaller to build the EXE.
 
 ## Set Up with Conda
 

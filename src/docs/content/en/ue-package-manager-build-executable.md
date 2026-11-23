@@ -14,17 +14,19 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-package-manager/docs/build-executable/
 lang: en
 translationKey: doc:ue-package-manager:build-executable
-sourceHash: 0e25575e6009d8564c5ef5d8ec56695339332065df8020b576c2731a20bfdfd4
+sourceHash: f3fd8eb83492dbc832172035132ffbc5c60be776c8e5945413659bd74933529e
 translationStatus: translated
-generatedBodyHash: 753afbcc6c30278d2eb76099a4581487dc81ae766f54d2d27d503253b177abe4
+generatedBodyHash: 307cd27f8dbdfd39e992ba63ac6aaced1d9a884d3c8ff4bc746a4ba939a13e80
 docPage:
   work: ue-package-manager
-  group: source
+  group: features
   slug: build-executable
-  order: 1
+  order: 5
 ---
 
 ## Run from source
+
+Create and activate the Conda environment from `environment.yml` in the tool’s source directory, then switch to the UE project directory. Replace the two absolute paths in the example with your own paths to the UE project and the tool’s source.
 
 ```bat
 conda env create -f environment.yml
@@ -36,6 +38,8 @@ python E:\Tools\UEPackageManager\Main.py validate --project-root E:\Projects\MyG
 On Windows, you can also double-click `Run.bat` to launch the GUI or use `CLI.bat` to run commands.
 
 ## Build a single-file EXE
+
+Run the build command from the tool’s source directory:
 
 ```bat
 Build.bat

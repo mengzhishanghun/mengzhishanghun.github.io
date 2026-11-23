@@ -10,7 +10,7 @@ workIds:
   - simple-launcher
 docPage:
   work: simple-launcher
-  group: process-control
+  group: features
   slug: presets
   order: 1
 documentKind: product-manual
@@ -20,6 +20,8 @@ translationKey: doc:simple-launcher:presets
 ---
 
 ## 设置预设字段
+
+先确定预设要启动哪个程序、程序从哪个目录读取相对路径，以及游戏退出后进程是否仍需运行。填写后核对预设名，启动接口按这个名字查找。
 
 打开 **项目设置 → Plugins → Simple Launcher**，在 Launchers 中添加预设。例如，将 `Key` 设为 `MyServer`，把 `CommandLine` 设为 `notepad.exe` 或 `python script.py`。
 
@@ -54,7 +56,7 @@ Launchers:
 
 ### Key（预设名称）
 
-此预设的名称。所有 API 通过此名称引用预设。
+在设置和 API 调用中，用同一个名称指向该预设。
 
 - 使用任意名称，如 `MyServer`、`Logger`、`DataSync`
 - 名称在所有预设中必须唯一

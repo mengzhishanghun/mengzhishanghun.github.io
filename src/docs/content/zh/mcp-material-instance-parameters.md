@@ -11,9 +11,9 @@ workIds:
   - mcp-material
 docPage:
   work: mcp-material
-  group: editing
+  group: features
   slug: instance-parameters
-  order: 2
+  order: 4
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-material/docs/instance-parameters/
 lang: zh
@@ -26,7 +26,7 @@ translationKey: doc:mcp-material:instance-parameters
 
 新列表独立使用同一组 `Offset`、`MaxResults`，计数字段为 `StructuredTotalCount`、`StructuredReturned`、`StructuredOffset`。`SupportedParameterTypes` 不分页：UE 5.2–5.4 支持九类，5.5–5.6 增加 TextureCollection，5.7+ 增加 ParameterCollection。排序依次为 Scalar、Vector、DoubleVector、Texture、Font、RuntimeVirtualTexture、SparseVolumeTexture、StaticSwitch、StaticComponentMask、TextureCollection、ParameterCollection，再按 Association、Index、名称排序。
 
-`SetInstanceParameters` 接受 1–1000 个完整身份及值：
+先在返回列表里选中要改的那一行，按其中的类型、名称、Association 和 Index 定位参数。即使同名参数分别出现在全局和材质层中，也应使用目标行的完整身份。`SetInstanceParameters` 接受 1–1000 项，每项都要提供完整身份和新值：
 
 ```json
 {"AssetPath":"/Game/Materials/MI_Example","Parameters":[{"Type":"Scalar","Name":"Amount","Association":"Global","Index":-1,"Value":0.5}]}

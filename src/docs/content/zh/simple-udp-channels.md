@@ -10,7 +10,7 @@ workIds:
   - simple-udp
 docPage:
   work: simple-udp
-  group: network
+  group: features
   slug: channels
   order: 1
 documentKind: product-manual
@@ -48,6 +48,8 @@ translationKey: doc:simple-udp:channels
 
 ## 在蓝图中读取和更新通道
 
+更新前先用对应的读取节点查看通道是否已存在、当前监听或发送配置是什么。更新后再读一次，核对通道名称、地址和端口，避免改错同类通道。
+
 | 节点                           | 说明                                          |
 |-------------------------------|-----------------------------------------------|
 | `UpdateReceiveChannelConfig`  | 创建/更新接收通道（如需要会重新绑定）            |
@@ -61,7 +63,7 @@ translationKey: doc:simple-udp:channels
 
 ![](/media-occurrence/doc%3Asimple-udp%3Achannels%3Amedia%3A1)
 
-如需要 Socket 会自动重建。函数调用顺序无关紧要。  
+需要重新绑定时，插件会重建 Socket。这里的函数调用不要求固定顺序。  
 
 两个布尔值控制是覆盖现有通道还是添加新通道。
 

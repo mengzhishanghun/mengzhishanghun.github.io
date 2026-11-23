@@ -12,12 +12,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-websocket/docs/configure-connections/
 lang: en
 translationKey: doc:simple-websocket:configure-connections
-sourceHash: 692b5690be058b4edeb263cfe14ea1160302589885351ac9f9baa728a0080ee3
+sourceHash: 5a81624b45541f6b8a70fbc783696f08abf66adea4262dbc8f837989a5aebef5
 translationStatus: translated
-generatedBodyHash: 95e8e4d089bac23660703e2f07d4a3e1287edf5c95d64916dfc1e71e2b3aea2e
+generatedBodyHash: 7bdbbdabd44745e33650c245124ce24558344673136a8b8b13f0bd2d2759e8d6
 docPage:
   work: simple-websocket
-  group: setup
+  group: getting-started
   slug: configure-connections
   order: 1
 ---
@@ -33,9 +33,11 @@ Open **Edit → Project Settings**, select the SimpleWebSocket settings page, an
 
 ## Add a named connection
 
+Keep the configuration name and use it again in Blueprint. For a service on the same machine, use the port it actually listens on. If **Auto Connect** is off, initiate the connection from Blueprint.
+
 1. Enable the plugin in Unreal Engine Editor.  
 2. Go to `Edit > Project Settings`  
-3. Scroll down and find `Simple WebSocket Settings`  
+3. Scroll to `Simple WebSocket Settings` and open it  
 4. Add a new WebSocket connection entry (e.g., named `Test`)  
 5. Enter the WebSocket address (recommended format: `ws://127.0.0.1:xxxx`)  
 6. Enable **Auto Connect** (optional; if enabled, the connection will be established automatically at runtime)

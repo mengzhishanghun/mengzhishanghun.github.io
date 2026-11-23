@@ -10,7 +10,7 @@ workIds:
   - simple-ssh-tunnel
 docPage:
   work: simple-ssh-tunnel
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 documentKind: product-manual
@@ -32,6 +32,8 @@ UE 应用有时需要访问远程数据库、API 或内网服务，直接把服�
 
 ## 连接参数
 
+先区分三组地址：本地参数决定 UE 应用连接哪个监听地址和端口；远程参数指向要访问的服务；SSH 参数用于登录建立隧道的服务器。创建隧道后，应让应用连接本地端点，再验证目标服务能否访问。
+
 1. 在 Unreal Engine 编辑器中打开 **项目设置**。
 2. 在左侧面板导航至 **Engine → Simple SSH Tunnel**。
 3. 配置以下参数：
@@ -47,7 +49,7 @@ UE 应用有时需要访问远程数据库、API 或内网服务，直接把服�
 
 如需替换默认子系统，可设置 **Subsystem Class**。
 
-所有设置保存在 `DefaultSimpleSSHTunnel.ini` 中，引擎启动时自动应用。
+设置都保存在 `DefaultSimpleSSHTunnel.ini` 中，引擎启动时会自动应用。
 
 ## 界面语言
 

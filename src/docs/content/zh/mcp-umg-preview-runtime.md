@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: preview-diagnostics
+  group: features
   slug: preview-runtime
-  order: 1
+  order: 15
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/preview-runtime/
 lang: zh
@@ -21,6 +21,8 @@ translationKey: doc:mcp-umg:preview-runtime
 ---
 
 ## 离屏预览
+
+先决定要看哪种画面。需要检查编译后界面的初始外观或样本数据时，用离屏预览；需要看 PIE/Game 已显示的内容时，截取现有实例。要比较空列表和有数据的列表，可以在同一组尺寸下批量预览。
 
 列表样本使用临时资产副本，不把原资产直接交给列表条目。副本引用的外部资源仍可能共享；Widget 生命周期与列表回调可以运行项目代码，这不是脚本沙箱。用于预览的业务逻辑应无副作用。
 
@@ -91,7 +93,7 @@ Widget Material 动画会为轨道实际使用的每个材质位置创建独立�
 }
 ```
 
-这仍是 `TemporaryNewInstance` 设计态预览，不代表 PIE/Game 运行状态。当前阶段不接受动画时间参数，避免在跨 UE 版本时把未实际评估的动画帧误报为截图结果。
+批量预览仍在设计态创建临时实例，状态为 `TemporaryNewInstance`，不能用它判断 PIE/Game 的实际画面。目前不能指定动画时间来截取某一帧。
 
 ## 截取正在运行或设计中的控件
 

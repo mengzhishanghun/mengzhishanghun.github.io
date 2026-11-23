@@ -13,17 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/layout/
 lang: en
 translationKey: doc:mcp-umg:layout
-sourceHash: 08d98341c272db7d782d9b2d41e1b56072be3f60334d0060aff62f1a56d0d214
+sourceHash: 5f5c1e3a67096d12cedc822df83c6ffe229aefa13b52d4232544d2594cd7bf46
 translationStatus: translated
-generatedBodyHash: 6c52d29f6c2c50523932c6ac3132ecd93a2656c8da5ffa28f08d0cbc1c703dfc
+generatedBodyHash: 7fe70b17fad369d8c3bdd7b3e8bcdb896a7c0c5b93ff656c93e4d255516997f3
 docPage:
   work: mcp-umg
-  group: widgets-layout
+  group: features
   slug: layout
   order: 1
 ---
 
 ## Find widgets and edit their structure
+
+Find the asset with `ListWidgetBlueprints`, then use `GetWidgetTree` to check the widget’s exact name and immediate parent. Use `GetWidgetProperties` to read the current values before editing the widget itself. For position or alignment changes, first check which slot type its parent uses.
 
 | Tool | Purpose |
 | --- | --- |
@@ -77,7 +79,7 @@ hAlign accepts Left/Center/Right/Fill; vAlign accepts Top/Center/Bottom/Fill. Bo
 
 On an unstretched Canvas axis, right/bottom mean width/height. On a stretched axis, they are native UMG right/bottom margins. Coordinates are relative to the immediate parent container, not the whole screen. Setting a sizeBox override to null clears it; it does not set width or height to zero. Omitted fields retain their values.
 
-dryRun validates parameters, types and applicable targets without performing layout; success does not establish that there is no overlap. Change dryRun to false to apply, read back with GetWidgetProperties, then check the result and save exactly that Blueprint with SaveWidgetBlueprint.
+dryRun checks the parameters, types, and target compatibility without laying out the widgets. After a successful dry run, check the rendered layout for overlaps. Change dryRun to false to apply, read back with GetWidgetProperties, then check the result and save exactly that Blueprint with SaveWidgetBlueprint.
 
 ## Create, configure, and save a Widget Blueprint
 

@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/connect/
 lang: en
 translationKey: doc:mcp-blueprint:connect
-sourceHash: 19434eb56c97fb145fd07ede5e4ce2b3e7e0845ac35821dab62d3c90eeb59c52
+sourceHash: 2649e8c9615f9a0ce8d1129d2da1ab4ab5e8fef83377d0fea5756c8aea617c94
 translationStatus: translated
-generatedBodyHash: 7fc13bb94bd85667199b9866a0cccc5fe3447e959ac511ac9911a421b8d2e00f
+generatedBodyHash: ec658aa2f0a978ef9fbe89b6b37ad0b542584596fb62f6e60c6b361fb51c2d4b
 docPage:
   work: mcp-blueprint
   group: getting-started
@@ -41,7 +41,7 @@ MCPBlueprint is an optional editor tool installed with the engine. Its `.uplugin
 
 MCPBlueprint enables itself automatically. With Auto Start enabled, its local MCP server starts with the editor. You do not need to enable it manually in each project or add a plugin declaration to the project's `.uproject`.
 
-Follow your AI client's MCP setup process and give it the endpoint shown in the plugin toolbar. The default endpoint is `http://127.0.0.1:8766/mcp`. If the configured port is occupied, MCPBlueprint tries up to nine subsequent ports. Client configuration formats differ, so this guide does not prescribe a client-specific JSON file or manual port-configuration procedure.
+Add a local HTTP service in your AI client’s MCP settings, using the endpoint in the plugin toolbar. The default endpoint is `http://127.0.0.1:8766/mcp`. If the configured port is occupied, MCPBlueprint tries up to nine subsequent ports. Use the configuration format your client expects.
 
 The MCP client normally handles `initialize` and `tools/list` automatically. `ping` is for troubleshooting and does not need to be run manually for every session.
 
@@ -59,7 +59,7 @@ Open **Project Settings → Plugins → MCP Blueprint**:
 
 ## Read and edit your first Blueprint
 
-After connecting, find an asset with `ListBlueprints` and pass its exact `BlueprintPath` to `GetBlueprintOverview`. To change logic, identify the target graph and follow the [graph editing workflow](/en/works/mcp-blueprint/docs/graphs/) to preview the edit. Ordinary edits mark an asset dirty. Call `SaveAsset` when you want to keep the changes.
+After connecting, find an asset with `ListBlueprints` and pass its exact `BlueprintPath` to `GetBlueprintOverview`. To change logic, identify the target graph and follow the [graph editing workflow](/en/works/mcp-blueprint/docs/graphs/) to preview the edit. Ordinary edits mark the asset dirty. Compilation does not save the asset. Address any compiler diagnostics, then call `SaveAsset` to keep the changes.
 
 ## Choose the tool for the object you want to edit
 

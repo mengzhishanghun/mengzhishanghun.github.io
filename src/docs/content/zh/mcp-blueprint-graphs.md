@@ -11,7 +11,7 @@ workIds:
   - mcp-blueprint
 docPage:
   work: mcp-blueprint
-  group: assets-graphs
+  group: features
   slug: graphs
   order: 2
 documentKind: product-manual
@@ -31,7 +31,7 @@ translationKey: doc:mcp-blueprint:graphs
 
 ## 预检、应用和保存图表补丁
 
-涉及结构或数据变化的写操作可按以下顺序进行：
+改节点、连线或结构数据时，按这几个步骤操作：
 
 1. **定位**： 确定目标资产、图、Pin、成员或组件。
 2. **搜索**： 通过 `SearchGraphNodes` 获取合法 `SpawnerId`。
@@ -84,7 +84,7 @@ FinalScore = (BaseScore + Bonus) × Multiplier
 2. 用 `CreateFunction` 创建 `CalculateScore`，包含三个 `double` 输入和一个 `double` 输出。
 3. 用 `GetGraphDetail` 找到新函数的 Entry/Result 节点标识。
 4. 在这个函数图中搜索 `Add` 和 `Multiply`，使用返回的 `Operator:Add` 和 `Operator:Multiply`。
-5. 预览一个同时包含两个节点和五条数据连接的 `ApplyGraphPatch`。
+5. 预览一个同时包含两个节点和五条数据连接的 `ApplyGraphPatch`：基础分和奖励分分别接到加法节点；加法结果和倍率分别接到乘法节点；乘法结果接到返回节点。
 6. 对完全相同的 Patch 执行写入，使用原生 `double` 类型提升和自动 `Balanced` 布局。
 7. 需要保留这项改动时，调用 `SaveAsset`。
 
@@ -100,7 +100,7 @@ FinalScore = (BaseScore + Bonus) × Multiplier
 
 ![Region 1 增加首单免运费之前](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A1)
 
-修改后，Region 1 增加 `FirstOrder` 分支：首单运费为 `0`，其他订单仍为 `1000`。
+修改后，Region 1 增加 `FirstOrder` 分支：首单运费为 `0`，其他订单仍为 `1000`。在蓝色的地区运费区域，红框标出新增分支。
 
 ![Region 1 增加首单免运费之后](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A2)
 
@@ -110,7 +110,7 @@ FinalScore = (BaseScore + Bonus) × Multiplier
 
 ![积分排除运费之前](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A3)
 
-修改后：`PointsEarned = (TotalCents - ShippingCents) / 100`，新增 Subtract 节点以排除运费。
+修改后：`PointsEarned = (TotalCents - ShippingCents) / 100`，新增的 Subtract 节点位于输入和除法节点之间，先扣除运费。
 
 ![积分排除运费之后](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A4)
 

@@ -11,7 +11,7 @@ workIds:
   - simple-static-mesh-merger
 docPage:
   work: simple-static-mesh-merger
-  group: workflow
+  group: features
   slug: split-level-instance
   order: 2
 documentKind: product-manual
@@ -22,11 +22,13 @@ translationKey: doc:simple-static-mesh-merger:split-level-instance
 
 ## 递归拆分与刷新预览
 
+拆分会改动整个场景，操作前先保留一份可恢复的关卡版本。进度结束后，先在 Outliner 检查拆出的 Actor 和被移除的重复项，再查看合并预览。
+
 点击 `Break Level Instances` 递归拆分场景中所有 LevelInstance：
 
 - ✅ 自动处理嵌套 LevelInstance
 - ✅ 智能去重（相同路径的重复实例被删除）
-- ✅ 实时进度通知（滚动显示当前项目）
+- ✅ 显示拆分进度和当前处理的对象
 - ✅ 每轮迭代后 UI 自动刷新
 
 ## 首次拆分和重复路径的处理

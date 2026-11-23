@@ -13,7 +13,7 @@ workInfo:
     - kind: sale
       href: https://www.fab.com/listings/320c7471-92b8-4a3e-a88a-2a5fcb98d620
     - kind: docs
-      href: /zh/works/simple-bp-inherit-fix/docs/find-components/
+      href: /zh/works/simple-bp-inherit-fix/docs/quickstart/
   compatibility:
     - platforms:
         - Windows (Win64)
@@ -32,6 +32,7 @@ links:
   - label: GitHub
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 docIds:
+  - simple-bp-inherit-fix-quickstart
   - simple-bp-inherit-fix-find-components
   - simple-bp-inherit-fix-repair-components
 coverAlt: SimpleBPInheritFix封面

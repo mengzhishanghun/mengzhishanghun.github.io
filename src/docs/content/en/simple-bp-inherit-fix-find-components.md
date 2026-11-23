@@ -13,19 +13,21 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-bp-inherit-fix/docs/find-components/
 lang: en
 translationKey: doc:simple-bp-inherit-fix:find-components
-sourceHash: 5c7cbd8f273da9b833ae781d47cf9dfbf436629513d5c9ec94ae0d241a568d85
+sourceHash: f5aced95b40cf8966317f7dc2d1417d00cbc879695682b27148d94b74f543d37
 translationStatus: translated
-generatedBodyHash: 990cf2ae3bb64dcda8f5acfb1d10cf652e744516f0c8e6ec7ef4d0728b6bf38d
+generatedBodyHash: ad4df3a2aa0f1f474d05250930e95e9c6ad61d3be3ce0831986699bd7b7ff8ce
 docPage:
   work: simple-bp-inherit-fix
-  group: components
+  group: features
   slug: find-components
   order: 1
 ---
 
 ## Supported Symptoms
 
-Actor Blueprint inheritance can exhibit these component anomalies:
+Open the affected parent and child Actor Blueprints and compare the same component. If a change in the child also affected the parent, check whether the parent’s component template changed before running the repair.
+
+Look for two symptoms:
 
 - **Cut / Delete is disabled in the parent Blueprint** even though the component belongs to that parent.
 - **A child Blueprint's property changes write back to the parent**: Even toggling a bool can affect the parent template rather than creating an isolated child override.

@@ -13,16 +13,16 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-material/docs/material-preview/
 lang: en
 translationKey: doc:mcp-material:material-preview
-sourceHash: 08896e87ccedee6179c7bacac96d7a67f2f4cdf13c0ade354b95bc2dab43d6e4
+sourceHash: 4fff191c9ab90bd30d02397de66f5c71bdb63762c3ae361bb32aa5b517e5d5d4
 translationStatus: translated
-generatedBodyHash: 6978c7bf9eead1ef7cc55a09bb0da5153349a02b79b69eb047e95c747632165c
+generatedBodyHash: 12c1d8eca2919227e6ac829ac4a8a34bc919137ba0324ec2fd75c63bb4c23cd5
 docPage:
   work: mcp-material
-  group: assets
+  group: features
   slug: material-preview
   order: 2
 ---
 
 ## Preview dimensions and output
 
-`CapturePreview` is capped at 1024×1024 and rejects compressed PNG data larger than 4 MiB.
+Find the material or material instance in the asset list, then call `CapturePreview`. Keep each side at 1024 pixels or less and the compressed PNG at 4 MiB or less. Use the image to inspect the appearance, and check the compilation result before saving the edit.

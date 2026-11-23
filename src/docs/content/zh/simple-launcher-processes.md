@@ -10,7 +10,7 @@ workIds:
   - simple-launcher
 docPage:
   work: simple-launcher
-  group: process-control
+  group: features
   slug: processes
   order: 2
 documentKind: product-manual
@@ -76,6 +76,8 @@ StopAllProcesses();
 
 ## 查询进程状态
 
+启动后保留返回的进程标识。要确认本次启动的实例是否仍在运行，查询这一标识；只查预设名时，同一预设下的其他实例也可能使结果显示有进程在运行。
+
 | 函数 | 说明 |
 |------|------|
 | `IsProcessRunning(ProcessId)` | 检查特定进程是否仍在运行 |
@@ -110,7 +112,7 @@ GetProcessCount("LocalServer");  // 返回 2（还剩两个在运行）
 
 ## 进程退出回调
 
-进程退出时获得通知并执行自定义逻辑（如重启、日志记录）。
+需要在退出后重启或记日志时，可以绑定回调。程序崩溃也归为自行退出，不能据此判断任务成功。
 
 | 函数 | 说明 |
 |------|------|

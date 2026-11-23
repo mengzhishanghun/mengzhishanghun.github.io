@@ -13,21 +13,21 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-animation/docs/connect/
 lang: en
 translationKey: doc:mcp-animation:connect
-sourceHash: 0f08ea5abf952f8fdb3f517d65db517aef0142472fb043fcbe0599a270dbb7d4
+sourceHash: 9796e595bf99f7c84e03cff30d39bdb40c10e61b365388eaa60b80439d973d2e
 translationStatus: translated
-generatedBodyHash: adbcd89a69ec51d2b6bfc33a876de8c461f1401f9cbc6a7f15c35fac00b97d32
+generatedBodyHash: 6a847de6164bfcbed30296a34a0738db5361d0c4caa9840ac0ef93d8ed0af735
 docPage:
   work: mcp-animation
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 ---
 
-MCPAnimation is a self-contained Unreal Editor plugin that exposes Animation Blueprint, state machine, Skeleton, AnimSequence, Montage, AnimNotify, and BlendSpace discovery, inspection, and editing through HTTP MCP. It supports Unreal Engine 5.2 and later and has no dependency on other user-created plugins.
+MCPAnimation is a self-contained Unreal Editor plugin that exposes Animation Blueprint, state machine, Skeleton, AnimSequence, Montage, AnimNotify, and BlendSpace discovery, inspection, and editing through HTTP MCP. It does not depend on other user-created plugins. UE 5.2–5.8 are development targets; compatibility is still being checked, so try the plugin in your target version first.
 
 ## Connection
 
-The default endpoint is `http://127.0.0.1:8760/mcp`. If that port is occupied, the server tries subsequent ports; use the actual endpoint shown in the editor. The server implements `initialize`, `tools/list`, `tools/call`, and `ping`.
+Enable the plugin in Unreal Editor and enter the endpoint shown in the editor in your client’s HTTP MCP settings. It defaults to `http://127.0.0.1:8760/mcp`; if that port is in use, the server tries later ports. Use `initialize` to start the session, `tools/list` to see what is available, and `tools/call` to run a tool. Use `ping` to check the connection.
 
 ## Input validation and scope
 

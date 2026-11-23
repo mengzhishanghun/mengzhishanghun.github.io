@@ -13,23 +13,25 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-static-mesh-merger/docs/split-level-instance/
 lang: en
 translationKey: doc:simple-static-mesh-merger:split-level-instance
-sourceHash: 5d2904af289eeef6a98f5380abcc67a422eaa28912ecb907bf75500cb5274335
+sourceHash: 2c6682aa6f89b29e78fea5519278e2be8fd45546c2f1b9d4f508d47e5cc41f8a
 translationStatus: translated
-generatedBodyHash: 439c6db55fea8e15bf9f69c57abe13f036651acdedb683d14ee3c908c26c33b4
+generatedBodyHash: d78a8d482113e37ba31b667f8d69140e41d620e9ae44550a8254c5e028d6e2cd
 docPage:
   work: simple-static-mesh-merger
-  group: workflow
+  group: features
   slug: split-level-instance
   order: 2
 ---
 
 ## Break Instances Recursively and Refresh the Preview
 
+Breaking instances changes the scene. Keep a recoverable copy of the level before you start. Once progress finishes, check the actors that were moved out and the duplicates that were removed in the Outliner, then review the merge preview.
+
 Clicking `Break Level Instances` recursively breaks all LevelInstances in the scene:
 
 - ✅ Automatically handles nested LevelInstances
 - ✅ Smart deduplication (duplicate instances with same path are deleted)
-- ✅ Real-time progress notifications (flowing display of current item)
+- ✅ Progress notifications show which object the tool is processing
 - ✅ UI auto-refreshes after each iteration
 
 ## How First and Repeated Paths Are Handled

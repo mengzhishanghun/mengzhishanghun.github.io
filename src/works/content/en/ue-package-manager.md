@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEPackageManager
 lang: en
 translationKey: ue-package-manager
-sourceHash: 26189c96092075917945126ec015c426de2794caa6c26efaf3e07b59f7e0b12b
+sourceHash: 3646b66f2d8cbee1a18fccc47737e4be4a81e73dfb1d882cb17fe0cd2de054f9
 translationStatus: translated
-generatedBodyHash: 6963d970ab003b937e1883dd5c8dc259df67bce45780e8d2c66e6879d3587dd3
+generatedBodyHash: b99504c09dc46f248b26a0b6ee6fb066adc8087d120a8740dec2199ee4529063
 workInfo:
   channels:
     - kind: open-source
@@ -43,11 +43,12 @@ docIds:
   - ue-package-manager-deploy-additional-files
   - ue-package-manager-clean-old-packages
   - ue-package-manager-build-executable
+  - ue-package-manager-updates-2026-09-15
 ---
 
 ## Overview
 
-UEPackageManager is a Windows Unreal Engine project packaging tool. Package projects quickly without opening the UE editor, using a graphical interface or the command line.
+UEPackageManager packages Unreal Engine projects on Windows. Start packaging from the GUI or the command line without opening Unreal Editor first.
 
 It calls Unreal Automation Tool for Build, Cook, Stage, Pak, Archive, and related steps, then deploys additional files into successful packages according to rules. Project detection, isolated configuration, and output cleanup support controlled repeated packaging.
 
@@ -65,7 +66,7 @@ The tool automatically detects the current UE project and associated engine, and
 
 ### UE packaging and result inspection
 
-The tool organizes project packaging through UAT, supports multiple build types, and provides process logs. Both the GUI and CLI can start packaging; actual build results still come from UAT.
+Choose a build configuration in the GUI or on the command line, then start packaging. UAT runs the build, and the log shows its progress and result.
 
 ### Additional deployment after success
 
@@ -93,7 +94,7 @@ Full Debug builds, standalone plugin packaging, automatic editor closure, and pr
 
 ![](/media-occurrence/work%3Aue-package-manager%3Amedia%3A1)
 
-*UEPackageManager graphical interface: configuring the project, packaging parameters, and additional file copy rules.*
+*UEPackageManager shows the detected project and engine at the top. Use the fields below to set the output directory, build configuration, and additional file rules.*
 
 For operation steps and parameter details, see the [user guide](/en/works/ue-package-manager/docs/package-project/).
 

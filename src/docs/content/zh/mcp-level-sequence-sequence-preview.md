@@ -11,7 +11,7 @@ workIds:
   - mcp-level-sequence
 docPage:
   work: mcp-level-sequence
-  group: assets
+  group: features
   slug: sequence-preview
   order: 2
 documentKind: product-manual
@@ -26,4 +26,4 @@ translationKey: doc:mcp-level-sequence:sequence-preview
 |---|---|---|
 | 预览 | `CaptureSequencerView` | 截取活动关卡编辑器视口并返回 PNG |
 
-最多 16 Mi 像素，压缩后的 PNG 最多 8 MiB。可访问当前已加载或可读取的序列位置。
+先让活动关卡视口显示想要的画面，再对已加载或可读取的目标序列调用 `CaptureSequencerView`。返回的 PNG 对应当时的视口画面。截图最多 16 Mi 像素，压缩后的 PNG 最多 8 MiB。

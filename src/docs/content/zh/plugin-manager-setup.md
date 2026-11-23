@@ -12,7 +12,7 @@ workIds:
   - plugin-manager
 docPage:
   work: plugin-manager
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -23,5 +23,5 @@ translationKey: doc:plugin-manager:setup
 
 ## 启动并识别引擎
 
-1. 从 Release 下载 `UEPluginManager.exe`，放在 UE 项目目录并运行。
-2. 启动后，工具会识别项目关联的引擎并扫描项目、商城和引擎插件。它通过注册表识别安装版引擎，通过 GUID 识别源码版引擎。
+1. 从 Release 下载 `UEPluginManager.exe`，放在目标 UE 项目的 `.uproject` 所在目录，再运行。
+2. 工具通过注册表识别安装版引擎，通过 GUID 识别源码版引擎。识别出关联引擎后，打开项目、商城或引擎标签页查看扫描到的插件。

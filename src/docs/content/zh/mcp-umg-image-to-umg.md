@@ -11,7 +11,7 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: widgets-layout
+  group: features
   slug: image-to-umg
   order: 2
 documentKind: product-manual
@@ -20,11 +20,13 @@ lang: zh
 translationKey: doc:mcp-umg:image-to-umg
 ---
 
-MCPUMG 不在插件内部连接图片模型，也不保存模型密钥。AI 客户端负责理解参考图、核对文字、拆分可复用组件并生成结构化规格；MCPUMG 只负责确定性地校验、构建、测量和保存 Unreal Engine 资产。
+MCPUMG 不在插件内部连接图片模型，也不保存模型密钥。AI 客户端负责理解参考图、核对文字、拆分可复用组件并生成结构化规格；MCPUMG 按收到的规格校验、构建、测量和保存 Unreal Engine 资产，不会自行解读参考图。
 
 `ApplyWidgetTreePatch` 支持整树与增量两种 Patch。若仅需更新现有 Widget 属性或布局，可直接使用相应的属性和布局工具。
 
 ## 从规格到预览和保存
+
+开始前准备参考图、目标 Widget Blueprint 路径和要导入的图片文件。如果目标里已有控件，先读回当前树，指出哪些控件要保留、哪些需要调整；这样才能判断整树规格还是增量修改更合适。
 
 1. 调用 `GetUIDesignCapabilities` 读取当前 Schema、限制和支持的 Widget/样式能力。
 2. AI 根据参考图生成 `schemaVersion=1` 的 Widget 规格，并明确设计尺寸、布局假设和素材来源。

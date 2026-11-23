@@ -12,14 +12,14 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-websocket/docs/native-module/
 lang: en
 translationKey: doc:simple-websocket:native-module
-sourceHash: e590b6ea4af80a50da056e8b0cab9cc60298013c19d2ab12f3392003d418b9dc
+sourceHash: b7f99b66af57951b5b8441e2f529c1107b9eef183cee2f55f50190b104cb0c63
 translationStatus: translated
-generatedBodyHash: c75c8c8de4cb7343d116c09ed8275ff39ec57a416a669a9b9e861c02a1aa2886
+generatedBodyHash: c8f9c5c810d61c24916258d823a9649371e01964fe9e857d6614b9dbc5d5fe12
 docPage:
   work: simple-websocket
-  group: native
+  group: features
   slug: native-module
-  order: 1
+  order: 2
 ---
 
 ## Use cases
@@ -31,7 +31,7 @@ docPage:
 
 ## Add the built-in WebSockets module
 
-UE provides the `WebSockets` module. Add these dependencies to `.Build.cs`:
+To use UE’s built-in `WebSockets` module, add these dependencies to `.Build.cs`:
 
 ```csharp
 PublicDependencyModuleNames.AddRange(new string[] {
@@ -42,6 +42,8 @@ PublicDependencyModuleNames.AddRange(new string[] {
 ```
 
 ## Implementation example
+
+Start the target WebSocket service before running the example and check the connection event. Send a short text message and check what the server receives. If the service replies, check the receive event as well.
 
 **Connect a WebSocket:**
 
@@ -91,7 +93,7 @@ void SendWebSocketMessage(TSharedPtr<IWebSocket> WebSocket, const FString& Messa
 
 **Connection notes:**
 
-- Use `127.0.0.1` instead of `localhost` when troubleshooting name resolution in packaged builds.
+- For a local service in a packaged build, try `127.0.0.1` in place of `localhost` when troubleshooting name resolution.
 - The SimpleWebSocket plugin in this guide supports only `ws://`. Check the engine, backend, and certificate configuration for native UE WebSockets module support for `wss://`.
 - Example connection URL: `ws://127.0.0.1:8080`.
 

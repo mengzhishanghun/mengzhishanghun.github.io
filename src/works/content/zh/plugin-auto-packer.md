@@ -33,6 +33,14 @@ docIds:
   - plugin-auto-packer-setup
   - plugin-auto-packer-package
   - plugin-auto-packer-output
+  - plugin-auto-packer-updates-2026-08-08
+  - plugin-auto-packer-updates-2026-06-19
+  - plugin-auto-packer-updates-2026-04-17
+  - plugin-auto-packer-updates-2026-02-26
+  - plugin-auto-packer-updates-2025-06-22
+  - plugin-auto-packer-updates-2025-06-18
+  - plugin-auto-packer-updates-2025-06-10
+  - plugin-auto-packer-updates-2025-04-21
 coverAlt: UEPluginAutoPacker封面
 websiteCoverUrl: /media/covers/works/plugin-auto-packer-20261101.webp
 lang: zh
@@ -41,9 +49,9 @@ translationKey: plugin-auto-packer
 
 ## 作品简介
 
-UEPluginAutoPacker 主要用于 Fab 提交流程，将 UE 插件打包为可发布版本，也适合其他插件分发场景。工具把多引擎配置、插件构建、状态查看和发布文件整理放在同一个界面中。
+UEPluginAutoPacker 将 UE 插件打包为可分发的版本，可用于 Fab 提交和其他插件分发场景。在图形界面登记引擎、选择插件和目标版本，构建后按需整理发布文件。
 
-图形界面适合逐个观察各引擎任务，命令行则能对已配置的引擎执行指定插件构建。
+若要从命令行打包，先在图形界面添加引擎，再在命令中指定插件和目标引擎。
 
 ## 背景与目标
 
@@ -61,7 +69,7 @@ UEPluginAutoPacker 主要用于 Fab 提交流程，将 UE 插件打包为可发�
 
 ### 状态和日志
 
-图形界面显示每个引擎的等待、打包中、成功、失败与取消状态，并可切换查看对应日志。失败结果会保留日志文件，方便把问题定位到具体引擎版本，而不是只得到整批任务的单一成败结论。
+图形界面按引擎显示等待、打包中、成功、失败和取消状态。点击引擎可查看对应日志；如果某个版本打包失败，可在该版本的输出目录找到失败日志。
 
 ### 发布文件整理
 

@@ -12,17 +12,19 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-launcher/docs/presets/
 lang: en
 translationKey: doc:simple-launcher:presets
-sourceHash: fc3b56f3b484b354617fc53bc6b5b8b66b543a7b6145eca27a12a7121e94265f
+sourceHash: 5a42b1c7b5f2d55704dee373f2efdc44211f499bceafe45a473e652faf98916d
 translationStatus: translated
-generatedBodyHash: f339247fd98ed909142d68fa54410afdd7f62ba113e5d1f5276a95ef7b9bcba2
+generatedBodyHash: e50b6854dece55596287e923239ba5f32ef2172f57ea3ec5082d399526043bb4
 docPage:
   work: simple-launcher
-  group: process-control
+  group: features
   slug: presets
   order: 1
 ---
 
 ## Set Preset Fields
+
+Decide which program to launch, where it should resolve relative paths, and whether it should stay running after the game exits. Check the saved preset name: the launch call uses that name to find it.
 
 Open **Project Settings → Plugins → Simple Launcher** and add a preset under Launchers. For example, set `Key` to `MyServer` and `CommandLine` to `notepad.exe` or `python script.py`.
 
@@ -56,7 +58,7 @@ Launchers:
 
 ### Key (Preset Name)
 
-A name for this preset. All APIs reference presets by this name.
+Use the same preset name in settings and API calls.
 
 - Use any name you like, e.g. `MyServer`, `Logger`, `DataSync`
 - Names must be unique across all presets

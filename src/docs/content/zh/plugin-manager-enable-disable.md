@@ -12,7 +12,7 @@ workIds:
   - plugin-manager
 docPage:
   work: plugin-manager
-  group: plugins
+  group: features
   slug: enable-disable
   order: 2
 documentKind: product-manual
@@ -23,8 +23,8 @@ translationKey: doc:plugin-manager:enable-disable
 
 ## 修改启用状态
 
-找到插件后，使用右侧的按钮启用、禁用或恢复默认。启用及禁用写入 `.uproject`，影响依赖链时工具会请你确认。恢复默认会移除 `.uproject` 中的对应配置。
+在列表中选中插件，然后用右侧按钮启用、禁用或恢复默认。启用和禁用会把选择写入 `.uproject`。如果弹出依赖变更提示，先核对受影响的插件，再确认。恢复默认会移除 `.uproject` 中针对该插件的显式设置，之后按插件默认状态处理。
 
 ## 处理同名冲突
 
-如果项目里有同名插件，先移除其中一个才能启用剩下的插件。
+如果项目里有同名插件，先核对它们的来源，再移除其中一个。之后才能启用留下的插件。

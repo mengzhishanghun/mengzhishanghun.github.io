@@ -11,7 +11,7 @@ workIds:
   - simple-static-mesh-merger
 docPage:
   work: simple-static-mesh-merger
-  group: workflow
+  group: features
   slug: merge-actors
   order: 1
 documentKind: product-manual
@@ -35,7 +35,7 @@ translationKey: doc:simple-static-mesh-merger:merge-actors
 
 **只有所有属性完全相同的 Actor 才会被合并到一个分组。**
 
-合并范围是主场景 `PersistentLevel`。如需处理 LevelInstance 内的对象，先按拆分章节操作。
+工具只合并主关卡 `PersistentLevel` 中的 Actor。若要合并 LevelInstance 内的对象，先按拆分章节展开。
 
 ## 按移动性和实例数筛选
 
@@ -94,7 +94,9 @@ translationKey: doc:simple-static-mesh-merger:merge-actors
 
 ## 执行合并与检查结果
 
-合并会替换原 Actor，先保留可恢复的场景版本。核对分组的模型、材质、移动性和碰撞，再按下方示例完成筛选与勾选，点击 **Merge Selected**。插件会复制整套碰撞设置，包括对象类型和 32 个通道响应。完成后检查实例数和场景表现；编辑器会选中新 Actor 并跳到第一个。
+点击 **Merge Selected** 前再看一遍右侧实例列表。搜索命中一个 Actor 就会显示整组；如果只想合并其中几项，在右侧逐一排除要保留的 Actor。
+
+合并会替换原 Actor，先保留可恢复的场景版本。核对分组的模型、材质、移动性和碰撞，再按下方示例完成筛选与勾选，点击 **Merge Selected**。插件会复制整套碰撞设置，包括对象类型和 32 个通道响应。完成后，编辑器会选中新 Actor 并跳到第一个。检查实例数、材质、碰撞和场景表现，再保存关卡。
 
 ```
 工作流程：
@@ -160,7 +162,7 @@ for (int i = 0; i < 500; i++)
 
 **加载时引擎需要：**
 
-1.  **反序列化500个UObject**（每个AStaticMeshActor + 每个UStaticMeshComponent）
+1.  **反序列化 500 组 Actor 和组件**（每棵树分别有一个 AStaticMeshActor 和一个 UStaticMeshComponent）
 2.  **创建500个Component**（每个都要初始化、注册到场景）
 3.  **构建500次碰撞体**（即使碰撞配置相同，每个Component独立构建）
 4.  **注册500次到渲染系统**（每个Component独立提交渲染数据）

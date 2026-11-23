@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-byte-conversion/docs/setup/
 lang: en
 translationKey: doc:simple-byte-conversion:setup
-sourceHash: 85468896b535b89738348c426084103483cf0aa605443a33a9a7c3e0b5181521
+sourceHash: c26c1fbdbe022ba52ea24fce0bb3409d1c9eaf9e82db0f7d58739527a2c56ac3
 translationStatus: translated
-generatedBodyHash: 12faf18da4f892e0c1ab11836413f8d678f5124f467c292cf5a0cb55d49ef798
+generatedBodyHash: b70b04158248b0e93396c684ae1011e8baac991267cfae1258b4c1cdc467c3a3
 docPage:
   work: simple-byte-conversion
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 ---
@@ -27,9 +27,11 @@ docPage:
 
 Copy the plugin folder into your project's `Plugins` directory and restart the editor.
 
-Once enabled, the plugin is ready to use. You do not need to manage a subsystem or the plugin lifecycle.
+Once the plugin is enabled, its Blueprint nodes are available without managing a subsystem or the plugin lifecycle.
 
 ## Blueprint Node Category
+
+The graph shows the conversion nodes in pairs. Pick the data type, connect the `Bytes` output to the matching decoder, and check the recovered value before wiring it into transport or storage.
 
 All nodes are under the `SimpleByteConversion` category:
 

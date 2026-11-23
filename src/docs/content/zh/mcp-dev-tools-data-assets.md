@@ -11,9 +11,9 @@ workIds:
   - mcp-dev-tools
 docPage:
   work: mcp-dev-tools
-  group: data
+  group: features
   slug: data-assets
-  order: 1
+  order: 4
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-dev-tools/docs/data-assets/
 lang: zh
@@ -38,7 +38,7 @@ translationKey: doc:mcp-dev-tools:data-assets
 
 ## 修改属性示例
 
-例如，`GetDataAsset` 读到 `Title` 为 `"Old"` 后，用 `SetDataAssetProperties` 预览修改：
+下面只改一个属性。先用 `GetDataAsset` 读到 `Title` 为 `"Old"`，再把读到的旧值和要写入的新值一起交给 `SetDataAssetProperties` 预检：
 
 ```json
 {
@@ -49,4 +49,4 @@ translationKey: doc:mcp-dev-tools:data-assets
 }
 ```
 
-创建或修改前先预览，确认后单独保存；见[预览和保存规则](/zh/works/mcp-dev-tools/docs/connect/)。
+预检通过后，按下方规则重发实际写入请求。再次读取并确认目标值后，单独保存资产；见[预览和保存规则](/zh/works/mcp-dev-tools/docs/connect/)。

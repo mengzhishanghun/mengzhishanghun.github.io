@@ -11,7 +11,7 @@ workIds:
   - simple-file-updater
 docPage:
   work: simple-file-updater
-  group: updates
+  group: features
   slug: update-files
   order: 1
 documentKind: product-manual
@@ -22,7 +22,7 @@ translationKey: doc:simple-file-updater:update-files
 
 ## 编写更新清单
 
-默认配置文件为 **`.SimpleFileUpdater`**，内容格式如下：
+在默认配置文件 **`.SimpleFileUpdater`** 中，每行写一组映射。等号左侧是本地保存路径，右侧是下载地址：
 
 ```
 # 每行一个映射：本地路径 = 远程 URL
@@ -49,4 +49,4 @@ SimpleFileUpdater.exe MyConfig.txt
 
 ## 覆盖同名文件前核对
 
-这是个人工具，使用风险由使用者承担。运行前核对远程 URL 是否可信、目标路径是否正确。更新可能覆盖同名文件，请提前备份。
+这是个人工具，使用风险由使用者承担。运行前先确认远程 URL 可信、目标路径正确；目标位置已有同名文件时，请先备份，更新可能覆盖它。

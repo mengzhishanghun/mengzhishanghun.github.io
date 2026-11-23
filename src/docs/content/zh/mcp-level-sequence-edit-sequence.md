@@ -11,9 +11,9 @@ workIds:
   - mcp-level-sequence
 docPage:
   work: mcp-level-sequence
-  group: sequence-editing
+  group: features
   slug: edit-sequence
-  order: 2
+  order: 4
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-level-sequence/docs/edit-sequence/
 lang: zh
@@ -33,6 +33,8 @@ translationKey: doc:mcp-level-sequence:edit-sequence
 - 根级或 Binding 轨道：`MovieSceneAudioTrack`、`MovieSceneEventTrack`。
 - 仅根级轨道：`MovieSceneCameraCutTrack`、`MovieSceneFadeTrack`。
 
+先用 `ListTrackTypes` 选轨道类型，确认轨道应放在根级还是指定对象绑定下，再添加轨道和区段。修改已有区段时，先在详情中定位它所在的轨道。
+
 Float 与 Bool 属性轨要求 `PropertyName`，可用 `PropertyPath` 指定嵌套属性。Skeletal Animation Section 要求 `AnimationAssetPath`，并验证为 `AnimSequenceBase`；Audio Section 要求 `SoundAssetPath`，并验证为 `SoundBase`。Event Track 目前只创建 Section 容器，不创建 Director Blueprint endpoint 或事件 payload。
 
 ## 事务、删除与局限
@@ -41,8 +43,8 @@ Float 与 Bool 属性轨要求 `PropertyName`，可用 `PropertyPath` 指定嵌�
 
 删除 Track 会级联移除其下级对象。重名选择器会返回歧义；使用 `GetSequenceDetail` 返回的 `TrackName`。
 
-Subsequence 创建/导航：需要循环依赖检查、层级所有权和跨序列时间语义设计，当前不提供写入工具。
+当前没有用于创建或导航 Subsequence 的写入工具。
 
-任意 Track/Class、Folder、Tag、选择状态和骨骼级高级操作：官方实验 Toolset 覆盖更广，本插件只公开已审查并能维持严格 Schema 的能力。
+本插件不提供任意 Track/Class、Folder、Tag、选择状态或骨骼级高级操作；官方实验 Toolset 的范围更广。
 
 区段起止帧按序列的 `TickResolution` 解释，见[时间单位与帧率](/zh/works/mcp-level-sequence/docs/sequence-timing/)。

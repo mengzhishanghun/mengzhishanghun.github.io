@@ -13,19 +13,21 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-stream-switcher/docs/install-and-connect/
 lang: en
 translationKey: doc:p4-stream-switcher:install-and-connect
-sourceHash: 07d701d038ee1f730d55cc4b50980e0cb6433799bdfdc64b1d0d58d505f33eda
+sourceHash: 5b6fed8effc5f562242f6cab7f651efe5a0b68cae05b80ead64ae0bcd7b1af57
 translationStatus: translated
-generatedBodyHash: fb402f715362f01d6e3c43af34b3d1b605d70bb1b1ad6cf1120acaa2b24925fd
+generatedBodyHash: ab1ada058a99ebcb58b959b1673e1b0c70985204bab290b84ba38d6ca46f8eac
 docPage:
   work: p4-stream-switcher
-  group: setup
+  group: getting-started
   slug: install-and-connect
   order: 1
 ---
 
 ## Install dependencies and sign in
 
-Prepare Windows, Python 3.10 or later with Tkinter, the Perforce CLI, and P4V. Your server account needs permission to access the target streams and create and delete clients, with a valid login. The current host must already have at least one stream client owned by the current user, with Host set to this machine and a Stream assigned.
+You need Windows, Python 3.10 or later with Tkinter, the Perforce CLI, and P4V. Your account needs access to the target streams and permission to create and delete clients. Before starting, set P4PORT and P4USER in your Perforce environment and sign in as usual.
+
+In P4V, make sure you own at least one stream client with Host set to this machine and a Stream assigned.
 
 Obtain the files from the [public source repository](https://github.com/MZSH-Tools/P4StreamSwitcher), then install dependencies and start from the project directory:
 
@@ -34,7 +36,7 @@ python -m pip install p4python platformdirs
 python Main.py
 ```
 
-Before starting, configure P4PORT and P4USER in your own Perforce environment and establish a valid session through your normal login process.
+After launch, check the server and user in the status area. If the connection fails or the tool cannot find a stream client, use the checks below.
 
 ## Troubleshoot the connection and stream client
 

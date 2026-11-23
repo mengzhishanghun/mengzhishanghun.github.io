@@ -11,7 +11,7 @@ workIds:
   - simple-input-simulator
 docPage:
   work: simple-input-simulator
-  group: input
+  group: features
   slug: axis-input
   order: 2
 documentKind: product-manual
@@ -37,9 +37,11 @@ translationKey: doc:simple-input-simulator:axis-input
 
 ## 鼠标与摇杆示例
 
+图中在每帧向第一个本地玩家发送手柄右摇杆 Y 轴输入。复用这段蓝图时，按项目的输入映射选择轴键，再观察接收端的轴值或角色动作。
+
 ![](/media-occurrence/doc%3Asimple-input-simulator%3Aaxis-input%3Amedia%3A2)
 
-模拟鼠标移动或手柄摇杆输入。
+同样的接法也可以用来测试鼠标移动或其他摇杆轴。
 
 ## AI 行为调试
 

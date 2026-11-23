@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginManager
 lang: en
 translationKey: plugin-manager
-sourceHash: 22be984bee4a995c3bbc99568311a783205e28882cbdfb50630992f46808ea3c
+sourceHash: e25f52a41aa5cd1fd390d9bda7293879918d29713263dee4c724917380752f4c
 translationStatus: translated
-generatedBodyHash: 7c7f6f55c415b3c0a7c7b7e67a9d5cea9a500fe6e883f93bfa60f7c982d9a167
+generatedBodyHash: f0f361b48d6c7ee2bffc9e3b40a99321c5fc19f55baea623950a8d3c07230f1f
 workInfo:
   channels:
     - kind: docs
@@ -38,13 +38,14 @@ docIds:
   - plugin-manager-find
   - plugin-manager-enable-disable
   - plugin-manager-folder-actions
+  - plugin-manager-updates-2026-01-10
 ---
 
 ## Overview
 
-UEPluginManager is a desktop tool for browsing and managing local UE plugins. It displays project and engine plugins together, fixes garbled directory names, and moves plugins between the project and the engine Marketplace directory. Bundled engine plugins are available for browsing and state inspection only; they cannot be moved or deleted.
+UEPluginManager is a desktop tool for browsing and managing local UE plugins. Find a plugin by source (Project, Marketplace, or Engine), check for duplicates and dependencies, then change its enabled state or organize its folder.
 
-For actionable project and Marketplace plugins, it also supports moving, sending to the recycle bin, and correcting directory names.
+You can move project and Marketplace plugins between permitted folders, send them to the Recycle Bin, or fix garbled folder names. You can browse bundled engine plugins and inspect their status.
 
 ## Background and goals
 

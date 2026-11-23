@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-dev-tools/docs/asset-registry/
 lang: en
 translationKey: doc:mcp-dev-tools:asset-registry
-sourceHash: a35d5ed7074dbb688de18a0ee1138e89ebeab74d76a048d9123ad9afb858572b
+sourceHash: e914b5e1dbbf53eeb7b0461745dea18a94934589200f4dc84b36a952f7587e30
 translationStatus: translated
-generatedBodyHash: 8f08c474ebcbcadf4bb48be5850196af5ab00a680845b1708e9a1654ac576e15
+generatedBodyHash: de5a1f45bdf88d0bb9c2c630d167a216cd90bb9f7bfa1e18b8f21863acbd5862
 docPage:
   work: mcp-dev-tools
-  group: assets
+  group: features
   slug: asset-registry
-  order: 1
+  order: 2
 ---
 
 ## Asset registry information and references
@@ -31,6 +31,6 @@ docPage:
 
 `AssetPath` is a package path such as `/Game/Data/DA_Example`, not a short name, object path, or subobject path. `ClassPath` is a full class object path, such as `/Script/Engine.DataAsset` or a compiled Blueprint class path like `/Game/Data/BP_Example.BP_Example_C`.
 
-Standard lists and paged reads return 20 items by default, with at most 100 per page. Continue using `bHasMore` and `NextOffset`.
+If you know the package path, read the asset details directly. If you only know the content folder, find the asset in the list first. When checking references, distinguish what the asset depends on from what refers to it. Lists and paged reads return 20 items by default, up to 100 per page. If `bHasMore` indicates another page, continue at `NextOffset`.
 
 Other platforms and native Manage/SearchableName dependency edges remain unverified.

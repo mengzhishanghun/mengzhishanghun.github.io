@@ -14,12 +14,12 @@ documentKind: product-manual
 websiteRoute: /en/works/plugin-auto-packer/docs/setup/
 lang: en
 translationKey: doc:plugin-auto-packer:setup
-sourceHash: 24db6b6daccbd29087a6645d656fc544e7bee6a2040c30381abedcbd5cc5d50c
+sourceHash: e4c3d35d3a8304327a089920baa6760cc5e7e152776962176f6ec30b79b10948
 translationStatus: translated
-generatedBodyHash: 67779645c440c33bdd855ee71a19aaabd535ea9405b2704f7b6924ce2cd62b98
+generatedBodyHash: 7c0877ff55ce5e2c433a54d7959630ebc727169804bd447d643705a72591c041
 docPage:
   work: plugin-auto-packer
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 ---
@@ -28,7 +28,7 @@ docPage:
 
 1. Download `UEPluginPacker.exe` from the Releases page
 2. Place it in your Unreal project root, containing the `.uproject` file
-3. Double-click to run; no command-line or environment configuration is required
+3. Double-click `UEPluginPacker.exe` to open the GUI. You do not need to use the command line or set up a separate environment to run the EXE.
 
 ## Run from Source
 

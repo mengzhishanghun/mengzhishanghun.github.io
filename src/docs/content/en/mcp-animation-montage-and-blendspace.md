@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-animation/docs/montage-and-blendspace/
 lang: en
 translationKey: doc:mcp-animation:montage-and-blendspace
-sourceHash: b2235d67933c7f46c7b25c6eac62f7246c7bed994a2ae0e3c9329419671913fd
+sourceHash: 23f4a3bd5641ba659be8be81febaefe6ceeac5197a9eae50395dbf05f951d593
 translationStatus: translated
-generatedBodyHash: 1cc9a3c45f71aecc225f69999529bf9c6dca66a8add07dd0e39e40d1ab7a6ad5
+generatedBodyHash: 59f32b24b25b16853d5aa19d9b117c1408dabd6256cf57001db5a9d4ced7062a
 docPage:
   work: mcp-animation
-  group: editing
+  group: features
   slug: montage-and-blendspace
-  order: 2
+  order: 3
 ---
 
 ## Find, create, and edit montages
@@ -33,5 +33,7 @@ docPage:
 |---|---|
 | `CreateMontage` | Create a Montage from an AnimSequence. |
 | `AddMontageSection` / `SetMontageSection` / `RemoveMontageSection` | Manage Montage sections. |
+
+For an existing Montage, get its path from the list and use the details to locate the section. To create one, find the source AnimSequence, then call `CreateMontage`. After adding, changing, or removing a section, read the details again to check that you edited the intended section.
 
 For paths, transactions, and saving, see how to [open and save animation assets](/en/works/mcp-animation/docs/find-assets/).

@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-byte-conversion/docs/primitive-bytes/
 lang: en
 translationKey: doc:simple-byte-conversion:primitive-bytes
-sourceHash: 9b434cdfbe283534a7d96d71cab017192b2900142d3df8a4f9de0afe8932ddbd
+sourceHash: 3f13df6b87afee30c18bb769df40c1a424f5836c7735ad0b9f1e4cf7b97b8bf7
 translationStatus: translated
-generatedBodyHash: d629e4e059d429d3b5a4265da3ec4db1899fa2baafec7c5056b7af12969ccfbf
+generatedBodyHash: 11bcdbf241b87fa211c79e5c65155fe1726a4012c8f5f11d1ea3823202b2c426
 docPage:
   work: simple-byte-conversion
-  group: conversion
+  group: features
   slug: primitive-bytes
   order: 1
 ---
@@ -42,9 +42,15 @@ Use these nodes for custom protocols, lightweight storage, and binary communicat
 
 ## Blueprint Conversion Example
 
+The first graph prints numbers, a Boolean, and a string after converting each value to bytes and back with its matching node.
+
 ![](/media-occurrence/doc%3Asimple-byte-conversion%3Aprimitive-bytes%3Amedia%3A1)
 
+The second graph converts a vector, a color, and a constraint struct to bytes and back, then reads a component or field.
+
 ![](/media-occurrence/doc%3Asimple-byte-conversion%3Aprimitive-bytes%3Amedia%3A2)
+
+The third graph prints byte array lengths and JSON text for structs. The two outputs serve different purposes.
 
 ![](/media-occurrence/doc%3Asimple-byte-conversion%3Aprimitive-bytes%3Amedia%3A3)
 

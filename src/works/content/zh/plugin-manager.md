@@ -31,6 +31,7 @@ docIds:
   - plugin-manager-find
   - plugin-manager-enable-disable
   - plugin-manager-folder-actions
+  - plugin-manager-updates-2026-01-10
 coverAlt: UEPluginManager封面
 websiteCoverUrl: /media/covers/works/plugin-manager-20261101.webp
 lang: zh
@@ -39,9 +40,9 @@ translationKey: plugin-manager
 
 ## 作品简介
 
-UEPluginManager 是浏览和管理本地 UE 插件的桌面工具。它统一展示项目与引擎插件，支持修正乱码目录名，并在项目与引擎的 Marketplace 目录之间移动插件。引擎自带插件只供浏览和状态判断，不能移动或删除。
+UEPluginManager 是查看和管理本地 UE 插件的桌面工具。先按项目、Marketplace 或引擎来源找到插件，核对同名项和依赖，再调整启用状态或整理目录。
 
-对于可操作的项目和商城插件，还提供移动、移至回收站及目录名修正功能。
+项目和商城插件可以在允许的目录之间移动，也可移至回收站或修正乱码目录名。引擎自带插件只供浏览和状态判断。
 
 ## 背景与目标
 

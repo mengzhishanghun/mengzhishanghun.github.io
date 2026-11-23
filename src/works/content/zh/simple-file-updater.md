@@ -30,6 +30,8 @@ links:
 docIds:
   - simple-file-updater-setup
   - simple-file-updater-update-files
+  - simple-file-updater-updates-2026-04-18
+  - simple-file-updater-updates-2025-05-03
 coverAlt: SimpleFileUpdater封面
 websiteCoverUrl: /media/covers/works/simple-file-updater-20261101.webp
 lang: zh
@@ -38,7 +40,7 @@ translationKey: simple-file-updater
 
 ## 作品简介
 
-SimpleFileUpdater 根据配置文件中的“本地目标路径—远程下载地址”映射，批量下载并更新指定文件。
+SimpleFileUpdater 按配置批量下载并更新文件。清单里的每一项都对应一个远程下载地址和一个本地保存路径。
 
 它适合维护一组来源固定、需要反复刷新到本机位置的工具或资料；路径和 URL 放在配置中，更新时按这份清单处理。
 
@@ -64,7 +66,7 @@ SimpleFileUpdater 根据配置文件中的“本地目标路径—远程下载�
 
 ## 适用场景
 
-适用于定期从固定地址获取多个工具、模板或公开资料，并希望把落盘位置稳定记录下来的个人维护流程。相同配置可供下次更新复用，减少重复查找下载地址和手动整理目录。
+如果要定期更新一组工具、模板或公开资料，先把固定的下载地址和本地保存位置写入清单。下次更新时可以沿用同一份清单，不必重新找链接或整理目录。
 
 ## 适用范围与边界
 

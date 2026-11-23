@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-material/docs/instance-parameters/
 lang: en
 translationKey: doc:mcp-material:instance-parameters
-sourceHash: 550520838b3c93ed27cb536fb7ebb24f2b21619e2e00780a517b0d8867241e79
+sourceHash: 7b934e58485ac35a2eee70ef9c32991c1aa125bbd9a09c93ce44799e25df4c39
 translationStatus: translated
-generatedBodyHash: 1b07219f929ab6b1f88007f3e7e7560c11718f9c68489ff652243b2c6562aa7c
+generatedBodyHash: 44bebed5f081dbbddf209a89d514d62cd6ceff4fbc0a3c4b31a66845a9d15fbe
 docPage:
   work: mcp-material
-  group: editing
+  group: features
   slug: instance-parameters
-  order: 2
+  order: 4
 ---
 
 ## Structured instance parameters
@@ -29,7 +29,7 @@ Call `GetMaterialParameters` with `IncludeStructuredParameters: true` to add `Pa
 
 The new list uses `Offset` and `MaxResults` independently of the legacy arrays, with `StructuredTotalCount`, `StructuredReturned`, and `StructuredOffset`. `SupportedParameterTypes` is unpaginated: UE 5.2–5.4 expose nine types, 5.5–5.6 add TextureCollection, and 5.7+ add ParameterCollection. Rows sort by Scalar, Vector, DoubleVector, Texture, Font, RuntimeVirtualTexture, SparseVolumeTexture, StaticSwitch, StaticComponentMask, TextureCollection, ParameterCollection, then Association, Index, and name.
 
-For `SetInstanceParameters`, pass 1–1000 full identities and values:
+Find the row you want to edit and use its type, name, association, and index to identify the parameter. If a global parameter and a layer parameter share a name, use the full identity from the intended row. `SetInstanceParameters` accepts 1–1000 entries, each with a full identity and a new value:
 
 ```json
 {"AssetPath":"/Game/Materials/MI_Example","Parameters":[{"Type":"Scalar","Name":"Amount","Association":"Global","Index":-1,"Value":0.5}]}

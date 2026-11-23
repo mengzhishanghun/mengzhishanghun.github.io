@@ -13,19 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-case-sync/docs/reuse-environment/
 lang: en
 translationKey: doc:p4-case-sync:reuse-environment
-sourceHash: d5ee100146ca99356831cdb19501bfbdf6d521860af8a4126c8ee6dec23921f0
+sourceHash: d38ecf752b5a99e281b3a69b32e5b751b957becf3594dae92efc2a49482c0a63
 translationStatus: translated
-generatedBodyHash: b765fda6740efb4146a4857d0108dea2525662d71267196201eb6037734e61ca
+generatedBodyHash: 9c9223d53e62cdb26ad94198fbdc980c4b4be04adde71a580511423293d5143d
 docPage:
   work: p4-case-sync
-  group: distribution
+  group: features
   slug: reuse-environment
-  order: 2
+  order: 3
 ---
 
 ## Export and Restore Environments
 
-Export the dependency list from the existing environment, then restore it with the matching tool.
+Activate the environment you want to reuse, then export its dependencies with the tool you used to set it up: Conda or pip. Use the matching commands to restore it.
 
 ## Conda
 
@@ -35,7 +35,7 @@ Export the dependency list from the existing environment, then restore it with t
 conda env export > environment.yml
 ```
 
-For an export limited to explicitly installed packages, use Conda?s history. The command above exports the active environment.
+To export only explicitly installed packages, use Conda’s history. The command above exports the active environment.
 
 **Restore:**
 ```bash

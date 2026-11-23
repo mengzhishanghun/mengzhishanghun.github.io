@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-dev-tools/docs/data-assets/
 lang: en
 translationKey: doc:mcp-dev-tools:data-assets
-sourceHash: f91b4cdac6a4aa2c0c6116476e54bcd42a289fc653d6c0483284b363dd2643b8
+sourceHash: 0953820dd60c139aa32326a9cbb6487a10864e68f6d57b00fa157712615b9e85
 translationStatus: translated
-generatedBodyHash: 0e181415d6f7e9657a68ab977b94e30ce1bf0368627ac30290918966af3f892e
+generatedBodyHash: 65b1dc10cd28d93a5758ee1ac9a35bed5a47487cffe83c9c122b71b267ca4ae3
 docPage:
   work: mcp-dev-tools
-  group: data
+  group: features
   slug: data-assets
-  order: 1
+  order: 4
 ---
 
 ## Read and write
@@ -41,7 +41,7 @@ docPage:
 
 ## Property edit example
 
-For example, if `GetDataAsset` returns `"Old"` for `Title`, preview the change with `SetDataAssetProperties`:
+This example changes one property. First confirm that `GetDataAsset` returns `"Old"` for `Title`. Then send the old and new values together to `SetDataAssetProperties` to preview the edit:
 
 ```json
 {
@@ -52,4 +52,4 @@ For example, if `GetDataAsset` returns `"Old"` for `Title`, preview the change w
 }
 ```
 
-Preview changes before applying them, then save separately. See the [preview and save workflow](/en/works/mcp-dev-tools/docs/connect/).
+If the preview passes, send the write request using the workflow below. Read the asset again to check the new value, then save it separately; see the [preview and save workflow](/en/works/mcp-dev-tools/docs/connect/).

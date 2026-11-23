@@ -11,9 +11,9 @@ workIds:
   - mcp-blueprint
 docPage:
   work: mcp-blueprint
-  group: members-types
+  group: features
   slug: events-dispatchers
-  order: 3
+  order: 6
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-blueprint/docs/events-dispatchers/
 lang: zh
@@ -30,11 +30,11 @@ translationKey: doc:mcp-blueprint:events-dispatchers
 | `AddEventDispatcher` | 添加事件分发器。 | 指定名称和签名。 |
 | `RemoveEventDispatcher` | 删除事件分发器。 | 有引用或无法安全恢复时会被阻止。 |
 
-可以在创建事件分发器时指定签名。Custom Event 和 Event Dispatcher 的签名修改选项少于普通函数。
+先判断要添加的是 Event Graph 里的事件节点，还是可声明签名的事件分发器。创建组件绑定事件前，确认目标组件和委托可解析。创建事件分发器时可以指定签名。Custom Event 和 Event Dispatcher 的签名修改选项少于普通函数。
 
 ## 示例：Actor 生命周期与组件绑定
 
-以下两张图展示组件事件的辅助函数，以及 Actor 生命周期、组件绑定事件与可变 Pin 如何出现在同一图中。
+第一张图右侧是组件事件的辅助函数。第二张图中，橙色框是 Actor 生命周期节点，红色框里是组件的重叠事件与后续连线，下方的自定义事件显示了它的参数 Pin。
 
 ![组件事件辅助函数图](/media-occurrence/doc%3Amcp-blueprint%3Aevents-dispatchers%3Amedia%3A1)
 

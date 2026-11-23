@@ -19,9 +19,9 @@ links:
     href: https://github.com/MZSH-Tools/MDBlogPacker
 lang: en
 translationKey: md-blog-packer
-sourceHash: 62e488ce828b741475950004789da9b3e88520de570cf104e07e84063f957ba7
+sourceHash: 5e46490704eeca7e58de809c8cbb5d8210651fed5fef08f48e37a0c57099ecc7
 translationStatus: translated
-generatedBodyHash: d04ca898d8b4f57f4e0d65e59f6731a66cef6fac5ed2fac0d0b01e99967b91ae
+generatedBodyHash: 8e1e69e29101696b1fbd052d9a3bf40bbc76d19a6763ec090e82f2b14248553c
 workInfo:
   channels:
     - kind: open-source
@@ -37,11 +37,13 @@ coverAlt: MDBlogPacker cover
 docIds:
   - md-blog-packer-setup
   - md-blog-packer-package
+  - md-blog-packer-updates-2026-05-13
+  - md-blog-packer-updates-2026-04-18
 ---
 
 ## Overview
 
-MDBlogPacker is the Python version of MDImageEmbed. It exports Markdown with local images embedded as Base64. Future maintenance of MDImageEmbed will focus solely on its Python version, MDBlogPacker.
+MDBlogPacker exports a Markdown article and its local images as a single text document with Base64 images embedded. It is the Python version of MDImageEmbed and the only version of that project that will continue to be maintained.
 
 It recognizes standard Markdown image syntax and Obsidian Wiki image references, converting local images into embedded Base64 while preserving online images and images already embedded. Users can process articles through a graphical interface or command line, then copy the result or export a file.
 

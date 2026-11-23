@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/events-dispatchers/
 lang: en
 translationKey: doc:mcp-blueprint:events-dispatchers
-sourceHash: cfbc4365f0040f5fc5a365103455e8378e8a2027502ba7c369ea9fb9d8eed989
+sourceHash: 8089d61bcec9baddf5648632e3e056875d4cc76681c9c3cc7656ce935707f8c8
 translationStatus: translated
-generatedBodyHash: 0433175e1cb98fa2a202c1dc63a14ea9e00517fd3ff27d14b91a54259f781722
+generatedBodyHash: 2ed0aadd93209ff8212e920db3c9790eb563ed9f9a13793240e701fbe6fb9318
 docPage:
   work: mcp-blueprint
-  group: members-types
+  group: features
   slug: events-dispatchers
-  order: 3
+  order: 6
 ---
 
 ## Create events or edit dispatchers
@@ -33,11 +33,11 @@ docPage:
 | `AddEventDispatcher` | Adds an Event Dispatcher. | Specify its name and signature. |
 | `RemoveEventDispatcher` | Removes an Event Dispatcher. | References or an inability to recover safely block removal. |
 
-Set the signature when adding an Event Dispatcher. Custom Events and Event Dispatchers have fewer signature-editing options than ordinary functions.
+Decide whether you need an event node in the Event Graph or an Event Dispatcher with a signature. Before adding a bound component event, make sure the tool can resolve the component and delegate. You can specify the signature when creating a dispatcher. Custom Events and Event Dispatchers have fewer signature-editing options than ordinary functions.
 
 ## Examples: Actor lifecycle and component bindings
 
-The examples show a component-event helper function and a graph with Actor lifecycle events, a bound component event, and a node with a variable pin count.
+The helper function is on the right in the first image. In the second, the orange box holds Actor lifecycle nodes. The red box shows the bound overlap event and its outgoing connection. The custom event below it shows its parameter pin.
 
 ![Component-event helper graph](/media-occurrence/doc%3Amcp-blueprint%3Aevents-dispatchers%3Amedia%3A1)
 

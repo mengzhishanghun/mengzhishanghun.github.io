@@ -13,23 +13,25 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-config-exclude/docs/setup/
 lang: en
 translationKey: doc:simple-config-exclude:setup
-sourceHash: d4c0682f8796f0c9726cbf039ab8382e5b0bbcf8581260ebf4ee8443559a2c03
+sourceHash: f61f16f0220a1f56b1d3cacd0e7cc95e285ea9a92e8bf399f68a2439b52b5306
 translationStatus: translated
-generatedBodyHash: f690b26d9d3a7c76f486a805514a7a7f3c4012a73f5e5e7f7dfcd915bdc50c9d
+generatedBodyHash: 9651b9de361375a6a4cc490fc65e0c960b6a8ee7a286d8db4de7e7d1919dbebb
 docPage:
   work: simple-config-exclude
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 ---
 
 ## Installation and Settings
 
+Use **Config Exclude Rules** to change what ships. Use **Copy** only if deployment requires placing excluded files in the destination.
+
 Copy the plugin folder into your project's `Plugins` directory and restart the editor.
 
 Path: `Edit > Project Settings > Plugins > Simple Config Exclude`
 
-The panel has three areas:
+Choose a panel section for the task:
 
 1.  **Settings**: General settings, including hiding plugin configuration and cleaning the target directory before copying
 2.  **Copy**: Copy excluded files to the target directory

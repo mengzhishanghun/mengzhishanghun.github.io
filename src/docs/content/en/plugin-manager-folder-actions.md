@@ -14,19 +14,25 @@ documentKind: product-manual
 websiteRoute: /en/works/plugin-manager/docs/folder-actions/
 lang: en
 translationKey: doc:plugin-manager:folder-actions
-sourceHash: 062d2f5e5f5568226d48036faf7da7a961b1ec0753055095b8c2e482cb7fbdb7
+sourceHash: d33b98490d07776030f672cc671f5a5fac4bf53508a6cf2fdc5f8da7cd11c992
 translationStatus: translated
-generatedBodyHash: 2a538c7872ecf39ed9904c1cbafaa88318935272d6cc8a69e4a1481074eb3535
+generatedBodyHash: 48bf2d9cb2b61ee19a125460234df6e03373824491998ca3ad72d5a267c0b505
 docPage:
   work: plugin-manager
-  group: plugins
+  group: features
   slug: folder-actions
   order: 3
 ---
 
 ## Move, Delete, or Rename Plugin Folders
 
-Close the UE editor before changing plugin folders. Project and Marketplace plugins can move between those locations. Engine plugins cannot be moved or deleted. Deleting sends the plugin to the recycle bin, and directory correction renames a garbled folder to match the plugin. The tool removes the read-only attribute for environments using Perforce or similar version control. Resolve any same-name conflict before moving the remaining plugin.
+Close the UE editor first, then select the plugin in the Project or Marketplace tab.
+
+- Move: Move the plugin between the project and Marketplace directories. If two plugins share a name, remove one first.
+- Delete: Send the plugin to the Recycle Bin.
+- Correct the folder name: Rename a garbled folder to match the plugin name.
+
+Engine plugins cannot be moved or deleted. The tool removes read-only attributes so it can handle files in Perforce and similar version control environments.
 
 ## Folder and List Shortcuts
 

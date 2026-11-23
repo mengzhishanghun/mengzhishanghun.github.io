@@ -11,7 +11,7 @@ workIds:
   - mcp-blueprint
 docPage:
   work: mcp-blueprint
-  group: assets-graphs
+  group: features
   slug: asset-lifecycle
   order: 1
 documentKind: product-manual
@@ -33,7 +33,7 @@ translationKey: doc:mcp-blueprint:asset-lifecycle
 | `OpenAsset` | 打开资产编辑器。 | 截图前必须先打开资产。 |
 | `CloseAsset` | 关闭资产编辑器。 | 关闭前请先保存需要保留的改动。 |
 
-大型资产列表支持有界分页。请使用读取结果中的资产路径；普通编辑只标记资产有改动，`SaveAsset` 才把这些改动写入磁盘。
+项目资产多时，先按目录缩小查找范围，必要时继续翻页。将列表返回的资产路径用于后续操作。普通编辑不会写入磁盘；需要保留改动时调用 `SaveAsset`。
 
 ## 编译与诊断
 
@@ -42,7 +42,7 @@ translationKey: doc:mcp-blueprint:asset-lifecycle
 | `GetCompileErrors` | 获取蓝图当前的编译诊断。 | 用于处理编辑器报告的错误或警告。 |
 | `CompileBlueprint` | 编译指定蓝图并返回诊断。 | 用于处理编辑器报告的错误或警告。 |
 
-获取编译诊断，根据真实蓝图错误修复后再保存。
+要查看已有的编译消息，用 `GetCompileErrors`。要编译当前改动，用 `CompileBlueprint`。处理报告的问题后，再保存要保留的版本。
 
 ## 重载磁盘版本与删除资产
 
@@ -51,5 +51,5 @@ translationKey: doc:mcp-blueprint:asset-lifecycle
 | `ReloadBlueprintFromDisk` | 用磁盘版本替换当前内存中的 Blueprint。 | 默认 dry-run；丢弃未保存改动必须显式批准。 |
 | `DeleteAsset` | 删除资产。 | 删除具有更严格的引用和恢复安全检查。 |
 
-- 磁盘重载默认 dry-run，丢弃内存状态前必须显式批准。
+- 想放弃未保存的改动时，先预检磁盘重载；确认可以丢弃内存状态后，再明确批准。
 - 破坏性删除比普通图修改具有更严格的 Undo/Redo 和 Package 安全要求。

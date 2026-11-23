@@ -13,19 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-dev-tools/docs/connect/
 lang: en
 translationKey: doc:mcp-dev-tools:connect
-sourceHash: d6f034e0cd32bf64b5e60f08a2cebc0707b806e9f4572e7bc5aba827fe040164
+sourceHash: 6223ac3fbbff64a782ec01997f6a7d2dae849897b1499206bc2e1a0e24d121dc
 translationStatus: translated
-generatedBodyHash: 585157ece818a6d1d1abd03c18cbbe1e2d8d95318a5ddc4a8ace362025f183cb
+generatedBodyHash: d4ba79b66cc61d521d452454da920381ba90d4e49baa103fe7639462a3581ff8
 docPage:
   work: mcp-dev-tools
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 ---
 
 ## Enable and configure the plugin
 
-MCPDevTools provides asset queries, editing, and read-only diagnostics over HTTP MCP in Unreal Editor. Use `tools/list` and tool results from the target editor to confirm what is available.
+MCPDevTools provides asset queries, editing, and read-only diagnostics over HTTP MCP in Unreal Editor. Enter the address from the editor log in your MCP client. Once connected, use `tools/list` to check which tools that editor instance offers.
 
 Place `Plugins/MCPDevTools` in your project's `Plugins` directory and enable `MCPDevTools` in the `.uproject` `Plugins` array. After opening the editor, configure the port and automatic startup under **Project Settings → Plugins → MCPDevTools**. The default address is `http://127.0.0.1:8768/mcp`. If the port is occupied, the server tries subsequent ports; use the actual address in the editor log.
 

@@ -10,9 +10,9 @@ workIds:
   - simple-tcp-server
 docPage:
   work: simple-tcp-server
-  group: native
+  group: features
   slug: native-server
-  order: 1
+  order: 3
 documentKind: product-manual
 websiteRoute: /zh/works/simple-tcp-server/docs/native-server/
 lang: zh
@@ -20,6 +20,8 @@ translationKey: doc:simple-tcp-server:native-server
 ---
 
 ## 实现示例
+
+先创建并启动监听，再用一个测试客户端发起连接，确认接收连接得到有效的会话 Socket。测试结束时，分别核对监听和已接受连接的释放路径。
 
 **监听端口:**
 
@@ -77,7 +79,7 @@ void AcceptClients(FSocket* ListenSocket)
 
 ## 监听与会话的生命周期
 
-这两段原生示例展示 `Bind`、`Listen` 与 `Accept`，不是 SimpleTCPServer 的蓝图接口。监听 Socket 和已接受 Socket 都需要保存所有权并在失败、停止或断开时释放；示例函数里的局部指针没有组成完整的服务器生命周期。
+这两段原生示例展示 `Bind`、`Listen` 与 `Accept`，不是 SimpleTCPServer 的蓝图接口。让项目持有监听 Socket 和已接受的 Socket，并在失败、停止或断开时释放。示例只定义了局部指针，没有演示完整的持有和释放过程。
 
 `Listen(8)` 设置待接受连接队列，并不是插件允许的总客户端数。`IP:Port` 能区分网络端点，不能当成长期用户身份或认证。读取客户端数据时仍需要处理字节流分帧、部分读写、超时和权限；多客户端示例也应避免阻塞主线程。
 

@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-dev-tools/docs/curves/
 lang: en
 translationKey: doc:mcp-dev-tools:curves
-sourceHash: 16988026fc6c0989884f00970d60dc3e98da1138e17df7b166f613d8471c98d8
+sourceHash: f9c155416cae58089532f6a9878afb2b5a72f92cdb497c54460a0b306be53fea
 translationStatus: translated
-generatedBodyHash: 44899020bded5389ac542df0be3e8a839c035ee20269d282c9e52cb635147473
+generatedBodyHash: 1f94125bc5dab5aa215dfaedf5f891c1e211cd5e748631c51b515d7c13b208d0
 docPage:
   work: mcp-dev-tools
-  group: data
+  group: features
   slug: curves
-  order: 3
+  order: 6
 ---
 
 ## Read and write
@@ -29,4 +29,4 @@ docPage:
 |---|---|---|
 | Curve | `GetCurve`, `CreateCurve`, `SetCurve` | Read or create Float, Vector, and LinearColor curves; replace selected channels using `Channels` and the corresponding complete old channels in `ExpectedValues`. Unspecified channels retain their values. |
 
-Preview changes before applying them, then save separately. See the [preview and save workflow](/en/works/mcp-dev-tools/docs/connect/).
+To edit one channel in a Vector curve, read the full channel first. Send the complete replacement and the complete old channel. Leave out any channel you want to keep. Preview the change before applying it. Then read the curve again to check the edited channel and confirm the others are unchanged. Then save separately; see the [preview and save workflow](/en/works/mcp-dev-tools/docs/connect/).

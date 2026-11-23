@@ -14,19 +14,19 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-quick-start/docs/build-configuration/
 lang: en
 translationKey: doc:ue-quick-start:build-configuration
-sourceHash: 8f1e49e92f518f68cbf3fcce1cdc836d3f567c754907ef886d8c05bba18e4816
+sourceHash: 164b5535423ce12bdbbd5a583dbbbd5c28ab3caddf94e5afb6025ba97dbee9e3
 translationStatus: translated
-generatedBodyHash: 8b070db07c167a8a324a26c758e822fedf463ad9bc1cd1c7876bf7d7b9ad569c
+generatedBodyHash: d16c8a04c47409fb8f87fe19f8bda8425e65b9afb73376a35cbed991f3be3ff6
 docPage:
   work: ue-quick-start
-  group: build
+  group: features
   slug: build-configuration
   order: 1
 ---
 
 ## Create UEBuildConfig.json
 
-Create `UEBuildConfig.json` in the project root to customize build behavior:
+Create `UEBuildConfig.json` in the project root, next to `.uproject`. This example shows the default settings:
 
 ```json
 {
@@ -47,4 +47,4 @@ Create `UEBuildConfig.json` in the project root to customize build behavior:
 | Build.AdditionalArgs | [] | Additional build arguments |
 | AutoOpenProject | true | Open the project automatically after a successful build |
 | AutoCloseOnSuccess | true | Close the tool automatically after opening the project |
-| CloseDelayMs | 1500 | Close delay in milliseconds |
+| CloseDelayMs | 1500 | Time the tool waits before closing automatically, in milliseconds |

@@ -11,7 +11,7 @@ workIds:
   - mcp-material
 docPage:
   work: mcp-material
-  group: assets
+  group: features
   slug: material-assets
   order: 1
 documentKind: product-manual
@@ -32,4 +32,4 @@ translationKey: doc:mcp-material:material-assets
 
 创建的资产先处于内存 Dirty 状态，必须显式调用 `SaveAsset` 才会写入磁盘；底层保存失败会返回 MCP 错误终态，而不是成功响应中的警告。
 
-写入工具使用事务并将包标记为 Dirty。保存前可用 `CompileMaterial` 验证；需要手动检查时用 `OpenAsset` 打开。
+写入工具会把改动记入事务，并将包标记为 Dirty。保存前可用 `CompileMaterial` 检查编译结果。若想在编辑器里查看结果，可先保存，再用 `OpenAsset` 打开；如果先打开查看，保存前要再次关闭目标编辑器。

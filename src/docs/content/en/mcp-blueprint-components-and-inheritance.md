@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/components-and-inheritance/
 lang: en
 translationKey: doc:mcp-blueprint:components-and-inheritance
-sourceHash: a441bbbdf025ab11c10e24c440637672edb0b5cabba1541272f5eb330f105328
+sourceHash: 8e4cf738174e1202a90bd6325d66c125be72d1226f18f1e2b4e24a74432fdfda
 translationStatus: translated
-generatedBodyHash: 58b7da9ee1a25bc159d04879ea403019369cc08ab6f6f8c6dc99741eefb611af
+generatedBodyHash: 4d3c28385e9f613af5836f19556362491ccab9c727eefdbc93b5a9c620d075da
 docPage:
   work: mcp-blueprint
-  group: class-structure
+  group: features
   slug: components-and-inheritance
-  order: 1
+  order: 10
 ---
 
 ## Read and edit the local component tree
@@ -38,10 +38,10 @@ docPage:
 
 ## Edit SCS component-template properties
 
-Use `GetComponents` to find the local SCS `ComponentName`, then call `SetComponentProperties`. Supply `Properties` as a map of property names to UE-text values, for example `RelativeLocation: "(X=0,Y=0,Z=50)"` or `bHiddenInGame: "True"`. The tool edits only component templates added by this Blueprint. An invalid property rolls back the whole call and reports the property name with a format hint. Save separately with `SaveAsset` when needed.
+Find the local SCS `ComponentName` with `GetComponents`, then check editable template properties with `GetComponentProperties`. To make the edit, call `SetComponentProperties`. Supply `Properties` as a map of property names to UE-text values, for example `RelativeLocation: "(X=0,Y=0,Z=50)"` or `bHiddenInGame: "True"`. The tool edits only component templates added by this Blueprint. An invalid property rolls back the whole call and reports the property name with a format hint. Save separately with `SaveAsset` when needed.
 
 This changes a component template added by this Blueprint, such as `StaticMesh` or `RelativeLocation`. Existing Actor instance overrides stay as they are. Use `SetClassDefaults` for defaults on the generated class.
 
 ## Change component attachments
 
-`ReparentComponent` changes the attachment tree of local SceneComponents within the same Actor Blueprint. Supply the component name and new `NewParentName`. A component cannot attach to itself or a descendant, and non-SceneComponents cannot be reparented. Use `SetRootComponent` for the actual local root.
+`ReparentComponent` changes the attachment tree of local SceneComponents within the same Actor Blueprint. Supply the component name and new `NewParentName`. A component cannot attach to itself or a descendant, and non-SceneComponents cannot be reparented. Use `SetRootComponent` for the actual local root. After editing, check the parent or root in the component tree before saving the changes you want to keep.

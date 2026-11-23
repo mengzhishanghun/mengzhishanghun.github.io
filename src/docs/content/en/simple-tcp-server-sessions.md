@@ -12,12 +12,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-server/docs/sessions/
 lang: en
 translationKey: doc:simple-tcp-server:sessions
-sourceHash: 765ccd7cfb01f006762def1a688d265815d09b8c161d6657cbeb526e70e2811f
+sourceHash: c4e07b7801683747dc750dd0a3482b1bd86540e0de0154ae0d5e82cdc40d8f1a
 translationStatus: translated
-generatedBodyHash: 1951fb28d0e3c00a5ee6235b76f930e4cf70a64ddd43f3a3f3a73ccbe3e3ab93
+generatedBodyHash: 95a368674cfa9f0228bb784b245d4d79fd3ef21cda15cabe5f4c1ec50e2bdad4
 docPage:
   work: simple-tcp-server
-  group: network
+  group: features
   slug: sessions
   order: 1
 ---
@@ -34,6 +34,8 @@ When the server accepts a client, the plugin assigns it a unique `SessionChannel
 
 ## List sessions and check their connection state
 
+Once the listener starts, check that the client connected to the right channel, then use `GetAllSessions` to see the current sessions. Before sending to a client, check the selected session with `IsSessionConnected`. Read the list again after a reconnect.
+
 | Node Function             | Description                                               |
 |---------------------------|-----------------------------------------------------------|
 | `GetAllSessions`          | Get all current SessionChannels on a listening channel    |
@@ -41,7 +43,7 @@ When the server accepts a client, the plugin assigns it a unique `SessionChannel
 
 ## When session sockets are created and destroyed
 
-The plugin creates a session socket when it accepts a client. The socket ends on disconnection or destruction. The plugin manages sockets; no manual cleanup is needed.
+The plugin creates a session socket when it accepts a client. The session ends when the client disconnects or the socket is destroyed. The plugin handles socket cleanup.
 
 ## Blueprint node overview
 

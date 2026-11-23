@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-asset-namer/docs/naming-rules/
 lang: en
 translationKey: doc:simple-asset-namer:naming-rules
-sourceHash: f80311967150534e572d79101384443ab8d7cec1eddb89da108a4254897b7443
+sourceHash: 24c48b6816e491fe9d9adfa87832826c133e1cc1085a1abebb0f491da24ff7ea
 translationStatus: translated
-generatedBodyHash: df2e59dff64ac1ba3e2a38a46fdbfd52f9ebbab62dc78bc0183e7bff2b1028e8
+generatedBodyHash: 8af67aafe1c24322acf99a43295ea4a86a6813801f94d7f49e1cd11af00875db
 docPage:
   work: simple-asset-namer
-  group: naming
+  group: features
   slug: naming-rules
   order: 1
 ---
@@ -106,7 +106,7 @@ docPage:
 
 **Naming rule configuration:**
 
-Each asset type can have its own prefix and suffix:
+Set the prefix and suffix for each asset type:
 
 ```cpp
 USTRUCT(BlueprintType)
@@ -144,6 +144,8 @@ Extraction attempts to match and remove:
 Click **+** under **Asset Type Naming Rules** to add a rule.
 
 ## Limit Asset Paths
+
+For a gradual rollout, allowlist one test folder and check that its asset types match the rules before expanding the scope. If a path falls outside the filter, check the path settings before changing affixes.
 
 `Filter Type` defaults to a blocklist and skips assets under `Exclude Paths`. An allowlist processes only paths in `Include Paths`, which is useful for introducing rules gradually. The blocks below show the default exclusions and an example allowlist.
 

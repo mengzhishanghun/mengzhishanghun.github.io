@@ -38,7 +38,7 @@ MCPBlueprint 是跟随引擎安装的可选编辑器工具。`.uplugin` 使用 `
 
 MCPBlueprint 会自动启用；开启 Auto Start 后，本机 MCP 服务会随编辑器启动。用户不需要在每个项目中手动启用插件，也不需要向项目 `.uproject` 添加插件声明。
 
-让你使用的 AI 客户端按照自身的 MCP 配置流程接入 MCPBlueprint，并把插件工具栏显示的端点交给它即可。默认端点为 `http://127.0.0.1:8766/mcp`；配置端口被占用时，MCPBlueprint 最多尝试后续九个端口。不同 AI 客户端的配置格式不同，因此本文不规定某个客户端专用的 JSON 文件或手动端口配置步骤。
+在 AI 客户端的 MCP 设置中添加本机 HTTP 服务，地址使用插件工具栏显示的端点。默认端点为 `http://127.0.0.1:8766/mcp`；配置端口被占用时，MCPBlueprint 最多尝试后续九个端口。不同 AI 客户端的配置格式不同，请按所用客户端的格式填写。
 
 `initialize` 和 `tools/list` 通常由 MCP 客户端自动完成；`ping` 只用于排障，不是普通用户每次都要手动执行的步骤。
 
@@ -56,7 +56,7 @@ MCPBlueprint 会自动启用；开启 Auto Start 后，本机 MCP 服务会随�
 
 ## 首次读取和修改蓝图
 
-连接后，用 `ListBlueprints` 找到资产，再把确切的 `BlueprintPath` 交给 `GetBlueprintOverview`。如果要修改逻辑，先确认要编辑的图，再按[图表编辑流程](/zh/works/mcp-blueprint/docs/graphs/)预检操作。普通工具只标记资产有改动；需要保留时明确调用 `SaveAsset`。
+连接后，用 `ListBlueprints` 找到资产，再把确切的 `BlueprintPath` 交给 `GetBlueprintOverview`。如果要修改逻辑，先确认要编辑的图，再按[图表编辑流程](/zh/works/mcp-blueprint/docs/graphs/)预检操作。普通工具只标记资产有改动。编译和保存是两步：处理编译诊断后，需要保留改动时再调用 `SaveAsset`。
 
 ## 按编辑对象选择工具
 

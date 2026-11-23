@@ -12,7 +12,7 @@ workIds:
   - ue-package-manager
 docPage:
   work: ue-package-manager
-  group: packaging
+  group: features
   slug: package-project
   order: 1
 documentKind: product-manual
@@ -25,11 +25,11 @@ translationKey: doc:ue-package-manager:package-project
 
 ![](/media-occurrence/doc%3Aue-package-manager%3Apackage-project%3Amedia%3A1)
 
-确认界面显示的是当前项目和引擎，选择 Archive 输出目录与构建类型，再启动打包。输出目录不能是项目根目录。构建类型为 `DebugGame`、`Development`、`Test` 或 `Shipping`；`Shipping` 额外启用压缩。打包过程和结果可在日志中查看。
+先核对界面顶部显示的项目目录和 UE 目录，再选择 Archive 输出目录及构建类型。输出目录不能是项目根目录。可选类型为 `DebugGame`、`Development`、`Test` 或 `Shipping`；`Shipping` 还会启用压缩。点击“开始打包”后，在界面下方的日志区查看进度和结果。
 
 ## 命令行打包与完整命令示例
 
-先运行 `validate` 检查配置，再运行 `package --dry-run` 查看 UAT 命令。去掉 `--dry-run` 才会开始打包。从项目根目录运行时可省略 `--project-root`。成功返回 `0`，参数、配置或执行出错时返回 `2`。
+先运行 `validate` 检查配置，再用 `package --dry-run` 预览 UAT 命令。确认命令无误后，去掉 `--dry-run` 开始打包。从项目根目录运行时可省略 `--project-root`。命令成功返回 `0`；参数、配置或执行出错时返回 `2`。
 
 ```bat
 UEPackageManager.exe --version

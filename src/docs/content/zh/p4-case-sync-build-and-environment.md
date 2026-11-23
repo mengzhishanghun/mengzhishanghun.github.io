@@ -11,9 +11,9 @@ workIds:
   - p4-case-sync
 docPage:
   work: p4-case-sync
-  group: distribution
+  group: features
   slug: build-and-environment
-  order: 1
+  order: 2
 documentKind: product-manual
 websiteRoute: /zh/works/p4-case-sync/docs/build-and-environment/
 lang: zh
@@ -22,7 +22,7 @@ translationKey: doc:p4-case-sync:build-and-environment
 
 ## 用 spec 文件打包
 
-本项目使用动态路径导入，需要通过 **spec 文件**指定隐藏导入。
+在 `P4CaseSync.spec` 所在的项目目录运行以下命令。项目会动态导入模块，打包时需要从 spec 文件读取隐藏导入配置。
 
 ```bash
 pyinstaller P4CaseSync.spec

@@ -12,12 +12,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-server/docs/listen/
 lang: en
 translationKey: doc:simple-tcp-server:listen
-sourceHash: cf17ea2d66a61cbe85d04784ec8fe580c48962d49eb8f3b55356497e4d8972be
+sourceHash: 6c1d6d7092a9805a44f200a30d92e9499ffb50a55cb574321725cdbf26713edb
 translationStatus: translated
-generatedBodyHash: 33e42edba2c81b4c0ec8bf313a652c3848616fa9e89a85299c7a846fabd05fdf
+generatedBodyHash: 8e7b9f979dd95dffc463cc18d8be08c987c629d3cd83493ef522a56cef45d364
 docPage:
   work: simple-tcp-server
-  group: setup
+  group: getting-started
   slug: listen
   order: 1
 ---
@@ -38,8 +38,7 @@ It registers as a `GameInstanceSubsystem`, and its lifecycle persists across lev
 
 ## Define a listening channel in Project Settings
 
-You can define server listening channels via **Project Settings → SimpleTCPServer Settings**.  
-Using this method is recommended for centralized management and ease of debugging.
+Add listening channels under **Project Settings → SimpleTCPServer Settings** so you can inspect and troubleshoot their settings in one place.
 
 ### Listening channel parameters
 
@@ -51,6 +50,8 @@ Using this method is recommended for centralized management and ease of debuggin
 | Max Receive Bytes     | `1024`            | Max buffer size for each message               |
 
 ## Start and stop listening in Blueprint
+
+For example, use the settings in the table, start `MainServer` in Blueprint, and check the same channel with `IsServerRunning`. Once it is listening, connect a test client to a reachable IPv4 address of the server and its listening port. The bind address is a listener setting.
 
 | Node Function             | Description                                               |
 |---------------------------|-----------------------------------------------------------|

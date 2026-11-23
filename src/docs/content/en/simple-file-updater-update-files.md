@@ -13,19 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-file-updater/docs/update-files/
 lang: en
 translationKey: doc:simple-file-updater:update-files
-sourceHash: fa703c86f3a212c07c3228580c92db65451442fae3907c1f7c879460a56afc64
+sourceHash: 773ef6b79c316b7dbd68910e2c22e26afd1ce3be1d99cc11687c29d3a575a6f6
 translationStatus: translated
-generatedBodyHash: 9b250927f9cbb41d93549887d86db57d35a6710a01ab62e76443880fb9401fb1
+generatedBodyHash: 1ddfedb802d92b97c1c87da65bac557a88ec11662a99c8ca998985f265fb392f
 docPage:
   work: simple-file-updater
-  group: updates
+  group: features
   slug: update-files
   order: 1
 ---
 
 ## Write the Update List
 
-The default configuration file is **`.SimpleFileUpdater`**, with the following format:
+In the default configuration file, **`.SimpleFileUpdater`**, write one mapping per line. Put the local destination on the left of the equals sign and the download URL on the right:
 
 ```
 # 每行一个映射：本地路径 = 远程 URL
@@ -50,4 +50,4 @@ After execution, the program remains in the console and waits for you to press E
 
 ## Before Overwriting Files
 
-This is a personal utility; you assume the risks of using it. Verify the remote URLs and local target paths before running an update. Back up any existing files that it might overwrite.
+This is a personal utility; you assume the risks of using it. Before running the update, verify that the remote URLs are trustworthy and the destination paths are correct. Back up any files already at those destinations, as the update may overwrite them.

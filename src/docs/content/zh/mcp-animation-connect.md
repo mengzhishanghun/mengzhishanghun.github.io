@@ -11,7 +11,7 @@ workIds:
   - mcp-animation
 docPage:
   work: mcp-animation
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 documentKind: product-manual
@@ -20,11 +20,11 @@ lang: zh
 translationKey: doc:mcp-animation:connect
 ---
 
-MCPAnimation 是一个自包含的 Unreal Editor 插件，通过 HTTP MCP 向 AI 客户端提供动画蓝图、状态机、Skeleton、AnimSequence、Montage、AnimNotify 与 BlendSpace 的发现、读取和编辑能力。插件支持 Unreal Engine 5.2 及以上版本，不依赖其他用户制作的插件。
+MCPAnimation 是一个自包含的 Unreal Editor 插件，通过 HTTP MCP 向 AI 客户端提供动画蓝图、状态机、Skeleton、AnimSequence、Montage、AnimNotify 与 BlendSpace 的发现、读取和编辑能力。插件不依赖其他用户制作的插件。当前开发覆盖 UE 5.2–5.8，兼容性仍待确认，请先在自己的目标版本中试用。
 
 ## 连接方式
 
-默认端点为 `http://127.0.0.1:8760/mcp`。若端口被占用，服务器会继续尝试后续端口；请以编辑器中显示的实际端点为准。服务器实现 `initialize`、`tools/list`、`tools/call` 和 `ping`。
+在 Unreal Editor 中启用插件后，把编辑器显示的实际地址填入 MCP 客户端的 HTTP 配置。默认端点为 `http://127.0.0.1:8760/mcp`；端口被占用时，服务会尝试后续端口。连接后可用 `initialize` 建立会话，通过 `tools/list` 查看可用工具，再用 `tools/call` 调用；`ping` 可用于检查连接。
 
 ## 输入校验与适用范围
 

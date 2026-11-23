@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 lang: en
 translationKey: ue-quick-start
-sourceHash: 34a735c6c027b8b3d59a538fb6aced0cbb314c5f9d88fd07448958b2b9c084f4
+sourceHash: e4db9a3dddfc1e00f9324ed60f84ded0a907d5a75e7b72fbd29e82a1bbfe897b
 translationStatus: translated
-generatedBodyHash: 88ec4958887b398166f1649e886ad50b2c90b4be686ba217f668832b859f7642
+generatedBodyHash: f967cc618a8eaabcef59a655dbff21ff171051afa432a78e1d2f4b91726b2706
 workInfo:
   channels:
     - kind: docs
@@ -37,13 +37,16 @@ docIds:
   - ue-quick-start-open-project
   - ue-quick-start-build-configuration
   - ue-quick-start-normalize-line-endings
+  - ue-quick-start-updates-2026-06-13
+  - ue-quick-start-updates-2026-03-18
+  - ue-quick-start-updates-2026-01-31
+  - ue-quick-start-updates-2026-01-30
+  - ue-quick-start-updates-2026-01-22
 ---
 
 ## Overview
 
-UEQuickStart lets UE artists, testers, designers, and other non-programmers compile and open existing projects locally with one click, avoiding repeated team synchronization of the project Binaries folder. It automatically detects the project and associated engine, displays live build logs, and launches the project after a successful build.
-
-It targets members who need to update local projects but are unfamiliar with command-line builds.
+UEQuickStart lets UE artists, testers, designers, and other team members build and open an existing project locally, reducing the need to resync the project’s Binaries folder. After updating the project, run the tool from the project root. It detects the project and its engine, shows live build logs, and opens the project by default after a successful build.
 
 ## Background and goals
 
@@ -63,7 +66,7 @@ Before compilation, the tool can normalize source line ending differences caused
 
 ### Logs and launch
 
-Live logs show build progress and failure details. After success, users can launch the project from the tool, connecting compilation to opening the project. Failed builds still require actual problems to be fixed from the logs and cannot be treated as runnable.
+Follow the build in the log window. After a successful build, you can open the project. If the build fails, find the specific error in the log and fix it before trying again.
 
 ## Use cases
 

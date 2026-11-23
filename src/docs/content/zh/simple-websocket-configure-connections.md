@@ -10,7 +10,7 @@ workIds:
   - simple-websocket
 docPage:
   work: simple-websocket
-  group: setup
+  group: getting-started
   slug: configure-connections
   order: 1
 documentKind: product-manual
@@ -30,9 +30,11 @@ translationKey: doc:simple-websocket:configure-connections
 
 ## 添加命名连接
 
+把配置名称记下来，后续在蓝图里用同一个名称。连接本机服务时，地址中的端口必须与服务端监听端口一致；不启用 **Auto Connect** 时，从蓝图手动发起连接。
+
 1. 在 Unreal Engine 编辑器中启用插件。  
 2. 前往 `编辑 > 项目设置`  
-3. 向下滚动找到 `Simple WebSocket Settings`  
+3. 向下滚动并打开 `Simple WebSocket Settings`  
 4. 添加新的 WebSocket 连接条目（如命名为 `Test`）  
 5. 输入 WebSocket 地址（推荐格式：`ws://127.0.0.1:xxxx`）  
 6. 启用 **Auto Connect**（可选；启用后运行时自动建立连接）

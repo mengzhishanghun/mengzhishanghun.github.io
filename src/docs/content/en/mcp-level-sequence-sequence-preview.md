@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-level-sequence/docs/sequence-preview/
 lang: en
 translationKey: doc:mcp-level-sequence:sequence-preview
-sourceHash: 12a68b02e7f30a57f02290c2c7a84f2a6dc87f025bc853acc18b2fd7c9642c6f
+sourceHash: bbe6b14ccea5befec417fcb17ff5ecaa37f1d86b1e64d0aa1c272b3070d0969c
 translationStatus: translated
-generatedBodyHash: bcec9b349eae3c1ec2937b33439b3a7be640855bc5162fa18a8cf44ef37538f2
+generatedBodyHash: f38ef1fd109d597c1adef2bc77b41f79164f17cfdd4c5e7b6461694675ac7bb7
 docPage:
   work: mcp-level-sequence
-  group: assets
+  group: features
   slug: sequence-preview
   order: 2
 ---
@@ -29,4 +29,4 @@ docPage:
 |---|---|---|
 | Preview | `CaptureSequencerView` | Capture the active level editor viewport as PNG |
 
-The capture is limited to 16 Mi pixels and 8 MiB of compressed PNG data. The tool can access loaded or readable sequence locations.
+Show the shot you want in the active level viewport, then call `CaptureSequencerView` for a loaded or readable sequence. The PNG shows what was in that viewport at the time of capture. The limit is 16 Mi pixels and 8 MiB of compressed PNG data.

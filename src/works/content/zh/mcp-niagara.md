@@ -12,7 +12,7 @@ workInfo:
   stage: developing
   channels:
     - kind: docs
-      href: /zh/works/mcp-niagara/docs/inspect/
+      href: /zh/works/mcp-niagara/docs/quickstart/
   compatibility:
     - platforms: []
       requirements:
@@ -24,6 +24,7 @@ tags:
   - Niagara 系统、发射器与模块
   - MCP 系列
 docIds:
+  - mcp-niagara-quickstart
   - mcp-niagara-inspect
   - mcp-niagara-niagara-system-assets
   - mcp-niagara-niagara-preview

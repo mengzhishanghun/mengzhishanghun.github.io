@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-bp-inherit-fix/docs/repair-components/
 lang: en
 translationKey: doc:simple-bp-inherit-fix:repair-components
-sourceHash: fed61244653ce5a7b5960674253d219a34a15628ffb6fe9572e7445d97ea0b73
+sourceHash: 39a7c95e5dc2957217362eb8fa12ee9de767ca1adb2f8d14353b9d70ac2eae96
 translationStatus: translated
-generatedBodyHash: 86555c38fbe9237ba40330fb2d1bf3796b5c38b7d94cc98672b54311c6baa3e6
+generatedBodyHash: 6710a2406d39ce30fab7f688ef176917180231e2fc9760800e4e6ef7b3846f6f
 docPage:
   work: simple-bp-inherit-fix
-  group: components
+  group: features
   slug: repair-components
   order: 2
 ---
@@ -32,6 +32,8 @@ docPage:
 
 ## Review and Save the Repair
 
+The Blueprint you select is the starting point. Parent or child assets can also appear in the save list. Match those assets against the repair and dirty entries in the log.
+
 Collect the inheritance chain and identify affected components before checkout, field updates, and saving.
 
 | Stage | Action |
@@ -42,7 +44,7 @@ Collect the inheritance chain and identify affected components before checkout, 
 | 4. **ApplyFindings** | Change `CreationMethod` from `Instance` to `SimpleConstructionScript` |
 | 5. **MarkDirty** | Mark changed Blueprints dirty and prompt the user to save manually |
 
-A complete log looks roughly like this:
+For example, a repair started from a child Blueprint can list the modified parent:
 
 ```
 [SBIF] ==============================================

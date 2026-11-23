@@ -11,9 +11,9 @@ workIds:
   - mcp-level-sequence
 docPage:
   work: mcp-level-sequence
-  group: sequence-editing
+  group: features
   slug: sequence-keyframes
-  order: 3
+  order: 5
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-level-sequence/docs/sequence-keyframes/
 lang: zh
@@ -27,6 +27,8 @@ translationKey: doc:mcp-level-sequence:sequence-keyframes
 | Key | `GetKeyframes`、`SetKeyframes`、`RemoveKeyframes` | 分页读取、写入和删除关键帧 |
 
 关键帧工具支持三类 Channel：Transform 使用 Double，Float/Fade 使用 Float，Bool 属性轨使用 Bool。`GetSequenceDetail` 返回 Track 与 Section 结构，但不枚举 Channel；调用关键帧工具时应使用对应 Track 类型约定的 `ChannelName`。
+
+先定位轨道和区段，再按轨道类型选择通道。修改或删除前先读取该通道的关键帧，确认帧位置和数值类型；改完后可查看同一通道。
 
 - `GetKeyframes`：默认 200，单页最多 1000，并提供 `NextOffset`。
 

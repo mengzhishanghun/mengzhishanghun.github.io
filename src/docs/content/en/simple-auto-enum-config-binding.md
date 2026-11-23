@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-auto-enum/docs/config-binding/
 lang: en
 translationKey: doc:simple-auto-enum:config-binding
-sourceHash: c5c8f93d7842177a422b1b1e721cfc765651a74bb5fbdd10913e0b56784d1476
+sourceHash: f923dd0380333ee539cb44a67049593bb3950088c31da771a5616bb56ff90122
 translationStatus: translated
-generatedBodyHash: 3f567f56a68589791716b11ef55baa1b3c1f50bbfbdc1135b60a748e92d78948
+generatedBodyHash: a74849837b3127a04d74e60bad655b693035e48073091ff739d2c1671516b482
 docPage:
   work: simple-auto-enum
-  group: enum-binding
+  group: features
   slug: config-binding
   order: 1
 ---
@@ -102,7 +102,7 @@ enum class EDemo_StandardWeapons : uint8
 SIMPLE_BIND_ENUM_TO_CONFIG(EDemo_StandardWeapons, None, Max, USimpleAutoEnumTestSettings, Demo_PrimaryWeaponsArray);
 ```
 
-The most common pattern binds one enum to one configuration array.
+This example fills a range in one enum from a single configuration array.
 
 ```cpp
 // 1. 定义枚举框架
@@ -273,6 +273,8 @@ Begin, 普通, 优秀, 稀有, 史诗, 传说, End
 The plugin supports three common usage patterns for different scenarios.
 
 ## Set and Check Enum Boundaries
+
+Compare the configuration with runtime values one range at a time. Boundary entries should still be present, and configured values should appear in the intended range. If a value is missing, check for empty strings, duplicates, and incorrect boundaries before checking the log.
 
 ```cpp
 // 标准模式

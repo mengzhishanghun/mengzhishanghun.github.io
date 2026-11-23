@@ -11,7 +11,7 @@ workIds:
   - simple-bp-inherit-fix
 docPage:
   work: simple-bp-inherit-fix
-  group: components
+  group: features
   slug: find-components
   order: 1
 documentKind: product-manual
@@ -22,7 +22,9 @@ translationKey: doc:simple-bp-inherit-fix:find-components
 
 ## 可识别的异常
 
-在 UE 的 Actor 蓝图继承中，有时会出现这样的组件异常：
+先打开出现异常的父、子 Actor 蓝图，对照同一组件。如果子蓝图里的操作影响了父蓝图，核对父级组件模板是否跟着变了，再决定是否运行修复。
+
+下面两种表现值得检查：
 
 -   **父蓝图中，组件的「剪切 / 删除」菜单变灰**：组件属于父类，却无法从这里删除。
 -   **子蓝图修改组件属性后，改动写回父蓝图**：即使只是勾选一个 bool，也可能影响父模板，子类修改没有被正常隔离。

@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/graphs/
 lang: en
 translationKey: doc:mcp-blueprint:graphs
-sourceHash: 27e971627a75eedcfcfec1941e30805de1070489ef582a019311a3e14f9afc40
+sourceHash: 06d78dbcc0d6a7be996c658c6d531c1f1edf37e87794af3ffad83d303ba5a197
 translationStatus: translated
-generatedBodyHash: 831a7b7e6cd2e478773763236efd13c0d1ca73b2f59f9401fd062f79f2dd6751
+generatedBodyHash: 8a045b414c8e71bf8e96b38e4f1a27f9dfd66167b21338dde92360d5345ab78a
 docPage:
   work: mcp-blueprint
-  group: assets-graphs
+  group: features
   slug: graphs
   order: 2
 ---
@@ -34,7 +34,7 @@ Use the asset path returned by the plugin and page through large graphs. `GetGra
 
 ## Preview, apply, and save a graph patch
 
-For writes that change structure or data:
+When changing nodes, links, or graph data:
 
 1. Locate the target asset, graph, pin, member, or component.
 2. Search with `SearchGraphNodes` to obtain a valid `SpawnerId`.
@@ -87,7 +87,7 @@ FinalScore = (BaseScore + Bonus) × Multiplier
 2. Use `CreateFunction` to add `CalculateScore` with three `double` inputs and one `double` output.
 3. Use `GetGraphDetail` to find the new function's Entry and Result node identifiers.
 4. Search this function graph for `Add` and `Multiply`, then use the returned `Operator:Add` and `Operator:Multiply` actions.
-5. Preview an `ApplyGraphPatch` containing the two nodes and five data connections.
+5. Preview an `ApplyGraphPatch` with two nodes and five data connections. Connect the base score and bonus to Add. Connect the sum and multiplier to Multiply. Connect the product to the return node.
 6. Apply the same patch with native `double` promotion and automatic `Balanced` layout.
 7. Call `SaveAsset` if you want to keep the change.
 
@@ -103,7 +103,7 @@ Before the change, Region 1 always sets `ShippingCents = 1000`.
 
 ![Region 1 before](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A1)
 
-After the change, a `FirstOrder` branch sets shipping to `0` for first orders and keeps `1000` for other orders.
+After the change, a `FirstOrder` branch sets shipping to `0` for first orders and keeps `1000` for other orders. The red box in the blue shipping region marks the new branch.
 
 ![Region 1 after](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A2)
 
@@ -113,7 +113,7 @@ Before the change: `PointsEarned = TotalCents / 100`.
 
 ![Points before](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A3)
 
-After the change: `PointsEarned = (TotalCents - ShippingCents) / 100`. A new Subtract node excludes shipping.
+After the change: `PointsEarned = (TotalCents - ShippingCents) / 100`. The new Subtract node sits between the inputs and the Divide node, so shipping is deducted before division.
 
 ![Points after](/media-occurrence/doc%3Amcp-blueprint%3Agraphs%3Amedia%3A4)
 

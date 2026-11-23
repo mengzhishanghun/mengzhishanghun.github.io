@@ -12,14 +12,14 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-udp/docs/native-sockets/
 lang: en
 translationKey: doc:simple-udp:native-sockets
-sourceHash: 7f7077b88e51026cb7a6c765a7379d875bf3027826eaf0aca626f019d3f92279
+sourceHash: 5f20865f8b4721d61390aa659559a681b76d370b6ab8ecb5535805ca742f73b9
 translationStatus: translated
-generatedBodyHash: b33e02652a4994634874203eb1e6d6fcab4ee459268842f2593d6b948e2d4af8
+generatedBodyHash: 33c2a303654ca4e2cb039cb9ea2ba2a2769fc3ac463693aca7c5e3f10799f88d
 docPage:
   work: simple-udp
-  group: native
+  group: features
   slug: native-sockets
-  order: 1
+  order: 3
 ---
 
 ## Use cases
@@ -114,9 +114,11 @@ void SendUDPData(const FString& TargetIP, int32 TargetPort, const TArray<uint8>&
 
 ## Native example and plugin channels
 
+For an initial test, bind the receiver to a test port, then send it a short datagram. Check the byte count and contents separately. Once reception works, add the shutdown and resource cleanup your project needs.
+
 These three `FSocket` examples demonstrate binding, receiving, and sending. They are not SimpleUDP Blueprint APIs. Implement `ProcessReceivedData` in your project. Check object validity and the return values from creation, binding, data transfer, and closing. The receiver also needs an explicit exit and cleanup path. A nonblocking native socket does not by itself provide a background receive thread.
 
-The example's `65507` illustrates the usual IPv4 UDP datagram payload limit. It is not a recommended packet size. The usable size also depends on path MTU, fragmentation, and plugin channel buffers. Broadcast and multicast are protocol use cases; listing them does not mean the plugin has configured the routes, socket options, or subscriptions they require. UDP does not guarantee delivery or ordering, so application logic must handle packet loss and message identity.
+The example uses `65507` to illustrate the usual IPv4 UDP payload limit. Choose a packet size your path MTU, fragmentation behavior, and plugin channel buffers can support. Broadcast and multicast are protocol use cases; listing them does not mean the plugin has configured the routes, socket options, or subscriptions they require. UDP does not guarantee delivery or ordering, so application logic must handle packet loss and message identity.
 
 See the [SimpleTCPClient overview](/en/works/simple-tcp-client/) for protocol choices. Its connection guide covers threading, and its messaging guide links to byte conversion.
 

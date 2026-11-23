@@ -12,14 +12,14 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-client/docs/native-client/
 lang: en
 translationKey: doc:simple-tcp-client:native-client
-sourceHash: 0720da36860d9dbefacf96f6b1ad58cae8dbae61c010b79376b3628bdef02fe3
+sourceHash: 5e6d84516c12db9ad9caceae1a4820fcc289a3783bd6ce3bcd1eaa073c2d18a7
 translationStatus: translated
-generatedBodyHash: 4a5dc87e3c0fe1f6712f3adfb3fe73eed74d8ba552caddaa94676714281259f3
+generatedBodyHash: ff6d87a84435e8c01473756063636b9052b91bd1d9c39e7ed91d626d23f96a1d
 docPage:
   work: simple-tcp-client
-  group: native
+  group: features
   slug: native-client
-  order: 1
+  order: 3
 ---
 
 ## Use cases
@@ -98,10 +98,12 @@ bool ReceiveTCPData(FSocket* Socket, TArray<uint8>& OutData)
 
 ## Connection ownership and byte stream handling
 
+Connect to a test service that is already listening and exchange a short, known payload. Check the bytes transferred as well as their contents. If an operation handles only part of the payload, retain your position and continue according to the protocol.
+
 These `FSocket` functions are native implementation examples, not SimpleTCPClient nodes. The connection function only returns a Boolean and does not give the caller a way to own and release the socket. Release resources for invalid addresses, failed connections, and shutdown. A synchronous `Connect` can wait, so keep it out of game-thread flows that need to remain responsive.
 
 A successful `Send` does not mean one call sent every byte; continue according to the actual number sent. `Recv` returns part of a byte stream, which may not be one complete application message. Handle buffer limits, zero-byte reads, disconnections, and errors. Reliable TCP transport does not guarantee that an application command executes or that a disconnected session recovers automatically. Define message framing, acknowledgments, and recovery rules in the application protocol.
 
 ## From the example to your project
 
-Use the native example to practice creating a socket and sending and receiving data. A production project still needs to account for asynchronous work, multiple channels, sessions, address filters, serialization, and Blueprint integration as applicable. The companion plugins provide server sessions, UDP address filters, and named WebSocket connections.
+The native example covers socket creation and basic reads and writes. A production project still needs to account for asynchronous work, multiple channels, sessions, address filters, serialization, and Blueprint integration as applicable. The companion plugins provide server sessions, UDP address filters, and named WebSocket connections.

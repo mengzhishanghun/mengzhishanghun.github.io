@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-dev-tools/docs/enhanced-input/
 lang: en
 translationKey: doc:mcp-dev-tools:enhanced-input
-sourceHash: 33bdcff649d88faf9c9594dfa0b6eda0c09be079c3fc45ec6f5e43b3b241aca5
+sourceHash: 550ee2d3d6b9d013a331509d5807b1655efa687573328fd5c76a0d146f1d0728
 translationStatus: translated
-generatedBodyHash: 30feeecbe46156b3dd1a8e4884cb33ae1fe396269de039c200546969916dd7f9
+generatedBodyHash: dae2b97665df21fbe72d41b644fb2455f6ac01b63261c50aacd4a0e8b0f02306
 docPage:
   work: mcp-dev-tools
-  group: input
+  group: features
   slug: enhanced-input
-  order: 1
+  order: 9
 ---
 
 ## Enable Enhanced Input
@@ -38,4 +38,4 @@ InputAction and InputMappingContext tools also require EnhancedInput. Creating e
 
 Input Trigger, Modifier, and PlayerMappable settings are instances owned by the asset, rather than ordinary object references. Replace an instance using the shape `{ "ClassPath": "/Script/EnhancedInput.InputTriggerHold", "Properties": {} }`. Arrays retain input order, and `PlayerMappableKeySettings` accepts that object shape or `null`. Each InputMappingContext mapping contains `Properties`, `Triggers`, and `Modifiers`, with optional `PlayerMappableKeySettings`. `MappingProfileOverrides` is an object mapping profile names to complete mapping arrays. UE 5.8 exposes profiles; UE 5.2 has no such field and rejects profile parameters. First read `bProfileOverridesSupported` and the complete old values for the current engine from `GetInputMappingContext`.
 
-Preview changes before applying them, then save separately. See the [preview and save workflow](/en/works/mcp-dev-tools/docs/connect/).
+To change one default key mapping, read the InputMappingContext first. Edit that entry in the complete new array, keeping the other entries and their order. Send the complete old array too. If your engine version supports profiles, prepare the full old and new profile configurations as well. Preview the change, apply it, and read it back before saving separately; see the [preview and save workflow](/en/works/mcp-dev-tools/docs/connect/).

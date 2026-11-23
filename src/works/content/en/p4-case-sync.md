@@ -19,9 +19,9 @@ links:
     href: https://github.com/MZSH-Tools/P4CaseSync
 lang: en
 translationKey: p4-case-sync
-sourceHash: 6fc6e7b479993349a8eb854df9f3a4fae912a1071d21f7a8bab45d0620d3f930
+sourceHash: cf53b63a01eabf509cf0a1c8c5c690eda5ea329207c3d7d0fa7598f3ccfc8102
 translationStatus: translated
-generatedBodyHash: 6b3547144c2486884e02550076d74fdfbfa7aeed36b7f0a47ee302a11bb570d0
+generatedBodyHash: 3a4d020b2749f95c95dd86de3041b24972c6717a690f179a609975d11f834aa9
 workInfo:
   channels:
     - kind: open-source
@@ -41,11 +41,12 @@ docIds:
   - p4-case-sync-check-and-fix
   - p4-case-sync-build-and-environment
   - p4-case-sync-reuse-environment
+  - p4-case-sync-updates-2025-10-16
 ---
 
 ## Overview
 
-P4CaseSync checks the path capitalization of opened files before a Perforce submit. Using actual disk paths as its reference, it checks files in a specified changelist or default and provides preview, manual adjustment, and correction actions.
+P4CaseSync checks file path capitalization before a Perforce submit. Select a changelist or use `default`. The tool checks its opened files against their actual paths on disk. Preview the suggestions, adjust them if needed, then apply the corrections.
 
 Its goal is to make the Perforce paths being submitted match the actual directory and file names.
 

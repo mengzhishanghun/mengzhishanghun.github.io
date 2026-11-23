@@ -10,7 +10,7 @@ workIds:
   - simple-tcp-server
 docPage:
   work: simple-tcp-server
-  group: setup
+  group: getting-started
   slug: listen
   order: 1
 documentKind: product-manual
@@ -35,8 +35,7 @@ translationKey: doc:simple-tcp-server:listen
 
 ## 在项目设置中定义监听通道
 
-可通过 **项目设置 → SimpleTCPServer Settings** 定义服务器监听通道。  
-建议用此方法集中管理和调试。
+在 **项目设置 → SimpleTCPServer Settings** 添加监听通道。把通道放在这里，便于统一查看配置和调试。
 
 ### 监听通道参数
 
@@ -48,6 +47,8 @@ translationKey: doc:simple-tcp-server:listen
 | Max Receive Bytes | `1024`           | 每条消息的最大缓冲区大小                   |
 
 ## 在蓝图中启停监听
+
+例如先用表中的通道配置，在蓝图中启动 `MainServer`，再用 `IsServerRunning` 查询同一通道。监听成功后，让测试客户端连接该服务器可达的 IPv4 地址和监听端口；服务器的绑定地址用于配置监听。
 
 | 节点函数                    | 说明                                               |
 |----------------------------|----------------------------------------------------|

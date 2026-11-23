@@ -11,9 +11,9 @@ workIds:
   - mcp-animation
 docPage:
   work: mcp-animation
-  group: editing
+  group: features
   slug: animation-blueprint
-  order: 1
+  order: 2
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-animation/docs/animation-blueprint/
 lang: zh
@@ -39,6 +39,6 @@ translationKey: doc:mcp-animation:animation-blueprint
 | `SetTransitionRule` | 设置受支持的过渡规则。 |
 | `CompileAnimBlueprint` | 编译并返回包括 AnimGraph、状态图和过渡图在内的诊断。 |
 
-复杂或歧义的状态结果图不会被猜测修改；请先调整为单一直接驱动结构或使用 Unreal Editor 手工编辑。
+例如，要替换一个已有状态的动画，先找到动画蓝图，再从概览选定状态机，打开状态机详情确认目标状态。图里只有一个 Sequence Player 直接驱动状态结果时，才用 `SetStateAnimation` 替换。若结构复杂或有歧义，请在 Unreal Editor 中直接编辑，或先整理成单一直接驱动的结构。修改后运行 `CompileAnimBlueprint`，处理图表诊断，再用 `SaveAsset` 保留改动。
 
 写入前后请遵循[打开与保存动画资产](/zh/works/mcp-animation/docs/find-assets/)一节的路径、事务和保存规则。

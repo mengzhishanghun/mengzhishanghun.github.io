@@ -12,7 +12,7 @@ workIds:
   - simple-level-seq-smooth
 docPage:
   work: simple-level-seq-smooth
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -25,9 +25,11 @@ translationKey: doc:simple-level-seq-smooth:setup
 
 1. 将 `SimpleLevelSeqSmooth` 文件夹复制到项目的 `Plugins/` 目录
 2. 重启 Unreal 编辑器
-3. 如未自动启用，在 编辑 > 插件 中启用
+3. 如果插件未自动启用，请打开 **编辑 → 插件**，找到并启用它。
 
 ## ControlRig 依赖
+
+重启后先检查 ControlRig 是否处于启用状态。准备一个带 ControlRig 参数段的 LevelSequence，再从内容浏览器右键打开 **Smooth**。
 
 - ControlRig 插件（默认已启用）
 

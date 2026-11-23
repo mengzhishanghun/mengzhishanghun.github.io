@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-niagara/docs/inspect/
 lang: en
 translationKey: doc:mcp-niagara:inspect
-sourceHash: 3281b21555dcf9d845a089840e091bebb4f11805827c754dfcdf43fe8a7592d3
+sourceHash: e4c238c6f398196a18660edca90081f988d7e596b4ba875935dca91b9461adba
 translationStatus: translated
-generatedBodyHash: b2bcfb9ed534c591ecb040b4136195bef7e6bb3bc350457d6faec90f35782060
+generatedBodyHash: 09f7e5c7433e8a99da1a80674dfc384a748064b794acb62d4c494c6ed1cb431b
 docPage:
   work: mcp-niagara
-  group: systems
+  group: features
   slug: inspect
   order: 1
 ---
@@ -42,7 +42,7 @@ MCP Niagara provides MCP tools in Unreal Editor for Niagara systems, emitters, m
 
 `GetModuleDetail` inspects only modules on the selected Spawn, Update, or Event parameter-map chain, so `ModuleIndex` follows actual execution order. Duplicate names require an index; when both a name and index are supplied, they must identify the same module. `GetModuleDetail`, `AddModule`, `RemoveModule`, and `ReorderModule` all require `UsageId` when an emitter has multiple Event stages; successful responses return the selected output GUID.
 
-Module inputs are paged with `MaxResults` (1–256, default 100) and `Offset`. Each input reports its Niagara type and `ValueSource`; graph overrides, linked or dynamic overrides, and rapid-iteration values are distinguished explicitly. `Value` is limited to 4096 characters, and `bValueTruncated` explicitly reports truncation. Inputs without an override are reported as `ModuleDefaultOrBinding`. To remain self-contained on UE 5.2+, the tool does not depend on NiagaraEditor-internal default-topology APIs and does not guess whether that source is a module default or an internal binding.
+Identify the execution stage first. Locate the module by its order within that stage. If there are multiple Event stages, identify the target stage before sending the request. Page through module inputs with `MaxResults` (1–256, default 100) and `Offset`. Each input reports its Niagara type and `ValueSource`; graph overrides, linked or dynamic overrides, and rapid-iteration values are distinguished explicitly. `Value` is limited to 4096 characters, and `bValueTruncated` explicitly reports truncation. Inputs without an override are reported as `ModuleDefaultOrBinding`. To remain self-contained on UE 5.2+, the tool does not depend on NiagaraEditor-internal default-topology APIs and does not guess whether that source is a module default or an internal binding.
 
 ## Versions and usage limitations
 

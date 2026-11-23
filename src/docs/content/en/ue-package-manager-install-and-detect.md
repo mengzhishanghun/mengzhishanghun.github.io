@@ -14,19 +14,19 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-package-manager/docs/install-and-detect/
 lang: en
 translationKey: doc:ue-package-manager:install-and-detect
-sourceHash: 91be48ed21779c7ab8b79fba08de77f6ecb8c98b9c1871d1f89b06c0a31d9558
+sourceHash: b4d4355c35a87b56aa12f121d77c88f0f1e9e3996cc2501261ce576e168016f0
 translationStatus: translated
-generatedBodyHash: c418bfcc6f1ab44a6dd910b1d79df5371e6e747f321ebcdd709284f1db7e665b
+generatedBodyHash: cac672ef2985aee9d96fc06a16828d33b819bc05b1fd99f99e7ee5802c45d10e
 docPage:
   work: ue-package-manager
-  group: setup
+  group: getting-started
   slug: install-and-detect
   order: 1
 ---
 
 ## Download and run UEPackageManager
 
-Download `UEPackageManager.exe` from [Releases](https://github.com/MZSH-Tools/UEPackageManager/releases/latest).
+Download `UEPackageManager.exe` from [Releases](https://github.com/MZSH-Tools/UEPackageManager/releases/latest). If you plan to launch it by double-clicking, first put it in the project root that contains the `.uproject` file.
 
 - Double-click the EXE without arguments to hide the console and open the GUI.
 - Run a subcommand in a terminal to retain the console and CLI output.

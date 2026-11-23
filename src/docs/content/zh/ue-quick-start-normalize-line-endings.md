@@ -12,7 +12,7 @@ workIds:
   - ue-quick-start
 docPage:
   work: ue-quick-start
-  group: build
+  group: features
   slug: normalize-line-endings
   order: 2
 documentKind: product-manual
@@ -23,7 +23,7 @@ translationKey: doc:ue-quick-start:normalize-line-endings
 
 ## 转换时机、目录和文件类型
 
-协作项目中的 LF (`\n`) 或 CR (`\r`) 换行符可能影响 Windows 上的 MSVC 编译。工具会在编译前扫描并修改匹配的源码文件，将换行符转为 CRLF (`\r\n`)，无需手动转换。
+在多人协作的项目里，LF (`\n`) 或 CR (`\r`) 换行符可能影响 Windows 上的 MSVC 编译。运行编译时，工具会先扫描下列目录，把匹配文件的换行符直接改为 CRLF (`\r\n`)。
 
 扫描以下位置：
 

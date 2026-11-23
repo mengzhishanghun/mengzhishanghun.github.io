@@ -22,7 +22,7 @@ translationKey: doc:mcp-umg:connect
 
 ## 开发状态与要求
 
-MCPUMG 是开发中的 Unreal Engine 编辑器插件。它通过 MCP（模型上下文协议）让 AI 客户端读取、创建和编辑 Widget 树、属性、插槽、动画和事件。UE 5.2–5.8 相关版本仍在开发，兼容性待确认；这些版本尚不能视为已完成测试。
+MCPUMG 是开发中的 Unreal Engine 编辑器插件。它通过 MCP（模型上下文协议）让 AI 客户端读取、创建和编辑 Widget 树、属性、插槽、动画和事件。UE 5.2–5.8 相关版本仍在开发，各版本的测试尚未全部完成，兼容性待确认。
 
 - Unreal Engine 5.2+
 - 仅限编辑器
@@ -52,6 +52,8 @@ MCPUMG 是开发中的 Unreal Engine 编辑器插件。它通过 MCP（模型上
 
 ## MCP 连接
 
+先打开要操作的 Unreal 项目，再从编辑器工具栏确认实际 MCP URL。客户端连上后，先核对下面的会话信息，再尝试读取 Widget 树。
+
 插件会在 Unreal Editor 内运行 HTTP 服务器，AI 客户端通过 MCP 协议连接。
 
 **MCP URL**：`http://127.0.0.1:8765/mcp`
@@ -60,12 +62,13 @@ MCPUMG 是开发中的 Unreal Engine 编辑器插件。它通过 MCP（模型上
 
 ### Claude Code
 
-添加到 `~/.claude/.mcp.json`（全局）或项目根目录的 `.mcp.json`：
+用户范围的配置存放在 `~/.claude.json`；项目范围的配置使用项目根目录的 `.mcp.json`。在所选范围添加下面的 HTTP 服务器条目，并将示例 URL 换成工具栏显示的实际地址：
 
 ```json
 {
   "mcpServers": {
     "ue-umg": {
+      "type": "http",
       "url": "http://127.0.0.1:8765/mcp"
     }
   }

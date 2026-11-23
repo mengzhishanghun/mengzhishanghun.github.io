@@ -87,12 +87,25 @@ export function renderDocumentSlots(html,layout,source,slots,workCopy,chrome,{ou
   return html.replace(/\{\{doc:(\w+)\}\}/g,(_,key)=>{if(!Object.hasOwn(values,key))throw Error('章节模板槽无效: '+key);return values[key];});
 }
 
+export function parseDocumentFilename(name){
+  if(typeof name==='string'&&!/[/\\:\p{Cc}]/u.test(name)){
+    const numbered=/^(\d{3})-(.+)\.md$/u.exec(name);
+    if(numbered&&Number(numbered[1])>0)return {title:numbered[2],order:Number(numbered[1])};
+    const dated=/^(\d{4}-\d{2}-\d{2})\.md$/.exec(name);
+    if(dated&&!dated[1].startsWith('0000-')){
+      const title=dated[1],date=new Date(`${title}T00:00:00Z`);
+      if(Number.isFinite(date.getTime())&&date.toISOString().slice(0,10)===title)return {title,order:100_000_000-Number(title.replaceAll('-',''))};
+    }
+  }
+  throw Error('章节来源文件名无效');
+}
+
 export function validateDocumentSourcePath(source,{work,groupOrder,docPage}){
   const root=/^网站\/001-作品\/\d{3}-[^/]+\/[^/]+\/README\.md$/;
   if(typeof work!=='string'||typeof source!=='string'||/[\\:\0]/.test(work+source)||!root.test(work)||[...work.split('/'),...source.split('/')].some(part=>part==='.'||part==='..')||!source.startsWith(work.slice(0,-'README.md'.length)))throw Error('章节来源不在所属作品目录');
   const [group,file,...extra]=source.slice(work.length-'README.md'.length).replace(/^文档\//,'').split('/');
-  const groupMatch=/^(\d{3})-[^/]+$/.exec(group??''),fileMatch=/^(\d{3})-[^/]+\.md$/.exec(file??'');
-  if(extra.length||!groupMatch||!fileMatch||!order(groupOrder)||!order(docPage.order)||Number(groupMatch[1])!==groupOrder||Number(fileMatch[1])!==docPage.order)throw Error('章节来源目录层级或编号不符');
+  const groupMatch=/^(\d{3})-[^/]+$/.exec(group??'');
+  if(extra.length||!groupMatch||!order(groupOrder)||!order(docPage.order)||Number(groupMatch[1])!==groupOrder||parseDocumentFilename(file).order!==docPage.order)throw Error('章节来源目录层级或编号不符');
   return group;
 }
 

@@ -13,24 +13,26 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-byte-conversion/docs/struct-and-json/
 lang: en
 translationKey: doc:simple-byte-conversion:struct-and-json
-sourceHash: 5394a859f7db59e581f613c4e7650fdde1c52c0b2626acd7143601237f918a0e
+sourceHash: 2ba5fe2496ba4fd45390f12d1684c52f304550cc6cf2b9a68a6d4f1c779bddb6
 translationStatus: translated
-generatedBodyHash: f4d638dac5825a7eff94b58b0cbbeb3ac4e2744ef3d9daaaa0626916659e1b38
+generatedBodyHash: 0bfa153c0be5f299c561b94c53fbd77e6dacb0788bbb1a35c771db2220010171
 docPage:
   work: simple-byte-conversion
-  group: conversion
+  group: features
   slug: struct-and-json
   order: 2
 ---
 
 ## Choose a Struct Conversion Node
 
+Choose the node pair by what the receiver can read. Use JSON when you need to inspect fields or exchange data with another program. For binary messages, first agree on the struct and byte format on both sides.
+
 The plugin supports any `USTRUCT` exposed to Blueprints:
 
 - Convert to/from byte arrays: `Struct To Bytes` / `Bytes To Struct`
 - Convert to/from JSON strings: `Struct To JsonString` / `JsonString To Struct`
 
-Unreal's reflection system automatically serializes and deserializes fields while preserving original naming and floating-point precision.
+The conversions use Unreal reflection to read and write fields. Check JSON field names and floating-point formatting against your data.
 
 > ⚠️ Unsupported: Structs containing object references such as `UObject*`, `TSoftObjectPtr`, or `TWeakObjectPtr`, or asset handles such as `FSoftObjectPath`.
 
@@ -40,7 +42,7 @@ Unreal's reflection system automatically serializes and deserializes fields whil
 | Feature | SimpleByteConversion | Native UE FJsonObjectConverter |
 |------------------|-------------------------------------|-------------------------------|
 | Field names preserved | ✅ Yes | ❌ Converted to camelCase |
-| Float/Double precision | ✅ float (9 digits), double (17 digits) | ❌ Lower default precision |
+| Float/Double precision | Float: 9 decimal places; double: 17 significant digits | Depends on field type and serialization path |
 | Full Blueprint support | ✅ Yes | ⚠️ Partial support / C++ required |
 
 - `StringToBytes` and `BytesToString` use UTF-8 for safe cross-platform conversion
@@ -73,7 +75,7 @@ The original example addresses two issues observed in UE's default JSON output:
 1. Field names can include internal suffixes, such as `MyField_5_A3B2C1D4`.
 2. Float output can lose precision; the example describes output with only six significant digits.
 
-The original implementation cleans up field names and uses a custom `FExactPrintPolicy`:
+The custom `FExactPrintPolicy` below illustrates numeric formatting. Field name cleanup is a separate step.
 
 ```cpp
 // 高精度输出：float 保留9位，double 保留17位
@@ -93,7 +95,7 @@ struct FExactPrintPolicy : TCondensedJsonPrintPolicy<CharT>
 };
 ```
 
-The intent is to give Python, C# and other programs clean keys and numeric output with enough precision to read the values back.
+Python, C#, and other programs can parse the JSON. After parsing, check that keys and values match the agreed format.
 
 Check the actual field types and serialization path before assuming the suffixes or six-digit output apply. Keep a mapping from each cleaned key to its reflected property so keys cannot collide and can be restored on import.
 

@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-auto-enum/docs/blueprints-and-assets/
 lang: en
 translationKey: doc:simple-auto-enum:blueprints-and-assets
-sourceHash: 491068f6e070900a176bf635eb28f45fc61c3e7716256c620cee5c3b67ac95da
+sourceHash: f3550791b03fc70c862cb9bfff454838d7b800963cdb0ccae3e512f0385de80a
 translationStatus: translated
-generatedBodyHash: de1d37b63bbb050efa6c65a327c1d4ca1d4762af47e1ccce21c013cae434cb7b
+generatedBodyHash: 6f08d7ed5c04b75bae5b7f60d4bbe2f98a5b7fcb3f0e82b96d8b68e1779dae21
 docPage:
   work: simple-auto-enum
-  group: usage
+  group: features
   slug: blueprints-and-assets
-  order: 1
+  order: 2
 ---
 
 ## Blueprint Function Limitations
@@ -30,6 +30,8 @@ docPage:
 
 ## Default Values in DataAssets
 
+After appending entries, open a Blueprint and DataAsset that use the enum. Check that existing selections still point to the original entries, then try selecting a new one. If you have already reordered the entries, review the affected defaults individually.
+
 - **Behavior**: DataAssets use enum indices and synchronize automatically when names change
 - **Warning**: Reordering enum values shifts DataAsset values; for example, swapping positions 1 and 2 causes a DataAsset storing value 1 to refer to position 2
-- **Recommendation**: Avoid reordering existing enum entries in production; append new values only
+- **Recommendation**: In production, append new enum values to the existing list without reordering its entries.

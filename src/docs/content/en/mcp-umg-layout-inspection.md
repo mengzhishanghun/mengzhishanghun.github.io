@@ -13,23 +13,25 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-umg/docs/layout-inspection/
 lang: en
 translationKey: doc:mcp-umg:layout-inspection
-sourceHash: 4bfdac62b9ce9e316f71d08eb63357aec938c2a548689b0e5d9acfad513339b5
+sourceHash: 7707e059e0bcd17178383d9c6399642d6d0d9efdbd92cfc474e978deac7601bd
 translationStatus: translated
-generatedBodyHash: c5ad5c13b9c5d2e8662179bf7bda732ad34b00f64f1994d2a62a4446b129215d
+generatedBodyHash: 53269030bcca6a4c9d6ec4059c75322170c7531cdd5a6ea7c8e7172921fb116e
 docPage:
   work: mcp-umg
-  group: widgets-layout
+  group: features
   slug: layout-inspection
   order: 3
 ---
 
 ## Diagnostic scope in Design and PIE modes
 
-`dryRun` validates the tree and properties without running Slate layout. Design mode in `InspectWidgetLayout` provides metadata only. PIE mode adds direct Slate parent bounds, up to 64 clipping ancestors (at most 256 entries per page), and signs of vertical overflow, including automatically wrapped text. Locate `PossibleAncestorClipping` and `PossibleVerticalOverflow` issues using the actual screenshot. `Unverified*` means the tool did not have enough evidence to determine a result.
+`dryRun` validates the tree and properties without running Slate layout. Design mode in `InspectWidgetLayout` provides metadata only. PIE mode adds direct Slate parent bounds, up to 64 clipping ancestors (at most 256 entries per page), and signs of vertical overflow, including automatically wrapped text. If you see `PossibleAncestorClipping` or `PossibleVerticalOverflow`, use the screenshot to locate the affected area. `Unverified*` means the tool could not determine the result.
 
 Ancestor rectangles are screen-space axis-aligned bounding boxes, not the final paint clipping region. Rotation, OnDemand, ClipToBoundsWithoutIntersecting, custom painting and stale cached geometry can affect the findings. The tool does not create instances, force preview data or change runtime state for diagnostics. Let the real page finish its layout before inspecting the target instance.
 
 ## Interpret clipping and scaling
+
+Find the clipped widget in the screenshot, then compare its actual bounds with its immediate parent and clipping ancestors. If a button label does not fit, for example, check how much width the button leaves for the text, then check whether an outer container also clips it.
 
 Use PIE mode in InspectWidgetLayout to read actual dimensions, layout scale, parent bounds, clipping ancestors and signs of text overflow. Design mode cannot establish actual layout results. Unverified does not mean a check passed. Rotated bounding boxes, conditional clipping and stale caches still require screenshots for interpretation.
 

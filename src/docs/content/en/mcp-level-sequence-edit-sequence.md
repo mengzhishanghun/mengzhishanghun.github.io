@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-level-sequence/docs/edit-sequence/
 lang: en
 translationKey: doc:mcp-level-sequence:edit-sequence
-sourceHash: d4e074031c81c2405a856d9e5d1a02829f2e287acd42d4798b261ed36b9a155b
+sourceHash: 11a78f9b702247410c24e4abcd98176c0f7d32748090b02a0a157e771e5cb1b3
 translationStatus: translated
-generatedBodyHash: 6257faa08cf7d03deee0eb559ae27e5450ebf42d358bbb1b5156471791f8ee0b
+generatedBodyHash: feedb5186ba3e05fbaa8cfca81150e3159950fb6f1a975d1b5bb259cd3643f9c
 docPage:
   work: mcp-level-sequence
-  group: sequence-editing
+  group: features
   slug: edit-sequence
-  order: 2
+  order: 4
 ---
 
 ## Supported tracks and sections
@@ -36,6 +36,8 @@ docPage:
 - Root or binding tracks: `MovieSceneAudioTrack` and `MovieSceneEventTrack`.
 - Root-only tracks: `MovieSceneCameraCutTrack` and `MovieSceneFadeTrack`.
 
+Choose a track type with `ListTrackTypes`. Check whether it belongs at the root or under an object binding, then add the track and section. To edit an existing section, find its track in the sequence details first.
+
 Float and Bool property tracks require `PropertyName` and accept `PropertyPath` for nested properties. Skeletal Animation sections require `AnimationAssetPath`, validated as `AnimSequenceBase`; Audio sections require `SoundAssetPath`, validated as `SoundBase`. Event tracks currently create section containers only; they do not create Director Blueprint endpoints or event payloads.
 
 ## Transactions, removal, and limits
@@ -44,8 +46,8 @@ Mutation and save tools accept only valid `/Game/...` Level Sequence paths. Read
 
 Deleting a Track also removes objects it owns. Ambiguous name selectors return an error; use the `TrackName` from `GetSequenceDetail`.
 
-Subsequence creation/navigation needs cycle checks, hierarchy ownership, and cross-sequence time semantics, so write tools are not exposed yet.
+There are currently no write tools for creating or navigating subsequences.
 
-Arbitrary track/class creation, folders, tags, selection state, and advanced bone-level operations remain outside the reviewed strict-schema surface, although the official experimental toolset is broader.
+The plugin does not support arbitrary track or class creation, folders, tags, selection state, or advanced bone-level operations. The official experimental toolset covers more operations.
 
 Section bounds use the sequence’s `TickResolution`; see [Time Units and Frame Rates](/en/works/mcp-level-sequence/docs/sequence-timing/).

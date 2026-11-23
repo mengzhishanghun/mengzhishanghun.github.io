@@ -12,7 +12,7 @@ workIds:
   - ue-quick-start
 docPage:
   work: ue-quick-start
-  group: build
+  group: features
   slug: build-configuration
   order: 1
 documentKind: product-manual
@@ -23,7 +23,7 @@ translationKey: doc:ue-quick-start:build-configuration
 
 ## 编写 UEBuildConfig.json
 
-在项目根目录创建 `UEBuildConfig.json` 可自定义编译行为：
+在项目根目录（`.uproject` 所在目录）创建 `UEBuildConfig.json`。下面的示例列出了默认值：
 
 ```json
 {
@@ -45,4 +45,4 @@ translationKey: doc:ue-quick-start:build-configuration
 | Build.AdditionalArgs | [] | 额外编译参数 |
 | AutoOpenProject | true | 编译成功后自动打开项目 |
 | AutoCloseOnSuccess | true | 打开项目后自动关闭工具 |
-| CloseDelayMs | 1500 | 关闭延迟（毫秒） |
+| CloseDelayMs | 1500 | 工具自动关闭前等待的时间（毫秒） |

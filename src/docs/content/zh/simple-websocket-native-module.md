@@ -10,9 +10,9 @@ workIds:
   - simple-websocket
 docPage:
   work: simple-websocket
-  group: native
+  group: features
   slug: native-module
-  order: 1
+  order: 2
 documentKind: product-manual
 websiteRoute: /zh/works/simple-websocket/docs/native-module/
 lang: zh
@@ -28,7 +28,7 @@ translationKey: doc:simple-websocket:native-module
 
 ## 添加内置 WebSockets 模块
 
-UE提供了`WebSockets`模块,需要在`.Build.cs`中添加:
+使用 UE 内置的 `WebSockets` 模块前，先在 `.Build.cs` 中添加以下依赖：
 
 ```csharp
 PublicDependencyModuleNames.AddRange(new string[] {
@@ -39,6 +39,8 @@ PublicDependencyModuleNames.AddRange(new string[] {
 ```
 
 ## 实现示例
+
+测试时，先启动目标 WebSocket 服务，再检查连接事件。发送短文本后，在服务端确认收到的内容；若服务会回消息，再检查接收事件。
 
 **连接WebSocket:**
 
@@ -88,7 +90,7 @@ void SendWebSocketMessage(TSharedPtr<IWebSocket> WebSocket, const FString& Messa
 
 **注意事项:**
 
--   打包后使用`127.0.0.1`而非`localhost`(避免域名解析问题)
+-   打包后连接本机服务时，可用 `127.0.0.1` 代替 `localhost`，排查域名解析问题。
 -   本教程中的 SimpleWebSocket 插件仅支持 `ws://`；原生 UE WebSockets 模块的 `wss://` 能力需按所用引擎、后端与证书配置核对。
 -   连接URL格式: `ws://127.0.0.1:8080`
 

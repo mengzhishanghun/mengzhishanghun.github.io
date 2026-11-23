@@ -34,6 +34,7 @@ docIds:
   - p4-case-sync-check-and-fix
   - p4-case-sync-build-and-environment
   - p4-case-sync-reuse-environment
+  - p4-case-sync-updates-2025-10-16
 coverAlt: P4CaseSync封面
 websiteCoverUrl: /media/imported/works/p4-case-sync-cover-v2.png
 lang: zh
@@ -42,7 +43,7 @@ translationKey: p4-case-sync
 
 ## 作品简介
 
-P4CaseSync 在 Perforce 提交前检查已打开文件的路径大小写。它以本地磁盘上的真实路径为参照，核对指定 changelist 或 default 中的文件，并提供预览、人工微调和应用修正的入口。
+P4CaseSync 用于在 Perforce 提交前核对文件路径的大小写。选定 changelist 或使用 `default` 后，工具会用本地磁盘上的实际路径检查其中已打开的文件。先预览建议，必要时手动调整，再应用修正。
 
 目标是让将要提交的 Perforce 路径与实际目录和文件名称一致。
 

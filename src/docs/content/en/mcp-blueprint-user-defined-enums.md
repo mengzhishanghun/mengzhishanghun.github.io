@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/user-defined-enums/
 lang: en
 translationKey: doc:mcp-blueprint:user-defined-enums
-sourceHash: 17f44b616aa754c27f1f2426eaca70ed9a3c0dee1d7a4447cf1453a769a0f4f0
+sourceHash: c72081689ed35f79835de8b374936cf5530a6688d4f88783f3270b3bbb3881ad
 translationStatus: translated
-generatedBodyHash: 8313eb992966921a0672122bf1eec77b04693bba5eb17fb38cb7cc8071e2a32e
+generatedBodyHash: 106a3c0175fa4fc66d93d265cd27336db7648ee529e0b3305f5b572c3ead24cf
 docPage:
   work: mcp-blueprint
-  group: members-types
+  group: features
   slug: user-defined-enums
-  order: 6
+  order: 9
 ---
 
 ## Create, read, and edit entries
@@ -31,4 +31,4 @@ docPage:
 | `GetUserDefinedEnum` | Shows Enum entries, values, and display names. | Read large Enums with pagination. |
 | `ModifyUserDefinedEnum` | Adds, edits, or removes Enum entries. | Start with `bDryRun`; changing serialized meaning requires explicit approval. |
 
-Use entry identifiers to select targets and check the reference impact with `bDryRun`. Give separate explicit approval for edits that may change what existing serialized values mean.
+Read the entries, values, and display names first. Select the entry by its identifier and use `bDryRun` to check the impact on references. Give separate explicit approval for any edit that may change the meaning of existing serialized values. After creating or editing the Enum, save any changes you want to keep separately.

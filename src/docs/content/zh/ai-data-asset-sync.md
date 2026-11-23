@@ -11,7 +11,7 @@ workIds:
   - ai-data-asset
 docPage:
   work: ai-data-asset
-  group: data
+  group: features
   slug: sync
   order: 1
 documentKind: product-manual
@@ -28,7 +28,9 @@ DataAsset 以 UE 序列化后的 .uasset 文件保存，常用于技能表、角
 
 ## 何时同步
 
-双向同步按编辑器状态和磁盘文件情况触发。启动时先检查两端文件；运行中则分别监听资产和 JSON 的变更。
+如果刚在外部改过 JSON，准备重启编辑器前先比对两侧文件的修改时间。两端都有重要改动时，先保留副本，再启动同步。
+
+编辑器启动时，插件检查磁盘上的资产和 JSON；启动同步结束后，插件监听两侧的变更。
 
 **启动时如何选择数据。** 开启自动同步后，插件会在项目资产扫描完成后扫描 DataAsset，执行初始同步并显示进度，然后监听后续变化。扫描排除 `/Engine/` 下的资产，先完成初始同步，再注册运行期间的资产和目录监听。启动时使用资产文件和 JSON 文件在磁盘上的修改时间，按以下规则处理：
 

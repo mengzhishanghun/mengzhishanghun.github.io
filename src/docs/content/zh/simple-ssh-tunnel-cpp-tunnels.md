@@ -10,9 +10,9 @@ workIds:
   - simple-ssh-tunnel
 docPage:
   work: simple-ssh-tunnel
-  group: native
+  group: features
   slug: cpp-tunnels
-  order: 1
+  order: 2
 documentKind: product-manual
 websiteRoute: /zh/works/simple-ssh-tunnel/docs/cpp-tunnels/
 lang: zh
@@ -78,7 +78,7 @@ void CloseSSHTunnel(FProcHandle& ProcHandle)
 }
 ```
 
-这种方式实现简单，无需在项目中集成第三方库。
+调用系统客户端所需的集成代码较少，项目也无需集成第三方库。
 
 Windows、Linux 和 macOS 的客户端路径不同。若无法控制用户环境，这种方式不适合作为打包发布的依赖。
 
@@ -153,6 +153,8 @@ libssh2_exit();
 libssh2 需要与 Socket 配合使用，在 UE 中可用 `FSocket`。通过本地监听 Socket 接受连接，并在独立线程循环转发数据，避免阻塞游戏主线程。每个 libssh2 操作都需要处理错误并释放资源。
 
 ### 监听、转发和主机身份核验
+
+在测试环境中，分别验证进程或会话能否建立、目标服务能否通过本地端口访问，以及关闭后资源能否释放。进程启动或 SSH 握手成功，只能说明对应阶段已完成。
 
 libssh2 示例说明初始化、握手、认证、开通道和释放的顺序，没有包含完整的本地监听、双向转发、返回值检查或服务器主机密钥核验。`socket`、`username` 等来自项目上下文；发布时还应核对目标平台的库文件、运行时依赖和许可证。
 

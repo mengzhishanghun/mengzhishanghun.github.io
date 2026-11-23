@@ -13,16 +13,18 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-world-editor/docs/actor-components/
 lang: en
 translationKey: doc:mcp-world-editor:actor-components
-sourceHash: a14c6d1bf49a491a918222c4b350a7c71d9c45131a7968a59c76a264d65cc1bb
+sourceHash: cd4a313f63db2599135e82e36fc226483f837db7242bb74ae4fc8660202ad5cf
 translationStatus: translated
-generatedBodyHash: 9ad1522ff41d62922e0e6d809440d11fa247d9c2be12c9569bd097433acedfd9
+generatedBodyHash: 661277b366dd172c487c4887dc816fdd5984e8acf0be2752b0e11bec78588d3d
 docPage:
   work: mcp-world-editor
-  group: actors
+  group: features
   slug: actor-components
-  order: 6
+  order: 11
 ---
 
 ## Choose a component class
 
-`AddComponent` accepts an exact full component class path or a short name that uniquely matches a currently loaded class; ambiguous short names are rejected with sorted full-path candidates. It rejects non-`ActorComponent`, abstract, deprecated, superseded, and `ClassWithin`-incompatible classes. Instance components follow the Unreal Editor creation order for serialization, creation notification, and registration; attachment, root assignment, or registration failure cleans up the new component and cancels the transaction.
+`AddComponent` accepts an exact full component class path or a short name that uniquely matches a currently loaded class; ambiguous short names are rejected with sorted full-path candidates. It rejects non-`ActorComponent`, abstract, deprecated, superseded, and `ClassWithin`-incompatible classes. The tool follows Unreal Editor’s creation order: it adds the instance component to the serialized array, sends the creation notification, and registers the component. If attachment, root assignment, or registration fails, it removes the new component and cancels the transaction.
+
+Identify the target actor before choosing the class to add. If the short name matches more than one class, pick the intended full path from the returned candidates before trying again. After creation, check the new component and where it is attached on the actor.

@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-config-exclude/docs/staging-rules/
 lang: en
 translationKey: doc:simple-config-exclude:staging-rules
-sourceHash: e138c2ccaa27bcd622ecd0744fa49bfe3e600b7798060a1ac4e954056f017188
+sourceHash: 7b731fdfabeb06ab84e9b983d545ab5467d28157c61714c8b686ea782513184b
 translationStatus: translated
-generatedBodyHash: 56437a2b6562fb25f3a2af7776733f48684742c403206a76d9b20a9e14604701
+generatedBodyHash: f11c67be043a13e6abc234ef16cd824a723f31c84372c22a1ddb39f6bbfe49c0
 docPage:
   work: simple-config-exclude
-  group: packaging
+  group: features
   slug: staging-rules
   order: 1
 ---
@@ -40,7 +40,7 @@ The plugin runs in the editor. Its packaging rules determine which INI files fro
 1.  Find the configuration file to exclude
 2.  Click `Disallowed` to exclude it
 3.  Click `Allowed` for forced inclusion
-4.  Changes take effect immediately; no additional save is needed
+4.  Changes are written to configuration without a separate save. If writing fails, check checkout and file differences as described below.
 
 See the [SimpleConfigExclude work page](/en/works/simple-config-exclude/) for use cases.
 
@@ -121,6 +121,8 @@ DefaultDebug.ini → Disallowed
 ```
 
 ## Verify the Package and Handle Sensitive Configuration
+
+To verify the exclusion rule, inspect the current package before copying anything into it. For the two example files, check that the excluded file is absent and the included file is present.
 
 Package the project normally and check its `Config` output folder to confirm excluded files are absent.
 

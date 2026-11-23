@@ -11,9 +11,9 @@ workIds:
   - mcp-material
 docPage:
   work: mcp-material
-  group: editing
+  group: features
   slug: material-compilation
-  order: 3
+  order: 5
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-material/docs/material-compilation/
 lang: zh
@@ -32,4 +32,4 @@ translationKey: doc:mcp-material:material-compilation
 
 有静态置换的实例编译自身资源；没有静态置换的实例使用父链中的有效资源，其所属资产可能是父材质，也可能是祖先实例。`ResourceOwnerPath` 返回实际所属资产。编译前，请关闭请求资产和资源所属资产的编辑器。资源缺失时，返回 `CompileStatus: "Error"`、非空 `Errors` 和空字符串 `ResourceOwnerPath`；实例没有完整 shader map 时也返回编译错误。
 
-确认编译结果后，参见[材质资产保存说明](/zh/works/mcp-material/docs/material-assets/)。
+如果编译报错，先用错误数组排查；实例出错时，也要看返回的资源所属路径是否指向父级。处理错误并重新编译后，再按[材质资产保存说明](/zh/works/mcp-material/docs/material-assets/)操作。

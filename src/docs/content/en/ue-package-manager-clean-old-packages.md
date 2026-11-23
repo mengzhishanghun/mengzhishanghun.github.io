@@ -14,18 +14,18 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-package-manager/docs/clean-old-packages/
 lang: en
 translationKey: doc:ue-package-manager:clean-old-packages
-sourceHash: b4dd9475f2ec0387293be93c3a9402c79c3cbd8c077ac7bbb0aea00993d61cbb
+sourceHash: 950c440fef81dab0b70836094c3a1ee6d55a5969a72fcac1132dbef22fba8293
 translationStatus: translated
-generatedBodyHash: 1c1a5b4ca06cfc93c536ee0972d37d524674e2e014a66b10e9c37a64f7a4bd48
+generatedBodyHash: ff94b9a9f221385b0ee082fc600a29b03f1518237519ae41d212f792fe58e6fd
 docPage:
   work: ue-package-manager
-  group: output
+  group: features
   slug: clean-old-packages
-  order: 2
+  order: 4
 ---
 
 ## Choose the cleanup scope
 
-Select Clean old package in the GUI. The tool saves the checkbox state with the project configuration and asks for confirmation each time it performs cleanup. Use `--clean-output` to request cleanup before the current CLI packaging run.
+Check the current output path, then select Clean old package in the GUI. The tool remembers the selection but asks you to confirm before each cleanup. In the CLI, use `--clean-output` to request cleanup before the current build.
 
 The tool cleans only recognized old packages in the current output path. It does not delete the entire output directory or clean the previous path when you change the output location.

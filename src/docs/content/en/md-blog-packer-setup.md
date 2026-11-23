@@ -13,17 +13,19 @@ documentKind: product-manual
 websiteRoute: /en/works/md-blog-packer/docs/setup/
 lang: en
 translationKey: doc:md-blog-packer:setup
-sourceHash: 6a7ad277da8ae237e90566d6cf58c4c3ab75dde51a3ddf2e2aaaaa6a2b123c07
+sourceHash: 316b5fd002901bba208823899d5dfbce0cae41dbc4cb7eb6266fdc07633e5cb8
 translationStatus: translated
-generatedBodyHash: 38aecbf6c1f7b73517879eff37e8bff9dae51f34694406bc7e0f0218b84128be
+generatedBodyHash: 1229be19ca12d6a00e219c6e6eae345b03767e3ceb6b23ea7740a829a37c5170
 docPage:
   work: md-blog-packer
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 ---
 
 ## Create the Conda Environment
+
+To run from source, open a terminal in the directory that contains `environment.yml` and create the Conda environment with this command.
 
 ```bash
 # 用 environment.yml 创建 conda 环境
@@ -32,4 +34,4 @@ conda env create -f environment.yml
 
 ## Start the Tool
 
-Double-click `MDBlogPacker.exe` to open the GUI. From source, run `Main.py` without arguments for the GUI or with arguments for the command line.
+Double-click `MDBlogPacker.exe` to open the GUI. When running from source, launch `Main.py` without arguments to open the GUI, or pass arguments to use command-line mode.

@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-level-sequence/docs/sequence-timing/
 lang: en
 translationKey: doc:mcp-level-sequence:sequence-timing
-sourceHash: 2766fd51f54fd3b44d7f5bc8516264a675bcdcdf614445893ecfe7825761379a
+sourceHash: 39634b320bc7fcb0d8f699f738d8e25dfbe9886876ecb45fbab76eca7509c872
 translationStatus: translated
-generatedBodyHash: 1f8588d06b6cf2e1245aa43d0c90df5d838e2879029ed1c226c4d12222e451ca
+generatedBodyHash: b9ec5ed76e1e2a6fceff00b4c7026ebc82d08db134db22407b7dbc8b416fe9f8
 docPage:
   work: mcp-level-sequence
-  group: sequence-editing
+  group: features
   slug: sequence-timing
-  order: 4
+  order: 6
 ---
 
 ## Time units and frame rates
@@ -37,7 +37,7 @@ Mutation and save tools accept only valid `/Game/...` Level Sequence paths. Read
 
 ## Call example
 
-This request sets a 24 fps display rate and migrates Tick Resolution to 24000 fps:
+This request sets the Display Rate to 24 fps and migrates the Tick Resolution to 24000 fps. One second spans 24 display frames in the editor and 24000 units in a tool’s frame arguments. For a one-second playback range starting at 0, use 24000 as the exclusive end.
 
 ```json
 {

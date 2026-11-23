@@ -14,12 +14,12 @@ documentKind: product-manual
 websiteRoute: /en/works/plugin-auto-packer/docs/package/
 lang: en
 translationKey: doc:plugin-auto-packer:package
-sourceHash: 95bd20f710ecb9e01896559721df8f5cdcef2862c7700c34d7872d9d5e9db32b
+sourceHash: 42ccc547fc2dd29853703863c22ac3d51ea49c0d3fed229c494c4067ab383cf3
 translationStatus: translated
-generatedBodyHash: 58843f7d411d3dc513789024671c9a51510b7d643120f38e15e499b9c59bd2ee
+generatedBodyHash: 7ef73856dfc038dfacb82b561959aa0e7af6a7bb24c8dae5601327860fa053cb
 docPage:
   work: plugin-auto-packer
-  group: packaging
+  group: features
   slug: package
   order: 1
 ---
@@ -32,7 +32,7 @@ docPage:
 
 ## Configure Engines and Post-processing
 
-In the GUI, add engine paths from the Epic Games Launcher or a source build. Choose the plugin and target engines, then select any post-processing options you need.
+In the GUI, add the paths to your Launcher-installed or source-built engines. The tool scans the project for `.uplugin` files. Select a plugin from the results and choose the target engines. You can use the options below on their own or together. Check which files you intend to process before enabling options that change the plugin descriptor or source files.
 
 | Feature | Purpose |
 |-----------------------------|--------------------------------------------------------------------|
@@ -44,7 +44,7 @@ In the GUI, add engine paths from the Epic Games Launcher or a source build. Cho
 | Generate FilterPlugin.ini | Scan files/folders in the plugin root and generate publication `.ini` filter configuration |
 | Add copyright notices | Insert notices using the author from `.uplugin`, replace old comments, and cover all `.h/.cpp/.Build.cs` files; automatically skip the `ThredParty` folder |
 
-Each operation can be selected separately or combined. The log includes the generated copyright text and ini contents.
+If you generate copyright notices or an ini file, you can read the generated text in the log.
 
 ## Package from the Command Line
 

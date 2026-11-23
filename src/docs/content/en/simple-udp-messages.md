@@ -12,17 +12,19 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-udp/docs/messages/
 lang: en
 translationKey: doc:simple-udp:messages
-sourceHash: 2bcc8fb732da72d5f4800d0a0c152ce22d448f2231b12975ee4a319bd74a3fc4
+sourceHash: fecb01eae143d72f6b8ee37925fb7023c513d8f24b97d58fdc5ee3539458f5cb
 translationStatus: translated
-generatedBodyHash: 20a381fe21fedb1c078aebf9b8492ee574917ef6f2fba33f061399065b3218ea
+generatedBodyHash: e7e7f208628cb698f49d92aa9bf095804d3aedff6fb27cabe0e0d12b97aaf161
 docPage:
   work: simple-udp
-  group: network
+  group: features
   slug: messages
   order: 2
 ---
 
 ## Receive datagrams
+
+First check the receive channel’s name, bind address, and filter rules in Project Settings. Use the same channel name when binding and unbinding a handler. Once the handler is bound, send a test datagram from a permitted sender and check that the callback receives the expected bytes.
 
 | Node                         | Description                             |
 |------------------------------|-----------------------------------------|
@@ -38,7 +40,7 @@ docPage:
 
 ![](/media-occurrence/doc%3Asimple-udp%3Amessages%3Amedia%3A2)
 
-Use this node to unbind everything from a channel and close the socket manually.
+Use this node to unbind every handler and close the socket when the channel no longer needs to receive datagrams.
 
 ## Send datagrams
 

@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-blueprint/docs/asset-lifecycle/
 lang: en
 translationKey: doc:mcp-blueprint:asset-lifecycle
-sourceHash: e462438ae246416e88520596ff317c48f806026003ecd7d1db7faf2bef1622e8
+sourceHash: 6fd65f07efa7b7cdf42433da92f0da0fa9074e4d8320600201b3788b1fa1c1a7
 translationStatus: translated
-generatedBodyHash: bc061888315f94345f6c6c7e9afad5117664ab9bce61599db7ee560eaf6812a0
+generatedBodyHash: 20ec160aa8c567b182c4126323625358589ed0389fedac35b7b65fd9166c28ae
 docPage:
   work: mcp-blueprint
-  group: assets-graphs
+  group: features
   slug: asset-lifecycle
   order: 1
 ---
@@ -36,7 +36,7 @@ docPage:
 | `OpenAsset` | Opens a Blueprint in the editor. | Required before capturing its graph. |
 | `CloseAsset` | Closes the asset editor. | Save changes you want to keep before closing. |
 
-Large asset lists support bounded pagination. Use the asset paths returned by the tools. Ordinary edits mark an asset dirty; `SaveAsset` writes those changes to disk.
+In a large project, narrow the search to a folder and continue through the pages if needed. Use an asset path from the results in later calls. Ordinary edits do not write to disk; call `SaveAsset` to keep them.
 
 ## Compile and read diagnostics
 
@@ -45,7 +45,7 @@ Large asset lists support bounded pagination. Use the asset paths returned by th
 | `GetCompileErrors` | Retrieves current Blueprint compilation diagnostics. | Use it to handle errors or warnings reported by the editor. |
 | `CompileBlueprint` | Compiles the selected Blueprint and returns diagnostics. | Use it to handle errors or warnings reported by the editor. |
 
-obtain compiler diagnostics and fix the reported Blueprint errors before saving.
+Use `GetCompileErrors` to read existing compiler messages. Use `CompileBlueprint` to compile the current changes. Address any reported problems before saving the version you want to keep.
 
 ## Reload from disk or delete assets
 
@@ -54,5 +54,5 @@ obtain compiler diagnostics and fix the reported Blueprint errors before saving.
 | `ReloadBlueprintFromDisk` | Replaces the in-memory Blueprint with its disk version. | Defaults to dry-run; discarding unsaved changes requires explicit approval. |
 | `DeleteAsset` | Deletes an asset. | Deletion has stricter reference and recovery-safety checks. |
 
-- Reloading from disk defaults to dry-run and requires explicit approval before discarding in-memory state.
+- To discard unsaved changes, preview the reload first. Explicitly approve it only after deciding that the in-memory changes can be lost.
 - Destructive deletion has stricter Undo/Redo and Package safety requirements than ordinary graph edits.

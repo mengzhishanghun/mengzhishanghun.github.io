@@ -12,12 +12,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-udp/docs/channels/
 lang: en
 translationKey: doc:simple-udp:channels
-sourceHash: 19be453a23a4fa11454160e888b433b0a97462e23f18fc7668f3cacff9c7a80c
+sourceHash: 86a30626250d722868d6a2e2e0b23640474c7813d323598d3b2a3a0c4b10dcc2
 translationStatus: translated
-generatedBodyHash: d6fc7bf975ca7480b9a0c28ebd287b8c537ed7405866554d399f4335bcdeb85d
+generatedBodyHash: 36474957eeed686b98a00990646fd7919bfc2276d51a9bc526791d20261feace
 docPage:
   work: simple-udp
-  group: network
+  group: features
   slug: channels
   order: 1
 ---
@@ -51,6 +51,8 @@ In **Project Settings → SimpleUDP Settings**, add receive or send channels. Yo
 
 ## Read and update channels in Blueprint
 
+Before updating, use the matching getter to see whether the channel exists and read its current settings. Read it again after the update and check the name, addresses, and port so you can catch changes to the wrong channel.
+
 | Node                         | Description                                          |
 |------------------------------|------------------------------------------------------|
 | `UpdateReceiveChannelConfig` | Create/update a receive channel (rebinding if needed) |
@@ -64,7 +66,7 @@ In **Project Settings → SimpleUDP Settings**, add receive or send channels. Yo
 
 ![](/media-occurrence/doc%3Asimple-udp%3Achannels%3Amedia%3A1)
 
-Socket is auto-rebuilt if needed. Function order doesn't matter.  
+The plugin rebuilds the socket when it needs to rebind. These calls have no required order.  
 
 The two booleans control whether to override existing channels or add new ones.
 

@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-input-simulator/docs/axis-input/
 lang: en
 translationKey: doc:simple-input-simulator:axis-input
-sourceHash: 76a0b1c73a40151158ad0a8767019a2e2b536d1e5657de323acf6637aa70f566
+sourceHash: 84a259e0fedb190d71c583b98ea3cdcfb8398cde2f7e572f1e650be96797befd
 translationStatus: translated
-generatedBodyHash: 6a3166e58bddfc4e2e819db9a8204936aca8976ee65e6cde3df8dea5671e4e5f
+generatedBodyHash: 6090a52f401b1e6f5637312108aef50d1aa2c966f5d04f670ef80f2aa4c60a13
 docPage:
   work: simple-input-simulator
-  group: input
+  group: features
   slug: axis-input
   order: 2
 ---
@@ -40,9 +40,11 @@ The node reads the current frame’s `DeltaTime`; callers do not pass it in.
 
 ## Mouse and Stick Example
 
+The graph sends right thumbstick Y input to the first local player each frame. When adapting it, choose the axis key from your project’s input mapping and check the received value or character behavior.
+
 ![](/media-occurrence/doc%3Asimple-input-simulator%3Aaxis-input%3Amedia%3A2)
 
-Simulate mouse movement or gamepad stick input.
+Use the same setup to test mouse motion or a different stick axis.
 
 ## AI Behavior Debugging
 

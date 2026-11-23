@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-file-updater/docs/setup/
 lang: en
 translationKey: doc:simple-file-updater:setup
-sourceHash: 10d85709da5ecc7d491fc773b093aba4977fddafaa9bf92b6dd7046a5734e133
+sourceHash: 2b84706559dd4a2aeb8649a01179773eb31784d0669defa9df2ddbeeceb0504f
 translationStatus: translated
-generatedBodyHash: a3b030c7c929f30c74a32d7ff3f5aadaa8b59762c3762b0be3ad5dbe29e41088
+generatedBodyHash: 87d90526dbe2033521077cb1f57ed3119426310d75845b34e06bf90d31384daf
 docPage:
   work: simple-file-updater
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 ---
@@ -29,7 +29,7 @@ Place `SimpleFileUpdater.exe` and the default `.SimpleFileUpdater` configuration
 
 ## Run from Source
 
-If you are running from source, set up dependencies with either Conda or pip and then run `Main.py`.
+To run from source, open a terminal in the project directory that contains `Main.py`. Install the dependencies with either method below, then run `Main.py`.
 
 ## Use Conda
 

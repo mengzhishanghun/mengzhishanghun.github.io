@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/ai-data-asset/docs/ai-edit/
 lang: en
 translationKey: doc:ai-data-asset:ai-edit
-sourceHash: 1341de64986c468cf95b5d5b4128ba6bf42b9119f07c175f64e02398085bdc4f
+sourceHash: 28f65b5d45f9f7afe055771d5e13a3d2d13e3f7800e10f199514b9ca7e78c8db
 translationStatus: translated
-generatedBodyHash: 8b4985f4aeb0cb2e1e0c695888971b202871aee10cfcd55b64ec4024ae55dfd6
+generatedBodyHash: d70b24d370722efa10e679d08ab4f8e9178cdf544f4f054b4df0344f7199d906
 docPage:
   work: ai-data-asset
-  group: data
+  group: features
   slug: ai-edit
   order: 2
 ---
@@ -36,11 +36,11 @@ JSON files are stored in the project's `Saved/AIDataAsset/` directory (configura
 
 ## JSON Format
 
-Consider the `CharacterStatsData` DataAsset in the editor:
+The `CharacterStatsData` asset holds character attributes. Its Details panel shows maximum health and critical hit rate.
 
 ![](/media-occurrence/doc%3Aai-data-asset%3Aai-edit%3Amedia%3A1)
 
-The plugin automatically exports the following JSON:
+The plugin automatically exports the same asset’s character attributes and type information:
 
 ![](/media-occurrence/doc%3Aai-data-asset%3Aai-edit%3Amedia%3A2)
 
@@ -58,6 +58,8 @@ The plugin automatically exports the following JSON:
 > **Note**: Field names match the UE editor display (for example, `MaxHealth` rather than `maxHealth`). The fixed decimal places in float’s `%.9f` cannot guarantee exact round trips across its full range; double uses `%.17g`. Check actual fields and acceptable error after editing.
 
 ## Edit Character Stats with AI
+
+Before asking the AI to make changes, check the asset path in the Content Browser and make sure the AI will edit the JSON exported for that asset. This example changes maximum health and critical hit rate and leaves the other fields as they are.
 
 1. **Tell the AI where the data files are**:
 

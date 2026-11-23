@@ -12,7 +12,7 @@ workIds:
   - plugin-auto-packer
 docPage:
   work: plugin-auto-packer
-  group: packaging
+  group: features
   slug: package
   order: 1
 documentKind: product-manual
@@ -29,7 +29,7 @@ translationKey: doc:plugin-auto-packer:package
 
 ## 配置引擎与整理选项
 
-在图形界面添加 Launcher 或源码版引擎路径，选择插件和目标引擎，再按需要勾选整理操作。
+先在图形界面添加 Launcher 或源码版引擎的路径。工具会检测项目中的 `.uplugin`，再从检测结果中选择要打包的插件，勾选目标引擎。下面的整理选项可单独使用，也可组合使用；开启会修改插件描述或源文件的选项前，先核对本次要处理的文件。
 
 | 功能项                      | 用途说明                                                               |
 |-----------------------------|--------------------------------------------------------------------|
@@ -41,7 +41,7 @@ translationKey: doc:plugin-auto-packer:package
 | 自动生成 FilterPlugin.ini  | 自动扫描插件根目录下的文件/文件夹，生成用于发布的 `.ini` 过滤配置                              |
 | 自动添加版权声明           | 插入版权声明（从 `.uplugin` 中读取作者），替换旧注释，覆盖所有 `.h/.cpp/.Build.cs` 文件，自动跳过 `ThredParty` 目录 |
 
-每项操作均可单独勾选与组合使用，日志会显示生成的版权文本与 ini 内容。
+生成版权声明或 ini 后，可在日志中查看相应内容。
 
 ## 命令行打包
 

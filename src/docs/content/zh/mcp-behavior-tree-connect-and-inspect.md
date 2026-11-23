@@ -11,7 +11,7 @@ workIds:
   - mcp-behavior-tree
 docPage:
   work: mcp-behavior-tree
-  group: setup
+  group: getting-started
   slug: connect-and-inspect
   order: 1
 documentKind: product-manual
@@ -20,11 +20,11 @@ lang: zh
 translationKey: doc:mcp-behavior-tree:connect-and-inspect
 ---
 
-MCP Behavior Tree 是一个自包含的 Unreal Editor 插件，可通过 Model Context Protocol 创建、查看、编辑、验证并保存行为树与黑板资产。插件支持 Unreal Engine 5.2 及更高版本，不依赖其他用户插件。
+MCP Behavior Tree 是一个自包含的 Unreal Editor 插件，可通过 Model Context Protocol 创建、查看、编辑、验证并保存行为树与黑板资产。插件不依赖其他用户插件，UE 5.2–5.8 仍在开发与兼容性验证。
 
 ## 连接
 
-插件会在 Unreal Editor 中启动 MCP HTTP 服务。默认端口为 `8767`；若端口被占用，应以插件运行时报告的实际端口为准，不要假定始终使用默认端口。
+在 Unreal Editor 中启用插件，等 MCP HTTP 服务启动后，把插件报告的实际地址填入客户端。默认端口为 `8767`；端口被占用时，以插件报告为准。
 
 ## 第一次编辑行为树
 
@@ -33,8 +33,8 @@ MCP Behavior Tree 是一个自包含的 Unreal Editor 插件，可通过 Model C
 3. 使用 `CreateBehaviorTree` 创建行为树并传入黑板路径。
 4. 先在 `Root` 下添加 Composite，再添加任务、装饰器和服务。
 5. 使用 `GetBehaviorTreeDetail` 获取节点 ID 和可编辑属性。
-6. 运行 `ValidateBehaviorTree`。
-7. 对每个脏的行为树或黑板资产调用 `SaveAsset`。
+6. 运行 `ValidateBehaviorTree`，处理报告的问题。
+7. 对每个改过的行为树或黑板分别调用 `SaveAsset`。
 
 ## 与 UE 5.8 官方工具集的区别
 

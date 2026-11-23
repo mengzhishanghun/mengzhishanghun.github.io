@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-static-mesh-merger/docs/merge-actors/
 lang: en
 translationKey: doc:simple-static-mesh-merger:merge-actors
-sourceHash: 0517a11d4ef846ca879e06bb7673a9ca256ecccc088dc3469345a49dcfb69319
+sourceHash: 4eef9c596897903abf49b15f8bbfc7d19011ea1a187a89441d1cdfbb6cbc497a
 translationStatus: translated
-generatedBodyHash: 571b24fe1b5d7c22a9ef0ba2d290606e78e437dabbc659f441a213b318f77270
+generatedBodyHash: 3198cc463d3b6718865038ec174a0fe9be313e69117c67a634adbcc4ddaa97af
 docPage:
   work: simple-static-mesh-merger
-  group: workflow
+  group: features
   slug: merge-actors
   order: 1
 ---
@@ -38,7 +38,7 @@ The plugin automatically groups Actors with **identical properties** into the sa
 
 **Only Actors with all identical properties will be merged into one group.**
 
-Merging is limited to actors in the `PersistentLevel`. To include actors inside a LevelInstance, follow the separate chapter on breaking LevelInstances first.
+The tool only merges actors in the `PersistentLevel`. To include actors inside a LevelInstance, expand it first as described in the chapter on breaking LevelInstances.
 
 ## Filter by Mobility and Instance Count
 
@@ -97,7 +97,9 @@ If exclusions bring the eligible count below the threshold, the group is automat
 
 ## Merge Groups and Check the Result
 
-Save a recoverable scene version first, because merging replaces the original actors. Check the mesh, materials, mobility, and collision of each group. Filter and select the groups as shown below, then click **Merge Selected**. The plugin copies the collision configuration, including object type and all 32 channel responses. Afterward, check instance counts and scene behavior. The editor selects the new actors and jumps to the first one.
+Before clicking **Merge Selected**, review the instance list on the right. A search hit on one actor shows the whole group. If you only want part of the group, exclude the actors you want to keep separate.
+
+Save a recoverable scene version first, because merging replaces the original actors. Check the mesh, materials, mobility, and collision of each group. Filter and select the groups as shown below, then click **Merge Selected**. The plugin copies the collision configuration, including object type and all 32 channel responses. The editor selects the new actors and jumps to the first one. Check instance counts, materials, collision, and scene behavior before saving the level.
 
 ```
 Workflow:
@@ -163,7 +165,7 @@ for (int i = 0; i < 500; i++)
 
 **Work during loading**
 
-1. Deserialize 500 sets of objects (an AStaticMeshActor and UStaticMeshComponent for each tree).
+1. Deserialize 500 actor-component pairs (an AStaticMeshActor and a UStaticMeshComponent for each tree).
 2. Create, initialize and register 500 components.
 3. Build collision for each component, even when the settings match.
 4. Register 500 components with the renderer, each submitting its own data.

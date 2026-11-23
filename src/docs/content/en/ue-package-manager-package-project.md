@@ -14,12 +14,12 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-package-manager/docs/package-project/
 lang: en
 translationKey: doc:ue-package-manager:package-project
-sourceHash: e9a7e87081d5577664e18a7240ea7d9329364f5f60aae60aa5f2cd9edde893df
+sourceHash: 5ae9b3f05a84daac74ba3a22be8f9d0ae10cc99dd5e8810dce7c314899869c84
 translationStatus: translated
-generatedBodyHash: 428887068b7d6534761619ac792d40f7775d6e01319fd41adf0a3bb578bdb7bc
+generatedBodyHash: 4fc4faa3029f8a1b21a28292638a1e08888d01782182cfc6de844f23138e62d8
 docPage:
   work: ue-package-manager
-  group: packaging
+  group: features
   slug: package-project
   order: 1
 ---
@@ -28,11 +28,11 @@ docPage:
 
 ![](/media-occurrence/doc%3Aue-package-manager%3Apackage-project%3Amedia%3A1)
 
-Confirm the project and engine shown in the GUI, choose the Archive output directory and build configuration, then start packaging. The project root cannot be used as the output directory. Choose `DebugGame`, `Development`, `Test`, or `Shipping`. `Shipping` also enables compression. Check the log for progress and the result.
+Check the project and UE directories shown at the top of the window. Then choose the Archive output directory and build configuration. The output directory cannot be the project root. Choose `DebugGame`, `Development`, `Test`, or `Shipping`. `Shipping` also enables compression. Click Start Packaging, then check the log at the bottom of the window for progress and the result.
 
 ## Command-line packaging and examples
 
-Run `validate` to check the configuration, then run `package --dry-run` to see the UAT command. Remove `--dry-run` to start packaging. When running from the project root, you can omit `--project-root`. Commands return `0` on success and `2` for argument, configuration, or execution errors.
+Run `validate` to check the configuration, then use `package --dry-run` to preview the UAT command. When the command looks right, remove `--dry-run` to start packaging. You can omit `--project-root` when running from the project root. Commands return `0` on success or `2` for argument, configuration, or execution errors.
 
 ```bat
 UEPackageManager.exe --version

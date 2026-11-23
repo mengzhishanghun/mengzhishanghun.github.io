@@ -14,12 +14,12 @@ documentKind: product-manual
 websiteRoute: /en/works/plugin-manager/docs/find/
 lang: en
 translationKey: doc:plugin-manager:find
-sourceHash: ec634bc51b4de5f8be7460a1300a9126da7caf1ca5b09e5d7dff9553485b28ce
+sourceHash: 5c3bda81df551ee010332411b8df83b9b3264630ea937bd08610e6e0d7692026
 translationStatus: translated
-generatedBodyHash: fb6c5817759f35028710d852889df03c35a76cd4f8275873e6f09bd3bd208a77
+generatedBodyHash: 52979513db6c09a4e7b7d4ba92876210ccef6bee918979066557a65405b5bb85
 docPage:
   work: plugin-manager
-  group: plugins
+  group: features
   slug: find
   order: 1
 ---
@@ -30,4 +30,6 @@ The tabs separate **Project** plugins in the project’s `Plugins` directory, **
 
 ## Search, Sort, and Inspect Dependencies
 
-Search by name, author, category, description, dependency, or dependent plugin. Search is case-insensitive and all space-separated terms must match. Click a column header to sort; the arrow shows the direction. Select a plugin to inspect its details and relationships. Plugins with the same name display a red **Conflict** status.
+Open the relevant tab and search by name, author, category, description, dependency, or dependent plugin. Search ignores case. If you separate terms with spaces, results must match every term.
+
+Click a column header to sort. The arrow shows the current sort direction. Select a plugin to see its details, what it depends on, and which plugins depend on it. Plugins with the same name show a red **Conflict** status.

@@ -13,14 +13,14 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-dev-tools/docs/primary-asset-labels/
 lang: en
 translationKey: doc:mcp-dev-tools:primary-asset-labels
-sourceHash: 40c45ac98b36539bde9a150c2b40cfdc1cbb2e9f5ba52e29c96046c0cd3bc142
+sourceHash: 75958bc3663250cbef1579584754d2532013e42842608032f6694ac01348ba27
 translationStatus: translated
-generatedBodyHash: 00e77c6ea2cb9c6ffb9cd595d0d064067c0a8e3a29911ba6f8edae5746ca3d2f
+generatedBodyHash: 84c20b8001cd2bedb13b93d2c6059e780d7fd9d0c4822c210f30cf9f4d49a392
 docPage:
   work: mcp-dev-tools
-  group: assets
+  group: features
   slug: primary-asset-labels
-  order: 2
+  order: 3
 ---
 
 ## Read and write
@@ -29,6 +29,6 @@ docPage:
 |---|---|---|
 | PrimaryAssetLabel | `GetPrimaryAssetLabel`, `CreatePrimaryAssetLabel`, `SetPrimaryAssetLabel` | Read native labels, create labels, or change editable fields with `Properties` and `ExpectedValues`. Derived bundle data is read-only. |
 
-Cook results, actual Chunk output, and behavior with non-empty ExplicitBlueprints remain unconfirmed.
+Before editing an existing label, read its fields. Put the values you want to change in `Properties` and supply the corresponding `ExpectedValues`. Apply after the preview passes, then read the label again. The rules you read back confirm the current asset settings only. Cook results, actual Chunk output, and behavior with non-empty ExplicitBlueprints remain unconfirmed.
 
 Preview changes before applying them, then save separately. See the [preview and save workflow](/en/works/mcp-dev-tools/docs/connect/).

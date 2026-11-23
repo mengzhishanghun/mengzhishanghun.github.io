@@ -11,9 +11,9 @@ workIds:
   - p4-case-sync
 docPage:
   work: p4-case-sync
-  group: distribution
+  group: features
   slug: reuse-environment
-  order: 2
+  order: 3
 documentKind: product-manual
 websiteRoute: /zh/works/p4-case-sync/docs/reuse-environment/
 lang: zh
@@ -22,7 +22,7 @@ translationKey: doc:p4-case-sync:reuse-environment
 
 ## 导出与恢复环境
 
-将现有环境导出为依赖文件，再按原环境对应的方式还原。
+先激活要复用的环境，按原来使用的 Conda 或 pip 导出依赖。恢复时选择对应的命令。
 
 ## Conda
 

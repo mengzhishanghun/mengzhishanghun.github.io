@@ -12,12 +12,12 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-launcher/docs/processes/
 lang: en
 translationKey: doc:simple-launcher:processes
-sourceHash: c82bdccebf22f58894e7e3de9b4b8c772bb593dfdc84a0fbd5a0137e30858d67
+sourceHash: 0fd8cdf733429bb59b4e449590d8ebe50bd2f39fae388845595969d97305f3ff
 translationStatus: translated
-generatedBodyHash: fb19c3a46d7577df074fa6aa4658e4ce330e9b884d1e8bb03ed5ae5f9b114457
+generatedBodyHash: 919e11ca9d3146941b30ec31cd7be493cb55efafb7ae92a3a14471c55ee24082
 docPage:
   work: simple-launcher
-  group: process-control
+  group: features
   slug: processes
   order: 2
 ---
@@ -77,6 +77,8 @@ StopAllProcesses();
 
 ## Query Process Status
 
+Keep the process identifier returned at launch. To check whether this instance is still running, query that identifier. A preset-level check can report a running process because another instance uses the same preset.
+
 | Function | Description |
 |----------|-------------|
 | `IsProcessRunning(ProcessId)` | Check if a specific process is still running |
@@ -110,7 +112,7 @@ GetProcessCount("LocalServer");  // 返回 2（还剩两个在运行）
 
 ## Process Exit Callbacks
 
-Get notified when a process exits and execute custom logic (e.g. restart, logging).
+Bind a callback if you need to restart or log after exit. A crash also counts as a natural exit, so it does not tell you whether the task succeeded.
 
 | Function | Description |
 |----------|-------------|

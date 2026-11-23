@@ -11,9 +11,9 @@ workIds:
   - mcp-dev-tools
 docPage:
   work: mcp-dev-tools
-  group: data
+  group: features
   slug: curve-tables
-  order: 4
+  order: 7
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-dev-tools/docs/curve-tables/
 lang: zh
@@ -26,6 +26,6 @@ translationKey: doc:mcp-dev-tools:curve-tables
 |---|---|---|
 | CurveTable | `GetCurveTable`、`CreateCurveTable`、`PatchCurveTableRows` | 按页读取 Simple 或 Rich 行；创建时指定 `Mode`；用 `Mode`、`Changes` 和完整旧行 `ExpectedValues` 执行 Add、Replace、Remove。不转换 Simple/Rich 模式。 |
 
-常规列表和分页读取默认返回 20 项，每页最多 100 项；根据 `bHasMore` 和 `NextOffset` 继续读取。
+替换已有行时，先从读回的表中确认模式和目标行，再在请求中沿用该模式，提交完整旧行和替换内容。列表和分页读取默认每页 20 项，最多 100 项。没在当前页找到目标行时，先看 `bHasMore`，再用 `NextOffset` 继续。
 
 创建或修改前先预览，确认后单独保存；见[预览和保存规则](/zh/works/mcp-dev-tools/docs/connect/)。

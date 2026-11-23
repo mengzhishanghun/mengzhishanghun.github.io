@@ -13,12 +13,12 @@ documentKind: product-manual
 websiteRoute: /en/works/mcp-level-sequence/docs/sequence-assets/
 lang: en
 translationKey: doc:mcp-level-sequence:sequence-assets
-sourceHash: 76614c027a3395543e45dd105a165f5136cd2ea176e5fc6eb47713c4e3db9565
+sourceHash: c60d824d009840781cfc4189dbede0d6663cec0bcbe3b9c5a4f77f8cefce6e59
 translationStatus: translated
-generatedBodyHash: 67976cfba35a0ac6b0827f82cab37bb906b975dab448474fd728c99764ef70b5
+generatedBodyHash: f05ec414bd90f8cdbfd3dbfed50932d84b0573bfc3a046498705d031947f455f
 docPage:
   work: mcp-level-sequence
-  group: assets
+  group: features
   slug: sequence-assets
   order: 1
 ---
@@ -32,7 +32,7 @@ docPage:
 - `ListSequences`: 100 by default, capped at 500 per page.
 - `GetSequenceDetail`: pages a stable combined Binding/Track/Section traversal with `Offset` and `MaxItems`.
 
-Paged responses report totals, the current offset, whether more data exists, and a `NextOffset` when applicable. Clients should continue paging instead of assuming that one response contains the whole asset.
+Find the asset path first, then use it to read the details. Paged responses show the total, the current offset, whether there is more to read, and `NextOffset` when applicable. If you have not found the object yet, use the next offset to continue.
 
 ## Open, save, and close sequences
 
@@ -42,4 +42,4 @@ Paged responses report totals, the current offset, whether more data exists, and
 
 Mutation and save tools accept only valid `/Game/...` Level Sequence paths. Read-only discovery, inspection, opening, capture, and closing may access other readable sequence locations. Editing tools reject PIE/save/GC busy states and read-only MovieScenes, and use editor transactions for Undo.
 
-A successful edit only marks the package dirty; it never saves implicitly. `SaveAsset` saves only the specified Level Sequence package. After requesting a close, `CloseAsset` queries editors for the asset and its subobjects again; if an editor refuses to close, the tool reports failure instead of a false success.
+Edits stay in the editor until saved. To keep them, call `SaveAsset` before closing. It saves only the specified Level Sequence. `CloseAsset` checks whether the editors for the asset and its subobjects have closed. If an editor refuses to close, the tool reports a failure.

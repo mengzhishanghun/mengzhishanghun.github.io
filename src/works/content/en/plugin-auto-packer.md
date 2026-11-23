@@ -20,9 +20,9 @@ links:
     href: https://github.com/MZSH-Tools/UEPluginAutoPacker
 lang: en
 translationKey: plugin-auto-packer
-sourceHash: d0387e17d6db28f7b7e277028c07023b572ba42693ffd773ca356d8ff5f2bb4a
+sourceHash: d468840dc8948d1c3458769427b6789372070e5978e096b9fd3f9b51f57cef7c
 translationStatus: translated
-generatedBodyHash: 31fbe88fcfa609eb04bcfe7b63bf15262795b51eb5ff618d22c55d8300e8e58d
+generatedBodyHash: ff5d7c99bc915675c7ffc12859e92e6e02907e263754cc153089566c2d39060d
 workInfo:
   channels:
     - kind: open-source
@@ -40,13 +40,21 @@ docIds:
   - plugin-auto-packer-setup
   - plugin-auto-packer-package
   - plugin-auto-packer-output
+  - plugin-auto-packer-updates-2026-08-08
+  - plugin-auto-packer-updates-2026-06-19
+  - plugin-auto-packer-updates-2026-04-17
+  - plugin-auto-packer-updates-2026-02-26
+  - plugin-auto-packer-updates-2025-06-22
+  - plugin-auto-packer-updates-2025-06-18
+  - plugin-auto-packer-updates-2025-06-10
+  - plugin-auto-packer-updates-2025-04-21
 ---
 
 ## Overview
 
-UEPluginAutoPacker packages UE plugins for release, primarily for Fab submissions and also for other distribution channels. It brings multi-engine configuration, plugin builds, status inspection, and release file preparation into one interface.
+UEPluginAutoPacker builds UE plugin packages for Fab and other distribution channels. In the GUI, add your engines, select the plugin and target versions, and choose how to prepare the release files after the build.
 
-The GUI supports observing each engine task, while the CLI builds a specified plugin using configured engines.
+To package from the command line, add the engines in the GUI first, then specify the plugin and target engines in the build command.
 
 ## Background and goals
 
@@ -64,7 +72,7 @@ The CLI uses these engine configurations and can restrict target versions. Addin
 
 ### Status and logs
 
-The GUI shows waiting, packaging, successful, failed, and canceled states per engine, with corresponding log views. Failed results retain log files to locate problems in a specific engine version rather than reporting only one success or failure for the entire batch.
+The GUI shows each engine’s status: waiting, packaging, succeeded, failed, or canceled. Click an engine to view its log. If packaging fails for a version, look in that version’s output directory for the failure log.
 
 ### Release file preparation
 

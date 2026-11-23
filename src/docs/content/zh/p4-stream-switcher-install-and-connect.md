@@ -11,7 +11,7 @@ workIds:
   - p4-stream-switcher
 docPage:
   work: p4-stream-switcher
-  group: setup
+  group: getting-started
   slug: install-and-connect
   order: 1
 documentKind: product-manual
@@ -22,7 +22,9 @@ translationKey: doc:p4-stream-switcher:install-and-connect
 
 ## 安装依赖并登录
 
-准备 Windows、带 Tkinter 的 Python 3.10 或更高版本、Perforce CLI 和 P4V。服务器账户需有访问目标流、创建和删除客户端所需的权限，并完成登录。当前主机至少应有一个属于当前用户的流客户端，Host 为当前主机，且关联 Stream。
+准备 Windows、带 Tkinter 的 Python 3.10 或更高版本、Perforce CLI 和 P4V。账户需要能访问目标流，并有创建和删除客户端的权限。启动前，在自己的 Perforce 环境中配置 P4PORT、P4USER，按平时的方式登录。
+
+在 P4V 中确认至少有一个属于当前用户的流客户端，Host 为当前主机，且已关联 Stream。
 
 从[公开源码仓库](https://github.com/MZSH-Tools/P4StreamSwitcher)取得文件后，在项目目录安装依赖并启动：
 
@@ -31,7 +33,7 @@ python -m pip install p4python platformdirs
 python Main.py
 ```
 
-启动前，在自己的 Perforce 环境中配置 P4PORT、P4USER，并用正常登录流程建立有效会话。
+启动后，在状态区核对服务器和用户。如果连接失败或未找到流客户端，按下文排查。
 
 ## 连接与流客户端排查
 

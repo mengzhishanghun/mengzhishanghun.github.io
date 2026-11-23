@@ -11,7 +11,7 @@ workIds:
   - mcp-material
 docPage:
   work: mcp-material
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 documentKind: product-manual
@@ -34,7 +34,7 @@ MCPMaterial 为 Unreal Editor 提供面向 AI 客户端的材质与材质实例 
 
 JSON-RPC 仅把缺少 `id` 字段的消息视为通知；显式 `id:null` 仍会收到带空 id 的响应。
 
-超时不能强制终止已被 GameThread 认领的编辑器操作；收到超时错误后应先核对编辑器状态，再决定是否重试。
+GameThread 接手操作后，即使客户端收到超时错误，编辑器也可能继续执行。先读回目标资产，核对这次请求有没有生效，再决定是否重试。
 
 ## 反馈
 

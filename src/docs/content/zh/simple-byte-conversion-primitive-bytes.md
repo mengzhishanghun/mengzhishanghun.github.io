@@ -11,7 +11,7 @@ workIds:
   - simple-byte-conversion
 docPage:
   work: simple-byte-conversion
-  group: conversion
+  group: features
   slug: primitive-bytes
   order: 1
 documentKind: product-manual
@@ -39,9 +39,15 @@ translationKey: doc:simple-byte-conversion:primitive-bytes
 
 ## 蓝图转换示例
 
+第一张图把数值、布尔值和字符串转成字节，再用同类型节点还原并打印。
+
 ![](/media-occurrence/doc%3Asimple-byte-conversion%3Aprimitive-bytes%3Amedia%3A1)
 
+第二张图把向量、颜色和约束结构体转成字节后还原，读取其中的分量或字段。
+
 ![](/media-occurrence/doc%3Asimple-byte-conversion%3Aprimitive-bytes%3Amedia%3A2)
+
+第三张图分别打印结构体转成的字节数组长度与 JSON 文本；两种输出的后续用法不同。
 
 ![](/media-occurrence/doc%3Asimple-byte-conversion%3Aprimitive-bytes%3Amedia%3A3)
 

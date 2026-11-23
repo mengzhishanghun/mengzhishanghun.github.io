@@ -11,9 +11,9 @@ workIds:
   - mcp-umg
 docPage:
   work: mcp-umg
-  group: preview-diagnostics
+  group: features
   slug: widget-performance
-  order: 3
+  order: 17
 documentKind: product-manual
 websiteRoute: /zh/works/mcp-umg/docs/widget-performance/
 lang: zh
@@ -21,6 +21,8 @@ translationKey: doc:mcp-umg:widget-performance
 ---
 
 ## 测量 Slate CPU 工作并捕获 Trace
+
+如果还不知道该检查哪里，可以先看设计态的树深度和绑定数量。如果已能在 PIE 复现卡顿，就在问题出现时取样。比较两次测量时，尽量保持页面状态和操作一致。
 
 `InspectWidgetPerformance` 读取设计态结构复杂度，不能代替运行时测量。`MeasureWidgetPerformance` 必填 `RuntimeInstanceToken`、`RequestId`；可设 `Frames`（默认 30，最大 120）和 `MaxNodes`（默认 100，最大 500）。它汇总实际 Slate paint、invalidation、update 事件的逐 Widget **包含式 GameThread CPU** 时间，不是独占时间或 GPU 时间。用返回的 `OperationId` 查询结果。
 
@@ -37,7 +39,7 @@ translationKey: doc:mcp-umg:widget-performance
 }
 ```
 
-`BlueprintPath` 为必填 Widget Blueprint 资产路径。`MaxWidgets` 可选，默认 `500`，必须是 `1` 到 `1000` 的 JSON 整数；不接受小数、字符串或布尔值。达到上限时返回 `bTruncated: true`，这表示统计只覆盖已遍历的前缀，不能将其视为全树总数。
+`BlueprintPath` 为必填 Widget Blueprint 资产路径。`MaxWidgets` 可选，默认 `500`，必须是 `1` 到 `1000` 的 JSON 整数；不接受小数、字符串或布尔值。如果看到 `bTruncated: true`，统计只包括达到上限前走过的节点，不能当作整棵树的总数。
 
 ### 结构检查的返回值
 

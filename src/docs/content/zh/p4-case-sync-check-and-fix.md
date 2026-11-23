@@ -11,7 +11,7 @@ workIds:
   - p4-case-sync
 docPage:
   work: p4-case-sync
-  group: case-fixes
+  group: features
   slug: check-and-fix
   order: 1
 documentKind: product-manual
@@ -22,7 +22,7 @@ translationKey: doc:p4-case-sync:check-and-fix
 
 ## 路径检查与颜色标记
 
-工具读取 `p4 opened` 中的待提交文件，通过 `p4 where` 找到本地文件，并逐级对照真实路径的大小写。列表只显示 `edit / add / move/add`，自动隐藏删除类动作。
+工具用 `p4 opened` 读取待提交文件，再用 `p4 where` 找到它们在本地工作区中的位置，逐级比较路径的实际大小写。列表只显示 `edit / add / move/add`，删除类动作不会出现。
 
 - **灰色**：更改前后相同，无需修改。
 - **绿色**：更改后路径与更改前不同，并且与自动建议一致。
@@ -44,4 +44,4 @@ translationKey: doc:p4-case-sync:check-and-fix
 
 - **本地路径不存在**：工具逐级纠正到可访问的最深父目录，其余部分保留原样，可手动调整。
 - **显示 “X” 而非 “✔”**：图标随系统主题变化；工具优先用 Windows 的 `vista/xpnative` 主题，也可改用自定义图标。
-- **刷新后的灰条或残影**：原有残影问题已修复；刷新会移除旧列表控件，包括分隔线。
+- **刷新后的灰条或残影**：刷新列表时会移除旧分隔线。

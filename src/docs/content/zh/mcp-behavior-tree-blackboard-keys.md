@@ -11,7 +11,7 @@ workIds:
   - mcp-behavior-tree
 docPage:
   work: mcp-behavior-tree
-  group: editing
+  group: features
   slug: blackboard-keys
   order: 2
 documentKind: product-manual
@@ -32,10 +32,10 @@ translationKey: doc:mcp-behavior-tree:blackboard-keys
 - `Enum` 键必须提供 `Enum`；无关类型若传入 `BaseClass` 或 `Enum` 会被拒绝。
 - `KeyName` 不得为空或 `None`。
 - 键选择器按 Unreal 原生过滤语义校验，包括 Object/Class 基类约束和 Enum 身份；同名但类型不兼容的键仍然无效。
-- `RemoveBlackboardKey` 会扫描项目中的行为树；存在引用或无法完成扫描时默认拒绝删除，只有显式设置 `bForce=true` 才接受风险。
+- `RemoveBlackboardKey` 会扫描项目中的行为树；存在引用或无法完成扫描时默认拒绝删除，只有显式设置 `bForce=true` 才允许承担这项风险。正常清理时，先处理引用该键的节点，再尝试删除。
 
 | 领域 | 工具 |
 |---|---|
 | 黑板 | `AddBlackboardKey`、`RemoveBlackboardKey` |
 
-确认修改后对黑板调用 `SaveAsset`，参见[行为树的验证与保存说明](/zh/works/mcp-behavior-tree/docs/edit-tree/)。
+如果改过正在使用的键，先验证所关联的行为树，再对黑板调用 `SaveAsset`。验证流程见[行为树的验证与保存说明](/zh/works/mcp-behavior-tree/docs/edit-tree/)。

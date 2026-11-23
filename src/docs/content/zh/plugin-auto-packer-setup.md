@@ -12,7 +12,7 @@ workIds:
   - plugin-auto-packer
 docPage:
   work: plugin-auto-packer
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -25,7 +25,7 @@ translationKey: doc:plugin-auto-packer:setup
 
 1. 前往 Releases 页面下载 `UEPluginPacker.exe`
 2. 放置到你的 Unreal 项目根目录（即包含 `.uproject` 的目录）
-3. 双击运行即可，无需命令行和环境配置
+3. 双击 `UEPluginPacker.exe` 打开图形界面。运行这个 EXE 无需命令行或额外的环境配置。
 
 ## 从源码运行
 

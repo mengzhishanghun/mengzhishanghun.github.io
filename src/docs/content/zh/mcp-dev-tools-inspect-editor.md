@@ -11,7 +11,7 @@ workIds:
   - mcp-dev-tools
 docPage:
   work: mcp-dev-tools
-  group: diagnostics
+  group: features
   slug: inspect-editor
   order: 1
 documentKind: product-manual
@@ -28,7 +28,7 @@ translationKey: doc:mcp-dev-tools:inspect-editor
 | 工程插件 | `ListProjectPlugins` | 从已加载插件管理信息读取白名单字段；`Scope` 默认为 `enabled`，也可选 `discovered`；稳定排序分页。 |
 | 插件日志 | `ReadDevLog` | 只读取模块注册完成后捕获的 `LogMCPDevTools` 日志；用 `Cursor`、`Limit`、可选 `VerbosityFilter` 分页。 |
 
-三个诊断工具不会启动进程或测试作业、加载资产、保存包或更改配置。输入不接受额外字段。上下文缺失时返回具体不可用原因。
+同时开着多个编辑器时，先对照返回的项目、实例标识和端口，确认你连的是目标编辑器；再查插件状态或日志。三个诊断工具不会启动进程或测试作业、加载资产、保存包或更改配置。输入不接受额外字段。上下文缺失时返回具体不可用原因。
 
 ## 插件列表与日志分页
 

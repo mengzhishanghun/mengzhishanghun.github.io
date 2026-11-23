@@ -12,7 +12,7 @@ workIds:
   - simple-level-seq-smooth
 docPage:
   work: simple-level-seq-smooth
-  group: curves
+  group: features
   slug: smooth-curves
   order: 1
 documentKind: product-manual
@@ -27,6 +27,8 @@ translationKey: doc:simple-level-seq-smooth:smooth-curves
 
 ## 从内容浏览器应用平滑
 
+第一次处理一段动作时，先选创建新序列。应用后分别播放原序列和新序列，比较同一段抖动、急停和峰值；确认动作细节仍符合预期，再决定是否覆盖原资产。
+
 1. 在内容浏览器中右键选择一个或多个 LevelSequence 资产
 2. 从右键菜单中选择 **Smooth**
 3. 选择平滑算法并调整参数
@@ -40,7 +42,7 @@ translationKey: doc:simple-level-seq-smooth:smooth-curves
 | 1 | 移动平均 | 时域 | 最简单直观，零配置 | 快速预览 |
 | 2 | 高斯平滑 | 时域 | 速度/加速度曲线也平滑，无突变 | 四肢大关节 |
 | 3 | 指数平滑 | 时域 | 近期数据权重大，响应快 | 实时预处理 |
-| 4 | 中值滤波 | 时域 | 唯一能干净去除脉冲噪声/跳帧的算法 | 动捕数据第一步 |
+| 4 | 中值滤波 | 时域 | 适合去除孤立的尖峰和跳帧 | 动捕数据第一步 |
 | 5 | 双边滤波 | 时域 | 平滑噪声但保留急停/突变边缘 | 有明确开始结束的动作 |
 | 6 | Butterworth 低通 | 频域 | 截止频率精确，零相位无延迟 | 关节数据首选 |
 | 7 | 小波去噪 | 频域 | 多尺度分离，自动估计噪声水平 | 精细关节/复合噪声 |

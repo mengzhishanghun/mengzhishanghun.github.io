@@ -11,7 +11,7 @@ workIds:
   - simple-bp-inherit-fix
 docPage:
   work: simple-bp-inherit-fix
-  group: components
+  group: features
   slug: repair-components
   order: 2
 documentKind: product-manual
@@ -29,6 +29,8 @@ translationKey: doc:simple-bp-inherit-fix:repair-components
 
 ## 检查和保存修复结果
 
+启动修复的蓝图只是检查起点。待保存列表可能还包括父级或子级资产；以日志中的修复项与待保存项为准。
+
 修复前先收集继承链并确认受影响组件，再处理版本控制签出、字段修改和保存。
 
 | 阶段 | 动作 |
@@ -39,7 +41,7 @@ translationKey: doc:simple-bp-inherit-fix:repair-components
 | 4\. **ApplyFindings** | 将 `CreationMethod` 从 `Instance` 翻转为 `SimpleConstructionScript` |
 | 5\. **MarkDirty** | 将改动过的蓝图标记为脏，提示用户手动保存 |
 
-完整日志大致长这样：
+例如，从子蓝图启动修复时，日志可能列出实际修改的父蓝图：
 
 ```
 [SBIF] ==============================================

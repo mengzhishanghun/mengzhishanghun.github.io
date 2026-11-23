@@ -11,7 +11,7 @@ workIds:
   - mcp-world-editor
 docPage:
   work: mcp-world-editor
-  group: setup
+  group: getting-started
   slug: connect
   order: 1
 documentKind: product-manual
@@ -24,7 +24,7 @@ translationKey: doc:mcp-world-editor:connect
 
 MCPWorldEditor 在 Unreal Editor 内运行 HTTP 服务，将 Actor 创建、变换与属性编辑、灯光、地形、关卡和视口操作暴露给 AI 助手。
 
-> **注意**：插件仍在开发中；服务器基础设施已经可用，工具能力会持续完善。
+> **注意**：插件仍在开发中。服务已可用，各引擎版本的功能和兼容性仍在验证。
 
 - Unreal Engine 5.2+
 - 仅支持编辑器
@@ -44,16 +44,17 @@ MCPWorldEditor 在 Unreal Editor 内运行 HTTP 服务，将 Actor 创建、变�
 
 ## MCP 连接
 
-服务地址为 `http://127.0.0.1:8764/mcp`。若默认端口被占用，请以编辑器工具栏显示的实际地址为准。
+先启动目标 Unreal Editor。默认启用 `bAutoStart`，服务会随编辑器启动。客户端可使用默认地址 `http://127.0.0.1:8764/mcp`；如果端口被占用，请复制编辑器工具栏显示的实际地址。
 
 ### Claude Code
 
-在全局 `~/.claude/.mcp.json` 或项目根目录 `.mcp.json` 中加入：
+将下面的 `ue-world-editor` 条目合并到项目根目录 `.mcp.json` 的 `mcpServers` 中，保留现有条目。如果工具栏显示的端口与示例不同，请换成实际地址。若希望在多个项目中使用，请通过 Claude Code 添加用户范围的 MCP 设置，由客户端写入 `~/.claude.json`。
 
 ```json
 {
   "mcpServers": {
     "ue-world-editor": {
+      "type": "http",
       "url": "http://127.0.0.1:8764/mcp"
     }
   }
@@ -72,7 +73,7 @@ Cursor、Windsurf、VS Code Copilot 等客户端的配置位置不同，请按�
 
 响应大小在工具执行完成后核验。若 `tools/call` 的结果超出预算，JSON-RPC 错误数据会返回 `code=response_too_large`、`retryable=false` 与 `stateMayHaveChanged=true`；这不表示工具被回滚，调用方同样必须先核验编辑器状态。
 
-请通过 MCP `tools/list` 查询当前工具及其输入 schema；可用工具会随插件版本变化。
+连接后先调用 MCP `tools/list`。能返回工具列表时，再从中确认所需工具和输入 schema；工具清单会随插件版本变化。
 
 ## 反馈
 

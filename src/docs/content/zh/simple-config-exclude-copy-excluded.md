@@ -11,7 +11,7 @@ workIds:
   - simple-config-exclude
 docPage:
   work: simple-config-exclude
-  group: packaging
+  group: features
   slug: copy-excluded
   order: 2
 documentKind: product-manual
@@ -29,7 +29,7 @@ translationKey: doc:simple-config-exclude:copy-excluded
 - **目录结构**：保留原始结构（`TargetDir/ProjectName/Config/xxx.ini`）
 - **复制按钮**：将所有 Disallowed 配置文件复制到目标目录
 
-打包后，你可能想手动添加排除的配置：
+需要在打包后补充被排除的配置时，按以下顺序操作：
 
 1. 将 "Copy Target Directory" 设为打包输出路径（如 `/Windows`）
 2. 将要排除的配置设为 "Disallowed"
@@ -38,6 +38,8 @@ translationKey: doc:simple-config-exclude:copy-excluded
 5. 文件复制到 `Windows/YourProject/Config/xxx.ini`
 
 ## 复制前清理目标目录
+
+如果目录里已有部署所需的配置，先备份，或关闭清理选项后再复制。复制完打开目标目录，确认所需文件仍在。
 
 **Clean Config Before Copy** 默认启用。点击 **Copy** 前，确认 `TargetDir/ProjectName/Config/` 不包含要保留的文件：该目录会被删除，随后只复制当前标为 `Disallowed` 的配置。
 

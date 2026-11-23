@@ -11,7 +11,7 @@ workIds:
   - p4-case-sync
 docPage:
   work: p4-case-sync
-  group: setup
+  group: getting-started
   slug: setup
   order: 1
 documentKind: product-manual
@@ -30,7 +30,7 @@ translationKey: doc:p4-case-sync:setup
 
 ## 获取源码
 
-以下示例中的 `<your-org-or-user>` 是仓库所有者占位符，运行前换成实际值。
+先将 `<your-org-or-user>` 替换为实际仓库所有者，再运行以下命令获取源码并进入项目目录。
 
 ```bash
 git clone https://github.com/<your-org-or-user>/P4CaseSync.git
@@ -39,7 +39,7 @@ cd P4CaseSync
 
 ## 安装依赖
 
-下面两种环境任选其一。工具运行只需要 Python 标准库和可用的 `p4`；PyInstaller 用于构建 EXE。
+任选下面一种方式准备环境。运行工具需要 Python 标准库和可用的 `p4`；只有打包 EXE 时才需要 PyInstaller。
 
 ## 用 Conda 建立环境
 
