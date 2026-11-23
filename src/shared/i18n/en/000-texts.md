@@ -4504,7 +4504,10 @@ shellSlots:
     migrated-blog:robot-realtime-ik-prototype:category: Unreal Engine
     migrated-blog:robot-realtime-ik-prototype:tag: Robotics
   page:contact:
-    contact.meta: "UE project collaboration, technical services and small custom jobs. Available for outsourced projects, full-time or part-time work. Contact me by email or WeChat, or support my work."
+    contact.supportPageTitle: "Support my work"
+    contact.supportPageBrowserTitle: "Support my work · Xiao Mao"
+    contact.supportPageMeta: "If my articles, tools or projects have helped you, voluntary contributions support continued updates and maintenance."
+    contact.meta: "UE project collaboration, technical services and small custom jobs. Available for outsourced projects, full-time or part-time work. Contact me by email or WeChat."
     contact.intro: "Have a project in mind? Get in touch."
     contact.introSupport: "If my articles or tools have helped you, you can also support my work."
     contact.projectsTitle: "Project collaboration"
@@ -4551,7 +4554,7 @@ shellSlots:
     contact.purposes.5.title: "Website and maintenance"
     contact.purposes.5.description: "Domain, hosting and routine maintenance to keep the content accessible."
     root.html:1.head:0.meta:2@content: Available for game development, digital twins, and custom tools or plugins. Contact me by email or WeChat, or support my work.
-    root.html:1.head:0.title:4.#text:0: Development Enquiries, Contact & Support · Xiao Mao
+    root.html:1.head:0.title:4.#text:0: "Contact · Xiao Mao"
     root.html:1.head:0.link:7@title: Xiao Mao's Blog RSS
     root.html:1.body:1.div:0.a:0.#text:0: Skip to main content
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH home
@@ -4564,7 +4567,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: Blog
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: About me
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: Contact & support
-    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: Contact & support
+    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: "Contact"
     root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.p:1.#text:0: Contact me about development projects, or support my work.
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:0.#text:0: Available for development
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:0.div:1.h3:0.#text:0: Game Development
@@ -6681,6 +6684,12 @@ shellSlots:
     documents: Documentation
     backToWork: Back
 scriptSlots:
+  navigation:home: "Home"
+  navigation:works: "Works"
+  navigation:cases: "Projects"
+  navigation:blog: "Blog"
+  navigation:contact: "Contact"
+  navigation:support: "Support"
   content-index:sort-likes: Most liked
   content-index:likes-loading: Loading like counts…
   content-index:likes-unavailable: Like counts are unavailable. Showing the original order.
@@ -8562,9 +8571,9 @@ engagementLabels:
   manual: Select and copy the link below.
   manualLabel: Share link (select and copy)
 translationKey: site-copy
-sourceHash: 31322b79a4e00d8d1b3f7239ac13627a7f45cdd75341b3d3f33241b6ad8c13b6
+sourceHash: e7467b4208083d71c67da2e72d7399b7d26c86464ebd5d77672da1bc62f7fd01
 translationStatus: translated
-generatedBodyHash: "56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409"
+generatedBodyHash: 56270112c732db46770efbd0a329d6681de550086616c09cfe9aa271c843e409
 workLabels:
   sale: On sale
   open-source: Open source

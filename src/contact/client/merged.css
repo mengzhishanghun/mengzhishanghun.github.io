@@ -191,3 +191,6 @@
 }
 
 html[lang^="en"] .contact-preview .support-heading h2::first-letter { text-transform: uppercase; }
+
+.contact-preview.support-page .local-page .contact-content { display: block; }
+.contact-preview.support-page .support-section { border-top: 0; padding-top: 0; }

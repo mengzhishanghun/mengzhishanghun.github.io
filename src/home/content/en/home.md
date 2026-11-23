@@ -8,9 +8,9 @@ websiteRoute: /
 template: index.html
 lang: en
 translationKey: home
-sourceHash: "5b9f029b3893b057758c37edc5f15c8272447658b3c069e32cd3c113371870b2"
+sourceHash: 34a7fa9b13e360c636e082ccef0277408e418639dfb4137119b8d33eccf0aeb0
 translationStatus: translated
-generatedBodyHash: "8d73a066294e2e7d4521ed62816a83a1334d3a75f5cf2d780ad1c79d831432c8"
+generatedBodyHash: 791c0d9a094815da523376980460d1153a5ed4fd523d5f1b00edfa742abcff67
 ---
 
 # Complexity can be encapsulated;
@@ -20,7 +20,7 @@ Hi, I'm Xiao Mao, a freelance developer.
 
 I have worked in UE development since 2018, on games, driving simulation, flight simulation, digital humans, AI interaction, digital twins, and VR projects. I also develop tools, plugins, and automation workflows. For project collaboration or development work, [get in touch](/contact/).
 
-This website is where I share my plugins, tools, and games, present projects I have contributed to, and write about development practice and ideas. If my work, articles, or tools help you, you can also [support my work](/contact/#support-title).
+This website is where I share my plugins, tools, and games, present projects I have contributed to, and write about development practice and ideas. If my work, articles, or tools help you, you can also [support my work](/support/).
 
 ![](/media-occurrence/page%3Ahome%3Amedia%3A1)
 

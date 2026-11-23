@@ -367,6 +367,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
   const urls=Object.fromEntries(config.languages.map(l=>[l.code,localeRoute(entry,l.code)]));
   const runtime={...publicLanguages(config),locale,urls,anchors,anchorAliases,labels};
   const nav='<label class="site-language-switch"><select data-site-language-select data-current="'+locale+'" aria-label="'+escapeHTML(labels.group)+'">'+config.languages.map(l=>'<option value="'+l.code+'" data-site-locale="'+l.code+'"'+(l.code===locale?' selected':'')+'>'+escapeHTML(l.label)+'</option>').join('')+'</select></label>';
+  const navigation=[['page:home','home'],['page:works-index','works'],['page:cases-index','cases'],['page:blog-index','blog'],['page:contact','contact'],['page:support','support']];
   let actions = 0;
   let engagementBodies=0,engagementSlots=0;
   const article=articleTypes.has(entry.type);
@@ -383,7 +384,18 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     if(contentIndex && a['data-content-card']!==undefined && loc.attrs?.hidden)edits.push([loc.attrs.hidden.startOffset,loc.attrs.hidden.endOffset,'']);
     if(contentIndex && ['content-category-nav','content-filter'].some(cls=>(a.class || '').split(/\s+/).includes(cls)) && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
     if(contentIndex && a['data-content-pagination']!==undefined && a.hidden===undefined)edits.push([loc.startTag.endOffset-1,loc.startTag.endOffset-1,' hidden']);
-    if(node.tagName==='a' && a.href==='/about/' && (attrs(node.parentNode).class || '').split(/\s+/).includes('header-actions')) {
+    if(node.tagName==='nav' && a.id==='main-navigation') {
+      const links=navigation.map(([id,key])=>{
+        const target=entries.find(item=>item.id===id),label=scriptSlots['navigation:'+key];
+        if(!target || typeof label!=='string' || !label.trim())throw Error('主导航目标或文案缺失: '+id);
+        const href=localeRoute(target,locale),current=urls[locale]===href || id!=='page:home' && urls[locale].startsWith(href);
+        return '<a href="'+href+'"'+(current?' aria-current="page"':'')+'>'+escapeHTML(label)+'</a>';
+      }).join('');
+      edits.push([loc.startTag.endOffset,loc.endTag.startOffset,links]);
+      for(const child of node.childNodes || [])walk(child,item=>excluded.add(item));
+      return;
+    }
+    if(node.tagName==='a' && ['/about/','/contact/'].includes(a.href) && (attrs(node.parentNode).class || '').split(/\s+/).includes('header-actions')) {
       edits.push([loc.startOffset,loc.endOffset,'']);
       walk(node,child=>excluded.add(child));
       return;

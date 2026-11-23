@@ -69,6 +69,7 @@ languages:
       page:cases-index: cases/content/zh/cases-index.md
       page:blog-index: blog/content/zh/blog-index.md
       page:contact: contact/content/zh/contact.md
+      page:support: contact/content/zh/support.md
       page:not-found: shared/content/zh/not-found.md
       blog:ue-source-engine-association: blog/content/zh/ue-source-engine-association.md
       blog:ue-uparam-reference-metadata: blog/content/zh/ue-uparam-reference-metadata.md
@@ -371,6 +372,7 @@ languages:
       page:cases-index: cases/content/en/cases-index.md
       page:blog-index: blog/content/en/blog-index.md
       page:contact: contact/content/en/contact.md
+      page:support: contact/content/en/support.md
       page:not-found: shared/content/en/not-found.md
       blog:ue-source-engine-association: blog/content/en/ue-source-engine-association.md
       blog:ue-uparam-reference-metadata: blog/content/en/ue-uparam-reference-metadata.md

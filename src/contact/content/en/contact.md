@@ -1,5 +1,5 @@
 ---
-title: Contact & support
+title: Contact
 type: page
 slug: contact
 draft: false
@@ -8,18 +8,16 @@ websiteRoute: /contact/
 template: contact/index.html
 lang: en
 translationKey: contact
-sourceHash: 1ed2a88868eb6ac5bed5dbe26faa273353a262263003b9ca54fb00a91986e28c
+sourceHash: 383911ef63bf2f0464d58352e45e7344757a72911bda6fada117a8794b8268d9
 translationStatus: translated
-generatedBodyHash: b6b838c33f5f8f6a7e9e4efb0eb241ba56936ddc20b84bc2942e682026b2e4b6
+generatedBodyHash: 4cd6c5d4f6eddf56cd59d1eeda11835e1bdfc5409be4a34fe0631720848afa77
 ---
 
 ![](/media-occurrence/page%3Acontact%3Amedia%3A1)
 
-# Contact & support
+# Contact
 
 Have a project in mind? Get in touch.
-
-If my articles or tools have helped you, you can also support my work.
 
 ## Project collaboration
 
@@ -74,43 +72,3 @@ mzsh.me@icloud.com
 ### Personal WeChat
 
 [![Xiao Mao's personal WeChat QR code](/media-occurrence/page%3Acontact%3Amedia%3A2)](/assets/contact/wechat-personal-qr.webp)
-
-## support my work
-
-If this work has helped you, voluntary contributions support continued updates and maintenance.
-
-### What your support helps with
-
-#### Works and tools
-
-Bug fixes, version compatibility, documentation and experiments with new tools.
-
-#### Games and creative projects
-
-Gameplay prototypes, content creation and continued work on personal games.
-
-#### Articles and tutorials
-
-Sharing project experience, maintaining articles and documenting reusable methods.
-
-#### Videos and translation
-
-Planned: AI-assisted translation of overseas tutorials for reposting on Bilibili.
-
-#### Website and maintenance
-
-Domain, hosting and routine maintenance to keep the content accessible.
-
-### Ways to contribute
-
-#### WeChat
-
-[![Xiao Mao's WeChat Pay QR code](/media-occurrence/page%3Acontact%3Amedia%3A3)](/assets/support/wechat-pay-qr.webp)
-
-#### Alipay
-
-[![Mengzhishanghun's Alipay payment QR code](/media-occurrence/page%3Acontact%3Amedia%3A4)](/assets/support/alipay-qr.webp)
-
-[GitHub Sponsors](https://github.com/sponsors/mengzhishanghun)
-
-Thank you for supporting the tools, articles and creative projects I continue to work on.

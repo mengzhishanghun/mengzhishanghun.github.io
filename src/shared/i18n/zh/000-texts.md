@@ -4504,7 +4504,10 @@ shellSlots:
     migrated-blog:robot-realtime-ik-prototype:category: UE开发
     migrated-blog:robot-realtime-ik-prototype:tag: 机器人
   page:contact:
-    contact.meta: "UE 项目合作、技术服务与小型定制，支持外包、全职和兼职合作，通过邮箱或微信联系，也可自愿支持创作。"
+    contact.supportPageTitle: "支持创作"
+    contact.supportPageBrowserTitle: "支持创作 · 小毛"
+    contact.supportPageMeta: "如果文章、工具或作品对你有帮助，欢迎自愿赞赏，支持后续更新与维护。"
+    contact.meta: "UE 项目合作、技术服务与小型定制，支持外包、全职和兼职合作，通过邮箱或微信联系。"
     contact.intro: "有项目需求，欢迎联系我聊聊。"
     contact.introSupport: "如果文章或工具帮到了你，也欢迎支持我继续创作。"
     contact.projectsTitle: "项目合作"
@@ -4551,7 +4554,7 @@ shellSlots:
     contact.purposes.5.title: "网站与维护"
     contact.purposes.5.description: "域名、服务器与日常维护，让内容持续可访问。"
     root.html:1.head:0.meta:2@content: 承接游戏开发、数字孪生与工具插件开发，通过邮箱或微信联系，也可自愿支持作品与分享。
-    root.html:1.head:0.title:4.#text:0: 开发合作、联系与支持 · 小毛
+    root.html:1.head:0.title:4.#text:0: "联系合作 · 小毛"
     root.html:1.head:0.link:7@title: 小毛博客 RSS
     root.html:1.body:1.div:0.a:0.#text:0: 跳到主要内容
     root.html:1.body:1.div:0.header:1.div:0.a:0@aria-label: MZSH 首页
@@ -4564,7 +4567,7 @@ shellSlots:
     root.html:1.body:1.div:0.header:1.div:0.nav:2.a:3.#text:0: 博客
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:0.#text:0: 关于我
     root.html:1.body:1.div:0.header:1.div:0.div:3.a:1.#text:0: 联系与支持
-    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: 联系与支持
+    root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.h1:0.#text:0: "联系合作"
     root.html:1.body:1.div:0.main:2.div:0.div:1.section:0.div:1.p:1.#text:0: 项目开发合作，欢迎通过邮箱或微信联系。
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.h2:0.#text:0: 承接开发
     root.html:1.body:1.div:0.main:2.div:0.div:3.section:1.div:1.article:0.div:1.h3:0.#text:0: 游戏开发
@@ -6681,6 +6684,12 @@ shellSlots:
     documents: 使用文档
     backToWork: 返回
 scriptSlots:
+  navigation:home: "首页"
+  navigation:works: "作品展示"
+  navigation:cases: "项目案例"
+  navigation:blog: "个人博客"
+  navigation:contact: "联系合作"
+  navigation:support: "支持创作"
   content-index:sort-likes: 点赞最多
   content-index:likes-loading: 正在读取点赞排序…
   content-index:likes-unavailable: 点赞排序暂不可用，已按原有顺序显示。
