@@ -13,10 +13,6 @@ workInfo:
   channels:
     - kind: docs
       href: /en/works/mcp-level-sequence/docs/connect/
-  compatibility:
-    - platforms: []
-      requirements:
-        - UE 5.2–5.8 (in development; compatibility to be confirmed)
 featured: false
 draft: false
 sitePublish: true
@@ -25,7 +21,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-level-sequence
-sourceHash: a922cc907102e96722dbe4a07e62c69fb96e9fea8bb8a72f214a6ff82e9a7965
+sourceHash: d551aecf5c3cfec77e69712d21edd7edf82ab4e5e43556450e8f2fdb915d3473
 generatedBodyHash: fb20ffaf576d7b9bb7ed89ff49eafd31735882b0e0ed85eaca577bba59d79afa
 translationStatus: translated
 coverAlt: MCPLevelSequence cover

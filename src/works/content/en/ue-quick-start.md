@@ -20,17 +20,15 @@ links:
     href: https://github.com/MZSH-Tools/UEQuickStart
 lang: en
 translationKey: ue-quick-start
-sourceHash: e4db9a3dddfc1e00f9324ed60f84ded0a907d5a75e7b72fbd29e82a1bbfe897b
+sourceHash: 5b334b8f764582141eaf5b7681097669a26ee087d4933310981fad8a8edd25b6
 translationStatus: translated
 generatedBodyHash: f967cc618a8eaabcef59a655dbff21ff171051afa432a78e1d2f4b91726b2706
 workInfo:
   channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/UEQuickStart
     - kind: docs
       href: /en/works/ue-quick-start/docs/open-project/
-  compatibility:
-    - platforms:
-        - UE project tool (operating system to be verified)
-      requirements: []
 websiteCoverUrl: /media/covers/works/ue-quick-start-20261101.webp
 coverAlt: UEQuickStart cover
 docIds:

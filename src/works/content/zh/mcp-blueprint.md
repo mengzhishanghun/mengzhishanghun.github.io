@@ -14,13 +14,6 @@ workInfo:
       href: https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713
     - kind: docs
       href: /zh/works/mcp-blueprint/docs/connect/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8（使用与引擎小版本匹配的发行包）
 featured: false
 draft: false
 sitePublish: true

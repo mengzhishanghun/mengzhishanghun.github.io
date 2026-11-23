@@ -10,12 +10,10 @@ order: 3
 status: 正式文档
 workInfo:
   channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/UEQuickStart
     - kind: docs
       href: /zh/works/ue-quick-start/docs/open-project/
-  compatibility:
-    - platforms:
-        - UE 项目工具（操作系统待核实）
-      requirements: []
 featured: false
 draft: false
 sitePublish: false

@@ -11,10 +11,6 @@ status: 开发中
 workInfo:
   stage: developing
   channels: []
-  compatibility:
-    - platforms:
-        - Windows（当前测试平台）
-      requirements: []
 featured: false
 draft: false
 sitePublish: true

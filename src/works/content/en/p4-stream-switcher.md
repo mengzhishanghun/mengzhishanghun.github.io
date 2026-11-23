@@ -10,15 +10,10 @@ order: 1
 status: Public source
 workInfo:
   channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/P4StreamSwitcher
     - kind: docs
       href: /en/works/p4-stream-switcher/docs/install-and-connect/
-  compatibility:
-    - platforms:
-        - Windows
-      requirements:
-        - Python 3.10+, Tkinter, P4Python, platformdirs
-        - Perforce CLI, P4V, and a valid server account
-        - "Two-level streams: //depot/project/branch"
 featured: false
 draft: false
 sitePublish: true
@@ -30,7 +25,7 @@ links:
     href: https://github.com/MZSH-Tools/P4StreamSwitcher
 lang: en
 translationKey: p4-stream-switcher
-sourceHash: 83c65cb0cac5bfd98264bd2cca970b00be01df5b175ded98647f363576f3ca68
+sourceHash: bb888cd207e461be0906e2ba62e16c0b403a8285cbb56549ff04fd8068580da1
 translationStatus: translated
 generatedBodyHash: 1217de984ba9231114356141c2b5d5ec7432a531cea87ef815a7e49021c1caac
 coverAlt: P4StreamSwitcher cover

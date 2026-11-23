@@ -10,12 +10,10 @@ order: 2
 status: 正式文档
 workInfo:
   channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/UEPluginManager
     - kind: docs
       href: /zh/works/plugin-manager/docs/setup/
-  compatibility:
-    - platforms:
-        - UE 插件管理工具（操作系统待核实）
-      requirements: []
 featured: false
 draft: false
 sitePublish: false

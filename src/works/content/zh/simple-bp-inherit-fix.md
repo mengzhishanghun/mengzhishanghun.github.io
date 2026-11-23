@@ -14,13 +14,6 @@ workInfo:
       href: https://www.fab.com/listings/320c7471-92b8-4a3e-a88a-2a5fcb98d620
     - kind: docs
       href: /zh/works/simple-bp-inherit-fix/docs/quickstart/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false

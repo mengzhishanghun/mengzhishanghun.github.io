@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-udp
-sourceHash: 05690028e0466f00e46d77a81d0e1fb2dcb289e7c5f97cc600bda3cf3239a3d6
+sourceHash: 1f58b2bbfa6b89a16c2ea64fb3518a10a69619367678eaaaa4137653e0daca6e
 translationStatus: translated
 generatedBodyHash: 0af7cdd6e2f9d3e63cc00245c1b3a00223cc609c3215d2f6d5e2123fec542b56
 workInfo:
@@ -31,13 +31,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/9e0d0c8c-ac79-4699-925c-abdfe9ac51eb
     - kind: docs
       href: /en/works/simple-udp/docs/enable-plugin/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-udp-20261101.webp
 coverAlt: SimpleUDP cover
 docIds:

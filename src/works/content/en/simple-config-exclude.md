@@ -27,22 +27,15 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-config-exclude
-sourceHash: 9388e8a7c0bd3d4de413cad5d947fc801be3a886cf644193084081c2a9d482e6
+sourceHash: 3d007c9b6674776ac409af2f8604f428901059fb661b3746fd2ba83f361e2baa
 translationStatus: translated
-generatedBodyHash: e4493829bcd1af13f75d6eea6f5fd4794c75b5578914c517e5f9759dc4df0646
+generatedBodyHash: c077446e9f93cb295bc6ddd5732befb988df06a219e2ce3ad280d48feeb2a168
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/05c2cb8f-cabc-45ef-84e0-9eac988b5a35
     - kind: docs
       href: /en/works/simple-config-exclude/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-config-exclude-20261101.webp
 coverAlt: SimpleConfigExclude cover
 ---
@@ -102,7 +95,3 @@ Open **Edit → Project Settings**, go to SimpleConfigExclude settings, and set 
 For usage questions or collaboration inquiries, visit the contact page.
 
 - **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
-
-## Documentation Source
-
-The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19770930) on 2026-03-25.

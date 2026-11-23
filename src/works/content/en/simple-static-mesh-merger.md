@@ -27,22 +27,15 @@ docIds:
 sourceDate: 2025-11-09
 lang: en
 translationKey: simple-static-mesh-merger
-sourceHash: c902d2bd74de3e1a0223e46a2a15643ba2fa3c0aedfbbcf6bf00d729f815dcfb
+sourceHash: 8ea6eb1cee0a36112e243083bb73460e613af172e0db493f577d96ffa175011b
 translationStatus: translated
-generatedBodyHash: 46ca0ed30df456d2d5deab735673737b847388446f67ebc8090dd46ec9ac5c78
+generatedBodyHash: 61bceb9155bc65fa9a7e7321b5fd321a51006d97568187a1f02e5bc21bb6ddce
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
     - kind: docs
       href: /en/works/simple-static-mesh-merger/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-static-mesh-merger-20261101.webp
 coverAlt: SimpleStaticMeshMerger cover
 ---
@@ -109,7 +102,3 @@ Open **Edit → Project Settings**, select the SimpleStaticMeshMerger settings p
 For usage questions or collaboration, please visit the contact page.
 
 - **Contact:** [Contact and collaboration](https://mzsh.me/contact/)
-
-## Documentation Source
-
-The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19204715) on 2025-11-09.

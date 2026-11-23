@@ -14,11 +14,6 @@ workInfo:
       href: https://www.fab.com/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721
     - kind: docs
       href: /zh/works/simple-ssh-tunnel/docs/connect/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false

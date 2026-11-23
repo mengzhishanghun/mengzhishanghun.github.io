@@ -14,13 +14,6 @@ workInfo:
       href: https://www.fab.com/listings/f7c4474c-9a9d-455a-a948-d46d557b457d
     - kind: docs
       href: /zh/works/simple-asset-namer/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -97,7 +90,3 @@ SimpleAssetNamer 为 UE 资产提供基于类型和路径的命名规则。它�
 如有使用问题或合作需求，请前往联系页面。
 
 - **联系入口：** [联系与合作](https://mzsh.me/contact/)
-
-## 文档出处
-
-原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770922)。

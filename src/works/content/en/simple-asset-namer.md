@@ -27,22 +27,15 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-asset-namer
-sourceHash: f1581cbaa9da38fb92b3c9a55be3d9cb5b3f2bfb81a5070f5fb1917a335289de
+sourceHash: bc2b3fcb86446816a063aea77e1528f7e578e1fa6dea7224fd239d5205ee39c4
 translationStatus: translated
-generatedBodyHash: 741b1664c9169031031c3c96d38d2266d75f2b6ce559efa42ad017b3569dcc07
+generatedBodyHash: 6ee83a5644f6076b735c762eb80871c3899161c3dee0a2e08fd398003cb06f72
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/f7c4474c-9a9d-455a-a948-d46d557b457d
     - kind: docs
       href: /en/works/simple-asset-namer/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-asset-namer-20261101.webp
 coverAlt: SimpleAssetNamer cover
 ---
@@ -100,7 +93,3 @@ Supports Unreal Engine 5.2–5.8.
 For usage questions or collaboration inquiries, visit the contact page.
 
 - **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
-
-## Documentation Source
-
-The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19770922) on 2026-03-25.

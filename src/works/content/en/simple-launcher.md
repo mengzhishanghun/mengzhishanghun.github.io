@@ -26,7 +26,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-launcher
-sourceHash: 44d39c1ad2c48ef79c174a3bed09a1975c5c54a5d9c86b1da324809d4223999b
+sourceHash: 9161e147e4acfcf1de4ca90dc93817ac01388c09543c2847634f3bbd4bce738b
 translationStatus: translated
 generatedBodyHash: 6b9194a8bc85fd3eaee3f8f229f34654ab2a4b1a357ffa075c0798b2ce44569c
 workInfo:
@@ -35,13 +35,6 @@ workInfo:
       href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
     - kind: docs
       href: /en/works/simple-launcher/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-launcher-20261101.webp
 coverAlt: SimpleLauncher cover
 ---

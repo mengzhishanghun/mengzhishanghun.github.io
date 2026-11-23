@@ -14,13 +14,6 @@ workInfo:
       href: https://www.fab.com/listings/58d6403a-a2fe-4b49-9b27-536e12beace3
     - kind: docs
       href: /zh/works/simple-launcher/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false

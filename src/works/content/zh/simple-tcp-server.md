@@ -14,15 +14,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/cc276a4a-389b-43e3-8a04-a6d628534108
     - kind: docs
       href: /zh/works/simple-tcp-server/docs/listen/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false

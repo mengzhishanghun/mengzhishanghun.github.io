@@ -12,7 +12,7 @@ test('all manifest work pages expose verified channels, title statuses and local
   const file=path.resolve(process.env.SITE_OUTPUT||'dist/site',lang,'works',entry.slug,'index.html'),doc=parse(fs.readFileSync(file,'utf8'));
   const badges=[],actions=[];let compatibility,titleLine;
   walk(doc,node=>{const classes=(attrs(node).class||'').split(/\s+/);if(classes.includes('work-status'))badges.push(text(node));if(classes.includes('work-action'))actions.push({href:attrs(node).href,text:text(node),tag:node.tagName,disabled:attrs(node).disabled});if(classes.includes('work-compatibility'))compatibility=node;if(classes.includes('work-title-line'))titleLine=node;});
-  assert.ok(titleLine,file);assert.ok(compatibility,file);
+  assert.ok(titleLine,file);assert.equal(compatibility,undefined,file);
   assert.equal(badges.length,source.workInfo.channels.filter(c=>c.kind!=='docs').length+(source.workInfo.stage?1:0),file);
   for(const channel of source.workInfo.channels){const label=lang==='zh'?{sale:'跳转到在售页面','open-source':'跳转到开源页面',docs:'查看具体文档'}[channel.kind]:{sale:'View sales page','open-source':'View open-source page',docs:'View documentation'}[channel.kind];
    const action=actions.find(a=>a.text===label);assert.ok(action,file+' '+label);
@@ -20,8 +20,7 @@ test('all manifest work pages expose verified channels, title statuses and local
    if(channel.kind==='docs')assert.ok(fs.existsSync(path.resolve(process.env.SITE_OUTPUT||'dist/site',action.href.slice(1),'index.html')),file+' documentation target');
   }
   if(!source.workInfo.channels.some(c=>c.kind==='docs')){const missing=actions.find(a=>a.text===(lang==='zh'?'暂无相关文档':'No documentation available'));assert.ok(missing,file);assert.equal(missing.tag,'button');assert.equal(missing.disabled,'');assert.equal(missing.href,undefined);}
-  for(const group of source.workInfo.compatibility)for(const value of [...group.platforms,...group.requirements])assert.ok(text(compatibility).includes(value),file+' '+value);
-  if(['plugin-manager','ue-quick-start'].includes(entry.slug)){assert.equal(badges.length,0);assert.ok(actions.some(a=>a.href.startsWith('https://github.com/')));}
+  if(['plugin-manager','ue-quick-start','p4-stream-switcher'].includes(entry.slug)){assert.deepEqual(badges,[lang==='zh'?'开源':'Open source']);assert.ok(actions.some(a=>a.href.startsWith('https://github.com/')));}
   pages++;
  }
  assert.equal(pages,publishedWorks.length*2);

@@ -23,7 +23,7 @@ links:
 sourceDate: 2026-05-25
 lang: en
 translationKey: ai-data-asset
-sourceHash: 276e532d28856d3aa64c5c619f4ee936d5a677c75a8b275281d4ebc3854a5abf
+sourceHash: 608a73b5ad59fa0fc38de6cab09d1321dd1dcfb292555c103d7c6be29da3c6fc
 translationStatus: translated
 generatedBodyHash: 52e7a38daad696e0afb07c3a9d640e16634f7b7747cf2f2d6cb8a7e5f947122f
 workInfo:
@@ -32,13 +32,6 @@ workInfo:
       href: https://www.fab.com/listings/e6c92c8b-6e87-4f2f-9975-1c0d85621c60
     - kind: docs
       href: /en/works/ai-data-asset/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/ai-data-asset-20261101.webp
 coverAlt: AIDataAsset cover
 docIds:

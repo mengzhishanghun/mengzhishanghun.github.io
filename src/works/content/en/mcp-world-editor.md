@@ -13,10 +13,6 @@ workInfo:
   channels:
     - kind: docs
       href: /en/works/mcp-world-editor/docs/connect/
-  compatibility:
-    - platforms: []
-      requirements:
-        - UE 5.2–5.8 (in development; compatibility to be confirmed)
 featured: false
 draft: false
 sitePublish: true
@@ -25,7 +21,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-world-editor
-sourceHash: 715de7b73ac22ac0b97dbd09d2d3aadf992d652249d9111b8de0d981b8034717
+sourceHash: 62b1b60afffbecfb256d6941771a19a60a43f4d5d92987aee35df0199db87282
 generatedBodyHash: 3ef36b95493dc861a062bf618c0f0acd00736ee3d3a1844793f88120189514ac
 translationStatus: translated
 coverAlt: MCPWorldEditor cover

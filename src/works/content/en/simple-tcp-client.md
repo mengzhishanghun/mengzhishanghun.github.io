@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-client
-sourceHash: 52dc99d37c9237d5be6a76db84d57a37186fff22f3def02ba1ef8a5341c5d5a6
+sourceHash: f769c9c548092c5292a555200370e5a5fa3aa4210a5550281e5e7d57f639923e
 translationStatus: translated
 generatedBodyHash: 86c732fbbc49d624017d879bf3ddfea66eaac5bb62a44675383d86b4410b6e7d
 workInfo:
@@ -31,13 +31,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/6d6d46bf-eaed-4b66-8382-9d69eb56981e
     - kind: docs
       href: /en/works/simple-tcp-client/docs/enable-plugin/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-tcp-client-20261101.webp
 coverAlt: SimpleTCPClient cover
 docIds:

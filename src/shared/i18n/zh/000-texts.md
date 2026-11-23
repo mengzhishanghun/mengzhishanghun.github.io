@@ -8625,9 +8625,6 @@ workLabels:
   saleAction: 跳转到在售页面
   sourceAction: 跳转到开源页面
   docsAction: 查看具体文档
-  platforms: 适用平台
-  requirements: 环境要求
-  pending: 待核实
   developing: 开发中
   noDocs: 暂无相关文档
 ---

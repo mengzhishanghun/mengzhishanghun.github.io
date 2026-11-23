@@ -20,7 +20,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleBPInheritFix
 lang: en
 translationKey: simple-bp-inherit-fix
-sourceHash: 25c0ac79e67d9f2e0dc74c1d79c2aeec9b2bd11be0e4f4322aee2b9291e7a739
+sourceHash: d41a579e97142f64c894774ba1685cd841003244464955869d17d5bd6ddea765
 translationStatus: translated
 generatedBodyHash: 974dec6056db37d5159f2674049ffe0882868a5e58bfa73bae46f547fa6b6672
 workInfo:
@@ -29,13 +29,6 @@ workInfo:
       href: https://www.fab.com/listings/320c7471-92b8-4a3e-a88a-2a5fcb98d620
     - kind: docs
       href: /en/works/simple-bp-inherit-fix/docs/quickstart/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-bp-inherit-fix-20261101.webp
 coverAlt: SimpleBPInheritFix cover
 docIds:

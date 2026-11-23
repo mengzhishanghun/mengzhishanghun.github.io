@@ -14,13 +14,6 @@ workInfo:
       href: https://www.fab.com/listings/e6c92c8b-6e87-4f2f-9975-1c0d85621c60
     - kind: docs
       href: /zh/works/ai-data-asset/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false

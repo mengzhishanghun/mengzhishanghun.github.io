@@ -10,15 +10,10 @@ order: 1
 status: 源码公开
 workInfo:
   channels:
+    - kind: open-source
+      href: https://github.com/MZSH-Tools/P4StreamSwitcher
     - kind: docs
       href: /zh/works/p4-stream-switcher/docs/install-and-connect/
-  compatibility:
-    - platforms:
-        - Windows
-      requirements:
-        - Python 3.10+、Tkinter、P4Python、platformdirs
-        - Perforce CLI、P4V 及有效服务器账户
-        - 两层流结构 //depot/project/branch
 featured: false
 draft: false
 sitePublish: true

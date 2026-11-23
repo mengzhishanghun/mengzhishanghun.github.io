@@ -14,15 +14,6 @@ workInfo:
       href: https://www.fab.com/listings/dd1ee0a8-f450-4a3d-adc4-4a96f5dec3dd
     - kind: docs
       href: /zh/works/simple-input-simulator/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false

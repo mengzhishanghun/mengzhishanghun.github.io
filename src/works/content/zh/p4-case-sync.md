@@ -14,12 +14,6 @@ workInfo:
       href: https://github.com/MZSH-Tools/P4CaseSync
     - kind: docs
       href: /zh/works/p4-case-sync/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows（推荐）
-        - macOS / Linux（文档提供命令）
-      requirements:
-        - Perforce p4 命令行环境
 featured: false
 draft: false
 sitePublish: false

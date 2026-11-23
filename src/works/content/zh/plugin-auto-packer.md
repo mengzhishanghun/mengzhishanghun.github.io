@@ -14,11 +14,6 @@ workInfo:
       href: https://github.com/MZSH-Tools/UEPluginAutoPacker
     - kind: docs
       href: /zh/works/plugin-auto-packer/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows
-      requirements:
-        - 仅构建 Win64 插件
 featured: false
 draft: false
 sitePublish: false

@@ -14,11 +14,6 @@ workInfo:
       href: https://github.com/MZSH-Tools/UEPackageManager
     - kind: docs
       href: /zh/works/ue-package-manager/docs/install-and-detect/
-  compatibility:
-    - platforms:
-        - Windows
-      requirements:
-        - Win64 项目打包；Launcher 或源码引擎
 featured: false
 draft: false
 sitePublish: false

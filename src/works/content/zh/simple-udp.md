@@ -14,13 +14,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/9e0d0c8c-ac79-4699-925c-abdfe9ac51eb
     - kind: docs
       href: /zh/works/simple-udp/docs/enable-plugin/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {assertPublicFields} from '../build/source-schema.mjs';
 import {projectSource} from '../import/import.mjs';
-const info={channels:[{kind:'sale',href:'https://example.com/store'},{kind:'open-source',href:'https://github.com/example/tool'},{kind:'docs',href:'/docs/zh/tool/'}],compatibility:[{platforms:['Windows'],requirements:['UE 5.2–5.8']},{platforms:['macOS'],requirements:['UE 5.4']}]};
+const info={channels:[{kind:'sale',href:'https://example.com/store'},{kind:'open-source',href:'https://github.com/example/tool'},{kind:'docs',href:'/docs/zh/tool/'}]};
 test('nested metadata rejects unknown fields, invalid shape and unsafe URL',()=>{
  for(const workInfo of [{...info,privatePath:'secret'},{...info,channels:[{kind:'sale',href:'javascript:alert(1)'}]},{...info,channels:[{kind:'docs',href:'//evil.test'}]},{...info,channels:[{kind:'sale',href:'https://example.com',secret:true}]},{...info,compatibility:[{platforms:'Windows',requirements:[]}]},{...info,compatibility:[{platforms:['Windows'],requirements:[],secret:true}]}])assert.throws(()=>assertPublicFields({workInfo}),/workInfo/);
  assert.doesNotThrow(()=>assertPublicFields({workInfo:info}));
@@ -12,7 +12,7 @@ test('projection preserves valid public metadata and refuses nested private fiel
  assert.deepEqual((await projectSource({data:{workInfo:info},body:'Body\n'},record)).data.workInfo,info);
  await assert.rejects(()=>projectSource({data:{workInfo:{...info,secret:'private'}},body:'Body\n'},record),/workInfo/);
 });
-test('metadata renderer supports sale, source, both, grouped compatibility and legacy fallback',async()=>{
+test('metadata renderer keeps channels and statuses without a compatibility summary',async()=>{
  const {renderWorkMetadata}=await import('./metadata.mjs');
  const labels={sale:'在售', 'open-source':'开源',saleAction:'跳转到在售页面',sourceAction:'跳转到开源页面',docsAction:'查看具体文档',platforms:'适用平台',requirements:'环境要求',pending:'待核实'};
  const html='<div class="project-title-group"><h1>Test</h1><p>English</p></div><nav class="work-actions"><a href="/docs/zh/tool/">Old docs</a></nav>';
@@ -20,9 +20,8 @@ test('metadata renderer supports sale, source, both, grouped compatibility and l
  for(const kinds of [['sale'],['open-source'],['sale','open-source']]){
   const result=renderWorkMetadata(html,{workInfo:{...info,channels:info.channels.filter(x=>kinds.includes(x.kind)||x.kind==='docs')}},labels);
   assert.equal((result.match(/class="work-status /g)||[]).length,kinds.length);
-  const groups=[...result.matchAll(/<div class="work-compatibility-group">([\s\S]*?)<\/div>/g)].map(match=>match[1]);
-  assert.equal(groups.length,2);assert.match(groups[0],/Windows/);assert.match(groups[0],/UE 5.2–5.8/);assert.doesNotMatch(groups[0],/macOS/);assert.match(groups[1],/macOS/);assert.match(groups[1],/UE 5.4/);
-  assert.match(result,/查看具体文档/);assert.match(result,/Windows/);assert.match(result,/macOS/);assert.match(result,/UE 5.4/);
+  assert.doesNotMatch(result,/work-compatibility|适用平台|环境要求|待核实/);
+  assert.match(result,/查看具体文档/);
   for(const kind of kinds)assert.match(result,new RegExp(kind==='sale'?'跳转到在售页面':'跳转到开源页面'));
  }
 });
@@ -56,7 +55,7 @@ test('work cards show only verified sale and source badges beside their titles',
 
 test('developing works retain lifecycle and missing documentation without retired support metadata',async()=>{
  const {renderWorkMetadata,renderWorkBadges}=await import('./metadata.mjs');
- const workInfo={stage:'developing',channels:[],compatibility:[]};
+ const workInfo={stage:'developing',channels:[]};
  assert.doesNotThrow(()=>assertPublicFields({workInfo}));
  assert.throws(()=>assertPublicFields({workInfo:{...workInfo,supportHref:'/contact/#support-title'}}),/workInfo/);
  assert.throws(()=>assertPublicFields({workInfo:{...workInfo,stage:'released'}}),/workInfo/);
@@ -74,7 +73,7 @@ test('missing documentation renders a disabled button regardless of development 
  const labels={noDocs:'暂无相关文档',pending:'待核实',platforms:'适用平台',requirements:'环境要求'};
  const html='<div class="project-title-group"><h1>Example</h1></div><nav class="work-actions"></nav>';
  for(const stage of [undefined,'developing']){
-  const result=renderWorkMetadata(html,{workInfo:{...(stage?{stage}:{}),channels:[],compatibility:[]}},labels),buttons=[];
+  const result=renderWorkMetadata(html,{workInfo:{...(stage?{stage}:{}),channels:[]}},labels),buttons=[];
   walk(parseFragment(result),node=>{if((attrs(node).class||'').split(' ').includes('work-action-unavailable'))buttons.push(node);});
   assert.equal(buttons.length,1);assert.equal(buttons[0].tagName,'button');
   assert.equal(attrs(buttons[0]).type,'button');assert.ok(Object.hasOwn(attrs(buttons[0]),'disabled'));

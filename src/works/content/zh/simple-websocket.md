@@ -14,15 +14,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/70e9040b-66c0-4793-a219-93203a117545
     - kind: docs
       href: /zh/works/simple-websocket/docs/configure-connections/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false

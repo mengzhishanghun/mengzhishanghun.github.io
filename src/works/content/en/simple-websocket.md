@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-websocket
-sourceHash: 27ca3a6446edbd3b2a23c59bd997b5dee3b6932cb885b5f87000e16ea8485555
+sourceHash: 9460bb307b319268a175f066c4270ddd18679d47cd38b172f4715935e0aa8b89
 translationStatus: translated
 generatedBodyHash: bc32a19bf7240b9d2939837c0b75c69404358ecc599fc2d087be8062b9e36ff1
 workInfo:
@@ -31,15 +31,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/70e9040b-66c0-4793-a219-93203a117545
     - kind: docs
       href: /en/works/simple-websocket/docs/configure-connections/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-websocket-20261101.webp
 coverAlt: SimpleWebSocket cover
 docIds:

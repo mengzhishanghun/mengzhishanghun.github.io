@@ -14,15 +14,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
     - kind: docs
       href: /zh/works/simple-byte-conversion/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -110,8 +101,4 @@ StructToJsonString 与 JsonStringToStruct 在结构体和可读文本之间转�
 
 ## 配套插件
 
-如果需要通过 TCP 或 UDP 收发结构化消息，可搭配 **SimpleTCPClient** 或 **SimpleUDP**。
-
-## 文档出处
-
-原文于 2026-03-25 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19770934)。
+如果需要通过 TCP 或 UDP 收发结构化消息，可搭配 [SimpleTCPClient](/zh/works/simple-tcp-client/) 或 [SimpleUDP](/zh/works/simple-udp/)。

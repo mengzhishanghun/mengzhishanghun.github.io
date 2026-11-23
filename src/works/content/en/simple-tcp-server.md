@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-tcp-server
-sourceHash: 5d889c4c9915bc01873e44ae44f0f0c7d201e79f3e43da756ab665677166fb08
+sourceHash: 20ee9efc644400fe8db123d482b754e43d40a769c3fdc4e6987d5532d4692306
 translationStatus: translated
 generatedBodyHash: e6680192b53159142fad9c176e7a6a310d7954bd72385f414853ba1dbe580534
 workInfo:
@@ -31,15 +31,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/cc276a4a-389b-43e3-8a04-a6d628534108
     - kind: docs
       href: /en/works/simple-tcp-server/docs/listen/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-tcp-server-20261101.webp
 coverAlt: SimpleTCPServer cover
 docIds:

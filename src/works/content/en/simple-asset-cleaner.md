@@ -28,22 +28,15 @@ docIds:
 sourceDate: 2025-11-01
 lang: en
 translationKey: simple-asset-cleaner
-sourceHash: 6b25ee1e1b040573d08cbdf7f625c93dca74d1371771c349e105c8d5995b1d01
+sourceHash: 8320222bed96d1b69f50d61f2f84fba5672bb9a2e717021737cc3d5ebca73d36
 translationStatus: translated
-generatedBodyHash: f580cea95346d6ba4a4bb47cf7104fbae151ac7aa5b5479a61f4f55677ec932d
+generatedBodyHash: fab8fb7dd48d2d45ce68c660a166f3cf6c6658c59d65855bb02dbf1aaff35e03
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/listings/b0cf0a4d-c1a2-45f6-8bfb-7a92313379c2
     - kind: docs
       href: /en/works/simple-asset-cleaner/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-asset-cleaner-20261101.webp
 coverAlt: SimpleAssetCleaner cover
 ---
@@ -113,7 +106,3 @@ Supports Unreal Engine 5.2–5.8. The plugin has been tested on Windows; support
 For usage questions or collaboration inquiries, visit the contact page.
 
 - **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
-
-## Documentation Source
-
-The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19183435) on 2025-11-01.

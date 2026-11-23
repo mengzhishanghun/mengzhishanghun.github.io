@@ -22,7 +22,7 @@ links:
 sourceDate: 2025-10-25
 lang: en
 translationKey: simple-ssh-tunnel
-sourceHash: b2b7b9a9b590738642fac010fb61ec36bf5686d6bd6720a46207875c9c1bdee5
+sourceHash: 8a82431ac4ece392df92f9fd612d6775525c2a417c49a0e80292e8caa2b56b8a
 translationStatus: translated
 generatedBodyHash: aeeac046f5b0bd0396581f926b853a3b24848e3462254d51ed6238504855e3bc
 workInfo:
@@ -31,11 +31,6 @@ workInfo:
       href: https://www.fab.com/listings/e86019ed-6e80-4f14-b70c-1fb2f0154721
     - kind: docs
       href: /en/works/simple-ssh-tunnel/docs/connect/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-ssh-tunnel-20261101.webp
 coverAlt: SimpleSSHTunnel cover
 docIds:

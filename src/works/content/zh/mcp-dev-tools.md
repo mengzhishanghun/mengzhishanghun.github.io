@@ -13,11 +13,6 @@ workInfo:
   channels:
     - kind: docs
       href: /zh/works/mcp-dev-tools/docs/connect/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-      requirements:
-        - UE 5.2–5.8（开发中，兼容性待确认）
 featured: false
 draft: false
 sitePublish: true

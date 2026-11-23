@@ -11,10 +11,6 @@ status: In development
 workInfo:
   stage: developing
   channels: []
-  compatibility:
-    - platforms:
-        - Windows (current test platform)
-      requirements: []
 featured: false
 draft: false
 sitePublish: true
@@ -23,7 +19,7 @@ tags:
   - Background tasks
 lang: en
 translationKey: shaniu
-sourceHash: 6dee20070076bf73284965bb99015db0647ab9684a452a06710c5e6658ab5b11
+sourceHash: c8bf5c764274b008270eb9b69c057ebc9fb96f835c332489ffc68e46de912e72
 generatedBodyHash: 55066d53e29025c5aa678aa4386ed14725b85c8bf33aefbe13bf826ebdf22b42
 translationStatus: translated
 coverAlt: ShaNiu cover

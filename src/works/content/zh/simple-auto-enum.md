@@ -14,15 +14,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/2d104382-60b1-4da6-86c6-ed93997f9c0a
     - kind: docs
       href: /zh/works/simple-auto-enum/docs/quickstart/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -111,7 +102,3 @@ SimpleAutoEnum 用宏声明配置数组与 UE 枚举之间的绑定，减少为�
 如有使用问题或合作需求，请前往联系页面。
 
 - **联系入口：** [联系与合作](https://mzsh.me/contact/)
-
-## 文档出处
-
-原文于 2025-10-12 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19136345)。

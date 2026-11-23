@@ -13,11 +13,6 @@ workInfo:
   channels:
     - kind: docs
       href: /en/works/mcp-dev-tools/docs/connect/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-      requirements:
-        - UE 5.2–5.8 (in development; compatibility to be confirmed)
 featured: false
 draft: false
 sitePublish: true
@@ -26,7 +21,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-dev-tools
-sourceHash: 12f2b9aeba0d1c98fd1eecef00763c37efbe4549abac7674b5aab7f83a8dae18
+sourceHash: ad9039add6571ee7b471d41aa262bc0982bf21da26051cf7587406c5bff40faa
 generatedBodyHash: e65c87e857eaabe3bc7329d800afce9bc9053c166bb1fcdc1f1b91bdd629a651
 translationStatus: translated
 coverAlt: MCPDevTools cover

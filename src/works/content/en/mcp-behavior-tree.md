@@ -13,10 +13,6 @@ workInfo:
   channels:
     - kind: docs
       href: /en/works/mcp-behavior-tree/docs/connect-and-inspect/
-  compatibility:
-    - platforms: []
-      requirements:
-        - UE 5.2–5.8 (in development; compatibility to be confirmed)
 featured: false
 draft: false
 sitePublish: true
@@ -25,7 +21,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-behavior-tree
-sourceHash: dea2e86c5c7ebf7eb677edd7e1b13b03ece0dea1fd320fbdc34e94334d048e91
+sourceHash: 61067886dbd38862932ae708b323f923afe1263049e40c1bfe1bddfe1f44340e
 generatedBodyHash: 7faf0ca6a1c56d06946d2f036f8ff470aba8db70216b7cda0d258965f5900c5f
 translationStatus: translated
 coverAlt: MCPBehaviorTree cover

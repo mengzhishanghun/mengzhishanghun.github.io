@@ -21,7 +21,7 @@ links:
     href: https://github.com/MZSH-UEPlugins/SimpleLevelSeqSmooth
 lang: en
 translationKey: simple-level-seq-smooth
-sourceHash: 9781f51b8bb619017083a4aad3e0c56415401b4f8360d1b93dffd0a6a131d3fd
+sourceHash: 12365c05ee27bc1f8fd1a368fbf4f82dfd16ff0d41e5ca0e5e4e4e6f9d2839a3
 translationStatus: translated
 generatedBodyHash: fbe477c43637fd7c03dc84dcc65cf83e96a1236df3e1dd39132aae8873546492
 workInfo:
@@ -30,13 +30,6 @@ workInfo:
       href: https://www.fab.com/listings/b8acac2b-913d-47ce-8596-b4e2d7d6753a
     - kind: docs
       href: /en/works/simple-level-seq-smooth/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-level-seq-smooth-20261101.webp
 coverAlt: SimpleLevelSeqSmooth cover
 docIds:

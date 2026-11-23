@@ -13,10 +13,6 @@ workInfo:
   channels:
     - kind: docs
       href: /en/works/mcp-animation/docs/connect/
-  compatibility:
-    - platforms: []
-      requirements:
-        - UE 5.2–5.8 (in development; compatibility to be confirmed)
 featured: false
 draft: false
 sitePublish: true
@@ -25,7 +21,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-animation
-sourceHash: 5c01510f7ab3b628363a150e1c4e5ff1c429d0b0b63ad65328036796e5dfaff0
+sourceHash: 57c31892c496056ab3fa5613b7d0208a8327cf1bbaaf512ff75c2a53ce6656e2
 generatedBodyHash: d7f18ceed1af3fd53287c5ae64f7d913759fa10f84e002f2db4f7cf2e3a57fa4
 translationStatus: translated
 coverAlt: MCPAnimation cover

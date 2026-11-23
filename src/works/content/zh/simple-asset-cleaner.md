@@ -14,13 +14,6 @@ workInfo:
       href: https://www.fab.com/listings/b0cf0a4d-c1a2-45f6-8bfb-7a92313379c2
     - kind: docs
       href: /zh/works/simple-asset-cleaner/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -110,7 +103,3 @@ SimpleAssetCleaner 从指定的根资产出发，沿直接和间接引用查找 
 如有使用问题或合作需求，请前往联系页面。
 
 - **联系入口：** [联系与合作](https://mzsh.me/contact/)
-
-## 文档出处
-
-原文于 2025-11-01 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19183435)。

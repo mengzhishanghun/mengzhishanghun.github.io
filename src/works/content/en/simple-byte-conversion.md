@@ -27,24 +27,15 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-byte-conversion
-sourceHash: 833f8a95d96b8bf0e5fa06a9a615709188216cd6284e95602139644fc019f56d
+sourceHash: da91f7c6e43e0e10c08b55880c5233e5b4afbb4b86636f78737956a8023ba7ea
 translationStatus: translated
-generatedBodyHash: 8f72244264bba8c975b75ea6b216496326069fb32e02061b022ec7d431dd5986
+generatedBodyHash: 6098ca5a41cdd9781ee5b37e643cbc0dc573a5eea7a0c8242369c46e93aee2de
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/ee68b12e-30b4-4904-8f80-3cc43c1e6002
     - kind: docs
       href: /en/works/simple-byte-conversion/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-byte-conversion-20261101.webp
 coverAlt: SimpleByteConversion cover
 ---
@@ -113,8 +104,4 @@ For usage questions or collaboration inquiries, visit the contact page.
 
 ## Companion Plugins
 
-For structured messages over TCP or UDP, use **SimpleTCPClient** or **SimpleUDP** alongside the conversion nodes.
-
-## Documentation Source
-
-The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19770934) on 2026-03-25.
+For structured messages over TCP or UDP, use [SimpleTCPClient](/en/works/simple-tcp-client/) or [SimpleUDP](/en/works/simple-udp/) alongside the conversion nodes.

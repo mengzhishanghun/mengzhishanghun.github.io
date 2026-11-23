@@ -14,13 +14,6 @@ workInfo:
       href: https://www.fab.com/zh-cn/listings/bc2a9439-c5d4-4815-9694-8920661f10b5
     - kind: docs
       href: /zh/works/simple-static-mesh-merger/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8
 featured: false
 draft: false
 sitePublish: false
@@ -106,7 +99,3 @@ SimpleStaticMeshMerger 用于整理关卡中重复出现的 StaticMeshActor。�
 如有使用问题或合作需求，请前往联系页面。
 
 - **联系入口：** [联系与合作](https://mzsh.me/contact/)
-
-## 文档出处
-
-原文于 2025-11-09 发表于[博客园](https://www.cnblogs.com/mengzhishanghun/p/19204715)。

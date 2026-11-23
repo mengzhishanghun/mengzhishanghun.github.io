@@ -19,7 +19,7 @@ links:
     href: https://github.com/MZSH-Tools/P4CaseSync
 lang: en
 translationKey: p4-case-sync
-sourceHash: cf53b63a01eabf509cf0a1c8c5c690eda5ea329207c3d7d0fa7598f3ccfc8102
+sourceHash: bce9231f14209ca1148c1d583841ab362c481ff8b63ed9504a878f56ff470057
 translationStatus: translated
 generatedBodyHash: 3a4d020b2749f95c95dd86de3041b24972c6717a690f179a609975d11f834aa9
 workInfo:
@@ -28,12 +28,6 @@ workInfo:
       href: https://github.com/MZSH-Tools/P4CaseSync
     - kind: docs
       href: /en/works/p4-case-sync/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (recommended)
-        - macOS / Linux (commands documented)
-      requirements:
-        - Perforce p4 command-line environment
 websiteCoverUrl: /media/imported/works/p4-case-sync-cover-v2.png
 coverAlt: P4CaseSync cover
 docIds:

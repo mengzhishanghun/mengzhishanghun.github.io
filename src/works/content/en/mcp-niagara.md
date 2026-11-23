@@ -13,10 +13,6 @@ workInfo:
   channels:
     - kind: docs
       href: /en/works/mcp-niagara/docs/quickstart/
-  compatibility:
-    - platforms: []
-      requirements:
-        - UE 5.2–5.8 (in development; compatibility to be confirmed)
 featured: false
 draft: false
 sitePublish: true
@@ -25,7 +21,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-niagara
-sourceHash: 743a4eb39cf580c2c8f17b8b8a35198ccc4f41d75638299c3053a06e80ea566f
+sourceHash: 23f1e4bd1ec5b1a4db04b9f896a342b3b4ae4adfcdaa51ac2c3b785057f8bb41
 generatedBodyHash: 931ad45d5acc12c8b3ac306d500ab03076da13dfe6f1523bca2d96750ef35585
 translationStatus: translated
 coverAlt: MCPNiagara cover

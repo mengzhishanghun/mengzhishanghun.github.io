@@ -14,10 +14,6 @@ workInfo:
       href: https://github.com/MZSH-Tools/MDBlogPacker
     - kind: docs
       href: /zh/works/md-blog-packer/docs/setup/
-  compatibility:
-    - platforms:
-        - Markdown 工具（操作系统待核实）
-      requirements: []
 featured: false
 draft: false
 sitePublish: false

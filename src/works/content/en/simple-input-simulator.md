@@ -28,7 +28,7 @@ docIds:
 sourceDate: 2026-03-25
 lang: en
 translationKey: simple-input-simulator
-sourceHash: 6f257804e5eb1bfc2c51a6a7fc17c5df62a24a82cb64f0505771d6acdbb9fdf3
+sourceHash: ee4e2f99056c7a240b7a49d1b64098551675da3b411035992e425bba7231b665
 translationStatus: translated
 generatedBodyHash: 981cb3218ae498d853ee74242c9404252ca47746ab6611f1cfef2c1ea9ebd1d4
 workInfo:
@@ -37,15 +37,6 @@ workInfo:
       href: https://www.fab.com/listings/dd1ee0a8-f450-4a3d-adc4-4a96f5dec3dd
     - kind: docs
       href: /en/works/simple-input-simulator/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-input-simulator-20261101.webp
 coverAlt: SimpleInputSimulator cover
 ---

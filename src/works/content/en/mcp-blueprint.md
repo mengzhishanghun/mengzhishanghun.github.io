@@ -14,13 +14,6 @@ workInfo:
       href: https://www.fab.com/listings/22073900-edb6-456b-b840-753db7205713
     - kind: docs
       href: /en/works/mcp-blueprint/docs/connect/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-      requirements:
-        - UE 5.2–5.8 (use a release package matching your engine minor version)
 featured: false
 draft: false
 sitePublish: true
@@ -29,7 +22,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-blueprint
-sourceHash: 0cb8265f4ef15851eb0353bb00e16548ee72501d704ce23256302876b82621b6
+sourceHash: f2571e3e640a9b6fbfbfe1deb2d76a07fae5578d7acb71adce59a60fcb07ab9b
 generatedBodyHash: 901975f6dd9add8c5212e431ca842e24ff53f42d4246632e37dc998bc020f33a
 translationStatus: translated
 coverAlt: MCPBlueprint cover

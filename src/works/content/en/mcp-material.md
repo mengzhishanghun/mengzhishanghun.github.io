@@ -13,10 +13,6 @@ workInfo:
   channels:
     - kind: docs
       href: /en/works/mcp-material/docs/connect/
-  compatibility:
-    - platforms: []
-      requirements:
-        - UE 5.2–5.8 (in development; compatibility to be confirmed)
 featured: false
 draft: false
 sitePublish: true
@@ -25,7 +21,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-material
-sourceHash: f26b5b7f6122f40cf2f7a35fef30217de1e0542caa52ea79993c32872c9be8a1
+sourceHash: 98e982f54f4034c9348adb5280c1a5b7ca0a3df1cc1cab5f43cd7ca381111b98
 generatedBodyHash: 0ee3b4376e9246f91f4dc2934c23d0a7c074791b0095d74c80d632ed26d33383
 translationStatus: translated
 coverAlt: MCPMaterial cover

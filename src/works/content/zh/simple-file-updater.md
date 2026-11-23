@@ -14,10 +14,6 @@ workInfo:
       href: https://github.com/MZSH-Tools/SimpleFileUpdater
     - kind: docs
       href: /zh/works/simple-file-updater/docs/setup/
-  compatibility:
-    - platforms:
-        - Windows（.exe 打包程序）
-      requirements: []
 featured: false
 draft: false
 sitePublish: false

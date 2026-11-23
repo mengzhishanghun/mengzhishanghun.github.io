@@ -27,24 +27,15 @@ docIds:
 sourceDate: 2025-10-12
 lang: en
 translationKey: simple-auto-enum
-sourceHash: edd0f56136bed23fafabb99a7df5452fc691e5a3d0d850a658eac4fcccab7ea6
+sourceHash: a5a96ab4a31a55b964ed17c1893eb4652196acc18b95f3e8729b3206df61c50a
 translationStatus: translated
-generatedBodyHash: f830144ffe263c8fd3cb96623beb986abd75817118ea102665f8dfbb5b2d7be6
+generatedBodyHash: abbd332aadf33c2a4f274db9f0ffbd0b89d18a42e372b269a8f46f704af70fb2
 workInfo:
   channels:
     - kind: sale
       href: https://www.fab.com/zh-cn/listings/2d104382-60b1-4da6-86c6-ed93997f9c0a
     - kind: docs
       href: /en/works/simple-auto-enum/docs/quickstart/
-  compatibility:
-    - platforms:
-        - Windows (Win64)
-        - macOS
-        - Linux
-        - Android
-        - iOS
-      requirements:
-        - UE 5.2–5.8
 websiteCoverUrl: /media/covers/works/simple-auto-enum-20261101.webp
 coverAlt: SimpleAutoEnum cover
 ---
@@ -114,7 +105,3 @@ Open **Edit → Project Settings**, go to SimpleAutoEnum settings, and set **Lan
 For usage questions or collaboration inquiries, visit the contact page.
 
 - **Contact:** [Contact and Collaboration](https://mzsh.me/contact/)
-
-## Documentation Source
-
-The original article was published on [CNBlogs](https://www.cnblogs.com/mengzhishanghun/p/19136345) on 2025-10-12.

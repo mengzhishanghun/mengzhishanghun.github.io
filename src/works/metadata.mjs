@@ -42,9 +42,7 @@ export function renderWorkMetadata(html,data,labels){
   const buttons=info.channels.map((c,index)=>'<a class="work-action'+(index===0?' work-action-primary':'')+'" href="'+escapeHTML(c.href)+'"'+(c.href.startsWith('https:')?' target="_blank" rel="noopener noreferrer"':'')+'>'+escapeHTML(labels[c.kind==='sale'?'saleAction':c.kind==='open-source'?'sourceAction':'docsAction'])+'</a>').join('')+missing;
   // Keep unclassified source links as neutral legacy entries, never as open-source claims.
   const neutral=[];walk(actions,node=>{if(node.tagName==='a' && /^https:\/\/github\.com\//.test(attrs(node).href||'') && !info.channels.some(c=>c.href===attrs(node).href)){const loc=node.sourceCodeLocation;neutral.push(html.slice(loc.startOffset,loc.endOffset));}});
-  const rows=(info.compatibility.length?info.compatibility:[{platforms:[],requirements:[]}]).map(group=>'<div class="work-compatibility-group"><p><span class="work-compatibility-label">'+escapeHTML(labels.platforms)+'：</span>'+escapeHTML(group.platforms.join(' / ')||labels.pending)+'</p><p><span class="work-compatibility-label">'+escapeHTML(labels.requirements)+'：</span>'+escapeHTML(group.requirements.join(' / ')||labels.pending)+'</p></div>').join('');
   const a=actions.sourceCodeLocation;
   edits.push([a.startTag.endOffset,a.endTag.startOffset,buttons+neutral.join('')]);
-  edits.push([a.endOffset,a.endOffset,'<div class="work-compatibility">'+rows+'</div>']);
   return applyEdits(html,edits);
 }

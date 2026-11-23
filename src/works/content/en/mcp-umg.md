@@ -13,10 +13,6 @@ workInfo:
   channels:
     - kind: docs
       href: /en/works/mcp-umg/docs/connect/
-  compatibility:
-    - platforms: []
-      requirements:
-        - UE 5.2–5.8 (in development; compatibility to be confirmed)
 featured: false
 draft: false
 sitePublish: true
@@ -25,7 +21,7 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: 240126d6e646dec573d7d8b85e7c62eb97a3b14d59c1afc3ae4545cab754b245
+sourceHash: 35ffc6e416e0fb60432254eda255c5d529b8c1401a2d306d961d3eb61dcb258f
 generatedBodyHash: 4ce8c711cc72a2e82054b882da243ffc81cc67af523b41a8774426b7588235c8
 translationStatus: translated
 coverAlt: MCPUMG cover
