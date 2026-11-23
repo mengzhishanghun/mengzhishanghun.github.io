@@ -12063,7 +12063,29 @@
       "translationKey": "mcp-blueprint",
       "order": 18,
       "supplementTranslationKeys": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "work:mcp-blueprint:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/manuals/0fb1edd8bf48404ba784.png",
+          "publicSha256": "0fb1edd8bf48404ba78409cba3870b64b9bff1c0aaafd32a1292574b7fe4fc66"
+        },
+        {
+          "id": "work:mcp-blueprint:media:2",
+          "ordinal": 2,
+          "state": "public",
+          "websiteUrl": "/media/manuals/f46cdde0706b4e88adc8.png",
+          "publicSha256": "f46cdde0706b4e88adc8dd90feb36caa0630f80adb03234adea8852397b14462"
+        },
+        {
+          "id": "work:mcp-blueprint:media:3",
+          "ordinal": 3,
+          "state": "public",
+          "websiteUrl": "/media/manuals/2cc65c2a8b248c6cb1d2.png",
+          "publicSha256": "2cc65c2a8b248c6cb1d28aa00540f42672534ba8c2ec2f8e9af5e850a45b042b"
+        }
+      ],
       "cover": {
         "websiteUrl": "/media/covers/works/mcp-blueprint-20261101.webp",
         "sha256": "acd79853c6a8974853a5e41565ff4cff8aab6a7c4bf9522ed49e939aceb77013"
