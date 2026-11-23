@@ -35,3 +35,7 @@ translationKey: doc:simple-udp:enable-plugin
 启用后，插件由 `GameInstanceSubsystem` 自动运行，无需另写启动或关闭代码。
 
 [在项目设置中配置收发通道](/zh/works/simple-udp/docs/channels/)
+
+![SimpleUDP 接收与发送通道设置](/media-occurrence/doc%3Asimple-udp%3Aenable-plugin%3Amedia%3A1)
+
+在 Simple UDP Settings 中分别配置接收和发送通道。监听地址与目标地址用途不同，填写时按各自的通道说明核对。

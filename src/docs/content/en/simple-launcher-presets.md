@@ -12,9 +12,9 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-launcher/docs/presets/
 lang: en
 translationKey: doc:simple-launcher:presets
-sourceHash: 5a42b1c7b5f2d55704dee373f2efdc44211f499bceafe45a473e652faf98916d
+sourceHash: 4ea263def75a46f931f4e825bcb2f5ddda900557ce9425bed0ac925dca873a82
 translationStatus: translated
-generatedBodyHash: e50b6854dece55596287e923239ba5f32ef2172f57ea3ec5082d399526043bb4
+generatedBodyHash: 6594a21addf1e35379ba06f4e5c91a090da8385e08f86b3b338432f48edf8750
 docPage:
   work: simple-launcher
   group: features
@@ -104,6 +104,10 @@ The working directory for the program. Defaults to empty (uses the game's workin
 
 - Use an absolute path, e.g. `C:\MyApp` or `/home/user/app`
 - Relative paths used by the program will resolve based on this directory
+
+![SimpleLauncher process presets](/media-occurrence/doc%3Asimple-launcher%3Apresets%3Amedia%3A1)
+
+Each preset has its own command line, hidden launch option, detached launch option, and working directory. Test and Notepad are separate presets in this example.
 
 ## Manage Presets at Runtime
 

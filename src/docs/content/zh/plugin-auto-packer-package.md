@@ -43,6 +43,14 @@ translationKey: doc:plugin-auto-packer:package
 
 生成版权声明或 ini 后，可在日志中查看相应内容。
 
+![UEPluginAutoPacker 添加引擎](/media-occurrence/doc%3Aplugin-auto-packer%3Apackage%3Amedia%3A1)
+
+“添加引擎”窗口中填写引擎路径和名称；源码版引擎需勾选对应选项。
+
+![UEPluginAutoPacker 引擎列表与 Fab 整理选项](/media-occurrence/doc%3Aplugin-auto-packer%3Apackage%3Amedia%3A2)
+
+左侧勾选要使用的引擎，右侧选择插件和整理选项。图中尚未选择插件，也未开始打包。
+
 ## 命令行打包
 
 将 `UEPluginPacker.exe` 放到项目根目录后，不加参数是 GUI，加参数进入 CLI：

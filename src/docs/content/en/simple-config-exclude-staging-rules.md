@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-config-exclude/docs/staging-rules/
 lang: en
 translationKey: doc:simple-config-exclude:staging-rules
-sourceHash: 7b731fdfabeb06ab84e9b983d545ab5467d28157c61714c8b686ea782513184b
+sourceHash: 99656de7cbc81200ba259e073ca939348eb3aa44b6ea2be2f0b0c077210b5288
 translationStatus: translated
-generatedBodyHash: f11c67be043a13e6abc234ef16cd824a723f31c84372c22a1ddb39f6bbfe49c0
+generatedBodyHash: d0b87d72beb826808513c423636c30372e077e4a4ac8dbf0c210e84b19f34900
 docPage:
   work: simple-config-exclude
   group: features
@@ -43,6 +43,10 @@ The plugin runs in the editor. Its packaging rules determine which INI files fro
 4.  Changes are written to configuration without a separate save. If writing fails, check checkout and file differences as described below.
 
 See the [SimpleConfigExclude work page](/en/works/simple-config-exclude/) for use cases.
+
+![SimpleConfigExclude three-state configuration controls](/media-occurrence/doc%3Asimple-config-exclude%3Astaging-rules%3Amedia%3A1)
+
+Choose Default, Allowed, or Disallowed for each entry. Use Refresh Config List after adding or removing INI files.
 
 ## Scan Configuration and Refresh the List
 

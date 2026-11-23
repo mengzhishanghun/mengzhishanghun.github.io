@@ -320,6 +320,46 @@
       "websiteUrl": "/media/imported/projects/1832c060d72cb08c55dedcc5c50c5f19713c58ff0b238e01b830668fad35c3ee.jpg",
       "sha256": "1832c060d72cb08c55dedcc5c50c5f19713c58ff0b238e01b830668fad35c3ee",
       "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:plugin-auto-packer:ob:gallery:5f924ec9625c15b83f331de5166adf8f81fc56c2c8763d5caa8c804a8ebe6b13",
+      "entryId": "work:plugin-auto-packer",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/5f924ec9625c15b83f331de5166adf8f81fc56c2c8763d5caa8c804a8ebe6b13.png",
+      "sha256": "5f924ec9625c15b83f331de5166adf8f81fc56c2c8763d5caa8c804a8ebe6b13",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:plugin-auto-packer:ob:gallery:c34162cdea0838468447407618ba80fa9c897013259350b6687798b15795d6f1",
+      "entryId": "work:plugin-auto-packer",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/c34162cdea0838468447407618ba80fa9c897013259350b6687798b15795d6f1.png",
+      "sha256": "c34162cdea0838468447407618ba80fa9c897013259350b6687798b15795d6f1",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:plugin-manager:ob:gallery:1bc1fa79e8c713dd60a8e7b572e6f464cf2b5b21cadaef28d01202e951f27a99",
+      "entryId": "work:plugin-manager",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/1bc1fa79e8c713dd60a8e7b572e6f464cf2b5b21cadaef28d01202e951f27a99.png",
+      "sha256": "1bc1fa79e8c713dd60a8e7b572e6f464cf2b5b21cadaef28d01202e951f27a99",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:plugin-manager:ob:gallery:f52c974b67367a88a2556f6626fe5bf4ee21c27fbeebaff4bbeb3467f52d2b98",
+      "entryId": "work:plugin-manager",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/f52c974b67367a88a2556f6626fe5bf4ee21c27fbeebaff4bbeb3467f52d2b98.png",
+      "sha256": "f52c974b67367a88a2556f6626fe5bf4ee21c27fbeebaff4bbeb3467f52d2b98",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:md-blog-packer:ob:gallery:eb7aaa0786a21c4c77b09864a872e3ed5621206252f700339f9a58f87b6a1c91",
+      "entryId": "work:md-blog-packer",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/eb7aaa0786a21c4c77b09864a872e3ed5621206252f700339f9a58f87b6a1c91.png",
+      "sha256": "eb7aaa0786a21c4c77b09864a872e3ed5621206252f700339f9a58f87b6a1c91",
+      "basis": "owner-explicit-publication"
     }
   ]
 }

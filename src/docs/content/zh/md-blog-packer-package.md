@@ -30,6 +30,10 @@ MDBlogPacker 将 `![](</path>)` 或 Obsidian `![[image.png]]` 引用的本地图
 2. 如需附加版权声明或转载提示，填写前文与后文；工具会缓存这些内容。
 3. 点击 **转换并复制到剪贴板**，将结果粘贴到支持 Base64 图片的发布平台。
 
+![MDBlogPacker 文件选择与前后文设置](/media-occurrence/doc%3Amd-blog-packer%3Apackage%3Amedia%3A1)
+
+选择要处理的 Markdown 文件，按需填写前文和后文。图中仍为“就绪”状态，尚未执行转换。
+
 ## 命令行
 
 向程序传入参数即可使用命令行。把示例中的 `博客.md` 换成要转换的文章路径；用 `-c` 把结果复制到剪贴板，或用 `-o` 写入文件：

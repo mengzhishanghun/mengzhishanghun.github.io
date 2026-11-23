@@ -12,9 +12,9 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-ssh-tunnel/docs/connect/
 lang: en
 translationKey: doc:simple-ssh-tunnel:connect
-sourceHash: 0cfefbd71056bbd7c34012e522566962545c2150c7abd07d867e55404fcf68cf
+sourceHash: 9c6bd9ed1182ddc64f0dc869bd178e1ff4aaaa2a9e167075f429f71a95e9e136
 translationStatus: translated
-generatedBodyHash: a6d4774c1fb9782f4240fa878052ffc76b19090bceddbf64d5d98c7cd4221ee5
+generatedBodyHash: e2199a744b715a4e5f272aa42d17257b395c624f58e31685e4d1eb33a6dc9918
 docPage:
   work: simple-ssh-tunnel
   group: getting-started
@@ -53,6 +53,10 @@ Distinguish the three endpoints. The local settings tell the UE app where to con
 Set **Subsystem Class** if you need to replace the default subsystem.
 
 The plugin saves these settings in `DefaultSimpleSSHTunnel.ini`. The engine applies them at startup.
+
+![SimpleSSHTunnel connection preset](/media-occurrence/doc%3Asimple-ssh-tunnel%3Aconnect%3Amedia%3A1)
+
+Fill in the local endpoint, remote endpoint, and SSH login details separately. Replace the demonstration values with your own configuration.
 
 ## Interface language
 

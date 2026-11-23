@@ -2295,7 +2295,15 @@
       "template": "docs/templates/document.html",
       "shellId": "doc:chapter",
       "legacyRoutes": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "doc:md-blog-packer:package:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/imported/projects/eb7aaa0786a21c4c77b09864a872e3ed5621206252f700339f9a58f87b6a1c91.png",
+          "publicSha256": "eb7aaa0786a21c4c77b09864a872e3ed5621206252f700339f9a58f87b6a1c91"
+        }
+      ],
       "docPage": {
         "work": "md-blog-packer",
         "group": "features",
@@ -2940,7 +2948,22 @@
       "template": "docs/templates/document.html",
       "shellId": "doc:chapter",
       "legacyRoutes": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "doc:plugin-auto-packer:package:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/imported/projects/5f924ec9625c15b83f331de5166adf8f81fc56c2c8763d5caa8c804a8ebe6b13.png",
+          "publicSha256": "5f924ec9625c15b83f331de5166adf8f81fc56c2c8763d5caa8c804a8ebe6b13"
+        },
+        {
+          "id": "doc:plugin-auto-packer:package:media:2",
+          "ordinal": 2,
+          "state": "public",
+          "websiteUrl": "/media/imported/projects/c34162cdea0838468447407618ba80fa9c897013259350b6687798b15795d6f1.png",
+          "publicSha256": "c34162cdea0838468447407618ba80fa9c897013259350b6687798b15795d6f1"
+        }
+      ],
       "docPage": {
         "work": "plugin-auto-packer",
         "group": "features",
@@ -3146,7 +3169,22 @@
       "template": "docs/templates/document.html",
       "shellId": "doc:chapter",
       "legacyRoutes": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "doc:plugin-manager:find:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/imported/projects/1bc1fa79e8c713dd60a8e7b572e6f464cf2b5b21cadaef28d01202e951f27a99.png",
+          "publicSha256": "1bc1fa79e8c713dd60a8e7b572e6f464cf2b5b21cadaef28d01202e951f27a99"
+        },
+        {
+          "id": "doc:plugin-manager:find:media:2",
+          "ordinal": 2,
+          "state": "public",
+          "websiteUrl": "/media/imported/projects/f52c974b67367a88a2556f6626fe5bf4ee21c27fbeebaff4bbeb3467f52d2b98.png",
+          "publicSha256": "f52c974b67367a88a2556f6626fe5bf4ee21c27fbeebaff4bbeb3467f52d2b98"
+        }
+      ],
       "docPage": {
         "work": "plugin-manager",
         "group": "features",
@@ -6062,7 +6100,15 @@
       "template": "docs/templates/document.html",
       "shellId": "doc:chapter",
       "legacyRoutes": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "doc:simple-config-exclude:staging-rules:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/works/fab/simple-config-exclude-01.jpg",
+          "publicSha256": "a278609a04f297d4c8d8db68f4f956ec577831b5450bf1ebf99120c3b3c48ad1"
+        }
+      ],
       "docPage": {
         "work": "simple-config-exclude",
         "group": "features",
@@ -7435,7 +7481,15 @@
       "template": "docs/templates/document.html",
       "shellId": "doc:chapter",
       "legacyRoutes": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "doc:simple-launcher:presets:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/works/fab/simple-launcher-01.jpg",
+          "publicSha256": "b3cd3b69c2421ea8c9478c0e2928908db52a3939dd6847fc71f2938dc478067d"
+        }
+      ],
       "docPage": {
         "work": "simple-launcher",
         "group": "features",
@@ -7945,7 +7999,15 @@
       "template": "docs/templates/document.html",
       "shellId": "doc:chapter",
       "legacyRoutes": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "doc:simple-level-seq-smooth:smooth-curves:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/works/fab/simple-level-seq-smooth-01.jpg",
+          "publicSha256": "da3fb0abc1670063d98b4391b1eed0825dc294d98a5958ba508939a8ab910665"
+        }
+      ],
       "docPage": {
         "work": "simple-level-seq-smooth",
         "group": "features",
@@ -8112,7 +8174,15 @@
       "template": "docs/templates/document.html",
       "shellId": "doc:chapter",
       "legacyRoutes": [],
-      "mediaOccurrences": [],
+      "mediaOccurrences": [
+        {
+          "id": "doc:simple-ssh-tunnel:connect:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/works/fab/simple-ssh-tunnel-01.jpg",
+          "publicSha256": "9194ef1772536564872b6a43b0711de5ad6f2f6f060720ea56e83556bd8c4fab"
+        }
+      ],
       "docPage": {
         "work": "simple-ssh-tunnel",
         "group": "getting-started",
@@ -16010,7 +16080,15 @@
         "slug": "setup",
         "order": 1
       },
-      "mediaOccurrences": []
+      "mediaOccurrences": [
+        {
+          "id": "doc:simple-static-mesh-merger:setup:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/works/fab/simple-static-mesh-merger-01.jpg",
+          "publicSha256": "3363ba8baf3f0fa93260556cd682809bb4664b009626dd4fae887f95f317a12c"
+        }
+      ]
     },
     {
       "id": "doc:ai-data-asset:setup",
@@ -16346,7 +16424,15 @@
         "slug": "enable-plugin",
         "order": 1
       },
-      "mediaOccurrences": []
+      "mediaOccurrences": [
+        {
+          "id": "doc:simple-tcp-client:enable-plugin:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/works/fab/simple-tcp-client-01.jpg",
+          "publicSha256": "dceeb2f45b1ff0813ea2023bedee3d019230ef9301ef2b5aa79dc1d3ae61b9ed"
+        }
+      ]
     },
     {
       "id": "doc:simple-tcp-server:sessions",
@@ -16389,7 +16475,15 @@
         "slug": "enable-plugin",
         "order": 1
       },
-      "mediaOccurrences": []
+      "mediaOccurrences": [
+        {
+          "id": "doc:simple-udp:enable-plugin:media:1",
+          "ordinal": 1,
+          "state": "public",
+          "websiteUrl": "/media/works/fab/simple-udp-01.jpg",
+          "publicSha256": "460f60293a408bc51b5211b585e0c327b48170beb9854c50b16df28315c212ae"
+        }
+      ]
     },
     {
       "id": "doc:simple-websocket:configure-connections",

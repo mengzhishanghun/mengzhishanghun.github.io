@@ -12,9 +12,9 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-tcp-client/docs/enable-plugin/
 lang: en
 translationKey: doc:simple-tcp-client:enable-plugin
-sourceHash: 1d49746e2e97850615f2df717e23aa6ed5e6aa2dc55bc4cad262245e3527ab7b
+sourceHash: 97dd525f9d298e1ff6ac9aec65f1f10d881dceab9cc3d675e495babc47c15eca
 translationStatus: translated
-generatedBodyHash: 7b47cff600a4431c5f86819d6ed78882a891383beea22edbf2b7957a2ee820f2
+generatedBodyHash: 729676dc385049e4585e00d57f4aa023c66ad031dab49aa41fae0e4b941278b4
 docPage:
   work: simple-tcp-client
   group: getting-started
@@ -40,3 +40,7 @@ Once you enable the plugin, its `GameInstanceSubsystem` starts automatically and
 Start the target TCP service listening first. Once the channel is configured, let it connect automatically or start it from Blueprint. Check the channel’s connection state before testing message exchange.
 
 Open **Project Settings → SimpleTCPClient Settings** and follow the [connection setup](/en/works/simple-tcp-client/docs/connect/) to create a channel.
+
+![SimpleTCPClient channel configuration](/media-occurrence/doc%3Asimple-tcp-client%3Aenable-plugin%3Amedia%3A1)
+
+Enter the channel name and server address in TCP Client Settings, then configure automatic connection and reconnection as needed.

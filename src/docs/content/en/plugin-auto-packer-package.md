@@ -14,9 +14,9 @@ documentKind: product-manual
 websiteRoute: /en/works/plugin-auto-packer/docs/package/
 lang: en
 translationKey: doc:plugin-auto-packer:package
-sourceHash: 42ccc547fc2dd29853703863c22ac3d51ea49c0d3fed229c494c4067ab383cf3
+sourceHash: dd2e8ca2157f724de458f32fe5f99233dc09dcfb9976be1fd35f5fb56a5a9540
 translationStatus: translated
-generatedBodyHash: 7ef73856dfc038dfacb82b561959aa0e7af6a7bb24c8dae5601327860fa053cb
+generatedBodyHash: c595545a5777542adfbbe096b94fc04649542b7b799bc58d5f6a0baeed1168b8
 docPage:
   work: plugin-auto-packer
   group: features
@@ -45,6 +45,14 @@ In the GUI, add the paths to your Launcher-installed or source-built engines. Th
 | Add copyright notices | Insert notices using the author from `.uplugin`, replace old comments, and cover all `.h/.cpp/.Build.cs` files; automatically skip the `ThredParty` folder |
 
 If you generate copyright notices or an ini file, you can read the generated text in the log.
+
+![UEPluginAutoPacker add engine dialog](/media-occurrence/doc%3Aplugin-auto-packer%3Apackage%3Amedia%3A1)
+
+Enter the engine path and name in the Add Engine dialog. Select the source build option when adding an engine built from source.
+
+![UEPluginAutoPacker engine list and Fab formatting options](/media-occurrence/doc%3Aplugin-auto-packer%3Apackage%3Amedia%3A2)
+
+Select the engines on the left, then choose a plugin and formatting options on the right. No plugin is selected and packaging has not started in this example.
 
 ## Package from the Command Line
 

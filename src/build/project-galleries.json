@@ -719,6 +719,71 @@
           }
         }
       ]
+    },
+    {
+      "entryId": "work:plugin-auto-packer",
+      "items": [
+        {
+          "id": "ob-gallery-5f924ec9625c15b83f331de5166adf8f81fc56c2c8763d5caa8c804a8ebe6b13",
+          "grantId": "work:plugin-auto-packer:ob:gallery:5f924ec9625c15b83f331de5166adf8f81fc56c2c8763d5caa8c804a8ebe6b13",
+          "width": 420,
+          "height": 180,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-c34162cdea0838468447407618ba80fa9c897013259350b6687798b15795d6f1",
+          "grantId": "work:plugin-auto-packer:ob:gallery:c34162cdea0838468447407618ba80fa9c897013259350b6687798b15795d6f1",
+          "width": 1100,
+          "height": 720,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        }
+      ]
+    },
+    {
+      "entryId": "work:plugin-manager",
+      "items": [
+        {
+          "id": "ob-gallery-1bc1fa79e8c713dd60a8e7b572e6f464cf2b5b21cadaef28d01202e951f27a99",
+          "grantId": "work:plugin-manager:ob:gallery:1bc1fa79e8c713dd60a8e7b572e6f464cf2b5b21cadaef28d01202e951f27a99",
+          "width": 1440,
+          "height": 900,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-f52c974b67367a88a2556f6626fe5bf4ee21c27fbeebaff4bbeb3467f52d2b98",
+          "grantId": "work:plugin-manager:ob:gallery:f52c974b67367a88a2556f6626fe5bf4ee21c27fbeebaff4bbeb3467f52d2b98",
+          "width": 1440,
+          "height": 900,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        }
+      ]
+    },
+    {
+      "entryId": "work:md-blog-packer",
+      "items": [
+        {
+          "id": "ob-gallery-eb7aaa0786a21c4c77b09864a872e3ed5621206252f700339f9a58f87b6a1c91",
+          "grantId": "work:md-blog-packer:ob:gallery:eb7aaa0786a21c4c77b09864a872e3ed5621206252f700339f9a58f87b6a1c91",
+          "width": 720,
+          "height": 560,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        }
+      ]
     }
   ]
 }

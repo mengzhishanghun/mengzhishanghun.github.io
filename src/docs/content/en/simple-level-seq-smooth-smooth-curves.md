@@ -14,9 +14,9 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-level-seq-smooth/docs/smooth-curves/
 lang: en
 translationKey: doc:simple-level-seq-smooth:smooth-curves
-sourceHash: 0a6d2fab7edcd6c73ae43d76c4442c6c6108041925fb9e812a99d1a1e4cbd37c
+sourceHash: f6fc8220411ed9a4d43b59068b5b6d203efec52397614854a69f7faa727c483e
 translationStatus: translated
-generatedBodyHash: 8dd93b221a7671e38f70506f66edeac0c35cf90d2f00c299783a5a3a9a9d4849
+generatedBodyHash: 01e878590195aea446cff7c4b4d55e71d9795770f8ad6ccbabd5a4bfc6bca04c
 docPage:
   work: simple-level-seq-smooth
   group: features
@@ -37,6 +37,10 @@ For a first pass, choose to create a new sequence. Play the original and the res
 3. Choose a smoothing algorithm and adjust parameters
 4. Select output mode (overwrite or create new)
 5. Click **OK** to apply
+
+![SimpleLevelSeqSmooth Gaussian smoothing and output settings](/media-occurrence/doc%3Asimple-level-seq-smooth%3Asmooth-curves%3Amedia%3A1)
+
+This example selects Gaussian and shows Window Size, Sigma, and Create New Sequence. Adjust the parameters for your footage; the values shown are examples.
 
 ## Choose an Algorithm by Goal
 

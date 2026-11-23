@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/md-blog-packer/docs/package/
 lang: en
 translationKey: doc:md-blog-packer:package
-sourceHash: 61f23c7bab1fa524b570538b0e8146a03fbee67abc2876408d1da69533c3e355
+sourceHash: 3d72746e7c51403a3a5150d984aa720c7d2d1949420f89666b8479f1c51f2977
 translationStatus: translated
-generatedBodyHash: 8518e2c3b98dee0e901c0f26704f3f8e8ccb862db499466065a40470bdafd0bc
+generatedBodyHash: b2212a024e6a3e3bdae36e58391eb2ce0b5845937f9eed9d9b9e9bb7c9959e98
 docPage:
   work: md-blog-packer
   group: features
@@ -32,6 +32,10 @@ MDBlogPacker converts local images referenced with `![](</path>)` or Obsidian `!
 1. Check the input article. On startup the GUI selects the first `.md` file in the EXE directory.
 2. Optionally add a prefix and suffix, such as a copyright notice or a reposting policy. The GUI remembers these fields.
 3. Click **Convert and Copy to Clipboard**, then paste the result into a platform that accepts Base64 images.
+
+![MDBlogPacker file selection and prefix and suffix fields](/media-occurrence/doc%3Amd-blog-packer%3Apackage%3Amedia%3A1)
+
+Select the Markdown file and fill in the optional prefix and suffix. The window is still Ready; conversion has not started.
 
 ## Command Line
 

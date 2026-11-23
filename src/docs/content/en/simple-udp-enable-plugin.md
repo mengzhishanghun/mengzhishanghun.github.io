@@ -12,9 +12,9 @@ documentKind: product-manual
 websiteRoute: /en/works/simple-udp/docs/enable-plugin/
 lang: en
 translationKey: doc:simple-udp:enable-plugin
-sourceHash: 438ae8820752aa95efcad3238647c1496d38c5df8bf0f3e16696ddf94ac3a2ef
+sourceHash: 748a22309bac372907c9ccee3f7e4f7218fd8efe963ac9c3128d9f1bf63cf904
 translationStatus: translated
-generatedBodyHash: 7dce21c9d72211fa1529df9fc0f296ea8b6ee355e10f41e43f48a76bd4a22d6f
+generatedBodyHash: 25d251f403ffe0a9a3aa19b632dd6256157f3dc3dca86fd5f351c2f4fbcd0320
 docPage:
   work: simple-udp
   group: getting-started
@@ -38,3 +38,7 @@ Configure the channels after enabling the plugin. A receive channel needs a loca
 Once enabled, the plugin runs through its `GameInstanceSubsystem`. You don’t need to write startup or shutdown code.
 
 [Configure send and receive channels in Project Settings](/en/works/simple-udp/docs/channels/)
+
+![SimpleUDP receive and send channel settings](/media-occurrence/doc%3Asimple-udp%3Aenable-plugin%3Amedia%3A1)
+
+Configure receive and send channels separately in Simple UDP Settings. Check the channel documentation when filling in listening and destination addresses.

@@ -37,3 +37,7 @@ translationKey: doc:simple-tcp-client:enable-plugin
 先让目标 TCP 服务开始监听。通道建好后可由自动连接启动，也可以从蓝图手动启动；继续测试收发前，先查看该通道是否已连接。
 
 打开 **项目设置 → SimpleTCPClient Settings**，按[连接设置](/zh/works/simple-tcp-client/docs/connect/)创建通道。
+
+![SimpleTCPClient 通道配置](/media-occurrence/doc%3Asimple-tcp-client%3Aenable-plugin%3Amedia%3A1)
+
+在 TCP Client Settings 中填写通道名称和服务端地址，再根据需要设置自动连接与重连选项。

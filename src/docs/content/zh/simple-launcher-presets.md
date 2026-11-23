@@ -104,6 +104,10 @@ D:/Tools/server.exe --config default
 - 使用绝对路径，如 `C:\MyApp` 或 `/home/user/app`
 - 程序使用的相对路径将基于此目录解析
 
+![SimpleLauncher 多个进程预设](/media-occurrence/doc%3Asimple-launcher%3Apresets%3Amedia%3A1)
+
+每个预设分别填写命令行、是否隐藏启动、是否分离运行和工作目录。图中的 Test 与 Notepad 是不同的预设。
+
 ## 运行时管理预设
 
 所有 API 都是 `USimpleLauncherGameSubsystem` 上的静态函数，可从蓝图和 C++ 调用。

@@ -35,6 +35,10 @@ translationKey: doc:simple-level-seq-smooth:smooth-curves
 4. 选择输出方式（覆盖原序列或创建新序列）
 5. 点击 **确定** 应用
 
+![SimpleLevelSeqSmooth 高斯平滑与输出设置](/media-occurrence/doc%3Asimple-level-seq-smooth%3Asmooth-curves%3Amedia%3A1)
+
+图中选择 Gaussian，并设置 Window Size、Sigma 和 Create New Sequence。参数需要根据素材调整，图中的数值仅为界面示例。
+
 ## 按处理目标选择算法
 
 | # | 算法 | 类别 | 核心优势 | 最佳场景 |

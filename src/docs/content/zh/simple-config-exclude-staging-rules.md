@@ -41,6 +41,10 @@ translationKey: doc:simple-config-exclude:staging-rules
 
 适用场景见 [SimpleConfigExclude 作品页](/zh/works/simple-config-exclude/)。
 
+![SimpleConfigExclude 配置文件三态选择](/media-occurrence/doc%3Asimple-config-exclude%3Astaging-rules%3Amedia%3A1)
+
+在配置列表中逐项选择 Default、Allowed 或 Disallowed；新增或删除 INI 后，用 Refresh Config List 更新列表。
+
 ## 扫描配置、刷新列表
 
 打开编辑器时，插件递归扫描 `Config` 中的 INI 文件，再用磁盘上的 `[Staging]` 规则填充列表。文件增删或列表过期时，点击 **Refresh Config List**；没有找到文件时，核对它是否位于项目 `Config` 下且扩展名为 `.ini`。
