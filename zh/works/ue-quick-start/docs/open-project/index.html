@@ -36,10 +36,12 @@
 <p>在 Windows 上运行。使用前应在本机配置好编译环境，并至少成功运行过一次该项目。</p>
 <h2 id="编译并打开工程">编译并打开工程</h2>
 <ol>
-<li>将 <code>UEBuildTool.exe</code> 放到项目根目录，与 <code>.uproject</code> 同级。</li>
+<li>将 <code>UEQuickStart.exe</code> 放到项目根目录，与 <code>.uproject</code> 同级。</li>
 <li>双击运行。日志窗口会显示编译进度和报错。</li>
 <li>编译成功后，工具默认自动打开工程。如果编译失败，先按下文查看具体错误。</li>
 </ol>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/tutorials/ue-quick-start-20261123.png" data-media-alt="UEQuickStart 识别工程后显示的编译界面" aria-label="放大查看图片：UEQuickStart 识别工程后显示的编译界面" href="/media/tutorials/ue-quick-start-20261123.png" data-media-width="900" data-media-height="674"><img src="/media/tutorials/ue-quick-start-20261123.png" alt="UEQuickStart 识别工程后显示的编译界面"></a></p>
+<p>窗口上方显示项目名称、引擎版本和当前状态，下方显示实时编译日志。图中使用 Unreal Engine 5.7，状态为“编译中…”，尚未显示编译结果。</p>
 <h2 id="工程与引擎识别">工程与引擎识别</h2>
 
 
@@ -73,7 +75,7 @@
 <p>工具会自动识别 <code>.uproject</code> 中的 GUID 格式引擎版本，并从注册表获取对应的引擎路径。</p>
 <h2 id="启动与编译排查">启动与编译排查</h2>
 <h3 id="找不到-uproject-文件">找不到 .uproject 文件</h3>
-<p>确认工具位于 UE 项目根目录。将 <code>UEBuildTool.exe</code> 或 <code>Main.py</code> + <code>Source/</code> 复制到 <code>.uproject</code> 所在目录。</p>
+<p>确认工具位于 UE 项目根目录。将 <code>UEQuickStart.exe</code> 或 <code>Main.py</code> + <code>Source/</code> 复制到 <code>.uproject</code> 所在目录。</p>
 <h3 id="找不到引擎安装路径">找不到引擎安装路径</h3>
 <p>检查引擎的注册信息是否缺失。若使用 Launcher 版引擎，确认它通过 Epic Games Launcher 安装，并先尝试在 Launcher 中验证引擎文件；必要时重新安装。若使用源码引擎，核对 <code>.uproject</code> 中的 GUID 是否与注册表记录对应。</p>
 <h3 id="编译失败">编译失败</h3>

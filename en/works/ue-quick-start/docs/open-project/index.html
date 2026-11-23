@@ -36,10 +36,12 @@
 <p>Run the tool on Windows. Set up the build environment and run the project successfully on this machine at least once before using the tool.</p>
 <h2 id="build-and-open-the-project">Build and open the project</h2>
 <ol>
-<li>Place <code>UEBuildTool.exe</code> in the project root, alongside <code>.uproject</code>.</li>
+<li>Place <code>UEQuickStart.exe</code> in the project root, alongside <code>.uproject</code>.</li>
 <li>Double-click the executable. The log window shows build progress and errors.</li>
 <li>The tool opens the project by default after a successful build. If the build fails, use the troubleshooting steps below to find the error.</li>
 </ol>
+<p><a class="media-image-trigger" data-astro-reload data-media-image data-media-src="/media/tutorials/ue-quick-start-20261123.png" data-media-alt="UEQuickStart build window after detecting a project" aria-label="View image: UEQuickStart build window after detecting a project" href="/media/tutorials/ue-quick-start-20261123.png" data-media-width="900" data-media-height="674"><img src="/media/tutorials/ue-quick-start-20261123.png" alt="UEQuickStart build window after detecting a project"></a></p>
+<p>The top of the window shows the project name, engine version, and current status. Build logs appear below. This screenshot uses Unreal Engine 5.7 and shows <code>编译中...</code> (building); no build result is shown yet.</p>
 <h2 id="how-the-tool-detects-projects-and-engines">How the tool detects projects and engines</h2>
 
 
@@ -73,7 +75,7 @@
 <p>The tool automatically recognizes GUID-format engine versions in <code>.uproject</code> and retrieves the corresponding engine path from the registry.</p>
 <h2 id="startup-and-build-troubleshooting">Startup and build troubleshooting</h2>
 <h3 id="no-uproject-file-found">No .uproject file found</h3>
-<p>Make sure the tool is in the UE project root. Copy <code>UEBuildTool.exe</code> or <code>Main.py</code> + <code>Source/</code> to the directory containing <code>.uproject</code>.</p>
+<p>Make sure the tool is in the UE project root. Copy <code>UEQuickStart.exe</code> or <code>Main.py</code> + <code>Source/</code> to the directory containing <code>.uproject</code>.</p>
 <h3 id="engine-installation-path-not-found">Engine installation path not found</h3>
 <p>Check whether the engine registration is missing. For a Launcher engine, confirm it was installed through Epic Games Launcher, verify the engine files there, and reinstall if needed. For a source-built engine, check that the GUID in <code>.uproject</code> matches its registry entry.</p>
 <h3 id="build-fails">Build fails</h3>
