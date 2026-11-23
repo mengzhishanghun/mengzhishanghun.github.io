@@ -10,7 +10,7 @@ import {mapMedia,projectImageViewers,mediaDimensions} from './media.mjs';
 import {assertPublicFields} from './source-schema.mjs';
 import {articleTypes,validateArticleIdentities,shareRoute} from '../engagement/article-identities.mjs';
 import {loadResources,regularPath,resourcePath,safeRelative} from './resources.mjs';
-import {renderWorkMetadata,renderWorkCardStatuses} from '../works/metadata.mjs';
+import {renderWorkMetadata,renderWorkCardStatuses,renderWorkTitles} from '../works/metadata.mjs';
 import {loadReprints,reprintTemplate,isReprintHTML} from '../blog/reprints.mjs';
 import {projectBlogTopics} from '../blog/topics.mjs';
 import {projectContentTopics} from './content-topics.mjs';
@@ -571,6 +571,7 @@ export async function buildSite(options) {
       html=renderDocumentSlots(html,documentLayout(entry,locale,entries,documents,localeRoute),entry.sources[locale].data,slots,copy[locale].shellSlots['page:works-index'],chapterChrome,{outline:outline(result.headings,[2,3]),bodyHasTitle:result.headings.some(heading=>heading.depth===1),body:result.code});
     }
     html=html.replace(/\{\{text:([^}]+)\}\}/g,(_,key)=>{if(typeof slots[key]!=='string') throw new Error('文本槽缺失: '+entry.id+' '+locale+' '+key);const original=copy[primary].shellSlots[entry.shellId || entry.id]?.[key];return escapeHTML(dict.get(original) ?? slots[key]);});
+    html=renderWorkTitles(html,entry,entries,locale);
     if(entry.id==='page:home')html=renderFeaturedCategories(html,entries,locale);
     html=filterPublicationHTML(html,publication);
     if(entry.id==='page:works-index')html=renderWorkCardStatuses(html,entries,locale,copy[locale].workLabels);

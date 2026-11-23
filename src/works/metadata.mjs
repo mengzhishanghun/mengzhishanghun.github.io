@@ -2,6 +2,37 @@ import {parseFragment} from 'parse5';
 import {attrs,walk,applyEdits} from '../build/extract-dom.mjs';
 import {assertWorkInfo} from '../build/source-schema.mjs';
 const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export function renderWorkTitles(html,entry,entries,locale){
+  if(entry.type!=='work'&&!['page:home','page:works-index'].includes(entry.id))return html;
+  const works=entries.filter(item=>item.type==='work');
+  const bySlug=new Map(works.map(item=>[item.slug,item]));
+  const byRoute=new Map(works.flatMap(item=>(item.legacyRoutes||[]).map(route=>[route,item])));
+  const hasClass=(node,name)=>(attrs(node).class||'').split(/\s+/).includes(name);
+  const text=node=>node.nodeName==='#text'?node.value:(node.childNodes||[]).map(text).join('');
+  const edits=[];
+  walk(parseFragment(html,{sourceCodeLocationInfo:true}),group=>{
+    if(!hasClass(group,'project-title-group'))return;
+    let heading,secondary;
+    walk(group,node=>{if(/^h[1-3]$/.test(node.tagName||''))heading=node;if(hasClass(node,'project-title-secondary'))secondary=node;});
+    if(!heading)return;
+    let work=entry.type==='work'?entry:undefined,headingContent=heading,card;
+    if(!work)for(let parent=group.parentNode;parent;parent=parent.parentNode){const slug=attrs(parent)['data-slug'];if(slug){work=bySlug.get(slug);card=parent;break;}}
+    walk(heading,node=>{if(node.tagName==='a'){headingContent=node;work??=byRoute.get(attrs(node).href);}});
+    if(!work)return;
+    const name=work.sources[locale].data.title,current=text(heading).trim(),subtitle=secondary?text(secondary).trim():'';
+    const label=card&&attrs(card)['aria-label'];
+    if(label&&!label.includes(name)){const at=card.sourceCodeLocation.attrs['aria-label'];edits.push([at.startOffset,at.endOffset,'aria-label="'+escapeHTML(name+' · '+label)+'"']);}
+    if(current===name){
+      if(subtitle===name){const loc=secondary.sourceCodeLocation;edits.push([loc.startOffset,loc.endOffset,'']);}
+      return;
+    }
+    const loc=headingContent.sourceCodeLocation;
+    edits.push([loc.startTag.endOffset,loc.endTag.startOffset,escapeHTML(name)]);
+    if(secondary){const at=secondary.sourceCodeLocation;edits.push([at.startTag.endOffset,at.endTag.startOffset,escapeHTML(current)]);}
+    else {const at=heading.sourceCodeLocation;edits.push([at.endOffset,at.endOffset,'<p class="project-title-secondary">'+escapeHTML(current)+'</p>']);}
+  });
+  return applyEdits(html,edits);
+}
 export function renderWorkBadges(data,labels){
   if(!data.workInfo)return '';
   assertWorkInfo(data.workInfo);

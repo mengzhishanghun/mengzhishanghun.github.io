@@ -3,6 +3,30 @@ import test from 'node:test';
 import {assertPublicFields} from '../build/source-schema.mjs';
 import {projectSource} from '../import/import.mjs';
 const info={channels:[{kind:'sale',href:'https://example.com/store'},{kind:'open-source',href:'https://github.com/example/tool'},{kind:'docs',href:'/docs/zh/tool/'}]};
+test('work titles show the canonical name above the existing localized function title',async()=>{
+ const {renderWorkTitles}=await import('./metadata.mjs');
+ const work={id:'work:example',type:'work',slug:'example',legacyRoutes:['/works/example/'],sources:{zh:{data:{title:'ExamplePlugin'}},en:{data:{title:'ExamplePlugin'}}}};
+ for(const [locale,label] of [['zh','编辑蓝图'],['en','Edit Blueprints']]){
+  const detail='<div class="project-title-group"><h1>'+label+'</h1><p class="project-title-secondary">ExamplePlugin</p></div><nav class="work-actions"><a href="https://example.com">Store</a></nav>';
+  const card='<a href="/works/example/" aria-label="'+label+'" data-content-card data-slug="example"><div class="project-title-group"><h2>'+label+'</h2><p class="project-title-secondary">ExamplePlugin</p></div></a>';
+  assert.equal(renderWorkTitles(detail,work,[work],locale),detail.replace('<h1>'+label+'</h1>','<h1>ExamplePlugin</h1>').replace('secondary">ExamplePlugin','secondary">'+label));
+  assert.equal(renderWorkTitles(card,{id:'page:works-index',type:'page'},[work],locale),card.replace('<h2>'+label+'</h2>','<h2>ExamplePlugin</h2>').replace('secondary">ExamplePlugin','secondary">'+label).replace('aria-label="'+label+'"','aria-label="ExamplePlugin · '+label+'"'));
+ }
+ const home='<section data-feature-panel><div class="project-title-group"><h3><a href="/works/example/">ExamplePlugin</a></h3><p class="project-title-secondary">Edit Blueprints</p></div></section>';
+ assert.equal(renderWorkTitles(home,{id:'page:home',type:'page'},[work],'en'),home);
+ const caseCard='<a data-content-card data-slug="case"><div class="project-title-group"><h2>Case title</h2><p class="project-title-secondary">Case subtitle</p></div></a>';
+ assert.equal(renderWorkTitles(caseCard,{id:'page:works-index',type:'page'},[work],'zh'),caseCard);
+});
+test('work title projection removes a repeated name and preserves linked headings',async()=>{
+ const {renderWorkTitles}=await import('./metadata.mjs');
+ const work={type:'work',slug:'example',legacyRoutes:['/works/example/'],sources:{zh:{data:{title:'ExamplePlugin'}}}};
+ const repeated='<div class="project-title-group"><h1>ExamplePlugin</h1><p class="project-title-secondary">ExamplePlugin</p></div>';
+ assert.equal(renderWorkTitles(repeated,work,[work],'zh'),'<div class="project-title-group"><h1>ExamplePlugin</h1></div>');
+ const linked='<div class="project-title-group"><h3><a href="/works/example/">Edit Blueprints</a></h3><p class="project-title-secondary">ExamplePlugin</p></div>';
+ const rendered=renderWorkTitles(linked,{id:'page:home'},[work],'zh');
+ assert.equal(rendered,linked.replace('>Edit Blueprints</a>','>ExamplePlugin</a>').replace('secondary">ExamplePlugin','secondary">Edit Blueprints'));
+ assert.equal(renderWorkTitles(rendered,{id:'page:home'},[work],'zh'),rendered);
+});
 test('nested metadata rejects unknown fields, invalid shape and unsafe URL',()=>{
  for(const workInfo of [{...info,privatePath:'secret'},{...info,channels:[{kind:'sale',href:'javascript:alert(1)'}]},{...info,channels:[{kind:'docs',href:'//evil.test'}]},{...info,channels:[{kind:'sale',href:'https://example.com',secret:true}]},{...info,compatibility:[{platforms:'Windows',requirements:[]}]},{...info,compatibility:[{platforms:['Windows'],requirements:[],secret:true}]}])assert.throws(()=>assertPublicFields({workInfo}),/workInfo/);
  assert.doesNotThrow(()=>assertPublicFields({workInfo:info}));
