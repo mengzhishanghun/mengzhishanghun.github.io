@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-stream-switcher/docs/workspace-settings/
 lang: en
 translationKey: doc:p4-stream-switcher:workspace-settings
-sourceHash: 19e5fcec8af371de96f5faa3cd354aa089ed59653d2c3876757d4c25f9e43955
+sourceHash: 1460e61c2e6173ce90ef37eafd3411cb1aa4f2d4d994d25573c99ff735ccee67
 translationStatus: translated
-generatedBodyHash: 5f2daa2f807d9e359a7bc3bdd6f46fb19f951857beed66234e4a84e4931490f4
+generatedBodyHash: 01efd74b89aa2a2a391104cf5127542648e07d2ba137a192c3868847c9fce943
 docPage:
   work: p4-stream-switcher
   group: features
@@ -34,6 +34,10 @@ docPage:
 | Remove empty directories | Enabled by default. Changing it updates rmdir for local workspaces under the current tag; sync removes empty directories. |
 | Line endings | Choose local, unix, mac, win, or share according to your team’s client policy. The default is win. New workspaces use the saved setting. On startup, the tool also checks and corrects the line ending option for existing local workspaces under the current tag to match that setting. |
 | Status and logs | View server, user, used/maximum count, progress, and information, warning, and error logs. |
+
+![P4StreamSwitcher general settings and workspace options](/media-occurrence/doc%3Ap4-stream-switcher%3Aworkspace-settings%3Amedia%3A1)
+
+General settings are at the top of the window, with workspace options in the middle. This view shows where the settings appear. The project, branch, and directory are empty, and no stream switch has run.
 
 ## Local settings and workspace tag checks
 

@@ -5353,6 +5353,30 @@
       ],
       "sha256": "ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4",
       "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/tutorials/p4-case-sync-20261123.png",
+      "outputs": [
+        "media/tutorials/p4-case-sync-20261123.png"
+      ],
+      "sha256": "8e6d0278e3a1d824c031fdab9619253b3e1c7d59727182223387d2aaed11f67b",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/tutorials/p4-stream-switcher-20261123.png",
+      "outputs": [
+        "media/tutorials/p4-stream-switcher-20261123.png"
+      ],
+      "sha256": "370d7781435a9cb6f3549209defd36f6d55deb820e116e0079ad1964d072e7c6",
+      "mode": "frozen"
+    },
+    {
+      "source": "attachments/images/media/tutorials/ue-quick-start-20261123.png",
+      "outputs": [
+        "media/tutorials/ue-quick-start-20261123.png"
+      ],
+      "sha256": "e160124283ff92e24f9b772cbea4c9381efd72c5e8cee0c28e1c1c126c3d3a3f",
+      "mode": "frozen"
     }
   ]
 }

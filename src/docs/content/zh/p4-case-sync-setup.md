@@ -79,3 +79,7 @@ pip install -r requirements.txt
 # 在激活环境下
 python Main.py
 ```
+
+![P4CaseSync 的 Perforce 连接界面](/media-occurrence/doc%3Ap4-case-sync%3Asetup%3Amedia%3A1)
+
+启动后填写服务器、用户和工作区，再点击“连接”。图中的服务器地址、demo 用户和 Game_Demo 工作区都是示例值，使用时请替换为自己的配置。

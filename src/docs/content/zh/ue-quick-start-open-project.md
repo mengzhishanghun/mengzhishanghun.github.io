@@ -27,9 +27,13 @@ translationKey: doc:ue-quick-start:open-project
 
 ## 编译并打开工程
 
-1. 将 `UEBuildTool.exe` 放到项目根目录，与 `.uproject` 同级。
+1. 将 `UEQuickStart.exe` 放到项目根目录，与 `.uproject` 同级。
 2. 双击运行。日志窗口会显示编译进度和报错。
 3. 编译成功后，工具默认自动打开工程。如果编译失败，先按下文查看具体错误。
+
+![UEQuickStart 识别工程后显示的编译界面](/media-occurrence/doc%3Aue-quick-start%3Aopen-project%3Amedia%3A1)
+
+窗口上方显示项目名称、引擎版本和当前状态，下方显示实时编译日志。图中使用 Unreal Engine 5.7，状态为“编译中...”，尚未显示编译结果。
 
 ## 工程与引擎识别
 
@@ -53,7 +57,7 @@ translationKey: doc:ue-quick-start:open-project
 
 ### 找不到 .uproject 文件
 
-确认工具位于 UE 项目根目录。将 `UEBuildTool.exe` 或 `Main.py` + `Source/` 复制到 `.uproject` 所在目录。
+确认工具位于 UE 项目根目录。将 `UEQuickStart.exe` 或 `Main.py` + `Source/` 复制到 `.uproject` 所在目录。
 
 ### 找不到引擎安装路径
 

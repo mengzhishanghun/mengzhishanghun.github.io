@@ -14,9 +14,9 @@ documentKind: product-manual
 websiteRoute: /en/works/ue-quick-start/docs/open-project/
 lang: en
 translationKey: doc:ue-quick-start:open-project
-sourceHash: a8dab528c939f7efc90fcd1ebac89f2c05a69e81d7bd378a5cde6a1e0c19090f
+sourceHash: 0a58977fb5fa172656485ac7e4c558972e3b1e4de742d30276194ce3de807569
 translationStatus: translated
-generatedBodyHash: d1a7fd9b6292d0c87693e54230837f1e1c1c27b45517192009d45fc33c3826ab
+generatedBodyHash: 3697d40f05d590b3430cb0aa3fd40c6f28870842896ac80b16cc134e529302b2
 docPage:
   work: ue-quick-start
   group: getting-started
@@ -30,9 +30,13 @@ Run the tool on Windows. Set up the build environment and run the project succes
 
 ## Build and open the project
 
-1. Place `UEBuildTool.exe` in the project root, alongside `.uproject`.
+1. Place `UEQuickStart.exe` in the project root, alongside `.uproject`.
 2. Double-click the executable. The log window shows build progress and errors.
 3. The tool opens the project by default after a successful build. If the build fails, use the troubleshooting steps below to find the error.
+
+![UEQuickStart build window after detecting a project](/media-occurrence/doc%3Aue-quick-start%3Aopen-project%3Amedia%3A1)
+
+The top of the window shows the project name, engine version, and current status. Build logs appear below. This screenshot uses Unreal Engine 5.7 and shows `编译中...` (building); no build result is shown yet.
 
 ## How the tool detects projects and engines
 
@@ -56,7 +60,7 @@ The tool automatically recognizes GUID-format engine versions in `.uproject` and
 
 ### No .uproject file found
 
-Make sure the tool is in the UE project root. Copy `UEBuildTool.exe` or `Main.py` + `Source/` to the directory containing `.uproject`.
+Make sure the tool is in the UE project root. Copy `UEQuickStart.exe` or `Main.py` + `Source/` to the directory containing `.uproject`.
 
 ### Engine installation path not found
 

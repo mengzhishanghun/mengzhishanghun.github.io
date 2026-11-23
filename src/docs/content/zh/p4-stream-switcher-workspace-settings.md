@@ -32,6 +32,10 @@ translationKey: doc:p4-stream-switcher:workspace-settings
 | 换行符 | 按团队客户端规范选择 local、unix、mac、win 或 share，默认 win。新建工作区使用已保存的设置。工具启动时也会按该设置检查并修正当前标识下已有本地工作区的换行符设置。 |
 | 状态与日志 | 查看服务器、用户、已用/最大工作区数、进度及信息、警告、错误日志。 |
 
+![P4StreamSwitcher 的通用配置与工作区选项](/media-occurrence/doc%3Ap4-stream-switcher%3Aworkspace-settings%3Amedia%3A1)
+
+通用配置位于窗口上方，工作区选项位于中部。图中展示各配置项的位置，项目、分支和目录尚未填入，也未执行切流。
+
 ## 本机配置保存与标识排查
 
 工具在用户缓存目录保存标识、池上限、选项、使用时间戳，以及每个流的目录、离线选项和同步状态。Windows 通常位于 %LOCALAPPDATA% 下；不要把这些本机记录作为项目共享配置。

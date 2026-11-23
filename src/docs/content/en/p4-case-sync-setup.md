@@ -13,9 +13,9 @@ documentKind: product-manual
 websiteRoute: /en/works/p4-case-sync/docs/setup/
 lang: en
 translationKey: doc:p4-case-sync:setup
-sourceHash: 97b5557004853443e532c2e2623c0b9be7e3902e68ebe4f95c5951f706233ce7
+sourceHash: 69a394895d75308fa6123e270f0ce25a8f59801bf0df9614a5fcfd1c9aafd603
 translationStatus: translated
-generatedBodyHash: 3ae83f71d4ec14fdaaa924fc9f597daa62e5213e1aaf5eb8649d380dca1d47af
+generatedBodyHash: fb4e45e6c410af429cace09299ff9969faf4c2e9829a90947bf6509055ca9f42
 docPage:
   work: p4-case-sync
   group: getting-started
@@ -82,3 +82,7 @@ pip install -r requirements.txt
 # 在激活环境下
 python Main.py
 ```
+
+![P4CaseSync Perforce connection window](/media-occurrence/doc%3Ap4-case-sync%3Asetup%3Amedia%3A1)
+
+Enter the server, user, and workspace, then click Connect (`连接`). The server address, demo user, and Game_Demo workspace shown here are examples; replace them with your own settings.
