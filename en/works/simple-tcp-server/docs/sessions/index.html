@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleTCPServer</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-tcp-server/docs/listen/">Enable the Plugin and Configure TCP Listening</a></li></ul></li><li><span>Networking</span><ul><li><a href="/en/works/simple-tcp-server/docs/sessions/" aria-current="page">Manage Client Sessions</a></li><li><a href="/en/works/simple-tcp-server/docs/messages/">Send and Receive TCP Server Messages</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-tcp-server/docs/native-server/">Implement a TCP Server in C++</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-tcp-server/docs/listen/">Enable the Plugin and Configure TCP Listening</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-tcp-server/docs/sessions/" aria-current="page">Manage Client Sessions</a></li><li><a href="/en/works/simple-tcp-server/docs/messages/">Send and Receive TCP Server Messages</a></li><li><a href="/en/works/simple-tcp-server/docs/native-server/">Implement a TCP Server in C++</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#subscribe-to-client-connection-and-disconnection-events" class="outline-link outline-root-link">Subscribe to client connection and disconnection events</a></li><li class="outline-node" data-heading-depth="2"><a href="#list-sessions-and-check-their-connection-state" class="outline-link outline-root-link">List sessions and check their connection state</a></li><li class="outline-node" data-heading-depth="2"><a href="#when-session-sockets-are-created-and-destroyed" class="outline-link outline-root-link">When session sockets are created and destroyed</a></li><li class="outline-node" data-heading-depth="2"><a href="#blueprint-node-overview" class="outline-link outline-root-link">Blueprint node overview</a></li></ol></nav></details></aside>
@@ -57,6 +57,7 @@
 
 <table><thead><tr><th>Node Function</th><th>Description</th></tr></thead><tbody><tr><td><code>BindConnectHandle</code></td><td>Bind delegate for client connect/disconnect</td></tr><tr><td><code>UnbindConnectHandle</code></td><td>Unbind a specific connection delegate</td></tr><tr><td><code>UnbindAllConnectHandle</code></td><td>Unbind all connection delegates</td></tr></tbody></table>
 <h2 id="list-sessions-and-check-their-connection-state">List sessions and check their connection state</h2>
+<p>Once the listener starts, check that the client connected to the right channel, then use <code>GetAllSessions</code> to see the current sessions. Before sending to a client, check the selected session with <code>IsSessionConnected</code>. Read the list again after a reconnect.</p>
 
 
 
@@ -76,7 +77,7 @@
 
 <table><thead><tr><th>Node Function</th><th>Description</th></tr></thead><tbody><tr><td><code>GetAllSessions</code></td><td>Get all current SessionChannels on a listening channel</td></tr><tr><td><code>IsSessionConnected</code></td><td>Check if a session is still connected</td></tr></tbody></table>
 <h2 id="when-session-sockets-are-created-and-destroyed">When session sockets are created and destroyed</h2>
-<p>The plugin creates a session socket when it accepts a client. The socket ends on disconnection or destruction. The plugin manages sockets; no manual cleanup is needed.</p>
+<p>The plugin creates a session socket when it accepts a client. The session ends when the client disconnects or the socket is destroyed. The plugin handles socket cleanup.</p>
 <h2 id="blueprint-node-overview">Blueprint node overview</h2>
 <p><a href="/media/manuals/e7cdf97f5f530a684eee.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/e7cdf97f5f530a684eee.png" data-media-alt="ShowAllFunction" class="media-image-trigger" aria-label="View a larger image: ShowAllFunction"><img src="/media/manuals/e7cdf97f5f530a684eee.png" alt="ShowAllFunction" loading="lazy" decoding="async"></a></p></div>
           </article>

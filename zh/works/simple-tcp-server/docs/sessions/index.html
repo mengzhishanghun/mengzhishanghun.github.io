@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleTCPServer</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-tcp-server/docs/listen/">启用插件并配置 TCP 监听</a></li></ul></li><li><span>网络通信</span><ul><li><a href="/zh/works/simple-tcp-server/docs/sessions/" aria-current="page">管理客户端会话</a></li><li><a href="/zh/works/simple-tcp-server/docs/messages/">收发 TCP 服务端消息</a></li></ul></li><li><span>原生实现</span><ul><li><a href="/zh/works/simple-tcp-server/docs/native-server/">在 C++ 中实现 TCP 服务端</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-tcp-server/docs/listen/">启用插件并配置 TCP 监听</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-tcp-server/docs/sessions/" aria-current="page">管理客户端会话</a></li><li><a href="/zh/works/simple-tcp-server/docs/messages/">收发 TCP 服务端消息</a></li><li><a href="/zh/works/simple-tcp-server/docs/native-server/">在 C++ 中实现 TCP 服务端</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%AE%A2%E9%98%85%E5%AE%A2%E6%88%B7%E7%AB%AF%E8%BF%9E%E6%8E%A5%E5%92%8C%E6%96%AD%E5%BC%80%E4%BA%8B%E4%BB%B6" class="outline-link outline-root-link">订阅客户端连接和断开事件</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%88%97%E5%87%BA%E4%BC%9A%E8%AF%9D%E5%B9%B6%E6%A3%80%E6%9F%A5%E8%BF%9E%E6%8E%A5%E7%8A%B6%E6%80%81" class="outline-link outline-root-link">列出会话并检查连接状态</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BC%9A%E8%AF%9D-socket-%E7%9A%84%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81" class="outline-link outline-root-link">会话 Socket 的创建和销毁</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%93%9D%E5%9B%BE%E8%8A%82%E7%82%B9%E4%B8%80%E8%A7%88" class="outline-link outline-root-link">蓝图节点一览</a></li></ol></nav></details></aside>
@@ -57,6 +57,7 @@
 
 <table><thead><tr><th>节点函数</th><th>说明</th></tr></thead><tbody><tr><td><code>BindConnectHandle</code></td><td>绑定客户端连接/断开委托</td></tr><tr><td><code>UnbindConnectHandle</code></td><td>解绑指定连接委托</td></tr><tr><td><code>UnbindAllConnectHandle</code></td><td>解绑所有连接委托</td></tr></tbody></table>
 <h2 id="列出会话并检查连接状态">列出会话并检查连接状态</h2>
+<p>监听启动后，先确认客户端确实连到了正确的通道，再用 <code>GetAllSessions</code> 查看当前会话。向某个客户端发消息前，用 <code>IsSessionConnected</code> 核对选中的会话；客户端重连时，重新读取会话列表。</p>
 
 
 
@@ -76,7 +77,7 @@
 
 <table><thead><tr><th>节点函数</th><th>说明</th></tr></thead><tbody><tr><td><code>GetAllSessions</code></td><td>获取监听通道上所有当前 SessionChannel</td></tr><tr><td><code>IsSessionConnected</code></td><td>检查 Session 是否仍然连接</td></tr></tbody></table>
 <h2 id="会话-socket-的创建和销毁">会话 Socket 的创建和销毁</h2>
-<p>接受客户端连接时会创建会话 Socket；客户端断开或 Socket 销毁时，会话 Socket 随之结束。插件负责管理 Socket，无需手动清理。</p>
+<p>插件接受连接时创建会话 Socket。客户端断开或 Socket 被销毁后，会话结束。Socket 由插件清理。</p>
 <h2 id="蓝图节点一览">蓝图节点一览</h2>
 <p><a href="/media/manuals/e7cdf97f5f530a684eee.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/e7cdf97f5f530a684eee.png" data-media-alt="ShowAllFunction" class="media-image-trigger" aria-label="放大查看图片：ShowAllFunction"><img src="/media/manuals/e7cdf97f5f530a684eee.png" alt="ShowAllFunction" loading="lazy" decoding="async"></a></p></div>
           </article>

@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleTCPClient</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-tcp-client/docs/enable-plugin/" aria-current="page">Enable SimpleTCPClient</a></li></ul></li><li><span>Networking</span><ul><li><a href="/en/works/simple-tcp-client/docs/connect/">Configure and Manage TCP Client Connections</a></li><li><a href="/en/works/simple-tcp-client/docs/messages/">Send and Receive TCP Client Messages</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-tcp-client/docs/native-client/">Implement a TCP Client in C++</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-tcp-client/docs/enable-plugin/" aria-current="page">Enable SimpleTCPClient</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-tcp-client/docs/connect/">Configure and Manage TCP Client Connections</a></li><li><a href="/en/works/simple-tcp-client/docs/messages/">Send and Receive TCP Client Messages</a></li><li><a href="/en/works/simple-tcp-client/docs/native-client/">Implement a TCP Client in C++</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#compatibility" class="outline-link outline-root-link">Compatibility</a></li><li class="outline-node" data-heading-depth="2"><a href="#interface-language" class="outline-link outline-root-link">Interface language</a></li><li class="outline-node" data-heading-depth="2"><a href="#enable-the-plugin" class="outline-link outline-root-link">Enable the plugin</a></li><li class="outline-node" data-heading-depth="2"><a href="#first-connection" class="outline-link outline-root-link">First connection</a></li></ol></nav></details></aside>
@@ -42,7 +42,8 @@
 <h2 id="enable-the-plugin">Enable the plugin</h2>
 <p>Once you enable the plugin, its <code>GameInstanceSubsystem</code> starts automatically and manages connections. You do not need startup or shutdown code. The plugin lives for the lifetime of the <code>GameInstance</code>, so changing levels does not affect it.</p>
 <h2 id="first-connection">First connection</h2>
-<p>After enabling the plugin, open <strong>Project Settings → SimpleTCPClient Settings</strong> and follow the <a href="/en/works/simple-tcp-client/docs/connect/">connection setup</a> to create a channel.</p></div>
+<p>Start the target TCP service listening first. Once the channel is configured, let it connect automatically or start it from Blueprint. Check the channel’s connection state before testing message exchange.</p>
+<p>Open <strong>Project Settings → SimpleTCPClient Settings</strong> and follow the <a href="/en/works/simple-tcp-client/docs/connect/">connection setup</a> to create a channel.</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-tcp-client/docs/connect/" rel="next"><span>Next</span>Configure and Manage TCP Client Connections</a></div>
         </div>

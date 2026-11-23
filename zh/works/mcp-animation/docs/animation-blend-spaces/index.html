@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-animation/docs/connect/">连接动画编辑工具</a></li></ul></li><li><span>动画资产</span><ul><li><a href="/zh/works/mcp-animation/docs/find-assets/">查找、检查与保存动画资产</a></li></ul></li><li><span>动画编辑</span><ul><li><a href="/zh/works/mcp-animation/docs/animation-blueprint/">编辑动画蓝图与状态机</a></li><li><a href="/zh/works/mcp-animation/docs/montage-and-blendspace/">创建 Montage 并编辑区段</a></li><li><a href="/zh/works/mcp-animation/docs/animation-notifies/">查找并编辑动画 Notify</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blend-spaces/" aria-current="page">创建 BlendSpace 并编辑采样点</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-animation/docs/connect/">连接动画编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-animation/docs/find-assets/">查找、检查与保存动画资产</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blueprint/">编辑动画蓝图与状态机</a></li><li><a href="/zh/works/mcp-animation/docs/montage-and-blendspace/">创建 Montage 并编辑区段</a></li><li><a href="/zh/works/mcp-animation/docs/animation-notifies/">查找并编辑动画 Notify</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blend-spaces/" aria-current="page">创建 BlendSpace 并编辑采样点</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%9F%A5%E6%89%BE%E5%88%9B%E5%BB%BA%E4%B8%8E%E4%BF%AE%E6%94%B9-blendspace" class="outline-link outline-root-link">查找、创建与修改 BlendSpace</a></li></ol></nav></details></aside>
@@ -65,6 +65,7 @@
 
 
 <table><thead><tr><th>工具</th><th>用途</th></tr></thead><tbody><tr><td><code>CreateBlendSpace</code></td><td>在轴范围有效时创建 BlendSpace。</td></tr><tr><td><code>SetBlendSpaceSamples</code></td><td>事务化替换最多 256 个已验证的采样点；失败时回滚。</td></tr></tbody></table>
+<p>编辑现有资产时，先读取轴范围和原有采样点。<code>SetBlendSpaceSamples</code> 会替换整组采样点；即使只改一个点，也要把其余应保留的点一起传入。改完可用详情工具核对轴和采样点。</p>
 <p>写入前后请遵循<a href="/zh/works/mcp-animation/docs/find-assets/">打开与保存动画资产</a>一节的路径、事务和保存规则。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-animation/docs/animation-notifies/" rel="prev"><span>上一篇</span>查找并编辑动画 Notify</a></div>

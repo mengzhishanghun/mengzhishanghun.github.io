@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleStaticMeshMerger</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-static-mesh-merger/docs/setup/">打开工具并认识窗口</a></li></ul></li><li><span>场景处理</span><ul><li><a href="/zh/works/simple-static-mesh-merger/docs/merge-actors/">筛选并合并静态网格 Actor</a></li><li><a href="/zh/works/simple-static-mesh-merger/docs/split-level-instance/" aria-current="page">拆分 LevelInstance</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-static-mesh-merger/docs/setup/">打开工具并认识窗口</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-static-mesh-merger/docs/merge-actors/">筛选并合并静态网格 Actor</a></li><li><a href="/zh/works/simple-static-mesh-merger/docs/split-level-instance/" aria-current="page">拆分 LevelInstance</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E9%80%92%E5%BD%92%E6%8B%86%E5%88%86%E4%B8%8E%E5%88%B7%E6%96%B0%E9%A2%84%E8%A7%88" class="outline-link outline-root-link">递归拆分与刷新预览</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%A6%96%E6%AC%A1%E6%8B%86%E5%88%86%E5%92%8C%E9%87%8D%E5%A4%8D%E8%B7%AF%E5%BE%84%E7%9A%84%E5%A4%84%E7%90%86" class="outline-link outline-root-link">首次拆分和重复路径的处理</a></li></ol></nav></details></aside>
@@ -33,11 +33,12 @@
           <article>
             <h1>拆分 LevelInstance</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="递归拆分与刷新预览">递归拆分与刷新预览</h2>
+<p>拆分会改动整个场景，操作前先保留一份可恢复的关卡版本。进度结束后，先在 Outliner 检查拆出的 Actor 和被移除的重复项，再查看合并预览。</p>
 <p>点击 <code>Break Level Instances</code> 递归拆分场景中所有 LevelInstance：</p>
 <ul>
 <li>✅ 自动处理嵌套 LevelInstance</li>
 <li>✅ 智能去重（相同路径的重复实例被删除）</li>
-<li>✅ 实时进度通知（滚动显示当前项目）</li>
+<li>✅ 显示拆分进度和当前处理的对象</li>
 <li>✅ 每轮迭代后 UI 自动刷新</li>
 </ul>
 <h2 id="首次拆分和重复路径的处理">首次拆分和重复路径的处理</h2>

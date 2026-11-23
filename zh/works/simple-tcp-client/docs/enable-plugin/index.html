@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleTCPClient</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-tcp-client/docs/enable-plugin/" aria-current="page">启用 SimpleTCPClient</a></li></ul></li><li><span>网络通信</span><ul><li><a href="/zh/works/simple-tcp-client/docs/connect/">配置与管理 TCP 客户端连接</a></li><li><a href="/zh/works/simple-tcp-client/docs/messages/">收发 TCP 客户端消息</a></li></ul></li><li><span>原生实现</span><ul><li><a href="/zh/works/simple-tcp-client/docs/native-client/">在 C++ 中实现 TCP 客户端</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-tcp-client/docs/enable-plugin/" aria-current="page">启用 SimpleTCPClient</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-tcp-client/docs/connect/">配置与管理 TCP 客户端连接</a></li><li><a href="/zh/works/simple-tcp-client/docs/messages/">收发 TCP 客户端消息</a></li><li><a href="/zh/works/simple-tcp-client/docs/native-client/">在 C++ 中实现 TCP 客户端</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%85%BC%E5%AE%B9%E6%80%A7" class="outline-link outline-root-link">兼容性</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%95%8C%E9%9D%A2%E8%AF%AD%E8%A8%80" class="outline-link outline-root-link">界面语言</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%90%AF%E7%94%A8%E6%8F%92%E4%BB%B6" class="outline-link outline-root-link">启用插件</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%A6%96%E6%AC%A1%E8%BF%9E%E6%8E%A5" class="outline-link outline-root-link">首次连接</a></li></ol></nav></details></aside>
@@ -42,7 +42,8 @@
 <h2 id="启用插件">启用插件</h2>
 <p>启用插件后，<code>GameInstanceSubsystem</code> 会自动启动并管理连接，不需要编写初始化或关闭代码。插件的生命周期与 <code>GameInstance</code> 一致，切换关卡不影响连接。</p>
 <h2 id="首次连接">首次连接</h2>
-<p>启用插件后，前往 <strong>项目设置 → SimpleTCPClient Settings</strong>，按<a href="/zh/works/simple-tcp-client/docs/connect/">连接设置</a>创建通道。</p></div>
+<p>先让目标 TCP 服务开始监听。通道建好后可由自动连接启动，也可以从蓝图手动启动；继续测试收发前，先查看该通道是否已连接。</p>
+<p>打开 <strong>项目设置 → SimpleTCPClient Settings</strong>，按<a href="/zh/works/simple-tcp-client/docs/connect/">连接设置</a>创建通道。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-tcp-client/docs/connect/" rel="next"><span>下一篇</span>配置与管理 TCP 客户端连接</a></div>
         </div>

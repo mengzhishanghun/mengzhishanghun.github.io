@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleConfigExclude</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-config-exclude/docs/setup/">Install the Plugin and Open Its Settings</a></li></ul></li><li><span>Packaging and Deployment</span><ul><li><a href="/en/works/simple-config-exclude/docs/staging-rules/" aria-current="page">Set and Verify Packaging Rules</a></li><li><a href="/en/works/simple-config-exclude/docs/copy-excluded/">Copy Excluded Configuration Files</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-config-exclude/docs/setup/">Install the Plugin and Open Its Settings</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-config-exclude/docs/staging-rules/" aria-current="page">Set and Verify Packaging Rules</a></li><li><a href="/en/works/simple-config-exclude/docs/copy-excluded/">Copy Excluded Configuration Files</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#choose-a-packaging-state-for-each-ini-file" class="outline-link outline-root-link">Choose a Packaging State for Each INI File</a></li><li class="outline-node" data-heading-depth="2"><a href="#scan-configuration-and-refresh-the-list" class="outline-link outline-root-link">Scan Configuration and Refresh the List</a></li><li class="outline-node" data-heading-depth="2"><a href="#save-rules-check-out-files-and-protect-plugin-settings" class="outline-link outline-root-link">Save Rules, Check Out Files, and Protect Plugin Settings</a></li><li class="outline-node" data-heading-depth="2"><a href="#exclude-debug-files-and-force-inclusion" class="outline-link outline-root-link">Exclude Debug Files and Force Inclusion</a></li><li class="outline-node" data-heading-depth="2"><a href="#verify-the-package-and-handle-sensitive-configuration" class="outline-link outline-root-link">Verify the Package and Handle Sensitive Configuration</a></li></ol></nav></details></aside>
@@ -66,7 +66,7 @@
 <li>Find the configuration file to exclude</li>
 <li>Click <code>Disallowed</code> to exclude it</li>
 <li>Click <code>Allowed</code> for forced inclusion</li>
-<li>Changes take effect immediately; no additional save is needed</li>
+<li>Changes are written to configuration without a separate save. If writing fails, check checkout and file differences as described below.</li>
 </ol>
 <p>See the <a href="/en/works/simple-config-exclude/">SimpleConfigExclude work page</a> for use cases.</p>
 <h2 id="scan-configuration-and-refresh-the-list">Scan Configuration and Refresh the List</h2>
@@ -110,6 +110,7 @@
 </ol>
 <div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#e1e4e8;--1:#24292e">DefaultDebug.ini → Disallowed</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="Copy to clipboard" data-copied="Copied!" data-code="DefaultDebug.ini → Disallowed"><div></div></button></div></figure></div>
 <h2 id="verify-the-package-and-handle-sensitive-configuration">Verify the Package and Handle Sensitive Configuration</h2>
+<p>To verify the exclusion rule, inspect the current package before copying anything into it. For the two example files, check that the excluded file is absent and the included file is present.</p>
 <p>Package the project normally and check its <code>Config</code> output folder to confirm excluded files are absent.</p>
 <ol>
 <li>Check that <code>DefaultGame.ini</code> contains a <code>[Staging]</code> section</li>

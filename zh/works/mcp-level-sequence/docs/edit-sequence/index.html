@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/">安装与连接序列编辑工具</a></li></ul></li><li><span>序列资产</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/">查找、创建与保存 Level Sequence</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/">截取序列预览</a></li></ul></li><li><span>编辑序列</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/">编辑对象绑定与 Camera Cut</a></li><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/" aria-current="page">编辑序列轨道与区段</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/">读取和编辑关键帧</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">设置播放范围与帧率</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/">安装与连接序列编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/">查找、创建与保存 Level Sequence</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/">截取序列预览</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/">编辑对象绑定与 Camera Cut</a></li><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/" aria-current="page">编辑序列轨道与区段</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/">读取和编辑关键帧</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">设置播放范围与帧率</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%94%AF%E6%8C%81%E7%9A%84%E8%BD%A8%E9%81%93%E5%92%8C%E5%8C%BA%E6%AE%B5%E7%B1%BB%E5%9E%8B" class="outline-link outline-root-link">支持的轨道和区段类型</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BA%8B%E5%8A%A1%E5%88%A0%E9%99%A4%E4%B8%8E%E5%B1%80%E9%99%90" class="outline-link outline-root-link">事务、删除与局限</a></li></ol></nav></details></aside>
@@ -60,12 +60,13 @@
 <li>根级或 Binding 轨道：<code>MovieSceneAudioTrack</code>、<code>MovieSceneEventTrack</code>。</li>
 <li>仅根级轨道：<code>MovieSceneCameraCutTrack</code>、<code>MovieSceneFadeTrack</code>。</li>
 </ul>
+<p>先用 <code>ListTrackTypes</code> 选轨道类型，确认轨道应放在根级还是指定对象绑定下，再添加轨道和区段。修改已有区段时，先在详情中定位它所在的轨道。</p>
 <p>Float 与 Bool 属性轨要求 <code>PropertyName</code>，可用 <code>PropertyPath</code> 指定嵌套属性。Skeletal Animation Section 要求 <code>AnimationAssetPath</code>，并验证为 <code>AnimSequenceBase</code>；Audio Section 要求 <code>SoundAssetPath</code>，并验证为 <code>SoundBase</code>。Event Track 目前只创建 Section 容器，不创建 Director Blueprint endpoint 或事件 payload。</p>
 <h2 id="事务删除与局限">事务、删除与局限</h2>
 <p>修改与保存工具只接受有效的 <code>/Game/...</code> Level Sequence 路径；只读发现、读取、打开、截图和关闭可访问其他已加载或可读取的序列位置。所有编辑工具会检查 PIE、保存和 GC 忙碌状态，拒绝只读 MovieScene，并通过编辑器事务支持 Undo。</p>
 <p>删除 Track 会级联移除其下级对象。重名选择器会返回歧义；使用 <code>GetSequenceDetail</code> 返回的 <code>TrackName</code>。</p>
-<p>Subsequence 创建/导航：需要循环依赖检查、层级所有权和跨序列时间语义设计，当前不提供写入工具。</p>
-<p>任意 Track/Class、Folder、Tag、选择状态和骨骼级高级操作：官方实验 Toolset 覆盖更广，本插件只公开已审查并能维持严格 Schema 的能力。</p>
+<p>当前没有用于创建或导航 Subsequence 的写入工具。</p>
+<p>本插件不提供任意 Track/Class、Folder、Tag、选择状态或骨骼级高级操作；官方实验 Toolset 的范围更广。</p>
 <p>区段起止帧按序列的 <code>TickResolution</code> 解释，见<a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">时间单位与帧率</a>。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/" rel="prev"><span>上一篇</span>编辑对象绑定与 Camera Cut</a><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/" rel="next"><span>下一篇</span>读取和编辑关键帧</a></div>

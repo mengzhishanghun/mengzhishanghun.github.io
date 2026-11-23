@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleWebSocket</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-websocket/docs/configure-connections/" aria-current="page">Configure Named WebSocket Connections</a></li></ul></li><li><span>Networking</span><ul><li><a href="/en/works/simple-websocket/docs/connect-and-send/">Manage WebSocket Connections and Messages in Blueprint</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-websocket/docs/native-module/">Use the UE WebSockets Module</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-websocket/docs/configure-connections/" aria-current="page">Configure Named WebSocket Connections</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-websocket/docs/connect-and-send/">Manage WebSocket Connections and Messages in Blueprint</a></li><li><a href="/en/works/simple-websocket/docs/native-module/">Use the UE WebSockets Module</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#compatibility" class="outline-link outline-root-link">Compatibility</a></li><li class="outline-node" data-heading-depth="2"><a href="#interface-language" class="outline-link outline-root-link">Interface language</a></li><li class="outline-node" data-heading-depth="2"><a href="#add-a-named-connection" class="outline-link outline-root-link">Add a named connection</a></li><li class="outline-node" data-heading-depth="2"><a href="#address-and-protocol-limits" class="outline-link outline-root-link">Address and protocol limits</a></li></ol></nav></details></aside>
@@ -40,10 +40,11 @@
 <h2 id="interface-language">Interface language</h2>
 <p>Open <strong>Edit → Project Settings</strong>, select the SimpleWebSocket settings page, and set <strong>Language</strong> to <strong>English</strong> or <strong>Chinese</strong>. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.</p>
 <h2 id="add-a-named-connection">Add a named connection</h2>
+<p>Keep the configuration name and use it again in Blueprint. For a service on the same machine, use the port it actually listens on. If <strong>Auto Connect</strong> is off, initiate the connection from Blueprint.</p>
 <ol>
 <li>Enable the plugin in Unreal Engine Editor.</li>
 <li>Go to <code>Edit &gt; Project Settings</code></li>
-<li>Scroll down and find <code>Simple WebSocket Settings</code></li>
+<li>Scroll to <code>Simple WebSocket Settings</code> and open it</li>
 <li>Add a new WebSocket connection entry (e.g., named <code>Test</code>)</li>
 <li>Enter the WebSocket address (recommended format: <code>ws://127.0.0.1:xxxx</code>)</li>
 <li>Enable <strong>Auto Connect</strong> (optional; if enabled, the connection will be established automatically at runtime)</li>

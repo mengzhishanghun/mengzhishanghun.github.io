@@ -24,7 +24,7 @@
           <p class="work-doc-name">MCPBlueprint</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-blueprint/docs/connect/">安装并连接 MCPBlueprint</a></li></ul></li><li><span>资产与图表</span><ul><li><a href="/zh/works/mcp-blueprint/docs/asset-lifecycle/" aria-current="page">创建、编译与管理蓝图资产</a></li><li><a href="/zh/works/mcp-blueprint/docs/graphs/">编辑蓝图节点、连线与布局</a></li><li><a href="/zh/works/mcp-blueprint/docs/graph-screenshots/">截取蓝图图表</a></li></ul></li><li><span>成员与类型</span><ul><li><a href="/zh/works/mcp-blueprint/docs/variables/">管理成员变量与局部变量</a></li><li><a href="/zh/works/mcp-blueprint/docs/members-and-types/">创建与修改蓝图函数</a></li><li><a href="/zh/works/mcp-blueprint/docs/events-dispatchers/">添加事件与管理事件分发器</a></li><li><a href="/zh/works/mcp-blueprint/docs/interfaces/">为蓝图添加接口</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-structs/">创建与修改用户定义 Struct</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-enums/">创建与修改用户定义 Enum</a></li></ul></li><li><span>类结构</span><ul><li><a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/">管理蓝图组件与附着层级</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-defaults/">读取与修改蓝图类默认值</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-inheritance/">更改蓝图父类</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-blueprint/docs/connect/">安装并连接 MCPBlueprint</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-blueprint/docs/asset-lifecycle/" aria-current="page">创建、编译与管理蓝图资产</a></li><li><a href="/zh/works/mcp-blueprint/docs/graphs/">编辑蓝图节点、连线与布局</a></li><li><a href="/zh/works/mcp-blueprint/docs/graph-screenshots/">截取蓝图图表</a></li><li><a href="/zh/works/mcp-blueprint/docs/variables/">管理成员变量与局部变量</a></li><li><a href="/zh/works/mcp-blueprint/docs/members-and-types/">创建与修改蓝图函数</a></li><li><a href="/zh/works/mcp-blueprint/docs/events-dispatchers/">添加事件与管理事件分发器</a></li><li><a href="/zh/works/mcp-blueprint/docs/interfaces/">为蓝图添加接口</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-structs/">创建与修改用户定义 Struct</a></li><li><a href="/zh/works/mcp-blueprint/docs/user-defined-enums/">创建与修改用户定义 Enum</a></li><li><a href="/zh/works/mcp-blueprint/docs/components-and-inheritance/">管理蓝图组件与附着层级</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-defaults/">读取与修改蓝图类默认值</a></li><li><a href="/zh/works/mcp-blueprint/docs/class-inheritance/">更改蓝图父类</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%B5%84%E4%BA%A7%E7%9A%84%E5%88%9B%E5%BB%BA%E5%A4%8D%E5%88%B6%E4%B8%8E%E4%BF%9D%E5%AD%98" class="outline-link outline-root-link">资产的创建、复制与保存</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%BC%96%E8%AF%91%E4%B8%8E%E8%AF%8A%E6%96%AD" class="outline-link outline-root-link">编译与诊断</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%87%8D%E8%BD%BD%E7%A3%81%E7%9B%98%E7%89%88%E6%9C%AC%E4%B8%8E%E5%88%A0%E9%99%A4%E8%B5%84%E4%BA%A7" class="outline-link outline-root-link">重载磁盘版本与删除资产</a></li></ol></nav></details></aside>
@@ -84,7 +84,7 @@
 
 
 <table><thead><tr><th>工具</th><th>用途</th><th>注意事项</th></tr></thead><tbody><tr><td><code>ListBlueprints</code></td><td>分页查找项目中的 Blueprint 资产。</td><td>大型项目请用 <code>PathFilter</code> 和分页缩小范围。</td></tr><tr><td><code>GetBlueprintOverview</code></td><td>查看蓝图的父类、图、变量、组件和接口概览。</td><td>需要提供准确的 <code>BlueprintPath</code>。</td></tr><tr><td><code>CreateBlueprint</code></td><td>创建受支持类型的 Blueprint 资产。</td><td>指定资产路径和父类等定义；创建后不会自动保存。</td></tr><tr><td><code>DuplicateAsset</code></td><td>复制资产。</td><td>指定源路径和目标路径。</td></tr><tr><td><code>RenameAsset</code></td><td>重命名或移动资产。</td><td>指定源路径和目标路径。</td></tr><tr><td><code>SaveAsset</code></td><td>将资产的当前改动明确保存到磁盘。</td><td>普通编辑不会自动保存。</td></tr><tr><td><code>OpenAsset</code></td><td>打开资产编辑器。</td><td>截图前必须先打开资产。</td></tr><tr><td><code>CloseAsset</code></td><td>关闭资产编辑器。</td><td>关闭前请先保存需要保留的改动。</td></tr></tbody></table>
-<p>大型资产列表支持有界分页。请使用读取结果中的资产路径；普通编辑只标记资产有改动，<code>SaveAsset</code> 才把这些改动写入磁盘。</p>
+<p>项目资产多时，先按目录缩小查找范围，必要时继续翻页。将列表返回的资产路径用于后续操作。普通编辑不会写入磁盘；需要保留改动时调用 <code>SaveAsset</code>。</p>
 <h2 id="编译与诊断">编译与诊断</h2>
 
 
@@ -107,7 +107,7 @@
 
 
 <table><thead><tr><th>工具</th><th>用途</th><th>注意事项</th></tr></thead><tbody><tr><td><code>GetCompileErrors</code></td><td>获取蓝图当前的编译诊断。</td><td>用于处理编辑器报告的错误或警告。</td></tr><tr><td><code>CompileBlueprint</code></td><td>编译指定蓝图并返回诊断。</td><td>用于处理编辑器报告的错误或警告。</td></tr></tbody></table>
-<p>获取编译诊断，根据真实蓝图错误修复后再保存。</p>
+<p>要查看已有的编译消息，用 <code>GetCompileErrors</code>。要编译当前改动，用 <code>CompileBlueprint</code>。处理报告的问题后，再保存要保留的版本。</p>
 <h2 id="重载磁盘版本与删除资产">重载磁盘版本与删除资产</h2>
 
 
@@ -131,7 +131,7 @@
 
 <table><thead><tr><th>工具</th><th>用途</th><th>注意事项</th></tr></thead><tbody><tr><td><code>ReloadBlueprintFromDisk</code></td><td>用磁盘版本替换当前内存中的 Blueprint。</td><td>默认 dry-run；丢弃未保存改动必须显式批准。</td></tr><tr><td><code>DeleteAsset</code></td><td>删除资产。</td><td>删除具有更严格的引用和恢复安全检查。</td></tr></tbody></table>
 <ul>
-<li>磁盘重载默认 dry-run，丢弃内存状态前必须显式批准。</li>
+<li>想放弃未保存的改动时，先预检磁盘重载；确认可以丢弃内存状态后，再明确批准。</li>
 <li>破坏性删除比普通图修改具有更严格的 Undo/Redo 和 Package 安全要求。</li>
 </ul></div>
           </article>

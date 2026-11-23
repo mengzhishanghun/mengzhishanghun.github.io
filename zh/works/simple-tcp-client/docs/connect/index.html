@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleTCPClient</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-tcp-client/docs/enable-plugin/">启用 SimpleTCPClient</a></li></ul></li><li><span>网络通信</span><ul><li><a href="/zh/works/simple-tcp-client/docs/connect/" aria-current="page">配置与管理 TCP 客户端连接</a></li><li><a href="/zh/works/simple-tcp-client/docs/messages/">收发 TCP 客户端消息</a></li></ul></li><li><span>原生实现</span><ul><li><a href="/zh/works/simple-tcp-client/docs/native-client/">在 C++ 中实现 TCP 客户端</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-tcp-client/docs/enable-plugin/">启用 SimpleTCPClient</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-tcp-client/docs/connect/" aria-current="page">配置与管理 TCP 客户端连接</a></li><li><a href="/zh/works/simple-tcp-client/docs/messages/">收发 TCP 客户端消息</a></li><li><a href="/zh/works/simple-tcp-client/docs/native-client/">在 C++ 中实现 TCP 客户端</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%9C%A8%E9%A1%B9%E7%9B%AE%E8%AE%BE%E7%BD%AE%E4%B8%AD%E9%A2%84%E5%AE%9A%E4%B9%89%E9%80%9A%E9%81%93" class="outline-link outline-root-link">在项目设置中预定义通道</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E9%80%9A%E9%81%93%E5%8F%82%E6%95%B0" class="outline-link">通道参数</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%9C%A8%E8%93%9D%E5%9B%BE%E4%B8%AD%E7%AE%A1%E7%90%86%E9%80%9A%E9%81%93" class="outline-link outline-root-link">在蓝图中管理通道</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%BF%9E%E6%8E%A5%E9%99%90%E5%88%B6%E4%B8%8E-socket-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" class="outline-link outline-root-link">连接限制与 Socket 生命周期</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%BF%9E%E6%8E%A5%E8%8A%82%E7%82%B9%E7%A4%BA%E4%BE%8B" class="outline-link outline-root-link">连接节点示例</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%89%8B%E5%8A%A8%E5%90%AF%E5%8A%A8%E5%92%8C%E5%81%9C%E6%AD%A2%E8%BF%9E%E6%8E%A5" class="outline-link outline-root-link">手动启动和停止连接</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%9B%B4%E6%96%B0%E9%85%8D%E7%BD%AE%E4%B8%8E%E8%87%AA%E5%8A%A8%E9%87%8D%E8%BF%9E" class="outline-link outline-root-link">更新配置与自动重连</a></li></ol></nav></details></aside>
@@ -33,8 +33,7 @@
           <article>
             <h1>配置与管理 TCP 客户端连接</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="在项目设置中预定义通道">在项目设置中预定义通道</h2>
-<p>可通过 <strong>项目设置 → SimpleTCPClient Settings</strong> 预定义客户端通道。<br>
-建议在此处配置通道，便于集中管理。</p>
+<p>在 <strong>项目设置 → SimpleTCPClient Settings</strong> 添加客户端通道。为每个目标填写独立的通道名称，再在蓝图里用该名称引用对应连接。</p>
 <h3 id="通道参数">通道参数</h3>
 
 
@@ -122,6 +121,7 @@
 
 <table><thead><tr><th>类型</th><th>创建时机</th><th>销毁时机</th></tr></thead><tbody><tr><td>Client Socket</td><td>调用 <code>StartConnection</code> 或自动连接时</td><td>调用 <code>StopConnection</code> 或关闭时</td></tr></tbody></table>
 <h2 id="连接节点示例">连接节点示例</h2>
+<p>手动连接前，让目标服务开始监听，并把字段表中的通道名称传给 <code>StartConnection</code>。用 <code>IsConnected</code> 核对同一通道的状态；只有确认连接已建立，再测试收发。</p>
 <p><a href="/media/manuals/2f974d095126f5f60e63.jpg" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/2f974d095126f5f60e63.jpg" data-media-alt="ShowAllFunction" class="media-image-trigger" aria-label="放大查看图片：ShowAllFunction"><img src="/media/manuals/2f974d095126f5f60e63.jpg" alt="ShowAllFunction" loading="lazy" decoding="async"></a></p>
 <h2 id="手动启动和停止连接">手动启动和停止连接</h2>
 <p><a href="/media/manuals/1e59fed236ce1e5311be.jpg" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/1e59fed236ce1e5311be.jpg" data-media-alt="Connection" class="media-image-trigger" aria-label="放大查看图片：Connection"><img src="/media/manuals/1e59fed236ce1e5311be.jpg" alt="Connection" loading="lazy" decoding="async"></a><br>

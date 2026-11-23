@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>系统资产与预览</span><ul><li><a href="/zh/works/mcp-niagara/docs/inspect/">查找并检查 Niagara 资产</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-system-assets/">创建、打开与保存 Niagara System</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-preview/">导出 Niagara 缓存缩略图</a></li></ul></li><li><span>效果编辑</span><ul><li><a href="/zh/works/mcp-niagara/docs/edit-emitter/">添加和修改 Niagara 发射器</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-renderers/">更换与配置 Niagara 渲染器</a></li><li><a href="/zh/works/mcp-niagara/docs/parameters-preview/" aria-current="page">编辑 Niagara 用户参数</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-niagara/docs/quickstart/">准备并首次查询 Niagara</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-niagara/docs/inspect/">查找并检查 Niagara 资产</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-system-assets/">创建、打开与保存 Niagara System</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-preview/">导出 Niagara 缓存缩略图</a></li><li><a href="/zh/works/mcp-niagara/docs/edit-emitter/">添加和修改 Niagara 发射器</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-renderers/">更换与配置 Niagara 渲染器</a></li><li><a href="/zh/works/mcp-niagara/docs/parameters-preview/" aria-current="page">编辑 Niagara 用户参数</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#user-parameter-%E7%BC%96%E8%BE%91" class="outline-link outline-root-link">User Parameter 编辑</a></li></ol></nav></details></aside>
@@ -34,7 +34,7 @@
             <h1>编辑 Niagara 用户参数</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="user-parameter-编辑">User Parameter 编辑</h2>
 <p><code>AddUserParameter</code> 以撤销事务添加 float、int、bool、Vector、Vector2、Vector4 或 Color 值参数，并发送 System PostEditChange。<code>SetSystemParameters</code> 每次原子写入 1–64 个现有值参数：所有名称和值预校验并保存旧值后才提交；JSON 布尔值会按 Niagara 的 <code>FNiagaraBool</code> 表示写入。<code>RemoveUserParameter</code> 按唯一名称执行与 UE 5.8 External 相同的公开 exposed-parameter 删除语义。</p>
-<p>对象与 Data Interface 参数需要类型化资产或实例处理，不能安全地走文本值导入，因此 <code>AddUserParameter</code>/<code>SetSystemParameters</code> 不声称支持它们。删除参数不会猜测如何重写图引用，调用者应另行更新引用。UE 5.2–5.8 没有共同导出的 User Parameter 重命名及引用传播 API，本插件不依赖 Private 头绕过该边界，因而不提供 RenameUserParameter。</p></div>
+<p>先读取 System 的用户参数，按名称和类型确认目标。新建时用添加工具；已有值参数要改值时，使用设置工具。对象和 Data Interface 需要按类型处理资产或实例，不能安全地用文本导入，因此 <code>AddUserParameter</code>/<code>SetSystemParameters</code> 不声称支持它们。删除参数不会猜测如何重写图引用，调用者应另行更新引用。UE 5.2–5.8 没有共同导出的 User Parameter 重命名及引用传播 API，插件不依赖 Private 头来绕过这个限制，因此没有 RenameUserParameter 工具。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-niagara/docs/niagara-renderers/" rel="prev"><span>上一篇</span>更换与配置 Niagara 渲染器</a></div>
         </div>

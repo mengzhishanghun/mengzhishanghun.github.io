@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleAutoEnum</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>枚举绑定</span><ul><li><a href="/zh/works/simple-auto-enum/docs/config-binding/">从配置绑定枚举</a></li></ul></li><li><span>枚举使用</span><ul><li><a href="/zh/works/simple-auto-enum/docs/blueprints-and-assets/" aria-current="page">在蓝图和数据资产中使用枚举</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-auto-enum/docs/quickstart/">安装与首次绑定</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-auto-enum/docs/config-binding/">从配置绑定枚举</a></li><li><a href="/zh/works/simple-auto-enum/docs/blueprints-and-assets/" aria-current="page">在蓝图和数据资产中使用枚举</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%93%9D%E5%9B%BE%E5%87%BD%E6%95%B0%E4%B8%AD%E7%9A%84%E9%99%90%E5%88%B6" class="outline-link outline-root-link">蓝图函数中的限制</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%95%B0%E6%8D%AE%E8%B5%84%E4%BA%A7%E4%B8%AD%E7%9A%84%E9%BB%98%E8%AE%A4%E5%80%BC" class="outline-link outline-root-link">数据资产中的默认值</a></li></ol></nav></details></aside>
@@ -38,10 +38,11 @@
 <li><strong>解决方案</strong>：右键蓝图函数并选择 <strong>Refresh</strong> 以同步当前枚举值</li>
 </ul>
 <h2 id="数据资产中的默认值">数据资产中的默认值</h2>
+<p>追加后，打开使用该枚举的蓝图与数据资产，确认已有选择仍指向原条目，再试选新增项。如果已经调整过顺序，逐个检查受影响的默认值，确认它们仍对应预期的枚举项。</p>
 <ul>
 <li><strong>行为</strong>：数据资产使用枚举索引，名称更改时自动同步</li>
 <li><strong>警告</strong>：重新排序枚举值会导致数据资产值偏移（例如交换位置 1 和 2，存储值 1 的数据资产将引用位置 2）</li>
-<li><strong>建议</strong>：在生产环境中避免重新排序现有枚举条目；仅追加新值</li>
+<li><strong>建议</strong>：在生产环境中，需要增加枚举值时，在现有条目后追加，避免重排已有条目。</li>
 </ul></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-auto-enum/docs/config-binding/" rel="prev"><span>上一篇</span>从配置绑定枚举</a></div>

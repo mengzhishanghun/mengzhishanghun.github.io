@@ -24,7 +24,7 @@
           <p class="work-doc-name">UEPackageManager</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ue-package-manager/docs/install-and-detect/">下载与识别项目</a></li></ul></li><li><span>项目打包</span><ul><li><a href="/zh/works/ue-package-manager/docs/package-project/">用图形界面和命令行打包</a></li><li><a href="/zh/works/ue-package-manager/docs/project-configuration/">管理项目打包配置</a></li></ul></li><li><span>包输出管理</span><ul><li><a href="/zh/works/ue-package-manager/docs/deploy-additional-files/">部署附加文件</a></li><li><a href="/zh/works/ue-package-manager/docs/clean-old-packages/" aria-current="page">清理旧包</a></li></ul></li><li><span>源码运行与构建</span><ul><li><a href="/zh/works/ue-package-manager/docs/build-executable/">从源码运行和构建</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ue-package-manager/docs/install-and-detect/">下载与识别项目</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/ue-package-manager/docs/package-project/">用图形界面和命令行打包</a></li><li><a href="/zh/works/ue-package-manager/docs/project-configuration/">管理项目打包配置</a></li><li><a href="/zh/works/ue-package-manager/docs/deploy-additional-files/">部署附加文件</a></li><li><a href="/zh/works/ue-package-manager/docs/clean-old-packages/" aria-current="page">清理旧包</a></li><li><a href="/zh/works/ue-package-manager/docs/build-executable/">从源码运行和构建</a></li></ul></li><li><span>更新日志</span><ul><li><a href="/zh/works/ue-package-manager/docs/updates-2026-09-15/">2026-09-15</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E9%80%89%E6%8B%A9%E6%B8%85%E7%90%86%E8%8C%83%E5%9B%B4" class="outline-link outline-root-link">选择清理范围</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>清理旧包</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="选择清理范围">选择清理范围</h2>
-<p>在 GUI 中勾选“清理旧包”。勾选状态会随项目配置保存，但实际清理每次都需确认。命令行使用 <code>--clean-output</code> 请求在本次打包前清理。</p>
+<p>先检查当前输出路径，再在 GUI 中勾选“清理旧包”。工具会保存这个选项，但每次实际清理前都会请你确认。命令行使用 <code>--clean-output</code> 请求在本次打包前清理。</p>
 <p>工具只处理当前输出路径中识别到的旧包，不删除整个输出目录。切换输出路径后，不会清理原来的路径。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/ue-package-manager/docs/deploy-additional-files/" rel="prev"><span>上一篇</span>部署附加文件</a><a href="/zh/works/ue-package-manager/docs/build-executable/" rel="next"><span>下一篇</span>从源码运行和构建</a></div>

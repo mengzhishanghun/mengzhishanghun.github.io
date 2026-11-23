@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleInputSimulator</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-input-simulator/docs/setup/" aria-current="page">Install and Set Up</a></li></ul></li><li><span>Input Simulation</span><ul><li><a href="/en/works/simple-input-simulator/docs/key-input/">Simulate Key Input</a></li><li><a href="/en/works/simple-input-simulator/docs/axis-input/">Simulate Axis Input</a></li><li><a href="/en/works/simple-input-simulator/docs/reset-input-state/">Clear Simulated Input State</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-input-simulator/docs/setup/" aria-current="page">Install and Set Up</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-input-simulator/docs/key-input/">Simulate Key Input</a></li><li><a href="/en/works/simple-input-simulator/docs/axis-input/">Simulate Axis Input</a></li><li><a href="/en/works/simple-input-simulator/docs/reset-input-state/">Clear Simulated Input State</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#install-the-plugin" class="outline-link outline-root-link">Install the Plugin</a></li><li class="outline-node" data-heading-depth="2"><a href="#use-in-blueprints" class="outline-link outline-root-link">Use in Blueprints</a></li><li class="outline-node" data-heading-depth="2"><a href="#available-nodes" class="outline-link outline-root-link">Available Nodes</a></li><li class="outline-node" data-heading-depth="2"><a href="#input-system-compatibility" class="outline-link outline-root-link">Input System Compatibility</a></li><li class="outline-node" data-heading-depth="2"><a href="#interface-language" class="outline-link outline-root-link">Interface Language</a></li></ol></nav></details></aside>
@@ -37,6 +37,7 @@
 <h2 id="use-in-blueprints">Use in Blueprints</h2>
 <p>After enabling the plugin, add nodes from the <strong>Simple Input Simulator</strong> category in Blueprint. Each call returns a <code>bool</code> for success or failure. Select a valid <code>PlayerController</code> with <code>PlayerIndex</code>; <code>0</code> targets the first local player. The nodes are marked <code>CallInEditor = true</code>, and editor calls still require a valid controller. For troubleshooting, filter the Output Log by <code>LogSimpleInputSimulator</code>.</p>
 <h2 id="available-nodes">Available Nodes</h2>
+<p>The top row shows the key and axis inputs and their return values. The node at the bottom left clears pressed keys.</p>
 <p><a href="/media/manuals/89dd66d8f8dd02fd3699.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/89dd66d8f8dd02fd3699.png" data-media-alt="所有可用函数" class="media-image-trigger" aria-label="View a larger image: All Available Functions"><img src="/media/manuals/89dd66d8f8dd02fd3699.png" alt="All Available Functions" loading="lazy" decoding="async"></a></p>
 
 
@@ -79,7 +80,7 @@
 
 
 <table><thead><tr><th>Input System</th><th>Compatibility</th></tr></thead><tbody><tr><td>Legacy Input</td><td>✅ Full support</td></tr><tr><td>Enhanced Input</td><td>✅ Full support - triggers Input Actions automatically</td></tr></tbody></table>
-<p>The plugin works at the raw input level, so both input systems receive simulated events automatically.</p>
+<p>Both input systems receive simulated events at the raw input layer. If the call succeeds but the game action does not fire, check the target player’s input bindings.</p>
 <p>Simulated events are injected through <code>PlayerController::InputKey</code>.</p>
 <h2 id="interface-language">Interface Language</h2>
 <p>Open <strong>Edit → Project Settings</strong>, select the SimpleInputSimulator settings page, and set <strong>Language</strong> to <strong>English</strong> or <strong>Chinese</strong>. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.</p></div>

@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleInputSimulator</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-input-simulator/docs/setup/" aria-current="page">安装与接入</a></li></ul></li><li><span>模拟输入</span><ul><li><a href="/zh/works/simple-input-simulator/docs/key-input/">模拟按键</a></li><li><a href="/zh/works/simple-input-simulator/docs/axis-input/">模拟轴输入</a></li><li><a href="/zh/works/simple-input-simulator/docs/reset-input-state/">清理模拟输入状态</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-input-simulator/docs/setup/" aria-current="page">安装与接入</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-input-simulator/docs/key-input/">模拟按键</a></li><li><a href="/zh/works/simple-input-simulator/docs/axis-input/">模拟轴输入</a></li><li><a href="/zh/works/simple-input-simulator/docs/reset-input-state/">清理模拟输入状态</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6" class="outline-link outline-root-link">安装插件</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%9C%A8%E8%93%9D%E5%9B%BE%E4%B8%AD%E4%BD%BF%E7%94%A8" class="outline-link outline-root-link">在蓝图中使用</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%AF%E7%94%A8%E8%8A%82%E7%82%B9" class="outline-link outline-root-link">可用节点</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%BE%93%E5%85%A5%E7%B3%BB%E7%BB%9F%E5%85%BC%E5%AE%B9%E6%80%A7" class="outline-link outline-root-link">输入系统兼容性</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%95%8C%E9%9D%A2%E8%AF%AD%E8%A8%80" class="outline-link outline-root-link">界面语言</a></li></ol></nav></details></aside>
@@ -37,6 +37,7 @@
 <h2 id="在蓝图中使用">在蓝图中使用</h2>
 <p>启用后，在蓝图的 <strong>Simple Input Simulator</strong> 分类中添加节点。节点返回 <code>bool</code> 表示调用成功或失败。请为 <code>PlayerIndex</code> 选择有效的 <code>PlayerController</code>；<code>0</code> 对应第一个本地玩家。节点标记为 <code>CallInEditor = true</code>，在编辑器里调用时也需要可用的控制器。需要排查时，在输出日志中筛选 <code>LogSimpleInputSimulator</code>。</p>
 <h2 id="可用节点">可用节点</h2>
+<p>图中列出了三个节点的输入和返回值：从左上到右上分别是按键与轴输入，左下是清理按下状态。</p>
 <p><a href="/media/manuals/89dd66d8f8dd02fd3699.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/89dd66d8f8dd02fd3699.png" data-media-alt="所有可用函数" class="media-image-trigger" aria-label="放大查看图片：所有可用函数"><img src="/media/manuals/89dd66d8f8dd02fd3699.png" alt="所有可用函数" loading="lazy" decoding="async"></a></p>
 
 
@@ -79,7 +80,7 @@
 
 
 <table><thead><tr><th>输入系统</th><th>兼容性</th></tr></thead><tbody><tr><td>Legacy Input</td><td>✅ 完全支持</td></tr><tr><td>Enhanced Input</td><td>✅ 完全支持 - 自动触发 Input Actions</td></tr></tbody></table>
-<p>插件在原始输入层工作，因此两种输入系统都会自动接收模拟事件。</p>
+<p>插件在原始输入层工作，两种输入系统都能接收模拟事件。若节点返回成功但游戏动作没有触发，检查目标玩家的输入绑定。</p>
 <p>模拟事件通过 <code>PlayerController::InputKey</code> 注入。</p>
 <h2 id="界面语言">界面语言</h2>
 <p>打开 <strong>编辑 → 项目设置</strong>，进入 SimpleInputSimulator 设置页，将 <strong>Language</strong> 设置为 <strong>English</strong> 或 <strong>中文</strong>。默认语言为英文。面向用户的界面、提示、通知和功能日志会立即更新，无需重启编辑器；公开 API 名称以及模块启动/关闭日志始终保持英文。</p></div>

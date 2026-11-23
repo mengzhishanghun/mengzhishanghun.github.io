@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleTCPClient</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-tcp-client/docs/enable-plugin/">启用 SimpleTCPClient</a></li></ul></li><li><span>网络通信</span><ul><li><a href="/zh/works/simple-tcp-client/docs/connect/">配置与管理 TCP 客户端连接</a></li><li><a href="/zh/works/simple-tcp-client/docs/messages/" aria-current="page">收发 TCP 客户端消息</a></li></ul></li><li><span>原生实现</span><ul><li><a href="/zh/works/simple-tcp-client/docs/native-client/">在 C++ 中实现 TCP 客户端</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-tcp-client/docs/enable-plugin/">启用 SimpleTCPClient</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-tcp-client/docs/connect/">配置与管理 TCP 客户端连接</a></li><li><a href="/zh/works/simple-tcp-client/docs/messages/" aria-current="page">收发 TCP 客户端消息</a></li><li><a href="/zh/works/simple-tcp-client/docs/native-client/">在 C++ 中实现 TCP 客户端</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%8E%A5%E6%94%B6%E6%B6%88%E6%81%AF" class="outline-link outline-root-link">接收消息</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E7%BB%91%E5%AE%9A%E5%92%8C%E8%A7%A3%E7%BB%91%E7%A4%BA%E4%BE%8B" class="outline-link">绑定和解绑示例</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%91%E9%80%81%E6%B6%88%E6%81%AF" class="outline-link outline-root-link">发送消息</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E5%8F%91%E9%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%96%E7%BB%93%E6%9E%84%E5%8C%96%E6%95%B0%E6%8D%AE" class="outline-link">发送字符串或结构化数据</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84%E4%B8%8E%E4%B8%9A%E5%8A%A1%E6%95%B0%E6%8D%AE%E8%BD%AC%E6%8D%A2" class="outline-link outline-root-link">字节数组与业务数据转换</a></li></ol></nav></details></aside>
@@ -73,9 +73,10 @@
 
 <table><thead><tr><th>节点函数</th><th>说明</th></tr></thead><tbody><tr><td><code>SendMessage</code></td><td>通过指定通道发送字节数组</td></tr></tbody></table>
 <h3 id="发送字符串或结构化数据">发送字符串或结构化数据</h3>
+<p>用连接时的通道名称发送数据。发送端和接收端先约定编码与消息边界；接收回调拿到的是 TCP 字节流的一段，可能只包含部分消息，也可能包含多条消息。</p>
 <p><a href="/media/manuals/6bebb2adaed201837f19.jpg" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/6bebb2adaed201837f19.jpg" data-media-alt="SendMessage" class="media-image-trigger" aria-label="放大查看图片：SendMessage"><img src="/media/manuals/6bebb2adaed201837f19.jpg" alt="SendMessage" loading="lazy" decoding="async"></a></p>
 <h2 id="字节数组与业务数据转换">字节数组与业务数据转换</h2>
-<p>配合 <strong>SimpleByteConversion</strong> 使用，可将常见 Unreal 类型（FString、float、int 等）与 <code>TArray&lt;uint8&gt;</code> 互转，构建结构化协议。</p>
+<p>用 <strong>SimpleByteConversion</strong> 在常见 Unreal 类型（FString、float、int 等）和 <code>TArray&lt;uint8&gt;</code> 之间转换，以便按约定读写结构化数据。</p>
 <p><a href="/zh/works/simple-byte-conversion/docs/primitive-bytes/">SimpleByteConversion 字节转换教程</a></p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-tcp-client/docs/connect/" rel="prev"><span>上一篇</span>配置与管理 TCP 客户端连接</a><a href="/zh/works/simple-tcp-client/docs/native-client/" rel="next"><span>下一篇</span>在 C++ 中实现 TCP 客户端</a></div>

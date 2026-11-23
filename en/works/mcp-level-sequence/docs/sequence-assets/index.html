@@ -24,7 +24,7 @@
           <p class="work-doc-name">Works</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-level-sequence/docs/connect/">Install and Connect MCP Level Sequence</a></li></ul></li><li><span>Sequence Assets</span><ul><li><a href="/en/works/mcp-level-sequence/docs/sequence-assets/" aria-current="page">Find, Create, and Save Level Sequences</a></li><li><a href="/en/works/mcp-level-sequence/docs/sequence-preview/">Capture a Sequence Preview</a></li></ul></li><li><span>Sequence Editing</span><ul><li><a href="/en/works/mcp-level-sequence/docs/sequence-bindings/">Edit Object Bindings and Camera Cuts</a></li><li><a href="/en/works/mcp-level-sequence/docs/edit-sequence/">Edit Sequence Tracks and Sections</a></li><li><a href="/en/works/mcp-level-sequence/docs/sequence-keyframes/">Read and Edit Keyframes</a></li><li><a href="/en/works/mcp-level-sequence/docs/sequence-timing/">Set Playback Range and Frame Rates</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-level-sequence/docs/connect/">Install and Connect MCP Level Sequence</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/mcp-level-sequence/docs/sequence-assets/" aria-current="page">Find, Create, and Save Level Sequences</a></li><li><a href="/en/works/mcp-level-sequence/docs/sequence-preview/">Capture a Sequence Preview</a></li><li><a href="/en/works/mcp-level-sequence/docs/sequence-bindings/">Edit Object Bindings and Camera Cuts</a></li><li><a href="/en/works/mcp-level-sequence/docs/edit-sequence/">Edit Sequence Tracks and Sections</a></li><li><a href="/en/works/mcp-level-sequence/docs/sequence-keyframes/">Read and Edit Keyframes</a></li><li><a href="/en/works/mcp-level-sequence/docs/sequence-timing/">Set Playback Range and Frame Rates</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#discovery-and-pagination" class="outline-link outline-root-link">Discovery and pagination</a></li><li class="outline-node" data-heading-depth="2"><a href="#open-save-and-close-sequences" class="outline-link outline-root-link">Open, save, and close sequences</a></li></ol></nav></details></aside>
@@ -53,7 +53,7 @@
 <li><code>ListSequences</code>: 100 by default, capped at 500 per page.</li>
 <li><code>GetSequenceDetail</code>: pages a stable combined Binding/Track/Section traversal with <code>Offset</code> and <code>MaxItems</code>.</li>
 </ul>
-<p>Paged responses report totals, the current offset, whether more data exists, and a <code>NextOffset</code> when applicable. Clients should continue paging instead of assuming that one response contains the whole asset.</p>
+<p>Find the asset path first, then use it to read the details. Paged responses show the total, the current offset, whether there is more to read, and <code>NextOffset</code> when applicable. If you have not found the object yet, use the next offset to continue.</p>
 <h2 id="open-save-and-close-sequences">Open, save, and close sequences</h2>
 
 
@@ -72,7 +72,7 @@
 
 <table><thead><tr><th>Group</th><th>Tools</th><th>Purpose</th></tr></thead><tbody><tr><td>Lifecycle</td><td><code>OpenAsset</code>, <code>SaveAsset</code>, <code>CloseAsset</code></td><td>Open, save one asset, and verify close results</td></tr></tbody></table>
 <p>Mutation and save tools accept only valid <code>/Game/...</code> Level Sequence paths. Read-only discovery, inspection, opening, capture, and closing may access other readable sequence locations. Editing tools reject PIE/save/GC busy states and read-only MovieScenes, and use editor transactions for Undo.</p>
-<p>A successful edit only marks the package dirty; it never saves implicitly. <code>SaveAsset</code> saves only the specified Level Sequence package. After requesting a close, <code>CloseAsset</code> queries editors for the asset and its subobjects again; if an editor refuses to close, the tool reports failure instead of a false success.</p></div>
+<p>Edits stay in the editor until saved. To keep them, call <code>SaveAsset</code> before closing. It saves only the specified Level Sequence. <code>CloseAsset</code> checks whether the editors for the asset and its subobjects have closed. If an editor refuses to close, the tool reports a failure.</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/mcp-level-sequence/docs/connect/" rel="prev"><span>Previous</span>Install and Connect MCP Level Sequence</a><a href="/en/works/mcp-level-sequence/docs/sequence-preview/" rel="next"><span>Next</span>Capture a Sequence Preview</a></div>
         </div>

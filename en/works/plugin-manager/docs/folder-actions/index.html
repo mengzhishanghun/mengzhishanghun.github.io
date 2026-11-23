@@ -24,7 +24,7 @@
           <p class="work-doc-name">UEPluginManager</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/plugin-manager/docs/setup/">Start and Scan a Project</a></li></ul></li><li><span>Finding and Managing Plugins</span><ul><li><a href="/en/works/plugin-manager/docs/find/">Find Plugins and Dependencies</a></li><li><a href="/en/works/plugin-manager/docs/enable-disable/">Enable and Disable Plugins</a></li><li><a href="/en/works/plugin-manager/docs/folder-actions/" aria-current="page">Manage Plugin Folders</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/plugin-manager/docs/setup/">Start and Scan a Project</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/plugin-manager/docs/find/">Find Plugins and Dependencies</a></li><li><a href="/en/works/plugin-manager/docs/enable-disable/">Enable and Disable Plugins</a></li><li><a href="/en/works/plugin-manager/docs/folder-actions/" aria-current="page">Manage Plugin Folders</a></li></ul></li><li><span>Changelog</span><ul><li><a href="/en/works/plugin-manager/docs/updates-2026-01-10/">2026-01-10</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#move-delete-or-rename-plugin-folders" class="outline-link outline-root-link">Move, Delete, or Rename Plugin Folders</a></li><li class="outline-node" data-heading-depth="2"><a href="#folder-and-list-shortcuts" class="outline-link outline-root-link">Folder and List Shortcuts</a></li></ol></nav></details></aside>
@@ -33,7 +33,13 @@
           <article>
             <h1>Manage Plugin Folders</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="move-delete-or-rename-plugin-folders">Move, Delete, or Rename Plugin Folders</h2>
-<p>Close the UE editor before changing plugin folders. Project and Marketplace plugins can move between those locations. Engine plugins cannot be moved or deleted. Deleting sends the plugin to the recycle bin, and directory correction renames a garbled folder to match the plugin. The tool removes the read-only attribute for environments using Perforce or similar version control. Resolve any same-name conflict before moving the remaining plugin.</p>
+<p>Close the UE editor first, then select the plugin in the Project or Marketplace tab.</p>
+<ul>
+<li>Move: Move the plugin between the project and Marketplace directories. If two plugins share a name, remove one first.</li>
+<li>Delete: Send the plugin to the Recycle Bin.</li>
+<li>Correct the folder name: Rename a garbled folder to match the plugin name.</li>
+</ul>
+<p>Engine plugins cannot be moved or deleted. The tool removes read-only attributes so it can handle files in Perforce and similar version control environments.</p>
 <h2 id="folder-and-list-shortcuts">Folder and List Shortcuts</h2>
 <ul>
 <li><strong>Open directory</strong> - Open project/engine/plugin directories in one click</li>
@@ -41,7 +47,7 @@
 <li><strong>Reload</strong> - Refresh the plugin list after external changes</li>
 </ul></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/plugin-manager/docs/enable-disable/" rel="prev"><span>Previous</span>Enable and Disable Plugins</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/plugin-manager/docs/enable-disable/" rel="prev"><span>Previous</span>Enable and Disable Plugins</a><a href="/en/works/plugin-manager/docs/updates-2026-01-10/" rel="next"><span>Next</span>2026-01-10</a></div>
         </div>
       </mzsh-reading>
     </main>

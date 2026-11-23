@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>系统资产与预览</span><ul><li><a href="/zh/works/mcp-niagara/docs/inspect/">查找并检查 Niagara 资产</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-system-assets/">创建、打开与保存 Niagara System</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-preview/" aria-current="page">导出 Niagara 缓存缩略图</a></li></ul></li><li><span>效果编辑</span><ul><li><a href="/zh/works/mcp-niagara/docs/edit-emitter/">添加和修改 Niagara 发射器</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-renderers/">更换与配置 Niagara 渲染器</a></li><li><a href="/zh/works/mcp-niagara/docs/parameters-preview/">编辑 Niagara 用户参数</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-niagara/docs/quickstart/">准备并首次查询 Niagara</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-niagara/docs/inspect/">查找并检查 Niagara 资产</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-system-assets/">创建、打开与保存 Niagara System</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-preview/" aria-current="page">导出 Niagara 缓存缩略图</a></li><li><a href="/zh/works/mcp-niagara/docs/edit-emitter/">添加和修改 Niagara 发射器</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-renderers/">更换与配置 Niagara 渲染器</a></li><li><a href="/zh/works/mcp-niagara/docs/parameters-preview/">编辑 Niagara 用户参数</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E7%BC%A9%E7%95%A5%E5%9B%BE%E6%9D%A5%E6%BA%90%E4%B8%8E%E8%BE%93%E5%87%BA%E9%99%90%E5%88%B6" class="outline-link outline-root-link">缩略图来源与输出限制</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>导出 Niagara 缓存缩略图</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="缩略图来源与输出限制">缩略图来源与输出限制</h2>
-<p><code>CapturePreview</code> 只读取内存或已保存包中的缓存缩略图，不实时渲染或改写 thumbnail cache；输出固定为一张 PNG，并限制尺寸 1024×1024、原始数据 16 MiB、压缩数据 8 MiB。</p></div>
+<p><code>CapturePreview</code> 只读取内存或已保存包中的缓存缩略图，不会现场渲染，也不会改写缩略图缓存。输出为一张 PNG，尺寸不超过 1024×1024，原始数据不超过 16 MiB，压缩数据不超过 8 MiB。要核对刚改的效果，请打开目标 System 查看；缓存图不能确认编辑结果已反映到画面上。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-niagara/docs/niagara-system-assets/" rel="prev"><span>上一篇</span>创建、打开与保存 Niagara System</a><a href="/zh/works/mcp-niagara/docs/edit-emitter/" rel="next"><span>下一篇</span>添加和修改 Niagara 发射器</a></div>
         </div>

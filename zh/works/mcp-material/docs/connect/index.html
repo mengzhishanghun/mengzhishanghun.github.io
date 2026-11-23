@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-material/docs/connect/" aria-current="page">连接材质编辑工具</a></li></ul></li><li><span>材质资产</span><ul><li><a href="/zh/works/mcp-material/docs/material-assets/">创建、打开与保存材质资产</a></li><li><a href="/zh/works/mcp-material/docs/material-preview/">截取材质预览</a></li></ul></li><li><span>材质编辑</span><ul><li><a href="/zh/works/mcp-material/docs/edit-graph/">编辑材质图与节点</a></li><li><a href="/zh/works/mcp-material/docs/instance-parameters/">读取和修改材质实例参数</a></li><li><a href="/zh/works/mcp-material/docs/material-compilation/">编译材质并检查诊断</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-material/docs/connect/" aria-current="page">连接材质编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-material/docs/material-assets/">创建、打开与保存材质资产</a></li><li><a href="/zh/works/mcp-material/docs/material-preview/">截取材质预览</a></li><li><a href="/zh/works/mcp-material/docs/edit-graph/">编辑材质图与节点</a></li><li><a href="/zh/works/mcp-material/docs/instance-parameters/">读取和修改材质实例参数</a></li><li><a href="/zh/works/mcp-material/docs/material-compilation/">编译材质并检查诊断</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E7%AB%AF%E7%82%B9%E4%B8%8E%E5%85%BC%E5%AE%B9%E7%89%88%E6%9C%AC" class="outline-link outline-root-link">端点与兼容版本</a></li><li class="outline-node" data-heading-depth="2"><a href="#http-%E9%99%90%E5%88%B6%E4%B8%8E%E5%A4%B1%E8%B4%A5%E5%A4%84%E7%90%86" class="outline-link outline-root-link">HTTP 限制与失败处理</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%8D%E9%A6%88" class="outline-link outline-root-link">反馈</a></li></ol></nav></details></aside>
@@ -39,7 +39,7 @@
 <p>服务端会按工具输入 Schema 递归拒绝未知字段、缺失必填字段、错误类型和值域；原始 <code>tools/call</code> 也不能绕过该校验。</p>
 <p>工具结果超限时会保留真实成功/失败终态并省略过大的内容；成功写工具不得仅因结果被省略而盲目重试。</p>
 <p>JSON-RPC 仅把缺少 <code>id</code> 字段的消息视为通知；显式 <code>id:null</code> 仍会收到带空 id 的响应。</p>
-<p>超时不能强制终止已被 GameThread 认领的编辑器操作；收到超时错误后应先核对编辑器状态，再决定是否重试。</p>
+<p>GameThread 接手操作后，即使客户端收到超时错误，编辑器也可能继续执行。先读回目标资产，核对这次请求有没有生效，再决定是否重试。</p>
 <h2 id="反馈">反馈</h2>
 <p>反馈请发送至 <a href="mailto:mzsh.me@icloud.com">mzsh.me@icloud.com</a>。</p></div>
           </article>

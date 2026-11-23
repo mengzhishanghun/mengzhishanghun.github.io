@@ -24,7 +24,7 @@
           <p class="work-doc-name">UEQuickStart</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/ue-quick-start/docs/open-project/">Detect, Build, and Open a UE Project</a></li></ul></li><li><span>Build and Launch</span><ul><li><a href="/en/works/ue-quick-start/docs/build-configuration/">Customize Build and Launch Behavior</a></li><li><a href="/en/works/ue-quick-start/docs/normalize-line-endings/" aria-current="page">Normalize Source Line Endings Before Building</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/ue-quick-start/docs/open-project/">Detect, Build, and Open a UE Project</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/ue-quick-start/docs/build-configuration/">Customize Build and Launch Behavior</a></li><li><a href="/en/works/ue-quick-start/docs/normalize-line-endings/" aria-current="page">Normalize Source Line Endings Before Building</a></li></ul></li><li><span>Changelog</span><ul><li><a href="/en/works/ue-quick-start/docs/updates-2026-06-13/">2026-06-13</a></li><li><a href="/en/works/ue-quick-start/docs/updates-2026-03-18/">2026-03-18</a></li><li><a href="/en/works/ue-quick-start/docs/updates-2026-01-31/">2026-01-31</a></li><li><a href="/en/works/ue-quick-start/docs/updates-2026-01-30/">2026-01-30</a></li><li><a href="/en/works/ue-quick-start/docs/updates-2026-01-22/">2026-01-22</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#when-and-which-files-the-tool-converts" class="outline-link outline-root-link">When and which files the tool converts</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>Normalize Source Line Endings Before Building</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="when-and-which-files-the-tool-converts">When and which files the tool converts</h2>
-<p>LF (<code>\n</code>) or CR (<code>\r</code>) line endings in a shared project can cause MSVC build problems on Windows. Before building, the tool scans matching source files and rewrites their line endings as CRLF (<code>\r\n</code>). No manual conversion is needed.</p>
+<p>LF (<code>\n</code>) or CR (<code>\r</code>) line endings in a shared project can cause MSVC build problems on Windows. Before building, the tool scans the directories below and changes the line endings of matching files to CRLF (<code>\r\n</code>) in place.</p>
 <p>The scan covers:</p>
 <ul>
 <li>The project’s <code>Source/</code> and <code>ThirdParty/</code> directories.</li>
@@ -41,7 +41,7 @@
 </ul>
 <p>It handles <code>.h</code>, <code>.c</code>, <code>.cpp</code>, <code>.cs</code>, and <code>.inl</code> files.</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/ue-quick-start/docs/build-configuration/" rel="prev"><span>Previous</span>Customize Build and Launch Behavior</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/ue-quick-start/docs/build-configuration/" rel="prev"><span>Previous</span>Customize Build and Launch Behavior</a><a href="/en/works/ue-quick-start/docs/updates-2026-06-13/" rel="next"><span>Next</span>2026-06-13</a></div>
         </div>
       </mzsh-reading>
     </main>

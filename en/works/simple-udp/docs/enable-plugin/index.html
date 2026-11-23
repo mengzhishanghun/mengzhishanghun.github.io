@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleUDP</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-udp/docs/enable-plugin/" aria-current="page">Enable SimpleUDP</a></li></ul></li><li><span>Networking</span><ul><li><a href="/en/works/simple-udp/docs/channels/">Configure UDP Receive and Send Channels</a></li><li><a href="/en/works/simple-udp/docs/messages/">Send and Receive UDP Datagrams</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-udp/docs/native-sockets/">Use UDP Sockets in C++</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-udp/docs/enable-plugin/" aria-current="page">Enable SimpleUDP</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-udp/docs/channels/">Configure UDP Receive and Send Channels</a></li><li><a href="/en/works/simple-udp/docs/messages/">Send and Receive UDP Datagrams</a></li><li><a href="/en/works/simple-udp/docs/native-sockets/">Use UDP Sockets in C++</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#compatibility" class="outline-link outline-root-link">Compatibility</a></li><li class="outline-node" data-heading-depth="2"><a href="#interface-language" class="outline-link outline-root-link">Interface language</a></li><li class="outline-node" data-heading-depth="2"><a href="#enable-the-plugin" class="outline-link outline-root-link">Enable the plugin</a></li></ol></nav></details></aside>
@@ -40,7 +40,8 @@
 <h2 id="interface-language">Interface language</h2>
 <p>Open <strong>Edit → Project Settings</strong>, select the SimpleUDP settings page, and set <strong>Language</strong> to <strong>English</strong> or <strong>Chinese</strong>. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.</p>
 <h2 id="enable-the-plugin">Enable the plugin</h2>
-<p>After you enable the plugin, its <code>GameInstanceSubsystem</code> runs automatically. You do not need to write startup or shutdown code.</p>
+<p>Configure the channels after enabling the plugin. A receive channel needs a local listening endpoint; a send channel needs a destination. In Blueprint, use the corresponding channel name when binding a receiver or sending data.</p>
+<p>Once enabled, the plugin runs through its <code>GameInstanceSubsystem</code>. You don’t need to write startup or shutdown code.</p>
 <p><a href="/en/works/simple-udp/docs/channels/">Configure send and receive channels in Project Settings</a></p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-udp/docs/channels/" rel="next"><span>Next</span>Configure UDP Receive and Send Channels</a></div>

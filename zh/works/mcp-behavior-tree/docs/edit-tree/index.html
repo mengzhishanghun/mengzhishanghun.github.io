@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/connect-and-inspect/">连接行为树编辑工具</a></li></ul></li><li><span>行为树与黑板</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/edit-tree/" aria-current="page">检查、编辑与验证行为树</a></li><li><a href="/zh/works/mcp-behavior-tree/docs/blackboard-keys/">创建黑板并管理黑板键</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/connect-and-inspect/">连接行为树编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/edit-tree/" aria-current="page">检查、编辑与验证行为树</a></li><li><a href="/zh/works/mcp-behavior-tree/docs/blackboard-keys/">创建黑板并管理黑板键</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%88%9B%E5%BB%BA%E5%B9%B6%E6%A3%80%E6%9F%A5%E8%A1%8C%E4%B8%BA%E6%A0%91" class="outline-link outline-root-link">创建并检查行为树</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%BC%96%E8%BE%91%E6%A0%91%E7%BB%93%E6%9E%84%E4%B8%8E%E8%8A%82%E7%82%B9" class="outline-link outline-root-link">编辑树结构与节点</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%AA%8C%E8%AF%81%E4%BF%9D%E5%AD%98%E4%B8%8E%E4%BF%AE%E5%A4%8D" class="outline-link outline-root-link">验证、保存与修复</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>检查、编辑与验证行为树</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="创建并检查行为树">创建并检查行为树</h2>
-<p>用 <code>CreateBehaviorTree</code> 创建树并指定黑板路径。<code>ListBehaviorTrees</code> 分页查找现有树。</p>
+<p>新建树时，用 <code>CreateBehaviorTree</code> 指定黑板路径。要编辑已有的树，先用 <code>ListBehaviorTrees</code> 查到资产，再打开详情定位节点。</p>
 <p><code>GetBehaviorTreeDetail</code> 会返回编辑工具可复用的稳定 <code>NodeId</code>、关联黑板及键、嵌套树结构、装饰器、服务、反射导出的可编辑属性和游离节点。大结果受深度、节点数、属性数和文本上限保护，未完整返回时会设置 <code>bTruncated</code>。<code>ListBehaviorTrees</code> 支持确定性排序、过滤以及 <code>Offset</code>/<code>MaxResults</code> 分页。</p>
 <h2 id="编辑树结构与节点">编辑树结构与节点</h2>
 
@@ -54,11 +54,11 @@
 
 
 <table><thead><tr><th>领域</th><th>工具</th></tr></thead><tbody><tr><td>树结构</td><td><code>AddCompositeNode</code>、<code>AddTaskNode</code>、<code>ConnectNodes</code>、<code>RemoveNode</code></td></tr><tr><td>节点</td><td><code>SetNodeProperties</code>、<code>AddDecorator</code>、<code>AddService</code></td></tr></tbody></table>
-<p>编辑工具使用 Unreal 事务，并将受影响的包标记为脏。节点属性采用 Unreal import-text 字符串：布尔值使用 <code>true</code>/<code>false</code>，枚举使用名称，向量使用 <code>(X=0.0,Y=0.0,Z=0.0)</code>。属性映射只接受字符串值；导入失败时会保留该属性原值。黑板选择器属性接收黑板键名，并按选择器的原生类型过滤器验证。</p>
+<p>移动或修改已有节点前，先从详情里取得对应节点的 <code>NodeId</code>。编辑使用 Unreal 事务，改动先留在内存中。节点属性采用 Unreal import-text 字符串：布尔值使用 <code>true</code>/<code>false</code>，枚举使用名称，向量使用 <code>(X=0.0,Y=0.0,Z=0.0)</code>。属性映射只接受字符串值；导入失败时会保留该属性原值。黑板选择器属性接收黑板键名，并按选择器的原生类型过滤器验证。</p>
 <p>本插件不编写 Blueprint 任务、装饰器和服务的内部逻辑。请先通过具备 Blueprint 能力的工具创建并编译这些类，再传入生成的 <code>_C</code> 类路径。</p>
 <h2 id="验证保存与修复">验证、保存与修复</h2>
-<p>保存前运行 <code>ValidateBehaviorTree</code>。</p>
-<p><code>SimpleParallel</code> 具有 <code>Default</code> 与 <code>Background</code> 输出引脚。添加或移动后台子树时使用 <code>ParentOutputPin="Background"</code>。保存前应运行验证；验证会报告结构错误、缺失类、无效键绑定、无效装饰器中止模式和未连接节点。</p>
+<p>运行 <code>ValidateBehaviorTree</code> 并修正报告的问题，再保存。</p>
+<p><code>SimpleParallel</code> 具有 <code>Default</code> 与 <code>Background</code> 输出引脚。添加或移动后台子树时使用 <code>ParentOutputPin="Background"</code>。验证会报告结构错误、缺失类、无效键绑定、无效装饰器中止模式和未连接节点。</p>
 <p>资产参数使用 <code>/Game/AI/BT_Enemy</code>、<code>/Game/AI/BB_Enemy</code> 这类 Unreal 内容路径。新建或编辑后的资产保持脏状态，直到 <code>SaveAsset</code> 成功。</p>
 <p><code>SaveAsset</code>、<code>OpenAsset</code> 和 <code>CloseAsset</code> 只接受行为树或黑板资产。编辑器图无法同步或 Unreal 无法写入包时，保存会直接失败；因此 MCP 返回成功即表示包保存成功。</p>
 <p>若行为树已有运行时节点却缺失编辑器图，插件会拒绝把它重建为空图。请先在 Behavior Tree 编辑器中修复资产，再使用 MCP 编辑或保存工具。</p></div>

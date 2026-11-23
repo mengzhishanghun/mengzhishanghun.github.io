@@ -24,7 +24,7 @@
           <p class="work-doc-name">P4CaseSync</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/p4-case-sync/docs/setup/">准备运行环境</a></li></ul></li><li><span>路径大小写</span><ul><li><a href="/zh/works/p4-case-sync/docs/check-and-fix/" aria-current="page">检查并修正文件名大小写</a></li></ul></li><li><span>打包与环境复用</span><ul><li><a href="/zh/works/p4-case-sync/docs/build-and-environment/">打包独立 EXE</a></li><li><a href="/zh/works/p4-case-sync/docs/reuse-environment/">复用依赖环境</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/p4-case-sync/docs/setup/">准备运行环境</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/p4-case-sync/docs/check-and-fix/" aria-current="page">检查并修正文件名大小写</a></li><li><a href="/zh/works/p4-case-sync/docs/build-and-environment/">打包独立 EXE</a></li><li><a href="/zh/works/p4-case-sync/docs/reuse-environment/">复用依赖环境</a></li></ul></li><li><span>更新日志</span><ul><li><a href="/zh/works/p4-case-sync/docs/updates-2025-10-16/">2025-10-16</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%B7%AF%E5%BE%84%E6%A3%80%E6%9F%A5%E4%B8%8E%E9%A2%9C%E8%89%B2%E6%A0%87%E8%AE%B0" class="outline-link outline-root-link">路径检查与颜色标记</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%88%97%E8%A1%A8%E6%98%BE%E7%A4%BA" class="outline-link outline-root-link">列表显示</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%A0%B8%E5%AF%B9%E5%B9%B6%E5%BA%94%E7%94%A8%E8%B7%AF%E5%BE%84%E5%8F%98%E6%9B%B4" class="outline-link outline-root-link">核对并应用路径变更</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%98%BE%E7%A4%BA%E4%B8%8E%E8%B7%AF%E5%BE%84%E5%BC%82%E5%B8%B8" class="outline-link outline-root-link">显示与路径异常</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>检查并修正文件名大小写</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="路径检查与颜色标记">路径检查与颜色标记</h2>
-<p>工具读取 <code>p4 opened</code> 中的待提交文件，通过 <code>p4 where</code> 找到本地文件，并逐级对照真实路径的大小写。列表只显示 <code>edit / add / move/add</code>，自动隐藏删除类动作。</p>
+<p>工具用 <code>p4 opened</code> 读取待提交文件，再用 <code>p4 where</code> 找到它们在本地工作区中的位置，逐级比较路径的实际大小写。列表只显示 <code>edit / add / move/add</code>，删除类动作不会出现。</p>
 <ul>
 <li><strong>灰色</strong>：更改前后相同，无需修改。</li>
 <li><strong>绿色</strong>：更改后路径与更改前不同，并且与自动建议一致。</li>
@@ -55,7 +55,7 @@
 <ul>
 <li><strong>本地路径不存在</strong>：工具逐级纠正到可访问的最深父目录，其余部分保留原样，可手动调整。</li>
 <li><strong>显示 “X” 而非 “✔”</strong>：图标随系统主题变化；工具优先用 Windows 的 <code>vista/xpnative</code> 主题，也可改用自定义图标。</li>
-<li><strong>刷新后的灰条或残影</strong>：原有残影问题已修复；刷新会移除旧列表控件，包括分隔线。</li>
+<li><strong>刷新后的灰条或残影</strong>：刷新列表时会移除旧分隔线。</li>
 </ul></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/p4-case-sync/docs/setup/" rel="prev"><span>上一篇</span>准备运行环境</a><a href="/zh/works/p4-case-sync/docs/build-and-environment/" rel="next"><span>下一篇</span>打包独立 EXE</a></div>

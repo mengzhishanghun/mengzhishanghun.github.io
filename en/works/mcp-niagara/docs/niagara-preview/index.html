@@ -24,7 +24,7 @@
           <p class="work-doc-name">Works</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Systems and Previews</span><ul><li><a href="/en/works/mcp-niagara/docs/inspect/">Find and Inspect Niagara Assets</a></li><li><a href="/en/works/mcp-niagara/docs/niagara-system-assets/">Create, Open, and Save Niagara Systems</a></li><li><a href="/en/works/mcp-niagara/docs/niagara-preview/" aria-current="page">Export a Cached Niagara Thumbnail</a></li></ul></li><li><span>Effect Editing</span><ul><li><a href="/en/works/mcp-niagara/docs/edit-emitter/">Add and Edit Niagara Emitters</a></li><li><a href="/en/works/mcp-niagara/docs/niagara-renderers/">Replace and Configure Niagara Renderers</a></li><li><a href="/en/works/mcp-niagara/docs/parameters-preview/">Edit Niagara User Parameters</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-niagara/docs/quickstart/">Prepare and query Niagara for the first time</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/mcp-niagara/docs/inspect/">Find and Inspect Niagara Assets</a></li><li><a href="/en/works/mcp-niagara/docs/niagara-system-assets/">Create, Open, and Save Niagara Systems</a></li><li><a href="/en/works/mcp-niagara/docs/niagara-preview/" aria-current="page">Export a Cached Niagara Thumbnail</a></li><li><a href="/en/works/mcp-niagara/docs/edit-emitter/">Add and Edit Niagara Emitters</a></li><li><a href="/en/works/mcp-niagara/docs/niagara-renderers/">Replace and Configure Niagara Renderers</a></li><li><a href="/en/works/mcp-niagara/docs/parameters-preview/">Edit Niagara User Parameters</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#thumbnail-source-and-output-limits" class="outline-link outline-root-link">Thumbnail source and output limits</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>Export a Cached Niagara Thumbnail</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="thumbnail-source-and-output-limits">Thumbnail source and output limits</h2>
-<p><code>CapturePreview</code> reads only a thumbnail already cached in memory or stored in a saved package; it does not render or replace the thumbnail cache. Exactly one PNG is returned, bounded to 1024×1024 pixels, 16 MiB raw data, and 8 MiB compressed data.</p></div>
+<p><code>CapturePreview</code> reads only a thumbnail already cached in memory or stored in a saved package; it neither renders a new view nor changes the thumbnail cache. The tool returns one PNG, limited to 1024×1024 pixels, 16 MiB of raw data, and 8 MiB of compressed data. Open the target system to inspect a recent edit, since the cached image cannot confirm that the edit is visible.</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/mcp-niagara/docs/niagara-system-assets/" rel="prev"><span>Previous</span>Create, Open, and Save Niagara Systems</a><a href="/en/works/mcp-niagara/docs/edit-emitter/" rel="next"><span>Next</span>Add and Edit Niagara Emitters</a></div>
         </div>

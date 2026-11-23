@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-animation/docs/connect/">连接动画编辑工具</a></li></ul></li><li><span>动画资产</span><ul><li><a href="/zh/works/mcp-animation/docs/find-assets/">查找、检查与保存动画资产</a></li></ul></li><li><span>动画编辑</span><ul><li><a href="/zh/works/mcp-animation/docs/animation-blueprint/" aria-current="page">编辑动画蓝图与状态机</a></li><li><a href="/zh/works/mcp-animation/docs/montage-and-blendspace/">创建 Montage 并编辑区段</a></li><li><a href="/zh/works/mcp-animation/docs/animation-notifies/">查找并编辑动画 Notify</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blend-spaces/">创建 BlendSpace 并编辑采样点</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-animation/docs/connect/">连接动画编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-animation/docs/find-assets/">查找、检查与保存动画资产</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blueprint/" aria-current="page">编辑动画蓝图与状态机</a></li><li><a href="/zh/works/mcp-animation/docs/montage-and-blendspace/">创建 Montage 并编辑区段</a></li><li><a href="/zh/works/mcp-animation/docs/animation-notifies/">查找并编辑动画 Notify</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blend-spaces/">创建 BlendSpace 并编辑采样点</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%91%E7%8E%B0%E4%B8%8E%E6%A3%80%E6%9F%A5%E7%8A%B6%E6%80%81%E6%9C%BA" class="outline-link outline-root-link">发现与检查状态机</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BF%AE%E6%94%B9%E5%B9%B6%E7%BC%96%E8%AF%91%E5%8A%A8%E7%94%BB%E8%93%9D%E5%9B%BE" class="outline-link outline-root-link">修改并编译动画蓝图</a></li></ol></nav></details></aside>
@@ -90,7 +90,7 @@
 
 
 <table><thead><tr><th>工具</th><th>用途</th></tr></thead><tbody><tr><td><code>CreateAnimBlueprint</code></td><td>为指定 Skeleton 创建 Animation Blueprint。</td></tr><tr><td><code>AddState</code> / <code>RemoveState</code></td><td>添加或移除状态。</td></tr><tr><td><code>SetStateAnimation</code></td><td>仅在能确认唯一直接驱动状态结果的 Sequence Player 时设置动画。</td></tr><tr><td><code>AddTransition</code></td><td>在两个状态之间创建过渡。</td></tr><tr><td><code>SetTransitionRule</code></td><td>设置受支持的过渡规则。</td></tr><tr><td><code>CompileAnimBlueprint</code></td><td>编译并返回包括 AnimGraph、状态图和过渡图在内的诊断。</td></tr></tbody></table>
-<p>复杂或歧义的状态结果图不会被猜测修改；请先调整为单一直接驱动结构或使用 Unreal Editor 手工编辑。</p>
+<p>例如，要替换一个已有状态的动画，先找到动画蓝图，再从概览选定状态机，打开状态机详情确认目标状态。图里只有一个 Sequence Player 直接驱动状态结果时，才用 <code>SetStateAnimation</code> 替换。若结构复杂或有歧义，请在 Unreal Editor 中直接编辑，或先整理成单一直接驱动的结构。修改后运行 <code>CompileAnimBlueprint</code>，处理图表诊断，再用 <code>SaveAsset</code> 保留改动。</p>
 <p>写入前后请遵循<a href="/zh/works/mcp-animation/docs/find-assets/">打开与保存动画资产</a>一节的路径、事务和保存规则。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-animation/docs/find-assets/" rel="prev"><span>上一篇</span>查找、检查与保存动画资产</a><a href="/zh/works/mcp-animation/docs/montage-and-blendspace/" rel="next"><span>下一篇</span>创建 Montage 并编辑区段</a></div>

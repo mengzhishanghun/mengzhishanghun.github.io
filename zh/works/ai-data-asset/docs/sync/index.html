@@ -24,7 +24,7 @@
           <p class="work-doc-name">AIDataAsset</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ai-data-asset/docs/setup/">安装与同步设置</a></li></ul></li><li><span>数据同步与编辑</span><ul><li><a href="/zh/works/ai-data-asset/docs/sync/" aria-current="page">同步 DataAsset 与 JSON</a></li><li><a href="/zh/works/ai-data-asset/docs/ai-edit/">用 AI 编辑资产数据</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ai-data-asset/docs/setup/">安装与同步设置</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/ai-data-asset/docs/sync/" aria-current="page">同步 DataAsset 与 JSON</a></li><li><a href="/zh/works/ai-data-asset/docs/ai-edit/">用 AI 编辑资产数据</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E4%BD%95%E6%97%B6%E5%90%8C%E6%AD%A5" class="outline-link outline-root-link">何时同步</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%AF%BC%E5%85%A5%E7%BB%93%E6%9E%9C%E4%B8%8E%E4%BF%9D%E5%AD%98%E5%A4%B1%E8%B4%A5" class="outline-link outline-root-link">导入结果与保存失败</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%87%8D%E5%A4%8D%E9%80%9A%E7%9F%A5%E4%B8%8E%E7%9B%B8%E5%90%8C%E5%86%85%E5%AE%B9" class="outline-link outline-root-link">重复通知与相同内容</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%85%B3%E9%97%AD%E6%8F%92%E4%BB%B6%E4%B8%8E%E6%92%A4%E9%94%80" class="outline-link outline-root-link">关闭插件与撤销</a></li><li class="outline-node" data-heading-depth="2"><a href="#json-%E5%B1%9E%E6%80%A7%E8%BD%AC%E6%8D%A2" class="outline-link outline-root-link">JSON 属性转换</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%B5%AE%E7%82%B9%E6%95%B0%E8%BE%93%E5%87%BA%E4%B8%8E%E5%B1%9E%E6%80%A7%E5%90%8D" class="outline-link outline-root-link">浮点数输出与属性名</a></li></ol></nav></details></aside>
@@ -36,7 +36,8 @@
 <p>DataAsset 以 UE 序列化后的 .uasset 文件保存，常用于技能表、角色属性、掉落表和 AI 行为参数。外部 AI 工具难以直接处理这些字段，通过 JSON 可以调整基础字段、嵌套结构体和容器数据，减少把 AI 输出手工填回编辑器的工作。LLM 生成关卡配置、强化学习调整平衡数值，以及策划批量修改，都可以使用这条数据通道；修改后的结果仍需在 UE 中检查和测试。</p>
 <p>插件的用途与适用场景见 <a href="/zh/works/ai-data-asset/">AIDataAsset 作品页</a>。</p>
 <h2 id="何时同步">何时同步</h2>
-<p>双向同步按编辑器状态和磁盘文件情况触发。启动时先检查两端文件；运行中则分别监听资产和 JSON 的变更。</p>
+<p>如果刚在外部改过 JSON，准备重启编辑器前先比对两侧文件的修改时间。两端都有重要改动时，先保留副本，再启动同步。</p>
+<p>编辑器启动时，插件检查磁盘上的资产和 JSON；启动同步结束后，插件监听两侧的变更。</p>
 <p><strong>启动时如何选择数据。</strong> 开启自动同步后，插件会在项目资产扫描完成后扫描 DataAsset，执行初始同步并显示进度，然后监听后续变化。扫描排除 <code>/Engine/</code> 下的资产，先完成初始同步，再注册运行期间的资产和目录监听。启动时使用资产文件和 JSON 文件在磁盘上的修改时间，按以下规则处理：</p>
 
 

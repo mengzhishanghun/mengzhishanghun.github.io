@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleTCPServer</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-tcp-server/docs/listen/" aria-current="page">Enable the Plugin and Configure TCP Listening</a></li></ul></li><li><span>Networking</span><ul><li><a href="/en/works/simple-tcp-server/docs/sessions/">Manage Client Sessions</a></li><li><a href="/en/works/simple-tcp-server/docs/messages/">Send and Receive TCP Server Messages</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-tcp-server/docs/native-server/">Implement a TCP Server in C++</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-tcp-server/docs/listen/" aria-current="page">Enable the Plugin and Configure TCP Listening</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-tcp-server/docs/sessions/">Manage Client Sessions</a></li><li><a href="/en/works/simple-tcp-server/docs/messages/">Send and Receive TCP Server Messages</a></li><li><a href="/en/works/simple-tcp-server/docs/native-server/">Implement a TCP Server in C++</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#compatibility" class="outline-link outline-root-link">Compatibility</a></li><li class="outline-node" data-heading-depth="2"><a href="#interface-language" class="outline-link outline-root-link">Interface language</a></li><li class="outline-node" data-heading-depth="2"><a href="#enable-the-plugin" class="outline-link outline-root-link">Enable the plugin</a></li><li class="outline-node" data-heading-depth="2"><a href="#define-a-listening-channel-in-project-settings" class="outline-link outline-root-link">Define a listening channel in Project Settings</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#listening-channel-parameters" class="outline-link">Listening channel parameters</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#start-and-stop-listening-in-blueprint" class="outline-link outline-root-link">Start and stop listening in Blueprint</a></li></ol></nav></details></aside>
@@ -43,8 +43,7 @@
 <p>Once enabled, the plugin activates automatically.<br>
 It registers as a <code>GameInstanceSubsystem</code>, and its lifecycle persists across level transitions.</p>
 <h2 id="define-a-listening-channel-in-project-settings">Define a listening channel in Project Settings</h2>
-<p>You can define server listening channels via <strong>Project Settings → SimpleTCPServer Settings</strong>.<br>
-Using this method is recommended for centralized management and ease of debugging.</p>
+<p>Add listening channels under <strong>Project Settings → SimpleTCPServer Settings</strong> so you can inspect and troubleshoot their settings in one place.</p>
 <h3 id="listening-channel-parameters">Listening channel parameters</h3>
 
 
@@ -78,6 +77,7 @@ Using this method is recommended for centralized management and ease of debuggin
 
 <table><thead><tr><th>Field Name</th><th>Example</th><th>Description</th></tr></thead><tbody><tr><td>Channel Name</td><td><code>MainServer</code></td><td>The name used in Blueprints to refer to channel</td></tr><tr><td>Bind Address (IP:Port)</td><td><code>0.0.0.0:8888</code></td><td>Address to bind the listening socket</td></tr><tr><td>Max Connections</td><td><code>32</code></td><td>Max number of concurrent client connections</td></tr><tr><td>Max Receive Bytes</td><td><code>1024</code></td><td>Max buffer size for each message</td></tr></tbody></table>
 <h2 id="start-and-stop-listening-in-blueprint">Start and stop listening in Blueprint</h2>
+<p>For example, use the settings in the table, start <code>MainServer</code> in Blueprint, and check the same channel with <code>IsServerRunning</code>. Once it is listening, connect a test client to a reachable IPv4 address of the server and its listening port. The bind address is a listener setting.</p>
 
 
 

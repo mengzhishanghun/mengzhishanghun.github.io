@@ -24,7 +24,7 @@
           <p class="work-doc-name">Works</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/connect-and-inspect/">Connect to MCP Behavior Tree</a></li></ul></li><li><span>Behavior Trees and Blackboards</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/edit-tree/">Inspect, Edit, and Validate Behavior Trees</a></li><li><a href="/en/works/mcp-behavior-tree/docs/blackboard-keys/" aria-current="page">Create Blackboards and Manage Keys</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/connect-and-inspect/">Connect to MCP Behavior Tree</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/edit-tree/">Inspect, Edit, and Validate Behavior Trees</a></li><li><a href="/en/works/mcp-behavior-tree/docs/blackboard-keys/" aria-current="page">Create Blackboards and Manage Keys</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#create-and-link-a-blackboard" class="outline-link outline-root-link">Create and link a Blackboard</a></li><li class="outline-node" data-heading-depth="2"><a href="#blackboard-key-rules" class="outline-link outline-root-link">Blackboard key rules</a></li></ol></nav></details></aside>
@@ -41,7 +41,7 @@
 <li><code>Enum</code> keys require <code>Enum</code>; <code>BaseClass</code> and <code>Enum</code> are rejected for unrelated key types.</li>
 <li><code>KeyName</code> cannot be empty or <code>None</code>.</li>
 <li>A key selector is checked with Unreal’s native filter semantics, including Object/Class base-class restrictions and Enum identity. A same-named key of the wrong type is invalid.</li>
-<li><code>RemoveBlackboardKey</code> scans project Behavior Trees and refuses unresolved references or scan failures unless <code>bForce=true</code> explicitly accepts the risk.</li>
+<li><code>RemoveBlackboardKey</code> scans the project’s Behavior Trees. If it finds a reference or cannot finish scanning, it refuses to delete the key unless you explicitly accept the risk with <code>bForce=true</code>. For routine cleanup, update the nodes that use the key before trying to remove it.</li>
 </ul>
 
 
@@ -57,7 +57,7 @@
 
 
 <table><thead><tr><th>Area</th><th>Tools</th></tr></thead><tbody><tr><td>Blackboard</td><td><code>AddBlackboardKey</code>, <code>RemoveBlackboardKey</code></td></tr></tbody></table>
-<p>Call <code>SaveAsset</code> for the Blackboard after reviewing the changes. See <a href="/en/works/mcp-behavior-tree/docs/edit-tree/">behavior tree validation and saving</a>.</p></div>
+<p>If you changed a key that a tree uses, validate the associated tree first, then call <code>SaveAsset</code> for the Blackboard. See <a href="/en/works/mcp-behavior-tree/docs/edit-tree/">behavior tree validation and saving</a>.</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/mcp-behavior-tree/docs/edit-tree/" rel="prev"><span>Previous</span>Inspect, Edit, and Validate Behavior Trees</a></div>
         </div>

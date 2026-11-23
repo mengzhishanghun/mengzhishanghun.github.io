@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-animation/docs/connect/">连接动画编辑工具</a></li></ul></li><li><span>动画资产</span><ul><li><a href="/zh/works/mcp-animation/docs/find-assets/">查找、检查与保存动画资产</a></li></ul></li><li><span>动画编辑</span><ul><li><a href="/zh/works/mcp-animation/docs/animation-blueprint/">编辑动画蓝图与状态机</a></li><li><a href="/zh/works/mcp-animation/docs/montage-and-blendspace/" aria-current="page">创建 Montage 并编辑区段</a></li><li><a href="/zh/works/mcp-animation/docs/animation-notifies/">查找并编辑动画 Notify</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blend-spaces/">创建 BlendSpace 并编辑采样点</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-animation/docs/connect/">连接动画编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-animation/docs/find-assets/">查找、检查与保存动画资产</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blueprint/">编辑动画蓝图与状态机</a></li><li><a href="/zh/works/mcp-animation/docs/montage-and-blendspace/" aria-current="page">创建 Montage 并编辑区段</a></li><li><a href="/zh/works/mcp-animation/docs/animation-notifies/">查找并编辑动画 Notify</a></li><li><a href="/zh/works/mcp-animation/docs/animation-blend-spaces/">创建 BlendSpace 并编辑采样点</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%9F%A5%E6%89%BE%E5%88%9B%E5%BB%BA%E4%B8%8E%E7%BC%96%E8%BE%91-montage" class="outline-link outline-root-link">查找、创建与编辑 Montage</a></li></ol></nav></details></aside>
@@ -65,6 +65,7 @@
 
 
 <table><thead><tr><th>工具</th><th>用途</th></tr></thead><tbody><tr><td><code>CreateMontage</code></td><td>从 AnimSequence 创建 Montage。</td></tr><tr><td><code>AddMontageSection</code> / <code>SetMontageSection</code> / <code>RemoveMontageSection</code></td><td>管理 Montage Section。</td></tr></tbody></table>
+<p>已有 Montage 时，先从列表取得资产路径，用详情定位要修改的 Section。新建时，先找出要用的 AnimSequence，再调用 <code>CreateMontage</code>。添加、调整或移除 Section 后，重新查看详情，确认修改的是预期区段。</p>
 <p>写入前后请遵循<a href="/zh/works/mcp-animation/docs/find-assets/">打开与保存动画资产</a>一节的路径、事务和保存规则。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-animation/docs/animation-blueprint/" rel="prev"><span>上一篇</span>编辑动画蓝图与状态机</a><a href="/zh/works/mcp-animation/docs/animation-notifies/" rel="next"><span>下一篇</span>查找并编辑动画 Notify</a></div>

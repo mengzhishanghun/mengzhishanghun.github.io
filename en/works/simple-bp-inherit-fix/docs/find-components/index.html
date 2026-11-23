@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleBPInheritFix</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Inherited Components</span><ul><li><a href="/en/works/simple-bp-inherit-fix/docs/find-components/" aria-current="page">Identify Inherited Component Issues</a></li><li><a href="/en/works/simple-bp-inherit-fix/docs/repair-components/">Repair Inherited Components</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-bp-inherit-fix/docs/quickstart/">Install and run the first repair</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-bp-inherit-fix/docs/find-components/" aria-current="page">Identify Inherited Component Issues</a></li><li><a href="/en/works/simple-bp-inherit-fix/docs/repair-components/">Repair Inherited Components</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#supported-symptoms" class="outline-link outline-root-link">Supported Symptoms</a></li><li class="outline-node" data-heading-depth="2"><a href="#scan-scope" class="outline-link outline-root-link">Scan Scope</a></li><li class="outline-node" data-heading-depth="2"><a href="#component-records-in-scs-and-ich" class="outline-link outline-root-link">Component Records in SCS and ICH</a></li><li class="outline-node" data-heading-depth="2"><a href="#the-creationmethod-field" class="outline-link outline-root-link">The CreationMethod Field</a></li><li class="outline-node" data-heading-depth="2"><a href="#known-conditions" class="outline-link outline-root-link">Known Conditions</a></li></ol></nav></details></aside>
@@ -33,7 +33,8 @@
           <article>
             <h1>Identify Inherited Component Issues</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="supported-symptoms">Supported Symptoms</h2>
-<p>Actor Blueprint inheritance can exhibit these component anomalies:</p>
+<p>Open the affected parent and child Actor Blueprints and compare the same component. If a change in the child also affected the parent, check whether the parent’s component template changed before running the repair.</p>
+<p>Look for two symptoms:</p>
 <ul>
 <li><strong>Cut / Delete is disabled in the parent Blueprint</strong> even though the component belongs to that parent.</li>
 <li><strong>A child Blueprint’s property changes write back to the parent</strong>: Even toggling a bool can affect the parent template rather than creating an isolated child override.</li>
@@ -84,7 +85,7 @@
 <h2 id="known-conditions">Known Conditions</h2>
 <p>The triggering operations have not formed a stable reproduction path. Similar symptoms alone cannot establish the cause; check the component template’s <code>CreationMethod</code>. Once present, the anomaly may persist and does not repair itself when saved.</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-bp-inherit-fix/docs/repair-components/" rel="next"><span>Next</span>Repair Inherited Components</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-bp-inherit-fix/docs/quickstart/" rel="prev"><span>Previous</span>Install and run the first repair</a><a href="/en/works/simple-bp-inherit-fix/docs/repair-components/" rel="next"><span>Next</span>Repair Inherited Components</a></div>
         </div>
       </mzsh-reading>
     </main>

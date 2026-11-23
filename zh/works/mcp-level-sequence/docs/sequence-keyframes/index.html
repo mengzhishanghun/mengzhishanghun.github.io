@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/">安装与连接序列编辑工具</a></li></ul></li><li><span>序列资产</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/">查找、创建与保存 Level Sequence</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/">截取序列预览</a></li></ul></li><li><span>编辑序列</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/">编辑对象绑定与 Camera Cut</a></li><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/">编辑序列轨道与区段</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/" aria-current="page">读取和编辑关键帧</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">设置播放范围与帧率</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/">安装与连接序列编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/">查找、创建与保存 Level Sequence</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/">截取序列预览</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/">编辑对象绑定与 Camera Cut</a></li><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/">编辑序列轨道与区段</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/" aria-current="page">读取和编辑关键帧</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">设置播放范围与帧率</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%94%AF%E6%8C%81%E7%9A%84-channel-%E4%B8%8E%E5%88%86%E9%A1%B5" class="outline-link outline-root-link">支持的 Channel 与分页</a></li></ol></nav></details></aside>
@@ -50,6 +50,7 @@
 
 <table><thead><tr><th>分组</th><th>工具</th><th>用途</th></tr></thead><tbody><tr><td>Key</td><td><code>GetKeyframes</code>、<code>SetKeyframes</code>、<code>RemoveKeyframes</code></td><td>分页读取、写入和删除关键帧</td></tr></tbody></table>
 <p>关键帧工具支持三类 Channel：Transform 使用 Double，Float/Fade 使用 Float，Bool 属性轨使用 Bool。<code>GetSequenceDetail</code> 返回 Track 与 Section 结构，但不枚举 Channel；调用关键帧工具时应使用对应 Track 类型约定的 <code>ChannelName</code>。</p>
+<p>先定位轨道和区段，再按轨道类型选择通道。修改或删除前先读取该通道的关键帧，确认帧位置和数值类型；改完后可查看同一通道。</p>
 <ul>
 <li><code>GetKeyframes</code>：默认 200，单页最多 1000，并提供 <code>NextOffset</code>。</li>
 </ul>

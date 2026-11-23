@@ -24,7 +24,7 @@
           <p class="work-doc-name">P4StreamSwitcher</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/p4-stream-switcher/docs/install-and-connect/">安装并连接 Perforce</a></li></ul></li><li><span>切流与同步</span><ul><li><a href="/zh/works/p4-stream-switcher/docs/normal-switch/">普通切流与重新同步</a></li><li><a href="/zh/works/p4-stream-switcher/docs/offline-switch/">使用离线目录切流</a></li></ul></li><li><span>工作区管理</span><ul><li><a href="/zh/works/p4-stream-switcher/docs/workspace-settings/">配置工作区与本机选项</a></li><li><a href="/zh/works/p4-stream-switcher/docs/recycle-workspace/" aria-current="page">回收与删除工作区</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/p4-stream-switcher/docs/install-and-connect/">安装并连接 Perforce</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/p4-stream-switcher/docs/normal-switch/">普通切流与重新同步</a></li><li><a href="/zh/works/p4-stream-switcher/docs/offline-switch/">使用离线目录切流</a></li><li><a href="/zh/works/p4-stream-switcher/docs/workspace-settings/">配置工作区与本机选项</a></li><li><a href="/zh/works/p4-stream-switcher/docs/recycle-workspace/" aria-current="page">回收与删除工作区</a></li></ul></li><li><span>更新日志</span><ul><li><a href="/zh/works/p4-stream-switcher/docs/updates-2026-03-23/">2026-03-23</a></li><li><a href="/zh/works/p4-stream-switcher/docs/updates-2026-02-10/">2026-02-10</a></li><li><a href="/zh/works/p4-stream-switcher/docs/updates-2026-01-31/">2026-01-31</a></li><li><a href="/zh/works/p4-stream-switcher/docs/updates-2026-01-30/">2026-01-30</a></li><li><a href="/zh/works/p4-stream-switcher/docs/updates-2026-01-16/">2026-01-16</a></li><li><a href="/zh/works/p4-stream-switcher/docs/updates-2026-01-13/">2026-01-13</a></li><li><a href="/zh/works/p4-stream-switcher/docs/updates-2026-01-09/">2026-01-09</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%87%AA%E5%8A%A8%E5%9B%9E%E6%94%B6%E4%B8%8E%E6%89%8B%E5%8A%A8%E5%88%A0%E9%99%A4" class="outline-link outline-root-link">自动回收与手动删除</a></li></ol></nav></details></aside>
@@ -35,10 +35,10 @@
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="自动回收与手动删除">自动回收与手动删除</h2>
 <p>工作区池上限至少为 1，默认 5。</p>
 <p>池满时按本机保存的使用时间戳选择最旧客户端。候选有已打开文件，或检测到 P4V 正在运行时，自动回收会停止；先检查并处理变更，必要时关闭 P4V 后再操作。不要为通过检查盲目撤销工作。</p>
-<p>“删除工作区”是单独入口，会弹出确认并检查已打开文件；它不包含自动回收路径中的 P4V 运行检查，使用前自行关闭相关会话。删除的是服务器客户端及工具缓存记录，不是清空整个本地目录。</p>
+<p>手动删除前先关闭该工作区相关的 P4V 会话：“删除工作区”会要求确认并检查已打开文件，但不会像自动回收那样检查 P4V 是否正在运行。删除会移除服务器客户端和工具缓存记录，不会清空本地目录。</p>
 <p>池管理限于当前用户、当前主机、符合命名规则的工作区。未登记到 Perforce 的本地修改仍需自行保护。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/p4-stream-switcher/docs/workspace-settings/" rel="prev"><span>上一篇</span>配置工作区与本机选项</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/p4-stream-switcher/docs/workspace-settings/" rel="prev"><span>上一篇</span>配置工作区与本机选项</a><a href="/zh/works/p4-stream-switcher/docs/updates-2026-03-23/" rel="next"><span>下一篇</span>2026-03-23</a></div>
         </div>
       </mzsh-reading>
     </main>

@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleTCPClient</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-tcp-client/docs/enable-plugin/">Enable SimpleTCPClient</a></li></ul></li><li><span>Networking</span><ul><li><a href="/en/works/simple-tcp-client/docs/connect/" aria-current="page">Configure and Manage TCP Client Connections</a></li><li><a href="/en/works/simple-tcp-client/docs/messages/">Send and Receive TCP Client Messages</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-tcp-client/docs/native-client/">Implement a TCP Client in C++</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-tcp-client/docs/enable-plugin/">Enable SimpleTCPClient</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-tcp-client/docs/connect/" aria-current="page">Configure and Manage TCP Client Connections</a></li><li><a href="/en/works/simple-tcp-client/docs/messages/">Send and Receive TCP Client Messages</a></li><li><a href="/en/works/simple-tcp-client/docs/native-client/">Implement a TCP Client in C++</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#predefine-a-channel-in-project-settings" class="outline-link outline-root-link">Predefine a channel in Project Settings</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#channel-parameters" class="outline-link">Channel parameters</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#manage-channels-in-blueprint" class="outline-link outline-root-link">Manage channels in Blueprint</a></li><li class="outline-node" data-heading-depth="2"><a href="#connection-limits-and-socket-lifecycle" class="outline-link outline-root-link">Connection limits and socket lifecycle</a></li><li class="outline-node" data-heading-depth="2"><a href="#connection-node-overview" class="outline-link outline-root-link">Connection node overview</a></li><li class="outline-node" data-heading-depth="2"><a href="#start-and-stop-a-connection-manually" class="outline-link outline-root-link">Start and stop a connection manually</a></li><li class="outline-node" data-heading-depth="2"><a href="#update-configuration-and-reconnect" class="outline-link outline-root-link">Update configuration and reconnect</a></li></ol></nav></details></aside>
@@ -33,8 +33,7 @@
           <article>
             <h1>Configure and Manage TCP Client Connections</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="predefine-a-channel-in-project-settings">Predefine a channel in Project Settings</h2>
-<p>You can predefine client channels via <strong>Project Settings → SimpleTCPClient Settings</strong>.<br>
-It is recommended to configure channels here for easier management.</p>
+<p>Add client channels under <strong>Project Settings → SimpleTCPClient Settings</strong>. Give each target its own channel name, then use that name to refer to the connection in Blueprint.</p>
 <h3 id="channel-parameters">Channel parameters</h3>
 
 
@@ -122,6 +121,7 @@ It is recommended to configure channels here for easier management.</p>
 
 <table><thead><tr><th>Type</th><th>Created When</th><th>Destroyed When</th></tr></thead><tbody><tr><td>Client Socket</td><td>When calling <code>StartConnection</code> or auto</td><td>When calling <code>StopConnection</code> or shutdown</td></tr></tbody></table>
 <h2 id="connection-node-overview">Connection node overview</h2>
+<p>For a manual connection, make sure the target service is listening and pass the channel name from the table to <code>StartConnection</code>. Check the same channel with <code>IsConnected</code>. Test message exchange once the connection is up.</p>
 <p><a href="/media/manuals/2f974d095126f5f60e63.jpg" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/2f974d095126f5f60e63.jpg" data-media-alt="ShowAllFunction" class="media-image-trigger" aria-label="View a larger image: ShowAllFunction"><img src="/media/manuals/2f974d095126f5f60e63.jpg" alt="ShowAllFunction" loading="lazy" decoding="async"></a></p>
 <h2 id="start-and-stop-a-connection-manually">Start and stop a connection manually</h2>
 <p><a href="/media/manuals/1e59fed236ce1e5311be.jpg" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/1e59fed236ce1e5311be.jpg" data-media-alt="Connection" class="media-image-trigger" aria-label="View a larger image: Connection"><img src="/media/manuals/1e59fed236ce1e5311be.jpg" alt="Connection" loading="lazy" decoding="async"></a><br>

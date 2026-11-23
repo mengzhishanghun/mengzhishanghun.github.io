@@ -24,7 +24,7 @@
           <p class="work-doc-name">UEQuickStart</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ue-quick-start/docs/open-project/" aria-current="page">识别、编译并启动 UE 工程</a></li></ul></li><li><span>编译与启动</span><ul><li><a href="/zh/works/ue-quick-start/docs/build-configuration/">自定义编译和启动行为</a></li><li><a href="/zh/works/ue-quick-start/docs/normalize-line-endings/">编译前修复源码换行符</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ue-quick-start/docs/open-project/" aria-current="page">识别、编译并启动 UE 工程</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/ue-quick-start/docs/build-configuration/">自定义编译和启动行为</a></li><li><a href="/zh/works/ue-quick-start/docs/normalize-line-endings/">编译前修复源码换行符</a></li></ul></li><li><span>更新日志</span><ul><li><a href="/zh/works/ue-quick-start/docs/updates-2026-06-13/">2026-06-13</a></li><li><a href="/zh/works/ue-quick-start/docs/updates-2026-03-18/">2026-03-18</a></li><li><a href="/zh/works/ue-quick-start/docs/updates-2026-01-31/">2026-01-31</a></li><li><a href="/zh/works/ue-quick-start/docs/updates-2026-01-30/">2026-01-30</a></li><li><a href="/zh/works/ue-quick-start/docs/updates-2026-01-22/">2026-01-22</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E4%BD%BF%E7%94%A8%E6%9D%A1%E4%BB%B6" class="outline-link outline-root-link">使用条件</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E7%BC%96%E8%AF%91%E5%B9%B6%E6%89%93%E5%BC%80%E5%B7%A5%E7%A8%8B" class="outline-link outline-root-link">编译并打开工程</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%B7%A5%E7%A8%8B%E4%B8%8E%E5%BC%95%E6%93%8E%E8%AF%86%E5%88%AB" class="outline-link outline-root-link">工程与引擎识别</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#ue4-%E5%92%8C-ue5-%E7%BC%96%E8%BE%91%E5%99%A8" class="outline-link">UE4 和 UE5 编辑器</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E6%BA%90%E7%A0%81%E5%BC%95%E6%93%8E%E8%AF%86%E5%88%AB" class="outline-link">源码引擎识别</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%90%AF%E5%8A%A8%E4%B8%8E%E7%BC%96%E8%AF%91%E6%8E%92%E6%9F%A5" class="outline-link outline-root-link">启动与编译排查</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0-uproject-%E6%96%87%E4%BB%B6" class="outline-link">找不到 .uproject 文件</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E6%89%BE%E4%B8%8D%E5%88%B0%E5%BC%95%E6%93%8E%E5%AE%89%E8%A3%85%E8%B7%AF%E5%BE%84" class="outline-link">找不到引擎安装路径</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E7%BC%96%E8%AF%91%E5%A4%B1%E8%B4%A5" class="outline-link">编译失败</a></li></ol></li></ol></nav></details></aside>
@@ -37,8 +37,8 @@
 <h2 id="编译并打开工程">编译并打开工程</h2>
 <ol>
 <li>将 <code>UEBuildTool.exe</code> 放到项目根目录，与 <code>.uproject</code> 同级。</li>
-<li>双击运行，在日志窗口查看编译进度。</li>
-<li>编译成功后，工具默认自动打开工程。</li>
+<li>双击运行。日志窗口会显示编译进度和报错。</li>
+<li>编译成功后，工具默认自动打开工程。如果编译失败，先按下文查看具体错误。</li>
 </ol>
 <h2 id="工程与引擎识别">工程与引擎识别</h2>
 

@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/">安装与连接序列编辑工具</a></li></ul></li><li><span>序列资产</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/">查找、创建与保存 Level Sequence</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/">截取序列预览</a></li></ul></li><li><span>编辑序列</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/" aria-current="page">编辑对象绑定与 Camera Cut</a></li><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/">编辑序列轨道与区段</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/">读取和编辑关键帧</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">设置播放范围与帧率</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/">安装与连接序列编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/">查找、创建与保存 Level Sequence</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/">截取序列预览</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/" aria-current="page">编辑对象绑定与 Camera Cut</a></li><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/">编辑序列轨道与区段</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/">读取和编辑关键帧</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">设置播放范围与帧率</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%AF%B9%E8%B1%A1%E7%BB%91%E5%AE%9A%E4%B8%8E%E9%95%9C%E5%A4%B4" class="outline-link outline-root-link">对象绑定与镜头</a></li></ol></nav></details></aside>
@@ -57,9 +57,10 @@
 <ul>
 <li><code>ListBindings</code>：默认 100，单页最多 500，并按 BindingId 稳定排序。</li>
 </ul>
+<p>修改已有镜头切换前，用 <code>ListBindings</code> 找到镜头的 <code>BindingId</code>，再用 <code>GetSequenceDetail</code> 找到要调整的区段。已有区段用 <code>SetCameraCut</code>，新建区段用 <code>AddCameraCut</code>。</p>
 <p>修改与保存工具只接受有效的 <code>/Game/...</code> Level Sequence 路径；只读发现、读取、打开、截图和关闭可访问其他已加载或可读取的序列位置。所有编辑工具会检查 PIE、保存和 GC 忙碌状态，拒绝只读 MovieScene，并通过编辑器事务支持 Undo。</p>
 <p>删除 Binding 或 Track 会级联处理其下级对象；删除 Binding 还会在同一事务中移除引用该子树的本地 Camera Cut Section。遇到无效、锁定、只读或无法安全解析的非本地 Camera Cut 序列引用时会拒绝破坏性操作。名称选择器存在重名时会报歧义；优先使用 <code>ListBindings</code> 返回的 <code>BindingId</code> 和 <code>GetSequenceDetail</code> 返回的 <code>TrackName</code>。</p>
-<p>Spawnable 创建：对象模板所有权、Undo 与 spawner 路径跨版本变化较大，需独立运行时验证后再开放。</p>
+<p>当前不提供 Spawnable 创建。</p>
 <p>Camera Cut 帧数按序列的 <code>TickResolution</code> 解释，见<a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">时间单位与帧率</a>。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/" rel="prev"><span>上一篇</span>截取序列预览</a><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/" rel="next"><span>下一篇</span>编辑序列轨道与区段</a></div>

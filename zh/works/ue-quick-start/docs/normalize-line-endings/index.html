@@ -24,7 +24,7 @@
           <p class="work-doc-name">UEQuickStart</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ue-quick-start/docs/open-project/">识别、编译并启动 UE 工程</a></li></ul></li><li><span>编译与启动</span><ul><li><a href="/zh/works/ue-quick-start/docs/build-configuration/">自定义编译和启动行为</a></li><li><a href="/zh/works/ue-quick-start/docs/normalize-line-endings/" aria-current="page">编译前修复源码换行符</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ue-quick-start/docs/open-project/">识别、编译并启动 UE 工程</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/ue-quick-start/docs/build-configuration/">自定义编译和启动行为</a></li><li><a href="/zh/works/ue-quick-start/docs/normalize-line-endings/" aria-current="page">编译前修复源码换行符</a></li></ul></li><li><span>更新日志</span><ul><li><a href="/zh/works/ue-quick-start/docs/updates-2026-06-13/">2026-06-13</a></li><li><a href="/zh/works/ue-quick-start/docs/updates-2026-03-18/">2026-03-18</a></li><li><a href="/zh/works/ue-quick-start/docs/updates-2026-01-31/">2026-01-31</a></li><li><a href="/zh/works/ue-quick-start/docs/updates-2026-01-30/">2026-01-30</a></li><li><a href="/zh/works/ue-quick-start/docs/updates-2026-01-22/">2026-01-22</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%BD%AC%E6%8D%A2%E6%97%B6%E6%9C%BA%E7%9B%AE%E5%BD%95%E5%92%8C%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B" class="outline-link outline-root-link">转换时机、目录和文件类型</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>编译前修复源码换行符</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="转换时机目录和文件类型">转换时机、目录和文件类型</h2>
-<p>协作项目中的 LF (<code>\n</code>) 或 CR (<code>\r</code>) 换行符可能影响 Windows 上的 MSVC 编译。工具会在编译前扫描并修改匹配的源码文件，将换行符转为 CRLF (<code>\r\n</code>)，无需手动转换。</p>
+<p>在多人协作的项目里，LF (<code>\n</code>) 或 CR (<code>\r</code>) 换行符可能影响 Windows 上的 MSVC 编译。运行编译时，工具会先扫描下列目录，把匹配文件的换行符直接改为 CRLF (<code>\r\n</code>)。</p>
 <p>扫描以下位置：</p>
 <ul>
 <li>项目中的 <code>Source/</code>、<code>ThirdParty/</code>。</li>
@@ -41,7 +41,7 @@
 </ul>
 <p>处理的文件类型为 <code>.h</code>、<code>.c</code>、<code>.cpp</code>、<code>.cs</code> 和 <code>.inl</code>。</p></div>
           </article>
-          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/ue-quick-start/docs/build-configuration/" rel="prev"><span>上一篇</span>自定义编译和启动行为</a></div>
+          <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/ue-quick-start/docs/build-configuration/" rel="prev"><span>上一篇</span>自定义编译和启动行为</a><a href="/zh/works/ue-quick-start/docs/updates-2026-06-13/" rel="next"><span>下一篇</span>2026-06-13</a></div>
         </div>
       </mzsh-reading>
     </main>

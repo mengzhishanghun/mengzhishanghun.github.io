@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>系统资产与预览</span><ul><li><a href="/zh/works/mcp-niagara/docs/inspect/">查找并检查 Niagara 资产</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-system-assets/" aria-current="page">创建、打开与保存 Niagara System</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-preview/">导出 Niagara 缓存缩略图</a></li></ul></li><li><span>效果编辑</span><ul><li><a href="/zh/works/mcp-niagara/docs/edit-emitter/">添加和修改 Niagara 发射器</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-renderers/">更换与配置 Niagara 渲染器</a></li><li><a href="/zh/works/mcp-niagara/docs/parameters-preview/">编辑 Niagara 用户参数</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-niagara/docs/quickstart/">准备并首次查询 Niagara</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-niagara/docs/inspect/">查找并检查 Niagara 资产</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-system-assets/" aria-current="page">创建、打开与保存 Niagara System</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-preview/">导出 Niagara 缓存缩略图</a></li><li><a href="/zh/works/mcp-niagara/docs/edit-emitter/">添加和修改 Niagara 发射器</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-renderers/">更换与配置 Niagara 渲染器</a></li><li><a href="/zh/works/mcp-niagara/docs/parameters-preview/">编辑 Niagara 用户参数</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%88%9B%E5%BB%BA%E6%88%96%E5%A4%8D%E5%88%B6%E6%A8%A1%E6%9D%BF" class="outline-link outline-root-link">创建或复制模板</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%89%93%E5%BC%80%E4%B8%8E%E4%BF%9D%E5%AD%98" class="outline-link outline-root-link">打开与保存</a></li></ol></nav></details></aside>
@@ -33,9 +33,9 @@
           <article>
             <h1>创建、打开与保存 Niagara System</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="创建或复制模板">创建或复制模板</h2>
-<p><code>CreateNiagaraSystem</code> 仅接受可写挂载点内、不带 <code>.ObjectName</code> 后缀的合法长包名，并在创建前检查磁盘包、内存包和 Asset Registry 冲突，绝不覆盖同名资产。提供 <code>TemplatePath</code> 时会真实复制模板；未提供时才使用 Niagara Factory 创建空 System。创建结果会返回规范对象路径、包名和 dirty 状态，需调用 <code>SaveAsset</code> 落盘。</p>
+<p><code>CreateNiagaraSystem</code> 仅接受可写挂载点内、不带 <code>.ObjectName</code> 后缀的合法长包名，并在创建前检查磁盘包、内存包和 Asset Registry 冲突，绝不覆盖同名资产。要基于现有特效做变体，先查到模板，再提供 <code>TemplatePath</code>，将模板复制到新的包路径。省略该参数时，Niagara Factory 会创建空 System。创建后记下返回的规范对象路径和包名，核对 dirty 状态，需要保留该资产时调用 <code>SaveAsset</code>。</p>
 <h2 id="打开与保存">打开与保存</h2>
-<p><code>SaveAsset</code> 使用非致命的包名到文件名转换，拒绝只读目标；只有 <code>SavePackage</code> 成功、文件存在且包不再 dirty 时才返回成功。<code>OpenAsset</code> 会检查 Editor 与 AssetEditorSubsystem 生命周期。</p></div>
+<p><code>SaveAsset</code> 使用非致命的包名到文件名转换，拒绝只读目标；只有 <code>SavePackage</code> 成功、文件存在且包不再 dirty 时才返回成功。保存后，可用 <code>OpenAsset</code> 在编辑器中打开 System，检查目标资产是否正确。该调用要求 Unreal Editor 及其资产编辑器子系统可用。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-niagara/docs/inspect/" rel="prev"><span>上一篇</span>查找并检查 Niagara 资产</a><a href="/zh/works/mcp-niagara/docs/niagara-preview/" rel="next"><span>下一篇</span>导出 Niagara 缓存缩略图</a></div>
         </div>

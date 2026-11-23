@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleAssetNamer</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-asset-namer/docs/setup/">安装与首次使用</a></li></ul></li><li><span>资产命名</span><ul><li><a href="/zh/works/simple-asset-namer/docs/naming-rules/">配置资产命名规则</a></li><li><a href="/zh/works/simple-asset-namer/docs/rename-assets/" aria-current="page">自动与批量重命名</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-asset-namer/docs/setup/">安装与首次使用</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-asset-namer/docs/naming-rules/">配置资产命名规则</a></li><li><a href="/zh/works/simple-asset-namer/docs/rename-assets/" aria-current="page">自动与批量重命名</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%88%9B%E5%BB%BA%E6%88%96%E6%94%B9%E5%90%8D%E6%97%B6%E8%87%AA%E5%8A%A8%E5%BA%94%E7%94%A8%E8%A7%84%E5%88%99" class="outline-link outline-root-link">创建或改名时自动应用规则</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%80%9A%E8%BF%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E6%89%B9%E9%87%8F%E9%87%8D%E5%91%BD%E5%90%8D" class="outline-link outline-root-link">通过右键菜单批量重命名</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%A3%80%E6%9F%A5%E7%BB%93%E6%9E%9C%E4%B8%8E%E6%8E%92%E6%9F%A5%E5%A4%B1%E8%B4%A5" class="outline-link outline-root-link">检查结果与排查失败</a></li></ol></nav></details></aside>
@@ -35,6 +35,7 @@
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="创建或改名时自动应用规则">创建或改名时自动应用规则</h2>
 <p><code>Auto Rename on Create</code>（<code>bAutoRenameOnCreate</code>）在创建或导入时运行；<code>Auto Rename on Rename</code>（<code>bAutoRenameOnRename</code>）在手动改名后重新检查。两个开关可独立配置，类型规则和路径筛选仍然适用。</p>
 <h2 id="通过右键菜单批量重命名">通过右键菜单批量重命名</h2>
+<p>批量改名前先选少量资产试跑，确认路径范围，并保留可恢复的版本。</p>
 <p>右键菜单项位于 <strong>Simple Asset Namer</strong> 二级子菜单下。</p>
 <p><strong>资产右键菜单</strong></p>
 <ol>
@@ -46,7 +47,7 @@
 <li>右键点击文件夹</li>
 <li><strong>Simple Asset Namer</strong> → <strong>Auto Rename All Assets</strong></li>
 </ol>
-<p>批量操作前，先确认路径范围并保留可恢复的版本。少于 100 个资产时逐个处理；达到 100 个时先分 10 批，失败的批次合并重试一次，仍失败的资产逐个重试并显示错误。</p>
+<p>少于 100 个资产时逐个处理；达到 100 个时先分 10 批，失败的批次合并重试一次，仍失败的资产逐个重试并显示错误。</p>
 <h2 id="检查结果与排查失败">检查结果与排查失败</h2>
 <p>完成后显示结果窗口，包含三个标签页：</p>
 <ul>
@@ -85,7 +86,7 @@
 
 
 <table><thead><tr><th>错误信息</th><th>说明</th></tr></thead><tbody><tr><td>Source control not connected</td><td>版本控制未连接</td></tr><tr><td>Checked out by another user</td><td>文件被其他用户签出</td></tr><tr><td>File is read-only</td><td>文件为只读</td></tr><tr><td>Target file already exists</td><td>目标文件已存在</td></tr><tr><td>Asset has unsaved changes</td><td>资产有未保存的更改</td></tr></tbody></table>
-<p>成功记录显示原名和新名。跳过时检查名称、类型规则、路径筛选和只读文件能否签出；目标名称已存在时检查重名。若许多文件报未知错误，可在内容浏览器右键文件夹，执行 <strong>Fix Up Redirectors in Folder</strong> 后重试。重命名通过 UE API 更新引用并创建重定向器；批量处理后可检查引用，需要时用 Ctrl+Z 撤销。</p></div>
+<p>先核对成功项的原名和新名，再根据跳过或失败的原因处理剩余资产。跳过时检查名称、类型规则、路径筛选和只读文件能否签出；目标名称已存在时检查重名。若许多文件报未知错误，可在内容浏览器右键文件夹，执行 <strong>Fix Up Redirectors in Folder</strong> 后重试。重命名通过 UE API 更新引用并创建重定向器；批量处理后可检查引用，需要时用 Ctrl+Z 撤销。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-asset-namer/docs/naming-rules/" rel="prev"><span>上一篇</span>配置资产命名规则</a></div>
         </div>

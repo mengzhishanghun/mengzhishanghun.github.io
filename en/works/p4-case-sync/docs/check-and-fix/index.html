@@ -24,7 +24,7 @@
           <p class="work-doc-name">P4CaseSync</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/p4-case-sync/docs/setup/">Prepare the Runtime Environment</a></li></ul></li><li><span>Path Case</span><ul><li><a href="/en/works/p4-case-sync/docs/check-and-fix/" aria-current="page">Check and Fix Filename Case</a></li></ul></li><li><span>Packaging and Environment Reuse</span><ul><li><a href="/en/works/p4-case-sync/docs/build-and-environment/">Build a Standalone EXE</a></li><li><a href="/en/works/p4-case-sync/docs/reuse-environment/">Reuse the Dependency Environment</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/p4-case-sync/docs/setup/">Prepare the Runtime Environment</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/p4-case-sync/docs/check-and-fix/" aria-current="page">Check and Fix Filename Case</a></li><li><a href="/en/works/p4-case-sync/docs/build-and-environment/">Build a Standalone EXE</a></li><li><a href="/en/works/p4-case-sync/docs/reuse-environment/">Reuse the Dependency Environment</a></li></ul></li><li><span>Changelog</span><ul><li><a href="/en/works/p4-case-sync/docs/updates-2025-10-16/">2025-10-16</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#path-checks-and-color-indicators" class="outline-link outline-root-link">Path Checks and Color Indicators</a></li><li class="outline-node" data-heading-depth="2"><a href="#list-display" class="outline-link outline-root-link">List Display</a></li><li class="outline-node" data-heading-depth="2"><a href="#review-and-apply-path-changes" class="outline-link outline-root-link">Review and Apply Path Changes</a></li><li class="outline-node" data-heading-depth="2"><a href="#display-and-path-issues" class="outline-link outline-root-link">Display and Path Issues</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>Check and Fix Filename Case</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="path-checks-and-color-indicators">Path Checks and Color Indicators</h2>
-<p>The tool reads pending files from <code>p4 opened</code>, uses <code>p4 where</code> to locate them, and compares the case of each path component against the disk. It lists <code>edit / add / move/add</code> actions and filters out deletions.</p>
+<p>The tool reads pending files with <code>p4 opened</code>, then uses <code>p4 where</code> to locate them in the local workspace and compare the case of each path component. The list shows only <code>edit / add / move/add</code> actions and omits deletions.</p>
 <ul>
 <li><strong>Gray</strong>: The path is unchanged.</li>
 <li><strong>Green</strong>: The new path differs from the original and matches the automatic suggestion.</li>
@@ -55,7 +55,7 @@
 <ul>
 <li><strong>The local path does not exist:</strong> The tool corrects case as far as the deepest accessible parent directory. Edit the remaining path manually if needed.</li>
 <li><strong>An X appears instead of a check mark:</strong> Icons depend on the system theme. The tool prefers Windows <code>vista/xpnative</code> themes; a custom icon is another option.</li>
-<li><strong>Gray bars or remnants after refresh:</strong> The earlier rendering issue was fixed. Refresh removes the old list controls, including separators.</li>
+<li><strong>Gray bars or remnants after refresh:</strong> Refreshing the list removes the old separators.</li>
 </ul></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/p4-case-sync/docs/setup/" rel="prev"><span>Previous</span>Prepare the Runtime Environment</a><a href="/en/works/p4-case-sync/docs/build-and-environment/" rel="next"><span>Next</span>Build a Standalone EXE</a></div>

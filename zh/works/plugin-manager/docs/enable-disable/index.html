@@ -24,7 +24,7 @@
           <p class="work-doc-name">UEPluginManager</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/plugin-manager/docs/setup/">启动并扫描项目</a></li></ul></li><li><span>插件查找与管理</span><ul><li><a href="/zh/works/plugin-manager/docs/find/">查找插件与依赖</a></li><li><a href="/zh/works/plugin-manager/docs/enable-disable/" aria-current="page">启用与禁用插件</a></li><li><a href="/zh/works/plugin-manager/docs/folder-actions/">管理插件目录</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/plugin-manager/docs/setup/">启动并扫描项目</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/plugin-manager/docs/find/">查找插件与依赖</a></li><li><a href="/zh/works/plugin-manager/docs/enable-disable/" aria-current="page">启用与禁用插件</a></li><li><a href="/zh/works/plugin-manager/docs/folder-actions/">管理插件目录</a></li></ul></li><li><span>更新日志</span><ul><li><a href="/zh/works/plugin-manager/docs/updates-2026-01-10/">2026-01-10</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E4%BF%AE%E6%94%B9%E5%90%AF%E7%94%A8%E7%8A%B6%E6%80%81" class="outline-link outline-root-link">修改启用状态</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%A4%84%E7%90%86%E5%90%8C%E5%90%8D%E5%86%B2%E7%AA%81" class="outline-link outline-root-link">处理同名冲突</a></li></ol></nav></details></aside>
@@ -33,9 +33,9 @@
           <article>
             <h1>启用与禁用插件</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="修改启用状态">修改启用状态</h2>
-<p>找到插件后，使用右侧的按钮启用、禁用或恢复默认。启用及禁用写入 <code>.uproject</code>，影响依赖链时工具会请你确认。恢复默认会移除 <code>.uproject</code> 中的对应配置。</p>
+<p>在列表中选中插件，然后用右侧按钮启用、禁用或恢复默认。启用和禁用会把选择写入 <code>.uproject</code>。如果弹出依赖变更提示，先核对受影响的插件，再确认。恢复默认会移除 <code>.uproject</code> 中针对该插件的显式设置，之后按插件默认状态处理。</p>
 <h2 id="处理同名冲突">处理同名冲突</h2>
-<p>如果项目里有同名插件，先移除其中一个才能启用剩下的插件。</p></div>
+<p>如果项目里有同名插件，先核对它们的来源，再移除其中一个。之后才能启用留下的插件。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/plugin-manager/docs/find/" rel="prev"><span>上一篇</span>查找插件与依赖</a><a href="/zh/works/plugin-manager/docs/folder-actions/" rel="next"><span>下一篇</span>管理插件目录</a></div>
         </div>

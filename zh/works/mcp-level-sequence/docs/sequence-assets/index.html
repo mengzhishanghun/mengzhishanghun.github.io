@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/">安装与连接序列编辑工具</a></li></ul></li><li><span>序列资产</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/" aria-current="page">查找、创建与保存 Level Sequence</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/">截取序列预览</a></li></ul></li><li><span>编辑序列</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/">编辑对象绑定与 Camera Cut</a></li><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/">编辑序列轨道与区段</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/">读取和编辑关键帧</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">设置播放范围与帧率</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/connect/">安装与连接序列编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-level-sequence/docs/sequence-assets/" aria-current="page">查找、创建与保存 Level Sequence</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/">截取序列预览</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-bindings/">编辑对象绑定与 Camera Cut</a></li><li><a href="/zh/works/mcp-level-sequence/docs/edit-sequence/">编辑序列轨道与区段</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-keyframes/">读取和编辑关键帧</a></li><li><a href="/zh/works/mcp-level-sequence/docs/sequence-timing/">设置播放范围与帧率</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%9F%A5%E6%89%BE%E4%B8%8E%E5%88%86%E9%A1%B5" class="outline-link outline-root-link">查找与分页</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%89%93%E5%BC%80%E4%BF%9D%E5%AD%98%E4%B8%8E%E5%85%B3%E9%97%AD" class="outline-link outline-root-link">打开、保存与关闭</a></li></ol></nav></details></aside>
@@ -53,7 +53,7 @@
 <li><code>ListSequences</code>：默认 100，单页最多 500。</li>
 <li><code>GetSequenceDetail</code>：用 <code>Offset</code> 与 <code>MaxItems</code> 对 Binding/Track/Section 的稳定组合遍历分页。</li>
 </ul>
-<p>分页响应会返回总数、当前 Offset、是否还有更多数据和可用的 <code>NextOffset</code>。客户端应继续分页，不要假设一次返回完整资产。</p>
+<p>先找序列的资产路径，再按该路径查详情。分页响应会返回总数、当前 Offset、是否还有更多数据，以及可用时的 <code>NextOffset</code>。要定位的对象还没出现时，用下一页偏移继续读取。</p>
 <h2 id="打开保存与关闭">打开、保存与关闭</h2>
 
 
@@ -72,7 +72,7 @@
 
 <table><thead><tr><th>分组</th><th>工具</th><th>用途</th></tr></thead><tbody><tr><td>生命周期</td><td><code>OpenAsset</code>、<code>SaveAsset</code>、<code>CloseAsset</code></td><td>打开、保存指定资产并核验关闭结果</td></tr></tbody></table>
 <p>修改与保存工具只接受有效的 <code>/Game/...</code> Level Sequence 路径；只读发现、读取、打开、截图和关闭可访问其他已加载或可读取的序列位置。所有编辑工具会检查 PIE、保存和 GC 忙碌状态，拒绝只读 MovieScene，并通过编辑器事务支持 Undo。</p>
-<p>编辑成功只会将包标记为 dirty，不会隐式保存。调用 <code>SaveAsset</code> 只保存指定 Level Sequence 的 package。<code>CloseAsset</code> 发出关闭请求后会再次查询该资产及其子对象的编辑器实例；若编辑器拒绝关闭，工具会返回失败而不是误报成功。</p></div>
+<p>改动先留在编辑器里。需要保留时，在关闭前调用 <code>SaveAsset</code>；它只保存指定的 Level Sequence。<code>CloseAsset</code> 会检查该资产及其子对象的编辑器实例是否已关闭。若编辑器拒绝关闭，工具会报告失败。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-level-sequence/docs/connect/" rel="prev"><span>上一篇</span>安装与连接序列编辑工具</a><a href="/zh/works/mcp-level-sequence/docs/sequence-preview/" rel="next"><span>下一篇</span>截取序列预览</a></div>
         </div>

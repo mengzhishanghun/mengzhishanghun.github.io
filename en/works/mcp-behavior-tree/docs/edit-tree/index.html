@@ -24,7 +24,7 @@
           <p class="work-doc-name">Works</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/connect-and-inspect/">Connect to MCP Behavior Tree</a></li></ul></li><li><span>Behavior Trees and Blackboards</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/edit-tree/" aria-current="page">Inspect, Edit, and Validate Behavior Trees</a></li><li><a href="/en/works/mcp-behavior-tree/docs/blackboard-keys/">Create Blackboards and Manage Keys</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/connect-and-inspect/">Connect to MCP Behavior Tree</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/mcp-behavior-tree/docs/edit-tree/" aria-current="page">Inspect, Edit, and Validate Behavior Trees</a></li><li><a href="/en/works/mcp-behavior-tree/docs/blackboard-keys/">Create Blackboards and Manage Keys</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#create-and-inspect-a-behavior-tree" class="outline-link outline-root-link">Create and inspect a behavior tree</a></li><li class="outline-node" data-heading-depth="2"><a href="#edit-tree-structure-and-nodes" class="outline-link outline-root-link">Edit tree structure and nodes</a></li><li class="outline-node" data-heading-depth="2"><a href="#validate-save-and-repair" class="outline-link outline-root-link">Validate, save, and repair</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>Inspect, Edit, and Validate Behavior Trees</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="create-and-inspect-a-behavior-tree">Create and inspect a behavior tree</h2>
-<p>Use <code>CreateBehaviorTree</code> to create a tree and specify its Blackboard path. Use <code>ListBehaviorTrees</code> to find existing trees page by page.</p>
+<p>To create a tree, call <code>CreateBehaviorTree</code> with the Blackboard path. To edit an existing tree, find it with <code>ListBehaviorTrees</code>, then use its details to locate the node.</p>
 <p><code>GetBehaviorTreeDetail</code> returns stable <code>NodeId</code> values for editing calls, the linked Blackboard and its keys, nested tree structure, decorators, services, reflected editable properties, and floating nodes. Large results are bounded by depth, node, property, and text limits and report <code>bTruncated</code> when incomplete. <code>ListBehaviorTrees</code> supports deterministic sorting, filtering, and <code>Offset</code>/<code>MaxResults</code> paging.</p>
 <h2 id="edit-tree-structure-and-nodes">Edit tree structure and nodes</h2>
 
@@ -54,11 +54,11 @@
 
 
 <table><thead><tr><th>Area</th><th>Tools</th></tr></thead><tbody><tr><td>Tree structure</td><td><code>AddCompositeNode</code>, <code>AddTaskNode</code>, <code>ConnectNodes</code>, <code>RemoveNode</code></td></tr><tr><td>Nodes</td><td><code>SetNodeProperties</code>, <code>AddDecorator</code>, <code>AddService</code></td></tr></tbody></table>
-<p>Editing tools use Unreal transactions and mark affected packages dirty. Node properties use Unreal import-text strings; for example, booleans use <code>true</code>/<code>false</code>, enums use their names, and vectors use <code>(X=0.0,Y=0.0,Z=0.0)</code>. Property maps accept string values only, and a failed import leaves the property’s previous value unchanged. Blackboard selector properties take a Blackboard key name and are validated against the selector’s native type filters.</p>
+<p>Before moving or editing an existing node, get its <code>NodeId</code> from the tree details. Edits use Unreal transactions and stay in memory until saved. Node properties use Unreal import-text strings; for example, booleans use <code>true</code>/<code>false</code>, enums use their names, and vectors use <code>(X=0.0,Y=0.0,Z=0.0)</code>. Property maps accept string values only, and a failed import leaves the property’s previous value unchanged. Blackboard selector properties take a Blackboard key name and are validated against the selector’s native type filters.</p>
 <p>Blueprint task, decorator, and service logic is not authored here. Create and compile those Blueprint classes with a Blueprint-capable tool, then pass the generated <code>_C</code> class path.</p>
 <h2 id="validate-save-and-repair">Validate, save, and repair</h2>
-<p>Run <code>ValidateBehaviorTree</code> before saving.</p>
-<p><code>SimpleParallel</code> has <code>Default</code> and <code>Background</code> output pins. Use <code>ParentOutputPin="Background"</code> when adding or moving the background subtree. Run validation before saving; validation reports structural errors, missing classes, invalid key bindings, invalid decorator abort modes, and unconnected nodes.</p>
+<p>Run <code>ValidateBehaviorTree</code> and fix any reported problems before saving.</p>
+<p><code>SimpleParallel</code> has <code>Default</code> and <code>Background</code> output pins. Use <code>ParentOutputPin="Background"</code> when adding or moving the background subtree. Validation reports structural errors, missing classes, invalid key bindings, invalid decorator abort modes, and unconnected nodes.</p>
 <p>Asset arguments use Unreal content paths such as <code>/Game/AI/BT_Enemy</code> and <code>/Game/AI/BB_Enemy</code>. Newly created or edited assets remain dirty until <code>SaveAsset</code> succeeds.</p>
 <p><code>SaveAsset</code>, <code>OpenAsset</code>, and <code>CloseAsset</code> only accept Behavior Tree or Blackboard assets. Saving fails closed when the editor graph cannot be synchronized or Unreal cannot write the package; a successful MCP result therefore means the package save succeeded.</p>
 <p>A Behavior Tree that has runtime nodes but no editor graph is rejected instead of being rebuilt as an empty graph. Repair that asset in the Behavior Tree editor before using MCP editing or save tools.</p></div>

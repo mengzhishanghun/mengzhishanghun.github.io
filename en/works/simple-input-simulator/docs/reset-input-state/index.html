@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleInputSimulator</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-input-simulator/docs/setup/">Install and Set Up</a></li></ul></li><li><span>Input Simulation</span><ul><li><a href="/en/works/simple-input-simulator/docs/key-input/">Simulate Key Input</a></li><li><a href="/en/works/simple-input-simulator/docs/axis-input/">Simulate Axis Input</a></li><li><a href="/en/works/simple-input-simulator/docs/reset-input-state/" aria-current="page">Clear Simulated Input State</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-input-simulator/docs/setup/">Install and Set Up</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-input-simulator/docs/key-input/">Simulate Key Input</a></li><li><a href="/en/works/simple-input-simulator/docs/axis-input/">Simulate Axis Input</a></li><li><a href="/en/works/simple-input-simulator/docs/reset-input-state/" aria-current="page">Clear Simulated Input State</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#clear-pressed-input" class="outline-link outline-root-link">Clear Pressed Input</a></li><li class="outline-node" data-heading-depth="2"><a href="#cleanup-after-testing-or-playback" class="outline-link outline-root-link">Cleanup After Testing or Playback</a></li></ol></nav></details></aside>
@@ -52,7 +52,7 @@
 <li><strong>Player Index</strong>: Target player controller (0 = first player)</li>
 </ul>
 <h2 id="cleanup-after-testing-or-playback">Cleanup After Testing or Playback</h2>
-<p>Pair press events with releases. After testing, a demonstration, or playback, call <code>FlushPressedKeys</code> to clear any remaining pressed state for the target controller.</p></div>
+<p>Send press and release events to the same player index. When a test, demonstration, or replay ends or is interrupted, call <code>FlushPressedKeys</code> to clear any remaining pressed keys on that player’s controller. In local multiplayer, check which player you are clearing.</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-input-simulator/docs/axis-input/" rel="prev"><span>Previous</span>Simulate Axis Input</a></div>
         </div>

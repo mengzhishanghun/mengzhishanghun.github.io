@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleSSHTunnel</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-ssh-tunnel/docs/connect/" aria-current="page">Configure SSH Connections</a></li></ul></li><li><span>Tunnel Management</span><ul><li><a href="/en/works/simple-ssh-tunnel/docs/manage-tunnels/">Manage SSH Tunnels in Blueprint</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-ssh-tunnel/docs/cpp-tunnels/">Create SSH Tunnels in C++</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-ssh-tunnel/docs/connect/" aria-current="page">Configure SSH Connections</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-ssh-tunnel/docs/manage-tunnels/">Manage SSH Tunnels in Blueprint</a></li><li><a href="/en/works/simple-ssh-tunnel/docs/cpp-tunnels/">Create SSH Tunnels in C++</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#ssh-tunnels-and-remote-services" class="outline-link outline-root-link">SSH tunnels and remote services</a></li><li class="outline-node" data-heading-depth="2"><a href="#compatibility" class="outline-link outline-root-link">Compatibility</a></li><li class="outline-node" data-heading-depth="2"><a href="#connection-parameters" class="outline-link outline-root-link">Connection parameters</a></li><li class="outline-node" data-heading-depth="2"><a href="#interface-language" class="outline-link outline-root-link">Interface language</a></li></ol></nav></details></aside>
@@ -41,6 +41,7 @@
 <li>Version 1.1.0 (Version 2)</li>
 </ul>
 <h2 id="connection-parameters">Connection parameters</h2>
+<p>Distinguish the three endpoints. The local settings tell the UE app where to connect, the remote settings identify the service it needs, and the SSH settings identify the server and account used to open the tunnel. Once the tunnel is running, connect the app to the local endpoint and check that it can reach the service.</p>
 <ol>
 <li>
 <p>Open <strong>Project Settings</strong> in Unreal Engine editor.</p>
@@ -63,7 +64,7 @@
 </li>
 </ol>
 <p>Set <strong>Subsystem Class</strong> if you need to replace the default subsystem.</p>
-<p>All settings are saved in <code>DefaultSimpleSSHTunnel.ini</code> and automatically applied at engine startup.</p>
+<p>The plugin saves these settings in <code>DefaultSimpleSSHTunnel.ini</code>. The engine applies them at startup.</p>
 <h2 id="interface-language">Interface language</h2>
 <p>Open <strong>Edit → Project Settings</strong>, select the SimpleSSHTunnel settings page, and set <strong>Language</strong> to <strong>English</strong> or <strong>Chinese</strong>. English is the default. Available user-facing UI, tooltips, notifications, and functional logs update immediately without restarting the editor. Public API names and module startup/shutdown logs remain in English.</p>
 <p><a href="/en/works/simple-ssh-tunnel/docs/manage-tunnels/">Manage SSH tunnels in Blueprint</a></p></div>

@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-material/docs/connect/">连接材质编辑工具</a></li></ul></li><li><span>材质资产</span><ul><li><a href="/zh/works/mcp-material/docs/material-assets/">创建、打开与保存材质资产</a></li><li><a href="/zh/works/mcp-material/docs/material-preview/">截取材质预览</a></li></ul></li><li><span>材质编辑</span><ul><li><a href="/zh/works/mcp-material/docs/edit-graph/">编辑材质图与节点</a></li><li><a href="/zh/works/mcp-material/docs/instance-parameters/">读取和修改材质实例参数</a></li><li><a href="/zh/works/mcp-material/docs/material-compilation/" aria-current="page">编译材质并检查诊断</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-material/docs/connect/">连接材质编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-material/docs/material-assets/">创建、打开与保存材质资产</a></li><li><a href="/zh/works/mcp-material/docs/material-preview/">截取材质预览</a></li><li><a href="/zh/works/mcp-material/docs/edit-graph/">编辑材质图与节点</a></li><li><a href="/zh/works/mcp-material/docs/instance-parameters/">读取和修改材质实例参数</a></li><li><a href="/zh/works/mcp-material/docs/material-compilation/" aria-current="page">编译材质并检查诊断</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E7%BC%96%E8%AF%91%E7%BB%93%E6%9E%9C" class="outline-link outline-root-link">编译结果</a></li></ol></nav></details></aside>
@@ -57,7 +57,7 @@
 
 <table><thead><tr><th>返回字段</th><th>含义</th></tr></thead><tbody><tr><td><code>AssetPath</code></td><td>保留请求中传入的路径。</td></tr><tr><td><code>AssetType</code></td><td>请求资产的类型，值为 <code>Material</code> 或 <code>MaterialInstanceConstant</code>。</td></tr><tr><td><code>ResourceOwnerPath</code></td><td>实际编译资源所属资产的完整对象路径，例如 <code>/Game/Materials/MI_Example.MI_Example</code>。</td></tr></tbody></table>
 <p>有静态置换的实例编译自身资源；没有静态置换的实例使用父链中的有效资源，其所属资产可能是父材质，也可能是祖先实例。<code>ResourceOwnerPath</code> 返回实际所属资产。编译前，请关闭请求资产和资源所属资产的编辑器。资源缺失时，返回 <code>CompileStatus: "Error"</code>、非空 <code>Errors</code> 和空字符串 <code>ResourceOwnerPath</code>；实例没有完整 shader map 时也返回编译错误。</p>
-<p>确认编译结果后，参见<a href="/zh/works/mcp-material/docs/material-assets/">材质资产保存说明</a>。</p></div>
+<p>如果编译报错，先用错误数组排查；实例出错时，也要看返回的资源所属路径是否指向父级。处理错误并重新编译后，再按<a href="/zh/works/mcp-material/docs/material-assets/">材质资产保存说明</a>操作。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-material/docs/instance-parameters/" rel="prev"><span>上一篇</span>读取和修改材质实例参数</a></div>
         </div>

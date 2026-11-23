@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>系统资产与预览</span><ul><li><a href="/zh/works/mcp-niagara/docs/inspect/">查找并检查 Niagara 资产</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-system-assets/">创建、打开与保存 Niagara System</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-preview/">导出 Niagara 缓存缩略图</a></li></ul></li><li><span>效果编辑</span><ul><li><a href="/zh/works/mcp-niagara/docs/edit-emitter/" aria-current="page">添加和修改 Niagara 发射器</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-renderers/">更换与配置 Niagara 渲染器</a></li><li><a href="/zh/works/mcp-niagara/docs/parameters-preview/">编辑 Niagara 用户参数</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-niagara/docs/quickstart/">准备并首次查询 Niagara</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-niagara/docs/inspect/">查找并检查 Niagara 资产</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-system-assets/">创建、打开与保存 Niagara System</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-preview/">导出 Niagara 缓存缩略图</a></li><li><a href="/zh/works/mcp-niagara/docs/edit-emitter/" aria-current="page">添加和修改 Niagara 发射器</a></li><li><a href="/zh/works/mcp-niagara/docs/niagara-renderers/">更换与配置 Niagara 渲染器</a></li><li><a href="/zh/works/mcp-niagara/docs/parameters-preview/">编辑 Niagara 用户参数</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%A4%8D%E5%88%B6%E4%B8%8E%E4%BF%AE%E6%94%B9-emitter" class="outline-link outline-root-link">复制与修改 Emitter</a></li></ol></nav></details></aside>
@@ -33,7 +33,7 @@
           <article>
             <h1>添加和修改 Niagara 发射器</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="复制与修改-emitter">复制与修改 Emitter</h2>
-<p><code>AddEmitter</code> 使用 NiagaraEditor 的标准复制路径生成唯一名称、重建 Emitter 节点并同步 Overview Graph。<code>RemoveEmitter</code> 和 <code>RenameEmitter</code> 要求名称唯一；增删改名均支持撤销事务并发送 System 编辑通知。</p>
+<p>先读取目标 System 的发射器列表，确认要编辑的是哪一个。添加时，用 <code>AddEmitter</code> 走 NiagaraEditor 的标准复制流程生成唯一名称、重建 Emitter 节点并同步 Overview Graph。<code>RemoveEmitter</code> 和 <code>RenameEmitter</code> 要求名称唯一；增删改名均支持撤销事务并发送 System 编辑通知。</p>
 <p><code>SetEmitterProperties</code> 原子写入 <code>FVersionedNiagaraEmitterData</code>，每次 1–64 项：全部属性和值预校验成功后才提交，并对每项发送版本感知的 PostEditChange。支持可编辑的标量、枚举、字符串、名称和安全结构体；顶层属性必须可编辑且不得为临时或弃用属性，结构体成员会递归拒绝对象引用、容器、委托、临时和弃用字段。<code>SetEmitterProperties</code> 与 <code>SetModuleParameters</code> 的动态对象 Schema 只接受字符串、数字或布尔值，并与运行时数量边界一致。字符串输入及动态属性名的 Schema 和运行时上限不超过 4096 字符，部分资产路径更严格；输入 JSON 还限制为 8 层、2048 个值。所有加载现有 System 的工具在成功时统一返回实际对象的规范 <code>SystemPath</code>；最终错误文本最多 4096 字符，可用名称候选也会限制数量与文本长度。</p>
 <p>限制：UE 5.2 未导出 NiagaraEditor 私有的 merge-adapter cache 清理 API。<code>RemoveEmitter</code> 会销毁引用实例、移除并重连公开 System Graph、同步 Overview Graph 并发送编辑通知，但无法显式清该私有缓存；响应会返回 <code>Warnings</code>，在紧接着执行继承 Emitter merge 工作流前应刷新或重开 System。插件不会为此依赖引擎 Private 头或非导出符号。</p></div>
           </article>

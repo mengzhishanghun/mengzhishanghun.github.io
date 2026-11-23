@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleByteConversion</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-byte-conversion/docs/setup/" aria-current="page">Install the Plugin and Find Nodes</a></li></ul></li><li><span>Data Conversion</span><ul><li><a href="/en/works/simple-byte-conversion/docs/primitive-bytes/">Convert Primitive Types to and from Bytes</a></li><li><a href="/en/works/simple-byte-conversion/docs/struct-and-json/">Convert Structs, Byte Arrays, and JSON</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-byte-conversion/docs/setup/" aria-current="page">Install the Plugin and Find Nodes</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-byte-conversion/docs/primitive-bytes/">Convert Primitive Types to and from Bytes</a></li><li><a href="/en/works/simple-byte-conversion/docs/struct-and-json/">Convert Structs, Byte Arrays, and JSON</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#installation-and-activation" class="outline-link outline-root-link">Installation and Activation</a></li><li class="outline-node" data-heading-depth="2"><a href="#blueprint-node-category" class="outline-link outline-root-link">Blueprint Node Category</a></li></ol></nav></details></aside>
@@ -34,8 +34,9 @@
             <h1>Install the Plugin and Find Nodes</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="installation-and-activation">Installation and Activation</h2>
 <p>Copy the plugin folder into your project’s <code>Plugins</code> directory and restart the editor.</p>
-<p>Once enabled, the plugin is ready to use. You do not need to manage a subsystem or the plugin lifecycle.</p>
+<p>Once the plugin is enabled, its Blueprint nodes are available without managing a subsystem or the plugin lifecycle.</p>
 <h2 id="blueprint-node-category">Blueprint Node Category</h2>
+<p>The graph shows the conversion nodes in pairs. Pick the data type, connect the <code>Bytes</code> output to the matching decoder, and check the recovered value before wiring it into transport or storage.</p>
 <p>All nodes are under the <code>SimpleByteConversion</code> category:</p>
 <ul>
 <li>

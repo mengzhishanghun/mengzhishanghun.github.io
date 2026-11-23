@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleAutoEnum</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Enum Binding</span><ul><li><a href="/en/works/simple-auto-enum/docs/config-binding/">Bind Enums to Configuration</a></li></ul></li><li><span>Using Enums</span><ul><li><a href="/en/works/simple-auto-enum/docs/blueprints-and-assets/" aria-current="page">Use Enums in Blueprints and DataAssets</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-auto-enum/docs/quickstart/">Install and create the first binding</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-auto-enum/docs/config-binding/">Bind Enums to Configuration</a></li><li><a href="/en/works/simple-auto-enum/docs/blueprints-and-assets/" aria-current="page">Use Enums in Blueprints and DataAssets</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#blueprint-function-limitations" class="outline-link outline-root-link">Blueprint Function Limitations</a></li><li class="outline-node" data-heading-depth="2"><a href="#default-values-in-dataassets" class="outline-link outline-root-link">Default Values in DataAssets</a></li></ol></nav></details></aside>
@@ -38,10 +38,11 @@
 <li><strong>Solution</strong>: Right-click the Blueprint function and choose <strong>Refresh</strong> to synchronize current enum values</li>
 </ul>
 <h2 id="default-values-in-dataassets">Default Values in DataAssets</h2>
+<p>After appending entries, open a Blueprint and DataAsset that use the enum. Check that existing selections still point to the original entries, then try selecting a new one. If you have already reordered the entries, review the affected defaults individually.</p>
 <ul>
 <li><strong>Behavior</strong>: DataAssets use enum indices and synchronize automatically when names change</li>
 <li><strong>Warning</strong>: Reordering enum values shifts DataAsset values; for example, swapping positions 1 and 2 causes a DataAsset storing value 1 to refer to position 2</li>
-<li><strong>Recommendation</strong>: Avoid reordering existing enum entries in production; append new values only</li>
+<li><strong>Recommendation</strong>: In production, append new enum values to the existing list without reordering its entries.</li>
 </ul></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-auto-enum/docs/config-binding/" rel="prev"><span>Previous</span>Bind Enums to Configuration</a></div>

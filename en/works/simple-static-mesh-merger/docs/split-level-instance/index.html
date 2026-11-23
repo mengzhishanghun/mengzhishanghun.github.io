@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleStaticMeshMerger</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-static-mesh-merger/docs/setup/">Open the Tool and Find Its Controls</a></li></ul></li><li><span>Scene Workflows</span><ul><li><a href="/en/works/simple-static-mesh-merger/docs/merge-actors/">Filter and Merge Static Mesh Actors</a></li><li><a href="/en/works/simple-static-mesh-merger/docs/split-level-instance/" aria-current="page">Break LevelInstances</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-static-mesh-merger/docs/setup/">Open the Tool and Find Its Controls</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-static-mesh-merger/docs/merge-actors/">Filter and Merge Static Mesh Actors</a></li><li><a href="/en/works/simple-static-mesh-merger/docs/split-level-instance/" aria-current="page">Break LevelInstances</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#break-instances-recursively-and-refresh-the-preview" class="outline-link outline-root-link">Break Instances Recursively and Refresh the Preview</a></li><li class="outline-node" data-heading-depth="2"><a href="#how-first-and-repeated-paths-are-handled" class="outline-link outline-root-link">How First and Repeated Paths Are Handled</a></li></ol></nav></details></aside>
@@ -33,11 +33,12 @@
           <article>
             <h1>Break LevelInstances</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="break-instances-recursively-and-refresh-the-preview">Break Instances Recursively and Refresh the Preview</h2>
+<p>Breaking instances changes the scene. Keep a recoverable copy of the level before you start. Once progress finishes, check the actors that were moved out and the duplicates that were removed in the Outliner, then review the merge preview.</p>
 <p>Clicking <code>Break Level Instances</code> recursively breaks all LevelInstances in the scene:</p>
 <ul>
 <li>✅ Automatically handles nested LevelInstances</li>
 <li>✅ Smart deduplication (duplicate instances with same path are deleted)</li>
-<li>✅ Real-time progress notifications (flowing display of current item)</li>
+<li>✅ Progress notifications show which object the tool is processing</li>
 <li>✅ UI auto-refreshes after each iteration</li>
 </ul>
 <h2 id="how-first-and-repeated-paths-are-handled">How First and Repeated Paths Are Handled</h2>

@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleUDP</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-udp/docs/enable-plugin/">Enable SimpleUDP</a></li></ul></li><li><span>Networking</span><ul><li><a href="/en/works/simple-udp/docs/channels/">Configure UDP Receive and Send Channels</a></li><li><a href="/en/works/simple-udp/docs/messages/" aria-current="page">Send and Receive UDP Datagrams</a></li></ul></li><li><span>Native Implementations</span><ul><li><a href="/en/works/simple-udp/docs/native-sockets/">Use UDP Sockets in C++</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-udp/docs/enable-plugin/">Enable SimpleUDP</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-udp/docs/channels/">Configure UDP Receive and Send Channels</a></li><li><a href="/en/works/simple-udp/docs/messages/" aria-current="page">Send and Receive UDP Datagrams</a></li><li><a href="/en/works/simple-udp/docs/native-sockets/">Use UDP Sockets in C++</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#receive-datagrams" class="outline-link outline-root-link">Receive datagrams</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#example-bind-and-unbind-a-handler" class="outline-link">Example: bind and unbind a handler</a></li><li class="outline-node" data-heading-depth="3"><a href="#unbind-all-receive-handlers" class="outline-link">Unbind all receive handlers</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#send-datagrams" class="outline-link outline-root-link">Send datagrams</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#example-send-a-string" class="outline-link">Example: send a string</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#receive-and-send-socket-lifecycles" class="outline-link outline-root-link">Receive and send socket lifecycles</a></li><li class="outline-node" data-heading-depth="2"><a href="#convert-byte-arrays" class="outline-link outline-root-link">Convert byte arrays</a></li></ol></nav></details></aside>
@@ -33,6 +33,7 @@
           <article>
             <h1>Send and Receive UDP Datagrams</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="receive-datagrams">Receive datagrams</h2>
+<p>First check the receive channel’s name, bind address, and filter rules in Project Settings. Use the same channel name when binding and unbinding a handler. Once the handler is bound, send a test datagram from a permitted sender and check that the callback receives the expected bytes.</p>
 
 
 
@@ -59,7 +60,7 @@
 <p><a href="/media/manuals/f6d246d6dd2934e4c5a1.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/f6d246d6dd2934e4c5a1.png" data-media-alt="StartReceiveMessage" class="media-image-trigger" aria-label="View a larger image: StartReceiveMessage"><img src="/media/manuals/f6d246d6dd2934e4c5a1.png" alt="StartReceiveMessage" loading="lazy" decoding="async"></a></p>
 <h3 id="unbind-all-receive-handlers">Unbind all receive handlers</h3>
 <p><a href="/media/manuals/70c9fd752abed00b6b4c.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/70c9fd752abed00b6b4c.png" data-media-alt="StopReceiveMessage" class="media-image-trigger" aria-label="View a larger image: StopReceiveMessage"><img src="/media/manuals/70c9fd752abed00b6b4c.png" alt="StopReceiveMessage" loading="lazy" decoding="async"></a></p>
-<p>Use this node to unbind everything from a channel and close the socket manually.</p>
+<p>Use this node to unbind every handler and close the socket when the channel no longer needs to receive datagrams.</p>
 <h2 id="send-datagrams">Send datagrams</h2>
 
 

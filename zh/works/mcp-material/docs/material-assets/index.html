@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-material/docs/connect/">连接材质编辑工具</a></li></ul></li><li><span>材质资产</span><ul><li><a href="/zh/works/mcp-material/docs/material-assets/" aria-current="page">创建、打开与保存材质资产</a></li><li><a href="/zh/works/mcp-material/docs/material-preview/">截取材质预览</a></li></ul></li><li><span>材质编辑</span><ul><li><a href="/zh/works/mcp-material/docs/edit-graph/">编辑材质图与节点</a></li><li><a href="/zh/works/mcp-material/docs/instance-parameters/">读取和修改材质实例参数</a></li><li><a href="/zh/works/mcp-material/docs/material-compilation/">编译材质并检查诊断</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-material/docs/connect/">连接材质编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-material/docs/material-assets/" aria-current="page">创建、打开与保存材质资产</a></li><li><a href="/zh/works/mcp-material/docs/material-preview/">截取材质预览</a></li><li><a href="/zh/works/mcp-material/docs/edit-graph/">编辑材质图与节点</a></li><li><a href="/zh/works/mcp-material/docs/instance-parameters/">读取和修改材质实例参数</a></li><li><a href="/zh/works/mcp-material/docs/material-compilation/">编译材质并检查诊断</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%91%E7%8E%B0%E5%92%8C%E5%88%9B%E5%BB%BA%E8%B5%84%E4%BA%A7" class="outline-link outline-root-link">发现和创建资产</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%A4%84%E7%90%86%E7%BC%96%E8%BE%91%E5%99%A8%E4%B8%AD%E7%9A%84%E6%9B%B4%E6%94%B9%E5%B9%B6%E4%BF%9D%E5%AD%98" class="outline-link outline-root-link">处理编辑器中的更改并保存</a></li></ol></nav></details></aside>
@@ -38,7 +38,7 @@
 <p>如果目标已在资产编辑器中打开，先保存或处理编辑器中的更改，再调用 <code>CloseAsset</code>。</p>
 <p>写入、编译和保存工具会拒绝操作仍在资产编辑器中打开的目标。这可避免 Material Editor 的 transient preview 与 backing asset 形成双状态，并防止编辑器稍后 Apply 时覆盖 MCP 已完成的修改。</p>
 <p>创建的资产先处于内存 Dirty 状态，必须显式调用 <code>SaveAsset</code> 才会写入磁盘；底层保存失败会返回 MCP 错误终态，而不是成功响应中的警告。</p>
-<p>写入工具使用事务并将包标记为 Dirty。保存前可用 <code>CompileMaterial</code> 验证；需要手动检查时用 <code>OpenAsset</code> 打开。</p></div>
+<p>写入工具会把改动记入事务，并将包标记为 Dirty。保存前可用 <code>CompileMaterial</code> 检查编译结果。若想在编辑器里查看结果，可先保存，再用 <code>OpenAsset</code> 打开；如果先打开查看，保存前要再次关闭目标编辑器。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-material/docs/connect/" rel="prev"><span>上一篇</span>连接材质编辑工具</a><a href="/zh/works/mcp-material/docs/material-preview/" rel="next"><span>下一篇</span>截取材质预览</a></div>
         </div>

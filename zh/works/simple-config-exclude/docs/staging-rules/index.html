@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleConfigExclude</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-config-exclude/docs/setup/">安装插件并打开配置面板</a></li></ul></li><li><span>打包规则与部署</span><ul><li><a href="/zh/works/simple-config-exclude/docs/staging-rules/" aria-current="page">配置并验证打包规则</a></li><li><a href="/zh/works/simple-config-exclude/docs/copy-excluded/">复制被排除的配置</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-config-exclude/docs/setup/">安装插件并打开配置面板</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-config-exclude/docs/staging-rules/" aria-current="page">配置并验证打包规则</a></li><li><a href="/zh/works/simple-config-exclude/docs/copy-excluded/">复制被排除的配置</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E4%B8%BA%E6%AF%8F%E4%B8%AA-ini-%E6%96%87%E4%BB%B6%E9%80%89%E6%8B%A9%E6%89%93%E5%8C%85%E7%8A%B6%E6%80%81" class="outline-link outline-root-link">为每个 INI 文件选择打包状态</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%89%AB%E6%8F%8F%E9%85%8D%E7%BD%AE%E5%88%B7%E6%96%B0%E5%88%97%E8%A1%A8" class="outline-link outline-root-link">扫描配置、刷新列表</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E4%BF%9D%E5%AD%98%E8%A7%84%E5%88%99%E7%AD%BE%E5%87%BA%E4%B8%8E%E6%8F%92%E4%BB%B6%E9%85%8D%E7%BD%AE%E4%BF%9D%E6%8A%A4" class="outline-link outline-root-link">保存规则、签出与插件配置保护</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%8E%92%E9%99%A4%E8%B0%83%E8%AF%95%E6%96%87%E4%BB%B6%E4%B8%8E%E5%BC%BA%E5%88%B6%E5%8C%85%E5%90%AB%E9%85%8D%E7%BD%AE" class="outline-link outline-root-link">排除调试文件与强制包含配置</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%AA%8C%E8%AF%81%E4%BA%A7%E7%89%A9%E4%B8%8E%E7%AE%A1%E7%90%86%E6%95%8F%E6%84%9F%E9%85%8D%E7%BD%AE" class="outline-link outline-root-link">验证产物与管理敏感配置</a></li></ol></nav></details></aside>
@@ -66,7 +66,7 @@
 <li>找到你要排除的配置文件</li>
 <li>点击 <code>Disallowed</code> 即可排除</li>
 <li>需要强制包含的点击 <code>Allowed</code></li>
-<li>修改即时生效，无需额外保存</li>
+<li>修改会写入配置，无需另点保存；若遇到写入问题，按下文检查签出和文件差异。</li>
 </ol>
 <p>适用场景见 <a href="/zh/works/simple-config-exclude/">SimpleConfigExclude 作品页</a>。</p>
 <h2 id="扫描配置刷新列表">扫描配置、刷新列表</h2>
@@ -110,6 +110,7 @@
 </ol>
 <div class="expressive-code"><figure class="frame not-content"><figcaption class="header"></figcaption><pre data-language="plaintext"><code><div class="ec-line"><div class="code"><span style="--0:#e1e4e8;--1:#24292e">DefaultDebug.ini → Disallowed</span></div></div></code></pre><div class="copy"><div aria-live="polite"></div><button title="复制到剪贴板" data-copied="复制成功！" data-code="DefaultDebug.ini → Disallowed"><div></div></button></div></figure></div>
 <h2 id="验证产物与管理敏感配置">验证产物与管理敏感配置</h2>
+<p>如果准备验证排除规则，先检查本次打包的产物，再执行任何手动复制。用示例中的两份文件检查时，应分别确认排除项不在、包含项存在。</p>
 <p>正常打包项目，检查打包目录中的 <code>Config</code> 文件夹，确认排除的文件不存在。</p>
 <ol>
 <li>检查 <code>DefaultGame.ini</code> 是否包含 <code>[Staging]</code> 段</li>

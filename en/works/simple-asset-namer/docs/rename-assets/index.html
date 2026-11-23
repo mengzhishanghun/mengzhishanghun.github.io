@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleAssetNamer</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-asset-namer/docs/setup/">Install and Get Started</a></li></ul></li><li><span>Asset Naming</span><ul><li><a href="/en/works/simple-asset-namer/docs/naming-rules/">Configure Asset Naming Rules</a></li><li><a href="/en/works/simple-asset-namer/docs/rename-assets/" aria-current="page">Rename Assets Automatically or in Batches</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-asset-namer/docs/setup/">Install and Get Started</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-asset-namer/docs/naming-rules/">Configure Asset Naming Rules</a></li><li><a href="/en/works/simple-asset-namer/docs/rename-assets/" aria-current="page">Rename Assets Automatically or in Batches</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#apply-rules-when-creating-or-renaming-assets" class="outline-link outline-root-link">Apply Rules When Creating or Renaming Assets</a></li><li class="outline-node" data-heading-depth="2"><a href="#batch-rename-from-the-context-menu" class="outline-link outline-root-link">Batch Rename from the Context Menu</a></li><li class="outline-node" data-heading-depth="2"><a href="#review-results-and-troubleshoot-failures" class="outline-link outline-root-link">Review Results and Troubleshoot Failures</a></li></ol></nav></details></aside>
@@ -35,6 +35,7 @@
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="apply-rules-when-creating-or-renaming-assets">Apply Rules When Creating or Renaming Assets</h2>
 <p><code>Auto Rename on Create</code> (<code>bAutoRenameOnCreate</code>) runs on creation or import; <code>Auto Rename on Rename</code> (<code>bAutoRenameOnRename</code>) rechecks the name after a manual rename. Configure them independently. Type rules and path filters still apply.</p>
 <h2 id="batch-rename-from-the-context-menu">Batch Rename from the Context Menu</h2>
+<p>Try the rules on a small selection first. Check the path scope and keep a recoverable version before running a batch.</p>
 <p>All context-menu entries are grouped under the <strong>Simple Asset Namer</strong> submenu.</p>
 <p><strong>Asset context menu</strong></p>
 <ol>
@@ -46,7 +47,7 @@
 <li>Right-click a folder</li>
 <li><strong>Simple Asset Namer</strong> → <strong>Auto Rename All Assets</strong></li>
 </ol>
-<p>Before a batch, check the path scope and keep a recoverable version. The plugin processes fewer than 100 assets individually. At 100 or more, it runs ten batches, retries failed batches together once, and retries remaining failures individually with detailed errors.</p>
+<p>The plugin processes fewer than 100 assets individually. At 100 or more, it runs ten batches, retries failed batches together once, and retries remaining failures individually with detailed errors.</p>
 <h2 id="review-results-and-troubleshoot-failures">Review Results and Troubleshoot Failures</h2>
 <p>After completion, a results window appears with three tabs:</p>
 <ul>
@@ -85,7 +86,7 @@
 
 
 <table><thead><tr><th>Error message</th><th>Description</th></tr></thead><tbody><tr><td>Source control not connected</td><td>Version control is disconnected</td></tr><tr><td>Checked out by another user</td><td>File checked out by another user</td></tr><tr><td>File is read-only</td><td>File is read-only</td></tr><tr><td>Target file already exists</td><td>Destination file already exists</td></tr><tr><td>Asset has unsaved changes</td><td>Asset contains unsaved changes</td></tr></tbody></table>
-<p>Success records show the old and new names. For skips, check the name, type rule, path filter, or whether a read-only file can be checked out. Check for a collision if the target exists. If many files report unknown errors, right-click the folder in the Content Browser, choose <strong>Fix Up Redirectors in Folder</strong>, and try again. Renaming uses the UE API to update references and create redirectors. Check references after a batch and use Ctrl+Z to undo if needed.</p></div>
+<p>Compare the old and new names for successful renames, then use the skip or error messages to decide what to do with the remaining assets. For skips, check the name, type rule, path filter, or whether a read-only file can be checked out. Check for a collision if the target exists. If many files report unknown errors, right-click the folder in the Content Browser, choose <strong>Fix Up Redirectors in Folder</strong>, and try again. Renaming uses the UE API to update references and create redirectors. Check references after a batch and use Ctrl+Z to undo if needed.</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-asset-namer/docs/naming-rules/" rel="prev"><span>Previous</span>Configure Asset Naming Rules</a></div>
         </div>

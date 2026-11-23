@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleByteConversion</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-byte-conversion/docs/setup/" aria-current="page">安装插件并查找节点</a></li></ul></li><li><span>数据转换</span><ul><li><a href="/zh/works/simple-byte-conversion/docs/primitive-bytes/">基础类型与字节数组互转</a></li><li><a href="/zh/works/simple-byte-conversion/docs/struct-and-json/">转换结构体、字节数组与 JSON</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-byte-conversion/docs/setup/" aria-current="page">安装插件并查找节点</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-byte-conversion/docs/primitive-bytes/">基础类型与字节数组互转</a></li><li><a href="/zh/works/simple-byte-conversion/docs/struct-and-json/">转换结构体、字节数组与 JSON</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E5%90%AF%E7%94%A8" class="outline-link outline-root-link">安装与启用</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%93%9D%E5%9B%BE%E8%8A%82%E7%82%B9%E5%88%86%E7%B1%BB" class="outline-link outline-root-link">蓝图节点分类</a></li></ol></nav></details></aside>
@@ -34,8 +34,9 @@
             <h1>安装插件并查找节点</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="安装与启用">安装与启用</h2>
 <p>将插件文件夹复制到项目的 <code>Plugins</code> 目录，重启编辑器。</p>
-<p>插件启用后自动生效，无需手动管理子系统或插件生命周期。</p>
+<p>启用插件后即可使用蓝图节点，无需手动管理子系统或插件的生命周期。</p>
 <h2 id="蓝图节点分类">蓝图节点分类</h2>
+<p>图中按输入和输出列出了成对的转换节点。选好数据类型后，先将 <code>Bytes</code> 输出接到同一类型的还原节点，检查还原值，再接入通信或存储。</p>
 <p>所有节点都在 <code>SimpleByteConversion</code> 分类下：</p>
 <ul>
 <li>

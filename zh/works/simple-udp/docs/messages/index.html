@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleUDP</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-udp/docs/enable-plugin/">启用 SimpleUDP</a></li></ul></li><li><span>网络通信</span><ul><li><a href="/zh/works/simple-udp/docs/channels/">配置 UDP 接收与发送通道</a></li><li><a href="/zh/works/simple-udp/docs/messages/" aria-current="page">发送和接收 UDP 数据</a></li></ul></li><li><span>原生实现</span><ul><li><a href="/zh/works/simple-udp/docs/native-sockets/">在 C++ 中使用 UDP Socket</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-udp/docs/enable-plugin/">启用 SimpleUDP</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-udp/docs/channels/">配置 UDP 接收与发送通道</a></li><li><a href="/zh/works/simple-udp/docs/messages/" aria-current="page">发送和接收 UDP 数据</a></li><li><a href="/zh/works/simple-udp/docs/native-sockets/">在 C++ 中使用 UDP Socket</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE" class="outline-link outline-root-link">接收数据</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E7%BB%91%E5%AE%9A%E4%B8%8E%E8%A7%A3%E7%BB%91%E7%A4%BA%E4%BE%8B" class="outline-link">绑定与解绑示例</a></li><li class="outline-node" data-heading-depth="3"><a href="#%E8%A7%A3%E7%BB%91%E6%89%80%E6%9C%89%E6%8E%A5%E6%94%B6%E5%A4%84%E7%90%86%E5%99%A8" class="outline-link">解绑所有接收处理器</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE" class="outline-link outline-root-link">发送数据</a><ol class="outline-tree"><li class="outline-node" data-heading-depth="3"><a href="#%E5%8F%91%E9%80%81%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%A4%BA%E4%BE%8B" class="outline-link">发送字符串示例</a></li></ol></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%94%B6%E5%8F%91-socket-%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F" class="outline-link outline-root-link">收发 Socket 生命周期</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E8%BD%AC%E6%8D%A2%E5%AD%97%E8%8A%82%E6%95%B0%E7%BB%84" class="outline-link outline-root-link">转换字节数组</a></li></ol></nav></details></aside>
@@ -33,6 +33,7 @@
           <article>
             <h1>发送和接收 UDP 数据</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="接收数据">接收数据</h2>
+<p>先在项目设置中确认接收通道的名称、监听地址和过滤规则。把同一个通道名称传给绑定与解绑节点；绑定处理器后，从符合过滤规则的发送端发一个测试数据报，检查回调是否收到预期字节。</p>
 
 
 
@@ -59,7 +60,7 @@
 <p><a href="/media/manuals/f6d246d6dd2934e4c5a1.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/f6d246d6dd2934e4c5a1.png" data-media-alt="StartReceiveMessage" class="media-image-trigger" aria-label="放大查看图片：StartReceiveMessage"><img src="/media/manuals/f6d246d6dd2934e4c5a1.png" alt="StartReceiveMessage" loading="lazy" decoding="async"></a></p>
 <h3 id="解绑所有接收处理器">解绑所有接收处理器</h3>
 <p><a href="/media/manuals/70c9fd752abed00b6b4c.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/70c9fd752abed00b6b4c.png" data-media-alt="StopReceiveMessage" class="media-image-trigger" aria-label="放大查看图片：StopReceiveMessage"><img src="/media/manuals/70c9fd752abed00b6b4c.png" alt="StopReceiveMessage" loading="lazy" decoding="async"></a></p>
-<p>使用此节点解绑通道上的所有内容并手动关闭 Socket。</p>
+<p>需要结束整个通道的接收时，用这个节点解绑所有处理器并关闭 Socket。</p>
 <h2 id="发送数据">发送数据</h2>
 
 

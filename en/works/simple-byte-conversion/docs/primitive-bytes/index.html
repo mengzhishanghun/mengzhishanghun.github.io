@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleByteConversion</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-byte-conversion/docs/setup/">Install the Plugin and Find Nodes</a></li></ul></li><li><span>Data Conversion</span><ul><li><a href="/en/works/simple-byte-conversion/docs/primitive-bytes/" aria-current="page">Convert Primitive Types to and from Bytes</a></li><li><a href="/en/works/simple-byte-conversion/docs/struct-and-json/">Convert Structs, Byte Arrays, and JSON</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-byte-conversion/docs/setup/">Install the Plugin and Find Nodes</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-byte-conversion/docs/primitive-bytes/" aria-current="page">Convert Primitive Types to and from Bytes</a></li><li><a href="/en/works/simple-byte-conversion/docs/struct-and-json/">Convert Structs, Byte Arrays, and JSON</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#supported-types-and-nodes" class="outline-link outline-root-link">Supported Types and Nodes</a></li><li class="outline-node" data-heading-depth="2"><a href="#blueprint-conversion-example" class="outline-link outline-root-link">Blueprint Conversion Example</a></li><li class="outline-node" data-heading-depth="2"><a href="#memory-layout-byte-order-and-utf-8" class="outline-link outline-root-link">Memory Layout, Byte Order, and UTF-8</a></li></ol></nav></details></aside>
@@ -78,8 +78,11 @@
 <p>All nodes are <code>BlueprintPure</code> and can be used directly as pure Blueprint functions without execution pins.</p>
 <p>Use these nodes for custom protocols, lightweight storage, and binary communication. The C++ snippet below illustrates how the conversion works.</p>
 <h2 id="blueprint-conversion-example">Blueprint Conversion Example</h2>
+<p>The first graph prints numbers, a Boolean, and a string after converting each value to bytes and back with its matching node.</p>
 <p><a href="/media/manuals/bd6287d37959bc872859.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/bd6287d37959bc872859.png" data-media-alt="Test" class="media-image-trigger" aria-label="View a larger image: Test"><img src="/media/manuals/bd6287d37959bc872859.png" alt="Test" loading="lazy" decoding="async"></a></p>
+<p>The second graph converts a vector, a color, and a constraint struct to bytes and back, then reads a component or field.</p>
 <p><a href="/media/manuals/ea5bdaab0abb35ddef0c.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/ea5bdaab0abb35ddef0c.png" data-media-alt="Test" class="media-image-trigger" aria-label="View a larger image: Test"><img src="/media/manuals/ea5bdaab0abb35ddef0c.png" alt="Test" loading="lazy" decoding="async"></a></p>
+<p>The third graph prints byte array lengths and JSON text for structs. The two outputs serve different purposes.</p>
 <p><a href="/media/manuals/2ebae79ee6b329de0803.png" data-astro-reload="" data-media-image="" data-media-src="/media/manuals/2ebae79ee6b329de0803.png" data-media-alt="Test" class="media-image-trigger" aria-label="View a larger image: Test"><img src="/media/manuals/2ebae79ee6b329de0803.png" alt="Test" loading="lazy" decoding="async"></a></p>
 <h2 id="memory-layout-byte-order-and-utf-8">Memory Layout, Byte Order, and UTF-8</h2>
 <p>This C++ example shows how to convert a primitive value:</p>

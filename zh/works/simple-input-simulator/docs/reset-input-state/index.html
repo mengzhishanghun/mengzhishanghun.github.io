@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleInputSimulator</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-input-simulator/docs/setup/">安装与接入</a></li></ul></li><li><span>模拟输入</span><ul><li><a href="/zh/works/simple-input-simulator/docs/key-input/">模拟按键</a></li><li><a href="/zh/works/simple-input-simulator/docs/axis-input/">模拟轴输入</a></li><li><a href="/zh/works/simple-input-simulator/docs/reset-input-state/" aria-current="page">清理模拟输入状态</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/simple-input-simulator/docs/setup/">安装与接入</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/simple-input-simulator/docs/key-input/">模拟按键</a></li><li><a href="/zh/works/simple-input-simulator/docs/axis-input/">模拟轴输入</a></li><li><a href="/zh/works/simple-input-simulator/docs/reset-input-state/" aria-current="page">清理模拟输入状态</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E6%B8%85%E9%99%A4%E6%8C%89%E4%B8%8B%E7%8A%B6%E6%80%81%E7%9A%84%E8%8A%82%E7%82%B9" class="outline-link outline-root-link">清除按下状态的节点</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E6%B5%8B%E8%AF%95%E5%92%8C%E5%9B%9E%E6%94%BE%E5%90%8E%E7%9A%84%E6%B8%85%E7%90%86" class="outline-link outline-root-link">测试和回放后的清理</a></li></ol></nav></details></aside>
@@ -52,7 +52,7 @@
 <li><strong>Player Index</strong>：目标玩家控制器（0 = 第一个玩家）</li>
 </ul>
 <h2 id="测试和回放后的清理">测试和回放后的清理</h2>
-<p>按下和释放应成对发送。测试、演示或回放结束后，调用 <code>FlushPressedKeys</code> 清除目标控制器上的残留状态，避免按键持续处于按下状态。</p></div>
+<p>用同一个玩家索引成对发送按下和释放事件。测试、演示或回放结束或中断时，调用 <code>FlushPressedKeys</code> 清除该玩家控制器上的残留状态，避免按键一直处于按下状态。本地多人测试时，先核对要清理的是哪位玩家。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/simple-input-simulator/docs/axis-input/" rel="prev"><span>上一篇</span>模拟轴输入</a></div>
         </div>

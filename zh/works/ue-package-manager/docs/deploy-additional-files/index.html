@@ -24,7 +24,7 @@
           <p class="work-doc-name">UEPackageManager</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ue-package-manager/docs/install-and-detect/">下载与识别项目</a></li></ul></li><li><span>项目打包</span><ul><li><a href="/zh/works/ue-package-manager/docs/package-project/">用图形界面和命令行打包</a></li><li><a href="/zh/works/ue-package-manager/docs/project-configuration/">管理项目打包配置</a></li></ul></li><li><span>包输出管理</span><ul><li><a href="/zh/works/ue-package-manager/docs/deploy-additional-files/" aria-current="page">部署附加文件</a></li><li><a href="/zh/works/ue-package-manager/docs/clean-old-packages/">清理旧包</a></li></ul></li><li><span>源码运行与构建</span><ul><li><a href="/zh/works/ue-package-manager/docs/build-executable/">从源码运行和构建</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/ue-package-manager/docs/install-and-detect/">下载与识别项目</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/ue-package-manager/docs/package-project/">用图形界面和命令行打包</a></li><li><a href="/zh/works/ue-package-manager/docs/project-configuration/">管理项目打包配置</a></li><li><a href="/zh/works/ue-package-manager/docs/deploy-additional-files/" aria-current="page">部署附加文件</a></li><li><a href="/zh/works/ue-package-manager/docs/clean-old-packages/">清理旧包</a></li><li><a href="/zh/works/ue-package-manager/docs/build-executable/">从源码运行和构建</a></li></ul></li><li><span>更新日志</span><ul><li><a href="/zh/works/ue-package-manager/docs/updates-2026-09-15/">2026-09-15</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E8%AE%BE%E7%BD%AE%E5%A4%8D%E5%88%B6%E8%A7%84%E5%88%99" class="outline-link outline-root-link">设置复制规则</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E5%A4%8D%E5%88%B6%E6%97%B6%E6%9C%BA%E4%B8%8E%E8%B7%AF%E5%BE%84%E9%99%90%E5%88%B6" class="outline-link outline-root-link">复制时机与路径限制</a></li></ol></nav></details></aside>
@@ -33,7 +33,8 @@
           <article>
             <h1>部署附加文件</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="设置复制规则">设置复制规则</h2>
-<p>在图形界面的“附加文件”中选择文件或文件夹，并按规则设置包内目标子目录和递归忽略项。命令行可用 <code>copy-list</code> 查看规则、<code>copy-add</code> 添加规则、<code>copy-remove --index 0</code> 删除示例中的第一条规则。<code>--no-copy</code> 跳过本次部署。</p>
+<p>在图形界面的“附加文件”中选择要随包交付的文件或文件夹，再为每条规则指定包内目标子目录。复制文件夹时，可填写递归忽略项。</p>
+<p>命令行可用 <code>copy-list</code> 查看规则、<code>copy-add</code> 添加规则、<code>copy-remove --index 0</code> 删除示例中的第一条规则。若本次打包不需要复制附加文件，使用 <code>--no-copy</code>。</p>
 <h2 id="复制时机与路径限制">复制时机与路径限制</h2>
 <p>附加复制只在 UE 打包成功后执行。目录复制会跳过 <code>.trash</code>、<code>.svn</code>、<code>.git</code>、<code>.codex</code>、<code>.agents</code>、<code>.vs</code>、<code>.idea</code>、<code>__pycache__</code> 和 <code>.pyc</code>，复制后检查文件完整性。用分号分隔名称模式，可以忽略任意层级的文件或文件夹。模式支持 <code>*</code> 和 <code>?</code>，例如 <code>README*.md; Cache</code>。目标位置必须是包根目录内的相对目录，禁止绝对路径、盘符和 <code>..</code>；递归忽略项只填写名称模式，不能包含路径。</p>
 <p><a href="/zh/works/ue-package-manager/docs/package-project/">查看 CLI 的完整示例</a></p></div>

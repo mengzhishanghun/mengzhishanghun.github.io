@@ -24,7 +24,7 @@
           <p class="work-doc-name">UEPluginManager</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/plugin-manager/docs/setup/">Start and Scan a Project</a></li></ul></li><li><span>Finding and Managing Plugins</span><ul><li><a href="/en/works/plugin-manager/docs/find/">Find Plugins and Dependencies</a></li><li><a href="/en/works/plugin-manager/docs/enable-disable/" aria-current="page">Enable and Disable Plugins</a></li><li><a href="/en/works/plugin-manager/docs/folder-actions/">Manage Plugin Folders</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/plugin-manager/docs/setup/">Start and Scan a Project</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/plugin-manager/docs/find/">Find Plugins and Dependencies</a></li><li><a href="/en/works/plugin-manager/docs/enable-disable/" aria-current="page">Enable and Disable Plugins</a></li><li><a href="/en/works/plugin-manager/docs/folder-actions/">Manage Plugin Folders</a></li></ul></li><li><span>Changelog</span><ul><li><a href="/en/works/plugin-manager/docs/updates-2026-01-10/">2026-01-10</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#change-the-enabled-state" class="outline-link outline-root-link">Change the Enabled State</a></li><li class="outline-node" data-heading-depth="2"><a href="#resolve-same-name-conflicts" class="outline-link outline-root-link">Resolve Same-Name Conflicts</a></li></ol></nav></details></aside>
@@ -33,9 +33,9 @@
           <article>
             <h1>Enable and Disable Plugins</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="change-the-enabled-state">Change the Enabled State</h2>
-<p>Use the buttons on the right to enable, disable, or restore defaults for the selected plugin. Enabling or disabling writes to <code>.uproject</code>; the tool asks for confirmation when the dependency chain is affected. Restore Defaults removes the plugin’s override from <code>.uproject</code>.</p>
+<p>Select a plugin in the list, then use the buttons on the right to enable it, disable it, or restore its defaults. Enabling or disabling records your choice in <code>.uproject</code>. If the tool prompts you about dependency changes, review the affected plugins before confirming. Restoring defaults removes the plugin’s explicit setting from <code>.uproject</code> so its default state applies.</p>
 <h2 id="resolve-same-name-conflicts">Resolve Same-Name Conflicts</h2>
-<p>If two plugins have the same name, remove one before enabling the other.</p></div>
+<p>If two plugins in the project have the same name, check where each one comes from. Remove one before enabling the other.</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/plugin-manager/docs/find/" rel="prev"><span>Previous</span>Find Plugins and Dependencies</a><a href="/en/works/plugin-manager/docs/folder-actions/" rel="next"><span>Next</span>Manage Plugin Folders</a></div>
         </div>

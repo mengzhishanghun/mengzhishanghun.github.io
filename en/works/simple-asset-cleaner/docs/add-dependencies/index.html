@@ -24,7 +24,7 @@
           <p class="work-doc-name">SimpleAssetCleaner</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">Documentation</p>
-            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/setup/">Install and Set Up Source Control</a></li></ul></li><li><span>Asset Cleanup</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/clean-assets/">Clean Unreferenced Assets</a></li></ul></li><li><span>Asset Protection</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/protect-assets/">Configure Root Assets and Protection</a></li></ul></li><li><span>Dependency Management</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/add-dependencies/" aria-current="page">Add Untracked Dependencies</a></li></ul></li></ul></nav>
+            <nav aria-label="Documentation"><ul><li><span>Getting Started</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/setup/">Install and Set Up Source Control</a></li></ul></li><li><span>Features</span><ul><li><a href="/en/works/simple-asset-cleaner/docs/clean-assets/">Clean Unreferenced Assets</a></li><li><a href="/en/works/simple-asset-cleaner/docs/protect-assets/">Configure Root Assets and Protection</a></li><li><a href="/en/works/simple-asset-cleaner/docs/add-dependencies/" aria-current="page">Add Untracked Dependencies</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>On this page</summary><nav class="article-outline" aria-label="On this page"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#check-dependencies-on-submission" class="outline-link outline-root-link">Check Dependencies on Submission</a></li><li class="outline-node" data-heading-depth="2"><a href="#check-selected-assets-from-the-context-menu" class="outline-link outline-root-link">Check Selected Assets from the Context Menu</a></li></ol></nav></details></aside>
@@ -33,8 +33,9 @@
           <article>
             <h1>Add Untracked Dependencies</h1>
             <div class="prose sl-markdown-content" data-pagefind-body><h2 id="check-dependencies-on-submission">Check Dependencies on Submission</h2>
-<p><code>Enable Auto Add Dependencies</code> is on by default. When submitting a changelist, the plugin checks dependencies of the assets being submitted. Tracked files need no action. Select and confirm which untracked files to add in the dialog. Teams can leave this on to avoid missing dependencies in other members’ builds.</p>
+<p><code>Enable Auto Add Dependencies</code> is on by default. When submitting a changelist, the plugin checks dependencies of the assets being submitted. Tracked files need no action. Select the untracked dependencies you want to add, then confirm. Teams can leave this on to avoid missing dependencies in other members’ builds.</p>
 <h2 id="check-selected-assets-from-the-context-menu">Check Selected Assets from the Context Menu</h2>
+<p>Before submitting, check that the dependencies you confirmed now appear in the pending submission. Unchecked files are left out of this selection. If you need one later, run the dependency check again on the original asset or folder.</p>
 <p>Select one or more assets or folders in the Content Browser and choose <strong>Add Untracked Dependencies</strong> from the <strong>Simple Asset Cleaner</strong> context submenu. Review the untracked dependencies found in the selection and confirm the files to add.</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/en/works/simple-asset-cleaner/docs/protect-assets/" rel="prev"><span>Previous</span>Configure Root Assets and Protection</a></div>

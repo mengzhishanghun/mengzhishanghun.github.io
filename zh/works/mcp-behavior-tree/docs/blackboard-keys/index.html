@@ -24,7 +24,7 @@
           <p class="work-doc-name">作品</p>
           <div class="work-doc-tree">
             <p class="work-doc-tree-heading">使用文档</p>
-            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/connect-and-inspect/">连接行为树编辑工具</a></li></ul></li><li><span>行为树与黑板</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/edit-tree/">检查、编辑与验证行为树</a></li><li><a href="/zh/works/mcp-behavior-tree/docs/blackboard-keys/" aria-current="page">创建黑板并管理黑板键</a></li></ul></li></ul></nav>
+            <nav aria-label="使用文档"><ul><li><span>开始</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/connect-and-inspect/">连接行为树编辑工具</a></li></ul></li><li><span>功能说明</span><ul><li><a href="/zh/works/mcp-behavior-tree/docs/edit-tree/">检查、编辑与验证行为树</a></li><li><a href="/zh/works/mcp-behavior-tree/docs/blackboard-keys/" aria-current="page">创建黑板并管理黑板键</a></li></ul></li></ul></nav>
           </div>
         </aside>
         <aside class="article-sidebar work-doc-outline" data-work-doc-outline data-pagefind-ignore><details class="work-doc-outline-details" open><summary>本页目录</summary><nav class="article-outline" aria-label="本页目录"><ol class="outline-tree"><li class="outline-node" data-heading-depth="2"><a href="#%E5%88%9B%E5%BB%BA%E5%B9%B6%E5%85%B3%E8%81%94%E9%BB%91%E6%9D%BF" class="outline-link outline-root-link">创建并关联黑板</a></li><li class="outline-node" data-heading-depth="2"><a href="#%E9%BB%91%E6%9D%BF%E9%94%AE%E8%A7%84%E5%88%99" class="outline-link outline-root-link">黑板键规则</a></li></ol></nav></details></aside>
@@ -41,7 +41,7 @@
 <li><code>Enum</code> 键必须提供 <code>Enum</code>；无关类型若传入 <code>BaseClass</code> 或 <code>Enum</code> 会被拒绝。</li>
 <li><code>KeyName</code> 不得为空或 <code>None</code>。</li>
 <li>键选择器按 Unreal 原生过滤语义校验，包括 Object/Class 基类约束和 Enum 身份；同名但类型不兼容的键仍然无效。</li>
-<li><code>RemoveBlackboardKey</code> 会扫描项目中的行为树；存在引用或无法完成扫描时默认拒绝删除，只有显式设置 <code>bForce=true</code> 才接受风险。</li>
+<li><code>RemoveBlackboardKey</code> 会扫描项目中的行为树；存在引用或无法完成扫描时默认拒绝删除，只有显式设置 <code>bForce=true</code> 才允许承担这项风险。正常清理时，先处理引用该键的节点，再尝试删除。</li>
 </ul>
 
 
@@ -57,7 +57,7 @@
 
 
 <table><thead><tr><th>领域</th><th>工具</th></tr></thead><tbody><tr><td>黑板</td><td><code>AddBlackboardKey</code>、<code>RemoveBlackboardKey</code></td></tr></tbody></table>
-<p>确认修改后对黑板调用 <code>SaveAsset</code>，参见<a href="/zh/works/mcp-behavior-tree/docs/edit-tree/">行为树的验证与保存说明</a>。</p></div>
+<p>如果改过正在使用的键，先验证所关联的行为树，再对黑板调用 <code>SaveAsset</code>。验证流程见<a href="/zh/works/mcp-behavior-tree/docs/edit-tree/">行为树的验证与保存说明</a>。</p></div>
           </article>
           <div class="work-doc-adjacent" data-pagefind-ignore><a href="/zh/works/mcp-behavior-tree/docs/edit-tree/" rel="prev"><span>上一篇</span>检查、编辑与验证行为树</a></div>
         </div>
