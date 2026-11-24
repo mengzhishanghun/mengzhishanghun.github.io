@@ -30,7 +30,7 @@ test('backup host initiates zero API calls and repeated Astro initialization bin
   let requests=0,copied='';const window={location:{origin:'https://mengzhishanghun.github.io'},fetch:async()=>{requests++;throw Error('must not fetch');},navigator:{clipboard:{writeText:async value=>{copied=value;}}}};
   const document={readyState:'complete',querySelectorAll:()=>[root],addEventListener(){}};
   vm.runInNewContext(fs.readFileSync(new URL('../engagement/client/engagement.js',import.meta.url),'utf8'),{window,document,URL,AbortController,setTimeout,clearTimeout});window.SiteEngagement.init();
-  await listeners.get('share')();assert.equal(requests,0);assert.equal(parts['[data-engagement-like]'].hidden,true);assert.equal(copied,'https://mzsh.me/en/works/simple-asset-cleaner/docs/setup/');assert.equal(parts['[data-engagement-status]'].textContent,'Copied');
+  await listeners.get('share')();assert.equal(requests,0);assert.equal(parts['[data-engagement-like]'].hidden,true);assert.equal(copied,'https://mzsh.me/en/works/simple-asset-cleaner/docs/setup/');assert.equal(parts['[data-engagement-status]'].textContent,'');
 });
 
 function runtime(){const window={};const document={readyState:'loading',addEventListener(){}};vm.runInNewContext(fs.readFileSync(new URL('../engagement/client/engagement.js',import.meta.url),'utf8'),{window,document,URL,AbortController,setTimeout,clearTimeout});return window.SiteEngagement;}

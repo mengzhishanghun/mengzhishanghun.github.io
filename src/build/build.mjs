@@ -362,7 +362,7 @@ export function articleReturnTarget(entry,href,locale,entries){
   const compatibleCategories=members.length?[...new Set([members[0].id,...Object.entries(index.taxonomy.legacyQueries||{}).filter(([,query])=>query.entities.includes(entry.id)).map(([id])=>id)])]:[];
   return {href:path+(category?'?category='+encodeURIComponent(category):''),policy:{path,firstCategory,compatibleCategories,skipCache:!members.length}};
 }
-function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels,anchorAliases,styleVersions) {
+function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels,anchorAliases,resourceVersions) {
   const doc = parse(html,{sourceCodeLocationInfo:true}), edits=[], excluded=new Set();
   const contentType=indexContentTypes.get(entry.id);
   const urls=Object.fromEntries(config.languages.map(l=>[l.code,localeRoute(entry,l.code)]));
@@ -408,7 +408,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
       engagementSlots++;
       if(!engagementLabels || Object.values(engagementLabels).some(v=>typeof v!=='string'))throw new Error('互动文案缺失');
       const data={id:entry.id,origin:'https://mzsh.me',url:'https://mzsh.me'+neutral,title:entry.sources[entry.docPage?locale:config.fallback].data.title,labels:engagementLabels,...(entry.original?{likesEnabled:false}:{})};
-      const markup=entry.original?'':'<section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="'+escapeHTML(engagementLabels.group)+'"><div class="article-engagement-actions"><button type="button" data-engagement-share aria-label="'+escapeHTML(engagementLabels.share)+'" title="'+escapeHTML(engagementLabels.share)+'"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">'+escapeHTML(engagementLabels.share)+'</span></button><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>'+escapeHTML(engagementLabels.like)+'</span> <span data-engagement-count aria-label="'+escapeHTML(engagementLabels.count)+'">—</span></button><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p></div><label class="article-engagement-manual" data-engagement-manual hidden>'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" data-engagement-url readonly value="'+escapeHTML(data.url)+'"></label><script type="application/json" data-engagement-config>'+safeJSON(data)+'</script><noscript><label class="article-engagement-manual">'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" readonly value="'+escapeHTML(data.url)+'"></label></noscript></section>';
+      const markup=entry.original?'':'<section class="article-engagement" data-article-engagement data-pagefind-ignore="true" aria-label="'+escapeHTML(engagementLabels.group)+'"><div class="article-engagement-actions"><button type="button" data-engagement-share aria-label="'+escapeHTML(engagementLabels.share)+'" title="'+escapeHTML(engagementLabels.share)+'"><svg class="article-engagement-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 10.5 6.8-4M8.6 13.5l6.8 4"/></svg><span class="article-engagement-sr-only">'+escapeHTML(engagementLabels.share)+'</span></button><button type="button" data-engagement-like aria-pressed="false" hidden><svg class="article-engagement-icon article-engagement-heart" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg><span class="article-engagement-sr-only" data-engagement-like-label>'+escapeHTML(engagementLabels.like)+'</span> <span data-engagement-count aria-label="'+escapeHTML(engagementLabels.count)+'">—</span></button></div><p class="article-engagement-status" data-engagement-status aria-live="polite" role="status"></p><label class="article-engagement-manual" data-engagement-manual hidden>'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" data-engagement-url readonly value="'+escapeHTML(data.url)+'"></label><script type="application/json" data-engagement-config>'+safeJSON(data)+'</script><noscript><label class="article-engagement-manual">'+escapeHTML(engagementLabels.manualLabel)+'<input type="url" readonly value="'+escapeHTML(data.url)+'"></label></noscript></section>';
       edits.push([loc.startTag.startOffset,loc.startTag.startOffset,'<div class="article-detail-controls">']);
       edits.push([loc.endTag.endOffset,loc.endTag.endOffset,markup+'</div>']);
     }
@@ -427,11 +427,11 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
       if(contentIndex||entry.id==='page:home')edits.push([loc.endTag.startOffset,loc.endTag.startOffset,'<link rel="stylesheet" href="/assets/site-ui/content-index.css">']);
       edits.push([loc.startTag.endOffset,loc.startTag.endOffset,`<script>window.SiteCopy=${safeJSON(scriptSlots || {})};window.SiteLanguageCode=${safeJSON(locale)};window.SitePrimaryCode=${safeJSON(config.primary)}</script>`]);
       edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<link rel="stylesheet" href="/assets/site-ui/language-switch.css">`+config.languages.map(({code:l})=>`<link rel="alternate" hreflang="${l}" href="https://mzsh.me${urls[l]}">`).join('')]);
-      if(article)edits.push([loc.endTag.startOffset,loc.endTag.startOffset,'<link rel="stylesheet" href="/assets/site-ui/engagement.css'+(styleVersions?.has('/assets/site-ui/engagement.css')?'?v='+styleVersions.get('/assets/site-ui/engagement.css'):'')+'"><script defer src="/assets/site-ui/engagement.js"></script>']);
+      if(article)edits.push([loc.endTag.startOffset,loc.endTag.startOffset,'<link rel="stylesheet" href="/assets/site-ui/engagement.css'+(resourceVersions?.has('/assets/site-ui/engagement.css')?'?v='+resourceVersions.get('/assets/site-ui/engagement.css'):'')+'"><script defer src="/assets/site-ui/engagement.js'+(resourceVersions?.has('/assets/site-ui/engagement.js')?'?v='+resourceVersions.get('/assets/site-ui/engagement.js'):'')+'"></script>']);
     }
     if (node.tagName==='body') edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<script type="application/json" data-site-language>${safeJSON(runtime)}</script><script defer src="/assets/site-ui/language-switch.js"></script>`]);
     if(node.tagName==='script' && scriptURLs?.has(a.src) && loc.attrs?.src)edits.push([loc.attrs.src.startOffset,loc.attrs.src.endOffset,`src="${scriptURLs.get(a.src)}"`]);
-    if(node.tagName==='link' && a.rel==='stylesheet' && styleVersions?.has(a.href) && loc.attrs?.href)edits.push([loc.attrs.href.startOffset,loc.attrs.href.endOffset,`href="${a.href}?v=${styleVersions.get(a.href)}"`]);
+    if(node.tagName==='link' && a.rel==='stylesheet' && resourceVersions?.has(a.href) && loc.attrs?.href)edits.push([loc.attrs.href.startOffset,loc.attrs.href.endOffset,`href="${a.href}?v=${resourceVersions.get(a.href)}"`]);
     if(node.tagName==='script' && a.type==='application/json' && loc.startTag && loc.endTag) {
       const raw=html.slice(loc.startTag.endOffset,loc.endTag.startOffset);
       if(contentType&&entry.taxonomy&&a['data-content-index-data']!==undefined){
@@ -513,7 +513,7 @@ export async function buildSite(options) {
   config.shareAliases=redirects.map(alias=>alias.route);
   config.documentRedirects=documentRedirects;
   const resources = !options.templateRoot?loadResources({site}):new Map(), files=new Map(), rendered = new Map();
-  const styleVersions=new Map([...resources].filter(([file])=>file.endsWith('.css')).map(([file,bytes])=>['/'+file,hash(bytes).slice(0,12)]));
+  const resourceVersions=new Map([...resources].filter(([file])=>/\.(css|js)$/.test(file)).map(([file,bytes])=>['/'+file,hash(bytes).slice(0,12)]));
   const imageDimensions=mediaDimensions(entries,resources);
   let chapterChrome;
   if(documents.size){
@@ -581,7 +581,7 @@ export async function buildSite(options) {
     html=html.replace('{{body}}',()=>result.code).replace('{{outline}}',()=>outline(result.headings));
     if (/\{\{(?:text|body|outline|profile)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
     const anchors = Object.fromEntries(pageCodes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
-    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,pageConfig,copy[locale].engagementLabels,documentAnchorAliases.get(entry.id),styleVersions);
+    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,pageConfig,copy[locale].engagementLabels,documentAnchorAliases.get(entry.id),resourceVersions);
     html=projectGallery(html,entry,locale,galleries);
     html=projectImageViewers(html,locale,imageDimensions);
     html=filterPublicationHTML(html,publication);

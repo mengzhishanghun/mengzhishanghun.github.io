@@ -29,17 +29,22 @@ function fixture({origin='https://mzsh.me',copy=async()=>{},ready=true,state='co
   return {window,document,root,sidebar,desktop,back,mobile,controls,query,share:root.querySelector('[data-engagement-share]'),manual:root.querySelector('[data-engagement-manual]'),link:root.querySelector('[data-engagement-url]'),status:root.querySelector('[data-engagement-status]'),get requestMethods(){return requestMethods;},get requests(){return requests;},get mediaQueries(){return mediaQueries;},setMobile(value){query.matches=value;query.dispatch('change');}};
 }
 function store(){const data=new Map();return {getItem:key=>data.get(key)||null,setItem:(key,value)=>data.set(key,value),removeItem:key=>data.delete(key)};}
-test('share precedes like in both layouts and copied feedback follows the controls',async()=>{
+test('share precedes like in both layouts and successful copying shows no message',async()=>{
   let copied;const x=fixture({copy:async value=>{copied=value;}});
   assert.equal(x.status.textContent,'');await x.share.click();
-  assert.equal(copied,'https://mzsh.me/blog/ue53-multiview-gi/');assert.equal(x.status.textContent,'Link copied');
+  assert.equal(copied,'https://mzsh.me/blog/ue53-multiview-gi/');assert.equal(x.status.textContent,'');
   const like=x.root.querySelector('[data-engagement-like]');
   assert.ok(like.previousSibling===x.share,'share must precede like in keyboard and visual order');
-  assert.ok(x.status.parentNode===x.share.parentNode,'feedback must use the action row');assert.ok(x.status.previousSibling===like,'feedback must follow the controls');
+  assert.ok(x.status.parentNode===x.root,'error feedback must remain outside the unbroken action row');
   x.setMobile(true);assert.ok(like.previousSibling===x.share);assert.ok(x.root.parent===x.controls);
   assert.equal(x.status.getAttribute('aria-live'),'polite');assert.equal(x.status.getAttribute('role'),'status');assert.equal(x.manual.hidden,true);
 });
 test('clipboard failure exposes the selectable canonical link without scrolling its focus',async()=>{const x=fixture({copy:async()=>{throw Error('denied');}});await x.share.click();assert.equal(x.manual.hidden,false);assert.equal(x.link.value,'https://mzsh.me/blog/ue53-multiview-gi/');assert.equal(x.link.selected,true);assert.equal(x.link.focusCalls[0]?.preventScroll,true);assert.equal(x.status.textContent,'Select and copy the link below.');});
+test('successful copy after a clipboard failure clears the fallback without a success message',async()=>{
+  let calls=0;const x=fixture({copy:async()=>{if(++calls===1)throw Error('denied');}});
+  await x.share.click();assert.equal(x.manual.hidden,false);
+  await x.share.click();assert.equal(calls,2);assert.equal(x.manual.hidden,true);assert.equal(x.status.textContent,'');
+});
 for(const boundary of ['preparation','pagehide','disconnect'])test('a pending failed copy after '+boundary+' never reveals or focuses the old manual link',async()=>{let reject;const pending=new Promise((_,no)=>{reject=no;});const x=fixture({copy:()=>pending});const before=x.status.textContent;const click=x.share.click();if(boundary==='preparation')x.document.dispatch('astro:before-preparation');if(boundary==='pagehide')x.window.dispatch('pagehide');if(boundary==='disconnect')x.root.remove();reject(Error('denied'));await click;assert.equal(x.link.focusCalls.length,0);assert.equal(x.manual.hidden,true);assert.equal(x.status.textContent,before);});
 test('breakpoint changes move the same initialized root and preserve focused controls without new requests or listeners',async()=>{const x=fixture();await new Promise(resolve=>setTimeout(resolve,0));const root=x.root;x.share.focus();x.setMobile(true);assert.ok(root.parent===x.controls,'the existing root must move into mobile controls');assert.ok(root.previousSibling.matches('.outline-mobile-back'),'actions must immediately follow the mobile back button');assert.equal(x.document.querySelectorAll('[data-article-engagement]').length,1);assert.deepEqual(JSON.parse(JSON.stringify(x.share.focusCalls.at(-1))),{preventScroll:true});x.window.SiteEngagement.init();x.window.SiteEngagement.init();x.setMobile(false);assert.ok(root.parent===x.desktop,'the existing root must return to its desktop slot');assert.ok(root.previousSibling.previousSibling===x.back,'actions must follow the desktop back button');assert.equal(x.requests,1);assert.equal(x.mediaQueries,1);assert.equal(x.query.listeners.get('change').size,1);assert.equal(x.share.listeners.get('click').size,1);assert.ok(x.sidebar.nodes.indexOf(x.desktop)<x.sidebar.nodes.indexOf(x.sidebar.querySelector('.article-outline')));});
 test('mobile component not ready retains the usable sidebar placement',()=>{const x=fixture({ready:false});x.setMobile(true);assert.equal(x.root.parent,x.desktop);});
