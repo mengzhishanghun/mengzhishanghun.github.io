@@ -102,3 +102,25 @@
   min-inline-size: 0;
   overflow-wrap: anywhere;
 }
+
+.site-chrome :is(.work-action, .a-button, .feature-action, .article-back, .outline-mobile-back, .work-doc-back, a[role="button"]) {
+  text-decoration: none;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+.site-chrome :is(.work-action, .a-button, .feature-action, .article-back, .outline-mobile-back, .work-doc-back, a[role="button"]):is(:hover, :focus-visible, :active, [data-navigation-pending]) {
+  text-decoration: none;
+}
+.site-chrome :is(.work-action, .a-button)[data-navigation-pending] {
+  color: var(--text);
+  background: color-mix(in srgb, var(--blue) 12%, var(--panel));
+  border-color: var(--blue);
+}
+.site-chrome .work-action-primary[data-navigation-pending] {
+  color: var(--bg);
+  background: color-mix(in srgb, var(--blue) 82%, white);
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-chrome :is(.work-action, .a-button, .feature-action, .article-back, .outline-mobile-back, .work-doc-back, a[role="button"]) {
+    transition: none;
+  }
+}

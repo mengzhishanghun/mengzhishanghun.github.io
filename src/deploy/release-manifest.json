@@ -1144,9 +1144,9 @@
     },
     {
       "path": "assets/site-ui/navigation.css",
-      "size": 3125,
-      "gitBlob": "6a00d757503bc44731b2a73c6b5a314ae0521e83",
-      "sha256": "82865f8ff0088732e5180465d1129d05ee98d8cea913b34aac737edfb5f8a1b5",
+      "size": 4125,
+      "gitBlob": "0eefbae2921e980e40783dce55a249d4b915d774",
+      "sha256": "6fb43db0da97922d18f1226ee2d66b47f34d3044abf3007e0bd288b3b5672ac2",
       "target": "both"
     },
     {
