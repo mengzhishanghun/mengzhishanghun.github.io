@@ -131,7 +131,10 @@
           const result = await share({ url: data.url,
             copy: value => window.navigator.clipboard.writeText(value),
             manual: value => { if (!live()) return; manual.hidden = false; link.value = value; link.focus({preventScroll:true}); link.select(); } });
-          if (live()) status.textContent = data.labels[result] || '';
+          if (live()) {
+            status.textContent = result === 'manual' ? data.labels.manual || '' : '';
+            if (result === 'copied') manual.hidden = true;
+          }
         } finally { if (root.isConnected) shareButton.disabled = false; }
       });
       place(root);
