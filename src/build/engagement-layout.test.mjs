@@ -29,11 +29,14 @@ function fixture({origin='https://mzsh.me',copy=async()=>{},ready=true,state='co
   return {window,document,root,sidebar,desktop,back,mobile,controls,query,share:root.querySelector('[data-engagement-share]'),manual:root.querySelector('[data-engagement-manual]'),link:root.querySelector('[data-engagement-url]'),status:root.querySelector('[data-engagement-status]'),get requestMethods(){return requestMethods;},get requests(){return requests;},get mediaQueries(){return mediaQueries;},setMobile(value){query.matches=value;query.dispatch('change');}};
 }
 function store(){const data=new Map();return {getItem:key=>data.get(key)||null,setItem:(key,value)=>data.set(key,value),removeItem:key=>data.delete(key)};}
-test('successful share reports copied feedback directly after the share control in its action row',async()=>{
+test('share precedes like in both layouts and copied feedback follows the controls',async()=>{
   let copied;const x=fixture({copy:async value=>{copied=value;}});
   assert.equal(x.status.textContent,'');await x.share.click();
   assert.equal(copied,'https://mzsh.me/blog/ue53-multiview-gi/');assert.equal(x.status.textContent,'Link copied');
-  assert.ok(x.status.parentNode===x.share.parentNode,'feedback must use the share action row');assert.ok(x.status.previousSibling===x.share,'feedback must immediately follow share');
+  const like=x.root.querySelector('[data-engagement-like]');
+  assert.ok(like.previousSibling===x.share,'share must precede like in keyboard and visual order');
+  assert.ok(x.status.parentNode===x.share.parentNode,'feedback must use the action row');assert.ok(x.status.previousSibling===like,'feedback must follow the controls');
+  x.setMobile(true);assert.ok(like.previousSibling===x.share);assert.ok(x.root.parent===x.controls);
   assert.equal(x.status.getAttribute('aria-live'),'polite');assert.equal(x.status.getAttribute('role'),'status');assert.equal(x.manual.hidden,true);
 });
 test('clipboard failure exposes the selectable canonical link without scrolling its focus',async()=>{const x=fixture({copy:async()=>{throw Error('denied');}});await x.share.click();assert.equal(x.manual.hidden,false);assert.equal(x.link.value,'https://mzsh.me/blog/ue53-multiview-gi/');assert.equal(x.link.selected,true);assert.equal(x.link.focusCalls[0]?.preventScroll,true);assert.equal(x.status.textContent,'Select and copy the link below.');});
