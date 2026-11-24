@@ -107,17 +107,44 @@
   text-decoration: none;
   transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
 }
-.site-chrome :is(.work-action, .a-button, .feature-action, .article-back, .outline-mobile-back, .work-doc-back, a[role="button"]):is(:hover, :focus-visible, :active, [data-navigation-pending]) {
+.site-chrome :is(.work-action, .a-button, .feature-action, .article-back, .outline-mobile-back, .work-doc-back, a[role="button"]):is(:hover, :focus, :active, [data-navigation-pending]) {
   text-decoration: none;
 }
-.site-chrome :is(.work-action, .a-button)[data-navigation-pending] {
-  color: var(--text);
-  background: color-mix(in srgb, var(--blue) 12%, var(--panel));
-  border-color: var(--blue);
+.site-chrome :is(.work-action, .a-button) {
+  color: #e4eef1;
+  background: #121d22;
+  border: 1px solid #4c6672;
+  border-radius: 6px;
+  box-shadow: none;
 }
-.site-chrome .work-action-primary[data-navigation-pending] {
-  color: var(--bg);
-  background: color-mix(in srgb, var(--blue) 82%, white);
+.site-chrome :is(.work-action, .a-button):hover {
+  color: #e4eef1;
+  background: #1c3038;
+  border-color: #7bdeeb;
+}
+.site-chrome :is(.work-action, .a-button):is(:active, [data-navigation-pending]) {
+  color: #e4eef1;
+  background: #0c161b;
+  border-color: #6ebbc8;
+}
+.site-chrome .work-action-primary {
+  color: #09252d;
+  background: #7bdeeb;
+  border-color: #7bdeeb;
+}
+.site-chrome .work-action-primary:hover {
+  color: #09252d;
+  background: #a3eaf2;
+  border-color: #a3eaf2;
+}
+.site-chrome .work-action-primary:is(:active, [data-navigation-pending]) {
+  color: #09252d;
+  background: #5fc4d2;
+  border-color: #5fc4d2;
+}
+.site-chrome :is(.work-action, .a-button, .feature-action, .article-back, .outline-mobile-back, .work-doc-back, a[role="button"]):focus-visible {
+  outline: 2px solid #7bdeeb;
+  outline-offset: 4px;
 }
 @media (prefers-reduced-motion: reduce) {
   .site-chrome :is(.work-action, .a-button, .feature-action, .article-back, .outline-mobile-back, .work-doc-back, a[role="button"]) {

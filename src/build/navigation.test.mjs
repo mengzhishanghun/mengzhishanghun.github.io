@@ -2,6 +2,7 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import {createHash} from 'node:crypto';
 import {parse} from 'parse5';
 import {attrs,walk} from './extract-dom.mjs';
 
@@ -9,6 +10,21 @@ const output=path.resolve(process.env.SITE_OUTPUT || 'dist/site');
 function page(route){return parse(fs.readFileSync(path.join(output,route,'index.html'),'utf8'));}
 function find(doc,predicate){const found=[];walk(doc,node=>{if(predicate(node))found.push(node)});return found;}
 function text(node){return node.nodeName==='#text'?node.value:(node.childNodes || []).map(text).join('');}
+
+test('stylesheet URLs bind the page to the published CSS bytes',()=>{
+  const cssPath='/assets/site-ui/navigation.css';
+  const version=createHash('sha256').update(fs.readFileSync(path.join(output,cssPath.slice(1)))).digest('hex').slice(0,12);
+  for(const locale of ['zh','en'])for(const route of ['', 'works/', 'works/simple-byte-conversion/', 'works/simple-byte-conversion/docs/setup/']) {
+    const links=find(page(locale+'/'+route),n=>n.tagName==='link'&&attrs(n).rel==='stylesheet');
+    assert.ok(links.some(n=>attrs(n).href===cssPath+'?v='+version),locale+'/'+route);
+    for(const link of links){
+      const url=new URL(attrs(link).href,'https://mzsh.me');
+      if(!url.searchParams.has('v'))continue;
+      const bytes=fs.readFileSync(path.join(output,url.pathname.slice(1)));
+      assert.equal(url.searchParams.get('v'),createHash('sha256').update(bytes).digest('hex').slice(0,12),url.pathname);
+    }
+  }
+});
 
 test('case hero actions include contact and support without cover notes',()=>{
   const manifest=JSON.parse(fs.readFileSync(new URL('./manifest.json',import.meta.url),'utf8'));

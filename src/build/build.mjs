@@ -362,7 +362,7 @@ export function articleReturnTarget(entry,href,locale,entries){
   const compatibleCategories=members.length?[...new Set([members[0].id,...Object.entries(index.taxonomy.legacyQueries||{}).filter(([,query])=>query.entities.includes(entry.id)).map(([id])=>id)])]:[];
   return {href:path+(category?'?category='+encodeURIComponent(category):''),policy:{path,firstCategory,compatibleCategories,skipCache:!members.length}};
 }
-function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels,anchorAliases) {
+function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,scriptURLs,config,engagementLabels,anchorAliases,styleVersions) {
   const doc = parse(html,{sourceCodeLocationInfo:true}), edits=[], excluded=new Set();
   const contentType=indexContentTypes.get(entry.id);
   const urls=Object.fromEntries(config.languages.map(l=>[l.code,localeRoute(entry,l.code)]));
@@ -431,6 +431,7 @@ function completeHTML(html,entry,locale,entries,labels,anchors,scriptSlots,dict,
     }
     if (node.tagName==='body') edits.push([loc.endTag.startOffset,loc.endTag.startOffset,`<script type="application/json" data-site-language>${safeJSON(runtime)}</script><script defer src="/assets/site-ui/language-switch.js"></script>`]);
     if(node.tagName==='script' && scriptURLs?.has(a.src) && loc.attrs?.src)edits.push([loc.attrs.src.startOffset,loc.attrs.src.endOffset,`src="${scriptURLs.get(a.src)}"`]);
+    if(node.tagName==='link' && a.rel==='stylesheet' && styleVersions?.has(a.href) && loc.attrs?.href)edits.push([loc.attrs.href.startOffset,loc.attrs.href.endOffset,`href="${a.href}?v=${styleVersions.get(a.href)}"`]);
     if(node.tagName==='script' && a.type==='application/json' && loc.startTag && loc.endTag) {
       const raw=html.slice(loc.startTag.endOffset,loc.endTag.startOffset);
       if(contentType&&entry.taxonomy&&a['data-content-index-data']!==undefined){
@@ -512,6 +513,7 @@ export async function buildSite(options) {
   config.shareAliases=redirects.map(alias=>alias.route);
   config.documentRedirects=documentRedirects;
   const resources = !options.templateRoot?loadResources({site}):new Map(), files=new Map(), rendered = new Map();
+  const styleVersions=new Map([...resources].filter(([file])=>file.endsWith('.css')).map(([file,bytes])=>['/'+file,hash(bytes).slice(0,12)]));
   const imageDimensions=mediaDimensions(entries,resources);
   let chapterChrome;
   if(documents.size){
@@ -579,7 +581,7 @@ export async function buildSite(options) {
     html=html.replace('{{body}}',()=>result.code).replace('{{outline}}',()=>outline(result.headings));
     if (/\{\{(?:text|body|outline|profile)/.test(html)) throw new Error('模板槽未解析: '+entry.id);
     const anchors = Object.fromEntries(pageCodes.map(l=>[l,Object.fromEntries(result.headings.map((h,i)=>[h.slug,rendered.get(entry.id+':'+l).headings[i].slug]))]));
-    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,pageConfig,copy[locale].engagementLabels,documentAnchorAliases.get(entry.id));
+    html=completeHTML(html,entry,locale,entries,copy[locale].languageLabels,anchors,copy[locale].scriptSlots,dict,scriptURLs,pageConfig,copy[locale].engagementLabels,documentAnchorAliases.get(entry.id),styleVersions);
     html=projectGallery(html,entry,locale,galleries);
     html=projectImageViewers(html,locale,imageDimensions);
     html=filterPublicationHTML(html,publication);
