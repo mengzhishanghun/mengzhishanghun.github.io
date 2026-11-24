@@ -22,6 +22,7 @@ test('unlisted reprints preserve source and images without entering public disco
  const publicHTML=fs.readFileSync(path.join(output,'zh/blog/markdown-publishing/index.html'),'utf8');
  const publicNodes=[];walk(parse(publicHTML),n=>publicNodes.push(n));
  assert.equal(Object.hasOwn(JSON.parse(publicNodes.find(n=>attrs(n)['data-engagement-config']!==undefined).childNodes[0].value),'likesEnabled'),false);
+ for(const attribute of ['data-article-engagement','data-engagement-like','data-engagement-share'])assert.ok(publicNodes.some(n=>Object.hasOwn(attrs(n),attribute)),'public articles retain '+attribute);
  let images=0;
  for(const entry of validated.reprints){
   assert.equal(digest(entry.sources.zh.bytes),entry.sha256);
@@ -44,8 +45,7 @@ test('unlisted reprints preserve source and images without entering public disco
   assert.equal(backs.length,2);
   for(const n of backs){const first=validated.entries.find(e=>e.id==='page:blog-index').taxonomy.categories[0].id;assert.equal(attrs(n).href,'/zh/blog/?category='+encodeURIComponent(first));assert.equal(attrs(n)['data-fixed-return'],undefined);assert.equal(attrs(n)['aria-label'],'返回');assert.equal(JSON.parse(attrs(n)['data-return-policy']).skipCache,true);}
   assert.equal(nodes.some(n=>(attrs(n).class||'').split(/\s+/).includes('note-hero')),false);
-  const engagement=JSON.parse(nodes.find(n=>attrs(n)['data-engagement-config']!==undefined).childNodes[0].value);
-  assert.equal(engagement.likesEnabled,false);
+  for(const attribute of ['data-article-engagement','data-engagement-config','data-engagement-like','data-engagement-share','data-engagement-manual','data-engagement-url'])assert.equal(nodes.some(n=>Object.hasOwn(attrs(n),attribute)),false,'reprints must not expose '+attribute);
   const runtime=JSON.parse(nodes.find(n=>attrs(n)['data-site-language']!==undefined).childNodes[0].value);
   assert.deepEqual(Object.keys(runtime.urls),['zh']);
   assert.equal(runtime.fallback,'zh');

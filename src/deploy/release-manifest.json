@@ -13338,16 +13338,16 @@
     },
     {
       "path": "zh/blog/reprints/claude-max-account-guide/index.html",
-      "size": 90190,
-      "gitBlob": "846bce44f151b58778bd7b4cba2a354af9d7379e",
-      "sha256": "c6e3456b21cea25d568a4fb1be9bd5745620cf9b9c88d21b78bab3d25f017a90",
+      "size": 87881,
+      "gitBlob": "45d9c5d4f2b42fc72cb3a8fa7cac00ee96964983",
+      "sha256": "961a93222bf4359da90e5a64d33822a4b5194027dfbc32e6f63917cf762b8a03",
       "target": "both"
     },
     {
       "path": "zh/blog/reprints/eian-claude-codex-seedance/index.html",
-      "size": 89133,
-      "gitBlob": "e595eb5f8e65362ea70ad620cd831d6f81b1d627",
-      "sha256": "84aa2587ad9dad3a890b11a8052bba308e2a2827887464ae163e44ea8af155a9",
+      "size": 86830,
+      "gitBlob": "7a4f35dfdb9b50a0a836343d9b95c24c711b8b81",
+      "sha256": "832b2c2f12c42e305fb461d7e082306413b3cbe29611eab9273b35f2eed243d0",
       "target": "both"
     },
     {
