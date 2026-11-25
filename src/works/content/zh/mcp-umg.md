@@ -1,15 +1,13 @@
 ---
 title: MCPUMG
-description: MCPUMG 是开发中的 UE 编辑器 MCP 插件，围绕Widget 树、属性与动画提供工具接口。当前功能与兼容性仍在验证。
+description: 通过 MCP 让 AI 创建与编辑 Unreal Engine 的 UMG 界面，支持控件树、布局、样式、动画、资源导入与截图。
 type: work
 slug: mcp-umg
 categoryId: ue-plugins
 categoryName: UE插件
 categoryOrder: 0
 order: 23
-status: 开发中
 workInfo:
-  stage: developing
   channels:
     - kind: docs
       href: /zh/works/mcp-umg/docs/connect/
@@ -46,9 +44,9 @@ translationKey: mcp-umg
 
 ## 作品简介
 
-MCPUMG 是开发中的 UE 编辑器 MCP 插件。外部 AI 工具可通过 MCP 读取和编辑 Widget Blueprint，包括 Widget 树、属性、插槽、动画与事件，也可以预览界面、检查运行中的控件。工具范围与诊断能力仍可能调整。
+MCPUMG 是 Unreal Editor 的 UMG 编辑插件。支持 MCP 的 AI 客户端可用它读取和编辑 Widget Blueprint，包括控件树、属性、插槽、样式、动画与事件，也可以导入 UI 素材、截取界面，并按版本条件检查运行中的控件。
 
-## 开发方向
+## 功能
 
 ### 搭建界面与复用控件
 
@@ -68,6 +66,26 @@ MCPUMG 是开发中的 UE 编辑器 MCP 插件。外部 AI 工具可通过 MCP �
 
 如果需要[批量修改控件属性](/zh/works/mcp-umg/docs/batch-migration/)，先读取每个目标的指纹，再预检要改的属性。应用时按 Widget Blueprint 分别记录撤销事务；发生失败时检查逐包结果，工具不会跨资产自动回滚，也不会自动编译或保存。
 
-## 开发状态
+## 舰队界面案例
 
-项目处于开发阶段。UE 5.2–5.8 相关版本仍在开发，兼容性待确认，各版本的测试尚未全部完成。[查看 MCPUMG 教程](/zh/works/mcp-umg/docs/connect/)
+Orbital Fleet 将舰船选择、详情面板、升级、任务部署与系统设置放在同一套 UMG 界面中。页面上方提供 52 秒的完整交互视频、六张完整界面截图与两张完整蓝图，可打开原图查看节点和连线。
+
+界面控件、布局、样式、动画与资源导入由 AI 通过 MCPUMG 搭建；蓝图交互逻辑由 AI 通过 MCPBlueprint 编排。舰船与场景素材由 GPT 生成并拆分后导入。截图和视频均来自 Unreal Engine 中实际运行的界面。
+
+### 舰船选择与升级
+
+选择 AEGIS、VALOR 或 ORION，舰船图片、名称、指标与选中标记随之变化。点击 `UPGRADE / 600` 消耗 600 信用点并提高当前舰船的船体值；切换舰船后再返回，本次运行中的升级结果仍会保留。信用点不足或船体达到上限时，界面会拒绝升级。
+
+`RefreshSelectedShip` 根据当前选择刷新舰船详情；`ConfirmUpgrade` 检查信用点与船体上限，再更新数值和界面。图库中的两张蓝图截图保留完整节点与连接。
+
+### 部署与设置
+
+点击 `MISSIONS` 查看任务，点击 `DEPLOY` 打开确认框。取消会关闭确认框；确认后显示本地部署反馈，不会派发外部任务。点击 `SYSTEMS` 可切换遥测开关、调整信号增益。页面切换带有淡入动画。
+
+案例只包含界面与本地交互，不包含联网、真实任务派发或玩家存档。重新开始 PIE 后恢复初始状态。案例随开发工程提供，不包含在 MCPUMG 插件安装包中。
+
+## UE 版本与使用范围
+
+支持 UE 5.2–5.8，具体功能按引擎版本区分。UE 5.2–5.5 可对通过安全检查的独立、原生父类 Widget Blueprint 使用基础创建、控件树编辑、属性、布局、样式、动画、事件、资源导入、保存与截图。继承蓝图、高级树补丁、组件提取、多状态预览、运行时控制及可选框架操作需要 UE 5.6–5.8。
+
+插件仅用于编辑器，不是游戏运行时 UI 框架。请使用与引擎匹配的安装包，并以所安装版本的工具清单、参数与安全检查结果为准。[查看 MCPUMG 教程](/zh/works/mcp-umg/docs/connect/)

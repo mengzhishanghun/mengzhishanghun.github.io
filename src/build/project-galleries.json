@@ -809,6 +809,108 @@
           }
         }
       ]
+    },
+    {
+      "entryId": "work:mcp-umg",
+      "items": [
+        {
+          "id": "ob-video",
+          "grantId": "work:mcp-umg:ob:video:1",
+          "alt": {
+            "zh": "项目视频",
+            "en": "Project video"
+          },
+          "poster": {
+            "grantId": "work:mcp-umg:ob:videoPoster:1",
+            "width": 1920,
+            "height": 1080,
+            "alt": {
+              "zh": "项目图片",
+              "en": "Project image"
+            }
+          }
+        },
+        {
+          "id": "ob-gallery-5c626511530d6f24ab1691c74d47a1d52b26d1beea3d75580aa85aea23b0c3f4",
+          "grantId": "work:mcp-umg:ob:gallery:5c626511530d6f24ab1691c74d47a1d52b26d1beea3d75580aa85aea23b0c3f4",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-331a8fb12bf292bb8d5f97a4edc2b55357d21fc7483fb0607745f6661e2f6eb1",
+          "grantId": "work:mcp-umg:ob:gallery:331a8fb12bf292bb8d5f97a4edc2b55357d21fc7483fb0607745f6661e2f6eb1",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-82e2f95cbb82fa2ad7000a9293ca68968caee4b89a55c13c045929f92f27d418",
+          "grantId": "work:mcp-umg:ob:gallery:82e2f95cbb82fa2ad7000a9293ca68968caee4b89a55c13c045929f92f27d418",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-623a2da2f3e0b58ca29950d92964ecec76c95a7f68dc9e8f4be6e730354ee241",
+          "grantId": "work:mcp-umg:ob:gallery:623a2da2f3e0b58ca29950d92964ecec76c95a7f68dc9e8f4be6e730354ee241",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-d36ad32611fb110ad4a6b9ef07c4580e8140b7ea90d208c41e3b17d83f840e26",
+          "grantId": "work:mcp-umg:ob:gallery:d36ad32611fb110ad4a6b9ef07c4580e8140b7ea90d208c41e3b17d83f840e26",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-5e6db743205f6577cb4e7e3b2e424c2fab23abbc1b8d33bb96a880606280b6a0",
+          "grantId": "work:mcp-umg:ob:gallery:5e6db743205f6577cb4e7e3b2e424c2fab23abbc1b8d33bb96a880606280b6a0",
+          "width": 1920,
+          "height": 1080,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-d3541d09297fa44f080157f2b15a0cbfc4244cb8c39085e42c034ff2c54e5195",
+          "grantId": "work:mcp-umg:ob:gallery:d3541d09297fa44f080157f2b15a0cbfc4244cb8c39085e42c034ff2c54e5195",
+          "width": 4096,
+          "height": 4096,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        },
+        {
+          "id": "ob-gallery-5a6adeb87565e69f4680312a86051bf0a3fe62e4e2fec31079ddab1b7c433478",
+          "grantId": "work:mcp-umg:ob:gallery:5a6adeb87565e69f4680312a86051bf0a3fe62e4e2fec31079ddab1b7c433478",
+          "width": 4096,
+          "height": 4096,
+          "alt": {
+            "zh": "项目图片",
+            "en": "Project image"
+          }
+        }
+      ]
     }
   ]
 }

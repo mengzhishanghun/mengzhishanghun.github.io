@@ -376,6 +376,86 @@
       "websiteUrl": "/media/imported/projects/ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4.png",
       "sha256": "ef4d02039c3f52526cb966b33e5ccd386a5f2254c4134c2c03da3025f8d331c4",
       "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:video:1",
+      "entryId": "work:mcp-umg",
+      "kind": "video",
+      "websiteUrl": "/media/imported/projects/08645d721b5440a9cf4585f186562c835824a2d257dfeb51e869d8d98d4cffd1.mp4",
+      "sha256": "08645d721b5440a9cf4585f186562c835824a2d257dfeb51e869d8d98d4cffd1",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:videoPoster:1",
+      "entryId": "work:mcp-umg",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/5c626511530d6f24ab1691c74d47a1d52b26d1beea3d75580aa85aea23b0c3f4.png",
+      "sha256": "5c626511530d6f24ab1691c74d47a1d52b26d1beea3d75580aa85aea23b0c3f4",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:gallery:5c626511530d6f24ab1691c74d47a1d52b26d1beea3d75580aa85aea23b0c3f4",
+      "entryId": "work:mcp-umg",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/5c626511530d6f24ab1691c74d47a1d52b26d1beea3d75580aa85aea23b0c3f4.png",
+      "sha256": "5c626511530d6f24ab1691c74d47a1d52b26d1beea3d75580aa85aea23b0c3f4",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:gallery:331a8fb12bf292bb8d5f97a4edc2b55357d21fc7483fb0607745f6661e2f6eb1",
+      "entryId": "work:mcp-umg",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/331a8fb12bf292bb8d5f97a4edc2b55357d21fc7483fb0607745f6661e2f6eb1.png",
+      "sha256": "331a8fb12bf292bb8d5f97a4edc2b55357d21fc7483fb0607745f6661e2f6eb1",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:gallery:82e2f95cbb82fa2ad7000a9293ca68968caee4b89a55c13c045929f92f27d418",
+      "entryId": "work:mcp-umg",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/82e2f95cbb82fa2ad7000a9293ca68968caee4b89a55c13c045929f92f27d418.png",
+      "sha256": "82e2f95cbb82fa2ad7000a9293ca68968caee4b89a55c13c045929f92f27d418",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:gallery:623a2da2f3e0b58ca29950d92964ecec76c95a7f68dc9e8f4be6e730354ee241",
+      "entryId": "work:mcp-umg",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/623a2da2f3e0b58ca29950d92964ecec76c95a7f68dc9e8f4be6e730354ee241.png",
+      "sha256": "623a2da2f3e0b58ca29950d92964ecec76c95a7f68dc9e8f4be6e730354ee241",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:gallery:d36ad32611fb110ad4a6b9ef07c4580e8140b7ea90d208c41e3b17d83f840e26",
+      "entryId": "work:mcp-umg",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/d36ad32611fb110ad4a6b9ef07c4580e8140b7ea90d208c41e3b17d83f840e26.png",
+      "sha256": "d36ad32611fb110ad4a6b9ef07c4580e8140b7ea90d208c41e3b17d83f840e26",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:gallery:5e6db743205f6577cb4e7e3b2e424c2fab23abbc1b8d33bb96a880606280b6a0",
+      "entryId": "work:mcp-umg",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/5e6db743205f6577cb4e7e3b2e424c2fab23abbc1b8d33bb96a880606280b6a0.png",
+      "sha256": "5e6db743205f6577cb4e7e3b2e424c2fab23abbc1b8d33bb96a880606280b6a0",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:gallery:d3541d09297fa44f080157f2b15a0cbfc4244cb8c39085e42c034ff2c54e5195",
+      "entryId": "work:mcp-umg",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/d3541d09297fa44f080157f2b15a0cbfc4244cb8c39085e42c034ff2c54e5195.png",
+      "sha256": "d3541d09297fa44f080157f2b15a0cbfc4244cb8c39085e42c034ff2c54e5195",
+      "basis": "owner-explicit-publication"
+    },
+    {
+      "id": "work:mcp-umg:ob:gallery:5a6adeb87565e69f4680312a86051bf0a3fe62e4e2fec31079ddab1b7c433478",
+      "entryId": "work:mcp-umg",
+      "kind": "image",
+      "websiteUrl": "/media/imported/projects/5a6adeb87565e69f4680312a86051bf0a3fe62e4e2fec31079ddab1b7c433478.png",
+      "sha256": "5a6adeb87565e69f4680312a86051bf0a3fe62e4e2fec31079ddab1b7c433478",
+      "basis": "owner-explicit-publication"
     }
   ]
 }

@@ -1,15 +1,13 @@
 ---
 title: MCPUMG
-description: MCPUMG is an Unreal Editor MCP plugin in development, providing tool interfaces for Widget trees, properties and animations. Features and compatibility are still being verified.
+description: Let AI create and edit Unreal Engine UMG interfaces through MCP, including widget trees, layouts, styles, animations, asset imports, and screenshots.
 type: work
 slug: mcp-umg
 categoryId: ue-plugins
 categoryName: UE plugins
 categoryOrder: 0
 order: 23
-status: In development
 workInfo:
-  stage: developing
   channels:
     - kind: docs
       href: /en/works/mcp-umg/docs/connect/
@@ -21,8 +19,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: 35ffc6e416e0fb60432254eda255c5d529b8c1401a2d306d961d3eb61dcb258f
-generatedBodyHash: 4ce8c711cc72a2e82054b882da243ffc81cc67af523b41a8774426b7588235c8
+sourceHash: 9e9778dc9103f4fb0601bb66c8f34f1ce02c63e7f4f25255ad5aed0f9ca394ef
+generatedBodyHash: 26c8fd95712659a34ef3ea9620337fbd569899e72d54261ffa0a49b381dabbc3
 translationStatus: translated
 coverAlt: MCPUMG cover
 websiteCoverUrl: /media/covers/works/mcp-umg-20261101.webp
@@ -49,9 +47,9 @@ docIds:
 
 ## About this work
 
-MCPUMG is an Unreal Editor MCP plugin in development. External AI tools can use it to read and edit Widget Blueprints, including Widget trees, properties, slots, animations, and events. They can also preview interfaces and inspect running widgets. Tool coverage and diagnostics may change.
+MCPUMG is a UMG editing plugin for Unreal Editor. MCP-compatible AI clients can read and edit Widget Blueprints, including widget trees, properties, slots, styles, animations, and events. They can also import UI assets, capture interfaces, and inspect running widgets where the engine version supports it.
 
-## Development direction
+## Features
 
 ### Build interfaces and reuse widgets
 
@@ -71,6 +69,26 @@ To build a page from a reference image, follow the [connection guide](/en/works/
 
 Before you [edit widget properties in batches](/en/works/mcp-umg/docs/batch-migration/), read each target’s fingerprint and preview the property changes. The tool records a separate undo transaction for each Widget Blueprint. If something fails, check the result for each package. The tool does not roll changes back across assets or compile or save them automatically.
 
-## Development status
+## Orbital Fleet interface example
 
-Work on UE 5.2–5.8 is ongoing. Compatibility remains unconfirmed, and testing across those versions is incomplete. [MCPUMG user guide](/en/works/mcp-umg/docs/connect/)
+Orbital Fleet combines ship selection, a detail panel, upgrades, mission deployment, and system settings in one UMG interface. The gallery above contains a complete 52-second interaction video, six full-interface screenshots, and two complete Blueprint graphs. Open the original images to inspect the nodes and connections.
+
+AI built the widgets, layouts, styles, animations, and asset imports through MCPUMG. AI arranged the Blueprint interaction logic through MCPBlueprint. GPT generated the ship and scene artwork, which was split into assets and imported. The screenshots and video show the interface running in Unreal Engine.
+
+### Ship selection and upgrades
+
+Selecting AEGIS, VALOR, or ORION updates the ship image, name, metrics, and selection marker. Clicking `UPGRADE / 600` spends 600 credits and increases the selected ship's hull value. Switching ships and returning preserves the upgrade for the current session. The interface rejects upgrades when credits are insufficient or the hull has reached its limit.
+
+`RefreshSelectedShip` updates ship details from the current selection. `ConfirmUpgrade` checks the available credits and hull limit before updating the values and interface. Both Blueprint screenshots retain the complete nodes and connections.
+
+### Deployment and settings
+
+Click `MISSIONS` to view the mission, then `DEPLOY` to open the confirmation dialog. Cancel closes the dialog. Confirm displays local deployment feedback without dispatching an external task. Under `SYSTEMS`, toggle telemetry or adjust signal gain. Page changes use a fade-in animation.
+
+The example contains interface behavior and local interactions only. It does not include networking, real task dispatch, or player saves. Restarting PIE restores the initial state. The example is provided with the development project, not the MCPUMG plugin installation package.
+
+## UE versions and scope
+
+MCPUMG supports UE 5.2 through 5.8, with features varying by engine version. On UE 5.2 through 5.5, standalone Widget Blueprints with native parent classes that pass the safety checks support basic creation, widget tree editing, properties, layout, styles, animations, events, asset imports, saving, and screenshots. Inherited Blueprints, advanced tree patches, component extraction, multi-state previews, runtime control, and optional framework operations require UE 5.6 through 5.8.
+
+The plugin is editor-only. It is not a runtime UI framework for games. Use the installation package that matches your engine, and check the installed version's tool list, parameters, and safety results. [MCPUMG user guide](/en/works/mcp-umg/docs/connect/)
