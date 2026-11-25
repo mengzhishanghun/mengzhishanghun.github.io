@@ -46,24 +46,3 @@
 .content-blog .content-card-copy > p { max-width: 78ch; overflow-wrap: anywhere; }
 .content-blog .content-card-side { flex-wrap: wrap; gap: 6px 20px; }
 .content-blog .content-card-link { margin-top: 0; }
-
-.site-chrome .content-blog a.content-card[data-has-cover] {
-  display: grid;
-  grid-template-columns: 200px minmax(0, 1fr);
-  column-gap: 24px;
-  align-items: start;
-}
-.site-chrome .content-blog [data-has-cover] > .content-cover-link {
-  grid-column: 1;
-  grid-row: 1 / 3;
-  overflow: hidden;
-  border-radius: 6px;
-}
-.site-chrome .content-blog [data-has-cover] .content-cover { border: 0; aspect-ratio: 2; }
-.site-chrome .content-blog [data-has-cover] > .content-card-copy,
-.site-chrome .content-blog [data-has-cover] > .content-card-side { grid-column: 2; min-width: 0; }
-.site-chrome .content-blog a.content-card[data-has-cover][hidden] { display: none; }
-@media (max-width: 720px) {
-  .site-chrome .content-blog a.content-card[data-has-cover] { grid-template-columns: 112px minmax(0, 1fr); column-gap: 16px; }
-  .site-chrome .content-blog [data-has-cover] > .content-card-side { grid-column: 1 / -1; }
-}
