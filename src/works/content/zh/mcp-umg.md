@@ -70,7 +70,7 @@ MCPUMG 是 Unreal Editor 的 UMG 编辑插件。支持 MCP 的 AI 客户端可�
 
 Orbital Fleet 将舰船选择、详情面板、升级、任务部署与系统设置放在同一套 UMG 界面中。页面上方提供 52 秒的完整交互视频、六张完整界面截图与两张完整蓝图，可打开原图查看节点和连线。
 
-界面控件、布局、样式、动画与资源导入由 AI 通过 MCPUMG 搭建；蓝图交互逻辑由 AI 通过 MCPBlueprint 编排。舰船与场景素材由 GPT 生成并拆分后导入。截图和视频均来自 Unreal Engine 中实际运行的界面。
+演示视频及截图展示的 UMG 界面由 AI 通过 MCPUMG 搭建，包括控件、布局、样式、动画与资源导入；蓝图交互逻辑由 AI 通过 MCPBlueprint 编排，舰船与场景素材由 GPT 生成并拆分后导入。画面均来自 Unreal Engine 中的实际运行效果。
 
 ### 舰船选择与升级
 

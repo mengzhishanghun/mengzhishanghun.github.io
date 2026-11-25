@@ -19,8 +19,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: 9e9778dc9103f4fb0601bb66c8f34f1ce02c63e7f4f25255ad5aed0f9ca394ef
-generatedBodyHash: 26c8fd95712659a34ef3ea9620337fbd569899e72d54261ffa0a49b381dabbc3
+sourceHash: 0656cc89ee505b436499c78f321edb0263f70b263cfa403ecc85362b2e9b6014
+generatedBodyHash: fa7e328165c76293ec5e3ac63f4e72826c89922c01bbdc8561982c27d6a63088
 translationStatus: translated
 coverAlt: MCPUMG cover
 websiteCoverUrl: /media/covers/works/mcp-umg-20261101.webp
@@ -73,7 +73,7 @@ Before you [edit widget properties in batches](/en/works/mcp-umg/docs/batch-migr
 
 Orbital Fleet combines ship selection, a detail panel, upgrades, mission deployment, and system settings in one UMG interface. The gallery above contains a complete 52-second interaction video, six full-interface screenshots, and two complete Blueprint graphs. Open the original images to inspect the nodes and connections.
 
-AI built the widgets, layouts, styles, animations, and asset imports through MCPUMG. AI arranged the Blueprint interaction logic through MCPBlueprint. GPT generated the ship and scene artwork, which was split into assets and imported. The screenshots and video show the interface running in Unreal Engine.
+The UMG interface shown in the demonstration video and screenshots was built by AI through MCPUMG, including widgets, layouts, styles, animations, and asset imports. AI arranged the Blueprint interaction logic through MCPBlueprint. GPT generated the ship and scene artwork, which was split into assets and imported. All footage and screenshots show actual results in Unreal Engine.
 
 ### Ship selection and upgrades
 
