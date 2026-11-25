@@ -19,8 +19,8 @@ tags:
   - MCP series
 lang: en
 translationKey: mcp-umg
-sourceHash: 0656cc89ee505b436499c78f321edb0263f70b263cfa403ecc85362b2e9b6014
-generatedBodyHash: fa7e328165c76293ec5e3ac63f4e72826c89922c01bbdc8561982c27d6a63088
+sourceHash: fcd3bd1dbc3521977aba45a97c33f2f1d0f56899bf1fa685bae84382c66be377
+generatedBodyHash: 6acb0f689982ac2e8aa6b37197cba1a505518ad080d01acd3a05b7ed619cbc1d
 translationStatus: translated
 coverAlt: MCPUMG cover
 websiteCoverUrl: /media/covers/works/mcp-umg-20261101.webp
@@ -49,6 +49,8 @@ docIds:
 
 MCPUMG is a UMG editing plugin for Unreal Editor. MCP-compatible AI clients can read and edit Widget Blueprints, including widget trees, properties, slots, styles, animations, and events. They can also import UI assets, capture interfaces, and inspect running widgets where the engine version supports it.
 
+The demonstration video and screenshots show a UMG interface built by AI through MCPUMG. Blueprint logic was arranged through MCPBlueprint, and GPT generated the artwork. The media shows actual results in Unreal Engine.
+
 ## Features
 
 ### Build interfaces and reuse widgets
@@ -68,24 +70,6 @@ Preview different states and sizes, or inspect PIE instances for clipping and hi
 To build a page from a reference image, follow the [connection guide](/en/works/mcp-umg/docs/connect/) and confirm the target project and tool version. The AI client interprets the image and produces a Widget Spec. The plugin does not call an image model. Validate the spec first, then build and inspect the actual preview. If you need to confirm clipping or interaction behavior, check a running instance. Once you have reviewed the changes, call `SaveWidgetBlueprint` explicitly to keep them. [Build a UMG interface from a reference image](/en/works/mcp-umg/docs/image-to-umg/)
 
 Before you [edit widget properties in batches](/en/works/mcp-umg/docs/batch-migration/), read each target’s fingerprint and preview the property changes. The tool records a separate undo transaction for each Widget Blueprint. If something fails, check the result for each package. The tool does not roll changes back across assets or compile or save them automatically.
-
-## Orbital Fleet interface example
-
-Orbital Fleet combines ship selection, a detail panel, upgrades, mission deployment, and system settings in one UMG interface. The gallery above contains a complete 52-second interaction video, six full-interface screenshots, and two complete Blueprint graphs. Open the original images to inspect the nodes and connections.
-
-The UMG interface shown in the demonstration video and screenshots was built by AI through MCPUMG, including widgets, layouts, styles, animations, and asset imports. AI arranged the Blueprint interaction logic through MCPBlueprint. GPT generated the ship and scene artwork, which was split into assets and imported. All footage and screenshots show actual results in Unreal Engine.
-
-### Ship selection and upgrades
-
-Selecting AEGIS, VALOR, or ORION updates the ship image, name, metrics, and selection marker. Clicking `UPGRADE / 600` spends 600 credits and increases the selected ship's hull value. Switching ships and returning preserves the upgrade for the current session. The interface rejects upgrades when credits are insufficient or the hull has reached its limit.
-
-`RefreshSelectedShip` updates ship details from the current selection. `ConfirmUpgrade` checks the available credits and hull limit before updating the values and interface. Both Blueprint screenshots retain the complete nodes and connections.
-
-### Deployment and settings
-
-Click `MISSIONS` to view the mission, then `DEPLOY` to open the confirmation dialog. Cancel closes the dialog. Confirm displays local deployment feedback without dispatching an external task. Under `SYSTEMS`, toggle telemetry or adjust signal gain. Page changes use a fade-in animation.
-
-The example contains interface behavior and local interactions only. It does not include networking, real task dispatch, or player saves. Restarting PIE restores the initial state. The example is provided with the development project, not the MCPUMG plugin installation package.
 
 ## UE versions and scope
 
