@@ -4,15 +4,23 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 import {generatedPage} from './interaction-fixtures.mjs';
 
-for (const locale of ['zh', 'en']) test(`${locale} blog index renders linked text entries without covers`, () => {
+for (const locale of ['zh', 'en']) test(`${locale} blog index links each thumbnail to its matching article`, () => {
   const page = generatedPage(`${locale}/blog/index.html`);
   const cards = page.nodes.filter(node => page.matches(node, '[data-content-card]'));
+  const manifest = JSON.parse(fs.readFileSync(new URL('./manifest.json', import.meta.url), 'utf8'));
   assert.ok(cards.length > 0);
-  assert.ok(!page.select('[data-content-card] img, [data-content-card] .content-cover, [data-content-card] .content-cover-link'), 'blog entries must not contain cover markup');
   for (const card of cards) {
+    const entry = manifest.entries.find(entry => entry.type === 'blog' && entry.slug === page.attrs(card)['data-slug']);
+    const images = page.nodes.filter(node => node.tagName === 'img' && page.closest(node, '[data-content-card]') === card);
     assert.equal(card.tagName, 'a');
-    assert.ok(page.attrs(card).href.startsWith(`/${locale}/blog/`));
-    assert.equal(Object.hasOwn(page.attrs(card), 'data-has-cover'), false);
+    assert.equal(page.attrs(card).href, `/${locale}/blog/${entry.slug}/`);
+    assert.equal(images.length, entry.cover ? 1 : 0, entry.id);
+    if (entry.cover) {
+      assert.equal(page.attrs(images[0]).src, entry.cover.websiteUrl);
+      assert.equal(page.attrs(images[0]).alt, '');
+      assert.equal(page.attrs(images[0]).loading, 'lazy');
+      assert.ok(Number(page.attrs(images[0]).width) > 0 && Number(page.attrs(images[0]).height) > 0);
+    }
   }
 });
 const contentSource=fs.readFileSync(new URL('../shared/i18n/scripts/_astro/ContentIndex.astro_astro_type_script_index_0_lang.fObaHoDK.js',import.meta.url),'utf8');
