@@ -173,11 +173,25 @@ function withoutSourceAttribution(source) {
   if(source.data.sourceUrl && source.data.date && last?.includes(source.data.sourceUrl) && last.includes(String(source.data.date)))return body.slice(0,body.lastIndexOf(last));
   return body;
 }
+function removeLegacyBlogFooter(tree) {
+  const footer=tree.children.at(-1);
+  if(footer?.type!=='blockquote' || footer.children.length!==1 || footer.children[0].type!=='paragraph')return;
+  const links=footer.children[0].children.filter(node=>node.type==='link');
+  if(links.length!==1 || links[0].url!=='https://raw.githubusercontent.com/mengzhishanghun/mengzhishanghun/refs/heads/main/Donate/WeChat.jpg?raw=true')return;
+  const text=node=>node.type==='break'?' ':node.type==='text'?node.value:(node.children || []).map(text).join('');
+  const content=text(footer).replace(/\s+/g,' ').trim();
+  const chinese=content.startsWith('感谢阅读，欢迎点赞、关注、收藏，有问题可在评论区交流。') && content.endsWith('如果本文对你有帮助，点击这里捐赠支持作者。');
+  const english=/^Thanks for reading[.!] /.test(content) && content.endsWith('If this article helped you, click here to donate and support the author.');
+  if(!chinese && !english)return;
+  tree.children.pop();
+  if(tree.children.at(-1)?.type==='thematicBreak')tree.children.pop();
+}
 export async function renderBody(entry,locale,processor,site) {
   const source = entry.sources[locale];
   let mediaOrdinal=0;
   const tokens=[];
   const mediaPlugin = () => tree => {
+    if(entry.type==='blog' && !entry.original)removeLegacyBlogFooter(tree);
     const visit = node => {
       if (node.type === 'html' && !(entry.original && isReprintHTML(node.value))) throw new Error('来源含未批准HTML: '+entry.id);
       if (node.type === 'image') {
